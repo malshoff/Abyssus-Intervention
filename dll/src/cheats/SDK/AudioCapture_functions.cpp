@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function AudioCapture.AudioCapture.GetAudioCaptureDeviceInfo
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAudioCaptureDeviceInfo*         OutInfo                                                (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -47,7 +47,7 @@ bool UAudioCapture::GetAudioCaptureDeviceInfo(struct FAudioCaptureDeviceInfo* Ou
 
 
 // Function AudioCapture.AudioCapture.IsCapturingAudio
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -72,7 +72,7 @@ bool UAudioCapture::IsCapturingAudio()
 
 
 // Function AudioCapture.AudioCapture.StartCapturingAudio
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UAudioCapture::StartCapturingAudio()
 {
@@ -91,7 +91,7 @@ void UAudioCapture::StartCapturingAudio()
 
 
 // Function AudioCapture.AudioCapture.StopCapturingAudio
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UAudioCapture::StopCapturingAudio()
 {
@@ -110,7 +110,7 @@ void UAudioCapture::StopCapturingAudio()
 
 
 // Function AudioCapture.AudioCaptureFunctionLibrary.CreateAudioCapture
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UAudioCapture*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -135,7 +135,7 @@ class UAudioCapture* UAudioCaptureFunctionLibrary::CreateAudioCapture()
 
 
 // Function AudioCapture.AudioCaptureBlueprintLibrary.Conv_AudioInputDeviceInfoToString
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FAudioInputDeviceInfo&     Info                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -163,7 +163,7 @@ class FString UAudioCaptureBlueprintLibrary::Conv_AudioInputDeviceInfoToString(c
 
 
 // Function AudioCapture.AudioCaptureBlueprintLibrary.GetAvailableAudioInputDevices
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(const TArray<struct FAudioInputDeviceInfo>& AvailableDevices)>&OnObtainDevicesEvent                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

@@ -10,44 +10,43 @@
 
 #include "Basic.hpp"
 
-#include "RGame_structs.hpp"
 #include "UMG_classes.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_RunStatsList.Widget_RunStatsList_C
-// 0x00D8 (0x03A8 - 0x02D0)
-class UWidget_RunStatsList_C final : public UUserWidget
+// 0x0140 (0x0480 - 0x0340)
+class UWidget_RunStatsList_C : public UUserWidget
 {
 public:
-	class UImage*                                 BackgroundShadow;                                  // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 FrameImage;                                        // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UListView*                              StatList;                                          // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FRPlayerStats                          RPlayerStats;                                      // 0x02E8(0x00C0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UListView*                              StatList;                                          // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 FrameImage;                                        // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BackgroundShadow;                                  // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FRPlayerStats                          RPlayerStats;                                      // 0x0358(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void Setup(bool UseSpecificPlayerStats, const struct FRPlayerStats& PlayerStats);
-	void BuildStatWidgets(bool UseSpecificPlayerStats, const struct FRPlayerStats& PlayerStats);
-	void AddStatItem(const class FText& StatName, const class FText& StatValue, class UTexture2D* StatIcon);
+	void AddStatItem(const class FText& StatName, const class FText& StatValue, class UTexture2D* StatIcon, float Progress);
+	void BuildStatWidgets(const struct FRPlayerStats& PlayerStats);
+	void Setup(const struct FRPlayerStats& PlayerStats);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_RunStatsList_C">();
+		BP_STATIC_CLASS_IMPL("Widget_RunStatsList_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_RunStatsList_C")
 	}
 	static class UWidget_RunStatsList_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_RunStatsList_C>();
 	}
 };
-static_assert(alignof(UWidget_RunStatsList_C) == 0x000008, "Wrong alignment on UWidget_RunStatsList_C");
-static_assert(sizeof(UWidget_RunStatsList_C) == 0x0003A8, "Wrong size on UWidget_RunStatsList_C");
-static_assert(offsetof(UWidget_RunStatsList_C, BackgroundShadow) == 0x0002D0, "Member 'UWidget_RunStatsList_C::BackgroundShadow' has a wrong offset!");
-static_assert(offsetof(UWidget_RunStatsList_C, FrameImage) == 0x0002D8, "Member 'UWidget_RunStatsList_C::FrameImage' has a wrong offset!");
-static_assert(offsetof(UWidget_RunStatsList_C, StatList) == 0x0002E0, "Member 'UWidget_RunStatsList_C::StatList' has a wrong offset!");
-static_assert(offsetof(UWidget_RunStatsList_C, RPlayerStats) == 0x0002E8, "Member 'UWidget_RunStatsList_C::RPlayerStats' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_RunStatsList_C;
 
 }
 

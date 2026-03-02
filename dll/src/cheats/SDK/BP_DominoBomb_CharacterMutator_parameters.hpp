@@ -24,12 +24,7 @@ public:
 	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue; // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_FunctionResult_DamageIncreasePercent_ImplicitCast; // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DominoBomb_CharacterMutator_C_GetDamage) == 0x000008, "Wrong alignment on BP_DominoBomb_CharacterMutator_C_GetDamage");
-static_assert(sizeof(BP_DominoBomb_CharacterMutator_C_GetDamage) == 0x000018, "Wrong size on BP_DominoBomb_CharacterMutator_C_GetDamage");
-static_assert(offsetof(BP_DominoBomb_CharacterMutator_C_GetDamage, DamageIncreasePercent) == 0x000000, "Member 'BP_DominoBomb_CharacterMutator_C_GetDamage::DamageIncreasePercent' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_CharacterMutator_C_GetDamage, CallFunc_GetMutatorRank_ReturnValue) == 0x000008, "Member 'BP_DominoBomb_CharacterMutator_C_GetDamage::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_CharacterMutator_C_GetDamage, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x00000C, "Member 'BP_DominoBomb_CharacterMutator_C_GetDamage::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_CharacterMutator_C_GetDamage, K2Node_FunctionResult_DamageIncreasePercent_ImplicitCast) == 0x000010, "Member 'BP_DominoBomb_CharacterMutator_C_GetDamage::K2Node_FunctionResult_DamageIncreasePercent_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DominoBomb_CharacterMutator_C_GetDamage;
 
 // Function BP_DominoBomb_CharacterMutator.BP_DominoBomb_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -41,11 +36,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_DominoBomb_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_DominoBomb_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_DominoBomb_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_DominoBomb_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_DominoBomb_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_DominoBomb_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_DominoBomb_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_DominoBomb_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DominoBomb_CharacterMutator_C_GetMutatorDescription;
 
 }
 

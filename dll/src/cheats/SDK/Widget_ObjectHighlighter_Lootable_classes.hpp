@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_ObjectHighlighter_Lootable.Widget_ObjectHighlighter_Lootable_C
-// 0x0000 (0x03D0 - 0x03D0)
+// 0x0000 (0x0440 - 0x0440)
 class UWidget_ObjectHighlighter_Lootable_C final : public UWidget_ObjectHighlighter_C
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_ObjectHighlighter_Lootable_C">();
+		BP_STATIC_CLASS_IMPL("Widget_ObjectHighlighter_Lootable_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_ObjectHighlighter_Lootable_C")
 	}
 	static class UWidget_ObjectHighlighter_Lootable_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_ObjectHighlighter_Lootable_C>();
 	}
 };
-static_assert(alignof(UWidget_ObjectHighlighter_Lootable_C) == 0x000010, "Wrong alignment on UWidget_ObjectHighlighter_Lootable_C");
-static_assert(sizeof(UWidget_ObjectHighlighter_Lootable_C) == 0x0003D0, "Wrong size on UWidget_ObjectHighlighter_Lootable_C");
+DUMPER7_ASSERTS_UWidget_ObjectHighlighter_Lootable_C;
 
 }
 

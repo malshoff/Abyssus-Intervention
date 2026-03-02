@@ -38,7 +38,7 @@ void UWidget_RoomObjective_C::BindToChargeZoneUpdate(class ABP_RoomObjectiveObje
 
 
 // Function Widget_RoomObjective.Widget_RoomObjective_C.ExecuteUbergraph_Widget_RoomObjective
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -96,7 +96,7 @@ void UWidget_RoomObjective_C::OnInitialized()
 
 
 // Function Widget_RoomObjective.Widget_RoomObjective_C.OnObjectiveEnded
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FGameplayTag&              ObjectiveTag                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 // bool                                    bCompleted                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

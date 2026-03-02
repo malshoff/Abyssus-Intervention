@@ -41,19 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ObjectiveManager_C">();
+		BP_STATIC_CLASS_IMPL("BP_ObjectiveManager_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ObjectiveManager_C")
 	}
 	static class ABP_ObjectiveManager_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_ObjectiveManager_C>();
 	}
 };
-static_assert(alignof(ABP_ObjectiveManager_C) == 0x000008, "Wrong alignment on ABP_ObjectiveManager_C");
-static_assert(sizeof(ABP_ObjectiveManager_C) == 0x000360, "Wrong size on ABP_ObjectiveManager_C");
-static_assert(offsetof(ABP_ObjectiveManager_C, UberGraphFrame) == 0x000340, "Member 'ABP_ObjectiveManager_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_ObjectiveManager_C, DefaultSceneRoot) == 0x000348, "Member 'ABP_ObjectiveManager_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_ObjectiveManager_C, RandomizedObjectivePA_BP) == 0x000350, "Member 'ABP_ObjectiveManager_C::RandomizedObjectivePA_BP' has a wrong offset!");
-static_assert(offsetof(ABP_ObjectiveManager_C, LatestEnemySpawnAreaSegment) == 0x000358, "Member 'ABP_ObjectiveManager_C::LatestEnemySpawnAreaSegment' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_ObjectiveManager_C;
 
 }
 

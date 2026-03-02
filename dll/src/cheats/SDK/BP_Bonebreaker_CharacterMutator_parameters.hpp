@@ -18,74 +18,51 @@ namespace SDK::Params
 {
 
 // Function BP_Bonebreaker_CharacterMutator.BP_Bonebreaker_CharacterMutator_C.ExecuteUbergraph_BP_Bonebreaker_CharacterMutator
-// 0x01A8 (0x01A8 - 0x0000)
+// 0x0328 (0x0328 - 0x0000)
 struct BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue; // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Event_Socket;                               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_Bool;                                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x0014(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x001C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0028(0x0030)(ContainsInstancedReference)
-	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate; // 0x0058(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPawnBase*                             K2Node_CustomEvent_Pawn;                           // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0070(0x00C0)()
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue;      // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActorAnEnemy_ReturnValue;               // 0x013A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x013B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AREnemyPawnBase*                        K2Node_DynamicCast_AsREnemy_Pawn_Base;             // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AREnemyPawnBase*                        K2Node_DynamicCast_AsREnemy_Pawn_Base_1;           // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_159[0x3];                                      // 0x0159(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x015C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0170(0x0008)(NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Event_EventName;                            // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue_1; // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_184[0x4];                                      // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Event_EventName;                            // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x000C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x0014(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0020(0x0030)(ContainsInstancedReference)
+	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate; // 0x0050(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPawnBase*                             K2Node_CustomEvent_Pawn;                           // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0068(0x01F0)()
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0258(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue;      // 0x0261(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0262(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActorAnEnemy_ReturnValue;               // 0x0263(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0264(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_265[0x3];                                      // 0x0265(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class AREnemyPawnBase*                        K2Node_DynamicCast_AsREnemy_Pawn_Base;             // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_271[0x7];                                      // 0x0271(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AREnemyPawnBase*                        K2Node_DynamicCast_AsREnemy_Pawn_Base_1;           // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_281[0x3];                                      // 0x0281(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0284(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue; // 0x0294(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Event_Socket;                               // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_Bool;                                 // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A9[0x7];                                      // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue_1; // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2BC[0x4];                                      // 0x02BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x02C0(0x0008)(NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x02C8(0x0030)(ContainsInstancedReference)
+	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_2; // 0x02F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_1;                 // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_311[0x7];                                      // 0x0311(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0318(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0320(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator) == 0x000008, "Wrong alignment on BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator");
-static_assert(sizeof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator) == 0x0001A8, "Wrong size on BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x000004, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, K2Node_Event_Socket) == 0x000008, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::K2Node_Event_Socket' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, K2Node_Event_Bool) == 0x000010, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::K2Node_Event_Bool' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, CallFunc_GetScriptFName_ReturnValue) == 0x000014, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, CallFunc_GetScriptFName_ReturnValue_1) == 0x00001C, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000028, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000058, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, K2Node_CustomEvent_Pawn) == 0x000068, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::K2Node_CustomEvent_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, K2Node_CustomEvent_DamageEventData) == 0x000070, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::K2Node_CustomEvent_DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000130, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000138, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, CallFunc_DamageSourceMaskHasFlag_ReturnValue) == 0x000139, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::CallFunc_DamageSourceMaskHasFlag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, CallFunc_IsActorAnEnemy_ReturnValue) == 0x00013A, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::CallFunc_IsActorAnEnemy_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, CallFunc_BooleanAND_ReturnValue) == 0x00013B, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, K2Node_DynamicCast_AsREnemy_Pawn_Base) == 0x000140, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::K2Node_DynamicCast_AsREnemy_Pawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000148, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, K2Node_DynamicCast_AsREnemy_Pawn_Base_1) == 0x000150, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::K2Node_DynamicCast_AsREnemy_Pawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, K2Node_DynamicCast_bSuccess_2) == 0x000158, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x00015C, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000170, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, K2Node_Event_EventName) == 0x000178, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::K2Node_Event_EventName' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue_1) == 0x000180, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000188, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000190, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000198, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x0001A0, "Member 'BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Bonebreaker_CharacterMutator_C_ExecuteUbergraph_BP_Bonebreaker_CharacterMutator;
 
 // Function BP_Bonebreaker_CharacterMutator.BP_Bonebreaker_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -97,11 +74,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_Bonebreaker_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_Bonebreaker_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_Bonebreaker_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_Bonebreaker_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_Bonebreaker_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_Bonebreaker_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_Bonebreaker_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Bonebreaker_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_Bonebreaker_CharacterMutator.BP_Bonebreaker_CharacterMutator_C.OnAnimationTriggerEvent
 // 0x0008 (0x0008 - 0x0000)
@@ -110,22 +83,17 @@ struct BP_Bonebreaker_CharacterMutator_C_OnAnimationTriggerEvent final
 public:
 	class FName                                   EventName;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Bonebreaker_CharacterMutator_C_OnAnimationTriggerEvent) == 0x000004, "Wrong alignment on BP_Bonebreaker_CharacterMutator_C_OnAnimationTriggerEvent");
-static_assert(sizeof(BP_Bonebreaker_CharacterMutator_C_OnAnimationTriggerEvent) == 0x000008, "Wrong size on BP_Bonebreaker_CharacterMutator_C_OnAnimationTriggerEvent");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_OnAnimationTriggerEvent, EventName) == 0x000000, "Member 'BP_Bonebreaker_CharacterMutator_C_OnAnimationTriggerEvent::EventName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Bonebreaker_CharacterMutator_C_OnAnimationTriggerEvent;
 
 // Function BP_Bonebreaker_CharacterMutator.BP_Bonebreaker_CharacterMutator_C.OnDamageDealt
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_Bonebreaker_CharacterMutator_C_OnDamageDealt final
 {
 public:
 	class ARPawnBase*                             Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_Bonebreaker_CharacterMutator_C_OnDamageDealt) == 0x000008, "Wrong alignment on BP_Bonebreaker_CharacterMutator_C_OnDamageDealt");
-static_assert(sizeof(BP_Bonebreaker_CharacterMutator_C_OnDamageDealt) == 0x0000C8, "Wrong size on BP_Bonebreaker_CharacterMutator_C_OnDamageDealt");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_OnDamageDealt, Pawn) == 0x000000, "Member 'BP_Bonebreaker_CharacterMutator_C_OnDamageDealt::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_OnDamageDealt, DamageEventData) == 0x000008, "Member 'BP_Bonebreaker_CharacterMutator_C_OnDamageDealt::DamageEventData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Bonebreaker_CharacterMutator_C_OnDamageDealt;
 
 // Function BP_Bonebreaker_CharacterMutator.BP_Bonebreaker_CharacterMutator_C.OnToggleEvent
 // 0x000C (0x000C - 0x0000)
@@ -135,10 +103,7 @@ public:
 	class FName                                   Socket;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Bool;                                              // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Bonebreaker_CharacterMutator_C_OnToggleEvent) == 0x000004, "Wrong alignment on BP_Bonebreaker_CharacterMutator_C_OnToggleEvent");
-static_assert(sizeof(BP_Bonebreaker_CharacterMutator_C_OnToggleEvent) == 0x00000C, "Wrong size on BP_Bonebreaker_CharacterMutator_C_OnToggleEvent");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_OnToggleEvent, Socket) == 0x000000, "Member 'BP_Bonebreaker_CharacterMutator_C_OnToggleEvent::Socket' has a wrong offset!");
-static_assert(offsetof(BP_Bonebreaker_CharacterMutator_C_OnToggleEvent, Bool) == 0x000008, "Member 'BP_Bonebreaker_CharacterMutator_C_OnToggleEvent::Bool' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Bonebreaker_CharacterMutator_C_OnToggleEvent;
 
 }
 

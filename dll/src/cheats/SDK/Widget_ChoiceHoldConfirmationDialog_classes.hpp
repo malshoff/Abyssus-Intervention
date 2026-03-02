@@ -19,36 +19,36 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_ChoiceHoldConfirmationDialog.Widget_ChoiceHoldConfirmationDialog_C
-// 0x00D0 (0x0508 - 0x0438)
+// 0x00D0 (0x0590 - 0x04C0)
 class UWidget_ChoiceHoldConfirmationDialog_C final : public URCommonActivatableWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       DestructAnimation;                                 // 0x0440(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ConstructAnimation;                                // 0x0448(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget;                                // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_160;                            // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Description;                                       // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Header;                                            // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           HoldConfirmationProgressBar;                       // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 W_Button_No;                                       // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 W_Button_Yes;                                      // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_Divider_C*                      Widget_Divider_139;                                // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   HeaderText;                                        // 0x0490(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   DescriptionText;                                   // 0x04A0(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   YesText;                                           // 0x04B0(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   NoText;                                            // 0x04C0(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	TMulticastInlineDelegate<void()>              YesEvent;                                          // 0x04D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              NoEvent;                                           // 0x04E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          IsPressing;                                        // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F1[0x7];                                      // 0x04F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        TimeAtPress;                                       // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        HoldDuration;                                      // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_Divider_C*                      Widget_Divider_139;                                // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_SimpleText_C*                 W_Button_Yes;                                      // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_SimpleText_C*                 W_Button_No;                                       // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           HoldConfirmationProgressBar;                       // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Header;                                            // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Description;                                       // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_160;                            // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget;                                // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ConstructAnimation;                                // 0x0508(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       DestructAnimation;                                 // 0x0510(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class FText                                   HeaderText;                                        // 0x0518(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   DescriptionText;                                   // 0x0528(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   YesText;                                           // 0x0538(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   NoText;                                            // 0x0548(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	TMulticastInlineDelegate<void()>              YesEvent;                                          // 0x0558(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              NoEvent;                                           // 0x0568(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          IsPressing;                                        // 0x0578(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_579[0x7];                                      // 0x0579(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        TimeAtPress;                                       // 0x0580(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        HoldDuration;                                      // 0x0588(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_No_K2Node_ComponentBoundEvent_5_OnPressed__DelegateSignature();
-	void BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature();
-	void BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_4_OnReleased__DelegateSignature();
+	void BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_No_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_SimpleText_K2Node_ComponentBoundEvent_3_OnReleased__DelegateSignature();
+	void BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_6_OnPressed__DelegateSignature();
 	void ClosePanel();
 	void DestructAnimationFinished();
 	void ExecuteUbergraph_Widget_ChoiceHoldConfirmationDialog(int32 EntryPoint);
@@ -61,35 +61,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_ChoiceHoldConfirmationDialog_C">();
+		BP_STATIC_CLASS_IMPL("Widget_ChoiceHoldConfirmationDialog_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_ChoiceHoldConfirmationDialog_C")
 	}
 	static class UWidget_ChoiceHoldConfirmationDialog_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_ChoiceHoldConfirmationDialog_C>();
 	}
 };
-static_assert(alignof(UWidget_ChoiceHoldConfirmationDialog_C) == 0x000008, "Wrong alignment on UWidget_ChoiceHoldConfirmationDialog_C");
-static_assert(sizeof(UWidget_ChoiceHoldConfirmationDialog_C) == 0x000508, "Wrong size on UWidget_ChoiceHoldConfirmationDialog_C");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, UberGraphFrame) == 0x000438, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, DestructAnimation) == 0x000440, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::DestructAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, ConstructAnimation) == 0x000448, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::ConstructAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, CommonActionWidget) == 0x000450, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::CommonActionWidget' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, CommonActionWidget_160) == 0x000458, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::CommonActionWidget_160' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, Description) == 0x000460, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::Description' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, Header) == 0x000468, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::Header' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, HoldConfirmationProgressBar) == 0x000470, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::HoldConfirmationProgressBar' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, W_Button_No) == 0x000478, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::W_Button_No' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, W_Button_Yes) == 0x000480, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::W_Button_Yes' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, Widget_Divider_139) == 0x000488, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::Widget_Divider_139' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, HeaderText) == 0x000490, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::HeaderText' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, DescriptionText) == 0x0004A0, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::DescriptionText' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, YesText) == 0x0004B0, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::YesText' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, NoText) == 0x0004C0, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::NoText' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, YesEvent) == 0x0004D0, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::YesEvent' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, NoEvent) == 0x0004E0, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::NoEvent' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, IsPressing) == 0x0004F0, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::IsPressing' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, TimeAtPress) == 0x0004F8, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::TimeAtPress' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceHoldConfirmationDialog_C, HoldDuration) == 0x000500, "Member 'UWidget_ChoiceHoldConfirmationDialog_C::HoldDuration' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_ChoiceHoldConfirmationDialog_C;
 
 }
 

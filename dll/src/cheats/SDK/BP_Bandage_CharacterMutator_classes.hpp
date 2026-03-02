@@ -32,23 +32,25 @@ public:
 	void K2_DeactivateScript();
 	void K2_OnDamageTaken(class URHealthComponent* Component, const struct FDamageCombatEvent& DamageData);
 	void K2_OnPreDamageTaken(class URHealthComponent* Component, float Damage, int32 DamageSourceMask);
+	void ResetBlockFX();
 
 	class FText GetDescription() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Bandage_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Bandage_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Bandage_CharacterMutator_C")
 	}
 	static class UBP_Bandage_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Bandage_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_Bandage_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_Bandage_CharacterMutator_C");
-static_assert(sizeof(UBP_Bandage_CharacterMutator_C) == 0x000118, "Wrong size on UBP_Bandage_CharacterMutator_C");
-static_assert(offsetof(UBP_Bandage_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_Bandage_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Bandage_CharacterMutator_C, ChanceOnHit) == 0x000110, "Member 'UBP_Bandage_CharacterMutator_C::ChanceOnHit' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Bandage_CharacterMutator_C;
 
 }
 

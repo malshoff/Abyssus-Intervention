@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -41,20 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FrostPassive7_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_FrostPassive7_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FrostPassive7_CharacterMutator_C")
 	}
 	static class UBP_FrostPassive7_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_FrostPassive7_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_FrostPassive7_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_FrostPassive7_CharacterMutator_C");
-static_assert(sizeof(UBP_FrostPassive7_CharacterMutator_C) == 0x000140, "Wrong size on UBP_FrostPassive7_CharacterMutator_C");
-static_assert(offsetof(UBP_FrostPassive7_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_FrostPassive7_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_FrostPassive7_CharacterMutator_C, Instigator_Script_Component) == 0x000110, "Member 'UBP_FrostPassive7_CharacterMutator_C::Instigator_Script_Component' has a wrong offset!");
-static_assert(offsetof(UBP_FrostPassive7_CharacterMutator_C, CachedShardsToSpawn) == 0x000118, "Member 'UBP_FrostPassive7_CharacterMutator_C::CachedShardsToSpawn' has a wrong offset!");
-static_assert(offsetof(UBP_FrostPassive7_CharacterMutator_C, EnemyDeathLocation) == 0x000120, "Member 'UBP_FrostPassive7_CharacterMutator_C::EnemyDeathLocation' has a wrong offset!");
-static_assert(offsetof(UBP_FrostPassive7_CharacterMutator_C, CurrentTarget) == 0x000138, "Member 'UBP_FrostPassive7_CharacterMutator_C::CurrentTarget' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_FrostPassive7_CharacterMutator_C;
 
 }
 

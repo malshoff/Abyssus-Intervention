@@ -24,9 +24,7 @@ struct ABP_Generic_Chest_C_AnimGraph final
 public:
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_Generic_Chest_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_Generic_Chest_C_AnimGraph");
-static_assert(sizeof(ABP_Generic_Chest_C_AnimGraph) == 0x000010, "Wrong size on ABP_Generic_Chest_C_AnimGraph");
-static_assert(offsetof(ABP_Generic_Chest_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'ABP_Generic_Chest_C_AnimGraph::AnimGraph_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Generic_Chest_C_AnimGraph;
 
 // Function ABP_Generic_Chest.ABP_Generic_Chest_C.ExecuteUbergraph_ABP_Generic_Chest
 // 0x0018 (0x0018 - 0x0000)
@@ -43,15 +41,7 @@ public:
 	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest) == 0x000008, "Wrong alignment on ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest");
-static_assert(sizeof(ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest) == 0x000018, "Wrong size on ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest");
-static_assert(offsetof(ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest, EntryPoint) == 0x000000, "Member 'ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000004, "Member 'ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000005, "Member 'ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue) == 0x000008, "Member 'ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x00000C, "Member 'ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest, CallFunc_Less_DoubleDouble_ReturnValue) == 0x00000D, "Member 'ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000010, "Member 'ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Generic_Chest_C_ExecuteUbergraph_ABP_Generic_Chest;
 
 // Function ABP_Generic_Chest.ABP_Generic_Chest_C.SetNewChestState
 // 0x0001 (0x0001 - 0x0000)
@@ -60,9 +50,7 @@ struct ABP_Generic_Chest_C_SetNewChestState final
 public:
 	E_Chest_Animation_State                       NewState;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_Generic_Chest_C_SetNewChestState) == 0x000001, "Wrong alignment on ABP_Generic_Chest_C_SetNewChestState");
-static_assert(sizeof(ABP_Generic_Chest_C_SetNewChestState) == 0x000001, "Wrong size on ABP_Generic_Chest_C_SetNewChestState");
-static_assert(offsetof(ABP_Generic_Chest_C_SetNewChestState, NewState) == 0x000000, "Member 'ABP_Generic_Chest_C_SetNewChestState::NewState' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Generic_Chest_C_SetNewChestState;
 
 }
 

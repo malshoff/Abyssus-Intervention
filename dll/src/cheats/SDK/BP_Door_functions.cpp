@@ -205,23 +205,87 @@ void ABP_Door_C::GetOSIOverrideActor(class AActor** OverrideActor)
 }
 
 
-// Function BP_Door.BP_Door_C.On Teleported
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_Door.BP_Door_C.GetPortalEntranceProximity
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class ARPlayerPawn*                     TeleportedPlayer                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UDMActorProximityBoxComponent*    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Door_C::On_Teleported(class ARPlayerPawn* TeleportedPlayer)
+class UDMActorProximityBoxComponent* ABP_Door_C::GetPortalEntranceProximity()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Door_C", "On Teleported");
+		Func = Class->GetFunction("BP_Door_C", "GetPortalEntranceProximity");
 
-	Params::BP_Door_C_On_Teleported Parms{};
-
-	Parms.TeleportedPlayer = TeleportedPlayer;
+	Params::BP_Door_C_GetPortalEntranceProximity Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_Door.BP_Door_C.GetPortalExitLocation
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class USceneComponent*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class USceneComponent* ABP_Door_C::GetPortalExitLocation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Door_C", "GetPortalExitLocation");
+
+	Params::BP_Door_C_GetPortalExitLocation Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_Door.BP_Door_C.GetRequireKeyState
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   Require_Key                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Door_C::GetRequireKeyState(bool* Require_Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Door_C", "GetRequireKeyState");
+
+	Params::BP_Door_C_GetRequireKeyState Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Require_Key != nullptr)
+		*Require_Key = Parms.Require_Key;
+}
+
+
+// Function BP_Door.BP_Door_C.IsShareable
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_Door_C::IsShareable(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Door_C", "IsShareable");
+
+	Params::BP_Door_C_IsShareable Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -381,6 +445,26 @@ void ABP_Door_C::OnSegmentStarted(class AREnemySpawnAreaSegment* EnemySpawnAreaS
 }
 
 
+// Function BP_Door.BP_Door_C.OnTeleported
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ARPlayerPawn*                     RPlayerPawn                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Door_C::OnTeleported(class ARPlayerPawn* RPlayerPawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Door_C", "OnTeleported");
+
+	Params::BP_Door_C_OnTeleported Parms{};
+
+	Parms.RPlayerPawn = RPlayerPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_Door.BP_Door_C.OpenDoorMulticast
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 
@@ -505,6 +589,26 @@ void ABP_Door_C::SetupHighlight()
 }
 
 
+// Function BP_Door.BP_Door_C.ShareInteractableActor
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class APlayerController*          PlayerController                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Door_C::ShareInteractableActor(const class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Door_C", "ShareInteractableActor");
+
+	Params::BP_Door_C_ShareInteractableActor Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_Door.BP_Door_C.SpawnPortalSFX
 // (BlueprintCallable, BlueprintEvent)
 
@@ -558,26 +662,6 @@ void ABP_Door_C::StartOpening()
 		Func = Class->GetFunction("BP_Door_C", "StartOpening");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Door.BP_Door_C.Teleport Player
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ARPlayerPawn*                     PlayerToTeleport                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Door_C::Teleport_Player(class ARPlayerPawn* PlayerToTeleport)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Door_C", "Teleport Player");
-
-	Params::BP_Door_C_Teleport_Player Parms{};
-
-	Parms.PlayerToTeleport = PlayerToTeleport;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "RGame_structs.hpp"
 #include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
-#include "RGame_structs.hpp"
 
 
 namespace SDK::Params
@@ -66,43 +66,7 @@ public:
 	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0180(0x0010)()
 	struct FRChatLogMessage                       K2Node_MakeStruct_RChatLogMessage;                 // 0x0190(0x0020)()
 };
-static_assert(alignof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown) == 0x000008, "Wrong alignment on Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown");
-static_assert(sizeof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown) == 0x0001B0, "Wrong size on Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, EntryPoint) == 0x000000, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, Temp_byte_Variable) == 0x000014, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, Temp_byte_Variable_1) == 0x000015, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, Temp_bool_IsClosed_Variable) == 0x000016, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, Temp_bool_Has_Been_Initd_Variable) == 0x000017, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, Temp_text_Variable) == 0x000018, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, K2Node_Event_MyGeometry) == 0x000028, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, K2Node_Event_InDeltaTime) == 0x000060, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_IsValid_ReturnValue) == 0x000064, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_GetGScriptCategory_ReturnValue) == 0x000068, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_GetGScriptCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_GetGScriptComponent_ReturnValue) == 0x000070, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_GetGScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_IsValid_ReturnValue_1) == 0x000078, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_GetScriptInCategory_ReturnValue) == 0x000080, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_GetScriptInCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, K2Node_DynamicCast_AsBP_Downed_Status_Effect) == 0x000088, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::K2Node_DynamicCast_AsBP_Downed_Status_Effect' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, K2Node_DynamicCast_bSuccess) == 0x000090, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_K2_IsTimerPausedHandle_ReturnValue) == 0x000091, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_K2_IsTimerPausedHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, Temp_bool_Variable) == 0x000092, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_GetOwningPlayer_ReturnValue) == 0x000098, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, Temp_bool_Variable_1) == 0x0000A0, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, K2Node_Select_Default) == 0x0000A1, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, Temp_text_Variable_1) == 0x0000A8, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_IsValid_ReturnValue_2) == 0x0000B8, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, K2Node_Select_Default_1) == 0x0000C0, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_GetPlayerName_ReturnValue) == 0x0000D0, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_Conv_StringToText_ReturnValue) == 0x0000E0, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_GetRGameUserSettings_ReturnValue) == 0x0000F0, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, K2Node_MakeStruct_FormatArgumentData) == 0x0000F8, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, K2Node_MakeArray_Array) == 0x000140, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_GetShowPlayerHUD_ReturnValue) == 0x000150, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_GetShowPlayerHUD_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_Format_ReturnValue) == 0x000158, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_Conv_TextToString_ReturnValue) == 0x000168, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_Conv_StringToName_ReturnValue) == 0x000178, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, CallFunc_Conv_NameToText_ReturnValue) == 0x000180, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown, K2Node_MakeStruct_RChatLogMessage) == 0x000190, "Member 'Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown::K2Node_MakeStruct_RChatLogMessage' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PlayerDown_C_ExecuteUbergraph_Widget_PlayerDown;
 
 // Function Widget_PlayerDown.Widget_PlayerDown_C.SetAllVisibility
 // 0x0018 (0x0018 - 0x0000)
@@ -119,16 +83,7 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PlayerDown_C_SetAllVisibility) == 0x000008, "Wrong alignment on Widget_PlayerDown_C_SetAllVisibility");
-static_assert(sizeof(Widget_PlayerDown_C_SetAllVisibility) == 0x000018, "Wrong size on Widget_PlayerDown_C_SetAllVisibility");
-static_assert(offsetof(Widget_PlayerDown_C_SetAllVisibility, NewValue) == 0x000000, "Member 'Widget_PlayerDown_C_SetAllVisibility::NewValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_SetAllVisibility, Temp_bool_Variable) == 0x000001, "Member 'Widget_PlayerDown_C_SetAllVisibility::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_SetAllVisibility, Temp_byte_Variable) == 0x000002, "Member 'Widget_PlayerDown_C_SetAllVisibility::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_SetAllVisibility, Temp_byte_Variable_1) == 0x000003, "Member 'Widget_PlayerDown_C_SetAllVisibility::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_SetAllVisibility, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000008, "Member 'Widget_PlayerDown_C_SetAllVisibility::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_SetAllVisibility, CallFunc_GetShowPlayerHUD_ReturnValue) == 0x000010, "Member 'Widget_PlayerDown_C_SetAllVisibility::CallFunc_GetShowPlayerHUD_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_SetAllVisibility, CallFunc_BooleanAND_ReturnValue) == 0x000011, "Member 'Widget_PlayerDown_C_SetAllVisibility::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_SetAllVisibility, K2Node_Select_Default) == 0x000012, "Member 'Widget_PlayerDown_C_SetAllVisibility::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PlayerDown_C_SetAllVisibility;
 
 // Function Widget_PlayerDown.Widget_PlayerDown_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -138,10 +93,7 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PlayerDown_C_Tick) == 0x000004, "Wrong alignment on Widget_PlayerDown_C_Tick");
-static_assert(sizeof(Widget_PlayerDown_C_Tick) == 0x00003C, "Wrong size on Widget_PlayerDown_C_Tick");
-static_assert(offsetof(Widget_PlayerDown_C_Tick, MyGeometry) == 0x000000, "Member 'Widget_PlayerDown_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDown_C_Tick, InDeltaTime) == 0x000038, "Member 'Widget_PlayerDown_C_Tick::InDeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PlayerDown_C_Tick;
 
 }
 

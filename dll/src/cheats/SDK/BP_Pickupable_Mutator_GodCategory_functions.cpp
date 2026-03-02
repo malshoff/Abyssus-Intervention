@@ -111,8 +111,9 @@ void ABP_Pickupable_Mutator_GodCategory_C::GenerateGodCategory(class URMutatorRe
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class URMutatorRewardCategoryDataAsset* GodCategory                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class URMutatorPrimaryAsset*            BoughtMutatorPA                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Pickupable_Mutator_GodCategory_C::GenerateGodMutatorOptionsFromGodCategory(class URMutatorRewardCategoryDataAsset* GodCategory)
+void ABP_Pickupable_Mutator_GodCategory_C::GenerateGodMutatorOptionsFromGodCategory(class URMutatorRewardCategoryDataAsset* GodCategory, class URMutatorPrimaryAsset* BoughtMutatorPA)
 {
 	static class UFunction* Func = nullptr;
 
@@ -122,6 +123,7 @@ void ABP_Pickupable_Mutator_GodCategory_C::GenerateGodMutatorOptionsFromGodCateg
 	Params::BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory Parms{};
 
 	Parms.GodCategory = GodCategory;
+	Parms.BoughtMutatorPA = BoughtMutatorPA;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -403,15 +405,21 @@ void ABP_Pickupable_Mutator_GodCategory_C::ReceiveBeginPlay()
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.RegenerateOptions
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URMutatorPrimaryAsset*            BoughtMutatorPA                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Pickupable_Mutator_GodCategory_C::RegenerateOptions()
+void ABP_Pickupable_Mutator_GodCategory_C::RegenerateOptions(class URMutatorPrimaryAsset* BoughtMutatorPA)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_Pickupable_Mutator_GodCategory_C", "RegenerateOptions");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_Pickupable_Mutator_GodCategory_C_RegenerateOptions Parms{};
+
+	Parms.BoughtMutatorPA = BoughtMutatorPA;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -483,19 +491,39 @@ void ABP_Pickupable_Mutator_GodCategory_C::UpdateGeneratedMutatorOptions(const T
 }
 
 
-// Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.UpdateMerchantOptionsAfterTriggerWasBought
+// Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.UpdateMutatorMerchantOptionsBlessings
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class URMutatorPrimaryAsset*            BoughtMutator                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Pickupable_Mutator_GodCategory_C::UpdateMerchantOptionsAfterTriggerWasBought(class URMutatorPrimaryAsset* BoughtMutator)
+void ABP_Pickupable_Mutator_GodCategory_C::UpdateMutatorMerchantOptionsBlessings(class URMutatorPrimaryAsset* BoughtMutator)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Pickupable_Mutator_GodCategory_C", "UpdateMerchantOptionsAfterTriggerWasBought");
+		Func = Class->GetFunction("BP_Pickupable_Mutator_GodCategory_C", "UpdateMutatorMerchantOptionsBlessings");
 
-	Params::BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought Parms{};
+	Params::BP_Pickupable_Mutator_GodCategory_C_UpdateMutatorMerchantOptionsBlessings Parms{};
+
+	Parms.BoughtMutator = BoughtMutator;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.UpdateMutatorMerchantOptionsTriggers
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URMutatorPrimaryAsset*            BoughtMutator                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Pickupable_Mutator_GodCategory_C::UpdateMutatorMerchantOptionsTriggers(class URMutatorPrimaryAsset* BoughtMutator)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Pickupable_Mutator_GodCategory_C", "UpdateMutatorMerchantOptionsTriggers");
+
+	Params::BP_Pickupable_Mutator_GodCategory_C_UpdateMutatorMerchantOptionsTriggers Parms{};
 
 	Parms.BoughtMutator = BoughtMutator;
 

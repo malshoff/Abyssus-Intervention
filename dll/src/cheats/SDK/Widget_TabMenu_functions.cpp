@@ -17,69 +17,132 @@
 namespace SDK
 {
 
-// Function Widget_TabMenu.Widget_TabMenu_C.StopWeaponFire
+// Function Widget_TabMenu.Widget_TabMenu_C.CreatePlayerEntryWidgets
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWidget_TabMenu_C::StopWeaponFire()
+void UWidget_TabMenu_C::CreatePlayerEntryWidgets()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_C", "StopWeaponFire");
+		Func = Class->GetFunction("Widget_TabMenu_C", "CreatePlayerEntryWidgets");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_TabMenu.Widget_TabMenu_C.OnWidgetPushedOrPopped
-// (Private, BlueprintCallable, BlueprintEvent)
+// Function Widget_TabMenu.Widget_TabMenu_C.ExecuteUbergraph_Widget_TabMenu
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class URCommonActivatableWidget*        PushedWidget                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_TabMenu_C::OnWidgetPushedOrPopped(class URCommonActivatableWidget* PushedWidget)
+void UWidget_TabMenu_C::ExecuteUbergraph_Widget_TabMenu(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_C", "OnWidgetPushedOrPopped");
+		Func = Class->GetFunction("Widget_TabMenu_C", "ExecuteUbergraph_Widget_TabMenu");
 
-	Params::Widget_TabMenu_C_OnWidgetPushedOrPopped Parms{};
+	Params::Widget_TabMenu_C_ExecuteUbergraph_Widget_TabMenu Parms{};
 
-	Parms.PushedWidget = PushedWidget;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_TabMenu.Widget_TabMenu_C.OnVisibilityChanged_Event
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Widget_TabMenu.Widget_TabMenu_C.FocusDesiredFocusTarget
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWidget_TabMenu_C::OnVisibilityChanged_Event(ESlateVisibility InVisibility)
+void UWidget_TabMenu_C::FocusDesiredFocusTarget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_C", "OnVisibilityChanged_Event");
+		Func = Class->GetFunction("Widget_TabMenu_C", "FocusDesiredFocusTarget");
 
-	Params::Widget_TabMenu_C_OnVisibilityChanged_Event Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InVisibility = InVisibility;
+
+// Function Widget_TabMenu.Widget_TabMenu_C.GetDesiredFocusTarget
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UUserWidget**                     Target                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_TabMenu_C::GetDesiredFocusTarget(class UUserWidget** Target)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenu_C", "GetDesiredFocusTarget");
+
+	Params::Widget_TabMenu_C_GetDesiredFocusTarget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Target != nullptr)
+		*Target = Parms.Target;
+}
+
+
+// Function Widget_TabMenu.Widget_TabMenu_C.MenuClosed
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenu_C::MenuClosed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenu_C", "MenuClosed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_TabMenu.Widget_TabMenu_C.MenuOpened
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenu_C::MenuOpened()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenu_C", "MenuOpened");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_TabMenu.Widget_TabMenu_C.OnFocusLost
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+
+void UWidget_TabMenu_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenu_C", "OnFocusLost");
+
+	Params::Widget_TabMenu_C_OnFocusLost Parms{};
+
+	Parms.InFocusEvent = std::move(InFocusEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_TabMenu.Widget_TabMenu_C.OnLevelChanged_Event
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_TabMenu.Widget_TabMenu_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_TabMenu_C::OnLevelChanged_Event()
+void UWidget_TabMenu_C::OnInitialized()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_C", "OnLevelChanged_Event");
+		Func = Class->GetFunction("Widget_TabMenu_C", "OnInitialized");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -110,132 +173,69 @@ struct FEventReply UWidget_TabMenu_C::OnKeyDown(const struct FGeometry& MyGeomet
 }
 
 
-// Function Widget_TabMenu.Widget_TabMenu_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_TabMenu.Widget_TabMenu_C.OnLevelChanged_Event
+// (BlueprintCallable, BlueprintEvent)
 
-void UWidget_TabMenu_C::OnInitialized()
+void UWidget_TabMenu_C::OnLevelChanged_Event()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_C", "OnInitialized");
+		Func = Class->GetFunction("Widget_TabMenu_C", "OnLevelChanged_Event");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_TabMenu.Widget_TabMenu_C.OnFocusLost
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_TabMenu.Widget_TabMenu_C.OnVisibilityChanged_Event
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_TabMenu_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
+void UWidget_TabMenu_C::OnVisibilityChanged_Event(ESlateVisibility InVisibility)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_C", "OnFocusLost");
+		Func = Class->GetFunction("Widget_TabMenu_C", "OnVisibilityChanged_Event");
 
-	Params::Widget_TabMenu_C_OnFocusLost Parms{};
+	Params::Widget_TabMenu_C_OnVisibilityChanged_Event Parms{};
 
-	Parms.InFocusEvent = std::move(InFocusEvent);
+	Parms.InVisibility = InVisibility;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_TabMenu.Widget_TabMenu_C.MenuOpened
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_TabMenu_C::MenuOpened()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_C", "MenuOpened");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_TabMenu.Widget_TabMenu_C.MenuClosed
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_TabMenu_C::MenuClosed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_C", "MenuClosed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_TabMenu.Widget_TabMenu_C.GetDesiredFocusTarget
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function Widget_TabMenu.Widget_TabMenu_C.OnWidgetPushedOrPopped
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UUserWidget**                     Target                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class URCommonActivatableWidget*        PushedWidget                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_TabMenu_C::GetDesiredFocusTarget(class UUserWidget** Target)
+void UWidget_TabMenu_C::OnWidgetPushedOrPopped(class URCommonActivatableWidget* PushedWidget)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_C", "GetDesiredFocusTarget");
+		Func = Class->GetFunction("Widget_TabMenu_C", "OnWidgetPushedOrPopped");
 
-	Params::Widget_TabMenu_C_GetDesiredFocusTarget Parms{};
+	Params::Widget_TabMenu_C_OnWidgetPushedOrPopped Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Target != nullptr)
-		*Target = Parms.Target;
-}
-
-
-// Function Widget_TabMenu.Widget_TabMenu_C.FocusDesiredFocusTarget
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWidget_TabMenu_C::FocusDesiredFocusTarget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_C", "FocusDesiredFocusTarget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_TabMenu.Widget_TabMenu_C.ExecuteUbergraph_Widget_TabMenu
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_TabMenu_C::ExecuteUbergraph_Widget_TabMenu(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_C", "ExecuteUbergraph_Widget_TabMenu");
-
-	Params::Widget_TabMenu_C_ExecuteUbergraph_Widget_TabMenu Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.PushedWidget = PushedWidget;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_TabMenu.Widget_TabMenu_C.CreatePlayerEntryWidgets
+// Function Widget_TabMenu.Widget_TabMenu_C.StopWeaponFire
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWidget_TabMenu_C::CreatePlayerEntryWidgets()
+void UWidget_TabMenu_C::StopWeaponFire()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_C", "CreatePlayerEntryWidgets");
+		Func = Class->GetFunction("Widget_TabMenu_C", "StopWeaponFire");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

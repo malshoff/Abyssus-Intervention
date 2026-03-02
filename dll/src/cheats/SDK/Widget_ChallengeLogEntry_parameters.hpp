@@ -10,33 +10,54 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_ChallengeLogEntry_C_PreConstruct final
+// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.ApplyScrollHighlight
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_ChallengeLogEntry_C_ApplyScrollHighlight final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue;         // 0x0000(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ChallengeLogEntry_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_ChallengeLogEntry_C_PreConstruct");
-static_assert(sizeof(Widget_ChallengeLogEntry_C_PreConstruct) == 0x000001, "Wrong size on Widget_ChallengeLogEntry_C_PreConstruct");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_ChallengeLogEntry_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChallengeLogEntry_C_ApplyScrollHighlight;
 
-// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.OnListItemObjectSet
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_ChallengeLogEntry_C_OnListItemObjectSet final
+// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.ExecuteUbergraph_Widget_ChallengeLogEntry
+// 0x00F8 (0x00F8 - 0x0000)
+struct Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry final
 {
 public:
-	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0004(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue_1;              // 0x0014(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_Event_ListItemObject;                       // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URChallengeGridItem*                    K2Node_DynamicCast_AsRChallenge_Grid_Item;         // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0048(0x0048)(HasGetValueTypeHash)
+	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue;          // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0098(0x0010)(ReferenceParm)
+	bool                                          CallFunc_IsChallengeCompleted_ReturnValue;         // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00B0(0x0010)()
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue_1;         // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsShippingBuild_ReturnValue;           // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue_1;        // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ChallengeLogEntry_C_OnListItemObjectSet) == 0x000008, "Wrong alignment on Widget_ChallengeLogEntry_C_OnListItemObjectSet");
-static_assert(sizeof(Widget_ChallengeLogEntry_C_OnListItemObjectSet) == 0x000008, "Wrong size on Widget_ChallengeLogEntry_C_OnListItemObjectSet");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_OnListItemObjectSet, ListItemObject) == 0x000000, "Member 'Widget_ChallengeLogEntry_C_OnListItemObjectSet::ListItemObject' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry;
 
 // Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.GetToolTipWidget
 // 0x0090 (0x0090 - 0x0000)
@@ -67,81 +88,25 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValidSoftClassReference_ReturnValue;    // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ChallengeLogEntry_C_GetToolTipWidget) == 0x000008, "Wrong alignment on Widget_ChallengeLogEntry_C_GetToolTipWidget");
-static_assert(sizeof(Widget_ChallengeLogEntry_C_GetToolTipWidget) == 0x000090, "Wrong size on Widget_ChallengeLogEntry_C_GetToolTipWidget");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, ReturnValue) == 0x000000, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, Tooltip) == 0x000008, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::Tooltip' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000010, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, CallFunc_GetListItemObject_ReturnValue) == 0x000018, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::CallFunc_GetListItemObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, CallFunc_GetChallengeManager_ReturnValue) == 0x000020, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, K2Node_DynamicCast_AsRChallenge_Grid_Item) == 0x000028, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::K2Node_DynamicCast_AsRChallenge_Grid_Item' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, CallFunc_GetChallengeRewardAssets_OutReward) == 0x000038, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::CallFunc_GetChallengeRewardAssets_OutReward' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, CallFunc_GetChallengeRewardAssets_OutSoulFragmentsReward) == 0x000040, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::CallFunc_GetChallengeRewardAssets_OutSoulFragmentsReward' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, CallFunc_GetChallengeRewardAssets_ReturnValue) == 0x000044, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::CallFunc_GetChallengeRewardAssets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, CallFunc_GetOwningPlayer_ReturnValue) == 0x000048, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, CallFunc_IsValid_ReturnValue) == 0x000050, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, CallFunc_Create_ReturnValue) == 0x000058, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, K2Node_DynamicCast_AsRMutator_Primary_Asset) == 0x000060, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::K2Node_DynamicCast_AsRMutator_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, K2Node_DynamicCast_bSuccess_1) == 0x000068, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000070, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, K2Node_DynamicCast_AsRCharacter_Mutator_Primary_Asset) == 0x000080, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::K2Node_DynamicCast_AsRCharacter_Mutator_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, K2Node_DynamicCast_bSuccess_2) == 0x000088, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_GetToolTipWidget, CallFunc_IsValidSoftClassReference_ReturnValue) == 0x000089, "Member 'Widget_ChallengeLogEntry_C_GetToolTipWidget::CallFunc_IsValidSoftClassReference_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChallengeLogEntry_C_GetToolTipWidget;
 
-// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.ExecuteUbergraph_Widget_ChallengeLogEntry
-// 0x00C8 (0x00C8 - 0x0000)
-struct Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                K2Node_Event_ListItemObject;                       // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class URChallengeGridItem*                    K2Node_DynamicCast_AsRChallenge_Grid_Item;         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0038(0x0048)(HasGetValueTypeHash)
-	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue;          // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0088(0x0010)(ReferenceParm)
-	bool                                          CallFunc_IsChallengeCompleted_ReturnValue;         // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00A0(0x0010)()
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue_1;         // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry) == 0x000008, "Wrong alignment on Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry");
-static_assert(sizeof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry) == 0x0000C8, "Wrong size on Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry, EntryPoint) == 0x000000, "Member 'Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry, CallFunc_PlayAnimation_ReturnValue_1) == 0x000010, "Member 'Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry, K2Node_Event_ListItemObject) == 0x000018, "Member 'Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry::K2Node_Event_ListItemObject' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry, K2Node_DynamicCast_AsRChallenge_Grid_Item) == 0x000020, "Member 'Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry::K2Node_DynamicCast_AsRChallenge_Grid_Item' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry, CallFunc_GetOwningPlayer_ReturnValue) == 0x000030, "Member 'Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry, K2Node_MakeStruct_FormatArgumentData) == 0x000038, "Member 'Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry, CallFunc_GetChallengeManager_ReturnValue) == 0x000080, "Member 'Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry, K2Node_MakeArray_Array) == 0x000088, "Member 'Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry, CallFunc_IsChallengeCompleted_ReturnValue) == 0x000098, "Member 'Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry::CallFunc_IsChallengeCompleted_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry, CallFunc_Format_ReturnValue) == 0x0000A0, "Member 'Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry, K2Node_Event_IsDesignTime) == 0x0000B0, "Member 'Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry, CallFunc_GetDynamicMaterial_ReturnValue) == 0x0000B8, "Member 'Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry, CallFunc_GetDynamicMaterial_ReturnValue_1) == 0x0000C0, "Member 'Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry::CallFunc_GetDynamicMaterial_ReturnValue_1' has a wrong offset!");
-
-// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.ApplyScrollHighlight
+// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.OnListItemObjectSet
 // 0x0008 (0x0008 - 0x0000)
-struct Widget_ChallengeLogEntry_C_ApplyScrollHighlight final
+struct Widget_ChallengeLogEntry_C_OnListItemObjectSet final
 {
 public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ChallengeLogEntry_C_ApplyScrollHighlight) == 0x000008, "Wrong alignment on Widget_ChallengeLogEntry_C_ApplyScrollHighlight");
-static_assert(sizeof(Widget_ChallengeLogEntry_C_ApplyScrollHighlight) == 0x000008, "Wrong size on Widget_ChallengeLogEntry_C_ApplyScrollHighlight");
-static_assert(offsetof(Widget_ChallengeLogEntry_C_ApplyScrollHighlight, CallFunc_PlayAnimationForward_ReturnValue) == 0x000000, "Member 'Widget_ChallengeLogEntry_C_ApplyScrollHighlight::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChallengeLogEntry_C_OnListItemObjectSet;
+
+// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_ChallengeLogEntry_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_ChallengeLogEntry_C_PreConstruct;
 
 }
 

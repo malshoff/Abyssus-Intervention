@@ -32,27 +32,28 @@ public:
 	void K2_DeactivateScript();
 	void MutatorRankChanged(int32 NewRank, class URMutatorPrimaryAsset* MutatorPrimaryAsset);
 	void RemoveDamageModifiers();
-	void RunAbilityBehavior(class AActor* TriggeringActor, int32 DamageSourceMask, float HealthDamage, class AActor* OptionalAvatarActor);
+	void RunAbilityBehavior(class AActor* TriggeringActor, int32 DamageSourceMask, float HealthDamage, class AActor* OptionalAvatarActor, const struct FRMutableFloat& SpecificCombatEventModifier);
 	void RunBehaviour(class AActor* TriggeringActor, float Damage);
 	void RunMeleeBehavior();
-	void RunPrimaryFireBehavior(float HealthDamage);
+	void RunPrimaryFireBehavior(float HealthDamage, class AActor* TriggeringActor);
 	void RunSecondaryFireBehavior(class AActor* TriggeringActor, float HealthDamage);
 	void UpdateDamageModifiers();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ApplyFire_Behavior_Mutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_ApplyFire_Behavior_Mutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ApplyFire_Behavior_Mutator_C")
 	}
 	static class UBP_ApplyFire_Behavior_Mutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ApplyFire_Behavior_Mutator_C>();
 	}
 };
-static_assert(alignof(UBP_ApplyFire_Behavior_Mutator_C) == 0x000008, "Wrong alignment on UBP_ApplyFire_Behavior_Mutator_C");
-static_assert(sizeof(UBP_ApplyFire_Behavior_Mutator_C) == 0x000120, "Wrong size on UBP_ApplyFire_Behavior_Mutator_C");
-static_assert(offsetof(UBP_ApplyFire_Behavior_Mutator_C, UberGraphFrame) == 0x000110, "Member 'UBP_ApplyFire_Behavior_Mutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_ApplyFire_Behavior_Mutator_C, BaseDamage) == 0x000118, "Member 'UBP_ApplyFire_Behavior_Mutator_C::BaseDamage' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_ApplyFire_Behavior_Mutator_C;
 
 }
 

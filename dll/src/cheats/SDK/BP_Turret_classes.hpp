@@ -38,7 +38,7 @@ public:
 	class ARPlayerPawn*                           OwningPlayerPawn;                                  // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class ARNPCPawnBase*                          TargetEnemy;                                       // 0x0300(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FRMutableFloat                         Damage;                                            // 0x0308(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FRMutableFloat                         RateOfFire;                                        // 0x0430(0x0128)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
+	struct FRMutableFloat                         RateOfFire;                                        // 0x0430(0x0128)(Edit, BlueprintVisible, Net, DisableEditOnInstance, RepNotify)
 	double                                        PostDeathLifeSpan;                                 // 0x0558(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UProximitySphere*                       ProximitySphere;                                   // 0x0560(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	double                                        PerTurretDamageIncreasePercent;                    // 0x0568(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -79,6 +79,7 @@ public:
 	void DisableSharingIsCaringBuff();
 	void ExecuteUbergraph_BP_Turret(int32 EntryPoint);
 	void FindAndAttackTarget();
+	struct FVector FindTargettingLocation(class AActor* Target);
 	void FireProjectileSpawnFX(const struct FVector& Location, const struct FVector& Direction);
 	void GetProjectileClass(class UClass** AsRProjectile);
 	void OnActorEnterProximity(class AActor* Actor);
@@ -87,62 +88,30 @@ public:
 	void OnInvoke_9DC7927B469A9972D31A4CBFA159964B();
 	void OnPlayerEnterProximity(class AActor* Actor);
 	void OnPlayerExitProximity(class AActor* Actor);
+	void OnRep_RateOfFire();
 	void PlayCutoutTimeline(double Duration, double From, double To);
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ResetFoundTargetSFX();
 	void ToggleUnstableCoresVFX(bool Visible);
 	void ToggleUnstableCoresVFXMulticast(bool Visible);
-	void UpdateLifeTime(double LifetimeMultiplier);
+	void UpdateLifeTime(double LifeTimeMultiplier);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Turret_C">();
+		BP_STATIC_CLASS_IMPL("BP_Turret_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Turret_C")
 	}
 	static class ABP_Turret_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Turret_C>();
 	}
 };
-static_assert(alignof(ABP_Turret_C) == 0x000008, "Wrong alignment on ABP_Turret_C");
-static_assert(sizeof(ABP_Turret_C) == 0x000600, "Wrong size on ABP_Turret_C");
-static_assert(offsetof(ABP_Turret_C, UberGraphFrame) == 0x0002A8, "Member 'ABP_Turret_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, SK_PlayerTurret_Body) == 0x0002B0, "Member 'ABP_Turret_C::SK_PlayerTurret_Body' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, Capsule) == 0x0002B8, "Member 'ABP_Turret_C::Capsule' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, DMActorProximitySphere2) == 0x0002C0, "Member 'ABP_Turret_C::DMActorProximitySphere2' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, NS_PlayerTurret_UnstablePowerCores_Attached_01) == 0x0002C8, "Member 'ABP_Turret_C::NS_PlayerTurret_UnstablePowerCores_Attached_01' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, PointLight) == 0x0002D0, "Member 'ABP_Turret_C::PointLight' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, DMActorProximitySphere) == 0x0002D8, "Member 'ABP_Turret_C::DMActorProximitySphere' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, RHealth) == 0x0002E0, "Member 'ABP_Turret_C::RHealth' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, CutoutTimeline_Percentage_EE32214E416CC0C143F31AB9170F60AE) == 0x0002E8, "Member 'ABP_Turret_C::CutoutTimeline_Percentage_EE32214E416CC0C143F31AB9170F60AE' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, CutoutTimeline__Direction_EE32214E416CC0C143F31AB9170F60AE) == 0x0002EC, "Member 'ABP_Turret_C::CutoutTimeline__Direction_EE32214E416CC0C143F31AB9170F60AE' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, CutoutTimeline) == 0x0002F0, "Member 'ABP_Turret_C::CutoutTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, OwningPlayerPawn) == 0x0002F8, "Member 'ABP_Turret_C::OwningPlayerPawn' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, TargetEnemy) == 0x000300, "Member 'ABP_Turret_C::TargetEnemy' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, Damage) == 0x000308, "Member 'ABP_Turret_C::Damage' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, RateOfFire) == 0x000430, "Member 'ABP_Turret_C::RateOfFire' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, PostDeathLifeSpan) == 0x000558, "Member 'ABP_Turret_C::PostDeathLifeSpan' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, ProximitySphere) == 0x000560, "Member 'ABP_Turret_C::ProximitySphere' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, PerTurretDamageIncreasePercent) == 0x000568, "Member 'ABP_Turret_C::PerTurretDamageIncreasePercent' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, OnProjectileFired) == 0x000570, "Member 'ABP_Turret_C::OnProjectileFired' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, PerPlayerFirerateIncreasePercent) == 0x000580, "Member 'ABP_Turret_C::PerPlayerFirerateIncreasePercent' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, SniperMode) == 0x000588, "Member 'ABP_Turret_C::SniperMode' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, SharingIsCaringTimer) == 0x000590, "Member 'ABP_Turret_C::SharingIsCaringTimer' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, TargetHorizontalRotation) == 0x000598, "Member 'ABP_Turret_C::TargetHorizontalRotation' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, TargetVerticalRotation) == 0x00059C, "Member 'ABP_Turret_C::TargetVerticalRotation' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, HasUnstablePowerCores) == 0x0005A0, "Member 'ABP_Turret_C::HasUnstablePowerCores' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, MSS_PassiveLoop) == 0x0005A8, "Member 'ABP_Turret_C::MSS_PassiveLoop' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, MSS_TargetFound) == 0x0005B0, "Member 'ABP_Turret_C::MSS_TargetFound' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, FireTimer) == 0x0005B8, "Member 'ABP_Turret_C::FireTimer' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, bShouldUpdateRateOfFireTimer) == 0x0005C0, "Member 'ABP_Turret_C::bShouldUpdateRateOfFireTimer' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, ProximitySphere2) == 0x0005C8, "Member 'ABP_Turret_C::ProximitySphere2' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, LifeTimeTimer) == 0x0005D0, "Member 'ABP_Turret_C::LifeTimeTimer' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, RemainingLifeTime) == 0x0005D8, "Member 'ABP_Turret_C::RemainingLifeTime' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, LastFiredAtTarget) == 0x0005E0, "Member 'ABP_Turret_C::LastFiredAtTarget' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, MoraleBoostStacks) == 0x0005E8, "Member 'ABP_Turret_C::MoraleBoostStacks' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, CachedController) == 0x0005F0, "Member 'ABP_Turret_C::CachedController' has a wrong offset!");
-static_assert(offsetof(ABP_Turret_C, SpawnDelay) == 0x0005F8, "Member 'ABP_Turret_C::SpawnDelay' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Turret_C;
 
 }
 

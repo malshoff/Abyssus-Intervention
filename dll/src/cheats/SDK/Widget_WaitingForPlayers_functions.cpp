@@ -31,6 +31,20 @@ void UWidget_WaitingForPlayers_C::Construct()
 }
 
 
+// Function Widget_WaitingForPlayers.Widget_WaitingForPlayers_C.ControlMappingsRebuiltDelegate_Event
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_WaitingForPlayers_C::ControlMappingsRebuiltDelegate_Event()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_WaitingForPlayers_C", "ControlMappingsRebuiltDelegate_Event");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Widget_WaitingForPlayers.Widget_WaitingForPlayers_C.ExecuteUbergraph_Widget_WaitingForPlayers
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -175,6 +189,26 @@ void UWidget_WaitingForPlayers_C::OnUngluTeleportSequenceStarted_Event()
 }
 
 
+// Function Widget_WaitingForPlayers.Widget_WaitingForPlayers_C.OnVisibilityChanged_Event
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_WaitingForPlayers_C::OnVisibilityChanged_Event(ESlateVisibility InVisibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_WaitingForPlayers_C", "OnVisibilityChanged_Event");
+
+	Params::Widget_WaitingForPlayers_C_OnVisibilityChanged_Event Parms{};
+
+	Parms.InVisibility = InVisibility;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Widget_WaitingForPlayers.Widget_WaitingForPlayers_C.OnVoteToProceed
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -230,6 +264,26 @@ void UWidget_WaitingForPlayers_C::StopWait()
 		Func = Class->GetFunction("Widget_WaitingForPlayers_C", "StopWait");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_WaitingForPlayers.Widget_WaitingForPlayers_C.UpdateKeyboardHelper
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECommonInputType                        bNewInputType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_WaitingForPlayers_C::UpdateKeyboardHelper(ECommonInputType bNewInputType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_WaitingForPlayers_C", "UpdateKeyboardHelper");
+
+	Params::Widget_WaitingForPlayers_C_UpdateKeyboardHelper Parms{};
+
+	Parms.bNewInputType = bNewInputType;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

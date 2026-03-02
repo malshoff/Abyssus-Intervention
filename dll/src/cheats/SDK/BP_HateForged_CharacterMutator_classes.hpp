@@ -33,26 +33,25 @@ public:
 	void K2_DeactivateScript();
 	void Multicast_PlayerSound();
 	void OnDamageDealt(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData);
-	void OnFailed_C5CC665D482807BD6E7B8CBC1206160E();
 	void OnPreDealtDamage(class ARPawnBase* Pawn, class AActor* DamagedActor, bool bWasCritical, int32 DamageSourceMask);
-	void OnSoundPlayed_C5CC665D482807BD6E7B8CBC1206160E();
 
 	class FText GetDescription() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_HateForged_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_HateForged_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_HateForged_CharacterMutator_C")
 	}
 	static class UBP_HateForged_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_HateForged_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_HateForged_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_HateForged_CharacterMutator_C");
-static_assert(sizeof(UBP_HateForged_CharacterMutator_C) == 0x000118, "Wrong size on UBP_HateForged_CharacterMutator_C");
-static_assert(offsetof(UBP_HateForged_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_HateForged_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_HateForged_CharacterMutator_C, DamageMultiplier) == 0x000110, "Member 'UBP_HateForged_CharacterMutator_C::DamageMultiplier' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_HateForged_CharacterMutator_C;
 
 }
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Chaos_structs.hpp"
 #include "Engine_structs.hpp"
 #include "RGame_classes.hpp"
+#include "Chaos_structs.hpp"
 
 
 namespace SDK
@@ -35,16 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_RFieldSystemActor_Default_C">();
+		BP_STATIC_CLASS_IMPL("BP_RFieldSystemActor_Default_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_RFieldSystemActor_Default_C")
 	}
 	static class ABP_RFieldSystemActor_Default_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_RFieldSystemActor_Default_C>();
 	}
 };
-static_assert(alignof(ABP_RFieldSystemActor_Default_C) == 0x000008, "Wrong alignment on ABP_RFieldSystemActor_Default_C");
-static_assert(sizeof(ABP_RFieldSystemActor_Default_C) == 0x000300, "Wrong size on ABP_RFieldSystemActor_Default_C");
-static_assert(offsetof(ABP_RFieldSystemActor_Default_C, UberGraphFrame) == 0x0002F8, "Member 'ABP_RFieldSystemActor_Default_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_RFieldSystemActor_Default_C;
 
 }
 

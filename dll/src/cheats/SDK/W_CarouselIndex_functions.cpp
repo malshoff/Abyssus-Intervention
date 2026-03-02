@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function W_CarouselIndex.W_CarouselIndex_C.BndEvt__W_CarouselIndex_Button_09_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UW_CarouselIndex_C::BndEvt__W_CarouselIndex_Button_09_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_CarouselIndex_C", "BndEvt__W_CarouselIndex_Button_09_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function W_CarouselIndex.W_CarouselIndex_C.BndEvt__W_CarouselIndex_Button_0_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 

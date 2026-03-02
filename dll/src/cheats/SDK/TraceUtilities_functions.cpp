@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function TraceUtilities.TraceUtilLibrary.GetAllChannels
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // TArray<class FString>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -43,7 +43,7 @@ TArray<class FString> UTraceUtilLibrary::GetAllChannels()
 
 
 // Function TraceUtilities.TraceUtilLibrary.GetEnabledChannels
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // TArray<class FString>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -68,7 +68,7 @@ TArray<class FString> UTraceUtilLibrary::GetEnabledChannels()
 
 
 // Function TraceUtilities.TraceUtilLibrary.IsChannelEnabled
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    ChannelName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -96,7 +96,7 @@ bool UTraceUtilLibrary::IsChannelEnabled(const class FString& ChannelName)
 
 
 // Function TraceUtilities.TraceUtilLibrary.IsTracing
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -121,7 +121,7 @@ bool UTraceUtilLibrary::IsTracing()
 
 
 // Function TraceUtilities.TraceUtilLibrary.PauseTracing
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -146,7 +146,7 @@ bool UTraceUtilLibrary::PauseTracing()
 
 
 // Function TraceUtilities.TraceUtilLibrary.ResumeTracing
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -171,7 +171,7 @@ bool UTraceUtilLibrary::ResumeTracing()
 
 
 // Function TraceUtilities.TraceUtilLibrary.StartTraceSendTo
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class FString&                    Target                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<class FString>&            Channels                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -201,7 +201,7 @@ bool UTraceUtilLibrary::StartTraceSendTo(const class FString& Target, const TArr
 
 
 // Function TraceUtilities.TraceUtilLibrary.StartTraceToFile
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class FString&                    Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<class FString>&            Channels                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -231,7 +231,7 @@ bool UTraceUtilLibrary::StartTraceToFile(const class FString& Filename, const TA
 
 
 // Function TraceUtilities.TraceUtilLibrary.StopTracing
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -256,7 +256,7 @@ bool UTraceUtilLibrary::StopTracing()
 
 
 // Function TraceUtilities.TraceUtilLibrary.ToggleChannel
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    ChannelName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    Enabled                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -286,7 +286,7 @@ bool UTraceUtilLibrary::ToggleChannel(const class FString& ChannelName, bool Ena
 
 
 // Function TraceUtilities.TraceUtilLibrary.TraceBookmark
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -311,7 +311,7 @@ void UTraceUtilLibrary::TraceBookmark(const class FString& Name_0)
 
 
 // Function TraceUtilities.TraceUtilLibrary.TraceMarkRegionEnd
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -336,7 +336,7 @@ void UTraceUtilLibrary::TraceMarkRegionEnd(const class FString& Name_0)
 
 
 // Function TraceUtilities.TraceUtilLibrary.TraceMarkRegionStart
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -361,7 +361,7 @@ void UTraceUtilLibrary::TraceMarkRegionStart(const class FString& Name_0)
 
 
 // Function TraceUtilities.TraceUtilLibrary.TraceScreenshot
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bShowUI                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

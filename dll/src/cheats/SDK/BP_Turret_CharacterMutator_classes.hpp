@@ -19,27 +19,27 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Turret_CharacterMutator.BP_Turret_CharacterMutator_C
-// 0x0180 (0x1020 - 0x0EA0)
+// 0x0180 (0x1028 - 0x0EA8)
 class UBP_Turret_CharacterMutator_C final : public UBP_Activatable_CharacterMutator_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Turret_CharacterMutator_C;       // 0x0EA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	double                                        TargetAquisitionRange;                             // 0x0EA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TurretLifeDuration;                                // 0x0EB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TurretPlacementRange;                              // 0x0EB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CapsuleTraceHit;                                   // 0x0EC0(0x0100)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	double                                        ClearAreaSizeForPlacement;                         // 0x0FC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPlacementGrounded;                               // 0x0FC8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FC9[0x7];                                      // 0x0FC9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class ABP_Turret_C* SpawnedTurret)> OnTurretSpawned;               // 0x0FD0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          TraceHitSet;                                       // 0x0FE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FE1[0x7];                                      // 0x0FE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class ABP_Turret_C*>                   SpawnedTurrets;                                    // 0x0FE8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	class ASkeletalMeshActor*                     SpawnedIndicatorMesh;                              // 0x0FF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DynamicMaterial;                                   // 0x1000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           As_RPlayer_Pawn;                                   // 0x1008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        PlayerMovementInfluence;                           // 0x1010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ThrowingVelocity;                                  // 0x1018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Turret_CharacterMutator_C;       // 0x0EA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	double                                        TargetAquisitionRange;                             // 0x0EB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TurretLifeDuration;                                // 0x0EB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TurretPlacementRange;                              // 0x0EC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CapsuleTraceHit;                                   // 0x0EC8(0x0100)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	double                                        ClearAreaSizeForPlacement;                         // 0x0FC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPlacementGrounded;                               // 0x0FD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FD1[0x7];                                      // 0x0FD1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class ABP_Turret_C* SpawnedTurret)> OnTurretSpawned;               // 0x0FD8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          TraceHitSet;                                       // 0x0FE8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FE9[0x7];                                      // 0x0FE9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ABP_Turret_C*>                   SpawnedTurrets;                                    // 0x0FF0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	class ASkeletalMeshActor*                     SpawnedIndicatorMesh;                              // 0x1000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DynamicMaterial;                                   // 0x1008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           As_RPlayer_Pawn;                                   // 0x1010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        PlayerMovementInfluence;                           // 0x1018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ThrowingVelocity;                                  // 0x1020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BroadcastOnTurretSpawned(class ABP_Turret_C* SpawnedTurret);
@@ -59,6 +59,7 @@ public:
 	void OnInterrupted_6E4888C1479C106A692EA5A4B1420A75(class FName NotifyName);
 	void OnNotifyBegin_6E4888C1479C106A692EA5A4B1420A75(class FName NotifyName);
 	void OnNotifyEnd_6E4888C1479C106A692EA5A4B1420A75(class FName NotifyName);
+	void OnPlayerFailsafeTeleported();
 	void OnProjectileSpawned_2C6A38C944FA0C6C42FA55A16E3F0EA0(class ARProjectileBase* Projectile);
 	void OnReleaseChargeUp();
 	void OnToggleEvent(class FName Socket, bool Bool);
@@ -72,30 +73,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Turret_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Turret_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Turret_CharacterMutator_C")
 	}
 	static class UBP_Turret_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Turret_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_Turret_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_Turret_CharacterMutator_C");
-static_assert(sizeof(UBP_Turret_CharacterMutator_C) == 0x001020, "Wrong size on UBP_Turret_CharacterMutator_C");
-static_assert(offsetof(UBP_Turret_CharacterMutator_C, UberGraphFrame_BP_Turret_CharacterMutator_C) == 0x000EA0, "Member 'UBP_Turret_CharacterMutator_C::UberGraphFrame_BP_Turret_CharacterMutator_C' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_CharacterMutator_C, TargetAquisitionRange) == 0x000EA8, "Member 'UBP_Turret_CharacterMutator_C::TargetAquisitionRange' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_CharacterMutator_C, TurretLifeDuration) == 0x000EB0, "Member 'UBP_Turret_CharacterMutator_C::TurretLifeDuration' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_CharacterMutator_C, TurretPlacementRange) == 0x000EB8, "Member 'UBP_Turret_CharacterMutator_C::TurretPlacementRange' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_CharacterMutator_C, CapsuleTraceHit) == 0x000EC0, "Member 'UBP_Turret_CharacterMutator_C::CapsuleTraceHit' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_CharacterMutator_C, ClearAreaSizeForPlacement) == 0x000FC0, "Member 'UBP_Turret_CharacterMutator_C::ClearAreaSizeForPlacement' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_CharacterMutator_C, IsPlacementGrounded) == 0x000FC8, "Member 'UBP_Turret_CharacterMutator_C::IsPlacementGrounded' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_CharacterMutator_C, OnTurretSpawned) == 0x000FD0, "Member 'UBP_Turret_CharacterMutator_C::OnTurretSpawned' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_CharacterMutator_C, TraceHitSet) == 0x000FE0, "Member 'UBP_Turret_CharacterMutator_C::TraceHitSet' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_CharacterMutator_C, SpawnedTurrets) == 0x000FE8, "Member 'UBP_Turret_CharacterMutator_C::SpawnedTurrets' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_CharacterMutator_C, SpawnedIndicatorMesh) == 0x000FF8, "Member 'UBP_Turret_CharacterMutator_C::SpawnedIndicatorMesh' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_CharacterMutator_C, DynamicMaterial) == 0x001000, "Member 'UBP_Turret_CharacterMutator_C::DynamicMaterial' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_CharacterMutator_C, As_RPlayer_Pawn) == 0x001008, "Member 'UBP_Turret_CharacterMutator_C::As_RPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_CharacterMutator_C, PlayerMovementInfluence) == 0x001010, "Member 'UBP_Turret_CharacterMutator_C::PlayerMovementInfluence' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_CharacterMutator_C, ThrowingVelocity) == 0x001018, "Member 'UBP_Turret_CharacterMutator_C::ThrowingVelocity' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Turret_CharacterMutator_C;
 
 }
 

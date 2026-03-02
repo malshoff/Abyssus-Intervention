@@ -27,15 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"CsvActorCountMetric">();
+		STATIC_CLASS_IMPL("CsvActorCountMetric")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CsvActorCountMetric")
 	}
 	static class UCsvActorCountMetric* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCsvActorCountMetric>();
 	}
 };
-static_assert(alignof(UCsvActorCountMetric) == 0x000008, "Wrong alignment on UCsvActorCountMetric");
-static_assert(sizeof(UCsvActorCountMetric) == 0x000088, "Wrong size on UCsvActorCountMetric");
+DUMPER7_ASSERTS_UCsvActorCountMetric;
 
 // Class CsvMetrics.CsvMetricsSubsystem
 // 0x0030 (0x0060 - 0x0030)
@@ -48,16 +51,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"CsvMetricsSubsystem">();
+		STATIC_CLASS_IMPL("CsvMetricsSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CsvMetricsSubsystem")
 	}
 	static class UCsvMetricsSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCsvMetricsSubsystem>();
 	}
 };
-static_assert(alignof(UCsvMetricsSubsystem) == 0x000008, "Wrong alignment on UCsvMetricsSubsystem");
-static_assert(sizeof(UCsvMetricsSubsystem) == 0x000060, "Wrong size on UCsvMetricsSubsystem");
-static_assert(offsetof(UCsvMetricsSubsystem, MetricClasses) == 0x000030, "Member 'UCsvMetricsSubsystem::MetricClasses' has a wrong offset!");
+DUMPER7_ASSERTS_UCsvMetricsSubsystem;
 
 }
 

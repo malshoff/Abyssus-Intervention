@@ -160,7 +160,7 @@ void UW_ActionInput_C::SetText(const class FText& InText)
 
 
 // Function W_ActionInput.W_ActionInput_C.UpdateLocalizedText
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UW_ActionInput_C::UpdateLocalizedText()
 {

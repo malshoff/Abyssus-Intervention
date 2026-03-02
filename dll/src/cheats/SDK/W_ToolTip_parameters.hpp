@@ -34,19 +34,7 @@ public:
 	double                                        CallFunc_NotEqual_DoubleDouble_B_ImplicitCast;     // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_NotEqual_DoubleDouble_B_ImplicitCast_1;   // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_ToolTip_C_ExecuteUbergraph_W_ToolTip) == 0x000008, "Wrong alignment on W_ToolTip_C_ExecuteUbergraph_W_ToolTip");
-static_assert(sizeof(W_ToolTip_C_ExecuteUbergraph_W_ToolTip) == 0x000020, "Wrong size on W_ToolTip_C_ExecuteUbergraph_W_ToolTip");
-static_assert(offsetof(W_ToolTip_C_ExecuteUbergraph_W_ToolTip, EntryPoint) == 0x000000, "Member 'W_ToolTip_C_ExecuteUbergraph_W_ToolTip::EntryPoint' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_ExecuteUbergraph_W_ToolTip, Temp_bool_Variable) == 0x000004, "Member 'W_ToolTip_C_ExecuteUbergraph_W_ToolTip::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_ExecuteUbergraph_W_ToolTip, Temp_byte_Variable) == 0x000005, "Member 'W_ToolTip_C_ExecuteUbergraph_W_ToolTip::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_ExecuteUbergraph_W_ToolTip, Temp_byte_Variable_1) == 0x000006, "Member 'W_ToolTip_C_ExecuteUbergraph_W_ToolTip::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_ExecuteUbergraph_W_ToolTip, K2Node_Event_IsDesignTime) == 0x000007, "Member 'W_ToolTip_C_ExecuteUbergraph_W_ToolTip::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_ExecuteUbergraph_W_ToolTip, CallFunc_NotEqual_DoubleDouble_ReturnValue) == 0x000008, "Member 'W_ToolTip_C_ExecuteUbergraph_W_ToolTip::CallFunc_NotEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_ExecuteUbergraph_W_ToolTip, CallFunc_NotEqual_DoubleDouble_ReturnValue_1) == 0x000009, "Member 'W_ToolTip_C_ExecuteUbergraph_W_ToolTip::CallFunc_NotEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_ExecuteUbergraph_W_ToolTip, CallFunc_TextIsEmpty_ReturnValue) == 0x00000A, "Member 'W_ToolTip_C_ExecuteUbergraph_W_ToolTip::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_ExecuteUbergraph_W_ToolTip, K2Node_Select_Default) == 0x00000B, "Member 'W_ToolTip_C_ExecuteUbergraph_W_ToolTip::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_ExecuteUbergraph_W_ToolTip, CallFunc_NotEqual_DoubleDouble_B_ImplicitCast) == 0x000010, "Member 'W_ToolTip_C_ExecuteUbergraph_W_ToolTip::CallFunc_NotEqual_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_ExecuteUbergraph_W_ToolTip, CallFunc_NotEqual_DoubleDouble_B_ImplicitCast_1) == 0x000018, "Member 'W_ToolTip_C_ExecuteUbergraph_W_ToolTip::CallFunc_NotEqual_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
+DUMPER7_ASSERTS_W_ToolTip_C_ExecuteUbergraph_W_ToolTip;
 
 // Function W_ToolTip.W_ToolTip_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -55,9 +43,7 @@ struct W_ToolTip_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_ToolTip_C_PreConstruct) == 0x000001, "Wrong alignment on W_ToolTip_C_PreConstruct");
-static_assert(sizeof(W_ToolTip_C_PreConstruct) == 0x000001, "Wrong size on W_ToolTip_C_PreConstruct");
-static_assert(offsetof(W_ToolTip_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'W_ToolTip_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_W_ToolTip_C_PreConstruct;
 
 // Function W_ToolTip.W_ToolTip_C.SetText
 // 0x0028 (0x0028 - 0x0000)
@@ -72,15 +58,7 @@ public:
 	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_ToolTip_C_SetText) == 0x000008, "Wrong alignment on W_ToolTip_C_SetText");
-static_assert(sizeof(W_ToolTip_C_SetText) == 0x000028, "Wrong size on W_ToolTip_C_SetText");
-static_assert(offsetof(W_ToolTip_C_SetText, Header) == 0x000000, "Member 'W_ToolTip_C_SetText::Header' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_SetText, Body) == 0x000010, "Member 'W_ToolTip_C_SetText::Body' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_SetText, Temp_bool_Variable) == 0x000020, "Member 'W_ToolTip_C_SetText::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_SetText, Temp_byte_Variable) == 0x000021, "Member 'W_ToolTip_C_SetText::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_SetText, Temp_byte_Variable_1) == 0x000022, "Member 'W_ToolTip_C_SetText::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_SetText, CallFunc_TextIsEmpty_ReturnValue) == 0x000023, "Member 'W_ToolTip_C_SetText::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ToolTip_C_SetText, K2Node_Select_Default) == 0x000024, "Member 'W_ToolTip_C_SetText::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_W_ToolTip_C_SetText;
 
 }
 

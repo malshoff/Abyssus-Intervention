@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "RGame_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
-#include "CommonInput_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "CommonInput_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -52,30 +52,7 @@ public:
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01B0(0x0010)(ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01C0(0x0010)()
 };
-static_assert(alignof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory) == 0x000008, "Wrong alignment on Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory");
-static_assert(sizeof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory) == 0x0001D0, "Wrong size on Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, InDescription) == 0x000000, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::InDescription' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, Target) == 0x000010, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::Target' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, OutDescription) == 0x000018, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::OutDescription' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, NewText) == 0x000028, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::NewText' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, Temp_int_Array_Index_Variable) == 0x00003C, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, Temp_int_Loop_Counter_Variable) == 0x000040, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, CallFunc_Array_Get_Item) == 0x000048, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, CallFunc_Less_IntInt_ReturnValue) == 0x000058, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000060, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, K2Node_MakeStruct_FormatArgumentData) == 0x000070, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, CallFunc_Conv_TextToString_ReturnValue) == 0x0000B8, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, CallFunc_Add_IntInt_ReturnValue) == 0x0000C8, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, CallFunc_AddHighlightToTextWithKeywords_ReturnValue) == 0x0000D0, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::CallFunc_AddHighlightToTextWithKeywords_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, CallFunc_Conv_StringToText_ReturnValue) == 0x0000E0, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000F0, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000138, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, CallFunc_AddHighlightToTextWithKeywords_ReturnValue_1) == 0x000148, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::CallFunc_AddHighlightToTextWithKeywords_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000158, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, K2Node_MakeStruct_FormatArgumentData_2) == 0x000168, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, K2Node_MakeArray_Array) == 0x0001B0, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory, CallFunc_Format_ReturnValue) == 0x0001C0, "Member 'Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory::CallFunc_Format_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_MutatorCategoryOption_C_AddGodPassiveToDescriptionIfCategory;
 
 // Function Widget_MutatorCategoryOption.Widget_MutatorCategoryOption_C.BndEvt__Widget_MutatorCategoryOption_W_Button_Altar_God_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -84,9 +61,7 @@ struct Widget_MutatorCategoryOption_C_BndEvt__Widget_MutatorCategoryOption_W_But
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_MutatorCategoryOption_C_BndEvt__Widget_MutatorCategoryOption_W_Button_Altar_God_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_MutatorCategoryOption_C_BndEvt__Widget_MutatorCategoryOption_W_Button_Altar_God_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_MutatorCategoryOption_C_BndEvt__Widget_MutatorCategoryOption_W_Button_Altar_God_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_MutatorCategoryOption_C_BndEvt__Widget_MutatorCategoryOption_W_Button_Altar_God_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_BndEvt__Widget_MutatorCategoryOption_W_Button_Altar_God_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_MutatorCategoryOption_C_BndEvt__Widget_MutatorCategoryOption_W_Button_Altar_God_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_MutatorCategoryOption_C_BndEvt__Widget_MutatorCategoryOption_W_Button_Altar_God_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_MutatorCategoryOption.Widget_MutatorCategoryOption_C.ExecuteUbergraph_Widget_MutatorCategoryOption
 // 0x0280 (0x0280 - 0x0000)
@@ -142,10 +117,10 @@ public:
 	class UWidgetAnimationPlayCallbackProxy*      CallFunc_CreatePlayAnimationProxyObject_ReturnValue; // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsAnimationPlaying_ReturnValue;           // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B2[0x6];                                      // 0x01B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1B2[0x2];                                      // 0x01B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue;         // 0x01B4(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x01C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C5[0x3];                                      // 0x01C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_BreakVector2D_X_5;                        // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_5;                        // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor_1;                   // 0x01D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -168,73 +143,7 @@ public:
 	float                                         K2Node_MakeStruct_G_ImplicitCast_1;                // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_B_ImplicitCast;       // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption) == 0x000008, "Wrong alignment on Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption");
-static_assert(sizeof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption) == 0x000280, "Wrong size on Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, EntryPoint) == 0x000000, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_Conv_DoubleToVector2D_ReturnValue) == 0x000008, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_Conv_DoubleToVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000018, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_Conv_DoubleToVector2D_ReturnValue_1) == 0x000020, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_Conv_DoubleToVector2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_GetCurrentInputType_ReturnValue) == 0x000030, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_GetCurrentInputType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, Temp_bool_IsClosed_Variable) == 0x000031, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000032, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, Temp_bool_Has_Been_Initd_Variable) == 0x000033, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, K2Node_ComponentBoundEvent_Button) == 0x000038, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, K2Node_Event_InFocusEvent_1) == 0x000040, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::K2Node_Event_InFocusEvent_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, K2Node_Event_InFocusEvent) == 0x000048, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::K2Node_Event_InFocusEvent' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, K2Node_Event_MyGeometry) == 0x000050, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, K2Node_Event_InDeltaTime) == 0x000088, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_GetBlessingDescription_MutatorDescription) == 0x000090, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_GetBlessingDescription_MutatorDescription' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, K2Node_DynamicCast_AsRMutator_Primary_Asset) == 0x0000A0, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::K2Node_DynamicCast_AsRMutator_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, K2Node_DynamicCast_bSuccess) == 0x0000A8, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_IsValid_ReturnValue) == 0x0000A9, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_GetMutatorName_ReturnValue) == 0x0000B0, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_GetMutatorName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_IsValid_ReturnValue_1) == 0x0000C0, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_BreakVector2D_X) == 0x0000C8, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_BreakVector2D_Y) == 0x0000D0, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, K2Node_MakeStruct_LinearColor) == 0x0000D8, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x0000E8, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_BreakVector2D_X_1) == 0x0000F0, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_BreakVector2D_Y_1) == 0x0000F8, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_BreakVector2D_X_2) == 0x000100, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_BreakVector2D_X_2' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_BreakVector2D_Y_2) == 0x000108, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_BreakVector2D_Y_2' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_BreakVector2D_X_3) == 0x000110, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_BreakVector2D_X_3' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_BreakVector2D_Y_3) == 0x000118, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_BreakVector2D_Y_3' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x000120, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, K2Node_CreateDelegate_OutputDelegate) == 0x000128, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x000138, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_Conv_DoubleToVector2D_ReturnValue_2) == 0x000148, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_Conv_DoubleToVector2D_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_Subtract_Vector2DVector2D_ReturnValue_1) == 0x000158, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_Subtract_Vector2DVector2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_MakeVector2D_ReturnValue) == 0x000168, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_Multiply_Vector2DVector2D_ReturnValue) == 0x000178, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_Multiply_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_BreakVector2D_X_4) == 0x000188, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_BreakVector2D_X_4' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_BreakVector2D_Y_4) == 0x000190, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_BreakVector2D_Y_4' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_IsHovered_ReturnValue) == 0x000198, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_IsHovered_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_CreatePlayAnimationProxyObject_Result) == 0x0001A0, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_CreatePlayAnimationProxyObject_Result' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_CreatePlayAnimationProxyObject_ReturnValue) == 0x0001A8, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_CreatePlayAnimationProxyObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_IsValid_ReturnValue_2) == 0x0001B0, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_IsAnimationPlaying_ReturnValue) == 0x0001B1, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_IsAnimationPlaying_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_PlayAnimationForward_ReturnValue) == 0x0001B8, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_Not_PreBool_ReturnValue) == 0x0001C0, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_BreakVector2D_X_5) == 0x0001C8, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_BreakVector2D_X_5' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_BreakVector2D_Y_5) == 0x0001D0, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_BreakVector2D_Y_5' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, K2Node_MakeStruct_LinearColor_1) == 0x0001D8, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::K2Node_MakeStruct_LinearColor_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_GetDynamicMaterial_ReturnValue) == 0x0001E8, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0001F0, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, K2Node_Event_IsDesignTime) == 0x0001F8, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_Lerp_ReturnValue) == 0x000200, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_Lerp_ReturnValue_1) == 0x000208, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_Lerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_Lerp_ReturnValue_2) == 0x000210, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_Lerp_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_MakeVector2D_ReturnValue_1) == 0x000218, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_MakeVector2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_Lerp_ReturnValue_3) == 0x000228, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_Lerp_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_ClampAxes2D_ReturnValue) == 0x000230, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_ClampAxes2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_MakeVector2D_ReturnValue_2) == 0x000240, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_MakeVector2D_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_ClampAxes2D_ReturnValue_1) == 0x000250, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_ClampAxes2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, K2Node_MakeStruct_R_ImplicitCast) == 0x000260, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::K2Node_MakeStruct_R_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, K2Node_MakeStruct_G_ImplicitCast) == 0x000264, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::K2Node_MakeStruct_G_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_Conv_DoubleToVector2D_InDouble_ImplicitCast) == 0x000268, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_Conv_DoubleToVector2D_InDouble_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, K2Node_MakeStruct_R_ImplicitCast_1) == 0x000270, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::K2Node_MakeStruct_R_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, K2Node_MakeStruct_G_ImplicitCast_1) == 0x000274, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::K2Node_MakeStruct_G_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption, CallFunc_Divide_DoubleDouble_B_ImplicitCast) == 0x000278, "Member 'Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption::CallFunc_Divide_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_MutatorCategoryOption_C_ExecuteUbergraph_Widget_MutatorCategoryOption;
 
 // Function Widget_MutatorCategoryOption.Widget_MutatorCategoryOption_C.GetBlessingDescription
 // 0x0040 (0x0040 - 0x0000)
@@ -252,15 +161,7 @@ public:
 	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0030(0x0010)()
 };
-static_assert(alignof(Widget_MutatorCategoryOption_C_GetBlessingDescription) == 0x000008, "Wrong alignment on Widget_MutatorCategoryOption_C_GetBlessingDescription");
-static_assert(sizeof(Widget_MutatorCategoryOption_C_GetBlessingDescription) == 0x000040, "Wrong size on Widget_MutatorCategoryOption_C_GetBlessingDescription");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetBlessingDescription, OverridenRank) == 0x000000, "Member 'Widget_MutatorCategoryOption_C_GetBlessingDescription::OverridenRank' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetBlessingDescription, MutatorDescription) == 0x000008, "Member 'Widget_MutatorCategoryOption_C_GetBlessingDescription::MutatorDescription' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetBlessingDescription, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000018, "Member 'Widget_MutatorCategoryOption_C_GetBlessingDescription::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetBlessingDescription, K2Node_DynamicCast_AsRMutator_Primary_Asset) == 0x000020, "Member 'Widget_MutatorCategoryOption_C_GetBlessingDescription::K2Node_DynamicCast_AsRMutator_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetBlessingDescription, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'Widget_MutatorCategoryOption_C_GetBlessingDescription::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetBlessingDescription, CallFunc_SelectInt_ReturnValue) == 0x00002C, "Member 'Widget_MutatorCategoryOption_C_GetBlessingDescription::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetBlessingDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000030, "Member 'Widget_MutatorCategoryOption_C_GetBlessingDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_MutatorCategoryOption_C_GetBlessingDescription;
 
 // Function Widget_MutatorCategoryOption.Widget_MutatorCategoryOption_C.GetToolTipWidget
 // 0x0088 (0x0088 - 0x0000)
@@ -283,21 +184,7 @@ public:
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0070(0x0010)()
 	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_MutatorCategoryOption_C_GetToolTipWidget) == 0x000008, "Wrong alignment on Widget_MutatorCategoryOption_C_GetToolTipWidget");
-static_assert(sizeof(Widget_MutatorCategoryOption_C_GetToolTipWidget) == 0x000088, "Wrong size on Widget_MutatorCategoryOption_C_GetToolTipWidget");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetToolTipWidget, ReturnValue) == 0x000000, "Member 'Widget_MutatorCategoryOption_C_GetToolTipWidget::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetToolTipWidget, Description) == 0x000008, "Member 'Widget_MutatorCategoryOption_C_GetToolTipWidget::Description' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetToolTipWidget, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'Widget_MutatorCategoryOption_C_GetToolTipWidget::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetToolTipWidget, CallFunc_IsValid_ReturnValue_1) == 0x000019, "Member 'Widget_MutatorCategoryOption_C_GetToolTipWidget::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetToolTipWidget, K2Node_DynamicCast_AsRMutator_Reward_Category_Data_Asset) == 0x000020, "Member 'Widget_MutatorCategoryOption_C_GetToolTipWidget::K2Node_DynamicCast_AsRMutator_Reward_Category_Data_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetToolTipWidget, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'Widget_MutatorCategoryOption_C_GetToolTipWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetToolTipWidget, CallFunc_GetOwningPlayer_ReturnValue) == 0x000030, "Member 'Widget_MutatorCategoryOption_C_GetToolTipWidget::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetToolTipWidget, CallFunc_AddGodPassiveToDescriptionIfCategory_OutDescription) == 0x000038, "Member 'Widget_MutatorCategoryOption_C_GetToolTipWidget::CallFunc_AddGodPassiveToDescriptionIfCategory_OutDescription' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetToolTipWidget, CallFunc_Create_ReturnValue) == 0x000048, "Member 'Widget_MutatorCategoryOption_C_GetToolTipWidget::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetToolTipWidget, CallFunc_Conv_TextToString_ReturnValue) == 0x000050, "Member 'Widget_MutatorCategoryOption_C_GetToolTipWidget::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetToolTipWidget, CallFunc_GetKeywordsInfoText_ReturnValue) == 0x000060, "Member 'Widget_MutatorCategoryOption_C_GetToolTipWidget::CallFunc_GetKeywordsInfoText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetToolTipWidget, CallFunc_Conv_StringToText_ReturnValue) == 0x000070, "Member 'Widget_MutatorCategoryOption_C_GetToolTipWidget::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_GetToolTipWidget, CallFunc_IsEmpty_ReturnValue) == 0x000080, "Member 'Widget_MutatorCategoryOption_C_GetToolTipWidget::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_MutatorCategoryOption_C_GetToolTipWidget;
 
 // Function Widget_MutatorCategoryOption.Widget_MutatorCategoryOption_C.LerpTransform
 // 0x01C8 (0x01C8 - 0x0000)
@@ -335,38 +222,7 @@ public:
 	double                                        CallFunc_Lerp_B_ImplicitCast;                      // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_MakeStruct_Angle_ImplicitCast;              // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_MutatorCategoryOption_C_LerpTransform) == 0x000008, "Wrong alignment on Widget_MutatorCategoryOption_C_LerpTransform");
-static_assert(sizeof(Widget_MutatorCategoryOption_C_LerpTransform) == 0x0001C8, "Wrong size on Widget_MutatorCategoryOption_C_LerpTransform");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, Current) == 0x000000, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::Current' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, Target) == 0x000038, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::Target' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, Alpha) == 0x000070, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::Alpha' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, Out) == 0x000078, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::Out' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_BreakVector2D_X) == 0x0000B0, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_BreakVector2D_Y) == 0x0000B8, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_Lerp_ReturnValue) == 0x0000C0, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_BreakVector2D_X_1) == 0x0000C8, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_BreakVector2D_Y_1) == 0x0000D0, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_BreakVector2D_X_2) == 0x0000D8, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_BreakVector2D_X_2' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_BreakVector2D_Y_2) == 0x0000E0, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_BreakVector2D_Y_2' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_Lerp_ReturnValue_1) == 0x0000E8, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_Lerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_Lerp_ReturnValue_2) == 0x0000F0, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_Lerp_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_BreakVector2D_X_3) == 0x0000F8, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_BreakVector2D_X_3' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_BreakVector2D_Y_3) == 0x000100, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_BreakVector2D_Y_3' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_MakeVector2D_ReturnValue) == 0x000108, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_BreakVector2D_X_4) == 0x000118, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_BreakVector2D_X_4' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_BreakVector2D_Y_4) == 0x000120, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_BreakVector2D_Y_4' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_BreakVector2D_X_5) == 0x000128, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_BreakVector2D_X_5' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_BreakVector2D_Y_5) == 0x000130, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_BreakVector2D_Y_5' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_Lerp_ReturnValue_3) == 0x000138, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_Lerp_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_Lerp_ReturnValue_4) == 0x000140, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_Lerp_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_Lerp_ReturnValue_5) == 0x000148, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_Lerp_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_Lerp_ReturnValue_6) == 0x000150, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_Lerp_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_MakeVector2D_ReturnValue_1) == 0x000158, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_MakeVector2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_MakeVector2D_ReturnValue_2) == 0x000168, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_MakeVector2D_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, K2Node_MakeStruct_WidgetTransform) == 0x000178, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::K2Node_MakeStruct_WidgetTransform' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_Lerp_A_ImplicitCast) == 0x0001B0, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_Lerp_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, CallFunc_Lerp_B_ImplicitCast) == 0x0001B8, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::CallFunc_Lerp_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_LerpTransform, K2Node_MakeStruct_Angle_ImplicitCast) == 0x0001C0, "Member 'Widget_MutatorCategoryOption_C_LerpTransform::K2Node_MakeStruct_Angle_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_MutatorCategoryOption_C_LerpTransform;
 
 // Function Widget_MutatorCategoryOption.Widget_MutatorCategoryOption_C.OnAddedToFocusPath
 // 0x0008 (0x0008 - 0x0000)
@@ -375,34 +231,23 @@ struct Widget_MutatorCategoryOption_C_OnAddedToFocusPath final
 public:
 	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-static_assert(alignof(Widget_MutatorCategoryOption_C_OnAddedToFocusPath) == 0x000004, "Wrong alignment on Widget_MutatorCategoryOption_C_OnAddedToFocusPath");
-static_assert(sizeof(Widget_MutatorCategoryOption_C_OnAddedToFocusPath) == 0x000008, "Wrong size on Widget_MutatorCategoryOption_C_OnAddedToFocusPath");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_OnAddedToFocusPath, InFocusEvent) == 0x000000, "Member 'Widget_MutatorCategoryOption_C_OnAddedToFocusPath::InFocusEvent' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_MutatorCategoryOption_C_OnAddedToFocusPath;
 
 // Function Widget_MutatorCategoryOption.Widget_MutatorCategoryOption_C.OnMouseMove
-// 0x0260 (0x0260 - 0x0000)
+// 0x0268 (0x0268 - 0x0000)
 struct Widget_MutatorCategoryOption_C_OnMouseMove final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FVector2D                              CallFunc_PointerEvent_GetScreenSpacePosition_ReturnValue; // 0x0168(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetLocalSize_ReturnValue;                 // 0x0178(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_AbsoluteToLocal_ReturnValue;              // 0x0188(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0198(0x00B8)()
-	struct FVector2D                              CallFunc_Divide_Vector2DVector2D_ReturnValue;      // 0x0250(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0080)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                            ReturnValue;                                       // 0x00B8(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FVector2D                              CallFunc_PointerEvent_GetScreenSpacePosition_ReturnValue; // 0x0170(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetLocalSize_ReturnValue;                 // 0x0180(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_AbsoluteToLocal_ReturnValue;              // 0x0190(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x01A0(0x00B8)()
+	struct FVector2D                              CallFunc_Divide_Vector2DVector2D_ReturnValue;      // 0x0258(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_MutatorCategoryOption_C_OnMouseMove) == 0x000008, "Wrong alignment on Widget_MutatorCategoryOption_C_OnMouseMove");
-static_assert(sizeof(Widget_MutatorCategoryOption_C_OnMouseMove) == 0x000260, "Wrong size on Widget_MutatorCategoryOption_C_OnMouseMove");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_OnMouseMove, MyGeometry) == 0x000000, "Member 'Widget_MutatorCategoryOption_C_OnMouseMove::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_OnMouseMove, MouseEvent) == 0x000038, "Member 'Widget_MutatorCategoryOption_C_OnMouseMove::MouseEvent' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_OnMouseMove, ReturnValue) == 0x0000B0, "Member 'Widget_MutatorCategoryOption_C_OnMouseMove::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_OnMouseMove, CallFunc_PointerEvent_GetScreenSpacePosition_ReturnValue) == 0x000168, "Member 'Widget_MutatorCategoryOption_C_OnMouseMove::CallFunc_PointerEvent_GetScreenSpacePosition_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_OnMouseMove, CallFunc_GetLocalSize_ReturnValue) == 0x000178, "Member 'Widget_MutatorCategoryOption_C_OnMouseMove::CallFunc_GetLocalSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_OnMouseMove, CallFunc_AbsoluteToLocal_ReturnValue) == 0x000188, "Member 'Widget_MutatorCategoryOption_C_OnMouseMove::CallFunc_AbsoluteToLocal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_OnMouseMove, CallFunc_Handled_ReturnValue) == 0x000198, "Member 'Widget_MutatorCategoryOption_C_OnMouseMove::CallFunc_Handled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_OnMouseMove, CallFunc_Divide_Vector2DVector2D_ReturnValue) == 0x000250, "Member 'Widget_MutatorCategoryOption_C_OnMouseMove::CallFunc_Divide_Vector2DVector2D_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_MutatorCategoryOption_C_OnMouseMove;
 
 // Function Widget_MutatorCategoryOption.Widget_MutatorCategoryOption_C.OnRemovedFromFocusPath
 // 0x0008 (0x0008 - 0x0000)
@@ -411,9 +256,7 @@ struct Widget_MutatorCategoryOption_C_OnRemovedFromFocusPath final
 public:
 	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-static_assert(alignof(Widget_MutatorCategoryOption_C_OnRemovedFromFocusPath) == 0x000004, "Wrong alignment on Widget_MutatorCategoryOption_C_OnRemovedFromFocusPath");
-static_assert(sizeof(Widget_MutatorCategoryOption_C_OnRemovedFromFocusPath) == 0x000008, "Wrong size on Widget_MutatorCategoryOption_C_OnRemovedFromFocusPath");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_OnRemovedFromFocusPath, InFocusEvent) == 0x000000, "Member 'Widget_MutatorCategoryOption_C_OnRemovedFromFocusPath::InFocusEvent' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_MutatorCategoryOption_C_OnRemovedFromFocusPath;
 
 // Function Widget_MutatorCategoryOption.Widget_MutatorCategoryOption_C.PlayHoveredTransition
 // 0x0001 (0x0001 - 0x0000)
@@ -422,9 +265,7 @@ struct Widget_MutatorCategoryOption_C_PlayHoveredTransition final
 public:
 	bool                                          Reverse;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_MutatorCategoryOption_C_PlayHoveredTransition) == 0x000001, "Wrong alignment on Widget_MutatorCategoryOption_C_PlayHoveredTransition");
-static_assert(sizeof(Widget_MutatorCategoryOption_C_PlayHoveredTransition) == 0x000001, "Wrong size on Widget_MutatorCategoryOption_C_PlayHoveredTransition");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_PlayHoveredTransition, Reverse) == 0x000000, "Member 'Widget_MutatorCategoryOption_C_PlayHoveredTransition::Reverse' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_MutatorCategoryOption_C_PlayHoveredTransition;
 
 // Function Widget_MutatorCategoryOption.Widget_MutatorCategoryOption_C.PlayPressedAnimation
 // 0x0010 (0x0010 - 0x0000)
@@ -436,11 +277,7 @@ public:
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        StartLocation;                                     // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_MutatorCategoryOption_C_PlayPressedAnimation) == 0x000008, "Wrong alignment on Widget_MutatorCategoryOption_C_PlayPressedAnimation");
-static_assert(sizeof(Widget_MutatorCategoryOption_C_PlayPressedAnimation) == 0x000010, "Wrong size on Widget_MutatorCategoryOption_C_PlayPressedAnimation");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_PlayPressedAnimation, Reverse) == 0x000000, "Member 'Widget_MutatorCategoryOption_C_PlayPressedAnimation::Reverse' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_PlayPressedAnimation, PlayMode) == 0x000001, "Member 'Widget_MutatorCategoryOption_C_PlayPressedAnimation::PlayMode' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_PlayPressedAnimation, StartLocation) == 0x000008, "Member 'Widget_MutatorCategoryOption_C_PlayPressedAnimation::StartLocation' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_MutatorCategoryOption_C_PlayPressedAnimation;
 
 // Function Widget_MutatorCategoryOption.Widget_MutatorCategoryOption_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -449,9 +286,7 @@ struct Widget_MutatorCategoryOption_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_MutatorCategoryOption_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_MutatorCategoryOption_C_PreConstruct");
-static_assert(sizeof(Widget_MutatorCategoryOption_C_PreConstruct) == 0x000001, "Wrong size on Widget_MutatorCategoryOption_C_PreConstruct");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_MutatorCategoryOption_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_MutatorCategoryOption_C_PreConstruct;
 
 // Function Widget_MutatorCategoryOption.Widget_MutatorCategoryOption_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -461,10 +296,7 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_MutatorCategoryOption_C_Tick) == 0x000004, "Wrong alignment on Widget_MutatorCategoryOption_C_Tick");
-static_assert(sizeof(Widget_MutatorCategoryOption_C_Tick) == 0x00003C, "Wrong size on Widget_MutatorCategoryOption_C_Tick");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_Tick, MyGeometry) == 0x000000, "Member 'Widget_MutatorCategoryOption_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_Tick, InDeltaTime) == 0x000038, "Member 'Widget_MutatorCategoryOption_C_Tick::InDeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_MutatorCategoryOption_C_Tick;
 
 // Function Widget_MutatorCategoryOption.Widget_MutatorCategoryOption_C.UpdateContent
 // 0x0088 (0x0088 - 0x0000)
@@ -485,19 +317,7 @@ public:
 	class FString                                 CallFunc_AddHighlightToTextWithKeywords_ReturnValue; // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0078(0x0010)()
 };
-static_assert(alignof(Widget_MutatorCategoryOption_C_UpdateContent) == 0x000008, "Wrong alignment on Widget_MutatorCategoryOption_C_UpdateContent");
-static_assert(sizeof(Widget_MutatorCategoryOption_C_UpdateContent) == 0x000088, "Wrong size on Widget_MutatorCategoryOption_C_UpdateContent");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_UpdateContent, RewardDataAsset) == 0x000000, "Member 'Widget_MutatorCategoryOption_C_UpdateContent::RewardDataAsset' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_UpdateContent, Description) == 0x000008, "Member 'Widget_MutatorCategoryOption_C_UpdateContent::Description' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_UpdateContent, K2Node_DynamicCast_AsRMutator_Primary_Asset) == 0x000018, "Member 'Widget_MutatorCategoryOption_C_UpdateContent::K2Node_DynamicCast_AsRMutator_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_UpdateContent, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'Widget_MutatorCategoryOption_C_UpdateContent::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_UpdateContent, K2Node_DynamicCast_AsRMutator_Reward_Category_Data_Asset) == 0x000028, "Member 'Widget_MutatorCategoryOption_C_UpdateContent::K2Node_DynamicCast_AsRMutator_Reward_Category_Data_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_UpdateContent, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'Widget_MutatorCategoryOption_C_UpdateContent::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_UpdateContent, CallFunc_AddGodPassiveToDescriptionIfCategory_OutDescription) == 0x000038, "Member 'Widget_MutatorCategoryOption_C_UpdateContent::CallFunc_AddGodPassiveToDescriptionIfCategory_OutDescription' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_UpdateContent, CallFunc_GetBlessingDescription_MutatorDescription) == 0x000048, "Member 'Widget_MutatorCategoryOption_C_UpdateContent::CallFunc_GetBlessingDescription_MutatorDescription' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_UpdateContent, CallFunc_Conv_TextToString_ReturnValue) == 0x000058, "Member 'Widget_MutatorCategoryOption_C_UpdateContent::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_UpdateContent, CallFunc_AddHighlightToTextWithKeywords_ReturnValue) == 0x000068, "Member 'Widget_MutatorCategoryOption_C_UpdateContent::CallFunc_AddHighlightToTextWithKeywords_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MutatorCategoryOption_C_UpdateContent, CallFunc_Conv_StringToText_ReturnValue) == 0x000078, "Member 'Widget_MutatorCategoryOption_C_UpdateContent::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_MutatorCategoryOption_C_UpdateContent;
 
 }
 

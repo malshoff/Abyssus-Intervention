@@ -48,6 +48,7 @@ public:
 	void HideHighlight();
 	void IndicatorTimeline__FinishedFunc();
 	void IndicatorTimeline__UpdateFunc();
+	bool IsShareable(class APlayerController* PlayerController);
 	void OnFocus(class APlayerController* Controller);
 	void OnFocusGone(class APlayerController* Controller);
 	void OnInteract(class APlayerController* Controller);
@@ -57,6 +58,7 @@ public:
 	void ReceiveBeginPlay();
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void SetupHighlight();
+	void ShareInteractableActor(const class APlayerController* PlayerController);
 	void ToggleInteractionIndicatorVisibility(class AActor* InteractingActor, const bool NewVisible);
 	void UpdateDifficultyIndicator(double IndicatorLevel);
 
@@ -75,29 +77,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_DifficultyInteractable_C">();
+		BP_STATIC_CLASS_IMPL("BP_DifficultyInteractable_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_DifficultyInteractable_C")
 	}
 	static class ABP_DifficultyInteractable_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_DifficultyInteractable_C>();
 	}
 };
-static_assert(alignof(ABP_DifficultyInteractable_C) == 0x000008, "Wrong alignment on ABP_DifficultyInteractable_C");
-static_assert(sizeof(ABP_DifficultyInteractable_C) == 0x000360, "Wrong size on ABP_DifficultyInteractable_C");
-static_assert(offsetof(ABP_DifficultyInteractable_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_DifficultyInteractable_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_DifficultyInteractable_C, BPC_InteractableIndicator) == 0x0002B8, "Member 'ABP_DifficultyInteractable_C::BPC_InteractableIndicator' has a wrong offset!");
-static_assert(offsetof(ABP_DifficultyInteractable_C, PointLight) == 0x0002C0, "Member 'ABP_DifficultyInteractable_C::PointLight' has a wrong offset!");
-static_assert(offsetof(ABP_DifficultyInteractable_C, SM_Interactable_Difficulty_Engine_01) == 0x0002C8, "Member 'ABP_DifficultyInteractable_C::SM_Interactable_Difficulty_Engine_01' has a wrong offset!");
-static_assert(offsetof(ABP_DifficultyInteractable_C, ObjectHighlightWidgetComponent) == 0x0002D0, "Member 'ABP_DifficultyInteractable_C::ObjectHighlightWidgetComponent' has a wrong offset!");
-static_assert(offsetof(ABP_DifficultyInteractable_C, StaticMesh) == 0x0002D8, "Member 'ABP_DifficultyInteractable_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_DifficultyInteractable_C, IndicatorTimeline_Alpha_3328613C4D5412C8D05037B13CEF21C9) == 0x0002E0, "Member 'ABP_DifficultyInteractable_C::IndicatorTimeline_Alpha_3328613C4D5412C8D05037B13CEF21C9' has a wrong offset!");
-static_assert(offsetof(ABP_DifficultyInteractable_C, IndicatorTimeline__Direction_3328613C4D5412C8D05037B13CEF21C9) == 0x0002E4, "Member 'ABP_DifficultyInteractable_C::IndicatorTimeline__Direction_3328613C4D5412C8D05037B13CEF21C9' has a wrong offset!");
-static_assert(offsetof(ABP_DifficultyInteractable_C, IndicatorTimeline) == 0x0002E8, "Member 'ABP_DifficultyInteractable_C::IndicatorTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_DifficultyInteractable_C, ShouldShowHighlight) == 0x0002F0, "Member 'ABP_DifficultyInteractable_C::ShouldShowHighlight' has a wrong offset!");
-static_assert(offsetof(ABP_DifficultyInteractable_C, DMIDifficultyIndicator) == 0x0002F8, "Member 'ABP_DifficultyInteractable_C::DMIDifficultyIndicator' has a wrong offset!");
-static_assert(offsetof(ABP_DifficultyInteractable_C, PreviousIndicatorLevel) == 0x000300, "Member 'ABP_DifficultyInteractable_C::PreviousIndicatorLevel' has a wrong offset!");
-static_assert(offsetof(ABP_DifficultyInteractable_C, MenuRef) == 0x000308, "Member 'ABP_DifficultyInteractable_C::MenuRef' has a wrong offset!");
-static_assert(offsetof(ABP_DifficultyInteractable_C, DifficultyTreeAssignedPoints) == 0x000310, "Member 'ABP_DifficultyInteractable_C::DifficultyTreeAssignedPoints' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_DifficultyInteractable_C;
 
 }
 

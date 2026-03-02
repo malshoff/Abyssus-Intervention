@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "RGame_structs.hpp"
 
@@ -26,9 +26,7 @@ struct AB_Ricky_C_BlueprintUpdateAnimation final
 public:
 	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(AB_Ricky_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on AB_Ricky_C_BlueprintUpdateAnimation");
-static_assert(sizeof(AB_Ricky_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on AB_Ricky_C_BlueprintUpdateAnimation");
-static_assert(offsetof(AB_Ricky_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'AB_Ricky_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
+DUMPER7_ASSERTS_AB_Ricky_C_BlueprintUpdateAnimation;
 
 // Function AB_Ricky.AB_Ricky_C.ExecuteUbergraph_AB_Ricky
 // 0x0330 (0x0330 - 0x0000)
@@ -102,66 +100,7 @@ public:
 	uint8                                         Pad_324[0x4];                                      // 0x0324(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0328(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky) == 0x000008, "Wrong alignment on AB_Ricky_C_ExecuteUbergraph_AB_Ricky");
-static_assert(sizeof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky) == 0x000330, "Wrong size on AB_Ricky_C_ExecuteUbergraph_AB_Ricky");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, EntryPoint) == 0x000000, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::EntryPoint' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, K2Node_MakeArray_Array) == 0x000008, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, K2Node_Event_DeltaTimeX) == 0x000018, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::K2Node_Event_DeltaTimeX' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakRotator_Roll) == 0x00001C, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakRotator_Pitch) == 0x000020, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakRotator_Yaw) == 0x000024, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000028, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_TryGetPawnOwner_ReturnValue) == 0x000030, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_MakeRotator_ReturnValue) == 0x000038, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000050, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_GetRPawnMovementComponent_ReturnValue) == 0x000060, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_GetRPawnMovementComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_GetRPawnMovementComponent_ReturnValue_1) == 0x000068, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_GetRPawnMovementComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_GetSurfaceType_ReturnValue) == 0x000070, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_GetSurfaceType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_GetSFXFromSurfaceTable_RowFound) == 0x000071, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_GetSFXFromSurfaceTable_RowFound' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_GetSFXFromSurfaceTable_ReturnValue) == 0x000078, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_GetSFXFromSurfaceTable_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000090, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_GetSkeletalMeshComponent_ReturnValue) == 0x000098, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_GetSkeletalMeshComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_GetSocketLocation_ReturnValue) == 0x0000A0, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_SelectName_ReturnValue) == 0x0000B8, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_SelectName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_SelectName_ReturnValue_1) == 0x0000C0, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_SelectName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_GetSocketLocation_ReturnValue_1) == 0x0000C8, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_GetSocketLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_SpawnSoundAttached_ReturnValue) == 0x0000E0, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_Subtract_VectorVector_ReturnValue) == 0x0000E8, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue) == 0x000100, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, Temp_object_Variable) == 0x000108, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_LineTraceSingleForObjects_OutHit) == 0x000118, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_LineTraceSingleForObjects_OutHit' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000218, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_GetSurfaceType_ReturnValue_1) == 0x000219, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_GetSurfaceType_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x00021A, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_bBlockingHit) == 0x00021B, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_bInitialOverlap) == 0x00021C, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_Time) == 0x000220, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_Distance) == 0x000224, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_Location) == 0x000228, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_ImpactPoint) == 0x000240, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_Normal) == 0x000258, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_ImpactNormal) == 0x000270, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_PhysMat) == 0x000288, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_HitActor) == 0x000290, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_HitComponent) == 0x000298, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_HitBoneName) == 0x0002A0, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_BoneName) == 0x0002A8, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_HitItem) == 0x0002B0, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_ElementIndex) == 0x0002B4, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_FaceIndex) == 0x0002B8, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_TraceStart) == 0x0002C0, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BreakHitResult_TraceEnd) == 0x0002D8, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_Less_DoubleDouble_ReturnValue) == 0x0002F0, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_IsVisible_ReturnValue) == 0x0002F1, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_BooleanAND_ReturnValue) == 0x0002F2, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_SpawnSoundAtLocation_ReturnValue) == 0x0002F8, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_SpawnSoundAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue_1) == 0x000300, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_SpawnSoundAtLocation_ReturnValue_1) == 0x000308, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_SpawnSoundAtLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue_2) == 0x000310, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000318, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x000320, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(AB_Ricky_C_ExecuteUbergraph_AB_Ricky, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000328, "Member 'AB_Ricky_C_ExecuteUbergraph_AB_Ricky::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_AB_Ricky_C_ExecuteUbergraph_AB_Ricky;
 
 }
 

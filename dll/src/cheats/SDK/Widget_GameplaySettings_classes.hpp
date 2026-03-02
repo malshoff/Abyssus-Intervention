@@ -19,40 +19,41 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_GameplaySettings.Widget_GameplaySettings_C
-// 0x0140 (0x0418 - 0x02D8)
+// 0x0148 (0x0490 - 0x0348)
 class UWidget_GameplaySettings_C final : public UWidget_SettingTabBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_GameplaySettings_C;          // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidget_SettingsSlider_C*               ControllerAimAssistStrength;                       // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsSlider_C*               ControllerScopedXSensitivity;                      // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsSlider_C*               ControllerScopedYSensitivity;                      // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsSlider_C*               ControllerXSensitivity;                            // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsSlider_C*               ControllerYSensitivity;                            // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsCheckbox_C*             Crosshair;                                         // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsOptions_C*              CrosshairAlignment;                                // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsOptions_C*              DamageNumbers;                                     // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsCheckbox_C*             DashIndicator;                                     // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsSlider_C*               FOV;                                               // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsCheckbox_C*             HealthBars;                                        // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsComboBox_C*             ICON_SCHEME;                                       // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsCheckbox_C*             InvertedXAxis;                                     // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsCheckbox_C*             InvertedYAxis;                                     // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsComboBox_C*             Language;                                          // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsCheckbox_C*             LANGUAGE_FILTERING;                                // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsSlider_C*               MouseSensitivity;                                  // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsCheckbox_C*             PlayerHUD;                                         // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsCheckbox_C*             PlayerNames;                                       // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsSlider_C*               ScopedSensitivity;                                 // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsCheckbox_C*             ScopeMode;                                         // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsCheckbox_C*             ScreenShake;                                       // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             ScrollBox_0;                                       // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsCheckbox_C*             TELEMETRY_CONSENT;                                 // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class FString>                         CultureArray;                                      // 0x03A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          RecursionFlag;                                     // 0x03B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B1[0x7];                                      // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FString, EGamepadIconScheme>       IconSchemeMap;                                     // 0x03B8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class FText>                           LangaugeArray;                                     // 0x0408(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_GameplaySettings_C;          // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_SettingsCheckbox_C*             TELEMETRY_CONSENT;                                 // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollBox*                             ScrollBox_0;                                       // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsCheckbox_C*             ScreenShake;                                       // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsCheckbox_C*             ScopeMode;                                         // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsSlider_C*               ScopedSensitivity;                                 // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsCheckbox_C*             PlayerNames;                                       // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsCheckbox_C*             PlayerHUD;                                         // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsSlider_C*               MouseSensitivity;                                  // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsCheckbox_C*             LANGUAGE_FILTERING;                                // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsComboBox_C*             Language;                                          // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsCheckbox_C*             InvertedYAxis;                                     // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsCheckbox_C*             InvertedXAxis;                                     // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsComboBox_C*             ICON_SCHEME;                                       // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsCheckbox_C*             HealthBarVisibility;                               // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsSlider_C*               FOV;                                               // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsCheckbox_C*             DashIndicator;                                     // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsOptions_C*              DamageNumbers;                                     // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsCheckbox_C*             CrosshairVisibility;                               // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsColor_C*                CrosshairColor;                                    // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsOptions_C*              CrosshairAlignment;                                // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsSlider_C*               ControllerYSensitivity;                            // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsSlider_C*               ControllerXSensitivity;                            // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsSlider_C*               ControllerScopedYSensitivity;                      // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsSlider_C*               ControllerScopedXSensitivity;                      // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsSlider_C*               ControllerAimAssistStrength;                       // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class FString>                         CultureArray;                                      // 0x0418(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          RecursionFlag;                                     // 0x0428(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_429[0x7];                                      // 0x0429(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FString, EGamepadIconScheme>       IconSchemeMap;                                     // 0x0430(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class FText>                           LangaugeArray;                                     // 0x0480(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void BndEvt__Widget_GameplaySettings_ControllerAimAssistStrength_K2Node_ComponentBoundEvent_16_OnValueChanged__DelegateSignature(double Value, double Percent);
@@ -76,6 +77,7 @@ public:
 	void BndEvt__Widget_GameplaySettings_ScreenShake_K2Node_ComponentBoundEvent_10_OnValueChanged__DelegateSignature(bool State);
 	void BndEvt__Widget_GameplaySettings_TELEMETRY_CONSENT_K2Node_ComponentBoundEvent_20_OnValueChanged__DelegateSignature(bool State);
 	void BndEvt__Widget_GameplaySettings_Widget_SettingsCheckbox_1_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature(bool State);
+	void BndEvt__Widget_GameplaySettings_Widget_SettingsColor_K2Node_ComponentBoundEvent_22_OnValueChanged__DelegateSignature(const struct FLinearColor& Color);
 	void BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature(const class FText& NewOption, int32 Index_0);
 	void BndEvt__Widget_GameplaySettings_Widget_SettingsSlider_2_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature(double Value, double Percent);
 	void BP_GetScrollBoxWidget(class UScrollBox** Result);
@@ -98,44 +100,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_GameplaySettings_C">();
+		BP_STATIC_CLASS_IMPL("Widget_GameplaySettings_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_GameplaySettings_C")
 	}
 	static class UWidget_GameplaySettings_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_GameplaySettings_C>();
 	}
 };
-static_assert(alignof(UWidget_GameplaySettings_C) == 0x000008, "Wrong alignment on UWidget_GameplaySettings_C");
-static_assert(sizeof(UWidget_GameplaySettings_C) == 0x000418, "Wrong size on UWidget_GameplaySettings_C");
-static_assert(offsetof(UWidget_GameplaySettings_C, UberGraphFrame_Widget_GameplaySettings_C) == 0x0002D8, "Member 'UWidget_GameplaySettings_C::UberGraphFrame_Widget_GameplaySettings_C' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, ControllerAimAssistStrength) == 0x0002E0, "Member 'UWidget_GameplaySettings_C::ControllerAimAssistStrength' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, ControllerScopedXSensitivity) == 0x0002E8, "Member 'UWidget_GameplaySettings_C::ControllerScopedXSensitivity' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, ControllerScopedYSensitivity) == 0x0002F0, "Member 'UWidget_GameplaySettings_C::ControllerScopedYSensitivity' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, ControllerXSensitivity) == 0x0002F8, "Member 'UWidget_GameplaySettings_C::ControllerXSensitivity' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, ControllerYSensitivity) == 0x000300, "Member 'UWidget_GameplaySettings_C::ControllerYSensitivity' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, Crosshair) == 0x000308, "Member 'UWidget_GameplaySettings_C::Crosshair' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, CrosshairAlignment) == 0x000310, "Member 'UWidget_GameplaySettings_C::CrosshairAlignment' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, DamageNumbers) == 0x000318, "Member 'UWidget_GameplaySettings_C::DamageNumbers' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, DashIndicator) == 0x000320, "Member 'UWidget_GameplaySettings_C::DashIndicator' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, FOV) == 0x000328, "Member 'UWidget_GameplaySettings_C::FOV' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, HealthBars) == 0x000330, "Member 'UWidget_GameplaySettings_C::HealthBars' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, ICON_SCHEME) == 0x000338, "Member 'UWidget_GameplaySettings_C::ICON_SCHEME' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, InvertedXAxis) == 0x000340, "Member 'UWidget_GameplaySettings_C::InvertedXAxis' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, InvertedYAxis) == 0x000348, "Member 'UWidget_GameplaySettings_C::InvertedYAxis' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, Language) == 0x000350, "Member 'UWidget_GameplaySettings_C::Language' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, LANGUAGE_FILTERING) == 0x000358, "Member 'UWidget_GameplaySettings_C::LANGUAGE_FILTERING' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, MouseSensitivity) == 0x000360, "Member 'UWidget_GameplaySettings_C::MouseSensitivity' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, PlayerHUD) == 0x000368, "Member 'UWidget_GameplaySettings_C::PlayerHUD' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, PlayerNames) == 0x000370, "Member 'UWidget_GameplaySettings_C::PlayerNames' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, ScopedSensitivity) == 0x000378, "Member 'UWidget_GameplaySettings_C::ScopedSensitivity' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, ScopeMode) == 0x000380, "Member 'UWidget_GameplaySettings_C::ScopeMode' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, ScreenShake) == 0x000388, "Member 'UWidget_GameplaySettings_C::ScreenShake' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, ScrollBox_0) == 0x000390, "Member 'UWidget_GameplaySettings_C::ScrollBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, TELEMETRY_CONSENT) == 0x000398, "Member 'UWidget_GameplaySettings_C::TELEMETRY_CONSENT' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, CultureArray) == 0x0003A0, "Member 'UWidget_GameplaySettings_C::CultureArray' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, RecursionFlag) == 0x0003B0, "Member 'UWidget_GameplaySettings_C::RecursionFlag' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, IconSchemeMap) == 0x0003B8, "Member 'UWidget_GameplaySettings_C::IconSchemeMap' has a wrong offset!");
-static_assert(offsetof(UWidget_GameplaySettings_C, LangaugeArray) == 0x000408, "Member 'UWidget_GameplaySettings_C::LangaugeArray' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_GameplaySettings_C;
 
 }
 

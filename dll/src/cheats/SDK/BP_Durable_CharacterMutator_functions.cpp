@@ -84,5 +84,41 @@ void UBP_Durable_CharacterMutator_C::K2_DeactivateScript()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function BP_Durable_CharacterMutator.BP_Durable_CharacterMutator_C.OnMaxHealthUpdated
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URHealthComponent*                Component                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// float                                   MaximumHealth                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_Durable_CharacterMutator_C::OnMaxHealthUpdated(class URHealthComponent* Component, float MaximumHealth)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Durable_CharacterMutator_C", "OnMaxHealthUpdated");
+
+	Params::BP_Durable_CharacterMutator_C_OnMaxHealthUpdated Parms{};
+
+	Parms.Component = Component;
+	Parms.MaximumHealth = MaximumHealth;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Durable_CharacterMutator.BP_Durable_CharacterMutator_C.UpdateMaxHealth
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBP_Durable_CharacterMutator_C::UpdateMaxHealth()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Durable_CharacterMutator_C", "UpdateMaxHealth");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 }
 

@@ -27,10 +27,7 @@ public:
 	class APlayerController*                      PlayerController_0;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          bConsumed;                                         // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_AddHealAltarSelectionForController) == 0x000008, "Wrong alignment on BP_HealAltar_C_AddHealAltarSelectionForController");
-static_assert(sizeof(BP_HealAltar_C_AddHealAltarSelectionForController) == 0x000010, "Wrong size on BP_HealAltar_C_AddHealAltarSelectionForController");
-static_assert(offsetof(BP_HealAltar_C_AddHealAltarSelectionForController, PlayerController_0) == 0x000000, "Member 'BP_HealAltar_C_AddHealAltarSelectionForController::PlayerController_0' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_AddHealAltarSelectionForController, bConsumed) == 0x000008, "Member 'BP_HealAltar_C_AddHealAltarSelectionForController::bConsumed' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_AddHealAltarSelectionForController;
 
 // Function BP_HealAltar.BP_HealAltar_C.BndEvt__BP_HealAltar_VoiceProximity_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -39,9 +36,7 @@ struct BP_HealAltar_C_BndEvt__BP_HealAltar_VoiceProximity_K2Node_ComponentBoundE
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_BndEvt__BP_HealAltar_VoiceProximity_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature) == 0x000008, "Wrong alignment on BP_HealAltar_C_BndEvt__BP_HealAltar_VoiceProximity_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature");
-static_assert(sizeof(BP_HealAltar_C_BndEvt__BP_HealAltar_VoiceProximity_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature) == 0x000008, "Wrong size on BP_HealAltar_C_BndEvt__BP_HealAltar_VoiceProximity_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature");
-static_assert(offsetof(BP_HealAltar_C_BndEvt__BP_HealAltar_VoiceProximity_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature, Actor) == 0x000000, "Member 'BP_HealAltar_C_BndEvt__BP_HealAltar_VoiceProximity_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_BndEvt__BP_HealAltar_VoiceProximity_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature;
 
 // Function BP_HealAltar.BP_HealAltar_C.CanInteract
 // 0x0010 (0x0010 - 0x0000)
@@ -56,15 +51,7 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_CanInteract) == 0x000008, "Wrong alignment on BP_HealAltar_C_CanInteract");
-static_assert(sizeof(BP_HealAltar_C_CanInteract) == 0x000010, "Wrong size on BP_HealAltar_C_CanInteract");
-static_assert(offsetof(BP_HealAltar_C_CanInteract, Controller) == 0x000000, "Member 'BP_HealAltar_C_CanInteract::Controller' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CanInteract, ReturnValue) == 0x000008, "Member 'BP_HealAltar_C_CanInteract::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CanInteract, CallFunc_IsLocalPlayerController_ReturnValue) == 0x000009, "Member 'BP_HealAltar_C_CanInteract::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CanInteract, CallFunc_IsValid_ReturnValue) == 0x00000A, "Member 'BP_HealAltar_C_CanInteract::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CanInteract, CallFunc_Not_PreBool_ReturnValue) == 0x00000B, "Member 'BP_HealAltar_C_CanInteract::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CanInteract, CallFunc_Not_PreBool_ReturnValue_1) == 0x00000C, "Member 'BP_HealAltar_C_CanInteract::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CanInteract, CallFunc_BooleanOR_ReturnValue) == 0x00000D, "Member 'BP_HealAltar_C_CanInteract::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_CanInteract;
 
 // Function BP_HealAltar.BP_HealAltar_C.CheckAndUpdateLootOptions
 // 0x0060 (0x0060 - 0x0000)
@@ -89,198 +76,113 @@ public:
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x005E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_CheckAndUpdateLootOptions) == 0x000008, "Wrong alignment on BP_HealAltar_C_CheckAndUpdateLootOptions");
-static_assert(sizeof(BP_HealAltar_C_CheckAndUpdateLootOptions) == 0x000060, "Wrong size on BP_HealAltar_C_CheckAndUpdateLootOptions");
-static_assert(offsetof(BP_HealAltar_C_CheckAndUpdateLootOptions, Controller) == 0x000000, "Member 'BP_HealAltar_C_CheckAndUpdateLootOptions::Controller' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CheckAndUpdateLootOptions, Temp_bool_True_if_break_was_hit_Variable) == 0x000008, "Member 'BP_HealAltar_C_CheckAndUpdateLootOptions::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CheckAndUpdateLootOptions, K2Node_DynamicCast_AsRPlayer_State) == 0x000010, "Member 'BP_HealAltar_C_CheckAndUpdateLootOptions::K2Node_DynamicCast_AsRPlayer_State' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CheckAndUpdateLootOptions, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_HealAltar_C_CheckAndUpdateLootOptions::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CheckAndUpdateLootOptions, CallFunc_Not_PreBool_ReturnValue) == 0x000019, "Member 'BP_HealAltar_C_CheckAndUpdateLootOptions::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CheckAndUpdateLootOptions, CallFunc_GetUniqueNetIdString_ReturnValue) == 0x000020, "Member 'BP_HealAltar_C_CheckAndUpdateLootOptions::CallFunc_GetUniqueNetIdString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CheckAndUpdateLootOptions, Temp_int_Array_Index_Variable) == 0x000030, "Member 'BP_HealAltar_C_CheckAndUpdateLootOptions::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CheckAndUpdateLootOptions, Temp_int_Loop_Counter_Variable) == 0x000034, "Member 'BP_HealAltar_C_CheckAndUpdateLootOptions::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CheckAndUpdateLootOptions, CallFunc_Add_IntInt_ReturnValue) == 0x000038, "Member 'BP_HealAltar_C_CheckAndUpdateLootOptions::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CheckAndUpdateLootOptions, CallFunc_Array_Get_Item) == 0x000040, "Member 'BP_HealAltar_C_CheckAndUpdateLootOptions::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CheckAndUpdateLootOptions, CallFunc_Array_Length_ReturnValue) == 0x000058, "Member 'BP_HealAltar_C_CheckAndUpdateLootOptions::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CheckAndUpdateLootOptions, CallFunc_Less_IntInt_ReturnValue) == 0x00005C, "Member 'BP_HealAltar_C_CheckAndUpdateLootOptions::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CheckAndUpdateLootOptions, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x00005D, "Member 'BP_HealAltar_C_CheckAndUpdateLootOptions::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_CheckAndUpdateLootOptions, CallFunc_BooleanAND_ReturnValue) == 0x00005E, "Member 'BP_HealAltar_C_CheckAndUpdateLootOptions::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_CheckAndUpdateLootOptions;
 
 // Function BP_HealAltar.BP_HealAltar_C.ExecuteUbergraph_BP_HealAltar
-// 0x0228 (0x0228 - 0x0000)
+// 0x0238 (0x0238 - 0x0000)
 struct BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      K2Node_Event_controller_2;                         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      K2Node_Event_controller_1;                         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_InteractingActor;                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_NewVisible;                           // 0x0020(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      K2Node_Event_controller;                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	ENCPoolMethod                                 CallFunc_GetShouldAutoPoolNiagara_ReturnValue;     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundAttenuation*                      Temp_object_Variable;                              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class APlayerController*                K2Node_Event_PlayerController_1;                   // 0x0018(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_InteractingActor;                     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_NewVisible;                           // 0x0028(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      K2Node_Event_controller;                           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ENCPoolMethod                                 CallFunc_GetShouldAutoPoolNiagara_ReturnValue;     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      CallFunc_SpawnSystemAtLocation_ReturnValue;        // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARGameState*                            CallFunc_GetRGameState_ReturnValue;                // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8A[0x6];                                       // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARGameState*                            CallFunc_GetRGameState_ReturnValue_1;              // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARRadarManager*                         CallFunc_GetRadarManager_ReturnValue;              // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARRadarManager*                         CallFunc_GetRadarManager_ReturnValue_1;            // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocalController_ReturnValue;            // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocalPlayerController_ReturnValue;      // 0x00BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocalPlayerController_ReturnValue_1;    // 0x00BB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_ComponentBoundEvent_Actor;                  // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundAttenuation*                      CallFunc_GetPlayer2DAttenuation_ReturnValue;       // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENCPoolMethod                                 Temp_byte_Variable;                                // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E2[0x6];                                       // 0x00E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundAttenuation*                      K2Node_Select_Default;                             // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Select_Default_1;                           // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool* RetValue)>               K2Node_CreateDelegate_OutputDelegate;              // 0x00F4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraComponent*                      CallFunc_SpawnSystemAtLocation_ReturnValue_1;      // 0x0108(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UFCInvokeBlueprintProxy*                CallFunc_CreateInvokeProxyObject_ReturnValue;      // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARGamePlayerController*                 CallFunc_GetFirstLocalGamePlayerController_ReturnValue; // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      K2Node_Event_PlayerController;                     // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bConsumed;                            // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller;      // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_142[0x6];                                      // 0x0142(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPlayerState*                          K2Node_DynamicCast_AsRPlayer_State;                // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_152[0x6];                                      // 0x0152(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetUniqueNetIdString_ReturnValue;         // 0x0158(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FRUniqueHealAltar                      K2Node_MakeStruct_RUniqueHealAltar;                // 0x0168(0x0018)()
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_184[0x4];                                      // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller_1;    // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_191[0x3];                                      // 0x0191(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0194(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class URHealthComponent*                      CallFunc_GetHealthComponent_ReturnValue;           // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetCurrentHealth_ReturnValue;             // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_1;                 // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMaxHealth_ReturnValue;                 // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x01D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x01E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_2;                 // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class URGScriptComponent*                     CallFunc_GetGScriptComponentFromActor_ReturnValue; // 0x01F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class URGAbilityCharacterMutatorScript*       CallFunc_GetActivatableAbilityByName_ReturnValue;  // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_FlaskBase_CharacterMutator_C*       K2Node_DynamicCast_AsBP_Flask_Base_Character_Mutator; // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_HealActor_Server_Value_ImplicitCast;      // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundAttenuation*                      Temp_object_Variable;                              // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      CallFunc_SpawnSystemAtLocation_ReturnValue;        // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARGameState*                            CallFunc_GetRGameState_ReturnValue;                // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_92[0x6];                                       // 0x0092(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARGameState*                            CallFunc_GetRGameState_ReturnValue_1;              // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A2[0x6];                                       // 0x00A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARRadarManager*                         CallFunc_GetRadarManager_ReturnValue;              // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARRadarManager*                         CallFunc_GetRadarManager_ReturnValue_1;            // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocalController_ReturnValue;            // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocalPlayerController_ReturnValue;      // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocalPlayerController_ReturnValue_1;    // 0x00C3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 K2Node_ComponentBoundEvent_Actor;                  // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundAttenuation*                      CallFunc_GetPlayer2DAttenuation_ReturnValue;       // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENCPoolMethod                                 Temp_byte_Variable;                                // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EA[0x6];                                       // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundAttenuation*                      K2Node_Select_Default;                             // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default_1;                           // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool* RetValue)>               K2Node_CreateDelegate_OutputDelegate;              // 0x00FC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraComponent*                      CallFunc_SpawnSystemAtLocation_ReturnValue_1;      // 0x0110(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UFCInvokeBlueprintProxy*                CallFunc_CreateInvokeProxyObject_ReturnValue;      // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARGamePlayerController*                 CallFunc_GetFirstLocalGamePlayerController_ReturnValue; // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      K2Node_Event_PlayerController;                     // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bConsumed;                            // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller;      // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14A[0x6];                                      // 0x014A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPlayerState*                          K2Node_DynamicCast_AsRPlayer_State;                // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15A[0x6];                                      // 0x015A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetUniqueNetIdString_ReturnValue;         // 0x0160(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FRUniqueHealAltar                      K2Node_MakeStruct_RUniqueHealAltar;                // 0x0170(0x0018)()
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller_1;    // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_199[0x3];                                      // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x019C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URHealthComponent*                      CallFunc_GetHealthComponent_ReturnValue;           // 0x01B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetCurrentHealth_ReturnValue;             // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_1;                 // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMaxHealth_ReturnValue;                 // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x01D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x01E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_2;                 // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URGScriptComponent*                     CallFunc_GetGScriptComponentFromActor_ReturnValue; // 0x01F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_Condition;                      // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGAbilityCharacterMutatorScript*       CallFunc_GetActivatableAbilityByName_ReturnValue;  // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_FlaskBase_CharacterMutator_C*       K2Node_DynamicCast_AsBP_Flask_Base_Character_Mutator; // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_HealActor_Server_Value_ImplicitCast;      // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar) == 0x000008, "Wrong alignment on BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar");
-static_assert(sizeof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar) == 0x000228, "Wrong size on BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, EntryPoint) == 0x000000, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, Temp_bool_IsClosed_Variable) == 0x000004, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, Temp_bool_Has_Been_Initd_Variable) == 0x000005, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, Temp_bool_Variable) == 0x000006, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, Temp_bool_Variable_1) == 0x000007, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_Event_controller_2) == 0x000008, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_Event_controller_2' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_Event_controller_1) == 0x000010, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_Event_controller_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_Event_InteractingActor) == 0x000018, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_Event_InteractingActor' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_Event_NewVisible) == 0x000020, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_Event_NewVisible' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_Event_controller) == 0x000028, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_Event_controller' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_GetShouldAutoPoolNiagara_ReturnValue) == 0x000030, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_GetShouldAutoPoolNiagara_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, Temp_object_Variable) == 0x000038, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000040, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_K2_GetComponentLocation_ReturnValue_1) == 0x000058, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_K2_GetComponentLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_SpawnSystemAtLocation_ReturnValue) == 0x000070, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_SpawnSystemAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_Not_PreBool_ReturnValue) == 0x000078, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, Temp_bool_Variable_2) == 0x000079, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_GetRGameState_ReturnValue) == 0x000080, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_GetRGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_IsValid_ReturnValue) == 0x000088, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_BooleanAND_ReturnValue) == 0x000089, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_GetRGameState_ReturnValue_1) == 0x000090, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_GetRGameState_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_IsValid_ReturnValue_1) == 0x000098, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_Not_PreBool_ReturnValue_1) == 0x000099, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_GetRadarManager_ReturnValue) == 0x0000A0, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_GetRadarManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_IsValid_ReturnValue_2) == 0x0000A8, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_GetRadarManager_ReturnValue_1) == 0x0000B0, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_GetRadarManager_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_IsValid_ReturnValue_3) == 0x0000B8, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_IsLocalController_ReturnValue) == 0x0000B9, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_IsLocalController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_IsLocalPlayerController_ReturnValue) == 0x0000BA, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_IsLocalPlayerController_ReturnValue_1) == 0x0000BB, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_IsLocalPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_ComponentBoundEvent_Actor) == 0x0000C0, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_ComponentBoundEvent_Actor' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x0000C8, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_DynamicCast_bSuccess) == 0x0000D0, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_GetPlayer2DAttenuation_ReturnValue) == 0x0000D8, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_GetPlayer2DAttenuation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, Temp_bool_Variable_3) == 0x0000E0, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, Temp_byte_Variable) == 0x0000E1, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_Select_Default) == 0x0000E8, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_Select_Default_1) == 0x0000F0, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_CreateDelegate_OutputDelegate) == 0x0000F4, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_SpawnSystemAtLocation_ReturnValue_1) == 0x000108, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_SpawnSystemAtLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_CreateInvokeProxyObject_ReturnValue) == 0x000110, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_CreateInvokeProxyObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000118, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_IsValid_ReturnValue_4) == 0x000120, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_Event_PlayerController) == 0x000128, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_Event_PlayerController' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_Event_bConsumed) == 0x000130, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_Event_bConsumed' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_DynamicCast_AsRGame_Player_Controller) == 0x000138, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_DynamicCast_AsRGame_Player_Controller' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_DynamicCast_bSuccess_1) == 0x000140, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_IsValid_ReturnValue_5) == 0x000141, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_DynamicCast_AsRPlayer_State) == 0x000148, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_DynamicCast_AsRPlayer_State' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_DynamicCast_bSuccess_2) == 0x000150, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_IsValid_ReturnValue_6) == 0x000151, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_GetUniqueNetIdString_ReturnValue) == 0x000158, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_GetUniqueNetIdString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_MakeStruct_RUniqueHealAltar) == 0x000168, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_MakeStruct_RUniqueHealAltar' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_Array_Add_ReturnValue) == 0x000180, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_DynamicCast_AsRGame_Player_Controller_1) == 0x000188, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_DynamicCast_AsRGame_Player_Controller_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_DynamicCast_bSuccess_3) == 0x000190, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_CreateDelegate_OutputDelegate_1) == 0x000194, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_K2_GetPawn_ReturnValue) == 0x0001A8, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_GetHealthComponent_ReturnValue) == 0x0001B0, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_GetHealthComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_GetCurrentHealth_ReturnValue) == 0x0001B8, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_GetCurrentHealth_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_K2_GetPawn_ReturnValue_1) == 0x0001C0, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_K2_GetPawn_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_GetMaxHealth_ReturnValue) == 0x0001C8, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_GetMaxHealth_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_K2_GetRootComponent_ReturnValue) == 0x0001D0, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0001D8, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_SpawnSoundAttached_ReturnValue) == 0x0001E0, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_K2_GetPawn_ReturnValue_2) == 0x0001E8, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_K2_GetPawn_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_GetGScriptComponentFromActor_ReturnValue) == 0x0001F0, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_GetGScriptComponentFromActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_GetActivatableAbilityByName_ReturnValue) == 0x0001F8, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_GetActivatableAbilityByName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_DynamicCast_AsBP_Flask_Base_Character_Mutator) == 0x000200, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_DynamicCast_AsBP_Flask_Base_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, K2Node_DynamicCast_bSuccess_4) == 0x000208, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x000210, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x000218, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar, CallFunc_HealActor_Server_Value_ImplicitCast) == 0x000220, "Member 'BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar::CallFunc_HealActor_Server_Value_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_ExecuteUbergraph_BP_HealAltar;
 
 // Function BP_HealAltar.BP_HealAltar_C.GetRequiredMutatorPA
 // 0x0050 (0x0050 - 0x0000)
@@ -296,15 +198,7 @@ public:
 	class URMutatorPrimaryAsset*                  CallFunc_Map_Find_Value;                           // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_GetRequiredMutatorPA) == 0x000008, "Wrong alignment on BP_HealAltar_C_GetRequiredMutatorPA");
-static_assert(sizeof(BP_HealAltar_C_GetRequiredMutatorPA) == 0x000050, "Wrong size on BP_HealAltar_C_GetRequiredMutatorPA");
-static_assert(offsetof(BP_HealAltar_C_GetRequiredMutatorPA, MutatorPA) == 0x000000, "Member 'BP_HealAltar_C_GetRequiredMutatorPA::MutatorPA' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_GetRequiredMutatorPA, CallFunc_GetOverworldManager_ReturnValue) == 0x000008, "Member 'BP_HealAltar_C_GetRequiredMutatorPA::CallFunc_GetOverworldManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_GetRequiredMutatorPA, CallFunc_GetCurrentOverworldArea_ReturnValue) == 0x000010, "Member 'BP_HealAltar_C_GetRequiredMutatorPA::CallFunc_GetCurrentOverworldArea_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_GetRequiredMutatorPA, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'BP_HealAltar_C_GetRequiredMutatorPA::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_GetRequiredMutatorPA, CallFunc_IsValid_ReturnValue_1) == 0x000039, "Member 'BP_HealAltar_C_GetRequiredMutatorPA::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_GetRequiredMutatorPA, CallFunc_Map_Find_Value) == 0x000040, "Member 'BP_HealAltar_C_GetRequiredMutatorPA::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_GetRequiredMutatorPA, CallFunc_Map_Find_ReturnValue) == 0x000048, "Member 'BP_HealAltar_C_GetRequiredMutatorPA::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_GetRequiredMutatorPA;
 
 // Function BP_HealAltar.BP_HealAltar_C.HasRequiredMutatorPA
 // 0x0040 (0x0040 - 0x0000)
@@ -324,18 +218,17 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasMutator_ReturnValue;                   // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_HasRequiredMutatorPA) == 0x000008, "Wrong alignment on BP_HealAltar_C_HasRequiredMutatorPA");
-static_assert(sizeof(BP_HealAltar_C_HasRequiredMutatorPA) == 0x000040, "Wrong size on BP_HealAltar_C_HasRequiredMutatorPA");
-static_assert(offsetof(BP_HealAltar_C_HasRequiredMutatorPA, PlayerController_0) == 0x000000, "Member 'BP_HealAltar_C_HasRequiredMutatorPA::PlayerController_0' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_HasRequiredMutatorPA, Result) == 0x000008, "Member 'BP_HealAltar_C_HasRequiredMutatorPA::Result' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_HasRequiredMutatorPA, CallFunc_GetRequiredMutatorPA_MutatorPA) == 0x000010, "Member 'BP_HealAltar_C_HasRequiredMutatorPA::CallFunc_GetRequiredMutatorPA_MutatorPA' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_HasRequiredMutatorPA, K2Node_DynamicCast_AsRPlayer_Controller) == 0x000018, "Member 'BP_HealAltar_C_HasRequiredMutatorPA::K2Node_DynamicCast_AsRPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_HasRequiredMutatorPA, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_HealAltar_C_HasRequiredMutatorPA::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_HasRequiredMutatorPA, CallFunc_IsValid_ReturnValue) == 0x000021, "Member 'BP_HealAltar_C_HasRequiredMutatorPA::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_HasRequiredMutatorPA, CallFunc_K2_GetPawn_ReturnValue) == 0x000028, "Member 'BP_HealAltar_C_HasRequiredMutatorPA::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_HasRequiredMutatorPA, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000030, "Member 'BP_HealAltar_C_HasRequiredMutatorPA::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_HasRequiredMutatorPA, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'BP_HealAltar_C_HasRequiredMutatorPA::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_HasRequiredMutatorPA, CallFunc_HasMutator_ReturnValue) == 0x000039, "Member 'BP_HealAltar_C_HasRequiredMutatorPA::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_HasRequiredMutatorPA;
+
+// Function BP_HealAltar.BP_HealAltar_C.IsShareable
+// 0x0010 (0x0010 - 0x0000)
+struct BP_HealAltar_C_IsShareable final
+{
+public:
+	class APlayerController*                      PlayerController_0;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_HealAltar_C_IsShareable;
 
 // Function BP_HealAltar.BP_HealAltar_C.OnFocus
 // 0x0008 (0x0008 - 0x0000)
@@ -344,9 +237,7 @@ struct BP_HealAltar_C_OnFocus final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_OnFocus) == 0x000008, "Wrong alignment on BP_HealAltar_C_OnFocus");
-static_assert(sizeof(BP_HealAltar_C_OnFocus) == 0x000008, "Wrong size on BP_HealAltar_C_OnFocus");
-static_assert(offsetof(BP_HealAltar_C_OnFocus, Controller) == 0x000000, "Member 'BP_HealAltar_C_OnFocus::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_OnFocus;
 
 // Function BP_HealAltar.BP_HealAltar_C.OnFocusGone
 // 0x0008 (0x0008 - 0x0000)
@@ -355,9 +246,7 @@ struct BP_HealAltar_C_OnFocusGone final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_OnFocusGone) == 0x000008, "Wrong alignment on BP_HealAltar_C_OnFocusGone");
-static_assert(sizeof(BP_HealAltar_C_OnFocusGone) == 0x000008, "Wrong size on BP_HealAltar_C_OnFocusGone");
-static_assert(offsetof(BP_HealAltar_C_OnFocusGone, Controller) == 0x000000, "Member 'BP_HealAltar_C_OnFocusGone::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_OnFocusGone;
 
 // Function BP_HealAltar.BP_HealAltar_C.OnInteract
 // 0x0008 (0x0008 - 0x0000)
@@ -366,9 +255,7 @@ struct BP_HealAltar_C_OnInteract final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_OnInteract) == 0x000008, "Wrong alignment on BP_HealAltar_C_OnInteract");
-static_assert(sizeof(BP_HealAltar_C_OnInteract) == 0x000008, "Wrong size on BP_HealAltar_C_OnInteract");
-static_assert(offsetof(BP_HealAltar_C_OnInteract, Controller) == 0x000000, "Member 'BP_HealAltar_C_OnInteract::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_OnInteract;
 
 // Function BP_HealAltar.BP_HealAltar_C.PlayerStateIsValid
 // 0x0018 (0x0018 - 0x0000)
@@ -381,12 +268,25 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_PlayerStateIsValid) == 0x000008, "Wrong alignment on BP_HealAltar_C_PlayerStateIsValid");
-static_assert(sizeof(BP_HealAltar_C_PlayerStateIsValid) == 0x000018, "Wrong size on BP_HealAltar_C_PlayerStateIsValid");
-static_assert(offsetof(BP_HealAltar_C_PlayerStateIsValid, IsValid) == 0x000000, "Member 'BP_HealAltar_C_PlayerStateIsValid::IsValid' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_PlayerStateIsValid, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000008, "Member 'BP_HealAltar_C_PlayerStateIsValid::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_PlayerStateIsValid, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_HealAltar_C_PlayerStateIsValid::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_PlayerStateIsValid, CallFunc_IsValid_ReturnValue_1) == 0x000011, "Member 'BP_HealAltar_C_PlayerStateIsValid::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_PlayerStateIsValid;
+
+// Function BP_HealAltar.BP_HealAltar_C.ShareInteractableActor
+// 0x0008 (0x0008 - 0x0000)
+struct BP_HealAltar_C_ShareInteractableActor final
+{
+public:
+	const class APlayerController*                PlayerController_0;                                // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_HealAltar_C_ShareInteractableActor;
+
+// Function BP_HealAltar.BP_HealAltar_C.ToggleAudioLoop
+// 0x0001 (0x0001 - 0x0000)
+struct BP_HealAltar_C_ToggleAudioLoop final
+{
+public:
+	bool                                          Condition;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_HealAltar_C_ToggleAudioLoop;
 
 // Function BP_HealAltar.BP_HealAltar_C.ToggleInteractionIndicatorVisibility
 // 0x0010 (0x0010 - 0x0000)
@@ -396,10 +296,7 @@ public:
 	class AActor*                                 InteractingActor;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          NewVisible;                                        // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_ToggleInteractionIndicatorVisibility) == 0x000008, "Wrong alignment on BP_HealAltar_C_ToggleInteractionIndicatorVisibility");
-static_assert(sizeof(BP_HealAltar_C_ToggleInteractionIndicatorVisibility) == 0x000010, "Wrong size on BP_HealAltar_C_ToggleInteractionIndicatorVisibility");
-static_assert(offsetof(BP_HealAltar_C_ToggleInteractionIndicatorVisibility, InteractingActor) == 0x000000, "Member 'BP_HealAltar_C_ToggleInteractionIndicatorVisibility::InteractingActor' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ToggleInteractionIndicatorVisibility, NewVisible) == 0x000008, "Member 'BP_HealAltar_C_ToggleInteractionIndicatorVisibility::NewVisible' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_ToggleInteractionIndicatorVisibility;
 
 // Function BP_HealAltar.BP_HealAltar_C.GetInteractableAlternativeDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -408,9 +305,7 @@ struct BP_HealAltar_C_GetInteractableAlternativeDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_HealAltar_C_GetInteractableAlternativeDescription) == 0x000008, "Wrong alignment on BP_HealAltar_C_GetInteractableAlternativeDescription");
-static_assert(sizeof(BP_HealAltar_C_GetInteractableAlternativeDescription) == 0x000010, "Wrong size on BP_HealAltar_C_GetInteractableAlternativeDescription");
-static_assert(offsetof(BP_HealAltar_C_GetInteractableAlternativeDescription, ReturnValue) == 0x000000, "Member 'BP_HealAltar_C_GetInteractableAlternativeDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_GetInteractableAlternativeDescription;
 
 // Function BP_HealAltar.BP_HealAltar_C.GetInteractableCost
 // 0x0004 (0x0004 - 0x0000)
@@ -419,9 +314,7 @@ struct BP_HealAltar_C_GetInteractableCost final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_GetInteractableCost) == 0x000004, "Wrong alignment on BP_HealAltar_C_GetInteractableCost");
-static_assert(sizeof(BP_HealAltar_C_GetInteractableCost) == 0x000004, "Wrong size on BP_HealAltar_C_GetInteractableCost");
-static_assert(offsetof(BP_HealAltar_C_GetInteractableCost, ReturnValue) == 0x000000, "Member 'BP_HealAltar_C_GetInteractableCost::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_GetInteractableCost;
 
 // Function BP_HealAltar.BP_HealAltar_C.GetInteractableCostCurrencyType
 // 0x0010 (0x0010 - 0x0000)
@@ -430,9 +323,7 @@ struct BP_HealAltar_C_GetInteractableCostCurrencyType final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_HealAltar_C_GetInteractableCostCurrencyType) == 0x000008, "Wrong alignment on BP_HealAltar_C_GetInteractableCostCurrencyType");
-static_assert(sizeof(BP_HealAltar_C_GetInteractableCostCurrencyType) == 0x000010, "Wrong size on BP_HealAltar_C_GetInteractableCostCurrencyType");
-static_assert(offsetof(BP_HealAltar_C_GetInteractableCostCurrencyType, ReturnValue) == 0x000000, "Member 'BP_HealAltar_C_GetInteractableCostCurrencyType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_GetInteractableCostCurrencyType;
 
 // Function BP_HealAltar.BP_HealAltar_C.GetInteractableDescription
 // 0x0078 (0x0078 - 0x0000)
@@ -451,17 +342,7 @@ public:
 	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0058(0x0010)()
 	class FText                                   CallFunc_SelectText_ReturnValue;                   // 0x0068(0x0010)()
 };
-static_assert(alignof(BP_HealAltar_C_GetInteractableDescription) == 0x000008, "Wrong alignment on BP_HealAltar_C_GetInteractableDescription");
-static_assert(sizeof(BP_HealAltar_C_GetInteractableDescription) == 0x000078, "Wrong size on BP_HealAltar_C_GetInteractableDescription");
-static_assert(offsetof(BP_HealAltar_C_GetInteractableDescription, ReturnValue) == 0x000000, "Member 'BP_HealAltar_C_GetInteractableDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_GetInteractableDescription, K2Node_MakeArray_Array) == 0x000010, "Member 'BP_HealAltar_C_GetInteractableDescription::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_GetInteractableDescription, CallFunc_GetRGameState_ReturnValue) == 0x000020, "Member 'BP_HealAltar_C_GetInteractableDescription::CallFunc_GetRGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_GetInteractableDescription, CallFunc_Format_ReturnValue) == 0x000028, "Member 'BP_HealAltar_C_GetInteractableDescription::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_GetInteractableDescription, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'BP_HealAltar_C_GetInteractableDescription::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_GetInteractableDescription, K2Node_MakeArray_Array_1) == 0x000040, "Member 'BP_HealAltar_C_GetInteractableDescription::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_GetInteractableDescription, CallFunc_Not_PreBool_ReturnValue) == 0x000050, "Member 'BP_HealAltar_C_GetInteractableDescription::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_GetInteractableDescription, CallFunc_Format_ReturnValue_1) == 0x000058, "Member 'BP_HealAltar_C_GetInteractableDescription::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_GetInteractableDescription, CallFunc_SelectText_ReturnValue) == 0x000068, "Member 'BP_HealAltar_C_GetInteractableDescription::CallFunc_SelectText_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_GetInteractableDescription;
 
 // Function BP_HealAltar.BP_HealAltar_C.GetInteractableName
 // 0x0010 (0x0010 - 0x0000)
@@ -470,9 +351,7 @@ struct BP_HealAltar_C_GetInteractableName final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_HealAltar_C_GetInteractableName) == 0x000008, "Wrong alignment on BP_HealAltar_C_GetInteractableName");
-static_assert(sizeof(BP_HealAltar_C_GetInteractableName) == 0x000010, "Wrong size on BP_HealAltar_C_GetInteractableName");
-static_assert(offsetof(BP_HealAltar_C_GetInteractableName, ReturnValue) == 0x000000, "Member 'BP_HealAltar_C_GetInteractableName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_GetInteractableName;
 
 // Function BP_HealAltar.BP_HealAltar_C.GetInteractableSubHeader
 // 0x0010 (0x0010 - 0x0000)
@@ -481,9 +360,7 @@ struct BP_HealAltar_C_GetInteractableSubHeader final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_HealAltar_C_GetInteractableSubHeader) == 0x000008, "Wrong alignment on BP_HealAltar_C_GetInteractableSubHeader");
-static_assert(sizeof(BP_HealAltar_C_GetInteractableSubHeader) == 0x000010, "Wrong size on BP_HealAltar_C_GetInteractableSubHeader");
-static_assert(offsetof(BP_HealAltar_C_GetInteractableSubHeader, ReturnValue) == 0x000000, "Member 'BP_HealAltar_C_GetInteractableSubHeader::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_GetInteractableSubHeader;
 
 // Function BP_HealAltar.BP_HealAltar_C.GetInteractionIndicatorWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -492,9 +369,7 @@ struct BP_HealAltar_C_GetInteractionIndicatorWidget final
 public:
 	class UWidgetComponent*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_GetInteractionIndicatorWidget) == 0x000008, "Wrong alignment on BP_HealAltar_C_GetInteractionIndicatorWidget");
-static_assert(sizeof(BP_HealAltar_C_GetInteractionIndicatorWidget) == 0x000008, "Wrong size on BP_HealAltar_C_GetInteractionIndicatorWidget");
-static_assert(offsetof(BP_HealAltar_C_GetInteractionIndicatorWidget, ReturnValue) == 0x000000, "Member 'BP_HealAltar_C_GetInteractionIndicatorWidget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_GetInteractionIndicatorWidget;
 
 // Function BP_HealAltar.BP_HealAltar_C.GetRadarIconColor
 // 0x0010 (0x0010 - 0x0000)
@@ -503,9 +378,7 @@ struct BP_HealAltar_C_GetRadarIconColor final
 public:
 	struct FLinearColor                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_GetRadarIconColor) == 0x000004, "Wrong alignment on BP_HealAltar_C_GetRadarIconColor");
-static_assert(sizeof(BP_HealAltar_C_GetRadarIconColor) == 0x000010, "Wrong size on BP_HealAltar_C_GetRadarIconColor");
-static_assert(offsetof(BP_HealAltar_C_GetRadarIconColor, ReturnValue) == 0x000000, "Member 'BP_HealAltar_C_GetRadarIconColor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_GetRadarIconColor;
 
 // Function BP_HealAltar.BP_HealAltar_C.GetRadarIconSize
 // 0x0010 (0x0010 - 0x0000)
@@ -514,9 +387,7 @@ struct BP_HealAltar_C_GetRadarIconSize final
 public:
 	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_GetRadarIconSize) == 0x000008, "Wrong alignment on BP_HealAltar_C_GetRadarIconSize");
-static_assert(sizeof(BP_HealAltar_C_GetRadarIconSize) == 0x000010, "Wrong size on BP_HealAltar_C_GetRadarIconSize");
-static_assert(offsetof(BP_HealAltar_C_GetRadarIconSize, ReturnValue) == 0x000000, "Member 'BP_HealAltar_C_GetRadarIconSize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_GetRadarIconSize;
 
 // Function BP_HealAltar.BP_HealAltar_C.GetRadarObjectIcon
 // 0x0008 (0x0008 - 0x0000)
@@ -525,12 +396,10 @@ struct BP_HealAltar_C_GetRadarObjectIcon final
 public:
 	class USlateBrushAsset*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_GetRadarObjectIcon) == 0x000008, "Wrong alignment on BP_HealAltar_C_GetRadarObjectIcon");
-static_assert(sizeof(BP_HealAltar_C_GetRadarObjectIcon) == 0x000008, "Wrong size on BP_HealAltar_C_GetRadarObjectIcon");
-static_assert(offsetof(BP_HealAltar_C_GetRadarObjectIcon, ReturnValue) == 0x000000, "Member 'BP_HealAltar_C_GetRadarObjectIcon::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_GetRadarObjectIcon;
 
 // Function BP_HealAltar.BP_HealAltar_C.ShouldShowOnRadar
-// 0x02F0 (0x02F0 - 0x0000)
+// 0x0300 (0x0300 - 0x0000)
 struct BP_HealAltar_C_ShouldShowOnRadar final
 {
 public:
@@ -560,47 +429,18 @@ public:
 	TArray<struct FLevelGenerationSettings>       CallFunc_GetCurrentLevelSettings_ReturnValue;      // 0x00B0(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C4[0xC];                                       // 0x00C4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLevelGenerationSettings               CallFunc_Array_Get_Item;                           // 0x00D0(0x01B0)()
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsObjectInSameRoomAsPlayer_ReturnValue;   // 0x0281(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_282[0x6];                                      // 0x0282(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0288(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x02A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x02B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x02D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPointInBox_ReturnValue;                 // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x02E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLevelGenerationSettings               CallFunc_Array_Get_Item;                           // 0x00D0(0x01C0)()
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsObjectInSameRoomAsPlayer_ReturnValue;   // 0x0291(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_292[0x6];                                      // 0x0292(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0298(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x02B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x02C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x02E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPointInBox_ReturnValue;                 // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x02F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HealAltar_C_ShouldShowOnRadar) == 0x000010, "Wrong alignment on BP_HealAltar_C_ShouldShowOnRadar");
-static_assert(sizeof(BP_HealAltar_C_ShouldShowOnRadar) == 0x0002F0, "Wrong size on BP_HealAltar_C_ShouldShowOnRadar");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, ReturnValue) == 0x000000, "Member 'BP_HealAltar_C_ShouldShowOnRadar::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, RGamePlayerController) == 0x000008, "Member 'BP_HealAltar_C_ShouldShowOnRadar::RGamePlayerController' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, Temp_int_Array_Index_Variable) == 0x000010, "Member 'BP_HealAltar_C_ShouldShowOnRadar::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'BP_HealAltar_C_ShouldShowOnRadar::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000020, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000038, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000050, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_IsValid_ReturnValue) == 0x000058, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_GetOverworldManager_ReturnValue) == 0x000060, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_GetOverworldManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_Conv_DoubleToVector_ReturnValue_1) == 0x000068, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_Conv_DoubleToVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_IsValid_ReturnValue_1) == 0x000080, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_GetOverworldAreas_ReturnValue) == 0x000088, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_GetOverworldAreas_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_Array_Length_ReturnValue) == 0x000098, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_GetLevelManager_ReturnValue) == 0x0000A0, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_GetLevelManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_Greater_IntInt_ReturnValue) == 0x0000A8, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_IsValid_ReturnValue_2) == 0x0000A9, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_GetCurrentLevelSettings_ReturnValue) == 0x0000B0, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_GetCurrentLevelSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_Array_Length_ReturnValue_1) == 0x0000C0, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_Array_Get_Item) == 0x0000D0, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_Less_IntInt_ReturnValue) == 0x000280, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_IsObjectInSameRoomAsPlayer_ReturnValue) == 0x000281, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_IsObjectInSameRoomAsPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000288, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_Add_VectorVector_ReturnValue) == 0x0002A0, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_Multiply_VectorVector_ReturnValue) == 0x0002B8, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x0002D0, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_IsPointInBox_ReturnValue) == 0x0002E8, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_IsPointInBox_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HealAltar_C_ShouldShowOnRadar, CallFunc_BooleanAND_ReturnValue) == 0x0002E9, "Member 'BP_HealAltar_C_ShouldShowOnRadar::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HealAltar_C_ShouldShowOnRadar;
 
 }
 

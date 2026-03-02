@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ConsoleVariablesEditorRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "ConsoleVariablesEditorRuntime_structs.hpp"
 
 
 namespace SDK
@@ -46,17 +46,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ConsoleVariablesAsset">();
+		STATIC_CLASS_IMPL("ConsoleVariablesAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ConsoleVariablesAsset")
 	}
 	static class UConsoleVariablesAsset* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UConsoleVariablesAsset>();
 	}
 };
-static_assert(alignof(UConsoleVariablesAsset) == 0x000008, "Wrong alignment on UConsoleVariablesAsset");
-static_assert(sizeof(UConsoleVariablesAsset) == 0x000050, "Wrong size on UConsoleVariablesAsset");
-static_assert(offsetof(UConsoleVariablesAsset, VariableCollectionDescription) == 0x000030, "Member 'UConsoleVariablesAsset::VariableCollectionDescription' has a wrong offset!");
-static_assert(offsetof(UConsoleVariablesAsset, SavedCommands) == 0x000040, "Member 'UConsoleVariablesAsset::SavedCommands' has a wrong offset!");
+DUMPER7_ASSERTS_UConsoleVariablesAsset;
 
 }
 

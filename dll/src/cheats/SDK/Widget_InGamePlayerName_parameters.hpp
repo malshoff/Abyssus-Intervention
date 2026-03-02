@@ -37,20 +37,7 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName) == 0x000008, "Wrong alignment on Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName");
-static_assert(sizeof(Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName) == 0x000030, "Wrong size on Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName");
-static_assert(offsetof(Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName, EntryPoint) == 0x000000, "Member 'Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName, Temp_bool_Variable) == 0x000004, "Member 'Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName, Temp_byte_Variable) == 0x000005, "Member 'Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName, Temp_byte_Variable_1) == 0x000006, "Member 'Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName, K2Node_CustomEvent_Player_1) == 0x000008, "Member 'Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName::K2Node_CustomEvent_Player_1' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName, K2Node_CustomEvent_Player) == 0x000010, "Member 'Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName::K2Node_CustomEvent_Player' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName, K2Node_CustomEvent_Is_Currently_Spectated) == 0x000018, "Member 'Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName::K2Node_CustomEvent_Is_Currently_Spectated' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName, CallFunc_Not_PreBool_ReturnValue) == 0x000019, "Member 'Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName, K2Node_CustomEvent_Actor) == 0x000020, "Member 'Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName::K2Node_CustomEvent_Actor' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName, K2Node_CustomEvent_EndPlayReason) == 0x000028, "Member 'Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName::K2Node_CustomEvent_EndPlayReason' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName, CallFunc_BooleanAND_ReturnValue) == 0x000029, "Member 'Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName, K2Node_Select_Default) == 0x00002A, "Member 'Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_InGamePlayerName_C_ExecuteUbergraph_Widget_InGamePlayerName;
 
 // Function Widget_InGamePlayerName.Widget_InGamePlayerName_C.OnCurrentlySpectatedChanged
 // 0x0001 (0x0001 - 0x0000)
@@ -59,9 +46,7 @@ struct Widget_InGamePlayerName_C_OnCurrentlySpectatedChanged final
 public:
 	bool                                          Is_Currently_Spectated;                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_InGamePlayerName_C_OnCurrentlySpectatedChanged) == 0x000001, "Wrong alignment on Widget_InGamePlayerName_C_OnCurrentlySpectatedChanged");
-static_assert(sizeof(Widget_InGamePlayerName_C_OnCurrentlySpectatedChanged) == 0x000001, "Wrong size on Widget_InGamePlayerName_C_OnCurrentlySpectatedChanged");
-static_assert(offsetof(Widget_InGamePlayerName_C_OnCurrentlySpectatedChanged, Is_Currently_Spectated) == 0x000000, "Member 'Widget_InGamePlayerName_C_OnCurrentlySpectatedChanged::Is_Currently_Spectated' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_InGamePlayerName_C_OnCurrentlySpectatedChanged;
 
 // Function Widget_InGamePlayerName.Widget_InGamePlayerName_C.OnEndPlay
 // 0x0010 (0x0010 - 0x0000)
@@ -71,10 +56,7 @@ public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EEndPlayReason                                EndPlayReason;                                     // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_InGamePlayerName_C_OnEndPlay) == 0x000008, "Wrong alignment on Widget_InGamePlayerName_C_OnEndPlay");
-static_assert(sizeof(Widget_InGamePlayerName_C_OnEndPlay) == 0x000010, "Wrong size on Widget_InGamePlayerName_C_OnEndPlay");
-static_assert(offsetof(Widget_InGamePlayerName_C_OnEndPlay, Actor) == 0x000000, "Member 'Widget_InGamePlayerName_C_OnEndPlay::Actor' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_OnEndPlay, EndPlayReason) == 0x000008, "Member 'Widget_InGamePlayerName_C_OnEndPlay::EndPlayReason' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_InGamePlayerName_C_OnEndPlay;
 
 // Function Widget_InGamePlayerName.Widget_InGamePlayerName_C.OnPlayerPawnKilled
 // 0x0008 (0x0008 - 0x0000)
@@ -83,9 +65,7 @@ struct Widget_InGamePlayerName_C_OnPlayerPawnKilled final
 public:
 	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_InGamePlayerName_C_OnPlayerPawnKilled) == 0x000008, "Wrong alignment on Widget_InGamePlayerName_C_OnPlayerPawnKilled");
-static_assert(sizeof(Widget_InGamePlayerName_C_OnPlayerPawnKilled) == 0x000008, "Wrong size on Widget_InGamePlayerName_C_OnPlayerPawnKilled");
-static_assert(offsetof(Widget_InGamePlayerName_C_OnPlayerPawnKilled, Player) == 0x000000, "Member 'Widget_InGamePlayerName_C_OnPlayerPawnKilled::Player' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_InGamePlayerName_C_OnPlayerPawnKilled;
 
 // Function Widget_InGamePlayerName.Widget_InGamePlayerName_C.OnPlayerPawnRespawned
 // 0x0008 (0x0008 - 0x0000)
@@ -94,9 +74,7 @@ struct Widget_InGamePlayerName_C_OnPlayerPawnRespawned final
 public:
 	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_InGamePlayerName_C_OnPlayerPawnRespawned) == 0x000008, "Wrong alignment on Widget_InGamePlayerName_C_OnPlayerPawnRespawned");
-static_assert(sizeof(Widget_InGamePlayerName_C_OnPlayerPawnRespawned) == 0x000008, "Wrong size on Widget_InGamePlayerName_C_OnPlayerPawnRespawned");
-static_assert(offsetof(Widget_InGamePlayerName_C_OnPlayerPawnRespawned, Player) == 0x000000, "Member 'Widget_InGamePlayerName_C_OnPlayerPawnRespawned::Player' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_InGamePlayerName_C_OnPlayerPawnRespawned;
 
 // Function Widget_InGamePlayerName.Widget_InGamePlayerName_C.Set All Visibilty
 // 0x0005 (0x0005 - 0x0000)
@@ -109,13 +87,7 @@ public:
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_InGamePlayerName_C_Set_All_Visibilty) == 0x000001, "Wrong alignment on Widget_InGamePlayerName_C_Set_All_Visibilty");
-static_assert(sizeof(Widget_InGamePlayerName_C_Set_All_Visibilty) == 0x000005, "Wrong size on Widget_InGamePlayerName_C_Set_All_Visibilty");
-static_assert(offsetof(Widget_InGamePlayerName_C_Set_All_Visibilty, bVisibility) == 0x000000, "Member 'Widget_InGamePlayerName_C_Set_All_Visibilty::bVisibility' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_Set_All_Visibilty, Temp_bool_Variable) == 0x000001, "Member 'Widget_InGamePlayerName_C_Set_All_Visibilty::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_Set_All_Visibilty, Temp_byte_Variable) == 0x000002, "Member 'Widget_InGamePlayerName_C_Set_All_Visibilty::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_Set_All_Visibilty, Temp_byte_Variable_1) == 0x000003, "Member 'Widget_InGamePlayerName_C_Set_All_Visibilty::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_Set_All_Visibilty, K2Node_Select_Default) == 0x000004, "Member 'Widget_InGamePlayerName_C_Set_All_Visibilty::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_InGamePlayerName_C_Set_All_Visibilty;
 
 // Function Widget_InGamePlayerName.Widget_InGamePlayerName_C.Setup
 // 0x0098 (0x0098 - 0x0000)
@@ -137,20 +109,7 @@ public:
 	TDelegate<void(class ARPlayerPawn* Player)>   K2Node_CreateDelegate_OutputDelegate_3;            // 0x0074(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class ARPlayerPawn* Player)>   K2Node_CreateDelegate_OutputDelegate_4;            // 0x0084(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_InGamePlayerName_C_Setup) == 0x000008, "Wrong alignment on Widget_InGamePlayerName_C_Setup");
-static_assert(sizeof(Widget_InGamePlayerName_C_Setup) == 0x000098, "Wrong size on Widget_InGamePlayerName_C_Setup");
-static_assert(offsetof(Widget_InGamePlayerName_C_Setup, PlayerState) == 0x000000, "Member 'Widget_InGamePlayerName_C_Setup::PlayerState' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_Setup, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000008, "Member 'Widget_InGamePlayerName_C_Setup::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_Setup, CallFunc_GetPlayerName_ReturnValue) == 0x000010, "Member 'Widget_InGamePlayerName_C_Setup::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_Setup, CallFunc_GetShowPlayerNames_ReturnValue) == 0x000020, "Member 'Widget_InGamePlayerName_C_Setup::CallFunc_GetShowPlayerNames_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_Setup, CallFunc_Conv_StringToText_ReturnValue) == 0x000028, "Member 'Widget_InGamePlayerName_C_Setup::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_Setup, K2Node_CreateDelegate_OutputDelegate) == 0x000038, "Member 'Widget_InGamePlayerName_C_Setup::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_Setup, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000048, "Member 'Widget_InGamePlayerName_C_Setup::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_Setup, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'Widget_InGamePlayerName_C_Setup::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_Setup, K2Node_CreateDelegate_OutputDelegate_1) == 0x000054, "Member 'Widget_InGamePlayerName_C_Setup::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_Setup, K2Node_CreateDelegate_OutputDelegate_2) == 0x000064, "Member 'Widget_InGamePlayerName_C_Setup::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_Setup, K2Node_CreateDelegate_OutputDelegate_3) == 0x000074, "Member 'Widget_InGamePlayerName_C_Setup::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(Widget_InGamePlayerName_C_Setup, K2Node_CreateDelegate_OutputDelegate_4) == 0x000084, "Member 'Widget_InGamePlayerName_C_Setup::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_InGamePlayerName_C_Setup;
 
 }
 

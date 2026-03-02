@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_SubtitleContainer.Widget_SubtitleContainer_C
-// 0x0010 (0x02E0 - 0x02D0)
+// 0x0010 (0x0350 - 0x0340)
 class UWidget_SubtitleContainer_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UVerticalBox*                           SubtitleEntryContainer;                            // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UVerticalBox*                           SubtitleEntryContainer;                            // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -37,17 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_SubtitleContainer_C">();
+		BP_STATIC_CLASS_IMPL("Widget_SubtitleContainer_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_SubtitleContainer_C")
 	}
 	static class UWidget_SubtitleContainer_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_SubtitleContainer_C>();
 	}
 };
-static_assert(alignof(UWidget_SubtitleContainer_C) == 0x000008, "Wrong alignment on UWidget_SubtitleContainer_C");
-static_assert(sizeof(UWidget_SubtitleContainer_C) == 0x0002E0, "Wrong size on UWidget_SubtitleContainer_C");
-static_assert(offsetof(UWidget_SubtitleContainer_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_SubtitleContainer_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_SubtitleContainer_C, SubtitleEntryContainer) == 0x0002D8, "Member 'UWidget_SubtitleContainer_C::SubtitleEntryContainer' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_SubtitleContainer_C;
 
 }
 

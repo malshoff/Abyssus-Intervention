@@ -14,16 +14,23 @@
 namespace SDK::Params
 {
 
-// Function MeshModelingTools.ExistingMeshMaterialProperties.GetUVChannelNamesFunc
-// 0x0010 (0x0010 - 0x0000)
-struct ExistingMeshMaterialProperties_GetUVChannelNamesFunc final
+// Function MeshModelingTools.MeshConstraintProperties.IsPreventNormalFlipsEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct MeshConstraintProperties_IsPreventNormalFlipsEnabled final
 {
 public:
-	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ExistingMeshMaterialProperties_GetUVChannelNamesFunc) == 0x000008, "Wrong alignment on ExistingMeshMaterialProperties_GetUVChannelNamesFunc");
-static_assert(sizeof(ExistingMeshMaterialProperties_GetUVChannelNamesFunc) == 0x000010, "Wrong size on ExistingMeshMaterialProperties_GetUVChannelNamesFunc");
-static_assert(offsetof(ExistingMeshMaterialProperties_GetUVChannelNamesFunc, ReturnValue) == 0x000000, "Member 'ExistingMeshMaterialProperties_GetUVChannelNamesFunc::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MeshConstraintProperties_IsPreventNormalFlipsEnabled;
+
+// Function MeshModelingTools.MeshConstraintProperties.IsPreventTinyTrianglesEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct MeshConstraintProperties_IsPreventTinyTrianglesEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshConstraintProperties_IsPreventTinyTrianglesEnabled;
 
 // Function MeshModelingTools.MeshUVChannelProperties.GetUVChannelNamesFunc
 // 0x0010 (0x0010 - 0x0000)
@@ -32,9 +39,70 @@ struct MeshUVChannelProperties_GetUVChannelNamesFunc final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MeshUVChannelProperties_GetUVChannelNamesFunc) == 0x000008, "Wrong alignment on MeshUVChannelProperties_GetUVChannelNamesFunc");
-static_assert(sizeof(MeshUVChannelProperties_GetUVChannelNamesFunc) == 0x000010, "Wrong size on MeshUVChannelProperties_GetUVChannelNamesFunc");
-static_assert(offsetof(MeshUVChannelProperties_GetUVChannelNamesFunc, ReturnValue) == 0x000000, "Member 'MeshUVChannelProperties_GetUVChannelNamesFunc::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MeshUVChannelProperties_GetUVChannelNamesFunc;
+
+// Function MeshModelingTools.ConvertToPolygonsToolProperties.GetGroupOptionsList
+// 0x0010 (0x0010 - 0x0000)
+struct ConvertToPolygonsToolProperties_GetGroupOptionsList final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ConvertToPolygonsToolProperties_GetGroupOptionsList;
+
+// Function MeshModelingTools.DisplaceMeshCommonProperties.GetWeightMapsFunc
+// 0x0010 (0x0010 - 0x0000)
+struct DisplaceMeshCommonProperties_GetWeightMapsFunc final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DisplaceMeshCommonProperties_GetWeightMapsFunc;
+
+// Function MeshModelingTools.MeshAttributePaintToolProperties.GetAttributeNames
+// 0x0010 (0x0010 - 0x0000)
+struct MeshAttributePaintToolProperties_GetAttributeNames final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshAttributePaintToolProperties_GetAttributeNames;
+
+// Function MeshModelingTools.SelectiveTessellationProperties.GetMaterialIDsFunc
+// 0x0010 (0x0010 - 0x0000)
+struct SelectiveTessellationProperties_GetMaterialIDsFunc final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SelectiveTessellationProperties_GetMaterialIDsFunc;
+
+// Function MeshModelingTools.MeshVertexPaintToolUtilityActions.GetWeightMapsFunc
+// 0x0010 (0x0010 - 0x0000)
+struct MeshVertexPaintToolUtilityActions_GetWeightMapsFunc final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshVertexPaintToolUtilityActions_GetWeightMapsFunc;
+
+// Function MeshModelingTools.MeshVertexPaintToolUtilityActions.GetLODNamesFunc
+// 0x0010 (0x0010 - 0x0000)
+struct MeshVertexPaintToolUtilityActions_GetLODNamesFunc final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshVertexPaintToolUtilityActions_GetLODNamesFunc;
+
+// Function MeshModelingTools.ExistingMeshMaterialProperties.GetUVChannelNamesFunc
+// 0x0010 (0x0010 - 0x0000)
+struct ExistingMeshMaterialProperties_GetUVChannelNamesFunc final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ExistingMeshMaterialProperties_GetUVChannelNamesFunc;
 
 }
 

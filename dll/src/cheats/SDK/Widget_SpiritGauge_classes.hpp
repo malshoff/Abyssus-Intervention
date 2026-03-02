@@ -19,21 +19,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_SpiritGauge.Widget_SpiritGauge_C
-// 0x0058 (0x0328 - 0x02D0)
+// 0x0058 (0x0398 - 0x0340)
 class UWidget_SpiritGauge_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       ThresholdReached_Animation;                        // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Reset_Animation;                                   // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       BecomeHidden_Animation;                            // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       BecomeVisible_Animation;                           // 0x02F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Frame;                                             // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 FrameLines;                                        // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           SpiritGauge;                                       // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	double                                        TargetGaugePrecentage;                             // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Filled;                                            // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UProgressBar*                           SpiritGauge;                                       // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 FrameLines;                                        // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Frame;                                             // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       BecomeVisible_Animation;                           // 0x0368(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       BecomeHidden_Animation;                            // 0x0370(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Reset_Animation;                                   // 0x0378(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ThresholdReached_Animation;                        // 0x0380(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	double                                        TargetGaugePrecentage;                             // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Filled;                                            // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Widget_SpiritGauge(int32 EntryPoint);
@@ -46,26 +46,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_SpiritGauge_C">();
+		BP_STATIC_CLASS_IMPL("Widget_SpiritGauge_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_SpiritGauge_C")
 	}
 	static class UWidget_SpiritGauge_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_SpiritGauge_C>();
 	}
 };
-static_assert(alignof(UWidget_SpiritGauge_C) == 0x000008, "Wrong alignment on UWidget_SpiritGauge_C");
-static_assert(sizeof(UWidget_SpiritGauge_C) == 0x000328, "Wrong size on UWidget_SpiritGauge_C");
-static_assert(offsetof(UWidget_SpiritGauge_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_SpiritGauge_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_SpiritGauge_C, ThresholdReached_Animation) == 0x0002D8, "Member 'UWidget_SpiritGauge_C::ThresholdReached_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_SpiritGauge_C, Reset_Animation) == 0x0002E0, "Member 'UWidget_SpiritGauge_C::Reset_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_SpiritGauge_C, BecomeHidden_Animation) == 0x0002E8, "Member 'UWidget_SpiritGauge_C::BecomeHidden_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_SpiritGauge_C, BecomeVisible_Animation) == 0x0002F0, "Member 'UWidget_SpiritGauge_C::BecomeVisible_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_SpiritGauge_C, Frame) == 0x0002F8, "Member 'UWidget_SpiritGauge_C::Frame' has a wrong offset!");
-static_assert(offsetof(UWidget_SpiritGauge_C, FrameLines) == 0x000300, "Member 'UWidget_SpiritGauge_C::FrameLines' has a wrong offset!");
-static_assert(offsetof(UWidget_SpiritGauge_C, InvalidationBox_0) == 0x000308, "Member 'UWidget_SpiritGauge_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_SpiritGauge_C, SpiritGauge) == 0x000310, "Member 'UWidget_SpiritGauge_C::SpiritGauge' has a wrong offset!");
-static_assert(offsetof(UWidget_SpiritGauge_C, TargetGaugePrecentage) == 0x000318, "Member 'UWidget_SpiritGauge_C::TargetGaugePrecentage' has a wrong offset!");
-static_assert(offsetof(UWidget_SpiritGauge_C, Filled) == 0x000320, "Member 'UWidget_SpiritGauge_C::Filled' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_SpiritGauge_C;
 
 }
 

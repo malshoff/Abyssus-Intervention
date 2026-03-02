@@ -18,40 +18,39 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C
-// 0x0020 (0x03B0 - 0x0390)
+// 0x0020 (0x0448 - 0x0428)
 class UWidget_Settings_GamepadInput_C final : public UWidget_Settings_KeyMappingBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_Settings_GamepadInput_C;     // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UInputKeySelector*                      InputKeySelector_1;                                // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 KeyImage;                                          // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsButtonBase_C*           TextKeybindDisplayName;                            // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_Settings_GamepadInput_C;     // 0x0428(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_SettingsButtonBase_C*           TextKeybindDisplayName;                            // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 KeyImage;                                          // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInputKeySelector*                      InputKeySelector_1;                                // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature(const struct FInputChord& SelectedKey);
 	void BndEvt__Widget_Settings_KeybindInput_InputKeySelector_1_K2Node_ComponentBoundEvent_1_OnIsSelectingKeyChanged__DelegateSignature();
 	void Construct();
 	void ExecuteUbergraph_Widget_Settings_GamepadInput(int32 EntryPoint);
-	void GetInputKeySelector(class UInputKeySelector** OutSelector);
 	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
 	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
+	void GetInputKeySelector(class UInputKeySelector** OutSelector);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_Settings_GamepadInput_C">();
+		BP_STATIC_CLASS_IMPL("Widget_Settings_GamepadInput_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_Settings_GamepadInput_C")
 	}
 	static class UWidget_Settings_GamepadInput_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_Settings_GamepadInput_C>();
 	}
 };
-static_assert(alignof(UWidget_Settings_GamepadInput_C) == 0x000008, "Wrong alignment on UWidget_Settings_GamepadInput_C");
-static_assert(sizeof(UWidget_Settings_GamepadInput_C) == 0x0003B0, "Wrong size on UWidget_Settings_GamepadInput_C");
-static_assert(offsetof(UWidget_Settings_GamepadInput_C, UberGraphFrame_Widget_Settings_GamepadInput_C) == 0x000390, "Member 'UWidget_Settings_GamepadInput_C::UberGraphFrame_Widget_Settings_GamepadInput_C' has a wrong offset!");
-static_assert(offsetof(UWidget_Settings_GamepadInput_C, InputKeySelector_1) == 0x000398, "Member 'UWidget_Settings_GamepadInput_C::InputKeySelector_1' has a wrong offset!");
-static_assert(offsetof(UWidget_Settings_GamepadInput_C, KeyImage) == 0x0003A0, "Member 'UWidget_Settings_GamepadInput_C::KeyImage' has a wrong offset!");
-static_assert(offsetof(UWidget_Settings_GamepadInput_C, TextKeybindDisplayName) == 0x0003A8, "Member 'UWidget_Settings_GamepadInput_C::TextKeybindDisplayName' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_Settings_GamepadInput_C;
 
 }
 

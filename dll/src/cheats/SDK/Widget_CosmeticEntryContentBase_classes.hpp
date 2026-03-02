@@ -17,24 +17,27 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_CosmeticEntryContentBase.Widget_CosmeticEntryContentBase_C
-// 0x0000 (0x02D0 - 0x02D0)
+// 0x0000 (0x0340 - 0x0340)
 class UWidget_CosmeticEntryContentBase_C : public UUserWidget
 {
 public:
-	void SetContentInfo(const struct FPlayerCosmeticOption& CosmeticOptionData);
+	void SetContentInfo(class URCosmeticPrimaryAsset* CosmeticPA);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_CosmeticEntryContentBase_C">();
+		BP_STATIC_CLASS_IMPL("Widget_CosmeticEntryContentBase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_CosmeticEntryContentBase_C")
 	}
 	static class UWidget_CosmeticEntryContentBase_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_CosmeticEntryContentBase_C>();
 	}
 };
-static_assert(alignof(UWidget_CosmeticEntryContentBase_C) == 0x000008, "Wrong alignment on UWidget_CosmeticEntryContentBase_C");
-static_assert(sizeof(UWidget_CosmeticEntryContentBase_C) == 0x0002D0, "Wrong size on UWidget_CosmeticEntryContentBase_C");
+DUMPER7_ASSERTS_UWidget_CosmeticEntryContentBase_C;
 
 }
 

@@ -19,8 +19,7 @@ namespace SDK
 struct FPropertyBag_0 final
 {
 };
-static_assert(alignof(FPropertyBag_0) == 0x000001, "Wrong alignment on FPropertyBag_0");
-static_assert(sizeof(FPropertyBag_0) == 0x000001, "Wrong size on FPropertyBag_0");
+DUMPER7_ASSERTS_FPropertyBag_0;
 
 }
 

@@ -26,13 +26,10 @@ public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_CanInteract) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_CanInteract");
-static_assert(sizeof(BP_WeaponWorkbench2_C_CanInteract) == 0x000010, "Wrong size on BP_WeaponWorkbench2_C_CanInteract");
-static_assert(offsetof(BP_WeaponWorkbench2_C_CanInteract, Controller) == 0x000000, "Member 'BP_WeaponWorkbench2_C_CanInteract::Controller' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_CanInteract, ReturnValue) == 0x000008, "Member 'BP_WeaponWorkbench2_C_CanInteract::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_CanInteract;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.ExecuteUbergraph_BP_WeaponWorkbench2
-// 0x03F0 (0x03F0 - 0x0000)
+// 0x0400 (0x0400 - 0x0000)
 struct BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2 final
 {
 public:
@@ -66,87 +63,38 @@ public:
 	class UWidget_Workbench2_C*                   CallFunc_PushWidget_OutWidget;                     // 0x0218(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsLocalPlayerController_ReturnValue;      // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      K2Node_Event_controller_1;                         // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPlaying_ReturnValue;                    // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPlaying_ReturnValue_1;                  // 0x0231(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_LightsOn;                       // 0x0232(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0233(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_234[0x4];                                      // 0x0234(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      K2Node_Event_controller;                           // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARRadarManager*                         CallFunc_GetRadarManager_ReturnValue;              // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Event_Socket;                               // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_Bool;                                 // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_251[0x3];                                      // 0x0251(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class AActor* Actor)>          K2Node_CreateDelegate_OutputDelegate;              // 0x0254(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class AActor* Actor)>          K2Node_CreateDelegate_OutputDelegate_1;            // 0x0264(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_274[0x4];                                      // 0x0274(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_CustomEvent_Actor_1;                        // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_CustomEvent_Actor;                          // 0x0280(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0288(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_VLerp_ReturnValue;                        // 0x02A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x02B8(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	double                                        CallFunc_SetLightIntesity_Alpha_ImplicitCast;      // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetPlayRate_NewRate_ImplicitCast;         // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C4[0x4];                                      // 0x03C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Lerp_Alpha_ImplicitCast;                  // 0x03C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_Alpha_ImplicitCast_1;                // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_Alpha_ImplicitCast_2;                // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast;   // 0x03E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast_1; // 0x03E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast_2; // 0x03E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetPlayRate_NewRate_ImplicitCast_1;       // 0x03EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class APlayerController*                K2Node_Event_PlayerController;                     // 0x0228(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      K2Node_Event_controller_1;                         // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlaying_ReturnValue;                    // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlaying_ReturnValue_1;                  // 0x0239(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_LightsOn;                       // 0x023A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x023B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23C[0x4];                                      // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      K2Node_Event_controller;                           // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARRadarManager*                         CallFunc_GetRadarManager_ReturnValue;              // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Event_Socket;                               // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_Bool;                                 // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_259[0x3];                                      // 0x0259(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class AActor* Actor)>          K2Node_CreateDelegate_OutputDelegate;              // 0x025C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class AActor* Actor)>          K2Node_CreateDelegate_OutputDelegate_1;            // 0x026C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 K2Node_CustomEvent_Actor_1;                        // 0x0280(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_CustomEvent_Actor;                          // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0290(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_VLerp_ReturnValue;                        // 0x02A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x02C0(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	double                                        CallFunc_SetLightIntesity_Alpha_ImplicitCast;      // 0x03C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetPlayRate_NewRate_ImplicitCast;         // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Lerp_Alpha_ImplicitCast;                  // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Lerp_Alpha_ImplicitCast_1;                // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Lerp_Alpha_ImplicitCast_2;                // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast;   // 0x03E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast_1; // 0x03EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast_2; // 0x03F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetPlayRate_NewRate_ImplicitCast_1;       // 0x03F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2) == 0x000010, "Wrong alignment on BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2");
-static_assert(sizeof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2) == 0x0003F0, "Wrong size on BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, EntryPoint) == 0x000000, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, Temp_bool_Variable) == 0x000004, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000008, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_Lerp_ReturnValue) == 0x000010, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_Lerp_ReturnValue_1) == 0x000018, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_Lerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_Lerp_ReturnValue_2) == 0x000020, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_Lerp_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_MakeTransform_ReturnValue) == 0x000030, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_AddComponentByClass_ReturnValue) == 0x000090, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_AddComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000098, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_GetProximitySphere_ReturnValue) == 0x0000A0, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_GetProximitySphere_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_GetRGameUserSettings_ReturnValue) == 0x0000A8, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_GetFieldOfView_ReturnValue) == 0x0000B0, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_GetFieldOfView_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, K2Node_CustomEvent_bInMainMenu) == 0x0000B4, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::K2Node_CustomEvent_bInMainMenu' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, K2Node_Select_Default) == 0x0000B8, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_K2_GetActorLocation_ReturnValue) == 0x0000C0, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_K2_SetRelativeLocationAndRotation_SweepHitResult) == 0x0000D8, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_K2_SetRelativeLocationAndRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_Not_PreBool_ReturnValue) == 0x0001D8, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x0001E0, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, K2Node_Event_EventName) == 0x0001F8, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::K2Node_Event_EventName' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, K2Node_Event_controller_2) == 0x000200, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::K2Node_Event_controller_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, K2Node_Event_InteractingActor) == 0x000208, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::K2Node_Event_InteractingActor' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, K2Node_Event_NewVisible) == 0x000210, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::K2Node_Event_NewVisible' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_PushWidget_OutWidget) == 0x000218, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_PushWidget_OutWidget' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_IsLocalPlayerController_ReturnValue) == 0x000220, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, K2Node_Event_controller_1) == 0x000228, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::K2Node_Event_controller_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_IsPlaying_ReturnValue) == 0x000230, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_IsPlaying_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_IsPlaying_ReturnValue_1) == 0x000231, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_IsPlaying_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, K2Node_CustomEvent_LightsOn) == 0x000232, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::K2Node_CustomEvent_LightsOn' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_IsValid_ReturnValue) == 0x000233, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, K2Node_Event_controller) == 0x000238, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::K2Node_Event_controller' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_GetRadarManager_ReturnValue) == 0x000240, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_GetRadarManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, K2Node_Event_Socket) == 0x000248, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::K2Node_Event_Socket' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, K2Node_Event_Bool) == 0x000250, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::K2Node_Event_Bool' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, K2Node_CreateDelegate_OutputDelegate) == 0x000254, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, K2Node_CreateDelegate_OutputDelegate_1) == 0x000264, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, K2Node_CustomEvent_Actor_1) == 0x000278, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::K2Node_CustomEvent_Actor_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, K2Node_CustomEvent_Actor) == 0x000280, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::K2Node_CustomEvent_Actor' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_Add_VectorVector_ReturnValue) == 0x000288, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_VLerp_ReturnValue) == 0x0002A0, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_VLerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x0002B8, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_SetLightIntesity_Alpha_ImplicitCast) == 0x0003B8, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_SetLightIntesity_Alpha_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_SetPlayRate_NewRate_ImplicitCast) == 0x0003C0, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_SetPlayRate_NewRate_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_Lerp_Alpha_ImplicitCast) == 0x0003C8, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_Lerp_Alpha_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_Lerp_Alpha_ImplicitCast_1) == 0x0003D0, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_Lerp_Alpha_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_Lerp_Alpha_ImplicitCast_2) == 0x0003D8, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_Lerp_Alpha_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_SetIntensity_NewIntensity_ImplicitCast) == 0x0003E0, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_SetIntensity_NewIntensity_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_SetIntensity_NewIntensity_ImplicitCast_1) == 0x0003E4, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_SetIntensity_NewIntensity_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_SetIntensity_NewIntensity_ImplicitCast_2) == 0x0003E8, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_SetIntensity_NewIntensity_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2, CallFunc_SetPlayRate_NewRate_ImplicitCast_1) == 0x0003EC, "Member 'BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2::CallFunc_SetPlayRate_NewRate_ImplicitCast_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_ExecuteUbergraph_BP_WeaponWorkbench2;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.HideHighlight
 // 0x0040 (0x0040 - 0x0000)
@@ -165,20 +113,20 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_HideHighlight) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_HideHighlight");
-static_assert(sizeof(BP_WeaponWorkbench2_C_HideHighlight) == 0x000040, "Wrong size on BP_WeaponWorkbench2_C_HideHighlight");
-static_assert(offsetof(BP_WeaponWorkbench2_C_HideHighlight, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BP_WeaponWorkbench2_C_HideHighlight::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_HideHighlight, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_WeaponWorkbench2_C_HideHighlight::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_HideHighlight, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_WeaponWorkbench2_C_HideHighlight::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_HideHighlight, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x000010, "Member 'BP_WeaponWorkbench2_C_HideHighlight::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_HideHighlight, CallFunc_Array_Get_Item) == 0x000020, "Member 'BP_WeaponWorkbench2_C_HideHighlight::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_HideHighlight, CallFunc_GetWidget_ReturnValue) == 0x000028, "Member 'BP_WeaponWorkbench2_C_HideHighlight::CallFunc_GetWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_HideHighlight, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_WeaponWorkbench2_C_HideHighlight::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_HideHighlight, CallFunc_Array_Length_ReturnValue) == 0x000034, "Member 'BP_WeaponWorkbench2_C_HideHighlight::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_HideHighlight, CallFunc_Less_IntInt_ReturnValue) == 0x000038, "Member 'BP_WeaponWorkbench2_C_HideHighlight::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_HideHighlight;
+
+// Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.IsShareable
+// 0x0010 (0x0010 - 0x0000)
+struct BP_WeaponWorkbench2_C_IsShareable final
+{
+public:
+	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_IsShareable;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.IsWeaponPaintUnlocked
-// 0x01A8 (0x01A8 - 0x0000)
+// 0x01B8 (0x01B8 - 0x0000)
 struct BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked final
 {
 public:
@@ -189,20 +137,11 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FRChallenge                            CallFunc_GetChallengeByRewardAsset_ReturnValue;    // 0x0028(0x0178)()
-	bool                                          CallFunc_ChallengeExists_ReturnValue;              // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsChallengeCompleted_ReturnValue;         // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRChallenge                            CallFunc_GetChallengeByRewardAsset_ReturnValue;    // 0x0028(0x0188)()
+	bool                                          CallFunc_ChallengeExists_ReturnValue;              // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChallengeCompleted_ReturnValue;         // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked");
-static_assert(sizeof(BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked) == 0x0001A8, "Wrong size on BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked");
-static_assert(offsetof(BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked, Asset) == 0x000000, "Member 'BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked::Asset' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked, ReturnValue) == 0x000008, "Member 'BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked, K2Node_DynamicCast_AsRWeapon_Cosmetic_Primary_Asset) == 0x000010, "Member 'BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked::K2Node_DynamicCast_AsRWeapon_Cosmetic_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked, CallFunc_GetChallengeManager_ReturnValue) == 0x000020, "Member 'BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked, CallFunc_GetChallengeByRewardAsset_ReturnValue) == 0x000028, "Member 'BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked::CallFunc_GetChallengeByRewardAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked, CallFunc_ChallengeExists_ReturnValue) == 0x0001A0, "Member 'BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked::CallFunc_ChallengeExists_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked, CallFunc_IsChallengeCompleted_ReturnValue) == 0x0001A1, "Member 'BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked::CallFunc_IsChallengeCompleted_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_IsWeaponPaintUnlocked;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.OnActorEnterProximity
 // 0x0008 (0x0008 - 0x0000)
@@ -211,9 +150,7 @@ struct BP_WeaponWorkbench2_C_OnActorEnterProximity final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_OnActorEnterProximity) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_OnActorEnterProximity");
-static_assert(sizeof(BP_WeaponWorkbench2_C_OnActorEnterProximity) == 0x000008, "Wrong size on BP_WeaponWorkbench2_C_OnActorEnterProximity");
-static_assert(offsetof(BP_WeaponWorkbench2_C_OnActorEnterProximity, Actor) == 0x000000, "Member 'BP_WeaponWorkbench2_C_OnActorEnterProximity::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_OnActorEnterProximity;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.OnActorExitProximity
 // 0x0008 (0x0008 - 0x0000)
@@ -222,9 +159,7 @@ struct BP_WeaponWorkbench2_C_OnActorExitProximity final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_OnActorExitProximity) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_OnActorExitProximity");
-static_assert(sizeof(BP_WeaponWorkbench2_C_OnActorExitProximity) == 0x000008, "Wrong size on BP_WeaponWorkbench2_C_OnActorExitProximity");
-static_assert(offsetof(BP_WeaponWorkbench2_C_OnActorExitProximity, Actor) == 0x000000, "Member 'BP_WeaponWorkbench2_C_OnActorExitProximity::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_OnActorExitProximity;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.OnAnimationTriggerEvent
 // 0x0008 (0x0008 - 0x0000)
@@ -233,9 +168,7 @@ struct BP_WeaponWorkbench2_C_OnAnimationTriggerEvent final
 public:
 	class FName                                   EventName;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_OnAnimationTriggerEvent) == 0x000004, "Wrong alignment on BP_WeaponWorkbench2_C_OnAnimationTriggerEvent");
-static_assert(sizeof(BP_WeaponWorkbench2_C_OnAnimationTriggerEvent) == 0x000008, "Wrong size on BP_WeaponWorkbench2_C_OnAnimationTriggerEvent");
-static_assert(offsetof(BP_WeaponWorkbench2_C_OnAnimationTriggerEvent, EventName) == 0x000000, "Member 'BP_WeaponWorkbench2_C_OnAnimationTriggerEvent::EventName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_OnAnimationTriggerEvent;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.OnFocus
 // 0x0008 (0x0008 - 0x0000)
@@ -244,9 +177,7 @@ struct BP_WeaponWorkbench2_C_OnFocus final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_OnFocus) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_OnFocus");
-static_assert(sizeof(BP_WeaponWorkbench2_C_OnFocus) == 0x000008, "Wrong size on BP_WeaponWorkbench2_C_OnFocus");
-static_assert(offsetof(BP_WeaponWorkbench2_C_OnFocus, Controller) == 0x000000, "Member 'BP_WeaponWorkbench2_C_OnFocus::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_OnFocus;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.OnFocusGone
 // 0x0008 (0x0008 - 0x0000)
@@ -255,9 +186,7 @@ struct BP_WeaponWorkbench2_C_OnFocusGone final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_OnFocusGone) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_OnFocusGone");
-static_assert(sizeof(BP_WeaponWorkbench2_C_OnFocusGone) == 0x000008, "Wrong size on BP_WeaponWorkbench2_C_OnFocusGone");
-static_assert(offsetof(BP_WeaponWorkbench2_C_OnFocusGone, Controller) == 0x000000, "Member 'BP_WeaponWorkbench2_C_OnFocusGone::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_OnFocusGone;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.OnInteract
 // 0x0008 (0x0008 - 0x0000)
@@ -266,9 +195,7 @@ struct BP_WeaponWorkbench2_C_OnInteract final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_OnInteract) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_OnInteract");
-static_assert(sizeof(BP_WeaponWorkbench2_C_OnInteract) == 0x000008, "Wrong size on BP_WeaponWorkbench2_C_OnInteract");
-static_assert(offsetof(BP_WeaponWorkbench2_C_OnInteract, Controller) == 0x000000, "Member 'BP_WeaponWorkbench2_C_OnInteract::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_OnInteract;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.OnToggleEvent
 // 0x000C (0x000C - 0x0000)
@@ -278,13 +205,10 @@ public:
 	class FName                                   Socket;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Bool;                                              // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_OnToggleEvent) == 0x000004, "Wrong alignment on BP_WeaponWorkbench2_C_OnToggleEvent");
-static_assert(sizeof(BP_WeaponWorkbench2_C_OnToggleEvent) == 0x00000C, "Wrong size on BP_WeaponWorkbench2_C_OnToggleEvent");
-static_assert(offsetof(BP_WeaponWorkbench2_C_OnToggleEvent, Socket) == 0x000000, "Member 'BP_WeaponWorkbench2_C_OnToggleEvent::Socket' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_OnToggleEvent, Bool) == 0x000008, "Member 'BP_WeaponWorkbench2_C_OnToggleEvent::Bool' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_OnToggleEvent;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.SetAbilitySemiHidden
-// 0x01B0 (0x01B0 - 0x0000)
+// 0x01C0 (0x01C0 - 0x0000)
 struct BP_WeaponWorkbench2_C_SetAbilitySemiHidden final
 {
 public:
@@ -335,84 +259,27 @@ public:
 	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkeletalMesh*                          CallFunc_GetSkeletalMeshAsset_ReturnValue_1;       // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FSkeletalMaterial>              CallFunc_GetMaterials_ReturnValue;                 // 0x00F0(0x0010)(ConstParm, ReferenceParm)
-	struct FSkeletalMaterial                      CallFunc_Array_Get_Item_2;                         // 0x0100(0x0028)(NoDestructor)
-	TArray<struct FStaticMaterial>                CallFunc_GetStaticMaterials_ReturnValue;           // 0x0128(0x0010)(ConstParm, ReferenceParm)
-	struct FStaticMaterial                        CallFunc_Array_Get_Item_3;                         // 0x0138(0x0030)(NoDestructor)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x016C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x016D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16E[0x2];                                      // 0x016E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x0175(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_176[0x2];                                      // 0x0176(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMeshComponent*>                 K2Node_MakeArray_Array_1;                          // 0x0178(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UMeshComponent*                         CallFunc_Array_Get_Item_4;                         // 0x0188(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x0194(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_195[0x3];                                      // 0x0195(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue_1;               // 0x0198(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue_5;               // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_5;                // 0x01AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSkeletalMaterial                      CallFunc_Array_Get_Item_2;                         // 0x0100(0x0030)(NoDestructor)
+	TArray<struct FStaticMaterial>                CallFunc_GetStaticMaterials_ReturnValue;           // 0x0130(0x0010)(ConstParm, ReferenceParm)
+	struct FStaticMaterial                        CallFunc_Array_Get_Item_3;                         // 0x0140(0x0038)(NoDestructor)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x017C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x017D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17E[0x2];                                      // 0x017E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0184(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x0185(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_186[0x2];                                      // 0x0186(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMeshComponent*>                 K2Node_MakeArray_Array_1;                          // 0x0188(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UMeshComponent*                         CallFunc_Array_Get_Item_4;                         // 0x0198(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A5[0x3];                                      // 0x01A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue_1;               // 0x01A8(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue_5;               // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_5;                // 0x01BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_SetAbilitySemiHidden");
-static_assert(sizeof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden) == 0x0001B0, "Wrong size on BP_WeaponWorkbench2_C_SetAbilitySemiHidden");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, NewHidden) == 0x000000, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::NewHidden' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CurrentMeshComponent) == 0x000008, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CurrentMeshComponent' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, Temp_int_Loop_Counter_Variable_1) == 0x000018, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, Temp_int_Loop_Counter_Variable_2) == 0x00001C, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Add_IntInt_ReturnValue_1) == 0x000020, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Add_IntInt_ReturnValue_2) == 0x000024, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, Temp_int_Array_Index_Variable) == 0x000028, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, Temp_int_Array_Index_Variable_1) == 0x00002C, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, Temp_int_Loop_Counter_Variable_3) == 0x000030, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Add_IntInt_ReturnValue_3) == 0x000034, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, Temp_int_Array_Index_Variable_2) == 0x000038, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, Temp_int_Array_Index_Variable_3) == 0x00003C, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::Temp_int_Array_Index_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, Temp_int_Loop_Counter_Variable_4) == 0x000040, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::Temp_int_Loop_Counter_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Add_IntInt_ReturnValue_4) == 0x000044, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, Temp_int_Loop_Counter_Variable_5) == 0x000048, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::Temp_int_Loop_Counter_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Add_IntInt_ReturnValue_5) == 0x00004C, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, Temp_int_Array_Index_Variable_4) == 0x000050, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::Temp_int_Array_Index_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, Temp_int_Array_Index_Variable_5) == 0x000054, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::Temp_int_Array_Index_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, K2Node_MakeArray_Array) == 0x000058, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, K2Node_DynamicCast_AsStatic_Mesh_Component) == 0x000068, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::K2Node_DynamicCast_AsStatic_Mesh_Component' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Array_Get_Item) == 0x000078, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_GetOwner_ReturnValue) == 0x000080, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_IsValid_ReturnValue) == 0x000088, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x000090, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Array_Get_Item_1) == 0x0000A0, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Array_Length_ReturnValue) == 0x0000A8, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Less_IntInt_ReturnValue) == 0x0000AC, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_SpawnSystemAttached_ReturnValue) == 0x0000B0, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_SpawnSystemAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Array_Length_ReturnValue_1) == 0x0000B8, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000BC, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, K2Node_DynamicCast_AsSkeletal_Mesh_Component) == 0x0000C0, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::K2Node_DynamicCast_AsSkeletal_Mesh_Component' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, K2Node_DynamicCast_bSuccess_1) == 0x0000C8, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_GetSkeletalMeshAsset_ReturnValue) == 0x0000D0, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_GetSkeletalMeshAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_SpawnSystemAttached_ReturnValue_1) == 0x0000D8, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_SpawnSystemAttached_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_IsValid_ReturnValue_1) == 0x0000E0, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_GetSkeletalMeshAsset_ReturnValue_1) == 0x0000E8, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_GetSkeletalMeshAsset_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_GetMaterials_ReturnValue) == 0x0000F0, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_GetMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Array_Get_Item_2) == 0x000100, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_GetStaticMaterials_ReturnValue) == 0x000128, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_GetStaticMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Array_Get_Item_3) == 0x000138, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Array_Length_ReturnValue_2) == 0x000168, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Less_IntInt_ReturnValue_2) == 0x00016C, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_IsValid_ReturnValue_2) == 0x00016D, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Array_Length_ReturnValue_3) == 0x000170, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_IsValid_ReturnValue_3) == 0x000174, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Less_IntInt_ReturnValue_3) == 0x000175, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, K2Node_MakeArray_Array_1) == 0x000178, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Array_Get_Item_4) == 0x000188, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Array_Get_Item_4' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Array_Length_ReturnValue_4) == 0x000190, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Less_IntInt_ReturnValue_4) == 0x000194, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_GetMaterials_ReturnValue_1) == 0x000198, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_GetMaterials_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Array_Length_ReturnValue_5) == 0x0001A8, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Array_Length_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetAbilitySemiHidden, CallFunc_Less_IntInt_ReturnValue_5) == 0x0001AC, "Member 'BP_WeaponWorkbench2_C_SetAbilitySemiHidden::CallFunc_Less_IntInt_ReturnValue_5' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_SetAbilitySemiHidden;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.SetCameraMainMenu
 // 0x0001 (0x0001 - 0x0000)
@@ -421,9 +288,7 @@ struct BP_WeaponWorkbench2_C_SetCameraMainMenu final
 public:
 	bool                                          bInMainMenu;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_SetCameraMainMenu) == 0x000001, "Wrong alignment on BP_WeaponWorkbench2_C_SetCameraMainMenu");
-static_assert(sizeof(BP_WeaponWorkbench2_C_SetCameraMainMenu) == 0x000001, "Wrong size on BP_WeaponWorkbench2_C_SetCameraMainMenu");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetCameraMainMenu, bInMainMenu) == 0x000000, "Member 'BP_WeaponWorkbench2_C_SetCameraMainMenu::bInMainMenu' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_SetCameraMainMenu;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.SetGunBodySemiHidden
 // 0x00E0 (0x00E0 - 0x0000)
@@ -470,100 +335,35 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_SetGunBodySemiHidden");
-static_assert(sizeof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden) == 0x0000E0, "Wrong size on BP_WeaponWorkbench2_C_SetGunBodySemiHidden");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CurrentMeshComponent) == 0x000000, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CurrentMeshComponent' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, Temp_int_Array_Index_Variable) == 0x000010, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, Temp_int_Loop_Counter_Variable_1) == 0x000014, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_Add_IntInt_ReturnValue_1) == 0x000018, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, Temp_int_Array_Index_Variable_1) == 0x00001C, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, Temp_int_Loop_Counter_Variable_2) == 0x000020, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_Add_IntInt_ReturnValue_2) == 0x000024, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, Temp_int_Array_Index_Variable_2) == 0x000028, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, Temp_int_Loop_Counter_Variable_3) == 0x00002C, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_Add_IntInt_ReturnValue_3) == 0x000030, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, Temp_int_Array_Index_Variable_3) == 0x000034, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::Temp_int_Array_Index_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x000038, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_Array_Get_Item) == 0x000048, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, K2Node_DynamicCast_AsStatic_Mesh_Component) == 0x000058, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::K2Node_DynamicCast_AsStatic_Mesh_Component' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_Less_IntInt_ReturnValue) == 0x000061, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_SpawnSystemAttached_ReturnValue) == 0x000068, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_SpawnSystemAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, K2Node_DynamicCast_AsSkeletal_Mesh_Component) == 0x000070, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::K2Node_DynamicCast_AsSkeletal_Mesh_Component' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, K2Node_DynamicCast_bSuccess_1) == 0x000078, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_SpawnSystemAttached_ReturnValue_1) == 0x000080, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_SpawnSystemAttached_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_K2_GetComponentsByClass_ReturnValue_1) == 0x000088, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_K2_GetComponentsByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_Array_Get_Item_1) == 0x000098, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_Array_Length_ReturnValue_1) == 0x0000A0, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000A4, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_GetMaterials_ReturnValue) == 0x0000A8, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_GetMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_Array_Length_ReturnValue_2) == 0x0000B8, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_Less_IntInt_ReturnValue_2) == 0x0000BC, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_K2_GetComponentsByClass_ReturnValue_2) == 0x0000C0, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_K2_GetComponentsByClass_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_Array_Get_Item_2) == 0x0000D0, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_Array_Length_ReturnValue_3) == 0x0000D8, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunBodySemiHidden, CallFunc_Less_IntInt_ReturnValue_3) == 0x0000DC, "Member 'BP_WeaponWorkbench2_C_SetGunBodySemiHidden::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_SetGunBodySemiHidden;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.SetGunMeshPaint
-// 0x0088 (0x0088 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct BP_WeaponWorkbench2_C_SetGunMeshPaint final
 {
 public:
 	class URWeaponCosmeticPrimaryAsset*           CosmeticPA;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class UMeshComponent*>                 Meshes;                                            // 0x0008(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
-	bool                                          CallFunc_IsWeaponPaintUnlocked_ReturnValue;        // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMeshComponent*                         CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWeaponPaintUnlocked_ReturnValue;        // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class USceneComponent*>                CallFunc_GetChildrenComponents_Children;           // 0x0030(0x0010)(ReferenceParm, ContainsInstancedReference)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class USceneComponent*>                CallFunc_GetChildrenComponents_Children;           // 0x0050(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        CallFunc_Array_Get_Item_1;                         // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMeshComponent*                         K2Node_DynamicCast_AsMesh_Component;               // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMeshComponent*                         K2Node_DynamicCast_AsMesh_Component;               // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_SetGunMeshPaint) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_SetGunMeshPaint");
-static_assert(sizeof(BP_WeaponWorkbench2_C_SetGunMeshPaint) == 0x000088, "Wrong size on BP_WeaponWorkbench2_C_SetGunMeshPaint");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, CosmeticPA) == 0x000000, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::CosmeticPA' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, Meshes) == 0x000008, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::Meshes' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, CallFunc_IsWeaponPaintUnlocked_ReturnValue) == 0x000018, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::CallFunc_IsWeaponPaintUnlocked_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, CallFunc_IsValid_ReturnValue) == 0x000019, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, Temp_int_Loop_Counter_Variable) == 0x00001C, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, Temp_int_Array_Index_Variable) == 0x000024, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, Temp_int_Loop_Counter_Variable_1) == 0x000028, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, CallFunc_Add_IntInt_ReturnValue_1) == 0x00002C, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, Temp_int_Array_Index_Variable_1) == 0x000030, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, CallFunc_Array_Get_Item) == 0x000038, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, CallFunc_Array_Length_ReturnValue) == 0x000040, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, CallFunc_Less_IntInt_ReturnValue) == 0x000044, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, CallFunc_Array_Add_ReturnValue) == 0x000048, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, CallFunc_GetChildrenComponents_Children) == 0x000050, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::CallFunc_GetChildrenComponents_Children' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, CallFunc_Array_Length_ReturnValue_1) == 0x000060, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, CallFunc_Array_Get_Item_1) == 0x000068, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, CallFunc_Less_IntInt_ReturnValue_1) == 0x000070, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, K2Node_DynamicCast_AsMesh_Component) == 0x000078, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::K2Node_DynamicCast_AsMesh_Component' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, K2Node_DynamicCast_bSuccess) == 0x000080, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetGunMeshPaint, CallFunc_Array_Add_ReturnValue_1) == 0x000084, "Member 'BP_WeaponWorkbench2_C_SetGunMeshPaint::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_SetGunMeshPaint;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.SetLightIntesity
 // 0x0048 (0x0048 - 0x0000)
@@ -580,17 +380,20 @@ public:
 	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast;   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast_1; // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_SetLightIntesity) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_SetLightIntesity");
-static_assert(sizeof(BP_WeaponWorkbench2_C_SetLightIntesity) == 0x000048, "Wrong size on BP_WeaponWorkbench2_C_SetLightIntesity");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetLightIntesity, Alpha) == 0x000000, "Member 'BP_WeaponWorkbench2_C_SetLightIntesity::Alpha' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetLightIntesity, CallFunc_Lerp_ReturnValue) == 0x000008, "Member 'BP_WeaponWorkbench2_C_SetLightIntesity::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetLightIntesity, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000010, "Member 'BP_WeaponWorkbench2_C_SetLightIntesity::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetLightIntesity, K2Node_MakeStruct_LinearColor) == 0x000018, "Member 'BP_WeaponWorkbench2_C_SetLightIntesity::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetLightIntesity, CallFunc_Lerp_ReturnValue_1) == 0x000028, "Member 'BP_WeaponWorkbench2_C_SetLightIntesity::CallFunc_Lerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetLightIntesity, CallFunc_Lerp_ReturnValue_2) == 0x000030, "Member 'BP_WeaponWorkbench2_C_SetLightIntesity::CallFunc_Lerp_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetLightIntesity, K2Node_MakeStruct_G_ImplicitCast) == 0x000038, "Member 'BP_WeaponWorkbench2_C_SetLightIntesity::K2Node_MakeStruct_G_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetLightIntesity, CallFunc_SetIntensity_NewIntensity_ImplicitCast) == 0x00003C, "Member 'BP_WeaponWorkbench2_C_SetLightIntesity::CallFunc_SetIntensity_NewIntensity_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetLightIntesity, CallFunc_SetIntensity_NewIntensity_ImplicitCast_1) == 0x000040, "Member 'BP_WeaponWorkbench2_C_SetLightIntesity::CallFunc_SetIntensity_NewIntensity_ImplicitCast_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_SetLightIntesity;
+
+// Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.SetStaticPreviewMeshState
+// 0x0005 (0x0005 - 0x0000)
+struct BP_WeaponWorkbench2_C_SetStaticPreviewMeshState final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_SetStaticPreviewMeshState;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.SetupHighlight
 // 0x0070 (0x0070 - 0x0000)
@@ -615,21 +418,16 @@ public:
 	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0050(0x0010)()
 	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0060(0x0010)()
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_SetupHighlight) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_SetupHighlight");
-static_assert(sizeof(BP_WeaponWorkbench2_C_SetupHighlight) == 0x000070, "Wrong size on BP_WeaponWorkbench2_C_SetupHighlight");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetupHighlight, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BP_WeaponWorkbench2_C_SetupHighlight::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetupHighlight, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_WeaponWorkbench2_C_SetupHighlight::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetupHighlight, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_WeaponWorkbench2_C_SetupHighlight::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetupHighlight, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x000010, "Member 'BP_WeaponWorkbench2_C_SetupHighlight::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetupHighlight, CallFunc_Array_Get_Item) == 0x000020, "Member 'BP_WeaponWorkbench2_C_SetupHighlight::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetupHighlight, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'BP_WeaponWorkbench2_C_SetupHighlight::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetupHighlight, CallFunc_Array_Length_ReturnValue) == 0x00002C, "Member 'BP_WeaponWorkbench2_C_SetupHighlight::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetupHighlight, CallFunc_Less_IntInt_ReturnValue) == 0x000030, "Member 'BP_WeaponWorkbench2_C_SetupHighlight::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetupHighlight, CallFunc_GetWidget_ReturnValue) == 0x000038, "Member 'BP_WeaponWorkbench2_C_SetupHighlight::CallFunc_GetWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetupHighlight, K2Node_DynamicCast_AsRObject_Highlight_Widget) == 0x000040, "Member 'BP_WeaponWorkbench2_C_SetupHighlight::K2Node_DynamicCast_AsRObject_Highlight_Widget' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetupHighlight, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_WeaponWorkbench2_C_SetupHighlight::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetupHighlight, CallFunc_MakeLiteralText_ReturnValue) == 0x000050, "Member 'BP_WeaponWorkbench2_C_SetupHighlight::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_SetupHighlight, CallFunc_MakeLiteralText_ReturnValue_1) == 0x000060, "Member 'BP_WeaponWorkbench2_C_SetupHighlight::CallFunc_MakeLiteralText_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_SetupHighlight;
+
+// Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.ShareInteractableActor
+// 0x0008 (0x0008 - 0x0000)
+struct BP_WeaponWorkbench2_C_ShareInteractableActor final
+{
+public:
+	const class APlayerController*                PlayerController;                                  // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_ShareInteractableActor;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.ToggleCinematicLights
 // 0x0001 (0x0001 - 0x0000)
@@ -638,9 +436,7 @@ struct BP_WeaponWorkbench2_C_ToggleCinematicLights final
 public:
 	bool                                          LightsOn;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_ToggleCinematicLights) == 0x000001, "Wrong alignment on BP_WeaponWorkbench2_C_ToggleCinematicLights");
-static_assert(sizeof(BP_WeaponWorkbench2_C_ToggleCinematicLights) == 0x000001, "Wrong size on BP_WeaponWorkbench2_C_ToggleCinematicLights");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ToggleCinematicLights, LightsOn) == 0x000000, "Member 'BP_WeaponWorkbench2_C_ToggleCinematicLights::LightsOn' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_ToggleCinematicLights;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.ToggleInteractionIndicatorVisibility
 // 0x0010 (0x0010 - 0x0000)
@@ -650,10 +446,7 @@ public:
 	class AActor*                                 InteractingActor;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          NewVisible;                                        // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_ToggleInteractionIndicatorVisibility) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_ToggleInteractionIndicatorVisibility");
-static_assert(sizeof(BP_WeaponWorkbench2_C_ToggleInteractionIndicatorVisibility) == 0x000010, "Wrong size on BP_WeaponWorkbench2_C_ToggleInteractionIndicatorVisibility");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ToggleInteractionIndicatorVisibility, InteractingActor) == 0x000000, "Member 'BP_WeaponWorkbench2_C_ToggleInteractionIndicatorVisibility::InteractingActor' has a wrong offset!");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ToggleInteractionIndicatorVisibility, NewVisible) == 0x000008, "Member 'BP_WeaponWorkbench2_C_ToggleInteractionIndicatorVisibility::NewVisible' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_ToggleInteractionIndicatorVisibility;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.GetInteractableAlternativeDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -662,9 +455,7 @@ struct BP_WeaponWorkbench2_C_GetInteractableAlternativeDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_GetInteractableAlternativeDescription) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_GetInteractableAlternativeDescription");
-static_assert(sizeof(BP_WeaponWorkbench2_C_GetInteractableAlternativeDescription) == 0x000010, "Wrong size on BP_WeaponWorkbench2_C_GetInteractableAlternativeDescription");
-static_assert(offsetof(BP_WeaponWorkbench2_C_GetInteractableAlternativeDescription, ReturnValue) == 0x000000, "Member 'BP_WeaponWorkbench2_C_GetInteractableAlternativeDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_GetInteractableAlternativeDescription;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.GetInteractableCost
 // 0x0004 (0x0004 - 0x0000)
@@ -673,9 +464,7 @@ struct BP_WeaponWorkbench2_C_GetInteractableCost final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_GetInteractableCost) == 0x000004, "Wrong alignment on BP_WeaponWorkbench2_C_GetInteractableCost");
-static_assert(sizeof(BP_WeaponWorkbench2_C_GetInteractableCost) == 0x000004, "Wrong size on BP_WeaponWorkbench2_C_GetInteractableCost");
-static_assert(offsetof(BP_WeaponWorkbench2_C_GetInteractableCost, ReturnValue) == 0x000000, "Member 'BP_WeaponWorkbench2_C_GetInteractableCost::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_GetInteractableCost;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.GetInteractableCostCurrencyType
 // 0x0010 (0x0010 - 0x0000)
@@ -684,9 +473,7 @@ struct BP_WeaponWorkbench2_C_GetInteractableCostCurrencyType final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_GetInteractableCostCurrencyType) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_GetInteractableCostCurrencyType");
-static_assert(sizeof(BP_WeaponWorkbench2_C_GetInteractableCostCurrencyType) == 0x000010, "Wrong size on BP_WeaponWorkbench2_C_GetInteractableCostCurrencyType");
-static_assert(offsetof(BP_WeaponWorkbench2_C_GetInteractableCostCurrencyType, ReturnValue) == 0x000000, "Member 'BP_WeaponWorkbench2_C_GetInteractableCostCurrencyType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_GetInteractableCostCurrencyType;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.GetInteractableDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -695,9 +482,7 @@ struct BP_WeaponWorkbench2_C_GetInteractableDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_GetInteractableDescription) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_GetInteractableDescription");
-static_assert(sizeof(BP_WeaponWorkbench2_C_GetInteractableDescription) == 0x000010, "Wrong size on BP_WeaponWorkbench2_C_GetInteractableDescription");
-static_assert(offsetof(BP_WeaponWorkbench2_C_GetInteractableDescription, ReturnValue) == 0x000000, "Member 'BP_WeaponWorkbench2_C_GetInteractableDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_GetInteractableDescription;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.GetInteractableName
 // 0x0010 (0x0010 - 0x0000)
@@ -706,9 +491,7 @@ struct BP_WeaponWorkbench2_C_GetInteractableName final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_GetInteractableName) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_GetInteractableName");
-static_assert(sizeof(BP_WeaponWorkbench2_C_GetInteractableName) == 0x000010, "Wrong size on BP_WeaponWorkbench2_C_GetInteractableName");
-static_assert(offsetof(BP_WeaponWorkbench2_C_GetInteractableName, ReturnValue) == 0x000000, "Member 'BP_WeaponWorkbench2_C_GetInteractableName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_GetInteractableName;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.GetInteractableSubHeader
 // 0x0010 (0x0010 - 0x0000)
@@ -717,9 +500,7 @@ struct BP_WeaponWorkbench2_C_GetInteractableSubHeader final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_GetInteractableSubHeader) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_GetInteractableSubHeader");
-static_assert(sizeof(BP_WeaponWorkbench2_C_GetInteractableSubHeader) == 0x000010, "Wrong size on BP_WeaponWorkbench2_C_GetInteractableSubHeader");
-static_assert(offsetof(BP_WeaponWorkbench2_C_GetInteractableSubHeader, ReturnValue) == 0x000000, "Member 'BP_WeaponWorkbench2_C_GetInteractableSubHeader::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_GetInteractableSubHeader;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.GetInteractionIndicatorWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -728,9 +509,7 @@ struct BP_WeaponWorkbench2_C_GetInteractionIndicatorWidget final
 public:
 	class UWidgetComponent*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_GetInteractionIndicatorWidget) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_GetInteractionIndicatorWidget");
-static_assert(sizeof(BP_WeaponWorkbench2_C_GetInteractionIndicatorWidget) == 0x000008, "Wrong size on BP_WeaponWorkbench2_C_GetInteractionIndicatorWidget");
-static_assert(offsetof(BP_WeaponWorkbench2_C_GetInteractionIndicatorWidget, ReturnValue) == 0x000000, "Member 'BP_WeaponWorkbench2_C_GetInteractionIndicatorWidget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_GetInteractionIndicatorWidget;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.GetRadarIconColor
 // 0x0010 (0x0010 - 0x0000)
@@ -739,9 +518,7 @@ struct BP_WeaponWorkbench2_C_GetRadarIconColor final
 public:
 	struct FLinearColor                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_GetRadarIconColor) == 0x000004, "Wrong alignment on BP_WeaponWorkbench2_C_GetRadarIconColor");
-static_assert(sizeof(BP_WeaponWorkbench2_C_GetRadarIconColor) == 0x000010, "Wrong size on BP_WeaponWorkbench2_C_GetRadarIconColor");
-static_assert(offsetof(BP_WeaponWorkbench2_C_GetRadarIconColor, ReturnValue) == 0x000000, "Member 'BP_WeaponWorkbench2_C_GetRadarIconColor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_GetRadarIconColor;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.GetRadarIconSize
 // 0x0010 (0x0010 - 0x0000)
@@ -750,9 +527,7 @@ struct BP_WeaponWorkbench2_C_GetRadarIconSize final
 public:
 	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_GetRadarIconSize) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_GetRadarIconSize");
-static_assert(sizeof(BP_WeaponWorkbench2_C_GetRadarIconSize) == 0x000010, "Wrong size on BP_WeaponWorkbench2_C_GetRadarIconSize");
-static_assert(offsetof(BP_WeaponWorkbench2_C_GetRadarIconSize, ReturnValue) == 0x000000, "Member 'BP_WeaponWorkbench2_C_GetRadarIconSize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_GetRadarIconSize;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.GetRadarObjectIcon
 // 0x0008 (0x0008 - 0x0000)
@@ -761,9 +536,7 @@ struct BP_WeaponWorkbench2_C_GetRadarObjectIcon final
 public:
 	class USlateBrushAsset*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_GetRadarObjectIcon) == 0x000008, "Wrong alignment on BP_WeaponWorkbench2_C_GetRadarObjectIcon");
-static_assert(sizeof(BP_WeaponWorkbench2_C_GetRadarObjectIcon) == 0x000008, "Wrong size on BP_WeaponWorkbench2_C_GetRadarObjectIcon");
-static_assert(offsetof(BP_WeaponWorkbench2_C_GetRadarObjectIcon, ReturnValue) == 0x000000, "Member 'BP_WeaponWorkbench2_C_GetRadarObjectIcon::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_GetRadarObjectIcon;
 
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.ShouldShowOnRadar
 // 0x0001 (0x0001 - 0x0000)
@@ -772,9 +545,7 @@ struct BP_WeaponWorkbench2_C_ShouldShowOnRadar final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WeaponWorkbench2_C_ShouldShowOnRadar) == 0x000001, "Wrong alignment on BP_WeaponWorkbench2_C_ShouldShowOnRadar");
-static_assert(sizeof(BP_WeaponWorkbench2_C_ShouldShowOnRadar) == 0x000001, "Wrong size on BP_WeaponWorkbench2_C_ShouldShowOnRadar");
-static_assert(offsetof(BP_WeaponWorkbench2_C_ShouldShowOnRadar, ReturnValue) == 0x000000, "Member 'BP_WeaponWorkbench2_C_ShouldShowOnRadar::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WeaponWorkbench2_C_ShouldShowOnRadar;
 
 }
 

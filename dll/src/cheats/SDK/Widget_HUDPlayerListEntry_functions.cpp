@@ -250,20 +250,20 @@ void UWidget_HUDPlayerListEntry_C::PollPlayerStateValidity()
 }
 
 
-// Function Widget_HUDPlayerListEntry.Widget_HUDPlayerListEntry_C.SetCurrentHealthText
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_HUDPlayerListEntry.Widget_HUDPlayerListEntry_C.SetCurrentHealth
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  currentHealth                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class URHealthComponent*                HealthComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_HUDPlayerListEntry_C::SetCurrentHealthText(double currentHealth, class URHealthComponent* HealthComponent)
+void UWidget_HUDPlayerListEntry_C::SetCurrentHealth(double currentHealth, class URHealthComponent* HealthComponent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_HUDPlayerListEntry_C", "SetCurrentHealthText");
+		Func = Class->GetFunction("Widget_HUDPlayerListEntry_C", "SetCurrentHealth");
 
-	Params::Widget_HUDPlayerListEntry_C_SetCurrentHealthText Parms{};
+	Params::Widget_HUDPlayerListEntry_C_SetCurrentHealth Parms{};
 
 	Parms.currentHealth = currentHealth;
 	Parms.HealthComponent = HealthComponent;

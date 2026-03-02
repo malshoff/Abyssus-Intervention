@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "RGame_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -40,22 +40,7 @@ public:
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0110(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPNotify_DropMagazine_C_Received_Notify) == 0x000010, "Wrong alignment on BPNotify_DropMagazine_C_Received_Notify");
-static_assert(sizeof(BPNotify_DropMagazine_C_Received_Notify) == 0x000130, "Wrong size on BPNotify_DropMagazine_C_Received_Notify");
-static_assert(offsetof(BPNotify_DropMagazine_C_Received_Notify, MeshComp) == 0x000000, "Member 'BPNotify_DropMagazine_C_Received_Notify::MeshComp' has a wrong offset!");
-static_assert(offsetof(BPNotify_DropMagazine_C_Received_Notify, Animation) == 0x000008, "Member 'BPNotify_DropMagazine_C_Received_Notify::Animation' has a wrong offset!");
-static_assert(offsetof(BPNotify_DropMagazine_C_Received_Notify, EventReference) == 0x000010, "Member 'BPNotify_DropMagazine_C_Received_Notify::EventReference' has a wrong offset!");
-static_assert(offsetof(BPNotify_DropMagazine_C_Received_Notify, ReturnValue) == 0x000040, "Member 'BPNotify_DropMagazine_C_Received_Notify::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_DropMagazine_C_Received_Notify, Temp_struct_Variable) == 0x000048, "Member 'BPNotify_DropMagazine_C_Received_Notify::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(BPNotify_DropMagazine_C_Received_Notify, CallFunc_GetOwner_ReturnValue) == 0x000058, "Member 'BPNotify_DropMagazine_C_Received_Notify::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_DropMagazine_C_Received_Notify, CallFunc_GetOwner_ReturnValue_1) == 0x000060, "Member 'BPNotify_DropMagazine_C_Received_Notify::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPNotify_DropMagazine_C_Received_Notify, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000068, "Member 'BPNotify_DropMagazine_C_Received_Notify::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BPNotify_DropMagazine_C_Received_Notify, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'BPNotify_DropMagazine_C_Received_Notify::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPNotify_DropMagazine_C_Received_Notify, CallFunc_GetEquippedWeapon_ReturnValue) == 0x000078, "Member 'BPNotify_DropMagazine_C_Received_Notify::CallFunc_GetEquippedWeapon_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_DropMagazine_C_Received_Notify, CallFunc_GetSocketTransform_ReturnValue) == 0x000080, "Member 'BPNotify_DropMagazine_C_Received_Notify::CallFunc_GetSocketTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_DropMagazine_C_Received_Notify, CallFunc_BreakTransform_Location) == 0x0000E0, "Member 'BPNotify_DropMagazine_C_Received_Notify::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(BPNotify_DropMagazine_C_Received_Notify, CallFunc_BreakTransform_Rotation) == 0x0000F8, "Member 'BPNotify_DropMagazine_C_Received_Notify::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(BPNotify_DropMagazine_C_Received_Notify, CallFunc_BreakTransform_Scale) == 0x000110, "Member 'BPNotify_DropMagazine_C_Received_Notify::CallFunc_BreakTransform_Scale' has a wrong offset!");
+DUMPER7_ASSERTS_BPNotify_DropMagazine_C_Received_Notify;
 
 }
 

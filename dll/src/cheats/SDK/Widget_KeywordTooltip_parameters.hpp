@@ -10,27 +10,24 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
+
 
 namespace SDK::Params
 {
 
 // Function Widget_KeywordTooltip.Widget_KeywordTooltip_C.Set Info
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct Widget_KeywordTooltip_C_Set_Info final
 {
 public:
 	class FText                                   Title_0;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class FText                                   Description_0;                                     // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0024(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_KeywordTooltip_C_Set_Info) == 0x000008, "Wrong alignment on Widget_KeywordTooltip_C_Set_Info");
-static_assert(sizeof(Widget_KeywordTooltip_C_Set_Info) == 0x000030, "Wrong size on Widget_KeywordTooltip_C_Set_Info");
-static_assert(offsetof(Widget_KeywordTooltip_C_Set_Info, Title_0) == 0x000000, "Member 'Widget_KeywordTooltip_C_Set_Info::Title_0' has a wrong offset!");
-static_assert(offsetof(Widget_KeywordTooltip_C_Set_Info, Description_0) == 0x000010, "Member 'Widget_KeywordTooltip_C_Set_Info::Description_0' has a wrong offset!");
-static_assert(offsetof(Widget_KeywordTooltip_C_Set_Info, CallFunc_TextIsEmpty_ReturnValue) == 0x000020, "Member 'Widget_KeywordTooltip_C_Set_Info::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_KeywordTooltip_C_Set_Info, CallFunc_PlayAnimation_ReturnValue) == 0x000028, "Member 'Widget_KeywordTooltip_C_Set_Info::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_KeywordTooltip_C_Set_Info;
 
 }
 

@@ -21,9 +21,7 @@ struct BP_SkeletalMeshRagdoll_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkeletalMeshRagdoll_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll) == 0x000004, "Wrong alignment on BP_SkeletalMeshRagdoll_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll");
-static_assert(sizeof(BP_SkeletalMeshRagdoll_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll) == 0x000004, "Wrong size on BP_SkeletalMeshRagdoll_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll, EntryPoint) == 0x000000, "Member 'BP_SkeletalMeshRagdoll_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll::EntryPoint' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkeletalMeshRagdoll_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll;
 
 }
 

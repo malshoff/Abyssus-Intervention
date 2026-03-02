@@ -17,105 +17,58 @@
 namespace SDK
 {
 
-// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.SpawnWeaponFireSFX
+// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.ExecuteUbergraph_BP_EngineRifle_Automatic_ModScript
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_EngineRifle_Automatic_ModScript_C::ExecuteUbergraph_BP_EngineRifle_Automatic_ModScript(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "ExecuteUbergraph_BP_EngineRifle_Automatic_ModScript");
+
+	Params::BP_EngineRifle_Automatic_ModScript_C_ExecuteUbergraph_BP_EngineRifle_Automatic_ModScript Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.FinishFire
 // (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class USoundBase*                       SoundTemplate                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBP_EngineRifle_Automatic_ModScript_C::SpawnWeaponFireSFX(class USoundBase* SoundTemplate)
+void UBP_EngineRifle_Automatic_ModScript_C::FinishFire()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "SpawnWeaponFireSFX");
-
-	Params::BP_EngineRifle_Automatic_ModScript_C_SpawnWeaponFireSFX Parms{};
-
-	Parms.SoundTemplate = SoundTemplate;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.SpawnWeaponFireFX
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TSubclassOf<class URNiagaraComponent>   RNiagaraComponent                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-
-void UBP_EngineRifle_Automatic_ModScript_C::SpawnWeaponFireFX(TSubclassOf<class URNiagaraComponent> RNiagaraComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "SpawnWeaponFireFX");
-
-	Params::BP_EngineRifle_Automatic_ModScript_C_SpawnWeaponFireFX Parms{};
-
-	Parms.RNiagaraComponent = RNiagaraComponent;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.K2_TickScript
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_EngineRifle_Automatic_ModScript_C::K2_TickScript(float DeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "K2_TickScript");
-
-	Params::BP_EngineRifle_Automatic_ModScript_C_K2_TickScript Parms{};
-
-	Parms.DeltaTime = DeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.K2_OnEndSecondaryFire
-// (Event, Public, BlueprintEvent)
-
-void UBP_EngineRifle_Automatic_ModScript_C::K2_OnEndSecondaryFire()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "K2_OnEndSecondaryFire");
+		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "FinishFire");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.K2_OnEndFire
-// (Event, Public, BlueprintEvent)
+// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.GetFireTag
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FGameplayTag*                    Tag                                                    (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 
-void UBP_EngineRifle_Automatic_ModScript_C::K2_OnEndFire()
+void UBP_EngineRifle_Automatic_ModScript_C::GetFireTag(struct FGameplayTag* Tag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "K2_OnEndFire");
+		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "GetFireTag");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::BP_EngineRifle_Automatic_ModScript_C_GetFireTag Parms{};
 
+	UObject::ProcessEvent(Func, &Parms);
 
-// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.K2_OnBeginFire
-// (Event, Public, BlueprintEvent)
-
-void UBP_EngineRifle_Automatic_ModScript_C::K2_OnBeginFire()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "K2_OnBeginFire");
-
-	UObject::ProcessEvent(Func, nullptr);
+	if (Tag != nullptr)
+		*Tag = std::move(Parms.Tag);
 }
 
 
@@ -143,56 +96,83 @@ void UBP_EngineRifle_Automatic_ModScript_C::HasBlockingInputs(class ARPlayerPawn
 }
 
 
-// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.GetFireTag
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FGameplayTag*                    Tag                                                    (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
+// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.K2_OnBeginFire
+// (Event, Public, BlueprintEvent)
 
-void UBP_EngineRifle_Automatic_ModScript_C::GetFireTag(struct FGameplayTag* Tag)
+void UBP_EngineRifle_Automatic_ModScript_C::K2_OnBeginFire()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "GetFireTag");
-
-	Params::BP_EngineRifle_Automatic_ModScript_C_GetFireTag Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Tag != nullptr)
-		*Tag = std::move(Parms.Tag);
-}
-
-
-// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.FinishFire
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_EngineRifle_Automatic_ModScript_C::FinishFire()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "FinishFire");
+		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "K2_OnBeginFire");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.ExecuteUbergraph_BP_EngineRifle_Automatic_ModScript
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.K2_OnEndFire
+// (Event, Public, BlueprintEvent)
 
-void UBP_EngineRifle_Automatic_ModScript_C::ExecuteUbergraph_BP_EngineRifle_Automatic_ModScript(int32 EntryPoint)
+void UBP_EngineRifle_Automatic_ModScript_C::K2_OnEndFire()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "ExecuteUbergraph_BP_EngineRifle_Automatic_ModScript");
+		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "K2_OnEndFire");
 
-	Params::BP_EngineRifle_Automatic_ModScript_C_ExecuteUbergraph_BP_EngineRifle_Automatic_ModScript Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.K2_OnEndSecondaryFire
+// (Event, Public, BlueprintEvent)
+
+void UBP_EngineRifle_Automatic_ModScript_C::K2_OnEndSecondaryFire()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "K2_OnEndSecondaryFire");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.K2_TickScript
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_EngineRifle_Automatic_ModScript_C::K2_TickScript(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "K2_TickScript");
+
+	Params::BP_EngineRifle_Automatic_ModScript_C_K2_TickScript Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EngineRifle_Automatic_ModScript.BP_EngineRifle_Automatic_ModScript_C.SpawnWeaponFireFX
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TSubclassOf<class URNiagaraComponent>   RNiagaraComponent                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+
+void UBP_EngineRifle_Automatic_ModScript_C::SpawnWeaponFireFX(TSubclassOf<class URNiagaraComponent> RNiagaraComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EngineRifle_Automatic_ModScript_C", "SpawnWeaponFireFX");
+
+	Params::BP_EngineRifle_Automatic_ModScript_C_SpawnWeaponFireFX Parms{};
+
+	Parms.RNiagaraComponent = RNiagaraComponent;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

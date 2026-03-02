@@ -19,22 +19,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_InteractTooltip.Widget_InteractTooltip_C
-// 0x0070 (0x0340 - 0x02D0)
+// 0x0070 (0x03B0 - 0x0340)
 class UWidget_InteractTooltip_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       ConstructAnimation;                                // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             Cost;                                              // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Header;                                            // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URichTextBlock*                         RichTextBlock_105;                                 // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             SubHeader;                                         // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBox_682;                                   // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   DefaultDescription;                                // 0x0310(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   AdvancedDescription;                               // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FTimerHandle                           FocusTimer;                                        // 0x0330(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class URPlayerInteractComponent*              CachedPlayerInteractComponent;                     // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UVerticalBox*                           VerticalBox_682;                                   // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             SubHeader;                                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URichTextBlock*                         RichTextBlock_105;                                 // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Header;                                            // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Cost;                                              // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ConstructAnimation;                                // 0x0378(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class FText                                   DefaultDescription;                                // 0x0380(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   AdvancedDescription;                               // 0x0390(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FTimerHandle                           FocusTimer;                                        // 0x03A0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class URPlayerInteractComponent*              CachedPlayerInteractComponent;                     // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CheckFocus();
@@ -52,27 +52,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_InteractTooltip_C">();
+		BP_STATIC_CLASS_IMPL("Widget_InteractTooltip_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_InteractTooltip_C")
 	}
 	static class UWidget_InteractTooltip_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_InteractTooltip_C>();
 	}
 };
-static_assert(alignof(UWidget_InteractTooltip_C) == 0x000008, "Wrong alignment on UWidget_InteractTooltip_C");
-static_assert(sizeof(UWidget_InteractTooltip_C) == 0x000340, "Wrong size on UWidget_InteractTooltip_C");
-static_assert(offsetof(UWidget_InteractTooltip_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_InteractTooltip_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractTooltip_C, ConstructAnimation) == 0x0002D8, "Member 'UWidget_InteractTooltip_C::ConstructAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractTooltip_C, Cost) == 0x0002E0, "Member 'UWidget_InteractTooltip_C::Cost' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractTooltip_C, Header) == 0x0002E8, "Member 'UWidget_InteractTooltip_C::Header' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractTooltip_C, InvalidationBox_0) == 0x0002F0, "Member 'UWidget_InteractTooltip_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractTooltip_C, RichTextBlock_105) == 0x0002F8, "Member 'UWidget_InteractTooltip_C::RichTextBlock_105' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractTooltip_C, SubHeader) == 0x000300, "Member 'UWidget_InteractTooltip_C::SubHeader' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractTooltip_C, VerticalBox_682) == 0x000308, "Member 'UWidget_InteractTooltip_C::VerticalBox_682' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractTooltip_C, DefaultDescription) == 0x000310, "Member 'UWidget_InteractTooltip_C::DefaultDescription' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractTooltip_C, AdvancedDescription) == 0x000320, "Member 'UWidget_InteractTooltip_C::AdvancedDescription' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractTooltip_C, FocusTimer) == 0x000330, "Member 'UWidget_InteractTooltip_C::FocusTimer' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractTooltip_C, CachedPlayerInteractComponent) == 0x000338, "Member 'UWidget_InteractTooltip_C::CachedPlayerInteractComponent' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_InteractTooltip_C;
 
 }
 

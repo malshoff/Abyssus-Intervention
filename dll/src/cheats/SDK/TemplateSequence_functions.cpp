@@ -17,8 +17,135 @@
 namespace SDK
 {
 
+// Function TemplateSequence.TemplateSequenceActor.SetBinding
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bOverridesDefault                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ATemplateSequenceActor::SetBinding(class AActor* Actor, bool bOverridesDefault)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TemplateSequenceActor", "SetBinding");
+
+	Params::TemplateSequenceActor_SetBinding Parms{};
+
+	Parms.Actor = Actor;
+	Parms.bOverridesDefault = bOverridesDefault;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TemplateSequence.TemplateSequenceActor.SetSequence
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UTemplateSequence*                InSequence                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ATemplateSequenceActor::SetSequence(class UTemplateSequence* InSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TemplateSequenceActor", "SetSequence");
+
+	Params::TemplateSequenceActor_SetSequence Parms{};
+
+	Parms.InSequence = InSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TemplateSequence.TemplateSequenceActor.GetSequence
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UTemplateSequence*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UTemplateSequence* ATemplateSequenceActor::GetSequence() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TemplateSequenceActor", "GetSequence");
+
+	Params::TemplateSequenceActor_GetSequence Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TemplateSequence.TemplateSequenceActor.GetSequencePlayer
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UTemplateSequencePlayer*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UTemplateSequencePlayer* ATemplateSequenceActor::GetSequencePlayer() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TemplateSequenceActor", "GetSequencePlayer");
+
+	Params::TemplateSequenceActor_GetSequencePlayer Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TemplateSequence.TemplateSequenceActor.LoadSequence
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UTemplateSequence*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UTemplateSequence* ATemplateSequenceActor::LoadSequence() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TemplateSequenceActor", "LoadSequence");
+
+	Params::TemplateSequenceActor_LoadSequence Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function TemplateSequence.TemplateSequencePlayer.CreateTemplateSequencePlayer
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UTemplateSequence*                TemplateSequence                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -48,133 +175,6 @@ class UTemplateSequencePlayer* UTemplateSequencePlayer::CreateTemplateSequencePl
 
 	if (OutActor != nullptr)
 		*OutActor = Parms.OutActor;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TemplateSequence.TemplateSequenceActor.SetBinding
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bOverridesDefault                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ATemplateSequenceActor::SetBinding(class AActor* Actor, bool bOverridesDefault)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TemplateSequenceActor", "SetBinding");
-
-	Params::TemplateSequenceActor_SetBinding Parms{};
-
-	Parms.Actor = Actor;
-	Parms.bOverridesDefault = bOverridesDefault;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function TemplateSequence.TemplateSequenceActor.SetSequence
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UTemplateSequence*                InSequence                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ATemplateSequenceActor::SetSequence(class UTemplateSequence* InSequence)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TemplateSequenceActor", "SetSequence");
-
-	Params::TemplateSequenceActor_SetSequence Parms{};
-
-	Parms.InSequence = InSequence;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function TemplateSequence.TemplateSequenceActor.GetSequence
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UTemplateSequence*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UTemplateSequence* ATemplateSequenceActor::GetSequence() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TemplateSequenceActor", "GetSequence");
-
-	Params::TemplateSequenceActor_GetSequence Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TemplateSequence.TemplateSequenceActor.GetSequencePlayer
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UTemplateSequencePlayer*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UTemplateSequencePlayer* ATemplateSequenceActor::GetSequencePlayer() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TemplateSequenceActor", "GetSequencePlayer");
-
-	Params::TemplateSequenceActor_GetSequencePlayer Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TemplateSequence.TemplateSequenceActor.LoadSequence
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UTemplateSequence*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UTemplateSequence* ATemplateSequenceActor::LoadSequence() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TemplateSequenceActor", "LoadSequence");
-
-	Params::TemplateSequenceActor_LoadSequence Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }

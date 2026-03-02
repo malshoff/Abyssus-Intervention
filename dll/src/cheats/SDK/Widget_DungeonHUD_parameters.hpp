@@ -29,15 +29,7 @@ public:
 	class UWidget_HUD_C*                          CallFunc_Create_ReturnValue;                       // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AddToPlayerScreen_ReturnValue;            // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD) == 0x000008, "Wrong alignment on Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD");
-static_assert(sizeof(Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD) == 0x000038, "Wrong size on Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD");
-static_assert(offsetof(Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD, EntryPoint) == 0x000000, "Member 'Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD, CallFunc_GetOwningPlayer_ReturnValue) == 0x000008, "Member 'Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x000010, "Member 'Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD, K2Node_DynamicCast_AsRGame_Player_Controller) == 0x000018, "Member 'Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD::K2Node_DynamicCast_AsRGame_Player_Controller' has a wrong offset!");
-static_assert(offsetof(Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD, CallFunc_Create_ReturnValue) == 0x000028, "Member 'Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD, CallFunc_AddToPlayerScreen_ReturnValue) == 0x000030, "Member 'Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD::CallFunc_AddToPlayerScreen_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_DungeonHUD_C_ExecuteUbergraph_Widget_DungeonHUD;
 
 }
 

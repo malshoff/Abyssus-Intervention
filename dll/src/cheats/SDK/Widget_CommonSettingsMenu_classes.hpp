@@ -18,30 +18,30 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C
-// 0x00A0 (0x04D8 - 0x0438)
+// 0x00A0 (0x0560 - 0x04C0)
 class UWidget_CommonSettingsMenu_C final : public URCommonActivatableWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonActionWidget*                    CommonActionWidget_381;                            // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_Apply;                          // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_Back;                           // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_L;                              // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_R;                              // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               SettingsOverlay;                                   // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 W_Button_Apply;                                    // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 W_Button_Back;                                     // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_Icon_C*                       W_Button_Icon_L;                                   // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_Icon_C*                       W_Button_Icon_R;                                   // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 W_Button_Reset;                                    // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_HorizontalTabList_C*                 W_HorizontalTabList;                               // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_AudioSettings_C*                Widget_AudioSettings;                              // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_DisplaySettings_C*              Widget_DisplaySettings;                            // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_GamepadBindingSettings_C*       Widget_GamepadBindingSettings;                     // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_GameplaySettings_C*             Widget_GameplaySettings;                           // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_GraphicSettings_C*              Widget_GraphicSettings;                            // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWidget_KeybindingSettings_C*           Widget_KeybindingSettings;                         // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URSettingTabWidget*                     CurrentSettingsTab;                                // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget_GraphicSettings_C*              Widget_GraphicSettings;                            // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_GameplaySettings_C*             Widget_GameplaySettings;                           // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_GamepadBindingSettings_C*       Widget_GamepadBindingSettings;                     // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_DisplaySettings_C*              Widget_DisplaySettings;                            // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_AudioSettings_C*                Widget_AudioSettings;                              // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_HorizontalTabList_C*                 W_HorizontalTabList;                               // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_SimpleText_C*                 W_Button_Reset;                                    // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_Icon_C*                       W_Button_Icon_R;                                   // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_Icon_C*                       W_Button_Icon_L;                                   // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_SimpleText_C*                 W_Button_Back;                                     // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_SimpleText_C*                 W_Button_Apply;                                    // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               SettingsOverlay;                                   // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_R;                              // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_L;                              // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_Back;                           // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_Apply;                          // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_381;                            // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URSettingTabWidget*                     CurrentSettingsTab;                                // 0x0558(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
@@ -66,35 +66,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_CommonSettingsMenu_C">();
+		BP_STATIC_CLASS_IMPL("Widget_CommonSettingsMenu_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_CommonSettingsMenu_C")
 	}
 	static class UWidget_CommonSettingsMenu_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_CommonSettingsMenu_C>();
 	}
 };
-static_assert(alignof(UWidget_CommonSettingsMenu_C) == 0x000008, "Wrong alignment on UWidget_CommonSettingsMenu_C");
-static_assert(sizeof(UWidget_CommonSettingsMenu_C) == 0x0004D8, "Wrong size on UWidget_CommonSettingsMenu_C");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, UberGraphFrame) == 0x000438, "Member 'UWidget_CommonSettingsMenu_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, CommonActionWidget_381) == 0x000440, "Member 'UWidget_CommonSettingsMenu_C::CommonActionWidget_381' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, CommonActionWidget_Apply) == 0x000448, "Member 'UWidget_CommonSettingsMenu_C::CommonActionWidget_Apply' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, CommonActionWidget_Back) == 0x000450, "Member 'UWidget_CommonSettingsMenu_C::CommonActionWidget_Back' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, CommonActionWidget_L) == 0x000458, "Member 'UWidget_CommonSettingsMenu_C::CommonActionWidget_L' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, CommonActionWidget_R) == 0x000460, "Member 'UWidget_CommonSettingsMenu_C::CommonActionWidget_R' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, SettingsOverlay) == 0x000468, "Member 'UWidget_CommonSettingsMenu_C::SettingsOverlay' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, W_Button_Apply) == 0x000470, "Member 'UWidget_CommonSettingsMenu_C::W_Button_Apply' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, W_Button_Back) == 0x000478, "Member 'UWidget_CommonSettingsMenu_C::W_Button_Back' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, W_Button_Icon_L) == 0x000480, "Member 'UWidget_CommonSettingsMenu_C::W_Button_Icon_L' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, W_Button_Icon_R) == 0x000488, "Member 'UWidget_CommonSettingsMenu_C::W_Button_Icon_R' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, W_Button_Reset) == 0x000490, "Member 'UWidget_CommonSettingsMenu_C::W_Button_Reset' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, W_HorizontalTabList) == 0x000498, "Member 'UWidget_CommonSettingsMenu_C::W_HorizontalTabList' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, Widget_AudioSettings) == 0x0004A0, "Member 'UWidget_CommonSettingsMenu_C::Widget_AudioSettings' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, Widget_DisplaySettings) == 0x0004A8, "Member 'UWidget_CommonSettingsMenu_C::Widget_DisplaySettings' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, Widget_GamepadBindingSettings) == 0x0004B0, "Member 'UWidget_CommonSettingsMenu_C::Widget_GamepadBindingSettings' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, Widget_GameplaySettings) == 0x0004B8, "Member 'UWidget_CommonSettingsMenu_C::Widget_GameplaySettings' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, Widget_GraphicSettings) == 0x0004C0, "Member 'UWidget_CommonSettingsMenu_C::Widget_GraphicSettings' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, Widget_KeybindingSettings) == 0x0004C8, "Member 'UWidget_CommonSettingsMenu_C::Widget_KeybindingSettings' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonSettingsMenu_C, CurrentSettingsTab) == 0x0004D0, "Member 'UWidget_CommonSettingsMenu_C::CurrentSettingsTab' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_CommonSettingsMenu_C;
 
 }
 

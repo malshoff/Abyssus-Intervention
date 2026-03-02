@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function Widget_Crosshair_DamageIndicator.Widget_Crosshair_DamageIndicator_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_Crosshair_DamageIndicator_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Crosshair_DamageIndicator_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Widget_Crosshair_DamageIndicator.Widget_Crosshair_DamageIndicator_C.ExecuteUbergraph_Widget_Crosshair_DamageIndicator
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -51,24 +37,24 @@ void UWidget_Crosshair_DamageIndicator_C::ExecuteUbergraph_Widget_Crosshair_Dama
 }
 
 
-// Function Widget_Crosshair_DamageIndicator.Widget_Crosshair_DamageIndicator_C.GetDamageSoundKey
+// Function Widget_Crosshair_DamageIndicator.Widget_Crosshair_DamageIndicator_C.GetKillSoundKey
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString*                          DamageSoundKey_0                                       (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString*                          DamageSoundKey                                         (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWidget_Crosshair_DamageIndicator_C::GetDamageSoundKey(class FString* DamageSoundKey_0)
+void UWidget_Crosshair_DamageIndicator_C::GetKillSoundKey(class FString* DamageSoundKey)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Crosshair_DamageIndicator_C", "GetDamageSoundKey");
+		Func = Class->GetFunction("Widget_Crosshair_DamageIndicator_C", "GetKillSoundKey");
 
-	Params::Widget_Crosshair_DamageIndicator_C_GetDamageSoundKey Parms{};
+	Params::Widget_Crosshair_DamageIndicator_C_GetKillSoundKey Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (DamageSoundKey_0 != nullptr)
-		*DamageSoundKey_0 = std::move(Parms.DamageSoundKey_0);
+	if (DamageSoundKey != nullptr)
+		*DamageSoundKey = std::move(Parms.DamageSoundKey);
 }
 
 
@@ -128,14 +114,28 @@ void UWidget_Crosshair_DamageIndicator_C::OnWeaponEquipped_Event(class ARWeapon*
 }
 
 
+// Function Widget_Crosshair_DamageIndicator.Widget_Crosshair_DamageIndicator_C.PlayKillSequence
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_Crosshair_DamageIndicator_C::PlayKillSequence()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_Crosshair_DamageIndicator_C", "PlayKillSequence");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Widget_Crosshair_DamageIndicator.Widget_Crosshair_DamageIndicator_C.SetDamageSounds
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    DamageSoundKey_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    DamageSoundKey                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class USoundBase*                       DirectDamageSound_0                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class USoundBase*                       CriticalSound_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_Crosshair_DamageIndicator_C::SetDamageSounds(const class FString& DamageSoundKey_0, class USoundBase* DirectDamageSound_0, class USoundBase* CriticalSound_0)
+void UWidget_Crosshair_DamageIndicator_C::SetDamageSounds(const class FString& DamageSoundKey, class USoundBase* DirectDamageSound_0, class USoundBase* CriticalSound_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -144,9 +144,31 @@ void UWidget_Crosshair_DamageIndicator_C::SetDamageSounds(const class FString& D
 
 	Params::Widget_Crosshair_DamageIndicator_C_SetDamageSounds Parms{};
 
-	Parms.DamageSoundKey_0 = std::move(DamageSoundKey_0);
+	Parms.DamageSoundKey = std::move(DamageSoundKey);
 	Parms.DirectDamageSound_0 = DirectDamageSound_0;
 	Parms.CriticalSound_0 = CriticalSound_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_Crosshair_DamageIndicator.Widget_Crosshair_DamageIndicator_C.SetKillSounds
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    DamageSoundKey                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class USoundBase*                       KillSound_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_Crosshair_DamageIndicator_C::SetKillSounds(const class FString& DamageSoundKey, class USoundBase* KillSound_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_Crosshair_DamageIndicator_C", "SetKillSounds");
+
+	Params::Widget_Crosshair_DamageIndicator_C_SetKillSounds Parms{};
+
+	Parms.DamageSoundKey = std::move(DamageSoundKey);
+	Parms.KillSound_0 = KillSound_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

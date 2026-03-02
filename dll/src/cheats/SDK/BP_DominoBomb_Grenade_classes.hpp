@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_DominoBomb_Grenade.BP_DominoBomb_Grenade_C
-// 0x0000 (0x06E8 - 0x06E8)
+// 0x0000 (0x06F8 - 0x06F8)
 class ABP_DominoBomb_Grenade_C final : public ABP_DefaultExplosion_Grenade_C
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_DominoBomb_Grenade_C">();
+		BP_STATIC_CLASS_IMPL("BP_DominoBomb_Grenade_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_DominoBomb_Grenade_C")
 	}
 	static class ABP_DominoBomb_Grenade_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_DominoBomb_Grenade_C>();
 	}
 };
-static_assert(alignof(ABP_DominoBomb_Grenade_C) == 0x000008, "Wrong alignment on ABP_DominoBomb_Grenade_C");
-static_assert(sizeof(ABP_DominoBomb_Grenade_C) == 0x0006E8, "Wrong size on ABP_DominoBomb_Grenade_C");
+DUMPER7_ASSERTS_ABP_DominoBomb_Grenade_C;
 
 }
 

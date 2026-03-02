@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "BP_Base_ModScript_classes.hpp"
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
@@ -21,7 +21,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_ChargeBase_ModScript.BP_ChargeBase_ModScript_C
 // 0x0090 (0x01E0 - 0x0150)
-class UBP_ChargeBase_ModScript_C final : public UBP_Base_ModScript_C
+class UBP_ChargeBase_ModScript_C : public UBP_Base_ModScript_C
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ChargeBase_ModScript_C;          // 0x0150(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
@@ -69,29 +69,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ChargeBase_ModScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_ChargeBase_ModScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ChargeBase_ModScript_C")
 	}
 	static class UBP_ChargeBase_ModScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ChargeBase_ModScript_C>();
 	}
 };
-static_assert(alignof(UBP_ChargeBase_ModScript_C) == 0x000008, "Wrong alignment on UBP_ChargeBase_ModScript_C");
-static_assert(sizeof(UBP_ChargeBase_ModScript_C) == 0x0001E0, "Wrong size on UBP_ChargeBase_ModScript_C");
-static_assert(offsetof(UBP_ChargeBase_ModScript_C, UberGraphFrame_BP_ChargeBase_ModScript_C) == 0x000150, "Member 'UBP_ChargeBase_ModScript_C::UberGraphFrame_BP_ChargeBase_ModScript_C' has a wrong offset!");
-static_assert(offsetof(UBP_ChargeBase_ModScript_C, MaxCharges) == 0x000158, "Member 'UBP_ChargeBase_ModScript_C::MaxCharges' has a wrong offset!");
-static_assert(offsetof(UBP_ChargeBase_ModScript_C, DelayBetweenChargeUp) == 0x000160, "Member 'UBP_ChargeBase_ModScript_C::DelayBetweenChargeUp' has a wrong offset!");
-static_assert(offsetof(UBP_ChargeBase_ModScript_C, CurrentCharges) == 0x000168, "Member 'UBP_ChargeBase_ModScript_C::CurrentCharges' has a wrong offset!");
-static_assert(offsetof(UBP_ChargeBase_ModScript_C, SweetspotTime) == 0x000170, "Member 'UBP_ChargeBase_ModScript_C::SweetspotTime' has a wrong offset!");
-static_assert(offsetof(UBP_ChargeBase_ModScript_C, WorldTimeOnFullCharge) == 0x000180, "Member 'UBP_ChargeBase_ModScript_C::WorldTimeOnFullCharge' has a wrong offset!");
-static_assert(offsetof(UBP_ChargeBase_ModScript_C, ChargeIncrementCue) == 0x000188, "Member 'UBP_ChargeBase_ModScript_C::ChargeIncrementCue' has a wrong offset!");
-static_assert(offsetof(UBP_ChargeBase_ModScript_C, ChargeFinishedCue) == 0x000190, "Member 'UBP_ChargeBase_ModScript_C::ChargeFinishedCue' has a wrong offset!");
-static_assert(offsetof(UBP_ChargeBase_ModScript_C, ChargeHold) == 0x000198, "Member 'UBP_ChargeBase_ModScript_C::ChargeHold' has a wrong offset!");
-static_assert(offsetof(UBP_ChargeBase_ModScript_C, ChargeWaitLoopTask) == 0x0001A8, "Member 'UBP_ChargeBase_ModScript_C::ChargeWaitLoopTask' has a wrong offset!");
-static_assert(offsetof(UBP_ChargeBase_ModScript_C, CachedRPlayerPawn) == 0x0001B0, "Member 'UBP_ChargeBase_ModScript_C::CachedRPlayerPawn' has a wrong offset!");
-static_assert(offsetof(UBP_ChargeBase_ModScript_C, PreviousCharge) == 0x0001B8, "Member 'UBP_ChargeBase_ModScript_C::PreviousCharge' has a wrong offset!");
-static_assert(offsetof(UBP_ChargeBase_ModScript_C, AvailableOverCharge) == 0x0001BC, "Member 'UBP_ChargeBase_ModScript_C::AvailableOverCharge' has a wrong offset!");
-static_assert(offsetof(UBP_ChargeBase_ModScript_C, BlockingTags) == 0x0001C0, "Member 'UBP_ChargeBase_ModScript_C::BlockingTags' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_ChargeBase_ModScript_C;
 
 }
 

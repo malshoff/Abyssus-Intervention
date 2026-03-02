@@ -11,91 +11,80 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonInput_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
-#include "UMG_classes.hpp"
+#include "RGame_classes.hpp"
+#include "CommonInput_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C
-// 0x00B0 (0x0380 - 0x02D0)
-class UWidget_MutatorGridElement_01_C : public UUserWidget
+// 0x00B8 (0x03F8 - 0x0340)
+class UWidget_MutatorGridElement_01_C : public URMutatorGridElement
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UButton*                                Button_220;                                        // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 EmptyFrame;                                        // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Background;                                  // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_FocusIndicator;                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Frame;                                       // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Icon;                                        // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 MinorMajorIcon;                                    // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_21;                                        // 0x0310(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_82;                                        // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_314;                                // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URMutatorPrimaryAsset*                  PrimaryAsset;                                      // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UWidget_BaseTooltip_C*                  MutatorTooltipWidget;                              // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Rank;                                              // 0x0338(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_33C[0x4];                                      // 0x033C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        FocusTime;                                         // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             DefaultFrameTexture;                               // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              SizeOverride;                                      // 0x0350(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIncludeGodPassiveDescriptionIfTrigger;            // 0x0360(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_361[0x7];                                      // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URWeaponPrimaryAsset*                   WeaponPA;                                          // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	TArray<class URWeaponModPrimaryAsset*>        Weapon_Mod_PAs;                                    // 0x0370(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetSwitcher*                        WidgetSwitcher_314;                                // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_82;                                        // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             RankText;                                          // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 MinorMajorIcon;                                    // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Icon;                                        // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Frame;                                       // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_FocusIndicator;                              // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Background;                                  // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 EmptyFrame;                                        // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_220;                                        // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URMutatorPrimaryAsset*                  PrimaryAsset;                                      // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UWidget_BaseTooltip_C*                  MutatorTooltipWidget;                              // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Rank;                                              // 0x03A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_3AC[0x4];                                      // 0x03AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        FocusTime;                                         // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             DefaultFrameTexture;                               // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              SizeOverride;                                      // 0x03C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIncludeGodPassiveDescriptionIfTrigger;            // 0x03D0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D1[0x7];                                      // 0x03D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URWeaponPrimaryAsset*                   WeaponPA;                                          // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	TArray<class URWeaponModPrimaryAsset*>        Weapon_Mod_PAs;                                    // 0x03E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class ARPlayerPawn*                           EntryPawn;                                         // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void UpdateGamepadFocus(bool HasFocus);
-	void SetIcon();
-	void PreConstruct(bool IsDesignTime);
-	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
-	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
-	void Initialize(class URMutatorPrimaryAsset* MutatorPA, int32 Rank_0, class URWeaponPrimaryAsset* WeaponPA_0, const TArray<class URWeaponModPrimaryAsset*>& WeaponModPAs);
-	class UWidget* GetToolTipWidget();
-	void GetTooltipSize(class UWidget_BaseTooltip_C* ToolTipWidget_0, struct FVector2D* Values);
-	void ExecuteUbergraph_Widget_MutatorGridElement_01(int32 EntryPoint);
-	void Destruct();
-	void DestroyTooltip();
-	void Construct();
-	void BndEvt__Widget_MutatorGridElement_01_Button_220_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature();
 	void AddGodPassiveToDescriptionIfTrigger(const class FText& InDescription, class URMutatorPrimaryAsset* Target, class FText* OutDescription);
+	void BndEvt__Widget_MutatorGridElement_01_Button_220_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature();
+	void Clear();
+	void Construct();
+	void DestroyTooltip();
+	void Destruct();
+	void ExecuteUbergraph_Widget_MutatorGridElement_01(int32 EntryPoint);
+	void GetOwningRPlayerPawn(class ARPlayerPawn** RPlayerPawn);
+	void GetTooltipSize(class UWidget_BaseTooltip_C* ToolTipWidget_0, struct FVector2D* Values);
+	class UWidget* GetToolTipWidget();
+	void Initialize(class URMutatorPrimaryAsset* MutatorPA, int32 Rank_0, class URWeaponPrimaryAsset* WeaponPA_0, const TArray<class URWeaponModPrimaryAsset*>& WeaponModPAs);
+	void NativeClear();
+	void NativeInitialize(const class URMutatorPrimaryAsset* RMutatorPA, const int32 Rank_0, const class URWeaponPrimaryAsset* RWeaponPA, const TArray<class URWeaponModPrimaryAsset*>& RWeaponModPAs);
+	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
+	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
+	void PreConstruct(bool IsDesignTime);
+	void SetIcon();
+	void SetRank();
+	void UpdateGamepadFocus(bool HasFocus);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_MutatorGridElement_01_C">();
+		BP_STATIC_CLASS_IMPL("Widget_MutatorGridElement_01_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_MutatorGridElement_01_C")
 	}
 	static class UWidget_MutatorGridElement_01_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_MutatorGridElement_01_C>();
 	}
 };
-static_assert(alignof(UWidget_MutatorGridElement_01_C) == 0x000008, "Wrong alignment on UWidget_MutatorGridElement_01_C");
-static_assert(sizeof(UWidget_MutatorGridElement_01_C) == 0x000380, "Wrong size on UWidget_MutatorGridElement_01_C");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_MutatorGridElement_01_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, Button_220) == 0x0002D8, "Member 'UWidget_MutatorGridElement_01_C::Button_220' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, EmptyFrame) == 0x0002E0, "Member 'UWidget_MutatorGridElement_01_C::EmptyFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, Image_Background) == 0x0002E8, "Member 'UWidget_MutatorGridElement_01_C::Image_Background' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, Image_FocusIndicator) == 0x0002F0, "Member 'UWidget_MutatorGridElement_01_C::Image_FocusIndicator' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, Image_Frame) == 0x0002F8, "Member 'UWidget_MutatorGridElement_01_C::Image_Frame' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, Image_Icon) == 0x000300, "Member 'UWidget_MutatorGridElement_01_C::Image_Icon' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, MinorMajorIcon) == 0x000308, "Member 'UWidget_MutatorGridElement_01_C::MinorMajorIcon' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, Overlay_21) == 0x000310, "Member 'UWidget_MutatorGridElement_01_C::Overlay_21' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, SizeBox_82) == 0x000318, "Member 'UWidget_MutatorGridElement_01_C::SizeBox_82' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, WidgetSwitcher_314) == 0x000320, "Member 'UWidget_MutatorGridElement_01_C::WidgetSwitcher_314' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, PrimaryAsset) == 0x000328, "Member 'UWidget_MutatorGridElement_01_C::PrimaryAsset' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, MutatorTooltipWidget) == 0x000330, "Member 'UWidget_MutatorGridElement_01_C::MutatorTooltipWidget' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, Rank) == 0x000338, "Member 'UWidget_MutatorGridElement_01_C::Rank' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, FocusTime) == 0x000340, "Member 'UWidget_MutatorGridElement_01_C::FocusTime' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, DefaultFrameTexture) == 0x000348, "Member 'UWidget_MutatorGridElement_01_C::DefaultFrameTexture' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, SizeOverride) == 0x000350, "Member 'UWidget_MutatorGridElement_01_C::SizeOverride' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, bIncludeGodPassiveDescriptionIfTrigger) == 0x000360, "Member 'UWidget_MutatorGridElement_01_C::bIncludeGodPassiveDescriptionIfTrigger' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, WeaponPA) == 0x000368, "Member 'UWidget_MutatorGridElement_01_C::WeaponPA' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorGridElement_01_C, Weapon_Mod_PAs) == 0x000370, "Member 'UWidget_MutatorGridElement_01_C::Weapon_Mod_PAs' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_MutatorGridElement_01_C;
 
 }
 

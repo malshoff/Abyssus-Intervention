@@ -17,180 +17,284 @@
 namespace SDK
 {
 
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.UpdateActionWidgetVisibilities
-// (Private, BlueprintCallable, BlueprintEvent)
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.BndEvt__Widget_TabMenuEntry_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_TabMenuEntry_C::UpdateActionWidgetVisibilities()
+void UWidget_TabMenuEntry_C::BndEvt__Widget_TabMenuEntry_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "UpdateActionWidgetVisibilities");
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "BndEvt__Widget_TabMenuEntry_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Widget_TabMenuEntry_C_BndEvt__Widget_TabMenuEntry_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.SetupWeaponMutatorsNavigation
-// (Private, BlueprintCallable, BlueprintEvent)
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.BndEvt__Widget_TabMenuEntry_Widget_TabMenu_CharmSlot_1_K2Node_ComponentBoundEvent_1_OnCharmDropped__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const struct FPointerEvent&             PointerEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_TabMenuEntry_C::SetupWeaponMutatorsNavigation()
+void UWidget_TabMenuEntry_C::BndEvt__Widget_TabMenuEntry_Widget_TabMenu_CharmSlot_1_K2Node_ComponentBoundEvent_1_OnCharmDropped__DelegateSignature(const struct FPointerEvent& PointerEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "SetupWeaponMutatorsNavigation");
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "BndEvt__Widget_TabMenuEntry_Widget_TabMenu_CharmSlot_1_K2Node_ComponentBoundEvent_1_OnCharmDropped__DelegateSignature");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Widget_TabMenuEntry_C_BndEvt__Widget_TabMenuEntry_Widget_TabMenu_CharmSlot_1_K2Node_ComponentBoundEvent_1_OnCharmDropped__DelegateSignature Parms{};
+
+	Parms.PointerEvent = std::move(PointerEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.SetupWeaponAndAbilityNavigation
-// (Private, BlueprintCallable, BlueprintEvent)
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.BndEvt__Widget_TabMenuEntry_Widget_TabMenu_CharmSlot_2_K2Node_ComponentBoundEvent_2_OnCharmDropped__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const struct FPointerEvent&             PointerEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_TabMenuEntry_C::SetupWeaponAndAbilityNavigation()
+void UWidget_TabMenuEntry_C::BndEvt__Widget_TabMenuEntry_Widget_TabMenu_CharmSlot_2_K2Node_ComponentBoundEvent_2_OnCharmDropped__DelegateSignature(const struct FPointerEvent& PointerEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "SetupWeaponAndAbilityNavigation");
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "BndEvt__Widget_TabMenuEntry_Widget_TabMenu_CharmSlot_2_K2Node_ComponentBoundEvent_2_OnCharmDropped__DelegateSignature");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Widget_TabMenuEntry_C_BndEvt__Widget_TabMenuEntry_Widget_TabMenu_CharmSlot_2_K2Node_ComponentBoundEvent_2_OnCharmDropped__DelegateSignature Parms{};
+
+	Parms.PointerEvent = std::move(PointerEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.SetupTriggersNavigation
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UWidget_TabMenuEntry_C::SetupTriggersNavigation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "SetupTriggersNavigation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.SetupGridItemsNavigation
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UWidget_TabMenuEntry_C::SetupGridItemsNavigation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "SetupGridItemsNavigation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.SetupCharmsNavigation
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UWidget_TabMenuEntry_C::SetupCharmsNavigation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "SetupCharmsNavigation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.SetupAbilityMutatorsNavigation
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UWidget_TabMenuEntry_C::SetupAbilityMutatorsNavigation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "SetupAbilityMutatorsNavigation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.OnInitialized
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_TabMenuEntry_C::OnInitialized()
+void UWidget_TabMenuEntry_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "OnInitialized");
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.OnCharmDropped_Event_0
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FPointerEvent&             PointerEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructActivatableAbility
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWidget_TabMenuEntry_C::OnCharmDropped_Event_0(const struct FPointerEvent& PointerEvent)
+void UWidget_TabMenuEntry_C::ConstructActivatableAbility()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "OnCharmDropped_Event_0");
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructActivatableAbility");
 
-	Params::Widget_TabMenuEntry_C_OnCharmDropped_Event_0 Parms{};
-
-	Parms.PointerEvent = std::move(PointerEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.OnCharmDropped_Event
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FPointerEvent&             PointerEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructCharms
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWidget_TabMenuEntry_C::OnCharmDropped_Event(const struct FPointerEvent& PointerEvent)
+void UWidget_TabMenuEntry_C::ConstructCharms()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "OnCharmDropped_Event");
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructCharms");
 
-	Params::Widget_TabMenuEntry_C_OnCharmDropped_Event Parms{};
-
-	Parms.PointerEvent = std::move(PointerEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.On_CharmIcon_MouseButtonDown
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructForgeMutators
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// int32                                   CharmIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UImage*                           CharmIcon                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+// TArray<class UWidget_MutatorGridElement_01_Large_C*>&Widget_Mutators                                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const struct FGameplayTagContainer&     Tags                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
 
-struct FEventReply UWidget_TabMenuEntry_C::On_CharmIcon_MouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent, int32 CharmIndex, class UImage* CharmIcon)
+void UWidget_TabMenuEntry_C::ConstructForgeMutators(TArray<class UWidget_MutatorGridElement_01_Large_C*>& Widget_Mutators, const struct FGameplayTagContainer& Tags)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "On_CharmIcon_MouseButtonDown");
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructForgeMutators");
 
-	Params::Widget_TabMenuEntry_C_On_CharmIcon_MouseButtonDown Parms{};
+	Params::Widget_TabMenuEntry_C_ConstructForgeMutators Parms{};
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
-	Parms.CharmIndex = CharmIndex;
-	Parms.CharmIcon = CharmIcon;
+	Parms.Widget_Mutators = std::move(Widget_Mutators);
+	Parms.Tags = std::move(Tags);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Widget_Mutators = std::move(Parms.Widget_Mutators);
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructKick
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenuEntry_C::ConstructKick()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructKick");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructMutatorGrid
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenuEntry_C::ConstructMutatorGrid()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructMutatorGrid");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructMutatorSubGrid
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget_AlternatingGrid_01_C*     Grid                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTagContainer&     Tags                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
+// class URMutatorPrimaryAsset*            MutatorPA                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_TabMenuEntry_C::ConstructMutatorSubGrid(class UWidget_AlternatingGrid_01_C* Grid, const struct FGameplayTagContainer& Tags, class URMutatorPrimaryAsset* MutatorPA)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructMutatorSubGrid");
+
+	Params::Widget_TabMenuEntry_C_ConstructMutatorSubGrid Parms{};
+
+	Parms.Grid = Grid;
+	Parms.Tags = std::move(Tags);
+	Parms.MutatorPA = MutatorPA;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructStats
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenuEntry_C::ConstructStats()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructStats");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructSuit
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenuEntry_C::ConstructSuit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructSuit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructWeapon
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenuEntry_C::ConstructWeapon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructWeapon");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ExecuteUbergraph_Widget_TabMenuEntry
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_TabMenuEntry_C::ExecuteUbergraph_Widget_TabMenuEntry(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ExecuteUbergraph_Widget_TabMenuEntry");
+
+	Params::Widget_TabMenuEntry_C_ExecuteUbergraph_Widget_TabMenuEntry Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.Get Player Charm Mutator and Rarity
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class URMutatorPrimaryAsset**           MutatorPA                                              (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// EMutatorRarity*                         Rarity                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_TabMenuEntry_C::Get_Player_Charm_Mutator_and_Rarity(class URMutatorPrimaryAsset** MutatorPA, EMutatorRarity* Rarity)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "Get Player Charm Mutator and Rarity");
+
+	Params::Widget_TabMenuEntry_C_Get_Player_Charm_Mutator_and_Rarity Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (MutatorPA != nullptr)
+		*MutatorPA = Parms.MutatorPA;
+
+	if (Rarity != nullptr)
+		*Rarity = Parms.Rarity;
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.GetAbilityTooltipWidget
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWidget_TabMenuEntry_C::GetAbilityTooltipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "GetAbilityTooltipWidget");
+
+	Params::Widget_TabMenuEntry_C_GetAbilityTooltipWidget Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -198,24 +302,143 @@ struct FEventReply UWidget_TabMenuEntry_C::On_CharmIcon_MouseButtonDown(const st
 }
 
 
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.On_Charm2Icon_MouseButtonDown
-// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.GetCharm1TooltipWidget
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-struct FEventReply UWidget_TabMenuEntry_C::On_Charm2Icon_MouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+class UWidget* UWidget_TabMenuEntry_C::GetCharm1TooltipWidget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "On_Charm2Icon_MouseButtonDown");
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "GetCharm1TooltipWidget");
 
-	Params::Widget_TabMenuEntry_C_On_Charm2Icon_MouseButtonDown Parms{};
+	Params::Widget_TabMenuEntry_C_GetCharm1TooltipWidget Parms{};
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.GetCharm2TooltipWidget
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWidget_TabMenuEntry_C::GetCharm2TooltipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "GetCharm2TooltipWidget");
+
+	Params::Widget_TabMenuEntry_C_GetCharm2TooltipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.GetCharmTooltipWidget
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   CharmIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWidget_TabMenuEntry_C::GetCharmTooltipWidget(int32 CharmIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "GetCharmTooltipWidget");
+
+	Params::Widget_TabMenuEntry_C_GetCharmTooltipWidget Parms{};
+
+	Parms.CharmIndex = CharmIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.GetCurrentTooltipWidget
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget_BaseTooltip_C**           Return_Value                                           (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_TabMenuEntry_C::GetCurrentTooltipWidget(class UWidget_BaseTooltip_C** Return_Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "GetCurrentTooltipWidget");
+
+	Params::Widget_TabMenuEntry_C_GetCurrentTooltipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Return_Value != nullptr)
+		*Return_Value = Parms.Return_Value;
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.GetDamageToolTipWidget
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWidget_TabMenuEntry_C::GetDamageToolTipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "GetDamageToolTipWidget");
+
+	Params::Widget_TabMenuEntry_C_GetDamageToolTipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.GetSuitTooltipWidget
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWidget_TabMenuEntry_C::GetSuitTooltipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "GetSuitTooltipWidget");
+
+	Params::Widget_TabMenuEntry_C_GetSuitTooltipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.GetWeaponToolTipWidget
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWidget_TabMenuEntry_C::GetWeaponToolTipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "GetWeaponToolTipWidget");
+
+	Params::Widget_TabMenuEntry_C_GetWeaponToolTipWidget Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -248,351 +471,183 @@ struct FEventReply UWidget_TabMenuEntry_C::On_Charm1Icon_MouseButtonDown(const s
 }
 
 
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.GetWeaponToolTipWidget
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UWidget_TabMenuEntry_C::GetWeaponToolTipWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "GetWeaponToolTipWidget");
-
-	Params::Widget_TabMenuEntry_C_GetWeaponToolTipWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.GetSuitTooltipWidget
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UWidget_TabMenuEntry_C::GetSuitTooltipWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "GetSuitTooltipWidget");
-
-	Params::Widget_TabMenuEntry_C_GetSuitTooltipWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.GetCharmTooltipWidget
-// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32                                   CharmIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UWidget_TabMenuEntry_C::GetCharmTooltipWidget(int32 CharmIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "GetCharmTooltipWidget");
-
-	Params::Widget_TabMenuEntry_C_GetCharmTooltipWidget Parms{};
-
-	Parms.CharmIndex = CharmIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.GetCharm2TooltipWidget
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UWidget_TabMenuEntry_C::GetCharm2TooltipWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "GetCharm2TooltipWidget");
-
-	Params::Widget_TabMenuEntry_C_GetCharm2TooltipWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.GetCharm1TooltipWidget
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UWidget_TabMenuEntry_C::GetCharm1TooltipWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "GetCharm1TooltipWidget");
-
-	Params::Widget_TabMenuEntry_C_GetCharm1TooltipWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.GetAbilityTooltipWidget
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UWidget_TabMenuEntry_C::GetAbilityTooltipWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "GetAbilityTooltipWidget");
-
-	Params::Widget_TabMenuEntry_C_GetAbilityTooltipWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.Get Player Charm Mutator and Rarity
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class URMutatorPrimaryAsset**           MutatorPA                                              (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// EMutatorRarity*                         Rarity                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_TabMenuEntry_C::Get_Player_Charm_Mutator_and_Rarity(class URMutatorPrimaryAsset** MutatorPA, EMutatorRarity* Rarity)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "Get Player Charm Mutator and Rarity");
-
-	Params::Widget_TabMenuEntry_C_Get_Player_Charm_Mutator_and_Rarity Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (MutatorPA != nullptr)
-		*MutatorPA = Parms.MutatorPA;
-
-	if (Rarity != nullptr)
-		*Rarity = Parms.Rarity;
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ExecuteUbergraph_Widget_TabMenuEntry
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_TabMenuEntry_C::ExecuteUbergraph_Widget_TabMenuEntry(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ExecuteUbergraph_Widget_TabMenuEntry");
-
-	Params::Widget_TabMenuEntry_C_ExecuteUbergraph_Widget_TabMenuEntry Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructWeapon
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_TabMenuEntry_C::ConstructWeapon()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructWeapon");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructSuit
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWidget_TabMenuEntry_C::ConstructSuit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructSuit");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructStats
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_TabMenuEntry_C::ConstructStats()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructStats");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructMutatorSubGrid
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget_AlternatingGrid_01_C*     Grid                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTagContainer&     Tags                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
-// class URMutatorPrimaryAsset*            MutatorPA                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_TabMenuEntry_C::ConstructMutatorSubGrid(class UWidget_AlternatingGrid_01_C* Grid, const struct FGameplayTagContainer& Tags, class URMutatorPrimaryAsset* MutatorPA)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructMutatorSubGrid");
-
-	Params::Widget_TabMenuEntry_C_ConstructMutatorSubGrid Parms{};
-
-	Parms.Grid = Grid;
-	Parms.Tags = std::move(Tags);
-	Parms.MutatorPA = MutatorPA;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructMutatorGrid
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_TabMenuEntry_C::ConstructMutatorGrid()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructMutatorGrid");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructKick
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWidget_TabMenuEntry_C::ConstructKick()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructKick");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructForgeMutators
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.On_Charm2Icon_MouseButtonDown
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class UWidget_MutatorGridElement_01_Large_C*>&Widget_Mutators                                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// const struct FGameplayTagContainer&     Tags                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-void UWidget_TabMenuEntry_C::ConstructForgeMutators(TArray<class UWidget_MutatorGridElement_01_Large_C*>& Widget_Mutators, const struct FGameplayTagContainer& Tags)
+struct FEventReply UWidget_TabMenuEntry_C::On_Charm2Icon_MouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructForgeMutators");
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "On_Charm2Icon_MouseButtonDown");
 
-	Params::Widget_TabMenuEntry_C_ConstructForgeMutators Parms{};
+	Params::Widget_TabMenuEntry_C_On_Charm2Icon_MouseButtonDown Parms{};
 
-	Parms.Widget_Mutators = std::move(Widget_Mutators);
-	Parms.Tags = std::move(Tags);
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.MouseEvent = std::move(MouseEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Widget_Mutators = std::move(Parms.Widget_Mutators);
+	return Parms.ReturnValue;
 }
 
 
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructCharms
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.On_CharmIcon_MouseButtonDown
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   CharmIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UImage*                           CharmIcon                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-void UWidget_TabMenuEntry_C::ConstructCharms()
+struct FEventReply UWidget_TabMenuEntry_C::On_CharmIcon_MouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent, int32 CharmIndex, class UImage* CharmIcon)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructCharms");
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "On_CharmIcon_MouseButtonDown");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Widget_TabMenuEntry_C_On_CharmIcon_MouseButtonDown Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.MouseEvent = std::move(MouseEvent);
+	Parms.CharmIndex = CharmIndex;
+	Parms.CharmIcon = CharmIcon;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.ConstructActivatableAbility
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_TabMenuEntry_C::ConstructActivatableAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "ConstructActivatableAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.Construct
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.OnInitialized
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_TabMenuEntry_C::Construct()
+void UWidget_TabMenuEntry_C::OnInitialized()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "Construct");
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "OnInitialized");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.BndEvt__Widget_TabMenuEntry_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.SetupAbilityMutatorsNavigation
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void UWidget_TabMenuEntry_C::BndEvt__Widget_TabMenuEntry_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+void UWidget_TabMenuEntry_C::SetupAbilityMutatorsNavigation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenuEntry_C", "BndEvt__Widget_TabMenuEntry_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "SetupAbilityMutatorsNavigation");
 
-	Params::Widget_TabMenuEntry_C_BndEvt__Widget_TabMenuEntry_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Button = Button;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.SetupCharmsNavigation
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenuEntry_C::SetupCharmsNavigation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "SetupCharmsNavigation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.SetupGridItemsNavigation
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenuEntry_C::SetupGridItemsNavigation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "SetupGridItemsNavigation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.SetupTriggersNavigation
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenuEntry_C::SetupTriggersNavigation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "SetupTriggersNavigation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.SetupUniqueGridElementOwners
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenuEntry_C::SetupUniqueGridElementOwners()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "SetupUniqueGridElementOwners");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.SetupWeaponAndAbilityNavigation
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenuEntry_C::SetupWeaponAndAbilityNavigation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "SetupWeaponAndAbilityNavigation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.SetupWeaponMutatorsNavigation
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenuEntry_C::SetupWeaponMutatorsNavigation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "SetupWeaponMutatorsNavigation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_TabMenuEntry.Widget_TabMenuEntry_C.UpdateActionWidgetVisibilities
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenuEntry_C::UpdateActionWidgetVisibilities()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenuEntry_C", "UpdateActionWidgetVisibilities");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

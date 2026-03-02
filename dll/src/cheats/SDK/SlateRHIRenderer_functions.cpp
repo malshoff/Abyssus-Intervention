@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function SlateRHIRenderer.SlateFXSubsystem.GetSlatePostProcessor
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // ESlatePostRT                            InPostBufferBit                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USlateRHIPostBufferProcessor*     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -46,7 +46,7 @@ class USlateRHIPostBufferProcessor* USlateFXSubsystem::GetSlatePostProcessor(ESl
 
 
 // Function SlateRHIRenderer.SlateRHIRendererSettings.GetMutableSlatePostSetting
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // ESlatePostRT                            InPostBufferBit                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FSlatePostSettings               ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
@@ -74,7 +74,7 @@ struct FSlatePostSettings USlateRHIRendererSettings::GetMutableSlatePostSetting(
 
 
 // Function SlateRHIRenderer.SlateRHIRendererSettings.GetSlatePostSetting
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ESlatePostRT                            InPostBufferBit                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FSlatePostSettings         ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)

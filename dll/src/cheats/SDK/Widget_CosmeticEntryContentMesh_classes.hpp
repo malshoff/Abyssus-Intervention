@@ -17,30 +17,31 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_CosmeticEntryContentMesh.Widget_CosmeticEntryContentMesh_C
-// 0x0010 (0x02E0 - 0x02D0)
+// 0x0010 (0x0350 - 0x0340)
 class UWidget_CosmeticEntryContentMesh_C final : public UWidget_CosmeticEntryContentBase_C
 {
 public:
-	class UTextBlock*                             TextBlock_Descript;                                // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_Name;                                    // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_Name;                                    // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_Descript;                                // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetContentInfo(const struct FPlayerCosmeticOption& CosmeticOptionData);
+	void SetContentInfo(class URCosmeticPrimaryAsset* CosmeticPA);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_CosmeticEntryContentMesh_C">();
+		BP_STATIC_CLASS_IMPL("Widget_CosmeticEntryContentMesh_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_CosmeticEntryContentMesh_C")
 	}
 	static class UWidget_CosmeticEntryContentMesh_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_CosmeticEntryContentMesh_C>();
 	}
 };
-static_assert(alignof(UWidget_CosmeticEntryContentMesh_C) == 0x000008, "Wrong alignment on UWidget_CosmeticEntryContentMesh_C");
-static_assert(sizeof(UWidget_CosmeticEntryContentMesh_C) == 0x0002E0, "Wrong size on UWidget_CosmeticEntryContentMesh_C");
-static_assert(offsetof(UWidget_CosmeticEntryContentMesh_C, TextBlock_Descript) == 0x0002D0, "Member 'UWidget_CosmeticEntryContentMesh_C::TextBlock_Descript' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticEntryContentMesh_C, TextBlock_Name) == 0x0002D8, "Member 'UWidget_CosmeticEntryContentMesh_C::TextBlock_Name' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_CosmeticEntryContentMesh_C;
 
 }
 

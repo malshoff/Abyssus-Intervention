@@ -24,7 +24,11 @@ class IDataflowSimulationInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataflowSimulationInterface">();
+		STATIC_CLASS_IMPL("DataflowSimulationInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowSimulationInterface")
 	}
 	static class IDataflowSimulationInterface* GetDefaultObj()
 	{
@@ -40,8 +44,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IDataflowSimulationInterface) == 0x000001, "Wrong alignment on IDataflowSimulationInterface");
-static_assert(sizeof(IDataflowSimulationInterface) == 0x000001, "Wrong size on IDataflowSimulationInterface");
+DUMPER7_ASSERTS_IDataflowSimulationInterface;
 
 // Class DataflowSimulation.DataflowCollisionObjectInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -50,7 +53,11 @@ class IDataflowCollisionObjectInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataflowCollisionObjectInterface">();
+		STATIC_CLASS_IMPL("DataflowCollisionObjectInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowCollisionObjectInterface")
 	}
 	static class IDataflowCollisionObjectInterface* GetDefaultObj()
 	{
@@ -66,8 +73,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IDataflowCollisionObjectInterface) == 0x000001, "Wrong alignment on IDataflowCollisionObjectInterface");
-static_assert(sizeof(IDataflowCollisionObjectInterface) == 0x000001, "Wrong size on IDataflowCollisionObjectInterface");
+DUMPER7_ASSERTS_IDataflowCollisionObjectInterface;
 
 // Class DataflowSimulation.DataflowConstraintObjectInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -76,7 +82,11 @@ class IDataflowConstraintObjectInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataflowConstraintObjectInterface">();
+		STATIC_CLASS_IMPL("DataflowConstraintObjectInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowConstraintObjectInterface")
 	}
 	static class IDataflowConstraintObjectInterface* GetDefaultObj()
 	{
@@ -92,8 +102,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IDataflowConstraintObjectInterface) == 0x000001, "Wrong alignment on IDataflowConstraintObjectInterface");
-static_assert(sizeof(IDataflowConstraintObjectInterface) == 0x000001, "Wrong size on IDataflowConstraintObjectInterface");
+DUMPER7_ASSERTS_IDataflowConstraintObjectInterface;
 
 // Class DataflowSimulation.DataflowGeometryCachable
 // 0x0000 (0x0000 - 0x0000)
@@ -102,7 +111,11 @@ class IDataflowGeometryCachable final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataflowGeometryCachable">();
+		STATIC_CLASS_IMPL("DataflowGeometryCachable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowGeometryCachable")
 	}
 	static class IDataflowGeometryCachable* GetDefaultObj()
 	{
@@ -118,8 +131,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IDataflowGeometryCachable) == 0x000001, "Wrong alignment on IDataflowGeometryCachable");
-static_assert(sizeof(IDataflowGeometryCachable) == 0x000001, "Wrong size on IDataflowGeometryCachable");
+DUMPER7_ASSERTS_IDataflowGeometryCachable;
 
 // Class DataflowSimulation.DataflowPhysicsObjectInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -128,7 +140,11 @@ class IDataflowPhysicsObjectInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataflowPhysicsObjectInterface">();
+		STATIC_CLASS_IMPL("DataflowPhysicsObjectInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowPhysicsObjectInterface")
 	}
 	static class IDataflowPhysicsObjectInterface* GetDefaultObj()
 	{
@@ -144,8 +160,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IDataflowPhysicsObjectInterface) == 0x000001, "Wrong alignment on IDataflowPhysicsObjectInterface");
-static_assert(sizeof(IDataflowPhysicsObjectInterface) == 0x000001, "Wrong size on IDataflowPhysicsObjectInterface");
+DUMPER7_ASSERTS_IDataflowPhysicsObjectInterface;
 
 // Class DataflowSimulation.DataflowPhysicsSolverInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -154,7 +169,11 @@ class IDataflowPhysicsSolverInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataflowPhysicsSolverInterface">();
+		STATIC_CLASS_IMPL("DataflowPhysicsSolverInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowPhysicsSolverInterface")
 	}
 	static class IDataflowPhysicsSolverInterface* GetDefaultObj()
 	{
@@ -170,8 +189,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IDataflowPhysicsSolverInterface) == 0x000001, "Wrong alignment on IDataflowPhysicsSolverInterface");
-static_assert(sizeof(IDataflowPhysicsSolverInterface) == 0x000001, "Wrong size on IDataflowPhysicsSolverInterface");
+DUMPER7_ASSERTS_IDataflowPhysicsSolverInterface;
 
 // Class DataflowSimulation.DataflowSimulationManager
 // 0x0068 (0x00A8 - 0x0040)
@@ -183,15 +201,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataflowSimulationManager">();
+		STATIC_CLASS_IMPL("DataflowSimulationManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowSimulationManager")
 	}
 	static class UDataflowSimulationManager* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDataflowSimulationManager>();
 	}
 };
-static_assert(alignof(UDataflowSimulationManager) == 0x000008, "Wrong alignment on UDataflowSimulationManager");
-static_assert(sizeof(UDataflowSimulationManager) == 0x0000A8, "Wrong size on UDataflowSimulationManager");
+DUMPER7_ASSERTS_UDataflowSimulationManager;
 
 // Class DataflowSimulation.DataflowSimulationActor
 // 0x0000 (0x0000 - 0x0000)
@@ -204,7 +225,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataflowSimulationActor">();
+		STATIC_CLASS_IMPL("DataflowSimulationActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowSimulationActor")
 	}
 	static class IDataflowSimulationActor* GetDefaultObj()
 	{
@@ -220,8 +245,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IDataflowSimulationActor) == 0x000001, "Wrong alignment on IDataflowSimulationActor");
-static_assert(sizeof(IDataflowSimulationActor) == 0x000001, "Wrong size on IDataflowSimulationActor");
+DUMPER7_ASSERTS_IDataflowSimulationActor;
 
 }
 

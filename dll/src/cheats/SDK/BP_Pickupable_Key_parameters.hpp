@@ -25,10 +25,7 @@ public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Key_C_CanInteract) == 0x000008, "Wrong alignment on BP_Pickupable_Key_C_CanInteract");
-static_assert(sizeof(BP_Pickupable_Key_C_CanInteract) == 0x000010, "Wrong size on BP_Pickupable_Key_C_CanInteract");
-static_assert(offsetof(BP_Pickupable_Key_C_CanInteract, Controller) == 0x000000, "Member 'BP_Pickupable_Key_C_CanInteract::Controller' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_CanInteract, ReturnValue) == 0x000008, "Member 'BP_Pickupable_Key_C_CanInteract::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Key_C_CanInteract;
 
 // Function BP_Pickupable_Key.BP_Pickupable_Key_C.ExecuteUbergraph_BP_Pickupable_Key
 // 0x0388 (0x0388 - 0x0000)
@@ -92,58 +89,7 @@ public:
 	float                                         CallFunc_MakeRotator_Roll_ImplicitCast;            // 0x0380(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_VLerp_Alpha_ImplicitCast;                 // 0x0384(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key) == 0x000008, "Wrong alignment on BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key");
-static_assert(sizeof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key) == 0x000388, "Wrong size on BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, EntryPoint) == 0x000000, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, K2Node_Event_controller) == 0x000008, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::K2Node_Event_controller' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, K2Node_Event_PlayerController) == 0x000010, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::K2Node_Event_PlayerController' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_IsLocalPlayerController_ReturnValue) == 0x000018, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_K2_GetPawn_ReturnValue) == 0x000020, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Pickup_ReturnValue) == 0x000028, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Pickup_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, K2Node_DynamicCast_AsRPlayer_State) == 0x000030, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::K2Node_DynamicCast_AsRPlayer_State' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_SimulateLootPhysics_ReturnValue) == 0x000039, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_SimulateLootPhysics_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_GetQuantity_ReturnValue) == 0x00003C, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_GetQuantity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000040, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, K2Node_CreateDelegate_OutputDelegate) == 0x000044, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_GetGameTimeInSeconds_ReturnValue) == 0x000058, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_GetGameTimeInSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000060, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000068, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000070, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_MultiplyByPi_ReturnValue) == 0x000078, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_MultiplyByPi_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_MultiplyByPi_ReturnValue_1) == 0x000080, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_MultiplyByPi_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000088, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000090, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Sin_ReturnValue) == 0x000098, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Sin_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Sin_ReturnValue_1) == 0x0000A0, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Sin_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000A8, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x0000B0, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x0000B8, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x0000C0, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Lerp_ReturnValue) == 0x0000C8, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Lerp_ReturnValue_1) == 0x0000D0, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Lerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Divide_DoubleDouble_ReturnValue_4) == 0x0000D8, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Divide_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_GetGameTimeInSeconds_ReturnValue_1) == 0x0000E0, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_GetGameTimeInSeconds_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_MultiplyByPi_ReturnValue_2) == 0x0000E8, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_MultiplyByPi_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Divide_DoubleDouble_ReturnValue_5) == 0x0000F0, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Divide_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x0000F8, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_MultiplyByPi_ReturnValue_3) == 0x000100, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_MultiplyByPi_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Sin_ReturnValue_2) == 0x000108, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Sin_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000110, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x000118, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Sin_ReturnValue_3) == 0x000120, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Sin_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Divide_DoubleDouble_ReturnValue_6) == 0x000128, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Divide_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Add_DoubleDouble_ReturnValue_3) == 0x000130, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Add_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Lerp_ReturnValue_2) == 0x000138, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Lerp_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_Divide_DoubleDouble_ReturnValue_7) == 0x000140, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_Divide_DoubleDouble_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_MakeRotator_ReturnValue) == 0x000148, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_VLerp_ReturnValue) == 0x000160, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_VLerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_K2_SetRelativeRotation_SweepHitResult) == 0x000178, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_K2_SetRelativeRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000278, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x000378, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x00037C, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x000380, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key, CallFunc_VLerp_Alpha_ImplicitCast) == 0x000384, "Member 'BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key::CallFunc_VLerp_Alpha_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Key_C_ExecuteUbergraph_BP_Pickupable_Key;
 
 // Function BP_Pickupable_Key.BP_Pickupable_Key_C.OnInteract
 // 0x0008 (0x0008 - 0x0000)
@@ -152,9 +98,7 @@ struct BP_Pickupable_Key_C_OnInteract final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Key_C_OnInteract) == 0x000008, "Wrong alignment on BP_Pickupable_Key_C_OnInteract");
-static_assert(sizeof(BP_Pickupable_Key_C_OnInteract) == 0x000008, "Wrong size on BP_Pickupable_Key_C_OnInteract");
-static_assert(offsetof(BP_Pickupable_Key_C_OnInteract, Controller) == 0x000000, "Member 'BP_Pickupable_Key_C_OnInteract::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Key_C_OnInteract;
 
 // Function BP_Pickupable_Key.BP_Pickupable_Key_C.TriggerPickup
 // 0x0008 (0x0008 - 0x0000)
@@ -163,9 +107,7 @@ struct BP_Pickupable_Key_C_TriggerPickup final
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Key_C_TriggerPickup) == 0x000008, "Wrong alignment on BP_Pickupable_Key_C_TriggerPickup");
-static_assert(sizeof(BP_Pickupable_Key_C_TriggerPickup) == 0x000008, "Wrong size on BP_Pickupable_Key_C_TriggerPickup");
-static_assert(offsetof(BP_Pickupable_Key_C_TriggerPickup, PlayerController) == 0x000000, "Member 'BP_Pickupable_Key_C_TriggerPickup::PlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Key_C_TriggerPickup;
 
 // Function BP_Pickupable_Key.BP_Pickupable_Key_C.GetInteractableCost
 // 0x0018 (0x0018 - 0x0000)
@@ -174,14 +116,10 @@ struct BP_Pickupable_Key_C_GetInteractableCost final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARGamePlayerController*                 CallFunc_GetFirstLocalGamePlayerController_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetPickupCost_ReturnValue;                // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Key_C_GetInteractableCost) == 0x000008, "Wrong alignment on BP_Pickupable_Key_C_GetInteractableCost");
-static_assert(sizeof(BP_Pickupable_Key_C_GetInteractableCost) == 0x000018, "Wrong size on BP_Pickupable_Key_C_GetInteractableCost");
-static_assert(offsetof(BP_Pickupable_Key_C_GetInteractableCost, ReturnValue) == 0x000000, "Member 'BP_Pickupable_Key_C_GetInteractableCost::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_GetInteractableCost, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000008, "Member 'BP_Pickupable_Key_C_GetInteractableCost::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Key_C_GetInteractableCost, CallFunc_GetPickupCost_ReturnValue) == 0x000010, "Member 'BP_Pickupable_Key_C_GetInteractableCost::CallFunc_GetPickupCost_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Key_C_GetInteractableCost;
 
 }
 

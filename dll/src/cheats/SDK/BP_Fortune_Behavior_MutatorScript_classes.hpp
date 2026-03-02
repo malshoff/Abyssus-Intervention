@@ -28,6 +28,7 @@ public:
 	class UAudioComponent*                        BuffLoopAC;                                        // 0x01B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ApplyMidasTouchOnInstantKill(class AActor* TriggeringActor);
 	void BP_SpawnVisuals();
 	void ExecuteUbergraph_BP_Fortune_Behavior_MutatorScript(int32 EntryPoint);
 	void GetHasBlessings(bool* HasMinorBlessing, bool* HasMajorBlessing);
@@ -37,18 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Fortune_Behavior_MutatorScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_Fortune_Behavior_MutatorScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Fortune_Behavior_MutatorScript_C")
 	}
 	static class UBP_Fortune_Behavior_MutatorScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Fortune_Behavior_MutatorScript_C>();
 	}
 };
-static_assert(alignof(UBP_Fortune_Behavior_MutatorScript_C) == 0x000008, "Wrong alignment on UBP_Fortune_Behavior_MutatorScript_C");
-static_assert(sizeof(UBP_Fortune_Behavior_MutatorScript_C) == 0x0001B8, "Wrong size on UBP_Fortune_Behavior_MutatorScript_C");
-static_assert(offsetof(UBP_Fortune_Behavior_MutatorScript_C, UberGraphFrame) == 0x0001A0, "Member 'UBP_Fortune_Behavior_MutatorScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Fortune_Behavior_MutatorScript_C, BP_SphereRadius) == 0x0001A8, "Member 'UBP_Fortune_Behavior_MutatorScript_C::BP_SphereRadius' has a wrong offset!");
-static_assert(offsetof(UBP_Fortune_Behavior_MutatorScript_C, BuffLoopAC) == 0x0001B0, "Member 'UBP_Fortune_Behavior_MutatorScript_C::BuffLoopAC' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Fortune_Behavior_MutatorScript_C;
 
 }
 

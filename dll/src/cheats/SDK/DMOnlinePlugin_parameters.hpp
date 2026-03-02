@@ -26,11 +26,7 @@ public:
 	class FName                                   SubsystemName;                                     // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USPAutoLoginBlueprintProxy*             ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineAsyncProxies_CreateAutoLoginProxyObject) == 0x000008, "Wrong alignment on DMOnlineAsyncProxies_CreateAutoLoginProxyObject");
-static_assert(sizeof(DMOnlineAsyncProxies_CreateAutoLoginProxyObject) == 0x000018, "Wrong size on DMOnlineAsyncProxies_CreateAutoLoginProxyObject");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateAutoLoginProxyObject, WorldContextObject) == 0x000000, "Member 'DMOnlineAsyncProxies_CreateAutoLoginProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateAutoLoginProxyObject, SubsystemName) == 0x000008, "Member 'DMOnlineAsyncProxies_CreateAutoLoginProxyObject::SubsystemName' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateAutoLoginProxyObject, ReturnValue) == 0x000010, "Member 'DMOnlineAsyncProxies_CreateAutoLoginProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineAsyncProxies_CreateAutoLoginProxyObject;
 
 // Function DMOnlinePlugin.DMOnlineAsyncProxies.CreateCreateSessionProxyObject
 // 0x0070 (0x0070 - 0x0000)
@@ -45,14 +41,7 @@ public:
 	class FName                                   SubsystemName;                                     // 0x0060(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USPCreateSessionBlueprintProxy*         ReturnValue;                                       // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineAsyncProxies_CreateCreateSessionProxyObject) == 0x000008, "Wrong alignment on DMOnlineAsyncProxies_CreateCreateSessionProxyObject");
-static_assert(sizeof(DMOnlineAsyncProxies_CreateCreateSessionProxyObject) == 0x000070, "Wrong size on DMOnlineAsyncProxies_CreateCreateSessionProxyObject");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateCreateSessionProxyObject, WorldContextObject) == 0x000000, "Member 'DMOnlineAsyncProxies_CreateCreateSessionProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateCreateSessionProxyObject, bLAN) == 0x000008, "Member 'DMOnlineAsyncProxies_CreateCreateSessionProxyObject::bLAN' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateCreateSessionProxyObject, MaxNrOfPlayers) == 0x00000C, "Member 'DMOnlineAsyncProxies_CreateCreateSessionProxyObject::MaxNrOfPlayers' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateCreateSessionProxyObject, CustomSessionSettings) == 0x000010, "Member 'DMOnlineAsyncProxies_CreateCreateSessionProxyObject::CustomSessionSettings' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateCreateSessionProxyObject, SubsystemName) == 0x000060, "Member 'DMOnlineAsyncProxies_CreateCreateSessionProxyObject::SubsystemName' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateCreateSessionProxyObject, ReturnValue) == 0x000068, "Member 'DMOnlineAsyncProxies_CreateCreateSessionProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineAsyncProxies_CreateCreateSessionProxyObject;
 
 // Function DMOnlinePlugin.DMOnlineAsyncProxies.CreateDestroySessionProxyObject
 // 0x0018 (0x0018 - 0x0000)
@@ -63,11 +52,7 @@ public:
 	class FName                                   SubsystemName;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USPDestroySessionBlueprintProxy*        ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineAsyncProxies_CreateDestroySessionProxyObject) == 0x000008, "Wrong alignment on DMOnlineAsyncProxies_CreateDestroySessionProxyObject");
-static_assert(sizeof(DMOnlineAsyncProxies_CreateDestroySessionProxyObject) == 0x000018, "Wrong size on DMOnlineAsyncProxies_CreateDestroySessionProxyObject");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateDestroySessionProxyObject, WorldContextObject) == 0x000000, "Member 'DMOnlineAsyncProxies_CreateDestroySessionProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateDestroySessionProxyObject, SubsystemName) == 0x000008, "Member 'DMOnlineAsyncProxies_CreateDestroySessionProxyObject::SubsystemName' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateDestroySessionProxyObject, ReturnValue) == 0x000010, "Member 'DMOnlineAsyncProxies_CreateDestroySessionProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineAsyncProxies_CreateDestroySessionProxyObject;
 
 // Function DMOnlinePlugin.DMOnlineAsyncProxies.CreateDummyProxyObject
 // 0x0010 (0x0010 - 0x0000)
@@ -77,10 +62,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USPDummyBlueprintProxy*                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineAsyncProxies_CreateDummyProxyObject) == 0x000008, "Wrong alignment on DMOnlineAsyncProxies_CreateDummyProxyObject");
-static_assert(sizeof(DMOnlineAsyncProxies_CreateDummyProxyObject) == 0x000010, "Wrong size on DMOnlineAsyncProxies_CreateDummyProxyObject");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateDummyProxyObject, WorldContextObject) == 0x000000, "Member 'DMOnlineAsyncProxies_CreateDummyProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateDummyProxyObject, ReturnValue) == 0x000008, "Member 'DMOnlineAsyncProxies_CreateDummyProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineAsyncProxies_CreateDummyProxyObject;
 
 // Function DMOnlinePlugin.DMOnlineAsyncProxies.CreateFindSessionByIdProxyObject
 // 0x0028 (0x0028 - 0x0000)
@@ -92,12 +74,7 @@ public:
 	class FName                                   SubsystemName;                                     // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USPFindSessionByIdBlueprintProxy*       ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineAsyncProxies_CreateFindSessionByIdProxyObject) == 0x000008, "Wrong alignment on DMOnlineAsyncProxies_CreateFindSessionByIdProxyObject");
-static_assert(sizeof(DMOnlineAsyncProxies_CreateFindSessionByIdProxyObject) == 0x000028, "Wrong size on DMOnlineAsyncProxies_CreateFindSessionByIdProxyObject");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateFindSessionByIdProxyObject, WorldContextObject) == 0x000000, "Member 'DMOnlineAsyncProxies_CreateFindSessionByIdProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateFindSessionByIdProxyObject, SessionId) == 0x000008, "Member 'DMOnlineAsyncProxies_CreateFindSessionByIdProxyObject::SessionId' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateFindSessionByIdProxyObject, SubsystemName) == 0x000018, "Member 'DMOnlineAsyncProxies_CreateFindSessionByIdProxyObject::SubsystemName' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateFindSessionByIdProxyObject, ReturnValue) == 0x000020, "Member 'DMOnlineAsyncProxies_CreateFindSessionByIdProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineAsyncProxies_CreateFindSessionByIdProxyObject;
 
 // Function DMOnlinePlugin.DMOnlineAsyncProxies.CreateFindSessionProxyObject
 // 0x0078 (0x0078 - 0x0000)
@@ -113,14 +90,7 @@ public:
 	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USPFindSessionBlueprintProxy*           ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineAsyncProxies_CreateFindSessionProxyObject) == 0x000008, "Wrong alignment on DMOnlineAsyncProxies_CreateFindSessionProxyObject");
-static_assert(sizeof(DMOnlineAsyncProxies_CreateFindSessionProxyObject) == 0x000078, "Wrong size on DMOnlineAsyncProxies_CreateFindSessionProxyObject");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateFindSessionProxyObject, WorldContextObject) == 0x000000, "Member 'DMOnlineAsyncProxies_CreateFindSessionProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateFindSessionProxyObject, bLAN) == 0x000008, "Member 'DMOnlineAsyncProxies_CreateFindSessionProxyObject::bLAN' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateFindSessionProxyObject, CustomSearchSettings) == 0x000010, "Member 'DMOnlineAsyncProxies_CreateFindSessionProxyObject::CustomSearchSettings' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateFindSessionProxyObject, SubsystemName) == 0x000060, "Member 'DMOnlineAsyncProxies_CreateFindSessionProxyObject::SubsystemName' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateFindSessionProxyObject, MaxResults) == 0x000068, "Member 'DMOnlineAsyncProxies_CreateFindSessionProxyObject::MaxResults' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateFindSessionProxyObject, ReturnValue) == 0x000070, "Member 'DMOnlineAsyncProxies_CreateFindSessionProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineAsyncProxies_CreateFindSessionProxyObject;
 
 // Function DMOnlinePlugin.DMOnlineAsyncProxies.CreateJoinFirstAvailableSessionProxyObject
 // 0x0020 (0x0020 - 0x0000)
@@ -134,12 +104,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USPJoinFirstAvailableSessionBlueprintProxy* ReturnValue;                                   // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineAsyncProxies_CreateJoinFirstAvailableSessionProxyObject) == 0x000008, "Wrong alignment on DMOnlineAsyncProxies_CreateJoinFirstAvailableSessionProxyObject");
-static_assert(sizeof(DMOnlineAsyncProxies_CreateJoinFirstAvailableSessionProxyObject) == 0x000020, "Wrong size on DMOnlineAsyncProxies_CreateJoinFirstAvailableSessionProxyObject");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateJoinFirstAvailableSessionProxyObject, WorldContextObject) == 0x000000, "Member 'DMOnlineAsyncProxies_CreateJoinFirstAvailableSessionProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateJoinFirstAvailableSessionProxyObject, bLAN) == 0x000008, "Member 'DMOnlineAsyncProxies_CreateJoinFirstAvailableSessionProxyObject::bLAN' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateJoinFirstAvailableSessionProxyObject, SubsystemName) == 0x00000C, "Member 'DMOnlineAsyncProxies_CreateJoinFirstAvailableSessionProxyObject::SubsystemName' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateJoinFirstAvailableSessionProxyObject, ReturnValue) == 0x000018, "Member 'DMOnlineAsyncProxies_CreateJoinFirstAvailableSessionProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineAsyncProxies_CreateJoinFirstAvailableSessionProxyObject;
 
 // Function DMOnlinePlugin.DMOnlineAsyncProxies.CreateJoinSessionProxyObject
 // 0x0138 (0x0138 - 0x0000)
@@ -151,12 +116,7 @@ public:
 	class FName                                   SubsystemName;                                     // 0x0128(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USPJoinSessionBlueprintProxy*           ReturnValue;                                       // 0x0130(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineAsyncProxies_CreateJoinSessionProxyObject) == 0x000008, "Wrong alignment on DMOnlineAsyncProxies_CreateJoinSessionProxyObject");
-static_assert(sizeof(DMOnlineAsyncProxies_CreateJoinSessionProxyObject) == 0x000138, "Wrong size on DMOnlineAsyncProxies_CreateJoinSessionProxyObject");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateJoinSessionProxyObject, WorldContextObject) == 0x000000, "Member 'DMOnlineAsyncProxies_CreateJoinSessionProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateJoinSessionProxyObject, Session) == 0x000008, "Member 'DMOnlineAsyncProxies_CreateJoinSessionProxyObject::Session' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateJoinSessionProxyObject, SubsystemName) == 0x000128, "Member 'DMOnlineAsyncProxies_CreateJoinSessionProxyObject::SubsystemName' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateJoinSessionProxyObject, ReturnValue) == 0x000130, "Member 'DMOnlineAsyncProxies_CreateJoinSessionProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineAsyncProxies_CreateJoinSessionProxyObject;
 
 // Function DMOnlinePlugin.DMOnlineAsyncProxies.CreateStartMatchmakingProxyObject
 // 0x00B8 (0x00B8 - 0x0000)
@@ -169,13 +129,7 @@ public:
 	class FName                                   SubsystemName;                                     // 0x00A8(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USPStartMatchmakingProxy*               ReturnValue;                                       // 0x00B0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineAsyncProxies_CreateStartMatchmakingProxyObject) == 0x000008, "Wrong alignment on DMOnlineAsyncProxies_CreateStartMatchmakingProxyObject");
-static_assert(sizeof(DMOnlineAsyncProxies_CreateStartMatchmakingProxyObject) == 0x0000B8, "Wrong size on DMOnlineAsyncProxies_CreateStartMatchmakingProxyObject");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateStartMatchmakingProxyObject, WorldContextObject) == 0x000000, "Member 'DMOnlineAsyncProxies_CreateStartMatchmakingProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateStartMatchmakingProxyObject, CustomSearchSettings) == 0x000008, "Member 'DMOnlineAsyncProxies_CreateStartMatchmakingProxyObject::CustomSearchSettings' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateStartMatchmakingProxyObject, CustomSessionSettings) == 0x000058, "Member 'DMOnlineAsyncProxies_CreateStartMatchmakingProxyObject::CustomSessionSettings' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateStartMatchmakingProxyObject, SubsystemName) == 0x0000A8, "Member 'DMOnlineAsyncProxies_CreateStartMatchmakingProxyObject::SubsystemName' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateStartMatchmakingProxyObject, ReturnValue) == 0x0000B0, "Member 'DMOnlineAsyncProxies_CreateStartMatchmakingProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineAsyncProxies_CreateStartMatchmakingProxyObject;
 
 // Function DMOnlinePlugin.DMOnlineAsyncProxies.CreateStartSessionProxyObject
 // 0x0018 (0x0018 - 0x0000)
@@ -186,11 +140,7 @@ public:
 	class FName                                   SubsystemName;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USPStartSessionBlueprintProxy*          ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineAsyncProxies_CreateStartSessionProxyObject) == 0x000008, "Wrong alignment on DMOnlineAsyncProxies_CreateStartSessionProxyObject");
-static_assert(sizeof(DMOnlineAsyncProxies_CreateStartSessionProxyObject) == 0x000018, "Wrong size on DMOnlineAsyncProxies_CreateStartSessionProxyObject");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateStartSessionProxyObject, WorldContextObject) == 0x000000, "Member 'DMOnlineAsyncProxies_CreateStartSessionProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateStartSessionProxyObject, SubsystemName) == 0x000008, "Member 'DMOnlineAsyncProxies_CreateStartSessionProxyObject::SubsystemName' has a wrong offset!");
-static_assert(offsetof(DMOnlineAsyncProxies_CreateStartSessionProxyObject, ReturnValue) == 0x000010, "Member 'DMOnlineAsyncProxies_CreateStartSessionProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineAsyncProxies_CreateStartSessionProxyObject;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.BranchByNativeOSS
 // 0x0001 (0x0001 - 0x0000)
@@ -199,9 +149,7 @@ struct DMOnlineFunctionLibrary_BranchByNativeOSS final
 public:
 	ENativeOSSBranches                            Branches;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineFunctionLibrary_BranchByNativeOSS) == 0x000001, "Wrong alignment on DMOnlineFunctionLibrary_BranchByNativeOSS");
-static_assert(sizeof(DMOnlineFunctionLibrary_BranchByNativeOSS) == 0x000001, "Wrong size on DMOnlineFunctionLibrary_BranchByNativeOSS");
-static_assert(offsetof(DMOnlineFunctionLibrary_BranchByNativeOSS, Branches) == 0x000000, "Member 'DMOnlineFunctionLibrary_BranchByNativeOSS::Branches' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_BranchByNativeOSS;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.GetActiveSessionCustomSettings
 // 0x0058 (0x0058 - 0x0000)
@@ -211,10 +159,7 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<class FName, class FString>              ReturnValue;                                       // 0x0008(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineFunctionLibrary_GetActiveSessionCustomSettings) == 0x000008, "Wrong alignment on DMOnlineFunctionLibrary_GetActiveSessionCustomSettings");
-static_assert(sizeof(DMOnlineFunctionLibrary_GetActiveSessionCustomSettings) == 0x000058, "Wrong size on DMOnlineFunctionLibrary_GetActiveSessionCustomSettings");
-static_assert(offsetof(DMOnlineFunctionLibrary_GetActiveSessionCustomSettings, WorldContextObject) == 0x000000, "Member 'DMOnlineFunctionLibrary_GetActiveSessionCustomSettings::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_GetActiveSessionCustomSettings, ReturnValue) == 0x000008, "Member 'DMOnlineFunctionLibrary_GetActiveSessionCustomSettings::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_GetActiveSessionCustomSettings;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.GetPlayerAvatar
 // 0x0020 (0x0020 - 0x0000)
@@ -225,11 +170,7 @@ public:
 	const class APlayerState*                     PlayerState;                                       // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(bool bSuccess, class UTexture2D* Texture)> Callback;                              // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineFunctionLibrary_GetPlayerAvatar) == 0x000008, "Wrong alignment on DMOnlineFunctionLibrary_GetPlayerAvatar");
-static_assert(sizeof(DMOnlineFunctionLibrary_GetPlayerAvatar) == 0x000020, "Wrong size on DMOnlineFunctionLibrary_GetPlayerAvatar");
-static_assert(offsetof(DMOnlineFunctionLibrary_GetPlayerAvatar, WorldContextObject) == 0x000000, "Member 'DMOnlineFunctionLibrary_GetPlayerAvatar::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_GetPlayerAvatar, PlayerState) == 0x000008, "Member 'DMOnlineFunctionLibrary_GetPlayerAvatar::PlayerState' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_GetPlayerAvatar, Callback) == 0x000010, "Member 'DMOnlineFunctionLibrary_GetPlayerAvatar::Callback' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_GetPlayerAvatar;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.GetSessionCustomSettings
 // 0x0170 (0x0170 - 0x0000)
@@ -239,10 +180,7 @@ public:
 	struct FBlueprintSessionResult                SessionSearchResult;                               // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	TMap<class FName, class FString>              ReturnValue;                                       // 0x0120(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineFunctionLibrary_GetSessionCustomSettings) == 0x000008, "Wrong alignment on DMOnlineFunctionLibrary_GetSessionCustomSettings");
-static_assert(sizeof(DMOnlineFunctionLibrary_GetSessionCustomSettings) == 0x000170, "Wrong size on DMOnlineFunctionLibrary_GetSessionCustomSettings");
-static_assert(offsetof(DMOnlineFunctionLibrary_GetSessionCustomSettings, SessionSearchResult) == 0x000000, "Member 'DMOnlineFunctionLibrary_GetSessionCustomSettings::SessionSearchResult' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_GetSessionCustomSettings, ReturnValue) == 0x000120, "Member 'DMOnlineFunctionLibrary_GetSessionCustomSettings::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_GetSessionCustomSettings;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.IsCurrentlyActiveSession
 // 0x0130 (0x0130 - 0x0000)
@@ -254,11 +192,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0128(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(DMOnlineFunctionLibrary_IsCurrentlyActiveSession) == 0x000008, "Wrong alignment on DMOnlineFunctionLibrary_IsCurrentlyActiveSession");
-static_assert(sizeof(DMOnlineFunctionLibrary_IsCurrentlyActiveSession) == 0x000130, "Wrong size on DMOnlineFunctionLibrary_IsCurrentlyActiveSession");
-static_assert(offsetof(DMOnlineFunctionLibrary_IsCurrentlyActiveSession, WorldContextObject) == 0x000000, "Member 'DMOnlineFunctionLibrary_IsCurrentlyActiveSession::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_IsCurrentlyActiveSession, SessionSearchResult) == 0x000008, "Member 'DMOnlineFunctionLibrary_IsCurrentlyActiveSession::SessionSearchResult' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_IsCurrentlyActiveSession, ReturnValue) == 0x000128, "Member 'DMOnlineFunctionLibrary_IsCurrentlyActiveSession::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_IsCurrentlyActiveSession;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.IsLoggedIn
 // 0x0018 (0x0018 - 0x0000)
@@ -270,11 +204,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(DMOnlineFunctionLibrary_IsLoggedIn) == 0x000008, "Wrong alignment on DMOnlineFunctionLibrary_IsLoggedIn");
-static_assert(sizeof(DMOnlineFunctionLibrary_IsLoggedIn) == 0x000018, "Wrong size on DMOnlineFunctionLibrary_IsLoggedIn");
-static_assert(offsetof(DMOnlineFunctionLibrary_IsLoggedIn, WorldContextObject) == 0x000000, "Member 'DMOnlineFunctionLibrary_IsLoggedIn::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_IsLoggedIn, SubsystemName) == 0x000008, "Member 'DMOnlineFunctionLibrary_IsLoggedIn::SubsystemName' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_IsLoggedIn, ReturnValue) == 0x000010, "Member 'DMOnlineFunctionLibrary_IsLoggedIn::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_IsLoggedIn;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.IsSessionHost
 // 0x0010 (0x0010 - 0x0000)
@@ -285,10 +215,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(DMOnlineFunctionLibrary_IsSessionHost) == 0x000008, "Wrong alignment on DMOnlineFunctionLibrary_IsSessionHost");
-static_assert(sizeof(DMOnlineFunctionLibrary_IsSessionHost) == 0x000010, "Wrong size on DMOnlineFunctionLibrary_IsSessionHost");
-static_assert(offsetof(DMOnlineFunctionLibrary_IsSessionHost, WorldContextObject) == 0x000000, "Member 'DMOnlineFunctionLibrary_IsSessionHost::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_IsSessionHost, ReturnValue) == 0x000008, "Member 'DMOnlineFunctionLibrary_IsSessionHost::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_IsSessionHost;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.IsSessionSingleplayer
 // 0x0010 (0x0010 - 0x0000)
@@ -299,23 +226,18 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(DMOnlineFunctionLibrary_IsSessionSingleplayer) == 0x000008, "Wrong alignment on DMOnlineFunctionLibrary_IsSessionSingleplayer");
-static_assert(sizeof(DMOnlineFunctionLibrary_IsSessionSingleplayer) == 0x000010, "Wrong size on DMOnlineFunctionLibrary_IsSessionSingleplayer");
-static_assert(offsetof(DMOnlineFunctionLibrary_IsSessionSingleplayer, WorldContextObject) == 0x000000, "Member 'DMOnlineFunctionLibrary_IsSessionSingleplayer::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_IsSessionSingleplayer, ReturnValue) == 0x000008, "Member 'DMOnlineFunctionLibrary_IsSessionSingleplayer::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_IsSessionSingleplayer;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.OpenSteamBrowser
-// 0x0018 (0x0018 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct DMOnlineFunctionLibrary_OpenSteamBrowser final
 {
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 URL;                                               // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const class FString& FinalUrl)> OnClosedCallback;                                 // 0x0018(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineFunctionLibrary_OpenSteamBrowser) == 0x000008, "Wrong alignment on DMOnlineFunctionLibrary_OpenSteamBrowser");
-static_assert(sizeof(DMOnlineFunctionLibrary_OpenSteamBrowser) == 0x000018, "Wrong size on DMOnlineFunctionLibrary_OpenSteamBrowser");
-static_assert(offsetof(DMOnlineFunctionLibrary_OpenSteamBrowser, WorldContextObject) == 0x000000, "Member 'DMOnlineFunctionLibrary_OpenSteamBrowser::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_OpenSteamBrowser, URL) == 0x000008, "Member 'DMOnlineFunctionLibrary_OpenSteamBrowser::URL' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_OpenSteamBrowser;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.PerformClientTravel
 // 0x0018 (0x0018 - 0x0000)
@@ -325,10 +247,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Adress;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineFunctionLibrary_PerformClientTravel) == 0x000008, "Wrong alignment on DMOnlineFunctionLibrary_PerformClientTravel");
-static_assert(sizeof(DMOnlineFunctionLibrary_PerformClientTravel) == 0x000018, "Wrong size on DMOnlineFunctionLibrary_PerformClientTravel");
-static_assert(offsetof(DMOnlineFunctionLibrary_PerformClientTravel, WorldContextObject) == 0x000000, "Member 'DMOnlineFunctionLibrary_PerformClientTravel::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_PerformClientTravel, Adress) == 0x000008, "Member 'DMOnlineFunctionLibrary_PerformClientTravel::Adress' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_PerformClientTravel;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.PerformServerTravel
 // 0x0028 (0x0028 - 0x0000)
@@ -345,15 +264,7 @@ public:
 	class FName                                   SubsystemName;                                     // 0x001C(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(DMOnlineFunctionLibrary_PerformServerTravel) == 0x000008, "Wrong alignment on DMOnlineFunctionLibrary_PerformServerTravel");
-static_assert(sizeof(DMOnlineFunctionLibrary_PerformServerTravel) == 0x000028, "Wrong size on DMOnlineFunctionLibrary_PerformServerTravel");
-static_assert(offsetof(DMOnlineFunctionLibrary_PerformServerTravel, WorldContextObject) == 0x000000, "Member 'DMOnlineFunctionLibrary_PerformServerTravel::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_PerformServerTravel, WorldPath) == 0x000008, "Member 'DMOnlineFunctionLibrary_PerformServerTravel::WorldPath' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_PerformServerTravel, GameMode) == 0x000010, "Member 'DMOnlineFunctionLibrary_PerformServerTravel::GameMode' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_PerformServerTravel, bAbsolute) == 0x000018, "Member 'DMOnlineFunctionLibrary_PerformServerTravel::bAbsolute' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_PerformServerTravel, bSeamlessTravel) == 0x000019, "Member 'DMOnlineFunctionLibrary_PerformServerTravel::bSeamlessTravel' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_PerformServerTravel, bStartSession) == 0x00001A, "Member 'DMOnlineFunctionLibrary_PerformServerTravel::bStartSession' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_PerformServerTravel, SubsystemName) == 0x00001C, "Member 'DMOnlineFunctionLibrary_PerformServerTravel::SubsystemName' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_PerformServerTravel;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.RegisterPlayer
 // 0x0018 (0x0018 - 0x0000)
@@ -365,11 +276,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(DMOnlineFunctionLibrary_RegisterPlayer) == 0x000008, "Wrong alignment on DMOnlineFunctionLibrary_RegisterPlayer");
-static_assert(sizeof(DMOnlineFunctionLibrary_RegisterPlayer) == 0x000018, "Wrong size on DMOnlineFunctionLibrary_RegisterPlayer");
-static_assert(offsetof(DMOnlineFunctionLibrary_RegisterPlayer, PlayerController) == 0x000000, "Member 'DMOnlineFunctionLibrary_RegisterPlayer::PlayerController' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_RegisterPlayer, SubsystemName) == 0x000008, "Member 'DMOnlineFunctionLibrary_RegisterPlayer::SubsystemName' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_RegisterPlayer, ReturnValue) == 0x000010, "Member 'DMOnlineFunctionLibrary_RegisterPlayer::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_RegisterPlayer;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.ShowFriendsUI
 // 0x0008 (0x0008 - 0x0000)
@@ -378,9 +285,7 @@ struct DMOnlineFunctionLibrary_ShowFriendsUI final
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMOnlineFunctionLibrary_ShowFriendsUI) == 0x000008, "Wrong alignment on DMOnlineFunctionLibrary_ShowFriendsUI");
-static_assert(sizeof(DMOnlineFunctionLibrary_ShowFriendsUI) == 0x000008, "Wrong size on DMOnlineFunctionLibrary_ShowFriendsUI");
-static_assert(offsetof(DMOnlineFunctionLibrary_ShowFriendsUI, WorldContextObject) == 0x000000, "Member 'DMOnlineFunctionLibrary_ShowFriendsUI::WorldContextObject' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_ShowFriendsUI;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.UnregisterPlayer
 // 0x0018 (0x0018 - 0x0000)
@@ -392,11 +297,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(DMOnlineFunctionLibrary_UnregisterPlayer) == 0x000008, "Wrong alignment on DMOnlineFunctionLibrary_UnregisterPlayer");
-static_assert(sizeof(DMOnlineFunctionLibrary_UnregisterPlayer) == 0x000018, "Wrong size on DMOnlineFunctionLibrary_UnregisterPlayer");
-static_assert(offsetof(DMOnlineFunctionLibrary_UnregisterPlayer, PlayerController) == 0x000000, "Member 'DMOnlineFunctionLibrary_UnregisterPlayer::PlayerController' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_UnregisterPlayer, SubsystemName) == 0x000008, "Member 'DMOnlineFunctionLibrary_UnregisterPlayer::SubsystemName' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_UnregisterPlayer, ReturnValue) == 0x000010, "Member 'DMOnlineFunctionLibrary_UnregisterPlayer::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_UnregisterPlayer;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.UpdateCustomSessionSettings
 // 0x0070 (0x0070 - 0x0000)
@@ -409,12 +310,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(DMOnlineFunctionLibrary_UpdateCustomSessionSettings) == 0x000008, "Wrong alignment on DMOnlineFunctionLibrary_UpdateCustomSessionSettings");
-static_assert(sizeof(DMOnlineFunctionLibrary_UpdateCustomSessionSettings) == 0x000070, "Wrong size on DMOnlineFunctionLibrary_UpdateCustomSessionSettings");
-static_assert(offsetof(DMOnlineFunctionLibrary_UpdateCustomSessionSettings, CustomSettings) == 0x000000, "Member 'DMOnlineFunctionLibrary_UpdateCustomSessionSettings::CustomSettings' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_UpdateCustomSessionSettings, SubsystemName) == 0x000050, "Member 'DMOnlineFunctionLibrary_UpdateCustomSessionSettings::SubsystemName' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_UpdateCustomSessionSettings, Callback) == 0x000058, "Member 'DMOnlineFunctionLibrary_UpdateCustomSessionSettings::Callback' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_UpdateCustomSessionSettings, ReturnValue) == 0x000068, "Member 'DMOnlineFunctionLibrary_UpdateCustomSessionSettings::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_UpdateCustomSessionSettings;
 
 // Function DMOnlinePlugin.DMOnlineFunctionLibrary.UpdateSessionSettings
 // 0x0070 (0x0070 - 0x0000)
@@ -427,12 +323,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(DMOnlineFunctionLibrary_UpdateSessionSettings) == 0x000008, "Wrong alignment on DMOnlineFunctionLibrary_UpdateSessionSettings");
-static_assert(sizeof(DMOnlineFunctionLibrary_UpdateSessionSettings) == 0x000070, "Wrong size on DMOnlineFunctionLibrary_UpdateSessionSettings");
-static_assert(offsetof(DMOnlineFunctionLibrary_UpdateSessionSettings, CustomSettings) == 0x000000, "Member 'DMOnlineFunctionLibrary_UpdateSessionSettings::CustomSettings' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_UpdateSessionSettings, SubsystemName) == 0x000050, "Member 'DMOnlineFunctionLibrary_UpdateSessionSettings::SubsystemName' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_UpdateSessionSettings, Callback) == 0x000058, "Member 'DMOnlineFunctionLibrary_UpdateSessionSettings::Callback' has a wrong offset!");
-static_assert(offsetof(DMOnlineFunctionLibrary_UpdateSessionSettings, ReturnValue) == 0x000068, "Member 'DMOnlineFunctionLibrary_UpdateSessionSettings::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMOnlineFunctionLibrary_UpdateSessionSettings;
 
 }
 

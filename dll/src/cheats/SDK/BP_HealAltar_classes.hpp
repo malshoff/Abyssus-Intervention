@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
 #include "GameplayTags_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Niagara_structs.hpp"
 
 
@@ -54,6 +54,7 @@ public:
 	void ExecuteUbergraph_BP_HealAltar(int32 EntryPoint);
 	void GetRequiredMutatorPA(class URMutatorPrimaryAsset** MutatorPA);
 	void HasRequiredMutatorPA(class APlayerController* PlayerController_0, bool* Result);
+	bool IsShareable(class APlayerController* PlayerController_0);
 	void OnFocus(class APlayerController* Controller);
 	void OnFocusGone(class APlayerController* Controller);
 	void OnInteract(class APlayerController* Controller);
@@ -61,6 +62,8 @@ public:
 	void PlayerStateIsValid(bool* IsValid);
 	void ReceiveBeginPlay();
 	void ReceiveDestroyed();
+	void ShareInteractableActor(const class APlayerController* PlayerController_0);
+	void ToggleAudioLoop(bool Condition);
 	void ToggleInteractionIndicatorVisibility(class AActor* InteractingActor, const bool NewVisible);
 
 	class FText GetInteractableAlternativeDescription() const;
@@ -78,33 +81,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_HealAltar_C">();
+		BP_STATIC_CLASS_IMPL("BP_HealAltar_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_HealAltar_C")
 	}
 	static class ABP_HealAltar_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_HealAltar_C>();
 	}
 };
-static_assert(alignof(ABP_HealAltar_C) == 0x000008, "Wrong alignment on ABP_HealAltar_C");
-static_assert(sizeof(ABP_HealAltar_C) == 0x000388, "Wrong size on ABP_HealAltar_C");
-static_assert(offsetof(ABP_HealAltar_C, UberGraphFrame) == 0x0002A8, "Member 'ABP_HealAltar_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, PointLight) == 0x0002B0, "Member 'ABP_HealAltar_C::PointLight' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, VoiceProximity) == 0x0002B8, "Member 'ABP_HealAltar_C::VoiceProximity' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, OrbEffect) == 0x0002C0, "Member 'ABP_HealAltar_C::OrbEffect' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, Decal) == 0x0002C8, "Member 'ABP_HealAltar_C::Decal' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, SC_HealAltar_Bubbling) == 0x0002D0, "Member 'ABP_HealAltar_C::SC_HealAltar_Bubbling' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, Blood) == 0x0002D8, "Member 'ABP_HealAltar_C::Blood' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, Box) == 0x0002E0, "Member 'ABP_HealAltar_C::Box' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, EnabledEffect) == 0x0002E8, "Member 'ABP_HealAltar_C::EnabledEffect' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, StaticMesh) == 0x0002F0, "Member 'ABP_HealAltar_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, DefaultSceneRoot) == 0x0002F8, "Member 'ABP_HealAltar_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, Consumed) == 0x000300, "Member 'ABP_HealAltar_C::Consumed' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, MutatorAsset) == 0x000308, "Member 'ABP_HealAltar_C::MutatorAsset' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, IsBossAltar) == 0x000310, "Member 'ABP_HealAltar_C::IsBossAltar' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, AssociatedSpawnAreaSegment) == 0x000318, "Member 'ABP_HealAltar_C::AssociatedSpawnAreaSegment' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, RequiredMutatorPAMap) == 0x000320, "Member 'ABP_HealAltar_C::RequiredMutatorPAMap' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, PlayerController) == 0x000370, "Member 'ABP_HealAltar_C::PlayerController' has a wrong offset!");
-static_assert(offsetof(ABP_HealAltar_C, HealAltarSelections) == 0x000378, "Member 'ABP_HealAltar_C::HealAltarSelections' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_HealAltar_C;
 
 }
 

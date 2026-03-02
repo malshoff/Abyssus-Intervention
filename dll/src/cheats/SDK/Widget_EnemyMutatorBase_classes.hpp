@@ -19,18 +19,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_EnemyMutatorBase.Widget_EnemyMutatorBase_C
-// 0x0038 (0x0308 - 0x02D0)
+// 0x0038 (0x0378 - 0x0340)
 class UWidget_EnemyMutatorBase_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Construct_Animation;                               // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 IconImage;                                         // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             MutatorName;                                       // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URetainerBox*                           RetainerBox_0;                                     // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UClass*                                 MutatorScriptClass;                                // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          NameVisible;                                       // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IconVisible;                                       // 0x0301(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class URetainerBox*                           RetainerBox_0;                                     // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             MutatorName;                                       // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IconImage;                                         // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Construct_Animation;                               // 0x0360(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 MutatorScriptClass;                                // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          NameVisible;                                       // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IconVisible;                                       // 0x0371(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -40,23 +40,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_EnemyMutatorBase_C">();
+		BP_STATIC_CLASS_IMPL("Widget_EnemyMutatorBase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_EnemyMutatorBase_C")
 	}
 	static class UWidget_EnemyMutatorBase_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_EnemyMutatorBase_C>();
 	}
 };
-static_assert(alignof(UWidget_EnemyMutatorBase_C) == 0x000008, "Wrong alignment on UWidget_EnemyMutatorBase_C");
-static_assert(sizeof(UWidget_EnemyMutatorBase_C) == 0x000308, "Wrong size on UWidget_EnemyMutatorBase_C");
-static_assert(offsetof(UWidget_EnemyMutatorBase_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_EnemyMutatorBase_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_EnemyMutatorBase_C, Construct_Animation) == 0x0002D8, "Member 'UWidget_EnemyMutatorBase_C::Construct_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_EnemyMutatorBase_C, IconImage) == 0x0002E0, "Member 'UWidget_EnemyMutatorBase_C::IconImage' has a wrong offset!");
-static_assert(offsetof(UWidget_EnemyMutatorBase_C, MutatorName) == 0x0002E8, "Member 'UWidget_EnemyMutatorBase_C::MutatorName' has a wrong offset!");
-static_assert(offsetof(UWidget_EnemyMutatorBase_C, RetainerBox_0) == 0x0002F0, "Member 'UWidget_EnemyMutatorBase_C::RetainerBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_EnemyMutatorBase_C, MutatorScriptClass) == 0x0002F8, "Member 'UWidget_EnemyMutatorBase_C::MutatorScriptClass' has a wrong offset!");
-static_assert(offsetof(UWidget_EnemyMutatorBase_C, NameVisible) == 0x000300, "Member 'UWidget_EnemyMutatorBase_C::NameVisible' has a wrong offset!");
-static_assert(offsetof(UWidget_EnemyMutatorBase_C, IconVisible) == 0x000301, "Member 'UWidget_EnemyMutatorBase_C::IconVisible' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_EnemyMutatorBase_C;
 
 }
 

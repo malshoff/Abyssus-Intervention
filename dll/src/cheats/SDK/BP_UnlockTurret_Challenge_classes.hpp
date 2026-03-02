@@ -17,25 +17,29 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_UnlockTurret_Challenge.BP_UnlockTurret_Challenge_C
-// 0x0008 (0x03B8 - 0x03B0)
+// 0x0018 (0x03D0 - 0x03B8)
 class ABP_UnlockTurret_Challenge_C final : public ABP_UnlockWeapon_Base_C
 {
 public:
-	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        SW_Turret_Unlock_Loop;                             // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      NS_PlayerTurret_Unlock_Sparks;                     // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x03C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_UnlockTurret_Challenge_C">();
+		BP_STATIC_CLASS_IMPL("BP_UnlockTurret_Challenge_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_UnlockTurret_Challenge_C")
 	}
 	static class ABP_UnlockTurret_Challenge_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_UnlockTurret_Challenge_C>();
 	}
 };
-static_assert(alignof(ABP_UnlockTurret_Challenge_C) == 0x000008, "Wrong alignment on ABP_UnlockTurret_Challenge_C");
-static_assert(sizeof(ABP_UnlockTurret_Challenge_C) == 0x0003B8, "Wrong size on ABP_UnlockTurret_Challenge_C");
-static_assert(offsetof(ABP_UnlockTurret_Challenge_C, SkeletalMesh) == 0x0003B0, "Member 'ABP_UnlockTurret_Challenge_C::SkeletalMesh' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_UnlockTurret_Challenge_C;
 
 }
 

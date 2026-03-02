@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "RGame_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function Widget_GameTimer.Widget_GameTimer_C.ExecuteUbergraph_Widget_GameTimer
-// 0x0338 (0x0338 - 0x0000)
+// 0x0340 (0x0340 - 0x0000)
 struct Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer final
 {
 public:
@@ -76,53 +76,9 @@ public:
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x02D0(0x0048)(HasGetValueTypeHash)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0318(0x0010)(ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x0328(0x0010)()
+	double                                        CallFunc_FromSeconds_Seconds_ImplicitCast;         // 0x0338(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer) == 0x000008, "Wrong alignment on Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer");
-static_assert(sizeof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer) == 0x000338, "Wrong size on Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, EntryPoint) == 0x000000, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, Temp_bool_Variable) == 0x000004, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, Temp_text_Variable) == 0x000008, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, Temp_bool_Variable_1) == 0x000018, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, Temp_text_Variable_1) == 0x000020, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, Temp_bool_Variable_2) == 0x000030, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, Temp_text_Variable_2) == 0x000038, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_CreateDelegate_OutputDelegate) == 0x000048, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000058, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_GetGameState_ReturnValue) == 0x000060, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_DynamicCast_AsRGame_State) == 0x000068, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_DynamicCast_AsRGame_State' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_GetRunStats_ReturnValue) == 0x000074, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_GetRunStats_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_FromSeconds_ReturnValue) == 0x000080, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_FromSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_BreakTimespan_Days) == 0x000088, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_BreakTimespan_Days' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_BreakTimespan_Hours) == 0x00008C, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_BreakTimespan_Hours' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_BreakTimespan_Minutes) == 0x000090, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_BreakTimespan_Minutes' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_BreakTimespan_Seconds) == 0x000094, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_BreakTimespan_Seconds' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_BreakTimespan_Milliseconds) == 0x000098, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_BreakTimespan_Milliseconds' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_Greater_IntInt_ReturnValue) == 0x00009C, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_Conv_IntToInt64_ReturnValue) == 0x0000A0, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_MakeStruct_FormatArgumentData) == 0x0000A8, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_Greater_IntInt_ReturnValue_1) == 0x0000F0, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_MakeArray_Array) == 0x0000F8, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000108, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_Format_ReturnValue) == 0x000110, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_MakeStruct_FormatArgumentData_1) == 0x000120, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_Greater_IntInt_ReturnValue_2) == 0x000168, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_Greater_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_MakeArray_Array_1) == 0x000170, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_BooleanOR_ReturnValue) == 0x000180, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_Format_ReturnValue_1) == 0x000188, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_BooleanOR_ReturnValue_1) == 0x000198, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_Select_Default) == 0x0001A0, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_MakeStruct_FormatArgumentData_2) == 0x0001B0, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_Select_Default_1) == 0x0001F8, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_Conv_IntToInt64_ReturnValue_2) == 0x000208, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_Conv_IntToInt64_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_MakeStruct_FormatArgumentData_3) == 0x000210, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_MakeStruct_FormatArgumentData_4) == 0x000258, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_MakeArray_Array_2) == 0x0002A0, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_Format_ReturnValue_2) == 0x0002B0, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_Select_Default_2) == 0x0002C0, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_MakeStruct_FormatArgumentData_5) == 0x0002D0, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, K2Node_MakeArray_Array_3) == 0x000318, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer, CallFunc_Format_ReturnValue_3) == 0x000328, "Member 'Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer::CallFunc_Format_ReturnValue_3' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_GameTimer_C_ExecuteUbergraph_Widget_GameTimer;
 
 }
 

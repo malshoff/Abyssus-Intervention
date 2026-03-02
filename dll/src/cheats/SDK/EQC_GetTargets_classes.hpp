@@ -26,15 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"EQC_GetTargets_C">();
+		BP_STATIC_CLASS_IMPL("EQC_GetTargets_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EQC_GetTargets_C")
 	}
 	static class UEQC_GetTargets_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEQC_GetTargets_C>();
 	}
 };
-static_assert(alignof(UEQC_GetTargets_C) == 0x000008, "Wrong alignment on UEQC_GetTargets_C");
-static_assert(sizeof(UEQC_GetTargets_C) == 0x000030, "Wrong size on UEQC_GetTargets_C");
+DUMPER7_ASSERTS_UEQC_GetTargets_C;
 
 }
 

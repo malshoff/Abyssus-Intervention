@@ -21,9 +21,7 @@ struct BP_EngineRev_Base_StatusEffect_C_ExecuteUbergraph_BP_EngineRev_Base_Statu
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRev_Base_StatusEffect_C_ExecuteUbergraph_BP_EngineRev_Base_StatusEffect) == 0x000004, "Wrong alignment on BP_EngineRev_Base_StatusEffect_C_ExecuteUbergraph_BP_EngineRev_Base_StatusEffect");
-static_assert(sizeof(BP_EngineRev_Base_StatusEffect_C_ExecuteUbergraph_BP_EngineRev_Base_StatusEffect) == 0x000004, "Wrong size on BP_EngineRev_Base_StatusEffect_C_ExecuteUbergraph_BP_EngineRev_Base_StatusEffect");
-static_assert(offsetof(BP_EngineRev_Base_StatusEffect_C_ExecuteUbergraph_BP_EngineRev_Base_StatusEffect, EntryPoint) == 0x000000, "Member 'BP_EngineRev_Base_StatusEffect_C_ExecuteUbergraph_BP_EngineRev_Base_StatusEffect::EntryPoint' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRev_Base_StatusEffect_C_ExecuteUbergraph_BP_EngineRev_Base_StatusEffect;
 
 }
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "AudioGameplay_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "AudioGameplay_classes.hpp"
 #include "CoreUObject_classes.hpp"
 
 
@@ -20,12 +20,12 @@ namespace SDK
 {
 
 // Class AudioGameplayVolume.AudioGameplayVolumeMutator
-// 0x0008 (0x00B0 - 0x00A8)
+// 0x0008 (0x00C8 - 0x00C0)
 class UAudioGameplayVolumeMutator : public UAudioGameplayComponent
 {
 public:
-	int32                                         Priority;                                          // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         Priority;                                          // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetPriority(int32 InPriority);
@@ -33,26 +33,28 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioGameplayVolumeMutator">();
+		STATIC_CLASS_IMPL("AudioGameplayVolumeMutator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioGameplayVolumeMutator")
 	}
 	static class UAudioGameplayVolumeMutator* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioGameplayVolumeMutator>();
 	}
 };
-static_assert(alignof(UAudioGameplayVolumeMutator) == 0x000008, "Wrong alignment on UAudioGameplayVolumeMutator");
-static_assert(sizeof(UAudioGameplayVolumeMutator) == 0x0000B0, "Wrong size on UAudioGameplayVolumeMutator");
-static_assert(offsetof(UAudioGameplayVolumeMutator, Priority) == 0x0000A8, "Member 'UAudioGameplayVolumeMutator::Priority' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioGameplayVolumeMutator;
 
 // Class AudioGameplayVolume.AttenuationVolumeComponent
-// 0x0010 (0x00C0 - 0x00B0)
+// 0x0010 (0x00D8 - 0x00C8)
 class UAttenuationVolumeComponent final : public UAudioGameplayVolumeMutator
 {
 public:
-	float                                         ExteriorVolume;                                    // 0x00B0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         ExteriorTime;                                      // 0x00B4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         InteriorVolume;                                    // 0x00B8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         InteriorTime;                                      // 0x00BC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         ExteriorVolume;                                    // 0x00C8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         ExteriorTime;                                      // 0x00CC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         InteriorVolume;                                    // 0x00D0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         InteriorTime;                                      // 0x00D4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	void SetExteriorVolume(float Volume, float InterpolateTime);
@@ -61,26 +63,25 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AttenuationVolumeComponent">();
+		STATIC_CLASS_IMPL("AttenuationVolumeComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AttenuationVolumeComponent")
 	}
 	static class UAttenuationVolumeComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAttenuationVolumeComponent>();
 	}
 };
-static_assert(alignof(UAttenuationVolumeComponent) == 0x000008, "Wrong alignment on UAttenuationVolumeComponent");
-static_assert(sizeof(UAttenuationVolumeComponent) == 0x0000C0, "Wrong size on UAttenuationVolumeComponent");
-static_assert(offsetof(UAttenuationVolumeComponent, ExteriorVolume) == 0x0000B0, "Member 'UAttenuationVolumeComponent::ExteriorVolume' has a wrong offset!");
-static_assert(offsetof(UAttenuationVolumeComponent, ExteriorTime) == 0x0000B4, "Member 'UAttenuationVolumeComponent::ExteriorTime' has a wrong offset!");
-static_assert(offsetof(UAttenuationVolumeComponent, InteriorVolume) == 0x0000B8, "Member 'UAttenuationVolumeComponent::InteriorVolume' has a wrong offset!");
-static_assert(offsetof(UAttenuationVolumeComponent, InteriorTime) == 0x0000BC, "Member 'UAttenuationVolumeComponent::InteriorTime' has a wrong offset!");
+DUMPER7_ASSERTS_UAttenuationVolumeComponent;
 
 // Class AudioGameplayVolume.AudioGameplayVolume
 // 0x0030 (0x0310 - 0x02E0)
 class AAudioGameplayVolume final : public AVolume
 {
 public:
-	class UAudioGameplayVolumeComponent*          AGVComponent;                                      // 0x02E0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UAudioGameplayVolumeComponent*          AGVComponent;                                      // 0x02E0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	bool                                          bEnabled;                                          // 0x02E8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_2E9[0x7];                                      // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void()>              OnListenerEnterEvent;                              // 0x02F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -95,64 +96,66 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioGameplayVolume">();
+		STATIC_CLASS_IMPL("AudioGameplayVolume")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioGameplayVolume")
 	}
 	static class AAudioGameplayVolume* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AAudioGameplayVolume>();
 	}
 };
-static_assert(alignof(AAudioGameplayVolume) == 0x000008, "Wrong alignment on AAudioGameplayVolume");
-static_assert(sizeof(AAudioGameplayVolume) == 0x000310, "Wrong size on AAudioGameplayVolume");
-static_assert(offsetof(AAudioGameplayVolume, AGVComponent) == 0x0002E0, "Member 'AAudioGameplayVolume::AGVComponent' has a wrong offset!");
-static_assert(offsetof(AAudioGameplayVolume, bEnabled) == 0x0002E8, "Member 'AAudioGameplayVolume::bEnabled' has a wrong offset!");
-static_assert(offsetof(AAudioGameplayVolume, OnListenerEnterEvent) == 0x0002F0, "Member 'AAudioGameplayVolume::OnListenerEnterEvent' has a wrong offset!");
-static_assert(offsetof(AAudioGameplayVolume, OnListenerExitEvent) == 0x000300, "Member 'AAudioGameplayVolume::OnListenerExitEvent' has a wrong offset!");
+DUMPER7_ASSERTS_AAudioGameplayVolume;
 
 // Class AudioGameplayVolume.AudioGameplayVolumeComponent
-// 0x0028 (0x00D0 - 0x00A8)
+// 0x0028 (0x00E8 - 0x00C0)
 class UAudioGameplayVolumeComponent final : public UAudioGameplayComponent
 {
 public:
-	TMulticastInlineDelegate<void()>              OnProxyEnter;                                      // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnProxyExit;                                       // 0x00B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UAudioGameplayVolumeProxy*              Proxy;                                             // 0x00C8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void()>              OnProxyEnter;                                      // 0x00C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnProxyExit;                                       // 0x00D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UAudioGameplayVolumeProxy*              Proxy;                                             // 0x00E0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioGameplayVolumeComponent">();
+		STATIC_CLASS_IMPL("AudioGameplayVolumeComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioGameplayVolumeComponent")
 	}
 	static class UAudioGameplayVolumeComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioGameplayVolumeComponent>();
 	}
 };
-static_assert(alignof(UAudioGameplayVolumeComponent) == 0x000008, "Wrong alignment on UAudioGameplayVolumeComponent");
-static_assert(sizeof(UAudioGameplayVolumeComponent) == 0x0000D0, "Wrong size on UAudioGameplayVolumeComponent");
-static_assert(offsetof(UAudioGameplayVolumeComponent, OnProxyEnter) == 0x0000A8, "Member 'UAudioGameplayVolumeComponent::OnProxyEnter' has a wrong offset!");
-static_assert(offsetof(UAudioGameplayVolumeComponent, OnProxyExit) == 0x0000B8, "Member 'UAudioGameplayVolumeComponent::OnProxyExit' has a wrong offset!");
-static_assert(offsetof(UAudioGameplayVolumeComponent, Proxy) == 0x0000C8, "Member 'UAudioGameplayVolumeComponent::Proxy' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioGameplayVolumeComponent;
 
 // Class AudioGameplayVolume.AudioGameplayVolumeComponentBase
-// 0x0008 (0x00B0 - 0x00A8)
+// 0x0008 (0x00C8 - 0x00C0)
 class UAudioGameplayVolumeComponentBase final : public UAudioGameplayComponent
 {
 public:
-	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C0[0x8];                                       // 0x00C0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioGameplayVolumeComponentBase">();
+		STATIC_CLASS_IMPL("AudioGameplayVolumeComponentBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioGameplayVolumeComponentBase")
 	}
 	static class UAudioGameplayVolumeComponentBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioGameplayVolumeComponentBase>();
 	}
 };
-static_assert(alignof(UAudioGameplayVolumeComponentBase) == 0x000008, "Wrong alignment on UAudioGameplayVolumeComponentBase");
-static_assert(sizeof(UAudioGameplayVolumeComponentBase) == 0x0000B0, "Wrong size on UAudioGameplayVolumeComponentBase");
+DUMPER7_ASSERTS_UAudioGameplayVolumeComponentBase;
 
 // Class AudioGameplayVolume.AudioGameplayVolumeProxy
 // 0x0020 (0x0048 - 0x0028)
@@ -164,59 +167,64 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioGameplayVolumeProxy">();
+		STATIC_CLASS_IMPL("AudioGameplayVolumeProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioGameplayVolumeProxy")
 	}
 	static class UAudioGameplayVolumeProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioGameplayVolumeProxy>();
 	}
 };
-static_assert(alignof(UAudioGameplayVolumeProxy) == 0x000008, "Wrong alignment on UAudioGameplayVolumeProxy");
-static_assert(sizeof(UAudioGameplayVolumeProxy) == 0x000048, "Wrong size on UAudioGameplayVolumeProxy");
+DUMPER7_ASSERTS_UAudioGameplayVolumeProxy;
 
 // Class AudioGameplayVolume.AGVPrimitiveComponentProxy
 // 0x0010 (0x0058 - 0x0048)
 class UAGVPrimitiveComponentProxy final : public UAudioGameplayVolumeProxy
 {
 public:
-	class UPrimitiveComponent*                    PrimitiveComp;                                     // 0x0048(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_50[0x8];                                       // 0x0050(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UPrimitiveComponent*>            Primitives;                                        // 0x0048(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AGVPrimitiveComponentProxy">();
+		STATIC_CLASS_IMPL("AGVPrimitiveComponentProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AGVPrimitiveComponentProxy")
 	}
 	static class UAGVPrimitiveComponentProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAGVPrimitiveComponentProxy>();
 	}
 };
-static_assert(alignof(UAGVPrimitiveComponentProxy) == 0x000008, "Wrong alignment on UAGVPrimitiveComponentProxy");
-static_assert(sizeof(UAGVPrimitiveComponentProxy) == 0x000058, "Wrong size on UAGVPrimitiveComponentProxy");
-static_assert(offsetof(UAGVPrimitiveComponentProxy, PrimitiveComp) == 0x000048, "Member 'UAGVPrimitiveComponentProxy::PrimitiveComp' has a wrong offset!");
+DUMPER7_ASSERTS_UAGVPrimitiveComponentProxy;
 
 // Class AudioGameplayVolume.AGVConditionProxy
-// 0x0010 (0x0058 - 0x0048)
+// 0x0008 (0x0050 - 0x0048)
 class UAGVConditionProxy final : public UAudioGameplayVolumeProxy
 {
 public:
-	class UObject*                                ObjectPtr;                                         // 0x0048(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_50[0x8];                                       // 0x0050(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UObject*                                ObjectPtr;                                         // 0x0048(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AGVConditionProxy">();
+		STATIC_CLASS_IMPL("AGVConditionProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AGVConditionProxy")
 	}
 	static class UAGVConditionProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAGVConditionProxy>();
 	}
 };
-static_assert(alignof(UAGVConditionProxy) == 0x000008, "Wrong alignment on UAGVConditionProxy");
-static_assert(sizeof(UAGVConditionProxy) == 0x000058, "Wrong size on UAGVConditionProxy");
-static_assert(offsetof(UAGVConditionProxy, ObjectPtr) == 0x000048, "Member 'UAGVConditionProxy::ObjectPtr' has a wrong offset!");
+DUMPER7_ASSERTS_UAGVConditionProxy;
 
 // Class AudioGameplayVolume.AudioGameplayVolumeSubsystem
 // 0x0138 (0x0168 - 0x0030)
@@ -224,34 +232,35 @@ class UAudioGameplayVolumeSubsystem final : public UAudioEngineSubsystem
 {
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UAudioGameplayVolumeProxy*>      TransientProxyList;                                // 0x0038(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TMap<uint32, class UAudioGameplayVolumeComponent*> AGVComponents;                                // 0x0048(0x0050)(ExportObject, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class UAudioGameplayVolumeProxy*>      TransientProxyList;                                // 0x0038(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
+	TMap<uint32, class UAudioGameplayVolumeComponent*> AGVComponents;                                // 0x0048(0x0050)(ExportObject, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_98[0xD0];                                      // 0x0098(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioGameplayVolumeSubsystem">();
+		STATIC_CLASS_IMPL("AudioGameplayVolumeSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioGameplayVolumeSubsystem")
 	}
 	static class UAudioGameplayVolumeSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioGameplayVolumeSubsystem>();
 	}
 };
-static_assert(alignof(UAudioGameplayVolumeSubsystem) == 0x000008, "Wrong alignment on UAudioGameplayVolumeSubsystem");
-static_assert(sizeof(UAudioGameplayVolumeSubsystem) == 0x000168, "Wrong size on UAudioGameplayVolumeSubsystem");
-static_assert(offsetof(UAudioGameplayVolumeSubsystem, TransientProxyList) == 0x000038, "Member 'UAudioGameplayVolumeSubsystem::TransientProxyList' has a wrong offset!");
-static_assert(offsetof(UAudioGameplayVolumeSubsystem, AGVComponents) == 0x000048, "Member 'UAudioGameplayVolumeSubsystem::AGVComponents' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioGameplayVolumeSubsystem;
 
 // Class AudioGameplayVolume.FilterVolumeComponent
-// 0x0010 (0x00C0 - 0x00B0)
+// 0x0010 (0x00D8 - 0x00C8)
 class UFilterVolumeComponent final : public UAudioGameplayVolumeMutator
 {
 public:
-	float                                         ExteriorLPF;                                       // 0x00B0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         ExteriorLPFTime;                                   // 0x00B4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         InteriorLPF;                                       // 0x00B8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         InteriorLPFTime;                                   // 0x00BC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         ExteriorLPF;                                       // 0x00C8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         ExteriorLPFTime;                                   // 0x00CC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         InteriorLPF;                                       // 0x00D0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         InteriorLPFTime;                                   // 0x00D4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	void SetExteriorLPF(float Volume, float InterpolateTime);
@@ -260,26 +269,25 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FilterVolumeComponent">();
+		STATIC_CLASS_IMPL("FilterVolumeComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FilterVolumeComponent")
 	}
 	static class UFilterVolumeComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFilterVolumeComponent>();
 	}
 };
-static_assert(alignof(UFilterVolumeComponent) == 0x000008, "Wrong alignment on UFilterVolumeComponent");
-static_assert(sizeof(UFilterVolumeComponent) == 0x0000C0, "Wrong size on UFilterVolumeComponent");
-static_assert(offsetof(UFilterVolumeComponent, ExteriorLPF) == 0x0000B0, "Member 'UFilterVolumeComponent::ExteriorLPF' has a wrong offset!");
-static_assert(offsetof(UFilterVolumeComponent, ExteriorLPFTime) == 0x0000B4, "Member 'UFilterVolumeComponent::ExteriorLPFTime' has a wrong offset!");
-static_assert(offsetof(UFilterVolumeComponent, InteriorLPF) == 0x0000B8, "Member 'UFilterVolumeComponent::InteriorLPF' has a wrong offset!");
-static_assert(offsetof(UFilterVolumeComponent, InteriorLPFTime) == 0x0000BC, "Member 'UFilterVolumeComponent::InteriorLPFTime' has a wrong offset!");
+DUMPER7_ASSERTS_UFilterVolumeComponent;
 
 // Class AudioGameplayVolume.ReverbVolumeComponent
-// 0x0020 (0x00D0 - 0x00B0)
+// 0x0020 (0x00E8 - 0x00C8)
 class UReverbVolumeComponent final : public UAudioGameplayVolumeMutator
 {
 public:
-	struct FReverbSettings                        ReverbSettings;                                    // 0x00B0(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FReverbSettings                        ReverbSettings;                                    // 0x00C8(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPrivate)
 
 public:
 	void SetReverbSettings(const struct FReverbSettings& NewReverbSettings);
@@ -287,23 +295,25 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ReverbVolumeComponent">();
+		STATIC_CLASS_IMPL("ReverbVolumeComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ReverbVolumeComponent")
 	}
 	static class UReverbVolumeComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UReverbVolumeComponent>();
 	}
 };
-static_assert(alignof(UReverbVolumeComponent) == 0x000008, "Wrong alignment on UReverbVolumeComponent");
-static_assert(sizeof(UReverbVolumeComponent) == 0x0000D0, "Wrong size on UReverbVolumeComponent");
-static_assert(offsetof(UReverbVolumeComponent, ReverbSettings) == 0x0000B0, "Member 'UReverbVolumeComponent::ReverbSettings' has a wrong offset!");
+DUMPER7_ASSERTS_UReverbVolumeComponent;
 
 // Class AudioGameplayVolume.SubmixOverrideVolumeComponent
-// 0x0010 (0x00C0 - 0x00B0)
+// 0x0010 (0x00D8 - 0x00C8)
 class USubmixOverrideVolumeComponent final : public UAudioGameplayVolumeMutator
 {
 public:
-	TArray<struct FAudioVolumeSubmixOverrideSettings> SubmixOverrideSettings;                        // 0x00B0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FAudioVolumeSubmixOverrideSettings> SubmixOverrideSettings;                        // 0x00C8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPrivate)
 
 public:
 	void SetSubmixOverrideSettings(const TArray<struct FAudioVolumeSubmixOverrideSettings>& NewSubmixOverrideSettings);
@@ -311,23 +321,25 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SubmixOverrideVolumeComponent">();
+		STATIC_CLASS_IMPL("SubmixOverrideVolumeComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SubmixOverrideVolumeComponent")
 	}
 	static class USubmixOverrideVolumeComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USubmixOverrideVolumeComponent>();
 	}
 };
-static_assert(alignof(USubmixOverrideVolumeComponent) == 0x000008, "Wrong alignment on USubmixOverrideVolumeComponent");
-static_assert(sizeof(USubmixOverrideVolumeComponent) == 0x0000C0, "Wrong size on USubmixOverrideVolumeComponent");
-static_assert(offsetof(USubmixOverrideVolumeComponent, SubmixOverrideSettings) == 0x0000B0, "Member 'USubmixOverrideVolumeComponent::SubmixOverrideSettings' has a wrong offset!");
+DUMPER7_ASSERTS_USubmixOverrideVolumeComponent;
 
 // Class AudioGameplayVolume.SubmixSendVolumeComponent
-// 0x0010 (0x00C0 - 0x00B0)
+// 0x0010 (0x00D8 - 0x00C8)
 class USubmixSendVolumeComponent final : public UAudioGameplayVolumeMutator
 {
 public:
-	TArray<struct FAudioVolumeSubmixSendSettings> SubmixSendSettings;                                // 0x00B0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FAudioVolumeSubmixSendSettings> SubmixSendSettings;                                // 0x00C8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPrivate)
 
 public:
 	void SetSubmixSendSettings(const TArray<struct FAudioVolumeSubmixSendSettings>& NewSubmixSendSettings);
@@ -335,16 +347,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SubmixSendVolumeComponent">();
+		STATIC_CLASS_IMPL("SubmixSendVolumeComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SubmixSendVolumeComponent")
 	}
 	static class USubmixSendVolumeComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USubmixSendVolumeComponent>();
 	}
 };
-static_assert(alignof(USubmixSendVolumeComponent) == 0x000008, "Wrong alignment on USubmixSendVolumeComponent");
-static_assert(sizeof(USubmixSendVolumeComponent) == 0x0000C0, "Wrong size on USubmixSendVolumeComponent");
-static_assert(offsetof(USubmixSendVolumeComponent, SubmixSendSettings) == 0x0000B0, "Member 'USubmixSendVolumeComponent::SubmixSendSettings' has a wrong offset!");
+DUMPER7_ASSERTS_USubmixSendVolumeComponent;
 
 }
 

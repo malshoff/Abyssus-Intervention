@@ -51,6 +51,20 @@ void UBP_LightningPassive1_CharacterMutator_C::K2_ActivateScript()
 }
 
 
+// Function BP_LightningPassive1_CharacterMutator.BP_LightningPassive1_CharacterMutator_C.K2_DeactivateScript
+// (Event, Public, BlueprintEvent)
+
+void UBP_LightningPassive1_CharacterMutator_C::K2_DeactivateScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LightningPassive1_CharacterMutator_C", "K2_DeactivateScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_LightningPassive1_CharacterMutator.BP_LightningPassive1_CharacterMutator_C.OnDealtDamage_Event
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

@@ -19,11 +19,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SpiritPassive8_StatusEffectAilment.BP_SpiritPassive8_StatusEffectAilment_C
-// 0x0008 (0x04E0 - 0x04D8)
+// 0x0008 (0x04E8 - 0x04E0)
 class UBP_SpiritPassive8_StatusEffectAilment_C final : public URStatusEffectAilmentGScript
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment(int32 EntryPoint);
@@ -35,16 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SpiritPassive8_StatusEffectAilment_C">();
+		BP_STATIC_CLASS_IMPL("BP_SpiritPassive8_StatusEffectAilment_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SpiritPassive8_StatusEffectAilment_C")
 	}
 	static class UBP_SpiritPassive8_StatusEffectAilment_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SpiritPassive8_StatusEffectAilment_C>();
 	}
 };
-static_assert(alignof(UBP_SpiritPassive8_StatusEffectAilment_C) == 0x000008, "Wrong alignment on UBP_SpiritPassive8_StatusEffectAilment_C");
-static_assert(sizeof(UBP_SpiritPassive8_StatusEffectAilment_C) == 0x0004E0, "Wrong size on UBP_SpiritPassive8_StatusEffectAilment_C");
-static_assert(offsetof(UBP_SpiritPassive8_StatusEffectAilment_C, UberGraphFrame) == 0x0004D8, "Member 'UBP_SpiritPassive8_StatusEffectAilment_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SpiritPassive8_StatusEffectAilment_C;
 
 }
 

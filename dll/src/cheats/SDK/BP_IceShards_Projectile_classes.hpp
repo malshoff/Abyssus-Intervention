@@ -17,25 +17,27 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_IceShards_Projectile.BP_IceShards_Projectile_C
-// 0x0008 (0x05E0 - 0x05D8)
+// 0x0008 (0x0610 - 0x0608)
 class ABP_IceShards_Projectile_C final : public ARProjectile
 {
 public:
-	class UStaticMeshComponent*                   TrailMesh;                                         // 0x05D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   TrailMesh;                                         // 0x0608(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_IceShards_Projectile_C">();
+		BP_STATIC_CLASS_IMPL("BP_IceShards_Projectile_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_IceShards_Projectile_C")
 	}
 	static class ABP_IceShards_Projectile_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_IceShards_Projectile_C>();
 	}
 };
-static_assert(alignof(ABP_IceShards_Projectile_C) == 0x000008, "Wrong alignment on ABP_IceShards_Projectile_C");
-static_assert(sizeof(ABP_IceShards_Projectile_C) == 0x0005E0, "Wrong size on ABP_IceShards_Projectile_C");
-static_assert(offsetof(ABP_IceShards_Projectile_C, TrailMesh) == 0x0005D8, "Member 'ABP_IceShards_Projectile_C::TrailMesh' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_IceShards_Projectile_C;
 
 }
 

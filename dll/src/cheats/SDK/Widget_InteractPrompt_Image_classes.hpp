@@ -20,50 +20,61 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C
-// 0x0040 (0x0310 - 0x02D0)
+// 0x0088 (0x03C8 - 0x0340)
 class UWidget_InteractPrompt_Image_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonActionWidget*                    CommonActionWidget_83;                             // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_0;                                   // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_ActionInput_C*                       W_ActionInput;                                     // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInputAction*                           IA_Interact;                                       // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           FocusTimer;                                        // 0x0300(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class URPlayerInteractComponent*              CachedPlayerInteractComponent;                     // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UVerticalBox*                           VerticalBox_0;                                     // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           ProgressBar;                                       // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_1;                                         // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_132;                                         // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_Share;                               // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_83;                             // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Binding_Text_1;                                    // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Binding_Text;                                      // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BG_Image;                                          // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       HoldTransition;                                    // 0x0398(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UInputAction*                           IA_Interact;                                       // 0x03A0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class URPlayerInteractComponent*              CachedPlayerInteractComponent;                     // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           FocusTimer;                                        // 0x03B0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        TimeAtStartShare;                                  // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RequiredShareTime;                                 // 0x03C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CheckFocus();
 	void Construct();
+	void ControlMappingsRebuiltDelegate_Event();
 	void ExecuteUbergraph_Widget_InteractPrompt_Image(int32 EntryPoint);
-	void GetKeyMappedToInteract(struct FKey* Key, bool* KeyFound);
+	class FText Get_Binding_Text_Text();
+	void HandleVisibilityChanged(ESlateVisibility InVisibility);
+	void InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void OnFocus_Event();
 	void OnFocusGone_Event();
 	void OnInitialized();
 	void OnInputMethodChanged_Event(ECommonInputType bNewInputType);
 	void OnPlayerPawnRespawned_Event(class ARPlayerPawn* Player);
+	void SetPressedState(bool Pressed);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void UpdateKeyboardHelper(ECommonInputType bNewInputType);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_InteractPrompt_Image_C">();
+		BP_STATIC_CLASS_IMPL("Widget_InteractPrompt_Image_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_InteractPrompt_Image_C")
 	}
 	static class UWidget_InteractPrompt_Image_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_InteractPrompt_Image_C>();
 	}
 };
-static_assert(alignof(UWidget_InteractPrompt_Image_C) == 0x000008, "Wrong alignment on UWidget_InteractPrompt_Image_C");
-static_assert(sizeof(UWidget_InteractPrompt_Image_C) == 0x000310, "Wrong size on UWidget_InteractPrompt_Image_C");
-static_assert(offsetof(UWidget_InteractPrompt_Image_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_InteractPrompt_Image_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractPrompt_Image_C, CommonActionWidget_83) == 0x0002D8, "Member 'UWidget_InteractPrompt_Image_C::CommonActionWidget_83' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractPrompt_Image_C, HorizontalBox_0) == 0x0002E0, "Member 'UWidget_InteractPrompt_Image_C::HorizontalBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractPrompt_Image_C, InvalidationBox_0) == 0x0002E8, "Member 'UWidget_InteractPrompt_Image_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractPrompt_Image_C, W_ActionInput) == 0x0002F0, "Member 'UWidget_InteractPrompt_Image_C::W_ActionInput' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractPrompt_Image_C, IA_Interact) == 0x0002F8, "Member 'UWidget_InteractPrompt_Image_C::IA_Interact' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractPrompt_Image_C, FocusTimer) == 0x000300, "Member 'UWidget_InteractPrompt_Image_C::FocusTimer' has a wrong offset!");
-static_assert(offsetof(UWidget_InteractPrompt_Image_C, CachedPlayerInteractComponent) == 0x000308, "Member 'UWidget_InteractPrompt_Image_C::CachedPlayerInteractComponent' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_InteractPrompt_Image_C;
 
 }
 

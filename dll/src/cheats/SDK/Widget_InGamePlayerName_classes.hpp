@@ -19,14 +19,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_InGamePlayerName.Widget_InGamePlayerName_C
-// 0x0020 (0x02F0 - 0x02D0)
+// 0x0020 (0x0360 - 0x0340)
 class UWidget_InGamePlayerName_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UOverlay*                               Overlay_0;                                         // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_65;                                      // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bIsDead;                                           // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             TextBlock_65;                                      // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_0;                                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bIsDead;                                           // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Widget_InGamePlayerName(int32 EntryPoint);
@@ -40,19 +40,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_InGamePlayerName_C">();
+		BP_STATIC_CLASS_IMPL("Widget_InGamePlayerName_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_InGamePlayerName_C")
 	}
 	static class UWidget_InGamePlayerName_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_InGamePlayerName_C>();
 	}
 };
-static_assert(alignof(UWidget_InGamePlayerName_C) == 0x000008, "Wrong alignment on UWidget_InGamePlayerName_C");
-static_assert(sizeof(UWidget_InGamePlayerName_C) == 0x0002F0, "Wrong size on UWidget_InGamePlayerName_C");
-static_assert(offsetof(UWidget_InGamePlayerName_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_InGamePlayerName_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_InGamePlayerName_C, Overlay_0) == 0x0002D8, "Member 'UWidget_InGamePlayerName_C::Overlay_0' has a wrong offset!");
-static_assert(offsetof(UWidget_InGamePlayerName_C, TextBlock_65) == 0x0002E0, "Member 'UWidget_InGamePlayerName_C::TextBlock_65' has a wrong offset!");
-static_assert(offsetof(UWidget_InGamePlayerName_C, bIsDead) == 0x0002E8, "Member 'UWidget_InGamePlayerName_C::bIsDead' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_InGamePlayerName_C;
 
 }
 

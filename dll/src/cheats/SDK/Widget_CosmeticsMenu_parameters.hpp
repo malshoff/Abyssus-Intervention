@@ -12,7 +12,6 @@
 
 #include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "RGame_structs.hpp"
 #include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -28,10 +27,7 @@ public:
 	class UObject*                                Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            Widget;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_ListView_Slots_K2Node_ComponentBoundEvent_8_OnListEntryInitializedDynamic__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_ListView_Slots_K2Node_ComponentBoundEvent_8_OnListEntryInitializedDynamic__DelegateSignature");
-static_assert(sizeof(Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_ListView_Slots_K2Node_ComponentBoundEvent_8_OnListEntryInitializedDynamic__DelegateSignature) == 0x000010, "Wrong size on Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_ListView_Slots_K2Node_ComponentBoundEvent_8_OnListEntryInitializedDynamic__DelegateSignature");
-static_assert(offsetof(Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_ListView_Slots_K2Node_ComponentBoundEvent_8_OnListEntryInitializedDynamic__DelegateSignature, Item) == 0x000000, "Member 'Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_ListView_Slots_K2Node_ComponentBoundEvent_8_OnListEntryInitializedDynamic__DelegateSignature::Item' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_ListView_Slots_K2Node_ComponentBoundEvent_8_OnListEntryInitializedDynamic__DelegateSignature, Widget) == 0x000008, "Member 'Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_ListView_Slots_K2Node_ComponentBoundEvent_8_OnListEntryInitializedDynamic__DelegateSignature::Widget' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_ListView_Slots_K2Node_ComponentBoundEvent_8_OnListEntryInitializedDynamic__DelegateSignature;
 
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.BndEvt__Widget_CosmeticsMenu_W_Button_Close_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -40,9 +36,7 @@ struct Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_W_Button_Close_K2Node
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_W_Button_Close_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_W_Button_Close_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_W_Button_Close_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_W_Button_Close_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_W_Button_Close_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_W_Button_Close_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticsMenu_C_BndEvt__Widget_CosmeticsMenu_W_Button_Close_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.ConstructDefaultSlotOptions
 // 0x0050 (0x0050 - 0x0000)
@@ -59,15 +53,7 @@ public:
 	class URCosmeticCategoryPrimaryAsset*         K2Node_DynamicCast_AsRCosmetic_Category_Primary_Asset; // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions) == 0x000008, "Wrong alignment on Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions");
-static_assert(sizeof(Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions) == 0x000050, "Wrong size on Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000000, "Member 'Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions, CallFunc_Array_Get_Item) == 0x000008, "Member 'Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions, CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue) == 0x000030, "Member 'Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions::CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000038, "Member 'Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions, CallFunc_IsValid_ReturnValue) == 0x000039, "Member 'Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions, K2Node_DynamicCast_AsRCosmetic_Category_Primary_Asset) == 0x000040, "Member 'Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions::K2Node_DynamicCast_AsRCosmetic_Category_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticsMenu_C_ConstructDefaultSlotOptions;
 
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.ConstructOptions
 // 0x0008 (0x0008 - 0x0000)
@@ -76,9 +62,7 @@ struct Widget_CosmeticsMenu_C_ConstructOptions final
 public:
 	class URCosmeticCategoryPrimaryAsset*         CosmeticPA;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticsMenu_C_ConstructOptions) == 0x000008, "Wrong alignment on Widget_CosmeticsMenu_C_ConstructOptions");
-static_assert(sizeof(Widget_CosmeticsMenu_C_ConstructOptions) == 0x000008, "Wrong size on Widget_CosmeticsMenu_C_ConstructOptions");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ConstructOptions, CosmeticPA) == 0x000000, "Member 'Widget_CosmeticsMenu_C_ConstructOptions::CosmeticPA' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticsMenu_C_ConstructOptions;
 
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.CustomEvent
 // 0x0010 (0x0010 - 0x0000)
@@ -88,22 +72,19 @@ public:
 	class URCosmeticCategoryPrimaryAsset*         CosmeticPA;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            SelfWidget;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticsMenu_C_CustomEvent) == 0x000008, "Wrong alignment on Widget_CosmeticsMenu_C_CustomEvent");
-static_assert(sizeof(Widget_CosmeticsMenu_C_CustomEvent) == 0x000010, "Wrong size on Widget_CosmeticsMenu_C_CustomEvent");
-static_assert(offsetof(Widget_CosmeticsMenu_C_CustomEvent, CosmeticPA) == 0x000000, "Member 'Widget_CosmeticsMenu_C_CustomEvent::CosmeticPA' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_CustomEvent, SelfWidget) == 0x000008, "Member 'Widget_CosmeticsMenu_C_CustomEvent::SelfWidget' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticsMenu_C_CustomEvent;
 
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.ExecuteUbergraph_Widget_CosmeticsMenu
-// 0x04A0 (0x04A0 - 0x0000)
+// 0x0180 (0x0180 - 0x0000)
 struct Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FPlayerCosmeticOption& CosmeticOptionData)> K2Node_CreateDelegate_OutputDelegate; // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FPlayerCosmeticOption& CosmeticOptionData)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0014(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class URCosmeticPrimaryAsset* CosmeticPA)> K2Node_CreateDelegate_OutputDelegate;  // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class URCosmeticPrimaryAsset* CosmeticPA)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0014(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const struct FPlayerCosmeticOption& CosmeticOptionData)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class URCosmeticPrimaryAsset* CosmeticPA)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
@@ -114,95 +95,47 @@ public:
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class URCosmeticCategoryPrimaryAsset*         K2Node_CustomEvent_CosmeticPA_1;                   // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URCosmeticCategoryPrimaryAsset*         K2Node_CustomEvent_CosmeticPA_4;                   // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TSoftObjectPtr<class URCosmeticCategoryPrimaryAsset> CallFunc_Array_Get_Item;                    // 0x0070(0x0028)(HasGetValueTypeHash)
 	class UObject*                                CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue;  // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A2[0x6];                                       // 0x00A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class URCosmeticCategoryPrimaryAsset*         K2Node_DynamicCast_AsRCosmetic_Category_Primary_Asset; // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPlayerCosmeticOption                  CallFunc_Array_Get_Item_1;                         // 0x00B8(0x00D0)()
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWidget_CosmeticOptionEntry_C*          CallFunc_Create_ReturnValue;                       // 0x01A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                K2Node_ComponentBoundEvent_Item;                   // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            K2Node_ComponentBoundEvent_Widget;                 // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class URCosmeticCategoryPrimaryAsset*         K2Node_CustomEvent_CosmeticPA;                     // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            K2Node_CustomEvent_SelfWidget;                     // 0x01C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget_CosmeticCategorySlotBTN_C*      K2Node_DynamicCast_AsWidget_Cosmetic_Category_Slot_BTN; // 0x01C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D2[0x6];                                      // 0x01D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPlayerCosmeticOption                  K2Node_CustomEvent_CosmeticOptionData_2;           // 0x01D8(0x00D0)()
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A9[0x7];                                      // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x02B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FPlayerCosmeticOption                  K2Node_CustomEvent_CosmeticOptionData_1;           // 0x02B8(0x00D0)()
-	struct FPlayerCosmeticOption                  K2Node_CustomEvent_CosmeticOptionData;             // 0x0388(0x00D0)()
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x0458(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetMousePositionOnViewport_ReturnValue;   // 0x0460(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0470(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0480(0x0008)(NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0488(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_48C[0x4];                                      // 0x048C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0490(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0498(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_499[0x3];                                      // 0x0499(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x049C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URCosmeticPrimaryAsset*                 CallFunc_Array_Get_Item_1;                         // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URCosmeticCategoryPrimaryAsset*         K2Node_DynamicCast_AsRCosmetic_Category_Primary_Asset; // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C2[0x2];                                       // 0x00C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWidget_CosmeticOptionEntry_C*          CallFunc_Create_ReturnValue;                       // 0x00D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                K2Node_ComponentBoundEvent_Item;                   // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            K2Node_ComponentBoundEvent_Widget;                 // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class URCosmeticCategoryPrimaryAsset*         K2Node_CustomEvent_CosmeticPA_3;                   // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            K2Node_CustomEvent_SelfWidget;                     // 0x00F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget_CosmeticCategorySlotBTN_C*      K2Node_DynamicCast_AsWidget_Cosmetic_Category_Slot_BTN; // 0x00F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0101(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_102[0x6];                                      // 0x0102(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class URCosmeticPrimaryAsset*                 K2Node_CustomEvent_CosmeticPA_2;                   // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0118(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class URCosmeticPrimaryAsset*                 K2Node_CustomEvent_CosmeticPA_1;                   // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URCosmeticPrimaryAsset*                 K2Node_CustomEvent_CosmeticPA;                     // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetMousePositionOnViewport_ReturnValue;   // 0x0138(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0148(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0158(0x0008)(NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0164(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_175[0x3];                                      // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu) == 0x000008, "Wrong alignment on Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu");
-static_assert(sizeof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu) == 0x0004A0, "Wrong size on Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, EntryPoint) == 0x000000, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_CreateDelegate_OutputDelegate_1) == 0x000014, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, Temp_bool_Variable) == 0x000024, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_CreateDelegate_OutputDelegate_2) == 0x000028, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, Temp_byte_Variable) == 0x000038, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, Temp_byte_Variable_1) == 0x000039, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, Temp_int_Array_Index_Variable) == 0x00003C, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_CreateDelegate_OutputDelegate_3) == 0x000040, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, Temp_int_Loop_Counter_Variable) == 0x000050, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_Add_IntInt_ReturnValue) == 0x000054, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, Temp_int_Array_Index_Variable_1) == 0x000058, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_ComponentBoundEvent_Button) == 0x000060, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_CustomEvent_CosmeticPA_1) == 0x000068, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_CustomEvent_CosmeticPA_1' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_Array_Get_Item) == 0x000070, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue) == 0x000098, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x0000A0, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_IsValid_ReturnValue) == 0x0000A1, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_DynamicCast_AsRCosmetic_Category_Primary_Asset) == 0x0000A8, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_DynamicCast_AsRCosmetic_Category_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_DynamicCast_bSuccess) == 0x0000B0, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_Array_Get_Item_1) == 0x0000B8, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_Array_Length_ReturnValue) == 0x000188, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_Array_Length_ReturnValue_1) == 0x00018C, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_Less_IntInt_ReturnValue) == 0x000190, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_GetOwningPlayer_ReturnValue) == 0x000198, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_Create_ReturnValue) == 0x0001A0, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_ComponentBoundEvent_Item) == 0x0001A8, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_ComponentBoundEvent_Item' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_ComponentBoundEvent_Widget) == 0x0001B0, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_ComponentBoundEvent_Widget' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_CustomEvent_CosmeticPA) == 0x0001B8, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_CustomEvent_CosmeticPA' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_CustomEvent_SelfWidget) == 0x0001C0, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_CustomEvent_SelfWidget' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_DynamicCast_AsWidget_Cosmetic_Category_Slot_BTN) == 0x0001C8, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_DynamicCast_AsWidget_Cosmetic_Category_Slot_BTN' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_DynamicCast_bSuccess_1) == 0x0001D0, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x0001D1, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_CustomEvent_CosmeticOptionData_2) == 0x0001D8, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_CustomEvent_CosmeticOptionData_2' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_Select_Default) == 0x0002A8, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_AddChild_ReturnValue) == 0x0002B0, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_AddChild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_CustomEvent_CosmeticOptionData_1) == 0x0002B8, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_CustomEvent_CosmeticOptionData_1' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_CustomEvent_CosmeticOptionData) == 0x000388, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_CustomEvent_CosmeticOptionData' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x000458, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_GetMousePositionOnViewport_ReturnValue) == 0x000460, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_GetMousePositionOnViewport_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, K2Node_CreateDelegate_OutputDelegate_4) == 0x000470, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000480, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, Temp_int_Loop_Counter_Variable_1) == 0x000488, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_PlayAnimation_ReturnValue) == 0x000490, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_Less_IntInt_ReturnValue_1) == 0x000498, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu, CallFunc_Add_IntInt_ReturnValue_1) == 0x00049C, "Member 'Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticsMenu_C_ExecuteUbergraph_Widget_CosmeticsMenu;
 
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.MouseMovementTracking
 // 0x0030 (0x0030 - 0x0000)
@@ -214,23 +147,16 @@ public:
 	double                                        CallFunc_VSize2D_ReturnValue;                      // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticsMenu_C_MouseMovementTracking) == 0x000008, "Wrong alignment on Widget_CosmeticsMenu_C_MouseMovementTracking");
-static_assert(sizeof(Widget_CosmeticsMenu_C_MouseMovementTracking) == 0x000030, "Wrong size on Widget_CosmeticsMenu_C_MouseMovementTracking");
-static_assert(offsetof(Widget_CosmeticsMenu_C_MouseMovementTracking, CallFunc_GetMousePositionOnViewport_ReturnValue) == 0x000000, "Member 'Widget_CosmeticsMenu_C_MouseMovementTracking::CallFunc_GetMousePositionOnViewport_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_MouseMovementTracking, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x000010, "Member 'Widget_CosmeticsMenu_C_MouseMovementTracking::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_MouseMovementTracking, CallFunc_VSize2D_ReturnValue) == 0x000020, "Member 'Widget_CosmeticsMenu_C_MouseMovementTracking::CallFunc_VSize2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_MouseMovementTracking, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000028, "Member 'Widget_CosmeticsMenu_C_MouseMovementTracking::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticsMenu_C_MouseMovementTracking;
 
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.OnApplyOption_Event
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x0008 (0x0008 - 0x0000)
 struct Widget_CosmeticsMenu_C_OnApplyOption_Event final
 {
 public:
-	struct FPlayerCosmeticOption                  CosmeticOptionData;                                // 0x0000(0x00D0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class URCosmeticPrimaryAsset*                 CosmeticPA;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticsMenu_C_OnApplyOption_Event) == 0x000008, "Wrong alignment on Widget_CosmeticsMenu_C_OnApplyOption_Event");
-static_assert(sizeof(Widget_CosmeticsMenu_C_OnApplyOption_Event) == 0x0000D0, "Wrong size on Widget_CosmeticsMenu_C_OnApplyOption_Event");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnApplyOption_Event, CosmeticOptionData) == 0x000000, "Member 'Widget_CosmeticsMenu_C_OnApplyOption_Event::CosmeticOptionData' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticsMenu_C_OnApplyOption_Event;
 
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.OnEmoteNavRight
 // 0x0040 (0x0040 - 0x0000)
@@ -249,27 +175,16 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticsMenu_C_OnEmoteNavRight) == 0x000008, "Wrong alignment on Widget_CosmeticsMenu_C_OnEmoteNavRight");
-static_assert(sizeof(Widget_CosmeticsMenu_C_OnEmoteNavRight) == 0x000040, "Wrong size on Widget_CosmeticsMenu_C_OnEmoteNavRight");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnEmoteNavRight, Navigation_0) == 0x000000, "Member 'Widget_CosmeticsMenu_C_OnEmoteNavRight::Navigation_0' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnEmoteNavRight, ReturnValue) == 0x000008, "Member 'Widget_CosmeticsMenu_C_OnEmoteNavRight::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnEmoteNavRight, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000010, "Member 'Widget_CosmeticsMenu_C_OnEmoteNavRight::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnEmoteNavRight, CallFunc_GetDisplayedEntryWidgets_ReturnValue) == 0x000018, "Member 'Widget_CosmeticsMenu_C_OnEmoteNavRight::CallFunc_GetDisplayedEntryWidgets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnEmoteNavRight, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'Widget_CosmeticsMenu_C_OnEmoteNavRight::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnEmoteNavRight, CallFunc_Subtract_IntInt_ReturnValue) == 0x00002C, "Member 'Widget_CosmeticsMenu_C_OnEmoteNavRight::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnEmoteNavRight, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000030, "Member 'Widget_CosmeticsMenu_C_OnEmoteNavRight::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnEmoteNavRight, CallFunc_Array_Get_Item) == 0x000038, "Member 'Widget_CosmeticsMenu_C_OnEmoteNavRight::CallFunc_Array_Get_Item' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticsMenu_C_OnEmoteNavRight;
 
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.OnHoverOption_Event
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x0008 (0x0008 - 0x0000)
 struct Widget_CosmeticsMenu_C_OnHoverOption_Event final
 {
 public:
-	struct FPlayerCosmeticOption                  CosmeticOptionData;                                // 0x0000(0x00D0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class URCosmeticPrimaryAsset*                 CosmeticPA;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticsMenu_C_OnHoverOption_Event) == 0x000008, "Wrong alignment on Widget_CosmeticsMenu_C_OnHoverOption_Event");
-static_assert(sizeof(Widget_CosmeticsMenu_C_OnHoverOption_Event) == 0x0000D0, "Wrong size on Widget_CosmeticsMenu_C_OnHoverOption_Event");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnHoverOption_Event, CosmeticOptionData) == 0x000000, "Member 'Widget_CosmeticsMenu_C_OnHoverOption_Event::CosmeticOptionData' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticsMenu_C_OnHoverOption_Event;
 
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.OnListViewNavLeft
 // 0x0018 (0x0018 - 0x0000)
@@ -282,12 +197,7 @@ public:
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticsMenu_C_OnListViewNavLeft) == 0x000008, "Wrong alignment on Widget_CosmeticsMenu_C_OnListViewNavLeft");
-static_assert(sizeof(Widget_CosmeticsMenu_C_OnListViewNavLeft) == 0x000018, "Wrong size on Widget_CosmeticsMenu_C_OnListViewNavLeft");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnListViewNavLeft, Navigation_0) == 0x000000, "Member 'Widget_CosmeticsMenu_C_OnListViewNavLeft::Navigation_0' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnListViewNavLeft, ReturnValue) == 0x000008, "Member 'Widget_CosmeticsMenu_C_OnListViewNavLeft::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnListViewNavLeft, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000010, "Member 'Widget_CosmeticsMenu_C_OnListViewNavLeft::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnListViewNavLeft, CallFunc_IsVisible_ReturnValue) == 0x000011, "Member 'Widget_CosmeticsMenu_C_OnListViewNavLeft::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticsMenu_C_OnListViewNavLeft;
 
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.OnListViewNavRight
 // 0x0020 (0x0020 - 0x0000)
@@ -300,12 +210,7 @@ public:
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticsMenu_C_OnListViewNavRight) == 0x000008, "Wrong alignment on Widget_CosmeticsMenu_C_OnListViewNavRight");
-static_assert(sizeof(Widget_CosmeticsMenu_C_OnListViewNavRight) == 0x000020, "Wrong size on Widget_CosmeticsMenu_C_OnListViewNavRight");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnListViewNavRight, Navigation_0) == 0x000000, "Member 'Widget_CosmeticsMenu_C_OnListViewNavRight::Navigation_0' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnListViewNavRight, ReturnValue) == 0x000008, "Member 'Widget_CosmeticsMenu_C_OnListViewNavRight::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnListViewNavRight, CallFunc_GetChildAt_ReturnValue) == 0x000010, "Member 'Widget_CosmeticsMenu_C_OnListViewNavRight::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnListViewNavRight, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'Widget_CosmeticsMenu_C_OnListViewNavRight::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticsMenu_C_OnListViewNavRight;
 
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.OnScrollListNavLeft
 // 0x0038 (0x0038 - 0x0000)
@@ -321,25 +226,16 @@ public:
 	class UUserWidget*                            CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticsMenu_C_OnScrollListNavLeft) == 0x000008, "Wrong alignment on Widget_CosmeticsMenu_C_OnScrollListNavLeft");
-static_assert(sizeof(Widget_CosmeticsMenu_C_OnScrollListNavLeft) == 0x000038, "Wrong size on Widget_CosmeticsMenu_C_OnScrollListNavLeft");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnScrollListNavLeft, Navigation_0) == 0x000000, "Member 'Widget_CosmeticsMenu_C_OnScrollListNavLeft::Navigation_0' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnScrollListNavLeft, ReturnValue) == 0x000008, "Member 'Widget_CosmeticsMenu_C_OnScrollListNavLeft::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnScrollListNavLeft, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'Widget_CosmeticsMenu_C_OnScrollListNavLeft::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnScrollListNavLeft, CallFunc_GetDisplayedEntryWidgets_ReturnValue) == 0x000018, "Member 'Widget_CosmeticsMenu_C_OnScrollListNavLeft::CallFunc_GetDisplayedEntryWidgets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnScrollListNavLeft, CallFunc_Array_Get_Item) == 0x000028, "Member 'Widget_CosmeticsMenu_C_OnScrollListNavLeft::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnScrollListNavLeft, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000030, "Member 'Widget_CosmeticsMenu_C_OnScrollListNavLeft::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticsMenu_C_OnScrollListNavLeft;
 
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.OnUnhoverOption_Event
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x0008 (0x0008 - 0x0000)
 struct Widget_CosmeticsMenu_C_OnUnhoverOption_Event final
 {
 public:
-	struct FPlayerCosmeticOption                  CosmeticOptionData;                                // 0x0000(0x00D0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class URCosmeticPrimaryAsset*                 CosmeticPA;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticsMenu_C_OnUnhoverOption_Event) == 0x000008, "Wrong alignment on Widget_CosmeticsMenu_C_OnUnhoverOption_Event");
-static_assert(sizeof(Widget_CosmeticsMenu_C_OnUnhoverOption_Event) == 0x0000D0, "Wrong size on Widget_CosmeticsMenu_C_OnUnhoverOption_Event");
-static_assert(offsetof(Widget_CosmeticsMenu_C_OnUnhoverOption_Event, CosmeticOptionData) == 0x000000, "Member 'Widget_CosmeticsMenu_C_OnUnhoverOption_Event::CosmeticOptionData' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticsMenu_C_OnUnhoverOption_Event;
 
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.BP_GetDesiredFocusTarget
 // 0x0028 (0x0028 - 0x0000)
@@ -352,12 +248,7 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticsMenu_C_BP_GetDesiredFocusTarget) == 0x000008, "Wrong alignment on Widget_CosmeticsMenu_C_BP_GetDesiredFocusTarget");
-static_assert(sizeof(Widget_CosmeticsMenu_C_BP_GetDesiredFocusTarget) == 0x000028, "Wrong size on Widget_CosmeticsMenu_C_BP_GetDesiredFocusTarget");
-static_assert(offsetof(Widget_CosmeticsMenu_C_BP_GetDesiredFocusTarget, ReturnValue) == 0x000000, "Member 'Widget_CosmeticsMenu_C_BP_GetDesiredFocusTarget::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_BP_GetDesiredFocusTarget, CallFunc_GetDisplayedEntryWidgets_ReturnValue) == 0x000008, "Member 'Widget_CosmeticsMenu_C_BP_GetDesiredFocusTarget::CallFunc_GetDisplayedEntryWidgets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_BP_GetDesiredFocusTarget, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000018, "Member 'Widget_CosmeticsMenu_C_BP_GetDesiredFocusTarget::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticsMenu_C_BP_GetDesiredFocusTarget, CallFunc_Array_Get_Item) == 0x000020, "Member 'Widget_CosmeticsMenu_C_BP_GetDesiredFocusTarget::CallFunc_Array_Get_Item' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticsMenu_C_BP_GetDesiredFocusTarget;
 
 }
 

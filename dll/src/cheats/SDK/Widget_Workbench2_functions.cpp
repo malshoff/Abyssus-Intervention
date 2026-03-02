@@ -845,12 +845,12 @@ void UWidget_Workbench2_C::GetWeaponModPAs(class URWeaponPrimaryAsset* RWeaponPA
 
 
 // Function Widget_Workbench2.Widget_Workbench2_C.GetWeaponPaintCosmeticByWeaponPA
-// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class URCosmeticCategoryPrimaryAsset*   CosmeticPA                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FPlayerCosmeticOption*           PlayerCosmetic                                         (Parm, OutParm)
+// class URCosmeticPrimaryAsset**          OutCosmeticPA                                          (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_Workbench2_C::GetWeaponPaintCosmeticByWeaponPA(class URCosmeticCategoryPrimaryAsset* CosmeticPA, struct FPlayerCosmeticOption* PlayerCosmetic)
+void UWidget_Workbench2_C::GetWeaponPaintCosmeticByWeaponPA(class URCosmeticCategoryPrimaryAsset* CosmeticPA, class URCosmeticPrimaryAsset** OutCosmeticPA)
 {
 	static class UFunction* Func = nullptr;
 
@@ -863,8 +863,8 @@ void UWidget_Workbench2_C::GetWeaponPaintCosmeticByWeaponPA(class URCosmeticCate
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (PlayerCosmetic != nullptr)
-		*PlayerCosmetic = std::move(Parms.PlayerCosmetic);
+	if (OutCosmeticPA != nullptr)
+		*OutCosmeticPA = Parms.OutCosmeticPA;
 }
 
 

@@ -10,10 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
+#include "CommonInput_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EnhancedInput_structs.hpp"
-#include "CommonInput_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -21,135 +22,171 @@ namespace SDK::Params
 {
 
 // Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.ExecuteUbergraph_Widget_InteractPrompt_Image
-// 0x0110 (0x0110 - 0x0000)
+// 0x0260 (0x0260 - 0x0000)
 struct Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECommonInputType                              Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_4;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   CallFunc_GetKeyMappedToInteract_Key;               // 0x0010(0x0018)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetKeyMappedToInteract_KeyFound;          // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x002C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x003C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARLevelGenerator*                       CallFunc_GetLevelManager_ReturnValue;              // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0058(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0068(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0078(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasInteractableTarget_ReturnValue;        // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_83[0x5];                                       // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_CustomEvent_Player;                         // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue; // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C2[0x6];                                       // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller;      // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class ARPlayerPawn* Player)>   K2Node_CreateDelegate_OutputDelegate_4;            // 0x00D4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasInteractableTarget_ReturnValue_1;      // 0x00E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECommonInputType                              K2Node_CustomEvent_bNewInputType;                  // 0x00E6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E7[0x1];                                       // 0x00E7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(ECommonInputType bNewInputType)> K2Node_CreateDelegate_OutputDelegate_5;          // 0x00E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_2;            // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue_1; // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	ECommonInputType                              CallFunc_GetCurrentInputType_ReturnValue;          // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_1;     // 0x0010(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_1;     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_1;   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction_1;    // 0x0038(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue;       // 0x0040(0x0020)(NoDestructor)
+	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime;       // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime;     // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     K2Node_EnhancedInputActionEvent_SourceAction;      // 0x0068(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue;  // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_1; // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInputAction*                           Temp_object_Variable;                              // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable;                                // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_0;                              // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_1;                              // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_1;                              // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Temp_real_Variable_1_0;                            // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable_1_1;                            // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ECommonInputType                              CallFunc_GetCurrentInputType_ReturnValue;          // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x00C4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x00D4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARLevelGenerator*                       CallFunc_GetLevelManager_ReturnValue;              // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x00F0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0100(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0110(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasInteractableTarget_ReturnValue;        // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x011A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11B[0x5];                                      // 0x011B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_CustomEvent_Player;                         // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_2;            // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue; // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECommonInputType                              CallFunc_GetCurrentInputType_ReturnValue_1;        // 0x015A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15B[0x5];                                      // 0x015B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller;      // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_169[0x3];                                      // 0x0169(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(ECommonInputType bNewInputType)> K2Node_CreateDelegate_OutputDelegate_4;          // 0x016C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x017C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasInteractableTarget_ReturnValue_1;      // 0x017D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECommonInputType                              K2Node_CustomEvent_bNewInputType;                  // 0x017E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17F[0x1];                                      // 0x017F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_3;            // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue_1; // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ECommonInputType                              CallFunc_GetCurrentInputType_ReturnValue_2;        // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_191[0x3];                                      // 0x0191(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0194(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x01CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasShareableTarget_ReturnValue;           // 0x01D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D3[0x1];                                      // 0x01D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetShareProgress_ReturnValue;             // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasShareableTarget_ReturnValue_1;         // 0x01D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1DA[0x6];                                      // 0x01DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubsystem_ReturnValue_1;    // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ECommonInputType                              CallFunc_GetCurrentInputType_ReturnValue_3;        // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1EA[0x2];                                      // 0x01EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_5;            // 0x01EC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(ESlateVisibility InVisibility)> K2Node_CreateDelegate_OutputDelegate_6;           // 0x01FC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x020C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue_1;                  // 0x020D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x020E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_20F[0x1];                                      // 0x020F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_4;            // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSingleplayer_ReturnValue;               // 0x0219(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x021A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x021B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class ARPlayerPawn* Player)>   K2Node_CreateDelegate_OutputDelegate_7;            // 0x021C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22C[0x4];                                      // 0x022C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubsystem_ReturnValue_2;    // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0239(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23A[0x2];                                      // 0x023A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetShareProgress_ReturnValue_1;           // 0x023C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0241(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetKeyMappedToInputAction_bOutKeyFound;   // 0x0242(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_243[0x5];                                      // 0x0243(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   CallFunc_GetKeyMappedToInputAction_ReturnValue;    // 0x0248(0x0018)(HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image) == 0x000008, "Wrong alignment on Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image");
-static_assert(sizeof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image) == 0x000110, "Wrong size on Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, EntryPoint) == 0x000000, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, Temp_byte_Variable) == 0x000004, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, Temp_byte_Variable_1) == 0x000005, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, Temp_byte_Variable_2) == 0x000006, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, Temp_byte_Variable_3) == 0x000007, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::Temp_byte_Variable_3' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, Temp_byte_Variable_4) == 0x000008, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::Temp_byte_Variable_4' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_GetKeyMappedToInteract_Key) == 0x000010, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_GetKeyMappedToInteract_Key' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_GetKeyMappedToInteract_KeyFound) == 0x000028, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_GetKeyMappedToInteract_KeyFound' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, K2Node_CreateDelegate_OutputDelegate) == 0x00002C, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, K2Node_CreateDelegate_OutputDelegate_1) == 0x00003C, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_GetLevelManager_ReturnValue) == 0x000050, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_GetLevelManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, K2Node_CreateDelegate_OutputDelegate_2) == 0x000058, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, K2Node_CreateDelegate_OutputDelegate_3) == 0x000068, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000078, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_IsValid_ReturnValue) == 0x000080, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_HasInteractableTarget_ReturnValue) == 0x000081, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_HasInteractableTarget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_Not_PreBool_ReturnValue) == 0x000082, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_GetOwningPlayer_ReturnValue) == 0x000088, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, K2Node_CustomEvent_Player) == 0x000090, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::K2Node_CustomEvent_Player' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_K2_GetPawn_ReturnValue) == 0x000098, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x0000A0, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, K2Node_DynamicCast_bSuccess) == 0x0000A8, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x0000B0, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue) == 0x0000B8, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_IsValid_ReturnValue_1) == 0x0000C0, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_IsValid_ReturnValue_2) == 0x0000C1, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, K2Node_DynamicCast_AsRGame_Player_Controller) == 0x0000C8, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::K2Node_DynamicCast_AsRGame_Player_Controller' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, K2Node_DynamicCast_bSuccess_1) == 0x0000D0, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, K2Node_CreateDelegate_OutputDelegate_4) == 0x0000D4, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_IsValid_ReturnValue_3) == 0x0000E4, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_HasInteractableTarget_ReturnValue_1) == 0x0000E5, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_HasInteractableTarget_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, K2Node_CustomEvent_bNewInputType) == 0x0000E6, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::K2Node_CustomEvent_bNewInputType' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, K2Node_CreateDelegate_OutputDelegate_5) == 0x0000E8, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_GetOwningPlayer_ReturnValue_2) == 0x0000F8, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_GetOwningPlayer_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue_1) == 0x000100, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, CallFunc_GetCurrentInputType_ReturnValue) == 0x000108, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::CallFunc_GetCurrentInputType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image, K2Node_Select_Default) == 0x000109, "Member 'Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_InteractPrompt_Image_C_ExecuteUbergraph_Widget_InteractPrompt_Image;
 
-// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.GetKeyMappedToInteract
-// 0x00C0 (0x00C0 - 0x0000)
-struct Widget_InteractPrompt_Image_C_GetKeyMappedToInteract final
+// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.Get_Binding_Text_Text
+// 0x0100 (0x0100 - 0x0000)
+struct Widget_InteractPrompt_Image_C_Get_Binding_Text_Text final
 {
 public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(Parm, OutParm, HasGetValueTypeHash)
-	bool                                          KeyFound;                                          // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UEnhancedInputLocalPlayerSubsystem*     CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue; // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_GetAllPlayerMappableActionKeyMappings_self_CastInput; // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FEnhancedActionKeyMapping>      CallFunc_GetAllPlayerMappableActionKeyMappings_ReturnValue; // 0x0050(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEnhancedActionKeyMapping              CallFunc_Array_Get_Item;                           // 0x0068(0x0050)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0010(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0020(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0030(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0040(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0050(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0098(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x00E0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x00F0(0x0010)()
 };
-static_assert(alignof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract) == 0x000008, "Wrong alignment on Widget_InteractPrompt_Image_C_GetKeyMappedToInteract");
-static_assert(sizeof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract) == 0x0000C0, "Wrong size on Widget_InteractPrompt_Image_C_GetKeyMappedToInteract");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract, Key) == 0x000000, "Member 'Widget_InteractPrompt_Image_C_GetKeyMappedToInteract::Key' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract, KeyFound) == 0x000018, "Member 'Widget_InteractPrompt_Image_C_GetKeyMappedToInteract::KeyFound' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'Widget_InteractPrompt_Image_C_GetKeyMappedToInteract::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'Widget_InteractPrompt_Image_C_GetKeyMappedToInteract::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract, CallFunc_Add_IntInt_ReturnValue) == 0x000024, "Member 'Widget_InteractPrompt_Image_C_GetKeyMappedToInteract::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'Widget_InteractPrompt_Image_C_GetKeyMappedToInteract::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract, CallFunc_GetOwningPlayer_ReturnValue) == 0x000030, "Member 'Widget_InteractPrompt_Image_C_GetKeyMappedToInteract::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract, CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue) == 0x000038, "Member 'Widget_InteractPrompt_Image_C_GetKeyMappedToInteract::CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract, CallFunc_GetAllPlayerMappableActionKeyMappings_self_CastInput) == 0x000040, "Member 'Widget_InteractPrompt_Image_C_GetKeyMappedToInteract::CallFunc_GetAllPlayerMappableActionKeyMappings_self_CastInput' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract, CallFunc_GetAllPlayerMappableActionKeyMappings_ReturnValue) == 0x000050, "Member 'Widget_InteractPrompt_Image_C_GetKeyMappedToInteract::CallFunc_GetAllPlayerMappableActionKeyMappings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract, CallFunc_Array_Length_ReturnValue) == 0x000060, "Member 'Widget_InteractPrompt_Image_C_GetKeyMappedToInteract::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract, CallFunc_Array_Get_Item) == 0x000068, "Member 'Widget_InteractPrompt_Image_C_GetKeyMappedToInteract::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract, CallFunc_Less_IntInt_ReturnValue) == 0x0000B8, "Member 'Widget_InteractPrompt_Image_C_GetKeyMappedToInteract::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_GetKeyMappedToInteract, CallFunc_EqualEqual_NameName_ReturnValue) == 0x0000B9, "Member 'Widget_InteractPrompt_Image_C_GetKeyMappedToInteract::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_InteractPrompt_Image_C_Get_Binding_Text_Text;
+
+// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.HandleVisibilityChanged
+// 0x0028 (0x0028 - 0x0000)
+struct Widget_InteractPrompt_Image_C_HandleVisibilityChanged final
+{
+public:
+	ESlateVisibility                              InVisibility;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECommonInputType                              CallFunc_GetCurrentInputType_ReturnValue;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSingleplayer_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_InteractPrompt_Image_C_HandleVisibilityChanged;
+
+// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct Widget_InteractPrompt_Image_C_InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_0 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_InteractPrompt_Image_C_InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_0;
+
+// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_1
+// 0x0030 (0x0030 - 0x0000)
+struct Widget_InteractPrompt_Image_C_InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_1 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_InteractPrompt_Image_C_InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_1;
 
 // Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.OnInputMethodChanged_Event
 // 0x0001 (0x0001 - 0x0000)
@@ -158,9 +195,7 @@ struct Widget_InteractPrompt_Image_C_OnInputMethodChanged_Event final
 public:
 	ECommonInputType                              bNewInputType;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_InteractPrompt_Image_C_OnInputMethodChanged_Event) == 0x000001, "Wrong alignment on Widget_InteractPrompt_Image_C_OnInputMethodChanged_Event");
-static_assert(sizeof(Widget_InteractPrompt_Image_C_OnInputMethodChanged_Event) == 0x000001, "Wrong size on Widget_InteractPrompt_Image_C_OnInputMethodChanged_Event");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_OnInputMethodChanged_Event, bNewInputType) == 0x000000, "Member 'Widget_InteractPrompt_Image_C_OnInputMethodChanged_Event::bNewInputType' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_InteractPrompt_Image_C_OnInputMethodChanged_Event;
 
 // Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.OnPlayerPawnRespawned_Event
 // 0x0008 (0x0008 - 0x0000)
@@ -169,9 +204,42 @@ struct Widget_InteractPrompt_Image_C_OnPlayerPawnRespawned_Event final
 public:
 	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_InteractPrompt_Image_C_OnPlayerPawnRespawned_Event) == 0x000008, "Wrong alignment on Widget_InteractPrompt_Image_C_OnPlayerPawnRespawned_Event");
-static_assert(sizeof(Widget_InteractPrompt_Image_C_OnPlayerPawnRespawned_Event) == 0x000008, "Wrong size on Widget_InteractPrompt_Image_C_OnPlayerPawnRespawned_Event");
-static_assert(offsetof(Widget_InteractPrompt_Image_C_OnPlayerPawnRespawned_Event, Player) == 0x000000, "Member 'Widget_InteractPrompt_Image_C_OnPlayerPawnRespawned_Event::Player' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_InteractPrompt_Image_C_OnPlayerPawnRespawned_Event;
+
+// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.SetPressedState
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_InteractPrompt_Image_C_SetPressedState final
+{
+public:
+	bool                                          Pressed;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_InteractPrompt_Image_C_SetPressedState;
+
+// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct Widget_InteractPrompt_Image_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_InteractPrompt_Image_C_Tick;
+
+// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.UpdateKeyboardHelper
+// 0x0040 (0x0040 - 0x0000)
+struct Widget_InteractPrompt_Image_C_UpdateKeyboardHelper final
+{
+public:
+	ECommonInputType                              bNewInputType;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetKeyMappedToInputAction_bOutKeyFound;   // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   CallFunc_GetKeyMappedToInputAction_ReturnValue;    // 0x0018(0x0018)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Key_GetDisplayName_ReturnValue;           // 0x0030(0x0010)()
+};
+DUMPER7_ASSERTS_Widget_InteractPrompt_Image_C_UpdateKeyboardHelper;
 
 }
 

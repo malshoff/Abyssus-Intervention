@@ -22,10 +22,7 @@ public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_SoulFragment_C_CanInteract) == 0x000008, "Wrong alignment on BP_Pickupable_SoulFragment_C_CanInteract");
-static_assert(sizeof(BP_Pickupable_SoulFragment_C_CanInteract) == 0x000010, "Wrong size on BP_Pickupable_SoulFragment_C_CanInteract");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_CanInteract, Controller) == 0x000000, "Member 'BP_Pickupable_SoulFragment_C_CanInteract::Controller' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_CanInteract, ReturnValue) == 0x000008, "Member 'BP_Pickupable_SoulFragment_C_CanInteract::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_SoulFragment_C_CanInteract;
 
 // Function BP_Pickupable_SoulFragment.BP_Pickupable_SoulFragment_C.ExecuteUbergraph_BP_Pickupable_SoulFragment
 // 0x0060 (0x0060 - 0x0000)
@@ -52,22 +49,7 @@ public:
 	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SimulateLootPhysics_ReturnValue;          // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment) == 0x000008, "Wrong alignment on BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment");
-static_assert(sizeof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment) == 0x000060, "Wrong size on BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment, EntryPoint) == 0x000000, "Member 'BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment, CallFunc_SpawnSoundAttached_ReturnValue) == 0x000008, "Member 'BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment, K2Node_Event_PlayerController) == 0x000010, "Member 'BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment::K2Node_Event_PlayerController' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment, CallFunc_K2_GetPawn_ReturnValue) == 0x000018, "Member 'BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment, CallFunc_Pickup_ReturnValue) == 0x000020, "Member 'BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment::CallFunc_Pickup_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000028, "Member 'BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000038, "Member 'BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment, CallFunc_GetQuantity_ReturnValue) == 0x000040, "Member 'BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment::CallFunc_GetQuantity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment, K2Node_Event_controller) == 0x000048, "Member 'BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment::K2Node_Event_controller' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment, CallFunc_IsLocalPlayerController_ReturnValue) == 0x000050, "Member 'BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment, CallFunc_GetQuantity_ReturnValue_1) == 0x000054, "Member 'BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment::CallFunc_GetQuantity_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000058, "Member 'BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment, CallFunc_SimulateLootPhysics_ReturnValue) == 0x000059, "Member 'BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment::CallFunc_SimulateLootPhysics_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_SoulFragment_C_ExecuteUbergraph_BP_Pickupable_SoulFragment;
 
 // Function BP_Pickupable_SoulFragment.BP_Pickupable_SoulFragment_C.OnInteract
 // 0x0008 (0x0008 - 0x0000)
@@ -76,9 +58,7 @@ struct BP_Pickupable_SoulFragment_C_OnInteract final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_SoulFragment_C_OnInteract) == 0x000008, "Wrong alignment on BP_Pickupable_SoulFragment_C_OnInteract");
-static_assert(sizeof(BP_Pickupable_SoulFragment_C_OnInteract) == 0x000008, "Wrong size on BP_Pickupable_SoulFragment_C_OnInteract");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_OnInteract, Controller) == 0x000000, "Member 'BP_Pickupable_SoulFragment_C_OnInteract::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_SoulFragment_C_OnInteract;
 
 // Function BP_Pickupable_SoulFragment.BP_Pickupable_SoulFragment_C.TriggerPickup
 // 0x0008 (0x0008 - 0x0000)
@@ -87,9 +67,7 @@ struct BP_Pickupable_SoulFragment_C_TriggerPickup final
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_SoulFragment_C_TriggerPickup) == 0x000008, "Wrong alignment on BP_Pickupable_SoulFragment_C_TriggerPickup");
-static_assert(sizeof(BP_Pickupable_SoulFragment_C_TriggerPickup) == 0x000008, "Wrong size on BP_Pickupable_SoulFragment_C_TriggerPickup");
-static_assert(offsetof(BP_Pickupable_SoulFragment_C_TriggerPickup, PlayerController) == 0x000000, "Member 'BP_Pickupable_SoulFragment_C_TriggerPickup::PlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_SoulFragment_C_TriggerPickup;
 
 }
 

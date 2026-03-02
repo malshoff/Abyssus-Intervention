@@ -143,7 +143,7 @@ const struct FColor UAudioModulationStyle::GetPatchColor()
 
 
 // Function AudioModulation.AudioModulationDestination.ClearModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -168,7 +168,7 @@ bool UAudioModulationDestination::ClearModulator()
 
 
 // Function AudioModulation.AudioModulationDestination.SetModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class USoundModulatorBase*        InModulator                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -196,7 +196,7 @@ bool UAudioModulationDestination::SetModulator(const class USoundModulatorBase* 
 
 
 // Function AudioModulation.AudioModulationDestination.GetModulator
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class USoundModulatorBase*        ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -221,7 +221,7 @@ const class USoundModulatorBase* UAudioModulationDestination::GetModulator() con
 
 
 // Function AudioModulation.AudioModulationDestination.GetValue
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -246,7 +246,7 @@ float UAudioModulationDestination::GetValue() const
 
 
 // Function AudioModulation.AudioModulationStatics.ActivateBus
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundControlBus*                 Bus                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -273,7 +273,7 @@ void UAudioModulationStatics::ActivateBus(const class UObject* WorldContextObjec
 
 
 // Function AudioModulation.AudioModulationStatics.ActivateBusMix
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundControlBusMix*              Mix                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -300,7 +300,7 @@ void UAudioModulationStatics::ActivateBusMix(const class UObject* WorldContextOb
 
 
 // Function AudioModulation.AudioModulationStatics.ActivateGenerator
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundModulationGenerator*        Generator                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -327,7 +327,7 @@ void UAudioModulationStatics::ActivateGenerator(const class UObject* WorldContex
 
 
 // Function AudioModulation.AudioModulationStatics.ClearAllGlobalBusMixValues
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   FadeTime                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -354,7 +354,7 @@ void UAudioModulationStatics::ClearAllGlobalBusMixValues(const class UObject* Wo
 
 
 // Function AudioModulation.AudioModulationStatics.ClearGlobalBusMixValue
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundControlBus*                 Bus                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -383,7 +383,7 @@ void UAudioModulationStatics::ClearGlobalBusMixValue(const class UObject* WorldC
 
 
 // Function AudioModulation.AudioModulationStatics.CreateADEnvelopeGenerator
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -415,7 +415,7 @@ class USoundModulationGeneratorADEnvelope* UAudioModulationStatics::CreateADEnve
 
 
 // Function AudioModulation.AudioModulationStatics.CreateBus
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -449,15 +449,17 @@ class USoundControlBus* UAudioModulationStatics::CreateBus(class UObject* WorldC
 
 
 // Function AudioModulation.AudioModulationStatics.CreateBusMix
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FSoundControlBusMixStage>&Stages                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// bool                                    Activate                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    Activate                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  Duration                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bRetriggerOnActivation                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundControlBusMix*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class USoundControlBusMix* UAudioModulationStatics::CreateBusMix(class UObject* WorldContextObject, class FName Name_0, const TArray<struct FSoundControlBusMixStage>& Stages, bool Activate)
+class USoundControlBusMix* UAudioModulationStatics::CreateBusMix(class UObject* WorldContextObject, class FName Name_0, const TArray<struct FSoundControlBusMixStage>& Stages, bool Activate, double Duration, bool bRetriggerOnActivation)
 {
 	static class UFunction* Func = nullptr;
 
@@ -470,6 +472,8 @@ class USoundControlBusMix* UAudioModulationStatics::CreateBusMix(class UObject* 
 	Parms.Name_0 = Name_0;
 	Parms.Stages = std::move(Stages);
 	Parms.Activate = Activate;
+	Parms.Duration = Duration;
+	Parms.bRetriggerOnActivation = bRetriggerOnActivation;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -483,7 +487,7 @@ class USoundControlBusMix* UAudioModulationStatics::CreateBusMix(class UObject* 
 
 
 // Function AudioModulation.AudioModulationStatics.CreateBusMixFromValue
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -523,7 +527,7 @@ class USoundControlBusMix* UAudioModulationStatics::CreateBusMixFromValue(const 
 
 
 // Function AudioModulation.AudioModulationStatics.CreateBusMixStage
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundControlBus*                 Bus                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -559,7 +563,7 @@ struct FSoundControlBusMixStage UAudioModulationStatics::CreateBusMixStage(const
 
 
 // Function AudioModulation.AudioModulationStatics.CreateEnvelopeFollowerGenerator
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -591,7 +595,7 @@ class USoundModulationGeneratorEnvelopeFollower* UAudioModulationStatics::Create
 
 
 // Function AudioModulation.AudioModulationStatics.CreateLFOGenerator
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -623,7 +627,7 @@ class USoundModulationGeneratorLFO* UAudioModulationStatics::CreateLFOGenerator(
 
 
 // Function AudioModulation.AudioModulationStatics.CreateModulationDestination
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -655,7 +659,7 @@ class UAudioModulationDestination* UAudioModulationStatics::CreateModulationDest
 
 
 // Function AudioModulation.AudioModulationStatics.CreateModulationParameter
-// (Final, Native, Static, Public)
+// (Final, RequiredAPI, Native, Static, Public)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -689,7 +693,7 @@ class USoundModulationParameter* UAudioModulationStatics::CreateModulationParame
 
 
 // Function AudioModulation.AudioModulationStatics.DeactivateAllBusMixes
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -714,7 +718,7 @@ void UAudioModulationStatics::DeactivateAllBusMixes(const class UObject* WorldCo
 
 
 // Function AudioModulation.AudioModulationStatics.DeactivateBus
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundControlBus*                 Bus                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -741,7 +745,7 @@ void UAudioModulationStatics::DeactivateBus(const class UObject* WorldContextObj
 
 
 // Function AudioModulation.AudioModulationStatics.DeactivateBusMix
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundControlBusMix*              Mix                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -768,7 +772,7 @@ void UAudioModulationStatics::DeactivateBusMix(const class UObject* WorldContext
 
 
 // Function AudioModulation.AudioModulationStatics.DeactivateGenerator
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundModulationGenerator*        Generator                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -795,7 +799,7 @@ void UAudioModulationStatics::DeactivateGenerator(const class UObject* WorldCont
 
 
 // Function AudioModulation.AudioModulationStatics.GetModulatorsFromDestination
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FSoundModulationDestinationSettings&Destination                                            (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // TSet<class USoundModulatorBase*>        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
@@ -823,7 +827,7 @@ TSet<class USoundModulatorBase*> UAudioModulationStatics::GetModulatorsFromDesti
 
 
 // Function AudioModulation.AudioModulationStatics.GetModulatorValue
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundModulatorBase*              Modulator                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -853,7 +857,7 @@ float UAudioModulationStatics::GetModulatorValue(const class UObject* WorldConte
 
 
 // Function AudioModulation.AudioModulationStatics.IsControlBusMixActive
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundControlBusMix*              Mix                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -883,7 +887,7 @@ bool UAudioModulationStatics::IsControlBusMixActive(const class UObject* WorldCo
 
 
 // Function AudioModulation.AudioModulationStatics.LoadMixFromProfile
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundControlBusMix*              Mix                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -917,7 +921,7 @@ TArray<struct FSoundControlBusMixStage> UAudioModulationStatics::LoadMixFromProf
 
 
 // Function AudioModulation.AudioModulationStatics.SaveMixToProfile
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundControlBusMix*              Mix                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -946,7 +950,7 @@ void UAudioModulationStatics::SaveMixToProfile(const class UObject* WorldContext
 
 
 // Function AudioModulation.AudioModulationStatics.SetGlobalBusMixValue
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundControlBus*                 Bus                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -977,14 +981,16 @@ void UAudioModulationStatics::SetGlobalBusMixValue(const class UObject* WorldCon
 
 
 // Function AudioModulation.AudioModulationStatics.UpdateMix
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundControlBusMix*              Mix                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FSoundControlBusMixStage>&Stages                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// float                                   FadeTime                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   FadeTime                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  Duration                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bRetriggerOnActivation                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAudioModulationStatics::UpdateMix(const class UObject* WorldContextObject, class USoundControlBusMix* Mix, const TArray<struct FSoundControlBusMixStage>& Stages, float FadeTime)
+void UAudioModulationStatics::UpdateMix(const class UObject* WorldContextObject, class USoundControlBusMix* Mix, const TArray<struct FSoundControlBusMixStage>& Stages, float FadeTime, double Duration, bool bRetriggerOnActivation)
 {
 	static class UFunction* Func = nullptr;
 
@@ -997,6 +1003,8 @@ void UAudioModulationStatics::UpdateMix(const class UObject* WorldContextObject,
 	Parms.Mix = Mix;
 	Parms.Stages = std::move(Stages);
 	Parms.FadeTime = FadeTime;
+	Parms.Duration = Duration;
+	Parms.bRetriggerOnActivation = bRetriggerOnActivation;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1008,7 +1016,7 @@ void UAudioModulationStatics::UpdateMix(const class UObject* WorldContextObject,
 
 
 // Function AudioModulation.AudioModulationStatics.UpdateMixByFilter
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundControlBusMix*              Mix                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1045,7 +1053,7 @@ void UAudioModulationStatics::UpdateMixByFilter(const class UObject* WorldContex
 
 
 // Function AudioModulation.AudioModulationStatics.UpdateMixFromObject
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundControlBusMix*              Mix                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1074,7 +1082,7 @@ void UAudioModulationStatics::UpdateMixFromObject(const class UObject* WorldCont
 
 
 // Function AudioModulation.AudioModulationStatics.UpdateModulator
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundModulatorBase*              Modulator                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

@@ -222,7 +222,7 @@ void UW_Button_Altar_Blessing_C::Tick(const struct FGeometry& MyGeometry, float 
 
 
 // Function W_Button_Altar_Blessing.W_Button_Altar_Blessing_C.TransHovered
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UW_Button_Altar_Blessing_C::TransHovered()
 {
@@ -236,7 +236,7 @@ void UW_Button_Altar_Blessing_C::TransHovered()
 
 
 // Function W_Button_Altar_Blessing.W_Button_Altar_Blessing_C.TransUnHovered
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UW_Button_Altar_Blessing_C::TransUnHovered()
 {

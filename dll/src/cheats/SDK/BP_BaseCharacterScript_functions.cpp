@@ -224,14 +224,13 @@ void UBP_BaseCharacterScript_C::OnRevivedCastStarted_Event(class ARPlayerPawn* R
 // Function BP_BaseCharacterScript.BP_BaseCharacterScript_C.SpawnDamageTakenSFX
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   PlatingLost                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Mask                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector_NetQuantize&       HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  DamageNormalized                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  CurrentHealthNormalized                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  BarrierDamage                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_BaseCharacterScript_C::SpawnDamageTakenSFX(int32 PlatingLost, int32 Mask, const struct FVector_NetQuantize& HitLocation, double DamageNormalized, double CurrentHealthNormalized, double BarrierDamage)
+void UBP_BaseCharacterScript_C::SpawnDamageTakenSFX(int32 Mask, const struct FVector_NetQuantize& HitLocation, double DamageNormalized, double CurrentHealthNormalized, double BarrierDamage)
 {
 	static class UFunction* Func = nullptr;
 
@@ -240,7 +239,6 @@ void UBP_BaseCharacterScript_C::SpawnDamageTakenSFX(int32 PlatingLost, int32 Mas
 
 	Params::BP_BaseCharacterScript_C_SpawnDamageTakenSFX Parms{};
 
-	Parms.PlatingLost = PlatingLost;
 	Parms.Mask = Mask;
 	Parms.HitLocation = std::move(HitLocation);
 	Parms.DamageNormalized = DamageNormalized;

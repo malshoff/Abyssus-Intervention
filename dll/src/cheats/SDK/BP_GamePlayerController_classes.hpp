@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
 
@@ -19,107 +20,104 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_GamePlayerController.BP_GamePlayerController_C
-// 0x00A8 (0x0CF8 - 0x0C50)
+// 0x0098 (0x0BD8 - 0x0B40)
 class ABP_GamePlayerController_C final : public ARGamePlayerController
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UUserWidget*                            DebugMenuRef;                                      // 0x0C58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           SessionPingTimer;                                  // 0x0C60(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TSoftClassPtr<class UClass>                   SoftDebugMenuClass;                                // 0x0C68(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, HasGetValueTypeHash)
-	TSoftClassPtr<class UClass>                   SoftPickupableCharmClass;                          // 0x0C90(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, HasGetValueTypeHash)
-	TSoftClassPtr<class UClass>                   SoftPickupableMutatorClass;                        // 0x0CB8(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, HasGetValueTypeHash)
-	class UUserWidget*                            TabMenuWidget;                                     // 0x0CE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CosmeticRefreshTimer;                              // 0x0CE8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         CosmicRefreshCount;                                // 0x0CF0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CosmicRefreshMaxAttempts;                          // 0x0CF4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UUserWidget*                            DebugMenuRef;                                      // 0x0B48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           SessionPingTimer;                                  // 0x0B50(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   SoftDebugMenuClass;                                // 0x0B58(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   SoftPickupableCharmClass;                          // 0x0B80(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   SoftPickupableMutatorClass;                        // 0x0BA8(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, HasGetValueTypeHash)
+	class UUserWidget*                            TabMenuWidget;                                     // 0x0BD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void VoteToProceed_Server();
-	void VoteToProceed();
-	void SwapStatCharmMutator(class URGCharacterStatCharmScript* StatCharmMutator, class ARPickupableItem* OldStatCharmActor, const struct FTransform& SpawnTransform, ERewardRarity NewRarity, const TArray<struct FStatCharmStat>& NewMutatorStats);
-	void SwapPickupableMutator_Server(class URMutatorPrimaryAsset* MutatorAsset, int32 MutatorRank, class ARPickupableMutator* PickupableMutator, const struct FMutatorContainer& AttachedMutators);
-	void SwapPickupableMutator(class URMutatorPrimaryAsset* MutatorAsset, int32 MutatorRank, class ARPickupableMutator* PickupableMutator, const struct FMutatorContainer& AttachedMutators);
-	void SwapPickupableCharm_Server(class URMutatorPrimaryAsset* MutatorAsset, int32 Rank, class ARPickupableMutator* PickupableMutator);
-	void SwapPickupableCharm(class URMutatorPrimaryAsset* MutatorAsset, int32 MutatorRank, class ARPickupableMutator* PickupableMutator);
-	void StopWaitingForMe_Server_BP();
-	void StopWaitingForMe();
-	void StatCharm_SwapStatCharm_Server(class URGCharacterStatCharmScript* StatCharmMutatorRef, class ARPickupableItem* OldStatCharmActorRef, const struct FTransform& SpawnTransform, const ERewardRarity NewRarity, const TArray<struct FStatCharmStat>& NewMutatorStats);
-	void StartWaitingForPlayersLobby();
-	void StartWaitingForPlayers_Server();
-	void StartWaitingForPlayers_Lobby_Server_BP();
-	void StartWaitingForPlayers();
-	void StartWaitingForPlayer_ClientBP();
-	void StartWaitingForPlayer_Client();
-	void RunPauseBehavior();
-	void RestartCosmeticsTempTimer();
-	void ReceiveBeginPlay();
-	void PlayEmoteSongImplementation(const class USoundBase* EmoteSong);
-	void OnTabKeyUp();
-	void OnTabKeyDown();
-	void OnPushDeathScreen();
-	void OnPlayerInteract_Event(class AActor* ActorInteractedWith);
-	void OnPlayerDroppedMutator_Event(class ARPlayerController* RPlayerController, class URMutatorPrimaryAsset* RMutatorPrimaryAsset, const int32 Rank);
-	void OnNotifyEnd_07F3ECF340BD53455BEFB880D891CAE9(class FName NotifyName);
-	void OnNotifyBegin_07F3ECF340BD53455BEFB880D891CAE9(class FName NotifyName);
-	void OnMenuWasClosed(class UWidget_CommonPauseMenu_C* PauseMenuReference);
-	void OnLevelChanged_Event();
-	void OnInterrupted_07F3ECF340BD53455BEFB880D891CAE9(class FName NotifyName);
-	void OnDealtDamage(class ARPawnBase* Player_0, const struct FDamageCombatEvent& DamageEventData);
-	void OnCompleted_07F3ECF340BD53455BEFB880D891CAE9(class FName NotifyName);
-	void OnBlendOut_07F3ECF340BD53455BEFB880D891CAE9(class FName NotifyName);
-	void K2_PushGameOverScreen();
-	void IsCharmMutator(class URMutatorPrimaryAsset* MutatorPA, bool* Value);
-	void InpActEvt_IA_ShowExtendedInfo_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_ShowExtendedInfo_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_Proceed_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_PauseMenu_K2Node_EnhancedInputActionEvent_7(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_KillPlayer_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_FocusChat_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_EmoteWheel_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_DebugMenu_K2Node_EnhancedInputActionEvent_6(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InitializeTabMenu();
-	void GetDropItemLoc(struct FTransform* Transform);
-	void ExecuteUbergraph_BP_GamePlayerController(int32 EntryPoint);
-	void DebugToggleInvulnerability();
-	void DebugTeleportPlayer();
-	void DebugRefillPlating_Server();
-	void DebugRefillBarrier_Server();
-	void DebugRefillArmor_Server();
-	void DebugKillPlayer_Server();
-	void DebugHealPlayer_Server();
-	void DebugGainMaxPlating_Server();
-	void DebugDamagePlayer_Server();
-	void DebugApplyDotPlayer_Server();
-	void CanOpenTabMenu(bool* Value);
-	void BPVoteToProceedPortal_Server();
-	void BPStopWeaponFire();
-	void BPSpawnSwappedCharm(class URMutatorPrimaryAsset* MutatorAsset, const int32 Rank);
+	void ActivatePlayerEmoteBySlotIndex(int32 SlotIndex);
 	void BPPlayEmoteSong(const class USoundBase* EmoteSong);
-	void ApplyAndRefreshFrame();
+	void BPSpawnSwappedCharm(class URMutatorPrimaryAsset* MutatorAsset);
+	void BPStopWeaponFire();
+	void BPVoteToProceedPortal_Server();
+	void CanOpenTabMenu(bool* Value);
+	void DebugAddSyringe_Server();
+	void DebugApplyDotPlayer_Server();
+	void DebugDamagePlayer_Server();
+	void DebugHealPlayer_Server();
+	void DebugKillPlayer_Server();
+	void DebugRefillArmor_Server();
+	void DebugRefillBarrier_Server();
+	void DebugTeleportPlayer();
+	void DebugToggleInvulnerability();
+	void ExecuteUbergraph_BP_GamePlayerController(int32 EntryPoint);
+	void GetDropItemLoc(struct FTransform* Transform);
+	void InitializeTabMenu();
+	void InpActEvt_IA_DebugMenu_K2Node_EnhancedInputActionEvent_10(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Emote1_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Emote2_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Emote3_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Emote4_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_EmoteWheel_K2Node_EnhancedInputActionEvent_4(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_FocusChat_K2Node_EnhancedInputActionEvent_9(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_KillPlayer_K2Node_EnhancedInputActionEvent_8(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_PauseMenu_K2Node_EnhancedInputActionEvent_11(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Proceed_K2Node_EnhancedInputActionEvent_5(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_ShowExtendedInfo_K2Node_EnhancedInputActionEvent_6(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_ShowExtendedInfo_K2Node_EnhancedInputActionEvent_7(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void IsCharmMutator(class URMutatorPrimaryAsset* MutatorPA, bool* Value);
+	void K2_PushGameOverScreen();
+	void OnBlendOut_07F3ECF340BD53455BEFB880D891CAE9(class FName NotifyName);
+	void OnCompleted_07F3ECF340BD53455BEFB880D891CAE9(class FName NotifyName);
+	void OnDealtDamage(class ARPawnBase* Player_0, const struct FDamageCombatEvent& DamageEventData);
+	void OnInterrupted_07F3ECF340BD53455BEFB880D891CAE9(class FName NotifyName);
+	void OnLevelChanged_Event();
+	void OnMenuWasClosed(class UWidget_CommonPauseMenu_C* PauseMenuReference);
+	void OnNotifyBegin_07F3ECF340BD53455BEFB880D891CAE9(class FName NotifyName);
+	void OnNotifyEnd_07F3ECF340BD53455BEFB880D891CAE9(class FName NotifyName);
+	void OnPlayerDroppedMutator_Event(class ARPlayerController* RPlayerController, class URMutatorPrimaryAsset* RMutatorPrimaryAsset, const int32 Rank);
+	void OnPlayerInteract_Event(class AActor* ActorInteractedWith);
+	void OnPromptAnswer_Event(bool ToVoid);
+	void OnPushDeathScreen();
+	void OnTabKeyDown();
+	void OnTabKeyUp();
+	void PlayEmoteSongImplementation(const class USoundBase* EmoteSong);
+	void ProcessEmote_Event(class URCosmeticPrimaryAsset* CosmeticPA);
+	void PromptCorruptedDepthsChoiceScreen();
+	void PromptInfiniteModeChoiceScreen();
+	void ReceiveBeginPlay();
+	void RemovePlayerFromCurrentSegment();
+	void RunPauseBehavior();
+	void StartWaitingForPlayer_Client();
+	void StartWaitingForPlayer_ClientBP();
+	void StartWaitingForPlayers();
+	void StartWaitingForPlayers_Lobby_Server_BP();
+	void StartWaitingForPlayers_Server();
+	void StartWaitingForPlayersLobby();
+	void StatCharm_SwapStatCharm_Server(class URGCharacterStatCharmScript* StatCharmMutatorRef, class ARPickupableItem* OldStatCharmActorRef, const struct FTransform& SpawnTransform, const ERewardRarity NewRarity, const TArray<struct FStatCharmStat>& NewMutatorStats);
+	void StopWaitingForMe();
+	void StopWaitingForMe_Server_BP();
+	void SwapPickupableCharm(class URMutatorPrimaryAsset* MutatorAsset, int32 MutatorRank, class ARPickupableMutator* PickupableMutator);
+	void SwapPickupableCharm_Server(class URMutatorPrimaryAsset* MutatorAsset, class ARPickupableMutator* PickupableMutator);
+	void SwapPickupableMutator(class URMutatorPrimaryAsset* MutatorAsset, int32 MutatorRank, class ARPickupableMutator* PickupableMutator, const struct FMutatorContainer& AttachedMutators);
+	void SwapPickupableMutator_Server(class URMutatorPrimaryAsset* MutatorAsset, int32 MutatorRank, class ARPickupableMutator* PickupableMutator, const struct FMutatorContainer& AttachedMutators);
+	void SwapStatCharmMutator(class URGCharacterStatCharmScript* StatCharmMutator, class ARPickupableItem* OldStatCharmActor, const struct FTransform& SpawnTransform, ERewardRarity NewRarity, const TArray<struct FStatCharmStat>& NewMutatorStats);
+	void VoteToProceed();
+	void VoteToProceed_Server();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_GamePlayerController_C">();
+		BP_STATIC_CLASS_IMPL("BP_GamePlayerController_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_GamePlayerController_C")
 	}
 	static class ABP_GamePlayerController_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_GamePlayerController_C>();
 	}
 };
-static_assert(alignof(ABP_GamePlayerController_C) == 0x000008, "Wrong alignment on ABP_GamePlayerController_C");
-static_assert(sizeof(ABP_GamePlayerController_C) == 0x000CF8, "Wrong size on ABP_GamePlayerController_C");
-static_assert(offsetof(ABP_GamePlayerController_C, UberGraphFrame) == 0x000C50, "Member 'ABP_GamePlayerController_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_GamePlayerController_C, DebugMenuRef) == 0x000C58, "Member 'ABP_GamePlayerController_C::DebugMenuRef' has a wrong offset!");
-static_assert(offsetof(ABP_GamePlayerController_C, SessionPingTimer) == 0x000C60, "Member 'ABP_GamePlayerController_C::SessionPingTimer' has a wrong offset!");
-static_assert(offsetof(ABP_GamePlayerController_C, SoftDebugMenuClass) == 0x000C68, "Member 'ABP_GamePlayerController_C::SoftDebugMenuClass' has a wrong offset!");
-static_assert(offsetof(ABP_GamePlayerController_C, SoftPickupableCharmClass) == 0x000C90, "Member 'ABP_GamePlayerController_C::SoftPickupableCharmClass' has a wrong offset!");
-static_assert(offsetof(ABP_GamePlayerController_C, SoftPickupableMutatorClass) == 0x000CB8, "Member 'ABP_GamePlayerController_C::SoftPickupableMutatorClass' has a wrong offset!");
-static_assert(offsetof(ABP_GamePlayerController_C, TabMenuWidget) == 0x000CE0, "Member 'ABP_GamePlayerController_C::TabMenuWidget' has a wrong offset!");
-static_assert(offsetof(ABP_GamePlayerController_C, CosmeticRefreshTimer) == 0x000CE8, "Member 'ABP_GamePlayerController_C::CosmeticRefreshTimer' has a wrong offset!");
-static_assert(offsetof(ABP_GamePlayerController_C, CosmicRefreshCount) == 0x000CF0, "Member 'ABP_GamePlayerController_C::CosmicRefreshCount' has a wrong offset!");
-static_assert(offsetof(ABP_GamePlayerController_C, CosmicRefreshMaxAttempts) == 0x000CF4, "Member 'ABP_GamePlayerController_C::CosmicRefreshMaxAttempts' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_GamePlayerController_C;
 
 }
 

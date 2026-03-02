@@ -11,24 +11,21 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function Widget_OffScreenIndication_Door.Widget_OffScreenIndication_Door_C.ExecuteUbergraph_Widget_OffScreenIndication_Door
-// 0x0010 (0x0010 - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 struct Widget_OffScreenIndication_Door_C_ExecuteUbergraph_Widget_OffScreenIndication_Door final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0004(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_OffScreenIndication_Door_C_ExecuteUbergraph_Widget_OffScreenIndication_Door) == 0x000008, "Wrong alignment on Widget_OffScreenIndication_Door_C_ExecuteUbergraph_Widget_OffScreenIndication_Door");
-static_assert(sizeof(Widget_OffScreenIndication_Door_C_ExecuteUbergraph_Widget_OffScreenIndication_Door) == 0x000010, "Wrong size on Widget_OffScreenIndication_Door_C_ExecuteUbergraph_Widget_OffScreenIndication_Door");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_ExecuteUbergraph_Widget_OffScreenIndication_Door, EntryPoint) == 0x000000, "Member 'Widget_OffScreenIndication_Door_C_ExecuteUbergraph_Widget_OffScreenIndication_Door::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_ExecuteUbergraph_Widget_OffScreenIndication_Door, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'Widget_OffScreenIndication_Door_C_ExecuteUbergraph_Widget_OffScreenIndication_Door::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_OffScreenIndication_Door_C_ExecuteUbergraph_Widget_OffScreenIndication_Door;
 
 // Function Widget_OffScreenIndication_Door.Widget_OffScreenIndication_Door_C.UpdateTarget
 // 0x0040 (0x0040 - 0x0000)
@@ -43,14 +40,7 @@ public:
 	struct FVector                                DangerousLocation;                                 // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetGameTimeInSeconds_ReturnValue;         // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_OffScreenIndication_Door_C_UpdateTarget) == 0x000008, "Wrong alignment on Widget_OffScreenIndication_Door_C_UpdateTarget");
-static_assert(sizeof(Widget_OffScreenIndication_Door_C_UpdateTarget) == 0x000040, "Wrong size on Widget_OffScreenIndication_Door_C_UpdateTarget");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTarget, TargetActor_0) == 0x000000, "Member 'Widget_OffScreenIndication_Door_C_UpdateTarget::TargetActor_0' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTarget, DangerousRadius) == 0x000008, "Member 'Widget_OffScreenIndication_Door_C_UpdateTarget::DangerousRadius' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTarget, CloseRadius) == 0x000010, "Member 'Widget_OffScreenIndication_Door_C_UpdateTarget::CloseRadius' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTarget, CriticalDanger) == 0x000018, "Member 'Widget_OffScreenIndication_Door_C_UpdateTarget::CriticalDanger' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTarget, DangerousLocation) == 0x000020, "Member 'Widget_OffScreenIndication_Door_C_UpdateTarget::DangerousLocation' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTarget, CallFunc_GetGameTimeInSeconds_ReturnValue) == 0x000038, "Member 'Widget_OffScreenIndication_Door_C_UpdateTarget::CallFunc_GetGameTimeInSeconds_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_OffScreenIndication_Door_C_UpdateTarget;
 
 // Function Widget_OffScreenIndication_Door.Widget_OffScreenIndication_Door_C.UpdateTransform
 // 0x01B8 (0x01B8 - 0x0000)
@@ -94,40 +84,7 @@ public:
 	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetRenderTransformAngle_Angle_ImplicitCast; // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_OffScreenIndication_Door_C_UpdateTransform) == 0x000008, "Wrong alignment on Widget_OffScreenIndication_Door_C_UpdateTransform");
-static_assert(sizeof(Widget_OffScreenIndication_Door_C_UpdateTransform) == 0x0001B8, "Wrong size on Widget_OffScreenIndication_Door_C_UpdateTransform");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, TargetLocation) == 0x000000, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::TargetLocation' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_GetOwningPlayer_ReturnValue) == 0x000018, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_ProjectWorldToScreen_ScreenPosition) == 0x000020, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_ProjectWorldToScreen_ScreenPosition' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_ProjectWorldToScreen_ReturnValue) == 0x000030, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_ProjectWorldToScreen_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_IsValid_ReturnValue) == 0x000031, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_Not_PreBool_ReturnValue) == 0x000032, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000038, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000050, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000058, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_GetOwningPlayerPawn_ReturnValue_1) == 0x000068, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_GetOwningPlayerPawn_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_GetCrosshairWorldTransform_WorldLocation) == 0x000070, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_GetCrosshairWorldTransform_WorldLocation' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_GetCrosshairWorldTransform_WorldDirection) == 0x000088, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_GetCrosshairWorldTransform_WorldDirection' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x0000A0, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_Multiply_VectorVector_ReturnValue) == 0x0000B8, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_Subtract_VectorVector_ReturnValue) == 0x0000D0, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_Normal_ReturnValue) == 0x0000E8, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_Normal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_Normal_ReturnValue_1) == 0x000100, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_Normal_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_Conv_VectorToRotator_ReturnValue) == 0x000118, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_Conv_VectorToRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x000130, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_BreakRotator_Roll) == 0x000148, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_BreakRotator_Pitch) == 0x00014C, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_BreakRotator_Yaw) == 0x000150, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_Normal_ReturnValue_2) == 0x000158, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_Normal_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_Conv_VectorToRotator_ReturnValue_1) == 0x000170, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_Conv_VectorToRotator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_BreakRotator_Roll_1) == 0x000188, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_BreakRotator_Pitch_1) == 0x00018C, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_BreakRotator_Yaw_1) == 0x000190, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000198, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x0001A0, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x0001A8, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_OffScreenIndication_Door_C_UpdateTransform, CallFunc_SetRenderTransformAngle_Angle_ImplicitCast) == 0x0001B0, "Member 'Widget_OffScreenIndication_Door_C_UpdateTransform::CallFunc_SetRenderTransformAngle_Angle_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_OffScreenIndication_Door_C_UpdateTransform;
 
 }
 

@@ -10,97 +10,57 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // ScriptStruct ABP_TeslaRifle.ABP_TeslaRifle_C.AnimBlueprintGeneratedConstantData
-// 0x041F (0x0420 - 0x0001)
+// 0x0447 (0x0448 - 0x0001)
 struct ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData final : public FAnimBlueprintConstantData
 {
 public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   __NameProperty_58;                                 // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESequenceEvalReinit                           __ByteProperty_59;                                 // 0x000C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_59;                                 // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESequenceEvalReinit                           __ByteProperty_60;                                 // 0x000C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         __IntProperty_60;                                  // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         __IntProperty_61;                                  // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimSequenceBase*                      __AnimSequenceBase_61;                             // 0x0018(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	struct FAnimNodeFunctionRef                   __StructProperty_62;                               // 0x0020(0x0020)(BlueprintVisible, NoDestructor)
-	bool                                          __BoolProperty_63;                                 // 0x0040(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequenceBase*                      __AnimSequenceBase_62;                             // 0x0018(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FAnimNodeFunctionRef                   __StructProperty_63;                               // 0x0020(0x0020)(BlueprintVisible, NoDestructor)
+	bool                                          __BoolProperty_64;                                 // 0x0040(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         __FloatProperty_64;                                // 0x0044(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FInputScaleBiasClampConstants          __StructProperty_65;                               // 0x0048(0x002C)(BlueprintVisible, NoDestructor)
-	float                                         __FloatProperty_66;                                // 0x0074(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_67;                                 // 0x0078(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAnimSyncMethod                               __EnumProperty_68;                                 // 0x0079(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAnimGroupRole                                __ByteProperty_69;                                 // 0x007A(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_65;                                // 0x0044(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FInputScaleBiasClampConstants          __StructProperty_66;                               // 0x0048(0x002C)(BlueprintVisible, NoDestructor)
+	float                                         __FloatProperty_67;                                // 0x0074(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAnimSyncMethod                               __EnumProperty_68;                                 // 0x0078(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_69;                                 // 0x0079(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAnimGroupRole                                __ByteProperty_70;                                 // 0x007A(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7B[0x1];                                       // 0x007B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   __NameProperty_70;                                 // 0x007C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_71;                                 // 0x007C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimSubsystem_PropertyAccess          AnimBlueprintExtension_PropertyAccess;             // 0x0088(0x0080)()
-	struct FAnimSubsystem_Base                    AnimBlueprintExtension_Base;                       // 0x0108(0x0018)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Root;                           // 0x0120(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyBone_3;                   // 0x0150(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ComponentToLocalSpace;          // 0x0180(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalToComponentSpace;          // 0x01B0(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyBone_2;                   // 0x01E0(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_1;                         // 0x0210(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyMeshSpaceAdditive;         // 0x0240(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyBone_1;                   // 0x0270(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyBone;                     // 0x02A0(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot;                           // 0x02D0(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequenceEvaluator;              // 0x0300(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose;                 // 0x0330(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_1;                // 0x0360(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose;                  // 0x0390(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend;               // 0x03C0(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer;                 // 0x03F0(0x0030)()
+	struct FAnimSubsystem_Base                    AnimBlueprintExtension_Base;                       // 0x0108(0x0040)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Root;                           // 0x0148(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyBone_3;                   // 0x0178(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ComponentToLocalSpace;          // 0x01A8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalToComponentSpace;          // 0x01D8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyBone_2;                   // 0x0208(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_1;                         // 0x0238(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyMeshSpaceAdditive;         // 0x0268(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyBone_1;                   // 0x0298(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyBone;                     // 0x02C8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot;                           // 0x02F8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequenceEvaluator;              // 0x0328(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose;                 // 0x0358(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_1;                // 0x0388(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose;                  // 0x03B8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend;               // 0x03E8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer;                 // 0x0418(0x0030)()
 };
-static_assert(alignof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData) == 0x000420, "Wrong size on ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, __NameProperty_58) == 0x000004, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::__NameProperty_58' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, __ByteProperty_59) == 0x00000C, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::__ByteProperty_59' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, __IntProperty_60) == 0x000010, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::__IntProperty_60' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, __AnimSequenceBase_61) == 0x000018, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::__AnimSequenceBase_61' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, __StructProperty_62) == 0x000020, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::__StructProperty_62' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, __BoolProperty_63) == 0x000040, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::__BoolProperty_63' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, __FloatProperty_64) == 0x000044, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::__FloatProperty_64' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, __StructProperty_65) == 0x000048, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::__StructProperty_65' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, __FloatProperty_66) == 0x000074, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::__FloatProperty_66' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, __BoolProperty_67) == 0x000078, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::__BoolProperty_67' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, __EnumProperty_68) == 0x000079, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::__EnumProperty_68' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, __ByteProperty_69) == 0x00007A, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::__ByteProperty_69' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, __NameProperty_70) == 0x00007C, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::__NameProperty_70' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_PropertyAccess) == 0x000088, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_Base) == 0x000108, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root) == 0x000120, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ModifyBone_3) == 0x000150, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ModifyBone_3' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ComponentToLocalSpace) == 0x000180, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LocalToComponentSpace) == 0x0001B0, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ModifyBone_2) == 0x0001E0, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ModifyBone_2' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_1) == 0x000210, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_1' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyMeshSpaceAdditive) == 0x000240, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyMeshSpaceAdditive' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ModifyBone_1) == 0x000270, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ModifyBone_1' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ModifyBone) == 0x0002A0, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ModifyBone' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot) == 0x0002D0, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequenceEvaluator) == 0x000300, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequenceEvaluator' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose) == 0x000330, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_1) == 0x000360, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose) == 0x000390, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend) == 0x0003C0, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer) == 0x0003F0, "Member 'ABP_TeslaRifle::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer' has a wrong offset!");
-
-// ScriptStruct ABP_TeslaRifle.ABP_TeslaRifle_C.AnimBlueprintGeneratedMutableData
-// 0x0000 (0x0001 - 0x0001)
-struct ABP_TeslaRifle::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-};
-static_assert(alignof(ABP_TeslaRifle::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_TeslaRifle::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(ABP_TeslaRifle::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_TeslaRifle::FAnimBlueprintGeneratedMutableData");
+DUMPER7_ASSERTS_ABP_TeslaRifle__FAnimBlueprintGeneratedConstantData;
 
 }
 

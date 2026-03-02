@@ -480,6 +480,26 @@ void UWidget_CommonContinueScreen_C::JoinSession(const class FString& SessionId)
 }
 
 
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.LoadGameFinished
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URSaveGame*                       SaveGame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonContinueScreen_C::LoadGameFinished(class URSaveGame* SaveGame)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "LoadGameFinished");
+
+	Params::Widget_CommonContinueScreen_C_LoadGameFinished Parms{};
+
+	Parms.SaveGame = SaveGame;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.LoginIfEOS
 // (BlueprintCallable, BlueprintEvent)
 
@@ -523,6 +543,26 @@ void UWidget_CommonContinueScreen_C::OnCurrentSaveGameChanged(class URSaveGame* 
 	Params::Widget_CommonContinueScreen_C_OnCurrentSaveGameChanged Parms{};
 
 	Parms.CurrentSaveGame = CurrentSaveGame;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonContinueScreen.Widget_CommonContinueScreen_C.OnLoadFinished
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URSaveGame*                       SaveGame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonContinueScreen_C::OnLoadFinished(class URSaveGame* SaveGame)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonContinueScreen_C", "OnLoadFinished");
+
+	Params::Widget_CommonContinueScreen_C_OnLoadFinished Parms{};
+
+	Parms.SaveGame = SaveGame;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

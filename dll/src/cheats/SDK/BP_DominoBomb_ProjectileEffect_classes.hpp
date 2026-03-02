@@ -18,12 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_DominoBomb_ProjectileEffect.BP_DominoBomb_ProjectileEffect_C
-// 0x0018 (0x0108 - 0x00F0)
+// 0x0028 (0x0118 - 0x00F0)
 class UBP_DominoBomb_ProjectileEffect_C final : public URGProjectileEffectScript
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	TArray<class AActor*>                         ActorsToIgnore;                                    // 0x00F8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<struct FHitResult>                     Cached_Hits_In_Detonation;                         // 0x0108(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void ExecuteUbergraph_BP_DominoBomb_ProjectileEffect(int32 EntryPoint);
@@ -35,17 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_DominoBomb_ProjectileEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_DominoBomb_ProjectileEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_DominoBomb_ProjectileEffect_C")
 	}
 	static class UBP_DominoBomb_ProjectileEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_DominoBomb_ProjectileEffect_C>();
 	}
 };
-static_assert(alignof(UBP_DominoBomb_ProjectileEffect_C) == 0x000008, "Wrong alignment on UBP_DominoBomb_ProjectileEffect_C");
-static_assert(sizeof(UBP_DominoBomb_ProjectileEffect_C) == 0x000108, "Wrong size on UBP_DominoBomb_ProjectileEffect_C");
-static_assert(offsetof(UBP_DominoBomb_ProjectileEffect_C, UberGraphFrame) == 0x0000F0, "Member 'UBP_DominoBomb_ProjectileEffect_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_DominoBomb_ProjectileEffect_C, ActorsToIgnore) == 0x0000F8, "Member 'UBP_DominoBomb_ProjectileEffect_C::ActorsToIgnore' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_DominoBomb_ProjectileEffect_C;
 
 }
 

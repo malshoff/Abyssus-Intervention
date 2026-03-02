@@ -132,7 +132,7 @@ void UWidget_CommonInviteMenu_C::Construct()
 
 
 // Function Widget_CommonInviteMenu.Widget_CommonInviteMenu_C.ExecuteUbergraph_Widget_CommonInviteMenu
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

@@ -274,6 +274,20 @@ void UBP_DropShield_CharacterMutator_C::OnNotifyEnd_B6CE43B04BFD94450B0EEC907B5C
 }
 
 
+// Function BP_DropShield_CharacterMutator.BP_DropShield_CharacterMutator_C.OnPlayerFailsafeTeleported
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_DropShield_CharacterMutator_C::OnPlayerFailsafeTeleported()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DropShield_CharacterMutator_C", "OnPlayerFailsafeTeleported");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_DropShield_CharacterMutator.BP_DropShield_CharacterMutator_C.OnSizeMultiplierUpdated
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -345,6 +359,28 @@ void UBP_DropShield_CharacterMutator_C::ToggleWeaponVisibility(bool NewVisible)
 	Params::BP_DropShield_CharacterMutator_C_ToggleWeaponVisibility Parms{};
 
 	Parms.NewVisible = NewVisible;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DropShield_CharacterMutator.BP_DropShield_CharacterMutator_C.UpdateLocationAndSize
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Size                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_DropShield_CharacterMutator_C::UpdateLocationAndSize(const struct FVector& Location, const struct FVector& Size)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DropShield_CharacterMutator_C", "UpdateLocationAndSize");
+
+	Params::BP_DropShield_CharacterMutator_C_UpdateLocationAndSize Parms{};
+
+	Parms.Location = std::move(Location);
+	Parms.Size = std::move(Size);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -34,19 +34,7 @@ public:
 	TDelegate<void(const class FName& Category, const class FName& Function)> K2Node_CreateDelegate_OutputDelegate; // 0x0048(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript) == 0x000008, "Wrong alignment on BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript");
-static_assert(sizeof(BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript) == 0x000060, "Wrong size on BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript");
-static_assert(offsetof(BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript, EntryPoint) == 0x000000, "Member 'BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript, K2Node_Event_OwnerController) == 0x000008, "Member 'BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript::K2Node_Event_OwnerController' has a wrong offset!");
-static_assert(offsetof(BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript, K2Node_Event_ControlledPawn) == 0x000010, "Member 'BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript::K2Node_Event_ControlledPawn' has a wrong offset!");
-static_assert(offsetof(BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript, K2Node_DynamicCast_AsRPawn_Base) == 0x000018, "Member 'BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript, K2Node_CustomEvent_Category) == 0x000024, "Member 'BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript::K2Node_CustomEvent_Category' has a wrong offset!");
-static_assert(offsetof(BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript, K2Node_CustomEvent_Function) == 0x00002C, "Member 'BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript::K2Node_CustomEvent_Function' has a wrong offset!");
-static_assert(offsetof(BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript, CallFunc_GetGScriptCategory_ReturnValue) == 0x000034, "Member 'BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript::CallFunc_GetGScriptCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript, CallFunc_GetGScriptComponent_ReturnValue) == 0x000040, "Member 'BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript::CallFunc_GetGScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript, K2Node_CreateDelegate_OutputDelegate) == 0x000048, "Member 'BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000058, "Member 'BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPTask_RunGScript_C_ExecuteUbergraph_BPTask_RunGScript;
 
 // Function BPTask_RunGScript.BPTask_RunGScript_C.OnFinishExecution
 // 0x0010 (0x0010 - 0x0000)
@@ -56,10 +44,7 @@ public:
 	class FName                                   Category;                                          // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Function_0;                                        // 0x0008(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPTask_RunGScript_C_OnFinishExecution) == 0x000004, "Wrong alignment on BPTask_RunGScript_C_OnFinishExecution");
-static_assert(sizeof(BPTask_RunGScript_C_OnFinishExecution) == 0x000010, "Wrong size on BPTask_RunGScript_C_OnFinishExecution");
-static_assert(offsetof(BPTask_RunGScript_C_OnFinishExecution, Category) == 0x000000, "Member 'BPTask_RunGScript_C_OnFinishExecution::Category' has a wrong offset!");
-static_assert(offsetof(BPTask_RunGScript_C_OnFinishExecution, Function_0) == 0x000008, "Member 'BPTask_RunGScript_C_OnFinishExecution::Function_0' has a wrong offset!");
+DUMPER7_ASSERTS_BPTask_RunGScript_C_OnFinishExecution;
 
 // Function BPTask_RunGScript.BPTask_RunGScript_C.ReceiveExecuteAI
 // 0x0010 (0x0010 - 0x0000)
@@ -69,10 +54,7 @@ public:
 	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPTask_RunGScript_C_ReceiveExecuteAI) == 0x000008, "Wrong alignment on BPTask_RunGScript_C_ReceiveExecuteAI");
-static_assert(sizeof(BPTask_RunGScript_C_ReceiveExecuteAI) == 0x000010, "Wrong size on BPTask_RunGScript_C_ReceiveExecuteAI");
-static_assert(offsetof(BPTask_RunGScript_C_ReceiveExecuteAI, OwnerController) == 0x000000, "Member 'BPTask_RunGScript_C_ReceiveExecuteAI::OwnerController' has a wrong offset!");
-static_assert(offsetof(BPTask_RunGScript_C_ReceiveExecuteAI, ControlledPawn) == 0x000008, "Member 'BPTask_RunGScript_C_ReceiveExecuteAI::ControlledPawn' has a wrong offset!");
+DUMPER7_ASSERTS_BPTask_RunGScript_C_ReceiveExecuteAI;
 
 }
 

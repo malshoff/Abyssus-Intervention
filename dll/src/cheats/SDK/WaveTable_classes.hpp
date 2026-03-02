@@ -35,20 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WaveTableBank">();
+		STATIC_CLASS_IMPL("WaveTableBank")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WaveTableBank")
 	}
 	static class UWaveTableBank* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWaveTableBank>();
 	}
 };
-static_assert(alignof(UWaveTableBank) == 0x000008, "Wrong alignment on UWaveTableBank");
-static_assert(sizeof(UWaveTableBank) == 0x000060, "Wrong size on UWaveTableBank");
-static_assert(offsetof(UWaveTableBank, SampleMode) == 0x000030, "Member 'UWaveTableBank::SampleMode' has a wrong offset!");
-static_assert(offsetof(UWaveTableBank, Resolution) == 0x000031, "Member 'UWaveTableBank::Resolution' has a wrong offset!");
-static_assert(offsetof(UWaveTableBank, SampleRate) == 0x000034, "Member 'UWaveTableBank::SampleRate' has a wrong offset!");
-static_assert(offsetof(UWaveTableBank, bBipolar) == 0x000038, "Member 'UWaveTableBank::bBipolar' has a wrong offset!");
-static_assert(offsetof(UWaveTableBank, Entries) == 0x000040, "Member 'UWaveTableBank::Entries' has a wrong offset!");
+DUMPER7_ASSERTS_UWaveTableBank;
 
 }
 

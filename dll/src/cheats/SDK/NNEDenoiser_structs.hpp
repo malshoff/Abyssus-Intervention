@@ -87,11 +87,7 @@ public:
 	int32                                         ResourceChannel;                                   // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FNNEDenoiserBaseMappingData) == 0x000008, "Wrong alignment on FNNEDenoiserBaseMappingData");
-static_assert(sizeof(FNNEDenoiserBaseMappingData) == 0x000018, "Wrong size on FNNEDenoiserBaseMappingData");
-static_assert(offsetof(FNNEDenoiserBaseMappingData, TensorIndex) == 0x000008, "Member 'FNNEDenoiserBaseMappingData::TensorIndex' has a wrong offset!");
-static_assert(offsetof(FNNEDenoiserBaseMappingData, TensorChannel) == 0x00000C, "Member 'FNNEDenoiserBaseMappingData::TensorChannel' has a wrong offset!");
-static_assert(offsetof(FNNEDenoiserBaseMappingData, ResourceChannel) == 0x000010, "Member 'FNNEDenoiserBaseMappingData::ResourceChannel' has a wrong offset!");
+DUMPER7_ASSERTS_FNNEDenoiserBaseMappingData;
 
 // ScriptStruct NNEDenoiser.NNEDenoiserInputMappingData
 // 0x0008 (0x0020 - 0x0018)
@@ -101,9 +97,7 @@ public:
 	EInputResourceName                            Resource;                                          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FNNEDenoiserInputMappingData) == 0x000008, "Wrong alignment on FNNEDenoiserInputMappingData");
-static_assert(sizeof(FNNEDenoiserInputMappingData) == 0x000020, "Wrong size on FNNEDenoiserInputMappingData");
-static_assert(offsetof(FNNEDenoiserInputMappingData, Resource) == 0x000018, "Member 'FNNEDenoiserInputMappingData::Resource' has a wrong offset!");
+DUMPER7_ASSERTS_FNNEDenoiserInputMappingData;
 
 // ScriptStruct NNEDenoiser.NNEDenoiserOutputMappingData
 // 0x0008 (0x0020 - 0x0018)
@@ -113,9 +107,7 @@ public:
 	EOutputResourceName                           Resource;                                          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FNNEDenoiserOutputMappingData) == 0x000008, "Wrong alignment on FNNEDenoiserOutputMappingData");
-static_assert(sizeof(FNNEDenoiserOutputMappingData) == 0x000020, "Wrong size on FNNEDenoiserOutputMappingData");
-static_assert(offsetof(FNNEDenoiserOutputMappingData, Resource) == 0x000018, "Member 'FNNEDenoiserOutputMappingData::Resource' has a wrong offset!");
+DUMPER7_ASSERTS_FNNEDenoiserOutputMappingData;
 
 // ScriptStruct NNEDenoiser.NNEDenoiserTemporalInputMappingData
 // 0x0008 (0x0020 - 0x0018)
@@ -126,10 +118,7 @@ public:
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         FrameIndex;                                        // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FNNEDenoiserTemporalInputMappingData) == 0x000008, "Wrong alignment on FNNEDenoiserTemporalInputMappingData");
-static_assert(sizeof(FNNEDenoiserTemporalInputMappingData) == 0x000020, "Wrong size on FNNEDenoiserTemporalInputMappingData");
-static_assert(offsetof(FNNEDenoiserTemporalInputMappingData, Resource) == 0x000018, "Member 'FNNEDenoiserTemporalInputMappingData::Resource' has a wrong offset!");
-static_assert(offsetof(FNNEDenoiserTemporalInputMappingData, FrameIndex) == 0x00001C, "Member 'FNNEDenoiserTemporalInputMappingData::FrameIndex' has a wrong offset!");
+DUMPER7_ASSERTS_FNNEDenoiserTemporalInputMappingData;
 
 // ScriptStruct NNEDenoiser.NNEDenoiserTemporalOutputMappingData
 // 0x0008 (0x0020 - 0x0018)
@@ -139,9 +128,7 @@ public:
 	ETemporalOutputResourceName                   Resource;                                          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FNNEDenoiserTemporalOutputMappingData) == 0x000008, "Wrong alignment on FNNEDenoiserTemporalOutputMappingData");
-static_assert(sizeof(FNNEDenoiserTemporalOutputMappingData) == 0x000020, "Wrong size on FNNEDenoiserTemporalOutputMappingData");
-static_assert(offsetof(FNNEDenoiserTemporalOutputMappingData, Resource) == 0x000018, "Member 'FNNEDenoiserTemporalOutputMappingData::Resource' has a wrong offset!");
+DUMPER7_ASSERTS_FNNEDenoiserTemporalOutputMappingData;
 
 // ScriptStruct NNEDenoiser.TilingConfig
 // 0x0010 (0x0010 - 0x0000)
@@ -153,12 +140,7 @@ public:
 	int32                                         MaxSize;                                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MinSize;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTilingConfig) == 0x000004, "Wrong alignment on FTilingConfig");
-static_assert(sizeof(FTilingConfig) == 0x000010, "Wrong size on FTilingConfig");
-static_assert(offsetof(FTilingConfig, Alignment) == 0x000000, "Member 'FTilingConfig::Alignment' has a wrong offset!");
-static_assert(offsetof(FTilingConfig, Overlap) == 0x000004, "Member 'FTilingConfig::Overlap' has a wrong offset!");
-static_assert(offsetof(FTilingConfig, MaxSize) == 0x000008, "Member 'FTilingConfig::MaxSize' has a wrong offset!");
-static_assert(offsetof(FTilingConfig, MinSize) == 0x00000C, "Member 'FTilingConfig::MinSize' has a wrong offset!");
+DUMPER7_ASSERTS_FTilingConfig;
 
 }
 

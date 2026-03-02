@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -70,47 +70,7 @@ public:
 	class UVerticalBoxSlot*                       CallFunc_AddChildToVerticalBox_ReturnValue;        // 0x0100(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class APlayerState*                           K2Node_CustomEvent_PlayerState;                    // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList) == 0x000008, "Wrong alignment on Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList");
-static_assert(sizeof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList) == 0x000110, "Wrong size on Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, EntryPoint) == 0x000000, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, K2Node_MakeStruct_Margin) == 0x000004, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::K2Node_MakeStruct_Margin' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, Temp_int_Array_Index_Variable) == 0x000014, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, K2Node_CreateDelegate_OutputDelegate) == 0x000018, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, Temp_int_Variable) == 0x000028, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, Temp_bool_Variable) == 0x000030, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_Not_PreBool_ReturnValue) == 0x000031, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, K2Node_CreateDelegate_OutputDelegate_1) == 0x000034, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_GetGameState_ReturnValue) == 0x000048, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_CreateInvokeProxyObject_ReturnValue) == 0x000050, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_CreateInvokeProxyObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, K2Node_DynamicCast_AsRGame_State) == 0x000058, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::K2Node_DynamicCast_AsRGame_State' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_IsValid_ReturnValue) == 0x000061, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, K2Node_CreateDelegate_OutputDelegate_2) == 0x000064, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, K2Node_CustomEvent_PlayerState_1) == 0x000078, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::K2Node_CustomEvent_PlayerState_1' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000080, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_GetGameState_ReturnValue_1) == 0x000088, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, Temp_int_Loop_Counter_Variable) == 0x000090, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_Array_Length_ReturnValue) == 0x000094, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, K2Node_DynamicCast_AsRPlayer_State) == 0x000098, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::K2Node_DynamicCast_AsRPlayer_State' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, K2Node_DynamicCast_bSuccess_1) == 0x0000A0, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_Less_IntInt_ReturnValue) == 0x0000A1, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_PlayerStateIsOwningPlayer_IsOwningPlayer) == 0x0000A2, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_PlayerStateIsOwningPlayer_IsOwningPlayer' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000A4, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, K2Node_CreateDelegate_OutputDelegate_3) == 0x0000A8, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_GetChildrenCount_ReturnValue) == 0x0000B8, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_Subtract_IntInt_ReturnValue) == 0x0000BC, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0000C0, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_BooleanAND_ReturnValue) == 0x0000C1, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_GetChildAt_ReturnValue) == 0x0000C8, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, K2Node_DynamicCast_AsWidget_HUDPlayer_List_Entry) == 0x0000D0, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::K2Node_DynamicCast_AsWidget_HUDPlayer_List_Entry' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, K2Node_DynamicCast_bSuccess_2) == 0x0000D8, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, K2Node_CreateDelegate_OutputDelegate_4) == 0x0000DC, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x0000EC, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_GetOwningPlayer_ReturnValue) == 0x0000F0, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_Create_ReturnValue) == 0x0000F8, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, CallFunc_AddChildToVerticalBox_ReturnValue) == 0x000100, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::CallFunc_AddChildToVerticalBox_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList, K2Node_CustomEvent_PlayerState) == 0x000108, "Member 'Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList::K2Node_CustomEvent_PlayerState' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HUDPlayerList_C_ExecuteUbergraph_Widget_HUDPlayerList;
 
 // Function Widget_HUDPlayerList.Widget_HUDPlayerList_C.GameStateIsValid
 // 0x0018 (0x0018 - 0x0000)
@@ -124,13 +84,7 @@ public:
 	bool                                          CallFunc_IsObjectChildOfSoftClass_ReturnValue;     // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HUDPlayerList_C_GameStateIsValid) == 0x000008, "Wrong alignment on Widget_HUDPlayerList_C_GameStateIsValid");
-static_assert(sizeof(Widget_HUDPlayerList_C_GameStateIsValid) == 0x000018, "Wrong size on Widget_HUDPlayerList_C_GameStateIsValid");
-static_assert(offsetof(Widget_HUDPlayerList_C_GameStateIsValid, IsValid) == 0x000000, "Member 'Widget_HUDPlayerList_C_GameStateIsValid::IsValid' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_GameStateIsValid, CallFunc_GetGameState_ReturnValue) == 0x000008, "Member 'Widget_HUDPlayerList_C_GameStateIsValid::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_GameStateIsValid, CallFunc_IsObjectASoftClass_ReturnValue) == 0x000010, "Member 'Widget_HUDPlayerList_C_GameStateIsValid::CallFunc_IsObjectASoftClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_GameStateIsValid, CallFunc_IsObjectChildOfSoftClass_ReturnValue) == 0x000011, "Member 'Widget_HUDPlayerList_C_GameStateIsValid::CallFunc_IsObjectChildOfSoftClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_GameStateIsValid, CallFunc_BooleanOR_ReturnValue) == 0x000012, "Member 'Widget_HUDPlayerList_C_GameStateIsValid::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HUDPlayerList_C_GameStateIsValid;
 
 // Function Widget_HUDPlayerList.Widget_HUDPlayerList_C.OnPlayerJoined
 // 0x0008 (0x0008 - 0x0000)
@@ -139,9 +93,7 @@ struct Widget_HUDPlayerList_C_OnPlayerJoined final
 public:
 	class APlayerState*                           PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HUDPlayerList_C_OnPlayerJoined) == 0x000008, "Wrong alignment on Widget_HUDPlayerList_C_OnPlayerJoined");
-static_assert(sizeof(Widget_HUDPlayerList_C_OnPlayerJoined) == 0x000008, "Wrong size on Widget_HUDPlayerList_C_OnPlayerJoined");
-static_assert(offsetof(Widget_HUDPlayerList_C_OnPlayerJoined, PlayerState) == 0x000000, "Member 'Widget_HUDPlayerList_C_OnPlayerJoined::PlayerState' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HUDPlayerList_C_OnPlayerJoined;
 
 // Function Widget_HUDPlayerList.Widget_HUDPlayerList_C.OnPlayerLeft
 // 0x0008 (0x0008 - 0x0000)
@@ -150,9 +102,7 @@ struct Widget_HUDPlayerList_C_OnPlayerLeft final
 public:
 	class APlayerState*                           PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HUDPlayerList_C_OnPlayerLeft) == 0x000008, "Wrong alignment on Widget_HUDPlayerList_C_OnPlayerLeft");
-static_assert(sizeof(Widget_HUDPlayerList_C_OnPlayerLeft) == 0x000008, "Wrong size on Widget_HUDPlayerList_C_OnPlayerLeft");
-static_assert(offsetof(Widget_HUDPlayerList_C_OnPlayerLeft, PlayerState) == 0x000000, "Member 'Widget_HUDPlayerList_C_OnPlayerLeft::PlayerState' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HUDPlayerList_C_OnPlayerLeft;
 
 // Function Widget_HUDPlayerList.Widget_HUDPlayerList_C.PlayerStateIsOwningPlayer
 // 0x0020 (0x0020 - 0x0000)
@@ -165,12 +115,7 @@ public:
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HUDPlayerList_C_PlayerStateIsOwningPlayer) == 0x000008, "Wrong alignment on Widget_HUDPlayerList_C_PlayerStateIsOwningPlayer");
-static_assert(sizeof(Widget_HUDPlayerList_C_PlayerStateIsOwningPlayer) == 0x000020, "Wrong size on Widget_HUDPlayerList_C_PlayerStateIsOwningPlayer");
-static_assert(offsetof(Widget_HUDPlayerList_C_PlayerStateIsOwningPlayer, PlayerState) == 0x000000, "Member 'Widget_HUDPlayerList_C_PlayerStateIsOwningPlayer::PlayerState' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_PlayerStateIsOwningPlayer, IsOwningPlayer) == 0x000008, "Member 'Widget_HUDPlayerList_C_PlayerStateIsOwningPlayer::IsOwningPlayer' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_PlayerStateIsOwningPlayer, CallFunc_GetOwningPlayer_ReturnValue) == 0x000010, "Member 'Widget_HUDPlayerList_C_PlayerStateIsOwningPlayer::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HUDPlayerList_C_PlayerStateIsOwningPlayer, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000018, "Member 'Widget_HUDPlayerList_C_PlayerStateIsOwningPlayer::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HUDPlayerList_C_PlayerStateIsOwningPlayer;
 
 }
 

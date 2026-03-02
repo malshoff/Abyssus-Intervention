@@ -208,9 +208,9 @@ void UWidget_CosmeticsMenu_C::MouseMovementTracking()
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.OnApplyOption_Event
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FPlayerCosmeticOption&     CosmeticOptionData                                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// class URCosmeticPrimaryAsset*           CosmeticPA                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CosmeticsMenu_C::OnApplyOption_Event(const struct FPlayerCosmeticOption& CosmeticOptionData)
+void UWidget_CosmeticsMenu_C::OnApplyOption_Event(class URCosmeticPrimaryAsset* CosmeticPA)
 {
 	static class UFunction* Func = nullptr;
 
@@ -219,7 +219,7 @@ void UWidget_CosmeticsMenu_C::OnApplyOption_Event(const struct FPlayerCosmeticOp
 
 	Params::Widget_CosmeticsMenu_C_OnApplyOption_Event Parms{};
 
-	Parms.CosmeticOptionData = std::move(CosmeticOptionData);
+	Parms.CosmeticPA = CosmeticPA;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -251,9 +251,9 @@ class UWidget* UWidget_CosmeticsMenu_C::OnEmoteNavRight(EUINavigation Navigation
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.OnHoverOption_Event
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FPlayerCosmeticOption&     CosmeticOptionData                                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// class URCosmeticPrimaryAsset*           CosmeticPA                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CosmeticsMenu_C::OnHoverOption_Event(const struct FPlayerCosmeticOption& CosmeticOptionData)
+void UWidget_CosmeticsMenu_C::OnHoverOption_Event(class URCosmeticPrimaryAsset* CosmeticPA)
 {
 	static class UFunction* Func = nullptr;
 
@@ -262,7 +262,7 @@ void UWidget_CosmeticsMenu_C::OnHoverOption_Event(const struct FPlayerCosmeticOp
 
 	Params::Widget_CosmeticsMenu_C_OnHoverOption_Event Parms{};
 
-	Parms.CosmeticOptionData = std::move(CosmeticOptionData);
+	Parms.CosmeticPA = CosmeticPA;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -340,9 +340,9 @@ class UWidget* UWidget_CosmeticsMenu_C::OnScrollListNavLeft(EUINavigation Naviga
 // Function Widget_CosmeticsMenu.Widget_CosmeticsMenu_C.OnUnhoverOption_Event
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FPlayerCosmeticOption&     CosmeticOptionData                                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// class URCosmeticPrimaryAsset*           CosmeticPA                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CosmeticsMenu_C::OnUnhoverOption_Event(const struct FPlayerCosmeticOption& CosmeticOptionData)
+void UWidget_CosmeticsMenu_C::OnUnhoverOption_Event(class URCosmeticPrimaryAsset* CosmeticPA)
 {
 	static class UFunction* Func = nullptr;
 
@@ -351,7 +351,7 @@ void UWidget_CosmeticsMenu_C::OnUnhoverOption_Event(const struct FPlayerCosmetic
 
 	Params::Widget_CosmeticsMenu_C_OnUnhoverOption_Event Parms{};
 
-	Parms.CosmeticOptionData = std::move(CosmeticOptionData);
+	Parms.CosmeticPA = CosmeticPA;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

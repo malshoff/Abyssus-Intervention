@@ -19,27 +19,27 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_BarrierGauge.Widget_BarrierGauge_C
-// 0x0080 (0x0350 - 0x02D0)
+// 0x0080 (0x03C0 - 0x0340)
 class UWidget_BarrierGauge_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Active_Transition;                                 // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Blocked_Transition;                                // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       BecomeHidden_Animation;                            // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       BecomeVisible_Animation;                           // 0x02F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Reset_Animation;                                   // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ThresholdReached_Animation;                        // 0x0300(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 BackgroundImage;                                   // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           BarrierGauge;                                      // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Clamps_Image;                                      // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PopImage;                                          // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URHealthComponent*                      HealthComponent;                                   // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         RelativeMaxBarrier;                                // 0x0338(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33C[0x4];                                      // 0x033C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        TargetGaugePrecentage;                             // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BarrierActive;                                     // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 PopImage;                                          // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Clamps_Image;                                      // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           BarrierGauge;                                      // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BackgroundImage;                                   // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ThresholdReached_Animation;                        // 0x0370(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Reset_Animation;                                   // 0x0378(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       BecomeVisible_Animation;                           // 0x0380(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       BecomeHidden_Animation;                            // 0x0388(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Blocked_Transition;                                // 0x0390(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Active_Transition;                                 // 0x0398(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class URHealthComponent*                      HealthComponent;                                   // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         RelativeMaxBarrier;                                // 0x03A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3AC[0x4];                                      // 0x03AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        TargetGaugePrecentage;                             // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BarrierActive;                                     // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Widget_BarrierGauge(int32 EntryPoint);
@@ -58,31 +58,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_BarrierGauge_C">();
+		BP_STATIC_CLASS_IMPL("Widget_BarrierGauge_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_BarrierGauge_C")
 	}
 	static class UWidget_BarrierGauge_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_BarrierGauge_C>();
 	}
 };
-static_assert(alignof(UWidget_BarrierGauge_C) == 0x000008, "Wrong alignment on UWidget_BarrierGauge_C");
-static_assert(sizeof(UWidget_BarrierGauge_C) == 0x000350, "Wrong size on UWidget_BarrierGauge_C");
-static_assert(offsetof(UWidget_BarrierGauge_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_BarrierGauge_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_BarrierGauge_C, Active_Transition) == 0x0002D8, "Member 'UWidget_BarrierGauge_C::Active_Transition' has a wrong offset!");
-static_assert(offsetof(UWidget_BarrierGauge_C, Blocked_Transition) == 0x0002E0, "Member 'UWidget_BarrierGauge_C::Blocked_Transition' has a wrong offset!");
-static_assert(offsetof(UWidget_BarrierGauge_C, BecomeHidden_Animation) == 0x0002E8, "Member 'UWidget_BarrierGauge_C::BecomeHidden_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_BarrierGauge_C, BecomeVisible_Animation) == 0x0002F0, "Member 'UWidget_BarrierGauge_C::BecomeVisible_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_BarrierGauge_C, Reset_Animation) == 0x0002F8, "Member 'UWidget_BarrierGauge_C::Reset_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_BarrierGauge_C, ThresholdReached_Animation) == 0x000300, "Member 'UWidget_BarrierGauge_C::ThresholdReached_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_BarrierGauge_C, BackgroundImage) == 0x000308, "Member 'UWidget_BarrierGauge_C::BackgroundImage' has a wrong offset!");
-static_assert(offsetof(UWidget_BarrierGauge_C, BarrierGauge) == 0x000310, "Member 'UWidget_BarrierGauge_C::BarrierGauge' has a wrong offset!");
-static_assert(offsetof(UWidget_BarrierGauge_C, Clamps_Image) == 0x000318, "Member 'UWidget_BarrierGauge_C::Clamps_Image' has a wrong offset!");
-static_assert(offsetof(UWidget_BarrierGauge_C, InvalidationBox_0) == 0x000320, "Member 'UWidget_BarrierGauge_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_BarrierGauge_C, PopImage) == 0x000328, "Member 'UWidget_BarrierGauge_C::PopImage' has a wrong offset!");
-static_assert(offsetof(UWidget_BarrierGauge_C, HealthComponent) == 0x000330, "Member 'UWidget_BarrierGauge_C::HealthComponent' has a wrong offset!");
-static_assert(offsetof(UWidget_BarrierGauge_C, RelativeMaxBarrier) == 0x000338, "Member 'UWidget_BarrierGauge_C::RelativeMaxBarrier' has a wrong offset!");
-static_assert(offsetof(UWidget_BarrierGauge_C, TargetGaugePrecentage) == 0x000340, "Member 'UWidget_BarrierGauge_C::TargetGaugePrecentage' has a wrong offset!");
-static_assert(offsetof(UWidget_BarrierGauge_C, BarrierActive) == 0x000348, "Member 'UWidget_BarrierGauge_C::BarrierActive' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_BarrierGauge_C;
 
 }
 

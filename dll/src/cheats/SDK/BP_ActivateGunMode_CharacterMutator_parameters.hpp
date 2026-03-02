@@ -39,22 +39,7 @@ public:
 	class URGAbilityCharacterMutatorScript*       CallFunc_GetEquippedActivatableAbility_ReturnValue; // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator) == 0x000008, "Wrong alignment on BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator");
-static_assert(sizeof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator) == 0x0000A8, "Wrong size on BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator, CallFunc_GetMutatorRank_ReturnValue) == 0x000004, "Member 'BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator, K2Node_Event_abilityScript) == 0x000008, "Member 'BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator::K2Node_Event_abilityScript' has a wrong offset!");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x000010, "Member 'BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000018, "Member 'BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000048, "Member 'BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator, CallFunc_BranchByNetRole_Branches) == 0x000051, "Member 'BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator::CallFunc_BranchByNetRole_Branches' has a wrong offset!");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x000058, "Member 'BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator, K2Node_SwitchEnum_CmpSuccess) == 0x000060, "Member 'BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator, CallFunc_IsValid_ReturnValue) == 0x000061, "Member 'BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000068, "Member 'BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator, CallFunc_GetEquippedActivatableAbility_ReturnValue) == 0x000098, "Member 'BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator::CallFunc_GetEquippedActivatableAbility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x0000A0, "Member 'BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ActivateGunMode_CharacterMutator_C_ExecuteUbergraph_BP_ActivateGunMode_CharacterMutator;
 
 // Function BP_ActivateGunMode_CharacterMutator.BP_ActivateGunMode_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -66,11 +51,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_ActivateGunMode_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_ActivateGunMode_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_ActivateGunMode_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_ActivateGunMode_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_ActivateGunMode_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_ActivateGunMode_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_ActivateGunMode_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ActivateGunMode_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_ActivateGunMode_CharacterMutator.BP_ActivateGunMode_CharacterMutator_C.K2_OnAbilityFired
 // 0x0008 (0x0008 - 0x0000)
@@ -79,9 +60,7 @@ struct BP_ActivateGunMode_CharacterMutator_C_K2_OnAbilityFired final
 public:
 	class URGScript*                              AbilityScript;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ActivateGunMode_CharacterMutator_C_K2_OnAbilityFired) == 0x000008, "Wrong alignment on BP_ActivateGunMode_CharacterMutator_C_K2_OnAbilityFired");
-static_assert(sizeof(BP_ActivateGunMode_CharacterMutator_C_K2_OnAbilityFired) == 0x000008, "Wrong size on BP_ActivateGunMode_CharacterMutator_C_K2_OnAbilityFired");
-static_assert(offsetof(BP_ActivateGunMode_CharacterMutator_C_K2_OnAbilityFired, AbilityScript) == 0x000000, "Member 'BP_ActivateGunMode_CharacterMutator_C_K2_OnAbilityFired::AbilityScript' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ActivateGunMode_CharacterMutator_C_K2_OnAbilityFired;
 
 }
 

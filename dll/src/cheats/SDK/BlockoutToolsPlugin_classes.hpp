@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "BlockoutToolsPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
+#include "BlockoutToolsPlugin_structs.hpp"
 
 
 namespace SDK
@@ -60,37 +60,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BlockoutToolsParent">();
+		STATIC_CLASS_IMPL("BlockoutToolsParent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlockoutToolsParent")
 	}
 	static class ABlockoutToolsParent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABlockoutToolsParent>();
 	}
 };
-static_assert(alignof(ABlockoutToolsParent) == 0x000008, "Wrong alignment on ABlockoutToolsParent");
-static_assert(sizeof(ABlockoutToolsParent) == 0x000340, "Wrong size on ABlockoutToolsParent");
-static_assert(offsetof(ABlockoutToolsParent, Root) == 0x0002A8, "Member 'ABlockoutToolsParent::Root' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, Billboard) == 0x0002B0, "Member 'ABlockoutToolsParent::Billboard' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, BlockoutGridParent) == 0x0002B8, "Member 'ABlockoutToolsParent::BlockoutGridParent' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, BlockoutGridMID) == 0x0002C0, "Member 'ABlockoutToolsParent::BlockoutGridMID' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, BlockoutCurrentMaterial) == 0x0002C8, "Member 'ABlockoutToolsParent::BlockoutCurrentMaterial' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, BlockoutMeshComponents) == 0x0002D0, "Member 'ABlockoutToolsParent::BlockoutMeshComponents' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, BlockoutMaterialType) == 0x0002E0, "Member 'ABlockoutToolsParent::BlockoutMaterialType' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, BlockoutMaterialColor) == 0x0002E4, "Member 'ABlockoutToolsParent::BlockoutMaterialColor' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, bBlockoutMaterialUseGrid) == 0x0002F4, "Member 'ABlockoutToolsParent::bBlockoutMaterialUseGrid' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, bBlockoutWorldAligned) == 0x0002F5, "Member 'ABlockoutToolsParent::bBlockoutWorldAligned' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, BlockoutMaterialGridSize) == 0x0002F8, "Member 'ABlockoutToolsParent::BlockoutMaterialGridSize' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, BlockoutMaterialCheckerLuminance) == 0x0002FC, "Member 'ABlockoutToolsParent::BlockoutMaterialCheckerLuminance' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, BlockoutMaterialRoughness) == 0x000300, "Member 'ABlockoutToolsParent::BlockoutMaterialRoughness' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, bBlockoutMaterialUseTopColor) == 0x000304, "Member 'ABlockoutToolsParent::bBlockoutMaterialUseTopColor' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, BlockoutMaterialTopColor) == 0x000308, "Member 'ABlockoutToolsParent::BlockoutMaterialTopColor' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, bUseCustomMaterial) == 0x000318, "Member 'ABlockoutToolsParent::bUseCustomMaterial' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, CustomMaterial) == 0x000320, "Member 'ABlockoutToolsParent::CustomMaterial' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, BlockoutCustomMaterial) == 0x000328, "Member 'ABlockoutToolsParent::BlockoutCustomMaterial' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, bBlockoutEnableCollisions) == 0x000330, "Member 'ABlockoutToolsParent::bBlockoutEnableCollisions' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, bBlockoutEnableCustomCollision) == 0x000331, "Member 'ABlockoutToolsParent::bBlockoutEnableCustomCollision' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, BlockoutCustomCollisionProfileName) == 0x000334, "Member 'ABlockoutToolsParent::BlockoutCustomCollisionProfileName' has a wrong offset!");
-static_assert(offsetof(ABlockoutToolsParent, bBlockoutCastShadows) == 0x00033C, "Member 'ABlockoutToolsParent::bBlockoutCastShadows' has a wrong offset!");
+DUMPER7_ASSERTS_ABlockoutToolsParent;
 
 // Class BlockoutToolsPlugin.BlockoutToolsSettings
 // 0x0038 (0x0060 - 0x0028)
@@ -113,24 +94,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BlockoutToolsSettings">();
+		STATIC_CLASS_IMPL("BlockoutToolsSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlockoutToolsSettings")
 	}
 	static class UBlockoutToolsSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBlockoutToolsSettings>();
 	}
 };
-static_assert(alignof(UBlockoutToolsSettings) == 0x000008, "Wrong alignment on UBlockoutToolsSettings");
-static_assert(sizeof(UBlockoutToolsSettings) == 0x000060, "Wrong size on UBlockoutToolsSettings");
-static_assert(offsetof(UBlockoutToolsSettings, BlockoutMaterialType) == 0x000028, "Member 'UBlockoutToolsSettings::BlockoutMaterialType' has a wrong offset!");
-static_assert(offsetof(UBlockoutToolsSettings, BlockoutMaterialColor) == 0x00002C, "Member 'UBlockoutToolsSettings::BlockoutMaterialColor' has a wrong offset!");
-static_assert(offsetof(UBlockoutToolsSettings, bBlockoutMaterialUseGrid) == 0x00003C, "Member 'UBlockoutToolsSettings::bBlockoutMaterialUseGrid' has a wrong offset!");
-static_assert(offsetof(UBlockoutToolsSettings, bBlockoutWorldAligned) == 0x00003D, "Member 'UBlockoutToolsSettings::bBlockoutWorldAligned' has a wrong offset!");
-static_assert(offsetof(UBlockoutToolsSettings, BlockoutMaterialGridSize) == 0x000040, "Member 'UBlockoutToolsSettings::BlockoutMaterialGridSize' has a wrong offset!");
-static_assert(offsetof(UBlockoutToolsSettings, BlockoutMaterialCheckerLuminance) == 0x000044, "Member 'UBlockoutToolsSettings::BlockoutMaterialCheckerLuminance' has a wrong offset!");
-static_assert(offsetof(UBlockoutToolsSettings, BlockoutMaterialRoughness) == 0x000048, "Member 'UBlockoutToolsSettings::BlockoutMaterialRoughness' has a wrong offset!");
-static_assert(offsetof(UBlockoutToolsSettings, bBlockoutMaterialUseTopColor) == 0x00004C, "Member 'UBlockoutToolsSettings::bBlockoutMaterialUseTopColor' has a wrong offset!");
-static_assert(offsetof(UBlockoutToolsSettings, BlockoutMaterialTopColor) == 0x000050, "Member 'UBlockoutToolsSettings::BlockoutMaterialTopColor' has a wrong offset!");
+DUMPER7_ASSERTS_UBlockoutToolsSettings;
 
 }
 

@@ -19,21 +19,21 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C
-// 0x0020 (0x0460 - 0x0440)
+// 0x0020 (0x0470 - 0x0450)
 class ABP_Pickupable_Mutator_GodCategory_C final : public ABP_Pickupable_RandomMutator_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Pickupable_Mutator_GodCategory_C; // 0x0440(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	int32                                         NumMutatorOptions;                                 // 0x0448(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44C[0x4];                                      // 0x044C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRLootSelectionOption>          GeneratedGodMutatorOptions;                        // 0x0450(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Pickupable_Mutator_GodCategory_C; // 0x0450(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	int32                                         NumMutatorOptions;                                 // 0x0458(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45C[0x4];                                      // 0x045C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRLootSelectionOption>          GeneratedGodMutatorOptions;                        // 0x0460(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	bool CanInteract(class APlayerController* Controller);
 	void ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory(int32 EntryPoint);
 	void FilterByMerchantBlacklist(TArray<struct FMutatorLootTableRow>& InRows, TArray<struct FMutatorLootTableRow>* OutRows);
 	void GenerateGodCategory(class URMutatorRewardCategoryDataAsset** GeneratedCategory);
-	void GenerateGodMutatorOptionsFromGodCategory(class URMutatorRewardCategoryDataAsset* GodCategory);
+	void GenerateGodMutatorOptionsFromGodCategory(class URMutatorRewardCategoryDataAsset* GodCategory, class URMutatorPrimaryAsset* BoughtMutatorPA);
 	void GenerateRandomGodCategory(class URMutatorRewardCategoryDataAsset** GeneratedCategory);
 	void GenerateRandomGodCategoryFromEquippedCategories(const struct FGameplayTagContainer& EquippedGodCategories, class URMutatorRewardCategoryDataAsset** GeneratedCategory);
 	void GetEquippedGodCategories(struct FGameplayTagContainer* EquippedGodCategories);
@@ -47,12 +47,13 @@ public:
 	void PlayerHasGeneratedMutator(bool* Value);
 	void PlayerHasGeneratedTriggerType(bool* Value);
 	void ReceiveBeginPlay();
-	void RegenerateOptions();
+	void RegenerateOptions(class URMutatorPrimaryAsset* BoughtMutatorPA);
 	void SetVisualIdentifier();
 	void TryUpdatePlinthSettings();
 	void UpdateGeneratedGodCategory(class URMutatorRewardCategoryDataAsset* NewGodCategory);
 	void UpdateGeneratedMutatorOptions(const TArray<struct FRLootSelectionOption>& NewLootOptions);
-	void UpdateMerchantOptionsAfterTriggerWasBought(class URMutatorPrimaryAsset* BoughtMutator);
+	void UpdateMutatorMerchantOptionsBlessings(class URMutatorPrimaryAsset* BoughtMutator);
+	void UpdateMutatorMerchantOptionsTriggers(class URMutatorPrimaryAsset* BoughtMutator);
 
 	class FText GetInteractableAlternativeDescription() const;
 	class FText GetInteractableDescription() const;
@@ -62,18 +63,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Pickupable_Mutator_GodCategory_C">();
+		BP_STATIC_CLASS_IMPL("BP_Pickupable_Mutator_GodCategory_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Pickupable_Mutator_GodCategory_C")
 	}
 	static class ABP_Pickupable_Mutator_GodCategory_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Pickupable_Mutator_GodCategory_C>();
 	}
 };
-static_assert(alignof(ABP_Pickupable_Mutator_GodCategory_C) == 0x000008, "Wrong alignment on ABP_Pickupable_Mutator_GodCategory_C");
-static_assert(sizeof(ABP_Pickupable_Mutator_GodCategory_C) == 0x000460, "Wrong size on ABP_Pickupable_Mutator_GodCategory_C");
-static_assert(offsetof(ABP_Pickupable_Mutator_GodCategory_C, UberGraphFrame_BP_Pickupable_Mutator_GodCategory_C) == 0x000440, "Member 'ABP_Pickupable_Mutator_GodCategory_C::UberGraphFrame_BP_Pickupable_Mutator_GodCategory_C' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_Mutator_GodCategory_C, NumMutatorOptions) == 0x000448, "Member 'ABP_Pickupable_Mutator_GodCategory_C::NumMutatorOptions' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_Mutator_GodCategory_C, GeneratedGodMutatorOptions) == 0x000450, "Member 'ABP_Pickupable_Mutator_GodCategory_C::GeneratedGodMutatorOptions' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Pickupable_Mutator_GodCategory_C;
 
 }
 

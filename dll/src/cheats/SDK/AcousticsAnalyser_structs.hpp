@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "PhysicsCore_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Synthesis_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -61,38 +61,7 @@ public:
 	float                                         TempDelayWetLevel;                                 // 0x00E0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAcousticsAnalysisSettings) == 0x000008, "Wrong alignment on FAcousticsAnalysisSettings");
-static_assert(sizeof(FAcousticsAnalysisSettings) == 0x0000E8, "Wrong size on FAcousticsAnalysisSettings");
-static_assert(offsetof(FAcousticsAnalysisSettings, EarlyReflectionsGainMax) == 0x000000, "Member 'FAcousticsAnalysisSettings::EarlyReflectionsGainMax' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, EarlyReflectionsGainMin) == 0x000004, "Member 'FAcousticsAnalysisSettings::EarlyReflectionsGainMin' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, EarlyReflectionsHFGain) == 0x000008, "Member 'FAcousticsAnalysisSettings::EarlyReflectionsHFGain' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, EarlyReflectionsMaxDistance) == 0x00000C, "Member 'FAcousticsAnalysisSettings::EarlyReflectionsMaxDistance' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, DiffusionMin) == 0x000010, "Member 'FAcousticsAnalysisSettings::DiffusionMin' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, DiffusionMax) == 0x000014, "Member 'FAcousticsAnalysisSettings::DiffusionMax' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, AirAbsorptionGainHF) == 0x000018, "Member 'FAcousticsAnalysisSettings::AirAbsorptionGainHF' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, DecayHFRatio) == 0x00001C, "Member 'FAcousticsAnalysisSettings::DecayHFRatio' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, ReverbFXWetLevel) == 0x000020, "Member 'FAcousticsAnalysisSettings::ReverbFXWetLevel' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, bBypassDelayBasedEarlyReflection) == 0x000024, "Member 'FAcousticsAnalysisSettings::bBypassDelayBasedEarlyReflection' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, bBypassReverbBasedEarlyReflection) == 0x000025, "Member 'FAcousticsAnalysisSettings::bBypassReverbBasedEarlyReflection' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, bBypassLateReflections) == 0x000026, "Member 'FAcousticsAnalysisSettings::bBypassLateReflections' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, DefaultAbsorbtionValue) == 0x000028, "Member 'FAcousticsAnalysisSettings::DefaultAbsorbtionValue' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, SurfaceTypeToAbsorbtion) == 0x000030, "Member 'FAcousticsAnalysisSettings::SurfaceTypeToAbsorbtion' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, LineTraceAngleMinMax) == 0x000080, "Member 'FAcousticsAnalysisSettings::LineTraceAngleMinMax' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, DelayFeedbackMin) == 0x000090, "Member 'FAcousticsAnalysisSettings::DelayFeedbackMin' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, DelayFeedbackMax) == 0x000094, "Member 'FAcousticsAnalysisSettings::DelayFeedbackMax' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, DelayCutoffFrequencyMinMax) == 0x000098, "Member 'FAcousticsAnalysisSettings::DelayCutoffFrequencyMinMax' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, DelayFilterQ) == 0x0000A8, "Member 'FAcousticsAnalysisSettings::DelayFilterQ' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, DelayReflectionsGainMax) == 0x0000AC, "Member 'FAcousticsAnalysisSettings::DelayReflectionsGainMax' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, DelayReflectionsGainMin) == 0x0000B0, "Member 'FAcousticsAnalysisSettings::DelayReflectionsGainMin' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, FilterType) == 0x0000B4, "Member 'FAcousticsAnalysisSettings::FilterType' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, TraceChannel) == 0x0000B5, "Member 'FAcousticsAnalysisSettings::TraceChannel' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, TraceCacheLength) == 0x0000B8, "Member 'FAcousticsAnalysisSettings::TraceCacheLength' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, LineTraceDistance) == 0x0000C0, "Member 'FAcousticsAnalysisSettings::LineTraceDistance' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, LineTraceAmount) == 0x0000C8, "Member 'FAcousticsAnalysisSettings::LineTraceAmount' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, LineTraceMaxBounces) == 0x0000CC, "Member 'FAcousticsAnalysisSettings::LineTraceMaxBounces' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, ResultInterpSpeed) == 0x0000D0, "Member 'FAcousticsAnalysisSettings::ResultInterpSpeed' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, GainCurve) == 0x0000D8, "Member 'FAcousticsAnalysisSettings::GainCurve' has a wrong offset!");
-static_assert(offsetof(FAcousticsAnalysisSettings, TempDelayWetLevel) == 0x0000E0, "Member 'FAcousticsAnalysisSettings::TempDelayWetLevel' has a wrong offset!");
+DUMPER7_ASSERTS_FAcousticsAnalysisSettings;
 
 }
 

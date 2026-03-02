@@ -17,21 +17,69 @@
 namespace SDK
 {
 
-// Function BP_Poisonous_StatusEffect.BP_Poisonous_StatusEffect_C.TogglePostProcessMaterial
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_Poisonous_StatusEffect.BP_Poisonous_StatusEffect_C.ExecuteUbergraph_BP_Poisonous_StatusEffect
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_Poisonous_StatusEffect_C::TogglePostProcessMaterial(bool Visible)
+void UBP_Poisonous_StatusEffect_C::ExecuteUbergraph_BP_Poisonous_StatusEffect(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Poisonous_StatusEffect_C", "TogglePostProcessMaterial");
+		Func = Class->GetFunction("BP_Poisonous_StatusEffect_C", "ExecuteUbergraph_BP_Poisonous_StatusEffect");
 
-	Params::BP_Poisonous_StatusEffect_C_TogglePostProcessMaterial Parms{};
+	Params::BP_Poisonous_StatusEffect_C_ExecuteUbergraph_BP_Poisonous_StatusEffect Parms{};
 
-	Parms.Visible = Visible;
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Poisonous_StatusEffect.BP_Poisonous_StatusEffect_C.K2_ActivateScript
+// (Event, Public, BlueprintEvent)
+
+void UBP_Poisonous_StatusEffect_C::K2_ActivateScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Poisonous_StatusEffect_C", "K2_ActivateScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Poisonous_StatusEffect.BP_Poisonous_StatusEffect_C.K2_DeactivateScript
+// (Event, Public, BlueprintEvent)
+
+void UBP_Poisonous_StatusEffect_C::K2_DeactivateScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Poisonous_StatusEffect_C", "K2_DeactivateScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Poisonous_StatusEffect.BP_Poisonous_StatusEffect_C.K2_TickScript
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_Poisonous_StatusEffect_C::K2_TickScript(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Poisonous_StatusEffect_C", "K2_TickScript");
+
+	Params::BP_Poisonous_StatusEffect_C_K2_TickScript Parms{};
+
+	Parms.DeltaTime = DeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -57,69 +105,21 @@ void UBP_Poisonous_StatusEffect_C::SegmentComplete(class AREnemySpawnAreaSegment
 }
 
 
-// Function BP_Poisonous_StatusEffect.BP_Poisonous_StatusEffect_C.K2_TickScript
-// (Event, Public, BlueprintEvent)
+// Function BP_Poisonous_StatusEffect.BP_Poisonous_StatusEffect_C.TogglePostProcessMaterial
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_Poisonous_StatusEffect_C::K2_TickScript(float DeltaTime)
+void UBP_Poisonous_StatusEffect_C::TogglePostProcessMaterial(bool Visible)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Poisonous_StatusEffect_C", "K2_TickScript");
+		Func = Class->GetFunction("BP_Poisonous_StatusEffect_C", "TogglePostProcessMaterial");
 
-	Params::BP_Poisonous_StatusEffect_C_K2_TickScript Parms{};
+	Params::BP_Poisonous_StatusEffect_C_TogglePostProcessMaterial Parms{};
 
-	Parms.DeltaTime = DeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Poisonous_StatusEffect.BP_Poisonous_StatusEffect_C.K2_DeactivateScript
-// (Event, Public, BlueprintEvent)
-
-void UBP_Poisonous_StatusEffect_C::K2_DeactivateScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Poisonous_StatusEffect_C", "K2_DeactivateScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Poisonous_StatusEffect.BP_Poisonous_StatusEffect_C.K2_ActivateScript
-// (Event, Public, BlueprintEvent)
-
-void UBP_Poisonous_StatusEffect_C::K2_ActivateScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Poisonous_StatusEffect_C", "K2_ActivateScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Poisonous_StatusEffect.BP_Poisonous_StatusEffect_C.ExecuteUbergraph_BP_Poisonous_StatusEffect
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_Poisonous_StatusEffect_C::ExecuteUbergraph_BP_Poisonous_StatusEffect(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Poisonous_StatusEffect_C", "ExecuteUbergraph_BP_Poisonous_StatusEffect");
-
-	Params::BP_Poisonous_StatusEffect_C_ExecuteUbergraph_BP_Poisonous_StatusEffect Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.Visible = Visible;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

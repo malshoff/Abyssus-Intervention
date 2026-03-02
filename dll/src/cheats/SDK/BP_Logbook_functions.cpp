@@ -114,6 +114,29 @@ void ABP_Logbook_C::HideHighlight()
 }
 
 
+// Function BP_Logbook.BP_Logbook_C.IsShareable
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_Logbook_C::IsShareable(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Logbook_C", "IsShareable");
+
+	Params::BP_Logbook_C_IsShareable Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_Logbook.BP_Logbook_C.OnFocus
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -199,6 +222,26 @@ void ABP_Logbook_C::SetupHighlight()
 		Func = Class->GetFunction("BP_Logbook_C", "SetupHighlight");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Logbook.BP_Logbook_C.ShareInteractableActor
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class APlayerController*          PlayerController                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Logbook_C::ShareInteractableActor(const class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Logbook_C", "ShareInteractableActor");
+
+	Params::BP_Logbook_C_ShareInteractableActor Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

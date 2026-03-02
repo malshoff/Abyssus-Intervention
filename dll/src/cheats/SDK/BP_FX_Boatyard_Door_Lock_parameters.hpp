@@ -24,10 +24,7 @@ public:
 	int32                                         ID;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Positive;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FX_Boatyard_Door_Lock_C_Activate) == 0x000004, "Wrong alignment on BP_FX_Boatyard_Door_Lock_C_Activate");
-static_assert(sizeof(BP_FX_Boatyard_Door_Lock_C_Activate) == 0x000008, "Wrong size on BP_FX_Boatyard_Door_Lock_C_Activate");
-static_assert(offsetof(BP_FX_Boatyard_Door_Lock_C_Activate, ID) == 0x000000, "Member 'BP_FX_Boatyard_Door_Lock_C_Activate::ID' has a wrong offset!");
-static_assert(offsetof(BP_FX_Boatyard_Door_Lock_C_Activate, Positive) == 0x000004, "Member 'BP_FX_Boatyard_Door_Lock_C_Activate::Positive' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FX_Boatyard_Door_Lock_C_Activate;
 
 // Function BP_FX_Boatyard_Door_Lock.BP_FX_Boatyard_Door_Lock_C.ExecuteUbergraph_BP_FX_Boatyard_Door_Lock
 // 0x0028 (0x0028 - 0x0000)
@@ -48,20 +45,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetScalarParameterValueOnMaterials_ParameterValue_ImplicitCast; // 0x0020(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock) == 0x000008, "Wrong alignment on BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock");
-static_assert(sizeof(BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock) == 0x000028, "Wrong size on BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock");
-static_assert(offsetof(BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock, EntryPoint) == 0x000000, "Member 'BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock, Temp_bool_Variable) == 0x000004, "Member 'BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock, Temp_byte_Variable) == 0x000005, "Member 'BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock, Temp_byte_Variable_1) == 0x000006, "Member 'BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock, K2Node_Event_ID) == 0x000008, "Member 'BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock::K2Node_Event_ID' has a wrong offset!");
-static_assert(offsetof(BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock, K2Node_Event_Positive) == 0x00000C, "Member 'BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock::K2Node_Event_Positive' has a wrong offset!");
-static_assert(offsetof(BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock, CallFunc_Not_PreBool_ReturnValue) == 0x00000D, "Member 'BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock, K2Node_Select_Default) == 0x00000E, "Member 'BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00000F, "Member 'BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000010, "Member 'BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000018, "Member 'BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock, CallFunc_SetScalarParameterValueOnMaterials_ParameterValue_ImplicitCast) == 0x000020, "Member 'BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock::CallFunc_SetScalarParameterValueOnMaterials_ParameterValue_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FX_Boatyard_Door_Lock_C_ExecuteUbergraph_BP_FX_Boatyard_Door_Lock;
 
 }
 

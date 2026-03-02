@@ -17,27 +17,28 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_UnlockAnchor_Challenge.BP_UnlockAnchor_Challenge_C
-// 0x0010 (0x03C0 - 0x03B0)
+// 0x0010 (0x03C8 - 0x03B8)
 class ABP_UnlockAnchor_Challenge_C final : public ABP_UnlockWeapon_Base_C
 {
 public:
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCapsuleComponent*                      Capsule;                                           // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                      Capsule;                                           // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_UnlockAnchor_Challenge_C">();
+		BP_STATIC_CLASS_IMPL("BP_UnlockAnchor_Challenge_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_UnlockAnchor_Challenge_C")
 	}
 	static class ABP_UnlockAnchor_Challenge_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_UnlockAnchor_Challenge_C>();
 	}
 };
-static_assert(alignof(ABP_UnlockAnchor_Challenge_C) == 0x000008, "Wrong alignment on ABP_UnlockAnchor_Challenge_C");
-static_assert(sizeof(ABP_UnlockAnchor_Challenge_C) == 0x0003C0, "Wrong size on ABP_UnlockAnchor_Challenge_C");
-static_assert(offsetof(ABP_UnlockAnchor_Challenge_C, StaticMesh) == 0x0003B0, "Member 'ABP_UnlockAnchor_Challenge_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_UnlockAnchor_Challenge_C, Capsule) == 0x0003B8, "Member 'ABP_UnlockAnchor_Challenge_C::Capsule' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_UnlockAnchor_Challenge_C;
 
 }
 

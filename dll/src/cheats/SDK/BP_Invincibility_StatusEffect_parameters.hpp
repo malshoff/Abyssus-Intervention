@@ -34,17 +34,7 @@ public:
 	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_1;                 // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect) == 0x000008, "Wrong alignment on BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect");
-static_assert(sizeof(BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect) == 0x000098, "Wrong size on BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect");
-static_assert(offsetof(BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect, EntryPoint) == 0x000000, "Member 'BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect, K2Node_DynamicCast_AsRPawn_Base) == 0x000038, "Member 'BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect, CallFunc_GetScriptFName_ReturnValue) == 0x000044, "Member 'BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000050, "Member 'BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect, CallFunc_GetScriptFName_ReturnValue_1) == 0x000080, "Member 'BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect, K2Node_DynamicCast_AsRPawn_Base_1) == 0x000088, "Member 'BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect, K2Node_DynamicCast_bSuccess_1) == 0x000090, "Member 'BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Invincibility_StatusEffect_C_ExecuteUbergraph_BP_Invincibility_StatusEffect;
 
 }
 

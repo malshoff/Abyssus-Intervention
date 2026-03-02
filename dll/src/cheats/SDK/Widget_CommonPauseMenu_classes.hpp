@@ -11,104 +11,98 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_classes.hpp"
 #include "UMG_structs.hpp"
+#include "RGame_structs.hpp"
+#include "RGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_CommonPauseMenu.Widget_CommonPauseMenu_C
-// 0x0098 (0x04D0 - 0x0438)
+// 0x00A8 (0x0568 - 0x04C0)
 class UWidget_CommonPauseMenu_C final : public URCommonActivatableWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       ConstructAnimation;                                // 0x0440(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   ContinueButton;                                    // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   ExitButton;                                        // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Glyph_Image;                                       // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   LeaveSessionButton;                                // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   LobbyButton;                                       // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   LogBookButton;                                     // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   MainMenuButton;                                    // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   OptionsButton;                                     // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   SessionBrowserButton;                              // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   SessionSettingsButton;                             // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   SkipTutorialBTN;                                   // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   LastFocusedPauseMenuButton;                        // 0x04A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   LastFocusedWidgetTextButton;                       // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class UWidget_CommonPauseMenu_C* PauseMenuReference)> OnMenuWasClosed; // 0x04B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TArray<class UQuartzClockHandle*>             PausedClocks;                                      // 0x04C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_TextButton_C*                   SkipTutorialBTN;                                   // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   SessionSettingsButton;                             // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   SessionBrowserButton;                              // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   OptionsButton;                                     // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   MainMenuButton;                                    // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   LogBookButton;                                     // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   LobbyButton;                                       // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   LeaveSessionButton;                                // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Glyph_Image;                                       // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   FailsafeTeleport_Button;                           // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   ExitButton;                                        // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   ContinueButton;                                    // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ConstructAnimation;                                // 0x0528(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   LastFocusedPauseMenuButton;                        // 0x0530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   LastFocusedWidgetTextButton;                       // 0x0538(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class UWidget_CommonPauseMenu_C* PauseMenuReference)> OnMenuWasClosed; // 0x0540(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TArray<class UQuartzClockHandle*>             PausedClocks;                                      // 0x0550(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UWidget_ConfirmPrompt_C*                CurrentConfirmPrompt;                              // 0x0560(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ToggleHandsVisibility();
-	void SetWidgetFocus();
-	void SetSkipTutorialBTNVisibility();
-	void SetSessionSettingsButtonVisibility();
-	void SetSessionBrowserButtonVisibility();
-	void SetLobbyButtonVisibility();
-	void SetLeaveSessionButtonVisibility();
-	void SessionSettingsPressed();
-	void SessionBrowserPressed();
-	void OptionsButtonPressed();
-	void OnWidgetPopped();
-	void OnVisibilityChanged_Event(ESlateVisibility InVisibility);
-	void OnLeaveSessionConfirm();
-	void MainMenuButtonPressed();
-	void LogbookButtonPressed();
-	void LobbyButtonPressed();
-	void IsInTutorial(bool* Value);
-	void GetFocusedPauseMenuButton(class UWidget_TextButton_C** Button);
-	void GetExitButtonLevelName(class FString* LevelName);
-	void ExitButtonPressed();
-	void ExecuteUbergraph_Widget_CommonPauseMenu(int32 EntryPoint);
-	void ContinueButtonPressed();
-	void Construct();
-	bool CanPause();
-	bool BP_OnHandleBackAction();
-	void BndEvt__Widget_PauseMenu_LogBookButton_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
-	void BndEvt__Widget_PauseMenu_ExitButton_K2Node_ComponentBoundEvent_6_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
-	void BndEvt__Widget_CommonPauseMenu_SkipTutorialBTN_K2Node_ComponentBoundEvent_2_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
-	void BndEvt__Widget_CommonPauseMenu_SessionSettingsButton_K2Node_ComponentBoundEvent_5_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
-	void BndEvt__Widget_CommonPauseMenu_SessionBrowserButton_K2Node_ComponentBoundEvent_4_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
-	void BndEvt__Widget_CommonPauseMenu_MainMenuButton_K2Node_ComponentBoundEvent_9_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
-	void BndEvt__Widget_CommonPauseMenu_LobbyButton_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
-	void BndEvt__Widget_CommonPauseMenu_LeaveSessionButton_K2Node_ComponentBoundEvent_7_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
-	void BndEvt__Widget_CommonPauseMenu_ContinueButton_K2Node_ComponentBoundEvent_10_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__WBP_MainMenu_OptionsButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
+	void BndEvt__Widget_CommonPauseMenu_ContinueButton_K2Node_ComponentBoundEvent_10_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_CommonPauseMenu_FailsafeTeleport_Button_K2Node_ComponentBoundEvent_8_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
+	void BndEvt__Widget_CommonPauseMenu_LeaveSessionButton_K2Node_ComponentBoundEvent_7_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
+	void BndEvt__Widget_CommonPauseMenu_LobbyButton_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
+	void BndEvt__Widget_CommonPauseMenu_MainMenuButton_K2Node_ComponentBoundEvent_9_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
+	void BndEvt__Widget_CommonPauseMenu_SessionBrowserButton_K2Node_ComponentBoundEvent_4_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
+	void BndEvt__Widget_CommonPauseMenu_SessionSettingsButton_K2Node_ComponentBoundEvent_5_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
+	void BndEvt__Widget_CommonPauseMenu_SkipTutorialBTN_K2Node_ComponentBoundEvent_2_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
+	void BndEvt__Widget_PauseMenu_ExitButton_K2Node_ComponentBoundEvent_6_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
+	void BndEvt__Widget_PauseMenu_LogBookButton_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
+	bool BP_OnHandleBackAction();
+	bool CanPause();
+	void ConfirmedQuitGame(bool Value);
+	void ConfirmedReturnToLobby(bool Value);
+	void ConfirmedReturnToMainMenu(bool Value);
+	void Construct();
+	void ContinueButtonPressed();
+	void ExecuteUbergraph_Widget_CommonPauseMenu(int32 EntryPoint);
+	void ExitButtonPressed();
+	void GetExitButtonLevelName(class FString* LevelName);
+	void GetFocusedPauseMenuButton(class UWidget_TextButton_C** Button);
+	void IsInTutorial(bool* Value);
+	void LobbyButtonPressed();
+	void LogbookButtonPressed();
+	void MainMenuButtonPressed();
+	void OnLeaveSessionConfirm();
+	void OnVisibilityChanged_Event(ESlateVisibility InVisibility);
+	void OnWidgetPopped();
+	void OptionsButtonPressed();
+	void SessionBrowserPressed();
+	void SessionSettingsPressed();
+	void SetLeaveSessionButtonVisibility();
+	void SetLobbyButtonVisibility();
+	void SetSessionBrowserButtonVisibility();
+	void SetSessionSettingsButtonVisibility();
+	void SetSkipTutorialBTNVisibility();
+	void SetUnstuckButtonVisibility();
+	void SetWidgetFocus();
+	void ToggleHandsVisibility();
 
 	class UWidget* BP_GetDesiredFocusTarget() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_CommonPauseMenu_C">();
+		BP_STATIC_CLASS_IMPL("Widget_CommonPauseMenu_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_CommonPauseMenu_C")
 	}
 	static class UWidget_CommonPauseMenu_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_CommonPauseMenu_C>();
 	}
 };
-static_assert(alignof(UWidget_CommonPauseMenu_C) == 0x000008, "Wrong alignment on UWidget_CommonPauseMenu_C");
-static_assert(sizeof(UWidget_CommonPauseMenu_C) == 0x0004D0, "Wrong size on UWidget_CommonPauseMenu_C");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, UberGraphFrame) == 0x000438, "Member 'UWidget_CommonPauseMenu_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, ConstructAnimation) == 0x000440, "Member 'UWidget_CommonPauseMenu_C::ConstructAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, ContinueButton) == 0x000448, "Member 'UWidget_CommonPauseMenu_C::ContinueButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, ExitButton) == 0x000450, "Member 'UWidget_CommonPauseMenu_C::ExitButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, Glyph_Image) == 0x000458, "Member 'UWidget_CommonPauseMenu_C::Glyph_Image' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, LeaveSessionButton) == 0x000460, "Member 'UWidget_CommonPauseMenu_C::LeaveSessionButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, LobbyButton) == 0x000468, "Member 'UWidget_CommonPauseMenu_C::LobbyButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, LogBookButton) == 0x000470, "Member 'UWidget_CommonPauseMenu_C::LogBookButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, MainMenuButton) == 0x000478, "Member 'UWidget_CommonPauseMenu_C::MainMenuButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, OptionsButton) == 0x000480, "Member 'UWidget_CommonPauseMenu_C::OptionsButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, SessionBrowserButton) == 0x000488, "Member 'UWidget_CommonPauseMenu_C::SessionBrowserButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, SessionSettingsButton) == 0x000490, "Member 'UWidget_CommonPauseMenu_C::SessionSettingsButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, SkipTutorialBTN) == 0x000498, "Member 'UWidget_CommonPauseMenu_C::SkipTutorialBTN' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, LastFocusedPauseMenuButton) == 0x0004A0, "Member 'UWidget_CommonPauseMenu_C::LastFocusedPauseMenuButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, LastFocusedWidgetTextButton) == 0x0004A8, "Member 'UWidget_CommonPauseMenu_C::LastFocusedWidgetTextButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, OnMenuWasClosed) == 0x0004B0, "Member 'UWidget_CommonPauseMenu_C::OnMenuWasClosed' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonPauseMenu_C, PausedClocks) == 0x0004C0, "Member 'UWidget_CommonPauseMenu_C::PausedClocks' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_CommonPauseMenu_C;
 
 }
 

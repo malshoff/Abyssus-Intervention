@@ -19,12 +19,13 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass AB_Ricky.AB_Ricky_C
-// 0x0010 (0x6F60 - 0x6F50)
+// 0x0010 (0x6F50 - 0x6F40)
 class UAB_Ricky_C final : public UABP_BasePlayer_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_AB_Ricky_C;                         // 0x6F50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          bIsLeft;                                           // 0x6F58(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6F32[0x6];                                     // 0x6F32(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_AB_Ricky_C;                         // 0x6F38(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          bIsLeft;                                           // 0x6F40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimNotify_FootStep_L();
@@ -35,17 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"AB_Ricky_C">();
+		BP_STATIC_CLASS_IMPL("AB_Ricky_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AB_Ricky_C")
 	}
 	static class UAB_Ricky_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAB_Ricky_C>();
 	}
 };
-static_assert(alignof(UAB_Ricky_C) == 0x000010, "Wrong alignment on UAB_Ricky_C");
-static_assert(sizeof(UAB_Ricky_C) == 0x006F60, "Wrong size on UAB_Ricky_C");
-static_assert(offsetof(UAB_Ricky_C, UberGraphFrame_AB_Ricky_C) == 0x006F50, "Member 'UAB_Ricky_C::UberGraphFrame_AB_Ricky_C' has a wrong offset!");
-static_assert(offsetof(UAB_Ricky_C, bIsLeft) == 0x006F58, "Member 'UAB_Ricky_C::bIsLeft' has a wrong offset!");
+DUMPER7_ASSERTS_UAB_Ricky_C;
 
 }
 

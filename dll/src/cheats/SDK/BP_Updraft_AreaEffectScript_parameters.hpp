@@ -39,21 +39,7 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaTime;                            // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript) == 0x000008, "Wrong alignment on BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript");
-static_assert(sizeof(BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript) == 0x000088, "Wrong size on BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript");
-static_assert(offsetof(BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript, EntryPoint) == 0x000000, "Member 'BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript, CallFunc_GetActorsInArea_ReturnValue) == 0x000008, "Member 'BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript::CallFunc_GetActorsInArea_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript, CallFunc_Array_Get_Item) == 0x000020, "Member 'BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript, K2Node_DynamicCast_AsRPawn_Base) == 0x000028, "Member 'BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000038, "Member 'BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript, Temp_int_Loop_Counter_Variable) == 0x000068, "Member 'BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x000070, "Member 'BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript, CallFunc_Less_IntInt_ReturnValue) == 0x000078, "Member 'BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript, CallFunc_Add_IntInt_ReturnValue) == 0x00007C, "Member 'BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript, K2Node_Event_DeltaTime) == 0x000080, "Member 'BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript::K2Node_Event_DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Updraft_AreaEffectScript_C_ExecuteUbergraph_BP_Updraft_AreaEffectScript;
 
 // Function BP_Updraft_AreaEffectScript.BP_Updraft_AreaEffectScript_C.K2_TickScript
 // 0x0004 (0x0004 - 0x0000)
@@ -62,9 +48,7 @@ struct BP_Updraft_AreaEffectScript_C_K2_TickScript final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Updraft_AreaEffectScript_C_K2_TickScript) == 0x000004, "Wrong alignment on BP_Updraft_AreaEffectScript_C_K2_TickScript");
-static_assert(sizeof(BP_Updraft_AreaEffectScript_C_K2_TickScript) == 0x000004, "Wrong size on BP_Updraft_AreaEffectScript_C_K2_TickScript");
-static_assert(offsetof(BP_Updraft_AreaEffectScript_C_K2_TickScript, DeltaTime) == 0x000000, "Member 'BP_Updraft_AreaEffectScript_C_K2_TickScript::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Updraft_AreaEffectScript_C_K2_TickScript;
 
 }
 

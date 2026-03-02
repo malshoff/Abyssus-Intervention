@@ -569,8 +569,9 @@ bool UDMOnlineFunctionLibrary::IsSessionSingleplayer(const class UObject* WorldC
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const class FString& FinalUrl)>OnClosedCallback                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UDMOnlineFunctionLibrary::OpenSteamBrowser(const class UObject* WorldContextObject, const class FString& URL)
+void UDMOnlineFunctionLibrary::OpenSteamBrowser(const class UObject* WorldContextObject, const class FString& URL, TDelegate<void(const class FString& FinalUrl)> OnClosedCallback)
 {
 	static class UFunction* Func = nullptr;
 
@@ -581,6 +582,7 @@ void UDMOnlineFunctionLibrary::OpenSteamBrowser(const class UObject* WorldContex
 
 	Parms.WorldContextObject = WorldContextObject;
 	Parms.URL = std::move(URL);
+	Parms.OnClosedCallback = OnClosedCallback;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

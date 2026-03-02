@@ -29,16 +29,7 @@ public:
 	TDelegate<void(class AActor* ActorUsedOn)>    K2Node_CreateDelegate_OutputDelegate;              // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_CustomEvent_ActorUsedOn;                    // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge) == 0x000008, "Wrong alignment on BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge");
-static_assert(sizeof(BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge) == 0x000038, "Wrong size on BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge");
-static_assert(offsetof(BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge, EntryPoint) == 0x000000, "Member 'BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge, Temp_int_Variable) == 0x000004, "Member 'BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge, CallFunc_GetChallengeManager_ReturnValue) == 0x000008, "Member 'BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000014, "Member 'BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge, CallFunc_GetRGameState_ReturnValue) == 0x000018, "Member 'BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge::CallFunc_GetRGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge, K2Node_CreateDelegate_OutputDelegate) == 0x000020, "Member 'BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge, K2Node_CustomEvent_ActorUsedOn) == 0x000030, "Member 'BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge::K2Node_CustomEvent_ActorUsedOn' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UseKeys_Challenge_C_ExecuteUbergraph_BP_UseKeys_Challenge;
 
 // Function BP_UseKeys_Challenge.BP_UseKeys_Challenge_C.OnKeyUsed
 // 0x0008 (0x0008 - 0x0000)
@@ -47,9 +38,7 @@ struct BP_UseKeys_Challenge_C_OnKeyUsed final
 public:
 	class AActor*                                 ActorUsedOn;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UseKeys_Challenge_C_OnKeyUsed) == 0x000008, "Wrong alignment on BP_UseKeys_Challenge_C_OnKeyUsed");
-static_assert(sizeof(BP_UseKeys_Challenge_C_OnKeyUsed) == 0x000008, "Wrong size on BP_UseKeys_Challenge_C_OnKeyUsed");
-static_assert(offsetof(BP_UseKeys_Challenge_C_OnKeyUsed, ActorUsedOn) == 0x000000, "Member 'BP_UseKeys_Challenge_C_OnKeyUsed::ActorUsedOn' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UseKeys_Challenge_C_OnKeyUsed;
 
 }
 

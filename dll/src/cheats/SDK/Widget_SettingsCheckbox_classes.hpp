@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_SettingsCheckbox.Widget_SettingsCheckbox_C
-// 0x0080 (0x0358 - 0x02D8)
+// 0x0080 (0x03C8 - 0x0348)
 class UWidget_SettingsCheckbox_C final : public UWidget_SettingsBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_SettingsCheckbox_C;          // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UButton*                                Button_104;                                        // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCheckBox*                              CheckBox_148;                                      // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Highlighted;                                       // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_35;                                          // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ValueText;                                         // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsButtonBase_C*           Widget_SettingsButtonBase;                         // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   SettingName;                                       // 0x0310(0x0010)(Edit, BlueprintVisible)
-	class FText                                   OnText;                                            // 0x0320(0x0010)(Edit, BlueprintVisible)
-	class FText                                   OffText;                                           // 0x0330(0x0010)(Edit, BlueprintVisible)
-	TMulticastInlineDelegate<void(bool State)>    OnValueChanged;                                    // 0x0340(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          ShowCheckbox;                                      // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_SettingsCheckbox_C;          // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_SettingsButtonBase_C*           Widget_SettingsButtonBase;                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ValueText;                                         // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_35;                                          // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Highlighted;                                       // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_CheckBox_C*                        CheckBox_148;                                      // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_104;                                        // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   SettingName;                                       // 0x0380(0x0010)(Edit, BlueprintVisible)
+	class FText                                   OnText;                                            // 0x0390(0x0010)(Edit, BlueprintVisible)
+	class FText                                   OffText;                                           // 0x03A0(0x0010)(Edit, BlueprintVisible)
+	TMulticastInlineDelegate<void(bool State)>    OnValueChanged;                                    // 0x03B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          ShowCheckbox;                                      // 0x03C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Widget_SettingsCheckbox_Button_104_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
@@ -54,27 +54,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_SettingsCheckbox_C">();
+		BP_STATIC_CLASS_IMPL("Widget_SettingsCheckbox_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_SettingsCheckbox_C")
 	}
 	static class UWidget_SettingsCheckbox_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_SettingsCheckbox_C>();
 	}
 };
-static_assert(alignof(UWidget_SettingsCheckbox_C) == 0x000008, "Wrong alignment on UWidget_SettingsCheckbox_C");
-static_assert(sizeof(UWidget_SettingsCheckbox_C) == 0x000358, "Wrong size on UWidget_SettingsCheckbox_C");
-static_assert(offsetof(UWidget_SettingsCheckbox_C, UberGraphFrame_Widget_SettingsCheckbox_C) == 0x0002D8, "Member 'UWidget_SettingsCheckbox_C::UberGraphFrame_Widget_SettingsCheckbox_C' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsCheckbox_C, Button_104) == 0x0002E0, "Member 'UWidget_SettingsCheckbox_C::Button_104' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsCheckbox_C, CheckBox_148) == 0x0002E8, "Member 'UWidget_SettingsCheckbox_C::CheckBox_148' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsCheckbox_C, Highlighted) == 0x0002F0, "Member 'UWidget_SettingsCheckbox_C::Highlighted' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsCheckbox_C, Image_35) == 0x0002F8, "Member 'UWidget_SettingsCheckbox_C::Image_35' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsCheckbox_C, ValueText) == 0x000300, "Member 'UWidget_SettingsCheckbox_C::ValueText' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsCheckbox_C, Widget_SettingsButtonBase) == 0x000308, "Member 'UWidget_SettingsCheckbox_C::Widget_SettingsButtonBase' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsCheckbox_C, SettingName) == 0x000310, "Member 'UWidget_SettingsCheckbox_C::SettingName' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsCheckbox_C, OnText) == 0x000320, "Member 'UWidget_SettingsCheckbox_C::OnText' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsCheckbox_C, OffText) == 0x000330, "Member 'UWidget_SettingsCheckbox_C::OffText' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsCheckbox_C, OnValueChanged) == 0x000340, "Member 'UWidget_SettingsCheckbox_C::OnValueChanged' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsCheckbox_C, ShowCheckbox) == 0x000350, "Member 'UWidget_SettingsCheckbox_C::ShowCheckbox' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_SettingsCheckbox_C;
 
 }
 

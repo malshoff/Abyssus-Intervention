@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function ComputeFramework.ComputeGraphComponent.CreateDataProviders
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   InBindingIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UObject*                          InBindingObject                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -45,7 +45,7 @@ void UComputeGraphComponent::CreateDataProviders(int32 InBindingIndex, class UOb
 
 
 // Function ComputeFramework.ComputeGraphComponent.DestroyDataProviders
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UComputeGraphComponent::DestroyDataProviders()
 {
@@ -64,7 +64,7 @@ void UComputeGraphComponent::DestroyDataProviders()
 
 
 // Function ComputeFramework.ComputeGraphComponent.QueueExecute
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UComputeGraphComponent::QueueExecute()
 {

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
@@ -39,22 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_HiddenCoinSpawner_C">();
+		BP_STATIC_CLASS_IMPL("BP_HiddenCoinSpawner_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_HiddenCoinSpawner_C")
 	}
 	static class ABP_HiddenCoinSpawner_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_HiddenCoinSpawner_C>();
 	}
 };
-static_assert(alignof(ABP_HiddenCoinSpawner_C) == 0x000008, "Wrong alignment on ABP_HiddenCoinSpawner_C");
-static_assert(sizeof(ABP_HiddenCoinSpawner_C) == 0x0002E0, "Wrong size on ABP_HiddenCoinSpawner_C");
-static_assert(offsetof(ABP_HiddenCoinSpawner_C, UberGraphFrame) == 0x0002A8, "Member 'ABP_HiddenCoinSpawner_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_HiddenCoinSpawner_C, RHealth) == 0x0002B0, "Member 'ABP_HiddenCoinSpawner_C::RHealth' has a wrong offset!");
-static_assert(offsetof(ABP_HiddenCoinSpawner_C, StaticMesh) == 0x0002B8, "Member 'ABP_HiddenCoinSpawner_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_HiddenCoinSpawner_C, DefaultSceneRoot) == 0x0002C0, "Member 'ABP_HiddenCoinSpawner_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_HiddenCoinSpawner_C, CoinId) == 0x0002C8, "Member 'ABP_HiddenCoinSpawner_C::CoinId' has a wrong offset!");
-static_assert(offsetof(ABP_HiddenCoinSpawner_C, ChallengeTag) == 0x0002D0, "Member 'ABP_HiddenCoinSpawner_C::ChallengeTag' has a wrong offset!");
-static_assert(offsetof(ABP_HiddenCoinSpawner_C, SkipLobbyCheck) == 0x0002D8, "Member 'ABP_HiddenCoinSpawner_C::SkipLobbyCheck' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_HiddenCoinSpawner_C;
 
 }
 

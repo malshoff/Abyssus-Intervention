@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -19,7 +20,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Geyser_CharacterMutator.BP_Geyser_CharacterMutator_C
-// 0x0040 (0x0148 - 0x0108)
+// 0x0168 (0x0270 - 0x0108)
 class UBP_Geyser_CharacterMutator_C final : public URGCharacterMutatorScript
 {
 public:
@@ -27,10 +28,11 @@ public:
 	double                                        GuesstimatedAreaEffectBaseDiameter;                // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         AreaEffectSizeMultiplier;                          // 0x0118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Location;                                          // 0x0120(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Delay;                                             // 0x0138(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_Anchor_CharacterMutator_C*          As_BP_Anchor_Character_Mutator;                    // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FRMutableFloat                         AbilityTriggerProcChanceModifier;                  // 0x0120(0x0128)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	struct FVector                                Location;                                          // 0x0248(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Delay;                                             // 0x0260(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_264[0x4];                                      // 0x0264(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_Anchor_CharacterMutator_C*          As_BP_Anchor_Character_Mutator;                    // 0x0268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Geyser_CharacterMutator(int32 EntryPoint);
@@ -45,21 +47,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Geyser_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Geyser_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Geyser_CharacterMutator_C")
 	}
 	static class UBP_Geyser_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Geyser_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_Geyser_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_Geyser_CharacterMutator_C");
-static_assert(sizeof(UBP_Geyser_CharacterMutator_C) == 0x000148, "Wrong size on UBP_Geyser_CharacterMutator_C");
-static_assert(offsetof(UBP_Geyser_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_Geyser_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Geyser_CharacterMutator_C, GuesstimatedAreaEffectBaseDiameter) == 0x000110, "Member 'UBP_Geyser_CharacterMutator_C::GuesstimatedAreaEffectBaseDiameter' has a wrong offset!");
-static_assert(offsetof(UBP_Geyser_CharacterMutator_C, AreaEffectSizeMultiplier) == 0x000118, "Member 'UBP_Geyser_CharacterMutator_C::AreaEffectSizeMultiplier' has a wrong offset!");
-static_assert(offsetof(UBP_Geyser_CharacterMutator_C, Location) == 0x000120, "Member 'UBP_Geyser_CharacterMutator_C::Location' has a wrong offset!");
-static_assert(offsetof(UBP_Geyser_CharacterMutator_C, Delay) == 0x000138, "Member 'UBP_Geyser_CharacterMutator_C::Delay' has a wrong offset!");
-static_assert(offsetof(UBP_Geyser_CharacterMutator_C, As_BP_Anchor_Character_Mutator) == 0x000140, "Member 'UBP_Geyser_CharacterMutator_C::As_BP_Anchor_Character_Mutator' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Geyser_CharacterMutator_C;
 
 }
 

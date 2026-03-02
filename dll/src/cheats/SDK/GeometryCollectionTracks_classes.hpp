@@ -10,55 +10,59 @@
 
 #include "Basic.hpp"
 
-#include "GeometryCollectionTracks_structs.hpp"
 #include "MovieScene_classes.hpp"
+#include "GeometryCollectionTracks_structs.hpp"
 
 
 namespace SDK
 {
 
 // Class GeometryCollectionTracks.MovieSceneGeometryCollectionSection
-// 0x0038 (0x0130 - 0x00F8)
+// 0x0038 (0x0140 - 0x0108)
 class UMovieSceneGeometryCollectionSection final : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneGeometryCollectionParams    Params_0;                                          // 0x00F8(0x0038)(Edit, NativeAccessSpecifierPublic)
+	struct FMovieSceneGeometryCollectionParams    Params_0;                                          // 0x0108(0x0038)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneGeometryCollectionSection">();
+		STATIC_CLASS_IMPL("MovieSceneGeometryCollectionSection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneGeometryCollectionSection")
 	}
 	static class UMovieSceneGeometryCollectionSection* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneGeometryCollectionSection>();
 	}
 };
-static_assert(alignof(UMovieSceneGeometryCollectionSection) == 0x000008, "Wrong alignment on UMovieSceneGeometryCollectionSection");
-static_assert(sizeof(UMovieSceneGeometryCollectionSection) == 0x000130, "Wrong size on UMovieSceneGeometryCollectionSection");
-static_assert(offsetof(UMovieSceneGeometryCollectionSection, Params_0) == 0x0000F8, "Member 'UMovieSceneGeometryCollectionSection::Params_0' has a wrong offset!");
+DUMPER7_ASSERTS_UMovieSceneGeometryCollectionSection;
 
 // Class GeometryCollectionTracks.MovieSceneGeometryCollectionTrack
-// 0x0018 (0x0110 - 0x00F8)
+// 0x0018 (0x0128 - 0x0110)
 class UMovieSceneGeometryCollectionTrack final : public UMovieSceneNameableTrack
 {
 public:
-	uint8                                         Pad_F8[0x8];                                       // 0x00F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneSection*>             AnimationSections;                                 // 0x0100(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_110[0x8];                                      // 0x0110(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMovieSceneSection*>             AnimationSections;                                 // 0x0118(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneGeometryCollectionTrack">();
+		STATIC_CLASS_IMPL("MovieSceneGeometryCollectionTrack")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneGeometryCollectionTrack")
 	}
 	static class UMovieSceneGeometryCollectionTrack* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneGeometryCollectionTrack>();
 	}
 };
-static_assert(alignof(UMovieSceneGeometryCollectionTrack) == 0x000008, "Wrong alignment on UMovieSceneGeometryCollectionTrack");
-static_assert(sizeof(UMovieSceneGeometryCollectionTrack) == 0x000110, "Wrong size on UMovieSceneGeometryCollectionTrack");
-static_assert(offsetof(UMovieSceneGeometryCollectionTrack, AnimationSections) == 0x000100, "Member 'UMovieSceneGeometryCollectionTrack::AnimationSections' has a wrong offset!");
+DUMPER7_ASSERTS_UMovieSceneGeometryCollectionTrack;
 
 }
 

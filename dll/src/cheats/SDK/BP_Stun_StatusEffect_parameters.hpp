@@ -72,46 +72,7 @@ public:
 	uint8                                         Pad_174[0x4];                                      // 0x0174(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast;    // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect) == 0x000008, "Wrong alignment on BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect");
-static_assert(sizeof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect) == 0x000180, "Wrong size on BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, EntryPoint) == 0x000000, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_K2_IsInstigatorLocallyControlled_ReturnValue) == 0x000004, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_K2_IsInstigatorLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_GetMutableFloatCurrentValue_ReturnValue) == 0x000038, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_GetMutableFloatCurrentValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, K2Node_DynamicCast_AsREnemy_Pawn_Base) == 0x000040, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::K2Node_DynamicCast_AsREnemy_Pawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_Not_PreBool_ReturnValue) == 0x000049, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, K2Node_CustomEvent_REnemyPawnBase) == 0x000050, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::K2Node_CustomEvent_REnemyPawnBase' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, K2Node_CustomEvent_Duration) == 0x000058, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::K2Node_CustomEvent_Duration' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, K2Node_CustomEvent_ShorterDurationOverrides) == 0x000060, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::K2Node_CustomEvent_ShorterDurationOverrides' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_GetGScriptComponentFromActor_ReturnValue) == 0x000068, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_GetGScriptComponentFromActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000070, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000071, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_GetGScriptCategory_ReturnValue) == 0x000074, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_GetGScriptCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_Not_PreBool_ReturnValue_1) == 0x00007C, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_BooleanOR_ReturnValue) == 0x00007D, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_Not_PreBool_ReturnValue_2) == 0x00007E, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_BooleanAND_ReturnValue) == 0x00007F, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_SetAIStunned_actualStunDuration) == 0x000080, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_SetAIStunned_actualStunDuration' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_LessEqual_DoubleDouble_ReturnValue_1) == 0x000084, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_LessEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000088, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_AttachParticlesToOwnerSkeletalMesh_ReturnValue) == 0x0000B8, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_AttachParticlesToOwnerSkeletalMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_IsValid_ReturnValue) == 0x0000C0, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, K2Node_DynamicCast_AsREnemy_Pawn_Base_1) == 0x0000C8, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::K2Node_DynamicCast_AsREnemy_Pawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, K2Node_DynamicCast_bSuccess_1) == 0x0000D0, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_GetComponentBounds_Origin) == 0x0000D8, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_GetComponentBounds_Origin' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_GetComponentBounds_BoxExtent) == 0x0000F0, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_GetComponentBounds_BoxExtent' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_GetComponentBounds_SphereRadius) == 0x000108, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_GetComponentBounds_SphereRadius' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_BreakVector_X) == 0x000110, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_BreakVector_Y) == 0x000118, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_BreakVector_Z) == 0x000120, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_MakeVector_ReturnValue) == 0x000128, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_Add_VectorVector_ReturnValue) == 0x000140, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000158, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_GetNonLocalPlayerVolumeMultiplier_ReturnValue) == 0x000160, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_GetNonLocalPlayerVolumeMultiplier_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_SpawnSoundAttached_ReturnValue) == 0x000168, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_SetEffectDuration_Duration_ImplicitCast) == 0x000170, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_SetEffectDuration_Duration_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast) == 0x000178, "Member 'BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Stun_StatusEffect_C_ExecuteUbergraph_BP_Stun_StatusEffect;
 
 // Function BP_Stun_StatusEffect.BP_Stun_StatusEffect_C.Interrupt
 // 0x0008 (0x0008 - 0x0000)
@@ -120,9 +81,7 @@ struct BP_Stun_StatusEffect_C_Interrupt final
 public:
 	class AREnemyPawnBase*                        REnemyPawnBase;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Stun_StatusEffect_C_Interrupt) == 0x000008, "Wrong alignment on BP_Stun_StatusEffect_C_Interrupt");
-static_assert(sizeof(BP_Stun_StatusEffect_C_Interrupt) == 0x000008, "Wrong size on BP_Stun_StatusEffect_C_Interrupt");
-static_assert(offsetof(BP_Stun_StatusEffect_C_Interrupt, REnemyPawnBase) == 0x000000, "Member 'BP_Stun_StatusEffect_C_Interrupt::REnemyPawnBase' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Stun_StatusEffect_C_Interrupt;
 
 // Function BP_Stun_StatusEffect.BP_Stun_StatusEffect_C.OnEffect
 // 0x0010 (0x0010 - 0x0000)
@@ -132,10 +91,7 @@ public:
 	double                                        Duration;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ShorterDurationOverrides;                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Stun_StatusEffect_C_OnEffect) == 0x000008, "Wrong alignment on BP_Stun_StatusEffect_C_OnEffect");
-static_assert(sizeof(BP_Stun_StatusEffect_C_OnEffect) == 0x000010, "Wrong size on BP_Stun_StatusEffect_C_OnEffect");
-static_assert(offsetof(BP_Stun_StatusEffect_C_OnEffect, Duration) == 0x000000, "Member 'BP_Stun_StatusEffect_C_OnEffect::Duration' has a wrong offset!");
-static_assert(offsetof(BP_Stun_StatusEffect_C_OnEffect, ShorterDurationOverrides) == 0x000008, "Member 'BP_Stun_StatusEffect_C_OnEffect::ShorterDurationOverrides' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Stun_StatusEffect_C_OnEffect;
 
 }
 

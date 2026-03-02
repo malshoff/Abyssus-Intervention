@@ -27,15 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_DoubleTrouble_CharcterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_DoubleTrouble_CharcterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_DoubleTrouble_CharcterMutator_C")
 	}
 	static class UBP_DoubleTrouble_CharcterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_DoubleTrouble_CharcterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_DoubleTrouble_CharcterMutator_C) == 0x000008, "Wrong alignment on UBP_DoubleTrouble_CharcterMutator_C");
-static_assert(sizeof(UBP_DoubleTrouble_CharcterMutator_C) == 0x000108, "Wrong size on UBP_DoubleTrouble_CharcterMutator_C");
+DUMPER7_ASSERTS_UBP_DoubleTrouble_CharcterMutator_C;
 
 }
 

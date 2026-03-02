@@ -22,10 +22,7 @@ public:
 	int32                                         ID;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Positive;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPI_Activatable_C_Activate) == 0x000004, "Wrong alignment on BPI_Activatable_C_Activate");
-static_assert(sizeof(BPI_Activatable_C_Activate) == 0x000008, "Wrong size on BPI_Activatable_C_Activate");
-static_assert(offsetof(BPI_Activatable_C_Activate, ID) == 0x000000, "Member 'BPI_Activatable_C_Activate::ID' has a wrong offset!");
-static_assert(offsetof(BPI_Activatable_C_Activate, Positive) == 0x000004, "Member 'BPI_Activatable_C_Activate::Positive' has a wrong offset!");
+DUMPER7_ASSERTS_BPI_Activatable_C_Activate;
 
 }
 

@@ -69,46 +69,7 @@ public:
 	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetTickScriptInterval_TickInterval_ImplicitCast; // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier) == 0x000008, "Wrong alignment on BP_NoxiousBubble_StatusEffect_C_AddMultiplier");
-static_assert(sizeof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier) == 0x0001B0, "Wrong size on BP_NoxiousBubble_StatusEffect_C_AddMultiplier");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000010, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000040, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue) == 0x000070, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_GetFirstScriptOfType_ReturnValue) == 0x000078, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_GetFirstScriptOfType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x000080, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, K2Node_DynamicCast_AsBP_Drop_Shield_Character_Mutator) == 0x0000B0, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::K2Node_DynamicCast_AsBP_Drop_Shield_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, K2Node_DynamicCast_bSuccess) == 0x0000B8, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue_1) == 0x0000BC, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000C0, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Greater_IntInt_ReturnValue) == 0x0000C8, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Subtract_IntInt_ReturnValue) == 0x0000CC, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0000D0, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Greater_IntInt_ReturnValue_1) == 0x0000D8, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_GetTickIntervalMultiplier_Value) == 0x0000E0, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_GetTickIntervalMultiplier_Value' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_SelectFloat_ReturnValue) == 0x0000E8, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_K2_GetCurrentActorInfo_ReturnValue_3) == 0x0000F0, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_K2_GetCurrentActorInfo_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000120, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000128, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, K2Node_DynamicCast_AsRNPCPawn_Base) == 0x000130, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::K2Node_DynamicCast_AsRNPCPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, K2Node_DynamicCast_bSuccess_1) == 0x000138, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000140, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_GetAllStatusEffectScripts_ReturnValue) == 0x000148, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_GetAllStatusEffectScripts_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000158, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Array_Get_Item) == 0x000160, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, K2Node_DynamicCast_AsRStatus_Effect_Ailment_GScript) == 0x000168, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::K2Node_DynamicCast_AsRStatus_Effect_Ailment_GScript' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, K2Node_DynamicCast_bSuccess_2) == 0x000170, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Array_Length_ReturnValue) == 0x000174, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_GetTickScriptInterval_ReturnValue) == 0x000178, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_GetTickScriptInterval_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Less_IntInt_ReturnValue) == 0x00017C, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000180, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000188, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x000190, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_SetEffectDuration_Duration_ImplicitCast) == 0x000198, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_SetEffectDuration_Duration_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x0001A0, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_AddMultiplier, CallFunc_SetTickScriptInterval_TickInterval_ImplicitCast) == 0x0001A8, "Member 'BP_NoxiousBubble_StatusEffect_C_AddMultiplier::CallFunc_SetTickScriptInterval_TickInterval_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NoxiousBubble_StatusEffect_C_AddMultiplier;
 
 // Function BP_NoxiousBubble_StatusEffect.BP_NoxiousBubble_StatusEffect_C.ExecuteUbergraph_BP_NoxiousBubble_StatusEffect
 // 0x00C0 (0x00C0 - 0x0000)
@@ -134,23 +95,7 @@ public:
 	TDelegate<void(class URStatusEffectGScript* StatusEffectScript)> K2Node_CreateDelegate_OutputDelegate_1; // 0x00AC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect) == 0x000008, "Wrong alignment on BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect");
-static_assert(sizeof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect) == 0x0000C0, "Wrong size on BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect, EntryPoint) == 0x000000, "Member 'BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect, K2Node_CustomEvent_ShieldAmount) == 0x000004, "Member 'BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect::K2Node_CustomEvent_ShieldAmount' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000018, "Member 'BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000048, "Member 'BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect, CallFunc_GetFirstScriptOfType_ReturnValue) == 0x000078, "Member 'BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect::CallFunc_GetFirstScriptOfType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect, K2Node_DynamicCast_AsRNPCPawn_Base) == 0x000080, "Member 'BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect::K2Node_DynamicCast_AsRNPCPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect, K2Node_DynamicCast_bSuccess) == 0x000088, "Member 'BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect, K2Node_DynamicCast_AsBP_Drop_Shield_Character_Mutator) == 0x000090, "Member 'BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect::K2Node_DynamicCast_AsBP_Drop_Shield_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect, K2Node_DynamicCast_bSuccess_1) == 0x000098, "Member 'BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect, K2Node_CustomEvent_StatusEffectScript) == 0x0000A0, "Member 'BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect::K2Node_CustomEvent_StatusEffectScript' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect, CallFunc_IsObjectASoftClass_ReturnValue) == 0x0000A8, "Member 'BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect::CallFunc_IsObjectASoftClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect, CallFunc_IsObjectChildOfSoftClass_ReturnValue) == 0x0000A9, "Member 'BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect::CallFunc_IsObjectChildOfSoftClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000AC, "Member 'BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect, CallFunc_BooleanOR_ReturnValue) == 0x0000BC, "Member 'BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NoxiousBubble_StatusEffect_C_ExecuteUbergraph_BP_NoxiousBubble_StatusEffect;
 
 // Function BP_NoxiousBubble_StatusEffect.BP_NoxiousBubble_StatusEffect_C.GetTickIntervalMultiplier
 // 0x0050 (0x0050 - 0x0000)
@@ -164,13 +109,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_NoxiousBubble_StatusEffect_C_GetTickIntervalMultiplier) == 0x000008, "Wrong alignment on BP_NoxiousBubble_StatusEffect_C_GetTickIntervalMultiplier");
-static_assert(sizeof(BP_NoxiousBubble_StatusEffect_C_GetTickIntervalMultiplier) == 0x000050, "Wrong size on BP_NoxiousBubble_StatusEffect_C_GetTickIntervalMultiplier");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_GetTickIntervalMultiplier, Value) == 0x000000, "Member 'BP_NoxiousBubble_StatusEffect_C_GetTickIntervalMultiplier::Value' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_GetTickIntervalMultiplier, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_NoxiousBubble_StatusEffect_C_GetTickIntervalMultiplier::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_GetTickIntervalMultiplier, CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue) == 0x000038, "Member 'BP_NoxiousBubble_StatusEffect_C_GetTickIntervalMultiplier::CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_GetTickIntervalMultiplier, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000040, "Member 'BP_NoxiousBubble_StatusEffect_C_GetTickIntervalMultiplier::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_GetTickIntervalMultiplier, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000048, "Member 'BP_NoxiousBubble_StatusEffect_C_GetTickIntervalMultiplier::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NoxiousBubble_StatusEffect_C_GetTickIntervalMultiplier;
 
 // Function BP_NoxiousBubble_StatusEffect.BP_NoxiousBubble_StatusEffect_C.OnStacksUpdated
 // 0x0004 (0x0004 - 0x0000)
@@ -179,9 +118,7 @@ struct BP_NoxiousBubble_StatusEffect_C_OnStacksUpdated final
 public:
 	int32                                         ShieldAmount;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_NoxiousBubble_StatusEffect_C_OnStacksUpdated) == 0x000004, "Wrong alignment on BP_NoxiousBubble_StatusEffect_C_OnStacksUpdated");
-static_assert(sizeof(BP_NoxiousBubble_StatusEffect_C_OnStacksUpdated) == 0x000004, "Wrong size on BP_NoxiousBubble_StatusEffect_C_OnStacksUpdated");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_OnStacksUpdated, ShieldAmount) == 0x000000, "Member 'BP_NoxiousBubble_StatusEffect_C_OnStacksUpdated::ShieldAmount' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NoxiousBubble_StatusEffect_C_OnStacksUpdated;
 
 // Function BP_NoxiousBubble_StatusEffect.BP_NoxiousBubble_StatusEffect_C.OnStatusEffectAttached
 // 0x0008 (0x0008 - 0x0000)
@@ -190,9 +127,7 @@ struct BP_NoxiousBubble_StatusEffect_C_OnStatusEffectAttached final
 public:
 	class URStatusEffectGScript*                  StatusEffectScript;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_NoxiousBubble_StatusEffect_C_OnStatusEffectAttached) == 0x000008, "Wrong alignment on BP_NoxiousBubble_StatusEffect_C_OnStatusEffectAttached");
-static_assert(sizeof(BP_NoxiousBubble_StatusEffect_C_OnStatusEffectAttached) == 0x000008, "Wrong size on BP_NoxiousBubble_StatusEffect_C_OnStatusEffectAttached");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_OnStatusEffectAttached, StatusEffectScript) == 0x000000, "Member 'BP_NoxiousBubble_StatusEffect_C_OnStatusEffectAttached::StatusEffectScript' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NoxiousBubble_StatusEffect_C_OnStatusEffectAttached;
 
 // Function BP_NoxiousBubble_StatusEffect.BP_NoxiousBubble_StatusEffect_C.RemoveMultiplier
 // 0x00A8 (0x00A8 - 0x0000)
@@ -223,25 +158,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetTickScriptInterval_TickInterval_ImplicitCast; // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier) == 0x000008, "Wrong alignment on BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier");
-static_assert(sizeof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier) == 0x0000A8, "Wrong size on BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000010, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000040, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, K2Node_DynamicCast_AsRNPCPawn_Base) == 0x000048, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::K2Node_DynamicCast_AsRNPCPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, CallFunc_GetAllStatusEffectScripts_ReturnValue) == 0x000058, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::CallFunc_GetAllStatusEffectScripts_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, CallFunc_Array_Length_ReturnValue) == 0x000068, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, CallFunc_Array_Get_Item) == 0x000070, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, CallFunc_Less_IntInt_ReturnValue) == 0x000078, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, K2Node_DynamicCast_AsRStatus_Effect_Ailment_GScript) == 0x000080, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::K2Node_DynamicCast_AsRStatus_Effect_Ailment_GScript' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, K2Node_DynamicCast_bSuccess_1) == 0x000088, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, CallFunc_GetTickScriptInterval_ReturnValue) == 0x00008C, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::CallFunc_GetTickScriptInterval_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000090, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000098, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier, CallFunc_SetTickScriptInterval_TickInterval_ImplicitCast) == 0x0000A0, "Member 'BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier::CallFunc_SetTickScriptInterval_TickInterval_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NoxiousBubble_StatusEffect_C_RemoveMultiplier;
 
 }
 

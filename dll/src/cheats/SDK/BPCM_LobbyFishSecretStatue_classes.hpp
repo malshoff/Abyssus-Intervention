@@ -23,15 +23,18 @@ class UBPCM_LobbyFishSecretStatue_C final : public UDefaultCameraShakeBase
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPCM_LobbyFishSecretStatue_C">();
+		BP_STATIC_CLASS_IMPL("BPCM_LobbyFishSecretStatue_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPCM_LobbyFishSecretStatue_C")
 	}
 	static class UBPCM_LobbyFishSecretStatue_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPCM_LobbyFishSecretStatue_C>();
 	}
 };
-static_assert(alignof(UBPCM_LobbyFishSecretStatue_C) == 0x000010, "Wrong alignment on UBPCM_LobbyFishSecretStatue_C");
-static_assert(sizeof(UBPCM_LobbyFishSecretStatue_C) == 0x0000E0, "Wrong size on UBPCM_LobbyFishSecretStatue_C");
+DUMPER7_ASSERTS_UBPCM_LobbyFishSecretStatue_C;
 
 }
 

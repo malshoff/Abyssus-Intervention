@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_ChatLog_Message.Widget_ChatLog_Message_C
-// 0x0020 (0x02F0 - 0x02D0)
+// 0x0020 (0x0360 - 0x0340)
 class UWidget_ChatLog_Message_C final : public URChatLogEntryWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             DisplayName;                                       // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             MessageContent;                                    // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Separator;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Separator;                                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             MessageContent;                                    // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             DisplayName;                                       // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Widget_ChatLog_Message(int32 EntryPoint);
@@ -34,19 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_ChatLog_Message_C">();
+		BP_STATIC_CLASS_IMPL("Widget_ChatLog_Message_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_ChatLog_Message_C")
 	}
 	static class UWidget_ChatLog_Message_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_ChatLog_Message_C>();
 	}
 };
-static_assert(alignof(UWidget_ChatLog_Message_C) == 0x000008, "Wrong alignment on UWidget_ChatLog_Message_C");
-static_assert(sizeof(UWidget_ChatLog_Message_C) == 0x0002F0, "Wrong size on UWidget_ChatLog_Message_C");
-static_assert(offsetof(UWidget_ChatLog_Message_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_ChatLog_Message_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_ChatLog_Message_C, DisplayName) == 0x0002D8, "Member 'UWidget_ChatLog_Message_C::DisplayName' has a wrong offset!");
-static_assert(offsetof(UWidget_ChatLog_Message_C, MessageContent) == 0x0002E0, "Member 'UWidget_ChatLog_Message_C::MessageContent' has a wrong offset!");
-static_assert(offsetof(UWidget_ChatLog_Message_C, Separator) == 0x0002E8, "Member 'UWidget_ChatLog_Message_C::Separator' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_ChatLog_Message_C;
 
 }
 

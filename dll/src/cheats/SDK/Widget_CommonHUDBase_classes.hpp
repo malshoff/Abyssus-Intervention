@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_CommonHUDBase.Widget_CommonHUDBase_C
-// 0x0008 (0x0300 - 0x02F8)
+// 0x0008 (0x0370 - 0x0368)
 class UWidget_CommonHUDBase_C : public URCommonHUDWidget
 {
 public:
-	class UCommonActivatableWidgetStack*          WidgetStack;                                       // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActivatableWidgetStack*          WidgetStack;                                       // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	class UCommonActivatableWidgetStack* GetWidgetStack();
@@ -29,16 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_CommonHUDBase_C">();
+		BP_STATIC_CLASS_IMPL("Widget_CommonHUDBase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_CommonHUDBase_C")
 	}
 	static class UWidget_CommonHUDBase_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_CommonHUDBase_C>();
 	}
 };
-static_assert(alignof(UWidget_CommonHUDBase_C) == 0x000008, "Wrong alignment on UWidget_CommonHUDBase_C");
-static_assert(sizeof(UWidget_CommonHUDBase_C) == 0x000300, "Wrong size on UWidget_CommonHUDBase_C");
-static_assert(offsetof(UWidget_CommonHUDBase_C, WidgetStack) == 0x0002F8, "Member 'UWidget_CommonHUDBase_C::WidgetStack' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_CommonHUDBase_C;
 
 }
 

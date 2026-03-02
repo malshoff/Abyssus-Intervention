@@ -10,7 +10,7 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "DataflowCore_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
@@ -18,37 +18,60 @@
 namespace SDK
 {
 
+// Class DataflowCore.DataflowGraphInterface
+// 0x0000 (0x0000 - 0x0000)
+class IDataflowGraphInterface final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DataflowGraphInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowGraphInterface")
+	}
+	static class IDataflowGraphInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IDataflowGraphInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IDataflowGraphInterface;
+
 // Class DataflowCore.DataflowSettings
-// 0x00B8 (0x00F0 - 0x0038)
+// 0x00F0 (0x0128 - 0x0038)
 class UDataflowSettings final : public UDeveloperSettings
 {
 public:
-	struct FLinearColor                           ArrayPinTypeColor;                                 // 0x0038(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ManagedArrayCollectionPinTypeColor;                // 0x0048(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           BoxPinTypeColor;                                   // 0x0058(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SpherePinTypeColor;                                // 0x0068(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           DataflowAnyTypePinTypeColor;                       // 0x0078(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FNodeColors>         NodeColorsMap;                                     // 0x0088(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D8[0x18];                                      // 0x00D8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMap<class FName, struct FNodeColors>         NodeColorsMap;                                     // 0x0038(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FPinSettings>        PinSettingsMap;                                    // 0x0088(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FTransformLevelColors                  TransformLevelColors;                              // 0x00D8(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F8[0x30];                                      // 0x00F8(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataflowSettings">();
+		STATIC_CLASS_IMPL("DataflowSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowSettings")
 	}
 	static class UDataflowSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDataflowSettings>();
 	}
 };
-static_assert(alignof(UDataflowSettings) == 0x000008, "Wrong alignment on UDataflowSettings");
-static_assert(sizeof(UDataflowSettings) == 0x0000F0, "Wrong size on UDataflowSettings");
-static_assert(offsetof(UDataflowSettings, ArrayPinTypeColor) == 0x000038, "Member 'UDataflowSettings::ArrayPinTypeColor' has a wrong offset!");
-static_assert(offsetof(UDataflowSettings, ManagedArrayCollectionPinTypeColor) == 0x000048, "Member 'UDataflowSettings::ManagedArrayCollectionPinTypeColor' has a wrong offset!");
-static_assert(offsetof(UDataflowSettings, BoxPinTypeColor) == 0x000058, "Member 'UDataflowSettings::BoxPinTypeColor' has a wrong offset!");
-static_assert(offsetof(UDataflowSettings, SpherePinTypeColor) == 0x000068, "Member 'UDataflowSettings::SpherePinTypeColor' has a wrong offset!");
-static_assert(offsetof(UDataflowSettings, DataflowAnyTypePinTypeColor) == 0x000078, "Member 'UDataflowSettings::DataflowAnyTypePinTypeColor' has a wrong offset!");
-static_assert(offsetof(UDataflowSettings, NodeColorsMap) == 0x000088, "Member 'UDataflowSettings::NodeColorsMap' has a wrong offset!");
+DUMPER7_ASSERTS_UDataflowSettings;
 
 }
 

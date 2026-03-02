@@ -11,23 +11,23 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Defender_Behavior_Mutator.BP_Defender_Behavior_Mutator_C
-// 0x0020 (0x0170 - 0x0150)
+// 0x0020 (0x0180 - 0x0160)
 class UBP_Defender_Behavior_Mutator_C final : public URBehaviorScriptDefender
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0150(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      SpawnedVFX;                                        // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        ActivateAC;                                        // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasActive;                                        // 0x0168(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0160(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      SpawnedVFX;                                        // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        ActivateAC;                                        // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasActive;                                        // 0x0178(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CheckDefenderPassive9(bool* Result, double* Multiplier);
@@ -43,8 +43,8 @@ public:
 	void OnFinish_82E44C7B4038E3E636C875B8EFDE7214();
 	void OnMutatorRankChanged(int32 NewRank, class URMutatorPrimaryAsset* MutatorPrimaryAsset);
 	void RemoveDamageModifiers();
-	void RunAbilityBehavior(class AActor* TriggeringActor, int32 DamageSourceMask, float HealthDamage, class AActor* OptionalAvatarActor);
-	void RunPrimaryFireBehavior(float HealthDamage);
+	void RunAbilityBehavior(class AActor* TriggeringActor, int32 DamageSourceMask, float HealthDamage, class AActor* OptionalAvatarActor, const struct FRMutableFloat& SpecificCombatEventModifier);
+	void RunPrimaryFireBehavior(float HealthDamage, class AActor* TriggeringActor);
 	void RunSecondaryFireBehavior(class AActor* TriggeringActor, float HealthDamage);
 	void SetBarrierGaugeHudWidgetVisibilty(ESlateVisibility BarrierGaugeVisibility);
 	void ToggleShield_Client(bool Active);
@@ -55,19 +55,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Defender_Behavior_Mutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Defender_Behavior_Mutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Defender_Behavior_Mutator_C")
 	}
 	static class UBP_Defender_Behavior_Mutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Defender_Behavior_Mutator_C>();
 	}
 };
-static_assert(alignof(UBP_Defender_Behavior_Mutator_C) == 0x000008, "Wrong alignment on UBP_Defender_Behavior_Mutator_C");
-static_assert(sizeof(UBP_Defender_Behavior_Mutator_C) == 0x000170, "Wrong size on UBP_Defender_Behavior_Mutator_C");
-static_assert(offsetof(UBP_Defender_Behavior_Mutator_C, UberGraphFrame) == 0x000150, "Member 'UBP_Defender_Behavior_Mutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Defender_Behavior_Mutator_C, SpawnedVFX) == 0x000158, "Member 'UBP_Defender_Behavior_Mutator_C::SpawnedVFX' has a wrong offset!");
-static_assert(offsetof(UBP_Defender_Behavior_Mutator_C, ActivateAC) == 0x000160, "Member 'UBP_Defender_Behavior_Mutator_C::ActivateAC' has a wrong offset!");
-static_assert(offsetof(UBP_Defender_Behavior_Mutator_C, bWasActive) == 0x000168, "Member 'UBP_Defender_Behavior_Mutator_C::bWasActive' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Defender_Behavior_Mutator_C;
 
 }
 

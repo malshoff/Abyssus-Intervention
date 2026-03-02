@@ -21,9 +21,7 @@ struct UVEditorTexelDensitySettings_InSamplingMode final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(UVEditorTexelDensitySettings_InSamplingMode) == 0x000001, "Wrong alignment on UVEditorTexelDensitySettings_InSamplingMode");
-static_assert(sizeof(UVEditorTexelDensitySettings_InSamplingMode) == 0x000001, "Wrong size on UVEditorTexelDensitySettings_InSamplingMode");
-static_assert(offsetof(UVEditorTexelDensitySettings_InSamplingMode, ReturnValue) == 0x000000, "Member 'UVEditorTexelDensitySettings_InSamplingMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_UVEditorTexelDensitySettings_InSamplingMode;
 
 }
 

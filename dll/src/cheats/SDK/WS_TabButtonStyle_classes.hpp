@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass WS_TabButtonStyle.WS_TabButtonStyle_C
-// 0x0000 (0x06B0 - 0x06B0)
+// 0x0000 (0x0710 - 0x0710)
 class UWS_TabButtonStyle_C final : public UCommonButtonStyle
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"WS_TabButtonStyle_C">();
+		BP_STATIC_CLASS_IMPL("WS_TabButtonStyle_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WS_TabButtonStyle_C")
 	}
 	static class UWS_TabButtonStyle_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWS_TabButtonStyle_C>();
 	}
 };
-static_assert(alignof(UWS_TabButtonStyle_C) == 0x000010, "Wrong alignment on UWS_TabButtonStyle_C");
-static_assert(sizeof(UWS_TabButtonStyle_C) == 0x0006B0, "Wrong size on UWS_TabButtonStyle_C");
+DUMPER7_ASSERTS_UWS_TabButtonStyle_C;
 
 }
 

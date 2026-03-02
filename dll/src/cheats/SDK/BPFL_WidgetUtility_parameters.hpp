@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BPFL_WidgetUtility.BPFL_WidgetUtility_C.PlayAnimation
-// 0x0050 (0x0050 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct BPFL_WidgetUtility_C_PlayAnimation final
 {
 public:
@@ -33,23 +33,11 @@ public:
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        StartLocation;                                     // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue;         // 0x003C(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationReverse_ReturnValue;         // 0x004C(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(BPFL_WidgetUtility_C_PlayAnimation) == 0x000008, "Wrong alignment on BPFL_WidgetUtility_C_PlayAnimation");
-static_assert(sizeof(BPFL_WidgetUtility_C_PlayAnimation) == 0x000050, "Wrong size on BPFL_WidgetUtility_C_PlayAnimation");
-static_assert(offsetof(BPFL_WidgetUtility_C_PlayAnimation, Target) == 0x000000, "Member 'BPFL_WidgetUtility_C_PlayAnimation::Target' has a wrong offset!");
-static_assert(offsetof(BPFL_WidgetUtility_C_PlayAnimation, Reverse) == 0x000008, "Member 'BPFL_WidgetUtility_C_PlayAnimation::Reverse' has a wrong offset!");
-static_assert(offsetof(BPFL_WidgetUtility_C_PlayAnimation, Animation) == 0x000010, "Member 'BPFL_WidgetUtility_C_PlayAnimation::Animation' has a wrong offset!");
-static_assert(offsetof(BPFL_WidgetUtility_C_PlayAnimation, PlaybackSpeed) == 0x000018, "Member 'BPFL_WidgetUtility_C_PlayAnimation::PlaybackSpeed' has a wrong offset!");
-static_assert(offsetof(BPFL_WidgetUtility_C_PlayAnimation, bRestoreState) == 0x00001C, "Member 'BPFL_WidgetUtility_C_PlayAnimation::bRestoreState' has a wrong offset!");
-static_assert(offsetof(BPFL_WidgetUtility_C_PlayAnimation, __WorldContext) == 0x000020, "Member 'BPFL_WidgetUtility_C_PlayAnimation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPFL_WidgetUtility_C_PlayAnimation, PlayMode) == 0x000028, "Member 'BPFL_WidgetUtility_C_PlayAnimation::PlayMode' has a wrong offset!");
-static_assert(offsetof(BPFL_WidgetUtility_C_PlayAnimation, StartLocation) == 0x000030, "Member 'BPFL_WidgetUtility_C_PlayAnimation::StartLocation' has a wrong offset!");
-static_assert(offsetof(BPFL_WidgetUtility_C_PlayAnimation, CallFunc_Not_PreBool_ReturnValue) == 0x000038, "Member 'BPFL_WidgetUtility_C_PlayAnimation::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPFL_WidgetUtility_C_PlayAnimation, CallFunc_PlayAnimationForward_ReturnValue) == 0x000040, "Member 'BPFL_WidgetUtility_C_PlayAnimation::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPFL_WidgetUtility_C_PlayAnimation, CallFunc_PlayAnimationReverse_ReturnValue) == 0x000048, "Member 'BPFL_WidgetUtility_C_PlayAnimation::CallFunc_PlayAnimationReverse_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPFL_WidgetUtility_C_PlayAnimation;
 
 }
 

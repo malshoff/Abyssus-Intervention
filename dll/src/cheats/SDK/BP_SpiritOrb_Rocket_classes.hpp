@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -19,15 +19,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SpiritOrb_Rocket.BP_SpiritOrb_Rocket_C
-// 0x00D8 (0x07C0 - 0x06E8)
+// 0x00D8 (0x07D0 - 0x06F8)
 class ABP_SpiritOrb_Rocket_C final : public ARRocket
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      Niagara;                                           // 0x06F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6F8[0x8];                                      // 0x06F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             MeshRelativeTransform;                             // 0x0700(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             NiagaraRelativeTransform;                          // 0x0760(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      Niagara;                                           // 0x0700(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_708[0x8];                                      // 0x0708(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             MeshRelativeTransform;                             // 0x0710(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             NiagaraRelativeTransform;                          // 0x0770(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_0_OnProjectileBounceDelegate__DelegateSignature(const struct FHitResult& ImpactResult, const struct FVector& ImpactVelocity);
@@ -44,19 +44,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SpiritOrb_Rocket_C">();
+		BP_STATIC_CLASS_IMPL("BP_SpiritOrb_Rocket_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SpiritOrb_Rocket_C")
 	}
 	static class ABP_SpiritOrb_Rocket_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_SpiritOrb_Rocket_C>();
 	}
 };
-static_assert(alignof(ABP_SpiritOrb_Rocket_C) == 0x000010, "Wrong alignment on ABP_SpiritOrb_Rocket_C");
-static_assert(sizeof(ABP_SpiritOrb_Rocket_C) == 0x0007C0, "Wrong size on ABP_SpiritOrb_Rocket_C");
-static_assert(offsetof(ABP_SpiritOrb_Rocket_C, UberGraphFrame) == 0x0006E8, "Member 'ABP_SpiritOrb_Rocket_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_SpiritOrb_Rocket_C, Niagara) == 0x0006F0, "Member 'ABP_SpiritOrb_Rocket_C::Niagara' has a wrong offset!");
-static_assert(offsetof(ABP_SpiritOrb_Rocket_C, MeshRelativeTransform) == 0x000700, "Member 'ABP_SpiritOrb_Rocket_C::MeshRelativeTransform' has a wrong offset!");
-static_assert(offsetof(ABP_SpiritOrb_Rocket_C, NiagaraRelativeTransform) == 0x000760, "Member 'ABP_SpiritOrb_Rocket_C::NiagaraRelativeTransform' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_SpiritOrb_Rocket_C;
 
 }
 

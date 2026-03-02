@@ -32,7 +32,7 @@ void UWidget_DashScreen_C::Construct()
 
 
 // Function Widget_DashScreen.Widget_DashScreen_C.ExecuteUbergraph_Widget_DashScreen
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

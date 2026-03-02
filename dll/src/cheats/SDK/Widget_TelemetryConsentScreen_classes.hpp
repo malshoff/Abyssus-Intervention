@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_TelemetryConsentScreen.Widget_TelemetryConsentScreen_C
-// 0x0030 (0x0468 - 0x0438)
+// 0x0030 (0x04F0 - 0x04C0)
 class UWidget_TelemetryConsentScreen_C final : public URCommonActivatableWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UW_Button_SimpleText_C*                 W_Button_SimpleText;                               // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 W_Button_SimpleText_1;                             // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 W_Button_SimpleText_Accept;                        // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 W_Button_SimpleText_Deny;                          // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bFromSettings;                                     // 0x0460(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UW_Button_SimpleText_C*                 W_Button_SimpleText_Deny;                          // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_SimpleText_C*                 W_Button_SimpleText_Accept;                        // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_SimpleText_C*                 W_Button_SimpleText_1;                             // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_SimpleText_C*                 W_Button_SimpleText;                               // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bFromSettings;                                     // 0x04E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
@@ -40,21 +40,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_TelemetryConsentScreen_C">();
+		BP_STATIC_CLASS_IMPL("Widget_TelemetryConsentScreen_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_TelemetryConsentScreen_C")
 	}
 	static class UWidget_TelemetryConsentScreen_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_TelemetryConsentScreen_C>();
 	}
 };
-static_assert(alignof(UWidget_TelemetryConsentScreen_C) == 0x000008, "Wrong alignment on UWidget_TelemetryConsentScreen_C");
-static_assert(sizeof(UWidget_TelemetryConsentScreen_C) == 0x000468, "Wrong size on UWidget_TelemetryConsentScreen_C");
-static_assert(offsetof(UWidget_TelemetryConsentScreen_C, UberGraphFrame) == 0x000438, "Member 'UWidget_TelemetryConsentScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_TelemetryConsentScreen_C, W_Button_SimpleText) == 0x000440, "Member 'UWidget_TelemetryConsentScreen_C::W_Button_SimpleText' has a wrong offset!");
-static_assert(offsetof(UWidget_TelemetryConsentScreen_C, W_Button_SimpleText_1) == 0x000448, "Member 'UWidget_TelemetryConsentScreen_C::W_Button_SimpleText_1' has a wrong offset!");
-static_assert(offsetof(UWidget_TelemetryConsentScreen_C, W_Button_SimpleText_Accept) == 0x000450, "Member 'UWidget_TelemetryConsentScreen_C::W_Button_SimpleText_Accept' has a wrong offset!");
-static_assert(offsetof(UWidget_TelemetryConsentScreen_C, W_Button_SimpleText_Deny) == 0x000458, "Member 'UWidget_TelemetryConsentScreen_C::W_Button_SimpleText_Deny' has a wrong offset!");
-static_assert(offsetof(UWidget_TelemetryConsentScreen_C, bFromSettings) == 0x000460, "Member 'UWidget_TelemetryConsentScreen_C::bFromSettings' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_TelemetryConsentScreen_C;
 
 }
 

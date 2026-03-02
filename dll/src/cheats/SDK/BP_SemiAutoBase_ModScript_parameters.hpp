@@ -24,11 +24,7 @@ public:
 	class URGWeaponScript*                        CallFunc_GetWeaponScript_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetIntegerWeaponStat_ReturnValue;         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SemiAutoBase_ModScript_C_ExecuteUbergraph_BP_SemiAutoBase_ModScript) == 0x000008, "Wrong alignment on BP_SemiAutoBase_ModScript_C_ExecuteUbergraph_BP_SemiAutoBase_ModScript");
-static_assert(sizeof(BP_SemiAutoBase_ModScript_C_ExecuteUbergraph_BP_SemiAutoBase_ModScript) == 0x000018, "Wrong size on BP_SemiAutoBase_ModScript_C_ExecuteUbergraph_BP_SemiAutoBase_ModScript");
-static_assert(offsetof(BP_SemiAutoBase_ModScript_C_ExecuteUbergraph_BP_SemiAutoBase_ModScript, EntryPoint) == 0x000000, "Member 'BP_SemiAutoBase_ModScript_C_ExecuteUbergraph_BP_SemiAutoBase_ModScript::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_SemiAutoBase_ModScript_C_ExecuteUbergraph_BP_SemiAutoBase_ModScript, CallFunc_GetWeaponScript_ReturnValue) == 0x000008, "Member 'BP_SemiAutoBase_ModScript_C_ExecuteUbergraph_BP_SemiAutoBase_ModScript::CallFunc_GetWeaponScript_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SemiAutoBase_ModScript_C_ExecuteUbergraph_BP_SemiAutoBase_ModScript, CallFunc_GetIntegerWeaponStat_ReturnValue) == 0x000010, "Member 'BP_SemiAutoBase_ModScript_C_ExecuteUbergraph_BP_SemiAutoBase_ModScript::CallFunc_GetIntegerWeaponStat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SemiAutoBase_ModScript_C_ExecuteUbergraph_BP_SemiAutoBase_ModScript;
 
 // Function BP_SemiAutoBase_ModScript.BP_SemiAutoBase_ModScript_C.GetDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -37,9 +33,7 @@ struct BP_SemiAutoBase_ModScript_C_GetDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_SemiAutoBase_ModScript_C_GetDescription) == 0x000008, "Wrong alignment on BP_SemiAutoBase_ModScript_C_GetDescription");
-static_assert(sizeof(BP_SemiAutoBase_ModScript_C_GetDescription) == 0x000010, "Wrong size on BP_SemiAutoBase_ModScript_C_GetDescription");
-static_assert(offsetof(BP_SemiAutoBase_ModScript_C_GetDescription, ReturnValue) == 0x000000, "Member 'BP_SemiAutoBase_ModScript_C_GetDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SemiAutoBase_ModScript_C_GetDescription;
 
 }
 

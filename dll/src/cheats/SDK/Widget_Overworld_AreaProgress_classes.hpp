@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_Overworld_AreaProgress.Widget_Overworld_AreaProgress_C
-// 0x0038 (0x0308 - 0x02D0)
+// 0x0038 (0x0378 - 0x0340)
 class UWidget_Overworld_AreaProgress_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FadeOut;                                           // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_34;                                  // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UWidget_Overworld_AreaProgress_Node_C*> Nodes;                                      // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	int32                                         CurrentIndex;                                      // 0x02F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2FC[0x4];                                      // 0x02FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget_Overworld_AreaProgress_Node_C*  CurrentWidget;                                     // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UHorizontalBox*                         HorizontalBox_34;                                  // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FadeOut;                                           // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWidget_Overworld_AreaProgress_Node_C*> Nodes;                                      // 0x0358(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	int32                                         CurrentIndex;                                      // 0x0368(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_36C[0x4];                                      // 0x036C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_Overworld_AreaProgress_Node_C*  CurrentWidget;                                     // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -41,21 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_Overworld_AreaProgress_C">();
+		BP_STATIC_CLASS_IMPL("Widget_Overworld_AreaProgress_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_Overworld_AreaProgress_C")
 	}
 	static class UWidget_Overworld_AreaProgress_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_Overworld_AreaProgress_C>();
 	}
 };
-static_assert(alignof(UWidget_Overworld_AreaProgress_C) == 0x000008, "Wrong alignment on UWidget_Overworld_AreaProgress_C");
-static_assert(sizeof(UWidget_Overworld_AreaProgress_C) == 0x000308, "Wrong size on UWidget_Overworld_AreaProgress_C");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_Overworld_AreaProgress_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_C, FadeOut) == 0x0002D8, "Member 'UWidget_Overworld_AreaProgress_C::FadeOut' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_C, HorizontalBox_34) == 0x0002E0, "Member 'UWidget_Overworld_AreaProgress_C::HorizontalBox_34' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_C, Nodes) == 0x0002E8, "Member 'UWidget_Overworld_AreaProgress_C::Nodes' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_C, CurrentIndex) == 0x0002F8, "Member 'UWidget_Overworld_AreaProgress_C::CurrentIndex' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_C, CurrentWidget) == 0x000300, "Member 'UWidget_Overworld_AreaProgress_C::CurrentWidget' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_Overworld_AreaProgress_C;
 
 }
 

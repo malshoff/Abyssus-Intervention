@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_MutatorGridElement_01_Large.Widget_MutatorGridElement_01_Large_C
-// 0x0000 (0x0380 - 0x0380)
+// 0x0000 (0x03F8 - 0x03F8)
 class UWidget_MutatorGridElement_01_Large_C final : public UWidget_MutatorGridElement_01_C
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_MutatorGridElement_01_Large_C">();
+		BP_STATIC_CLASS_IMPL("Widget_MutatorGridElement_01_Large_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_MutatorGridElement_01_Large_C")
 	}
 	static class UWidget_MutatorGridElement_01_Large_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_MutatorGridElement_01_Large_C>();
 	}
 };
-static_assert(alignof(UWidget_MutatorGridElement_01_Large_C) == 0x000008, "Wrong alignment on UWidget_MutatorGridElement_01_Large_C");
-static_assert(sizeof(UWidget_MutatorGridElement_01_Large_C) == 0x000380, "Wrong size on UWidget_MutatorGridElement_01_Large_C");
+DUMPER7_ASSERTS_UWidget_MutatorGridElement_01_Large_C;
 
 }
 

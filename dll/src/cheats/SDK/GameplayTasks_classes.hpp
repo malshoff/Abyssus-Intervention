@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "GameplayTasks_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -28,7 +28,7 @@ public:
 	uint8                                         Pad_38[0x2];                                       // 0x0038(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	ETaskResourceOverlapPolicy                    ResourceOverlapPolicy;                             // 0x003A(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_3B[0x25];                                      // 0x003B(0x0025)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameplayTask*                          ChildTask;                                         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UGameplayTask*                          ChildTask;                                         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	void EndTask();
@@ -37,18 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTask">();
+		STATIC_CLASS_IMPL("GameplayTask")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTask")
 	}
 	static class UGameplayTask* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTask>();
 	}
 };
-static_assert(alignof(UGameplayTask) == 0x000008, "Wrong alignment on UGameplayTask");
-static_assert(sizeof(UGameplayTask) == 0x000068, "Wrong size on UGameplayTask");
-static_assert(offsetof(UGameplayTask, InstanceName) == 0x000030, "Member 'UGameplayTask::InstanceName' has a wrong offset!");
-static_assert(offsetof(UGameplayTask, ResourceOverlapPolicy) == 0x00003A, "Member 'UGameplayTask::ResourceOverlapPolicy' has a wrong offset!");
-static_assert(offsetof(UGameplayTask, ChildTask) == 0x000060, "Member 'UGameplayTask::ChildTask' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayTask;
 
 // Class GameplayTasks.GameplayTaskOwnerInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -57,7 +57,11 @@ class IGameplayTaskOwnerInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTaskOwnerInterface">();
+		STATIC_CLASS_IMPL("GameplayTaskOwnerInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTaskOwnerInterface")
 	}
 	static class IGameplayTaskOwnerInterface* GetDefaultObj()
 	{
@@ -73,8 +77,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IGameplayTaskOwnerInterface) == 0x000001, "Wrong alignment on IGameplayTaskOwnerInterface");
-static_assert(sizeof(IGameplayTaskOwnerInterface) == 0x000001, "Wrong size on IGameplayTaskOwnerInterface");
+DUMPER7_ASSERTS_IGameplayTaskOwnerInterface;
 
 // Class GameplayTasks.GameplayTaskResource
 // 0x0010 (0x0038 - 0x0028)
@@ -90,30 +93,31 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTaskResource">();
+		STATIC_CLASS_IMPL("GameplayTaskResource")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTaskResource")
 	}
 	static class UGameplayTaskResource* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTaskResource>();
 	}
 };
-static_assert(alignof(UGameplayTaskResource) == 0x000008, "Wrong alignment on UGameplayTaskResource");
-static_assert(sizeof(UGameplayTaskResource) == 0x000038, "Wrong size on UGameplayTaskResource");
-static_assert(offsetof(UGameplayTaskResource, ManualResourceID) == 0x000028, "Member 'UGameplayTaskResource::ManualResourceID' has a wrong offset!");
-static_assert(offsetof(UGameplayTaskResource, AutoResourceID) == 0x00002C, "Member 'UGameplayTaskResource::AutoResourceID' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayTaskResource;
 
 // Class GameplayTasks.GameplayTasksComponent
-// 0x0078 (0x0118 - 0x00A0)
+// 0x0078 (0x0130 - 0x00B8)
 class UGameplayTasksComponent : public UActorComponent
 {
 public:
-	uint8                                         Pad_A0[0x18];                                      // 0x00A0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UGameplayTask*>                  TaskPriorityQueue;                                 // 0x00B8(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_C8[0x10];                                      // 0x00C8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UGameplayTask*>                  TickingTasks;                                      // 0x00D8(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TArray<class UGameplayTask*>                  KnownTasks;                                        // 0x00E8(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TMulticastInlineDelegate<void(const struct FGameplayResourceSet& NewlyClaimed, const struct FGameplayResourceSet& FreshlyReleased)> OnClaimedResourcesChange; // 0x00F8(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
-	TArray<class UGameplayTask*>                  SimulatedTasks;                                    // 0x0108(0x0010)(Net, ZeroConstructor, RepNotify, UObjectWrapper, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_B8[0x18];                                      // 0x00B8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UGameplayTask*>                  TaskPriorityQueue;                                 // 0x00D0(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_E0[0x10];                                      // 0x00E0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UGameplayTask*>                  TickingTasks;                                      // 0x00F0(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
+	TArray<class UGameplayTask*>                  KnownTasks;                                        // 0x0100(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
+	TMulticastInlineDelegate<void(const struct FGameplayResourceSet& NewlyClaimed, const struct FGameplayResourceSet& FreshlyReleased)> OnClaimedResourcesChange; // 0x0110(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	TArray<class UGameplayTask*>                  SimulatedTasks;                                    // 0x0120(0x0010)(Net, ZeroConstructor, RepNotify, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static EGameplayTaskRunResult K2_RunGameplayTask(TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner, class UGameplayTask* Task, uint8 Priority, const TArray<TSubclassOf<class UGameplayTaskResource>>& AdditionalRequiredResources, const TArray<TSubclassOf<class UGameplayTaskResource>>& AdditionalClaimedResources);
@@ -123,20 +127,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTasksComponent">();
+		STATIC_CLASS_IMPL("GameplayTasksComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTasksComponent")
 	}
 	static class UGameplayTasksComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTasksComponent>();
 	}
 };
-static_assert(alignof(UGameplayTasksComponent) == 0x000008, "Wrong alignment on UGameplayTasksComponent");
-static_assert(sizeof(UGameplayTasksComponent) == 0x000118, "Wrong size on UGameplayTasksComponent");
-static_assert(offsetof(UGameplayTasksComponent, TaskPriorityQueue) == 0x0000B8, "Member 'UGameplayTasksComponent::TaskPriorityQueue' has a wrong offset!");
-static_assert(offsetof(UGameplayTasksComponent, TickingTasks) == 0x0000D8, "Member 'UGameplayTasksComponent::TickingTasks' has a wrong offset!");
-static_assert(offsetof(UGameplayTasksComponent, KnownTasks) == 0x0000E8, "Member 'UGameplayTasksComponent::KnownTasks' has a wrong offset!");
-static_assert(offsetof(UGameplayTasksComponent, OnClaimedResourcesChange) == 0x0000F8, "Member 'UGameplayTasksComponent::OnClaimedResourcesChange' has a wrong offset!");
-static_assert(offsetof(UGameplayTasksComponent, SimulatedTasks) == 0x000108, "Member 'UGameplayTasksComponent::SimulatedTasks' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayTasksComponent;
 
 // Class GameplayTasks.GameplayTask_ClaimResource
 // 0x0000 (0x0068 - 0x0068)
@@ -149,15 +151,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTask_ClaimResource">();
+		STATIC_CLASS_IMPL("GameplayTask_ClaimResource")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTask_ClaimResource")
 	}
 	static class UGameplayTask_ClaimResource* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTask_ClaimResource>();
 	}
 };
-static_assert(alignof(UGameplayTask_ClaimResource) == 0x000008, "Wrong alignment on UGameplayTask_ClaimResource");
-static_assert(sizeof(UGameplayTask_ClaimResource) == 0x000068, "Wrong size on UGameplayTask_ClaimResource");
+DUMPER7_ASSERTS_UGameplayTask_ClaimResource;
 
 // Class GameplayTasks.GameplayTask_SpawnActor
 // 0x0058 (0x00C0 - 0x0068)
@@ -178,18 +183,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTask_SpawnActor">();
+		STATIC_CLASS_IMPL("GameplayTask_SpawnActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTask_SpawnActor")
 	}
 	static class UGameplayTask_SpawnActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTask_SpawnActor>();
 	}
 };
-static_assert(alignof(UGameplayTask_SpawnActor) == 0x000008, "Wrong alignment on UGameplayTask_SpawnActor");
-static_assert(sizeof(UGameplayTask_SpawnActor) == 0x0000C0, "Wrong size on UGameplayTask_SpawnActor");
-static_assert(offsetof(UGameplayTask_SpawnActor, Success) == 0x000068, "Member 'UGameplayTask_SpawnActor::Success' has a wrong offset!");
-static_assert(offsetof(UGameplayTask_SpawnActor, DidNotSpawn) == 0x000078, "Member 'UGameplayTask_SpawnActor::DidNotSpawn' has a wrong offset!");
-static_assert(offsetof(UGameplayTask_SpawnActor, ClassToSpawn) == 0x0000B8, "Member 'UGameplayTask_SpawnActor::ClassToSpawn' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayTask_SpawnActor;
 
 // Class GameplayTasks.GameplayTask_TimeLimitedExecution
 // 0x0038 (0x00A0 - 0x0068)
@@ -203,17 +208,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTask_TimeLimitedExecution">();
+		STATIC_CLASS_IMPL("GameplayTask_TimeLimitedExecution")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTask_TimeLimitedExecution")
 	}
 	static class UGameplayTask_TimeLimitedExecution* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTask_TimeLimitedExecution>();
 	}
 };
-static_assert(alignof(UGameplayTask_TimeLimitedExecution) == 0x000008, "Wrong alignment on UGameplayTask_TimeLimitedExecution");
-static_assert(sizeof(UGameplayTask_TimeLimitedExecution) == 0x0000A0, "Wrong size on UGameplayTask_TimeLimitedExecution");
-static_assert(offsetof(UGameplayTask_TimeLimitedExecution, OnFinished) == 0x000068, "Member 'UGameplayTask_TimeLimitedExecution::OnFinished' has a wrong offset!");
-static_assert(offsetof(UGameplayTask_TimeLimitedExecution, OnTimeExpired) == 0x000078, "Member 'UGameplayTask_TimeLimitedExecution::OnTimeExpired' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayTask_TimeLimitedExecution;
 
 // Class GameplayTasks.GameplayTask_WaitDelay
 // 0x0020 (0x0088 - 0x0068)
@@ -229,16 +235,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTask_WaitDelay">();
+		STATIC_CLASS_IMPL("GameplayTask_WaitDelay")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTask_WaitDelay")
 	}
 	static class UGameplayTask_WaitDelay* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTask_WaitDelay>();
 	}
 };
-static_assert(alignof(UGameplayTask_WaitDelay) == 0x000008, "Wrong alignment on UGameplayTask_WaitDelay");
-static_assert(sizeof(UGameplayTask_WaitDelay) == 0x000088, "Wrong size on UGameplayTask_WaitDelay");
-static_assert(offsetof(UGameplayTask_WaitDelay, OnFinish) == 0x000068, "Member 'UGameplayTask_WaitDelay::OnFinish' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayTask_WaitDelay;
 
 }
 

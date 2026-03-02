@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ConcentratedShot_Projectile.BP_ConcentratedShot_Projectile_C
-// 0x0000 (0x05D8 - 0x05D8)
+// 0x0000 (0x0608 - 0x0608)
 class ABP_ConcentratedShot_Projectile_C final : public ARProjectile
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ConcentratedShot_Projectile_C">();
+		BP_STATIC_CLASS_IMPL("BP_ConcentratedShot_Projectile_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ConcentratedShot_Projectile_C")
 	}
 	static class ABP_ConcentratedShot_Projectile_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_ConcentratedShot_Projectile_C>();
 	}
 };
-static_assert(alignof(ABP_ConcentratedShot_Projectile_C) == 0x000008, "Wrong alignment on ABP_ConcentratedShot_Projectile_C");
-static_assert(sizeof(ABP_ConcentratedShot_Projectile_C) == 0x0005D8, "Wrong size on ABP_ConcentratedShot_Projectile_C");
+DUMPER7_ASSERTS_ABP_ConcentratedShot_Projectile_C;
 
 }
 

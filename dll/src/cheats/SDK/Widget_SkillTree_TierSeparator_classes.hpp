@@ -17,13 +17,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_SkillTree_TierSeparator.Widget_SkillTree_TierSeparator_C
-// 0x0018 (0x02E8 - 0x02D0)
+// 0x0018 (0x0358 - 0x0340)
 class UWidget_SkillTree_TierSeparator_C final : public UUserWidget
 {
 public:
-	class UHorizontalBox*                         HorizontalBox_TierSeparator;                       // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         SkillNodeHorizontalBox;                            // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_TierInfo;                                // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_TierInfo;                                // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         SkillNodeHorizontalBox;                            // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_TierSeparator;                       // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void UpdateText(const class FText& InText);
@@ -31,18 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_SkillTree_TierSeparator_C">();
+		BP_STATIC_CLASS_IMPL("Widget_SkillTree_TierSeparator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_SkillTree_TierSeparator_C")
 	}
 	static class UWidget_SkillTree_TierSeparator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_SkillTree_TierSeparator_C>();
 	}
 };
-static_assert(alignof(UWidget_SkillTree_TierSeparator_C) == 0x000008, "Wrong alignment on UWidget_SkillTree_TierSeparator_C");
-static_assert(sizeof(UWidget_SkillTree_TierSeparator_C) == 0x0002E8, "Wrong size on UWidget_SkillTree_TierSeparator_C");
-static_assert(offsetof(UWidget_SkillTree_TierSeparator_C, HorizontalBox_TierSeparator) == 0x0002D0, "Member 'UWidget_SkillTree_TierSeparator_C::HorizontalBox_TierSeparator' has a wrong offset!");
-static_assert(offsetof(UWidget_SkillTree_TierSeparator_C, SkillNodeHorizontalBox) == 0x0002D8, "Member 'UWidget_SkillTree_TierSeparator_C::SkillNodeHorizontalBox' has a wrong offset!");
-static_assert(offsetof(UWidget_SkillTree_TierSeparator_C, TextBlock_TierInfo) == 0x0002E0, "Member 'UWidget_SkillTree_TierSeparator_C::TextBlock_TierInfo' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_SkillTree_TierSeparator_C;
 
 }
 

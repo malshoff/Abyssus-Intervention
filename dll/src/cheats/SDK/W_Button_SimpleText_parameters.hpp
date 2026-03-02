@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CommonInput_structs.hpp"
+#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "CommonInput_structs.hpp"
 
 
 namespace SDK::Params
@@ -40,21 +41,7 @@ public:
 	float                                         CallFunc_SetWidthOverride_InWidthOverride_ImplicitCast; // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetHeightOverride_InHeightOverride_ImplicitCast; // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText) == 0x000008, "Wrong alignment on W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText");
-static_assert(sizeof(W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText) == 0x000068, "Wrong size on W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText");
-static_assert(offsetof(W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText, EntryPoint) == 0x000000, "Member 'W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText::EntryPoint' has a wrong offset!");
-static_assert(offsetof(W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000008, "Member 'W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText, CallFunc_GetCurrentInputType_ReturnValue) == 0x000010, "Member 'W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText::CallFunc_GetCurrentInputType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText, K2Node_Event_IsDesignTime) == 0x000011, "Member 'W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000012, "Member 'W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText, K2Node_MakeStruct_SlateColor) == 0x000014, "Member 'W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-static_assert(offsetof(W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText, K2Node_MakeStruct_SlateColor_1) == 0x000028, "Member 'W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
-static_assert(offsetof(W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText, CallFunc_BreakVector2D_X) == 0x000040, "Member 'W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText, CallFunc_BreakVector2D_Y) == 0x000048, "Member 'W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText, CallFunc_VSize2D_ReturnValue) == 0x000050, "Member 'W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText::CallFunc_VSize2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000058, "Member 'W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText, CallFunc_SetWidthOverride_InWidthOverride_ImplicitCast) == 0x00005C, "Member 'W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText::CallFunc_SetWidthOverride_InWidthOverride_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText, CallFunc_SetHeightOverride_InHeightOverride_ImplicitCast) == 0x000060, "Member 'W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText::CallFunc_SetHeightOverride_InHeightOverride_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_W_Button_SimpleText_C_ExecuteUbergraph_W_Button_SimpleText;
 
 // Function W_Button_SimpleText.W_Button_SimpleText_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -63,53 +50,43 @@ struct W_Button_SimpleText_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_Button_SimpleText_C_PreConstruct) == 0x000001, "Wrong alignment on W_Button_SimpleText_C_PreConstruct");
-static_assert(sizeof(W_Button_SimpleText_C_PreConstruct) == 0x000001, "Wrong size on W_Button_SimpleText_C_PreConstruct");
-static_assert(offsetof(W_Button_SimpleText_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'W_Button_SimpleText_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_W_Button_SimpleText_C_PreConstruct;
 
 // Function W_Button_SimpleText.W_Button_SimpleText_C.Trans_Disabled
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct W_Button_SimpleText_C_Trans_Disabled final
 {
 public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue;         // 0x0000(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(W_Button_SimpleText_C_Trans_Disabled) == 0x000008, "Wrong alignment on W_Button_SimpleText_C_Trans_Disabled");
-static_assert(sizeof(W_Button_SimpleText_C_Trans_Disabled) == 0x000008, "Wrong size on W_Button_SimpleText_C_Trans_Disabled");
-static_assert(offsetof(W_Button_SimpleText_C_Trans_Disabled, CallFunc_PlayAnimationForward_ReturnValue) == 0x000000, "Member 'W_Button_SimpleText_C_Trans_Disabled::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_W_Button_SimpleText_C_Trans_Disabled;
 
 // Function W_Button_SimpleText.W_Button_SimpleText_C.Trans_Enabled
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct W_Button_SimpleText_C_Trans_Enabled final
 {
 public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0000(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(W_Button_SimpleText_C_Trans_Enabled) == 0x000008, "Wrong alignment on W_Button_SimpleText_C_Trans_Enabled");
-static_assert(sizeof(W_Button_SimpleText_C_Trans_Enabled) == 0x000008, "Wrong size on W_Button_SimpleText_C_Trans_Enabled");
-static_assert(offsetof(W_Button_SimpleText_C_Trans_Enabled, CallFunc_PlayAnimationReverse_ReturnValue) == 0x000000, "Member 'W_Button_SimpleText_C_Trans_Enabled::CallFunc_PlayAnimationReverse_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_W_Button_SimpleText_C_Trans_Enabled;
 
 // Function W_Button_SimpleText.W_Button_SimpleText_C.Trans_Hovered
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct W_Button_SimpleText_C_Trans_Hovered final
 {
 public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue;         // 0x0000(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(W_Button_SimpleText_C_Trans_Hovered) == 0x000008, "Wrong alignment on W_Button_SimpleText_C_Trans_Hovered");
-static_assert(sizeof(W_Button_SimpleText_C_Trans_Hovered) == 0x000008, "Wrong size on W_Button_SimpleText_C_Trans_Hovered");
-static_assert(offsetof(W_Button_SimpleText_C_Trans_Hovered, CallFunc_PlayAnimationForward_ReturnValue) == 0x000000, "Member 'W_Button_SimpleText_C_Trans_Hovered::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_W_Button_SimpleText_C_Trans_Hovered;
 
 // Function W_Button_SimpleText.W_Button_SimpleText_C.Trans_UnHovered
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct W_Button_SimpleText_C_Trans_UnHovered final
 {
 public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0000(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(W_Button_SimpleText_C_Trans_UnHovered) == 0x000008, "Wrong alignment on W_Button_SimpleText_C_Trans_UnHovered");
-static_assert(sizeof(W_Button_SimpleText_C_Trans_UnHovered) == 0x000008, "Wrong size on W_Button_SimpleText_C_Trans_UnHovered");
-static_assert(offsetof(W_Button_SimpleText_C_Trans_UnHovered, CallFunc_PlayAnimationReverse_ReturnValue) == 0x000000, "Member 'W_Button_SimpleText_C_Trans_UnHovered::CallFunc_PlayAnimationReverse_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_W_Button_SimpleText_C_Trans_UnHovered;
 
 // Function W_Button_SimpleText.W_Button_SimpleText_C.UpdateText
 // 0x0010 (0x0010 - 0x0000)
@@ -118,9 +95,7 @@ struct W_Button_SimpleText_C_UpdateText final
 public:
 	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(W_Button_SimpleText_C_UpdateText) == 0x000008, "Wrong alignment on W_Button_SimpleText_C_UpdateText");
-static_assert(sizeof(W_Button_SimpleText_C_UpdateText) == 0x000010, "Wrong size on W_Button_SimpleText_C_UpdateText");
-static_assert(offsetof(W_Button_SimpleText_C_UpdateText, InText) == 0x000000, "Member 'W_Button_SimpleText_C_UpdateText::InText' has a wrong offset!");
+DUMPER7_ASSERTS_W_Button_SimpleText_C_UpdateText;
 
 }
 

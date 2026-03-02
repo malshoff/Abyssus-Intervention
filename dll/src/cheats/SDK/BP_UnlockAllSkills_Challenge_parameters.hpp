@@ -28,15 +28,7 @@ public:
 	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge) == 0x000008, "Wrong alignment on BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge");
-static_assert(sizeof(BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge) == 0x000030, "Wrong size on BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge");
-static_assert(offsetof(BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge, EntryPoint) == 0x000000, "Member 'BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge, K2Node_CustomEvent_NumPointsAssigned) == 0x000004, "Member 'BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge::K2Node_CustomEvent_NumPointsAssigned' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge, K2Node_CustomEvent_NumMaxPoints) == 0x000008, "Member 'BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge::K2Node_CustomEvent_NumMaxPoints' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x00000C, "Member 'BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge, CallFunc_K2_GetPawn_ReturnValue) == 0x000020, "Member 'BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge, CallFunc_GetChallengeManager_ReturnValue) == 0x000028, "Member 'BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UnlockAllSkills_Challenge_C_ExecuteUbergraph_BP_UnlockAllSkills_Challenge;
 
 // Function BP_UnlockAllSkills_Challenge.BP_UnlockAllSkills_Challenge_C.OnAllSkillsUnlocked
 // 0x0008 (0x0008 - 0x0000)
@@ -46,10 +38,7 @@ public:
 	int32                                         NumPointsAssigned;                                 // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         NumMaxPoints;                                      // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UnlockAllSkills_Challenge_C_OnAllSkillsUnlocked) == 0x000004, "Wrong alignment on BP_UnlockAllSkills_Challenge_C_OnAllSkillsUnlocked");
-static_assert(sizeof(BP_UnlockAllSkills_Challenge_C_OnAllSkillsUnlocked) == 0x000008, "Wrong size on BP_UnlockAllSkills_Challenge_C_OnAllSkillsUnlocked");
-static_assert(offsetof(BP_UnlockAllSkills_Challenge_C_OnAllSkillsUnlocked, NumPointsAssigned) == 0x000000, "Member 'BP_UnlockAllSkills_Challenge_C_OnAllSkillsUnlocked::NumPointsAssigned' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllSkills_Challenge_C_OnAllSkillsUnlocked, NumMaxPoints) == 0x000004, "Member 'BP_UnlockAllSkills_Challenge_C_OnAllSkillsUnlocked::NumMaxPoints' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UnlockAllSkills_Challenge_C_OnAllSkillsUnlocked;
 
 }
 

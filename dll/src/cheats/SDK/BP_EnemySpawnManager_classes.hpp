@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_EnemySpawnManager.BP_EnemySpawnManager_C
-// 0x0050 (0x05D8 - 0x0588)
+// 0x0050 (0x0628 - 0x05D8)
 class ABP_EnemySpawnManager_C final : public AREnemySpawnManager
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0588(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0590(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<class ABP_EnemySpawnDecoy_C*>          PooledSpawnBPs;                                    // 0x0598(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	bool                                          InvalidPooledSpawnBPFound;                         // 0x05A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A9[0x3];                                      // 0x05A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         OutlineThreshold;                                  // 0x05AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSoftClassPtr<class UClass>                   SoftFrenziedMutatorRef;                            // 0x05B0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x05E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<class ABP_EnemySpawnDecoy_C*>          PooledSpawnBPs;                                    // 0x05E8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	bool                                          InvalidPooledSpawnBPFound;                         // 0x05F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5F9[0x3];                                      // 0x05F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         OutlineThreshold;                                  // 0x05FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   SoftFrenziedMutatorRef;                            // 0x0600(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void CheckLastEnemyOfEncounter();
@@ -47,21 +47,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_EnemySpawnManager_C">();
+		BP_STATIC_CLASS_IMPL("BP_EnemySpawnManager_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_EnemySpawnManager_C")
 	}
 	static class ABP_EnemySpawnManager_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_EnemySpawnManager_C>();
 	}
 };
-static_assert(alignof(ABP_EnemySpawnManager_C) == 0x000008, "Wrong alignment on ABP_EnemySpawnManager_C");
-static_assert(sizeof(ABP_EnemySpawnManager_C) == 0x0005D8, "Wrong size on ABP_EnemySpawnManager_C");
-static_assert(offsetof(ABP_EnemySpawnManager_C, UberGraphFrame) == 0x000588, "Member 'ABP_EnemySpawnManager_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_EnemySpawnManager_C, DefaultSceneRoot) == 0x000590, "Member 'ABP_EnemySpawnManager_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_EnemySpawnManager_C, PooledSpawnBPs) == 0x000598, "Member 'ABP_EnemySpawnManager_C::PooledSpawnBPs' has a wrong offset!");
-static_assert(offsetof(ABP_EnemySpawnManager_C, InvalidPooledSpawnBPFound) == 0x0005A8, "Member 'ABP_EnemySpawnManager_C::InvalidPooledSpawnBPFound' has a wrong offset!");
-static_assert(offsetof(ABP_EnemySpawnManager_C, OutlineThreshold) == 0x0005AC, "Member 'ABP_EnemySpawnManager_C::OutlineThreshold' has a wrong offset!");
-static_assert(offsetof(ABP_EnemySpawnManager_C, SoftFrenziedMutatorRef) == 0x0005B0, "Member 'ABP_EnemySpawnManager_C::SoftFrenziedMutatorRef' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_EnemySpawnManager_C;
 
 }
 

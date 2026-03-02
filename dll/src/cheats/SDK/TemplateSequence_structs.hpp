@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "MovieScene_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "MovieScene_structs.hpp"
 
 
 namespace SDK
@@ -37,12 +37,7 @@ public:
 	ETemplateSectionPropertyScaleType             PropertyScaleType;                                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMovieSceneFloatChannel                FloatChannel;                                      // 0x0028(0x0110)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTemplateSectionPropertyScale) == 0x000008, "Wrong alignment on FTemplateSectionPropertyScale");
-static_assert(sizeof(FTemplateSectionPropertyScale) == 0x000138, "Wrong size on FTemplateSectionPropertyScale");
-static_assert(offsetof(FTemplateSectionPropertyScale, ObjectBinding) == 0x000000, "Member 'FTemplateSectionPropertyScale::ObjectBinding' has a wrong offset!");
-static_assert(offsetof(FTemplateSectionPropertyScale, PropertyBinding) == 0x000010, "Member 'FTemplateSectionPropertyScale::PropertyBinding' has a wrong offset!");
-static_assert(offsetof(FTemplateSectionPropertyScale, PropertyScaleType) == 0x000024, "Member 'FTemplateSectionPropertyScale::PropertyScaleType' has a wrong offset!");
-static_assert(offsetof(FTemplateSectionPropertyScale, FloatChannel) == 0x000028, "Member 'FTemplateSectionPropertyScale::FloatChannel' has a wrong offset!");
+DUMPER7_ASSERTS_FTemplateSectionPropertyScale;
 
 // ScriptStruct TemplateSequence.TemplateSequenceBindingOverrideData
 // 0x000C (0x000C - 0x0000)
@@ -53,10 +48,7 @@ public:
 	bool                                          bOverridesDefault;                                 // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTemplateSequenceBindingOverrideData) == 0x000004, "Wrong alignment on FTemplateSequenceBindingOverrideData");
-static_assert(sizeof(FTemplateSequenceBindingOverrideData) == 0x00000C, "Wrong size on FTemplateSequenceBindingOverrideData");
-static_assert(offsetof(FTemplateSequenceBindingOverrideData, Object) == 0x000000, "Member 'FTemplateSequenceBindingOverrideData::Object' has a wrong offset!");
-static_assert(offsetof(FTemplateSequenceBindingOverrideData, bOverridesDefault) == 0x000008, "Member 'FTemplateSequenceBindingOverrideData::bOverridesDefault' has a wrong offset!");
+DUMPER7_ASSERTS_FTemplateSequenceBindingOverrideData;
 
 }
 

@@ -12,7 +12,6 @@
 
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "RGame_structs.hpp"
 
 
 namespace SDK::Params
@@ -29,242 +28,235 @@ public:
 	struct FVector                                NormalImpulse;                                     // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FHitResult                             Hit;                                               // 0x0030(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(BP_SkeletalMeshRagdoll_FishDiety_C_BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature) == 0x000008, "Wrong alignment on BP_SkeletalMeshRagdoll_FishDiety_C_BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
-static_assert(sizeof(BP_SkeletalMeshRagdoll_FishDiety_C_BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature) == 0x000130, "Wrong size on BP_SkeletalMeshRagdoll_FishDiety_C_BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature, HitComponent) == 0x000000, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature::HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature::OtherActor' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature::OtherComp' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature, NormalImpulse) == 0x000018, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature::NormalImpulse' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature, Hit) == 0x000030, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature::Hit' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkeletalMeshRagdoll_FishDiety_C_BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature;
+
+// Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.CheckFishDeityReloadKillChallenge
+// 0x0008 (0x0008 - 0x0000)
+struct BP_SkeletalMeshRagdoll_FishDiety_C_CheckFishDeityReloadKillChallenge final
+{
+public:
+	class AActor*                                 HitActor;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SkeletalMeshRagdoll_FishDiety_C_CheckFishDeityReloadKillChallenge;
 
 // Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety
-// 0x0618 (0x0618 - 0x0000)
+// 0x07A8 (0x07A8 - 0x0000)
 struct BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         Temp_wildcard_Variable;                            // 0x0008(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ARNPCPawnBase*                          K2Node_DynamicCast_AsRNPCPawn_Base;                // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x0060(0x0010)(ConstParm, ReferenceParm)
-	class ARGamePlayerController*                 CallFunc_GetFirstLocalGamePlayerController_ReturnValue; // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_GetControlledPlayerPawn_ReturnValue;      // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_RandomFloatInRange_ReturnValue;           // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasMutator_ReturnValue;                   // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CD[0x3];                                       // 0x00CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x00D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x00F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutableFloatCurrentValue_ReturnValue;  // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutableFloatCurrentValue_ReturnValue_1; // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0110(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      CallFunc_SpawnSystemAtLocation_ReturnValue;        // 0x0128(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LineTraceAndSpawnDecal_LineTraceHit;      // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_LineTraceAndSpawnDecal_OutHit;            // 0x0138(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class UDecalComponent*                        CallFunc_LineTraceAndSpawnDecal_ReturnValue;       // 0x0238(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_244[0x4];                                      // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            CallFunc_GetController_ReturnValue;                // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_251[0x3];                                      // 0x0251(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_2;    // 0x0258(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_271[0x3];                                      // 0x0271(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0274(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetMutatorRank_ReturnValue_1;             // 0x0284(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0288(0x0008)(NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue_1; // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_294[0x4];                                      // 0x0294(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetMutatorRank_ReturnValue_2;             // 0x02A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue_2; // 0x02AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue_3; // 0x02B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B4[0x4];                                      // 0x02B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLastDamageEventData                   CallFunc_ApplyHealthDamage_ReturnValue;            // 0x02C0(0x0088)(NoDestructor, ContainsInstancedReference)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0348(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class ARPawnBase*>                     CallFunc_GetAllPawnsInRadius_ReturnValue;          // 0x0358(0x0010)(ReferenceParm)
-	class UBP_Stun_StatusEffect_C*                CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x0368(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasMutator_ReturnValue_1;                 // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0371(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_372[0x2];                                      // 0x0372(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetMutatorRank_ReturnValue_3;             // 0x0374(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue; // 0x0378(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37C[0x4];                                      // 0x037C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_5;      // 0x0380(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_3;    // 0x0388(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_HitComponent;           // 0x03A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x03B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x03B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_ComponentBoundEvent_NormalImpulse;          // 0x03C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             K2Node_ComponentBoundEvent_Hit;                    // 0x03D8(0x0100)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x04D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x04E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x04E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E2[0x2];                                      // 0x04E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x04E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x04E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EC[0x4];                                      // 0x04EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x04F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0508(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0520(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0538(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0550(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0558(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0560(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0568(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0570(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0578(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x057C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0580(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_584[0x4];                                      // 0x0584(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0588(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x05A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x05B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SpawnSoundAtLocation_ReturnValue;         // 0x05C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x05C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C9[0x7];                                      // 0x05C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URAudioMixingSubsystem*                 CallFunc_GetWorldSubsystem_ReturnValue;            // 0x05D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetNonLocalPlayerVolumeMultiplier_ReturnValue; // 0x05D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5DC[0x4];                                      // 0x05DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x05E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast_1;   // 0x05E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x05F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x05F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayWorldCameraShake_OuterRadius_ImplicitCast; // 0x05FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x0600(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetAllPawnsInRadius_Radius_ImplicitCast;  // 0x0608(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_60C[0x4];                                      // 0x060C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x0610(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FHitResult>                     K2Node_CustomEvent_HitResults;                     // 0x0008(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
+	float                                         K2Node_CustomEvent_ActualExplosionRadius;          // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const TArray<struct FHitResult>& HitResults, float ActualExplosionRadius)> K2Node_CreateDelegate_OutputDelegate; // 0x001C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_real_Variable;                                // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FHitResult>                     Temp_struct_Variable;                              // 0x0030(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_Array_Get_Item;                           // 0x0068(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0168(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17A[0x2];                                      // 0x017A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_184[0x4];                                      // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x01D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x01F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x0214(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21C[0x4];                                      // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0238(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ARNPCPawnBase*                          K2Node_DynamicCast_AsRNPCPawn_Base;                // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_259[0x7];                                      // 0x0259(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_RandomFloatInRange_ReturnValue;           // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0268(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0280(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x0298(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x02B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutableFloatCurrentValue_ReturnValue;  // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutableFloatCurrentValue_ReturnValue_1; // 0x02CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x02D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      CallFunc_SpawnSystemAtLocation_ReturnValue;        // 0x02E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LineTraceAndSpawnDecal_LineTraceHit;      // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F1[0x7];                                      // 0x02F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_LineTraceAndSpawnDecal_OutHit;            // 0x02F8(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class UDecalComponent*                        CallFunc_LineTraceAndSpawnDecal_ReturnValue;       // 0x03F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_2;    // 0x0400(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0418(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0428(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x0438(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x043C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0440(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0448(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetMutatorRank_ReturnValue_1;             // 0x0450(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue_1; // 0x0454(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue_2; // 0x0458(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45C[0x4];                                      // 0x045C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x0470(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_3;    // 0x0478(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_Stun_StatusEffect_C*                CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x0490(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_RSpawnSoundAtLocation_ReturnValue;        // 0x0498(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x04A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasMutator_ReturnValue;                   // 0x04A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A2[0x2];                                      // 0x04A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetMutatorRank_ReturnValue_2;             // 0x04A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_HitComponent;           // 0x04A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x04B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x04B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                K2Node_ComponentBoundEvent_NormalImpulse;          // 0x04C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             K2Node_ComponentBoundEvent_Hit;                    // 0x04D8(0x0100)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue; // 0x05D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit_1;            // 0x05DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap_1;         // 0x05DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5DE[0x2];                                      // 0x05DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time_1;                    // 0x05E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance_1;                // 0x05E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Location_1;                // 0x05E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint_1;             // 0x0600(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal_1;                  // 0x0618(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal_1;            // 0x0630(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat_1;                 // 0x0648(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor_1;                // 0x0650(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent_1;            // 0x0658(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName_1;             // 0x0660(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName_1;                // 0x0668(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem_1;                 // 0x0670(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex_1;            // 0x0674(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex_1;               // 0x0678(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_67C[0x4];                                      // 0x067C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart_1;              // 0x0680(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd_1;                // 0x0698(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_5;      // 0x06B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_SpawnSoundAtLocation_ReturnValue;         // 0x06B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x06C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x06C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x06D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x06D8(0x0010)(ConstParm, ReferenceParm)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x06E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6E9[0x7];                                      // 0x06E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGTask_SpawnExplosion*                 CallFunc_SpawnExplosion_ReturnValue;               // 0x06F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x06F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6F9[0x7];                                      // 0x06F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x0700(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0708(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_709[0x7];                                      // 0x0709(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGCharacterMutatorScript*              CallFunc_GetCharacterMutator_ReturnValue;          // 0x0710(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetMutatorRank_ReturnValue_3;             // 0x0718(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue_3; // 0x071C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasMutator_ReturnValue_1;                 // 0x0720(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_721[0x7];                                      // 0x0721(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0728(0x0008)(NoDestructor, HasGetValueTypeHash)
+	class ARGamePlayerController*                 CallFunc_GetFirstLocalGamePlayerController_ReturnValue; // 0x0730(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_CustomEvent_HitActor;                       // 0x0738(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0740(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsObjectASoftClass_ReturnValue;           // 0x0748(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0749(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_74A[0x6];                                      // 0x074A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue;          // 0x0750(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0758(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsObjectChildOfSoftClass_ReturnValue;     // 0x0759(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsObjectASoftClass_ReturnValue_1;         // 0x075A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x075B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsObjectChildOfSoftClass_ReturnValue_1;   // 0x075C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x075D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsObjectASoftClass_ReturnValue_2;         // 0x075E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsObjectChildOfSoftClass_ReturnValue_2;   // 0x075F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ARNPCPawnBase*                          K2Node_DynamicCast_AsRNPCPawn_Base_1;              // 0x0760(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0768(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0769(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x076A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsDead_ReturnValue;                    // 0x076B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_76C[0x4];                                      // 0x076C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x0770(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast_1;   // 0x0778(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0780(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x0788(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PlayWorldCameraShake_OuterRadius_ImplicitCast; // 0x078C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x0790(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SpawnExplosion_Radius_ImplicitCast;       // 0x0798(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79C[0x4];                                      // 0x079C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x07A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety) == 0x000008, "Wrong alignment on BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety");
-static_assert(sizeof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety) == 0x000618, "Wrong size on BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, EntryPoint) == 0x000000, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, Temp_wildcard_Variable) == 0x000008, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::Temp_wildcard_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, K2Node_DynamicCast_AsRNPCPawn_Base) == 0x000020, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::K2Node_DynamicCast_AsRNPCPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000030, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, Temp_bool_IsClosed_Variable) == 0x000048, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, Temp_bool_Has_Been_Initd_Variable) == 0x000049, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, Temp_int_Variable) == 0x00004C, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Less_IntInt_ReturnValue) == 0x000050, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Add_IntInt_ReturnValue) == 0x000054, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Less_IntInt_ReturnValue_1) == 0x000058, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, Temp_bool_Has_Been_Initd_Variable_1) == 0x000059, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::Temp_bool_Has_Been_Initd_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, K2Node_MakeArray_Array) == 0x000060, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000070, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetControlledPlayerPawn_ReturnValue) == 0x000078, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetControlledPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000080, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000098, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, K2Node_DynamicCast_bSuccess_1) == 0x0000A0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_RandomFloatInRange_ReturnValue) == 0x0000A8, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_MakeVector_ReturnValue) == 0x0000B0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetMutatorRank_ReturnValue) == 0x0000C8, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_HasMutator_ReturnValue) == 0x0000CC, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x0000D0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_K2_GetComponentLocation_ReturnValue_1) == 0x0000D8, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_K2_GetComponentLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Add_VectorVector_ReturnValue) == 0x0000F0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetMutableFloatCurrentValue_ReturnValue) == 0x000108, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetMutableFloatCurrentValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetMutableFloatCurrentValue_ReturnValue_1) == 0x00010C, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetMutableFloatCurrentValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000110, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_SpawnSystemAtLocation_ReturnValue) == 0x000128, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_SpawnSystemAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_LineTraceAndSpawnDecal_LineTraceHit) == 0x000130, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_LineTraceAndSpawnDecal_LineTraceHit' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_LineTraceAndSpawnDecal_OutHit) == 0x000138, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_LineTraceAndSpawnDecal_OutHit' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_LineTraceAndSpawnDecal_ReturnValue) == 0x000238, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_LineTraceAndSpawnDecal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, Temp_int_Loop_Counter_Variable) == 0x000240, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetController_ReturnValue) == 0x000248, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Less_IntInt_ReturnValue_2) == 0x000250, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Add_IntInt_ReturnValue_1) == 0x000254, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_K2_GetComponentLocation_ReturnValue_2) == 0x000258, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_K2_GetComponentLocation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_IsLocallyControlled_ReturnValue) == 0x000270, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, K2Node_CreateDelegate_OutputDelegate) == 0x000274, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetMutatorRank_ReturnValue_1) == 0x000284, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetMutatorRank_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000288, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetMutatorValueByArrayIndex_ReturnValue_1) == 0x000290, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetMutatorValueByArrayIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000298, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x0002A0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetMutatorRank_ReturnValue_2) == 0x0002A8, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetMutatorRank_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetMutatorValueByArrayIndex_ReturnValue_2) == 0x0002AC, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetMutatorValueByArrayIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetMutatorValueByArrayIndex_ReturnValue_3) == 0x0002B0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetMutatorValueByArrayIndex_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x0002B8, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_ApplyHealthDamage_ReturnValue) == 0x0002C0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_ApplyHealthDamage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000348, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Multiply_DoubleDouble_ReturnValue_4) == 0x000350, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Multiply_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetAllPawnsInRadius_ReturnValue) == 0x000358, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetAllPawnsInRadius_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x000368, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_HasMutator_ReturnValue_1) == 0x000370, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_HasMutator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_IsValid_ReturnValue) == 0x000371, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetMutatorRank_ReturnValue_3) == 0x000374, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetMutatorRank_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x000378, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Multiply_DoubleDouble_ReturnValue_5) == 0x000380, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Multiply_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_K2_GetComponentLocation_ReturnValue_3) == 0x000388, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_K2_GetComponentLocation_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0003A0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, K2Node_ComponentBoundEvent_HitComponent) == 0x0003A8, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::K2Node_ComponentBoundEvent_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, K2Node_ComponentBoundEvent_OtherActor) == 0x0003B0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::K2Node_ComponentBoundEvent_OtherActor' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, K2Node_ComponentBoundEvent_OtherComp) == 0x0003B8, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::K2Node_ComponentBoundEvent_OtherComp' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, K2Node_ComponentBoundEvent_NormalImpulse) == 0x0003C0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::K2Node_ComponentBoundEvent_NormalImpulse' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, K2Node_ComponentBoundEvent_Hit) == 0x0003D8, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::K2Node_ComponentBoundEvent_Hit' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x0004D8, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_bBlockingHit) == 0x0004E0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_bInitialOverlap) == 0x0004E1, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_Time) == 0x0004E4, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_Distance) == 0x0004E8, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_Location) == 0x0004F0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_ImpactPoint) == 0x000508, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_Normal) == 0x000520, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_ImpactNormal) == 0x000538, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_PhysMat) == 0x000550, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_HitActor) == 0x000558, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_HitComponent) == 0x000560, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_HitBoneName) == 0x000568, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_BoneName) == 0x000570, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_HitItem) == 0x000578, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_ElementIndex) == 0x00057C, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_FaceIndex) == 0x000580, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_TraceStart) == 0x000588, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_BreakHitResult_TraceEnd) == 0x0005A0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_SelectFloat_ReturnValue) == 0x0005B8, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_SpawnSoundAtLocation_ReturnValue) == 0x0005C0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_SpawnSoundAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, Temp_bool_IsClosed_Variable_1) == 0x0005C8, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::Temp_bool_IsClosed_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetWorldSubsystem_ReturnValue) == 0x0005D0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetNonLocalPlayerVolumeMultiplier_ReturnValue) == 0x0005D8, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetNonLocalPlayerVolumeMultiplier_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x0005E0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Multiply_DoubleDouble_B_ImplicitCast_1) == 0x0005E8, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Multiply_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0005F0, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_SetFloatParameter_Param_ImplicitCast) == 0x0005F8, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_SetFloatParameter_Param_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_PlayWorldCameraShake_OuterRadius_ImplicitCast) == 0x0005FC, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_PlayWorldCameraShake_OuterRadius_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x000600, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_GetAllPawnsInRadius_Radius_ImplicitCast) == 0x000608, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_GetAllPawnsInRadius_Radius_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x000610, "Member 'BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkeletalMeshRagdoll_FishDiety_C_ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety;
+
+// Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.OnExplosion_3E67F20D4EB920412CBC41AE1A56ECAE
+// 0x0018 (0x0018 - 0x0000)
+struct BP_SkeletalMeshRagdoll_FishDiety_C_OnExplosion_3E67F20D4EB920412CBC41AE1A56ECAE final
+{
+public:
+	TArray<struct FHitResult>                     HitResults;                                        // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+	float                                         ActualExplosionRadius;                             // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SkeletalMeshRagdoll_FishDiety_C_OnExplosion_3E67F20D4EB920412CBC41AE1A56ECAE;
+
+// Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.SetupFishMeshes
+// 0x0040 (0x0040 - 0x0000)
+struct BP_SkeletalMeshRagdoll_FishDiety_C_SetupFishMeshes final
+{
+public:
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARWeapon*                               CallFunc_GetEquippedWeapon_ReturnValue;            // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UABP_CopyPose_C*                        K2Node_DynamicCast_AsABP_Copy_Pose;                // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_FishDiety_Body_C*                   K2Node_DynamicCast_AsBP_Fish_Diety_Body;           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SkeletalMeshRagdoll_FishDiety_C_SetupFishMeshes;
+
+// Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.CopyMeshes
+// 0x01C0 (0x01C0 - 0x0000)
+struct BP_SkeletalMeshRagdoll_FishDiety_C_CopyMeshes final
+{
+public:
+	class ABP_FishDiety_Body_C*                   Weapon;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMesh*                          CallFunc_GetSkeletalMeshAsset_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x0020(0x0010)(ReferenceParm)
+	class URStaticMeshComponent*                  CallFunc_GetComponentByClass_ReturnValue;          // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0xF];                                       // 0x0041(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetRelativeTransform_ReturnValue;         // 0x0050(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x00B0(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B1[0x3];                                      // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SkeletalMeshRagdoll_FishDiety_C_CopyMeshes;
 
 }
 

@@ -33,17 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_DealHighDamage_Challenge_C">();
+		BP_STATIC_CLASS_IMPL("BP_DealHighDamage_Challenge_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_DealHighDamage_Challenge_C")
 	}
 	static class UBP_DealHighDamage_Challenge_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_DealHighDamage_Challenge_C>();
 	}
 };
-static_assert(alignof(UBP_DealHighDamage_Challenge_C) == 0x000008, "Wrong alignment on UBP_DealHighDamage_Challenge_C");
-static_assert(sizeof(UBP_DealHighDamage_Challenge_C) == 0x000040, "Wrong size on UBP_DealHighDamage_Challenge_C");
-static_assert(offsetof(UBP_DealHighDamage_Challenge_C, UberGraphFrame) == 0x000030, "Member 'UBP_DealHighDamage_Challenge_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_DealHighDamage_Challenge_C, DamageTarget) == 0x000038, "Member 'UBP_DealHighDamage_Challenge_C::DamageTarget' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_DealHighDamage_Challenge_C;
 
 }
 

@@ -24,10 +24,7 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Teamwork_StatusEffect_C_ExecuteUbergraph_BP_Teamwork_StatusEffect) == 0x000004, "Wrong alignment on BP_Teamwork_StatusEffect_C_ExecuteUbergraph_BP_Teamwork_StatusEffect");
-static_assert(sizeof(BP_Teamwork_StatusEffect_C_ExecuteUbergraph_BP_Teamwork_StatusEffect) == 0x000014, "Wrong size on BP_Teamwork_StatusEffect_C_ExecuteUbergraph_BP_Teamwork_StatusEffect");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_ExecuteUbergraph_BP_Teamwork_StatusEffect, EntryPoint) == 0x000000, "Member 'BP_Teamwork_StatusEffect_C_ExecuteUbergraph_BP_Teamwork_StatusEffect::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_ExecuteUbergraph_BP_Teamwork_StatusEffect, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BP_Teamwork_StatusEffect_C_ExecuteUbergraph_BP_Teamwork_StatusEffect::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Teamwork_StatusEffect_C_ExecuteUbergraph_BP_Teamwork_StatusEffect;
 
 // Function BP_Teamwork_StatusEffect.BP_Teamwork_StatusEffect_C.GetTickIntervalMultiplier
 // 0x0048 (0x0048 - 0x0000)
@@ -40,12 +37,7 @@ public:
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_FunctionResult_Value_ImplicitCast;          // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Teamwork_StatusEffect_C_GetTickIntervalMultiplier) == 0x000008, "Wrong alignment on BP_Teamwork_StatusEffect_C_GetTickIntervalMultiplier");
-static_assert(sizeof(BP_Teamwork_StatusEffect_C_GetTickIntervalMultiplier) == 0x000048, "Wrong size on BP_Teamwork_StatusEffect_C_GetTickIntervalMultiplier");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_GetTickIntervalMultiplier, Value) == 0x000000, "Member 'BP_Teamwork_StatusEffect_C_GetTickIntervalMultiplier::Value' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_GetTickIntervalMultiplier, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Teamwork_StatusEffect_C_GetTickIntervalMultiplier::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_GetTickIntervalMultiplier, CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue) == 0x000038, "Member 'BP_Teamwork_StatusEffect_C_GetTickIntervalMultiplier::CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_GetTickIntervalMultiplier, K2Node_FunctionResult_Value_ImplicitCast) == 0x000040, "Member 'BP_Teamwork_StatusEffect_C_GetTickIntervalMultiplier::K2Node_FunctionResult_Value_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Teamwork_StatusEffect_C_GetTickIntervalMultiplier;
 
 // Function BP_Teamwork_StatusEffect.BP_Teamwork_StatusEffect_C.RemoveMultiplier
 // 0x0058 (0x0058 - 0x0000)
@@ -60,14 +52,7 @@ public:
 	class URGWeaponScript*                        CallFunc_GetCurrentWeaponScript_ReturnValue;       // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class URMutableWeaponSettings*                CallFunc_GetMutableWeaponSettings_ReturnValue;     // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Teamwork_StatusEffect_C_RemoveMultiplier) == 0x000008, "Wrong alignment on BP_Teamwork_StatusEffect_C_RemoveMultiplier");
-static_assert(sizeof(BP_Teamwork_StatusEffect_C_RemoveMultiplier) == 0x000058, "Wrong size on BP_Teamwork_StatusEffect_C_RemoveMultiplier");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_RemoveMultiplier, CallFunc_GetScriptFName_ReturnValue) == 0x000000, "Member 'BP_Teamwork_StatusEffect_C_RemoveMultiplier::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_RemoveMultiplier, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Teamwork_StatusEffect_C_RemoveMultiplier::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_RemoveMultiplier, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000038, "Member 'BP_Teamwork_StatusEffect_C_RemoveMultiplier::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_RemoveMultiplier, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_Teamwork_StatusEffect_C_RemoveMultiplier::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_RemoveMultiplier, CallFunc_GetCurrentWeaponScript_ReturnValue) == 0x000048, "Member 'BP_Teamwork_StatusEffect_C_RemoveMultiplier::CallFunc_GetCurrentWeaponScript_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_RemoveMultiplier, CallFunc_GetMutableWeaponSettings_ReturnValue) == 0x000050, "Member 'BP_Teamwork_StatusEffect_C_RemoveMultiplier::CallFunc_GetMutableWeaponSettings_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Teamwork_StatusEffect_C_RemoveMultiplier;
 
 // Function BP_Teamwork_StatusEffect.BP_Teamwork_StatusEffect_C.UpdateMultiplier
 // 0x0098 (0x0098 - 0x0000)
@@ -92,23 +77,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_AddFloatCoefficient_Value_ImplicitCast;   // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Teamwork_StatusEffect_C_UpdateMultiplier) == 0x000008, "Wrong alignment on BP_Teamwork_StatusEffect_C_UpdateMultiplier");
-static_assert(sizeof(BP_Teamwork_StatusEffect_C_UpdateMultiplier) == 0x000098, "Wrong size on BP_Teamwork_StatusEffect_C_UpdateMultiplier");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_UpdateMultiplier, CallFunc_GetScriptFName_ReturnValue) == 0x000000, "Member 'BP_Teamwork_StatusEffect_C_UpdateMultiplier::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_UpdateMultiplier, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Teamwork_StatusEffect_C_UpdateMultiplier::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_UpdateMultiplier, CallFunc_GetCurrentStackCount_ReturnValue) == 0x000038, "Member 'BP_Teamwork_StatusEffect_C_UpdateMultiplier::CallFunc_GetCurrentStackCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_UpdateMultiplier, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000040, "Member 'BP_Teamwork_StatusEffect_C_UpdateMultiplier::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_UpdateMultiplier, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000048, "Member 'BP_Teamwork_StatusEffect_C_UpdateMultiplier::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_UpdateMultiplier, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'BP_Teamwork_StatusEffect_C_UpdateMultiplier::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_UpdateMultiplier, CallFunc_GetCurrentWeaponScript_ReturnValue) == 0x000058, "Member 'BP_Teamwork_StatusEffect_C_UpdateMultiplier::CallFunc_GetCurrentWeaponScript_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_UpdateMultiplier, CallFunc_GetMutableWeaponSettings_ReturnValue) == 0x000060, "Member 'BP_Teamwork_StatusEffect_C_UpdateMultiplier::CallFunc_GetMutableWeaponSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_UpdateMultiplier, CallFunc_GetMutatorRank_ReturnValue) == 0x000068, "Member 'BP_Teamwork_StatusEffect_C_UpdateMultiplier::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_UpdateMultiplier, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x00006C, "Member 'BP_Teamwork_StatusEffect_C_UpdateMultiplier::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_UpdateMultiplier, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000070, "Member 'BP_Teamwork_StatusEffect_C_UpdateMultiplier::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_UpdateMultiplier, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000078, "Member 'BP_Teamwork_StatusEffect_C_UpdateMultiplier::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_UpdateMultiplier, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000080, "Member 'BP_Teamwork_StatusEffect_C_UpdateMultiplier::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_UpdateMultiplier, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000088, "Member 'BP_Teamwork_StatusEffect_C_UpdateMultiplier::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Teamwork_StatusEffect_C_UpdateMultiplier, CallFunc_AddFloatCoefficient_Value_ImplicitCast) == 0x000090, "Member 'BP_Teamwork_StatusEffect_C_UpdateMultiplier::CallFunc_AddFloatCoefficient_Value_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Teamwork_StatusEffect_C_UpdateMultiplier;
 
 }
 

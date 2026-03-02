@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -46,23 +46,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SpectatorPawn_C">();
+		BP_STATIC_CLASS_IMPL("BP_SpectatorPawn_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SpectatorPawn_C")
 	}
 	static class ABP_SpectatorPawn_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_SpectatorPawn_C>();
 	}
 };
-static_assert(alignof(ABP_SpectatorPawn_C) == 0x000008, "Wrong alignment on ABP_SpectatorPawn_C");
-static_assert(sizeof(ABP_SpectatorPawn_C) == 0x000418, "Wrong size on ABP_SpectatorPawn_C");
-static_assert(offsetof(ABP_SpectatorPawn_C, UberGraphFrame) == 0x0003B0, "Member 'ABP_SpectatorPawn_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_SpectatorPawn_C, TargetLocation) == 0x0003B8, "Member 'ABP_SpectatorPawn_C::TargetLocation' has a wrong offset!");
-static_assert(offsetof(ABP_SpectatorPawn_C, FreeRotation) == 0x0003D0, "Member 'ABP_SpectatorPawn_C::FreeRotation' has a wrong offset!");
-static_assert(offsetof(ABP_SpectatorPawn_C, FollowInterpSpeed) == 0x0003E8, "Member 'ABP_SpectatorPawn_C::FollowInterpSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_SpectatorPawn_C, RotateInterpSpeed) == 0x0003F0, "Member 'ABP_SpectatorPawn_C::RotateInterpSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_SpectatorPawn_C, HeightOffset) == 0x0003F8, "Member 'ABP_SpectatorPawn_C::HeightOffset' has a wrong offset!");
-static_assert(offsetof(ABP_SpectatorPawn_C, ZoomSpeed) == 0x000400, "Member 'ABP_SpectatorPawn_C::ZoomSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_SpectatorPawn_C, CharacterMaterials) == 0x000408, "Member 'ABP_SpectatorPawn_C::CharacterMaterials' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_SpectatorPawn_C;
 
 }
 

@@ -17,60 +17,33 @@ namespace SDK
 {
 
 // ScriptStruct ABP_Shotgun.ABP_Shotgun_C.AnimBlueprintGeneratedConstantData
-// 0x0257 (0x0258 - 0x0001)
+// 0x027F (0x0280 - 0x0001)
 struct ABP_Shotgun::FAnimBlueprintGeneratedConstantData final : public FAnimBlueprintConstantData
 {
 public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   __NameProperty_23;                                 // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_24;                                // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FInputScaleBiasClampConstants          __StructProperty_25;                               // 0x0010(0x002C)(BlueprintVisible, NoDestructor)
-	float                                         __FloatProperty_26;                                // 0x003C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_27;                                 // 0x0040(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAnimSyncMethod                               __EnumProperty_28;                                 // 0x0041(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAnimGroupRole                                __ByteProperty_29;                                 // 0x0042(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_24;                                 // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_25;                                // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FInputScaleBiasClampConstants          __StructProperty_26;                               // 0x0010(0x002C)(BlueprintVisible, NoDestructor)
+	float                                         __FloatProperty_27;                                // 0x003C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAnimSyncMethod                               __EnumProperty_28;                                 // 0x0040(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_29;                                 // 0x0041(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAnimGroupRole                                __ByteProperty_30;                                 // 0x0042(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_43[0x1];                                       // 0x0043(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   __NameProperty_30;                                 // 0x0044(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_31;                                 // 0x0044(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNodeFunctionRef                   __StructProperty_31;                               // 0x0050(0x0020)(BlueprintVisible, NoDestructor)
+	struct FAnimNodeFunctionRef                   __StructProperty_32;                               // 0x0050(0x0020)(BlueprintVisible, NoDestructor)
 	struct FAnimSubsystem_PropertyAccess          AnimBlueprintExtension_PropertyAccess;             // 0x0070(0x0080)()
-	struct FAnimSubsystem_Base                    AnimBlueprintExtension_Base;                       // 0x00F0(0x0018)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Root;                           // 0x0108(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ComponentToLocalSpace;          // 0x0138(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyBone_1;                   // 0x0168(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalToComponentSpace;          // 0x0198(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyBone;                     // 0x01C8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer;                 // 0x01F8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot;                           // 0x0228(0x0030)()
+	struct FAnimSubsystem_Base                    AnimBlueprintExtension_Base;                       // 0x00F0(0x0040)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Root;                           // 0x0130(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ComponentToLocalSpace;          // 0x0160(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyBone_1;                   // 0x0190(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalToComponentSpace;          // 0x01C0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyBone;                     // 0x01F0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer;                 // 0x0220(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot;                           // 0x0250(0x0030)()
 };
-static_assert(alignof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on ABP_Shotgun::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData) == 0x000258, "Wrong size on ABP_Shotgun::FAnimBlueprintGeneratedConstantData");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, __NameProperty_23) == 0x000004, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::__NameProperty_23' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, __FloatProperty_24) == 0x00000C, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::__FloatProperty_24' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, __StructProperty_25) == 0x000010, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::__StructProperty_25' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, __FloatProperty_26) == 0x00003C, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::__FloatProperty_26' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, __BoolProperty_27) == 0x000040, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::__BoolProperty_27' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, __EnumProperty_28) == 0x000041, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::__EnumProperty_28' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, __ByteProperty_29) == 0x000042, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::__ByteProperty_29' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, __NameProperty_30) == 0x000044, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::__NameProperty_30' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, __StructProperty_31) == 0x000050, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::__StructProperty_31' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_PropertyAccess) == 0x000070, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_Base) == 0x0000F0, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root) == 0x000108, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ComponentToLocalSpace) == 0x000138, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ModifyBone_1) == 0x000168, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ModifyBone_1' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LocalToComponentSpace) == 0x000198, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ModifyBone) == 0x0001C8, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ModifyBone' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer) == 0x0001F8, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot) == 0x000228, "Member 'ABP_Shotgun::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot' has a wrong offset!");
-
-// ScriptStruct ABP_Shotgun.ABP_Shotgun_C.AnimBlueprintGeneratedMutableData
-// 0x0000 (0x0001 - 0x0001)
-struct ABP_Shotgun::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-};
-static_assert(alignof(ABP_Shotgun::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_Shotgun::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(ABP_Shotgun::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_Shotgun::FAnimBlueprintGeneratedMutableData");
+DUMPER7_ASSERTS_ABP_Shotgun__FAnimBlueprintGeneratedConstantData;
 
 }
 

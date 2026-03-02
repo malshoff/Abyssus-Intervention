@@ -10,39 +10,84 @@
 
 #include "Basic.hpp"
 
+#include "RGame_structs.hpp"
+
 
 namespace SDK::Params
 {
 
 // Function Widget_MainMenuHUD.Widget_MainMenuHUD_C.ExecuteUbergraph_Widget_MainMenuHUD
-// 0x0040 (0x0040 - 0x0000)
+// 0x0110 (0x0110 - 0x0000)
 struct Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWidget_CommonContinueScreen_C*         CallFunc_PushWidget_OutWidget;                     // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetHasShownTelemetryConsentScreen_ReturnValue; // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget_TelemetryConsentScreen_C*       CallFunc_PushWidget_OutWidget_1;                   // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const class FString& Error)>   K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_Error;                          // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(const class FString& Error)>   K2Node_CreateDelegate_OutputDelegate_1;            // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable;                              // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class USPAutoLoginBlueprintProxy*             CallFunc_CreateAutoLoginProxyObject_ReturnValue;   // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWidget_CommonContinueScreen_C*         CallFunc_PushWidget_OutWidget;                     // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetHasShownTelemetryConsentScreen_ReturnValue; // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_TelemetryConsentScreen_C*       CallFunc_PushWidget_OutWidget_1;                   // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	ERPlatformType                                CallFunc_GetCurrentPlatform_ReturnValue;           // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URCommonActivatableWidget*              K2Node_CustomEvent_PoppedWidget;                   // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A2[0x2];                                       // 0x00A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class URCommonActivatableWidget* PoppedWidget)> K2Node_CreateDelegate_OutputDelegate_2; // 0x00A4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_Error_1;                        // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_2;            // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_3;            // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWidget_CompilingShaders_C*             CallFunc_PushWidget_OutWidget_2;                   // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class ARUIManager*                            CallFunc_GetUIManager_ReturnValue;                 // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARUIManager*                            CallFunc_GetUIManager_ReturnValue_1;               // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URGameInstance*                         K2Node_DynamicCast_AsRGame_Instance;               // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD) == 0x000008, "Wrong alignment on Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD");
-static_assert(sizeof(Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD) == 0x000040, "Wrong size on Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD");
-static_assert(offsetof(Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD, EntryPoint) == 0x000000, "Member 'Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD, CallFunc_GetOwningPlayer_ReturnValue) == 0x000008, "Member 'Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000010, "Member 'Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD, CallFunc_PushWidget_OutWidget) == 0x000018, "Member 'Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD::CallFunc_PushWidget_OutWidget' has a wrong offset!");
-static_assert(offsetof(Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD, CallFunc_GetHasShownTelemetryConsentScreen_ReturnValue) == 0x000021, "Member 'Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD::CallFunc_GetHasShownTelemetryConsentScreen_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x000028, "Member 'Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD, CallFunc_Not_PreBool_ReturnValue) == 0x000030, "Member 'Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD, CallFunc_PushWidget_OutWidget_1) == 0x000038, "Member 'Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD::CallFunc_PushWidget_OutWidget_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_MainMenuHUD_C_ExecuteUbergraph_Widget_MainMenuHUD;
+
+// Function Widget_MainMenuHUD.Widget_MainMenuHUD_C.Fail_EEE4B0094DCBB2A613FD4E8883AB5A2F
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_MainMenuHUD_C_Fail_EEE4B0094DCBB2A613FD4E8883AB5A2F final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_MainMenuHUD_C_Fail_EEE4B0094DCBB2A613FD4E8883AB5A2F;
+
+// Function Widget_MainMenuHUD.Widget_MainMenuHUD_C.OnWidgetPopped_Event
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_MainMenuHUD_C_OnWidgetPopped_Event final
+{
+public:
+	class URCommonActivatableWidget*              PoppedWidget;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_MainMenuHUD_C_OnWidgetPopped_Event;
+
+// Function Widget_MainMenuHUD.Widget_MainMenuHUD_C.Success_EEE4B0094DCBB2A613FD4E8883AB5A2F
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_MainMenuHUD_C_Success_EEE4B0094DCBB2A613FD4E8883AB5A2F final
+{
+public:
+	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_MainMenuHUD_C_Success_EEE4B0094DCBB2A613FD4E8883AB5A2F;
 
 }
 

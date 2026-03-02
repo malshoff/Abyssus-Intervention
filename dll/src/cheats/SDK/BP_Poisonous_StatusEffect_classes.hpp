@@ -19,37 +19,39 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Poisonous_StatusEffect.BP_Poisonous_StatusEffect_C
-// 0x0018 (0x04F0 - 0x04D8)
+// 0x0020 (0x0500 - 0x04E0)
 class UBP_Poisonous_StatusEffect_C final : public URStatusEffectGScript
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBPCM_ApplyPostProcessMaterial_C*       CameraModifier;                                    // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldKill;                                        // 0x04E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBPCM_ApplyPostProcessMaterial_C*       CameraModifier;                                    // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldKill;                                        // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4F1[0x7];                                      // 0x04F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        SoundAC;                                           // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void TogglePostProcessMaterial(bool Visible);
-	void SegmentComplete(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment);
-	void K2_TickScript(float DeltaTime);
-	void K2_DeactivateScript();
-	void K2_ActivateScript();
 	void ExecuteUbergraph_BP_Poisonous_StatusEffect(int32 EntryPoint);
+	void K2_ActivateScript();
+	void K2_DeactivateScript();
+	void K2_TickScript(float DeltaTime);
+	void SegmentComplete(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment);
+	void TogglePostProcessMaterial(bool Visible);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Poisonous_StatusEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_Poisonous_StatusEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Poisonous_StatusEffect_C")
 	}
 	static class UBP_Poisonous_StatusEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Poisonous_StatusEffect_C>();
 	}
 };
-static_assert(alignof(UBP_Poisonous_StatusEffect_C) == 0x000008, "Wrong alignment on UBP_Poisonous_StatusEffect_C");
-static_assert(sizeof(UBP_Poisonous_StatusEffect_C) == 0x0004F0, "Wrong size on UBP_Poisonous_StatusEffect_C");
-static_assert(offsetof(UBP_Poisonous_StatusEffect_C, UberGraphFrame) == 0x0004D8, "Member 'UBP_Poisonous_StatusEffect_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Poisonous_StatusEffect_C, CameraModifier) == 0x0004E0, "Member 'UBP_Poisonous_StatusEffect_C::CameraModifier' has a wrong offset!");
-static_assert(offsetof(UBP_Poisonous_StatusEffect_C, ShouldKill) == 0x0004E8, "Member 'UBP_Poisonous_StatusEffect_C::ShouldKill' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Poisonous_StatusEffect_C;
 
 }
 

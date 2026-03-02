@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function EyeTracker.EyeTrackerFunctionLibrary.GetGazeData
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FEyeTrackerGazeData*             OutGazeData                                            (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -47,7 +47,7 @@ bool UEyeTrackerFunctionLibrary::GetGazeData(struct FEyeTrackerGazeData* OutGaze
 
 
 // Function EyeTracker.EyeTrackerFunctionLibrary.GetStereoGazeData
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FEyeTrackerStereoGazeData*       OutGazeData                                            (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -76,7 +76,7 @@ bool UEyeTrackerFunctionLibrary::GetStereoGazeData(struct FEyeTrackerStereoGazeD
 
 
 // Function EyeTracker.EyeTrackerFunctionLibrary.IsEyeTrackerConnected
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -101,7 +101,7 @@ bool UEyeTrackerFunctionLibrary::IsEyeTrackerConnected()
 
 
 // Function EyeTracker.EyeTrackerFunctionLibrary.IsStereoGazeDataAvailable
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -126,7 +126,7 @@ bool UEyeTrackerFunctionLibrary::IsStereoGazeDataAvailable()
 
 
 // Function EyeTracker.EyeTrackerFunctionLibrary.SetEyeTrackedPlayer
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

@@ -17,59 +17,59 @@
 namespace SDK
 {
 
-// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.SetHighlighted
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    NewHighlighted                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Reset                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_EmoteWheelBTN_C::SetHighlighted(bool NewHighlighted, bool Reset)
+void UWidget_EmoteWheelBTN_C::BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheelBTN_C", "SetHighlighted");
-
-	Params::Widget_EmoteWheelBTN_C_SetHighlighted Parms{};
-
-	Parms.NewHighlighted = NewHighlighted;
-	Parms.Reset = Reset;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.SetEmoteFromPlayerData
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_EmoteWheelBTN_C::SetEmoteFromPlayerData()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheelBTN_C", "SetEmoteFromPlayerData");
+		Func = Class->GetFunction("Widget_EmoteWheelBTN_C", "BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_EmoteWheelBTN_C::PreConstruct(bool IsDesignTime)
+void UWidget_EmoteWheelBTN_C::BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheelBTN_C", "PreConstruct");
+		Func = Class->GetFunction("Widget_EmoteWheelBTN_C", "BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
 
-	Params::Widget_EmoteWheelBTN_C_PreConstruct Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.IsDesignTime = IsDesignTime;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_EmoteWheelBTN_C::BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_EmoteWheelBTN_C", "BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_EmoteWheelBTN_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_EmoteWheelBTN_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -93,59 +93,59 @@ void UWidget_EmoteWheelBTN_C::ExecuteUbergraph_Widget_EmoteWheelBTN(int32 EntryP
 }
 
 
-// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.Construct
+// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_EmoteWheelBTN_C::Construct()
+void UWidget_EmoteWheelBTN_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheelBTN_C", "Construct");
+		Func = Class->GetFunction("Widget_EmoteWheelBTN_C", "PreConstruct");
+
+	Params::Widget_EmoteWheelBTN_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.SetEmoteFromPlayerData
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_EmoteWheelBTN_C::SetEmoteFromPlayerData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_EmoteWheelBTN_C", "SetEmoteFromPlayerData");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
+// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.SetHighlighted
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    NewHighlighted                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Reset                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_EmoteWheelBTN_C::BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
+void UWidget_EmoteWheelBTN_C::SetHighlighted(bool NewHighlighted, bool Reset)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheelBTN_C", "BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
+		Func = Class->GetFunction("Widget_EmoteWheelBTN_C", "SetHighlighted");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::Widget_EmoteWheelBTN_C_SetHighlighted Parms{};
 
+	Parms.NewHighlighted = NewHighlighted;
+	Parms.Reset = Reset;
 
-// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWidget_EmoteWheelBTN_C::BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheelBTN_C", "BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWidget_EmoteWheelBTN_C::BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheelBTN_C", "BndEvt__Widget_EmoteWheelBTN_Button_102_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

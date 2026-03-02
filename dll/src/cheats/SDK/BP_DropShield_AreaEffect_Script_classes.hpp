@@ -45,24 +45,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_DropShield_AreaEffect_Script_C">();
+		BP_STATIC_CLASS_IMPL("BP_DropShield_AreaEffect_Script_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_DropShield_AreaEffect_Script_C")
 	}
 	static class UBP_DropShield_AreaEffect_Script_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_DropShield_AreaEffect_Script_C>();
 	}
 };
-static_assert(alignof(UBP_DropShield_AreaEffect_Script_C) == 0x000008, "Wrong alignment on UBP_DropShield_AreaEffect_Script_C");
-static_assert(sizeof(UBP_DropShield_AreaEffect_Script_C) == 0x000110, "Wrong size on UBP_DropShield_AreaEffect_Script_C");
-static_assert(offsetof(UBP_DropShield_AreaEffect_Script_C, UberGraphFrame) == 0x0000C8, "Member 'UBP_DropShield_AreaEffect_Script_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_AreaEffect_Script_C, PlayerDamageReductionPercent) == 0x0000D0, "Member 'UBP_DropShield_AreaEffect_Script_C::PlayerDamageReductionPercent' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_AreaEffect_Script_C, EnemyMovementSpeedReductionPercent) == 0x0000D8, "Member 'UBP_DropShield_AreaEffect_Script_C::EnemyMovementSpeedReductionPercent' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_AreaEffect_Script_C, DamageTickInterval) == 0x0000E0, "Member 'UBP_DropShield_AreaEffect_Script_C::DamageTickInterval' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_AreaEffect_Script_C, PassiveAC) == 0x0000E8, "Member 'UBP_DropShield_AreaEffect_Script_C::PassiveAC' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_AreaEffect_Script_C, DamagePerTick) == 0x0000F0, "Member 'UBP_DropShield_AreaEffect_Script_C::DamagePerTick' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_AreaEffect_Script_C, PlayerMaxDamageReductionPercent) == 0x0000F8, "Member 'UBP_DropShield_AreaEffect_Script_C::PlayerMaxDamageReductionPercent' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_AreaEffect_Script_C, EnemyMaxMovementSpeedReductionPercent) == 0x000100, "Member 'UBP_DropShield_AreaEffect_Script_C::EnemyMaxMovementSpeedReductionPercent' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_AreaEffect_Script_C, DropShieldRef) == 0x000108, "Member 'UBP_DropShield_AreaEffect_Script_C::DropShieldRef' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_DropShield_AreaEffect_Script_C;
 
 }
 

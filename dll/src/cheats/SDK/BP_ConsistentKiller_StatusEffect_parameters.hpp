@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BP_ConsistentKiller_StatusEffect.BP_ConsistentKiller_StatusEffect_C.ExecuteUbergraph_BP_ConsistentKiller_StatusEffect
-// 0x0218 (0x0218 - 0x0000)
+// 0x0348 (0x0348 - 0x0000)
 struct BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect final
 {
 public:
@@ -52,53 +52,22 @@ public:
 	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x011C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ARPawnBase*                             K2Node_CustomEvent_Pawn;                           // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0130(0x00C0)()
-	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_2; // 0x01F0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_3; // 0x0200(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0130(0x01F0)()
+	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0320(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_3; // 0x0330(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0340(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect) == 0x000008, "Wrong alignment on BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect");
-static_assert(sizeof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect) == 0x000218, "Wrong size on BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, EntryPoint) == 0x000000, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000008, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000010, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000018, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_CustomEvent_Pawn_1) == 0x000048, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_CustomEvent_Pawn_1' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_CustomEvent_DamagedActor) == 0x000050, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_CustomEvent_DamagedActor' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_CustomEvent_bWasCritical) == 0x000058, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_CustomEvent_bWasCritical' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_CustomEvent_DamageSourceMask) == 0x00005C, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_CustomEvent_DamageSourceMask' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, CallFunc_DamageSourceMaskHasFlag_ReturnValue) == 0x000060, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::CallFunc_DamageSourceMaskHasFlag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_DynamicCast_AsRPawn_Base) == 0x000068, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, CallFunc_Not_PreBool_ReturnValue) == 0x000071, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_CreateDelegate_OutputDelegate) == 0x000074, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000088, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, CallFunc_GetScriptFName_ReturnValue) == 0x0000B8, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000C0, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_DynamicCast_AsRPawn_Base_1) == 0x0000D0, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_DynamicCast_bSuccess_1) == 0x0000D8, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x0000E0, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_DynamicCast_AsRPawn_Base_2) == 0x000110, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_DynamicCast_AsRPawn_Base_2' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_DynamicCast_bSuccess_2) == 0x000118, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, CallFunc_GetScriptFName_ReturnValue_1) == 0x00011C, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_CustomEvent_Pawn) == 0x000128, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_CustomEvent_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_CustomEvent_DamageEventData) == 0x000130, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_CustomEvent_DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_CreateDelegate_OutputDelegate_2) == 0x0001F0, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, K2Node_CreateDelegate_OutputDelegate_3) == 0x000200, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x000210, "Member 'BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ConsistentKiller_StatusEffect_C_ExecuteUbergraph_BP_ConsistentKiller_StatusEffect;
 
 // Function BP_ConsistentKiller_StatusEffect.BP_ConsistentKiller_StatusEffect_C.OnDealtDamage_Event_0
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_ConsistentKiller_StatusEffect_C_OnDealtDamage_Event_0 final
 {
 public:
 	class ARPawnBase*                             Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_ConsistentKiller_StatusEffect_C_OnDealtDamage_Event_0) == 0x000008, "Wrong alignment on BP_ConsistentKiller_StatusEffect_C_OnDealtDamage_Event_0");
-static_assert(sizeof(BP_ConsistentKiller_StatusEffect_C_OnDealtDamage_Event_0) == 0x0000C8, "Wrong size on BP_ConsistentKiller_StatusEffect_C_OnDealtDamage_Event_0");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_OnDealtDamage_Event_0, Pawn) == 0x000000, "Member 'BP_ConsistentKiller_StatusEffect_C_OnDealtDamage_Event_0::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_OnDealtDamage_Event_0, DamageEventData) == 0x000008, "Member 'BP_ConsistentKiller_StatusEffect_C_OnDealtDamage_Event_0::DamageEventData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ConsistentKiller_StatusEffect_C_OnDealtDamage_Event_0;
 
 // Function BP_ConsistentKiller_StatusEffect.BP_ConsistentKiller_StatusEffect_C.OnPreDealtDamage_Event_0
 // 0x0018 (0x0018 - 0x0000)
@@ -111,12 +80,7 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DamageSourceMask;                                  // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ConsistentKiller_StatusEffect_C_OnPreDealtDamage_Event_0) == 0x000008, "Wrong alignment on BP_ConsistentKiller_StatusEffect_C_OnPreDealtDamage_Event_0");
-static_assert(sizeof(BP_ConsistentKiller_StatusEffect_C_OnPreDealtDamage_Event_0) == 0x000018, "Wrong size on BP_ConsistentKiller_StatusEffect_C_OnPreDealtDamage_Event_0");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_OnPreDealtDamage_Event_0, Pawn) == 0x000000, "Member 'BP_ConsistentKiller_StatusEffect_C_OnPreDealtDamage_Event_0::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_OnPreDealtDamage_Event_0, DamagedActor) == 0x000008, "Member 'BP_ConsistentKiller_StatusEffect_C_OnPreDealtDamage_Event_0::DamagedActor' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_OnPreDealtDamage_Event_0, bWasCritical) == 0x000010, "Member 'BP_ConsistentKiller_StatusEffect_C_OnPreDealtDamage_Event_0::bWasCritical' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_StatusEffect_C_OnPreDealtDamage_Event_0, DamageSourceMask) == 0x000014, "Member 'BP_ConsistentKiller_StatusEffect_C_OnPreDealtDamage_Event_0::DamageSourceMask' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ConsistentKiller_StatusEffect_C_OnPreDealtDamage_Event_0;
 
 }
 

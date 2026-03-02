@@ -21,9 +21,7 @@ struct PlayFabAuthenticationContext_GetClientSessionTicket final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(PlayFabAuthenticationContext_GetClientSessionTicket) == 0x000008, "Wrong alignment on PlayFabAuthenticationContext_GetClientSessionTicket");
-static_assert(sizeof(PlayFabAuthenticationContext_GetClientSessionTicket) == 0x000010, "Wrong size on PlayFabAuthenticationContext_GetClientSessionTicket");
-static_assert(offsetof(PlayFabAuthenticationContext_GetClientSessionTicket, ReturnValue) == 0x000000, "Member 'PlayFabAuthenticationContext_GetClientSessionTicket::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_PlayFabAuthenticationContext_GetClientSessionTicket;
 
 // Function PlayFabCommon.PlayFabAuthenticationContext.GetDeveloperSecretKey
 // 0x0010 (0x0010 - 0x0000)
@@ -32,9 +30,7 @@ struct PlayFabAuthenticationContext_GetDeveloperSecretKey final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(PlayFabAuthenticationContext_GetDeveloperSecretKey) == 0x000008, "Wrong alignment on PlayFabAuthenticationContext_GetDeveloperSecretKey");
-static_assert(sizeof(PlayFabAuthenticationContext_GetDeveloperSecretKey) == 0x000010, "Wrong size on PlayFabAuthenticationContext_GetDeveloperSecretKey");
-static_assert(offsetof(PlayFabAuthenticationContext_GetDeveloperSecretKey, ReturnValue) == 0x000000, "Member 'PlayFabAuthenticationContext_GetDeveloperSecretKey::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_PlayFabAuthenticationContext_GetDeveloperSecretKey;
 
 // Function PlayFabCommon.PlayFabAuthenticationContext.GetEntityToken
 // 0x0010 (0x0010 - 0x0000)
@@ -43,9 +39,7 @@ struct PlayFabAuthenticationContext_GetEntityToken final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(PlayFabAuthenticationContext_GetEntityToken) == 0x000008, "Wrong alignment on PlayFabAuthenticationContext_GetEntityToken");
-static_assert(sizeof(PlayFabAuthenticationContext_GetEntityToken) == 0x000010, "Wrong size on PlayFabAuthenticationContext_GetEntityToken");
-static_assert(offsetof(PlayFabAuthenticationContext_GetEntityToken, ReturnValue) == 0x000000, "Member 'PlayFabAuthenticationContext_GetEntityToken::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_PlayFabAuthenticationContext_GetEntityToken;
 
 // Function PlayFabCommon.PlayFabAuthenticationContext.GetPlayFabId
 // 0x0010 (0x0010 - 0x0000)
@@ -54,9 +48,7 @@ struct PlayFabAuthenticationContext_GetPlayFabId final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(PlayFabAuthenticationContext_GetPlayFabId) == 0x000008, "Wrong alignment on PlayFabAuthenticationContext_GetPlayFabId");
-static_assert(sizeof(PlayFabAuthenticationContext_GetPlayFabId) == 0x000010, "Wrong size on PlayFabAuthenticationContext_GetPlayFabId");
-static_assert(offsetof(PlayFabAuthenticationContext_GetPlayFabId, ReturnValue) == 0x000000, "Member 'PlayFabAuthenticationContext_GetPlayFabId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_PlayFabAuthenticationContext_GetPlayFabId;
 
 // Function PlayFabCommon.PlayFabAuthenticationContext.SetClientSessionTicket
 // 0x0010 (0x0010 - 0x0000)
@@ -65,9 +57,7 @@ struct PlayFabAuthenticationContext_SetClientSessionTicket final
 public:
 	class FString                                 InTicket;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(PlayFabAuthenticationContext_SetClientSessionTicket) == 0x000008, "Wrong alignment on PlayFabAuthenticationContext_SetClientSessionTicket");
-static_assert(sizeof(PlayFabAuthenticationContext_SetClientSessionTicket) == 0x000010, "Wrong size on PlayFabAuthenticationContext_SetClientSessionTicket");
-static_assert(offsetof(PlayFabAuthenticationContext_SetClientSessionTicket, InTicket) == 0x000000, "Member 'PlayFabAuthenticationContext_SetClientSessionTicket::InTicket' has a wrong offset!");
+DUMPER7_ASSERTS_PlayFabAuthenticationContext_SetClientSessionTicket;
 
 // Function PlayFabCommon.PlayFabAuthenticationContext.SetDeveloperSecretKey
 // 0x0010 (0x0010 - 0x0000)
@@ -76,9 +66,7 @@ struct PlayFabAuthenticationContext_SetDeveloperSecretKey final
 public:
 	class FString                                 InKey;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(PlayFabAuthenticationContext_SetDeveloperSecretKey) == 0x000008, "Wrong alignment on PlayFabAuthenticationContext_SetDeveloperSecretKey");
-static_assert(sizeof(PlayFabAuthenticationContext_SetDeveloperSecretKey) == 0x000010, "Wrong size on PlayFabAuthenticationContext_SetDeveloperSecretKey");
-static_assert(offsetof(PlayFabAuthenticationContext_SetDeveloperSecretKey, InKey) == 0x000000, "Member 'PlayFabAuthenticationContext_SetDeveloperSecretKey::InKey' has a wrong offset!");
+DUMPER7_ASSERTS_PlayFabAuthenticationContext_SetDeveloperSecretKey;
 
 // Function PlayFabCommon.PlayFabAuthenticationContext.SetEntityToken
 // 0x0010 (0x0010 - 0x0000)
@@ -87,9 +75,7 @@ struct PlayFabAuthenticationContext_SetEntityToken final
 public:
 	class FString                                 InToken;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(PlayFabAuthenticationContext_SetEntityToken) == 0x000008, "Wrong alignment on PlayFabAuthenticationContext_SetEntityToken");
-static_assert(sizeof(PlayFabAuthenticationContext_SetEntityToken) == 0x000010, "Wrong size on PlayFabAuthenticationContext_SetEntityToken");
-static_assert(offsetof(PlayFabAuthenticationContext_SetEntityToken, InToken) == 0x000000, "Member 'PlayFabAuthenticationContext_SetEntityToken::InToken' has a wrong offset!");
+DUMPER7_ASSERTS_PlayFabAuthenticationContext_SetEntityToken;
 
 // Function PlayFabCommon.PlayFabAuthenticationContext.SetPlayFabId
 // 0x0010 (0x0010 - 0x0000)
@@ -98,9 +84,7 @@ struct PlayFabAuthenticationContext_SetPlayFabId final
 public:
 	class FString                                 InKey;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(PlayFabAuthenticationContext_SetPlayFabId) == 0x000008, "Wrong alignment on PlayFabAuthenticationContext_SetPlayFabId");
-static_assert(sizeof(PlayFabAuthenticationContext_SetPlayFabId) == 0x000010, "Wrong size on PlayFabAuthenticationContext_SetPlayFabId");
-static_assert(offsetof(PlayFabAuthenticationContext_SetPlayFabId, InKey) == 0x000000, "Member 'PlayFabAuthenticationContext_SetPlayFabId::InKey' has a wrong offset!");
+DUMPER7_ASSERTS_PlayFabAuthenticationContext_SetPlayFabId;
 
 }
 

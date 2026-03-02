@@ -10,34 +10,34 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "CommonUI_classes.hpp"
 #include "CommonInput_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CommonUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_TextButton.Widget_TextButton_C
-// 0x00E0 (0x1490 - 0x13B0)
+// 0x00E0 (0x1610 - 0x1530)
 class UWidget_TextButton_C final : public UCommonButtonBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x13B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       UnhoverAnimation;                                  // 0x13B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       HoverAnimation;                                    // 0x13C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             Content_Text;                                      // 0x13C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_37;                                          // 0x13D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   ButtonText;                                        // 0x13D8(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	TMulticastInlineDelegate<void(class UWidget_TextButton_C* Button)> OnPressed;                    // 0x13E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(class UWidget_TextButton_C* Button)> OnReleased;                   // 0x13F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	int32                                         FontSizeOverride;                                  // 0x1408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_140C[0x4];                                     // 0x140C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateFontInfo                         Font;                                              // 0x1410(0x0060)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	ETextTransformPolicy                          Transform_Policy;                                  // 0x1470(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1471[0x3];                                     // 0x1471(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            ColorOverride;                                     // 0x1474(0x0014)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1530(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Image_37;                                          // 0x1538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Content_Text;                                      // 0x1540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       HoverAnimation;                                    // 0x1548(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       UnhoverAnimation;                                  // 0x1550(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ButtonText;                                        // 0x1558(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	TMulticastInlineDelegate<void(class UWidget_TextButton_C* Button)> OnPressed;                    // 0x1568(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class UWidget_TextButton_C* Button)> OnReleased;                   // 0x1578(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	int32                                         FontSizeOverride;                                  // 0x1588(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_158C[0x4];                                     // 0x158C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateFontInfo                         Font;                                              // 0x1590(0x0060)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	ETextTransformPolicy                          Transform_Policy;                                  // 0x15F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15F1[0x3];                                     // 0x15F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            ColorOverride;                                     // 0x15F4(0x0014)(Edit, BlueprintVisible)
 
 public:
 	void BP_OnFocusLost();
@@ -58,27 +58,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_TextButton_C">();
+		BP_STATIC_CLASS_IMPL("Widget_TextButton_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_TextButton_C")
 	}
 	static class UWidget_TextButton_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_TextButton_C>();
 	}
 };
-static_assert(alignof(UWidget_TextButton_C) == 0x000010, "Wrong alignment on UWidget_TextButton_C");
-static_assert(sizeof(UWidget_TextButton_C) == 0x001490, "Wrong size on UWidget_TextButton_C");
-static_assert(offsetof(UWidget_TextButton_C, UberGraphFrame) == 0x0013B0, "Member 'UWidget_TextButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_TextButton_C, UnhoverAnimation) == 0x0013B8, "Member 'UWidget_TextButton_C::UnhoverAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_TextButton_C, HoverAnimation) == 0x0013C0, "Member 'UWidget_TextButton_C::HoverAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_TextButton_C, Content_Text) == 0x0013C8, "Member 'UWidget_TextButton_C::Content_Text' has a wrong offset!");
-static_assert(offsetof(UWidget_TextButton_C, Image_37) == 0x0013D0, "Member 'UWidget_TextButton_C::Image_37' has a wrong offset!");
-static_assert(offsetof(UWidget_TextButton_C, ButtonText) == 0x0013D8, "Member 'UWidget_TextButton_C::ButtonText' has a wrong offset!");
-static_assert(offsetof(UWidget_TextButton_C, OnPressed) == 0x0013E8, "Member 'UWidget_TextButton_C::OnPressed' has a wrong offset!");
-static_assert(offsetof(UWidget_TextButton_C, OnReleased) == 0x0013F8, "Member 'UWidget_TextButton_C::OnReleased' has a wrong offset!");
-static_assert(offsetof(UWidget_TextButton_C, FontSizeOverride) == 0x001408, "Member 'UWidget_TextButton_C::FontSizeOverride' has a wrong offset!");
-static_assert(offsetof(UWidget_TextButton_C, Font) == 0x001410, "Member 'UWidget_TextButton_C::Font' has a wrong offset!");
-static_assert(offsetof(UWidget_TextButton_C, Transform_Policy) == 0x001470, "Member 'UWidget_TextButton_C::Transform_Policy' has a wrong offset!");
-static_assert(offsetof(UWidget_TextButton_C, ColorOverride) == 0x001474, "Member 'UWidget_TextButton_C::ColorOverride' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_TextButton_C;
 
 }
 

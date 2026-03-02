@@ -21,9 +21,7 @@ struct Widget_SettingsButtonBase_C_Set_Setting_Name final
 public:
 	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_SettingsButtonBase_C_Set_Setting_Name) == 0x000008, "Wrong alignment on Widget_SettingsButtonBase_C_Set_Setting_Name");
-static_assert(sizeof(Widget_SettingsButtonBase_C_Set_Setting_Name) == 0x000010, "Wrong size on Widget_SettingsButtonBase_C_Set_Setting_Name");
-static_assert(offsetof(Widget_SettingsButtonBase_C_Set_Setting_Name, InText) == 0x000000, "Member 'Widget_SettingsButtonBase_C_Set_Setting_Name::InText' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsButtonBase_C_Set_Setting_Name;
 
 }
 

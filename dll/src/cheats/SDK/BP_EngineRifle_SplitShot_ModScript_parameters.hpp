@@ -24,12 +24,7 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_SplitShot_ModScript_C_ExecuteUbergraph_BP_EngineRifle_SplitShot_ModScript) == 0x000004, "Wrong alignment on BP_EngineRifle_SplitShot_ModScript_C_ExecuteUbergraph_BP_EngineRifle_SplitShot_ModScript");
-static_assert(sizeof(BP_EngineRifle_SplitShot_ModScript_C_ExecuteUbergraph_BP_EngineRifle_SplitShot_ModScript) == 0x000010, "Wrong size on BP_EngineRifle_SplitShot_ModScript_C_ExecuteUbergraph_BP_EngineRifle_SplitShot_ModScript");
-static_assert(offsetof(BP_EngineRifle_SplitShot_ModScript_C_ExecuteUbergraph_BP_EngineRifle_SplitShot_ModScript, EntryPoint) == 0x000000, "Member 'BP_EngineRifle_SplitShot_ModScript_C_ExecuteUbergraph_BP_EngineRifle_SplitShot_ModScript::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_SplitShot_ModScript_C_ExecuteUbergraph_BP_EngineRifle_SplitShot_ModScript, Temp_int_Variable) == 0x000004, "Member 'BP_EngineRifle_SplitShot_ModScript_C_ExecuteUbergraph_BP_EngineRifle_SplitShot_ModScript::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_SplitShot_ModScript_C_ExecuteUbergraph_BP_EngineRifle_SplitShot_ModScript, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_EngineRifle_SplitShot_ModScript_C_ExecuteUbergraph_BP_EngineRifle_SplitShot_ModScript::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_SplitShot_ModScript_C_ExecuteUbergraph_BP_EngineRifle_SplitShot_ModScript, CallFunc_LessEqual_IntInt_ReturnValue) == 0x00000C, "Member 'BP_EngineRifle_SplitShot_ModScript_C_ExecuteUbergraph_BP_EngineRifle_SplitShot_ModScript::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_SplitShot_ModScript_C_ExecuteUbergraph_BP_EngineRifle_SplitShot_ModScript;
 
 }
 

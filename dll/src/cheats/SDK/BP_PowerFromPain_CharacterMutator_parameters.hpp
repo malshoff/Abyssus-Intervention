@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BP_PowerFromPain_CharacterMutator.BP_PowerFromPain_CharacterMutator_C.ExecuteUbergraph_BP_PowerFromPain_CharacterMutator
-// 0x0250 (0x0250 - 0x0000)
+// 0x0380 (0x0380 - 0x0000)
 struct BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator final
 {
 public:
@@ -34,69 +34,34 @@ public:
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class URHealthComponent*                      K2Node_Event_Component;                            // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_Event_DamageData;                           // 0x0088(0x00C0)()
-	TDelegate<void(class URHealthComponent* Component, float currentHealth, float healthDelta, const struct FHealCombatEvent& HealEvent)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0148(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutableFloatCurrentValue_ReturnValue_1; // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15C[0x4];                                      // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0168(0x0030)(ContainsInstancedReference)
-	TDelegate<void(class URHealthComponent* Component, float currentHealth, float healthDelta, const struct FHealCombatEvent& HealEvent)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0198(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class URHealthComponent* Component, float MaximumHealth)> K2Node_CreateDelegate_OutputDelegate_3; // 0x01A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C1[0x3];                                      // 0x01C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x01C4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URPawnMovementComponent*                CallFunc_GetRPawnMovementComponent_ReturnValue;    // 0x01D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x01E0(0x0030)(ContainsInstancedReference)
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_1;                 // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_219[0x3];                                      // 0x0219(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetMaxHealth_ReturnValue;                 // 0x021C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast_1;   // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast_1;   // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast_2;   // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast_2;   // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_Event_DamageData;                           // 0x0088(0x01F0)()
+	float                                         CallFunc_GetMutableFloatCurrentValue_ReturnValue_1; // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0288(0x0030)(ContainsInstancedReference)
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C1[0x3];                                      // 0x02C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class URHealthComponent* Component, float currentHealth, float healthDelta, const struct FHealCombatEvent& HealEvent)> K2Node_CreateDelegate_OutputDelegate_1; // 0x02C4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D4[0x4];                                      // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URPawnMovementComponent*                CallFunc_GetRPawnMovementComponent_ReturnValue;    // 0x02D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class URHealthComponent* Component, float MaximumHealth)> K2Node_CreateDelegate_OutputDelegate_2; // 0x02E0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class URHealthComponent* Component, float currentHealth, float healthDelta, const struct FHealCombatEvent& HealEvent)> K2Node_CreateDelegate_OutputDelegate_3; // 0x02F0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0310(0x0030)(ContainsInstancedReference)
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_1;                 // 0x0340(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_349[0x3];                                      // 0x0349(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetMaxHealth_ReturnValue;                 // 0x034C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast_1;   // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast_1;   // 0x0368(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast_2;   // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast_2;   // 0x0378(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator) == 0x000008, "Wrong alignment on BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator");
-static_assert(sizeof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator) == 0x000250, "Wrong size on BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_CustomEvent_Component) == 0x000008, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_CustomEvent_Component' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_CustomEvent_currentHealth) == 0x000010, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_CustomEvent_currentHealth' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_CustomEvent_healthDelta) == 0x000014, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_CustomEvent_healthDelta' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_CustomEvent_HealEvent) == 0x000018, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_CustomEvent_HealEvent' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000050, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_CustomEvent_Component_1) == 0x000060, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_CustomEvent_Component_1' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_CustomEvent_MaximumHealth) == 0x000068, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_CustomEvent_MaximumHealth' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_GetMutableFloatCurrentValue_ReturnValue) == 0x00006C, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_GetMutableFloatCurrentValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000070, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000078, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_Event_Component) == 0x000080, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_Event_Component' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_Event_DamageData) == 0x000088, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_Event_DamageData' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x000148, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_GetMutableFloatCurrentValue_ReturnValue_1) == 0x000158, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_GetMutableFloatCurrentValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x000160, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000168, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_2) == 0x000198, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_3) == 0x0001A8, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x0001B8, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x0001C0, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_GetScriptFName_ReturnValue) == 0x0001C4, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_GetRPawnMovementComponent_ReturnValue) == 0x0001D0, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_GetRPawnMovementComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_GetScriptFName_ReturnValue_1) == 0x0001D8, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x0001E0, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x000210, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000218, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_GetMaxHealth_ReturnValue) == 0x00021C, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_GetMaxHealth_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x000220, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x000228, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_Subtract_DoubleDouble_A_ImplicitCast_1) == 0x000230, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_Subtract_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_Subtract_DoubleDouble_B_ImplicitCast_1) == 0x000238, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_Subtract_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_Subtract_DoubleDouble_B_ImplicitCast_2) == 0x000240, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_Subtract_DoubleDouble_B_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator, CallFunc_Subtract_DoubleDouble_A_ImplicitCast_2) == 0x000248, "Member 'BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator::CallFunc_Subtract_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PowerFromPain_CharacterMutator_C_ExecuteUbergraph_BP_PowerFromPain_CharacterMutator;
 
 // Function BP_PowerFromPain_CharacterMutator.BP_PowerFromPain_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -108,24 +73,17 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_PowerFromPain_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_PowerFromPain_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_PowerFromPain_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_PowerFromPain_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_PowerFromPain_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_PowerFromPain_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_PowerFromPain_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PowerFromPain_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_PowerFromPain_CharacterMutator.BP_PowerFromPain_CharacterMutator_C.K2_OnDamageTaken
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_PowerFromPain_CharacterMutator_C_K2_OnDamageTaken final
 {
 public:
 	class URHealthComponent*                      Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageData;                                        // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageData;                                        // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_PowerFromPain_CharacterMutator_C_K2_OnDamageTaken) == 0x000008, "Wrong alignment on BP_PowerFromPain_CharacterMutator_C_K2_OnDamageTaken");
-static_assert(sizeof(BP_PowerFromPain_CharacterMutator_C_K2_OnDamageTaken) == 0x0000C8, "Wrong size on BP_PowerFromPain_CharacterMutator_C_K2_OnDamageTaken");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_K2_OnDamageTaken, Component) == 0x000000, "Member 'BP_PowerFromPain_CharacterMutator_C_K2_OnDamageTaken::Component' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_K2_OnDamageTaken, DamageData) == 0x000008, "Member 'BP_PowerFromPain_CharacterMutator_C_K2_OnDamageTaken::DamageData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PowerFromPain_CharacterMutator_C_K2_OnDamageTaken;
 
 // Function BP_PowerFromPain_CharacterMutator.BP_PowerFromPain_CharacterMutator_C.OnCurrentHealthChanged
 // 0x0048 (0x0048 - 0x0000)
@@ -137,12 +95,7 @@ public:
 	float                                         healthDelta;                                       // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FHealCombatEvent                       HealEvent;                                         // 0x0010(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 };
-static_assert(alignof(BP_PowerFromPain_CharacterMutator_C_OnCurrentHealthChanged) == 0x000008, "Wrong alignment on BP_PowerFromPain_CharacterMutator_C_OnCurrentHealthChanged");
-static_assert(sizeof(BP_PowerFromPain_CharacterMutator_C_OnCurrentHealthChanged) == 0x000048, "Wrong size on BP_PowerFromPain_CharacterMutator_C_OnCurrentHealthChanged");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_OnCurrentHealthChanged, Component) == 0x000000, "Member 'BP_PowerFromPain_CharacterMutator_C_OnCurrentHealthChanged::Component' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_OnCurrentHealthChanged, currentHealth) == 0x000008, "Member 'BP_PowerFromPain_CharacterMutator_C_OnCurrentHealthChanged::currentHealth' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_OnCurrentHealthChanged, healthDelta) == 0x00000C, "Member 'BP_PowerFromPain_CharacterMutator_C_OnCurrentHealthChanged::healthDelta' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_OnCurrentHealthChanged, HealEvent) == 0x000010, "Member 'BP_PowerFromPain_CharacterMutator_C_OnCurrentHealthChanged::HealEvent' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PowerFromPain_CharacterMutator_C_OnCurrentHealthChanged;
 
 // Function BP_PowerFromPain_CharacterMutator.BP_PowerFromPain_CharacterMutator_C.OnMaximumHealthChanged_Event
 // 0x0010 (0x0010 - 0x0000)
@@ -152,71 +105,59 @@ public:
 	class URHealthComponent*                      Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	float                                         MaximumHealth;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PowerFromPain_CharacterMutator_C_OnMaximumHealthChanged_Event) == 0x000008, "Wrong alignment on BP_PowerFromPain_CharacterMutator_C_OnMaximumHealthChanged_Event");
-static_assert(sizeof(BP_PowerFromPain_CharacterMutator_C_OnMaximumHealthChanged_Event) == 0x000010, "Wrong size on BP_PowerFromPain_CharacterMutator_C_OnMaximumHealthChanged_Event");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_OnMaximumHealthChanged_Event, Component) == 0x000000, "Member 'BP_PowerFromPain_CharacterMutator_C_OnMaximumHealthChanged_Event::Component' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_OnMaximumHealthChanged_Event, MaximumHealth) == 0x000008, "Member 'BP_PowerFromPain_CharacterMutator_C_OnMaximumHealthChanged_Event::MaximumHealth' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PowerFromPain_CharacterMutator_C_OnMaximumHealthChanged_Event;
 
 // Function BP_PowerFromPain_CharacterMutator.BP_PowerFromPain_CharacterMutator_C.UpdateBuff
-// 0x00D8 (0x00D8 - 0x0000)
+// 0x0148 (0x0148 - 0x0000)
 struct BP_PowerFromPain_CharacterMutator_C_UpdateBuff final
 {
 public:
-	double                                        MissingHealth;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x000C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue; // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue_1; // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue_2; // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0030(0x0030)(ContainsInstancedReference)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URPawnMovementComponent*                CallFunc_GetRPawnMovementComponent_ReturnValue;    // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast_1;   // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast_1; // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URHealthComponent*                      HealthComponent;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        MissingHealth;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0028(0x0030)(ContainsInstancedReference)
+	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue; // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue_1; // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue_2; // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URPawnMovementComponent*                CallFunc_GetRPawnMovementComponent_ReturnValue;    // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue_3; // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue_4; // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMin_ReturnValue;                         // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SafeDivide_ReturnValue_1;                 // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast_1;   // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast_2;   // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMin_B_ImplicitCast;                      // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast_1; // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff) == 0x000008, "Wrong alignment on BP_PowerFromPain_CharacterMutator_C_UpdateBuff");
-static_assert(sizeof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff) == 0x0000D8, "Wrong size on BP_PowerFromPain_CharacterMutator_C_UpdateBuff");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, MissingHealth) == 0x000000, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::MissingHealth' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_GetMutatorRank_ReturnValue) == 0x000008, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_GetScriptFName_ReturnValue) == 0x00000C, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x000014, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_GetMutatorValueByVariableName_ReturnValue_1) == 0x000018, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_GetMutatorValueByVariableName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_GetMutatorValueByVariableName_ReturnValue_2) == 0x00001C, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_GetMutatorValueByVariableName_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_GetScriptFName_ReturnValue_1) == 0x000020, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_FTrunc_ReturnValue) == 0x000028, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000030, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000060, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_SafeDivide_ReturnValue) == 0x000068, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, K2Node_DynamicCast_AsRPawn_Base) == 0x000070, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000080, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_GetRPawnMovementComponent_ReturnValue) == 0x000088, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_GetRPawnMovementComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000090, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000098, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x0000A0, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x0000A8, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x0000B0, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x0000B8, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_Multiply_DoubleDouble_B_ImplicitCast_1) == 0x0000C0, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_Multiply_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_FTrunc_A_ImplicitCast) == 0x0000C8, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_FTrunc_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x0000D0, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_PowerFromPain_CharacterMutator_C_UpdateBuff, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast_1) == 0x0000D4, "Member 'BP_PowerFromPain_CharacterMutator_C_UpdateBuff::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PowerFromPain_CharacterMutator_C_UpdateBuff;
 
 }
 

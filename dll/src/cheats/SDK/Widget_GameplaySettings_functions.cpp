@@ -453,6 +453,26 @@ void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_Widget_Settings
 }
 
 
+// Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Widget_SettingsColor_K2Node_ComponentBoundEvent_22_OnValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const struct FLinearColor&              Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_GameplaySettings_C::BndEvt__Widget_GameplaySettings_Widget_SettingsColor_K2Node_ComponentBoundEvent_22_OnValueChanged__DelegateSignature(const struct FLinearColor& Color)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GameplaySettings_C", "BndEvt__Widget_GameplaySettings_Widget_SettingsColor_K2Node_ComponentBoundEvent_22_OnValueChanged__DelegateSignature");
+
+	Params::Widget_GameplaySettings_C_BndEvt__Widget_GameplaySettings_Widget_SettingsColor_K2Node_ComponentBoundEvent_22_OnValueChanged__DelegateSignature Parms{};
+
+	Parms.Color = std::move(Color);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Widget_GameplaySettings.Widget_GameplaySettings_C.BndEvt__Widget_GameplaySettings_Widget_SettingsComboBox_K2Node_ComponentBoundEvent_8_OnOptionChanged__DelegateSignature
 // (BlueprintEvent)
 // Parameters:

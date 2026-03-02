@@ -19,7 +19,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_EngineRifle_Primary_CosmeticsScript.BP_EngineRifle_Primary_CosmeticsScript_C
 // 0x0038 (0x0130 - 0x00F8)
-class UBP_EngineRifle_Primary_CosmeticsScript_C final : public UBP_AttachMeshToWeapon_CosmeticScript_C
+class UBP_EngineRifle_Primary_CosmeticsScript_C : public UBP_AttachMeshToWeapon_CosmeticScript_C
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_EngineRifle_Primary_CosmeticsScript_C; // 0x00F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
@@ -29,30 +29,28 @@ public:
 	class UMaterialInstanceDynamic*               DynamicOverlayMaterial;                            // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnFinish_8D5DBD75420659DD4001E4804CF6133F();
-	void OnCancelled_8D5DBD75420659DD4001E4804CF6133F();
-	void K2_TickScript(float DeltaTime);
-	void K2_OnWeaponCosmeticEvent();
-	void K2_ActivateScript();
 	void ExecuteUbergraph_BP_EngineRifle_Primary_CosmeticsScript(int32 EntryPoint);
+	void K2_ActivateScript();
+	void K2_OnWeaponCosmeticEvent();
+	void K2_TickScript(float DeltaTime);
+	void OnCancelled_8D5DBD75420659DD4001E4804CF6133F();
+	void OnFinish_8D5DBD75420659DD4001E4804CF6133F();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_EngineRifle_Primary_CosmeticsScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_EngineRifle_Primary_CosmeticsScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_EngineRifle_Primary_CosmeticsScript_C")
 	}
 	static class UBP_EngineRifle_Primary_CosmeticsScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_EngineRifle_Primary_CosmeticsScript_C>();
 	}
 };
-static_assert(alignof(UBP_EngineRifle_Primary_CosmeticsScript_C) == 0x000008, "Wrong alignment on UBP_EngineRifle_Primary_CosmeticsScript_C");
-static_assert(sizeof(UBP_EngineRifle_Primary_CosmeticsScript_C) == 0x000130, "Wrong size on UBP_EngineRifle_Primary_CosmeticsScript_C");
-static_assert(offsetof(UBP_EngineRifle_Primary_CosmeticsScript_C, UberGraphFrame_BP_EngineRifle_Primary_CosmeticsScript_C) == 0x0000F8, "Member 'UBP_EngineRifle_Primary_CosmeticsScript_C::UberGraphFrame_BP_EngineRifle_Primary_CosmeticsScript_C' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Primary_CosmeticsScript_C, RuntimeBPScript) == 0x000100, "Member 'UBP_EngineRifle_Primary_CosmeticsScript_C::RuntimeBPScript' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Primary_CosmeticsScript_C, BPDynamicMaterials) == 0x000108, "Member 'UBP_EngineRifle_Primary_CosmeticsScript_C::BPDynamicMaterials' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Primary_CosmeticsScript_C, BPEmissiveNames) == 0x000118, "Member 'UBP_EngineRifle_Primary_CosmeticsScript_C::BPEmissiveNames' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Primary_CosmeticsScript_C, DynamicOverlayMaterial) == 0x000128, "Member 'UBP_EngineRifle_Primary_CosmeticsScript_C::DynamicOverlayMaterial' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_EngineRifle_Primary_CosmeticsScript_C;
 
 }
 

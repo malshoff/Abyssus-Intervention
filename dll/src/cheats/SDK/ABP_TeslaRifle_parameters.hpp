@@ -24,9 +24,7 @@ struct ABP_TeslaRifle_C_AnimGraph final
 public:
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_TeslaRifle_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_TeslaRifle_C_AnimGraph");
-static_assert(sizeof(ABP_TeslaRifle_C_AnimGraph) == 0x000010, "Wrong size on ABP_TeslaRifle_C_AnimGraph");
-static_assert(offsetof(ABP_TeslaRifle_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'ABP_TeslaRifle_C_AnimGraph::AnimGraph_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_TeslaRifle_C_AnimGraph;
 
 // Function ABP_TeslaRifle.ABP_TeslaRifle_C.BlueprintThreadSafeUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -35,9 +33,7 @@ struct ABP_TeslaRifle_C_BlueprintThreadSafeUpdateAnimation final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_TeslaRifle_C_BlueprintThreadSafeUpdateAnimation) == 0x000004, "Wrong alignment on ABP_TeslaRifle_C_BlueprintThreadSafeUpdateAnimation");
-static_assert(sizeof(ABP_TeslaRifle_C_BlueprintThreadSafeUpdateAnimation) == 0x000004, "Wrong size on ABP_TeslaRifle_C_BlueprintThreadSafeUpdateAnimation");
-static_assert(offsetof(ABP_TeslaRifle_C_BlueprintThreadSafeUpdateAnimation, DeltaTime) == 0x000000, "Member 'ABP_TeslaRifle_C_BlueprintThreadSafeUpdateAnimation::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_TeslaRifle_C_BlueprintThreadSafeUpdateAnimation;
 
 // Function ABP_TeslaRifle.ABP_TeslaRifle_C.BlueprintUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -46,9 +42,7 @@ struct ABP_TeslaRifle_C_BlueprintUpdateAnimation final
 public:
 	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_TeslaRifle_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on ABP_TeslaRifle_C_BlueprintUpdateAnimation");
-static_assert(sizeof(ABP_TeslaRifle_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on ABP_TeslaRifle_C_BlueprintUpdateAnimation");
-static_assert(offsetof(ABP_TeslaRifle_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'ABP_TeslaRifle_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_TeslaRifle_C_BlueprintUpdateAnimation;
 
 // Function ABP_TeslaRifle.ABP_TeslaRifle_C.ExecuteUbergraph_ABP_TeslaRifle
 // 0x0150 (0x0150 - 0x0000)
@@ -88,37 +82,7 @@ public:
 	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast;           // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_MakeRotator_Roll_ImplicitCast;            // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle) == 0x000008, "Wrong alignment on ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle");
-static_assert(sizeof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle) == 0x000150, "Wrong size on ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, EntryPoint) == 0x000000, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_BreakTransform_Location) == 0x000008, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_BreakTransform_Rotation) == 0x000020, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_BreakTransform_Scale) == 0x000038, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_BreakTransform_Location_1) == 0x000050, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_BreakTransform_Location_1' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_BreakTransform_Rotation_1) == 0x000068, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_BreakTransform_Scale_1) == 0x000080, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, Temp_int_Variable) == 0x000098, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, K2Node_Event_DeltaTimeX) == 0x00009C, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::K2Node_Event_DeltaTimeX' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_BreakRotator_Roll) == 0x0000A0, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_BreakRotator_Pitch) == 0x0000A4, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_BreakRotator_Yaw) == 0x0000A8, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, K2Node_Event_IsPrimaryMod) == 0x0000AC, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::K2Node_Event_IsPrimaryMod' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_RandomFloatInRange_ReturnValue) == 0x0000B0, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000B8, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x0000C0, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x0000C8, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_MakeRotator_ReturnValue) == 0x0000D0, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_Array_Get_Item) == 0x0000E8, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_Array_Length_ReturnValue) == 0x000100, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_Add_IntInt_ReturnValue) == 0x000104, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000108, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_RInterpTo_ReturnValue) == 0x000110, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_RInterpTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000128, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_Add_DoubleDouble_A_ImplicitCast_1) == 0x000130, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_Add_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_Add_DoubleDouble_A_ImplicitCast_2) == 0x000138, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_Add_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x000140, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x000144, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x000148, "Member 'ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_TeslaRifle_C_ExecuteUbergraph_ABP_TeslaRifle;
 
 // Function ABP_TeslaRifle.ABP_TeslaRifle_C.OnWeaponFired
 // 0x0001 (0x0001 - 0x0000)
@@ -127,9 +91,7 @@ struct ABP_TeslaRifle_C_OnWeaponFired final
 public:
 	bool                                          IsPrimaryMod;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_TeslaRifle_C_OnWeaponFired) == 0x000001, "Wrong alignment on ABP_TeslaRifle_C_OnWeaponFired");
-static_assert(sizeof(ABP_TeslaRifle_C_OnWeaponFired) == 0x000001, "Wrong size on ABP_TeslaRifle_C_OnWeaponFired");
-static_assert(offsetof(ABP_TeslaRifle_C_OnWeaponFired, IsPrimaryMod) == 0x000000, "Member 'ABP_TeslaRifle_C_OnWeaponFired::IsPrimaryMod' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_TeslaRifle_C_OnWeaponFired;
 
 }
 

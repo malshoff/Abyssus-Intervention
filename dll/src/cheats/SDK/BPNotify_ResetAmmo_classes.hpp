@@ -26,15 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPNotify_ResetAmmo_C">();
+		BP_STATIC_CLASS_IMPL("BPNotify_ResetAmmo_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPNotify_ResetAmmo_C")
 	}
 	static class UBPNotify_ResetAmmo_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPNotify_ResetAmmo_C>();
 	}
 };
-static_assert(alignof(UBPNotify_ResetAmmo_C) == 0x000008, "Wrong alignment on UBPNotify_ResetAmmo_C");
-static_assert(sizeof(UBPNotify_ResetAmmo_C) == 0x000038, "Wrong size on UBPNotify_ResetAmmo_C");
+DUMPER7_ASSERTS_UBPNotify_ResetAmmo_C;
 
 }
 

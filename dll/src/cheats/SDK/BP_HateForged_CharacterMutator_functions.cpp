@@ -121,20 +121,6 @@ void UBP_HateForged_CharacterMutator_C::OnDamageDealt(class ARPawnBase* Pawn, co
 }
 
 
-// Function BP_HateForged_CharacterMutator.BP_HateForged_CharacterMutator_C.OnFailed_C5CC665D482807BD6E7B8CBC1206160E
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_HateForged_CharacterMutator_C::OnFailed_C5CC665D482807BD6E7B8CBC1206160E()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HateForged_CharacterMutator_C", "OnFailed_C5CC665D482807BD6E7B8CBC1206160E");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_HateForged_CharacterMutator.BP_HateForged_CharacterMutator_C.OnPreDealtDamage
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -158,20 +144,6 @@ void UBP_HateForged_CharacterMutator_C::OnPreDealtDamage(class ARPawnBase* Pawn,
 	Parms.DamageSourceMask = DamageSourceMask;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_HateForged_CharacterMutator.BP_HateForged_CharacterMutator_C.OnSoundPlayed_C5CC665D482807BD6E7B8CBC1206160E
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_HateForged_CharacterMutator_C::OnSoundPlayed_C5CC665D482807BD6E7B8CBC1206160E()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HateForged_CharacterMutator_C", "OnSoundPlayed_C5CC665D482807BD6E7B8CBC1206160E");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

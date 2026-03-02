@@ -34,17 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ClusterBomb_ProjectileEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_ClusterBomb_ProjectileEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ClusterBomb_ProjectileEffect_C")
 	}
 	static class UBP_ClusterBomb_ProjectileEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ClusterBomb_ProjectileEffect_C>();
 	}
 };
-static_assert(alignof(UBP_ClusterBomb_ProjectileEffect_C) == 0x000008, "Wrong alignment on UBP_ClusterBomb_ProjectileEffect_C");
-static_assert(sizeof(UBP_ClusterBomb_ProjectileEffect_C) == 0x000100, "Wrong size on UBP_ClusterBomb_ProjectileEffect_C");
-static_assert(offsetof(UBP_ClusterBomb_ProjectileEffect_C, UberGraphFrame) == 0x0000F0, "Member 'UBP_ClusterBomb_ProjectileEffect_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_ClusterBomb_ProjectileEffect_C, RandomizedDetonationTime) == 0x0000F8, "Member 'UBP_ClusterBomb_ProjectileEffect_C::RandomizedDetonationTime' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_ClusterBomb_ProjectileEffect_C;
 
 }
 

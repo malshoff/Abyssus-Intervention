@@ -83,57 +83,10 @@ public:
 	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_AddMutableFloatPostAdditive_Val_ImplicitCast; // 0x02D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7) == 0x000008, "Wrong alignment on BP_Blood_Behavior_Mutator_C_CheckBloodPassive7");
-static_assert(sizeof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7) == 0x0002E0, "Wrong size on BP_Blood_Behavior_Mutator_C_CheckBloodPassive7");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, TargetActor) == 0x000000, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::TargetActor' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, Temp_bool_Variable) == 0x000008, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_MakeLiteralName_ReturnValue) == 0x00000C, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000018, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_IsValid_ReturnValue) == 0x000048, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, K2Node_DynamicCast_AsRPawn_Base) == 0x000050, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, K2Node_DynamicCast_AsRPlayer_State) == 0x000060, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::K2Node_DynamicCast_AsRPlayer_State' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, K2Node_DynamicCast_bSuccess_1) == 0x000068, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_GetPostAdditivesValueByKey_ReturnValue) == 0x00006C, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_GetPostAdditivesValueByKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_GetMutatorRank_ReturnValue) == 0x000070, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000078, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x0000A8, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x0000B0, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, K2Node_DynamicCast_bSuccess_2) == 0x0000B8, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_GetCachedHitResult_ReturnValue) == 0x0000C0, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_GetCachedHitResult_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_HasMutator_ReturnValue) == 0x0001C0, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_bBlockingHit) == 0x0001C1, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_bInitialOverlap) == 0x0001C2, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_Time) == 0x0001C4, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_Distance) == 0x0001C8, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_Location) == 0x0001D0, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_ImpactPoint) == 0x0001E8, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_Normal) == 0x000200, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_ImpactNormal) == 0x000218, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_PhysMat) == 0x000230, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_HitActor) == 0x000238, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_HitComponent) == 0x000240, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_HitBoneName) == 0x000248, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_BoneName) == 0x000250, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_HitItem) == 0x000258, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_ElementIndex) == 0x00025C, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_FaceIndex) == 0x000260, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_TraceStart) == 0x000268, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_BreakHitResult_TraceEnd) == 0x000280, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, K2Node_Select_Default) == 0x000298, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_MakeLiteralName_ReturnValue_1) == 0x0002A0, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_MakeLiteralName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_IsValid_ReturnValue_1) == 0x0002A8, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_GetPostAdditivesValueByKey_ReturnValue_1) == 0x0002AC, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_GetPostAdditivesValueByKey_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0002B0, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_GetHealthComponent_ReturnValue) == 0x0002B8, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_GetHealthComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_IsValid_ReturnValue_2) == 0x0002C0, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_GetIsAlive_ReturnValue) == 0x0002C1, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_GetIsAlive_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x0002C8, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x0002D0, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_CheckBloodPassive7, CallFunc_AddMutableFloatPostAdditive_Val_ImplicitCast) == 0x0002D8, "Member 'BP_Blood_Behavior_Mutator_C_CheckBloodPassive7::CallFunc_AddMutableFloatPostAdditive_Val_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Blood_Behavior_Mutator_C_CheckBloodPassive7;
 
 // Function BP_Blood_Behavior_Mutator.BP_Blood_Behavior_Mutator_C.ExecuteUbergraph_BP_Blood_Behavior_Mutator
-// 0x02B8 (0x02B8 - 0x0000)
+// 0x03E8 (0x03E8 - 0x0000)
 struct BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator final
 {
 public:
@@ -158,76 +111,38 @@ public:
 	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x00F8(0x0030)(ContainsInstancedReference)
 	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate; // 0x0128(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ARPawnBase*                             K2Node_CustomEvent_Pawn;                           // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0140(0x00C0)()
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue;      // 0x0209(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x020A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_20B[0x5];                                      // 0x020B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetActorBounds_Origin;                    // 0x0210(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetActorBounds_BoxExtent;                 // 0x0228(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_241[0x7];                                      // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0248(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0261(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_262[0x6];                                      // 0x0262(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0268(0x0030)(ContainsInstancedReference)
-	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0298(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_1;                 // 0x02A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B1[0x3];                                      // 0x02B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x02B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0140(0x01F0)()
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue;      // 0x0339(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x033A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_33B[0x5];                                      // 0x033B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetActorBounds_Origin;                    // 0x0340(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetActorBounds_BoxExtent;                 // 0x0358(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_371[0x7];                                      // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0378(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0391(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_392[0x6];                                      // 0x0392(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0398(0x0030)(ContainsInstancedReference)
+	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_1; // 0x03C8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_1;                 // 0x03D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E1[0x3];                                      // 0x03E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x03E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator) == 0x000008, "Wrong alignment on BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator");
-static_assert(sizeof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator) == 0x0002B8, "Wrong size on BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, EntryPoint) == 0x000000, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000008, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_RandomUnitVector_ReturnValue) == 0x000010, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_RandomUnitVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_RandomFloatInRange_ReturnValue) == 0x000028, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_RandomFloatInRange_ReturnValue_1) == 0x000030, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_RandomFloatInRange_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000038, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, K2Node_CustomEvent_StartLocation) == 0x000050, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::K2Node_CustomEvent_StartLocation' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, K2Node_CustomEvent_TargetLocation) == 0x000068, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::K2Node_CustomEvent_TargetLocation' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000080, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000098, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_Add_VectorVector_ReturnValue) == 0x0000B0, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_Conv_VectorToRotator_ReturnValue) == 0x0000C8, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_Conv_VectorToRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_K2_IsScriptLocallyControlled_ReturnValue) == 0x0000E0, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_K2_IsScriptLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_SpawnSystemAtLocation_ReturnValue) == 0x0000E8, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_SpawnSystemAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_GetNonLocalPlayerVolumeMultiplier_ReturnValue) == 0x0000F0, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_GetNonLocalPlayerVolumeMultiplier_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x0000F8, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, K2Node_CreateDelegate_OutputDelegate) == 0x000128, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, K2Node_CustomEvent_Pawn) == 0x000138, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::K2Node_CustomEvent_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, K2Node_CustomEvent_DamageEventData) == 0x000140, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::K2Node_CustomEvent_DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000200, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, K2Node_DynamicCast_bSuccess) == 0x000208, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_DamageSourceMaskHasFlag_ReturnValue) == 0x000209, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_DamageSourceMaskHasFlag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_IsValid_ReturnValue) == 0x00020A, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_GetActorBounds_Origin) == 0x000210, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_GetActorBounds_Origin' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_GetActorBounds_BoxExtent) == 0x000228, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_GetActorBounds_BoxExtent' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_IsValid_ReturnValue_1) == 0x000240, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000248, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_BooleanAND_ReturnValue) == 0x000260, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_BooleanAND_ReturnValue_1) == 0x000261, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000268, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x000298, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x0002A8, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, K2Node_DynamicCast_bSuccess_1) == 0x0002B0, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator, CallFunc_SetFloatParameter_Param_ImplicitCast) == 0x0002B4, "Member 'BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator::CallFunc_SetFloatParameter_Param_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Blood_Behavior_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_Mutator;
 
 // Function BP_Blood_Behavior_Mutator.BP_Blood_Behavior_Mutator_C.OnDamageDealt
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_Blood_Behavior_Mutator_C_OnDamageDealt final
 {
 public:
 	class ARPawnBase*                             Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_Blood_Behavior_Mutator_C_OnDamageDealt) == 0x000008, "Wrong alignment on BP_Blood_Behavior_Mutator_C_OnDamageDealt");
-static_assert(sizeof(BP_Blood_Behavior_Mutator_C_OnDamageDealt) == 0x0000C8, "Wrong size on BP_Blood_Behavior_Mutator_C_OnDamageDealt");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_OnDamageDealt, Pawn) == 0x000000, "Member 'BP_Blood_Behavior_Mutator_C_OnDamageDealt::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_OnDamageDealt, DamageEventData) == 0x000008, "Member 'BP_Blood_Behavior_Mutator_C_OnDamageDealt::DamageEventData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Blood_Behavior_Mutator_C_OnDamageDealt;
 
 // Function BP_Blood_Behavior_Mutator.BP_Blood_Behavior_Mutator_C.PlayVFX
 // 0x0030 (0x0030 - 0x0000)
@@ -237,10 +152,7 @@ public:
 	struct FVector                                StartLocation;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                TargetLocation;                                    // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Blood_Behavior_Mutator_C_PlayVFX) == 0x000008, "Wrong alignment on BP_Blood_Behavior_Mutator_C_PlayVFX");
-static_assert(sizeof(BP_Blood_Behavior_Mutator_C_PlayVFX) == 0x000030, "Wrong size on BP_Blood_Behavior_Mutator_C_PlayVFX");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_PlayVFX, StartLocation) == 0x000000, "Member 'BP_Blood_Behavior_Mutator_C_PlayVFX::StartLocation' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_Mutator_C_PlayVFX, TargetLocation) == 0x000018, "Member 'BP_Blood_Behavior_Mutator_C_PlayVFX::TargetLocation' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Blood_Behavior_Mutator_C_PlayVFX;
 
 }
 

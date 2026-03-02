@@ -53,23 +53,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_PingIndicator_C">();
+		BP_STATIC_CLASS_IMPL("BP_PingIndicator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_PingIndicator_C")
 	}
 	static class ABP_PingIndicator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_PingIndicator_C>();
 	}
 };
-static_assert(alignof(ABP_PingIndicator_C) == 0x000008, "Wrong alignment on ABP_PingIndicator_C");
-static_assert(sizeof(ABP_PingIndicator_C) == 0x0002F8, "Wrong size on ABP_PingIndicator_C");
-static_assert(offsetof(ABP_PingIndicator_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_PingIndicator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_PingIndicator_C, Widget) == 0x0002B8, "Member 'ABP_PingIndicator_C::Widget' has a wrong offset!");
-static_assert(offsetof(ABP_PingIndicator_C, PointLight) == 0x0002C0, "Member 'ABP_PingIndicator_C::PointLight' has a wrong offset!");
-static_assert(offsetof(ABP_PingIndicator_C, Sphere) == 0x0002C8, "Member 'ABP_PingIndicator_C::Sphere' has a wrong offset!");
-static_assert(offsetof(ABP_PingIndicator_C, DefaultSceneRoot) == 0x0002D0, "Member 'ABP_PingIndicator_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_PingIndicator_C, CachedPlayerColor) == 0x0002D8, "Member 'ABP_PingIndicator_C::CachedPlayerColor' has a wrong offset!");
-static_assert(offsetof(ABP_PingIndicator_C, SpawnedVFX) == 0x0002E8, "Member 'ABP_PingIndicator_C::SpawnedVFX' has a wrong offset!");
-static_assert(offsetof(ABP_PingIndicator_C, Icon_Texture) == 0x0002F0, "Member 'ABP_PingIndicator_C::Icon_Texture' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_PingIndicator_C;
 
 }
 

@@ -18,200 +18,115 @@
 namespace SDK::Params
 {
 
-// Function Widget_RunStatsList.Widget_RunStatsList_C.Setup
-// 0x00C8 (0x00C8 - 0x0000)
-struct Widget_RunStatsList_C_Setup final
-{
-public:
-	bool                                          UseSpecificPlayerStats;                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRPlayerStats                          PlayerStats;                                       // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-static_assert(alignof(Widget_RunStatsList_C_Setup) == 0x000008, "Wrong alignment on Widget_RunStatsList_C_Setup");
-static_assert(sizeof(Widget_RunStatsList_C_Setup) == 0x0000C8, "Wrong size on Widget_RunStatsList_C_Setup");
-static_assert(offsetof(Widget_RunStatsList_C_Setup, UseSpecificPlayerStats) == 0x000000, "Member 'Widget_RunStatsList_C_Setup::UseSpecificPlayerStats' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_Setup, PlayerStats) == 0x000008, "Member 'Widget_RunStatsList_C_Setup::PlayerStats' has a wrong offset!");
-
-// Function Widget_RunStatsList.Widget_RunStatsList_C.BuildStatWidgets
-// 0x05E8 (0x05E8 - 0x0000)
-struct Widget_RunStatsList_C_BuildStatWidgets final
-{
-public:
-	bool                                          UseSpecificPlayerStats;                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRPlayerStats                          PlayerStats;                                       // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FText                                   Temp_text_Variable;                                // 0x00C8(0x0010)()
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimespan                              CallFunc_FromSeconds_ReturnValue;                  // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Days;                       // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Hours;                      // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Minutes;                    // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Seconds;                    // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Milliseconds;               // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0120(0x0048)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0168(0x0048)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_2;            // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_3;            // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x01C0(0x0048)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0208(0x0048)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_4;            // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0258(0x0010)(ReferenceParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0268(0x0048)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x02B0(0x0010)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x02C0(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D1[0x7];                                      // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x02D8(0x0010)()
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_2;           // 0x02E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_SelectText_ReturnValue;                   // 0x02F0(0x0010)()
-	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_3;           // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue;                        // 0x0318(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31C[0x4];                                      // 0x031C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SafeDivide_ReturnValue_1;                 // 0x0320(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_5;            // 0x0328(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0330(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0338(0x0048)(HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x0380(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_384[0x4];                                      // 0x0384(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0388(0x0010)(ReferenceParm)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_6;            // 0x0398(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x03A0(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x03B0(0x0048)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_7;            // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0400(0x0010)(ReferenceParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x0410(0x0048)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x0458(0x0010)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x0468(0x0010)(ReferenceParm)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_8;            // 0x0478(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x0480(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x0490(0x0048)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x04D8(0x0010)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x04E8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x04F8(0x0010)()
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0508(0x0010)()
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_2;             // 0x0518(0x0010)()
-	int64                                         CallFunc_Round64_ReturnValue;                      // 0x0528(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0530(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_Int64ToText_ReturnValue;             // 0x0538(0x0010)()
-	int64                                         CallFunc_Round64_ReturnValue_1;                    // 0x0548(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_Int64ToText_ReturnValue_1;           // 0x0550(0x0010)()
-	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0560(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_561[0x7];                                      // 0x0561(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_1;                              // 0x0568(0x0010)()
-	class FString                                 CallFunc_GetCurrentCulture_ReturnValue;            // 0x0578(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0588(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0589(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_58A[0x6];                                      // 0x058A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_SelectText_ReturnValue_1;                 // 0x0590(0x0010)()
-	class FText                                   K2Node_Select_Default;                             // 0x05A0(0x0010)()
-	class FString                                 CallFunc_GetCurrentCulture_ReturnValue_1;          // 0x05B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x05C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C1[0x7];                                      // 0x05C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_SelectText_ReturnValue_2;                 // 0x05C8(0x0010)()
-	double                                        CallFunc_FClamp_Value_ImplicitCast;                // 0x05D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Round64_A_ImplicitCast;                   // 0x05E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_RunStatsList_C_BuildStatWidgets) == 0x000008, "Wrong alignment on Widget_RunStatsList_C_BuildStatWidgets");
-static_assert(sizeof(Widget_RunStatsList_C_BuildStatWidgets) == 0x0005E8, "Wrong size on Widget_RunStatsList_C_BuildStatWidgets");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, UseSpecificPlayerStats) == 0x000000, "Member 'Widget_RunStatsList_C_BuildStatWidgets::UseSpecificPlayerStats' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, PlayerStats) == 0x000008, "Member 'Widget_RunStatsList_C_BuildStatWidgets::PlayerStats' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, Temp_text_Variable) == 0x0000C8, "Member 'Widget_RunStatsList_C_BuildStatWidgets::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Add_IntInt_ReturnValue) == 0x0000D8, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_FromSeconds_ReturnValue) == 0x0000E0, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_FromSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0000E8, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_BreakTimespan_Days) == 0x0000F0, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_BreakTimespan_Days' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_BreakTimespan_Hours) == 0x0000F4, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_BreakTimespan_Hours' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_BreakTimespan_Minutes) == 0x0000F8, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_BreakTimespan_Minutes' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_BreakTimespan_Seconds) == 0x0000FC, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_BreakTimespan_Seconds' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_BreakTimespan_Milliseconds) == 0x000100, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_BreakTimespan_Milliseconds' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000108, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000110, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000118, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_MakeStruct_FormatArgumentData) == 0x000120, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_MakeStruct_FormatArgumentData_1) == 0x000168, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToInt64_ReturnValue_2) == 0x0001B0, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToInt64_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToInt64_ReturnValue_3) == 0x0001B8, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToInt64_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_MakeStruct_FormatArgumentData_2) == 0x0001C0, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_MakeStruct_FormatArgumentData_3) == 0x000208, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToInt64_ReturnValue_4) == 0x000250, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToInt64_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_MakeArray_Array) == 0x000258, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_MakeStruct_FormatArgumentData_4) == 0x000268, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Format_ReturnValue) == 0x0002B0, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_MakeArray_Array_1) == 0x0002C0, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Greater_IntInt_ReturnValue) == 0x0002D0, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Format_ReturnValue_1) == 0x0002D8, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToDouble_ReturnValue_2) == 0x0002E8, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_SelectText_ReturnValue) == 0x0002F0, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_SelectText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_SafeDivide_ReturnValue) == 0x000300, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000308, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToDouble_ReturnValue_3) == 0x000310, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Round_ReturnValue) == 0x000318, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Round_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_SafeDivide_ReturnValue_1) == 0x000320, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_SafeDivide_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToInt64_ReturnValue_5) == 0x000328, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToInt64_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000330, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_MakeStruct_FormatArgumentData_5) == 0x000338, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Round_ReturnValue_1) == 0x000380, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Round_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_MakeArray_Array_2) == 0x000388, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToInt64_ReturnValue_6) == 0x000398, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToInt64_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Format_ReturnValue_2) == 0x0003A0, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_MakeStruct_FormatArgumentData_6) == 0x0003B0, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToInt64_ReturnValue_7) == 0x0003F8, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToInt64_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_MakeArray_Array_3) == 0x000400, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_MakeStruct_FormatArgumentData_7) == 0x000410, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_MakeStruct_FormatArgumentData_7' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Format_ReturnValue_3) == 0x000458, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Format_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_MakeArray_Array_4) == 0x000468, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_MakeArray_Array_4' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToInt64_ReturnValue_8) == 0x000478, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToInt64_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Format_ReturnValue_4) == 0x000480, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Format_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_MakeStruct_FormatArgumentData_8) == 0x000490, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_MakeStruct_FormatArgumentData_8' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToText_ReturnValue) == 0x0004D8, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_MakeArray_Array_5) == 0x0004E8, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_MakeArray_Array_5' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Format_ReturnValue_5) == 0x0004F8, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Format_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000508, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_IntToText_ReturnValue_2) == 0x000518, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_IntToText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Round64_ReturnValue) == 0x000528, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Round64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_FClamp_ReturnValue) == 0x000530, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_Int64ToText_ReturnValue) == 0x000538, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_Int64ToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Round64_ReturnValue_1) == 0x000548, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Round64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Conv_Int64ToText_ReturnValue_1) == 0x000550, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Conv_Int64ToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_IsValidClass_ReturnValue) == 0x000560, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, Temp_text_Variable_1) == 0x000568, "Member 'Widget_RunStatsList_C_BuildStatWidgets::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_GetCurrentCulture_ReturnValue) == 0x000578, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_GetCurrentCulture_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, Temp_bool_Variable) == 0x000588, "Member 'Widget_RunStatsList_C_BuildStatWidgets::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000589, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_SelectText_ReturnValue_1) == 0x000590, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_SelectText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, K2Node_Select_Default) == 0x0005A0, "Member 'Widget_RunStatsList_C_BuildStatWidgets::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_GetCurrentCulture_ReturnValue_1) == 0x0005B0, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_GetCurrentCulture_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_EqualEqual_StrStr_ReturnValue_1) == 0x0005C0, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_EqualEqual_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_SelectText_ReturnValue_2) == 0x0005C8, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_SelectText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_FClamp_Value_ImplicitCast) == 0x0005D8, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_FClamp_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_BuildStatWidgets, CallFunc_Round64_A_ImplicitCast) == 0x0005E0, "Member 'Widget_RunStatsList_C_BuildStatWidgets::CallFunc_Round64_A_ImplicitCast' has a wrong offset!");
-
 // Function Widget_RunStatsList.Widget_RunStatsList_C.AddStatItem
-// 0x0038 (0x0038 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct Widget_RunStatsList_C_AddStatItem final
 {
 public:
 	class FText                                   StatName;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class FText                                   StatValue;                                         // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class UTexture2D*                             StatIcon;                                          // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class URGameOverScreenStatContainer*          CallFunc_SpawnObject_ReturnValue;                  // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         Progress;                                          // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URGameOverScreenStatContainer*          CallFunc_SpawnObject_ReturnValue;                  // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SetDoublePropertyByName_Value_ImplicitCast; // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_RunStatsList_C_AddStatItem) == 0x000008, "Wrong alignment on Widget_RunStatsList_C_AddStatItem");
-static_assert(sizeof(Widget_RunStatsList_C_AddStatItem) == 0x000038, "Wrong size on Widget_RunStatsList_C_AddStatItem");
-static_assert(offsetof(Widget_RunStatsList_C_AddStatItem, StatName) == 0x000000, "Member 'Widget_RunStatsList_C_AddStatItem::StatName' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_AddStatItem, StatValue) == 0x000010, "Member 'Widget_RunStatsList_C_AddStatItem::StatValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_AddStatItem, StatIcon) == 0x000020, "Member 'Widget_RunStatsList_C_AddStatItem::StatIcon' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_AddStatItem, CallFunc_GetOwningPlayer_ReturnValue) == 0x000028, "Member 'Widget_RunStatsList_C_AddStatItem::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunStatsList_C_AddStatItem, CallFunc_SpawnObject_ReturnValue) == 0x000030, "Member 'Widget_RunStatsList_C_AddStatItem::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_RunStatsList_C_AddStatItem;
+
+// Function Widget_RunStatsList.Widget_RunStatsList_C.BuildStatWidgets
+// 0x0628 (0x0628 - 0x0000)
+struct Widget_RunStatsList_C_BuildStatWidgets final
+{
+public:
+	struct FRPlayerStats                          PlayerStats;                                       // 0x0000(0x0128)(BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          Temp_bool_Variable;                                // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0130(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0140(0x0010)()
+	struct FTimespan                              CallFunc_FromSeconds_ReturnValue;                  // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default;                             // 0x0158(0x0010)()
+	int32                                         CallFunc_BreakTimespan_Days;                       // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Hours;                      // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Minutes;                    // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Seconds;                    // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Milliseconds;               // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0190(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x01D8(0x0048)(HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_2;            // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_3;            // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0230(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0278(0x0048)(HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_4;            // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x02C8(0x0010)(ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x02D8(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0320(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0330(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0348(0x0010)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0358(0x0010)()
+	class FText                                   CallFunc_SelectText_ReturnValue;                   // 0x0368(0x0010)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0378(0x0010)()
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0388(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Round64_ReturnValue;                      // 0x0390(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0398(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_399[0x7];                                      // 0x0399(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_Int64ToText_ReturnValue;             // 0x03A0(0x0010)()
+	class FString                                 CallFunc_GetCurrentCulture_ReturnValue;            // 0x03B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x03C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C1[0x7];                                      // 0x03C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetCurrentCulture_ReturnValue_1;          // 0x03C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D9[0x3];                                      // 0x03D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x03DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_2;           // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_3;           // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x0400(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SafeDivide_ReturnValue_1;                 // 0x0408(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0410(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0418(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue;                        // 0x0420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x0424(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_5;            // 0x0428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_6;            // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0438(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0480(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x04C8(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x04D8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x04E8(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x04F8(0x0010)()
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_7;            // 0x0508(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_8;            // 0x0510(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x0518(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x0560(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x05A8(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x05B8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x05C8(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x05D8(0x0010)()
+	class FText                                   CallFunc_SelectText_ReturnValue_1;                 // 0x05E8(0x0010)()
+	class FText                                   CallFunc_SelectText_ReturnValue_2;                 // 0x05F8(0x0010)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_2;             // 0x0608(0x0010)()
+	double                                        CallFunc_FClamp_Value_ImplicitCast;                // 0x0618(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FromSeconds_Seconds_ImplicitCast;         // 0x0620(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunStatsList_C_BuildStatWidgets;
+
+// Function Widget_RunStatsList.Widget_RunStatsList_C.Setup
+// 0x0128 (0x0128 - 0x0000)
+struct Widget_RunStatsList_C_Setup final
+{
+public:
+	struct FRPlayerStats                          PlayerStats;                                       // 0x0000(0x0128)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_Widget_RunStatsList_C_Setup;
 
 }
 

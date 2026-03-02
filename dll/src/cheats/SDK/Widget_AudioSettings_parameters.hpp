@@ -22,10 +22,7 @@ public:
 	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Effects_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Effects_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Effects_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Effects_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Effects_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Effects_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Effects_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Effects_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Effects_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature;
 
 // Function Widget_AudioSettings.Widget_AudioSettings_C.BndEvt__Widget_AudioSettings_EnableBinauralAudio_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature
 // 0x0001 (0x0001 - 0x0000)
@@ -34,9 +31,7 @@ struct Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_EnableBinauralAudio_K
 public:
 	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_EnableBinauralAudio_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_EnableBinauralAudio_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_EnableBinauralAudio_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_EnableBinauralAudio_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_EnableBinauralAudio_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_EnableBinauralAudio_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_EnableBinauralAudio_K2Node_ComponentBoundEvent_4_OnValueChanged__DelegateSignature;
 
 // Function Widget_AudioSettings.Widget_AudioSettings_C.BndEvt__Widget_AudioSettings_Master_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -46,10 +41,7 @@ public:
 	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Master_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Master_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Master_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Master_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Master_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Master_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Master_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Master_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Master_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature;
 
 // Function Widget_AudioSettings.Widget_AudioSettings_C.BndEvt__Widget_AudioSettings_Music_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -59,10 +51,7 @@ public:
 	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Music_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Music_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Music_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Music_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Music_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Music_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Music_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Music_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Music_K2Node_ComponentBoundEvent_1_OnValueChanged__DelegateSignature;
 
 // Function Widget_AudioSettings.Widget_AudioSettings_C.BndEvt__Widget_AudioSettings_MuteOutOfFocus_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature
 // 0x0001 (0x0001 - 0x0000)
@@ -71,9 +60,7 @@ struct Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_MuteOutOfFocus_K2Node
 public:
 	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_MuteOutOfFocus_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_MuteOutOfFocus_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_MuteOutOfFocus_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_MuteOutOfFocus_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_MuteOutOfFocus_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_MuteOutOfFocus_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_MuteOutOfFocus_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature;
 
 // Function Widget_AudioSettings.Widget_AudioSettings_C.BndEvt__Widget_AudioSettings_ShowSubtitles_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature
 // 0x0001 (0x0001 - 0x0000)
@@ -82,9 +69,7 @@ struct Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_ShowSubtitles_K2Node_
 public:
 	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_ShowSubtitles_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature) == 0x000001, "Wrong alignment on Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_ShowSubtitles_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_ShowSubtitles_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature) == 0x000001, "Wrong size on Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_ShowSubtitles_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_ShowSubtitles_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature, State) == 0x000000, "Member 'Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_ShowSubtitles_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature::State' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_ShowSubtitles_K2Node_ComponentBoundEvent_5_OnValueChanged__DelegateSignature;
 
 // Function Widget_AudioSettings.Widget_AudioSettings_C.BndEvt__Widget_AudioSettings_Voice_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -94,10 +79,7 @@ public:
 	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Percent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Voice_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Voice_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature");
-static_assert(sizeof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Voice_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature) == 0x000010, "Wrong size on Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Voice_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature");
-static_assert(offsetof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Voice_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature, Value) == 0x000000, "Member 'Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Voice_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Voice_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature, Percent) == 0x000008, "Member 'Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Voice_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature::Percent' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_AudioSettings_C_BndEvt__Widget_AudioSettings_Voice_K2Node_ComponentBoundEvent_8_OnValueChanged__DelegateSignature;
 
 // Function Widget_AudioSettings.Widget_AudioSettings_C.BP_GetScrollBoxWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -106,9 +88,7 @@ struct Widget_AudioSettings_C_BP_GetScrollBoxWidget final
 public:
 	class UScrollBox*                             Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_AudioSettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong alignment on Widget_AudioSettings_C_BP_GetScrollBoxWidget");
-static_assert(sizeof(Widget_AudioSettings_C_BP_GetScrollBoxWidget) == 0x000008, "Wrong size on Widget_AudioSettings_C_BP_GetScrollBoxWidget");
-static_assert(offsetof(Widget_AudioSettings_C_BP_GetScrollBoxWidget, Result) == 0x000000, "Member 'Widget_AudioSettings_C_BP_GetScrollBoxWidget::Result' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_AudioSettings_C_BP_GetScrollBoxWidget;
 
 // Function Widget_AudioSettings.Widget_AudioSettings_C.ExecuteUbergraph_Widget_AudioSettings
 // 0x00D0 (0x00D0 - 0x0000)
@@ -148,36 +128,7 @@ public:
 	float                                         CallFunc_SetSFXVolume_newValue_ImplicitCast;       // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetVoiceVolume_newValue_ImplicitCast;     // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings) == 0x000008, "Wrong alignment on Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings");
-static_assert(sizeof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings) == 0x0000D0, "Wrong size on Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, EntryPoint) == 0x000000, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, K2Node_ComponentBoundEvent_Value_3) == 0x000008, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::K2Node_ComponentBoundEvent_Value_3' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, K2Node_ComponentBoundEvent_Percent_3) == 0x000010, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::K2Node_ComponentBoundEvent_Percent_3' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, K2Node_ComponentBoundEvent_Value_2) == 0x000018, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::K2Node_ComponentBoundEvent_Value_2' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, K2Node_ComponentBoundEvent_Percent_2) == 0x000020, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::K2Node_ComponentBoundEvent_Percent_2' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, K2Node_ComponentBoundEvent_Value_1) == 0x000028, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::K2Node_ComponentBoundEvent_Value_1' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, K2Node_ComponentBoundEvent_Percent_1) == 0x000030, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::K2Node_ComponentBoundEvent_Percent_1' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000038, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_GetRGameUserSettings_ReturnValue_1) == 0x000040, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_GetRGameUserSettings_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_GetRGameUserSettings_ReturnValue_2) == 0x000048, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_GetRGameUserSettings_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, K2Node_ComponentBoundEvent_State_2) == 0x000050, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::K2Node_ComponentBoundEvent_State_2' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_GetRGameUserSettings_ReturnValue_3) == 0x000058, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_GetRGameUserSettings_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, K2Node_ComponentBoundEvent_State_1) == 0x000060, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::K2Node_ComponentBoundEvent_State_1' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_GetRGameUserSettings_ReturnValue_4) == 0x000068, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_GetRGameUserSettings_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_GetRGameUserSettings_ReturnValue_5) == 0x000070, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_GetRGameUserSettings_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_GetRGameUserSettings_ReturnValue_6) == 0x000078, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_GetRGameUserSettings_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, K2Node_ComponentBoundEvent_State) == 0x000080, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::K2Node_ComponentBoundEvent_State' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_GetRGameUserSettings_ReturnValue_7) == 0x000088, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_GetRGameUserSettings_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, K2Node_ComponentBoundEvent_Value) == 0x000090, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::K2Node_ComponentBoundEvent_Value' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, K2Node_ComponentBoundEvent_Percent) == 0x000098, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::K2Node_ComponentBoundEvent_Percent' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_GetRGameUserSettings_ReturnValue_8) == 0x0000A0, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_GetRGameUserSettings_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_SpawnSound2D_ReturnValue) == 0x0000A8, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_SpawnSound2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_Array_Random_OutItem) == 0x0000B0, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_Array_Random_OutItem' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_Array_Random_OutIndex) == 0x0000B8, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_Array_Random_OutIndex' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_SetMasterVolume_newValue_ImplicitCast) == 0x0000BC, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_SetMasterVolume_newValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_SetMusicVolume_newValue_ImplicitCast) == 0x0000C0, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_SetMusicVolume_newValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_SetSFXVolume_newValue_ImplicitCast) == 0x0000C4, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_SetSFXVolume_newValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings, CallFunc_SetVoiceVolume_newValue_ImplicitCast) == 0x0000C8, "Member 'Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings::CallFunc_SetVoiceVolume_newValue_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_AudioSettings_C_ExecuteUbergraph_Widget_AudioSettings;
 
 // Function Widget_AudioSettings.Widget_AudioSettings_C.NextWidgetSettingsValue
 // 0x0018 (0x0018 - 0x0000)
@@ -188,11 +139,7 @@ public:
 	class UWidget_SettingsSlider_C*               K2Node_DynamicCast_AsWidget_Settings_Slider;       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_AudioSettings_C_NextWidgetSettingsValue) == 0x000008, "Wrong alignment on Widget_AudioSettings_C_NextWidgetSettingsValue");
-static_assert(sizeof(Widget_AudioSettings_C_NextWidgetSettingsValue) == 0x000018, "Wrong size on Widget_AudioSettings_C_NextWidgetSettingsValue");
-static_assert(offsetof(Widget_AudioSettings_C_NextWidgetSettingsValue, Widget) == 0x000000, "Member 'Widget_AudioSettings_C_NextWidgetSettingsValue::Widget' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Slider) == 0x000008, "Member 'Widget_AudioSettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Slider' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_NextWidgetSettingsValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_AudioSettings_C_NextWidgetSettingsValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_AudioSettings_C_NextWidgetSettingsValue;
 
 // Function Widget_AudioSettings.Widget_AudioSettings_C.PreviousWidgetSettingsValue
 // 0x0018 (0x0018 - 0x0000)
@@ -203,11 +150,7 @@ public:
 	class UWidget_SettingsSlider_C*               K2Node_DynamicCast_AsWidget_Settings_Slider;       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_AudioSettings_C_PreviousWidgetSettingsValue) == 0x000008, "Wrong alignment on Widget_AudioSettings_C_PreviousWidgetSettingsValue");
-static_assert(sizeof(Widget_AudioSettings_C_PreviousWidgetSettingsValue) == 0x000018, "Wrong size on Widget_AudioSettings_C_PreviousWidgetSettingsValue");
-static_assert(offsetof(Widget_AudioSettings_C_PreviousWidgetSettingsValue, Widget) == 0x000000, "Member 'Widget_AudioSettings_C_PreviousWidgetSettingsValue::Widget' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_AsWidget_Settings_Slider) == 0x000008, "Member 'Widget_AudioSettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_AsWidget_Settings_Slider' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_PreviousWidgetSettingsValue, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_AudioSettings_C_PreviousWidgetSettingsValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_AudioSettings_C_PreviousWidgetSettingsValue;
 
 // Function Widget_AudioSettings.Widget_AudioSettings_C.SetWidgetCurrentValues
 // 0x0060 (0x0060 - 0x0000)
@@ -233,24 +176,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3;   // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_AudioSettings_C_SetWidgetCurrentValues) == 0x000008, "Wrong alignment on Widget_AudioSettings_C_SetWidgetCurrentValues");
-static_assert(sizeof(Widget_AudioSettings_C_SetWidgetCurrentValues) == 0x000060, "Wrong size on Widget_AudioSettings_C_SetWidgetCurrentValues");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000000, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_GetMasterAudioVolume_ReturnValue) == 0x000008, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_GetMasterAudioVolume_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_GetVoiceAudioVolume_ReturnValue) == 0x00000C, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_GetVoiceAudioVolume_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000010, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000018, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_GetShowSubtitles_ReturnValue) == 0x000020, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_GetShowSubtitles_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_GetBinauralAudio_ReturnValue) == 0x000021, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_GetBinauralAudio_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_GetMuteWhenUnfocused_ReturnValue) == 0x000022, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_GetMuteWhenUnfocused_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_GetSFXAudioVolume_ReturnValue) == 0x000024, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_GetSFXAudioVolume_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000028, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_GetMusicAudioVolume_ReturnValue) == 0x000030, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_GetMusicAudioVolume_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000038, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000040, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x000048, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x000050, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(Widget_AudioSettings_C_SetWidgetCurrentValues, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3) == 0x000058, "Member 'Widget_AudioSettings_C_SetWidgetCurrentValues::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_AudioSettings_C_SetWidgetCurrentValues;
 
 }
 

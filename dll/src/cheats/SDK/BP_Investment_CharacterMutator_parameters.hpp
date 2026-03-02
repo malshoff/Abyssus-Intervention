@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "RGame_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK::Params
@@ -71,46 +71,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator) == 0x000008, "Wrong alignment on BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator");
-static_assert(sizeof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator) == 0x000198, "Wrong size on BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_GetScriptFName_ReturnValue) == 0x000004, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x00000C, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_K2_GetRGScriptComponent_ReturnValue) == 0x000020, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_K2_GetRGScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000028, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x000058, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_IsValid_ReturnValue) == 0x000061, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_IsLocalController_ReturnValue) == 0x000062, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_IsLocalController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, K2Node_CustomEvent_Owner) == 0x000068, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::K2Node_CustomEvent_Owner' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000070, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_GetAbilityTriggerMutator_AbilityBehaviorMutatorPrimaryAsset) == 0x0000A0, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_GetAbilityTriggerMutator_AbilityBehaviorMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_IsValid_ReturnValue_1) == 0x0000A8, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x0000B0, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x0000B8, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_BreakGameplayTagContainer_GameplayTags) == 0x0000C0, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_BreakGameplayTagContainer_GameplayTags' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_GetScriptFName_ReturnValue_1) == 0x0000D0, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_GetMutatorRank_ReturnValue) == 0x0000D8, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_GetNumEquippedMutatorsInGodCategory_ReturnValue) == 0x0000DC, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_GetNumEquippedMutatorsInGodCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x0000E0, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_Less_IntInt_ReturnValue) == 0x0000E4, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000E8, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000F0, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_SelectInt_ReturnValue) == 0x0000F4, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000F8, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_SelectInt_ReturnValue_1) == 0x000108, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_SelectInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_K2_GetRGScriptComponent_ReturnValue_1) == 0x000110, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_K2_GetRGScriptComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_Subtract_IntInt_ReturnValue) == 0x000118, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, K2Node_DynamicCast_AsRPlayer_GScript_Component_1) == 0x000120, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::K2Node_DynamicCast_AsRPlayer_GScript_Component_1' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, K2Node_DynamicCast_bSuccess_2) == 0x000128, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000130, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000138, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000140, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x000148, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn_1) == 0x000178, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn_1' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, K2Node_DynamicCast_bSuccess_3) == 0x000180, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000188, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x000190, "Member 'BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Investment_CharacterMutator_C_ExecuteUbergraph_BP_Investment_CharacterMutator;
 
 // Function BP_Investment_CharacterMutator.BP_Investment_CharacterMutator_C.GetAbilityTriggerMutator
 // 0x0050 (0x0050 - 0x0000)
@@ -134,21 +95,7 @@ public:
 	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator) == 0x000008, "Wrong alignment on BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator");
-static_assert(sizeof(BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator) == 0x000050, "Wrong size on BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator, Owner) == 0x000000, "Member 'BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator::Owner' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator, AbilityBehaviorMutatorPrimaryAsset) == 0x000008, "Member 'BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator::AbilityBehaviorMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator, CallFunc_GetCharacterMutator_ReturnValue) == 0x000010, "Member 'BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator::CallFunc_GetCharacterMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator, Temp_int_Array_Index_Variable) == 0x000018, "Member 'BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator, CallFunc_GetCharacterMutatorPrimaryAsset_ReturnValue) == 0x000020, "Member 'BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator::CallFunc_GetCharacterMutatorPrimaryAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator, K2Node_DynamicCast_AsRCharacter_Trigger_Mutator_PA) == 0x000028, "Member 'BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator::K2Node_DynamicCast_AsRCharacter_Trigger_Mutator_PA' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator, Temp_int_Loop_Counter_Variable) == 0x000034, "Member 'BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator, CallFunc_Array_Get_Item) == 0x000038, "Member 'BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator, CallFunc_Array_Length_ReturnValue) == 0x000040, "Member 'BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator, CallFunc_Less_IntInt_ReturnValue) == 0x000044, "Member 'BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator, CallFunc_HasMutator_ReturnValue) == 0x000045, "Member 'BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator, CallFunc_Add_IntInt_ReturnValue) == 0x000048, "Member 'BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Investment_CharacterMutator_C_GetAbilityTriggerMutator;
 
 // Function BP_Investment_CharacterMutator.BP_Investment_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -160,11 +107,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_Investment_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_Investment_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_Investment_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_Investment_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_Investment_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_Investment_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_Investment_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Investment_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_Investment_CharacterMutator.BP_Investment_CharacterMutator_C.OnMutatorsChanged_Event
 // 0x0008 (0x0008 - 0x0000)
@@ -173,9 +116,7 @@ struct BP_Investment_CharacterMutator_C_OnMutatorsChanged_Event final
 public:
 	class URPlayerGScriptComponent*               Owner;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Investment_CharacterMutator_C_OnMutatorsChanged_Event) == 0x000008, "Wrong alignment on BP_Investment_CharacterMutator_C_OnMutatorsChanged_Event");
-static_assert(sizeof(BP_Investment_CharacterMutator_C_OnMutatorsChanged_Event) == 0x000008, "Wrong size on BP_Investment_CharacterMutator_C_OnMutatorsChanged_Event");
-static_assert(offsetof(BP_Investment_CharacterMutator_C_OnMutatorsChanged_Event, Owner) == 0x000000, "Member 'BP_Investment_CharacterMutator_C_OnMutatorsChanged_Event::Owner' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Investment_CharacterMutator_C_OnMutatorsChanged_Event;
 
 }
 

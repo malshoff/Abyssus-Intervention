@@ -30,17 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPCM_ApplyPostProcessMaterial_C">();
+		BP_STATIC_CLASS_IMPL("BPCM_ApplyPostProcessMaterial_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPCM_ApplyPostProcessMaterial_C")
 	}
 	static class UBPCM_ApplyPostProcessMaterial_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPCM_ApplyPostProcessMaterial_C>();
 	}
 };
-static_assert(alignof(UBPCM_ApplyPostProcessMaterial_C) == 0x000008, "Wrong alignment on UBPCM_ApplyPostProcessMaterial_C");
-static_assert(sizeof(UBPCM_ApplyPostProcessMaterial_C) == 0x000058, "Wrong size on UBPCM_ApplyPostProcessMaterial_C");
-static_assert(offsetof(UBPCM_ApplyPostProcessMaterial_C, MaterialInstance) == 0x000048, "Member 'UBPCM_ApplyPostProcessMaterial_C::MaterialInstance' has a wrong offset!");
-static_assert(offsetof(UBPCM_ApplyPostProcessMaterial_C, MaterialParent) == 0x000050, "Member 'UBPCM_ApplyPostProcessMaterial_C::MaterialParent' has a wrong offset!");
+DUMPER7_ASSERTS_UBPCM_ApplyPostProcessMaterial_C;
 
 }
 

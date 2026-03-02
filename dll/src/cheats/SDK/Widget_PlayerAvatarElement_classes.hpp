@@ -12,60 +12,57 @@
 
 #include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_PlayerAvatarElement.Widget_PlayerAvatarElement_C
-// 0x0048 (0x0318 - 0x02D0)
+// 0x0188 (0x04C8 - 0x0340)
 class UWidget_PlayerAvatarElement_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Image_BackgroundShadow;                            // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_PlayerAvatar;                                // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               PlayerFrameContainer;                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScaleBox*                              ScaleBox_1;                                        // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNamedSlot*                             Slot_Middle;                                       // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class APlayerState*                           PlayerState;                                       // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	float                                         Scale;                                             // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_30C[0x4];                                      // 0x030C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 DefaultPlayerFrame;                                // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_PlayerFrame_WeatheredGold_01_C* Widget_PlayerFrame_WeatheredGold_01;               // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_PlayerFrame_Default_C*          Widget_PlayerFrame_Default;                        // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNamedSlot*                             Slot_Middle;                                       // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScaleBox*                              ScaleBox_1;                                        // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URedpointAvatar*                        RedpointAvatar;                                    // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               PlayerFrameContainer;                              // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_BackgroundShadow;                            // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_87;                                          // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class APlayerState*                           PlayerState;                                       // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	float                                         Scale;                                             // 0x0390(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_394[0x4];                                      // 0x0394(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 DefaultPlayerFrame;                                // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FRPlayerStats                          PlayerStats;                                       // 0x03A0(0x0128)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
 	void Construct();
 	void ExecuteUbergraph_Widget_PlayerAvatarElement(int32 EntryPoint);
-	void OnGetPlayerAvatarComplete(bool bSuccess, class UTexture2D* Texture);
 	void OnInitialized();
 	void OnPlayerFrameUpdated_Event();
 	void PreConstruct(bool IsDesignTime);
-	void RefreshFrame();
-	void SetPlayerState(class APlayerState* PlayerState_0);
+	void SetPlayerState(class APlayerState* PlayerState_0, const struct FRPlayerStats& RPlayerStats);
 	void UpdatePlayerFrame();
 	void UpdatePlayerVisuals();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_PlayerAvatarElement_C">();
+		BP_STATIC_CLASS_IMPL("Widget_PlayerAvatarElement_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_PlayerAvatarElement_C")
 	}
 	static class UWidget_PlayerAvatarElement_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_PlayerAvatarElement_C>();
 	}
 };
-static_assert(alignof(UWidget_PlayerAvatarElement_C) == 0x000008, "Wrong alignment on UWidget_PlayerAvatarElement_C");
-static_assert(sizeof(UWidget_PlayerAvatarElement_C) == 0x000318, "Wrong size on UWidget_PlayerAvatarElement_C");
-static_assert(offsetof(UWidget_PlayerAvatarElement_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_PlayerAvatarElement_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerAvatarElement_C, Image_BackgroundShadow) == 0x0002D8, "Member 'UWidget_PlayerAvatarElement_C::Image_BackgroundShadow' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerAvatarElement_C, Image_PlayerAvatar) == 0x0002E0, "Member 'UWidget_PlayerAvatarElement_C::Image_PlayerAvatar' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerAvatarElement_C, PlayerFrameContainer) == 0x0002E8, "Member 'UWidget_PlayerAvatarElement_C::PlayerFrameContainer' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerAvatarElement_C, ScaleBox_1) == 0x0002F0, "Member 'UWidget_PlayerAvatarElement_C::ScaleBox_1' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerAvatarElement_C, Slot_Middle) == 0x0002F8, "Member 'UWidget_PlayerAvatarElement_C::Slot_Middle' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerAvatarElement_C, PlayerState) == 0x000300, "Member 'UWidget_PlayerAvatarElement_C::PlayerState' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerAvatarElement_C, Scale) == 0x000308, "Member 'UWidget_PlayerAvatarElement_C::Scale' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerAvatarElement_C, DefaultPlayerFrame) == 0x000310, "Member 'UWidget_PlayerAvatarElement_C::DefaultPlayerFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_PlayerAvatarElement_C;
 
 }
 

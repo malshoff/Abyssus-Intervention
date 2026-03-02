@@ -28,15 +28,7 @@ public:
 	class FString                                 CallFunc_GetCurrentCulture_ReturnValue;            // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry) == 0x000008, "Wrong alignment on Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry");
-static_assert(sizeof(Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry) == 0x000058, "Wrong size on Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry");
-static_assert(offsetof(Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry, EntryPoint) == 0x000000, "Member 'Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry, K2Node_CustomEvent_AudioComponent) == 0x000018, "Member 'Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry::K2Node_CustomEvent_AudioComponent' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry, K2Node_CustomEvent_DisplayName) == 0x000020, "Member 'Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry::K2Node_CustomEvent_DisplayName' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry, K2Node_CustomEvent_Subtitle) == 0x000030, "Member 'Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry::K2Node_CustomEvent_Subtitle' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry, CallFunc_GetCurrentCulture_ReturnValue) == 0x000040, "Member 'Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry::CallFunc_GetCurrentCulture_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000050, "Member 'Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SubtitleEntry_C_ExecuteUbergraph_Widget_SubtitleEntry;
 
 // Function Widget_SubtitleEntry.Widget_SubtitleEntry_C.Setup
 // 0x0028 (0x0028 - 0x0000)
@@ -47,11 +39,7 @@ public:
 	class FText                                   DisplayName_0;                                     // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class FText                                   Subtitle;                                          // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_SubtitleEntry_C_Setup) == 0x000008, "Wrong alignment on Widget_SubtitleEntry_C_Setup");
-static_assert(sizeof(Widget_SubtitleEntry_C_Setup) == 0x000028, "Wrong size on Widget_SubtitleEntry_C_Setup");
-static_assert(offsetof(Widget_SubtitleEntry_C_Setup, AudioComponent) == 0x000000, "Member 'Widget_SubtitleEntry_C_Setup::AudioComponent' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleEntry_C_Setup, DisplayName_0) == 0x000008, "Member 'Widget_SubtitleEntry_C_Setup::DisplayName_0' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleEntry_C_Setup, Subtitle) == 0x000018, "Member 'Widget_SubtitleEntry_C_Setup::Subtitle' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SubtitleEntry_C_Setup;
 
 }
 

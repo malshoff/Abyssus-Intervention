@@ -131,15 +131,21 @@ void UBP_Flare_StatusEffect_C::StacksChanged()
 
 // Function BP_Flare_StatusEffect.BP_Flare_StatusEffect_C.TriggerFlareDamage
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  ExtraMultiplier                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_Flare_StatusEffect_C::TriggerFlareDamage()
+void UBP_Flare_StatusEffect_C::TriggerFlareDamage(double ExtraMultiplier)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_Flare_StatusEffect_C", "TriggerFlareDamage");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_Flare_StatusEffect_C_TriggerFlareDamage Parms{};
+
+	Parms.ExtraMultiplier = ExtraMultiplier;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

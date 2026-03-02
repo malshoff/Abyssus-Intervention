@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -48,25 +48,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SpiritOrb_RocketScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_SpiritOrb_RocketScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SpiritOrb_RocketScript_C")
 	}
 	static class UBP_SpiritOrb_RocketScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SpiritOrb_RocketScript_C>();
 	}
 };
-static_assert(alignof(UBP_SpiritOrb_RocketScript_C) == 0x000008, "Wrong alignment on UBP_SpiritOrb_RocketScript_C");
-static_assert(sizeof(UBP_SpiritOrb_RocketScript_C) == 0x000198, "Wrong size on UBP_SpiritOrb_RocketScript_C");
-static_assert(offsetof(UBP_SpiritOrb_RocketScript_C, UberGraphFrame) == 0x000120, "Member 'UBP_SpiritOrb_RocketScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_SpiritOrb_RocketScript_C, SpawnedProjectileEffects) == 0x000128, "Member 'UBP_SpiritOrb_RocketScript_C::SpawnedProjectileEffects' has a wrong offset!");
-static_assert(offsetof(UBP_SpiritOrb_RocketScript_C, PassiveLoop) == 0x000138, "Member 'UBP_SpiritOrb_RocketScript_C::PassiveLoop' has a wrong offset!");
-static_assert(offsetof(UBP_SpiritOrb_RocketScript_C, PreHomingVelocityDamping) == 0x000140, "Member 'UBP_SpiritOrb_RocketScript_C::PreHomingVelocityDamping' has a wrong offset!");
-static_assert(offsetof(UBP_SpiritOrb_RocketScript_C, PreHomingVelocityMultiplier) == 0x000148, "Member 'UBP_SpiritOrb_RocketScript_C::PreHomingVelocityMultiplier' has a wrong offset!");
-static_assert(offsetof(UBP_SpiritOrb_RocketScript_C, PreHomingVelocityHeightAngle) == 0x000150, "Member 'UBP_SpiritOrb_RocketScript_C::PreHomingVelocityHeightAngle' has a wrong offset!");
-static_assert(offsetof(UBP_SpiritOrb_RocketScript_C, EnableHomingDelay) == 0x000158, "Member 'UBP_SpiritOrb_RocketScript_C::EnableHomingDelay' has a wrong offset!");
-static_assert(offsetof(UBP_SpiritOrb_RocketScript_C, PastHomingDelay) == 0x000160, "Member 'UBP_SpiritOrb_RocketScript_C::PastHomingDelay' has a wrong offset!");
-static_assert(offsetof(UBP_SpiritOrb_RocketScript_C, HomingTargetLocation) == 0x000168, "Member 'UBP_SpiritOrb_RocketScript_C::HomingTargetLocation' has a wrong offset!");
-static_assert(offsetof(UBP_SpiritOrb_RocketScript_C, PreHomingLocation) == 0x000180, "Member 'UBP_SpiritOrb_RocketScript_C::PreHomingLocation' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SpiritOrb_RocketScript_C;
 
 }
 

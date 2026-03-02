@@ -26,16 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FirePassive8_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_FirePassive8_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FirePassive8_CharacterMutator_C")
 	}
 	static class UBP_FirePassive8_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_FirePassive8_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_FirePassive8_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_FirePassive8_CharacterMutator_C");
-static_assert(sizeof(UBP_FirePassive8_CharacterMutator_C) == 0x000118, "Wrong size on UBP_FirePassive8_CharacterMutator_C");
-static_assert(offsetof(UBP_FirePassive8_CharacterMutator_C, ViableEnemies) == 0x000108, "Member 'UBP_FirePassive8_CharacterMutator_C::ViableEnemies' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_FirePassive8_CharacterMutator_C;
 
 }
 

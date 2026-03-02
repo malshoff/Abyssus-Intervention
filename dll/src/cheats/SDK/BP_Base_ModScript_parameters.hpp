@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "RGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function BP_Base_ModScript.BP_Base_ModScript_C.ExecuteUbergraph_BP_Base_ModScript
-// 0x01E8 (0x01E8 - 0x0000)
+// 0x01D8 (0x01D8 - 0x0000)
 struct BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript final
 {
 public:
@@ -77,94 +77,27 @@ public:
 	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class URGWeaponScript*                        CallFunc_GetWeaponScript_ReturnValue_1;            // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetActorForwardVector_ReturnValue;        // 0x0150(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGScriptNetRole                               CallFunc_BranchByNetRole_Branches;                 // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16A[0x6];                                      // 0x016A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                K2Node_Event_Direction;                            // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             K2Node_Event_SoundTemplate;                        // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsScriptLocallyControlled_ReturnValue; // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_192[0x6];                                      // 0x0192(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundAttenuation*                      K2Node_Select_Default_1;                           // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARWeapon*                               CallFunc_GetWeaponActor_ReturnValue_2;             // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_K2_GetPlayerController_ReturnValue;       // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPrimaryFire_ReturnValue;                // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B9[0x7];                                      // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             K2Node_Select_Default_2;                           // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x01C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class URGWeaponScript*                        CallFunc_GetWeaponScript_ReturnValue_2;            // 0x01D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue; // 0x01D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	EProjectileSpawnerType                        CallFunc_GetProjectileSpawnerType_ReturnValue;     // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x01E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Select_Default_3;                           // 0x01E3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_DelayedWhile_TimeBetweenTicks_ImplicitCast; // 0x01E4(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                K2Node_Event_Direction;                            // 0x0168(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             K2Node_Event_SoundTemplate;                        // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsScriptLocallyControlled_ReturnValue; // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18A[0x6];                                      // 0x018A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundAttenuation*                      K2Node_Select_Default_1;                           // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARWeapon*                               CallFunc_GetWeaponActor_ReturnValue_2;             // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_K2_GetPlayerController_ReturnValue;       // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPrimaryFire_ReturnValue;                // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             K2Node_Select_Default_2;                           // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_RSpawnSoundAttached_ReturnValue;          // 0x01C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class URGWeaponScript*                        CallFunc_GetWeaponScript_ReturnValue_2;            // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EProjectileSpawnerType                        CallFunc_GetProjectileSpawnerType_ReturnValue;     // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x01D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default_3;                           // 0x01D3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_DelayedWhile_TimeBetweenTicks_ImplicitCast; // 0x01D4(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript) == 0x000008, "Wrong alignment on BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript");
-static_assert(sizeof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript) == 0x0001E8, "Wrong size on BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, EntryPoint) == 0x000000, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, Temp_bool_Variable) == 0x000004, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, Temp_byte_Variable) == 0x000018, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, Temp_byte_Variable_1) == 0x000019, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, Temp_bool_Variable_1) == 0x00001A, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, Temp_object_Variable) == 0x000020, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, Temp_object_Variable_1) == 0x000028, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, Temp_bool_Variable_2) == 0x000030, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, Temp_bool_Variable_3) == 0x000031, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_IsValid_ReturnValue) == 0x000032, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_IsValid_ReturnValue_1) == 0x000033, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000038, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_IsValidClass_ReturnValue) == 0x000068, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_IsValid_ReturnValue_2) == 0x000069, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_IsLocalPlayerController_ReturnValue) == 0x00006A, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_Event_DeltaTime) == 0x00006C, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_Event_DeltaTime' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_CreateDelegate_OutputDelegate_1) == 0x000070, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_IsValid_ReturnValue_3) == 0x000080, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_GetDynamicCrosshairMaterial_ReturnValue) == 0x000088, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_GetDynamicCrosshairMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_MakeLiteralDouble_ReturnValue) == 0x000090, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_MakeLiteralDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_GetRemainingCooldownPercentage_ReturnValue) == 0x000098, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_GetRemainingCooldownPercentage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_DelayedWhile_ReturnValue) == 0x0000A0, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_DelayedWhile_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_IsValid_ReturnValue_4) == 0x0000A8, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_CustomEvent_bVisible) == 0x0000A9, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_CustomEvent_bVisible' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_Select_Default) == 0x0000AA, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_CreateDelegate_OutputDelegate_2) == 0x0000AC, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_Event_SpawnedProjectile) == 0x0000C0, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_Event_SpawnedProjectile' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_GetWeaponScript_ReturnValue) == 0x0000C8, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_GetWeaponScript_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_DynamicCast_AsBP_Weapon_Base_Script) == 0x0000D0, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_DynamicCast_AsBP_Weapon_Base_Script' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_DynamicCast_bSuccess) == 0x0000D8, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x0000E0, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_DynamicCast_AsRPlayer_Controller) == 0x000110, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_DynamicCast_AsRPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_DynamicCast_bSuccess_1) == 0x000118, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_IsValid_ReturnValue_5) == 0x000119, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_GetWeaponActor_ReturnValue) == 0x000120, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_GetWeaponActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_GetWeaponActor_ReturnValue_1) == 0x000128, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_GetWeaponActor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_IsValid_ReturnValue_6) == 0x000130, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_AddSubCrosshair_ReturnValue) == 0x000138, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_AddSubCrosshair_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_IsValid_ReturnValue_7) == 0x000140, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_GetWeaponScript_ReturnValue_1) == 0x000148, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_GetWeaponScript_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_GetActorForwardVector_ReturnValue) == 0x000150, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_GetActorForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_BranchByNetRole_Branches) == 0x000168, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_BranchByNetRole_Branches' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_SwitchEnum_CmpSuccess) == 0x000169, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_Event_Direction) == 0x000170, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_Event_Direction' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_Event_SoundTemplate) == 0x000188, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_Event_SoundTemplate' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_K2_IsScriptLocallyControlled_ReturnValue) == 0x000190, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_K2_IsScriptLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_IsValid_ReturnValue_8) == 0x000191, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_Select_Default_1) == 0x000198, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_GetWeaponActor_ReturnValue_2) == 0x0001A0, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_GetWeaponActor_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_K2_GetPlayerController_ReturnValue) == 0x0001A8, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_K2_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_K2_GetRootComponent_ReturnValue) == 0x0001B0, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_IsPrimaryFire_ReturnValue) == 0x0001B8, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_IsPrimaryFire_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_Select_Default_2) == 0x0001C0, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_SpawnSoundAttached_ReturnValue) == 0x0001C8, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_GetWeaponScript_ReturnValue_2) == 0x0001D0, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_GetWeaponScript_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue) == 0x0001D8, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_GetProjectileSpawnerType_ReturnValue) == 0x0001E0, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_GetProjectileSpawnerType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0001E1, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x0001E2, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, K2Node_Select_Default_3) == 0x0001E3, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript, CallFunc_DelayedWhile_TimeBetweenTicks_ImplicitCast) == 0x0001E4, "Member 'BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript::CallFunc_DelayedWhile_TimeBetweenTicks_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Base_ModScript_C_ExecuteUbergraph_BP_Base_ModScript;
 
 // Function BP_Base_ModScript.BP_Base_ModScript_C.IsCrosshairValid
 // 0x0048 (0x0048 - 0x0000)
@@ -179,14 +112,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Base_ModScript_C_IsCrosshairValid) == 0x000008, "Wrong alignment on BP_Base_ModScript_C_IsCrosshairValid");
-static_assert(sizeof(BP_Base_ModScript_C_IsCrosshairValid) == 0x000048, "Wrong size on BP_Base_ModScript_C_IsCrosshairValid");
-static_assert(offsetof(BP_Base_ModScript_C_IsCrosshairValid, RetValue) == 0x000000, "Member 'BP_Base_ModScript_C_IsCrosshairValid::RetValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_IsCrosshairValid, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Base_ModScript_C_IsCrosshairValid::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_IsCrosshairValid, K2Node_DynamicCast_AsRWeapon) == 0x000038, "Member 'BP_Base_ModScript_C_IsCrosshairValid::K2Node_DynamicCast_AsRWeapon' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_IsCrosshairValid, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_Base_ModScript_C_IsCrosshairValid::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_IsCrosshairValid, CallFunc_IsValid_ReturnValue) == 0x000041, "Member 'BP_Base_ModScript_C_IsCrosshairValid::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Base_ModScript_C_IsCrosshairValid, CallFunc_Not_PreBool_ReturnValue) == 0x000042, "Member 'BP_Base_ModScript_C_IsCrosshairValid::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Base_ModScript_C_IsCrosshairValid;
 
 // Function BP_Base_ModScript.BP_Base_ModScript_C.K2_OnProjectileSpawned
 // 0x0008 (0x0008 - 0x0000)
@@ -195,9 +121,7 @@ struct BP_Base_ModScript_C_K2_OnProjectileSpawned final
 public:
 	class ARProjectileBase*                       SpawnedProjectile;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Base_ModScript_C_K2_OnProjectileSpawned) == 0x000008, "Wrong alignment on BP_Base_ModScript_C_K2_OnProjectileSpawned");
-static_assert(sizeof(BP_Base_ModScript_C_K2_OnProjectileSpawned) == 0x000008, "Wrong size on BP_Base_ModScript_C_K2_OnProjectileSpawned");
-static_assert(offsetof(BP_Base_ModScript_C_K2_OnProjectileSpawned, SpawnedProjectile) == 0x000000, "Member 'BP_Base_ModScript_C_K2_OnProjectileSpawned::SpawnedProjectile' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Base_ModScript_C_K2_OnProjectileSpawned;
 
 // Function BP_Base_ModScript.BP_Base_ModScript_C.K2_OnProjectileSpawnedClientDummy
 // 0x0018 (0x0018 - 0x0000)
@@ -206,9 +130,7 @@ struct BP_Base_ModScript_C_K2_OnProjectileSpawnedClientDummy final
 public:
 	struct FVector                                Direction;                                         // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Base_ModScript_C_K2_OnProjectileSpawnedClientDummy) == 0x000008, "Wrong alignment on BP_Base_ModScript_C_K2_OnProjectileSpawnedClientDummy");
-static_assert(sizeof(BP_Base_ModScript_C_K2_OnProjectileSpawnedClientDummy) == 0x000018, "Wrong size on BP_Base_ModScript_C_K2_OnProjectileSpawnedClientDummy");
-static_assert(offsetof(BP_Base_ModScript_C_K2_OnProjectileSpawnedClientDummy, Direction) == 0x000000, "Member 'BP_Base_ModScript_C_K2_OnProjectileSpawnedClientDummy::Direction' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Base_ModScript_C_K2_OnProjectileSpawnedClientDummy;
 
 // Function BP_Base_ModScript.BP_Base_ModScript_C.K2_TickScript
 // 0x0004 (0x0004 - 0x0000)
@@ -217,9 +139,7 @@ struct BP_Base_ModScript_C_K2_TickScript final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Base_ModScript_C_K2_TickScript) == 0x000004, "Wrong alignment on BP_Base_ModScript_C_K2_TickScript");
-static_assert(sizeof(BP_Base_ModScript_C_K2_TickScript) == 0x000004, "Wrong size on BP_Base_ModScript_C_K2_TickScript");
-static_assert(offsetof(BP_Base_ModScript_C_K2_TickScript, DeltaTime) == 0x000000, "Member 'BP_Base_ModScript_C_K2_TickScript::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Base_ModScript_C_K2_TickScript;
 
 // Function BP_Base_ModScript.BP_Base_ModScript_C.SetCrosshairVisible
 // 0x0001 (0x0001 - 0x0000)
@@ -228,9 +148,7 @@ struct BP_Base_ModScript_C_SetCrosshairVisible final
 public:
 	bool                                          bVisible;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Base_ModScript_C_SetCrosshairVisible) == 0x000001, "Wrong alignment on BP_Base_ModScript_C_SetCrosshairVisible");
-static_assert(sizeof(BP_Base_ModScript_C_SetCrosshairVisible) == 0x000001, "Wrong size on BP_Base_ModScript_C_SetCrosshairVisible");
-static_assert(offsetof(BP_Base_ModScript_C_SetCrosshairVisible, bVisible) == 0x000000, "Member 'BP_Base_ModScript_C_SetCrosshairVisible::bVisible' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Base_ModScript_C_SetCrosshairVisible;
 
 // Function BP_Base_ModScript.BP_Base_ModScript_C.SpawnWeaponFireSFX
 // 0x0008 (0x0008 - 0x0000)
@@ -239,9 +157,7 @@ struct BP_Base_ModScript_C_SpawnWeaponFireSFX final
 public:
 	class USoundBase*                             SoundTemplate;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Base_ModScript_C_SpawnWeaponFireSFX) == 0x000008, "Wrong alignment on BP_Base_ModScript_C_SpawnWeaponFireSFX");
-static_assert(sizeof(BP_Base_ModScript_C_SpawnWeaponFireSFX) == 0x000008, "Wrong size on BP_Base_ModScript_C_SpawnWeaponFireSFX");
-static_assert(offsetof(BP_Base_ModScript_C_SpawnWeaponFireSFX, SoundTemplate) == 0x000000, "Member 'BP_Base_ModScript_C_SpawnWeaponFireSFX::SoundTemplate' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Base_ModScript_C_SpawnWeaponFireSFX;
 
 }
 

@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass W_Button_TabBase.W_Button_TabBase_C
-// 0x0010 (0x13C0 - 0x13B0)
+// 0x0010 (0x1540 - 0x1530)
 class UW_Button_TabBase_C final : public UCommonButtonBase
 {
 public:
-	class UTextBlock*                             TextBlock;                                         // 0x13B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         Index_0;                                           // 0x13B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock;                                         // 0x1530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x1538(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void SetText(const class FText& Text);
@@ -30,17 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"W_Button_TabBase_C">();
+		BP_STATIC_CLASS_IMPL("W_Button_TabBase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"W_Button_TabBase_C")
 	}
 	static class UW_Button_TabBase_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UW_Button_TabBase_C>();
 	}
 };
-static_assert(alignof(UW_Button_TabBase_C) == 0x000010, "Wrong alignment on UW_Button_TabBase_C");
-static_assert(sizeof(UW_Button_TabBase_C) == 0x0013C0, "Wrong size on UW_Button_TabBase_C");
-static_assert(offsetof(UW_Button_TabBase_C, TextBlock) == 0x0013B0, "Member 'UW_Button_TabBase_C::TextBlock' has a wrong offset!");
-static_assert(offsetof(UW_Button_TabBase_C, Index_0) == 0x0013B8, "Member 'UW_Button_TabBase_C::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_UW_Button_TabBase_C;
 
 }
 

@@ -10,37 +10,44 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Widget_CommonHUDBase_classes.hpp"
+#include "Engine_structs.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_MainMenuHUD.Widget_MainMenuHUD_C
-// 0x0008 (0x0308 - 0x0300)
+// 0x0010 (0x0380 - 0x0370)
 class UWidget_MainMenuHUD_C final : public UWidget_CommonHUDBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0370(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_CompilingShaders_C*             CompilingShadersWidget;                            // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
 	void ExecuteUbergraph_Widget_MainMenuHUD(int32 EntryPoint);
+	void Fail_EEE4B0094DCBB2A613FD4E8883AB5A2F(const class FString& Error);
+	void OnWidgetPopped_Event(class URCommonActivatableWidget* PoppedWidget);
+	void Success_EEE4B0094DCBB2A613FD4E8883AB5A2F(const class FString& Error);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_MainMenuHUD_C">();
+		BP_STATIC_CLASS_IMPL("Widget_MainMenuHUD_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_MainMenuHUD_C")
 	}
 	static class UWidget_MainMenuHUD_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_MainMenuHUD_C>();
 	}
 };
-static_assert(alignof(UWidget_MainMenuHUD_C) == 0x000008, "Wrong alignment on UWidget_MainMenuHUD_C");
-static_assert(sizeof(UWidget_MainMenuHUD_C) == 0x000308, "Wrong size on UWidget_MainMenuHUD_C");
-static_assert(offsetof(UWidget_MainMenuHUD_C, UberGraphFrame) == 0x000300, "Member 'UWidget_MainMenuHUD_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_MainMenuHUD_C;
 
 }
 

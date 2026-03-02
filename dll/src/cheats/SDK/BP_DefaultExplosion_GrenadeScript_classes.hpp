@@ -38,20 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_DefaultExplosion_GrenadeScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_DefaultExplosion_GrenadeScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_DefaultExplosion_GrenadeScript_C")
 	}
 	static class UBP_DefaultExplosion_GrenadeScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_DefaultExplosion_GrenadeScript_C>();
 	}
 };
-static_assert(alignof(UBP_DefaultExplosion_GrenadeScript_C) == 0x000008, "Wrong alignment on UBP_DefaultExplosion_GrenadeScript_C");
-static_assert(sizeof(UBP_DefaultExplosion_GrenadeScript_C) == 0x000110, "Wrong size on UBP_DefaultExplosion_GrenadeScript_C");
-static_assert(offsetof(UBP_DefaultExplosion_GrenadeScript_C, UberGraphFrame) == 0x0000E8, "Member 'UBP_DefaultExplosion_GrenadeScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_DefaultExplosion_GrenadeScript_C, NiagaraSystemTemplate) == 0x0000F0, "Member 'UBP_DefaultExplosion_GrenadeScript_C::NiagaraSystemTemplate' has a wrong offset!");
-static_assert(offsetof(UBP_DefaultExplosion_GrenadeScript_C, ExplosionSound) == 0x0000F8, "Member 'UBP_DefaultExplosion_GrenadeScript_C::ExplosionSound' has a wrong offset!");
-static_assert(offsetof(UBP_DefaultExplosion_GrenadeScript_C, CameraShake) == 0x000100, "Member 'UBP_DefaultExplosion_GrenadeScript_C::CameraShake' has a wrong offset!");
-static_assert(offsetof(UBP_DefaultExplosion_GrenadeScript_C, CameraShakeDistanceMultiplier) == 0x000108, "Member 'UBP_DefaultExplosion_GrenadeScript_C::CameraShakeDistanceMultiplier' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_DefaultExplosion_GrenadeScript_C;
 
 }
 

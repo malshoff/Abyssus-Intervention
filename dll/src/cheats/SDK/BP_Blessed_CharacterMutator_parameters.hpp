@@ -42,23 +42,7 @@ public:
 	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class URPlayerGScriptComponent* Owner, class URMutatorPrimaryAsset* MutatorPrimaryAsset)> K2Node_CreateDelegate_OutputDelegate_1; // 0x00EC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator) == 0x000008, "Wrong alignment on BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator");
-static_assert(sizeof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator) == 0x000100, "Wrong size on BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000038, "Member 'BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x000068, "Member 'BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000078, "Member 'BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000080, "Member 'BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator, CallFunc_GetScriptFName_ReturnValue) == 0x000084, "Member 'BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x00008C, "Member 'BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x0000A0, "Member 'BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator, K2Node_CustomEvent_Owner) == 0x0000D0, "Member 'BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator::K2Node_CustomEvent_Owner' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator, K2Node_CustomEvent_MutatorPrimaryAsset) == 0x0000D8, "Member 'BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator::K2Node_CustomEvent_MutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator, K2Node_DynamicCast_AsRPlayer_GScript_Component_1) == 0x0000E0, "Member 'BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator::K2Node_DynamicCast_AsRPlayer_GScript_Component_1' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator, K2Node_DynamicCast_bSuccess_2) == 0x0000E8, "Member 'BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000EC, "Member 'BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Blessed_CharacterMutator_C_ExecuteUbergraph_BP_Blessed_CharacterMutator;
 
 // Function BP_Blessed_CharacterMutator.BP_Blessed_CharacterMutator_C.OnMutatorAdded
 // 0x0010 (0x0010 - 0x0000)
@@ -68,10 +52,7 @@ public:
 	class URPlayerGScriptComponent*               Owner;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class URMutatorPrimaryAsset*                  MutatorPrimaryAsset;                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Blessed_CharacterMutator_C_OnMutatorAdded) == 0x000008, "Wrong alignment on BP_Blessed_CharacterMutator_C_OnMutatorAdded");
-static_assert(sizeof(BP_Blessed_CharacterMutator_C_OnMutatorAdded) == 0x000010, "Wrong size on BP_Blessed_CharacterMutator_C_OnMutatorAdded");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_OnMutatorAdded, Owner) == 0x000000, "Member 'BP_Blessed_CharacterMutator_C_OnMutatorAdded::Owner' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_OnMutatorAdded, MutatorPrimaryAsset) == 0x000008, "Member 'BP_Blessed_CharacterMutator_C_OnMutatorAdded::MutatorPrimaryAsset' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Blessed_CharacterMutator_C_OnMutatorAdded;
 
 // Function BP_Blessed_CharacterMutator.BP_Blessed_CharacterMutator_C.UpdateDamageModifier
 // 0x0138 (0x0138 - 0x0000)
@@ -121,40 +102,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier) == 0x000008, "Wrong alignment on BP_Blessed_CharacterMutator_C_UpdateDamageModifier");
-static_assert(sizeof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier) == 0x000138, "Wrong size on BP_Blessed_CharacterMutator_C_UpdateDamageModifier");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, Init) == 0x000000, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::Init' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, Mutator) == 0x000008, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::Mutator' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, Temp_int_Variable) == 0x000010, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, K2Node_DynamicCast_AsRCharacter_Mutator_Primary_Asset) == 0x000018, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::K2Node_DynamicCast_AsRCharacter_Mutator_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, Temp_int_Variable_1) == 0x000024, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, Temp_int_Loop_Counter_Variable) == 0x000028, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, Temp_int_Array_Index_Variable) == 0x000030, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_Add_IntInt_ReturnValue_1) == 0x000034, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000038, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_Add_IntInt_ReturnValue_2) == 0x000068, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x000070, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, K2Node_DynamicCast_bSuccess_1) == 0x000078, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_GetEquippedMutators_ReturnValue) == 0x000080, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_GetEquippedMutators_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_GetMutatorRank_ReturnValue) == 0x000090, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_Array_Get_Item) == 0x000098, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x0000A0, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, K2Node_DynamicCast_AsRCharacter_Mutator_Primary_Asset_1) == 0x0000A8, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::K2Node_DynamicCast_AsRCharacter_Mutator_Primary_Asset_1' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, K2Node_DynamicCast_bSuccess_2) == 0x0000B0, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_Array_Length_ReturnValue) == 0x0000B4, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_Less_IntInt_ReturnValue) == 0x0000B8, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0000C0, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_GetScriptFName_ReturnValue) == 0x0000C8, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000D0, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x0000D8, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000108, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000110, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000118, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, K2Node_DynamicCast_bSuccess_3) == 0x000120, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x000128, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_UpdateDamageModifier, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x000130, "Member 'BP_Blessed_CharacterMutator_C_UpdateDamageModifier::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Blessed_CharacterMutator_C_UpdateDamageModifier;
 
 // Function BP_Blessed_CharacterMutator.BP_Blessed_CharacterMutator_C.GetDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -163,9 +111,7 @@ struct BP_Blessed_CharacterMutator_C_GetDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_Blessed_CharacterMutator_C_GetDescription) == 0x000008, "Wrong alignment on BP_Blessed_CharacterMutator_C_GetDescription");
-static_assert(sizeof(BP_Blessed_CharacterMutator_C_GetDescription) == 0x000010, "Wrong size on BP_Blessed_CharacterMutator_C_GetDescription");
-static_assert(offsetof(BP_Blessed_CharacterMutator_C_GetDescription, ReturnValue) == 0x000000, "Member 'BP_Blessed_CharacterMutator_C_GetDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Blessed_CharacterMutator_C_GetDescription;
 
 }
 

@@ -137,6 +137,29 @@ void ABP_DifficultyInteractable_C::IndicatorTimeline__UpdateFunc()
 }
 
 
+// Function BP_DifficultyInteractable.BP_DifficultyInteractable_C.IsShareable
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_DifficultyInteractable_C::IsShareable(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DifficultyInteractable_C", "IsShareable");
+
+	Params::BP_DifficultyInteractable_C_IsShareable Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_DifficultyInteractable.BP_DifficultyInteractable_C.OnFocus
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -290,6 +313,26 @@ void ABP_DifficultyInteractable_C::SetupHighlight()
 		Func = Class->GetFunction("BP_DifficultyInteractable_C", "SetupHighlight");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_DifficultyInteractable.BP_DifficultyInteractable_C.ShareInteractableActor
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class APlayerController*          PlayerController                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DifficultyInteractable_C::ShareInteractableActor(const class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DifficultyInteractable_C", "ShareInteractableActor");
+
+	Params::BP_DifficultyInteractable_C_ShareInteractableActor Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

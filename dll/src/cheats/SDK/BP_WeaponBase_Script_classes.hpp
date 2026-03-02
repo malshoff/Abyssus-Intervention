@@ -36,19 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_WeaponBase_Script_C">();
+		BP_STATIC_CLASS_IMPL("BP_WeaponBase_Script_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_WeaponBase_Script_C")
 	}
 	static class UBP_WeaponBase_Script_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_WeaponBase_Script_C>();
 	}
 };
-static_assert(alignof(UBP_WeaponBase_Script_C) == 0x000008, "Wrong alignment on UBP_WeaponBase_Script_C");
-static_assert(sizeof(UBP_WeaponBase_Script_C) == 0x0004C8, "Wrong size on UBP_WeaponBase_Script_C");
-static_assert(offsetof(UBP_WeaponBase_Script_C, UberGraphFrame) == 0x0004A8, "Member 'UBP_WeaponBase_Script_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_WeaponBase_Script_C, EquipSound) == 0x0004B0, "Member 'UBP_WeaponBase_Script_C::EquipSound' has a wrong offset!");
-static_assert(offsetof(UBP_WeaponBase_Script_C, OnEquipActionBlockTime) == 0x0004B8, "Member 'UBP_WeaponBase_Script_C::OnEquipActionBlockTime' has a wrong offset!");
-static_assert(offsetof(UBP_WeaponBase_Script_C, BulletlineSystem) == 0x0004C0, "Member 'UBP_WeaponBase_Script_C::BulletlineSystem' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_WeaponBase_Script_C;
 
 }
 

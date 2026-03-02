@@ -24,9 +24,7 @@ struct ABP_Golem_Sentry_C_AnimGraph final
 public:
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_Golem_Sentry_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_Golem_Sentry_C_AnimGraph");
-static_assert(sizeof(ABP_Golem_Sentry_C_AnimGraph) == 0x000010, "Wrong size on ABP_Golem_Sentry_C_AnimGraph");
-static_assert(offsetof(ABP_Golem_Sentry_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'ABP_Golem_Sentry_C_AnimGraph::AnimGraph_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Golem_Sentry_C_AnimGraph;
 
 // Function ABP_Golem_Sentry.ABP_Golem_Sentry_C.BlueprintThreadSafeUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -35,9 +33,7 @@ struct ABP_Golem_Sentry_C_BlueprintThreadSafeUpdateAnimation final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_Golem_Sentry_C_BlueprintThreadSafeUpdateAnimation) == 0x000004, "Wrong alignment on ABP_Golem_Sentry_C_BlueprintThreadSafeUpdateAnimation");
-static_assert(sizeof(ABP_Golem_Sentry_C_BlueprintThreadSafeUpdateAnimation) == 0x000004, "Wrong size on ABP_Golem_Sentry_C_BlueprintThreadSafeUpdateAnimation");
-static_assert(offsetof(ABP_Golem_Sentry_C_BlueprintThreadSafeUpdateAnimation, DeltaTime) == 0x000000, "Member 'ABP_Golem_Sentry_C_BlueprintThreadSafeUpdateAnimation::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Golem_Sentry_C_BlueprintThreadSafeUpdateAnimation;
 
 // Function ABP_Golem_Sentry.ABP_Golem_Sentry_C.BlueprintUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -46,9 +42,7 @@ struct ABP_Golem_Sentry_C_BlueprintUpdateAnimation final
 public:
 	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_Golem_Sentry_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on ABP_Golem_Sentry_C_BlueprintUpdateAnimation");
-static_assert(sizeof(ABP_Golem_Sentry_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on ABP_Golem_Sentry_C_BlueprintUpdateAnimation");
-static_assert(offsetof(ABP_Golem_Sentry_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'ABP_Golem_Sentry_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Golem_Sentry_C_BlueprintUpdateAnimation;
 
 // Function ABP_Golem_Sentry.ABP_Golem_Sentry_C.EvaluateMovementState
 // 0x0001 (0x0001 - 0x0000)
@@ -57,9 +51,7 @@ struct ABP_Golem_Sentry_C_EvaluateMovementState final
 public:
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_Golem_Sentry_C_EvaluateMovementState) == 0x000001, "Wrong alignment on ABP_Golem_Sentry_C_EvaluateMovementState");
-static_assert(sizeof(ABP_Golem_Sentry_C_EvaluateMovementState) == 0x000001, "Wrong size on ABP_Golem_Sentry_C_EvaluateMovementState");
-static_assert(offsetof(ABP_Golem_Sentry_C_EvaluateMovementState, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000000, "Member 'ABP_Golem_Sentry_C_EvaluateMovementState::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Golem_Sentry_C_EvaluateMovementState;
 
 // Function ABP_Golem_Sentry.ABP_Golem_Sentry_C.ExecuteUbergraph_ABP_Golem_Sentry
 // 0x01D0 (0x01D0 - 0x0000)
@@ -104,39 +96,7 @@ public:
 	class UAudioComponent*                        CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue; // 0x01B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UAudioComponent*                        CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue_1; // 0x01C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry) == 0x000010, "Wrong alignment on ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry");
-static_assert(sizeof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry) == 0x0001D0, "Wrong size on ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, EntryPoint) == 0x000000, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, Temp_object_Variable) == 0x000008, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, Temp_object_Variable_1) == 0x000010, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, Temp_bool_Variable) == 0x000018, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, Temp_bool_Variable_1) == 0x000019, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, Temp_struct_Variable) == 0x000020, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, Temp_bool_Variable_2) == 0x000038, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, K2Node_Event_DeltaTimeX) == 0x00003C, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::K2Node_Event_DeltaTimeX' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_TryGetPawnOwner_ReturnValue) == 0x000040, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_IsObjectASoftClass_ReturnValue) == 0x000048, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_IsObjectASoftClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000050, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_SpawnSoundAtLocation_ReturnValue) == 0x000068, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_SpawnSoundAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, K2Node_Select_Default) == 0x000070, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_SpawnSoundAtLocation_ReturnValue_1) == 0x000078, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_SpawnSoundAtLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_TryGetPawnOwner_ReturnValue_1) == 0x000080, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_TryGetPawnOwner_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, K2Node_DynamicCast_AsREnemy_Pawn_Base) == 0x000088, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::K2Node_DynamicCast_AsREnemy_Pawn_Base' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, K2Node_DynamicCast_bSuccess) == 0x000090, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_GetCurrentCombatTarget_ReturnValue) == 0x000098, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_GetCurrentCombatTarget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_IsValid_ReturnValue) == 0x0000A0, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_GetTransform_ReturnValue) == 0x0000B0, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000110, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_K2_GetActorLocation_ReturnValue_2) == 0x000128, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_K2_GetActorLocation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_FindLookAtRotation_ReturnValue) == 0x000140, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_FindLookAtRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, Temp_object_Variable_2) == 0x000158, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::Temp_object_Variable_2' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_InverseTransformRotation_ReturnValue) == 0x000160, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_InverseTransformRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, K2Node_Select_Default_1) == 0x000178, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_RInterpTo_ReturnValue) == 0x000190, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_RInterpTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_GetCurrentCombatTarget_ReturnValue_1) == 0x0001A8, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_GetCurrentCombatTarget_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, K2Node_Select_Default_2) == 0x0001B0, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue) == 0x0001B8, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry, CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue_1) == 0x0001C0, "Member 'ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry::CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Golem_Sentry_C_ExecuteUbergraph_ABP_Golem_Sentry;
 
 }
 

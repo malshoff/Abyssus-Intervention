@@ -17,41 +17,77 @@
 namespace SDK
 {
 
-// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.ApplyScrollHighlight
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWidget_ChallengeLogEntry_C::PreConstruct(bool IsDesignTime)
+void UWidget_ChallengeLogEntry_C::ApplyScrollHighlight()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChallengeLogEntry_C", "PreConstruct");
+		Func = Class->GetFunction("Widget_ChallengeLogEntry_C", "ApplyScrollHighlight");
 
-	Params::Widget_ChallengeLogEntry_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.OnListItemObjectSet
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.BndEvt__Widget_ChallengeLogEntry_Button_208_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_ChallengeLogEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
+void UWidget_ChallengeLogEntry_C::BndEvt__Widget_ChallengeLogEntry_Button_208_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChallengeLogEntry_C", "OnListItemObjectSet");
+		Func = Class->GetFunction("Widget_ChallengeLogEntry_C", "BndEvt__Widget_ChallengeLogEntry_Button_208_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
 
-	Params::Widget_ChallengeLogEntry_C_OnListItemObjectSet Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.ListItemObject = ListItemObject;
+
+// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_ChallengeLogEntry_C::BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_ChallengeLogEntry_C", "BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_ChallengeLogEntry_C::BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_ChallengeLogEntry_C", "BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.ExecuteUbergraph_Widget_ChallengeLogEntry
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_ChallengeLogEntry_C::ExecuteUbergraph_Widget_ChallengeLogEntry(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_ChallengeLogEntry_C", "ExecuteUbergraph_Widget_ChallengeLogEntry");
+
+	Params::Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -77,65 +113,43 @@ class UWidget* UWidget_ChallengeLogEntry_C::GetToolTipWidget()
 }
 
 
-// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.ExecuteUbergraph_Widget_ChallengeLogEntry
-// (Final, UbergraphFunction, HasDefaults)
+// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.OnListItemObjectSet
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_ChallengeLogEntry_C::ExecuteUbergraph_Widget_ChallengeLogEntry(int32 EntryPoint)
+void UWidget_ChallengeLogEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChallengeLogEntry_C", "ExecuteUbergraph_Widget_ChallengeLogEntry");
+		Func = Class->GetFunction("Widget_ChallengeLogEntry_C", "OnListItemObjectSet");
 
-	Params::Widget_ChallengeLogEntry_C_ExecuteUbergraph_Widget_ChallengeLogEntry Parms{};
+	Params::Widget_ChallengeLogEntry_C_OnListItemObjectSet Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.ListItemObject = ListItemObject;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
+// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_ChallengeLogEntry_C::BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
+void UWidget_ChallengeLogEntry_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChallengeLogEntry_C", "BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+		Func = Class->GetFunction("Widget_ChallengeLogEntry_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::Widget_ChallengeLogEntry_C_PreConstruct Parms{};
 
+	Parms.IsDesignTime = IsDesignTime;
 
-// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWidget_ChallengeLogEntry_C::BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChallengeLogEntry_C", "BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C.ApplyScrollHighlight
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWidget_ChallengeLogEntry_C::ApplyScrollHighlight()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChallengeLogEntry_C", "ApplyScrollHighlight");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

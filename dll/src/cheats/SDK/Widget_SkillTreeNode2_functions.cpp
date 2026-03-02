@@ -177,48 +177,6 @@ void UWidget_SkillTreeNode2_C::GetCurrentTierDescription(class FText* Descriptio
 }
 
 
-// Function Widget_SkillTreeNode2.Widget_SkillTreeNode2_C.GetMutatorPA
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class URMutatorPrimaryAsset**           MutatorPA                                              (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SkillTreeNode2_C::GetMutatorPA(class URMutatorPrimaryAsset** MutatorPA)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SkillTreeNode2_C", "GetMutatorPA");
-
-	Params::Widget_SkillTreeNode2_C_GetMutatorPA Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (MutatorPA != nullptr)
-		*MutatorPA = Parms.MutatorPA;
-}
-
-
-// Function Widget_SkillTreeNode2.Widget_SkillTreeNode2_C.GetMutatorPrimaryAssetSkillTreeIdName
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FName*                            Name_0                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SkillTreeNode2_C::GetMutatorPrimaryAssetSkillTreeIdName(class FName* Name_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SkillTreeNode2_C", "GetMutatorPrimaryAssetSkillTreeIdName");
-
-	Params::Widget_SkillTreeNode2_C_GetMutatorPrimaryAssetSkillTreeIdName Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Name_0 != nullptr)
-		*Name_0 = Parms.Name_0;
-}
-
-
 // Function Widget_SkillTreeNode2.Widget_SkillTreeNode2_C.GetNextTierDescription
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -241,30 +199,6 @@ void UWidget_SkillTreeNode2_C::GetNextTierDescription(class FText* Header, class
 
 	if (Description != nullptr)
 		*Description = std::move(Parms.Description);
-}
-
-
-// Function Widget_SkillTreeNode2.Widget_SkillTreeNode2_C.GetNumRanks
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class URMutatorPrimaryAsset*            RMutatorPrimaryAsset                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32*                                  NumRanks                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SkillTreeNode2_C::GetNumRanks(class URMutatorPrimaryAsset* RMutatorPrimaryAsset, int32* NumRanks)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SkillTreeNode2_C", "GetNumRanks");
-
-	Params::Widget_SkillTreeNode2_C_GetNumRanks Parms{};
-
-	Parms.RMutatorPrimaryAsset = RMutatorPrimaryAsset;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (NumRanks != nullptr)
-		*NumRanks = Parms.NumRanks;
 }
 
 
@@ -294,27 +228,6 @@ void UWidget_SkillTreeNode2_C::GetPointsProgress(int32* AssignedPoints, int32* T
 
 	if (Ratio != nullptr)
 		*Ratio = Parms.Ratio;
-}
-
-
-// Function Widget_SkillTreeNode2.Widget_SkillTreeNode2_C.GetRequiredSkillTreePoints
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32*                                  Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SkillTreeNode2_C::GetRequiredSkillTreePoints(int32* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SkillTreeNode2_C", "GetRequiredSkillTreePoints");
-
-	Params::Widget_SkillTreeNode2_C_GetRequiredSkillTreePoints Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
 }
 
 
@@ -446,6 +359,20 @@ void UWidget_SkillTreeNode2_C::IsNodeLocked(bool* IsLocked)
 }
 
 
+// Function Widget_SkillTreeNode2.Widget_SkillTreeNode2_C.NativeResetButtonsVisuals
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_SkillTreeNode2_C::NativeResetButtonsVisuals()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SkillTreeNode2_C", "NativeResetButtonsVisuals");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Widget_SkillTreeNode2.Widget_SkillTreeNode2_C.On_Icon_MouseButtonDown
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -568,7 +495,7 @@ void UWidget_SkillTreeNode2_C::RefreshSkillTreeMutator()
 
 
 // Function Widget_SkillTreeNode2.Widget_SkillTreeNode2_C.ResetButtonVisuals
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SkillTreeNode2_C::ResetButtonVisuals()
 {
@@ -582,7 +509,7 @@ void UWidget_SkillTreeNode2_C::ResetButtonVisuals()
 
 
 // Function Widget_SkillTreeNode2.Widget_SkillTreeNode2_C.SetCappedButtonVisuals
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    SkipAnimation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

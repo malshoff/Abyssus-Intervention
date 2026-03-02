@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_FragGrenade_CharacterMutator.BP_FragGrenade_CharacterMutator_C
-// 0x0030 (0x0ED0 - 0x0EA0)
+// 0x0030 (0x0ED8 - 0x0EA8)
 class UBP_FragGrenade_CharacterMutator_C final : public UBP_Activatable_CharacterMutator_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FragGrenade_CharacterMutator_C;  // 0x0EA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TMulticastInlineDelegate<void(class ARGrenade* RGrenade)> OnGrenadeSpawned;                      // 0x0EA8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	double                                        ThrowingVelocity;                                  // 0x0EB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           As_RPlayer_Pawn;                                   // 0x0EC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        PlayerMovementInfluence;                           // 0x0EC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FragGrenade_CharacterMutator_C;  // 0x0EA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TMulticastInlineDelegate<void(class ARGrenade* RGrenade)> OnGrenadeSpawned;                      // 0x0EB0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	double                                        ThrowingVelocity;                                  // 0x0EC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           As_RPlayer_Pawn;                                   // 0x0EC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        PlayerMovementInfluence;                           // 0x0ED0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_FragGrenade_CharacterMutator(int32 EntryPoint);
@@ -47,20 +47,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FragGrenade_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_FragGrenade_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FragGrenade_CharacterMutator_C")
 	}
 	static class UBP_FragGrenade_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_FragGrenade_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_FragGrenade_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_FragGrenade_CharacterMutator_C");
-static_assert(sizeof(UBP_FragGrenade_CharacterMutator_C) == 0x000ED0, "Wrong size on UBP_FragGrenade_CharacterMutator_C");
-static_assert(offsetof(UBP_FragGrenade_CharacterMutator_C, UberGraphFrame_BP_FragGrenade_CharacterMutator_C) == 0x000EA0, "Member 'UBP_FragGrenade_CharacterMutator_C::UberGraphFrame_BP_FragGrenade_CharacterMutator_C' has a wrong offset!");
-static_assert(offsetof(UBP_FragGrenade_CharacterMutator_C, OnGrenadeSpawned) == 0x000EA8, "Member 'UBP_FragGrenade_CharacterMutator_C::OnGrenadeSpawned' has a wrong offset!");
-static_assert(offsetof(UBP_FragGrenade_CharacterMutator_C, ThrowingVelocity) == 0x000EB8, "Member 'UBP_FragGrenade_CharacterMutator_C::ThrowingVelocity' has a wrong offset!");
-static_assert(offsetof(UBP_FragGrenade_CharacterMutator_C, As_RPlayer_Pawn) == 0x000EC0, "Member 'UBP_FragGrenade_CharacterMutator_C::As_RPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(UBP_FragGrenade_CharacterMutator_C, PlayerMovementInfluence) == 0x000EC8, "Member 'UBP_FragGrenade_CharacterMutator_C::PlayerMovementInfluence' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_FragGrenade_CharacterMutator_C;
 
 }
 

@@ -17,63 +17,48 @@ namespace SDK::Params
 {
 
 // Function BP_CosmeticEmote_DragDropOperation.BP_CosmeticEmote_DragDropOperation_C.DragCancelled
-// 0x0078 (0x0078 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct BP_CosmeticEmote_DragDropOperation_C_DragCancelled final
 {
 public:
-	struct FPointerEvent                          PointerEvent;                                      // 0x0000(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FPointerEvent                          PointerEvent;                                      // 0x0000(0x0080)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(BP_CosmeticEmote_DragDropOperation_C_DragCancelled) == 0x000008, "Wrong alignment on BP_CosmeticEmote_DragDropOperation_C_DragCancelled");
-static_assert(sizeof(BP_CosmeticEmote_DragDropOperation_C_DragCancelled) == 0x000078, "Wrong size on BP_CosmeticEmote_DragDropOperation_C_DragCancelled");
-static_assert(offsetof(BP_CosmeticEmote_DragDropOperation_C_DragCancelled, PointerEvent) == 0x000000, "Member 'BP_CosmeticEmote_DragDropOperation_C_DragCancelled::PointerEvent' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CosmeticEmote_DragDropOperation_C_DragCancelled;
 
 // Function BP_CosmeticEmote_DragDropOperation.BP_CosmeticEmote_DragDropOperation_C.Dragged
-// 0x0078 (0x0078 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct BP_CosmeticEmote_DragDropOperation_C_Dragged final
 {
 public:
-	struct FPointerEvent                          PointerEvent;                                      // 0x0000(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FPointerEvent                          PointerEvent;                                      // 0x0000(0x0080)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(BP_CosmeticEmote_DragDropOperation_C_Dragged) == 0x000008, "Wrong alignment on BP_CosmeticEmote_DragDropOperation_C_Dragged");
-static_assert(sizeof(BP_CosmeticEmote_DragDropOperation_C_Dragged) == 0x000078, "Wrong size on BP_CosmeticEmote_DragDropOperation_C_Dragged");
-static_assert(offsetof(BP_CosmeticEmote_DragDropOperation_C_Dragged, PointerEvent) == 0x000000, "Member 'BP_CosmeticEmote_DragDropOperation_C_Dragged::PointerEvent' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CosmeticEmote_DragDropOperation_C_Dragged;
 
 // Function BP_CosmeticEmote_DragDropOperation.BP_CosmeticEmote_DragDropOperation_C.Drop
-// 0x0078 (0x0078 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct BP_CosmeticEmote_DragDropOperation_C_Drop final
 {
 public:
-	struct FPointerEvent                          PointerEvent;                                      // 0x0000(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FPointerEvent                          PointerEvent;                                      // 0x0000(0x0080)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(BP_CosmeticEmote_DragDropOperation_C_Drop) == 0x000008, "Wrong alignment on BP_CosmeticEmote_DragDropOperation_C_Drop");
-static_assert(sizeof(BP_CosmeticEmote_DragDropOperation_C_Drop) == 0x000078, "Wrong size on BP_CosmeticEmote_DragDropOperation_C_Drop");
-static_assert(offsetof(BP_CosmeticEmote_DragDropOperation_C_Drop, PointerEvent) == 0x000000, "Member 'BP_CosmeticEmote_DragDropOperation_C_Drop::PointerEvent' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CosmeticEmote_DragDropOperation_C_Drop;
 
 // Function BP_CosmeticEmote_DragDropOperation.BP_CosmeticEmote_DragDropOperation_C.ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation
-// 0x0188 (0x0188 - 0x0000)
+// 0x01A0 (0x01A0 - 0x0000)
 struct BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerEvent                          K2Node_Event_PointerEvent;                         // 0x0008(0x0078)(ConstParm)
-	struct FPointerEvent                          K2Node_Event_PointerEvent_2;                       // 0x0080(0x0078)(ConstParm)
-	struct FPointerEvent                          K2Node_Event_PointerEvent_1;                       // 0x00F8(0x0078)(ConstParm)
-	class ARUIManager*                            CallFunc_GetUIManager_ReturnValue;                 // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARUIManager*                            CallFunc_GetUIManager_ReturnValue_1;               // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerEvent                          K2Node_Event_PointerEvent;                         // 0x0008(0x0080)(ConstParm)
+	struct FPointerEvent                          K2Node_Event_PointerEvent_2;                       // 0x0088(0x0080)(ConstParm)
+	struct FPointerEvent                          K2Node_Event_PointerEvent_1;                       // 0x0108(0x0080)(ConstParm)
+	class ARUIManager*                            CallFunc_GetUIManager_ReturnValue;                 // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARUIManager*                            CallFunc_GetUIManager_ReturnValue_1;               // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0199(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation) == 0x000008, "Wrong alignment on BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation");
-static_assert(sizeof(BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation) == 0x000188, "Wrong size on BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation");
-static_assert(offsetof(BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation, EntryPoint) == 0x000000, "Member 'BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation, K2Node_Event_PointerEvent) == 0x000008, "Member 'BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation::K2Node_Event_PointerEvent' has a wrong offset!");
-static_assert(offsetof(BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation, K2Node_Event_PointerEvent_2) == 0x000080, "Member 'BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation::K2Node_Event_PointerEvent_2' has a wrong offset!");
-static_assert(offsetof(BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation, K2Node_Event_PointerEvent_1) == 0x0000F8, "Member 'BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation::K2Node_Event_PointerEvent_1' has a wrong offset!");
-static_assert(offsetof(BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation, CallFunc_GetUIManager_ReturnValue) == 0x000170, "Member 'BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation::CallFunc_GetUIManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation, CallFunc_GetUIManager_ReturnValue_1) == 0x000178, "Member 'BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation::CallFunc_GetUIManager_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation, CallFunc_IsValid_ReturnValue) == 0x000180, "Member 'BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation, CallFunc_IsValid_ReturnValue_1) == 0x000181, "Member 'BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CosmeticEmote_DragDropOperation_C_ExecuteUbergraph_BP_CosmeticEmote_DragDropOperation;
 
 }
 

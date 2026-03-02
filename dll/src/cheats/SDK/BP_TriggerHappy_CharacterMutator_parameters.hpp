@@ -39,21 +39,7 @@ public:
 	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class URStatusEffectGScript*                  CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator) == 0x000008, "Wrong alignment on BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator");
-static_assert(sizeof(BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator) == 0x0000B8, "Wrong size on BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator, CallFunc_GetMutatorRank_ReturnValue) == 0x000004, "Member 'BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x000008, "Member 'BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000010, "Member 'BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000040, "Member 'BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator, CallFunc_GetEquippedActivatableAbility_ReturnValue) == 0x000050, "Member 'BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator::CallFunc_GetEquippedActivatableAbility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator, K2Node_CustomEvent_RGAbilityCharacterMutatorScript) == 0x000058, "Member 'BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator::K2Node_CustomEvent_RGAbilityCharacterMutatorScript' has a wrong offset!");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator, CallFunc_BranchByNetRole_Branches) == 0x000060, "Member 'BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator::CallFunc_BranchByNetRole_Branches' has a wrong offset!");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000068, "Member 'BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator, K2Node_SwitchEnum_CmpSuccess) == 0x000098, "Member 'BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x0000A0, "Member 'BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x0000A8, "Member 'BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x0000B0, "Member 'BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_TriggerHappy_CharacterMutator_C_ExecuteUbergraph_BP_TriggerHappy_CharacterMutator;
 
 // Function BP_TriggerHappy_CharacterMutator.BP_TriggerHappy_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -65,11 +51,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_TriggerHappy_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_TriggerHappy_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_TriggerHappy_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_TriggerHappy_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_TriggerHappy_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_TriggerHappy_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_TriggerHappy_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_TriggerHappy_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_TriggerHappy_CharacterMutator.BP_TriggerHappy_CharacterMutator_C.OnCooldownFinished
 // 0x0008 (0x0008 - 0x0000)
@@ -78,9 +60,7 @@ struct BP_TriggerHappy_CharacterMutator_C_OnCooldownFinished final
 public:
 	class URGAbilityCharacterMutatorScript*       RGAbilityCharacterMutatorScript;                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_TriggerHappy_CharacterMutator_C_OnCooldownFinished) == 0x000008, "Wrong alignment on BP_TriggerHappy_CharacterMutator_C_OnCooldownFinished");
-static_assert(sizeof(BP_TriggerHappy_CharacterMutator_C_OnCooldownFinished) == 0x000008, "Wrong size on BP_TriggerHappy_CharacterMutator_C_OnCooldownFinished");
-static_assert(offsetof(BP_TriggerHappy_CharacterMutator_C_OnCooldownFinished, RGAbilityCharacterMutatorScript) == 0x000000, "Member 'BP_TriggerHappy_CharacterMutator_C_OnCooldownFinished::RGAbilityCharacterMutatorScript' has a wrong offset!");
+DUMPER7_ASSERTS_BP_TriggerHappy_CharacterMutator_C_OnCooldownFinished;
 
 }
 

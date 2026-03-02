@@ -38,17 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BouncyBomb_ProjectileEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_BouncyBomb_ProjectileEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BouncyBomb_ProjectileEffect_C")
 	}
 	static class UBP_BouncyBomb_ProjectileEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_BouncyBomb_ProjectileEffect_C>();
 	}
 };
-static_assert(alignof(UBP_BouncyBomb_ProjectileEffect_C) == 0x000008, "Wrong alignment on UBP_BouncyBomb_ProjectileEffect_C");
-static_assert(sizeof(UBP_BouncyBomb_ProjectileEffect_C) == 0x000100, "Wrong size on UBP_BouncyBomb_ProjectileEffect_C");
-static_assert(offsetof(UBP_BouncyBomb_ProjectileEffect_C, UberGraphFrame) == 0x0000F0, "Member 'UBP_BouncyBomb_ProjectileEffect_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_BouncyBomb_ProjectileEffect_C, As_BP_Frag_Grenade_Grenade) == 0x0000F8, "Member 'UBP_BouncyBomb_ProjectileEffect_C::As_BP_Frag_Grenade_Grenade' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_BouncyBomb_ProjectileEffect_C;
 
 }
 

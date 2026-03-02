@@ -109,7 +109,7 @@ void IAudioGameplayVolumeInteraction::OnListenerExit()
 
 
 // Function AudioGameplay.AudioComponentGroup.StaticGetOrCreateComponentGroup
-// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UAudioComponentGroup*             ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -137,7 +137,7 @@ class UAudioComponentGroup* UAudioComponentGroup::StaticGetOrCreateComponentGrou
 
 
 // Function AudioGameplay.AudioComponentGroup.AddExtension
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
 // TScriptInterface<class IAudioComponentGroupExtension>NewExtension                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -162,7 +162,7 @@ void UAudioComponentGroup::AddExtension(TScriptInterface<class IAudioComponentGr
 
 
 // Function AudioGameplay.AudioComponentGroup.AddExternalComponent
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
 // class UAudioComponent*                  ComponentToAdd                                         (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -187,7 +187,7 @@ void UAudioComponentGroup::AddExternalComponent(class UAudioComponent* Component
 
 
 // Function AudioGameplay.AudioComponentGroup.BroadcastEvent
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FName                       EventName                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -212,7 +212,7 @@ void UAudioComponentGroup::BroadcastEvent(const class FName EventName)
 
 
 // Function AudioGameplay.AudioComponentGroup.BroadcastKill
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 
 void UAudioComponentGroup::BroadcastKill()
 {
@@ -231,7 +231,7 @@ void UAudioComponentGroup::BroadcastKill()
 
 
 // Function AudioGameplay.AudioComponentGroup.BroadcastStopAll
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 
 void UAudioComponentGroup::BroadcastStopAll()
 {
@@ -250,7 +250,7 @@ void UAudioComponentGroup::BroadcastStopAll()
 
 
 // Function AudioGameplay.AudioComponentGroup.DisableVirtualization
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 
 void UAudioComponentGroup::DisableVirtualization()
 {
@@ -269,7 +269,7 @@ void UAudioComponentGroup::DisableVirtualization()
 
 
 // Function AudioGameplay.AudioComponentGroup.EnableVirtualization
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 
 void UAudioComponentGroup::EnableVirtualization()
 {
@@ -288,7 +288,7 @@ void UAudioComponentGroup::EnableVirtualization()
 
 
 // Function AudioGameplay.AudioComponentGroup.RemoveExtension
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
 // TScriptInterface<class IAudioComponentGroupExtension>NewExtension                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -313,7 +313,7 @@ void UAudioComponentGroup::RemoveExtension(TScriptInterface<class IAudioComponen
 
 
 // Function AudioGameplay.AudioComponentGroup.RemoveExternalComponent
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
 // class UAudioComponent*                  ComponentToRemove                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -413,7 +413,7 @@ void UAudioComponentGroup::SetVolumeMultiplier(const float InVolume)
 
 
 // Function AudioGameplay.AudioComponentGroup.StopSound
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
 // class USoundBase*                       Sound                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const float                             FadeTime                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -440,7 +440,7 @@ void UAudioComponentGroup::StopSound(class USoundBase* Sound, const float FadeTi
 
 
 // Function AudioGameplay.AudioComponentGroup.SubscribeToBool
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FName                       ParamName                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TDelegate<void(const bool ParamValue)>  Delegate                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -467,7 +467,7 @@ void UAudioComponentGroup::SubscribeToBool(const class FName ParamName, TDelegat
 
 
 // Function AudioGameplay.AudioComponentGroup.SubscribeToEvent
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FName                       EventName                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TDelegate<void(const class FName& EventName)>Delegate                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -494,7 +494,7 @@ void UAudioComponentGroup::SubscribeToEvent(const class FName EventName, TDelega
 
 
 // Function AudioGameplay.AudioComponentGroup.SubscribeToStringParam
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FName                       ParamName                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TDelegate<void(const class FString& Value)>Delegate                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -521,7 +521,7 @@ void UAudioComponentGroup::SubscribeToStringParam(const class FName ParamName, T
 
 
 // Function AudioGameplay.AudioComponentGroup.UnsubscribeObject
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    Object                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -546,7 +546,7 @@ void UAudioComponentGroup::UnsubscribeObject(const class UObject* Object)
 
 
 // Function AudioGameplay.AudioComponentGroup.GetBoolParamValue
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FName                       ParamName                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -574,7 +574,7 @@ bool UAudioComponentGroup::GetBoolParamValue(const class FName ParamName) const
 
 
 // Function AudioGameplay.AudioComponentGroup.GetFloatParamValue
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FName                       ParamName                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -602,7 +602,7 @@ float UAudioComponentGroup::GetFloatParamValue(const class FName ParamName) cons
 
 
 // Function AudioGameplay.AudioComponentGroup.GetStringParamValue
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FName                       ParamName                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -630,7 +630,7 @@ class FString UAudioComponentGroup::GetStringParamValue(const class FName ParamN
 
 
 // Function AudioGameplay.AudioComponentGroup.IsPlayingAny
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

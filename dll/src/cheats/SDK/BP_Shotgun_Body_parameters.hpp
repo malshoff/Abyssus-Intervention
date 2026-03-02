@@ -26,10 +26,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UNiagaraComponent*                      System;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Shotgun_Body_C_DisableNiagaraSystemDelayed) == 0x000008, "Wrong alignment on BP_Shotgun_Body_C_DisableNiagaraSystemDelayed");
-static_assert(sizeof(BP_Shotgun_Body_C_DisableNiagaraSystemDelayed) == 0x000010, "Wrong size on BP_Shotgun_Body_C_DisableNiagaraSystemDelayed");
-static_assert(offsetof(BP_Shotgun_Body_C_DisableNiagaraSystemDelayed, Duration) == 0x000000, "Member 'BP_Shotgun_Body_C_DisableNiagaraSystemDelayed::Duration' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_DisableNiagaraSystemDelayed, System) == 0x000008, "Member 'BP_Shotgun_Body_C_DisableNiagaraSystemDelayed::System' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Shotgun_Body_C_DisableNiagaraSystemDelayed;
 
 // Function BP_Shotgun_Body.BP_Shotgun_Body_C.ExecuteUbergraph_BP_Shotgun_Body
 // 0x0180 (0x0180 - 0x0000)
@@ -70,34 +67,7 @@ public:
 	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetPlayRate_NewRate_ImplicitCast;         // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body) == 0x000010, "Wrong alignment on BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body");
-static_assert(sizeof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body) == 0x000180, "Wrong size on BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, EntryPoint) == 0x000000, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, Temp_bool_Variable) == 0x000004, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, Temp_object_Variable) == 0x000008, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000010, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, CallFunc_K2_GetScalarParameterValue_ReturnValue) == 0x000018, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::CallFunc_K2_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, CallFunc_Lerp_ReturnValue) == 0x000020, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, CallFunc_MakeTransform_ReturnValue) == 0x000030, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, CallFunc_MakeTransform_ReturnValue_1) == 0x000090, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::CallFunc_MakeTransform_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, K2Node_CustomEvent_Duration_1) == 0x0000F0, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::K2Node_CustomEvent_Duration_1' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, K2Node_CustomEvent_System) == 0x0000F8, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::K2Node_CustomEvent_System' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, K2Node_CustomEvent_Duration) == 0x000100, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::K2Node_CustomEvent_Duration' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, K2Node_Event_Socket) == 0x000108, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::K2Node_Event_Socket' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, K2Node_Event_Bool) == 0x000110, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::K2Node_Event_Bool' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000118, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, CallFunc_GetPlayer2DAttenuation_ReturnValue) == 0x000120, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::CallFunc_GetPlayer2DAttenuation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, K2Node_Event_EventName) == 0x000128, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::K2Node_Event_EventName' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, K2Node_SwitchName_CmpSuccess) == 0x000130, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::K2Node_SwitchName_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, CallFunc_GetInstigatorController_ReturnValue) == 0x000138, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::CallFunc_GetInstigatorController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, CallFunc_IsLocalControllerWithNullCheck_ReturnValue) == 0x000140, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::CallFunc_IsLocalControllerWithNullCheck_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, K2Node_Select_Default) == 0x000148, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, CallFunc_SpawnSoundAttached_ReturnValue) == 0x000150, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue) == 0x000158, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, CallFunc_Lerp_Alpha_ImplicitCast) == 0x000160, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::CallFunc_Lerp_Alpha_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, CallFunc_Lerp_A_ImplicitCast) == 0x000168, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::CallFunc_Lerp_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000170, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body, CallFunc_SetPlayRate_NewRate_ImplicitCast) == 0x000174, "Member 'BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body::CallFunc_SetPlayRate_NewRate_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Shotgun_Body_C_ExecuteUbergraph_BP_Shotgun_Body;
 
 // Function BP_Shotgun_Body.BP_Shotgun_Body_C.OnAnimationTriggerEvent
 // 0x0008 (0x0008 - 0x0000)
@@ -106,9 +76,7 @@ struct BP_Shotgun_Body_C_OnAnimationTriggerEvent final
 public:
 	class FName                                   EventName;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Shotgun_Body_C_OnAnimationTriggerEvent) == 0x000004, "Wrong alignment on BP_Shotgun_Body_C_OnAnimationTriggerEvent");
-static_assert(sizeof(BP_Shotgun_Body_C_OnAnimationTriggerEvent) == 0x000008, "Wrong size on BP_Shotgun_Body_C_OnAnimationTriggerEvent");
-static_assert(offsetof(BP_Shotgun_Body_C_OnAnimationTriggerEvent, EventName) == 0x000000, "Member 'BP_Shotgun_Body_C_OnAnimationTriggerEvent::EventName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Shotgun_Body_C_OnAnimationTriggerEvent;
 
 // Function BP_Shotgun_Body.BP_Shotgun_Body_C.OnToggleEvent
 // 0x000C (0x000C - 0x0000)
@@ -118,10 +86,7 @@ public:
 	class FName                                   Socket;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Bool;                                              // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Shotgun_Body_C_OnToggleEvent) == 0x000004, "Wrong alignment on BP_Shotgun_Body_C_OnToggleEvent");
-static_assert(sizeof(BP_Shotgun_Body_C_OnToggleEvent) == 0x00000C, "Wrong size on BP_Shotgun_Body_C_OnToggleEvent");
-static_assert(offsetof(BP_Shotgun_Body_C_OnToggleEvent, Socket) == 0x000000, "Member 'BP_Shotgun_Body_C_OnToggleEvent::Socket' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_OnToggleEvent, Bool) == 0x000008, "Member 'BP_Shotgun_Body_C_OnToggleEvent::Bool' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Shotgun_Body_C_OnToggleEvent;
 
 // Function BP_Shotgun_Body.BP_Shotgun_Body_C.PlayReloadTimeline
 // 0x0008 (0x0008 - 0x0000)
@@ -130,9 +95,7 @@ struct BP_Shotgun_Body_C_PlayReloadTimeline final
 public:
 	double                                        Duration;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Shotgun_Body_C_PlayReloadTimeline) == 0x000008, "Wrong alignment on BP_Shotgun_Body_C_PlayReloadTimeline");
-static_assert(sizeof(BP_Shotgun_Body_C_PlayReloadTimeline) == 0x000008, "Wrong size on BP_Shotgun_Body_C_PlayReloadTimeline");
-static_assert(offsetof(BP_Shotgun_Body_C_PlayReloadTimeline, Duration) == 0x000000, "Member 'BP_Shotgun_Body_C_PlayReloadTimeline::Duration' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Shotgun_Body_C_PlayReloadTimeline;
 
 // Function BP_Shotgun_Body.BP_Shotgun_Body_C.RemoveAllCosmetics
 // 0x0020 (0x0020 - 0x0000)
@@ -147,14 +110,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Shotgun_Body_C_RemoveAllCosmetics) == 0x000008, "Wrong alignment on BP_Shotgun_Body_C_RemoveAllCosmetics");
-static_assert(sizeof(BP_Shotgun_Body_C_RemoveAllCosmetics) == 0x000020, "Wrong size on BP_Shotgun_Body_C_RemoveAllCosmetics");
-static_assert(offsetof(BP_Shotgun_Body_C_RemoveAllCosmetics, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BP_Shotgun_Body_C_RemoveAllCosmetics::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_RemoveAllCosmetics, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_Shotgun_Body_C_RemoveAllCosmetics::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_RemoveAllCosmetics, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_Shotgun_Body_C_RemoveAllCosmetics::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_RemoveAllCosmetics, CallFunc_Array_Get_Item) == 0x000010, "Member 'BP_Shotgun_Body_C_RemoveAllCosmetics::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_RemoveAllCosmetics, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'BP_Shotgun_Body_C_RemoveAllCosmetics::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_RemoveAllCosmetics, CallFunc_Less_IntInt_ReturnValue) == 0x00001C, "Member 'BP_Shotgun_Body_C_RemoveAllCosmetics::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Shotgun_Body_C_RemoveAllCosmetics;
 
 // Function BP_Shotgun_Body.BP_Shotgun_Body_C.SpawnMeshCosmetic
 // 0x0200 (0x0200 - 0x0000)
@@ -175,19 +131,7 @@ public:
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Shotgun_Body_C_SpawnMeshCosmetic) == 0x000010, "Wrong alignment on BP_Shotgun_Body_C_SpawnMeshCosmetic");
-static_assert(sizeof(BP_Shotgun_Body_C_SpawnMeshCosmetic) == 0x000200, "Wrong size on BP_Shotgun_Body_C_SpawnMeshCosmetic");
-static_assert(offsetof(BP_Shotgun_Body_C_SpawnMeshCosmetic, NewMesh) == 0x000000, "Member 'BP_Shotgun_Body_C_SpawnMeshCosmetic::NewMesh' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_SpawnMeshCosmetic, SocketName) == 0x000008, "Member 'BP_Shotgun_Body_C_SpawnMeshCosmetic::SocketName' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_SpawnMeshCosmetic, NewRelativeTransform) == 0x000010, "Member 'BP_Shotgun_Body_C_SpawnMeshCosmetic::NewRelativeTransform' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_SpawnMeshCosmetic, RemoveBeforeApplying) == 0x000070, "Member 'BP_Shotgun_Body_C_SpawnMeshCosmetic::RemoveBeforeApplying' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_SpawnMeshCosmetic, CallFunc_MakeTransform_ReturnValue) == 0x000080, "Member 'BP_Shotgun_Body_C_SpawnMeshCosmetic::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_SpawnMeshCosmetic, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x0000E0, "Member 'BP_Shotgun_Body_C_SpawnMeshCosmetic::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_SpawnMeshCosmetic, CallFunc_FinishSpawningActor_ReturnValue) == 0x0000E8, "Member 'BP_Shotgun_Body_C_SpawnMeshCosmetic::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_SpawnMeshCosmetic, CallFunc_K2_SetActorRelativeTransform_SweepHitResult) == 0x0000F0, "Member 'BP_Shotgun_Body_C_SpawnMeshCosmetic::CallFunc_K2_SetActorRelativeTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_SpawnMeshCosmetic, CallFunc_SetStaticMesh_ReturnValue) == 0x0001F0, "Member 'BP_Shotgun_Body_C_SpawnMeshCosmetic::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_SpawnMeshCosmetic, CallFunc_Array_Add_ReturnValue) == 0x0001F4, "Member 'BP_Shotgun_Body_C_SpawnMeshCosmetic::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shotgun_Body_C_SpawnMeshCosmetic, CallFunc_K2_AttachToComponent_ReturnValue) == 0x0001F8, "Member 'BP_Shotgun_Body_C_SpawnMeshCosmetic::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Shotgun_Body_C_SpawnMeshCosmetic;
 
 }
 

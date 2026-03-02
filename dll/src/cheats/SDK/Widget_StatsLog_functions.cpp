@@ -17,87 +17,17 @@
 namespace SDK
 {
 
-// Function Widget_StatsLog.Widget_StatsLog_C.GetTimesKilledByEnemyTypeNames
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// TArray<class FString>*                  Result                                                 (Parm, OutParm)
+// Function Widget_StatsLog.Widget_StatsLog_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_StatsLog_C::GetTimesKilledByEnemyTypeNames(TArray<class FString>* Result)
+void UWidget_StatsLog_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLog_C", "GetTimesKilledByEnemyTypeNames");
+		Func = Class->GetFunction("Widget_StatsLog_C", "Construct");
 
-	Params::Widget_StatsLog_C_GetTimesKilledByEnemyTypeNames Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
-}
-
-
-// Function Widget_StatsLog.Widget_StatsLog_C.GetEnemiesKilledOfTypeNames
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// TArray<class FString>*                  Result                                                 (Parm, OutParm)
-
-void UWidget_StatsLog_C::GetEnemiesKilledOfTypeNames(TArray<class FString>* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLog_C", "GetEnemiesKilledOfTypeNames");
-
-	Params::Widget_StatsLog_C_GetEnemiesKilledOfTypeNames Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
-}
-
-
-// Function Widget_StatsLog.Widget_StatsLog_C.ExecuteUbergraph_Widget_StatsLog
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_StatsLog_C::ExecuteUbergraph_Widget_StatsLog(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLog_C", "ExecuteUbergraph_Widget_StatsLog");
-
-	Params::Widget_StatsLog_C_ExecuteUbergraph_Widget_StatsLog Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_StatsLog.Widget_StatsLog_C.CreateTimesKilledByEnemyTypesEntries
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class FString>&                  UniqueEnemyNames                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UWidget_StatsLog_C::CreateTimesKilledByEnemyTypesEntries(TArray<class FString>& UniqueEnemyNames)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLog_C", "CreateTimesKilledByEnemyTypesEntries");
-
-	Params::Widget_StatsLog_C_CreateTimesKilledByEnemyTypesEntries Parms{};
-
-	Parms.UniqueEnemyNames = std::move(UniqueEnemyNames);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	UniqueEnemyNames = std::move(Parms.UniqueEnemyNames);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -123,17 +53,87 @@ void UWidget_StatsLog_C::CreateEnemiesKilledOfTypeEntries(TArray<class FString>&
 }
 
 
-// Function Widget_StatsLog.Widget_StatsLog_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_StatsLog.Widget_StatsLog_C.CreateTimesKilledByEnemyTypesEntries
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class FString>&                  UniqueEnemyNames                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_StatsLog_C::Construct()
+void UWidget_StatsLog_C::CreateTimesKilledByEnemyTypesEntries(TArray<class FString>& UniqueEnemyNames)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLog_C", "Construct");
+		Func = Class->GetFunction("Widget_StatsLog_C", "CreateTimesKilledByEnemyTypesEntries");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Widget_StatsLog_C_CreateTimesKilledByEnemyTypesEntries Parms{};
+
+	Parms.UniqueEnemyNames = std::move(UniqueEnemyNames);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	UniqueEnemyNames = std::move(Parms.UniqueEnemyNames);
+}
+
+
+// Function Widget_StatsLog.Widget_StatsLog_C.ExecuteUbergraph_Widget_StatsLog
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_StatsLog_C::ExecuteUbergraph_Widget_StatsLog(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLog_C", "ExecuteUbergraph_Widget_StatsLog");
+
+	Params::Widget_StatsLog_C_ExecuteUbergraph_Widget_StatsLog Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_StatsLog.Widget_StatsLog_C.GetEnemiesKilledOfTypeNames
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<class FString>*                  Result                                                 (Parm, OutParm)
+
+void UWidget_StatsLog_C::GetEnemiesKilledOfTypeNames(TArray<class FString>* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLog_C", "GetEnemiesKilledOfTypeNames");
+
+	Params::Widget_StatsLog_C_GetEnemiesKilledOfTypeNames Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
+}
+
+
+// Function Widget_StatsLog.Widget_StatsLog_C.GetTimesKilledByEnemyTypeNames
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<class FString>*                  Result                                                 (Parm, OutParm)
+
+void UWidget_StatsLog_C::GetTimesKilledByEnemyTypeNames(TArray<class FString>* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLog_C", "GetTimesKilledByEnemyTypeNames");
+
+	Params::Widget_StatsLog_C_GetTimesKilledByEnemyTypeNames Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
 }
 
 }

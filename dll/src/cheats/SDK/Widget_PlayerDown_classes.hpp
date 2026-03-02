@@ -11,24 +11,24 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_classes.hpp"
 #include "UMG_structs.hpp"
+#include "RGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_PlayerDown.Widget_PlayerDown_C
-// 0x0030 (0x0308 - 0x02D8)
+// 0x0030 (0x0378 - 0x0348)
 class UWidget_PlayerDown_C final : public URPawnDownedWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             DownTimer;                                         // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_0;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_79;                                      // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBP_Downed_StatusEffect_C*              DownedStatusEffect;                                // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        ScreenPadding;                                     // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             TextBlock_79;                                      // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_0;                                         // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             DownTimer;                                         // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBP_Downed_StatusEffect_C*              DownedStatusEffect;                                // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        ScreenPadding;                                     // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -40,21 +40,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_PlayerDown_C">();
+		BP_STATIC_CLASS_IMPL("Widget_PlayerDown_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_PlayerDown_C")
 	}
 	static class UWidget_PlayerDown_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_PlayerDown_C>();
 	}
 };
-static_assert(alignof(UWidget_PlayerDown_C) == 0x000008, "Wrong alignment on UWidget_PlayerDown_C");
-static_assert(sizeof(UWidget_PlayerDown_C) == 0x000308, "Wrong size on UWidget_PlayerDown_C");
-static_assert(offsetof(UWidget_PlayerDown_C, UberGraphFrame) == 0x0002D8, "Member 'UWidget_PlayerDown_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerDown_C, DownTimer) == 0x0002E0, "Member 'UWidget_PlayerDown_C::DownTimer' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerDown_C, SizeBox_0) == 0x0002E8, "Member 'UWidget_PlayerDown_C::SizeBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerDown_C, TextBlock_79) == 0x0002F0, "Member 'UWidget_PlayerDown_C::TextBlock_79' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerDown_C, DownedStatusEffect) == 0x0002F8, "Member 'UWidget_PlayerDown_C::DownedStatusEffect' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerDown_C, ScreenPadding) == 0x000300, "Member 'UWidget_PlayerDown_C::ScreenPadding' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_PlayerDown_C;
 
 }
 

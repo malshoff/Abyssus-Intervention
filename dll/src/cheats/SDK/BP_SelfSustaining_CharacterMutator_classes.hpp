@@ -35,17 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SelfSustaining_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_SelfSustaining_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SelfSustaining_CharacterMutator_C")
 	}
 	static class UBP_SelfSustaining_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SelfSustaining_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_SelfSustaining_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_SelfSustaining_CharacterMutator_C");
-static_assert(sizeof(UBP_SelfSustaining_CharacterMutator_C) == 0x000118, "Wrong size on UBP_SelfSustaining_CharacterMutator_C");
-static_assert(offsetof(UBP_SelfSustaining_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_SelfSustaining_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_SelfSustaining_CharacterMutator_C, ValidHitActors) == 0x000110, "Member 'UBP_SelfSustaining_CharacterMutator_C::ValidHitActors' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SelfSustaining_CharacterMutator_C;
 
 }
 

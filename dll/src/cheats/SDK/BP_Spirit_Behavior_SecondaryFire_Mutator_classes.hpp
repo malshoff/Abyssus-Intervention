@@ -35,17 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Spirit_Behavior_SecondaryFire_Mutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Spirit_Behavior_SecondaryFire_Mutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Spirit_Behavior_SecondaryFire_Mutator_C")
 	}
 	static class UBP_Spirit_Behavior_SecondaryFire_Mutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Spirit_Behavior_SecondaryFire_Mutator_C>();
 	}
 };
-static_assert(alignof(UBP_Spirit_Behavior_SecondaryFire_Mutator_C) == 0x000008, "Wrong alignment on UBP_Spirit_Behavior_SecondaryFire_Mutator_C");
-static_assert(sizeof(UBP_Spirit_Behavior_SecondaryFire_Mutator_C) == 0x0001A8, "Wrong size on UBP_Spirit_Behavior_SecondaryFire_Mutator_C");
-static_assert(offsetof(UBP_Spirit_Behavior_SecondaryFire_Mutator_C, UberGraphFrame_BP_Spirit_Behavior_SecondaryFire_Mutator_C) == 0x000198, "Member 'UBP_Spirit_Behavior_SecondaryFire_Mutator_C::UberGraphFrame_BP_Spirit_Behavior_SecondaryFire_Mutator_C' has a wrong offset!");
-static_assert(offsetof(UBP_Spirit_Behavior_SecondaryFire_Mutator_C, Weapon_Damage_Percent) == 0x0001A0, "Member 'UBP_Spirit_Behavior_SecondaryFire_Mutator_C::Weapon_Damage_Percent' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Spirit_Behavior_SecondaryFire_Mutator_C;
 
 }
 

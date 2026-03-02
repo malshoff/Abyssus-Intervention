@@ -27,13 +27,7 @@ public:
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0030(0x0010)()
 };
-static_assert(alignof(Widget_VersionNumber_C_ExecuteUbergraph_Widget_VersionNumber) == 0x000008, "Wrong alignment on Widget_VersionNumber_C_ExecuteUbergraph_Widget_VersionNumber");
-static_assert(sizeof(Widget_VersionNumber_C_ExecuteUbergraph_Widget_VersionNumber) == 0x000040, "Wrong size on Widget_VersionNumber_C_ExecuteUbergraph_Widget_VersionNumber");
-static_assert(offsetof(Widget_VersionNumber_C_ExecuteUbergraph_Widget_VersionNumber, EntryPoint) == 0x000000, "Member 'Widget_VersionNumber_C_ExecuteUbergraph_Widget_VersionNumber::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_VersionNumber_C_ExecuteUbergraph_Widget_VersionNumber, CallFunc_GetProjectVersion_ReturnValue) == 0x000008, "Member 'Widget_VersionNumber_C_ExecuteUbergraph_Widget_VersionNumber::CallFunc_GetProjectVersion_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_VersionNumber_C_ExecuteUbergraph_Widget_VersionNumber, CallFunc_Concat_StrStr_ReturnValue) == 0x000018, "Member 'Widget_VersionNumber_C_ExecuteUbergraph_Widget_VersionNumber::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_VersionNumber_C_ExecuteUbergraph_Widget_VersionNumber, K2Node_Event_IsDesignTime) == 0x000028, "Member 'Widget_VersionNumber_C_ExecuteUbergraph_Widget_VersionNumber::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(Widget_VersionNumber_C_ExecuteUbergraph_Widget_VersionNumber, CallFunc_Conv_StringToText_ReturnValue) == 0x000030, "Member 'Widget_VersionNumber_C_ExecuteUbergraph_Widget_VersionNumber::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_VersionNumber_C_ExecuteUbergraph_Widget_VersionNumber;
 
 // Function Widget_VersionNumber.Widget_VersionNumber_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -42,9 +36,7 @@ struct Widget_VersionNumber_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_VersionNumber_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_VersionNumber_C_PreConstruct");
-static_assert(sizeof(Widget_VersionNumber_C_PreConstruct) == 0x000001, "Wrong size on Widget_VersionNumber_C_PreConstruct");
-static_assert(offsetof(Widget_VersionNumber_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_VersionNumber_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_VersionNumber_C_PreConstruct;
 
 }
 

@@ -17,29 +17,353 @@
 namespace SDK
 {
 
-// Function Widget_RunsLog.Widget_RunsLog_C.SimulatePrevRun
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_RunsLog.Widget_RunsLog_C.BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_RunsLog_C::SimulatePrevRun()
+void UWidget_RunsLog_C::BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_RunsLog_C", "SimulatePrevRun");
+		Func = Class->GetFunction("Widget_RunsLog_C", "BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_RunsLog_C::BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.ChangeRunStatsPageToIndex
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_RunsLog_C::ChangeRunStatsPageToIndex(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "ChangeRunStatsPageToIndex");
+
+	Params::Widget_RunsLog_C_ChangeRunStatsPageToIndex Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_RunsLog_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_RunsLog.Widget_RunsLog_C.SimulateNextRun
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_RunsLog.Widget_RunsLog_C.ConstructActivatableAbility
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWidget_RunsLog_C::SimulateNextRun()
+void UWidget_RunsLog_C::ConstructActivatableAbility()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_RunsLog_C", "SimulateNextRun");
+		Func = Class->GetFunction("Widget_RunsLog_C", "ConstructActivatableAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.ConstructCharms
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_RunsLog_C::ConstructCharms()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "ConstructCharms");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.ConstructForgeMutators
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class UWidget_MutatorGridElement_01_Large_C*>&Widget_Mutators                                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const struct FGameplayTag&              Tag                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_RunsLog_C::ConstructForgeMutators(TArray<class UWidget_MutatorGridElement_01_Large_C*>& Widget_Mutators, const struct FGameplayTag& Tag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "ConstructForgeMutators");
+
+	Params::Widget_RunsLog_C_ConstructForgeMutators Parms{};
+
+	Parms.Widget_Mutators = std::move(Widget_Mutators);
+	Parms.Tag = std::move(Tag);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Widget_Mutators = std::move(Parms.Widget_Mutators);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.ConstructMutatorGrid
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_RunsLog_C::ConstructMutatorGrid()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "ConstructMutatorGrid");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.ConstructMutatorSubGrid
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget_AlternatingGrid_01_C*     Grid                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTagContainer&     Tags                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
+// class URMutatorPrimaryAsset*            MutatorPA                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   Rank                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_RunsLog_C::ConstructMutatorSubGrid(class UWidget_AlternatingGrid_01_C* Grid, const struct FGameplayTagContainer& Tags, class URMutatorPrimaryAsset* MutatorPA, int32 Rank)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "ConstructMutatorSubGrid");
+
+	Params::Widget_RunsLog_C_ConstructMutatorSubGrid Parms{};
+
+	Parms.Grid = Grid;
+	Parms.Tags = std::move(Tags);
+	Parms.MutatorPA = MutatorPA;
+	Parms.Rank = Rank;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.ConstructWeapon
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_RunsLog_C::ConstructWeapon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "ConstructWeapon");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_RunsLog_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.ExecuteUbergraph_Widget_RunsLog
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_RunsLog_C::ExecuteUbergraph_Widget_RunsLog(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "ExecuteUbergraph_Widget_RunsLog");
+
+	Params::Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.GetCharm1TooltipWidget
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWidget_RunsLog_C::GetCharm1TooltipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "GetCharm1TooltipWidget");
+
+	Params::Widget_RunsLog_C_GetCharm1TooltipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.GetCharm2TooltipWidget
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWidget_RunsLog_C::GetCharm2TooltipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "GetCharm2TooltipWidget");
+
+	Params::Widget_RunsLog_C_GetCharm2TooltipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.GetCharmTooltipWidget
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   CharmIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWidget_RunsLog_C::GetCharmTooltipWidget(int32 CharmIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "GetCharmTooltipWidget");
+
+	Params::Widget_RunsLog_C_GetCharmTooltipWidget Parms{};
+
+	Parms.CharmIndex = CharmIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.GetCurrentTooltipWidget
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget_BaseTooltip_C**           Return_Value                                           (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_RunsLog_C::GetCurrentTooltipWidget(class UWidget_BaseTooltip_C** Return_Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "GetCurrentTooltipWidget");
+
+	Params::Widget_RunsLog_C_GetCurrentTooltipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Return_Value != nullptr)
+		*Return_Value = Parms.Return_Value;
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.GetGridAvatarElementsWidget
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URGridPlayerAvatarElementsWidget* ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class URGridPlayerAvatarElementsWidget* UWidget_RunsLog_C::GetGridAvatarElementsWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "GetGridAvatarElementsWidget");
+
+	Params::Widget_RunsLog_C_GetGridAvatarElementsWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.HandleSelectPlayerTile
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget_PlayerGameOverPlayerTile_C*SelectedPlayerTile                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_RunsLog_C::HandleSelectPlayerTile(class UWidget_PlayerGameOverPlayerTile_C* SelectedPlayerTile)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "HandleSelectPlayerTile");
+
+	Params::Widget_RunsLog_C_HandleSelectPlayerTile Parms{};
+
+	Parms.SelectedPlayerTile = SelectedPlayerTile;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_RunsLog_C::OnInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "OnInitialized");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,97 +394,143 @@ struct FEventReply UWidget_RunsLog_C::OnPreviewKeyDown(const struct FGeometry& M
 }
 
 
-// Function Widget_RunsLog.Widget_RunsLog_C.ExecuteUbergraph_Widget_RunsLog
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Widget_RunsLog.Widget_RunsLog_C.SetupAbilityMutatorsNavigation
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void UWidget_RunsLog_C::ExecuteUbergraph_Widget_RunsLog(int32 EntryPoint)
+void UWidget_RunsLog_C::SetupAbilityMutatorsNavigation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_RunsLog_C", "ExecuteUbergraph_Widget_RunsLog");
-
-	Params::Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_RunsLog.Widget_RunsLog_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_RunsLog_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_RunsLog_C", "Construct");
+		Func = Class->GetFunction("Widget_RunsLog_C", "SetupAbilityMutatorsNavigation");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_RunsLog.Widget_RunsLog_C.Change Run Stats Page to Index
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Widget_RunsLog.Widget_RunsLog_C.SetupCharmsNavigation
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void UWidget_RunsLog_C::Change_Run_Stats_Page_to_Index(int32 Index_0)
+void UWidget_RunsLog_C::SetupCharmsNavigation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_RunsLog_C", "Change Run Stats Page to Index");
+		Func = Class->GetFunction("Widget_RunsLog_C", "SetupCharmsNavigation");
 
-	Params::Widget_RunsLog_C_Change_Run_Stats_Page_to_Index Parms{};
-
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_RunsLog.Widget_RunsLog_C.BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function Widget_RunsLog.Widget_RunsLog_C.SetupGridItemsNavigation
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void UWidget_RunsLog_C::BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+void UWidget_RunsLog_C::SetupGridItemsNavigation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_RunsLog_C", "BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
+		Func = Class->GetFunction("Widget_RunsLog_C", "SetupGridItemsNavigation");
 
-	Params::Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_RunsLog.Widget_RunsLog_C.BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function Widget_RunsLog.Widget_RunsLog_C.SetupTriggersNavigation
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void UWidget_RunsLog_C::BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+void UWidget_RunsLog_C::SetupTriggersNavigation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_RunsLog_C", "BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+		Func = Class->GetFunction("Widget_RunsLog_C", "SetupTriggersNavigation");
 
-	Params::Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Button = Button;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function Widget_RunsLog.Widget_RunsLog_C.SetupWeaponAndAbilityNavigation
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_RunsLog_C::SetupWeaponAndAbilityNavigation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "SetupWeaponAndAbilityNavigation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.SetupWeaponMutatorsNavigation
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_RunsLog_C::SetupWeaponMutatorsNavigation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "SetupWeaponMutatorsNavigation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.SimulateNextRun
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_RunsLog_C::SimulateNextRun()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "SimulateNextRun");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.SimulatePrevRun
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_RunsLog_C::SimulatePrevRun()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "SimulatePrevRun");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.UpdateEquipmentInfos
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_RunsLog_C::UpdateEquipmentInfos()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "UpdateEquipmentInfos");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_RunsLog.Widget_RunsLog_C.UpdateRunStatsWidgets
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_RunsLog_C::UpdateRunStatsWidgets()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunsLog_C", "UpdateRunStatsWidgets");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

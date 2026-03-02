@@ -22,17 +22,12 @@ struct BP_ShootingRange_Console_C_ExecuteUbergraph_BP_ShootingRange_Console fina
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARRadarManager*                         CallFunc_GetRadarManager_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARRadarManager*                         CallFunc_GetRadarManager_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ShootingRange_Console_C_ExecuteUbergraph_BP_ShootingRange_Console) == 0x000008, "Wrong alignment on BP_ShootingRange_Console_C_ExecuteUbergraph_BP_ShootingRange_Console");
-static_assert(sizeof(BP_ShootingRange_Console_C_ExecuteUbergraph_BP_ShootingRange_Console) == 0x000028, "Wrong size on BP_ShootingRange_Console_C_ExecuteUbergraph_BP_ShootingRange_Console");
-static_assert(offsetof(BP_ShootingRange_Console_C_ExecuteUbergraph_BP_ShootingRange_Console, EntryPoint) == 0x000000, "Member 'BP_ShootingRange_Console_C_ExecuteUbergraph_BP_ShootingRange_Console::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_ShootingRange_Console_C_ExecuteUbergraph_BP_ShootingRange_Console, CallFunc_GetRadarManager_ReturnValue) == 0x000008, "Member 'BP_ShootingRange_Console_C_ExecuteUbergraph_BP_ShootingRange_Console::CallFunc_GetRadarManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ShootingRange_Console_C_ExecuteUbergraph_BP_ShootingRange_Console, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000010, "Member 'BP_ShootingRange_Console_C_ExecuteUbergraph_BP_ShootingRange_Console::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ShootingRange_Console_C_ExecuteUbergraph_BP_ShootingRange_Console, K2Node_CreateDelegate_OutputDelegate) == 0x000018, "Member 'BP_ShootingRange_Console_C_ExecuteUbergraph_BP_ShootingRange_Console::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ShootingRange_Console_C_ExecuteUbergraph_BP_ShootingRange_Console;
 
 // Function BP_ShootingRange_Console.BP_ShootingRange_Console_C.GetRadarIconColor
 // 0x0010 (0x0010 - 0x0000)
@@ -41,9 +36,7 @@ struct BP_ShootingRange_Console_C_GetRadarIconColor final
 public:
 	struct FLinearColor                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ShootingRange_Console_C_GetRadarIconColor) == 0x000004, "Wrong alignment on BP_ShootingRange_Console_C_GetRadarIconColor");
-static_assert(sizeof(BP_ShootingRange_Console_C_GetRadarIconColor) == 0x000010, "Wrong size on BP_ShootingRange_Console_C_GetRadarIconColor");
-static_assert(offsetof(BP_ShootingRange_Console_C_GetRadarIconColor, ReturnValue) == 0x000000, "Member 'BP_ShootingRange_Console_C_GetRadarIconColor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ShootingRange_Console_C_GetRadarIconColor;
 
 // Function BP_ShootingRange_Console.BP_ShootingRange_Console_C.GetRadarIconSize
 // 0x0010 (0x0010 - 0x0000)
@@ -52,9 +45,7 @@ struct BP_ShootingRange_Console_C_GetRadarIconSize final
 public:
 	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ShootingRange_Console_C_GetRadarIconSize) == 0x000008, "Wrong alignment on BP_ShootingRange_Console_C_GetRadarIconSize");
-static_assert(sizeof(BP_ShootingRange_Console_C_GetRadarIconSize) == 0x000010, "Wrong size on BP_ShootingRange_Console_C_GetRadarIconSize");
-static_assert(offsetof(BP_ShootingRange_Console_C_GetRadarIconSize, ReturnValue) == 0x000000, "Member 'BP_ShootingRange_Console_C_GetRadarIconSize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ShootingRange_Console_C_GetRadarIconSize;
 
 // Function BP_ShootingRange_Console.BP_ShootingRange_Console_C.GetRadarObjectIcon
 // 0x0008 (0x0008 - 0x0000)
@@ -63,9 +54,7 @@ struct BP_ShootingRange_Console_C_GetRadarObjectIcon final
 public:
 	class USlateBrushAsset*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ShootingRange_Console_C_GetRadarObjectIcon) == 0x000008, "Wrong alignment on BP_ShootingRange_Console_C_GetRadarObjectIcon");
-static_assert(sizeof(BP_ShootingRange_Console_C_GetRadarObjectIcon) == 0x000008, "Wrong size on BP_ShootingRange_Console_C_GetRadarObjectIcon");
-static_assert(offsetof(BP_ShootingRange_Console_C_GetRadarObjectIcon, ReturnValue) == 0x000000, "Member 'BP_ShootingRange_Console_C_GetRadarObjectIcon::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ShootingRange_Console_C_GetRadarObjectIcon;
 
 // Function BP_ShootingRange_Console.BP_ShootingRange_Console_C.ShouldShowOnRadar
 // 0x0001 (0x0001 - 0x0000)
@@ -74,9 +63,7 @@ struct BP_ShootingRange_Console_C_ShouldShowOnRadar final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ShootingRange_Console_C_ShouldShowOnRadar) == 0x000001, "Wrong alignment on BP_ShootingRange_Console_C_ShouldShowOnRadar");
-static_assert(sizeof(BP_ShootingRange_Console_C_ShouldShowOnRadar) == 0x000001, "Wrong size on BP_ShootingRange_Console_C_ShouldShowOnRadar");
-static_assert(offsetof(BP_ShootingRange_Console_C_ShouldShowOnRadar, ReturnValue) == 0x000000, "Member 'BP_ShootingRange_Console_C_ShouldShowOnRadar::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ShootingRange_Console_C_ShouldShowOnRadar;
 
 }
 

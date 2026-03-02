@@ -31,17 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_DominoBomb_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_DominoBomb_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_DominoBomb_CharacterMutator_C")
 	}
 	static class UBP_DominoBomb_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_DominoBomb_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_DominoBomb_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_DominoBomb_CharacterMutator_C");
-static_assert(sizeof(UBP_DominoBomb_CharacterMutator_C) == 0x000128, "Wrong size on UBP_DominoBomb_CharacterMutator_C");
-static_assert(offsetof(UBP_DominoBomb_CharacterMutator_C, MinExplosionDelay) == 0x000118, "Member 'UBP_DominoBomb_CharacterMutator_C::MinExplosionDelay' has a wrong offset!");
-static_assert(offsetof(UBP_DominoBomb_CharacterMutator_C, MaxExplosionDelay) == 0x000120, "Member 'UBP_DominoBomb_CharacterMutator_C::MaxExplosionDelay' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_DominoBomb_CharacterMutator_C;
 
 }
 

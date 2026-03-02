@@ -42,19 +42,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SharpShell_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_SharpShell_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SharpShell_CharacterMutator_C")
 	}
 	static class UBP_SharpShell_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SharpShell_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_SharpShell_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_SharpShell_CharacterMutator_C");
-static_assert(sizeof(UBP_SharpShell_CharacterMutator_C) == 0x000128, "Wrong size on UBP_SharpShell_CharacterMutator_C");
-static_assert(offsetof(UBP_SharpShell_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_SharpShell_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_SharpShell_CharacterMutator_C, AsRPlayerPawn) == 0x000110, "Member 'UBP_SharpShell_CharacterMutator_C::AsRPlayerPawn' has a wrong offset!");
-static_assert(offsetof(UBP_SharpShell_CharacterMutator_C, ExplosionDelay) == 0x000118, "Member 'UBP_SharpShell_CharacterMutator_C::ExplosionDelay' has a wrong offset!");
-static_assert(offsetof(UBP_SharpShell_CharacterMutator_C, ExplosionDelayTask) == 0x000120, "Member 'UBP_SharpShell_CharacterMutator_C::ExplosionDelayTask' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SharpShell_CharacterMutator_C;
 
 }
 

@@ -43,21 +43,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_KillTarget_ObjectiveScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_KillTarget_ObjectiveScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_KillTarget_ObjectiveScript_C")
 	}
 	static class UBP_KillTarget_ObjectiveScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_KillTarget_ObjectiveScript_C>();
 	}
 };
-static_assert(alignof(UBP_KillTarget_ObjectiveScript_C) == 0x000008, "Wrong alignment on UBP_KillTarget_ObjectiveScript_C");
-static_assert(sizeof(UBP_KillTarget_ObjectiveScript_C) == 0x000160, "Wrong size on UBP_KillTarget_ObjectiveScript_C");
-static_assert(offsetof(UBP_KillTarget_ObjectiveScript_C, UberGraphFrame) == 0x000110, "Member 'UBP_KillTarget_ObjectiveScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_KillTarget_ObjectiveScript_C, CurrentTarget) == 0x000118, "Member 'UBP_KillTarget_ObjectiveScript_C::CurrentTarget' has a wrong offset!");
-static_assert(offsetof(UBP_KillTarget_ObjectiveScript_C, NumKills) == 0x000120, "Member 'UBP_KillTarget_ObjectiveScript_C::NumKills' has a wrong offset!");
-static_assert(offsetof(UBP_KillTarget_ObjectiveScript_C, NumKillsRequired) == 0x000124, "Member 'UBP_KillTarget_ObjectiveScript_C::NumKillsRequired' has a wrong offset!");
-static_assert(offsetof(UBP_KillTarget_ObjectiveScript_C, SoftEnemyMutatorScript) == 0x000128, "Member 'UBP_KillTarget_ObjectiveScript_C::SoftEnemyMutatorScript' has a wrong offset!");
-static_assert(offsetof(UBP_KillTarget_ObjectiveScript_C, CheckpointThersholds) == 0x000150, "Member 'UBP_KillTarget_ObjectiveScript_C::CheckpointThersholds' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_KillTarget_ObjectiveScript_C;
 
 }
 

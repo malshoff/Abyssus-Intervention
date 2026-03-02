@@ -46,27 +46,7 @@ public:
 	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class URStatusEffectGScript*                  CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript) == 0x000008, "Wrong alignment on BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript");
-static_assert(sizeof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript) == 0x000070, "Wrong size on BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, EntryPoint) == 0x000000, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, CallFunc_BranchByNetRole_Branches) == 0x000004, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::CallFunc_BranchByNetRole_Branches' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, K2Node_SwitchEnum_CmpSuccess) == 0x000005, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, Temp_int_Array_Index_Variable) == 0x000008, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, CallFunc_GetOwningAreaEffect_ReturnValue) == 0x000010, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::CallFunc_GetOwningAreaEffect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, K2Node_DynamicCast_AsBP_Blood_Passive_3_Area_Effect) == 0x000020, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::K2Node_DynamicCast_AsBP_Blood_Passive_3_Area_Effect' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, CallFunc_GetMutatorRank_ReturnValue) == 0x000030, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, K2Node_Event_DeltaTime) == 0x000034, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::K2Node_Event_DeltaTime' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, CallFunc_GetActorsInArea_ReturnValue) == 0x000038, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::CallFunc_GetActorsInArea_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, CallFunc_Array_Get_Item) == 0x000048, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, K2Node_DynamicCast_AsRPawn_Base) == 0x000058, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, K2Node_DynamicCast_bSuccess_1) == 0x000060, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, CallFunc_Less_IntInt_ReturnValue) == 0x000061, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x000068, "Member 'BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BloodPassive3_AreaEffectScript_C_ExecuteUbergraph_BP_BloodPassive3_AreaEffectScript;
 
 // Function BP_BloodPassive3_AreaEffectScript.BP_BloodPassive3_AreaEffectScript_C.K2_TickScript
 // 0x0004 (0x0004 - 0x0000)
@@ -75,9 +55,7 @@ struct BP_BloodPassive3_AreaEffectScript_C_K2_TickScript final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BloodPassive3_AreaEffectScript_C_K2_TickScript) == 0x000004, "Wrong alignment on BP_BloodPassive3_AreaEffectScript_C_K2_TickScript");
-static_assert(sizeof(BP_BloodPassive3_AreaEffectScript_C_K2_TickScript) == 0x000004, "Wrong size on BP_BloodPassive3_AreaEffectScript_C_K2_TickScript");
-static_assert(offsetof(BP_BloodPassive3_AreaEffectScript_C_K2_TickScript, DeltaTime) == 0x000000, "Member 'BP_BloodPassive3_AreaEffectScript_C_K2_TickScript::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BloodPassive3_AreaEffectScript_C_K2_TickScript;
 
 }
 

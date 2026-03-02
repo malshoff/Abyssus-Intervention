@@ -11,67 +11,65 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_structs.hpp"
 #include "UMG_classes.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_StatsLogEntry.Widget_StatsLogEntry_C
-// 0x0040 (0x0310 - 0x02D0)
+// 0x0040 (0x0380 - 0x0340)
 class UWidget_StatsLogEntry_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             Stat;                                              // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Value;                                             // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   StatName;                                          // 0x02E8(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FString                                 StatKey;                                           // 0x02F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
-	EPlayerStatEntrySelectType                    StatSelectType;                                    // 0x0308(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Value;                                             // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Stat;                                              // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   StatName;                                          // 0x0358(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FString                                 StatKey;                                           // 0x0368(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
+	EPlayerStatEntrySelectType                    StatSelectType;                                    // 0x0378(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void GetTotalRuns(class FText* Result);
-	void GetTotalEnemiesKilled(class FText* Result);
-	void GetTotalDamageDealt(class FText* Result);
-	void GetTimesRevivedOtherPlayers(class FText* Result);
-	void GetTimesKilledByEnemyType(const class FString& EnemyTypeName, class FText* Result);
-	void GetTimesDowned(class FText* Result);
-	void GetStatByKey(const class FString& Key, class FText* TextResult);
-	void GetShortestRunTime(class FText* Result);
-	void GetRunSuccesRate(class FText* Result);
-	void GetRunStreak(class FText* Result);
-	void GetNumSuccesfulRuns(class FText* Result);
-	void GetNumMutatorsPickedUp(class FText* Result);
-	void GetNemesisEnemy(class FText* EnemyName);
-	void GetMostDamageDoneInARun(class FText* Result);
-	void GetMaxHPReached(class FText* Result);
-	void GetFavoriteMutator(class FText* Result);
-	void GetEnemyKillsOfType(class FName EnemyTypeName, class FText* Result);
-	void GetDeaths(class FText* Result);
-	void GetAverageRunTime(class FText* Result);
-	void GetAverageAccuracy(class FText* Result);
-	void ExecuteUbergraph_Widget_StatsLogEntry(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_Widget_StatsLogEntry(int32 EntryPoint);
+	void GetAverageAccuracy(class FText* Result);
+	void GetAverageRunTime(class FText* Result);
+	void GetDeaths(class FText* Result);
+	void GetDeepestRun(class FText* Result);
+	void GetEnemyKillsOfType(class FName EnemyTypeName, class FText* Result);
+	void GetFavoriteMutator(class FText* Result);
+	void GetMaxHPReached(class FText* Result);
+	void GetMostDamageDoneInARun(class FText* Result);
+	void GetNemesisEnemy(class FText* EnemyName);
+	void GetNumMutatorsPickedUp(class FText* Result);
+	void GetNumSuccesfulRuns(class FText* Result);
+	void GetRunStreak(class FText* Result);
+	void GetRunSuccesRate(class FText* Result);
+	void GetShortestRunTime(class FText* Result);
+	void GetStatByKey(const class FString& Key, class FText* TextResult);
+	void GetTimesDowned(class FText* Result);
+	void GetTimesKilledByEnemyType(const class FString& EnemyTypeName, class FText* Result);
+	void GetTimesRevivedOtherPlayers(class FText* Result);
+	void GetTotalDamageDealt(class FText* Result);
+	void GetTotalEnemiesKilled(class FText* Result);
+	void GetTotalRuns(class FText* Result);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_StatsLogEntry_C">();
+		BP_STATIC_CLASS_IMPL("Widget_StatsLogEntry_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_StatsLogEntry_C")
 	}
 	static class UWidget_StatsLogEntry_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_StatsLogEntry_C>();
 	}
 };
-static_assert(alignof(UWidget_StatsLogEntry_C) == 0x000008, "Wrong alignment on UWidget_StatsLogEntry_C");
-static_assert(sizeof(UWidget_StatsLogEntry_C) == 0x000310, "Wrong size on UWidget_StatsLogEntry_C");
-static_assert(offsetof(UWidget_StatsLogEntry_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_StatsLogEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLogEntry_C, Stat) == 0x0002D8, "Member 'UWidget_StatsLogEntry_C::Stat' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLogEntry_C, Value) == 0x0002E0, "Member 'UWidget_StatsLogEntry_C::Value' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLogEntry_C, StatName) == 0x0002E8, "Member 'UWidget_StatsLogEntry_C::StatName' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLogEntry_C, StatKey) == 0x0002F8, "Member 'UWidget_StatsLogEntry_C::StatKey' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLogEntry_C, StatSelectType) == 0x000308, "Member 'UWidget_StatsLogEntry_C::StatSelectType' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_StatsLogEntry_C;
 
 }
 

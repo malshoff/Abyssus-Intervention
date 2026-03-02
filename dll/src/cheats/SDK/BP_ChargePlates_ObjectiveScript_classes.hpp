@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ChargePlates_ObjectiveScript.BP_ChargePlates_ObjectiveScript_C
-// 0x0058 (0x0168 - 0x0110)
+// 0x0060 (0x0170 - 0x0110)
 class UBP_ChargePlates_ObjectiveScript_C final : public URGObjectiveScript
 {
 public:
@@ -31,6 +31,7 @@ public:
 	double                                        TickInterval;                                      // 0x0148(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           Timer;                                             // 0x0150(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TArray<bool>                                  CheckpointThresholdsReached;                       // 0x0158(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bCharging;                                         // 0x0168(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_ChargePlates_ObjectiveScript(int32 EntryPoint);
@@ -38,6 +39,9 @@ public:
 	void GetChargeDurationRequired(double* Value);
 	void GetCheckpointThersholds(TArray<double>* Checkpoints);
 	void K2_ActivateScript();
+	void OnChargeEnded();
+	void OnChargeStarted();
+	void OnObjectiveEnded_Event(const struct FGameplayTag& ObjectiveTag_0, bool bCompleted);
 	void TickBehavior();
 
 	class FText GetProgressionText() const;
@@ -45,24 +49,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ChargePlates_ObjectiveScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_ChargePlates_ObjectiveScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ChargePlates_ObjectiveScript_C")
 	}
 	static class UBP_ChargePlates_ObjectiveScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ChargePlates_ObjectiveScript_C>();
 	}
 };
-static_assert(alignof(UBP_ChargePlates_ObjectiveScript_C) == 0x000008, "Wrong alignment on UBP_ChargePlates_ObjectiveScript_C");
-static_assert(sizeof(UBP_ChargePlates_ObjectiveScript_C) == 0x000168, "Wrong size on UBP_ChargePlates_ObjectiveScript_C");
-static_assert(offsetof(UBP_ChargePlates_ObjectiveScript_C, UberGraphFrame) == 0x000110, "Member 'UBP_ChargePlates_ObjectiveScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_ChargePlates_ObjectiveScript_C, ChargeAmount) == 0x000118, "Member 'UBP_ChargePlates_ObjectiveScript_C::ChargeAmount' has a wrong offset!");
-static_assert(offsetof(UBP_ChargePlates_ObjectiveScript_C, ChargeDurationRequired) == 0x000120, "Member 'UBP_ChargePlates_ObjectiveScript_C::ChargeDurationRequired' has a wrong offset!");
-static_assert(offsetof(UBP_ChargePlates_ObjectiveScript_C, CheckpointThresholds) == 0x000128, "Member 'UBP_ChargePlates_ObjectiveScript_C::CheckpointThresholds' has a wrong offset!");
-static_assert(offsetof(UBP_ChargePlates_ObjectiveScript_C, CurrentCheckpointThreshold) == 0x000138, "Member 'UBP_ChargePlates_ObjectiveScript_C::CurrentCheckpointThreshold' has a wrong offset!");
-static_assert(offsetof(UBP_ChargePlates_ObjectiveScript_C, IncrementAmountPerTick) == 0x000140, "Member 'UBP_ChargePlates_ObjectiveScript_C::IncrementAmountPerTick' has a wrong offset!");
-static_assert(offsetof(UBP_ChargePlates_ObjectiveScript_C, TickInterval) == 0x000148, "Member 'UBP_ChargePlates_ObjectiveScript_C::TickInterval' has a wrong offset!");
-static_assert(offsetof(UBP_ChargePlates_ObjectiveScript_C, Timer) == 0x000150, "Member 'UBP_ChargePlates_ObjectiveScript_C::Timer' has a wrong offset!");
-static_assert(offsetof(UBP_ChargePlates_ObjectiveScript_C, CheckpointThresholdsReached) == 0x000158, "Member 'UBP_ChargePlates_ObjectiveScript_C::CheckpointThresholdsReached' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_ChargePlates_ObjectiveScript_C;
 
 }
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "RGame_structs.hpp"
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -76,51 +76,7 @@ public:
 	bool                                          CallFunc_CanTakeDamageFromInstigator_ReturnValue;  // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x02B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator) == 0x000008, "Wrong alignment on BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator");
-static_assert(sizeof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator) == 0x0002C0, "Wrong size on BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BranchByNetRole_Branches) == 0x000004, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BranchByNetRole_Branches' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, K2Node_SwitchEnum_CmpSuccess) == 0x00000C, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, Temp_int_Array_Index_Variable) == 0x000014, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000018, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_GetFirstScriptOfType_ReturnValue) == 0x000048, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_GetFirstScriptOfType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000050, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, K2Node_DynamicCast_AsBP_Anchor_Character_Mutator) == 0x000060, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::K2Node_DynamicCast_AsBP_Anchor_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000068, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x00006C, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000080, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, K2Node_CustomEvent_Script) == 0x0000B0, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::K2Node_CustomEvent_Script' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x0000B8, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_Array_Get_Item) == 0x0000C0, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_Array_Length_ReturnValue) == 0x0001C0, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_bBlockingHit) == 0x0001C4, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_bInitialOverlap) == 0x0001C5, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_Time) == 0x0001C8, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_Distance) == 0x0001CC, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_Location) == 0x0001D0, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_ImpactPoint) == 0x0001E8, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_Normal) == 0x000200, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_ImpactNormal) == 0x000218, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_PhysMat) == 0x000230, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_HitActor) == 0x000238, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_HitComponent) == 0x000240, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_HitBoneName) == 0x000248, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_BoneName) == 0x000250, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_HitItem) == 0x000258, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_ElementIndex) == 0x00025C, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_FaceIndex) == 0x000260, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_TraceStart) == 0x000268, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_BreakHitResult_TraceEnd) == 0x000280, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_Less_IntInt_ReturnValue) == 0x000298, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_IsValid_ReturnValue) == 0x000299, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_GetComponentByClass_ReturnValue) == 0x0002A0, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_IsValid_ReturnValue_1) == 0x0002A8, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_GetActorStatusEffectFromInstigator_ReturnValue) == 0x0002B0, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_GetActorStatusEffectFromInstigator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_CanTakeDamageFromInstigator_ReturnValue) == 0x0002B8, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_CanTakeDamageFromInstigator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator, CallFunc_IsValid_ReturnValue_2) == 0x0002B9, "Member 'BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_TheThrill_CharacterMutator_C_ExecuteUbergraph_BP_TheThrill_CharacterMutator;
 
 // Function BP_TheThrill_CharacterMutator.BP_TheThrill_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -132,11 +88,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_TheThrill_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_TheThrill_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_TheThrill_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_TheThrill_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_TheThrill_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_TheThrill_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_TheThrill_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_TheThrill_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_TheThrill_CharacterMutator.BP_TheThrill_CharacterMutator_C.OnFireAbilityFinished
 // 0x0008 (0x0008 - 0x0000)
@@ -145,9 +97,7 @@ struct BP_TheThrill_CharacterMutator_C_OnFireAbilityFinished final
 public:
 	class UBP_Anchor_CharacterMutator_C*          Script;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_TheThrill_CharacterMutator_C_OnFireAbilityFinished) == 0x000008, "Wrong alignment on BP_TheThrill_CharacterMutator_C_OnFireAbilityFinished");
-static_assert(sizeof(BP_TheThrill_CharacterMutator_C_OnFireAbilityFinished) == 0x000008, "Wrong size on BP_TheThrill_CharacterMutator_C_OnFireAbilityFinished");
-static_assert(offsetof(BP_TheThrill_CharacterMutator_C_OnFireAbilityFinished, Script) == 0x000000, "Member 'BP_TheThrill_CharacterMutator_C_OnFireAbilityFinished::Script' has a wrong offset!");
+DUMPER7_ASSERTS_BP_TheThrill_CharacterMutator_C_OnFireAbilityFinished;
 
 }
 

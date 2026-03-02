@@ -66,46 +66,7 @@ public:
 	double                                        CallFunc_PlayVFX_Lifetime_ImplicitCast;            // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect) == 0x000008, "Wrong alignment on BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect");
-static_assert(sizeof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect) == 0x0002E8, "Wrong size on BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, EntryPoint) == 0x000000, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_GetActorScale3D_ReturnValue) == 0x000008, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_GetActorScale3D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, K2Node_CustomEvent_Lifetime) == 0x000020, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::K2Node_CustomEvent_Lifetime' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, K2Node_CustomEvent_Location) == 0x000028, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::K2Node_CustomEvent_Location' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, K2Node_CustomEvent_Scale) == 0x000040, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::K2Node_CustomEvent_Scale' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakVector_X) == 0x000058, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakVector_Y) == 0x000060, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakVector_Z) == 0x000068, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_Add_VectorVector_ReturnValue) == 0x000070, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000088, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_Add_VectorVector_ReturnValue_1) == 0x000090, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_MakeVector_ReturnValue) == 0x0000A8, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_MakeVector2D_ReturnValue) == 0x0000C0, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_LineTraceAndSpawnDecal_LineTraceHit) == 0x0000D0, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_LineTraceAndSpawnDecal_LineTraceHit' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_LineTraceAndSpawnDecal_OutHit) == 0x0000D8, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_LineTraceAndSpawnDecal_OutHit' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_LineTraceAndSpawnDecal_ReturnValue) == 0x0001D8, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_LineTraceAndSpawnDecal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_K2_GetActorLocation_ReturnValue) == 0x0001E0, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_bBlockingHit) == 0x0001F8, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_bInitialOverlap) == 0x0001F9, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_Time) == 0x0001FC, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_Distance) == 0x000200, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_Location) == 0x000208, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_ImpactPoint) == 0x000220, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_Normal) == 0x000238, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_ImpactNormal) == 0x000250, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_PhysMat) == 0x000268, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_HitActor) == 0x000270, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_HitComponent) == 0x000278, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_HitBoneName) == 0x000280, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_BoneName) == 0x000288, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_HitItem) == 0x000290, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_ElementIndex) == 0x000294, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_FaceIndex) == 0x000298, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_TraceStart) == 0x0002A0, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_BreakHitResult_TraceEnd) == 0x0002B8, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_SpawnSystemAtLocation_ReturnValue) == 0x0002D0, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_SpawnSystemAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_PlayVFX_Lifetime_ImplicitCast) == 0x0002D8, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_PlayVFX_Lifetime_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect, CallFunc_SetFloatParameter_Param_ImplicitCast) == 0x0002E0, "Member 'BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect::CallFunc_SetFloatParameter_Param_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Brine_AreaEffect_C_ExecuteUbergraph_BP_Brine_AreaEffect;
 
 // Function BP_Brine_AreaEffect.BP_Brine_AreaEffect_C.PlayVFX
 // 0x0038 (0x0038 - 0x0000)
@@ -116,11 +77,7 @@ public:
 	struct FVector                                Location;                                          // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Scale;                                             // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Brine_AreaEffect_C_PlayVFX) == 0x000008, "Wrong alignment on BP_Brine_AreaEffect_C_PlayVFX");
-static_assert(sizeof(BP_Brine_AreaEffect_C_PlayVFX) == 0x000038, "Wrong size on BP_Brine_AreaEffect_C_PlayVFX");
-static_assert(offsetof(BP_Brine_AreaEffect_C_PlayVFX, Lifetime_0) == 0x000000, "Member 'BP_Brine_AreaEffect_C_PlayVFX::Lifetime_0' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_PlayVFX, Location) == 0x000008, "Member 'BP_Brine_AreaEffect_C_PlayVFX::Location' has a wrong offset!");
-static_assert(offsetof(BP_Brine_AreaEffect_C_PlayVFX, Scale) == 0x000020, "Member 'BP_Brine_AreaEffect_C_PlayVFX::Scale' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Brine_AreaEffect_C_PlayVFX;
 
 }
 

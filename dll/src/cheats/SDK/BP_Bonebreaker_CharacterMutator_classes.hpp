@@ -30,6 +30,7 @@ public:
 	void ExecuteUbergraph_BP_Bonebreaker_CharacterMutator(int32 EntryPoint);
 	class FText GetMutatorDescription();
 	void K2_ActivateScript();
+	void K2_DeactivateScript();
 	void OnAnimationTriggerEvent(class FName EventName);
 	void OnDamageDealt(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData);
 	void OnToggleEvent(class FName Socket, bool Bool);
@@ -38,18 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Bonebreaker_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Bonebreaker_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Bonebreaker_CharacterMutator_C")
 	}
 	static class UBP_Bonebreaker_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Bonebreaker_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_Bonebreaker_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_Bonebreaker_CharacterMutator_C");
-static_assert(sizeof(UBP_Bonebreaker_CharacterMutator_C) == 0x000120, "Wrong size on UBP_Bonebreaker_CharacterMutator_C");
-static_assert(offsetof(UBP_Bonebreaker_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_Bonebreaker_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Bonebreaker_CharacterMutator_C, As_RPlayer_Pawn) == 0x000110, "Member 'UBP_Bonebreaker_CharacterMutator_C::As_RPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(UBP_Bonebreaker_CharacterMutator_C, Target) == 0x000118, "Member 'UBP_Bonebreaker_CharacterMutator_C::Target' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Bonebreaker_CharacterMutator_C;
 
 }
 

@@ -17,92 +17,96 @@ namespace SDK::Params
 {
 
 // Function BP_LightningPassive1_CharacterMutator.BP_LightningPassive1_CharacterMutator_C.ExecuteUbergraph_BP_LightningPassive1_CharacterMutator
-// 0x01E0 (0x01E0 - 0x0000)
+// 0x0410 (0x0410 - 0x0000)
 struct BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0008(0x0030)(ContainsInstancedReference)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URGScriptComponent*                     CallFunc_GetGScriptComponentFromActor_ReturnValue; // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate; // 0x004C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0060(0x0030)(ContainsInstancedReference)
-	class ARPawnBase*                             K2Node_CustomEvent_Pawn;                           // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0098(0x00C0)()
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue;      // 0x0161(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_162[0x6];                                      // 0x0162(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_1;                 // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_2;                 // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_182[0x6];                                      // 0x0182(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class URGScriptComponent*                     CallFunc_GetGScriptComponentFromActor_ReturnValue_1; // 0x0188(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class URStatusEffectGScript*>          CallFunc_GetAllStatusEffectScripts_ReturnValue;    // 0x0190(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URStatusEffectGScript*                  CallFunc_Array_Get_Item;                           // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URStatusEffectAilmentGScript*           K2Node_DynamicCast_AsRStatus_Effect_Ailment_GScript; // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C1[0x3];                                      // 0x01C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetCurrentStackCount_ReturnValue;         // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class URStatusEffectGScript*                  CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x01D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_SetCurrentStackCount_ReturnValue;         // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate; // 0x0018(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0028(0x0030)(ContainsInstancedReference)
+	class ARPawnBase*                             K2Node_CustomEvent_Pawn;                           // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0060(0x01F0)()
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue;      // 0x0259(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x025A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25B[0x5];                                      // 0x025B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_1;                 // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0269(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_26A[0x6];                                      // 0x026A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_2;                 // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_279[0x7];                                      // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGScriptComponent*                     CallFunc_GetGScriptComponentFromActor_ReturnValue; // 0x0280(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class URStatusEffectGScript*>          CallFunc_GetAllStatusEffectScripts_ReturnValue;    // 0x0288(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0298(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29C[0x4];                                      // 0x029C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x02A0(0x0030)(ContainsInstancedReference)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D1[0x7];                                      // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_3;                 // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E1[0x3];                                      // 0x02E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_1; // 0x02E4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x02F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URStatusEffectGScript*                  CallFunc_Array_Get_Item;                           // 0x02F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URStatusEffectAilmentGScript*           K2Node_DynamicCast_AsRStatus_Effect_Ailment_GScript; // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_309[0x7];                                      // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AController*                            CallFunc_K2_GetInstigatorController_ReturnValue;   // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_319[0x7];                                      // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URGScriptComponent*                     CallFunc_GetGScriptComponentFromActor_ReturnValue_1; // 0x0328(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetCurrentStackCount_ReturnValue;         // 0x0330(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_334[0x4];                                      // 0x0334(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_2;     // 0x0340(0x0030)(ContainsInstancedReference)
+	class URStatusEffectGScript*                  CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x0370(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URPlayerGScriptComponent*               K2Node_DynamicCast_AsRPlayer_GScript_Component;    // 0x0378(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0380(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_381[0x3];                                      // 0x0381(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x0384(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x0388(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_38C[0x4];                                      // 0x038C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0390(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0398(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SetCurrentStackCount_ReturnValue;         // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x03A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x03A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A6[0x2];                                      // 0x03A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   CallFunc_Array_Get_Item_1;                         // 0x03A8(0x0028)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x03D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D4[0x4];                                      // 0x03D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_LoadSoftClassSynchronous_ReturnValue;     // 0x03D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E1[0x7];                                      // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 K2Node_ClassDynamicCast_AsRStatus_Effect_Ailment_GScript; // 0x03E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x03F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3F1[0x3];                                      // 0x03F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x03F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0400(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast_1; // 0x0404(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast_2; // 0x0408(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator) == 0x000008, "Wrong alignment on BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator");
-static_assert(sizeof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator) == 0x0001E0, "Wrong size on BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, Temp_int_Loop_Counter_Variable) == 0x000038, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, CallFunc_Add_IntInt_ReturnValue) == 0x00003C, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, CallFunc_GetGScriptComponentFromActor_ReturnValue) == 0x000040, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::CallFunc_GetGScriptComponentFromActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, Temp_int_Array_Index_Variable) == 0x000048, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x00004C, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000060, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, K2Node_CustomEvent_Pawn) == 0x000090, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::K2Node_CustomEvent_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, K2Node_CustomEvent_DamageEventData) == 0x000098, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::K2Node_CustomEvent_DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000158, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000160, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, CallFunc_DamageSourceMaskHasFlag_ReturnValue) == 0x000161, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::CallFunc_DamageSourceMaskHasFlag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x000168, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000170, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_2) == 0x000178, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_2' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, K2Node_DynamicCast_bSuccess_2) == 0x000180, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, CallFunc_IsValid_ReturnValue) == 0x000181, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, CallFunc_GetGScriptComponentFromActor_ReturnValue_1) == 0x000188, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::CallFunc_GetGScriptComponentFromActor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, CallFunc_GetAllStatusEffectScripts_ReturnValue) == 0x000190, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::CallFunc_GetAllStatusEffectScripts_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, CallFunc_Array_Length_ReturnValue) == 0x0001A0, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, CallFunc_Array_Get_Item) == 0x0001A8, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, CallFunc_Less_IntInt_ReturnValue) == 0x0001B0, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, K2Node_DynamicCast_AsRStatus_Effect_Ailment_GScript) == 0x0001B8, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::K2Node_DynamicCast_AsRStatus_Effect_Ailment_GScript' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, K2Node_DynamicCast_bSuccess_3) == 0x0001C0, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, CallFunc_GetCurrentStackCount_ReturnValue) == 0x0001C4, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::CallFunc_GetCurrentStackCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, CallFunc_GetObjectClass_ReturnValue) == 0x0001C8, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x0001D0, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator, CallFunc_SetCurrentStackCount_ReturnValue) == 0x0001D8, "Member 'BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator::CallFunc_SetCurrentStackCount_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LightningPassive1_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive1_CharacterMutator;
 
 // Function BP_LightningPassive1_CharacterMutator.BP_LightningPassive1_CharacterMutator_C.OnDealtDamage_Event
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_LightningPassive1_CharacterMutator_C_OnDealtDamage_Event final
 {
 public:
 	class ARPawnBase*                             Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_LightningPassive1_CharacterMutator_C_OnDealtDamage_Event) == 0x000008, "Wrong alignment on BP_LightningPassive1_CharacterMutator_C_OnDealtDamage_Event");
-static_assert(sizeof(BP_LightningPassive1_CharacterMutator_C_OnDealtDamage_Event) == 0x0000C8, "Wrong size on BP_LightningPassive1_CharacterMutator_C_OnDealtDamage_Event");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_OnDealtDamage_Event, Pawn) == 0x000000, "Member 'BP_LightningPassive1_CharacterMutator_C_OnDealtDamage_Event::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive1_CharacterMutator_C_OnDealtDamage_Event, DamageEventData) == 0x000008, "Member 'BP_LightningPassive1_CharacterMutator_C_OnDealtDamage_Event::DamageEventData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LightningPassive1_CharacterMutator_C_OnDealtDamage_Event;
 
 }
 

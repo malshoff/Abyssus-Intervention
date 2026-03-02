@@ -36,18 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ThiefsEye_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_ThiefsEye_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ThiefsEye_CharacterMutator_C")
 	}
 	static class UBP_ThiefsEye_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ThiefsEye_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_ThiefsEye_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_ThiefsEye_CharacterMutator_C");
-static_assert(sizeof(UBP_ThiefsEye_CharacterMutator_C) == 0x000120, "Wrong size on UBP_ThiefsEye_CharacterMutator_C");
-static_assert(offsetof(UBP_ThiefsEye_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_ThiefsEye_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_ThiefsEye_CharacterMutator_C, DamageIncrease) == 0x000110, "Member 'UBP_ThiefsEye_CharacterMutator_C::DamageIncrease' has a wrong offset!");
-static_assert(offsetof(UBP_ThiefsEye_CharacterMutator_C, PlayerController) == 0x000118, "Member 'UBP_ThiefsEye_CharacterMutator_C::PlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_ThiefsEye_CharacterMutator_C;
 
 }
 

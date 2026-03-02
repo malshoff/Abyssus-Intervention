@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BP_SpiritPassive6_CharacterMutatorScript.BP_SpiritPassive6_CharacterMutatorScript_C.ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript
-// 0x01C8 (0x01C8 - 0x0000)
+// 0x02F8 (0x02F8 - 0x0000)
 struct BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript final
 {
 public:
@@ -34,66 +34,37 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ARPawnBase*                             K2Node_CustomEvent_Pawn;                           // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0090(0x00C0)()
-	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate; // 0x0150(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue;      // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_2;                 // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_171[0x3];                                      // 0x0171(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_2;     // 0x0178(0x0030)(ContainsInstancedReference)
-	int32                                         CallFunc_GetMutatorRank_ReturnValue_1;             // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URStatusEffectGScript*                  CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class URStatusEffectGScript*                  CallFunc_GetActorStatusEffectFromInstigator_ReturnValue; // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ActorHasStatusEffectFromInstigator_ReturnValue; // 0x01C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGScriptNetRole                               CallFunc_BranchByNetRole_Branches_1;               // 0x01C3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x01C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0090(0x01F0)()
+	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate; // 0x0280(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue;      // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0291(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_292[0x6];                                      // 0x0292(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_2;                 // 0x0298(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A1[0x3];                                      // 0x02A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x02A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_2;     // 0x02A8(0x0030)(ContainsInstancedReference)
+	int32                                         CallFunc_GetMutatorRank_ReturnValue_1;             // 0x02D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x02DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URStatusEffectGScript*                  CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URStatusEffectGScript*                  CallFunc_GetActorStatusEffectFromInstigator_ReturnValue; // 0x02E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x02F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ActorHasStatusEffectFromInstigator_ReturnValue; // 0x02F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGScriptNetRole                               CallFunc_BranchByNetRole_Branches_1;               // 0x02F3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x02F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript) == 0x000008, "Wrong alignment on BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript");
-static_assert(sizeof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript) == 0x0001C8, "Wrong size on BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, EntryPoint) == 0x000000, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, CallFunc_BranchByNetRole_Branches) == 0x000004, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::CallFunc_BranchByNetRole_Branches' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, K2Node_SwitchEnum_CmpSuccess) == 0x000005, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000038, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, K2Node_DynamicCast_AsRPawn_Base) == 0x000068, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, K2Node_DynamicCast_AsRPawn_Base_1) == 0x000078, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, K2Node_DynamicCast_bSuccess_1) == 0x000080, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, K2Node_CustomEvent_Pawn) == 0x000088, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::K2Node_CustomEvent_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, K2Node_CustomEvent_DamageEventData) == 0x000090, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::K2Node_CustomEvent_DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, K2Node_CreateDelegate_OutputDelegate) == 0x000150, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, CallFunc_DamageSourceMaskHasFlag_ReturnValue) == 0x000160, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::CallFunc_DamageSourceMaskHasFlag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, K2Node_DynamicCast_AsRPawn_Base_2) == 0x000168, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::K2Node_DynamicCast_AsRPawn_Base_2' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, K2Node_DynamicCast_bSuccess_2) == 0x000170, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, CallFunc_GetMutatorRank_ReturnValue) == 0x000174, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x000178, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, CallFunc_GetMutatorRank_ReturnValue_1) == 0x0001A8, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::CallFunc_GetMutatorRank_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x0001AC, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x0001B0, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, CallFunc_GetActorStatusEffectFromInstigator_ReturnValue) == 0x0001B8, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::CallFunc_GetActorStatusEffectFromInstigator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, CallFunc_IsValid_ReturnValue) == 0x0001C0, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, CallFunc_IsValid_ReturnValue_1) == 0x0001C1, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, CallFunc_ActorHasStatusEffectFromInstigator_ReturnValue) == 0x0001C2, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::CallFunc_ActorHasStatusEffectFromInstigator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, CallFunc_BranchByNetRole_Branches_1) == 0x0001C3, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::CallFunc_BranchByNetRole_Branches_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript, K2Node_SwitchEnum_CmpSuccess_1) == 0x0001C4, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpiritPassive6_CharacterMutatorScript_C_ExecuteUbergraph_BP_SpiritPassive6_CharacterMutatorScript;
 
 // Function BP_SpiritPassive6_CharacterMutatorScript.BP_SpiritPassive6_CharacterMutatorScript_C.OnDealtDamage_Event
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_SpiritPassive6_CharacterMutatorScript_C_OnDealtDamage_Event final
 {
 public:
 	class ARPawnBase*                             Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_SpiritPassive6_CharacterMutatorScript_C_OnDealtDamage_Event) == 0x000008, "Wrong alignment on BP_SpiritPassive6_CharacterMutatorScript_C_OnDealtDamage_Event");
-static_assert(sizeof(BP_SpiritPassive6_CharacterMutatorScript_C_OnDealtDamage_Event) == 0x0000C8, "Wrong size on BP_SpiritPassive6_CharacterMutatorScript_C_OnDealtDamage_Event");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_OnDealtDamage_Event, Pawn) == 0x000000, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_OnDealtDamage_Event::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_CharacterMutatorScript_C_OnDealtDamage_Event, DamageEventData) == 0x000008, "Member 'BP_SpiritPassive6_CharacterMutatorScript_C_OnDealtDamage_Event::DamageEventData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpiritPassive6_CharacterMutatorScript_C_OnDealtDamage_Event;
 
 }
 

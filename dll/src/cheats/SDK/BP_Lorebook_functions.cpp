@@ -100,6 +100,29 @@ void ABP_Lorebook_C::ExecuteUbergraph_BP_Lorebook(int32 EntryPoint)
 }
 
 
+// Function BP_Lorebook.BP_Lorebook_C.IsShareable
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_Lorebook_C::IsShareable(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Lorebook_C", "IsShareable");
+
+	Params::BP_Lorebook_C_IsShareable Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_Lorebook.BP_Lorebook_C.OnFocus
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -171,6 +194,26 @@ void ABP_Lorebook_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_Lorebook_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Lorebook.BP_Lorebook_C.ShareInteractableActor
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class APlayerController*          PlayerController                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Lorebook_C::ShareInteractableActor(const class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Lorebook_C", "ShareInteractableActor");
+
+	Params::BP_Lorebook_C_ShareInteractableActor Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

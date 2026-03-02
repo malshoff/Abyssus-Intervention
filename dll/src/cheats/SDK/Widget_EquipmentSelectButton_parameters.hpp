@@ -23,9 +23,7 @@ struct Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_Wor
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_EquipmentSelectButton.Widget_EquipmentSelectButton_C.BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -34,9 +32,7 @@ struct Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_Wor
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_EquipmentSelectButton.Widget_EquipmentSelectButton_C.BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -45,12 +41,10 @@ struct Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_Wor
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_EquipmentSelectButton_C_BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_EquipmentSelectButton.Widget_EquipmentSelectButton_C.ExecuteUbergraph_Widget_EquipmentSelectButton
-// 0x01E8 (0x01E8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton final
 {
 public:
@@ -75,29 +69,10 @@ public:
 	class URWeaponCosmeticPrimaryAsset*           K2Node_DynamicCast_AsRWeapon_Cosmetic_Primary_Asset; // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRChallenge                            CallFunc_GetChallengeByRewardAsset_ReturnValue;    // 0x0068(0x0178)()
-	bool                                          CallFunc_ChallengeExists_ReturnValue;              // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRChallenge                            CallFunc_GetChallengeByRewardAsset_ReturnValue;    // 0x0068(0x0188)()
+	bool                                          CallFunc_ChallengeExists_ReturnValue;              // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton) == 0x000008, "Wrong alignment on Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton");
-static_assert(sizeof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton) == 0x0001E8, "Wrong size on Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, EntryPoint) == 0x000000, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000008, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, CallFunc_GetChallengeManager_ReturnValue) == 0x000010, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, K2Node_ComponentBoundEvent_Button_2) == 0x000020, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::K2Node_ComponentBoundEvent_Button_2' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, K2Node_ComponentBoundEvent_Button_1) == 0x000028, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, K2Node_ComponentBoundEvent_Button) == 0x000030, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, CallFunc_ObjectIsA_ReturnValue) == 0x000038, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::CallFunc_ObjectIsA_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, CallFunc_IsLocked_Locked) == 0x000039, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::CallFunc_IsLocked_Locked' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, CallFunc_GetMeshOfDataAsset_PreviewStaticMesh) == 0x000040, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::CallFunc_GetMeshOfDataAsset_PreviewStaticMesh' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, CallFunc_GetMeshOfDataAsset_PreviewSkeletalMesh) == 0x000048, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::CallFunc_GetMeshOfDataAsset_PreviewSkeletalMesh' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, CallFunc_IsValid_ReturnValue_1) == 0x000050, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, CallFunc_IsLocked_Locked_1) == 0x000051, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::CallFunc_IsLocked_Locked_1' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, K2Node_Event_IsDesignTime) == 0x000052, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, K2Node_DynamicCast_AsRWeapon_Cosmetic_Primary_Asset) == 0x000058, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::K2Node_DynamicCast_AsRWeapon_Cosmetic_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, CallFunc_GetChallengeByRewardAsset_ReturnValue) == 0x000068, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::CallFunc_GetChallengeByRewardAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton, CallFunc_ChallengeExists_ReturnValue) == 0x0001E0, "Member 'Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton::CallFunc_ChallengeExists_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_EquipmentSelectButton_C_ExecuteUbergraph_Widget_EquipmentSelectButton;
 
 // Function Widget_EquipmentSelectButton.Widget_EquipmentSelectButton_C.GetMeshOfDataAsset
 // 0x0090 (0x0090 - 0x0000)
@@ -125,24 +100,7 @@ public:
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset) == 0x000008, "Wrong alignment on Widget_EquipmentSelectButton_C_GetMeshOfDataAsset");
-static_assert(sizeof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset) == 0x000090, "Wrong size on Widget_EquipmentSelectButton_C_GetMeshOfDataAsset");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, PreviewStaticMesh) == 0x000000, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::PreviewStaticMesh' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, PreviewSkeletalMesh) == 0x000008, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::PreviewSkeletalMesh' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, Temp_int_Array_Index_Variable) == 0x000010, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, K2Node_DynamicCast_AsRMutator_Primary_Asset) == 0x000018, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::K2Node_DynamicCast_AsRMutator_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, CallFunc_Add_IntInt_ReturnValue) == 0x000024, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, CallFunc_Array_Get_Item) == 0x000030, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, CallFunc_Less_IntInt_ReturnValue) == 0x000068, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue) == 0x000070, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000078, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, K2Node_DynamicCast_AsRMutator_Primary_Asset_1) == 0x000080, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::K2Node_DynamicCast_AsRMutator_Primary_Asset_1' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, K2Node_DynamicCast_bSuccess_1) == 0x000088, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000089, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetMeshOfDataAsset, CallFunc_IsValid_ReturnValue) == 0x00008A, "Member 'Widget_EquipmentSelectButton_C_GetMeshOfDataAsset::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_EquipmentSelectButton_C_GetMeshOfDataAsset;
 
 // Function Widget_EquipmentSelectButton.Widget_EquipmentSelectButton_C.GetPrimaryDataAsset
 // 0x0008 (0x0008 - 0x0000)
@@ -151,12 +109,10 @@ struct Widget_EquipmentSelectButton_C_GetPrimaryDataAsset final
 public:
 	class URPrimaryDataAsset*                     RPrimaryDataAsset;                                 // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_EquipmentSelectButton_C_GetPrimaryDataAsset) == 0x000008, "Wrong alignment on Widget_EquipmentSelectButton_C_GetPrimaryDataAsset");
-static_assert(sizeof(Widget_EquipmentSelectButton_C_GetPrimaryDataAsset) == 0x000008, "Wrong size on Widget_EquipmentSelectButton_C_GetPrimaryDataAsset");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetPrimaryDataAsset, RPrimaryDataAsset) == 0x000000, "Member 'Widget_EquipmentSelectButton_C_GetPrimaryDataAsset::RPrimaryDataAsset' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_EquipmentSelectButton_C_GetPrimaryDataAsset;
 
 // Function Widget_EquipmentSelectButton.Widget_EquipmentSelectButton_C.GetToolTipWidget
-// 0x0050 (0x0050 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct Widget_EquipmentSelectButton_C_GetToolTipWidget final
 {
 public:
@@ -170,19 +126,10 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetDescription_ReturnValue;               // 0x0038(0x0010)()
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URCosmeticPrimaryAsset*                 CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_EquipmentSelectButton_C_GetToolTipWidget) == 0x000008, "Wrong alignment on Widget_EquipmentSelectButton_C_GetToolTipWidget");
-static_assert(sizeof(Widget_EquipmentSelectButton_C_GetToolTipWidget) == 0x000050, "Wrong size on Widget_EquipmentSelectButton_C_GetToolTipWidget");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetToolTipWidget, ReturnValue) == 0x000000, "Member 'Widget_EquipmentSelectButton_C_GetToolTipWidget::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetToolTipWidget, CreatedTooltip) == 0x000008, "Member 'Widget_EquipmentSelectButton_C_GetToolTipWidget::CreatedTooltip' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetToolTipWidget, CallFunc_GetOwningPlayer_ReturnValue) == 0x000010, "Member 'Widget_EquipmentSelectButton_C_GetToolTipWidget::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetToolTipWidget, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'Widget_EquipmentSelectButton_C_GetToolTipWidget::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetToolTipWidget, CallFunc_Create_ReturnValue) == 0x000020, "Member 'Widget_EquipmentSelectButton_C_GetToolTipWidget::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetToolTipWidget, K2Node_DynamicCast_AsRCosmetic_Category_Primary_Asset) == 0x000028, "Member 'Widget_EquipmentSelectButton_C_GetToolTipWidget::K2Node_DynamicCast_AsRCosmetic_Category_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetToolTipWidget, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'Widget_EquipmentSelectButton_C_GetToolTipWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetToolTipWidget, CallFunc_GetDescription_ReturnValue) == 0x000038, "Member 'Widget_EquipmentSelectButton_C_GetToolTipWidget::CallFunc_GetDescription_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_GetToolTipWidget, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000048, "Member 'Widget_EquipmentSelectButton_C_GetToolTipWidget::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_EquipmentSelectButton_C_GetToolTipWidget;
 
 // Function Widget_EquipmentSelectButton.Widget_EquipmentSelectButton_C.HideUnlockInfo
 // 0x0028 (0x0028 - 0x0000)
@@ -201,17 +148,7 @@ public:
 	bool                                          CallFunc_IsLoadoutOptionUnlocked_ReturnValue;      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_EquipmentSelectButton_C_HideUnlockInfo) == 0x000008, "Wrong alignment on Widget_EquipmentSelectButton_C_HideUnlockInfo");
-static_assert(sizeof(Widget_EquipmentSelectButton_C_HideUnlockInfo) == 0x000028, "Wrong size on Widget_EquipmentSelectButton_C_HideUnlockInfo");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_HideUnlockInfo, Hide) == 0x000000, "Member 'Widget_EquipmentSelectButton_C_HideUnlockInfo::Hide' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_HideUnlockInfo, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'Widget_EquipmentSelectButton_C_HideUnlockInfo::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_HideUnlockInfo, K2Node_DynamicCast_AsRWeapon_Cosmetic_Primary_Asset) == 0x000008, "Member 'Widget_EquipmentSelectButton_C_HideUnlockInfo::K2Node_DynamicCast_AsRWeapon_Cosmetic_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_HideUnlockInfo, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_EquipmentSelectButton_C_HideUnlockInfo::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_HideUnlockInfo, CallFunc_IsWeaponPaintUnlocked_ReturnValue) == 0x000011, "Member 'Widget_EquipmentSelectButton_C_HideUnlockInfo::CallFunc_IsWeaponPaintUnlocked_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_HideUnlockInfo, CallFunc_IsValid_ReturnValue_1) == 0x000012, "Member 'Widget_EquipmentSelectButton_C_HideUnlockInfo::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_HideUnlockInfo, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000018, "Member 'Widget_EquipmentSelectButton_C_HideUnlockInfo::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_HideUnlockInfo, CallFunc_IsLoadoutOptionUnlocked_ReturnValue) == 0x000020, "Member 'Widget_EquipmentSelectButton_C_HideUnlockInfo::CallFunc_IsLoadoutOptionUnlocked_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_HideUnlockInfo, CallFunc_IsValid_ReturnValue_2) == 0x000021, "Member 'Widget_EquipmentSelectButton_C_HideUnlockInfo::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_EquipmentSelectButton_C_HideUnlockInfo;
 
 // Function Widget_EquipmentSelectButton.Widget_EquipmentSelectButton_C.IsLocked
 // 0x0002 (0x0002 - 0x0000)
@@ -221,13 +158,10 @@ public:
 	bool                                          Locked;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_EquipmentSelectButton_C_IsLocked) == 0x000001, "Wrong alignment on Widget_EquipmentSelectButton_C_IsLocked");
-static_assert(sizeof(Widget_EquipmentSelectButton_C_IsLocked) == 0x000002, "Wrong size on Widget_EquipmentSelectButton_C_IsLocked");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_IsLocked, Locked) == 0x000000, "Member 'Widget_EquipmentSelectButton_C_IsLocked::Locked' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_IsLocked, CallFunc_IsVisible_ReturnValue) == 0x000001, "Member 'Widget_EquipmentSelectButton_C_IsLocked::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_EquipmentSelectButton_C_IsLocked;
 
 // Function Widget_EquipmentSelectButton.Widget_EquipmentSelectButton_C.IsWeaponPaintUnlocked
-// 0x01C8 (0x01C8 - 0x0000)
+// 0x01D8 (0x01D8 - 0x0000)
 struct Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked final
 {
 public:
@@ -244,25 +178,11 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_GetOwningPlayerPawn_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue;          // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FRChallenge                            CallFunc_GetChallengeByRewardAsset_ReturnValue;    // 0x0048(0x0178)()
-	bool                                          CallFunc_IsChallengeCompleted_ReturnValue;         // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ChallengeExists_ReturnValue;              // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRChallenge                            CallFunc_GetChallengeByRewardAsset_ReturnValue;    // 0x0048(0x0188)()
+	bool                                          CallFunc_IsChallengeCompleted_ReturnValue;         // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ChallengeExists_ReturnValue;              // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked) == 0x000008, "Wrong alignment on Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked");
-static_assert(sizeof(Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked) == 0x0001C8, "Wrong size on Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked, Asset) == 0x000000, "Member 'Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked::Asset' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked, ReturnValue) == 0x000008, "Member 'Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked, K2Node_DynamicCast_AsRWeapon_Cosmetic_Primary_Asset) == 0x000010, "Member 'Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked::K2Node_DynamicCast_AsRWeapon_Cosmetic_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked, CallFunc_IsValid_ReturnValue) == 0x000019, "Member 'Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked, CallFunc_GetCurrentWeaponPAInView_RWeaponPA) == 0x000020, "Member 'Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked::CallFunc_GetCurrentWeaponPAInView_RWeaponPA' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000028, "Member 'Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked, CallFunc_IsLoadoutOptionUnlocked_ReturnValue) == 0x000030, "Member 'Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked::CallFunc_IsLoadoutOptionUnlocked_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000038, "Member 'Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked, CallFunc_GetChallengeManager_ReturnValue) == 0x000040, "Member 'Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked, CallFunc_GetChallengeByRewardAsset_ReturnValue) == 0x000048, "Member 'Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked::CallFunc_GetChallengeByRewardAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked, CallFunc_IsChallengeCompleted_ReturnValue) == 0x0001C0, "Member 'Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked::CallFunc_IsChallengeCompleted_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked, CallFunc_ChallengeExists_ReturnValue) == 0x0001C1, "Member 'Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked::CallFunc_ChallengeExists_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_EquipmentSelectButton_C_IsWeaponPaintUnlocked;
 
 // Function Widget_EquipmentSelectButton.Widget_EquipmentSelectButton_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -271,9 +191,7 @@ struct Widget_EquipmentSelectButton_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_EquipmentSelectButton_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_EquipmentSelectButton_C_PreConstruct");
-static_assert(sizeof(Widget_EquipmentSelectButton_C_PreConstruct) == 0x000001, "Wrong size on Widget_EquipmentSelectButton_C_PreConstruct");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_EquipmentSelectButton_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_EquipmentSelectButton_C_PreConstruct;
 
 // Function Widget_EquipmentSelectButton.Widget_EquipmentSelectButton_C.Update
 // 0x0018 (0x0018 - 0x0000)
@@ -285,11 +203,7 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class URPrimaryDataAsset*                     Asset_Local;                                       // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_EquipmentSelectButton_C_Update) == 0x000008, "Wrong alignment on Widget_EquipmentSelectButton_C_Update");
-static_assert(sizeof(Widget_EquipmentSelectButton_C_Update) == 0x000018, "Wrong size on Widget_EquipmentSelectButton_C_Update");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_Update, Asset) == 0x000000, "Member 'Widget_EquipmentSelectButton_C_Update::Asset' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_Update, ForceLock) == 0x000008, "Member 'Widget_EquipmentSelectButton_C_Update::ForceLock' has a wrong offset!");
-static_assert(offsetof(Widget_EquipmentSelectButton_C_Update, Asset_Local) == 0x000010, "Member 'Widget_EquipmentSelectButton_C_Update::Asset_Local' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_EquipmentSelectButton_C_Update;
 
 }
 

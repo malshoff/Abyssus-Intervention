@@ -10,47 +10,43 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "MovieSceneTracks_structs.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
 {
 
 // Class TakeMovieScene.MovieSceneTakeSection
-// 0x0750 (0x0848 - 0x00F8)
+// 0x0750 (0x0858 - 0x0108)
 class UMovieSceneTakeSection final : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneIntegerChannel              HoursCurve;                                        // 0x00F8(0x0108)(NativeAccessSpecifierPublic)
-	struct FMovieSceneIntegerChannel              MinutesCurve;                                      // 0x0200(0x0108)(NativeAccessSpecifierPublic)
-	struct FMovieSceneIntegerChannel              SecondsCurve;                                      // 0x0308(0x0108)(NativeAccessSpecifierPublic)
-	struct FMovieSceneIntegerChannel              FramesCurve;                                       // 0x0410(0x0108)(NativeAccessSpecifierPublic)
-	struct FMovieSceneFloatChannel                SubFramesCurve;                                    // 0x0518(0x0110)(NativeAccessSpecifierPublic)
-	struct FMovieSceneFloatChannel                RateCurve;                                         // 0x0628(0x0110)(NativeAccessSpecifierPublic)
-	struct FMovieSceneStringChannel               Slate;                                             // 0x0738(0x0110)(NativeAccessSpecifierPublic)
+	struct FMovieSceneIntegerChannel              HoursCurve;                                        // 0x0108(0x0108)(NativeAccessSpecifierPublic)
+	struct FMovieSceneIntegerChannel              MinutesCurve;                                      // 0x0210(0x0108)(NativeAccessSpecifierPublic)
+	struct FMovieSceneIntegerChannel              SecondsCurve;                                      // 0x0318(0x0108)(NativeAccessSpecifierPublic)
+	struct FMovieSceneIntegerChannel              FramesCurve;                                       // 0x0420(0x0108)(NativeAccessSpecifierPublic)
+	struct FMovieSceneFloatChannel                SubFramesCurve;                                    // 0x0528(0x0110)(NativeAccessSpecifierPublic)
+	struct FMovieSceneFloatChannel                RateCurve;                                         // 0x0638(0x0110)(NativeAccessSpecifierPublic)
+	struct FMovieSceneStringChannel               Slate;                                             // 0x0748(0x0110)(NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneTakeSection">();
+		STATIC_CLASS_IMPL("MovieSceneTakeSection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneTakeSection")
 	}
 	static class UMovieSceneTakeSection* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneTakeSection>();
 	}
 };
-static_assert(alignof(UMovieSceneTakeSection) == 0x000008, "Wrong alignment on UMovieSceneTakeSection");
-static_assert(sizeof(UMovieSceneTakeSection) == 0x000848, "Wrong size on UMovieSceneTakeSection");
-static_assert(offsetof(UMovieSceneTakeSection, HoursCurve) == 0x0000F8, "Member 'UMovieSceneTakeSection::HoursCurve' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSection, MinutesCurve) == 0x000200, "Member 'UMovieSceneTakeSection::MinutesCurve' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSection, SecondsCurve) == 0x000308, "Member 'UMovieSceneTakeSection::SecondsCurve' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSection, FramesCurve) == 0x000410, "Member 'UMovieSceneTakeSection::FramesCurve' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSection, SubFramesCurve) == 0x000518, "Member 'UMovieSceneTakeSection::SubFramesCurve' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSection, RateCurve) == 0x000628, "Member 'UMovieSceneTakeSection::RateCurve' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSection, Slate) == 0x000738, "Member 'UMovieSceneTakeSection::Slate' has a wrong offset!");
+DUMPER7_ASSERTS_UMovieSceneTakeSection;
 
 // Class TakeMovieScene.MovieSceneTakeSettings
 // 0x0070 (0x0098 - 0x0028)
@@ -68,43 +64,41 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneTakeSettings">();
+		STATIC_CLASS_IMPL("MovieSceneTakeSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneTakeSettings")
 	}
 	static class UMovieSceneTakeSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneTakeSettings>();
 	}
 };
-static_assert(alignof(UMovieSceneTakeSettings) == 0x000008, "Wrong alignment on UMovieSceneTakeSettings");
-static_assert(sizeof(UMovieSceneTakeSettings) == 0x000098, "Wrong size on UMovieSceneTakeSettings");
-static_assert(offsetof(UMovieSceneTakeSettings, HoursName) == 0x000028, "Member 'UMovieSceneTakeSettings::HoursName' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSettings, MinutesName) == 0x000038, "Member 'UMovieSceneTakeSettings::MinutesName' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSettings, SecondsName) == 0x000048, "Member 'UMovieSceneTakeSettings::SecondsName' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSettings, FramesName) == 0x000058, "Member 'UMovieSceneTakeSettings::FramesName' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSettings, SubFramesName) == 0x000068, "Member 'UMovieSceneTakeSettings::SubFramesName' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSettings, RateName) == 0x000078, "Member 'UMovieSceneTakeSettings::RateName' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSettings, SlateName) == 0x000088, "Member 'UMovieSceneTakeSettings::SlateName' has a wrong offset!");
+DUMPER7_ASSERTS_UMovieSceneTakeSettings;
 
 // Class TakeMovieScene.MovieSceneTakeTrack
-// 0x0010 (0x0108 - 0x00F8)
+// 0x0010 (0x0120 - 0x0110)
 class UMovieSceneTakeTrack final : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00F8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0110(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneTakeTrack">();
+		STATIC_CLASS_IMPL("MovieSceneTakeTrack")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneTakeTrack")
 	}
 	static class UMovieSceneTakeTrack* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneTakeTrack>();
 	}
 };
-static_assert(alignof(UMovieSceneTakeTrack) == 0x000008, "Wrong alignment on UMovieSceneTakeTrack");
-static_assert(sizeof(UMovieSceneTakeTrack) == 0x000108, "Wrong size on UMovieSceneTakeTrack");
-static_assert(offsetof(UMovieSceneTakeTrack, Sections) == 0x0000F8, "Member 'UMovieSceneTakeTrack::Sections' has a wrong offset!");
+DUMPER7_ASSERTS_UMovieSceneTakeTrack;
 
 }
 

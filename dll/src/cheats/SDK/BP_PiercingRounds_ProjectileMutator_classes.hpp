@@ -39,19 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_PiercingRounds_ProjectileMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_PiercingRounds_ProjectileMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_PiercingRounds_ProjectileMutator_C")
 	}
 	static class UBP_PiercingRounds_ProjectileMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_PiercingRounds_ProjectileMutator_C>();
 	}
 };
-static_assert(alignof(UBP_PiercingRounds_ProjectileMutator_C) == 0x000008, "Wrong alignment on UBP_PiercingRounds_ProjectileMutator_C");
-static_assert(sizeof(UBP_PiercingRounds_ProjectileMutator_C) == 0x0000F0, "Wrong size on UBP_PiercingRounds_ProjectileMutator_C");
-static_assert(offsetof(UBP_PiercingRounds_ProjectileMutator_C, UberGraphFrame) == 0x0000D0, "Member 'UBP_PiercingRounds_ProjectileMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_PiercingRounds_ProjectileMutator_C, PierceCount) == 0x0000D8, "Member 'UBP_PiercingRounds_ProjectileMutator_C::PierceCount' has a wrong offset!");
-static_assert(offsetof(UBP_PiercingRounds_ProjectileMutator_C, PierceMultiplierPerHit) == 0x0000E0, "Member 'UBP_PiercingRounds_ProjectileMutator_C::PierceMultiplierPerHit' has a wrong offset!");
-static_assert(offsetof(UBP_PiercingRounds_ProjectileMutator_C, CurrentPierceMultiplier) == 0x0000E8, "Member 'UBP_PiercingRounds_ProjectileMutator_C::CurrentPierceMultiplier' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_PiercingRounds_ProjectileMutator_C;
 
 }
 

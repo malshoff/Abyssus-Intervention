@@ -29,21 +29,23 @@ public:
 	void ExecuteUbergraph_BP_WindPassive6_CharacterMutator(int32 EntryPoint);
 	void K2_ActivateScript();
 	void OnMutatorAdded(class URPlayerGScriptComponent* Owner, class URMutatorPrimaryAsset* MutatorPrimaryAsset);
-	void OnWindburst(const struct FVector& Location, double Radius, TArray<struct FHitResult>& Hits);
+	void OnWindburst(const struct FVector& Location, double Radius, const TArray<class AActor*>& Hits);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_WindPassive6_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_WindPassive6_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_WindPassive6_CharacterMutator_C")
 	}
 	static class UBP_WindPassive6_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_WindPassive6_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_WindPassive6_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_WindPassive6_CharacterMutator_C");
-static_assert(sizeof(UBP_WindPassive6_CharacterMutator_C) == 0x000110, "Wrong size on UBP_WindPassive6_CharacterMutator_C");
-static_assert(offsetof(UBP_WindPassive6_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_WindPassive6_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_WindPassive6_CharacterMutator_C;
 
 }
 

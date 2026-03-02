@@ -11,39 +11,39 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_structs.hpp"
 #include "UMG_classes.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_ChallengeComplete_HUD.Widget_ChallengeComplete_HUD_C
-// 0x0220 (0x04F0 - 0x02D0)
+// 0x0230 (0x0570 - 0x0340)
 class UWidget_ChallengeComplete_HUD_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FadeOutAnimation;                                  // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ActivationAnimation;                               // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 GlowVFX;                                           // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 GlowVFX_2;                                         // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 GlowVFX_HorizontalBar;                             // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_RewardInfo;                          // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           ProgressBar;                                       // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ProgressionBarBackground;                          // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Text_ChallengeCompleted;                           // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Text_ChallengeName;                                // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_RewardInfo;                              // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 TrailVFX;                                          // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	double                                        DisplayTime;                                       // 0x0340(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FadeOutStartTime;                                  // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           Timer;                                             // 0x0350(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        FadeOutTime;                                       // 0x0358(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FRChallenge>                    CompletedChallengesQueue;                          // 0x0360(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FRChallenge                            CurrentChallenge;                                  // 0x0370(0x0178)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         MaxChallengesQueued;                               // 0x04E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 TrailVFX;                                          // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_RewardInfo;                              // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text_ChallengeName;                                // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text_ChallengeCompleted;                           // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ProgressionBarBackground;                          // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           ProgressBar;                                       // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_RewardInfo;                          // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 GlowVFX_HorizontalBar;                             // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 GlowVFX_2;                                         // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 GlowVFX;                                           // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ActivationAnimation;                               // 0x03A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FadeOutAnimation;                                  // 0x03A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	double                                        DisplayTime;                                       // 0x03B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FadeOutStartTime;                                  // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           Timer;                                             // 0x03C0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        FadeOutTime;                                       // 0x03C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FRChallenge>                    CompletedChallengesQueue;                          // 0x03D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FRChallenge                            CurrentChallenge;                                  // 0x03E0(0x0188)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         MaxChallengesQueued;                               // 0x0568(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddChallengeToQueue(const struct FRChallenge& Challenge);
@@ -58,36 +58,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_ChallengeComplete_HUD_C">();
+		BP_STATIC_CLASS_IMPL("Widget_ChallengeComplete_HUD_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_ChallengeComplete_HUD_C")
 	}
 	static class UWidget_ChallengeComplete_HUD_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_ChallengeComplete_HUD_C>();
 	}
 };
-static_assert(alignof(UWidget_ChallengeComplete_HUD_C) == 0x000008, "Wrong alignment on UWidget_ChallengeComplete_HUD_C");
-static_assert(sizeof(UWidget_ChallengeComplete_HUD_C) == 0x0004F0, "Wrong size on UWidget_ChallengeComplete_HUD_C");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_ChallengeComplete_HUD_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, FadeOutAnimation) == 0x0002D8, "Member 'UWidget_ChallengeComplete_HUD_C::FadeOutAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, ActivationAnimation) == 0x0002E0, "Member 'UWidget_ChallengeComplete_HUD_C::ActivationAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, GlowVFX) == 0x0002E8, "Member 'UWidget_ChallengeComplete_HUD_C::GlowVFX' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, GlowVFX_2) == 0x0002F0, "Member 'UWidget_ChallengeComplete_HUD_C::GlowVFX_2' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, GlowVFX_HorizontalBar) == 0x0002F8, "Member 'UWidget_ChallengeComplete_HUD_C::GlowVFX_HorizontalBar' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, HorizontalBox_RewardInfo) == 0x000300, "Member 'UWidget_ChallengeComplete_HUD_C::HorizontalBox_RewardInfo' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, InvalidationBox_0) == 0x000308, "Member 'UWidget_ChallengeComplete_HUD_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, ProgressBar) == 0x000310, "Member 'UWidget_ChallengeComplete_HUD_C::ProgressBar' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, ProgressionBarBackground) == 0x000318, "Member 'UWidget_ChallengeComplete_HUD_C::ProgressionBarBackground' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, Text_ChallengeCompleted) == 0x000320, "Member 'UWidget_ChallengeComplete_HUD_C::Text_ChallengeCompleted' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, Text_ChallengeName) == 0x000328, "Member 'UWidget_ChallengeComplete_HUD_C::Text_ChallengeName' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, TextBlock_RewardInfo) == 0x000330, "Member 'UWidget_ChallengeComplete_HUD_C::TextBlock_RewardInfo' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, TrailVFX) == 0x000338, "Member 'UWidget_ChallengeComplete_HUD_C::TrailVFX' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, DisplayTime) == 0x000340, "Member 'UWidget_ChallengeComplete_HUD_C::DisplayTime' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, FadeOutStartTime) == 0x000348, "Member 'UWidget_ChallengeComplete_HUD_C::FadeOutStartTime' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, Timer) == 0x000350, "Member 'UWidget_ChallengeComplete_HUD_C::Timer' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, FadeOutTime) == 0x000358, "Member 'UWidget_ChallengeComplete_HUD_C::FadeOutTime' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, CompletedChallengesQueue) == 0x000360, "Member 'UWidget_ChallengeComplete_HUD_C::CompletedChallengesQueue' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, CurrentChallenge) == 0x000370, "Member 'UWidget_ChallengeComplete_HUD_C::CurrentChallenge' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeComplete_HUD_C, MaxChallengesQueued) == 0x0004E8, "Member 'UWidget_ChallengeComplete_HUD_C::MaxChallengesQueued' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_ChallengeComplete_HUD_C;
 
 }
 

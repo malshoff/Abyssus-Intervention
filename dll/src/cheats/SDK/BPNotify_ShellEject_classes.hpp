@@ -26,15 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPNotify_ShellEject_C">();
+		BP_STATIC_CLASS_IMPL("BPNotify_ShellEject_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPNotify_ShellEject_C")
 	}
 	static class UBPNotify_ShellEject_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPNotify_ShellEject_C>();
 	}
 };
-static_assert(alignof(UBPNotify_ShellEject_C) == 0x000008, "Wrong alignment on UBPNotify_ShellEject_C");
-static_assert(sizeof(UBPNotify_ShellEject_C) == 0x000038, "Wrong size on UBPNotify_ShellEject_C");
+DUMPER7_ASSERTS_UBPNotify_ShellEject_C;
 
 }
 

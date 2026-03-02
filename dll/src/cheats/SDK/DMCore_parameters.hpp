@@ -25,11 +25,7 @@ public:
 	class AActor*                                 OwningActor;                                       // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UActorComponent*                        ReturnValue;                                       // 0x0038(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMComponentRefFunctions_ResolveComponentRef) == 0x000008, "Wrong alignment on DMComponentRefFunctions_ResolveComponentRef");
-static_assert(sizeof(DMComponentRefFunctions_ResolveComponentRef) == 0x000040, "Wrong size on DMComponentRefFunctions_ResolveComponentRef");
-static_assert(offsetof(DMComponentRefFunctions_ResolveComponentRef, ComponentRef) == 0x000000, "Member 'DMComponentRefFunctions_ResolveComponentRef::ComponentRef' has a wrong offset!");
-static_assert(offsetof(DMComponentRefFunctions_ResolveComponentRef, OwningActor) == 0x000030, "Member 'DMComponentRefFunctions_ResolveComponentRef::OwningActor' has a wrong offset!");
-static_assert(offsetof(DMComponentRefFunctions_ResolveComponentRef, ReturnValue) == 0x000038, "Member 'DMComponentRefFunctions_ResolveComponentRef::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMComponentRefFunctions_ResolveComponentRef;
 
 }
 

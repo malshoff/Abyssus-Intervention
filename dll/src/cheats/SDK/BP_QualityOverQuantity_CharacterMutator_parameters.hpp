@@ -24,11 +24,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_QualityOverQuantity_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_QualityOverQuantity_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_QualityOverQuantity_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_QualityOverQuantity_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_QualityOverQuantity_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_QualityOverQuantity_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_QualityOverQuantity_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_QualityOverQuantity_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_QualityOverQuantity_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_QualityOverQuantity_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_QualityOverQuantity_CharacterMutator_C_GetMutatorDescription;
 
 }
 

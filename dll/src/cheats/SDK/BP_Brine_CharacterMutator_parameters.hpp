@@ -18,7 +18,7 @@ namespace SDK::Params
 {
 
 // Function BP_Brine_CharacterMutator.BP_Brine_CharacterMutator_C.ExecuteUbergraph_BP_Brine_CharacterMutator
-// 0x0320 (0x0320 - 0x0000)
+// 0x0330 (0x0330 - 0x0000)
 struct BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator final
 {
 public:
@@ -62,57 +62,17 @@ public:
 	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_3;      // 0x0248(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_SelectVector_ReturnValue;                 // 0x0260(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_4;      // 0x0278(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0290(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URGTask_SpawnAreaEffect*                CallFunc_SpawnAreaEffect_ReturnValue;              // 0x02F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2F9[0x7];                                      // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast; // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast_1; // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_RSpawnSoundAtLocation_ReturnValue;        // 0x0290(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_298[0x8];                                      // 0x0298(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x02A0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URGTask_SpawnAreaEffect*                CallFunc_SpawnAreaEffect_ReturnValue;              // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_309[0x7];                                      // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast; // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x0318(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast_1; // 0x0320(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator) == 0x000010, "Wrong alignment on BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator");
-static_assert(sizeof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator) == 0x000320, "Wrong size on BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_GetMutatorRank_ReturnValue) == 0x000004, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x000008, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x00000C, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, K2Node_CustomEvent_GroundEffect) == 0x000020, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::K2Node_CustomEvent_GroundEffect' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x000028, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, Temp_object_Variable) == 0x000038, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000040, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_GetFirstScriptOfType_ReturnValue) == 0x000070, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_GetFirstScriptOfType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, K2Node_DynamicCast_AsBP_Anchor_Character_Mutator) == 0x000078, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::K2Node_DynamicCast_AsBP_Anchor_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000080, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_2) == 0x000084, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000098, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x0000C8, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_GetActorForwardVector_ReturnValue) == 0x0000F8, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_GetActorForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000110, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000118, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000120, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000138, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Vector_One_ReturnValue) == 0x000150, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Vector_One_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, K2Node_CustomEvent_Script) == 0x000168, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::K2Node_CustomEvent_Script' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Conv_DoubleToVector_ReturnValue_1) == 0x000170, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Conv_DoubleToVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_GetMutableFloatCurrentValue_ReturnValue) == 0x000188, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_GetMutableFloatCurrentValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_SelectFloat_ReturnValue) == 0x000190, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Conv_DoubleToVector_ReturnValue_2) == 0x000198, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Conv_DoubleToVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Conv_DoubleToVector_ReturnValue_3) == 0x0001B0, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Conv_DoubleToVector_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Multiply_VectorVector_ReturnValue) == 0x0001C8, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0001E0, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x0001E8, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Conv_DoubleToVector_ReturnValue_4) == 0x000200, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Conv_DoubleToVector_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Add_VectorVector_ReturnValue) == 0x000218, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Multiply_VectorVector_ReturnValue_2) == 0x000230, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Multiply_VectorVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Multiply_VectorVector_ReturnValue_3) == 0x000248, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Multiply_VectorVector_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_SelectVector_ReturnValue) == 0x000260, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_SelectVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Multiply_VectorVector_ReturnValue_4) == 0x000278, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Multiply_VectorVector_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_MakeTransform_ReturnValue) == 0x000290, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_SpawnAreaEffect_ReturnValue) == 0x0002F0, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_SpawnAreaEffect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_IsValid_ReturnValue) == 0x0002F8, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast) == 0x000300, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x000308, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator, CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast_1) == 0x000310, "Member 'BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator::CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Brine_CharacterMutator_C_ExecuteUbergraph_BP_Brine_CharacterMutator;
 
 // Function BP_Brine_CharacterMutator.BP_Brine_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -124,11 +84,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_Brine_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_Brine_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_Brine_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_Brine_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_Brine_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_Brine_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_Brine_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Brine_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_Brine_CharacterMutator.BP_Brine_CharacterMutator_C.OnFireAbilityFinished
 // 0x0008 (0x0008 - 0x0000)
@@ -137,9 +93,7 @@ struct BP_Brine_CharacterMutator_C_OnFireAbilityFinished final
 public:
 	class UBP_Anchor_CharacterMutator_C*          Script;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Brine_CharacterMutator_C_OnFireAbilityFinished) == 0x000008, "Wrong alignment on BP_Brine_CharacterMutator_C_OnFireAbilityFinished");
-static_assert(sizeof(BP_Brine_CharacterMutator_C_OnFireAbilityFinished) == 0x000008, "Wrong size on BP_Brine_CharacterMutator_C_OnFireAbilityFinished");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_OnFireAbilityFinished, Script) == 0x000000, "Member 'BP_Brine_CharacterMutator_C_OnFireAbilityFinished::Script' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Brine_CharacterMutator_C_OnFireAbilityFinished;
 
 // Function BP_Brine_CharacterMutator.BP_Brine_CharacterMutator_C.OnGroundEffectSpawned_8E587E044E1E6C9F7475419D3B2607DF
 // 0x0008 (0x0008 - 0x0000)
@@ -148,9 +102,7 @@ struct BP_Brine_CharacterMutator_C_OnGroundEffectSpawned_8E587E044E1E6C9F7475419
 public:
 	class ARAreaEffect*                           GroundEffect;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Brine_CharacterMutator_C_OnGroundEffectSpawned_8E587E044E1E6C9F7475419D3B2607DF) == 0x000008, "Wrong alignment on BP_Brine_CharacterMutator_C_OnGroundEffectSpawned_8E587E044E1E6C9F7475419D3B2607DF");
-static_assert(sizeof(BP_Brine_CharacterMutator_C_OnGroundEffectSpawned_8E587E044E1E6C9F7475419D3B2607DF) == 0x000008, "Wrong size on BP_Brine_CharacterMutator_C_OnGroundEffectSpawned_8E587E044E1E6C9F7475419D3B2607DF");
-static_assert(offsetof(BP_Brine_CharacterMutator_C_OnGroundEffectSpawned_8E587E044E1E6C9F7475419D3B2607DF, GroundEffect) == 0x000000, "Member 'BP_Brine_CharacterMutator_C_OnGroundEffectSpawned_8E587E044E1E6C9F7475419D3B2607DF::GroundEffect' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Brine_CharacterMutator_C_OnGroundEffectSpawned_8E587E044E1E6C9F7475419D3B2607DF;
 
 }
 

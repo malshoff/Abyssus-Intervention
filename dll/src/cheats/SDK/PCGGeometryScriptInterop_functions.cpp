@@ -47,7 +47,7 @@ void UPCGDynamicMeshData::K2_Initialize(class UDynamicMesh* InMesh, const TArray
 
 
 // Function PCGGeometryScriptInterop.PCGDynamicMeshData.SetMaterials
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<class UMaterialInterface*>&InMaterials                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -72,7 +72,7 @@ void UPCGDynamicMeshData::SetMaterials(const TArray<class UMaterialInterface*>& 
 
 
 // Function PCGGeometryScriptInterop.PCGGeometryBlueprintElement.ProcessDynamicMesh
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (RequiredAPI, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UDynamicMesh*                     InDynMesh                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class FString>*                  OutTags                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
@@ -96,7 +96,7 @@ void UPCGGeometryBlueprintElement::ProcessDynamicMesh(class UDynamicMesh* InDynM
 
 
 // Function PCGGeometryScriptInterop.PCGGeometryBlueprintElement.CopyOrStealInputData
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FPCGTaggedData&            InTaggedData                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class UPCGDynamicMeshData*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

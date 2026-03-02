@@ -130,6 +130,29 @@ void ABP_WeaponWorkbench2_C::HideHighlight()
 }
 
 
+// Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.IsShareable
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_WeaponWorkbench2_C::IsShareable(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeaponWorkbench2_C", "IsShareable");
+
+	Params::BP_WeaponWorkbench2_C_IsShareable Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.IsWeaponPaintUnlocked
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -459,6 +482,20 @@ void ABP_WeaponWorkbench2_C::SetLightIntesity(double Alpha)
 }
 
 
+// Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.SetStaticPreviewMeshState
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void ABP_WeaponWorkbench2_C::SetStaticPreviewMeshState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeaponWorkbench2_C", "SetStaticPreviewMeshState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.SetupHighlight
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -470,6 +507,26 @@ void ABP_WeaponWorkbench2_C::SetupHighlight()
 		Func = Class->GetFunction("BP_WeaponWorkbench2_C", "SetupHighlight");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_WeaponWorkbench2.BP_WeaponWorkbench2_C.ShareInteractableActor
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class APlayerController*          PlayerController                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_WeaponWorkbench2_C::ShareInteractableActor(const class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_WeaponWorkbench2_C", "ShareInteractableActor");
+
+	Params::BP_WeaponWorkbench2_C_ShareInteractableActor Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

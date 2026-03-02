@@ -24,9 +24,7 @@ struct ABP_CameraRig_C_AnimGraph final
 public:
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_CameraRig_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_CameraRig_C_AnimGraph");
-static_assert(sizeof(ABP_CameraRig_C_AnimGraph) == 0x000010, "Wrong size on ABP_CameraRig_C_AnimGraph");
-static_assert(offsetof(ABP_CameraRig_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'ABP_CameraRig_C_AnimGraph::AnimGraph_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_CameraRig_C_AnimGraph;
 
 // Function ABP_CameraRig.ABP_CameraRig_C.ExecuteUbergraph_ABP_CameraRig
 // 0x0180 (0x0180 - 0x0000)
@@ -48,20 +46,7 @@ public:
 	struct FHitResult                             CallFunc_K2_SetRelativeLocationAndRotation_SweepHitResult; // 0x0078(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	class ARPlayerPawn*                           K2Node_CustomEvent_Player;                         // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig) == 0x000008, "Wrong alignment on ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig");
-static_assert(sizeof(ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig) == 0x000180, "Wrong size on ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig");
-static_assert(offsetof(ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig, EntryPoint) == 0x000000, "Member 'ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig, K2Node_CreateDelegate_OutputDelegate_1) == 0x000014, "Member 'ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig, CallFunc_TryGetPawnOwner_ReturnValue) == 0x000028, "Member 'ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000030, "Member 'ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig, K2Node_CustomEvent_Player_2) == 0x000040, "Member 'ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig::K2Node_CustomEvent_Player_2' has a wrong offset!");
-static_assert(offsetof(ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig, K2Node_CreateDelegate_OutputDelegate_2) == 0x000048, "Member 'ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000058, "Member 'ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig, K2Node_CustomEvent_Player_1) == 0x000070, "Member 'ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig::K2Node_CustomEvent_Player_1' has a wrong offset!");
-static_assert(offsetof(ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig, CallFunc_K2_SetRelativeLocationAndRotation_SweepHitResult) == 0x000078, "Member 'ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig::CallFunc_K2_SetRelativeLocationAndRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig, K2Node_CustomEvent_Player) == 0x000178, "Member 'ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig::K2Node_CustomEvent_Player' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_CameraRig_C_ExecuteUbergraph_ABP_CameraRig;
 
 // Function ABP_CameraRig.ABP_CameraRig_C.PawnDowned
 // 0x0008 (0x0008 - 0x0000)
@@ -70,9 +55,7 @@ struct ABP_CameraRig_C_PawnDowned final
 public:
 	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_CameraRig_C_PawnDowned) == 0x000008, "Wrong alignment on ABP_CameraRig_C_PawnDowned");
-static_assert(sizeof(ABP_CameraRig_C_PawnDowned) == 0x000008, "Wrong size on ABP_CameraRig_C_PawnDowned");
-static_assert(offsetof(ABP_CameraRig_C_PawnDowned, Player) == 0x000000, "Member 'ABP_CameraRig_C_PawnDowned::Player' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_CameraRig_C_PawnDowned;
 
 // Function ABP_CameraRig.ABP_CameraRig_C.PawnRespawned
 // 0x0008 (0x0008 - 0x0000)
@@ -81,9 +64,7 @@ struct ABP_CameraRig_C_PawnRespawned final
 public:
 	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_CameraRig_C_PawnRespawned) == 0x000008, "Wrong alignment on ABP_CameraRig_C_PawnRespawned");
-static_assert(sizeof(ABP_CameraRig_C_PawnRespawned) == 0x000008, "Wrong size on ABP_CameraRig_C_PawnRespawned");
-static_assert(offsetof(ABP_CameraRig_C_PawnRespawned, Player) == 0x000000, "Member 'ABP_CameraRig_C_PawnRespawned::Player' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_CameraRig_C_PawnRespawned;
 
 // Function ABP_CameraRig.ABP_CameraRig_C.PawnRevived
 // 0x0008 (0x0008 - 0x0000)
@@ -92,9 +73,7 @@ struct ABP_CameraRig_C_PawnRevived final
 public:
 	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_CameraRig_C_PawnRevived) == 0x000008, "Wrong alignment on ABP_CameraRig_C_PawnRevived");
-static_assert(sizeof(ABP_CameraRig_C_PawnRevived) == 0x000008, "Wrong size on ABP_CameraRig_C_PawnRevived");
-static_assert(offsetof(ABP_CameraRig_C_PawnRevived, Player) == 0x000000, "Member 'ABP_CameraRig_C_PawnRevived::Player' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_CameraRig_C_PawnRevived;
 
 }
 

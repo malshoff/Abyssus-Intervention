@@ -33,19 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_AudioGamePlay_Base_C">();
+		BP_STATIC_CLASS_IMPL("BP_AudioGamePlay_Base_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_AudioGamePlay_Base_C")
 	}
 	static class ABP_AudioGamePlay_Base_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_AudioGamePlay_Base_C>();
 	}
 };
-static_assert(alignof(ABP_AudioGamePlay_Base_C) == 0x000008, "Wrong alignment on ABP_AudioGamePlay_Base_C");
-static_assert(sizeof(ABP_AudioGamePlay_Base_C) == 0x0002C8, "Wrong size on ABP_AudioGamePlay_Base_C");
-static_assert(offsetof(ABP_AudioGamePlay_Base_C, SubmixOverrideVolume) == 0x0002A8, "Member 'ABP_AudioGamePlay_Base_C::SubmixOverrideVolume' has a wrong offset!");
-static_assert(offsetof(ABP_AudioGamePlay_Base_C, SubmixSendVolume) == 0x0002B0, "Member 'ABP_AudioGamePlay_Base_C::SubmixSendVolume' has a wrong offset!");
-static_assert(offsetof(ABP_AudioGamePlay_Base_C, ProxyVolume) == 0x0002B8, "Member 'ABP_AudioGamePlay_Base_C::ProxyVolume' has a wrong offset!");
-static_assert(offsetof(ABP_AudioGamePlay_Base_C, DefaultSceneRoot) == 0x0002C0, "Member 'ABP_AudioGamePlay_Base_C::DefaultSceneRoot' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_AudioGamePlay_Base_C;
 
 }
 

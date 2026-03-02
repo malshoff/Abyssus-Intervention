@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "AudioModulation_structs.hpp"
 #include "RGame_structs.hpp"
+#include "AudioModulation_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -20,326 +20,211 @@ namespace SDK::Params
 {
 
 // Function BP_MusicManager.BP_MusicManager_C.CalculateMultiplayerMix
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00E0 (0x00E0 - 0x0000)
 struct BP_MusicManager_C_CalculateMultiplayerMix final
 {
 public:
-	TArray<class ARNPCPawnBase*>                  Temp_object_Variable;                              // 0x0000(0x0010)(ConstParm, ReferenceParm)
-	TArray<class AActor*>                         CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue; // 0x0010(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1; // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSoundControlBusMixStage               CallFunc_CreateBusMixStage_ReturnValue;            // 0x0050(0x0028)(NoDestructor)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSoundControlBusMixStage               CallFunc_CreateBusMixStage_ReturnValue_1;          // 0x0080(0x0028)(NoDestructor)
-	TArray<struct FSoundControlBusMixStage>       K2Node_MakeArray_Array;                            // 0x00A8(0x0010)(ReferenceParm)
-	class USoundControlBusMix*                    CallFunc_CreateBusMix_ReturnValue;                 // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_CreateBusMixStage_Value_ImplicitCast;     // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_CreateBusMixStage_Value_ImplicitCast_1;   // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EnemyCount;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsControlBusMixActive_ReturnValue;        // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1; // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSoundControlBusMixStage               CallFunc_CreateBusMixStage_ReturnValue;            // 0x0048(0x0028)(NoDestructor)
+	struct FSoundControlBusMixStage               CallFunc_CreateBusMixStage_ReturnValue_1;          // 0x0070(0x0028)(NoDestructor)
+	TArray<struct FSoundControlBusMixStage>       K2Node_MakeArray_Array;                            // 0x0098(0x0010)(ReferenceParm)
+	TArray<class ARNPCPawnBase*>                  Temp_object_Variable;                              // 0x00A8(0x0010)(ConstParm, ReferenceParm)
+	TArray<class AActor*>                         CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue; // 0x00B8(0x0010)(ReferenceParm)
+	class USoundControlBusMix*                    CallFunc_CreateBusMix_ReturnValue;                 // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_CreateBusMixStage_Value_ImplicitCast;     // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_CreateBusMixStage_Value_ImplicitCast_1;   // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_CalculateMultiplayerMix) == 0x000008, "Wrong alignment on BP_MusicManager_C_CalculateMultiplayerMix");
-static_assert(sizeof(BP_MusicManager_C_CalculateMultiplayerMix) == 0x0000C8, "Wrong size on BP_MusicManager_C_CalculateMultiplayerMix");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, Temp_object_Variable) == 0x000000, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue) == 0x000010, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_Subtract_IntInt_ReturnValue) == 0x000024, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_Clamp_ReturnValue) == 0x000028, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_Clamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000030, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_SafeDivide_ReturnValue) == 0x000038, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x000040, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1) == 0x000048, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_CreateBusMixStage_ReturnValue) == 0x000050, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_CreateBusMixStage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000078, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_CreateBusMixStage_ReturnValue_1) == 0x000080, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_CreateBusMixStage_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, K2Node_MakeArray_Array) == 0x0000A8, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_CreateBusMix_ReturnValue) == 0x0000B8, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_CreateBusMix_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_CreateBusMixStage_Value_ImplicitCast) == 0x0000C0, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_CreateBusMixStage_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_CalculateMultiplayerMix, CallFunc_CreateBusMixStage_Value_ImplicitCast_1) == 0x0000C4, "Member 'BP_MusicManager_C_CalculateMultiplayerMix::CallFunc_CreateBusMixStage_Value_ImplicitCast_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_CalculateMultiplayerMix;
 
 // Function BP_MusicManager.BP_MusicManager_C.ExecuteUbergraph_BP_MusicManager
-// 0x0378 (0x0378 - 0x0000)
+// 0x03B0 (0x03B0 - 0x0000)
 struct BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundBase*                             Temp_object_Variable;                              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class USoundBase*                             Temp_object_Variable_1;                            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class USoundBase*                             Temp_object_Variable_2;                            // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Temp_object_Variable_3;                            // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EVoicePitch                                   Temp_byte_Variable;                                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Temp_real_Variable;                                // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Temp_real_Variable_1;                              // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Temp_real_Variable_2;                              // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetFloatParameter_self_CastInput; // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EVoicePitch                                   Temp_byte_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Temp_real_Variable;                                // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_real_Variable_1;                              // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_real_Variable_2;                              // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetFloatParameter_self_CastInput; // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class ARPlayerPawn*>                   Temp_wildcard_Variable;                            // 0x0048(0x0010)(ReferenceParm)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetTriggerParameter_self_CastInput; // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundAttenuation*                      CallFunc_GetPlayer2DAttenuation_ReturnValue;       // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AREnemySpawnAreaSegment*                K2Node_Event_EnemySpawnAreaSegment_1;              // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AREnemySpawnAreaSegment*                K2Node_Event_EnemySpawnAreaSegment;                // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_Event_Player_1;                             // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_Event_Player;                               // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue_1;        // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A2[0x2];                                       // 0x00A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   K2Node_Event_NewState;                             // 0x00A4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchName_CmpSuccess_1;                    // 0x00AE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AF[0x1];                                       // 0x00AF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class AROverworldManager*                     CallFunc_GetOverworldManager_ReturnValue;          // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetDepthInCurrentArea_ReturnValue;        // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsInLobby_ReturnValue;                    // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Max_ReturnValue;                          // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x00CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x00CE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CF[0x1];                                       // 0x00CF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetTriggerParameter_self_CastInput_1; // 0x00D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Temp_object_Variable_4;                            // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetTriggerParameter_self_CastInput_2; // 0x00F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0100(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0118(0x0008)(NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0120(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Temp_object_Variable_3;                            // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x006D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x006E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6F[0x1];                                       // 0x006F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             Temp_object_Variable_4;                            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundAttenuation*                      CallFunc_GetPlayer2DAttenuation_ReturnValue;       // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetTriggerParameter_self_CastInput; // 0x0098(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AA[0x6];                                       // 0x00AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AREnemySpawnAreaSegment*                K2Node_Event_EnemySpawnAreaSegment_1;              // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AREnemySpawnAreaSegment*                K2Node_Event_EnemySpawnAreaSegment;                // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_Event_Player_1;                             // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_Event_Player;                               // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue_1;        // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D2[0x2];                                       // 0x00D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Event_NewState;                             // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchName_CmpSuccess_1;                    // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E2[0x6];                                       // 0x00E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AROverworldManager*                     CallFunc_GetOverworldManager_ReturnValue;          // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x00F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F2[0x6];                                       // 0x00F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetTriggerParameter_self_CastInput_1; // 0x00F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetDepthInCurrentArea_ReturnValue;        // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsInLobby_ReturnValue;                    // 0x010C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10D[0x3];                                      // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Max_ReturnValue;                          // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetTriggerParameter_self_CastInput_2; // 0x0120(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USoundBase*                             Temp_object_Variable_5;                            // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Temp_object_Variable_6;                            // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class ARPlayerPawn*>                   Temp_wildcard_Variable;                            // 0x0140(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0155(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_156[0x2];                                      // 0x0156(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             Temp_object_Variable_7;                            // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetUseAlternateMusicList_ReturnValue;     // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_169[0x3];                                      // 0x0169(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_1;                               // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0170(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_1;        // 0x0180(0x0008)(NoDestructor, HasGetValueTypeHash)
-	class URMusicData*                            Temp_object_Variable_8;                            // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue; // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_194[0x4];                                      // 0x0194(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class ARPlayerPawn*>                   CallFunc_GetAllPlayerPawnsInLevel_ReturnValue;     // 0x0198(0x0010)(ReferenceParm)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARGamePlayerController*                 CallFunc_GetFirstLocalGamePlayerController_ReturnValue; // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_CustomEvent_Player_1;                       // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetControlledPlayerPawn_ReturnValue;      // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x01D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D9[0x3];                                      // 0x01D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class ARPlayerPawn* Player)>   K2Node_CreateDelegate_OutputDelegate_3;            // 0x01DC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPlayerPawn*                           K2Node_CustomEvent_Player;                         // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	const class USoundBase*                       K2Node_Event_EmoteSong;                            // 0x01F8(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	const class ARPawnBase*                       K2Node_Event_RequestingPlayer;                     // 0x0200(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0208(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn_1;               // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0138(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0150(0x0008)(NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0158(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Temp_object_Variable_6;                            // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_175[0x3];                                      // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetUseAlternateMusicList_ReturnValue;     // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_189[0x3];                                      // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x018C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19C[0x4];                                      // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_1;        // 0x01A0(0x0008)(NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Temp_object_Variable_7;                            // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue; // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x01B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B5[0x3];                                      // 0x01B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ARPlayerPawn*>                   CallFunc_GetAllPlayerPawnsInLevel_ReturnValue;     // 0x01B8(0x0010)(ReferenceParm)
+	class ARGamePlayerController*                 CallFunc_GetFirstLocalGamePlayerController_ReturnValue; // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_CustomEvent_Player_1;                       // 0x01D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D9[0x7];                                      // 0x01D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetControlledPlayerPawn_ReturnValue;      // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F1[0x3];                                      // 0x01F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class ARPlayerPawn* Player)>   K2Node_CreateDelegate_OutputDelegate_3;            // 0x01F4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_204[0x4];                                      // 0x0204(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPlayerPawn*                           K2Node_CustomEvent_Player;                         // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class USoundBase*                       K2Node_Event_EmoteSong;                            // 0x0210(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class ARPawnBase*                       K2Node_Event_RequestingPlayer;                     // 0x0218(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_2;        // 0x0228(0x0008)(NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0234(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_235[0x3];                                      // 0x0235(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Select_Default;                             // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue_2;        // 0x023C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23D[0x3];                                      // 0x023D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0248(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAudioComponent*                        CallFunc_SpawnSound2D_ReturnValue;                 // 0x0250(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x025C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25D[0x3];                                      // 0x025D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             K2Node_Select_Default_1;                           // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26C[0x4];                                      // 0x026C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             K2Node_Select_Default_2;                           // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             K2Node_Select_Default_3;                           // 0x0280(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn_1;               // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_231[0x3];                                      // 0x0231(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x0234(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_239[0x3];                                      // 0x0239(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Select_Default;                             // 0x023C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue_2;        // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_241[0x7];                                      // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_254[0x4];                                      // 0x0254(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        CallFunc_SpawnSound2D_ReturnValue;                 // 0x0258(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_10;                   // 0x0264(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_265[0x3];                                      // 0x0265(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             K2Node_Select_Default_1;                           // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0278(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_SelectInt_ReturnValue_1;                  // 0x0288(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0290(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class USoundAttenuation*                      Temp_object_Variable_9;                            // 0x02A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x02A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_5;            // 0x02C0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D1[0x7];                                      // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URMusicData*                            Temp_object_Variable_10;                           // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_SelectInt_ReturnValue_2;                  // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x02E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E5[0x3];                                      // 0x02E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetFloatParameter_self_CastInput_1; // 0x02E8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URMusicData*                            K2Node_Select_Default_4;                           // 0x02F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_LoadSoftObjectSynchronous_ReturnValue;    // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USoundWave*                             K2Node_DynamicCast_AsSound_Wave;                   // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_311[0x7];                                      // 0x0311(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARGamePlayerController*                 CallFunc_GetFirstLocalGamePlayerController_ReturnValue_1; // 0x0318(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class ARPlayerPawn* Player)>   K2Node_CreateDelegate_OutputDelegate_6;            // 0x0320(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_10;                   // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_331[0x7];                                      // 0x0331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetControlledPlayerPawn_ReturnValue_1;    // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn_2;               // 0x0340(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0349(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34A[0x6];                                      // 0x034A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundAttenuation*                      K2Node_Select_Default_5;                           // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Event_Event;                                // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x0360(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchName_CmpSuccess_2;                    // 0x0368(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_369[0x3];                                      // 0x0369(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_FadeOut_FadeOutDuration_ImplicitCast;     // 0x036C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FadeOut_FadeOutDuration_ImplicitCast_1;   // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SpawnSoundAttached_VolumeMultiplier_ImplicitCast; // 0x0374(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_2;        // 0x0290(0x0008)(NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0298(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_5;            // 0x02A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x02B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_2;                               // 0x02D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x02D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D5[0x3];                                      // 0x02D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_SelectInt_ReturnValue_2;                  // 0x02D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2DC[0x4];                                      // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             K2Node_Select_Default_2;                           // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             K2Node_Select_Default_3;                           // 0x02E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URMusicData*                            Temp_object_Variable_8;                            // 0x02F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetFloatParameter_self_CastInput_1; // 0x02F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_LoadSoftObjectSynchronous_ReturnValue;    // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USoundWave*                             K2Node_DynamicCast_AsSound_Wave;                   // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_319[0x3];                                      // 0x0319(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   K2Node_Event_Event;                                // 0x031C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchName_CmpSuccess_2;                    // 0x0324(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_325[0x3];                                      // 0x0325(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARGamePlayerController*                 CallFunc_GetFirstLocalGamePlayerController_ReturnValue_1; // 0x0328(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class ARPlayerPawn* Player)>   K2Node_CreateDelegate_OutputDelegate_6;            // 0x0330(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_11;                   // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetControlledPlayerPawn_ReturnValue_1;    // 0x0348(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn_2;               // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0358(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0359(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35A[0x6];                                      // 0x035A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundAttenuation*                      Temp_object_Variable_9;                            // 0x0360(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x0368(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_369[0x7];                                      // 0x0369(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URMusicData*                            Temp_object_Variable_10;                           // 0x0370(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USoundAttenuation*                      K2Node_Select_Default_4;                           // 0x0378(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URMusicData*                            K2Node_Select_Default_5;                           // 0x0380(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x0388(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0390(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x0394(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Array_Get_Item;                           // 0x039C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FadeOut_FadeOutDuration_ImplicitCast;     // 0x03A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FadeOut_FadeOutDuration_ImplicitCast_1;   // 0x03A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SpawnSoundAttached_VolumeMultiplier_ImplicitCast; // 0x03AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager) == 0x000008, "Wrong alignment on BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager");
-static_assert(sizeof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager) == 0x000378, "Wrong size on BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, EntryPoint) == 0x000000, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_int_Variable) == 0x000004, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_object_Variable) == 0x000008, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_object_Variable_1) == 0x000010, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_object_Variable_2) == 0x000018, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_object_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_object_Variable_3) == 0x000020, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_object_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_byte_Variable) == 0x000028, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_real_Variable) == 0x00002C, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_real_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_real_Variable_1) == 0x000030, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_real_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_real_Variable_2) == 0x000034, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_real_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_SetFloatParameter_self_CastInput) == 0x000040, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_SetFloatParameter_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_bool_Variable) == 0x000050, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_int_Loop_Counter_Variable) == 0x000054, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsValid_ReturnValue_1) == 0x000058, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_Add_IntInt_ReturnValue) == 0x00005C, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_SetTriggerParameter_self_CastInput) == 0x000060, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_SetTriggerParameter_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_GetPlayer2DAttenuation_ReturnValue) == 0x000070, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_GetPlayer2DAttenuation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_Event_EnemySpawnAreaSegment_1) == 0x000078, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_Event_EnemySpawnAreaSegment_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsValid_ReturnValue_2) == 0x000080, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_Event_EnemySpawnAreaSegment) == 0x000088, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_Event_EnemySpawnAreaSegment' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_Event_Player_1) == 0x000090, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_Event_Player_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_Event_Player) == 0x000098, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_Event_Player' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsLocallyControlled_ReturnValue) == 0x0000A0, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsLocallyControlled_ReturnValue_1) == 0x0000A1, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsLocallyControlled_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_Event_NewState) == 0x0000A4, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_Event_NewState' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_SwitchName_CmpSuccess) == 0x0000AC, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_SwitchName_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsValid_ReturnValue_3) == 0x0000AD, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_SwitchName_CmpSuccess_1) == 0x0000AE, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_SwitchName_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_GetOverworldManager_ReturnValue) == 0x0000B0, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_GetOverworldManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsValid_ReturnValue_4) == 0x0000B8, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_GetDepthInCurrentArea_ReturnValue) == 0x0000BC, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_GetDepthInCurrentArea_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_Subtract_IntInt_ReturnValue) == 0x0000C0, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsInLobby_ReturnValue) == 0x0000C4, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsInLobby_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_Max_ReturnValue) == 0x0000C8, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_Max_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_Not_PreBool_ReturnValue) == 0x0000CC, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_Not_PreBool_ReturnValue_1) == 0x0000CD, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsValid_ReturnValue_5) == 0x0000CE, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_SetTriggerParameter_self_CastInput_1) == 0x0000D0, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_SetTriggerParameter_self_CastInput_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_object_Variable_4) == 0x0000E0, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_object_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsValid_ReturnValue_6) == 0x0000E8, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_SetTriggerParameter_self_CastInput_2) == 0x0000F0, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_SetTriggerParameter_self_CastInput_2' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_CreateDelegate_OutputDelegate) == 0x000100, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsServer_ReturnValue) == 0x000110, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000118, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000120, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_object_Variable_5) == 0x000130, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_object_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_object_Variable_6) == 0x000138, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_object_Variable_6' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_wildcard_Variable) == 0x000140, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_wildcard_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_Array_Length_ReturnValue) == 0x000150, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_Less_IntInt_ReturnValue) == 0x000154, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsValid_ReturnValue_7) == 0x000155, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_object_Variable_7) == 0x000158, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_object_Variable_7' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000160, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_GetUseAlternateMusicList_ReturnValue) == 0x000168, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_GetUseAlternateMusicList_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_int_Variable_1) == 0x00016C, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_CreateDelegate_OutputDelegate_2) == 0x000170, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_K2_SetTimerDelegate_ReturnValue_1) == 0x000180, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_K2_SetTimerDelegate_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_object_Variable_8) == 0x000188, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_object_Variable_8' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue) == 0x000190, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_GetAllPlayerPawnsInLevel_ReturnValue) == 0x000198, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_GetAllPlayerPawnsInLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_int_Array_Index_Variable) == 0x0001A8, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x0001B0, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_CustomEvent_Player_1) == 0x0001B8, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_CustomEvent_Player_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsValid_ReturnValue_8) == 0x0001C0, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_GetControlledPlayerPawn_ReturnValue) == 0x0001C8, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_GetControlledPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x0001D0, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_DynamicCast_bSuccess) == 0x0001D8, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_CreateDelegate_OutputDelegate_3) == 0x0001DC, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_CustomEvent_Player) == 0x0001F0, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_CustomEvent_Player' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_Event_EmoteSong) == 0x0001F8, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_Event_EmoteSong' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_Event_RequestingPlayer) == 0x000200, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_Event_RequestingPlayer' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_CreateDelegate_OutputDelegate_4) == 0x000208, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_DynamicCast_AsRPlayer_Pawn_1) == 0x000218, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_DynamicCast_AsRPlayer_Pawn_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_DynamicCast_bSuccess_1) == 0x000220, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_K2_SetTimerDelegate_ReturnValue_2) == 0x000228, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_K2_SetTimerDelegate_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_Array_Find_ReturnValue) == 0x000230, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_Array_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_Greater_IntInt_ReturnValue) == 0x000234, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_Select_Default) == 0x000238, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsLocallyControlled_ReturnValue_2) == 0x00023C, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsLocallyControlled_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_SelectFloat_ReturnValue) == 0x000240, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_Array_AddUnique_ReturnValue) == 0x000248, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_SpawnSound2D_ReturnValue) == 0x000250, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_SpawnSound2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_SelectInt_ReturnValue) == 0x000258, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsValid_ReturnValue_9) == 0x00025C, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_Select_Default_1) == 0x000260, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_Add_IntInt_ReturnValue_1) == 0x000268, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_Select_Default_2) == 0x000270, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_Add_IntInt_ReturnValue_2) == 0x000278, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_Select_Default_3) == 0x000280, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_SelectInt_ReturnValue_1) == 0x000288, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_SelectInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_Conv_IntToString_ReturnValue) == 0x000290, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_object_Variable_9) == 0x0002A0, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_object_Variable_9' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_Concat_StrStr_ReturnValue) == 0x0002A8, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_Conv_StringToName_ReturnValue) == 0x0002B8, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_CreateDelegate_OutputDelegate_5) == 0x0002C0, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_HasTag_ReturnValue) == 0x0002D0, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_HasTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_object_Variable_10) == 0x0002D8, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_object_Variable_10' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_SelectInt_ReturnValue_2) == 0x0002E0, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_SelectInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_bool_Variable_1) == 0x0002E4, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_SetFloatParameter_self_CastInput_1) == 0x0002E8, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_SetFloatParameter_self_CastInput_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_Select_Default_4) == 0x0002F8, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_Select_Default_4' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_LoadSoftObjectSynchronous_ReturnValue) == 0x000300, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_LoadSoftObjectSynchronous_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_DynamicCast_AsSound_Wave) == 0x000308, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_DynamicCast_AsSound_Wave' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_DynamicCast_bSuccess_2) == 0x000310, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_GetFirstLocalGamePlayerController_ReturnValue_1) == 0x000318, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_GetFirstLocalGamePlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_CreateDelegate_OutputDelegate_6) == 0x000320, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_IsValid_ReturnValue_10) == 0x000330, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_IsValid_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_GetControlledPlayerPawn_ReturnValue_1) == 0x000338, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_GetControlledPlayerPawn_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_DynamicCast_AsRPlayer_Pawn_2) == 0x000340, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_DynamicCast_AsRPlayer_Pawn_2' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_DynamicCast_bSuccess_3) == 0x000348, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, Temp_bool_Variable_2) == 0x000349, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_Select_Default_5) == 0x000350, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_Select_Default_5' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_Event_Event) == 0x000358, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_Event_Event' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_SpawnSoundAttached_ReturnValue) == 0x000360, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, K2Node_SwitchName_CmpSuccess_2) == 0x000368, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::K2Node_SwitchName_CmpSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_FadeOut_FadeOutDuration_ImplicitCast) == 0x00036C, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_FadeOut_FadeOutDuration_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_FadeOut_FadeOutDuration_ImplicitCast_1) == 0x000370, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_FadeOut_FadeOutDuration_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager, CallFunc_SpawnSoundAttached_VolumeMultiplier_ImplicitCast) == 0x000374, "Member 'BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager::CallFunc_SpawnSoundAttached_VolumeMultiplier_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_ExecuteUbergraph_BP_MusicManager;
 
 // Function BP_MusicManager.BP_MusicManager_C.FadeOutAndPlayNewAmbience
 // 0x0028 (0x0028 - 0x0000)
@@ -355,15 +240,7 @@ public:
 	float                                         CallFunc_SpawnSound2D_StartTime_ImplicitCast;      // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_FadeOut_FadeOutDuration_ImplicitCast;     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_FadeOutAndPlayNewAmbience) == 0x000008, "Wrong alignment on BP_MusicManager_C_FadeOutAndPlayNewAmbience");
-static_assert(sizeof(BP_MusicManager_C_FadeOutAndPlayNewAmbience) == 0x000028, "Wrong size on BP_MusicManager_C_FadeOutAndPlayNewAmbience");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, Cue) == 0x000000, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::Cue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, StartTime) == 0x000008, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::StartTime' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, CallFunc_SpawnSound2D_ReturnValue) == 0x000010, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::CallFunc_SpawnSound2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, CallFunc_IsValid_ReturnValue_1) == 0x000019, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, CallFunc_SpawnSound2D_StartTime_ImplicitCast) == 0x00001C, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::CallFunc_SpawnSound2D_StartTime_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewAmbience, CallFunc_FadeOut_FadeOutDuration_ImplicitCast) == 0x000020, "Member 'BP_MusicManager_C_FadeOutAndPlayNewAmbience::CallFunc_FadeOut_FadeOutDuration_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_FadeOutAndPlayNewAmbience;
 
 // Function BP_MusicManager.BP_MusicManager_C.FadeOutAndPlayNewMusicCue
 // 0x0058 (0x0058 - 0x0000)
@@ -384,18 +261,7 @@ public:
 	float                                         CallFunc_SpawnSound2D_StartTime_ImplicitCast;      // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_FadeOut_FadeOutDuration_ImplicitCast;     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue) == 0x000008, "Wrong alignment on BP_MusicManager_C_FadeOutAndPlayNewMusicCue");
-static_assert(sizeof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue) == 0x000058, "Wrong size on BP_MusicManager_C_FadeOutAndPlayNewMusicCue");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, SongName) == 0x000000, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::SongName' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, PartSelect) == 0x000010, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::PartSelect' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, Cue) == 0x000018, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::Cue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, StartTime) == 0x000020, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::StartTime' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_SpawnSound2D_ReturnValue) == 0x000028, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_SpawnSound2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_SetIntParameter_self_CastInput) == 0x000038, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_SetIntParameter_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_IsValid_ReturnValue_1) == 0x000048, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_SpawnSound2D_StartTime_ImplicitCast) == 0x00004C, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_SpawnSound2D_StartTime_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_FadeOutAndPlayNewMusicCue, CallFunc_FadeOut_FadeOutDuration_ImplicitCast) == 0x000050, "Member 'BP_MusicManager_C_FadeOutAndPlayNewMusicCue::CallFunc_FadeOut_FadeOutDuration_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_FadeOutAndPlayNewMusicCue;
 
 // Function BP_MusicManager.BP_MusicManager_C.IsNotInSegment
 // 0x0002 (0x0002 - 0x0000)
@@ -405,10 +271,7 @@ public:
 	bool                                          RetValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_IsNotInSegment) == 0x000001, "Wrong alignment on BP_MusicManager_C_IsNotInSegment");
-static_assert(sizeof(BP_MusicManager_C_IsNotInSegment) == 0x000002, "Wrong size on BP_MusicManager_C_IsNotInSegment");
-static_assert(offsetof(BP_MusicManager_C_IsNotInSegment, RetValue) == 0x000000, "Member 'BP_MusicManager_C_IsNotInSegment::RetValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_IsNotInSegment, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'BP_MusicManager_C_IsNotInSegment::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_IsNotInSegment;
 
 // Function BP_MusicManager.BP_MusicManager_C.OnBossPhaseStarted
 // 0x0008 (0x0008 - 0x0000)
@@ -417,9 +280,7 @@ struct BP_MusicManager_C_OnBossPhaseStarted final
 public:
 	class FName                                   NewState;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_OnBossPhaseStarted) == 0x000004, "Wrong alignment on BP_MusicManager_C_OnBossPhaseStarted");
-static_assert(sizeof(BP_MusicManager_C_OnBossPhaseStarted) == 0x000008, "Wrong size on BP_MusicManager_C_OnBossPhaseStarted");
-static_assert(offsetof(BP_MusicManager_C_OnBossPhaseStarted, NewState) == 0x000000, "Member 'BP_MusicManager_C_OnBossPhaseStarted::NewState' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_OnBossPhaseStarted;
 
 // Function BP_MusicManager.BP_MusicManager_C.OnLocalPlayerKilled
 // 0x0008 (0x0008 - 0x0000)
@@ -428,9 +289,7 @@ struct BP_MusicManager_C_OnLocalPlayerKilled final
 public:
 	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_OnLocalPlayerKilled) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnLocalPlayerKilled");
-static_assert(sizeof(BP_MusicManager_C_OnLocalPlayerKilled) == 0x000008, "Wrong size on BP_MusicManager_C_OnLocalPlayerKilled");
-static_assert(offsetof(BP_MusicManager_C_OnLocalPlayerKilled, Player) == 0x000000, "Member 'BP_MusicManager_C_OnLocalPlayerKilled::Player' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_OnLocalPlayerKilled;
 
 // Function BP_MusicManager.BP_MusicManager_C.OnPlayerAlive
 // 0x0008 (0x0008 - 0x0000)
@@ -439,9 +298,7 @@ struct BP_MusicManager_C_OnPlayerAlive final
 public:
 	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_OnPlayerAlive) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnPlayerAlive");
-static_assert(sizeof(BP_MusicManager_C_OnPlayerAlive) == 0x000008, "Wrong size on BP_MusicManager_C_OnPlayerAlive");
-static_assert(offsetof(BP_MusicManager_C_OnPlayerAlive, Player) == 0x000000, "Member 'BP_MusicManager_C_OnPlayerAlive::Player' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_OnPlayerAlive;
 
 // Function BP_MusicManager.BP_MusicManager_C.OnPlayerDowned
 // 0x0008 (0x0008 - 0x0000)
@@ -450,9 +307,7 @@ struct BP_MusicManager_C_OnPlayerDowned final
 public:
 	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_OnPlayerDowned) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnPlayerDowned");
-static_assert(sizeof(BP_MusicManager_C_OnPlayerDowned) == 0x000008, "Wrong size on BP_MusicManager_C_OnPlayerDowned");
-static_assert(offsetof(BP_MusicManager_C_OnPlayerDowned, Player) == 0x000000, "Member 'BP_MusicManager_C_OnPlayerDowned::Player' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_OnPlayerDowned;
 
 // Function BP_MusicManager.BP_MusicManager_C.OnPlayerPawnRespawned_Event
 // 0x0008 (0x0008 - 0x0000)
@@ -461,9 +316,7 @@ struct BP_MusicManager_C_OnPlayerPawnRespawned_Event final
 public:
 	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_OnPlayerPawnRespawned_Event) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnPlayerPawnRespawned_Event");
-static_assert(sizeof(BP_MusicManager_C_OnPlayerPawnRespawned_Event) == 0x000008, "Wrong size on BP_MusicManager_C_OnPlayerPawnRespawned_Event");
-static_assert(offsetof(BP_MusicManager_C_OnPlayerPawnRespawned_Event, Player) == 0x000000, "Member 'BP_MusicManager_C_OnPlayerPawnRespawned_Event::Player' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_OnPlayerPawnRespawned_Event;
 
 // Function BP_MusicManager.BP_MusicManager_C.OnRep_Intensity
 // 0x0020 (0x0020 - 0x0000)
@@ -475,11 +328,7 @@ public:
 	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetFloatParameter_self_CastInput; // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetFloatParameter_InFloat_ImplicitCast;   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_OnRep_Intensity) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnRep_Intensity");
-static_assert(sizeof(BP_MusicManager_C_OnRep_Intensity) == 0x000020, "Wrong size on BP_MusicManager_C_OnRep_Intensity");
-static_assert(offsetof(BP_MusicManager_C_OnRep_Intensity, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_MusicManager_C_OnRep_Intensity::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_OnRep_Intensity, CallFunc_SetFloatParameter_self_CastInput) == 0x000008, "Member 'BP_MusicManager_C_OnRep_Intensity::CallFunc_SetFloatParameter_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_OnRep_Intensity, CallFunc_SetFloatParameter_InFloat_ImplicitCast) == 0x000018, "Member 'BP_MusicManager_C_OnRep_Intensity::CallFunc_SetFloatParameter_InFloat_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_OnRep_Intensity;
 
 // Function BP_MusicManager.BP_MusicManager_C.OnSegmentCompleted
 // 0x0008 (0x0008 - 0x0000)
@@ -488,9 +337,7 @@ struct BP_MusicManager_C_OnSegmentCompleted final
 public:
 	class AREnemySpawnAreaSegment*                EnemySpawnAreaSegment;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_OnSegmentCompleted) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnSegmentCompleted");
-static_assert(sizeof(BP_MusicManager_C_OnSegmentCompleted) == 0x000008, "Wrong size on BP_MusicManager_C_OnSegmentCompleted");
-static_assert(offsetof(BP_MusicManager_C_OnSegmentCompleted, EnemySpawnAreaSegment) == 0x000000, "Member 'BP_MusicManager_C_OnSegmentCompleted::EnemySpawnAreaSegment' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_OnSegmentCompleted;
 
 // Function BP_MusicManager.BP_MusicManager_C.OnSegmentStarted
 // 0x0008 (0x0008 - 0x0000)
@@ -499,9 +346,7 @@ struct BP_MusicManager_C_OnSegmentStarted final
 public:
 	class AREnemySpawnAreaSegment*                EnemySpawnAreaSegment;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_OnSegmentStarted) == 0x000008, "Wrong alignment on BP_MusicManager_C_OnSegmentStarted");
-static_assert(sizeof(BP_MusicManager_C_OnSegmentStarted) == 0x000008, "Wrong size on BP_MusicManager_C_OnSegmentStarted");
-static_assert(offsetof(BP_MusicManager_C_OnSegmentStarted, EnemySpawnAreaSegment) == 0x000000, "Member 'BP_MusicManager_C_OnSegmentStarted::EnemySpawnAreaSegment' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_OnSegmentStarted;
 
 // Function BP_MusicManager.BP_MusicManager_C.PlayEmoteSongImplementation
 // 0x0010 (0x0010 - 0x0000)
@@ -511,10 +356,7 @@ public:
 	const class USoundBase*                       EmoteSong;                                         // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	const class ARPawnBase*                       RequestingPlayer;                                  // 0x0008(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_PlayEmoteSongImplementation) == 0x000008, "Wrong alignment on BP_MusicManager_C_PlayEmoteSongImplementation");
-static_assert(sizeof(BP_MusicManager_C_PlayEmoteSongImplementation) == 0x000010, "Wrong size on BP_MusicManager_C_PlayEmoteSongImplementation");
-static_assert(offsetof(BP_MusicManager_C_PlayEmoteSongImplementation, EmoteSong) == 0x000000, "Member 'BP_MusicManager_C_PlayEmoteSongImplementation::EmoteSong' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PlayEmoteSongImplementation, RequestingPlayer) == 0x000008, "Member 'BP_MusicManager_C_PlayEmoteSongImplementation::RequestingPlayer' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_PlayEmoteSongImplementation;
 
 // Function BP_MusicManager.BP_MusicManager_C.PlayEventMusic
 // 0x0008 (0x0008 - 0x0000)
@@ -523,9 +365,7 @@ struct BP_MusicManager_C_PlayEventMusic final
 public:
 	class FName                                   Event;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_PlayEventMusic) == 0x000004, "Wrong alignment on BP_MusicManager_C_PlayEventMusic");
-static_assert(sizeof(BP_MusicManager_C_PlayEventMusic) == 0x000008, "Wrong size on BP_MusicManager_C_PlayEventMusic");
-static_assert(offsetof(BP_MusicManager_C_PlayEventMusic, Event) == 0x000000, "Member 'BP_MusicManager_C_PlayEventMusic::Event' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_PlayEventMusic;
 
 // Function BP_MusicManager.BP_MusicManager_C.PrintAllLevelIds
 // 0x0058 (0x0058 - 0x0000)
@@ -545,18 +385,7 @@ public:
 	TArray<class FName>                           CallFunc_GetCurrentLevelIds_ReturnValue;           // 0x0040(0x0010)(ReferenceParm)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_PrintAllLevelIds) == 0x000008, "Wrong alignment on BP_MusicManager_C_PrintAllLevelIds");
-static_assert(sizeof(BP_MusicManager_C_PrintAllLevelIds) == 0x000058, "Wrong size on BP_MusicManager_C_PrintAllLevelIds");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, Temp_wildcard_Variable) == 0x000000, "Member 'BP_MusicManager_C_PrintAllLevelIds::Temp_wildcard_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, Temp_int_Array_Index_Variable) == 0x000010, "Member 'BP_MusicManager_C_PrintAllLevelIds::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_Array_Length_ReturnValue) == 0x000014, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_Conv_NameToString_ReturnValue) == 0x000018, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, Temp_int_Loop_Counter_Variable) == 0x000028, "Member 'BP_MusicManager_C_PrintAllLevelIds::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_Less_IntInt_ReturnValue) == 0x00002C, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_Add_IntInt_ReturnValue) == 0x000030, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_GetLevelManager_ReturnValue) == 0x000038, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_GetLevelManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_GetCurrentLevelIds_ReturnValue) == 0x000040, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_GetCurrentLevelIds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_PrintAllLevelIds, CallFunc_IsValid_ReturnValue) == 0x000050, "Member 'BP_MusicManager_C_PrintAllLevelIds::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_PrintAllLevelIds;
 
 // Function BP_MusicManager.BP_MusicManager_C.Set MusicData Fallback
 // 0x0070 (0x0070 - 0x0000)
@@ -579,20 +408,29 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_Set_MusicData_Fallback) == 0x000008, "Wrong alignment on BP_MusicManager_C_Set_MusicData_Fallback");
-static_assert(sizeof(BP_MusicManager_C_Set_MusicData_Fallback) == 0x000070, "Wrong size on BP_MusicManager_C_Set_MusicData_Fallback");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, Temp_bool_True_if_break_was_hit_Variable) == 0x000000, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_Not_PreBool_ReturnValue) == 0x000008, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_GetLevelManager_ReturnValue) == 0x000010, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_GetLevelManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_IsValid_ReturnValue) == 0x00001C, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_Array_Length_ReturnValue) == 0x000024, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_Less_IntInt_ReturnValue) == 0x000068, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_BooleanAND_ReturnValue) == 0x000069, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Set_MusicData_Fallback, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x00006A, "Member 'BP_MusicManager_C_Set_MusicData_Fallback::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_Set_MusicData_Fallback;
+
+// Function BP_MusicManager.BP_MusicManager_C.SetIsInEliteFight
+// 0x0090 (0x0090 - 0x0000)
+struct BP_MusicManager_C_SetIsInEliteFight final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AREnemySpawnManager*                    CallFunc_GetSpawnManager_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AREnemySpawnAreaSegment*                CallFunc_GetCurrentSpawnAreaSegment_ReturnValue;   // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRSegmentSettings                      CallFunc_Array_Get_Item;                           // 0x0030(0x0058)()
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_MusicManager_C_SetIsInEliteFight;
 
 // Function BP_MusicManager.BP_MusicManager_C.Spawn Ambience
 // 0x00D0 (0x00D0 - 0x0000)
@@ -612,17 +450,7 @@ public:
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_FinishSpawningActor_ReturnValue;          // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_Spawn_Ambience) == 0x000010, "Wrong alignment on BP_MusicManager_C_Spawn_Ambience");
-static_assert(sizeof(BP_MusicManager_C_Spawn_Ambience) == 0x0000D0, "Wrong size on BP_MusicManager_C_Spawn_Ambience");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, Key) == 0x000000, "Member 'BP_MusicManager_C_Spawn_Ambience::Key' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_GetTransform_ReturnValue) == 0x000010, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_Map_Find_Value) == 0x000070, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_Map_Find_ReturnValue) == 0x000098, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_LoadClassFromSoftClassPtr_ReturnValue) == 0x0000A0, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_LoadClassFromSoftClassPtr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, K2Node_ClassDynamicCast_AsActor) == 0x0000A8, "Member 'BP_MusicManager_C_Spawn_Ambience::K2Node_ClassDynamicCast_AsActor' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, K2Node_ClassDynamicCast_bSuccess) == 0x0000B0, "Member 'BP_MusicManager_C_Spawn_Ambience::K2Node_ClassDynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x0000B8, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_Spawn_Ambience, CallFunc_FinishSpawningActor_ReturnValue) == 0x0000C0, "Member 'BP_MusicManager_C_Spawn_Ambience::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_Spawn_Ambience;
 
 // Function BP_MusicManager.BP_MusicManager_C.UpdateIntensity
 // 0x0080 (0x0080 - 0x0000)
@@ -654,26 +482,7 @@ public:
 	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MusicManager_C_UpdateIntensity) == 0x000008, "Wrong alignment on BP_MusicManager_C_UpdateIntensity");
-static_assert(sizeof(BP_MusicManager_C_UpdateIntensity) == 0x000080, "Wrong size on BP_MusicManager_C_UpdateIntensity");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, bElite) == 0x000000, "Member 'BP_MusicManager_C_UpdateIntensity::bElite' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, TotalEnemyThreat) == 0x000004, "Member 'BP_MusicManager_C_UpdateIntensity::TotalEnemyThreat' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, Temp_int_Array_Index_Variable) == 0x000008, "Member 'BP_MusicManager_C_UpdateIntensity::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'BP_MusicManager_C_UpdateIntensity::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, Temp_object_Variable) == 0x000010, "Member 'BP_MusicManager_C_UpdateIntensity::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue) == 0x000020, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_GetAllAliveEnemyPawnsInLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, K2Node_DynamicCast_AsREnemy_Pawn_Base) == 0x000038, "Member 'BP_MusicManager_C_UpdateIntensity::K2Node_DynamicCast_AsREnemy_Pawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_MusicManager_C_UpdateIntensity::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Less_IntInt_ReturnValue) == 0x000041, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Add_IntInt_ReturnValue) == 0x000044, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_SelectInt_ReturnValue) == 0x000048, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_SelectFloat_ReturnValue) == 0x000050, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, Temp_int_Variable) == 0x000058, "Member 'BP_MusicManager_C_UpdateIntensity::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000060, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000068, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_Add_IntInt_ReturnValue_1) == 0x000070, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MusicManager_C_UpdateIntensity, CallFunc_FClamp_ReturnValue) == 0x000078, "Member 'BP_MusicManager_C_UpdateIntensity::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MusicManager_C_UpdateIntensity;
 
 }
 

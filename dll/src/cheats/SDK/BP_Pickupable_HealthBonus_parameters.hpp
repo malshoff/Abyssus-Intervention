@@ -24,10 +24,7 @@ public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_HealthBonus_C_CanInteract) == 0x000008, "Wrong alignment on BP_Pickupable_HealthBonus_C_CanInteract");
-static_assert(sizeof(BP_Pickupable_HealthBonus_C_CanInteract) == 0x000010, "Wrong size on BP_Pickupable_HealthBonus_C_CanInteract");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_CanInteract, Controller) == 0x000000, "Member 'BP_Pickupable_HealthBonus_C_CanInteract::Controller' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_CanInteract, ReturnValue) == 0x000008, "Member 'BP_Pickupable_HealthBonus_C_CanInteract::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_HealthBonus_C_CanInteract;
 
 // Function BP_Pickupable_HealthBonus.BP_Pickupable_HealthBonus_C.ExecuteUbergraph_BP_Pickupable_HealthBonus
 // 0x00A0 (0x00A0 - 0x0000)
@@ -60,61 +57,7 @@ public:
 	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus) == 0x000008, "Wrong alignment on BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus");
-static_assert(sizeof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus) == 0x0000A0, "Wrong size on BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, EntryPoint) == 0x000000, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000008, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, CallFunc_MakeLiteralDouble_ReturnValue) == 0x000020, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::CallFunc_MakeLiteralDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, CallFunc_SpawnSystemAtLocation_ReturnValue) == 0x000028, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::CallFunc_SpawnSystemAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, CallFunc_SimulateLootPhysics_ReturnValue) == 0x000030, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::CallFunc_SimulateLootPhysics_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000031, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, CallFunc_K2_GetComponentLocation_ReturnValue_1) == 0x000038, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::CallFunc_K2_GetComponentLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, CallFunc_SpawnSystemAtLocation_ReturnValue_1) == 0x000050, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::CallFunc_SpawnSystemAtLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, K2Node_Event_controller) == 0x000058, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::K2Node_Event_controller' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, K2Node_Event_PlayerController) == 0x000060, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::K2Node_Event_PlayerController' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, K2Node_DynamicCast_AsRGame_Player_Controller) == 0x000068, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::K2Node_DynamicCast_AsRGame_Player_Controller' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, CallFunc_K2_GetPawn_ReturnValue) == 0x000078, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, CallFunc_Pickup_ReturnValue) == 0x000080, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::CallFunc_Pickup_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000088, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, K2Node_DynamicCast_bSuccess_1) == 0x000090, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, CallFunc_IsLocalPlayerController_ReturnValue) == 0x000091, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, CallFunc_HasMutator_ReturnValue) == 0x000092, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, CallFunc_SetFloatParameter_Param_ImplicitCast) == 0x000094, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::CallFunc_SetFloatParameter_Param_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus, CallFunc_Delay_Duration_ImplicitCast) == 0x000098, "Member 'BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus::CallFunc_Delay_Duration_ImplicitCast' has a wrong offset!");
-
-// Function BP_Pickupable_HealthBonus.BP_Pickupable_HealthBonus_C.GetBloodPassive1Bonus
-// 0x0048 (0x0048 - 0x0000)
-struct BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus final
-{
-public:
-	double                                        PercentBonus;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ARGamePlayerController*                 CallFunc_GetFirstLocalGamePlayerController_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasMutator_ReturnValue;                   // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus) == 0x000008, "Wrong alignment on BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus");
-static_assert(sizeof(BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus) == 0x000048, "Wrong size on BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus, PercentBonus) == 0x000000, "Member 'BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus::PercentBonus' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000008, "Member 'BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus, CallFunc_K2_GetPawn_ReturnValue) == 0x000010, "Member 'BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000018, "Member 'BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus, CallFunc_HasMutator_ReturnValue) == 0x000021, "Member 'BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus, CallFunc_GetMutatorRank_ReturnValue) == 0x000024, "Member 'BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x000028, "Member 'BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000030, "Member 'BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000038, "Member 'BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000040, "Member 'BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_HealthBonus_C_ExecuteUbergraph_BP_Pickupable_HealthBonus;
 
 // Function BP_Pickupable_HealthBonus.BP_Pickupable_HealthBonus_C.OnInteract
 // 0x0008 (0x0008 - 0x0000)
@@ -123,9 +66,7 @@ struct BP_Pickupable_HealthBonus_C_OnInteract final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_HealthBonus_C_OnInteract) == 0x000008, "Wrong alignment on BP_Pickupable_HealthBonus_C_OnInteract");
-static_assert(sizeof(BP_Pickupable_HealthBonus_C_OnInteract) == 0x000008, "Wrong size on BP_Pickupable_HealthBonus_C_OnInteract");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_OnInteract, Controller) == 0x000000, "Member 'BP_Pickupable_HealthBonus_C_OnInteract::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_HealthBonus_C_OnInteract;
 
 // Function BP_Pickupable_HealthBonus.BP_Pickupable_HealthBonus_C.TriggerPickup
 // 0x0008 (0x0008 - 0x0000)
@@ -134,9 +75,7 @@ struct BP_Pickupable_HealthBonus_C_TriggerPickup final
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_HealthBonus_C_TriggerPickup) == 0x000008, "Wrong alignment on BP_Pickupable_HealthBonus_C_TriggerPickup");
-static_assert(sizeof(BP_Pickupable_HealthBonus_C_TriggerPickup) == 0x000008, "Wrong size on BP_Pickupable_HealthBonus_C_TriggerPickup");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_TriggerPickup, PlayerController) == 0x000000, "Member 'BP_Pickupable_HealthBonus_C_TriggerPickup::PlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_HealthBonus_C_TriggerPickup;
 
 // Function BP_Pickupable_HealthBonus.BP_Pickupable_HealthBonus_C.GetInteractableCost
 // 0x0018 (0x0018 - 0x0000)
@@ -145,40 +84,25 @@ struct BP_Pickupable_HealthBonus_C_GetInteractableCost final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARGamePlayerController*                 CallFunc_GetFirstLocalGamePlayerController_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetPickupCost_ReturnValue;                // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_HealthBonus_C_GetInteractableCost) == 0x000008, "Wrong alignment on BP_Pickupable_HealthBonus_C_GetInteractableCost");
-static_assert(sizeof(BP_Pickupable_HealthBonus_C_GetInteractableCost) == 0x000018, "Wrong size on BP_Pickupable_HealthBonus_C_GetInteractableCost");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetInteractableCost, ReturnValue) == 0x000000, "Member 'BP_Pickupable_HealthBonus_C_GetInteractableCost::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetInteractableCost, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000008, "Member 'BP_Pickupable_HealthBonus_C_GetInteractableCost::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetInteractableCost, CallFunc_GetPickupCost_ReturnValue) == 0x000010, "Member 'BP_Pickupable_HealthBonus_C_GetInteractableCost::CallFunc_GetPickupCost_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_HealthBonus_C_GetInteractableCost;
 
 // Function BP_Pickupable_HealthBonus.BP_Pickupable_HealthBonus_C.GetInteractableDescription
-// 0x0068 (0x0068 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct BP_Pickupable_HealthBonus_C_GetInteractableDescription final
 {
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
-	double                                        CallFunc_GetBloodPassive1Bonus_PercentBonus;       // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0058(0x0010)()
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0048(0x0010)()
 };
-static_assert(alignof(BP_Pickupable_HealthBonus_C_GetInteractableDescription) == 0x000008, "Wrong alignment on BP_Pickupable_HealthBonus_C_GetInteractableDescription");
-static_assert(sizeof(BP_Pickupable_HealthBonus_C_GetInteractableDescription) == 0x000068, "Wrong size on BP_Pickupable_HealthBonus_C_GetInteractableDescription");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetInteractableDescription, ReturnValue) == 0x000000, "Member 'BP_Pickupable_HealthBonus_C_GetInteractableDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetInteractableDescription, CallFunc_GetBloodPassive1Bonus_PercentBonus) == 0x000010, "Member 'BP_Pickupable_HealthBonus_C_GetInteractableDescription::CallFunc_GetBloodPassive1Bonus_PercentBonus' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetInteractableDescription, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_Pickupable_HealthBonus_C_GetInteractableDescription::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetInteractableDescription, CallFunc_Conv_TextToString_ReturnValue) == 0x000020, "Member 'BP_Pickupable_HealthBonus_C_GetInteractableDescription::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetInteractableDescription, CallFunc_FTrunc_ReturnValue) == 0x000030, "Member 'BP_Pickupable_HealthBonus_C_GetInteractableDescription::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetInteractableDescription, CallFunc_Conv_IntToString_ReturnValue) == 0x000038, "Member 'BP_Pickupable_HealthBonus_C_GetInteractableDescription::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetInteractableDescription, CallFunc_Replace_ReturnValue) == 0x000048, "Member 'BP_Pickupable_HealthBonus_C_GetInteractableDescription::CallFunc_Replace_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetInteractableDescription, CallFunc_Conv_StringToText_ReturnValue) == 0x000058, "Member 'BP_Pickupable_HealthBonus_C_GetInteractableDescription::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_HealthBonus_C_GetInteractableDescription;
 
 // Function BP_Pickupable_HealthBonus.BP_Pickupable_HealthBonus_C.GetPingableIconTexture
 // 0x0008 (0x0008 - 0x0000)
@@ -187,9 +111,7 @@ struct BP_Pickupable_HealthBonus_C_GetPingableIconTexture final
 public:
 	class UTexture2D*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_HealthBonus_C_GetPingableIconTexture) == 0x000008, "Wrong alignment on BP_Pickupable_HealthBonus_C_GetPingableIconTexture");
-static_assert(sizeof(BP_Pickupable_HealthBonus_C_GetPingableIconTexture) == 0x000008, "Wrong size on BP_Pickupable_HealthBonus_C_GetPingableIconTexture");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetPingableIconTexture, ReturnValue) == 0x000000, "Member 'BP_Pickupable_HealthBonus_C_GetPingableIconTexture::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_HealthBonus_C_GetPingableIconTexture;
 
 // Function BP_Pickupable_HealthBonus.BP_Pickupable_HealthBonus_C.GetPingableName
 // 0x0010 (0x0010 - 0x0000)
@@ -198,9 +120,7 @@ struct BP_Pickupable_HealthBonus_C_GetPingableName final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_Pickupable_HealthBonus_C_GetPingableName) == 0x000008, "Wrong alignment on BP_Pickupable_HealthBonus_C_GetPingableName");
-static_assert(sizeof(BP_Pickupable_HealthBonus_C_GetPingableName) == 0x000010, "Wrong size on BP_Pickupable_HealthBonus_C_GetPingableName");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_GetPingableName, ReturnValue) == 0x000000, "Member 'BP_Pickupable_HealthBonus_C_GetPingableName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_HealthBonus_C_GetPingableName;
 
 // Function BP_Pickupable_HealthBonus.BP_Pickupable_HealthBonus_C.IsCurrentlyPinged
 // 0x0001 (0x0001 - 0x0000)
@@ -209,9 +129,7 @@ struct BP_Pickupable_HealthBonus_C_IsCurrentlyPinged final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_HealthBonus_C_IsCurrentlyPinged) == 0x000001, "Wrong alignment on BP_Pickupable_HealthBonus_C_IsCurrentlyPinged");
-static_assert(sizeof(BP_Pickupable_HealthBonus_C_IsCurrentlyPinged) == 0x000001, "Wrong size on BP_Pickupable_HealthBonus_C_IsCurrentlyPinged");
-static_assert(offsetof(BP_Pickupable_HealthBonus_C_IsCurrentlyPinged, ReturnValue) == 0x000000, "Member 'BP_Pickupable_HealthBonus_C_IsCurrentlyPinged::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_HealthBonus_C_IsCurrentlyPinged;
 
 }
 

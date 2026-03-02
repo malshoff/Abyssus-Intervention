@@ -23,15 +23,18 @@ class UBP_CameraChake_LobbyElevator_Moving_01_C final : public UDefaultCameraSha
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_CameraChake_LobbyElevator_Moving_01_C">();
+		BP_STATIC_CLASS_IMPL("BP_CameraChake_LobbyElevator_Moving_01_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_CameraChake_LobbyElevator_Moving_01_C")
 	}
 	static class UBP_CameraChake_LobbyElevator_Moving_01_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_CameraChake_LobbyElevator_Moving_01_C>();
 	}
 };
-static_assert(alignof(UBP_CameraChake_LobbyElevator_Moving_01_C) == 0x000010, "Wrong alignment on UBP_CameraChake_LobbyElevator_Moving_01_C");
-static_assert(sizeof(UBP_CameraChake_LobbyElevator_Moving_01_C) == 0x0000E0, "Wrong size on UBP_CameraChake_LobbyElevator_Moving_01_C");
+DUMPER7_ASSERTS_UBP_CameraChake_LobbyElevator_Moving_01_C;
 
 }
 

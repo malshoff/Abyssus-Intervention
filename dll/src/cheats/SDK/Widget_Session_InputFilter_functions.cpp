@@ -17,63 +17,99 @@
 namespace SDK
 {
 
-// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.BndEvt__Widget_Session_InputFilter_Widget_BaseInputField_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// ETextCommit                             Commit_Method                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_Session_InputFilter_C::PreConstruct(bool IsDesignTime)
+void UWidget_Session_InputFilter_C::BndEvt__Widget_Session_InputFilter_Widget_BaseInputField_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit Commit_Method)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Session_InputFilter_C", "PreConstruct");
+		Func = Class->GetFunction("Widget_Session_InputFilter_C", "BndEvt__Widget_Session_InputFilter_Widget_BaseInputField_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature");
 
-	Params::Widget_Session_InputFilter_C_PreConstruct Parms{};
+	Params::Widget_Session_InputFilter_C_BndEvt__Widget_Session_InputFilter_Widget_BaseInputField_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.Text = std::move(Text);
+	Parms.Commit_Method = Commit_Method;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.OnListItemObjectSet
+// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.BP_OnEntryReleased
+// (Event, Protected, BlueprintEvent)
+
+void UWidget_Session_InputFilter_C::BP_OnEntryReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_Session_InputFilter_C", "BP_OnEntryReleased");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.BP_OnItemExpansionChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_Session_InputFilter_C::OnListItemObjectSet(class UObject* ListItemObject)
+void UWidget_Session_InputFilter_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Session_InputFilter_C", "OnListItemObjectSet");
+		Func = Class->GetFunction("Widget_Session_InputFilter_C", "BP_OnItemExpansionChanged");
 
-	Params::Widget_Session_InputFilter_C_OnListItemObjectSet Parms{};
+	Params::Widget_Session_InputFilter_C_BP_OnItemExpansionChanged Parms{};
 
-	Parms.ListItemObject = ListItemObject;
+	Parms.bIsExpanded = bIsExpanded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.GetValue
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.BP_OnItemSelectionChanged
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class FText UWidget_Session_InputFilter_C::GetValue()
+void UWidget_Session_InputFilter_C::BP_OnItemSelectionChanged(bool bIsSelected)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Session_InputFilter_C", "GetValue");
+		Func = Class->GetFunction("Widget_Session_InputFilter_C", "BP_OnItemSelectionChanged");
 
-	Params::Widget_Session_InputFilter_C_GetValue Parms{};
+	Params::Widget_Session_InputFilter_C_BP_OnItemSelectionChanged Parms{};
+
+	Parms.bIsSelected = bIsSelected;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	return Parms.ReturnValue;
+
+// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.ExecuteUbergraph_Widget_Session_InputFilter
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_Session_InputFilter_C::ExecuteUbergraph_Widget_Session_InputFilter(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_Session_InputFilter_C", "ExecuteUbergraph_Widget_Session_InputFilter");
+
+	Params::Widget_Session_InputFilter_C_ExecuteUbergraph_Widget_Session_InputFilter Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -102,97 +138,61 @@ void UWidget_Session_InputFilter_C::GetFilter(class FName* Key, class FText* Val
 }
 
 
-// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.ExecuteUbergraph_Widget_Session_InputFilter
-// (Final, UbergraphFunction, HasDefaults)
+// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.GetValue
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-void UWidget_Session_InputFilter_C::ExecuteUbergraph_Widget_Session_InputFilter(int32 EntryPoint)
+class FText UWidget_Session_InputFilter_C::GetValue()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Session_InputFilter_C", "ExecuteUbergraph_Widget_Session_InputFilter");
+		Func = Class->GetFunction("Widget_Session_InputFilter_C", "GetValue");
 
-	Params::Widget_Session_InputFilter_C_ExecuteUbergraph_Widget_Session_InputFilter Parms{};
+	Params::Widget_Session_InputFilter_C_GetValue Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.OnListItemObjectSet
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_Session_InputFilter_C::OnListItemObjectSet(class UObject* ListItemObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_Session_InputFilter_C", "OnListItemObjectSet");
+
+	Params::Widget_Session_InputFilter_C_OnListItemObjectSet Parms{};
+
+	Parms.ListItemObject = ListItemObject;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.BP_OnItemSelectionChanged
-// (Event, Protected, BlueprintEvent)
+// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_Session_InputFilter_C::BP_OnItemSelectionChanged(bool bIsSelected)
+void UWidget_Session_InputFilter_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Session_InputFilter_C", "BP_OnItemSelectionChanged");
+		Func = Class->GetFunction("Widget_Session_InputFilter_C", "PreConstruct");
 
-	Params::Widget_Session_InputFilter_C_BP_OnItemSelectionChanged Parms{};
+	Params::Widget_Session_InputFilter_C_PreConstruct Parms{};
 
-	Parms.bIsSelected = bIsSelected;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.BP_OnItemExpansionChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_Session_InputFilter_C::BP_OnItemExpansionChanged(bool bIsExpanded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Session_InputFilter_C", "BP_OnItemExpansionChanged");
-
-	Params::Widget_Session_InputFilter_C_BP_OnItemExpansionChanged Parms{};
-
-	Parms.bIsExpanded = bIsExpanded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.BP_OnEntryReleased
-// (Event, Protected, BlueprintEvent)
-
-void UWidget_Session_InputFilter_C::BP_OnEntryReleased()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Session_InputFilter_C", "BP_OnEntryReleased");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_Session_InputFilter.Widget_Session_InputFilter_C.BndEvt__Widget_Session_InputFilter_Widget_BaseInputField_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// ETextCommit                             Commit_Method                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_Session_InputFilter_C::BndEvt__Widget_Session_InputFilter_Widget_BaseInputField_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature(const class FText& Text, ETextCommit Commit_Method)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Session_InputFilter_C", "BndEvt__Widget_Session_InputFilter_Widget_BaseInputField_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature");
-
-	Params::Widget_Session_InputFilter_C_BndEvt__Widget_Session_InputFilter_Widget_BaseInputField_K2Node_ComponentBoundEvent_0_OnTextCommitted__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-	Parms.Commit_Method = Commit_Method;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

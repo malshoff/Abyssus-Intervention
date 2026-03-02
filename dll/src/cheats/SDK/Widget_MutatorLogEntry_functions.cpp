@@ -17,61 +17,63 @@
 namespace SDK
 {
 
-// Function Widget_MutatorLogEntry.Widget_MutatorLogEntry_C.Setup
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class URMutatorPrimaryAsset*            PrimaryAsset                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function Widget_MutatorLogEntry.Widget_MutatorLogEntry_C.BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_MutatorLogEntry_C::Setup(class URMutatorPrimaryAsset* PrimaryAsset)
+void UWidget_MutatorLogEntry_C::BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorLogEntry_C", "Setup");
+		Func = Class->GetFunction("Widget_MutatorLogEntry_C", "BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
 
-	Params::Widget_MutatorLogEntry_C_Setup Parms{};
-
-	Parms.PrimaryAsset = PrimaryAsset;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_MutatorLogEntry.Widget_MutatorLogEntry_C.OnListItemObjectSet
+// Function Widget_MutatorLogEntry.Widget_MutatorLogEntry_C.BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_MutatorLogEntry_C::BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_MutatorLogEntry_C", "BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_MutatorLogEntry.Widget_MutatorLogEntry_C.BP_OnEntryReleased
+// (Event, Protected, BlueprintEvent)
+
+void UWidget_MutatorLogEntry_C::BP_OnEntryReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_MutatorLogEntry_C", "BP_OnEntryReleased");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_MutatorLogEntry.Widget_MutatorLogEntry_C.BP_OnItemExpansionChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_MutatorLogEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
+void UWidget_MutatorLogEntry_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorLogEntry_C", "OnListItemObjectSet");
+		Func = Class->GetFunction("Widget_MutatorLogEntry_C", "BP_OnItemExpansionChanged");
 
-	Params::Widget_MutatorLogEntry_C_OnListItemObjectSet Parms{};
+	Params::Widget_MutatorLogEntry_C_BP_OnItemExpansionChanged Parms{};
 
-	Parms.ListItemObject = ListItemObject;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_MutatorLogEntry.Widget_MutatorLogEntry_C.ExecuteUbergraph_Widget_MutatorLogEntry
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_MutatorLogEntry_C::ExecuteUbergraph_Widget_MutatorLogEntry(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorLogEntry_C", "ExecuteUbergraph_Widget_MutatorLogEntry");
-
-	Params::Widget_MutatorLogEntry_C_ExecuteUbergraph_Widget_MutatorLogEntry Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.bIsExpanded = bIsExpanded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -97,65 +99,63 @@ void UWidget_MutatorLogEntry_C::BP_OnItemSelectionChanged(bool bIsSelected)
 }
 
 
-// Function Widget_MutatorLogEntry.Widget_MutatorLogEntry_C.BP_OnItemExpansionChanged
-// (Event, Protected, BlueprintEvent)
+// Function Widget_MutatorLogEntry.Widget_MutatorLogEntry_C.ExecuteUbergraph_Widget_MutatorLogEntry
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_MutatorLogEntry_C::BP_OnItemExpansionChanged(bool bIsExpanded)
+void UWidget_MutatorLogEntry_C::ExecuteUbergraph_Widget_MutatorLogEntry(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorLogEntry_C", "BP_OnItemExpansionChanged");
+		Func = Class->GetFunction("Widget_MutatorLogEntry_C", "ExecuteUbergraph_Widget_MutatorLogEntry");
 
-	Params::Widget_MutatorLogEntry_C_BP_OnItemExpansionChanged Parms{};
+	Params::Widget_MutatorLogEntry_C_ExecuteUbergraph_Widget_MutatorLogEntry Parms{};
 
-	Parms.bIsExpanded = bIsExpanded;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_MutatorLogEntry.Widget_MutatorLogEntry_C.BP_OnEntryReleased
+// Function Widget_MutatorLogEntry.Widget_MutatorLogEntry_C.OnListItemObjectSet
 // (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_MutatorLogEntry_C::BP_OnEntryReleased()
+void UWidget_MutatorLogEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorLogEntry_C", "BP_OnEntryReleased");
+		Func = Class->GetFunction("Widget_MutatorLogEntry_C", "OnListItemObjectSet");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Widget_MutatorLogEntry_C_OnListItemObjectSet Parms{};
+
+	Parms.ListItemObject = ListItemObject;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_MutatorLogEntry.Widget_MutatorLogEntry_C.BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
+// Function Widget_MutatorLogEntry.Widget_MutatorLogEntry_C.Setup
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URMutatorPrimaryAsset*            PrimaryAsset                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_MutatorLogEntry_C::BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
+void UWidget_MutatorLogEntry_C::Setup(class URMutatorPrimaryAsset* PrimaryAsset)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorLogEntry_C", "BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+		Func = Class->GetFunction("Widget_MutatorLogEntry_C", "Setup");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::Widget_MutatorLogEntry_C_Setup Parms{};
 
+	Parms.PrimaryAsset = PrimaryAsset;
 
-// Function Widget_MutatorLogEntry.Widget_MutatorLogEntry_C.BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWidget_MutatorLogEntry_C::BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorLogEntry_C", "BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

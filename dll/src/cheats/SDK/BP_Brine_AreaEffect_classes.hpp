@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Brine_AreaEffect.BP_Brine_AreaEffect_C
-// 0x0010 (0x0460 - 0x0450)
+// 0x0010 (0x0468 - 0x0458)
 class ABP_Brine_AreaEffect_C final : public ARAreaEffect
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0450(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UDMActorProximitySphereComponent*       DMActorProximitySphere;                            // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0458(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UDMActorProximitySphereComponent*       DMActorProximitySphere;                            // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Brine_AreaEffect(int32 EntryPoint);
@@ -33,17 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Brine_AreaEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_Brine_AreaEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Brine_AreaEffect_C")
 	}
 	static class ABP_Brine_AreaEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Brine_AreaEffect_C>();
 	}
 };
-static_assert(alignof(ABP_Brine_AreaEffect_C) == 0x000008, "Wrong alignment on ABP_Brine_AreaEffect_C");
-static_assert(sizeof(ABP_Brine_AreaEffect_C) == 0x000460, "Wrong size on ABP_Brine_AreaEffect_C");
-static_assert(offsetof(ABP_Brine_AreaEffect_C, UberGraphFrame) == 0x000450, "Member 'ABP_Brine_AreaEffect_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Brine_AreaEffect_C, DMActorProximitySphere) == 0x000458, "Member 'ABP_Brine_AreaEffect_C::DMActorProximitySphere' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Brine_AreaEffect_C;
 
 }
 

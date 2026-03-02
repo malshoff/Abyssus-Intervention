@@ -23,15 +23,18 @@ class UBP_DefenderPassive6_CharacterMutator_C final : public URGCharacterMutator
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_DefenderPassive6_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_DefenderPassive6_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_DefenderPassive6_CharacterMutator_C")
 	}
 	static class UBP_DefenderPassive6_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_DefenderPassive6_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_DefenderPassive6_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_DefenderPassive6_CharacterMutator_C");
-static_assert(sizeof(UBP_DefenderPassive6_CharacterMutator_C) == 0x000108, "Wrong size on UBP_DefenderPassive6_CharacterMutator_C");
+DUMPER7_ASSERTS_UBP_DefenderPassive6_CharacterMutator_C;
 
 }
 

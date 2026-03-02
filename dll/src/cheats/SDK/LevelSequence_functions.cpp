@@ -17,6 +17,991 @@
 namespace SDK
 {
 
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.ClearFavoriteRating
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class ULevelSequence*                   InLevelSequence                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ULevelSequenceShotMetaDataLibrary::ClearFavoriteRating(class ULevelSequence* InLevelSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "ClearFavoriteRating");
+
+	Params::LevelSequenceShotMetaDataLibrary_ClearFavoriteRating Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.ClearIsFlagged
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class ULevelSequence*                   InLevelSequence                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ULevelSequenceShotMetaDataLibrary::ClearIsFlagged(class ULevelSequence* InLevelSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "ClearIsFlagged");
+
+	Params::LevelSequenceShotMetaDataLibrary_ClearIsFlagged Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.ClearIsNoGood
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class ULevelSequence*                   InLevelSequence                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ULevelSequenceShotMetaDataLibrary::ClearIsNoGood(class ULevelSequence* InLevelSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "ClearIsNoGood");
+
+	Params::LevelSequenceShotMetaDataLibrary_ClearIsNoGood Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.ClearIsRecorded
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class ULevelSequence*                   InLevelSequence                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ULevelSequenceShotMetaDataLibrary::ClearIsRecorded(class ULevelSequence* InLevelSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "ClearIsRecorded");
+
+	Params::LevelSequenceShotMetaDataLibrary_ClearIsRecorded Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.ClearIsSubSequence
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class ULevelSequence*                   InLevelSequence                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ULevelSequenceShotMetaDataLibrary::ClearIsSubSequence(class ULevelSequence* InLevelSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "ClearIsSubSequence");
+
+	Params::LevelSequenceShotMetaDataLibrary_ClearIsSubSequence Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetFavoriteRating
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class ULevelSequence*             InLevelSequence                                        (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  OutFavoriteRating                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::GetFavoriteRating(const class ULevelSequence* InLevelSequence, int32* OutFavoriteRating)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "GetFavoriteRating");
+
+	Params::LevelSequenceShotMetaDataLibrary_GetFavoriteRating Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutFavoriteRating != nullptr)
+		*OutFavoriteRating = Parms.OutFavoriteRating;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetFavoriteRatingAssetTag
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName ULevelSequenceShotMetaDataLibrary::GetFavoriteRatingAssetTag()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "GetFavoriteRatingAssetTag");
+
+	Params::LevelSequenceShotMetaDataLibrary_GetFavoriteRatingAssetTag Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetFavoriteRatingByAssetData
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAssetData&                InAssetData                                            (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  OutFavoriteRating                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::GetFavoriteRatingByAssetData(const struct FAssetData& InAssetData, int32* OutFavoriteRating)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "GetFavoriteRatingByAssetData");
+
+	Params::LevelSequenceShotMetaDataLibrary_GetFavoriteRatingByAssetData Parms{};
+
+	Parms.InAssetData = std::move(InAssetData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutFavoriteRating != nullptr)
+		*OutFavoriteRating = Parms.OutFavoriteRating;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsFlagged
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class ULevelSequence*             InLevelSequence                                        (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bOutIsFlagged                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::GetIsFlagged(const class ULevelSequence* InLevelSequence, bool* bOutIsFlagged)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "GetIsFlagged");
+
+	Params::LevelSequenceShotMetaDataLibrary_GetIsFlagged Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bOutIsFlagged != nullptr)
+		*bOutIsFlagged = Parms.bOutIsFlagged;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsFlaggedAssetTag
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName ULevelSequenceShotMetaDataLibrary::GetIsFlaggedAssetTag()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "GetIsFlaggedAssetTag");
+
+	Params::LevelSequenceShotMetaDataLibrary_GetIsFlaggedAssetTag Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsFlaggedByAssetData
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAssetData&                InAssetData                                            (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bOutIsFlagged                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::GetIsFlaggedByAssetData(const struct FAssetData& InAssetData, bool* bOutIsFlagged)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "GetIsFlaggedByAssetData");
+
+	Params::LevelSequenceShotMetaDataLibrary_GetIsFlaggedByAssetData Parms{};
+
+	Parms.InAssetData = std::move(InAssetData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bOutIsFlagged != nullptr)
+		*bOutIsFlagged = Parms.bOutIsFlagged;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsNoGood
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class ULevelSequence*             InLevelSequence                                        (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bOutNoGood                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::GetIsNoGood(const class ULevelSequence* InLevelSequence, bool* bOutNoGood)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "GetIsNoGood");
+
+	Params::LevelSequenceShotMetaDataLibrary_GetIsNoGood Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bOutNoGood != nullptr)
+		*bOutNoGood = Parms.bOutNoGood;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsNoGoodAssetTag
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName ULevelSequenceShotMetaDataLibrary::GetIsNoGoodAssetTag()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "GetIsNoGoodAssetTag");
+
+	Params::LevelSequenceShotMetaDataLibrary_GetIsNoGoodAssetTag Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsNoGoodByAssetData
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAssetData&                InAssetData                                            (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bOutNoGood                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::GetIsNoGoodByAssetData(const struct FAssetData& InAssetData, bool* bOutNoGood)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "GetIsNoGoodByAssetData");
+
+	Params::LevelSequenceShotMetaDataLibrary_GetIsNoGoodByAssetData Parms{};
+
+	Parms.InAssetData = std::move(InAssetData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bOutNoGood != nullptr)
+		*bOutNoGood = Parms.bOutNoGood;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsRecorded
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class ULevelSequence*             InLevelSequence                                        (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bOutIsRecorded                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::GetIsRecorded(const class ULevelSequence* InLevelSequence, bool* bOutIsRecorded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "GetIsRecorded");
+
+	Params::LevelSequenceShotMetaDataLibrary_GetIsRecorded Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bOutIsRecorded != nullptr)
+		*bOutIsRecorded = Parms.bOutIsRecorded;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsRecordedAssetTag
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName ULevelSequenceShotMetaDataLibrary::GetIsRecordedAssetTag()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "GetIsRecordedAssetTag");
+
+	Params::LevelSequenceShotMetaDataLibrary_GetIsRecordedAssetTag Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsRecordedByAssetData
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAssetData&                InAssetData                                            (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bOutIsRecorded                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::GetIsRecordedByAssetData(const struct FAssetData& InAssetData, bool* bOutIsRecorded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "GetIsRecordedByAssetData");
+
+	Params::LevelSequenceShotMetaDataLibrary_GetIsRecordedByAssetData Parms{};
+
+	Parms.InAssetData = std::move(InAssetData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bOutIsRecorded != nullptr)
+		*bOutIsRecorded = Parms.bOutIsRecorded;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsSubSequence
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class ULevelSequence*             InLevelSequence                                        (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bOutIsSubSequence                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::GetIsSubSequence(const class ULevelSequence* InLevelSequence, bool* bOutIsSubSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "GetIsSubSequence");
+
+	Params::LevelSequenceShotMetaDataLibrary_GetIsSubSequence Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bOutIsSubSequence != nullptr)
+		*bOutIsSubSequence = Parms.bOutIsSubSequence;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsSubSequenceAssetTag
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName ULevelSequenceShotMetaDataLibrary::GetIsSubSequenceAssetTag()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "GetIsSubSequenceAssetTag");
+
+	Params::LevelSequenceShotMetaDataLibrary_GetIsSubSequenceAssetTag Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsSubSequenceByAssetData
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAssetData&                InAssetData                                            (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bOutIsSubSequence                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::GetIsSubSequenceByAssetData(const struct FAssetData& InAssetData, bool* bOutIsSubSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "GetIsSubSequenceByAssetData");
+
+	Params::LevelSequenceShotMetaDataLibrary_GetIsSubSequenceByAssetData Parms{};
+
+	Parms.InAssetData = std::move(InAssetData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bOutIsSubSequence != nullptr)
+		*bOutIsSubSequence = Parms.bOutIsSubSequence;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasFavoriteRating
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class ULevelSequence*             InLevelSequence                                        (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::HasFavoriteRating(const class ULevelSequence* InLevelSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "HasFavoriteRating");
+
+	Params::LevelSequenceShotMetaDataLibrary_HasFavoriteRating Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasFavoriteRatingByAssetData
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAssetData&                InAssetData                                            (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::HasFavoriteRatingByAssetData(const struct FAssetData& InAssetData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "HasFavoriteRatingByAssetData");
+
+	Params::LevelSequenceShotMetaDataLibrary_HasFavoriteRatingByAssetData Parms{};
+
+	Parms.InAssetData = std::move(InAssetData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsFlagged
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class ULevelSequence*             InLevelSequence                                        (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::HasIsFlagged(const class ULevelSequence* InLevelSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "HasIsFlagged");
+
+	Params::LevelSequenceShotMetaDataLibrary_HasIsFlagged Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsFlaggedByAssetData
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAssetData&                InAssetData                                            (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::HasIsFlaggedByAssetData(const struct FAssetData& InAssetData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "HasIsFlaggedByAssetData");
+
+	Params::LevelSequenceShotMetaDataLibrary_HasIsFlaggedByAssetData Parms{};
+
+	Parms.InAssetData = std::move(InAssetData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsNoGood
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class ULevelSequence*             InLevelSequence                                        (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::HasIsNoGood(const class ULevelSequence* InLevelSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "HasIsNoGood");
+
+	Params::LevelSequenceShotMetaDataLibrary_HasIsNoGood Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsNoGoodByAssetData
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAssetData&                InAssetData                                            (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::HasIsNoGoodByAssetData(const struct FAssetData& InAssetData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "HasIsNoGoodByAssetData");
+
+	Params::LevelSequenceShotMetaDataLibrary_HasIsNoGoodByAssetData Parms{};
+
+	Parms.InAssetData = std::move(InAssetData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsRecorded
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class ULevelSequence*             InLevelSequence                                        (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::HasIsRecorded(const class ULevelSequence* InLevelSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "HasIsRecorded");
+
+	Params::LevelSequenceShotMetaDataLibrary_HasIsRecorded Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsRecordedByAssetData
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAssetData&                InAssetData                                            (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::HasIsRecordedByAssetData(const struct FAssetData& InAssetData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "HasIsRecordedByAssetData");
+
+	Params::LevelSequenceShotMetaDataLibrary_HasIsRecordedByAssetData Parms{};
+
+	Parms.InAssetData = std::move(InAssetData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsSubSequence
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class ULevelSequence*             InLevelSequence                                        (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::HasIsSubSequence(const class ULevelSequence* InLevelSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "HasIsSubSequence");
+
+	Params::LevelSequenceShotMetaDataLibrary_HasIsSubSequence Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsSubSequenceByAssetData
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAssetData&                InAssetData                                            (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevelSequenceShotMetaDataLibrary::HasIsSubSequenceByAssetData(const struct FAssetData& InAssetData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "HasIsSubSequenceByAssetData");
+
+	Params::LevelSequenceShotMetaDataLibrary_HasIsSubSequenceByAssetData Parms{};
+
+	Parms.InAssetData = std::move(InAssetData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.SetFavoriteRating
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class ULevelSequence*                   InLevelSequence                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InFavoriteRating                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ULevelSequenceShotMetaDataLibrary::SetFavoriteRating(class ULevelSequence* InLevelSequence, int32 InFavoriteRating)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "SetFavoriteRating");
+
+	Params::LevelSequenceShotMetaDataLibrary_SetFavoriteRating Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+	Parms.InFavoriteRating = InFavoriteRating;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.SetIsFlagged
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class ULevelSequence*                   InLevelSequence                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInIsFlagged                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ULevelSequenceShotMetaDataLibrary::SetIsFlagged(class ULevelSequence* InLevelSequence, bool bInIsFlagged)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "SetIsFlagged");
+
+	Params::LevelSequenceShotMetaDataLibrary_SetIsFlagged Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+	Parms.bInIsFlagged = bInIsFlagged;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.SetIsNoGood
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class ULevelSequence*                   InLevelSequence                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInIsNoGood                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ULevelSequenceShotMetaDataLibrary::SetIsNoGood(class ULevelSequence* InLevelSequence, bool bInIsNoGood)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "SetIsNoGood");
+
+	Params::LevelSequenceShotMetaDataLibrary_SetIsNoGood Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+	Parms.bInIsNoGood = bInIsNoGood;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.SetIsRecorded
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class ULevelSequence*                   InLevelSequence                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInIsRecorded                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ULevelSequenceShotMetaDataLibrary::SetIsRecorded(class ULevelSequence* InLevelSequence, bool bInIsRecorded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "SetIsRecorded");
+
+	Params::LevelSequenceShotMetaDataLibrary_SetIsRecorded Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+	Parms.bInIsRecorded = bInIsRecorded;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.SetIsSubSequence
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class ULevelSequence*                   InLevelSequence                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInIsSubSequence                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ULevelSequenceShotMetaDataLibrary::SetIsSubSequence(class ULevelSequence* InLevelSequence, bool bInIsSubSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelSequenceShotMetaDataLibrary", "SetIsSubSequence");
+
+	Params::LevelSequenceShotMetaDataLibrary_SetIsSubSequence Parms{};
+
+	Parms.InLevelSequence = InLevelSequence;
+	Parms.bInIsSubSequence = bInIsSubSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function LevelSequence.LevelSequence.CopyMetaData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:

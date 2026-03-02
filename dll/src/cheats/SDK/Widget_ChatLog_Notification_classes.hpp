@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_ChatLog_Notification.Widget_ChatLog_Notification_C
-// 0x0028 (0x02F8 - 0x02D0)
+// 0x0028 (0x0368 - 0x0340)
 class UWidget_ChatLog_Notification_C final : public URChatLogEntryWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             DisplayName;                                       // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             MessageContent;                                    // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Space;                                             // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	float                                         NotificationAliveTime;                             // 0x02F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Space;                                             // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             MessageContent;                                    // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             DisplayName;                                       // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	float                                         NotificationAliveTime;                             // 0x0360(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Widget_ChatLog_Notification(int32 EntryPoint);
@@ -36,20 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_ChatLog_Notification_C">();
+		BP_STATIC_CLASS_IMPL("Widget_ChatLog_Notification_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_ChatLog_Notification_C")
 	}
 	static class UWidget_ChatLog_Notification_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_ChatLog_Notification_C>();
 	}
 };
-static_assert(alignof(UWidget_ChatLog_Notification_C) == 0x000008, "Wrong alignment on UWidget_ChatLog_Notification_C");
-static_assert(sizeof(UWidget_ChatLog_Notification_C) == 0x0002F8, "Wrong size on UWidget_ChatLog_Notification_C");
-static_assert(offsetof(UWidget_ChatLog_Notification_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_ChatLog_Notification_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_ChatLog_Notification_C, DisplayName) == 0x0002D8, "Member 'UWidget_ChatLog_Notification_C::DisplayName' has a wrong offset!");
-static_assert(offsetof(UWidget_ChatLog_Notification_C, MessageContent) == 0x0002E0, "Member 'UWidget_ChatLog_Notification_C::MessageContent' has a wrong offset!");
-static_assert(offsetof(UWidget_ChatLog_Notification_C, Space) == 0x0002E8, "Member 'UWidget_ChatLog_Notification_C::Space' has a wrong offset!");
-static_assert(offsetof(UWidget_ChatLog_Notification_C, NotificationAliveTime) == 0x0002F0, "Member 'UWidget_ChatLog_Notification_C::NotificationAliveTime' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_ChatLog_Notification_C;
 
 }
 

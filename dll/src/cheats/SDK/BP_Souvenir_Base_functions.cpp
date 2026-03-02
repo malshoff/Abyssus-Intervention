@@ -60,6 +60,29 @@ void ABP_Souvenir_Base_C::ExecuteUbergraph_BP_Souvenir_Base(int32 EntryPoint)
 }
 
 
+// Function BP_Souvenir_Base.BP_Souvenir_Base_C.IsShareable
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_Souvenir_Base_C::IsShareable(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Souvenir_Base_C", "IsShareable");
+
+	Params::BP_Souvenir_Base_C_IsShareable Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_Souvenir_Base.BP_Souvenir_Base_C.OnFocus
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -131,6 +154,26 @@ void ABP_Souvenir_Base_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_Souvenir_Base_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Souvenir_Base.BP_Souvenir_Base_C.ShareInteractableActor
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class APlayerController*          PlayerController                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Souvenir_Base_C::ShareInteractableActor(const class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Souvenir_Base_C", "ShareInteractableActor");
+
+	Params::BP_Souvenir_Base_C_ShareInteractableActor Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

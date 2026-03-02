@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function BP_CosmeticWardrobe.BP_CosmeticWardrobe_C.ApplyCurrentSaveGameCosmetics
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void ABP_CosmeticWardrobe_C::ApplyCurrentSaveGameCosmetics()
 {
@@ -28,6 +28,28 @@ void ABP_CosmeticWardrobe_C::ApplyCurrentSaveGameCosmetics()
 		Func = Class->GetFunction("BP_CosmeticWardrobe_C", "ApplyCurrentSaveGameCosmetics");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CosmeticWardrobe.BP_CosmeticWardrobe_C.ApplyPreviewVFX
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URCosmeticPrimaryAsset*           CosmeticPA                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class USceneComponent*                  AttachToComponent                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CosmeticWardrobe_C::ApplyPreviewVFX(class URCosmeticPrimaryAsset* CosmeticPA, class USceneComponent* AttachToComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CosmeticWardrobe_C", "ApplyPreviewVFX");
+
+	Params::BP_CosmeticWardrobe_C_ApplyPreviewVFX Parms{};
+
+	Parms.CosmeticPA = CosmeticPA;
+	Parms.AttachToComponent = AttachToComponent;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -57,9 +79,9 @@ bool ABP_CosmeticWardrobe_C::CanInteract(class APlayerController* Controller)
 // Function BP_CosmeticWardrobe.BP_CosmeticWardrobe_C.CosmeticPreview
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FPlayerCosmeticOption&     CosmeticOptionData                                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// class URCosmeticPrimaryAsset*           CosmeticPA                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CosmeticWardrobe_C::CosmeticPreview(const struct FPlayerCosmeticOption& CosmeticOptionData)
+void ABP_CosmeticWardrobe_C::CosmeticPreview(class URCosmeticPrimaryAsset* CosmeticPA)
 {
 	static class UFunction* Func = nullptr;
 
@@ -68,7 +90,7 @@ void ABP_CosmeticWardrobe_C::CosmeticPreview(const struct FPlayerCosmeticOption&
 
 	Params::BP_CosmeticWardrobe_C_CosmeticPreview Parms{};
 
-	Parms.CosmeticOptionData = std::move(CosmeticOptionData);
+	Parms.CosmeticPA = CosmeticPA;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -76,21 +98,15 @@ void ABP_CosmeticWardrobe_C::CosmeticPreview(const struct FPlayerCosmeticOption&
 
 // Function BP_CosmeticWardrobe.BP_CosmeticWardrobe_C.CosmeticPreviewEnd
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FPlayerCosmeticOption&     CosmeticOptionData                                     (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_CosmeticWardrobe_C::CosmeticPreviewEnd(const struct FPlayerCosmeticOption& CosmeticOptionData)
+void ABP_CosmeticWardrobe_C::CosmeticPreviewEnd()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_CosmeticWardrobe_C", "CosmeticPreviewEnd");
 
-	Params::BP_CosmeticWardrobe_C_CosmeticPreviewEnd Parms{};
-
-	Parms.CosmeticOptionData = std::move(CosmeticOptionData);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -132,6 +148,29 @@ void ABP_CosmeticWardrobe_C::GetPlayerCurrentPaintJobMaterial(class UMaterialIns
 
 	if (MaterialInstance != nullptr)
 		*MaterialInstance = Parms.MaterialInstance;
+}
+
+
+// Function BP_CosmeticWardrobe.BP_CosmeticWardrobe_C.IsShareable
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_CosmeticWardrobe_C::IsShareable(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CosmeticWardrobe_C", "IsShareable");
+
+	Params::BP_CosmeticWardrobe_C_IsShareable Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -218,10 +257,10 @@ void ABP_CosmeticWardrobe_C::OnCompleted_947F2FB5458A06D17B2B06BA920BCEC0(class 
 // Function BP_CosmeticWardrobe.BP_CosmeticWardrobe_C.OnCosmeticsApplied_Event
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FPlayerCosmeticOption&     CosmeticOptionData                                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// class URCosmeticPrimaryAsset*           CosmeticPA                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CosmeticWardrobe_C::OnCosmeticsApplied_Event(const struct FPlayerCosmeticOption& CosmeticOptionData, class APlayerController* PlayerController)
+void ABP_CosmeticWardrobe_C::OnCosmeticsApplied_Event(class URCosmeticPrimaryAsset* CosmeticPA, class APlayerController* PlayerController)
 {
 	static class UFunction* Func = nullptr;
 
@@ -230,7 +269,7 @@ void ABP_CosmeticWardrobe_C::OnCosmeticsApplied_Event(const struct FPlayerCosmet
 
 	Params::BP_CosmeticWardrobe_C_OnCosmeticsApplied_Event Parms{};
 
-	Parms.CosmeticOptionData = std::move(CosmeticOptionData);
+	Parms.CosmeticPA = CosmeticPA;
 	Parms.PlayerController = PlayerController;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -240,9 +279,9 @@ void ABP_CosmeticWardrobe_C::OnCosmeticsApplied_Event(const struct FPlayerCosmet
 // Function BP_CosmeticWardrobe.BP_CosmeticWardrobe_C.OnCosmeticsPreviewed_Event
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FPlayerCosmeticOption&     CosmeticOptionData                                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// class URCosmeticPrimaryAsset*           CosmeticPA                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CosmeticWardrobe_C::OnCosmeticsPreviewed_Event(const struct FPlayerCosmeticOption& CosmeticOptionData)
+void ABP_CosmeticWardrobe_C::OnCosmeticsPreviewed_Event(class URCosmeticPrimaryAsset* CosmeticPA)
 {
 	static class UFunction* Func = nullptr;
 
@@ -251,7 +290,7 @@ void ABP_CosmeticWardrobe_C::OnCosmeticsPreviewed_Event(const struct FPlayerCosm
 
 	Params::BP_CosmeticWardrobe_C_OnCosmeticsPreviewed_Event Parms{};
 
-	Parms.CosmeticOptionData = std::move(CosmeticOptionData);
+	Parms.CosmeticPA = CosmeticPA;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -260,9 +299,9 @@ void ABP_CosmeticWardrobe_C::OnCosmeticsPreviewed_Event(const struct FPlayerCosm
 // Function BP_CosmeticWardrobe.BP_CosmeticWardrobe_C.OnCosmeticsPreviewedEnd_Event
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FPlayerCosmeticOption&     CosmeticOptionData                                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// class URCosmeticPrimaryAsset*           CosmeticPA                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CosmeticWardrobe_C::OnCosmeticsPreviewedEnd_Event(const struct FPlayerCosmeticOption& CosmeticOptionData)
+void ABP_CosmeticWardrobe_C::OnCosmeticsPreviewedEnd_Event(class URCosmeticPrimaryAsset* CosmeticPA)
 {
 	static class UFunction* Func = nullptr;
 
@@ -271,7 +310,7 @@ void ABP_CosmeticWardrobe_C::OnCosmeticsPreviewedEnd_Event(const struct FPlayerC
 
 	Params::BP_CosmeticWardrobe_C_OnCosmeticsPreviewedEnd_Event Parms{};
 
-	Parms.CosmeticOptionData = std::move(CosmeticOptionData);
+	Parms.CosmeticPA = CosmeticPA;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -525,6 +564,26 @@ void ABP_CosmeticWardrobe_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_CosmeticWardrobe.BP_CosmeticWardrobe_C.RemovePreviewVFX
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USceneComponent*                  AttachToComponent                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CosmeticWardrobe_C::RemovePreviewVFX(class USceneComponent* AttachToComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CosmeticWardrobe_C", "RemovePreviewVFX");
+
+	Params::BP_CosmeticWardrobe_C_RemovePreviewVFX Parms{};
+
+	Parms.AttachToComponent = AttachToComponent;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_CosmeticWardrobe.BP_CosmeticWardrobe_C.RotateCharacter
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -558,6 +617,26 @@ void ABP_CosmeticWardrobe_C::SetCameraToWardrobeFocus(bool bFocusWardrobe, float
 	Parms.bFocusWardrobe = bFocusWardrobe;
 	Parms.BlendTime = BlendTime;
 	Parms.BlendFunc = BlendFunc;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CosmeticWardrobe.BP_CosmeticWardrobe_C.ShareInteractableActor
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class APlayerController*          PlayerController                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CosmeticWardrobe_C::ShareInteractableActor(const class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CosmeticWardrobe_C", "ShareInteractableActor");
+
+	Params::BP_CosmeticWardrobe_C_ShareInteractableActor Parms{};
+
+	Parms.PlayerController = PlayerController;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "GameplayTags_structs.hpp"
 
 
@@ -17,15 +18,14 @@ namespace SDK::Params
 {
 
 // Function Widget_ObjectiveTracker.Widget_ObjectiveTracker_C.AddNewEntry
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct Widget_ObjectiveTracker_C_AddNewEntry final
 {
 public:
 	class UObject*                                EntryObject;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ObjectiveTracker_C_AddNewEntry) == 0x000008, "Wrong alignment on Widget_ObjectiveTracker_C_AddNewEntry");
-static_assert(sizeof(Widget_ObjectiveTracker_C_AddNewEntry) == 0x000008, "Wrong size on Widget_ObjectiveTracker_C_AddNewEntry");
-static_assert(offsetof(Widget_ObjectiveTracker_C_AddNewEntry, EntryObject) == 0x000000, "Member 'Widget_ObjectiveTracker_C_AddNewEntry::EntryObject' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ObjectiveTracker_C_AddNewEntry;
 
 // Function Widget_ObjectiveTracker.Widget_ObjectiveTracker_C.CREATEDELEGATE_PROXYFUNCTION_0
 // 0x0018 (0x0018 - 0x0000)
@@ -35,10 +35,7 @@ public:
 	struct FGameplayTag                           ObjectiveTag;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 	class FText                                   UpdateInfo;                                        // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(Widget_ObjectiveTracker_C_CREATEDELEGATE_PROXYFUNCTION_0) == 0x000008, "Wrong alignment on Widget_ObjectiveTracker_C_CREATEDELEGATE_PROXYFUNCTION_0");
-static_assert(sizeof(Widget_ObjectiveTracker_C_CREATEDELEGATE_PROXYFUNCTION_0) == 0x000018, "Wrong size on Widget_ObjectiveTracker_C_CREATEDELEGATE_PROXYFUNCTION_0");
-static_assert(offsetof(Widget_ObjectiveTracker_C_CREATEDELEGATE_PROXYFUNCTION_0, ObjectiveTag) == 0x000000, "Member 'Widget_ObjectiveTracker_C_CREATEDELEGATE_PROXYFUNCTION_0::ObjectiveTag' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_CREATEDELEGATE_PROXYFUNCTION_0, UpdateInfo) == 0x000008, "Member 'Widget_ObjectiveTracker_C_CREATEDELEGATE_PROXYFUNCTION_0::UpdateInfo' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ObjectiveTracker_C_CREATEDELEGATE_PROXYFUNCTION_0;
 
 // Function Widget_ObjectiveTracker.Widget_ObjectiveTracker_C.ExecuteUbergraph_Widget_ObjectiveTracker
 // 0x0108 (0x0108 - 0x0000)
@@ -86,40 +83,7 @@ public:
 	class APawn*                                  CallFunc_GetOwningPlayerPawn_ReturnValue_2;        // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue_2;               // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker) == 0x000008, "Wrong alignment on Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker");
-static_assert(sizeof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker) == 0x000108, "Wrong size on Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, EntryPoint) == 0x000000, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, K2Node_CreateDelegate_OutputDelegate_1) == 0x000014, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, K2Node_Event_IsDesignTime) == 0x000024, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_GetObjectiveManager_ReturnValue) == 0x000028, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_GetObjectiveManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, K2Node_CreateDelegate_OutputDelegate_2) == 0x000030, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_IsValid_ReturnValue) == 0x000040, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, K2Node_CreateDelegate_OutputDelegate_3) == 0x000044, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, K2Node_CreateDelegate_OutputDelegate_4) == 0x000054, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, K2Node_CreateDelegate_OutputDelegate_5) == 0x000064, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_GetListItems_ReturnValue) == 0x000078, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_GetListItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, K2Node_CreateDelegate_OutputDelegate_6) == 0x000088, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_Array_IsEmpty_ReturnValue) == 0x000098, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x0000A0, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, K2Node_CustomEvent_Player) == 0x0000A8, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::K2Node_CustomEvent_Player' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x0000B0, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, K2Node_DynamicCast_bSuccess) == 0x0000B8, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_HasAuthority_ReturnValue) == 0x0000B9, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_GetRGameState_ReturnValue) == 0x0000C0, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_GetRGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_IsValid_ReturnValue_1) == 0x0000C8, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, K2Node_CustomEvent_RunFailed) == 0x0000C9, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::K2Node_CustomEvent_RunFailed' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_GetOwningPlayerPawn_ReturnValue_1) == 0x0000D0, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_GetOwningPlayerPawn_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_HasAuthority_ReturnValue_1) == 0x0000D8, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_GetLevelManager_ReturnValue) == 0x0000E0, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_GetLevelManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_GetOverworldManager_ReturnValue) == 0x0000E8, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_GetOverworldManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_IsValid_ReturnValue_2) == 0x0000F0, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_IsValid_ReturnValue_3) == 0x0000F1, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_IsInLobby_ReturnValue) == 0x0000F2, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_IsInLobby_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_IsInTutorial_ReturnValue) == 0x0000F3, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_IsInTutorial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_BooleanOR_ReturnValue) == 0x0000F4, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_GetOwningPlayerPawn_ReturnValue_2) == 0x0000F8, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_GetOwningPlayerPawn_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker, CallFunc_HasAuthority_ReturnValue_2) == 0x000100, "Member 'Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker::CallFunc_HasAuthority_ReturnValue_2' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ObjectiveTracker_C_ExecuteUbergraph_Widget_ObjectiveTracker;
 
 // Function Widget_ObjectiveTracker.Widget_ObjectiveTracker_C.OnFinishRun_Event
 // 0x0001 (0x0001 - 0x0000)
@@ -128,9 +92,7 @@ struct Widget_ObjectiveTracker_C_OnFinishRun_Event final
 public:
 	bool                                          RunFailed;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ObjectiveTracker_C_OnFinishRun_Event) == 0x000001, "Wrong alignment on Widget_ObjectiveTracker_C_OnFinishRun_Event");
-static_assert(sizeof(Widget_ObjectiveTracker_C_OnFinishRun_Event) == 0x000001, "Wrong size on Widget_ObjectiveTracker_C_OnFinishRun_Event");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnFinishRun_Event, RunFailed) == 0x000000, "Member 'Widget_ObjectiveTracker_C_OnFinishRun_Event::RunFailed' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ObjectiveTracker_C_OnFinishRun_Event;
 
 // Function Widget_ObjectiveTracker.Widget_ObjectiveTracker_C.OnObjectiveEnded
 // 0x0060 (0x0060 - 0x0000)
@@ -156,22 +118,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue;       // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ObjectiveTracker_C_OnObjectiveEnded) == 0x000008, "Wrong alignment on Widget_ObjectiveTracker_C_OnObjectiveEnded");
-static_assert(sizeof(Widget_ObjectiveTracker_C_OnObjectiveEnded) == 0x000060, "Wrong size on Widget_ObjectiveTracker_C_OnObjectiveEnded");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveEnded, ObjectiveTag) == 0x000000, "Member 'Widget_ObjectiveTracker_C_OnObjectiveEnded::ObjectiveTag' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveEnded, bCompleted) == 0x000008, "Member 'Widget_ObjectiveTracker_C_OnObjectiveEnded::bCompleted' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveEnded, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'Widget_ObjectiveTracker_C_OnObjectiveEnded::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveEnded, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'Widget_ObjectiveTracker_C_OnObjectiveEnded::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveEnded, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'Widget_ObjectiveTracker_C_OnObjectiveEnded::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveEnded, CallFunc_GetDisplayedEntryWidgets_ReturnValue) == 0x000018, "Member 'Widget_ObjectiveTracker_C_OnObjectiveEnded::CallFunc_GetDisplayedEntryWidgets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveEnded, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'Widget_ObjectiveTracker_C_OnObjectiveEnded::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveEnded, CallFunc_Array_Get_Item) == 0x000030, "Member 'Widget_ObjectiveTracker_C_OnObjectiveEnded::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveEnded, CallFunc_Less_IntInt_ReturnValue) == 0x000038, "Member 'Widget_ObjectiveTracker_C_OnObjectiveEnded::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveEnded, K2Node_DynamicCast_AsWidget_Objective_Tracker_Entry) == 0x000040, "Member 'Widget_ObjectiveTracker_C_OnObjectiveEnded::K2Node_DynamicCast_AsWidget_Objective_Tracker_Entry' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveEnded, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'Widget_ObjectiveTracker_C_OnObjectiveEnded::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveEnded, CallFunc_GetObjectivePA_ObjectivePA) == 0x000050, "Member 'Widget_ObjectiveTracker_C_OnObjectiveEnded::CallFunc_GetObjectivePA_ObjectivePA' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveEnded, CallFunc_IsValid_ReturnValue) == 0x000058, "Member 'Widget_ObjectiveTracker_C_OnObjectiveEnded::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveEnded, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x000059, "Member 'Widget_ObjectiveTracker_C_OnObjectiveEnded::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ObjectiveTracker_C_OnObjectiveEnded;
 
 // Function Widget_ObjectiveTracker.Widget_ObjectiveTracker_C.OnObjectiveRemoved
 // 0x0090 (0x0090 - 0x0000)
@@ -205,28 +152,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ObjectiveTracker_C_OnObjectiveRemoved) == 0x000008, "Wrong alignment on Widget_ObjectiveTracker_C_OnObjectiveRemoved");
-static_assert(sizeof(Widget_ObjectiveTracker_C_OnObjectiveRemoved) == 0x000090, "Wrong size on Widget_ObjectiveTracker_C_OnObjectiveRemoved");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, ObjectiveTag) == 0x000000, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::ObjectiveTag' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, EntryObject) == 0x000008, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::EntryObject' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, Temp_int_Array_Index_Variable) == 0x000010, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, CallFunc_GetListItems_ReturnValue) == 0x000020, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::CallFunc_GetListItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, CallFunc_Array_IsEmpty_ReturnValue) == 0x000030, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, CallFunc_GetOwningPlayer_ReturnValue) == 0x000038, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, CallFunc_HasAuthority_ReturnValue) == 0x000040, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, CallFunc_IsValid_ReturnValue) == 0x000041, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x000048, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, CallFunc_HasAuthority_ReturnValue_1) == 0x000050, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, K2Node_DynamicCast_AsRGObjective_Script) == 0x000058, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::K2Node_DynamicCast_AsRGObjective_Script' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, CallFunc_MatchesTag_ReturnValue) == 0x000061, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::CallFunc_MatchesTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, CallFunc_GetListItems_ReturnValue_1) == 0x000068, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::CallFunc_GetListItems_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, CallFunc_Array_IsEmpty_ReturnValue_1) == 0x000078, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::CallFunc_Array_IsEmpty_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, CallFunc_Array_Get_Item) == 0x000080, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, CallFunc_Array_Length_ReturnValue) == 0x000088, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveRemoved, CallFunc_Less_IntInt_ReturnValue) == 0x00008C, "Member 'Widget_ObjectiveTracker_C_OnObjectiveRemoved::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ObjectiveTracker_C_OnObjectiveRemoved;
 
 // Function Widget_ObjectiveTracker.Widget_ObjectiveTracker_C.OnObjectiveStarted
 // 0x0008 (0x0008 - 0x0000)
@@ -235,9 +161,7 @@ struct Widget_ObjectiveTracker_C_OnObjectiveStarted final
 public:
 	class URGObjectiveScript*                     ObjectiveScript;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ObjectiveTracker_C_OnObjectiveStarted) == 0x000008, "Wrong alignment on Widget_ObjectiveTracker_C_OnObjectiveStarted");
-static_assert(sizeof(Widget_ObjectiveTracker_C_OnObjectiveStarted) == 0x000008, "Wrong size on Widget_ObjectiveTracker_C_OnObjectiveStarted");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveStarted, ObjectiveScript) == 0x000000, "Member 'Widget_ObjectiveTracker_C_OnObjectiveStarted::ObjectiveScript' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ObjectiveTracker_C_OnObjectiveStarted;
 
 // Function Widget_ObjectiveTracker.Widget_ObjectiveTracker_C.OnObjectiveUpdated
 // 0x0070 (0x0070 - 0x0000)
@@ -263,22 +187,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue;       // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ObjectiveTracker_C_OnObjectiveUpdated) == 0x000008, "Wrong alignment on Widget_ObjectiveTracker_C_OnObjectiveUpdated");
-static_assert(sizeof(Widget_ObjectiveTracker_C_OnObjectiveUpdated) == 0x000070, "Wrong size on Widget_ObjectiveTracker_C_OnObjectiveUpdated");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveUpdated, ObjectiveTag) == 0x000000, "Member 'Widget_ObjectiveTracker_C_OnObjectiveUpdated::ObjectiveTag' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveUpdated, UpdateInfo) == 0x000008, "Member 'Widget_ObjectiveTracker_C_OnObjectiveUpdated::UpdateInfo' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveUpdated, Temp_int_Array_Index_Variable) == 0x000018, "Member 'Widget_ObjectiveTracker_C_OnObjectiveUpdated::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveUpdated, Temp_int_Loop_Counter_Variable) == 0x00001C, "Member 'Widget_ObjectiveTracker_C_OnObjectiveUpdated::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveUpdated, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'Widget_ObjectiveTracker_C_OnObjectiveUpdated::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveUpdated, CallFunc_GetDisplayedEntryWidgets_ReturnValue) == 0x000028, "Member 'Widget_ObjectiveTracker_C_OnObjectiveUpdated::CallFunc_GetDisplayedEntryWidgets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveUpdated, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'Widget_ObjectiveTracker_C_OnObjectiveUpdated::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveUpdated, CallFunc_Array_Get_Item) == 0x000040, "Member 'Widget_ObjectiveTracker_C_OnObjectiveUpdated::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveUpdated, CallFunc_Less_IntInt_ReturnValue) == 0x000048, "Member 'Widget_ObjectiveTracker_C_OnObjectiveUpdated::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveUpdated, K2Node_DynamicCast_AsWidget_Objective_Tracker_Entry) == 0x000050, "Member 'Widget_ObjectiveTracker_C_OnObjectiveUpdated::K2Node_DynamicCast_AsWidget_Objective_Tracker_Entry' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveUpdated, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'Widget_ObjectiveTracker_C_OnObjectiveUpdated::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveUpdated, CallFunc_GetObjectivePA_ObjectivePA) == 0x000060, "Member 'Widget_ObjectiveTracker_C_OnObjectiveUpdated::CallFunc_GetObjectivePA_ObjectivePA' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveUpdated, CallFunc_IsValid_ReturnValue) == 0x000068, "Member 'Widget_ObjectiveTracker_C_OnObjectiveUpdated::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnObjectiveUpdated, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x000069, "Member 'Widget_ObjectiveTracker_C_OnObjectiveUpdated::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ObjectiveTracker_C_OnObjectiveUpdated;
 
 // Function Widget_ObjectiveTracker.Widget_ObjectiveTracker_C.OnPlayerPawnKilled_Event
 // 0x0008 (0x0008 - 0x0000)
@@ -287,9 +196,7 @@ struct Widget_ObjectiveTracker_C_OnPlayerPawnKilled_Event final
 public:
 	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ObjectiveTracker_C_OnPlayerPawnKilled_Event) == 0x000008, "Wrong alignment on Widget_ObjectiveTracker_C_OnPlayerPawnKilled_Event");
-static_assert(sizeof(Widget_ObjectiveTracker_C_OnPlayerPawnKilled_Event) == 0x000008, "Wrong size on Widget_ObjectiveTracker_C_OnPlayerPawnKilled_Event");
-static_assert(offsetof(Widget_ObjectiveTracker_C_OnPlayerPawnKilled_Event, Player) == 0x000000, "Member 'Widget_ObjectiveTracker_C_OnPlayerPawnKilled_Event::Player' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ObjectiveTracker_C_OnPlayerPawnKilled_Event;
 
 // Function Widget_ObjectiveTracker.Widget_ObjectiveTracker_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -298,36 +205,25 @@ struct Widget_ObjectiveTracker_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ObjectiveTracker_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_ObjectiveTracker_C_PreConstruct");
-static_assert(sizeof(Widget_ObjectiveTracker_C_PreConstruct) == 0x000001, "Wrong size on Widget_ObjectiveTracker_C_PreConstruct");
-static_assert(offsetof(Widget_ObjectiveTracker_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_ObjectiveTracker_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ObjectiveTracker_C_PreConstruct;
 
 // Function Widget_ObjectiveTracker.Widget_ObjectiveTracker_C.UpdateVisibility
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct Widget_ObjectiveTracker_C_UpdateVisibility final
 {
 public:
 	bool                                          CallFunc_IsAnimationPlaying_ReturnValue;           // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue_1;       // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue;         // 0x0004(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue_1;       // 0x0014(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ObjectiveTracker_C_UpdateVisibility) == 0x000008, "Wrong alignment on Widget_ObjectiveTracker_C_UpdateVisibility");
-static_assert(sizeof(Widget_ObjectiveTracker_C_UpdateVisibility) == 0x000028, "Wrong size on Widget_ObjectiveTracker_C_UpdateVisibility");
-static_assert(offsetof(Widget_ObjectiveTracker_C_UpdateVisibility, CallFunc_IsAnimationPlaying_ReturnValue) == 0x000000, "Member 'Widget_ObjectiveTracker_C_UpdateVisibility::CallFunc_IsAnimationPlaying_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_UpdateVisibility, CallFunc_PlayAnimationForward_ReturnValue) == 0x000008, "Member 'Widget_ObjectiveTracker_C_UpdateVisibility::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_UpdateVisibility, CallFunc_PlayAnimationForward_ReturnValue_1) == 0x000010, "Member 'Widget_ObjectiveTracker_C_UpdateVisibility::CallFunc_PlayAnimationForward_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_UpdateVisibility, CallFunc_IsVisible_ReturnValue) == 0x000018, "Member 'Widget_ObjectiveTracker_C_UpdateVisibility::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_UpdateVisibility, CallFunc_Not_PreBool_ReturnValue) == 0x000019, "Member 'Widget_ObjectiveTracker_C_UpdateVisibility::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_UpdateVisibility, CallFunc_GetNumItems_ReturnValue) == 0x00001C, "Member 'Widget_ObjectiveTracker_C_UpdateVisibility::CallFunc_GetNumItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_UpdateVisibility, CallFunc_BooleanOR_ReturnValue) == 0x000020, "Member 'Widget_ObjectiveTracker_C_UpdateVisibility::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectiveTracker_C_UpdateVisibility, CallFunc_Greater_IntInt_ReturnValue) == 0x000021, "Member 'Widget_ObjectiveTracker_C_UpdateVisibility::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ObjectiveTracker_C_UpdateVisibility;
 
 }
 

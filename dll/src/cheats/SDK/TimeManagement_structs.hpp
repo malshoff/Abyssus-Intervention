@@ -15,15 +15,16 @@ namespace SDK
 {
 
 // Enum TimeManagement.EFrameNumberDisplayFormats
-// NumValues: 0x0006
+// NumValues: 0x0007
 enum class EFrameNumberDisplayFormats : uint8
 {
 	NonDropFrameTimecode                     = 0,
 	DropFrameTimecode                        = 1,
 	Seconds                                  = 2,
 	Frames                                   = 3,
-	MAX_Count                                = 4,
-	EFrameNumberDisplayFormats_MAX           = 5,
+	Custom                                   = 4,
+	MAX_Count                                = 5,
+	EFrameNumberDisplayFormats_MAX           = 6,
 };
 
 // Enum TimeManagement.ETimedDataInputEvaluationType
@@ -53,8 +54,7 @@ struct alignas(0x08) FTimedDataChannelSampleTime final
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTimedDataChannelSampleTime) == 0x000008, "Wrong alignment on FTimedDataChannelSampleTime");
-static_assert(sizeof(FTimedDataChannelSampleTime) == 0x000018, "Wrong size on FTimedDataChannelSampleTime");
+DUMPER7_ASSERTS_FTimedDataChannelSampleTime;
 
 // ScriptStruct TimeManagement.TimedDataInputEvaluationData
 // 0x0008 (0x0008 - 0x0000)
@@ -64,10 +64,7 @@ public:
 	float                                         DistanceToNewestSampleSeconds;                     // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DistanceToOldestSampleSeconds;                     // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTimedDataInputEvaluationData) == 0x000004, "Wrong alignment on FTimedDataInputEvaluationData");
-static_assert(sizeof(FTimedDataInputEvaluationData) == 0x000008, "Wrong size on FTimedDataInputEvaluationData");
-static_assert(offsetof(FTimedDataInputEvaluationData, DistanceToNewestSampleSeconds) == 0x000000, "Member 'FTimedDataInputEvaluationData::DistanceToNewestSampleSeconds' has a wrong offset!");
-static_assert(offsetof(FTimedDataInputEvaluationData, DistanceToOldestSampleSeconds) == 0x000004, "Member 'FTimedDataInputEvaluationData::DistanceToOldestSampleSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_FTimedDataInputEvaluationData;
 
 }
 

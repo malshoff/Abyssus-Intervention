@@ -26,10 +26,7 @@ public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_CanInteract) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_CanInteract");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_CanInteract) == 0x000010, "Wrong size on BP_Pickupable_RandomMutator_C_CanInteract");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_CanInteract, Controller) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_CanInteract::Controller' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_CanInteract, ReturnValue) == 0x000008, "Member 'BP_Pickupable_RandomMutator_C_CanInteract::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_CanInteract;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.CreatePickedUpEffects
 // 0x00C0 (0x00C0 - 0x0000)
@@ -48,17 +45,7 @@ public:
 	class ABP_ArtifactFadeoutActor_C*             CallFunc_FinishSpawningActor_ReturnValue;          // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_GetRankColor_ReturnValue;                 // 0x00B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_CreatePickedUpEffects) == 0x000010, "Wrong alignment on BP_Pickupable_RandomMutator_C_CreatePickedUpEffects");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_CreatePickedUpEffects) == 0x0000C0, "Wrong size on BP_Pickupable_RandomMutator_C_CreatePickedUpEffects");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_CreatePickedUpEffects, CallFunc_K2_GetComponentRotation_ReturnValue) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_CreatePickedUpEffects::CallFunc_K2_GetComponentRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_CreatePickedUpEffects, CallFunc_K2_GetComponentToWorld_ReturnValue) == 0x000020, "Member 'BP_Pickupable_RandomMutator_C_CreatePickedUpEffects::CallFunc_K2_GetComponentToWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_CreatePickedUpEffects, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000080, "Member 'BP_Pickupable_RandomMutator_C_CreatePickedUpEffects::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_CreatePickedUpEffects, CallFunc_GetMaterial_ReturnValue) == 0x000088, "Member 'BP_Pickupable_RandomMutator_C_CreatePickedUpEffects::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_CreatePickedUpEffects, K2Node_DynamicCast_AsMaterial_Instance_Dynamic) == 0x000090, "Member 'BP_Pickupable_RandomMutator_C_CreatePickedUpEffects::K2Node_DynamicCast_AsMaterial_Instance_Dynamic' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_CreatePickedUpEffects, K2Node_DynamicCast_bSuccess) == 0x000098, "Member 'BP_Pickupable_RandomMutator_C_CreatePickedUpEffects::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_CreatePickedUpEffects, CallFunc_K2_GetTextureParameterValue_ReturnValue) == 0x0000A0, "Member 'BP_Pickupable_RandomMutator_C_CreatePickedUpEffects::CallFunc_K2_GetTextureParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_CreatePickedUpEffects, CallFunc_FinishSpawningActor_ReturnValue) == 0x0000A8, "Member 'BP_Pickupable_RandomMutator_C_CreatePickedUpEffects::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_CreatePickedUpEffects, CallFunc_GetRankColor_ReturnValue) == 0x0000B0, "Member 'BP_Pickupable_RandomMutator_C_CreatePickedUpEffects::CallFunc_GetRankColor_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_CreatePickedUpEffects;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.DoesPlayerHaveMutatorWithMaxRank
 // 0x0030 (0x0030 - 0x0000)
@@ -78,19 +65,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasMutator_ReturnValue;                   // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank) == 0x000030, "Wrong size on BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank, PlayerController) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank::PlayerController' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank, RMutatorPrimaryAsset) == 0x000008, "Member 'BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank::RMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank, Value) == 0x000010, "Member 'BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank::Value' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank, CallFunc_IsValid_ReturnValue) == 0x000011, "Member 'BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank, CallFunc_IsValid_ReturnValue_1) == 0x000012, "Member 'BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank, CallFunc_K2_GetPawn_ReturnValue) == 0x000018, "Member 'BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000020, "Member 'BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank, CallFunc_IsValid_ReturnValue_2) == 0x000029, "Member 'BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank, CallFunc_IsValid_ReturnValue_3) == 0x00002A, "Member 'BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank, CallFunc_HasMutator_ReturnValue) == 0x00002B, "Member 'BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_DoesPlayerHaveMutatorWithMaxRank;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.ExecuteUbergraph_BP_Pickupable_RandomMutator
 // 0x07D0 (0x07D0 - 0x0000)
@@ -182,79 +157,7 @@ public:
 	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x07C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_PointWithPolarOffset_Angle_ImplicitCast;  // 0x07CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator) == 0x0007D0, "Wrong size on BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, EntryPoint) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_GetRNavigationManager_ReturnValue) == 0x000008, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_GetRNavigationManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, K2Node_Event_BehaviourName) == 0x000010, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::K2Node_Event_BehaviourName' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, K2Node_Event_RoutedData) == 0x000018, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::K2Node_Event_RoutedData' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, K2Node_Event_PlayerController) == 0x000020, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::K2Node_Event_PlayerController' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_VLerp_ReturnValue) == 0x000028, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_VLerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_IsLocalPlayerController_ReturnValue) == 0x000040, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_GetContextMessage_ReturnValue) == 0x000048, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_GetContextMessage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_Conv_StringToText_ReturnValue) == 0x000058, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_Lerp_ReturnValue) == 0x000068, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_RandomFloatInRange_ReturnValue) == 0x000070, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000078, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000080, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_SpawnSystemAtLocation_ReturnValue) == 0x000098, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_SpawnSystemAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_RandomFloatInRange_ReturnValue_1) == 0x0000A0, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_RandomFloatInRange_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_GetMaterial_ReturnValue) == 0x0000A8, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, K2Node_DynamicCast_AsMaterial_Instance_Dynamic) == 0x0000B0, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::K2Node_DynamicCast_AsMaterial_Instance_Dynamic' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, K2Node_DynamicCast_bSuccess) == 0x0000B8, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_MakeRotator_ReturnValue) == 0x0000C0, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_K2_SetRelativeRotation_SweepHitResult) == 0x0000D8, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_K2_SetRelativeRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_RandomFloatInRange_ReturnValue_2) == 0x0001D8, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_RandomFloatInRange_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_VLerp_ReturnValue_1) == 0x0001E0, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_VLerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0001F8, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_Add_VectorVector_ReturnValue) == 0x000200, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_K2_SetWorldLocation_SweepHitResult) == 0x000218, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_K2_SetWorldLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, K2Node_Event_controller) == 0x000318, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::K2Node_Event_controller' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_GetMutatorPrimaryAsset_ReturnValue) == 0x000320, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_GetMutatorPrimaryAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_IsValid_ReturnValue) == 0x000328, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_HasEnoughCurrencyForPickup_ReturnValue) == 0x000329, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_HasEnoughCurrencyForPickup_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_IsLocalPlayerController_ReturnValue_1) == 0x00032A, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_IsLocalPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_GetMutatorPrimaryAsset_ReturnValue_1) == 0x000330, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_GetMutatorPrimaryAsset_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000338, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_IsValid_ReturnValue_1) == 0x000340, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000348, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_RandomFloatInRange_ReturnValue_3) == 0x000360, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_RandomFloatInRange_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_RandomFloatInRange_ReturnValue_4) == 0x000368, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_RandomFloatInRange_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_IsValid_ReturnValue_2) == 0x000370, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000378, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_GetMoveToGroundLocation_ResultLocation) == 0x000390, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_GetMoveToGroundLocation_ResultLocation' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x0003A8, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_K2_SetActorLocation_ReturnValue) == 0x0004A8, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_IsValid_ReturnValue_3) == 0x0004A9, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_K2_GetActorLocation_ReturnValue_2) == 0x0004B0, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_K2_GetActorLocation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_PointWithPolarOffset_ReturnValue) == 0x0004C8, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_PointWithPolarOffset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_K2_SetActorLocation_SweepHitResult_1) == 0x0004E0, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_K2_SetActorLocation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_K2_SetActorLocation_ReturnValue_1) == 0x0005E0, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_K2_SetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, K2Node_CustomEvent_PlayerController_1) == 0x0005E8, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::K2Node_CustomEvent_PlayerController_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_PickupMutator_ReturnValue) == 0x0005F0, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_PickupMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_Conv_TextToString_ReturnValue) == 0x0005F8, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_GetMutatorPrimaryAsset_ReturnValue_2) == 0x000608, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_GetMutatorPrimaryAsset_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000610, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_DoesPlayerHaveMutatorWithMaxRank_Value) == 0x000620, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_DoesPlayerHaveMutatorWithMaxRank_Value' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_Not_PreBool_ReturnValue) == 0x000621, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, K2Node_CustomEvent_PlayerController) == 0x000628, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::K2Node_CustomEvent_PlayerController' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, K2Node_DynamicCast_AsRGame_Player_Controller) == 0x000630, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::K2Node_DynamicCast_AsRGame_Player_Controller' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, K2Node_DynamicCast_bSuccess_1) == 0x000638, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_Get_Player_Picked_Up_Mutator_Chat_Log_Message_RChatLogMessage) == 0x000640, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_Get_Player_Picked_Up_Mutator_Chat_Log_Message_RChatLogMessage' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_K2_GetActorLocation_ReturnValue_3) == 0x000660, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_K2_GetActorLocation_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_GetClosestNavigableLocation_ReturnValue) == 0x000678, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_GetClosestNavigableLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_K2_SetActorLocation_SweepHitResult_2) == 0x000690, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_K2_SetActorLocation_SweepHitResult_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_K2_SetActorLocation_ReturnValue_2) == 0x000790, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_K2_SetActorLocation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_LoadSoftObjectSynchronous_ReturnValue) == 0x000798, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_LoadSoftObjectSynchronous_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, K2Node_DynamicCast_AsSound_Base) == 0x0007A0, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::K2Node_DynamicCast_AsSound_Base' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, K2Node_DynamicCast_bSuccess_2) == 0x0007A8, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_Lerp_Alpha_ImplicitCast) == 0x0007B0, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_Lerp_Alpha_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x0007B8, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_SetPlayRate_NewRate_ImplicitCast) == 0x0007BC, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_SetPlayRate_NewRate_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_SetFloatParameter_Param_ImplicitCast) == 0x0007C0, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_SetFloatParameter_Param_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_SetPlayRate_NewRate_ImplicitCast_1) == 0x0007C4, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_SetPlayRate_NewRate_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_Delay_Duration_ImplicitCast) == 0x0007C8, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_Delay_Duration_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator, CallFunc_PointWithPolarOffset_Angle_ImplicitCast) == 0x0007CC, "Member 'BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator::CallFunc_PointWithPolarOffset_Angle_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_ExecuteUbergraph_BP_Pickupable_RandomMutator;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.Get Equipped Mutator Rank
 // 0x0030 (0x0030 - 0x0000)
@@ -272,16 +175,7 @@ public:
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank) == 0x000030, "Wrong size on BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank, RMutatorPrimaryAsset) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank::RMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank, PlayerController) == 0x000008, "Member 'BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank::PlayerController' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank, MutatorRank) == 0x000010, "Member 'BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank::MutatorRank' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank, CallFunc_IsValid_ReturnValue) == 0x000014, "Member 'BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank, CallFunc_K2_GetPawn_ReturnValue) == 0x000018, "Member 'BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000020, "Member 'BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank, CallFunc_GetMutatorRank_ReturnValue) == 0x00002C, "Member 'BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_Get_Equipped_Mutator_Rank;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.Get Player Picked Up Mutator Chat Log Message
 // 0x0130 (0x0130 - 0x0000)
@@ -300,19 +194,7 @@ public:
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0100(0x0010)()
 	struct FRChatLogMessage                       K2Node_MakeStruct_RChatLogMessage;                 // 0x0110(0x0020)()
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message) == 0x000130, "Wrong size on BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message, PlayerController) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message::PlayerController' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message, RChatLogMessage) == 0x000008, "Member 'BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message::RChatLogMessage' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message, CallFunc_GetMutatorPrimaryAsset_ReturnValue) == 0x000028, "Member 'BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message::CallFunc_GetMutatorPrimaryAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message, CallFunc_GetMutatorName_ReturnValue) == 0x000030, "Member 'BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message::CallFunc_GetMutatorName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message, CallFunc_GetPlayerName_ReturnValue) == 0x000040, "Member 'BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message, K2Node_MakeStruct_FormatArgumentData) == 0x000050, "Member 'BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message, CallFunc_Conv_StringToText_ReturnValue) == 0x000098, "Member 'BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000A8, "Member 'BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message, K2Node_MakeArray_Array) == 0x0000F0, "Member 'BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message, CallFunc_Format_ReturnValue) == 0x000100, "Member 'BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message, K2Node_MakeStruct_RChatLogMessage) == 0x000110, "Member 'BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message::K2Node_MakeStruct_RChatLogMessage' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_Get_Player_Picked_Up_Mutator_Chat_Log_Message;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.GetMoveToGroundLocation
 // 0x02A8 (0x02A8 - 0x0000)
@@ -358,42 +240,7 @@ public:
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x0290(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation) == 0x0002A8, "Wrong size on BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, ResultLocation) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::ResultLocation' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000018, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakVector_X) == 0x000030, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakVector_Y) == 0x000038, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakVector_Z) == 0x000040, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000048, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, K2Node_MakeArray_Array) == 0x000050, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_MakeVector_ReturnValue) == 0x000060, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_LineTraceSingle_OutHit) == 0x000078, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_LineTraceSingle_OutHit' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_LineTraceSingle_ReturnValue) == 0x000178, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_LineTraceSingle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000180, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_bBlockingHit) == 0x000198, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_bInitialOverlap) == 0x000199, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_Time) == 0x00019C, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_Distance) == 0x0001A0, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_Location) == 0x0001A8, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_ImpactPoint) == 0x0001C0, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_Normal) == 0x0001D8, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_ImpactNormal) == 0x0001F0, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_PhysMat) == 0x000208, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_HitActor) == 0x000210, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_HitComponent) == 0x000218, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_HitBoneName) == 0x000220, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_BoneName) == 0x000228, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_HitItem) == 0x000230, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_ElementIndex) == 0x000234, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_FaceIndex) == 0x000238, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_TraceStart) == 0x000240, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakHitResult_TraceEnd) == 0x000258, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakVector_X_1) == 0x000270, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakVector_Y_1) == 0x000278, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_BreakVector_Z_1) == 0x000280, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000288, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation, CallFunc_MakeVector_ReturnValue_1) == 0x000290, "Member 'BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_GetMoveToGroundLocation;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.LogMissingMutatorPAMessage
 // 0x0098 (0x0098 - 0x0000)
@@ -407,14 +254,7 @@ public:
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0078(0x0010)()
 	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage) == 0x000098, "Wrong size on BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage, CallFunc_GetDisplayName_ReturnValue) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage, K2Node_MakeStruct_FormatArgumentData) == 0x000020, "Member 'BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage, K2Node_MakeArray_Array) == 0x000068, "Member 'BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage, CallFunc_Format_ReturnValue) == 0x000078, "Member 'BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage, CallFunc_Conv_TextToString_ReturnValue) == 0x000088, "Member 'BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_LogMissingMutatorPAMessage;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.OnInteract
 // 0x0008 (0x0008 - 0x0000)
@@ -423,9 +263,7 @@ struct BP_Pickupable_RandomMutator_C_OnInteract final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_OnInteract) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_OnInteract");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_OnInteract) == 0x000008, "Wrong size on BP_Pickupable_RandomMutator_C_OnInteract");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_OnInteract, Controller) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_OnInteract::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_OnInteract;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.OnInteractionSuccesful
 // 0x0008 (0x0008 - 0x0000)
@@ -434,9 +272,7 @@ struct BP_Pickupable_RandomMutator_C_OnInteractionSuccesful final
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_OnInteractionSuccesful) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_OnInteractionSuccesful");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_OnInteractionSuccesful) == 0x000008, "Wrong size on BP_Pickupable_RandomMutator_C_OnInteractionSuccesful");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_OnInteractionSuccesful, PlayerController) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_OnInteractionSuccesful::PlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_OnInteractionSuccesful;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.OnTriggerPickupSuccesful
 // 0x0008 (0x0008 - 0x0000)
@@ -445,9 +281,7 @@ struct BP_Pickupable_RandomMutator_C_OnTriggerPickupSuccesful final
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_OnTriggerPickupSuccesful) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_OnTriggerPickupSuccesful");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_OnTriggerPickupSuccesful) == 0x000008, "Wrong size on BP_Pickupable_RandomMutator_C_OnTriggerPickupSuccesful");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_OnTriggerPickupSuccesful, PlayerController) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_OnTriggerPickupSuccesful::PlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_OnTriggerPickupSuccesful;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.RunRoutedObjectBehaviourByName
 // 0x0008 (0x0008 - 0x0000)
@@ -456,9 +290,7 @@ struct BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourByName final
 public:
 	class FName                                   BehaviourName;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourByName) == 0x000004, "Wrong alignment on BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourByName");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourByName) == 0x000008, "Wrong size on BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourByName");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourByName, BehaviourName) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourByName::BehaviourName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourByName;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.RunRoutedObjectBehaviourWithData
 // 0x0008 (0x0008 - 0x0000)
@@ -467,9 +299,7 @@ struct BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourWithData final
 public:
 	struct FRoutedObjectData                      RoutedData;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourWithData) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourWithData");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourWithData) == 0x000008, "Wrong size on BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourWithData");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourWithData, RoutedData) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourWithData::RoutedData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_RunRoutedObjectBehaviourWithData;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.Set Mutator Rank
 // 0x0001 (0x0001 - 0x0000)
@@ -478,9 +308,7 @@ struct BP_Pickupable_RandomMutator_C_Set_Mutator_Rank final
 public:
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_Set_Mutator_Rank) == 0x000001, "Wrong alignment on BP_Pickupable_RandomMutator_C_Set_Mutator_Rank");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_Set_Mutator_Rank) == 0x000001, "Wrong size on BP_Pickupable_RandomMutator_C_Set_Mutator_Rank");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_Set_Mutator_Rank, CallFunc_Greater_IntInt_ReturnValue) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_Set_Mutator_Rank::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_Set_Mutator_Rank;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.TriggerPickup
 // 0x0008 (0x0008 - 0x0000)
@@ -489,9 +317,7 @@ struct BP_Pickupable_RandomMutator_C_TriggerPickup final
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_TriggerPickup) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_TriggerPickup");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_TriggerPickup) == 0x000008, "Wrong size on BP_Pickupable_RandomMutator_C_TriggerPickup");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_TriggerPickup, PlayerController) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_TriggerPickup::PlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_TriggerPickup;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.UpdateMutatorIconColor
 // 0x0090 (0x0090 - 0x0000)
@@ -510,18 +336,7 @@ public:
 	struct FLinearColor                           K2Node_Select_Default;                             // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue;     // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor) == 0x000090, "Wrong size on BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor, Temp_int_Variable) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor, Temp_struct_Variable) == 0x000004, "Member 'BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor, Temp_struct_Variable_1) == 0x000014, "Member 'BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor, Temp_struct_Variable_2) == 0x000024, "Member 'BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor::Temp_struct_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor, Temp_struct_Variable_3) == 0x000034, "Member 'BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor::Temp_struct_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor, Temp_struct_Variable_4) == 0x000044, "Member 'BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor::Temp_struct_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor, Temp_struct_Variable_5) == 0x000054, "Member 'BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor::Temp_struct_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor, CallFunc_Greater_IntInt_ReturnValue) == 0x000064, "Member 'BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor, K2Node_Select_Default) == 0x000068, "Member 'BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor, CallFunc_Conv_LinearColorToVector_ReturnValue) == 0x000078, "Member 'BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor::CallFunc_Conv_LinearColorToVector_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_UpdateMutatorIconColor;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.GetInteractableAlternativeDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -532,11 +347,7 @@ public:
 	class URMutatorPrimaryAsset*                  CallFunc_GetMutatorPrimaryAsset_ReturnValue;       // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_GetInteractableAlternativeDescription) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_GetInteractableAlternativeDescription");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_GetInteractableAlternativeDescription) == 0x000028, "Wrong size on BP_Pickupable_RandomMutator_C_GetInteractableAlternativeDescription");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableAlternativeDescription, ReturnValue) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableAlternativeDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableAlternativeDescription, CallFunc_GetMutatorPrimaryAsset_ReturnValue) == 0x000010, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableAlternativeDescription::CallFunc_GetMutatorPrimaryAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableAlternativeDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableAlternativeDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_GetInteractableAlternativeDescription;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.GetInteractableDescription
 // 0x0058 (0x0058 - 0x0000)
@@ -552,15 +363,7 @@ public:
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0040(0x0010)()
 	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_GetInteractableDescription) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_GetInteractableDescription");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_GetInteractableDescription) == 0x000058, "Wrong size on BP_Pickupable_RandomMutator_C_GetInteractableDescription");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableDescription, ReturnValue) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableDescription, AbilityDescription) == 0x000010, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableDescription::AbilityDescription' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableDescription, CallFunc_GetMutatorPrimaryAsset_ReturnValue) == 0x000020, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableDescription::CallFunc_GetMutatorPrimaryAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableDescription, CallFunc_GetInteractableDescription_ReturnValue) == 0x000028, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableDescription::CallFunc_GetInteractableDescription_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableDescription, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableDescription::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000040, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableDescription, CallFunc_TextIsEmpty_ReturnValue) == 0x000050, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableDescription::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_GetInteractableDescription;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.GetInteractableName
 // 0x00B0 (0x00B0 - 0x0000)
@@ -579,17 +382,7 @@ public:
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0090(0x0010)()
 	class FText                                   K2Node_Select_Default;                             // 0x00A0(0x0010)()
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_GetInteractableName) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_GetInteractableName");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_GetInteractableName) == 0x0000B0, "Wrong size on BP_Pickupable_RandomMutator_C_GetInteractableName");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableName, ReturnValue) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableName::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableName, Temp_bool_Variable) == 0x000010, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableName::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableName, CallFunc_GetMutatorPrimaryAsset_ReturnValue) == 0x000018, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableName::CallFunc_GetMutatorPrimaryAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableName, CallFunc_GetInteractableName_ReturnValue) == 0x000020, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableName::CallFunc_GetInteractableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableName, K2Node_MakeStruct_FormatArgumentData) == 0x000030, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableName::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableName, CallFunc_IsValid_ReturnValue) == 0x000078, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableName::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableName, K2Node_MakeArray_Array) == 0x000080, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableName::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableName, CallFunc_Format_ReturnValue) == 0x000090, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableName::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableName, K2Node_Select_Default) == 0x0000A0, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableName::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_GetInteractableName;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.GetInteractableSubHeader
 // 0x00F0 (0x00F0 - 0x0000)
@@ -610,20 +403,7 @@ public:
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00D0(0x0010)(ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00E0(0x0010)()
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_GetInteractableSubHeader) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_GetInteractableSubHeader");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_GetInteractableSubHeader) == 0x0000F0, "Wrong size on BP_Pickupable_RandomMutator_C_GetInteractableSubHeader");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableSubHeader, ReturnValue) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableSubHeader::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableSubHeader, Temp_int_Variable) == 0x000010, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableSubHeader::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableSubHeader, Temp_text_Variable) == 0x000018, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableSubHeader::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableSubHeader, Temp_text_Variable_1) == 0x000028, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableSubHeader::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableSubHeader, Temp_text_Variable_2) == 0x000038, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableSubHeader::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableSubHeader, Temp_text_Variable_3) == 0x000048, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableSubHeader::Temp_text_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableSubHeader, Temp_text_Variable_4) == 0x000058, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableSubHeader::Temp_text_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableSubHeader, Temp_text_Variable_5) == 0x000068, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableSubHeader::Temp_text_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableSubHeader, K2Node_Select_Default) == 0x000078, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableSubHeader::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableSubHeader, K2Node_MakeStruct_FormatArgumentData) == 0x000088, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableSubHeader::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableSubHeader, K2Node_MakeArray_Array) == 0x0000D0, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableSubHeader::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetInteractableSubHeader, CallFunc_Format_ReturnValue) == 0x0000E0, "Member 'BP_Pickupable_RandomMutator_C_GetInteractableSubHeader::CallFunc_Format_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_GetInteractableSubHeader;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.GetPingableIconTexture
 // 0x0008 (0x0008 - 0x0000)
@@ -632,9 +412,7 @@ struct BP_Pickupable_RandomMutator_C_GetPingableIconTexture final
 public:
 	class UTexture2D*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_GetPingableIconTexture) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_GetPingableIconTexture");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_GetPingableIconTexture) == 0x000008, "Wrong size on BP_Pickupable_RandomMutator_C_GetPingableIconTexture");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableIconTexture, ReturnValue) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_GetPingableIconTexture::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_GetPingableIconTexture;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.GetPingableName
 // 0x0150 (0x0150 - 0x0000)
@@ -658,23 +436,7 @@ public:
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0130(0x0010)(ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0140(0x0010)()
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_GetPingableName) == 0x000008, "Wrong alignment on BP_Pickupable_RandomMutator_C_GetPingableName");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_GetPingableName) == 0x000150, "Wrong size on BP_Pickupable_RandomMutator_C_GetPingableName");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableName, ReturnValue) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_GetPingableName::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableName, Temp_int_Variable) == 0x000010, "Member 'BP_Pickupable_RandomMutator_C_GetPingableName::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableName, Temp_string_Variable) == 0x000018, "Member 'BP_Pickupable_RandomMutator_C_GetPingableName::Temp_string_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableName, Temp_string_Variable_1) == 0x000028, "Member 'BP_Pickupable_RandomMutator_C_GetPingableName::Temp_string_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableName, Temp_string_Variable_2) == 0x000038, "Member 'BP_Pickupable_RandomMutator_C_GetPingableName::Temp_string_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableName, Temp_string_Variable_3) == 0x000048, "Member 'BP_Pickupable_RandomMutator_C_GetPingableName::Temp_string_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableName, Temp_string_Variable_4) == 0x000058, "Member 'BP_Pickupable_RandomMutator_C_GetPingableName::Temp_string_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableName, Temp_string_Variable_5) == 0x000068, "Member 'BP_Pickupable_RandomMutator_C_GetPingableName::Temp_string_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableName, CallFunc_GetMutatorPrimaryAsset_ReturnValue) == 0x000078, "Member 'BP_Pickupable_RandomMutator_C_GetPingableName::CallFunc_GetMutatorPrimaryAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableName, K2Node_Select_Default) == 0x000080, "Member 'BP_Pickupable_RandomMutator_C_GetPingableName::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableName, K2Node_MakeStruct_FormatArgumentData) == 0x000090, "Member 'BP_Pickupable_RandomMutator_C_GetPingableName::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableName, CallFunc_Conv_StringToText_ReturnValue) == 0x0000D8, "Member 'BP_Pickupable_RandomMutator_C_GetPingableName::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableName, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000E8, "Member 'BP_Pickupable_RandomMutator_C_GetPingableName::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableName, K2Node_MakeArray_Array) == 0x000130, "Member 'BP_Pickupable_RandomMutator_C_GetPingableName::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_GetPingableName, CallFunc_Format_ReturnValue) == 0x000140, "Member 'BP_Pickupable_RandomMutator_C_GetPingableName::CallFunc_Format_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_GetPingableName;
 
 // Function BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C.IsCurrentlyPinged
 // 0x0001 (0x0001 - 0x0000)
@@ -683,9 +445,7 @@ struct BP_Pickupable_RandomMutator_C_IsCurrentlyPinged final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_RandomMutator_C_IsCurrentlyPinged) == 0x000001, "Wrong alignment on BP_Pickupable_RandomMutator_C_IsCurrentlyPinged");
-static_assert(sizeof(BP_Pickupable_RandomMutator_C_IsCurrentlyPinged) == 0x000001, "Wrong size on BP_Pickupable_RandomMutator_C_IsCurrentlyPinged");
-static_assert(offsetof(BP_Pickupable_RandomMutator_C_IsCurrentlyPinged, ReturnValue) == 0x000000, "Member 'BP_Pickupable_RandomMutator_C_IsCurrentlyPinged::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_RandomMutator_C_IsCurrentlyPinged;
 
 }
 

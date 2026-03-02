@@ -16,60 +16,42 @@
 namespace SDK::Params
 {
 
-// Function BP_Ability_Trigger_Mutator.BP_Ability_Trigger_Mutator_C.HandleDealtDamageEvent
-// 0x00C8 (0x00C8 - 0x0000)
-struct BP_Ability_Trigger_Mutator_C_HandleDealtDamageEvent final
-{
-public:
-	class ARPawnBase*                             RPawnBase;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
-};
-static_assert(alignof(BP_Ability_Trigger_Mutator_C_HandleDealtDamageEvent) == 0x000008, "Wrong alignment on BP_Ability_Trigger_Mutator_C_HandleDealtDamageEvent");
-static_assert(sizeof(BP_Ability_Trigger_Mutator_C_HandleDealtDamageEvent) == 0x0000C8, "Wrong size on BP_Ability_Trigger_Mutator_C_HandleDealtDamageEvent");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_HandleDealtDamageEvent, RPawnBase) == 0x000000, "Member 'BP_Ability_Trigger_Mutator_C_HandleDealtDamageEvent::RPawnBase' has a wrong offset!");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_HandleDealtDamageEvent, DamageEventData) == 0x000008, "Member 'BP_Ability_Trigger_Mutator_C_HandleDealtDamageEvent::DamageEventData' has a wrong offset!");
-
 // Function BP_Ability_Trigger_Mutator.BP_Ability_Trigger_Mutator_C.ExecuteUbergraph_BP_Ability_Trigger_Mutator
-// 0x0138 (0x0138 - 0x0000)
+// 0x0268 (0x0268 - 0x0000)
 struct BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ARPawnBase*                             K2Node_Event_RPawnBase;                            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_Event_DamageEventData;                      // 0x0010(0x00C0)(ConstParm)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x00D0(0x0030)(ContainsInstancedReference)
-	bool                                          CallFunc_CheckDamageSource_ReturnValue;            // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URPlayerGScriptComponent*               K2Node_DynamicCast_AsRPlayer_GScript_Component;    // 0x0108(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_111[0x3];                                      // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasMutator_ReturnValue;                   // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_RandomFloatInRange_ReturnValue;           // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0129(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12A[0x6];                                      // 0x012A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Less_DoubleDouble_B_ImplicitCast;         // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_Event_DamageEventData;                      // 0x0010(0x01F0)(ConstParm)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0200(0x0030)(ContainsInstancedReference)
+	bool                                          CallFunc_CheckDamageSource_ReturnValue;            // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_231[0x3];                                      // 0x0231(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x0234(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URPlayerGScriptComponent*               K2Node_DynamicCast_AsRPlayer_GScript_Component;    // 0x0238(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_241[0x3];                                      // 0x0241(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x0244(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasMutator_ReturnValue;                   // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_RandomFloatInRange_ReturnValue;           // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0259(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25A[0x6];                                      // 0x025A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Less_DoubleDouble_B_ImplicitCast;         // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator) == 0x000008, "Wrong alignment on BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator");
-static_assert(sizeof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator) == 0x000138, "Wrong size on BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator, EntryPoint) == 0x000000, "Member 'BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator, K2Node_Event_RPawnBase) == 0x000008, "Member 'BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator::K2Node_Event_RPawnBase' has a wrong offset!");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator, K2Node_Event_DamageEventData) == 0x000010, "Member 'BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator::K2Node_Event_DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x0000D0, "Member 'BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator, CallFunc_CheckDamageSource_ReturnValue) == 0x000100, "Member 'BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator::CallFunc_CheckDamageSource_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator, CallFunc_GetMutatorRank_ReturnValue) == 0x000104, "Member 'BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x000108, "Member 'BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator, K2Node_DynamicCast_bSuccess) == 0x000110, "Member 'BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x000114, "Member 'BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator, CallFunc_HasMutator_ReturnValue) == 0x000118, "Member 'BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator, CallFunc_RandomFloatInRange_ReturnValue) == 0x000120, "Member 'BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator, CallFunc_BooleanAND_ReturnValue) == 0x000128, "Member 'BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000129, "Member 'BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator, CallFunc_Less_DoubleDouble_B_ImplicitCast) == 0x000130, "Member 'BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator::CallFunc_Less_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator;
+
+// Function BP_Ability_Trigger_Mutator.BP_Ability_Trigger_Mutator_C.HandleDealtDamageEvent
+// 0x01F8 (0x01F8 - 0x0000)
+struct BP_Ability_Trigger_Mutator_C_HandleDealtDamageEvent final
+{
+public:
+	class ARPawnBase*                             RPawnBase;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_BP_Ability_Trigger_Mutator_C_HandleDealtDamageEvent;
 
 }
 

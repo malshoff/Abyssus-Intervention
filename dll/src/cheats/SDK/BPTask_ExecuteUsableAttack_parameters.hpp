@@ -58,37 +58,7 @@ public:
 	class URGEnemyAttackScript*                   CallFunc_GetRandomUsableAttack_ReturnValue_1;      // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack) == 0x000008, "Wrong alignment on BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack");
-static_assert(sizeof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack) == 0x0000B8, "Wrong size on BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, EntryPoint) == 0x000000, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, K2Node_Event_OwnerController) == 0x000018, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::K2Node_Event_OwnerController' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, K2Node_Event_ControlledPawn) == 0x000020, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::K2Node_Event_ControlledPawn' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, K2Node_CustomEvent_Category) == 0x000028, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::K2Node_CustomEvent_Category' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, K2Node_CustomEvent_Function) == 0x000030, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::K2Node_CustomEvent_Function' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, K2Node_DynamicCast_AsREnemy_Pawn_Base) == 0x000038, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::K2Node_DynamicCast_AsREnemy_Pawn_Base' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000041, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_GetRandomUsableAttack_ReturnValue) == 0x000048, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_GetRandomUsableAttack_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_IsValid_ReturnValue) == 0x000050, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, Temp_int_Variable) == 0x000054, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_Add_IntInt_ReturnValue) == 0x000058, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_GetRandomAlivePlayerController_ReturnValue) == 0x000060, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_GetRandomAlivePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_IsValid_ReturnValue_1) == 0x000068, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_IsTearingDownWorld_ReturnValue) == 0x000069, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_IsTearingDownWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_GetCategoryName_ReturnValue) == 0x00006C, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_GetCategoryName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_GetCurrentCombatTarget_ReturnValue) == 0x000078, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_GetCurrentCombatTarget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_GetGScriptComponent_ReturnValue) == 0x000080, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_GetGScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_IsValid_ReturnValue_2) == 0x000088, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_IsValid_ReturnValue_3) == 0x000089, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_Add_IntInt_ReturnValue_1) == 0x00008C, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_Less_IntInt_ReturnValue) == 0x000090, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_GetDangerZoneManager_ReturnValue) == 0x000098, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_GetDangerZoneManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_IsValid_ReturnValue_4) == 0x0000A0, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_IsValid_ReturnValue_5) == 0x0000A1, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_IsValid_ReturnValue_6) == 0x0000A2, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_GetRandomUsableAttack_ReturnValue_1) == 0x0000A8, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_GetRandomUsableAttack_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack, CallFunc_IsValid_ReturnValue_7) == 0x0000B0, "Member 'BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
+DUMPER7_ASSERTS_BPTask_ExecuteUsableAttack_C_ExecuteUbergraph_BPTask_ExecuteUsableAttack;
 
 // Function BPTask_ExecuteUsableAttack.BPTask_ExecuteUsableAttack_C.OnFinishExecution
 // 0x0010 (0x0010 - 0x0000)
@@ -98,10 +68,7 @@ public:
 	class FName                                   Category;                                          // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Function_0;                                        // 0x0008(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPTask_ExecuteUsableAttack_C_OnFinishExecution) == 0x000004, "Wrong alignment on BPTask_ExecuteUsableAttack_C_OnFinishExecution");
-static_assert(sizeof(BPTask_ExecuteUsableAttack_C_OnFinishExecution) == 0x000010, "Wrong size on BPTask_ExecuteUsableAttack_C_OnFinishExecution");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_OnFinishExecution, Category) == 0x000000, "Member 'BPTask_ExecuteUsableAttack_C_OnFinishExecution::Category' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_OnFinishExecution, Function_0) == 0x000008, "Member 'BPTask_ExecuteUsableAttack_C_OnFinishExecution::Function_0' has a wrong offset!");
+DUMPER7_ASSERTS_BPTask_ExecuteUsableAttack_C_OnFinishExecution;
 
 // Function BPTask_ExecuteUsableAttack.BPTask_ExecuteUsableAttack_C.ReceiveExecuteAI
 // 0x0010 (0x0010 - 0x0000)
@@ -111,10 +78,7 @@ public:
 	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPTask_ExecuteUsableAttack_C_ReceiveExecuteAI) == 0x000008, "Wrong alignment on BPTask_ExecuteUsableAttack_C_ReceiveExecuteAI");
-static_assert(sizeof(BPTask_ExecuteUsableAttack_C_ReceiveExecuteAI) == 0x000010, "Wrong size on BPTask_ExecuteUsableAttack_C_ReceiveExecuteAI");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ReceiveExecuteAI, OwnerController) == 0x000000, "Member 'BPTask_ExecuteUsableAttack_C_ReceiveExecuteAI::OwnerController' has a wrong offset!");
-static_assert(offsetof(BPTask_ExecuteUsableAttack_C_ReceiveExecuteAI, ControlledPawn) == 0x000008, "Member 'BPTask_ExecuteUsableAttack_C_ReceiveExecuteAI::ControlledPawn' has a wrong offset!");
+DUMPER7_ASSERTS_BPTask_ExecuteUsableAttack_C_ReceiveExecuteAI;
 
 }
 

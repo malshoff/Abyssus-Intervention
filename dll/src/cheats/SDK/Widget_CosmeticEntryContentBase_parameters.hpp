@@ -10,22 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "RGame_structs.hpp"
-
 
 namespace SDK::Params
 {
 
 // Function Widget_CosmeticEntryContentBase.Widget_CosmeticEntryContentBase_C.SetContentInfo
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x0008 (0x0008 - 0x0000)
 struct Widget_CosmeticEntryContentBase_C_SetContentInfo final
 {
 public:
-	struct FPlayerCosmeticOption                  CosmeticOptionData;                                // 0x0000(0x00D0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class URCosmeticPrimaryAsset*                 CosmeticPA;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticEntryContentBase_C_SetContentInfo) == 0x000008, "Wrong alignment on Widget_CosmeticEntryContentBase_C_SetContentInfo");
-static_assert(sizeof(Widget_CosmeticEntryContentBase_C_SetContentInfo) == 0x0000D0, "Wrong size on Widget_CosmeticEntryContentBase_C_SetContentInfo");
-static_assert(offsetof(Widget_CosmeticEntryContentBase_C_SetContentInfo, CosmeticOptionData) == 0x000000, "Member 'Widget_CosmeticEntryContentBase_C_SetContentInfo::CosmeticOptionData' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticEntryContentBase_C_SetContentInfo;
 
 }
 

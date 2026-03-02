@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_HUD_Background.Widget_HUD_Background_C
-// 0x0000 (0x02D0 - 0x02D0)
+// 0x0000 (0x0340 - 0x0340)
 class UWidget_HUD_Background_C final : public UUserWidget
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_HUD_Background_C">();
+		BP_STATIC_CLASS_IMPL("Widget_HUD_Background_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_HUD_Background_C")
 	}
 	static class UWidget_HUD_Background_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_HUD_Background_C>();
 	}
 };
-static_assert(alignof(UWidget_HUD_Background_C) == 0x000008, "Wrong alignment on UWidget_HUD_Background_C");
-static_assert(sizeof(UWidget_HUD_Background_C) == 0x0002D0, "Wrong size on UWidget_HUD_Background_C");
+DUMPER7_ASSERTS_UWidget_HUD_Background_C;
 
 }
 

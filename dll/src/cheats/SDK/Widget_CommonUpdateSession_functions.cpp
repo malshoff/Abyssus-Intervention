@@ -17,70 +17,76 @@
 namespace SDK
 {
 
-// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.ValidateSessionSettings
+// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonUpdateSession_C::BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonUpdateSession_C::BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.BuildCustomSessionSettings
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool*                                   IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TMap<class FName, struct FDMSessionSetting>*CustomSessionSettings                                  (Parm, OutParm)
 
-void UWidget_CommonUpdateSession_C::ValidateSessionSettings(bool* IsValid)
+void UWidget_CommonUpdateSession_C::BuildCustomSessionSettings(TMap<class FName, struct FDMSessionSetting>* CustomSessionSettings)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "ValidateSessionSettings");
+		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "BuildCustomSessionSettings");
 
-	Params::Widget_CommonUpdateSession_C_ValidateSessionSettings Parms{};
+	Params::Widget_CommonUpdateSession_C_BuildCustomSessionSettings Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (IsValid != nullptr)
-		*IsValid = Parms.IsValid;
+	if (CustomSessionSettings != nullptr)
+		*CustomSessionSettings = std::move(Parms.CustomSessionSettings);
 }
 
 
-// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.OnUpdateSettings
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_CommonUpdateSession_C::OnUpdateSettings(bool bWasSuccessful)
+void UWidget_CommonUpdateSession_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "OnUpdateSettings");
-
-	Params::Widget_CommonUpdateSession_C_OnUpdateSettings Parms{};
-
-	Parms.bWasSuccessful = bWasSuccessful;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.FillVisibilityOptions
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonUpdateSession_C::FillVisibilityOptions()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "FillVisibilityOptions");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.FillFromSession
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonUpdateSession_C::FillFromSession()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "FillFromSession");
+		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -106,78 +112,72 @@ void UWidget_CommonUpdateSession_C::ExecuteUbergraph_Widget_CommonUpdateSession(
 }
 
 
-// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.FillFromSession
+// (BlueprintCallable, BlueprintEvent)
 
-void UWidget_CommonUpdateSession_C::Construct()
+void UWidget_CommonUpdateSession_C::FillFromSession()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "Construct");
+		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "FillFromSession");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.BuildCustomSessionSettings
+// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.FillVisibilityOptions
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonUpdateSession_C::FillVisibilityOptions()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "FillVisibilityOptions");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.OnUpdateSettings
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonUpdateSession_C::OnUpdateSettings(bool bWasSuccessful)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "OnUpdateSettings");
+
+	Params::Widget_CommonUpdateSession_C_OnUpdateSettings Parms{};
+
+	Parms.bWasSuccessful = bWasSuccessful;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.ValidateSessionSettings
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// TMap<class FName, struct FDMSessionSetting>*CustomSessionSettings                                  (Parm, OutParm)
+// bool*                                   IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonUpdateSession_C::BuildCustomSessionSettings(TMap<class FName, struct FDMSessionSetting>* CustomSessionSettings)
+void UWidget_CommonUpdateSession_C::ValidateSessionSettings(bool* IsValid)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "BuildCustomSessionSettings");
+		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "ValidateSessionSettings");
 
-	Params::Widget_CommonUpdateSession_C_BuildCustomSessionSettings Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (CustomSessionSettings != nullptr)
-		*CustomSessionSettings = std::move(Parms.CustomSessionSettings);
-}
-
-
-// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonUpdateSession_C::BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
+	Params::Widget_CommonUpdateSession_C_ValidateSessionSettings Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonUpdateSession_C::BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonUpdateSession_C", "BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
+	if (IsValid != nullptr)
+		*IsValid = Parms.IsValid;
 }
 
 

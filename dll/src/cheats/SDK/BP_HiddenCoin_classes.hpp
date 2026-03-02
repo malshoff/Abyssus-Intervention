@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "RGame_classes.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
@@ -31,6 +31,7 @@ public:
 	class FName                                   CoinId;                                            // 0x02D8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	struct FGameplayTag                           ChallengeTag;                                      // 0x02E0(0x0008)(Edit, BlueprintVisible, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          SkipLobbyCheck;                                    // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          AlreadyCompleted;                                  // 0x02E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void BndEvt__BP_HiddenCoin_RHealth_K2Node_ComponentBoundEvent_0_OnHealthOrArmorChanged__DelegateSignature(class URHealthComponent* Component, const struct FDamageCombatEvent& DamageEvent);
@@ -41,27 +42,23 @@ public:
 	void PlayFX();
 	void ReceiveBeginPlay();
 	void ReceiveDestroyed();
+	void SetAlreadyCollectedFX();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_HiddenCoin_C">();
+		BP_STATIC_CLASS_IMPL("BP_HiddenCoin_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_HiddenCoin_C")
 	}
 	static class ABP_HiddenCoin_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_HiddenCoin_C>();
 	}
 };
-static_assert(alignof(ABP_HiddenCoin_C) == 0x000008, "Wrong alignment on ABP_HiddenCoin_C");
-static_assert(sizeof(ABP_HiddenCoin_C) == 0x0002F0, "Wrong size on ABP_HiddenCoin_C");
-static_assert(offsetof(ABP_HiddenCoin_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_HiddenCoin_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_HiddenCoin_C, VFX) == 0x0002B8, "Member 'ABP_HiddenCoin_C::VFX' has a wrong offset!");
-static_assert(offsetof(ABP_HiddenCoin_C, Sphere) == 0x0002C0, "Member 'ABP_HiddenCoin_C::Sphere' has a wrong offset!");
-static_assert(offsetof(ABP_HiddenCoin_C, RHealth) == 0x0002C8, "Member 'ABP_HiddenCoin_C::RHealth' has a wrong offset!");
-static_assert(offsetof(ABP_HiddenCoin_C, DefaultSceneRoot) == 0x0002D0, "Member 'ABP_HiddenCoin_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_HiddenCoin_C, CoinId) == 0x0002D8, "Member 'ABP_HiddenCoin_C::CoinId' has a wrong offset!");
-static_assert(offsetof(ABP_HiddenCoin_C, ChallengeTag) == 0x0002E0, "Member 'ABP_HiddenCoin_C::ChallengeTag' has a wrong offset!");
-static_assert(offsetof(ABP_HiddenCoin_C, SkipLobbyCheck) == 0x0002E8, "Member 'ABP_HiddenCoin_C::SkipLobbyCheck' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_HiddenCoin_C;
 
 }
 

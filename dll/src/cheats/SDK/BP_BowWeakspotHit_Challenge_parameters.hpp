@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BP_BowWeakspotHit_Challenge.BP_BowWeakspotHit_Challenge_C.ExecuteUbergraph_BP_BowWeakspotHit_Challenge
-// 0x0168 (0x0168 - 0x0000)
+// 0x0298 (0x0298 - 0x0000)
 struct BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge final
 {
 public:
@@ -25,73 +25,45 @@ public:
 	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate; // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ARPawnBase*                             K2Node_CustomEvent_Pawn;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0020(0x00C0)()
-	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue;          // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue;      // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsChallengeCompleted_ReturnValue;         // 0x00EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsObjectASoftClass_ReturnValue;           // 0x00EB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsObjectChildOfSoftClass_ReturnValue;     // 0x00ED(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00EE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00EF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool RunFailed)>               K2Node_CreateDelegate_OutputDelegate_1;            // 0x00F0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_RunFailed;                      // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_1;                 // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARGameState*                            CallFunc_GetRGameState_ReturnValue;                // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn_1;               // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_139[0x3];                                      // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool RunFailed)>               K2Node_CreateDelegate_OutputDelegate_2;            // 0x013C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARGameState*                            CallFunc_GetRGameState_ReturnValue_1;              // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_3; // 0x0158(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0020(0x01F0)()
+	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue;          // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue;      // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0219(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChallengeCompleted_ReturnValue;         // 0x021A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsObjectASoftClass_ReturnValue;           // 0x021B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x021C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsObjectChildOfSoftClass_ReturnValue;     // 0x021D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x021E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x021F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_RunFailed;                      // 0x0221(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_222[0x6];                                      // 0x0222(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_1;                 // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARGameState*                            CallFunc_GetRGameState_ReturnValue;                // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn_1;               // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_259[0x3];                                      // 0x0259(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool RunFailed)>               K2Node_CreateDelegate_OutputDelegate_1;            // 0x025C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool RunFailed)>               K2Node_CreateDelegate_OutputDelegate_2;            // 0x026C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARGameState*                            CallFunc_GetRGameState_ReturnValue_1;              // 0x0280(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_3; // 0x0288(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge) == 0x000008, "Wrong alignment on BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge");
-static_assert(sizeof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge) == 0x000168, "Wrong size on BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, EntryPoint) == 0x000000, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, K2Node_CustomEvent_Pawn) == 0x000018, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::K2Node_CustomEvent_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, K2Node_CustomEvent_DamageEventData) == 0x000020, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::K2Node_CustomEvent_DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, CallFunc_GetChallengeManager_ReturnValue) == 0x0000E0, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, CallFunc_DamageSourceMaskHasFlag_ReturnValue) == 0x0000E8, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::CallFunc_DamageSourceMaskHasFlag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, CallFunc_BooleanAND_ReturnValue) == 0x0000E9, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, CallFunc_IsChallengeCompleted_ReturnValue) == 0x0000EA, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::CallFunc_IsChallengeCompleted_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, CallFunc_IsObjectASoftClass_ReturnValue) == 0x0000EB, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::CallFunc_IsObjectASoftClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, CallFunc_Not_PreBool_ReturnValue) == 0x0000EC, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, CallFunc_IsObjectChildOfSoftClass_ReturnValue) == 0x0000ED, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::CallFunc_IsObjectChildOfSoftClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, CallFunc_BooleanAND_ReturnValue_1) == 0x0000EE, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, CallFunc_BooleanOR_ReturnValue) == 0x0000EF, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000F0, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, K2Node_CustomEvent_RunFailed) == 0x000100, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::K2Node_CustomEvent_RunFailed' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, CallFunc_K2_GetPawn_ReturnValue) == 0x000108, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000110, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, K2Node_DynamicCast_bSuccess) == 0x000118, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, CallFunc_K2_GetPawn_ReturnValue_1) == 0x000120, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::CallFunc_K2_GetPawn_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, CallFunc_GetRGameState_ReturnValue) == 0x000128, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::CallFunc_GetRGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, K2Node_DynamicCast_AsRPlayer_Pawn_1) == 0x000130, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::K2Node_DynamicCast_AsRPlayer_Pawn_1' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, K2Node_DynamicCast_bSuccess_1) == 0x000138, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, K2Node_CreateDelegate_OutputDelegate_2) == 0x00013C, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, CallFunc_GetRGameState_ReturnValue_1) == 0x000150, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::CallFunc_GetRGameState_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge, K2Node_CreateDelegate_OutputDelegate_3) == 0x000158, "Member 'BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BowWeakspotHit_Challenge_C_ExecuteUbergraph_BP_BowWeakspotHit_Challenge;
 
 // Function BP_BowWeakspotHit_Challenge.BP_BowWeakspotHit_Challenge_C.OnDealtDamage
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_BowWeakspotHit_Challenge_C_OnDealtDamage final
 {
 public:
 	class ARPawnBase*                             Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_BowWeakspotHit_Challenge_C_OnDealtDamage) == 0x000008, "Wrong alignment on BP_BowWeakspotHit_Challenge_C_OnDealtDamage");
-static_assert(sizeof(BP_BowWeakspotHit_Challenge_C_OnDealtDamage) == 0x0000C8, "Wrong size on BP_BowWeakspotHit_Challenge_C_OnDealtDamage");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_OnDealtDamage, Pawn) == 0x000000, "Member 'BP_BowWeakspotHit_Challenge_C_OnDealtDamage::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_OnDealtDamage, DamageEventData) == 0x000008, "Member 'BP_BowWeakspotHit_Challenge_C_OnDealtDamage::DamageEventData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BowWeakspotHit_Challenge_C_OnDealtDamage;
 
 // Function BP_BowWeakspotHit_Challenge.BP_BowWeakspotHit_Challenge_C.OnFinishRun
 // 0x0001 (0x0001 - 0x0000)
@@ -100,9 +72,7 @@ struct BP_BowWeakspotHit_Challenge_C_OnFinishRun final
 public:
 	bool                                          RunFailed;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BowWeakspotHit_Challenge_C_OnFinishRun) == 0x000001, "Wrong alignment on BP_BowWeakspotHit_Challenge_C_OnFinishRun");
-static_assert(sizeof(BP_BowWeakspotHit_Challenge_C_OnFinishRun) == 0x000001, "Wrong size on BP_BowWeakspotHit_Challenge_C_OnFinishRun");
-static_assert(offsetof(BP_BowWeakspotHit_Challenge_C_OnFinishRun, RunFailed) == 0x000000, "Member 'BP_BowWeakspotHit_Challenge_C_OnFinishRun::RunFailed' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BowWeakspotHit_Challenge_C_OnFinishRun;
 
 }
 

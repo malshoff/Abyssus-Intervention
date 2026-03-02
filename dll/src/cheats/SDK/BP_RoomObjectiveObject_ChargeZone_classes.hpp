@@ -55,26 +55,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_RoomObjectiveObject_ChargeZone_C">();
+		BP_STATIC_CLASS_IMPL("BP_RoomObjectiveObject_ChargeZone_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_RoomObjectiveObject_ChargeZone_C")
 	}
 	static class ABP_RoomObjectiveObject_ChargeZone_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_RoomObjectiveObject_ChargeZone_C>();
 	}
 };
-static_assert(alignof(ABP_RoomObjectiveObject_ChargeZone_C) == 0x000008, "Wrong alignment on ABP_RoomObjectiveObject_ChargeZone_C");
-static_assert(sizeof(ABP_RoomObjectiveObject_ChargeZone_C) == 0x000398, "Wrong size on ABP_RoomObjectiveObject_ChargeZone_C");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargeZone_C, UberGraphFrame) == 0x000340, "Member 'ABP_RoomObjectiveObject_ChargeZone_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargeZone_C, Sphere1) == 0x000348, "Member 'ABP_RoomObjectiveObject_ChargeZone_C::Sphere1' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargeZone_C, RangeIndicatorMesh) == 0x000350, "Member 'ABP_RoomObjectiveObject_ChargeZone_C::RangeIndicatorMesh' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargeZone_C, RangeIndicatorMesh1) == 0x000358, "Member 'ABP_RoomObjectiveObject_ChargeZone_C::RangeIndicatorMesh1' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargeZone_C, MSS_EscortObjective_Movement_Loop) == 0x000360, "Member 'ABP_RoomObjectiveObject_ChargeZone_C::MSS_EscortObjective_Movement_Loop' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargeZone_C, Scene) == 0x000368, "Member 'ABP_RoomObjectiveObject_ChargeZone_C::Scene' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargeZone_C, PointLight) == 0x000370, "Member 'ABP_RoomObjectiveObject_ChargeZone_C::PointLight' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargeZone_C, DMActorProximitySphere) == 0x000378, "Member 'ABP_RoomObjectiveObject_ChargeZone_C::DMActorProximitySphere' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargeZone_C, CurrentProgressionAmountBP) == 0x000380, "Member 'ABP_RoomObjectiveObject_ChargeZone_C::CurrentProgressionAmountBP' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargeZone_C, TickInterval) == 0x000388, "Member 'ABP_RoomObjectiveObject_ChargeZone_C::TickInterval' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargeZone_C, Timer) == 0x000390, "Member 'ABP_RoomObjectiveObject_ChargeZone_C::Timer' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_RoomObjectiveObject_ChargeZone_C;
 
 }
 

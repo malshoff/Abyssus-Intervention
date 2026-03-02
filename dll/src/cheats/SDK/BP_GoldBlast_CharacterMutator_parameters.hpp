@@ -18,7 +18,7 @@ namespace SDK::Params
 {
 
 // Function BP_GoldBlast_CharacterMutator.BP_GoldBlast_CharacterMutator_C.ExecuteUbergraph_BP_GoldBlast_CharacterMutator
-// 0x02C0 (0x02C0 - 0x0000)
+// 0x0400 (0x0400 - 0x0000)
 struct BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator final
 {
 public:
@@ -42,84 +42,43 @@ public:
 	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x00A0(0x0030)(ContainsInstancedReference)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x00D0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocalController_ReturnValue;            // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocalController_ReturnValue;            // 0x00E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00E3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class URGScriptComponent*                     CallFunc_K2_GetRGScriptComponent_ReturnValue;      // 0x00E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_2;     // 0x00F0(0x0030)(ContainsInstancedReference)
 	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0120(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ARPawnBase*                             K2Node_CustomEvent_Pawn;                           // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0138(0x00C0)()
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn_1;               // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URHealthComponent*                      CallFunc_GetHealthComponent_ReturnValue_1;         // 0x0208(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class ARNPCPawnBase*                          K2Node_DynamicCast_AsRNPCPawn_Base;                // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsAlive_ReturnValue;                   // 0x0219(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21A[0x6];                                      // 0x021A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class URStatusEffectGScript*                  CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_GoldBlast_StatusEffect_C*           K2Node_DynamicCast_AsBP_Gold_Blast_Status_Effect;  // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsActorAnEnemy_ReturnValue;               // 0x0231(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_232[0x6];                                      // 0x0232(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_3;     // 0x0238(0x0030)(ContainsInstancedReference)
-	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue_1;    // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x0269(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x026A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x026B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26C[0x4];                                      // 0x026C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_4;     // 0x0270(0x0030)(ContainsInstancedReference)
-	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_3; // 0x02A0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn_2;               // 0x02B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0138(0x01F0)()
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn_1;               // 0x0328(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0331(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_332[0x6];                                      // 0x0332(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class URHealthComponent*                      CallFunc_GetHealthComponent_ReturnValue_1;         // 0x0338(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsAlive_ReturnValue;                   // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARNPCPawnBase*                          K2Node_DynamicCast_AsRNPCPawn_Base;                // 0x0348(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0350(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue_1;    // 0x0351(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_352[0x6];                                      // 0x0352(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class URStatusEffectGScript*                  CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x0358(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActorAnEnemy_ReturnValue;               // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_361[0x7];                                      // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_GoldBlast_StatusEffect_C*           K2Node_DynamicCast_AsBP_Gold_Blast_Status_Effect;  // 0x0368(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_371[0x7];                                      // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_3;     // 0x0378(0x0030)(ContainsInstancedReference)
+	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x03A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x03A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x03AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3AB[0x5];                                      // 0x03AB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_4;     // 0x03B0(0x0030)(ContainsInstancedReference)
+	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_3; // 0x03E0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn_2;               // 0x03F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator) == 0x000008, "Wrong alignment on BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator");
-static_assert(sizeof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator) == 0x0002C0, "Wrong size on BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_WaitDelay_ReturnValue) == 0x000018, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_WaitDelay_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_GetGoldManager_ReturnValue) == 0x000028, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_GetGoldManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000030, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_Event_KilledActor) == 0x000060, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_Event_KilledActor' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000068, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000080, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000088, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_GetHealthComponent_ReturnValue) == 0x000090, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_GetHealthComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_ActorHasStatusEffect_ReturnValue) == 0x000098, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_ActorHasStatusEffect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_DamageSourceMaskHasFlag_ReturnValue) == 0x000099, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_DamageSourceMaskHasFlag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x0000A0, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000D0, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x0000E0, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_IsLocalController_ReturnValue) == 0x0000E1, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_IsLocalController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_BooleanAND_ReturnValue) == 0x0000E2, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_BooleanAND_ReturnValue_1) == 0x0000E3, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_K2_GetRGScriptComponent_ReturnValue) == 0x0000E8, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_K2_GetRGScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x0000F0, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_2) == 0x000120, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_CustomEvent_Pawn) == 0x000130, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_CustomEvent_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_CustomEvent_DamageEventData) == 0x000138, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_CustomEvent_DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn_1) == 0x0001F8, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn_1' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000200, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_GetHealthComponent_ReturnValue_1) == 0x000208, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_GetHealthComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_DynamicCast_AsRNPCPawn_Base) == 0x000210, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_DynamicCast_AsRNPCPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_DynamicCast_bSuccess_2) == 0x000218, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_GetIsAlive_ReturnValue) == 0x000219, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_GetIsAlive_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x000220, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_DynamicCast_AsBP_Gold_Blast_Status_Effect) == 0x000228, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_DynamicCast_AsBP_Gold_Blast_Status_Effect' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_DynamicCast_bSuccess_3) == 0x000230, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_IsActorAnEnemy_ReturnValue) == 0x000231, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_IsActorAnEnemy_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_3) == 0x000238, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_DamageSourceMaskHasFlag_ReturnValue_1) == 0x000268, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_DamageSourceMaskHasFlag_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_EqualEqual_ObjectObject_ReturnValue_1) == 0x000269, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_EqualEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_BooleanAND_ReturnValue_2) == 0x00026A, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_IsServer_ReturnValue) == 0x00026B, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_IsServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_4) == 0x000270, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_3) == 0x0002A0, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn_2) == 0x0002B0, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn_2' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator, K2Node_DynamicCast_bSuccess_4) == 0x0002B8, "Member 'BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GoldBlast_CharacterMutator_C_ExecuteUbergraph_BP_GoldBlast_CharacterMutator;
 
 // Function BP_GoldBlast_CharacterMutator.BP_GoldBlast_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -131,11 +90,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_GoldBlast_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_GoldBlast_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_GoldBlast_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_GoldBlast_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_GoldBlast_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_GoldBlast_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_GoldBlast_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GoldBlast_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_GoldBlast_CharacterMutator.BP_GoldBlast_CharacterMutator_C.K2_OnEnemyKilled
 // 0x0008 (0x0008 - 0x0000)
@@ -144,22 +99,17 @@ struct BP_GoldBlast_CharacterMutator_C_K2_OnEnemyKilled final
 public:
 	class AActor*                                 KilledActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GoldBlast_CharacterMutator_C_K2_OnEnemyKilled) == 0x000008, "Wrong alignment on BP_GoldBlast_CharacterMutator_C_K2_OnEnemyKilled");
-static_assert(sizeof(BP_GoldBlast_CharacterMutator_C_K2_OnEnemyKilled) == 0x000008, "Wrong size on BP_GoldBlast_CharacterMutator_C_K2_OnEnemyKilled");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_K2_OnEnemyKilled, KilledActor) == 0x000000, "Member 'BP_GoldBlast_CharacterMutator_C_K2_OnEnemyKilled::KilledActor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GoldBlast_CharacterMutator_C_K2_OnEnemyKilled;
 
 // Function BP_GoldBlast_CharacterMutator.BP_GoldBlast_CharacterMutator_C.OnDamageDealt
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_GoldBlast_CharacterMutator_C_OnDamageDealt final
 {
 public:
 	class ARPawnBase*                             Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_GoldBlast_CharacterMutator_C_OnDamageDealt) == 0x000008, "Wrong alignment on BP_GoldBlast_CharacterMutator_C_OnDamageDealt");
-static_assert(sizeof(BP_GoldBlast_CharacterMutator_C_OnDamageDealt) == 0x0000C8, "Wrong size on BP_GoldBlast_CharacterMutator_C_OnDamageDealt");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_OnDamageDealt, Pawn) == 0x000000, "Member 'BP_GoldBlast_CharacterMutator_C_OnDamageDealt::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_GoldBlast_CharacterMutator_C_OnDamageDealt, DamageEventData) == 0x000008, "Member 'BP_GoldBlast_CharacterMutator_C_OnDamageDealt::DamageEventData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GoldBlast_CharacterMutator_C_OnDamageDealt;
 
 }
 

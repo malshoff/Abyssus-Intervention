@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
@@ -49,21 +49,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Base_ModScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_Base_ModScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Base_ModScript_C")
 	}
 	static class UBP_Base_ModScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Base_ModScript_C>();
 	}
 };
-static_assert(alignof(UBP_Base_ModScript_C) == 0x000008, "Wrong alignment on UBP_Base_ModScript_C");
-static_assert(sizeof(UBP_Base_ModScript_C) == 0x000150, "Wrong size on UBP_Base_ModScript_C");
-static_assert(offsetof(UBP_Base_ModScript_C, UberGraphFrame) == 0x000120, "Member 'UBP_Base_ModScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Base_ModScript_C, CustomCrosshairWidgetClass) == 0x000128, "Member 'UBP_Base_ModScript_C::CustomCrosshairWidgetClass' has a wrong offset!");
-static_assert(offsetof(UBP_Base_ModScript_C, CustomCrosshairWidget) == 0x000130, "Member 'UBP_Base_ModScript_C::CustomCrosshairWidget' has a wrong offset!");
-static_assert(offsetof(UBP_Base_ModScript_C, FireSound) == 0x000138, "Member 'UBP_Base_ModScript_C::FireSound' has a wrong offset!");
-static_assert(offsetof(UBP_Base_ModScript_C, CooldownCrosshair) == 0x000140, "Member 'UBP_Base_ModScript_C::CooldownCrosshair' has a wrong offset!");
-static_assert(offsetof(UBP_Base_ModScript_C, ShouldSpawnProjectileLines) == 0x000148, "Member 'UBP_Base_ModScript_C::ShouldSpawnProjectileLines' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Base_ModScript_C;
 
 }
 

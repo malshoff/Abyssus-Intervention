@@ -10,22 +10,44 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
+
 
 namespace SDK::Params
 {
 
-// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.SetupTexts
-// 0x0020 (0x0020 - 0x0000)
-struct Widget_ChoiceDialog_C_SetupTexts final
+// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0000(0x0010)()
-	class FText                                   CallFunc_TextToUpper_ReturnValue_1;                // 0x0010(0x0010)()
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ChoiceDialog_C_SetupTexts) == 0x000008, "Wrong alignment on Widget_ChoiceDialog_C_SetupTexts");
-static_assert(sizeof(Widget_ChoiceDialog_C_SetupTexts) == 0x000020, "Wrong size on Widget_ChoiceDialog_C_SetupTexts");
-static_assert(offsetof(Widget_ChoiceDialog_C_SetupTexts, CallFunc_TextToUpper_ReturnValue) == 0x000000, "Member 'Widget_ChoiceDialog_C_SetupTexts::CallFunc_TextToUpper_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChoiceDialog_C_SetupTexts, CallFunc_TextToUpper_ReturnValue_1) == 0x000010, "Member 'Widget_ChoiceDialog_C_SetupTexts::CallFunc_TextToUpper_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature;
+
+// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature final
+{
+public:
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature;
+
+// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.ExecuteUbergraph_Widget_ChoiceDialog
+// 0x0048 (0x0048 - 0x0000)
+struct Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0020(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue_1;              // 0x0030(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog;
 
 // Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.Initialize
 // 0x0040 (0x0040 - 0x0000)
@@ -37,56 +59,17 @@ public:
 	class FText                                   YesText_0;                                         // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class FText                                   NoText_0;                                          // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_ChoiceDialog_C_Initialize) == 0x000008, "Wrong alignment on Widget_ChoiceDialog_C_Initialize");
-static_assert(sizeof(Widget_ChoiceDialog_C_Initialize) == 0x000040, "Wrong size on Widget_ChoiceDialog_C_Initialize");
-static_assert(offsetof(Widget_ChoiceDialog_C_Initialize, HeaderText_0) == 0x000000, "Member 'Widget_ChoiceDialog_C_Initialize::HeaderText_0' has a wrong offset!");
-static_assert(offsetof(Widget_ChoiceDialog_C_Initialize, DescriptionText_0) == 0x000010, "Member 'Widget_ChoiceDialog_C_Initialize::DescriptionText_0' has a wrong offset!");
-static_assert(offsetof(Widget_ChoiceDialog_C_Initialize, YesText_0) == 0x000020, "Member 'Widget_ChoiceDialog_C_Initialize::YesText_0' has a wrong offset!");
-static_assert(offsetof(Widget_ChoiceDialog_C_Initialize, NoText_0) == 0x000030, "Member 'Widget_ChoiceDialog_C_Initialize::NoText_0' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChoiceDialog_C_Initialize;
 
-// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.ExecuteUbergraph_Widget_ChoiceDialog
-// 0x0038 (0x0038 - 0x0000)
-struct Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog final
+// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.SetupTexts
+// 0x0020 (0x0020 - 0x0000)
+struct Widget_ChoiceDialog_C_SetupTexts final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0000(0x0010)()
+	class FText                                   CallFunc_TextToUpper_ReturnValue_1;                // 0x0010(0x0010)()
 };
-static_assert(alignof(Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog) == 0x000008, "Wrong alignment on Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog");
-static_assert(sizeof(Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog) == 0x000038, "Wrong size on Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog");
-static_assert(offsetof(Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog, EntryPoint) == 0x000000, "Member 'Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog, K2Node_ComponentBoundEvent_Button) == 0x000008, "Member 'Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog, CallFunc_PlayAnimation_ReturnValue) == 0x000020, "Member 'Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog, CallFunc_PlayAnimation_ReturnValue_1) == 0x000028, "Member 'Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog, K2Node_ComponentBoundEvent_Button_1) == 0x000030, "Member 'Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
-
-// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChoiceDialog_C_SetupTexts;
 
 }
 

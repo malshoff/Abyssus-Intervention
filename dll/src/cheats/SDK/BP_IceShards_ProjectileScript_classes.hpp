@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_IceShards_ProjectileScript.BP_IceShards_ProjectileScript_C
-// 0x0000 (0x0178 - 0x0178)
+// 0x0000 (0x0180 - 0x0180)
 class UBP_IceShards_ProjectileScript_C final : public URGIceShardsProjectileScript
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_IceShards_ProjectileScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_IceShards_ProjectileScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_IceShards_ProjectileScript_C")
 	}
 	static class UBP_IceShards_ProjectileScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_IceShards_ProjectileScript_C>();
 	}
 };
-static_assert(alignof(UBP_IceShards_ProjectileScript_C) == 0x000008, "Wrong alignment on UBP_IceShards_ProjectileScript_C");
-static_assert(sizeof(UBP_IceShards_ProjectileScript_C) == 0x000178, "Wrong size on UBP_IceShards_ProjectileScript_C");
+DUMPER7_ASSERTS_UBP_IceShards_ProjectileScript_C;
 
 }
 

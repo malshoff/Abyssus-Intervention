@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "RGame_structs.hpp"
 #include "BP_Activatable_CharacterMutator_classes.hpp"
 
@@ -20,34 +20,34 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_AtlanteanCube_CharacterMutator.BP_AtlanteanCube_CharacterMutator_C
-// 0x02C8 (0x1168 - 0x0EA0)
+// 0x02C8 (0x1170 - 0x0EA8)
 class UBP_AtlanteanCube_CharacterMutator_C final : public UBP_Activatable_CharacterMutator_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_AtlanteanCube_CharacterMutator_C; // 0x0EA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         Range;                                             // 0x0EA8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EAC[0x4];                                      // 0x0EAC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        ConeHalfAngle;                                     // 0x0EB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CachedForwardDir;                                  // 0x0EB8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentMinAngle;                                   // 0x0ED0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         NearestTarget;                                     // 0x0ED8(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnTemplate, DisableEditOnInstance)
-	struct FRMutableFloat                         Damage;                                            // 0x0EE8(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMulticastInlineDelegate<void(class UBP_AtlanteanCube_CharacterMutator_C* Script)> OnFireAbilityFinished; // 0x1010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FLastDamageEventData                   DamageEvent;                                       // 0x1020(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, ContainsInstancedReference)
-	bool                                          AbilityOverride;                                   // 0x10A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10A9[0x7];                                     // 0x10A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UABP_AtlanteanCube_C*                   Cube_AnimBP_Ref;                                   // 0x10B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, class UNiagaraComponent*>   SpawnedBuildupBeams;                               // 0x10B8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class FName>                           BeamNames;                                         // 0x1108(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          FadeOutStarted;                                    // 0x1118(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1119[0x7];                                     // 0x1119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               DynamicMaterial;                                   // 0x1120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CubeActivateAC;                                    // 0x1128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         InputCooldownMultiplier;                           // 0x1130(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1134[0x4];                                     // 0x1134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPlayerPawn*                           AsRPlayerPawn;                                     // 0x1138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CachedHitLocation;                                 // 0x1140(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         CurrentNearestTarget;                              // 0x1158(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_AtlanteanCube_CharacterMutator_C; // 0x0EA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         Range;                                             // 0x0EB0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EB4[0x4];                                      // 0x0EB4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ConeHalfAngle;                                     // 0x0EB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CachedForwardDir;                                  // 0x0EC0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentMinAngle;                                   // 0x0ED8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         NearestTarget;                                     // 0x0EE0(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FRMutableFloat                         Damage;                                            // 0x0EF0(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMulticastInlineDelegate<void(class UBP_AtlanteanCube_CharacterMutator_C* Script)> OnFireAbilityFinished; // 0x1018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FLastDamageEventData                   DamageEvent;                                       // 0x1028(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, ContainsInstancedReference)
+	bool                                          AbilityOverride;                                   // 0x10B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10B1[0x7];                                     // 0x10B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UABP_AtlanteanCube_C*                   Cube_AnimBP_Ref;                                   // 0x10B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, class UNiagaraComponent*>   SpawnedBuildupBeams;                               // 0x10C0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class FName>                           BeamNames;                                         // 0x1110(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          FadeOutStarted;                                    // 0x1120(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1121[0x7];                                     // 0x1121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               DynamicMaterial;                                   // 0x1128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CubeActivateAC;                                    // 0x1130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         InputCooldownMultiplier;                           // 0x1138(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_113C[0x4];                                     // 0x113C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPlayerPawn*                           AsRPlayerPawn;                                     // 0x1140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CachedHitLocation;                                 // 0x1148(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         CurrentNearestTarget;                              // 0x1160(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_BP_AtlanteanCube_CharacterMutator(int32 EntryPoint);
@@ -90,35 +90,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_AtlanteanCube_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_AtlanteanCube_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_AtlanteanCube_CharacterMutator_C")
 	}
 	static class UBP_AtlanteanCube_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_AtlanteanCube_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_AtlanteanCube_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_AtlanteanCube_CharacterMutator_C");
-static_assert(sizeof(UBP_AtlanteanCube_CharacterMutator_C) == 0x001168, "Wrong size on UBP_AtlanteanCube_CharacterMutator_C");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, UberGraphFrame_BP_AtlanteanCube_CharacterMutator_C) == 0x000EA0, "Member 'UBP_AtlanteanCube_CharacterMutator_C::UberGraphFrame_BP_AtlanteanCube_CharacterMutator_C' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, Range) == 0x000EA8, "Member 'UBP_AtlanteanCube_CharacterMutator_C::Range' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, ConeHalfAngle) == 0x000EB0, "Member 'UBP_AtlanteanCube_CharacterMutator_C::ConeHalfAngle' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, CachedForwardDir) == 0x000EB8, "Member 'UBP_AtlanteanCube_CharacterMutator_C::CachedForwardDir' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, CurrentMinAngle) == 0x000ED0, "Member 'UBP_AtlanteanCube_CharacterMutator_C::CurrentMinAngle' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, NearestTarget) == 0x000ED8, "Member 'UBP_AtlanteanCube_CharacterMutator_C::NearestTarget' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, Damage) == 0x000EE8, "Member 'UBP_AtlanteanCube_CharacterMutator_C::Damage' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, OnFireAbilityFinished) == 0x001010, "Member 'UBP_AtlanteanCube_CharacterMutator_C::OnFireAbilityFinished' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, DamageEvent) == 0x001020, "Member 'UBP_AtlanteanCube_CharacterMutator_C::DamageEvent' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, AbilityOverride) == 0x0010A8, "Member 'UBP_AtlanteanCube_CharacterMutator_C::AbilityOverride' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, Cube_AnimBP_Ref) == 0x0010B0, "Member 'UBP_AtlanteanCube_CharacterMutator_C::Cube_AnimBP_Ref' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, SpawnedBuildupBeams) == 0x0010B8, "Member 'UBP_AtlanteanCube_CharacterMutator_C::SpawnedBuildupBeams' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, BeamNames) == 0x001108, "Member 'UBP_AtlanteanCube_CharacterMutator_C::BeamNames' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, FadeOutStarted) == 0x001118, "Member 'UBP_AtlanteanCube_CharacterMutator_C::FadeOutStarted' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, DynamicMaterial) == 0x001120, "Member 'UBP_AtlanteanCube_CharacterMutator_C::DynamicMaterial' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, CubeActivateAC) == 0x001128, "Member 'UBP_AtlanteanCube_CharacterMutator_C::CubeActivateAC' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, InputCooldownMultiplier) == 0x001130, "Member 'UBP_AtlanteanCube_CharacterMutator_C::InputCooldownMultiplier' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, AsRPlayerPawn) == 0x001138, "Member 'UBP_AtlanteanCube_CharacterMutator_C::AsRPlayerPawn' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, CachedHitLocation) == 0x001140, "Member 'UBP_AtlanteanCube_CharacterMutator_C::CachedHitLocation' has a wrong offset!");
-static_assert(offsetof(UBP_AtlanteanCube_CharacterMutator_C, CurrentNearestTarget) == 0x001158, "Member 'UBP_AtlanteanCube_CharacterMutator_C::CurrentNearestTarget' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_AtlanteanCube_CharacterMutator_C;
 
 }
 

@@ -19,44 +19,47 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass W_CarouselIndex.W_CarouselIndex_C
-// 0x0260 (0x0530 - 0x02D0)
+// 0x0270 (0x05B0 - 0x0340)
 class UW_CarouselIndex_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       SelectedAnimation_8;                               // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       SelectedAnimation_7;                               // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       SelectedAnimation_6;                               // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       SelectedAnimation_5;                               // 0x02F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       SelectedAnimation_4;                               // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       SelectedAnimation_3;                               // 0x0300(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       SelectedAnimation_2;                               // 0x0308(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       SelectedAnimation_1;                               // 0x0310(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UButton*                                Button_01;                                         // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_02;                                         // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_03;                                         // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_04;                                         // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_05;                                         // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_06;                                         // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_07;                                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_08;                                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image;                                             // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_1;                                           // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_2;                                           // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Image_8;                                           // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_7;                                           // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_6;                                           // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_5;                                           // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_4;                                           // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_3;                                           // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_4;                                           // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_5;                                           // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_6;                                           // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_7;                                           // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         SelectedIndex;                                     // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39C[0x4];                                      // 0x039C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UImage*>                         ImageArray;                                        // 0x03A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	struct FSlateBrush                            SelectedBrush;                                     // 0x03B0(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateBrush                            UnSelectedBrush;                                   // 0x0460(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class URWeaponPrimaryAsset*>           WeaponPAs;                                         // 0x0510(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UWidget_Workbench2_C*                   Workbench_Ref;                                     // 0x0520(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Image_2;                                           // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_1;                                           // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image;                                             // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_09;                                         // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_08;                                         // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_07;                                         // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_06;                                         // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_05;                                         // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_04;                                         // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_03;                                         // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_02;                                         // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_01;                                         // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       SelectedAnimation_1;                               // 0x03D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       SelectedAnimation_2;                               // 0x03E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       SelectedAnimation_3;                               // 0x03E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       SelectedAnimation_4;                               // 0x03F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       SelectedAnimation_5;                               // 0x03F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       SelectedAnimation_6;                               // 0x0400(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       SelectedAnimation_7;                               // 0x0408(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       SelectedAnimation_8;                               // 0x0410(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	int32                                         SelectedIndex;                                     // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41C[0x4];                                      // 0x041C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UImage*>                         ImageArray;                                        // 0x0420(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FSlateBrush                            SelectedBrush;                                     // 0x0430(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateBrush                            UnSelectedBrush;                                   // 0x04E0(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class URWeaponPrimaryAsset*>           WeaponPAs;                                         // 0x0590(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UWidget_Workbench2_C*                   Workbench_Ref;                                     // 0x05A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void BndEvt__W_CarouselIndex_Button_09_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__W_CarouselIndex_Button_0_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__W_CarouselIndex_Button_1_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__W_CarouselIndex_Button_2_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature();
@@ -74,46 +77,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"W_CarouselIndex_C">();
+		BP_STATIC_CLASS_IMPL("W_CarouselIndex_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"W_CarouselIndex_C")
 	}
 	static class UW_CarouselIndex_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UW_CarouselIndex_C>();
 	}
 };
-static_assert(alignof(UW_CarouselIndex_C) == 0x000010, "Wrong alignment on UW_CarouselIndex_C");
-static_assert(sizeof(UW_CarouselIndex_C) == 0x000530, "Wrong size on UW_CarouselIndex_C");
-static_assert(offsetof(UW_CarouselIndex_C, UberGraphFrame) == 0x0002D0, "Member 'UW_CarouselIndex_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, SelectedAnimation_8) == 0x0002D8, "Member 'UW_CarouselIndex_C::SelectedAnimation_8' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, SelectedAnimation_7) == 0x0002E0, "Member 'UW_CarouselIndex_C::SelectedAnimation_7' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, SelectedAnimation_6) == 0x0002E8, "Member 'UW_CarouselIndex_C::SelectedAnimation_6' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, SelectedAnimation_5) == 0x0002F0, "Member 'UW_CarouselIndex_C::SelectedAnimation_5' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, SelectedAnimation_4) == 0x0002F8, "Member 'UW_CarouselIndex_C::SelectedAnimation_4' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, SelectedAnimation_3) == 0x000300, "Member 'UW_CarouselIndex_C::SelectedAnimation_3' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, SelectedAnimation_2) == 0x000308, "Member 'UW_CarouselIndex_C::SelectedAnimation_2' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, SelectedAnimation_1) == 0x000310, "Member 'UW_CarouselIndex_C::SelectedAnimation_1' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Button_01) == 0x000318, "Member 'UW_CarouselIndex_C::Button_01' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Button_02) == 0x000320, "Member 'UW_CarouselIndex_C::Button_02' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Button_03) == 0x000328, "Member 'UW_CarouselIndex_C::Button_03' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Button_04) == 0x000330, "Member 'UW_CarouselIndex_C::Button_04' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Button_05) == 0x000338, "Member 'UW_CarouselIndex_C::Button_05' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Button_06) == 0x000340, "Member 'UW_CarouselIndex_C::Button_06' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Button_07) == 0x000348, "Member 'UW_CarouselIndex_C::Button_07' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Button_08) == 0x000350, "Member 'UW_CarouselIndex_C::Button_08' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Image) == 0x000358, "Member 'UW_CarouselIndex_C::Image' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Image_1) == 0x000360, "Member 'UW_CarouselIndex_C::Image_1' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Image_2) == 0x000368, "Member 'UW_CarouselIndex_C::Image_2' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Image_3) == 0x000370, "Member 'UW_CarouselIndex_C::Image_3' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Image_4) == 0x000378, "Member 'UW_CarouselIndex_C::Image_4' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Image_5) == 0x000380, "Member 'UW_CarouselIndex_C::Image_5' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Image_6) == 0x000388, "Member 'UW_CarouselIndex_C::Image_6' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Image_7) == 0x000390, "Member 'UW_CarouselIndex_C::Image_7' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, SelectedIndex) == 0x000398, "Member 'UW_CarouselIndex_C::SelectedIndex' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, ImageArray) == 0x0003A0, "Member 'UW_CarouselIndex_C::ImageArray' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, SelectedBrush) == 0x0003B0, "Member 'UW_CarouselIndex_C::SelectedBrush' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, UnSelectedBrush) == 0x000460, "Member 'UW_CarouselIndex_C::UnSelectedBrush' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, WeaponPAs) == 0x000510, "Member 'UW_CarouselIndex_C::WeaponPAs' has a wrong offset!");
-static_assert(offsetof(UW_CarouselIndex_C, Workbench_Ref) == 0x000520, "Member 'UW_CarouselIndex_C::Workbench_Ref' has a wrong offset!");
+DUMPER7_ASSERTS_UW_CarouselIndex_C;
 
 }
 

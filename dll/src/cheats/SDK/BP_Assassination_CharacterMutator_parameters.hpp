@@ -54,32 +54,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator) == 0x000008, "Wrong alignment on BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator");
-static_assert(sizeof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator) == 0x000148, "Wrong size on BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000038, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000068, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000078, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000080, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn_1) == 0x000088, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn_1' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, K2Node_DynamicCast_bSuccess_2) == 0x000090, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000094, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000A4, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_2) == 0x0000B4, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, CallFunc_GetScriptFName_ReturnValue) == 0x0000C4, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, CallFunc_GetScriptFName_ReturnValue_1) == 0x0000CC, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x0000D8, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x000108, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, K2Node_DynamicCast_bSuccess_3) == 0x000110, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x000114, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000118, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue_1) == 0x000120, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000128, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000130, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000138, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x000140, "Member 'BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Assassination_CharacterMutator_C_ExecuteUbergraph_BP_Assassination_CharacterMutator;
 
 // Function BP_Assassination_CharacterMutator.BP_Assassination_CharacterMutator_C.GetMutatorDescription_0
 // 0x0028 (0x0028 - 0x0000)
@@ -91,11 +66,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_Assassination_CharacterMutator_C_GetMutatorDescription_0) == 0x000008, "Wrong alignment on BP_Assassination_CharacterMutator_C_GetMutatorDescription_0");
-static_assert(sizeof(BP_Assassination_CharacterMutator_C_GetMutatorDescription_0) == 0x000028, "Wrong size on BP_Assassination_CharacterMutator_C_GetMutatorDescription_0");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_GetMutatorDescription_0, ReturnValue) == 0x000000, "Member 'BP_Assassination_CharacterMutator_C_GetMutatorDescription_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_GetMutatorDescription_0, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_Assassination_CharacterMutator_C_GetMutatorDescription_0::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_GetMutatorDescription_0, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_Assassination_CharacterMutator_C_GetMutatorDescription_0::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Assassination_CharacterMutator_C_GetMutatorDescription_0;
 
 // Function BP_Assassination_CharacterMutator.BP_Assassination_CharacterMutator_C.GetDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -104,9 +75,7 @@ struct BP_Assassination_CharacterMutator_C_GetDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_Assassination_CharacterMutator_C_GetDescription) == 0x000008, "Wrong alignment on BP_Assassination_CharacterMutator_C_GetDescription");
-static_assert(sizeof(BP_Assassination_CharacterMutator_C_GetDescription) == 0x000010, "Wrong size on BP_Assassination_CharacterMutator_C_GetDescription");
-static_assert(offsetof(BP_Assassination_CharacterMutator_C_GetDescription, ReturnValue) == 0x000000, "Member 'BP_Assassination_CharacterMutator_C_GetDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Assassination_CharacterMutator_C_GetDescription;
 
 }
 

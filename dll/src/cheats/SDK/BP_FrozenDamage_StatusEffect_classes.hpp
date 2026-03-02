@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_FrozenDamage_StatusEffect.BP_FrozenDamage_StatusEffect_C
-// 0x0008 (0x04F0 - 0x04E8)
+// 0x0008 (0x0500 - 0x04F8)
 class UBP_FrozenDamage_StatusEffect_C final : public URGFrozenDamageAilment
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_FrozenDamage_StatusEffect(int32 EntryPoint);
@@ -31,16 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FrozenDamage_StatusEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_FrozenDamage_StatusEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FrozenDamage_StatusEffect_C")
 	}
 	static class UBP_FrozenDamage_StatusEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_FrozenDamage_StatusEffect_C>();
 	}
 };
-static_assert(alignof(UBP_FrozenDamage_StatusEffect_C) == 0x000008, "Wrong alignment on UBP_FrozenDamage_StatusEffect_C");
-static_assert(sizeof(UBP_FrozenDamage_StatusEffect_C) == 0x0004F0, "Wrong size on UBP_FrozenDamage_StatusEffect_C");
-static_assert(offsetof(UBP_FrozenDamage_StatusEffect_C, UberGraphFrame) == 0x0004E8, "Member 'UBP_FrozenDamage_StatusEffect_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_FrozenDamage_StatusEffect_C;
 
 }
 

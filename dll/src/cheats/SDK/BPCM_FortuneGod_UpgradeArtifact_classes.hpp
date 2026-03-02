@@ -31,17 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPCM_FortuneGod_UpgradeArtifact_C">();
+		BP_STATIC_CLASS_IMPL("BPCM_FortuneGod_UpgradeArtifact_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPCM_FortuneGod_UpgradeArtifact_C")
 	}
 	static class UBPCM_FortuneGod_UpgradeArtifact_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPCM_FortuneGod_UpgradeArtifact_C>();
 	}
 };
-static_assert(alignof(UBPCM_FortuneGod_UpgradeArtifact_C) == 0x000008, "Wrong alignment on UBPCM_FortuneGod_UpgradeArtifact_C");
-static_assert(sizeof(UBPCM_FortuneGod_UpgradeArtifact_C) == 0x0000D8, "Wrong size on UBPCM_FortuneGod_UpgradeArtifact_C");
-static_assert(offsetof(UBPCM_FortuneGod_UpgradeArtifact_C, MaterialInstance) == 0x000048, "Member 'UBPCM_FortuneGod_UpgradeArtifact_C::MaterialInstance' has a wrong offset!");
-static_assert(offsetof(UBPCM_FortuneGod_UpgradeArtifact_C, Curve) == 0x000050, "Member 'UBPCM_FortuneGod_UpgradeArtifact_C::Curve' has a wrong offset!");
+DUMPER7_ASSERTS_UBPCM_FortuneGod_UpgradeArtifact_C;
 
 }
 

@@ -167,5 +167,19 @@ void ABP_HiddenCoin_C::ReceiveDestroyed()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function BP_HiddenCoin.BP_HiddenCoin_C.SetAlreadyCollectedFX
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_HiddenCoin_C::SetAlreadyCollectedFX()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HiddenCoin_C", "SetAlreadyCollectedFX");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 }
 

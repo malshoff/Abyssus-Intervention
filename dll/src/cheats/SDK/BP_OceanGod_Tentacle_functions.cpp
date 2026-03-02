@@ -207,6 +207,29 @@ void ABP_OceanGod_Tentacle_C::ExecuteUbergraph_BP_OceanGod_Tentacle(int32 EntryP
 }
 
 
+// Function BP_OceanGod_Tentacle.BP_OceanGod_Tentacle_C.FindTargettingLocation
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class AActor*                           Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+struct FVector ABP_OceanGod_Tentacle_C::FindTargettingLocation(class AActor* Target)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_OceanGod_Tentacle_C", "FindTargettingLocation");
+
+	Params::BP_OceanGod_Tentacle_C_FindTargettingLocation Parms{};
+
+	Parms.Target = Target;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_OceanGod_Tentacle.BP_OceanGod_Tentacle_C.FireProjectileAtTarget
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -633,6 +656,20 @@ void ABP_OceanGod_Tentacle_C::OnNotifyEnd_F40FB19D42AC2DC77726D0802BF7C783(class
 	Parms.NotifyName = NotifyName;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_OceanGod_Tentacle.BP_OceanGod_Tentacle_C.OnPlayerFailsafeTeleported
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_OceanGod_Tentacle_C::OnPlayerFailsafeTeleported()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_OceanGod_Tentacle_C", "OnPlayerFailsafeTeleported");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

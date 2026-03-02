@@ -18,7 +18,7 @@ namespace SDK::Params
 {
 
 // Function BP_SpiritPassive8_StatusEffectAilment.BP_SpiritPassive8_StatusEffectAilment_C.ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment
-// 0x0288 (0x0288 - 0x0000)
+// 0x03B8 (0x03B8 - 0x0000)
 struct BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment final
 {
 public:
@@ -50,52 +50,22 @@ public:
 	struct FLastDamageEventData                   CallFunc_ApplyHealthDamage_ReturnValue;            // 0x00F0(0x0088)(NoDestructor, ContainsInstancedReference)
 	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_2;     // 0x0178(0x0030)(ContainsInstancedReference)
 	class URHealthComponent*                      K2Node_CustomEvent_Component;                      // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x01B0(0x00C0)()
-	class URHealthComponent*                      CallFunc_GetHealthComponent_ReturnValue;           // 0x0270(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_ApplyHealthDamage_Damage_ImplicitCast;    // 0x0280(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x01B0(0x01F0)()
+	class URHealthComponent*                      CallFunc_GetHealthComponent_ReturnValue;           // 0x03A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_ApplyHealthDamage_Damage_ImplicitCast;    // 0x03B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment) == 0x000008, "Wrong alignment on BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment");
-static_assert(sizeof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment) == 0x000288, "Wrong size on BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, EntryPoint) == 0x000000, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, K2Node_Event_DeltaTime) == 0x000014, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::K2Node_Event_DeltaTime' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_BranchByNetRole_Branches) == 0x000018, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_BranchByNetRole_Branches' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_K2_GetInstigatorController_ReturnValue) == 0x000020, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_K2_GetInstigatorController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, K2Node_SwitchEnum_CmpSuccess) == 0x000028, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_K2_GetInstigatorPawn_ReturnValue) == 0x000030, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_K2_GetInstigatorPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000038, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000068, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_IsValid_ReturnValue) == 0x000080, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000088, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_GetCurrentStackCount_ReturnValue) == 0x0000B8, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_GetCurrentStackCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0000C0, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x0000C8, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, K2Node_DynamicCast_bSuccess) == 0x0000D0, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_GetMutatorRank_ReturnValue) == 0x0000D4, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_AttachParticlesToOwnerSkeletalMesh_ReturnValue) == 0x0000D8, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_AttachParticlesToOwnerSkeletalMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x0000E0, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000E8, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_ApplyHealthDamage_ReturnValue) == 0x0000F0, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_ApplyHealthDamage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x000178, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, K2Node_CustomEvent_Component) == 0x0001A8, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::K2Node_CustomEvent_Component' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, K2Node_CustomEvent_DamageEventData) == 0x0001B0, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::K2Node_CustomEvent_DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_GetHealthComponent_ReturnValue) == 0x000270, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_GetHealthComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000278, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment, CallFunc_ApplyHealthDamage_Damage_ImplicitCast) == 0x000280, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment::CallFunc_ApplyHealthDamage_Damage_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpiritPassive8_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive8_StatusEffectAilment;
 
 // Function BP_SpiritPassive8_StatusEffectAilment.BP_SpiritPassive8_StatusEffectAilment_C.HealthDepleted
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_SpiritPassive8_StatusEffectAilment_C_HealthDepleted final
 {
 public:
 	class URHealthComponent*                      Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_SpiritPassive8_StatusEffectAilment_C_HealthDepleted) == 0x000008, "Wrong alignment on BP_SpiritPassive8_StatusEffectAilment_C_HealthDepleted");
-static_assert(sizeof(BP_SpiritPassive8_StatusEffectAilment_C_HealthDepleted) == 0x0000C8, "Wrong size on BP_SpiritPassive8_StatusEffectAilment_C_HealthDepleted");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_HealthDepleted, Component) == 0x000000, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_HealthDepleted::Component' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_HealthDepleted, DamageEventData) == 0x000008, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_HealthDepleted::DamageEventData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpiritPassive8_StatusEffectAilment_C_HealthDepleted;
 
 // Function BP_SpiritPassive8_StatusEffectAilment.BP_SpiritPassive8_StatusEffectAilment_C.K2_TickScript
 // 0x0004 (0x0004 - 0x0000)
@@ -104,9 +74,7 @@ struct BP_SpiritPassive8_StatusEffectAilment_C_K2_TickScript final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpiritPassive8_StatusEffectAilment_C_K2_TickScript) == 0x000004, "Wrong alignment on BP_SpiritPassive8_StatusEffectAilment_C_K2_TickScript");
-static_assert(sizeof(BP_SpiritPassive8_StatusEffectAilment_C_K2_TickScript) == 0x000004, "Wrong size on BP_SpiritPassive8_StatusEffectAilment_C_K2_TickScript");
-static_assert(offsetof(BP_SpiritPassive8_StatusEffectAilment_C_K2_TickScript, DeltaTime) == 0x000000, "Member 'BP_SpiritPassive8_StatusEffectAilment_C_K2_TickScript::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpiritPassive8_StatusEffectAilment_C_K2_TickScript;
 
 }
 

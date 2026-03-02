@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -19,20 +19,20 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Shotgun.ABP_Shotgun_C
-// 0x0360 (0x08C0 - 0x0560)
+// 0x0360 (0x08E0 - 0x0580)
 class UABP_Shotgun_C final : public URWeaponAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0560(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0568(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0570(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0578(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0598(0x0020)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_1;                        // 0x05B8(0x0128)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x06E0(0x0020)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0700(0x0128)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0828(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0870(0x0048)()
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0580(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0588(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0590(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0598(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x05B8(0x0020)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_1;                        // 0x05D8(0x0128)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0700(0x0020)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0720(0x0128)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0848(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0890(0x0048)()
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -43,25 +43,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_Shotgun_C">();
+		BP_STATIC_CLASS_IMPL("ABP_Shotgun_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_Shotgun_C")
 	}
 	static class UABP_Shotgun_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_Shotgun_C>();
 	}
 };
-static_assert(alignof(UABP_Shotgun_C) == 0x000010, "Wrong alignment on UABP_Shotgun_C");
-static_assert(sizeof(UABP_Shotgun_C) == 0x0008C0, "Wrong size on UABP_Shotgun_C");
-static_assert(offsetof(UABP_Shotgun_C, UberGraphFrame) == 0x000560, "Member 'UABP_Shotgun_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_Shotgun_C, AnimBlueprintExtension_PropertyAccess) == 0x000568, "Member 'UABP_Shotgun_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UABP_Shotgun_C, AnimBlueprintExtension_Base) == 0x000570, "Member 'UABP_Shotgun_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UABP_Shotgun_C, AnimGraphNode_Root) == 0x000578, "Member 'UABP_Shotgun_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_Shotgun_C, AnimGraphNode_ComponentToLocalSpace) == 0x000598, "Member 'UABP_Shotgun_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UABP_Shotgun_C, AnimGraphNode_ModifyBone_1) == 0x0005B8, "Member 'UABP_Shotgun_C::AnimGraphNode_ModifyBone_1' has a wrong offset!");
-static_assert(offsetof(UABP_Shotgun_C, AnimGraphNode_LocalToComponentSpace) == 0x0006E0, "Member 'UABP_Shotgun_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABP_Shotgun_C, AnimGraphNode_ModifyBone) == 0x000700, "Member 'UABP_Shotgun_C::AnimGraphNode_ModifyBone' has a wrong offset!");
-static_assert(offsetof(UABP_Shotgun_C, AnimGraphNode_SequencePlayer) == 0x000828, "Member 'UABP_Shotgun_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UABP_Shotgun_C, AnimGraphNode_Slot) == 0x000870, "Member 'UABP_Shotgun_C::AnimGraphNode_Slot' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_Shotgun_C;
 
 }
 

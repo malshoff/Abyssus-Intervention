@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Pickupable_SoulFragment.BP_Pickupable_SoulFragment_C
-// 0x0020 (0x03C0 - 0x03A0)
+// 0x0020 (0x03C8 - 0x03A8)
 class ABP_Pickupable_SoulFragment_C final : public ABP_Pickupable_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Pickupable_SoulFragment_C;       // 0x03A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      NS_SoulFragment_Trail_01;                          // 0x03A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        VisibleRepresentation;                             // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Sphere;                                            // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Pickupable_SoulFragment_C;       // 0x03A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      NS_SoulFragment_Trail_01;                          // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        VisibleRepresentation;                             // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Sphere;                                            // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	bool CanInteract(class APlayerController* Controller);
@@ -37,19 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Pickupable_SoulFragment_C">();
+		BP_STATIC_CLASS_IMPL("BP_Pickupable_SoulFragment_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Pickupable_SoulFragment_C")
 	}
 	static class ABP_Pickupable_SoulFragment_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Pickupable_SoulFragment_C>();
 	}
 };
-static_assert(alignof(ABP_Pickupable_SoulFragment_C) == 0x000008, "Wrong alignment on ABP_Pickupable_SoulFragment_C");
-static_assert(sizeof(ABP_Pickupable_SoulFragment_C) == 0x0003C0, "Wrong size on ABP_Pickupable_SoulFragment_C");
-static_assert(offsetof(ABP_Pickupable_SoulFragment_C, UberGraphFrame_BP_Pickupable_SoulFragment_C) == 0x0003A0, "Member 'ABP_Pickupable_SoulFragment_C::UberGraphFrame_BP_Pickupable_SoulFragment_C' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_SoulFragment_C, NS_SoulFragment_Trail_01) == 0x0003A8, "Member 'ABP_Pickupable_SoulFragment_C::NS_SoulFragment_Trail_01' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_SoulFragment_C, VisibleRepresentation) == 0x0003B0, "Member 'ABP_Pickupable_SoulFragment_C::VisibleRepresentation' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_SoulFragment_C, Sphere) == 0x0003B8, "Member 'ABP_Pickupable_SoulFragment_C::Sphere' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Pickupable_SoulFragment_C;
 
 }
 

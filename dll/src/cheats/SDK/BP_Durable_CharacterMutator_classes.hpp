@@ -18,33 +18,37 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Durable_CharacterMutator.BP_Durable_CharacterMutator_C
-// 0x0010 (0x0118 - 0x0108)
+// 0x0018 (0x0120 - 0x0108)
 class UBP_Durable_CharacterMutator_C final : public URGCharacterMutatorScript
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0108(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	double                                        PercentHealth;                                     // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CachedMaxHealthIncrease;                           // 0x0118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Durable_CharacterMutator(int32 EntryPoint);
 	class FText GetMutatorDescription();
 	void K2_ActivateScript();
 	void K2_DeactivateScript();
+	void OnMaxHealthUpdated(class URHealthComponent* Component, float MaximumHealth);
+	void UpdateMaxHealth();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Durable_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Durable_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Durable_CharacterMutator_C")
 	}
 	static class UBP_Durable_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Durable_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_Durable_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_Durable_CharacterMutator_C");
-static_assert(sizeof(UBP_Durable_CharacterMutator_C) == 0x000118, "Wrong size on UBP_Durable_CharacterMutator_C");
-static_assert(offsetof(UBP_Durable_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_Durable_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Durable_CharacterMutator_C, PercentHealth) == 0x000110, "Member 'UBP_Durable_CharacterMutator_C::PercentHealth' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Durable_CharacterMutator_C;
 
 }
 

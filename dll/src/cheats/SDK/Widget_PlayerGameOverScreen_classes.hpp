@@ -11,87 +11,75 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_structs.hpp"
+#include "UMG_structs.hpp"
 #include "RGame_classes.hpp"
+#include "CommonInput_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C
-// 0x00A8 (0x04E0 - 0x0438)
+// 0x00C0 (0x0580 - 0x04C0)
 class UWidget_PlayerGameOverScreen_C final : public URCommonActivatableWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonActionWidget*                    CommonActionWidget_88;                             // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_182;                            // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UUniformGridPanel*                      Grid_PlayerAvatarElements;                         // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_PlayerTiles;                         // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_PlayerGameOverPlayerTile_C*     PlayerPreview_01;                                  // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_PlayerGameOverPlayerTile_C*     PlayerPreview_02;                                  // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_PlayerGameOverPlayerTile_C*     PlayerPreview_03;                                  // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_PlayerGameOverPlayerTile_C*     PlayerPreview_04;                                  // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Title_TextBlock;                                   // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 W_Button_SimpleText;                               // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 W_Button_SimpleText_1;                             // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_Icon_C*                       W_PageButton_Left;                                 // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_Icon_C*                       W_PageButton_Right;                                // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_PlayerGameOverStats_C*          Widget_PlayerGameOverStats;                        // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         SelectedPlayerTileIndex;                           // 0x04B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B4[0x4];                                      // 0x04B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UW_Button_SimpleText_C*>         Buttons;                                           // 0x04B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class URChallengeGridItem*>            ChallengesCompleted;                               // 0x04C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         Completion_Ratio_Threshold;                        // 0x04D8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_RunStatsList_C*                 Widget_RunStatsList_Generic;                       // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_RunStatsList_DamageBreakdown_C* Widget_RunStatsList_DamageBreakdown;               // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_GridPlayerAvatarElements_C*     Widget_GridPlayerAvatarElements;                   // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_Icon_C*                       W_PageButton_Right;                                // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_Icon_C*                       W_PageButton_Left;                                 // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_SimpleText_C*                 W_Button_SimpleText_1;                             // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_SimpleText_C*                 W_Button_SimpleText;                               // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Title_TextBlock;                                   // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScaleBox*                              PlayerTabEntryContainer;                           // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_BackgroundOccluder;                          // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_6;                                   // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_4;                                   // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_281;                            // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_182;                            // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_162;                            // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_88;                             // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       SwitchAnimation;                                   // 0x0548(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	int32                                         SelectedPlayerTileIndex;                           // 0x0550(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_554[0x4];                                      // 0x0554(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UW_Button_SimpleText_C*>         Buttons;                                           // 0x0558(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class URChallengeGridItem*>            ChallengesCompleted;                               // 0x0568(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         Completion_Ratio_Threshold;                        // 0x0578(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetTitleText(const class FText& Text);
-	void SelectPlayerTile(class UWidget* PressedWidget);
-	void SelectNextPlayerTile(bool SelectPrevious);
-	void SavePlayerStats();
-	void PushChallengePopups();
-	void OnPressedPlayerTIle(class UWidget* PressedWidget);
-	void ExecuteUbergraph_Widget_PlayerGameOverScreen(int32 EntryPoint);
-	void ConstructButtons();
-	void Construct();
-	void BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Left_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
-	void BndEvt__Widget_PlayerGameOverScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__Widget_PlayerGameOverScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_PlayerGameOverScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Left_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void Construct();
+	void ConstructButtons();
+	void ExecuteUbergraph_Widget_PlayerGameOverScreen(int32 EntryPoint);
+	void HandleSelectPlayerTile(class UWidget_PlayerGameOverPlayerTile_C* SelectedPlayerTile);
+	void OnInitialized();
+	void OnInputMethodChanged_Event(ECommonInputType bNewInputType);
+	void PushChallengePopups();
+	void SavePlayerStats();
+	void SetTitleText(const class FText& Text);
 
 	class UWidget* BP_GetDesiredFocusTarget() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_PlayerGameOverScreen_C">();
+		BP_STATIC_CLASS_IMPL("Widget_PlayerGameOverScreen_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_PlayerGameOverScreen_C")
 	}
 	static class UWidget_PlayerGameOverScreen_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_PlayerGameOverScreen_C>();
 	}
 };
-static_assert(alignof(UWidget_PlayerGameOverScreen_C) == 0x000008, "Wrong alignment on UWidget_PlayerGameOverScreen_C");
-static_assert(sizeof(UWidget_PlayerGameOverScreen_C) == 0x0004E0, "Wrong size on UWidget_PlayerGameOverScreen_C");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, UberGraphFrame) == 0x000438, "Member 'UWidget_PlayerGameOverScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, CommonActionWidget_88) == 0x000440, "Member 'UWidget_PlayerGameOverScreen_C::CommonActionWidget_88' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, CommonActionWidget_182) == 0x000448, "Member 'UWidget_PlayerGameOverScreen_C::CommonActionWidget_182' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, Grid_PlayerAvatarElements) == 0x000450, "Member 'UWidget_PlayerGameOverScreen_C::Grid_PlayerAvatarElements' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, HorizontalBox_PlayerTiles) == 0x000458, "Member 'UWidget_PlayerGameOverScreen_C::HorizontalBox_PlayerTiles' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, PlayerPreview_01) == 0x000460, "Member 'UWidget_PlayerGameOverScreen_C::PlayerPreview_01' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, PlayerPreview_02) == 0x000468, "Member 'UWidget_PlayerGameOverScreen_C::PlayerPreview_02' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, PlayerPreview_03) == 0x000470, "Member 'UWidget_PlayerGameOverScreen_C::PlayerPreview_03' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, PlayerPreview_04) == 0x000478, "Member 'UWidget_PlayerGameOverScreen_C::PlayerPreview_04' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, Title_TextBlock) == 0x000480, "Member 'UWidget_PlayerGameOverScreen_C::Title_TextBlock' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, W_Button_SimpleText) == 0x000488, "Member 'UWidget_PlayerGameOverScreen_C::W_Button_SimpleText' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, W_Button_SimpleText_1) == 0x000490, "Member 'UWidget_PlayerGameOverScreen_C::W_Button_SimpleText_1' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, W_PageButton_Left) == 0x000498, "Member 'UWidget_PlayerGameOverScreen_C::W_PageButton_Left' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, W_PageButton_Right) == 0x0004A0, "Member 'UWidget_PlayerGameOverScreen_C::W_PageButton_Right' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, Widget_PlayerGameOverStats) == 0x0004A8, "Member 'UWidget_PlayerGameOverScreen_C::Widget_PlayerGameOverStats' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, SelectedPlayerTileIndex) == 0x0004B0, "Member 'UWidget_PlayerGameOverScreen_C::SelectedPlayerTileIndex' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, Buttons) == 0x0004B8, "Member 'UWidget_PlayerGameOverScreen_C::Buttons' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, ChallengesCompleted) == 0x0004C8, "Member 'UWidget_PlayerGameOverScreen_C::ChallengesCompleted' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverScreen_C, Completion_Ratio_Threshold) == 0x0004D8, "Member 'UWidget_PlayerGameOverScreen_C::Completion_Ratio_Threshold' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_PlayerGameOverScreen_C;
 
 }
 

@@ -19,18 +19,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_ObjectHighlighter.Widget_ObjectHighlighter_C
-// 0x00E8 (0x03D0 - 0x02E8)
+// 0x00E8 (0x0440 - 0x0358)
 class UWidget_ObjectHighlighter_C : public URObjectHighlightWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Image_Icon;                                        // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_Info;                                    // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_ObjectName;                              // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_ObjectHighlighter_C*            Child;                                             // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           DoorStateTimer;                                    // 0x0310(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_318[0x8];                                      // 0x0318(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            IconBrush;                                         // 0x0320(0x00B0)(Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0358(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             TextBlock_ObjectName;                              // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_Info;                                    // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Icon;                                        // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_ObjectHighlighter_C*            Child;                                             // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           DoorStateTimer;                                    // 0x0380(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_388[0x8];                                      // 0x0388(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            IconBrush;                                         // 0x0390(0x00B0)(Edit, BlueprintVisible, BlueprintReadOnly)
 
 public:
 	void Construct();
@@ -45,22 +45,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_ObjectHighlighter_C">();
+		BP_STATIC_CLASS_IMPL("Widget_ObjectHighlighter_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_ObjectHighlighter_C")
 	}
 	static class UWidget_ObjectHighlighter_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_ObjectHighlighter_C>();
 	}
 };
-static_assert(alignof(UWidget_ObjectHighlighter_C) == 0x000010, "Wrong alignment on UWidget_ObjectHighlighter_C");
-static_assert(sizeof(UWidget_ObjectHighlighter_C) == 0x0003D0, "Wrong size on UWidget_ObjectHighlighter_C");
-static_assert(offsetof(UWidget_ObjectHighlighter_C, UberGraphFrame) == 0x0002E8, "Member 'UWidget_ObjectHighlighter_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_ObjectHighlighter_C, Image_Icon) == 0x0002F0, "Member 'UWidget_ObjectHighlighter_C::Image_Icon' has a wrong offset!");
-static_assert(offsetof(UWidget_ObjectHighlighter_C, TextBlock_Info) == 0x0002F8, "Member 'UWidget_ObjectHighlighter_C::TextBlock_Info' has a wrong offset!");
-static_assert(offsetof(UWidget_ObjectHighlighter_C, TextBlock_ObjectName) == 0x000300, "Member 'UWidget_ObjectHighlighter_C::TextBlock_ObjectName' has a wrong offset!");
-static_assert(offsetof(UWidget_ObjectHighlighter_C, Child) == 0x000308, "Member 'UWidget_ObjectHighlighter_C::Child' has a wrong offset!");
-static_assert(offsetof(UWidget_ObjectHighlighter_C, DoorStateTimer) == 0x000310, "Member 'UWidget_ObjectHighlighter_C::DoorStateTimer' has a wrong offset!");
-static_assert(offsetof(UWidget_ObjectHighlighter_C, IconBrush) == 0x000320, "Member 'UWidget_ObjectHighlighter_C::IconBrush' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_ObjectHighlighter_C;
 
 }
 

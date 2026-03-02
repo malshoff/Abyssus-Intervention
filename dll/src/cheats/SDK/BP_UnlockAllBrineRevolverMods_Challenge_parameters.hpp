@@ -35,23 +35,10 @@ public:
 	bool                                          CallFunc_IsChallengeCompleted_ReturnValue;         // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges) == 0x000008, "Wrong alignment on BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges");
-static_assert(sizeof(BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges) == 0x000038, "Wrong size on BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges, CompletedChallenges) == 0x000000, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges::CompletedChallenges' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges, CompletedChallengesNum) == 0x000004, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges::CompletedChallengesNum' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges, Temp_int_Array_Index_Variable) == 0x000010, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges, Temp_int_Variable) == 0x000014, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges, CallFunc_Add_IntInt_ReturnValue_1) == 0x000018, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges, CallFunc_GetChallengeManager_ReturnValue) == 0x000020, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges, CallFunc_IsChallengeCompleted_ReturnValue) == 0x000034, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges::CallFunc_IsChallengeCompleted_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges, CallFunc_Less_IntInt_ReturnValue) == 0x000035, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UnlockAllBrineRevolverMods_Challenge_C_CheckCompletedChallenges;
 
 // Function BP_UnlockAllBrineRevolverMods_Challenge.BP_UnlockAllBrineRevolverMods_Challenge_C.ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge
-// 0x01F8 (0x01F8 - 0x0000)
+// 0x0208 (0x0208 - 0x0000)
 struct BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge final
 {
 public:
@@ -68,38 +55,21 @@ public:
 	class ARGameState*                            CallFunc_GetRGameState_ReturnValue_1;              // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(const struct FRChallenge& Challenge)> K2Node_CreateDelegate_OutputDelegate_2;     // 0x0048(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue_1;        // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FRChallenge                            K2Node_CustomEvent_Challenge;                      // 0x0060(0x0178)()
-	TDelegate<void(const struct FRChallenge& Challenge)> K2Node_CreateDelegate_OutputDelegate_3;     // 0x01D8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue_2;        // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_CheckCompletedChallenges_CompletedChallenges; // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRChallenge                            K2Node_CustomEvent_Challenge;                      // 0x0060(0x0188)()
+	TDelegate<void(const struct FRChallenge& Challenge)> K2Node_CreateDelegate_OutputDelegate_3;     // 0x01E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue_2;        // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_CheckCompletedChallenges_CompletedChallenges; // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge) == 0x000008, "Wrong alignment on BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge");
-static_assert(sizeof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge) == 0x0001F8, "Wrong size on BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge, EntryPoint) == 0x000000, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge, CallFunc_GetChallengeManager_ReturnValue) == 0x000008, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge, CallFunc_IsChallengeCompleted_ReturnValue) == 0x000020, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge::CallFunc_IsChallengeCompleted_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge, K2Node_CreateDelegate_OutputDelegate_1) == 0x000024, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge, K2Node_CustomEvent_RunFailed) == 0x000034, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge::K2Node_CustomEvent_RunFailed' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge, CallFunc_GetRGameState_ReturnValue) == 0x000038, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge::CallFunc_GetRGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge, CallFunc_GetRGameState_ReturnValue_1) == 0x000040, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge::CallFunc_GetRGameState_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge, K2Node_CreateDelegate_OutputDelegate_2) == 0x000048, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge, CallFunc_GetChallengeManager_ReturnValue_1) == 0x000058, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge::CallFunc_GetChallengeManager_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge, K2Node_CustomEvent_Challenge) == 0x000060, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge::K2Node_CustomEvent_Challenge' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge, K2Node_CreateDelegate_OutputDelegate_3) == 0x0001D8, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge, CallFunc_GetChallengeManager_ReturnValue_2) == 0x0001E8, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge::CallFunc_GetChallengeManager_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge, CallFunc_CheckCompletedChallenges_CompletedChallenges) == 0x0001F0, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge::CallFunc_CheckCompletedChallenges_CompletedChallenges' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UnlockAllBrineRevolverMods_Challenge_C_ExecuteUbergraph_BP_UnlockAllBrineRevolverMods_Challenge;
 
 // Function BP_UnlockAllBrineRevolverMods_Challenge.BP_UnlockAllBrineRevolverMods_Challenge_C.OnChallengeCompleted
-// 0x0178 (0x0178 - 0x0000)
+// 0x0188 (0x0188 - 0x0000)
 struct BP_UnlockAllBrineRevolverMods_Challenge_C_OnChallengeCompleted final
 {
 public:
-	struct FRChallenge                            Challenge;                                         // 0x0000(0x0178)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FRChallenge                            Challenge;                                         // 0x0000(0x0188)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_UnlockAllBrineRevolverMods_Challenge_C_OnChallengeCompleted) == 0x000008, "Wrong alignment on BP_UnlockAllBrineRevolverMods_Challenge_C_OnChallengeCompleted");
-static_assert(sizeof(BP_UnlockAllBrineRevolverMods_Challenge_C_OnChallengeCompleted) == 0x000178, "Wrong size on BP_UnlockAllBrineRevolverMods_Challenge_C_OnChallengeCompleted");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_OnChallengeCompleted, Challenge) == 0x000000, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_OnChallengeCompleted::Challenge' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UnlockAllBrineRevolverMods_Challenge_C_OnChallengeCompleted;
 
 // Function BP_UnlockAllBrineRevolverMods_Challenge.BP_UnlockAllBrineRevolverMods_Challenge_C.OnRunFinished
 // 0x0001 (0x0001 - 0x0000)
@@ -108,9 +78,7 @@ struct BP_UnlockAllBrineRevolverMods_Challenge_C_OnRunFinished final
 public:
 	bool                                          RunFailed;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UnlockAllBrineRevolverMods_Challenge_C_OnRunFinished) == 0x000001, "Wrong alignment on BP_UnlockAllBrineRevolverMods_Challenge_C_OnRunFinished");
-static_assert(sizeof(BP_UnlockAllBrineRevolverMods_Challenge_C_OnRunFinished) == 0x000001, "Wrong size on BP_UnlockAllBrineRevolverMods_Challenge_C_OnRunFinished");
-static_assert(offsetof(BP_UnlockAllBrineRevolverMods_Challenge_C_OnRunFinished, RunFailed) == 0x000000, "Member 'BP_UnlockAllBrineRevolverMods_Challenge_C_OnRunFinished::RunFailed' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UnlockAllBrineRevolverMods_Challenge_C_OnRunFinished;
 
 }
 

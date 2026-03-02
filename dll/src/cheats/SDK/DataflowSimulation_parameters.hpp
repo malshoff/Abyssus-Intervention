@@ -22,10 +22,7 @@ public:
 	float                                         SimulationTime;                                    // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DeltaTime;                                         // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DataflowSimulationActor_PostDataflowSimulationTick) == 0x000004, "Wrong alignment on DataflowSimulationActor_PostDataflowSimulationTick");
-static_assert(sizeof(DataflowSimulationActor_PostDataflowSimulationTick) == 0x000008, "Wrong size on DataflowSimulationActor_PostDataflowSimulationTick");
-static_assert(offsetof(DataflowSimulationActor_PostDataflowSimulationTick, SimulationTime) == 0x000000, "Member 'DataflowSimulationActor_PostDataflowSimulationTick::SimulationTime' has a wrong offset!");
-static_assert(offsetof(DataflowSimulationActor_PostDataflowSimulationTick, DeltaTime) == 0x000004, "Member 'DataflowSimulationActor_PostDataflowSimulationTick::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_DataflowSimulationActor_PostDataflowSimulationTick;
 
 // Function DataflowSimulation.DataflowSimulationActor.PreDataflowSimulationTick
 // 0x0008 (0x0008 - 0x0000)
@@ -35,10 +32,7 @@ public:
 	float                                         SimulationTime;                                    // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DeltaTime;                                         // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DataflowSimulationActor_PreDataflowSimulationTick) == 0x000004, "Wrong alignment on DataflowSimulationActor_PreDataflowSimulationTick");
-static_assert(sizeof(DataflowSimulationActor_PreDataflowSimulationTick) == 0x000008, "Wrong size on DataflowSimulationActor_PreDataflowSimulationTick");
-static_assert(offsetof(DataflowSimulationActor_PreDataflowSimulationTick, SimulationTime) == 0x000000, "Member 'DataflowSimulationActor_PreDataflowSimulationTick::SimulationTime' has a wrong offset!");
-static_assert(offsetof(DataflowSimulationActor_PreDataflowSimulationTick, DeltaTime) == 0x000004, "Member 'DataflowSimulationActor_PreDataflowSimulationTick::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_DataflowSimulationActor_PreDataflowSimulationTick;
 
 }
 

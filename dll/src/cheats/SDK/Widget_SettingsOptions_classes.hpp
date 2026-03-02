@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_SettingsOptions.Widget_SettingsOptions_C
-// 0x0070 (0x0348 - 0x02D8)
+// 0x0070 (0x03B8 - 0x0348)
 class UWidget_SettingsOptions_C final : public UWidget_SettingsBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_SettingsOptions_C;           // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Highlighted;                                       // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_58;                                          // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ValueText;                                         // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_Icon_C*                       W_Button_Icon_L;                                   // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_Icon_C*                       W_Button_Icon_R;                                   // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsButtonBase_C*           Widget_SettingsButtonBase;                         // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   SettingName;                                       // 0x0310(0x0010)(Edit, BlueprintVisible)
-	TArray<class FText>                           Settings;                                          // 0x0320(0x0010)(Edit, BlueprintVisible)
-	TMulticastInlineDelegate<void(int32 Index)>   OnValueChanged;                                    // 0x0330(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	int32                                         MaxNavigatableOption;                              // 0x0340(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentOption;                                     // 0x0344(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_SettingsOptions_C;           // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_SettingsButtonBase_C*           Widget_SettingsButtonBase;                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_Icon_C*                       W_Button_Icon_R;                                   // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_Icon_C*                       W_Button_Icon_L;                                   // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ValueText;                                         // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_58;                                          // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Highlighted;                                       // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   SettingName;                                       // 0x0380(0x0010)(Edit, BlueprintVisible)
+	TArray<class FText>                           Settings;                                          // 0x0390(0x0010)(Edit, BlueprintVisible)
+	TMulticastInlineDelegate<void(int32 Index)>   OnValueChanged;                                    // 0x03A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	int32                                         MaxNavigatableOption;                              // 0x03B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentOption;                                     // 0x03B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Widget_SettingsOptions_W_Button_Icon_L_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
@@ -53,27 +53,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_SettingsOptions_C">();
+		BP_STATIC_CLASS_IMPL("Widget_SettingsOptions_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_SettingsOptions_C")
 	}
 	static class UWidget_SettingsOptions_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_SettingsOptions_C>();
 	}
 };
-static_assert(alignof(UWidget_SettingsOptions_C) == 0x000008, "Wrong alignment on UWidget_SettingsOptions_C");
-static_assert(sizeof(UWidget_SettingsOptions_C) == 0x000348, "Wrong size on UWidget_SettingsOptions_C");
-static_assert(offsetof(UWidget_SettingsOptions_C, UberGraphFrame_Widget_SettingsOptions_C) == 0x0002D8, "Member 'UWidget_SettingsOptions_C::UberGraphFrame_Widget_SettingsOptions_C' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsOptions_C, Highlighted) == 0x0002E0, "Member 'UWidget_SettingsOptions_C::Highlighted' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsOptions_C, Image_58) == 0x0002E8, "Member 'UWidget_SettingsOptions_C::Image_58' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsOptions_C, ValueText) == 0x0002F0, "Member 'UWidget_SettingsOptions_C::ValueText' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsOptions_C, W_Button_Icon_L) == 0x0002F8, "Member 'UWidget_SettingsOptions_C::W_Button_Icon_L' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsOptions_C, W_Button_Icon_R) == 0x000300, "Member 'UWidget_SettingsOptions_C::W_Button_Icon_R' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsOptions_C, Widget_SettingsButtonBase) == 0x000308, "Member 'UWidget_SettingsOptions_C::Widget_SettingsButtonBase' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsOptions_C, SettingName) == 0x000310, "Member 'UWidget_SettingsOptions_C::SettingName' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsOptions_C, Settings) == 0x000320, "Member 'UWidget_SettingsOptions_C::Settings' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsOptions_C, OnValueChanged) == 0x000330, "Member 'UWidget_SettingsOptions_C::OnValueChanged' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsOptions_C, MaxNavigatableOption) == 0x000340, "Member 'UWidget_SettingsOptions_C::MaxNavigatableOption' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsOptions_C, CurrentOption) == 0x000344, "Member 'UWidget_SettingsOptions_C::CurrentOption' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_SettingsOptions_C;
 
 }
 

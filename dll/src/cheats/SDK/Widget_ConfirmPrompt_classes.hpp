@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_ConfirmPrompt.Widget_ConfirmPrompt_C
-// 0x0088 (0x04C0 - 0x0438)
+// 0x0088 (0x0548 - 0x04C0)
 class UWidget_ConfirmPrompt_C final : public URCommonActivatableWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonActionWidget*                    CommonActionWidget_119;                            // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_213;                            // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Text_Body;                                         // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Text_Header;                                       // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 W_Button_No;                                       // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 W_Button_Yes;                                      // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(bool Value)>    Confirmed;                                         // 0x0470(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class FText                                   PromptText;                                        // 0x0480(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   PromptYesText;                                     // 0x0490(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   PromptNoText;                                      // 0x04A0(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   PromptHeader;                                      // 0x04B0(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UW_Button_SimpleText_C*                 W_Button_Yes;                                      // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_SimpleText_C*                 W_Button_No;                                       // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text_Header;                                       // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text_Body;                                         // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_213;                            // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_119;                            // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(bool Value)>    Confirmed;                                         // 0x04F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FText                                   PromptText;                                        // 0x0508(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   PromptYesText;                                     // 0x0518(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   PromptNoText;                                      // 0x0528(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   PromptHeader;                                      // 0x0538(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
 	void BndEvt__Widget_ConfirmPrompt_W_Button_No_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
@@ -45,27 +45,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_ConfirmPrompt_C">();
+		BP_STATIC_CLASS_IMPL("Widget_ConfirmPrompt_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_ConfirmPrompt_C")
 	}
 	static class UWidget_ConfirmPrompt_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_ConfirmPrompt_C>();
 	}
 };
-static_assert(alignof(UWidget_ConfirmPrompt_C) == 0x000008, "Wrong alignment on UWidget_ConfirmPrompt_C");
-static_assert(sizeof(UWidget_ConfirmPrompt_C) == 0x0004C0, "Wrong size on UWidget_ConfirmPrompt_C");
-static_assert(offsetof(UWidget_ConfirmPrompt_C, UberGraphFrame) == 0x000438, "Member 'UWidget_ConfirmPrompt_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_ConfirmPrompt_C, CommonActionWidget_119) == 0x000440, "Member 'UWidget_ConfirmPrompt_C::CommonActionWidget_119' has a wrong offset!");
-static_assert(offsetof(UWidget_ConfirmPrompt_C, CommonActionWidget_213) == 0x000448, "Member 'UWidget_ConfirmPrompt_C::CommonActionWidget_213' has a wrong offset!");
-static_assert(offsetof(UWidget_ConfirmPrompt_C, Text_Body) == 0x000450, "Member 'UWidget_ConfirmPrompt_C::Text_Body' has a wrong offset!");
-static_assert(offsetof(UWidget_ConfirmPrompt_C, Text_Header) == 0x000458, "Member 'UWidget_ConfirmPrompt_C::Text_Header' has a wrong offset!");
-static_assert(offsetof(UWidget_ConfirmPrompt_C, W_Button_No) == 0x000460, "Member 'UWidget_ConfirmPrompt_C::W_Button_No' has a wrong offset!");
-static_assert(offsetof(UWidget_ConfirmPrompt_C, W_Button_Yes) == 0x000468, "Member 'UWidget_ConfirmPrompt_C::W_Button_Yes' has a wrong offset!");
-static_assert(offsetof(UWidget_ConfirmPrompt_C, Confirmed) == 0x000470, "Member 'UWidget_ConfirmPrompt_C::Confirmed' has a wrong offset!");
-static_assert(offsetof(UWidget_ConfirmPrompt_C, PromptText) == 0x000480, "Member 'UWidget_ConfirmPrompt_C::PromptText' has a wrong offset!");
-static_assert(offsetof(UWidget_ConfirmPrompt_C, PromptYesText) == 0x000490, "Member 'UWidget_ConfirmPrompt_C::PromptYesText' has a wrong offset!");
-static_assert(offsetof(UWidget_ConfirmPrompt_C, PromptNoText) == 0x0004A0, "Member 'UWidget_ConfirmPrompt_C::PromptNoText' has a wrong offset!");
-static_assert(offsetof(UWidget_ConfirmPrompt_C, PromptHeader) == 0x0004B0, "Member 'UWidget_ConfirmPrompt_C::PromptHeader' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_ConfirmPrompt_C;
 
 }
 

@@ -19,16 +19,12 @@ namespace SDK
 struct FWorldMetricCollection final
 {
 public:
-	TArray<class UWorldMetricInterface*>          Metrics;                                           // 0x0000(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UWorldMetricInterface*>          Metrics;                                           // 0x0000(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	TWeakObjectPtr<class UWorldMetricsSubsystem>  Subsystem;                                         // 0x0010(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bIsEnabled;                                        // 0x0018(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FWorldMetricCollection) == 0x000008, "Wrong alignment on FWorldMetricCollection");
-static_assert(sizeof(FWorldMetricCollection) == 0x000020, "Wrong size on FWorldMetricCollection");
-static_assert(offsetof(FWorldMetricCollection, Metrics) == 0x000000, "Member 'FWorldMetricCollection::Metrics' has a wrong offset!");
-static_assert(offsetof(FWorldMetricCollection, Subsystem) == 0x000010, "Member 'FWorldMetricCollection::Subsystem' has a wrong offset!");
-static_assert(offsetof(FWorldMetricCollection, bIsEnabled) == 0x000018, "Member 'FWorldMetricCollection::bIsEnabled' has a wrong offset!");
+DUMPER7_ASSERTS_FWorldMetricCollection;
 
 }
 

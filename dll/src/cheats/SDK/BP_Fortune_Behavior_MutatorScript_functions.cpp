@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function BP_Fortune_Behavior_MutatorScript.BP_Fortune_Behavior_MutatorScript_C.ApplyMidasTouchOnInstantKill
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           TriggeringActor                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_Fortune_Behavior_MutatorScript_C::ApplyMidasTouchOnInstantKill(class AActor* TriggeringActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Fortune_Behavior_MutatorScript_C", "ApplyMidasTouchOnInstantKill");
+
+	Params::BP_Fortune_Behavior_MutatorScript_C_ApplyMidasTouchOnInstantKill Parms{};
+
+	Parms.TriggeringActor = TriggeringActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_Fortune_Behavior_MutatorScript.BP_Fortune_Behavior_MutatorScript_C.BP_SpawnVisuals
 // (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 

@@ -43,21 +43,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Ocean_GodPassive_CharacterMutatorScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_Ocean_GodPassive_CharacterMutatorScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Ocean_GodPassive_CharacterMutatorScript_C")
 	}
 	static class UBP_Ocean_GodPassive_CharacterMutatorScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Ocean_GodPassive_CharacterMutatorScript_C>();
 	}
 };
-static_assert(alignof(UBP_Ocean_GodPassive_CharacterMutatorScript_C) == 0x000008, "Wrong alignment on UBP_Ocean_GodPassive_CharacterMutatorScript_C");
-static_assert(sizeof(UBP_Ocean_GodPassive_CharacterMutatorScript_C) == 0x000140, "Wrong size on UBP_Ocean_GodPassive_CharacterMutatorScript_C");
-static_assert(offsetof(UBP_Ocean_GodPassive_CharacterMutatorScript_C, UberGraphFrame) == 0x000108, "Member 'UBP_Ocean_GodPassive_CharacterMutatorScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Ocean_GodPassive_CharacterMutatorScript_C, UpdateDamageBonusTimer) == 0x000110, "Member 'UBP_Ocean_GodPassive_CharacterMutatorScript_C::UpdateDamageBonusTimer' has a wrong offset!");
-static_assert(offsetof(UBP_Ocean_GodPassive_CharacterMutatorScript_C, Radius) == 0x000118, "Member 'UBP_Ocean_GodPassive_CharacterMutatorScript_C::Radius' has a wrong offset!");
-static_assert(offsetof(UBP_Ocean_GodPassive_CharacterMutatorScript_C, NumMaxTentacles) == 0x000120, "Member 'UBP_Ocean_GodPassive_CharacterMutatorScript_C::NumMaxTentacles' has a wrong offset!");
-static_assert(offsetof(UBP_Ocean_GodPassive_CharacterMutatorScript_C, SoftAllyClasses) == 0x000128, "Member 'UBP_Ocean_GodPassive_CharacterMutatorScript_C::SoftAllyClasses' has a wrong offset!");
-static_assert(offsetof(UBP_Ocean_GodPassive_CharacterMutatorScript_C, NumCurrentTentacles) == 0x000138, "Member 'UBP_Ocean_GodPassive_CharacterMutatorScript_C::NumCurrentTentacles' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Ocean_GodPassive_CharacterMutatorScript_C;
 
 }
 

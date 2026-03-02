@@ -112,5 +112,25 @@ void UWidget_SelectedGlyph_C::SetActionGlyphVisibility(bool Visibe, bool Force)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function Widget_SelectedGlyph.Widget_SelectedGlyph_C.SetGlyphActive
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SelectedGlyph_C::SetGlyphActive(bool Active)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SelectedGlyph_C", "SetGlyphActive");
+
+	Params::Widget_SelectedGlyph_C_SetGlyphActive Parms{};
+
+	Parms.Active = Active;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 }
 

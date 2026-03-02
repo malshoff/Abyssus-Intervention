@@ -47,19 +47,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FishDiety_Body_C">();
+		BP_STATIC_CLASS_IMPL("BP_FishDiety_Body_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FishDiety_Body_C")
 	}
 	static class ABP_FishDiety_Body_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_FishDiety_Body_C>();
 	}
 };
-static_assert(alignof(ABP_FishDiety_Body_C) == 0x000008, "Wrong alignment on ABP_FishDiety_Body_C");
-static_assert(sizeof(ABP_FishDiety_Body_C) == 0x0003B0, "Wrong size on ABP_FishDiety_Body_C");
-static_assert(offsetof(ABP_FishDiety_Body_C, UberGraphFrame) == 0x000390, "Member 'ABP_FishDiety_Body_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_FishDiety_Body_C, Primary_Skeletal_Mesh_Component) == 0x000398, "Member 'ABP_FishDiety_Body_C::Primary_Skeletal_Mesh_Component' has a wrong offset!");
-static_assert(offsetof(ABP_FishDiety_Body_C, AttachmentSlot) == 0x0003A0, "Member 'ABP_FishDiety_Body_C::AttachmentSlot' has a wrong offset!");
-static_assert(offsetof(ABP_FishDiety_Body_C, DetailActionName) == 0x0003A8, "Member 'ABP_FishDiety_Body_C::DetailActionName' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_FishDiety_Body_C;
 
 }
 

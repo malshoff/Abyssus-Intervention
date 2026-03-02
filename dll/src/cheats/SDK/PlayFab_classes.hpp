@@ -18,6 +18,1007 @@
 namespace SDK
 {
 
+// Class PlayFab.PlayFabAuthenticationAPI
+// 0x0100 (0x0130 - 0x0030)
+class UPlayFabAuthenticationAPI final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40[0x88];                                      // 0x0040(0x0088)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_E0[0x50];                                      // 0x00E0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UPlayFabAuthenticationAPI* AuthenticateGameServerWithCustomId(const struct FAuthenticationAuthenticateCustomIdRequest& Request, TDelegate<void(const struct FAuthenticationAuthenticateCustomIdResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabAuthenticationAPI* Delete(const struct FAuthenticationDeleteRequest& Request, TDelegate<void(const struct FAuthenticationEmptyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabAuthenticationAPI* GetEntityToken(const struct FAuthenticationGetEntityTokenRequest& Request, TDelegate<void(const struct FAuthenticationGetEntityTokenResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabAuthenticationAPI* ValidateEntityToken(const struct FAuthenticationValidateEntityTokenRequest& Request, TDelegate<void(const struct FAuthenticationValidateEntityTokenResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+
+	void HelperAuthenticateGameServerWithCustomId(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperDelete(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetEntityToken(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperValidateEntityToken(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabAuthenticationAPI")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabAuthenticationAPI")
+	}
+	static class UPlayFabAuthenticationAPI* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabAuthenticationAPI>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabAuthenticationAPI;
+
+// Class PlayFab.PlayFabAuthenticationModelDecoder
+// 0x0000 (0x0028 - 0x0028)
+class UPlayFabAuthenticationModelDecoder final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FAuthenticationAuthenticateCustomIdResult decodeAuthenticateCustomIdResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAuthenticationEmptyResponse decodeEmptyResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FAuthenticationGetEntityTokenResponse decodeGetEntityTokenResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FAuthenticationValidateEntityTokenResponse decodeValidateEntityTokenResponseResponse(class UPlayFabJsonObject* Response);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabAuthenticationModelDecoder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabAuthenticationModelDecoder")
+	}
+	static class UPlayFabAuthenticationModelDecoder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabAuthenticationModelDecoder>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabAuthenticationModelDecoder;
+
+// Class PlayFab.PlayFabCloudScriptAPI
+// 0x01A0 (0x01D0 - 0x0030)
+class UPlayFabCloudScriptAPI final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40[0x128];                                     // 0x0040(0x0128)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x0170(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x0178(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_180[0x50];                                     // 0x0180(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UPlayFabCloudScriptAPI* ExecuteEntityCloudScript(const struct FCloudScriptExecuteEntityCloudScriptRequest& Request, TDelegate<void(const struct FCloudScriptExecuteCloudScriptResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabCloudScriptAPI* ExecuteFunction(const struct FCloudScriptExecuteFunctionRequest& Request, TDelegate<void(const struct FCloudScriptExecuteFunctionResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabCloudScriptAPI* GetFunction(const struct FCloudScriptGetFunctionRequest& Request, TDelegate<void(const struct FCloudScriptGetFunctionResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabCloudScriptAPI* ListFunctions(const struct FCloudScriptListFunctionsRequest& Request, TDelegate<void(const struct FCloudScriptListFunctionsResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabCloudScriptAPI* ListHttpFunctions(const struct FCloudScriptListFunctionsRequest& Request, TDelegate<void(const struct FCloudScriptListHttpFunctionsResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabCloudScriptAPI* ListQueuedFunctions(const struct FCloudScriptListFunctionsRequest& Request, TDelegate<void(const struct FCloudScriptListQueuedFunctionsResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabCloudScriptAPI* PostFunctionResultForEntityTriggeredAction(const struct FCloudScriptPostFunctionResultForEntityTriggeredActionRequest& Request, TDelegate<void(const struct FCloudScriptEmptyResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabCloudScriptAPI* PostFunctionResultForFunctionExecution(const struct FCloudScriptPostFunctionResultForFunctionExecutionRequest& Request, TDelegate<void(const struct FCloudScriptEmptyResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabCloudScriptAPI* PostFunctionResultForPlayerTriggeredAction(const struct FCloudScriptPostFunctionResultForPlayerTriggeredActionRequest& Request, TDelegate<void(const struct FCloudScriptEmptyResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabCloudScriptAPI* PostFunctionResultForScheduledTask(const struct FCloudScriptPostFunctionResultForScheduledTaskRequest& Request, TDelegate<void(const struct FCloudScriptEmptyResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabCloudScriptAPI* RegisterHttpFunction(const struct FCloudScriptRegisterHttpFunctionRequest& Request, TDelegate<void(const struct FCloudScriptEmptyResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabCloudScriptAPI* RegisterQueuedFunction(const struct FCloudScriptRegisterQueuedFunctionRequest& Request, TDelegate<void(const struct FCloudScriptEmptyResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabCloudScriptAPI* UnregisterFunction(const struct FCloudScriptUnregisterFunctionRequest& Request, TDelegate<void(const struct FCloudScriptEmptyResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+
+	void HelperExecuteEntityCloudScript(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperExecuteFunction(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetFunction(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperListFunctions(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperListHttpFunctions(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperListQueuedFunctions(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperPostFunctionResultForEntityTriggeredAction(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperPostFunctionResultForFunctionExecution(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperPostFunctionResultForPlayerTriggeredAction(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperPostFunctionResultForScheduledTask(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperRegisterHttpFunction(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperRegisterQueuedFunction(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperUnregisterFunction(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabCloudScriptAPI")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabCloudScriptAPI")
+	}
+	static class UPlayFabCloudScriptAPI* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabCloudScriptAPI>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabCloudScriptAPI;
+
+// Class PlayFab.PlayFabCloudScriptModelDecoder
+// 0x0000 (0x0028 - 0x0028)
+class UPlayFabCloudScriptModelDecoder final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FCloudScriptEmptyResult decodeEmptyResultResponse(class UPlayFabJsonObject* Response);
+	static struct FCloudScriptExecuteCloudScriptResult decodeExecuteCloudScriptResultResponse(class UPlayFabJsonObject* Response);
+	static struct FCloudScriptExecuteFunctionResult decodeExecuteFunctionResultResponse(class UPlayFabJsonObject* Response);
+	static struct FCloudScriptGetFunctionResult decodeGetFunctionResultResponse(class UPlayFabJsonObject* Response);
+	static struct FCloudScriptListFunctionsResult decodeListFunctionsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FCloudScriptListHttpFunctionsResult decodeListHttpFunctionsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FCloudScriptListQueuedFunctionsResult decodeListQueuedFunctionsResultResponse(class UPlayFabJsonObject* Response);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabCloudScriptModelDecoder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabCloudScriptModelDecoder")
+	}
+	static class UPlayFabCloudScriptModelDecoder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabCloudScriptModelDecoder>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabCloudScriptModelDecoder;
+
+// Class PlayFab.PlayFabDataAPI
+// 0x0130 (0x0160 - 0x0030)
+class UPlayFabDataAPI final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40[0xB8];                                      // 0x0040(0x00B8)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x0100(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x0108(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_110[0x50];                                     // 0x0110(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UPlayFabDataAPI* AbortFileUploads(const struct FDataAbortFileUploadsRequest& Request, TDelegate<void(const struct FDataAbortFileUploadsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabDataAPI* DeleteFiles(const struct FDataDeleteFilesRequest& Request, TDelegate<void(const struct FDataDeleteFilesResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabDataAPI* FinalizeFileUploads(const struct FDataFinalizeFileUploadsRequest& Request, TDelegate<void(const struct FDataFinalizeFileUploadsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabDataAPI* GetFiles(const struct FDataGetFilesRequest& Request, TDelegate<void(const struct FDataGetFilesResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabDataAPI* GetObjects(const struct FDataGetObjectsRequest& Request, TDelegate<void(const struct FDataGetObjectsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabDataAPI* InitiateFileUploads(const struct FDataInitiateFileUploadsRequest& Request, TDelegate<void(const struct FDataInitiateFileUploadsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabDataAPI* SetObjects(const struct FDataSetObjectsRequest& Request, TDelegate<void(const struct FDataSetObjectsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+
+	void HelperAbortFileUploads(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperDeleteFiles(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperFinalizeFileUploads(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetFiles(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetObjects(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperInitiateFileUploads(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperSetObjects(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabDataAPI")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabDataAPI")
+	}
+	static class UPlayFabDataAPI* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabDataAPI>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabDataAPI;
+
+// Class PlayFab.PlayFabDataModelDecoder
+// 0x0000 (0x0028 - 0x0028)
+class UPlayFabDataModelDecoder final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FDataAbortFileUploadsResponse decodeAbortFileUploadsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FDataDeleteFilesResponse decodeDeleteFilesResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FDataFinalizeFileUploadsResponse decodeFinalizeFileUploadsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FDataGetFilesResponse decodeGetFilesResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FDataGetObjectsResponse decodeGetObjectsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FDataInitiateFileUploadsResponse decodeInitiateFileUploadsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FDataSetObjectsResponse decodeSetObjectsResponseResponse(class UPlayFabJsonObject* Response);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabDataModelDecoder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabDataModelDecoder")
+	}
+	static class UPlayFabDataModelDecoder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabDataModelDecoder>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabDataModelDecoder;
+
+// Class PlayFab.PlayFabEconomyModelDecoder
+// 0x0000 (0x0028 - 0x0028)
+class UPlayFabEconomyModelDecoder final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FEconomyAddInventoryItemsResponse decodeAddInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyCreateDraftItemResponse decodeCreateDraftItemResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyCreateUploadUrlsResponse decodeCreateUploadUrlsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyDeleteEntityItemReviewsResponse decodeDeleteEntityItemReviewsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyDeleteInventoryCollectionResponse decodeDeleteInventoryCollectionResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyDeleteInventoryItemsResponse decodeDeleteInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyDeleteItemResponse decodeDeleteItemResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyExecuteInventoryOperationsResponse decodeExecuteInventoryOperationsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyExecuteTransferOperationsResponse decodeExecuteTransferOperationsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetCatalogConfigResponse decodeGetCatalogConfigResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetDraftItemResponse decodeGetDraftItemResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetDraftItemsResponse decodeGetDraftItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetEntityDraftItemsResponse decodeGetEntityDraftItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetEntityItemReviewResponse decodeGetEntityItemReviewResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetInventoryCollectionIdsResponse decodeGetInventoryCollectionIdsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetInventoryItemsResponse decodeGetInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetInventoryOperationStatusResponse decodeGetInventoryOperationStatusResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetItemContainersResponse decodeGetItemContainersResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetItemModerationStateResponse decodeGetItemModerationStateResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetItemPublishStatusResponse decodeGetItemPublishStatusResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetItemResponse decodeGetItemResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetItemReviewsResponse decodeGetItemReviewsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetItemReviewSummaryResponse decodeGetItemReviewSummaryResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetItemsResponse decodeGetItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetMicrosoftStoreAccessTokensResponse decodeGetMicrosoftStoreAccessTokensResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyGetTransactionHistoryResponse decodeGetTransactionHistoryResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyPublishDraftItemResponse decodePublishDraftItemResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyPurchaseInventoryItemsResponse decodePurchaseInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyRedeemAppleAppStoreInventoryItemsResponse decodeRedeemAppleAppStoreInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyRedeemGooglePlayInventoryItemsResponse decodeRedeemGooglePlayInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyRedeemMicrosoftStoreInventoryItemsResponse decodeRedeemMicrosoftStoreInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyRedeemNintendoEShopInventoryItemsResponse decodeRedeemNintendoEShopInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyRedeemPlayStationStoreInventoryItemsResponse decodeRedeemPlayStationStoreInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyRedeemSteamInventoryItemsResponse decodeRedeemSteamInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyReportItemResponse decodeReportItemResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyReportItemReviewResponse decodeReportItemReviewResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyReviewItemResponse decodeReviewItemResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomySearchItemsResponse decodeSearchItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomySetItemModerationStateResponse decodeSetItemModerationStateResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomySubmitItemReviewVoteResponse decodeSubmitItemReviewVoteResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomySubtractInventoryItemsResponse decodeSubtractInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyTakedownItemReviewsResponse decodeTakedownItemReviewsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyTransferInventoryItemsResponse decodeTransferInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyUpdateCatalogConfigResponse decodeUpdateCatalogConfigResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyUpdateDraftItemResponse decodeUpdateDraftItemResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEconomyUpdateInventoryItemsResponse decodeUpdateInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabEconomyModelDecoder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabEconomyModelDecoder")
+	}
+	static class UPlayFabEconomyModelDecoder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabEconomyModelDecoder>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabEconomyModelDecoder;
+
+// Class PlayFab.PlayFabEventsAPI
+// 0x0140 (0x0170 - 0x0030)
+class UPlayFabEventsAPI final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40[0xC8];                                      // 0x0040(0x00C8)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x0110(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x0118(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_120[0x50];                                     // 0x0120(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UPlayFabEventsAPI* CreateTelemetryKey(const struct FEventsCreateTelemetryKeyRequest& Request, TDelegate<void(const struct FEventsCreateTelemetryKeyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabEventsAPI* DeleteTelemetryKey(const struct FEventsDeleteTelemetryKeyRequest& Request, TDelegate<void(const struct FEventsDeleteTelemetryKeyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabEventsAPI* GetTelemetryKey(const struct FEventsGetTelemetryKeyRequest& Request, TDelegate<void(const struct FEventsGetTelemetryKeyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabEventsAPI* ListTelemetryKeys(const struct FEventsListTelemetryKeysRequest& Request, TDelegate<void(const struct FEventsListTelemetryKeysResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabEventsAPI* SetTelemetryKeyActive(const struct FEventsSetTelemetryKeyActiveRequest& Request, TDelegate<void(const struct FEventsSetTelemetryKeyActiveResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabEventsAPI* WriteEvents(const struct FEventsWriteEventsRequest& Request, TDelegate<void(const struct FEventsWriteEventsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabEventsAPI* WriteTelemetryEvents(const struct FEventsWriteEventsRequest& Request, TDelegate<void(const struct FEventsWriteEventsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabEventsAPI* WriteTelemetryEventsWithTelemetryKey(const struct FEventsWriteEventsRequest& Request, const class FString& telemetryKey, TDelegate<void(const struct FEventsWriteEventsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+
+	void HelperCreateTelemetryKey(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperDeleteTelemetryKey(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetTelemetryKey(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperListTelemetryKeys(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperSetTelemetryKeyActive(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperWriteEvents(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperWriteTelemetryEvents(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabEventsAPI")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabEventsAPI")
+	}
+	static class UPlayFabEventsAPI* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabEventsAPI>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabEventsAPI;
+
+// Class PlayFab.PlayFabAdminModelDecoder
+// 0x0000 (0x0028 - 0x0028)
+class UPlayFabAdminModelDecoder final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FAdminAddLocalizedNewsResult decodeAddLocalizedNewsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminAddNewsResult decodeAddNewsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminAddPlayerTagResult decodeAddPlayerTagResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminBanUsersResult decodeBanUsersResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminBlankResult decodeBlankResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminCheckLimitedEditionItemAvailabilityResult decodeCheckLimitedEditionItemAvailabilityResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminCreatePlayerSharedSecretResult decodeCreatePlayerSharedSecretResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminCreatePlayerStatisticDefinitionResult decodeCreatePlayerStatisticDefinitionResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminCreateSegmentResponse decodeCreateSegmentResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminCreateTaskResult decodeCreateTaskResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminDeleteMasterPlayerAccountResult decodeDeleteMasterPlayerAccountResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminDeleteMasterPlayerEventDataResult decodeDeleteMasterPlayerEventDataResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminDeleteMembershipSubscriptionResult decodeDeleteMembershipSubscriptionResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminDeletePlayerResult decodeDeletePlayerResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminDeletePlayerSharedSecretResult decodeDeletePlayerSharedSecretResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminDeleteSegmentsResponse decodeDeleteSegmentsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminDeleteStoreResult decodeDeleteStoreResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminDeleteTitleDataOverrideResult decodeDeleteTitleDataOverrideResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminDeleteTitleResult decodeDeleteTitleResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminEmptyResponse decodeEmptyResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminExportMasterPlayerDataResult decodeExportMasterPlayerDataResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminExportPlayersInSegmentResult decodeExportPlayersInSegmentResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetActionsOnPlayersInSegmentTaskInstanceResult decodeGetActionsOnPlayersInSegmentTaskInstanceResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetAllSegmentsResult decodeGetAllSegmentsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetCatalogItemsResult decodeGetCatalogItemsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetCloudScriptRevisionResult decodeGetCloudScriptRevisionResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetCloudScriptTaskInstanceResult decodeGetCloudScriptTaskInstanceResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetCloudScriptVersionsResult decodeGetCloudScriptVersionsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetContentListResult decodeGetContentListResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetContentUploadUrlResult decodeGetContentUploadUrlResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetDataReportResult decodeGetDataReportResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetPlayedTitleListResult decodeGetPlayedTitleListResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetPlayerIdFromAuthTokenResult decodeGetPlayerIdFromAuthTokenResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetPlayerProfileResult decodeGetPlayerProfileResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetPlayerSegmentsResult decodeGetPlayerSegmentsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetPlayerSharedSecretsResult decodeGetPlayerSharedSecretsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetPlayersInSegmentExportResponse decodeGetPlayersInSegmentExportResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetPlayersInSegmentResult decodeGetPlayersInSegmentResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetPlayerStatisticDefinitionsResult decodeGetPlayerStatisticDefinitionsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetPlayerStatisticVersionsResult decodeGetPlayerStatisticVersionsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetPlayerTagsResult decodeGetPlayerTagsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetPolicyResponse decodeGetPolicyResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetPublisherDataResult decodeGetPublisherDataResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetRandomResultTablesResult decodeGetRandomResultTablesResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetSegmentsResponse decodeGetSegmentsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetStoreItemsResult decodeGetStoreItemsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetTaskInstancesResult decodeGetTaskInstancesResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetTasksResult decodeGetTasksResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetTitleDataResult decodeGetTitleDataResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetUserBansResult decodeGetUserBansResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetUserDataResult decodeGetUserDataResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGetUserInventoryResult decodeGetUserInventoryResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminGrantItemsToUsersResult decodeGrantItemsToUsersResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminIncrementLimitedEditionItemAvailabilityResult decodeIncrementLimitedEditionItemAvailabilityResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminIncrementPlayerStatisticVersionResult decodeIncrementPlayerStatisticVersionResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminListOpenIdConnectionResponse decodeListOpenIdConnectionResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminListVirtualCurrencyTypesResult decodeListVirtualCurrencyTypesResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminLookupUserAccountInfoResult decodeLookupUserAccountInfoResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminModifyUserVirtualCurrencyResult decodeModifyUserVirtualCurrencyResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminRefundPurchaseResponse decodeRefundPurchaseResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminRemovePlayerTagResult decodeRemovePlayerTagResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminResetCharacterStatisticsResult decodeResetCharacterStatisticsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminResetPasswordResult decodeResetPasswordResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminResetUserStatisticsResult decodeResetUserStatisticsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminResolvePurchaseDisputeResponse decodeResolvePurchaseDisputeResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminRevokeAllBansForUserResult decodeRevokeAllBansForUserResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminRevokeBansResult decodeRevokeBansResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminRevokeInventoryItemsResult decodeRevokeInventoryItemsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminRevokeInventoryResult decodeRevokeInventoryResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminRunTaskResult decodeRunTaskResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminSendAccountRecoveryEmailResult decodeSendAccountRecoveryEmailResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminSetMembershipOverrideResult decodeSetMembershipOverrideResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminSetPlayerSecretResult decodeSetPlayerSecretResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminSetPublishedRevisionResult decodeSetPublishedRevisionResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminSetPublisherDataResult decodeSetPublisherDataResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminSetTitleDataAndOverridesResult decodeSetTitleDataAndOverridesResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminSetTitleDataResult decodeSetTitleDataResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminSetupPushNotificationResult decodeSetupPushNotificationResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminUpdateBansResult decodeUpdateBansResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminUpdateCatalogItemsResult decodeUpdateCatalogItemsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminUpdateCloudScriptResult decodeUpdateCloudScriptResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminUpdatePlayerSharedSecretResult decodeUpdatePlayerSharedSecretResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminUpdatePlayerStatisticDefinitionResult decodeUpdatePlayerStatisticDefinitionResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminUpdatePolicyResponse decodeUpdatePolicyResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminUpdateRandomResultTablesResult decodeUpdateRandomResultTablesResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminUpdateSegmentResponse decodeUpdateSegmentResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminUpdateStoreItemsResult decodeUpdateStoreItemsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminUpdateUserDataResult decodeUpdateUserDataResultResponse(class UPlayFabJsonObject* Response);
+	static struct FAdminUpdateUserTitleDisplayNameResult decodeUpdateUserTitleDisplayNameResultResponse(class UPlayFabJsonObject* Response);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabAdminModelDecoder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabAdminModelDecoder")
+	}
+	static class UPlayFabAdminModelDecoder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabAdminModelDecoder>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabAdminModelDecoder;
+
+// Class PlayFab.PlayFabEventsModelDecoder
+// 0x0000 (0x0028 - 0x0028)
+class UPlayFabEventsModelDecoder final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FEventsCreateTelemetryKeyResponse decodeCreateTelemetryKeyResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEventsDeleteTelemetryKeyResponse decodeDeleteTelemetryKeyResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEventsGetTelemetryKeyResponse decodeGetTelemetryKeyResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEventsListTelemetryKeysResponse decodeListTelemetryKeysResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEventsSetTelemetryKeyActiveResponse decodeSetTelemetryKeyActiveResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FEventsWriteEventsResponse decodeWriteEventsResponseResponse(class UPlayFabJsonObject* Response);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabEventsModelDecoder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabEventsModelDecoder")
+	}
+	static class UPlayFabEventsModelDecoder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabEventsModelDecoder>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabEventsModelDecoder;
+
+// Class PlayFab.PlayFabExperimentationAPI
+// 0x0190 (0x01C0 - 0x0030)
+class UPlayFabExperimentationAPI final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40[0x118];                                     // 0x0040(0x0118)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x0160(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x0168(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_170[0x50];                                     // 0x0170(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UPlayFabExperimentationAPI* CreateExclusionGroup(const struct FExperimentationCreateExclusionGroupRequest& Request, TDelegate<void(const struct FExperimentationCreateExclusionGroupResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabExperimentationAPI* CreateExperiment(const struct FExperimentationCreateExperimentRequest& Request, TDelegate<void(const struct FExperimentationCreateExperimentResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabExperimentationAPI* DeleteExclusionGroup(const struct FExperimentationDeleteExclusionGroupRequest& Request, TDelegate<void(const struct FExperimentationEmptyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabExperimentationAPI* DeleteExperiment(const struct FExperimentationDeleteExperimentRequest& Request, TDelegate<void(const struct FExperimentationEmptyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabExperimentationAPI* GetExclusionGroups(const struct FExperimentationGetExclusionGroupsRequest& Request, TDelegate<void(const struct FExperimentationGetExclusionGroupsResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabExperimentationAPI* GetExclusionGroupTraffic(const struct FExperimentationGetExclusionGroupTrafficRequest& Request, TDelegate<void(const struct FExperimentationGetExclusionGroupTrafficResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabExperimentationAPI* GetExperiments(const struct FExperimentationGetExperimentsRequest& Request, TDelegate<void(const struct FExperimentationGetExperimentsResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabExperimentationAPI* GetLatestScorecard(const struct FExperimentationGetLatestScorecardRequest& Request, TDelegate<void(const struct FExperimentationGetLatestScorecardResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabExperimentationAPI* GetTreatmentAssignment(const struct FExperimentationGetTreatmentAssignmentRequest& Request, TDelegate<void(const struct FExperimentationGetTreatmentAssignmentResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabExperimentationAPI* StartExperiment(const struct FExperimentationStartExperimentRequest& Request, TDelegate<void(const struct FExperimentationEmptyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabExperimentationAPI* StopExperiment(const struct FExperimentationStopExperimentRequest& Request, TDelegate<void(const struct FExperimentationEmptyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabExperimentationAPI* UpdateExclusionGroup(const struct FExperimentationUpdateExclusionGroupRequest& Request, TDelegate<void(const struct FExperimentationEmptyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabExperimentationAPI* UpdateExperiment(const struct FExperimentationUpdateExperimentRequest& Request, TDelegate<void(const struct FExperimentationEmptyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+
+	void HelperCreateExclusionGroup(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperCreateExperiment(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperDeleteExclusionGroup(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperDeleteExperiment(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetExclusionGroups(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetExclusionGroupTraffic(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetExperiments(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetLatestScorecard(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetTreatmentAssignment(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperStartExperiment(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperStopExperiment(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperUpdateExclusionGroup(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperUpdateExperiment(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabExperimentationAPI")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabExperimentationAPI")
+	}
+	static class UPlayFabExperimentationAPI* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabExperimentationAPI>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabExperimentationAPI;
+
+// Class PlayFab.PlayFabLocalizationModelDecoder
+// 0x0000 (0x0028 - 0x0028)
+class UPlayFabLocalizationModelDecoder final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FLocalizationGetLanguageListResponse decodeGetLanguageListResponseResponse(class UPlayFabJsonObject* Response);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabLocalizationModelDecoder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabLocalizationModelDecoder")
+	}
+	static class UPlayFabLocalizationModelDecoder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabLocalizationModelDecoder>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabLocalizationModelDecoder;
+
+// Class PlayFab.PlayFabExperimentationModelDecoder
+// 0x0000 (0x0028 - 0x0028)
+class UPlayFabExperimentationModelDecoder final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FExperimentationCreateExclusionGroupResult decodeCreateExclusionGroupResultResponse(class UPlayFabJsonObject* Response);
+	static struct FExperimentationCreateExperimentResult decodeCreateExperimentResultResponse(class UPlayFabJsonObject* Response);
+	static struct FExperimentationEmptyResponse decodeEmptyResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FExperimentationGetExclusionGroupsResult decodeGetExclusionGroupsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FExperimentationGetExclusionGroupTrafficResult decodeGetExclusionGroupTrafficResultResponse(class UPlayFabJsonObject* Response);
+	static struct FExperimentationGetExperimentsResult decodeGetExperimentsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FExperimentationGetLatestScorecardResult decodeGetLatestScorecardResultResponse(class UPlayFabJsonObject* Response);
+	static struct FExperimentationGetTreatmentAssignmentResult decodeGetTreatmentAssignmentResultResponse(class UPlayFabJsonObject* Response);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabExperimentationModelDecoder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabExperimentationModelDecoder")
+	}
+	static class UPlayFabExperimentationModelDecoder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabExperimentationModelDecoder>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabExperimentationModelDecoder;
+
+// Class PlayFab.PlayFabGroupsModelDecoder
+// 0x0000 (0x0028 - 0x0028)
+class UPlayFabGroupsModelDecoder final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FGroupsApplyToGroupResponse decodeApplyToGroupResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FGroupsCreateGroupResponse decodeCreateGroupResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FGroupsCreateGroupRoleResponse decodeCreateGroupRoleResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FGroupsEmptyResponse decodeEmptyResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FGroupsGetGroupResponse decodeGetGroupResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FGroupsInviteToGroupResponse decodeInviteToGroupResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FGroupsIsMemberResponse decodeIsMemberResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FGroupsListGroupApplicationsResponse decodeListGroupApplicationsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FGroupsListGroupBlocksResponse decodeListGroupBlocksResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FGroupsListGroupInvitationsResponse decodeListGroupInvitationsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FGroupsListGroupMembersResponse decodeListGroupMembersResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FGroupsListMembershipOpportunitiesResponse decodeListMembershipOpportunitiesResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FGroupsListMembershipResponse decodeListMembershipResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FGroupsUpdateGroupResponse decodeUpdateGroupResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FGroupsUpdateGroupRoleResponse decodeUpdateGroupRoleResponseResponse(class UPlayFabJsonObject* Response);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabGroupsModelDecoder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabGroupsModelDecoder")
+	}
+	static class UPlayFabGroupsModelDecoder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabGroupsModelDecoder>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabGroupsModelDecoder;
+
+// Class PlayFab.PlayFabInsightsAPI
+// 0x0120 (0x0150 - 0x0030)
+class UPlayFabInsightsAPI final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40[0xA8];                                      // 0x0040(0x00A8)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_100[0x50];                                     // 0x0100(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UPlayFabInsightsAPI* GetDetails(const struct FInsightsInsightsEmptyRequest& Request, TDelegate<void(const struct FInsightsInsightsGetDetailsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabInsightsAPI* GetLimits(const struct FInsightsInsightsEmptyRequest& Request, TDelegate<void(const struct FInsightsInsightsGetLimitsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabInsightsAPI* GetOperationStatus(const struct FInsightsInsightsGetOperationStatusRequest& Request, TDelegate<void(const struct FInsightsInsightsGetOperationStatusResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabInsightsAPI* GetPendingOperations(const struct FInsightsInsightsGetPendingOperationsRequest& Request, TDelegate<void(const struct FInsightsInsightsGetPendingOperationsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabInsightsAPI* SetPerformance(const struct FInsightsInsightsSetPerformanceRequest& Request, TDelegate<void(const struct FInsightsInsightsOperationResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabInsightsAPI* SetStorageRetention(const struct FInsightsInsightsSetStorageRetentionRequest& Request, TDelegate<void(const struct FInsightsInsightsOperationResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+
+	void HelperGetDetails(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetLimits(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetOperationStatus(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetPendingOperations(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperSetPerformance(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperSetStorageRetention(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabInsightsAPI")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabInsightsAPI")
+	}
+	static class UPlayFabInsightsAPI* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabInsightsAPI>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabInsightsAPI;
+
+// Class PlayFab.PlayFabInsightsModelDecoder
+// 0x0000 (0x0028 - 0x0028)
+class UPlayFabInsightsModelDecoder final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FInsightsInsightsGetDetailsResponse decodeInsightsGetDetailsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FInsightsInsightsGetLimitsResponse decodeInsightsGetLimitsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FInsightsInsightsGetOperationStatusResponse decodeInsightsGetOperationStatusResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FInsightsInsightsGetPendingOperationsResponse decodeInsightsGetPendingOperationsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FInsightsInsightsOperationResponse decodeInsightsOperationResponseResponse(class UPlayFabJsonObject* Response);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabInsightsModelDecoder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabInsightsModelDecoder")
+	}
+	static class UPlayFabInsightsModelDecoder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabInsightsModelDecoder>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabInsightsModelDecoder;
+
+// Class PlayFab.PlayFabUtilities
+// 0x0000 (0x0028 - 0x0028)
+class UPlayFabUtilities final : public UBlueprintFunctionLibrary
+{
+public:
+	static class FString getErrorText(int32 Code);
+	static class FString getPhotonAppId(bool Realtime, bool Chat, bool Turnbased);
+	static void setPlayFabSettings(const class FString& GameTitleId, const class FString& PlayFabSecretApiKey, const class FString& ProductionUrl, const class FString& PhotonRealtimeAppId, const class FString& PhotonTurnbasedAppId, const class FString& PhotonChatAppId);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabUtilities")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabUtilities")
+	}
+	static class UPlayFabUtilities* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabUtilities>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabUtilities;
+
+// Class PlayFab.PlayFabJsonObject
+// 0x0010 (0x0038 - 0x0028)
+class UPlayFabJsonObject final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UPlayFabJsonObject* ConstructJsonObject(class UObject* WorldContextObject);
+
+	bool DecodeJson(const class FString& JsonString);
+	TArray<class UPlayFabJsonValue*> GetArrayField(const class FString& FieldName);
+	TArray<bool> GetBoolArrayField(const class FString& FieldName);
+	TArray<class FString> GetFieldNames();
+	TArray<float> GetNumberArrayField(const class FString& FieldName);
+	TArray<class UPlayFabJsonObject*> GetObjectArrayField(const class FString& FieldName);
+	TArray<class FString> GetStringArrayField(const class FString& FieldName);
+	void MergeJsonObject(class UPlayFabJsonObject* InJsonObject, bool Overwrite);
+	void RemoveField(const class FString& FieldName);
+	void Reset();
+	void SetArrayField(const class FString& FieldName, const TArray<class UPlayFabJsonValue*>& inArray);
+	void SetBoolArrayField(const class FString& FieldName, const TArray<bool>& BoolArray);
+	void SetBoolField(const class FString& FieldName, bool InValue);
+	void SetField(const class FString& FieldName, class UPlayFabJsonValue* JsonValue);
+	void SetFieldNull(const class FString& FieldName);
+	void SetNumberArrayField(const class FString& FieldName, const TArray<float>& NumberArray);
+	void SetNumberField(const class FString& FieldName, float Number);
+	void SetObjectArrayField(const class FString& FieldName, const TArray<class UPlayFabJsonObject*>& ObjectArray);
+	void SetObjectField(const class FString& FieldName, class UPlayFabJsonObject* JsonObject);
+	void SetStringArrayField(const class FString& FieldName, const TArray<class FString>& StringArray);
+	void SetStringField(const class FString& FieldName, const class FString& StringValue);
+
+	class FString EncodeJson() const;
+	bool GetBoolField(const class FString& FieldName) const;
+	class UPlayFabJsonValue* GetField(const class FString& FieldName) const;
+	float GetNumberField(const class FString& FieldName) const;
+	class UPlayFabJsonObject* GetObjectField(const class FString& FieldName) const;
+	class FString GetStringField(const class FString& FieldName) const;
+	bool HasField(const class FString& FieldName) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabJsonObject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabJsonObject")
+	}
+	static class UPlayFabJsonObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabJsonObject>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabJsonObject;
+
+// Class PlayFab.PlayFabJsonValue
+// 0x0010 (0x0038 - 0x0028)
+class UPlayFabJsonValue final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UPlayFabJsonValue* ConstructJsonValueArray(class UObject* WorldContextObject, const TArray<class UPlayFabJsonValue*>& inArray);
+	static class UPlayFabJsonValue* ConstructJsonValueBool(class UObject* WorldContextObject, bool InValue);
+	static class UPlayFabJsonValue* ConstructJsonValueNumber(class UObject* WorldContextObject, float Number);
+	static class UPlayFabJsonValue* ConstructJsonValueObject(class UObject* WorldContextObject, class UPlayFabJsonObject* JsonObject);
+	static class UPlayFabJsonValue* ConstructJsonValueString(class UObject* WorldContextObject, const class FString& StringValue);
+
+	class UPlayFabJsonObject* AsObject();
+
+	TArray<class UPlayFabJsonValue*> AsArray() const;
+	bool AsBool() const;
+	float AsNumber() const;
+	class FString AsString() const;
+	EPFJson GetType() const;
+	class FString GetTypeString() const;
+	bool IsNull() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabJsonValue")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabJsonValue")
+	}
+	static class UPlayFabJsonValue* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabJsonValue>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabJsonValue;
+
+// Class PlayFab.PlayFabLocalizationAPI
+// 0x00D0 (0x0100 - 0x0030)
+class UPlayFabLocalizationAPI final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40[0x58];                                      // 0x0040(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_B0[0x50];                                      // 0x00B0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UPlayFabLocalizationAPI* GetLanguageList(const struct FLocalizationGetLanguageListRequest& Request, TDelegate<void(const struct FLocalizationGetLanguageListResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+
+	void HelperGetLanguageList(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabLocalizationAPI")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabLocalizationAPI")
+	}
+	static class UPlayFabLocalizationAPI* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabLocalizationAPI>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabLocalizationAPI;
+
+// Class PlayFab.PlayFabMultiplayerModelDecoder
+// 0x0000 (0x0028 - 0x0028)
+class UPlayFabMultiplayerModelDecoder final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FMultiplayerBuildAliasDetailsResponse decodeBuildAliasDetailsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerCancelAllMatchmakingTicketsForPlayerResult decodeCancelAllMatchmakingTicketsForPlayerResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerCancelAllServerBackfillTicketsForPlayerResult decodeCancelAllServerBackfillTicketsForPlayerResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerCancelMatchmakingTicketResult decodeCancelMatchmakingTicketResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerCancelServerBackfillTicketResult decodeCancelServerBackfillTicketResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerCreateBuildWithCustomContainerResponse decodeCreateBuildWithCustomContainerResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerCreateBuildWithManagedContainerResponse decodeCreateBuildWithManagedContainerResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerCreateBuildWithProcessBasedServerResponse decodeCreateBuildWithProcessBasedServerResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerCreateLobbyResult decodeCreateLobbyResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerCreateMatchmakingTicketResult decodeCreateMatchmakingTicketResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerCreateRemoteUserResponse decodeCreateRemoteUserResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerCreateServerBackfillTicketResult decodeCreateServerBackfillTicketResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerCreateTitleMultiplayerServersQuotaChangeResponse decodeCreateTitleMultiplayerServersQuotaChangeResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerEmptyResponse decodeEmptyResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerEnableMultiplayerServersForTitleResponse decodeEnableMultiplayerServersForTitleResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerFindFriendLobbiesResult decodeFindFriendLobbiesResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerFindLobbiesResult decodeFindLobbiesResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerGetAssetDownloadUrlResponse decodeGetAssetDownloadUrlResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerGetAssetUploadUrlResponse decodeGetAssetUploadUrlResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerGetBuildResponse decodeGetBuildResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerGetContainerRegistryCredentialsResponse decodeGetContainerRegistryCredentialsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerGetLobbyResult decodeGetLobbyResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerGetMatchmakingTicketResult decodeGetMatchmakingTicketResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerGetMatchResult decodeGetMatchResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerGetMultiplayerServerDetailsResponse decodeGetMultiplayerServerDetailsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerGetMultiplayerServerLogsResponse decodeGetMultiplayerServerLogsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerGetQueueStatisticsResult decodeGetQueueStatisticsResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerGetRemoteLoginEndpointResponse decodeGetRemoteLoginEndpointResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerGetServerBackfillTicketResult decodeGetServerBackfillTicketResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerGetTitleEnabledForMultiplayerServersStatusResponse decodeGetTitleEnabledForMultiplayerServersStatusResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerGetTitleMultiplayerServersQuotaChangeResponse decodeGetTitleMultiplayerServersQuotaChangeResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerGetTitleMultiplayerServersQuotasResponse decodeGetTitleMultiplayerServersQuotasResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerJoinLobbyAsServerResult decodeJoinLobbyAsServerResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerJoinLobbyResult decodeJoinLobbyResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerJoinMatchmakingTicketResult decodeJoinMatchmakingTicketResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerListAssetSummariesResponse decodeListAssetSummariesResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerListBuildAliasesResponse decodeListBuildAliasesResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerListBuildSummariesResponse decodeListBuildSummariesResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerListCertificateSummariesResponse decodeListCertificateSummariesResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerListContainerImagesResponse decodeListContainerImagesResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerListContainerImageTagsResponse decodeListContainerImageTagsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerListMatchmakingTicketsForPlayerResult decodeListMatchmakingTicketsForPlayerResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerListMultiplayerServersResponse decodeListMultiplayerServersResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerListPartyQosServersResponse decodeListPartyQosServersResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerListQosServersForTitleResponse decodeListQosServersForTitleResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerListServerBackfillTicketsForPlayerResult decodeListServerBackfillTicketsForPlayerResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerListTitleMultiplayerServersQuotaChangesResponse decodeListTitleMultiplayerServersQuotaChangesResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerListVirtualMachineSummariesResponse decodeListVirtualMachineSummariesResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerLobbyEmptyResult decodeLobbyEmptyResultResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerRequestMultiplayerServerResponse decodeRequestMultiplayerServerResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerRequestPartyServiceResponse decodeRequestPartyServiceResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerRolloverContainerRegistryCredentialsResponse decodeRolloverContainerRegistryCredentialsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FMultiplayerSubscribeToLobbyResourceResult decodeSubscribeToLobbyResourceResultResponse(class UPlayFabJsonObject* Response);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabMultiplayerModelDecoder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabMultiplayerModelDecoder")
+	}
+	static class UPlayFabMultiplayerModelDecoder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabMultiplayerModelDecoder>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabMultiplayerModelDecoder;
+
+// Class PlayFab.PlayFabProfilesAPI
+// 0x0140 (0x0170 - 0x0030)
+class UPlayFabProfilesAPI final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40[0xC8];                                      // 0x0040(0x00C8)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x0110(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x0118(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_120[0x50];                                     // 0x0120(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UPlayFabProfilesAPI* GetGlobalPolicy(const struct FProfilesGetGlobalPolicyRequest& Request, TDelegate<void(const struct FProfilesGetGlobalPolicyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabProfilesAPI* GetProfile(const struct FProfilesGetEntityProfileRequest& Request, TDelegate<void(const struct FProfilesGetEntityProfileResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabProfilesAPI* GetProfiles(const struct FProfilesGetEntityProfilesRequest& Request, TDelegate<void(const struct FProfilesGetEntityProfilesResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabProfilesAPI* GetTitlePlayersFromMasterPlayerAccountIds(const struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsRequest& Request, TDelegate<void(const struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabProfilesAPI* GetTitlePlayersFromXboxLiveIDs(const struct FProfilesGetTitlePlayersFromXboxLiveIDsRequest& Request, TDelegate<void(const struct FProfilesGetTitlePlayersFromProviderIDsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabProfilesAPI* SetGlobalPolicy(const struct FProfilesSetGlobalPolicyRequest& Request, TDelegate<void(const struct FProfilesSetGlobalPolicyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabProfilesAPI* SetProfileLanguage(const struct FProfilesSetProfileLanguageRequest& Request, TDelegate<void(const struct FProfilesSetProfileLanguageResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+	static class UPlayFabProfilesAPI* SetProfilePolicy(const struct FProfilesSetEntityProfilePolicyRequest& Request, TDelegate<void(const struct FProfilesSetEntityProfilePolicyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
+
+	void HelperGetGlobalPolicy(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetProfile(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetProfiles(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetTitlePlayersFromMasterPlayerAccountIds(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperGetTitlePlayersFromXboxLiveIDs(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperSetGlobalPolicy(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperSetProfileLanguage(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+	void HelperSetProfilePolicy(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabProfilesAPI")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabProfilesAPI")
+	}
+	static class UPlayFabProfilesAPI* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabProfilesAPI>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabProfilesAPI;
+
+// Class PlayFab.PlayFabProfilesModelDecoder
+// 0x0000 (0x0028 - 0x0028)
+class UPlayFabProfilesModelDecoder final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FProfilesGetEntityProfileResponse decodeGetEntityProfileResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FProfilesGetEntityProfilesResponse decodeGetEntityProfilesResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FProfilesGetGlobalPolicyResponse decodeGetGlobalPolicyResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsResponse decodeGetTitlePlayersFromMasterPlayerAccountIdsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FProfilesGetTitlePlayersFromProviderIDsResponse decodeGetTitlePlayersFromProviderIDsResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FProfilesSetEntityProfilePolicyResponse decodeSetEntityProfilePolicyResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FProfilesSetGlobalPolicyResponse decodeSetGlobalPolicyResponseResponse(class UPlayFabJsonObject* Response);
+	static struct FProfilesSetProfileLanguageResponse decodeSetProfileLanguageResponseResponse(class UPlayFabJsonObject* Response);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayFabProfilesModelDecoder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabProfilesModelDecoder")
+	}
+	static class UPlayFabProfilesModelDecoder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayFabProfilesModelDecoder>();
+	}
+};
+DUMPER7_ASSERTS_UPlayFabProfilesModelDecoder;
+
 // Class PlayFab.PlayFabAdminAPI
 // 0x07D0 (0x0800 - 0x0030)
 class UPlayFabAdminAPI final : public UOnlineBlueprintCallProxyBase
@@ -262,190 +1263,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PlayFabAdminAPI">();
+		STATIC_CLASS_IMPL("PlayFabAdminAPI")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabAdminAPI")
 	}
 	static class UPlayFabAdminAPI* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPlayFabAdminAPI>();
 	}
 };
-static_assert(alignof(UPlayFabAdminAPI) == 0x000008, "Wrong alignment on UPlayFabAdminAPI");
-static_assert(sizeof(UPlayFabAdminAPI) == 0x000800, "Wrong size on UPlayFabAdminAPI");
-static_assert(offsetof(UPlayFabAdminAPI, OnPlayFabResponse) == 0x000030, "Member 'UPlayFabAdminAPI::OnPlayFabResponse' has a wrong offset!");
-static_assert(offsetof(UPlayFabAdminAPI, CallAuthenticationContext) == 0x000798, "Member 'UPlayFabAdminAPI::CallAuthenticationContext' has a wrong offset!");
-static_assert(offsetof(UPlayFabAdminAPI, RequestJsonObj) == 0x0007A0, "Member 'UPlayFabAdminAPI::RequestJsonObj' has a wrong offset!");
-static_assert(offsetof(UPlayFabAdminAPI, ResponseJsonObj) == 0x0007A8, "Member 'UPlayFabAdminAPI::ResponseJsonObj' has a wrong offset!");
-
-// Class PlayFab.PlayFabAdminModelDecoder
-// 0x0000 (0x0028 - 0x0028)
-class UPlayFabAdminModelDecoder final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FAdminAddLocalizedNewsResult decodeAddLocalizedNewsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminAddNewsResult decodeAddNewsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminAddPlayerTagResult decodeAddPlayerTagResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminBanUsersResult decodeBanUsersResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminBlankResult decodeBlankResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminCheckLimitedEditionItemAvailabilityResult decodeCheckLimitedEditionItemAvailabilityResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminCreatePlayerSharedSecretResult decodeCreatePlayerSharedSecretResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminCreatePlayerStatisticDefinitionResult decodeCreatePlayerStatisticDefinitionResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminCreateSegmentResponse decodeCreateSegmentResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminCreateTaskResult decodeCreateTaskResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminDeleteMasterPlayerAccountResult decodeDeleteMasterPlayerAccountResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminDeleteMasterPlayerEventDataResult decodeDeleteMasterPlayerEventDataResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminDeleteMembershipSubscriptionResult decodeDeleteMembershipSubscriptionResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminDeletePlayerResult decodeDeletePlayerResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminDeletePlayerSharedSecretResult decodeDeletePlayerSharedSecretResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminDeleteSegmentsResponse decodeDeleteSegmentsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminDeleteStoreResult decodeDeleteStoreResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminDeleteTitleDataOverrideResult decodeDeleteTitleDataOverrideResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminDeleteTitleResult decodeDeleteTitleResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminEmptyResponse decodeEmptyResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminExportMasterPlayerDataResult decodeExportMasterPlayerDataResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminExportPlayersInSegmentResult decodeExportPlayersInSegmentResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetActionsOnPlayersInSegmentTaskInstanceResult decodeGetActionsOnPlayersInSegmentTaskInstanceResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetAllSegmentsResult decodeGetAllSegmentsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetCatalogItemsResult decodeGetCatalogItemsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetCloudScriptRevisionResult decodeGetCloudScriptRevisionResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetCloudScriptTaskInstanceResult decodeGetCloudScriptTaskInstanceResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetCloudScriptVersionsResult decodeGetCloudScriptVersionsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetContentListResult decodeGetContentListResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetContentUploadUrlResult decodeGetContentUploadUrlResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetDataReportResult decodeGetDataReportResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetPlayedTitleListResult decodeGetPlayedTitleListResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetPlayerIdFromAuthTokenResult decodeGetPlayerIdFromAuthTokenResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetPlayerProfileResult decodeGetPlayerProfileResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetPlayerSegmentsResult decodeGetPlayerSegmentsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetPlayerSharedSecretsResult decodeGetPlayerSharedSecretsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetPlayersInSegmentExportResponse decodeGetPlayersInSegmentExportResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetPlayersInSegmentResult decodeGetPlayersInSegmentResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetPlayerStatisticDefinitionsResult decodeGetPlayerStatisticDefinitionsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetPlayerStatisticVersionsResult decodeGetPlayerStatisticVersionsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetPlayerTagsResult decodeGetPlayerTagsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetPolicyResponse decodeGetPolicyResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetPublisherDataResult decodeGetPublisherDataResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetRandomResultTablesResult decodeGetRandomResultTablesResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetSegmentsResponse decodeGetSegmentsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetStoreItemsResult decodeGetStoreItemsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetTaskInstancesResult decodeGetTaskInstancesResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetTasksResult decodeGetTasksResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetTitleDataResult decodeGetTitleDataResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetUserBansResult decodeGetUserBansResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetUserDataResult decodeGetUserDataResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGetUserInventoryResult decodeGetUserInventoryResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminGrantItemsToUsersResult decodeGrantItemsToUsersResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminIncrementLimitedEditionItemAvailabilityResult decodeIncrementLimitedEditionItemAvailabilityResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminIncrementPlayerStatisticVersionResult decodeIncrementPlayerStatisticVersionResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminListOpenIdConnectionResponse decodeListOpenIdConnectionResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminListVirtualCurrencyTypesResult decodeListVirtualCurrencyTypesResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminLookupUserAccountInfoResult decodeLookupUserAccountInfoResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminModifyUserVirtualCurrencyResult decodeModifyUserVirtualCurrencyResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminRefundPurchaseResponse decodeRefundPurchaseResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminRemovePlayerTagResult decodeRemovePlayerTagResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminResetCharacterStatisticsResult decodeResetCharacterStatisticsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminResetPasswordResult decodeResetPasswordResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminResetUserStatisticsResult decodeResetUserStatisticsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminResolvePurchaseDisputeResponse decodeResolvePurchaseDisputeResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminRevokeAllBansForUserResult decodeRevokeAllBansForUserResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminRevokeBansResult decodeRevokeBansResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminRevokeInventoryItemsResult decodeRevokeInventoryItemsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminRevokeInventoryResult decodeRevokeInventoryResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminRunTaskResult decodeRunTaskResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminSendAccountRecoveryEmailResult decodeSendAccountRecoveryEmailResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminSetMembershipOverrideResult decodeSetMembershipOverrideResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminSetPlayerSecretResult decodeSetPlayerSecretResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminSetPublishedRevisionResult decodeSetPublishedRevisionResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminSetPublisherDataResult decodeSetPublisherDataResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminSetTitleDataAndOverridesResult decodeSetTitleDataAndOverridesResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminSetTitleDataResult decodeSetTitleDataResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminSetupPushNotificationResult decodeSetupPushNotificationResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminUpdateBansResult decodeUpdateBansResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminUpdateCatalogItemsResult decodeUpdateCatalogItemsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminUpdateCloudScriptResult decodeUpdateCloudScriptResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminUpdatePlayerSharedSecretResult decodeUpdatePlayerSharedSecretResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminUpdatePlayerStatisticDefinitionResult decodeUpdatePlayerStatisticDefinitionResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminUpdatePolicyResponse decodeUpdatePolicyResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminUpdateRandomResultTablesResult decodeUpdateRandomResultTablesResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminUpdateSegmentResponse decodeUpdateSegmentResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminUpdateStoreItemsResult decodeUpdateStoreItemsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminUpdateUserDataResult decodeUpdateUserDataResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAdminUpdateUserTitleDisplayNameResult decodeUpdateUserTitleDisplayNameResultResponse(class UPlayFabJsonObject* Response);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabAdminModelDecoder">();
-	}
-	static class UPlayFabAdminModelDecoder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabAdminModelDecoder>();
-	}
-};
-static_assert(alignof(UPlayFabAdminModelDecoder) == 0x000008, "Wrong alignment on UPlayFabAdminModelDecoder");
-static_assert(sizeof(UPlayFabAdminModelDecoder) == 0x000028, "Wrong size on UPlayFabAdminModelDecoder");
-
-// Class PlayFab.PlayFabAuthenticationAPI
-// 0x0100 (0x0130 - 0x0030)
-class UPlayFabAuthenticationAPI final : public UOnlineBlueprintCallProxyBase
-{
-public:
-	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0x88];                                      // 0x0040(0x0088)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_E0[0x50];                                      // 0x00E0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UPlayFabAuthenticationAPI* AuthenticateGameServerWithCustomId(const struct FAuthenticationAuthenticateCustomIdRequest& Request, TDelegate<void(const struct FAuthenticationAuthenticateCustomIdResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabAuthenticationAPI* Delete(const struct FAuthenticationDeleteRequest& Request, TDelegate<void(const struct FAuthenticationEmptyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabAuthenticationAPI* GetEntityToken(const struct FAuthenticationGetEntityTokenRequest& Request, TDelegate<void(const struct FAuthenticationGetEntityTokenResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabAuthenticationAPI* ValidateEntityToken(const struct FAuthenticationValidateEntityTokenRequest& Request, TDelegate<void(const struct FAuthenticationValidateEntityTokenResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-
-	void HelperAuthenticateGameServerWithCustomId(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperDelete(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetEntityToken(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperValidateEntityToken(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabAuthenticationAPI">();
-	}
-	static class UPlayFabAuthenticationAPI* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabAuthenticationAPI>();
-	}
-};
-static_assert(alignof(UPlayFabAuthenticationAPI) == 0x000008, "Wrong alignment on UPlayFabAuthenticationAPI");
-static_assert(sizeof(UPlayFabAuthenticationAPI) == 0x000130, "Wrong size on UPlayFabAuthenticationAPI");
-static_assert(offsetof(UPlayFabAuthenticationAPI, OnPlayFabResponse) == 0x000030, "Member 'UPlayFabAuthenticationAPI::OnPlayFabResponse' has a wrong offset!");
-static_assert(offsetof(UPlayFabAuthenticationAPI, CallAuthenticationContext) == 0x0000C8, "Member 'UPlayFabAuthenticationAPI::CallAuthenticationContext' has a wrong offset!");
-static_assert(offsetof(UPlayFabAuthenticationAPI, RequestJsonObj) == 0x0000D0, "Member 'UPlayFabAuthenticationAPI::RequestJsonObj' has a wrong offset!");
-static_assert(offsetof(UPlayFabAuthenticationAPI, ResponseJsonObj) == 0x0000D8, "Member 'UPlayFabAuthenticationAPI::ResponseJsonObj' has a wrong offset!");
-
-// Class PlayFab.PlayFabAuthenticationModelDecoder
-// 0x0000 (0x0028 - 0x0028)
-class UPlayFabAuthenticationModelDecoder final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FAuthenticationAuthenticateCustomIdResult decodeAuthenticateCustomIdResultResponse(class UPlayFabJsonObject* Response);
-	static struct FAuthenticationEmptyResponse decodeEmptyResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FAuthenticationGetEntityTokenResponse decodeGetEntityTokenResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FAuthenticationValidateEntityTokenResponse decodeValidateEntityTokenResponseResponse(class UPlayFabJsonObject* Response);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabAuthenticationModelDecoder">();
-	}
-	static class UPlayFabAuthenticationModelDecoder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabAuthenticationModelDecoder>();
-	}
-};
-static_assert(alignof(UPlayFabAuthenticationModelDecoder) == 0x000008, "Wrong alignment on UPlayFabAuthenticationModelDecoder");
-static_assert(sizeof(UPlayFabAuthenticationModelDecoder) == 0x000028, "Wrong size on UPlayFabAuthenticationModelDecoder");
+DUMPER7_ASSERTS_UPlayFabAdminAPI;
 
 // Class PlayFab.PlayFabClientAPI
 // 0x0B00 (0x0B30 - 0x0030)
@@ -793,19 +1622,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PlayFabClientAPI">();
+		STATIC_CLASS_IMPL("PlayFabClientAPI")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabClientAPI")
 	}
 	static class UPlayFabClientAPI* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPlayFabClientAPI>();
 	}
 };
-static_assert(alignof(UPlayFabClientAPI) == 0x000008, "Wrong alignment on UPlayFabClientAPI");
-static_assert(sizeof(UPlayFabClientAPI) == 0x000B30, "Wrong size on UPlayFabClientAPI");
-static_assert(offsetof(UPlayFabClientAPI, OnPlayFabResponse) == 0x000030, "Member 'UPlayFabClientAPI::OnPlayFabResponse' has a wrong offset!");
-static_assert(offsetof(UPlayFabClientAPI, CallAuthenticationContext) == 0x000AC8, "Member 'UPlayFabClientAPI::CallAuthenticationContext' has a wrong offset!");
-static_assert(offsetof(UPlayFabClientAPI, RequestJsonObj) == 0x000AD0, "Member 'UPlayFabClientAPI::RequestJsonObj' has a wrong offset!");
-static_assert(offsetof(UPlayFabClientAPI, ResponseJsonObj) == 0x000AD8, "Member 'UPlayFabClientAPI::ResponseJsonObj' has a wrong offset!");
+DUMPER7_ASSERTS_UPlayFabClientAPI;
 
 // Class PlayFab.PlayFabClientModelDecoder
 // 0x0000 (0x0028 - 0x0028)
@@ -945,171 +1773,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PlayFabClientModelDecoder">();
+		STATIC_CLASS_IMPL("PlayFabClientModelDecoder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabClientModelDecoder")
 	}
 	static class UPlayFabClientModelDecoder* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPlayFabClientModelDecoder>();
 	}
 };
-static_assert(alignof(UPlayFabClientModelDecoder) == 0x000008, "Wrong alignment on UPlayFabClientModelDecoder");
-static_assert(sizeof(UPlayFabClientModelDecoder) == 0x000028, "Wrong size on UPlayFabClientModelDecoder");
-
-// Class PlayFab.PlayFabCloudScriptAPI
-// 0x01A0 (0x01D0 - 0x0030)
-class UPlayFabCloudScriptAPI final : public UOnlineBlueprintCallProxyBase
-{
-public:
-	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0x128];                                     // 0x0040(0x0128)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x0170(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x0178(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_180[0x50];                                     // 0x0180(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UPlayFabCloudScriptAPI* ExecuteEntityCloudScript(const struct FCloudScriptExecuteEntityCloudScriptRequest& Request, TDelegate<void(const struct FCloudScriptExecuteCloudScriptResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabCloudScriptAPI* ExecuteFunction(const struct FCloudScriptExecuteFunctionRequest& Request, TDelegate<void(const struct FCloudScriptExecuteFunctionResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabCloudScriptAPI* GetFunction(const struct FCloudScriptGetFunctionRequest& Request, TDelegate<void(const struct FCloudScriptGetFunctionResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabCloudScriptAPI* ListFunctions(const struct FCloudScriptListFunctionsRequest& Request, TDelegate<void(const struct FCloudScriptListFunctionsResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabCloudScriptAPI* ListHttpFunctions(const struct FCloudScriptListFunctionsRequest& Request, TDelegate<void(const struct FCloudScriptListHttpFunctionsResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabCloudScriptAPI* ListQueuedFunctions(const struct FCloudScriptListFunctionsRequest& Request, TDelegate<void(const struct FCloudScriptListQueuedFunctionsResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabCloudScriptAPI* PostFunctionResultForEntityTriggeredAction(const struct FCloudScriptPostFunctionResultForEntityTriggeredActionRequest& Request, TDelegate<void(const struct FCloudScriptEmptyResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabCloudScriptAPI* PostFunctionResultForFunctionExecution(const struct FCloudScriptPostFunctionResultForFunctionExecutionRequest& Request, TDelegate<void(const struct FCloudScriptEmptyResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabCloudScriptAPI* PostFunctionResultForPlayerTriggeredAction(const struct FCloudScriptPostFunctionResultForPlayerTriggeredActionRequest& Request, TDelegate<void(const struct FCloudScriptEmptyResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabCloudScriptAPI* PostFunctionResultForScheduledTask(const struct FCloudScriptPostFunctionResultForScheduledTaskRequest& Request, TDelegate<void(const struct FCloudScriptEmptyResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabCloudScriptAPI* RegisterHttpFunction(const struct FCloudScriptRegisterHttpFunctionRequest& Request, TDelegate<void(const struct FCloudScriptEmptyResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabCloudScriptAPI* RegisterQueuedFunction(const struct FCloudScriptRegisterQueuedFunctionRequest& Request, TDelegate<void(const struct FCloudScriptEmptyResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabCloudScriptAPI* UnregisterFunction(const struct FCloudScriptUnregisterFunctionRequest& Request, TDelegate<void(const struct FCloudScriptEmptyResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-
-	void HelperExecuteEntityCloudScript(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperExecuteFunction(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetFunction(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperListFunctions(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperListHttpFunctions(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperListQueuedFunctions(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperPostFunctionResultForEntityTriggeredAction(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperPostFunctionResultForFunctionExecution(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperPostFunctionResultForPlayerTriggeredAction(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperPostFunctionResultForScheduledTask(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperRegisterHttpFunction(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperRegisterQueuedFunction(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperUnregisterFunction(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabCloudScriptAPI">();
-	}
-	static class UPlayFabCloudScriptAPI* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabCloudScriptAPI>();
-	}
-};
-static_assert(alignof(UPlayFabCloudScriptAPI) == 0x000008, "Wrong alignment on UPlayFabCloudScriptAPI");
-static_assert(sizeof(UPlayFabCloudScriptAPI) == 0x0001D0, "Wrong size on UPlayFabCloudScriptAPI");
-static_assert(offsetof(UPlayFabCloudScriptAPI, OnPlayFabResponse) == 0x000030, "Member 'UPlayFabCloudScriptAPI::OnPlayFabResponse' has a wrong offset!");
-static_assert(offsetof(UPlayFabCloudScriptAPI, CallAuthenticationContext) == 0x000168, "Member 'UPlayFabCloudScriptAPI::CallAuthenticationContext' has a wrong offset!");
-static_assert(offsetof(UPlayFabCloudScriptAPI, RequestJsonObj) == 0x000170, "Member 'UPlayFabCloudScriptAPI::RequestJsonObj' has a wrong offset!");
-static_assert(offsetof(UPlayFabCloudScriptAPI, ResponseJsonObj) == 0x000178, "Member 'UPlayFabCloudScriptAPI::ResponseJsonObj' has a wrong offset!");
-
-// Class PlayFab.PlayFabCloudScriptModelDecoder
-// 0x0000 (0x0028 - 0x0028)
-class UPlayFabCloudScriptModelDecoder final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FCloudScriptEmptyResult decodeEmptyResultResponse(class UPlayFabJsonObject* Response);
-	static struct FCloudScriptExecuteCloudScriptResult decodeExecuteCloudScriptResultResponse(class UPlayFabJsonObject* Response);
-	static struct FCloudScriptExecuteFunctionResult decodeExecuteFunctionResultResponse(class UPlayFabJsonObject* Response);
-	static struct FCloudScriptGetFunctionResult decodeGetFunctionResultResponse(class UPlayFabJsonObject* Response);
-	static struct FCloudScriptListFunctionsResult decodeListFunctionsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FCloudScriptListHttpFunctionsResult decodeListHttpFunctionsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FCloudScriptListQueuedFunctionsResult decodeListQueuedFunctionsResultResponse(class UPlayFabJsonObject* Response);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabCloudScriptModelDecoder">();
-	}
-	static class UPlayFabCloudScriptModelDecoder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabCloudScriptModelDecoder>();
-	}
-};
-static_assert(alignof(UPlayFabCloudScriptModelDecoder) == 0x000008, "Wrong alignment on UPlayFabCloudScriptModelDecoder");
-static_assert(sizeof(UPlayFabCloudScriptModelDecoder) == 0x000028, "Wrong size on UPlayFabCloudScriptModelDecoder");
-
-// Class PlayFab.PlayFabDataAPI
-// 0x0130 (0x0160 - 0x0030)
-class UPlayFabDataAPI final : public UOnlineBlueprintCallProxyBase
-{
-public:
-	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0xB8];                                      // 0x0040(0x00B8)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x0100(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x0108(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_110[0x50];                                     // 0x0110(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UPlayFabDataAPI* AbortFileUploads(const struct FDataAbortFileUploadsRequest& Request, TDelegate<void(const struct FDataAbortFileUploadsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabDataAPI* DeleteFiles(const struct FDataDeleteFilesRequest& Request, TDelegate<void(const struct FDataDeleteFilesResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabDataAPI* FinalizeFileUploads(const struct FDataFinalizeFileUploadsRequest& Request, TDelegate<void(const struct FDataFinalizeFileUploadsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabDataAPI* GetFiles(const struct FDataGetFilesRequest& Request, TDelegate<void(const struct FDataGetFilesResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabDataAPI* GetObjects(const struct FDataGetObjectsRequest& Request, TDelegate<void(const struct FDataGetObjectsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabDataAPI* InitiateFileUploads(const struct FDataInitiateFileUploadsRequest& Request, TDelegate<void(const struct FDataInitiateFileUploadsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabDataAPI* SetObjects(const struct FDataSetObjectsRequest& Request, TDelegate<void(const struct FDataSetObjectsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-
-	void HelperAbortFileUploads(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperDeleteFiles(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperFinalizeFileUploads(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetFiles(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetObjects(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperInitiateFileUploads(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperSetObjects(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabDataAPI">();
-	}
-	static class UPlayFabDataAPI* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabDataAPI>();
-	}
-};
-static_assert(alignof(UPlayFabDataAPI) == 0x000008, "Wrong alignment on UPlayFabDataAPI");
-static_assert(sizeof(UPlayFabDataAPI) == 0x000160, "Wrong size on UPlayFabDataAPI");
-static_assert(offsetof(UPlayFabDataAPI, OnPlayFabResponse) == 0x000030, "Member 'UPlayFabDataAPI::OnPlayFabResponse' has a wrong offset!");
-static_assert(offsetof(UPlayFabDataAPI, CallAuthenticationContext) == 0x0000F8, "Member 'UPlayFabDataAPI::CallAuthenticationContext' has a wrong offset!");
-static_assert(offsetof(UPlayFabDataAPI, RequestJsonObj) == 0x000100, "Member 'UPlayFabDataAPI::RequestJsonObj' has a wrong offset!");
-static_assert(offsetof(UPlayFabDataAPI, ResponseJsonObj) == 0x000108, "Member 'UPlayFabDataAPI::ResponseJsonObj' has a wrong offset!");
-
-// Class PlayFab.PlayFabDataModelDecoder
-// 0x0000 (0x0028 - 0x0028)
-class UPlayFabDataModelDecoder final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FDataAbortFileUploadsResponse decodeAbortFileUploadsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FDataDeleteFilesResponse decodeDeleteFilesResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FDataFinalizeFileUploadsResponse decodeFinalizeFileUploadsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FDataGetFilesResponse decodeGetFilesResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FDataGetObjectsResponse decodeGetObjectsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FDataInitiateFileUploadsResponse decodeInitiateFileUploadsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FDataSetObjectsResponse decodeSetObjectsResponseResponse(class UPlayFabJsonObject* Response);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabDataModelDecoder">();
-	}
-	static class UPlayFabDataModelDecoder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabDataModelDecoder>();
-	}
-};
-static_assert(alignof(UPlayFabDataModelDecoder) == 0x000008, "Wrong alignment on UPlayFabDataModelDecoder");
-static_assert(sizeof(UPlayFabDataModelDecoder) == 0x000028, "Wrong size on UPlayFabDataModelDecoder");
+DUMPER7_ASSERTS_UPlayFabClientModelDecoder;
 
 // Class PlayFab.PlayFabEconomyAPI
 // 0x03A0 (0x03D0 - 0x0030)
@@ -1221,241 +1896,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PlayFabEconomyAPI">();
+		STATIC_CLASS_IMPL("PlayFabEconomyAPI")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabEconomyAPI")
 	}
 	static class UPlayFabEconomyAPI* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPlayFabEconomyAPI>();
 	}
 };
-static_assert(alignof(UPlayFabEconomyAPI) == 0x000008, "Wrong alignment on UPlayFabEconomyAPI");
-static_assert(sizeof(UPlayFabEconomyAPI) == 0x0003D0, "Wrong size on UPlayFabEconomyAPI");
-static_assert(offsetof(UPlayFabEconomyAPI, OnPlayFabResponse) == 0x000030, "Member 'UPlayFabEconomyAPI::OnPlayFabResponse' has a wrong offset!");
-static_assert(offsetof(UPlayFabEconomyAPI, CallAuthenticationContext) == 0x000368, "Member 'UPlayFabEconomyAPI::CallAuthenticationContext' has a wrong offset!");
-static_assert(offsetof(UPlayFabEconomyAPI, RequestJsonObj) == 0x000370, "Member 'UPlayFabEconomyAPI::RequestJsonObj' has a wrong offset!");
-static_assert(offsetof(UPlayFabEconomyAPI, ResponseJsonObj) == 0x000378, "Member 'UPlayFabEconomyAPI::ResponseJsonObj' has a wrong offset!");
-
-// Class PlayFab.PlayFabEconomyModelDecoder
-// 0x0000 (0x0028 - 0x0028)
-class UPlayFabEconomyModelDecoder final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FEconomyAddInventoryItemsResponse decodeAddInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyCreateDraftItemResponse decodeCreateDraftItemResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyCreateUploadUrlsResponse decodeCreateUploadUrlsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyDeleteEntityItemReviewsResponse decodeDeleteEntityItemReviewsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyDeleteInventoryCollectionResponse decodeDeleteInventoryCollectionResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyDeleteInventoryItemsResponse decodeDeleteInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyDeleteItemResponse decodeDeleteItemResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyExecuteInventoryOperationsResponse decodeExecuteInventoryOperationsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyExecuteTransferOperationsResponse decodeExecuteTransferOperationsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetCatalogConfigResponse decodeGetCatalogConfigResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetDraftItemResponse decodeGetDraftItemResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetDraftItemsResponse decodeGetDraftItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetEntityDraftItemsResponse decodeGetEntityDraftItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetEntityItemReviewResponse decodeGetEntityItemReviewResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetInventoryCollectionIdsResponse decodeGetInventoryCollectionIdsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetInventoryItemsResponse decodeGetInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetInventoryOperationStatusResponse decodeGetInventoryOperationStatusResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetItemContainersResponse decodeGetItemContainersResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetItemModerationStateResponse decodeGetItemModerationStateResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetItemPublishStatusResponse decodeGetItemPublishStatusResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetItemResponse decodeGetItemResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetItemReviewsResponse decodeGetItemReviewsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetItemReviewSummaryResponse decodeGetItemReviewSummaryResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetItemsResponse decodeGetItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetMicrosoftStoreAccessTokensResponse decodeGetMicrosoftStoreAccessTokensResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyGetTransactionHistoryResponse decodeGetTransactionHistoryResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyPublishDraftItemResponse decodePublishDraftItemResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyPurchaseInventoryItemsResponse decodePurchaseInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyRedeemAppleAppStoreInventoryItemsResponse decodeRedeemAppleAppStoreInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyRedeemGooglePlayInventoryItemsResponse decodeRedeemGooglePlayInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyRedeemMicrosoftStoreInventoryItemsResponse decodeRedeemMicrosoftStoreInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyRedeemNintendoEShopInventoryItemsResponse decodeRedeemNintendoEShopInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyRedeemPlayStationStoreInventoryItemsResponse decodeRedeemPlayStationStoreInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyRedeemSteamInventoryItemsResponse decodeRedeemSteamInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyReportItemResponse decodeReportItemResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyReportItemReviewResponse decodeReportItemReviewResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyReviewItemResponse decodeReviewItemResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomySearchItemsResponse decodeSearchItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomySetItemModerationStateResponse decodeSetItemModerationStateResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomySubmitItemReviewVoteResponse decodeSubmitItemReviewVoteResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomySubtractInventoryItemsResponse decodeSubtractInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyTakedownItemReviewsResponse decodeTakedownItemReviewsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyTransferInventoryItemsResponse decodeTransferInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyUpdateCatalogConfigResponse decodeUpdateCatalogConfigResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyUpdateDraftItemResponse decodeUpdateDraftItemResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEconomyUpdateInventoryItemsResponse decodeUpdateInventoryItemsResponseResponse(class UPlayFabJsonObject* Response);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabEconomyModelDecoder">();
-	}
-	static class UPlayFabEconomyModelDecoder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabEconomyModelDecoder>();
-	}
-};
-static_assert(alignof(UPlayFabEconomyModelDecoder) == 0x000008, "Wrong alignment on UPlayFabEconomyModelDecoder");
-static_assert(sizeof(UPlayFabEconomyModelDecoder) == 0x000028, "Wrong size on UPlayFabEconomyModelDecoder");
-
-// Class PlayFab.PlayFabEventsAPI
-// 0x0140 (0x0170 - 0x0030)
-class UPlayFabEventsAPI final : public UOnlineBlueprintCallProxyBase
-{
-public:
-	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0xC8];                                      // 0x0040(0x00C8)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x0110(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x0118(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_120[0x50];                                     // 0x0120(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UPlayFabEventsAPI* CreateTelemetryKey(const struct FEventsCreateTelemetryKeyRequest& Request, TDelegate<void(const struct FEventsCreateTelemetryKeyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabEventsAPI* DeleteTelemetryKey(const struct FEventsDeleteTelemetryKeyRequest& Request, TDelegate<void(const struct FEventsDeleteTelemetryKeyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabEventsAPI* GetTelemetryKey(const struct FEventsGetTelemetryKeyRequest& Request, TDelegate<void(const struct FEventsGetTelemetryKeyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabEventsAPI* ListTelemetryKeys(const struct FEventsListTelemetryKeysRequest& Request, TDelegate<void(const struct FEventsListTelemetryKeysResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabEventsAPI* SetTelemetryKeyActive(const struct FEventsSetTelemetryKeyActiveRequest& Request, TDelegate<void(const struct FEventsSetTelemetryKeyActiveResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabEventsAPI* WriteEvents(const struct FEventsWriteEventsRequest& Request, TDelegate<void(const struct FEventsWriteEventsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabEventsAPI* WriteTelemetryEvents(const struct FEventsWriteEventsRequest& Request, TDelegate<void(const struct FEventsWriteEventsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabEventsAPI* WriteTelemetryEventsWithTelemetryKey(const struct FEventsWriteEventsRequest& Request, const class FString& telemetryKey, TDelegate<void(const struct FEventsWriteEventsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-
-	void HelperCreateTelemetryKey(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperDeleteTelemetryKey(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetTelemetryKey(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperListTelemetryKeys(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperSetTelemetryKeyActive(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperWriteEvents(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperWriteTelemetryEvents(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabEventsAPI">();
-	}
-	static class UPlayFabEventsAPI* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabEventsAPI>();
-	}
-};
-static_assert(alignof(UPlayFabEventsAPI) == 0x000008, "Wrong alignment on UPlayFabEventsAPI");
-static_assert(sizeof(UPlayFabEventsAPI) == 0x000170, "Wrong size on UPlayFabEventsAPI");
-static_assert(offsetof(UPlayFabEventsAPI, OnPlayFabResponse) == 0x000030, "Member 'UPlayFabEventsAPI::OnPlayFabResponse' has a wrong offset!");
-static_assert(offsetof(UPlayFabEventsAPI, CallAuthenticationContext) == 0x000108, "Member 'UPlayFabEventsAPI::CallAuthenticationContext' has a wrong offset!");
-static_assert(offsetof(UPlayFabEventsAPI, RequestJsonObj) == 0x000110, "Member 'UPlayFabEventsAPI::RequestJsonObj' has a wrong offset!");
-static_assert(offsetof(UPlayFabEventsAPI, ResponseJsonObj) == 0x000118, "Member 'UPlayFabEventsAPI::ResponseJsonObj' has a wrong offset!");
-
-// Class PlayFab.PlayFabEventsModelDecoder
-// 0x0000 (0x0028 - 0x0028)
-class UPlayFabEventsModelDecoder final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FEventsCreateTelemetryKeyResponse decodeCreateTelemetryKeyResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEventsDeleteTelemetryKeyResponse decodeDeleteTelemetryKeyResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEventsGetTelemetryKeyResponse decodeGetTelemetryKeyResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEventsListTelemetryKeysResponse decodeListTelemetryKeysResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEventsSetTelemetryKeyActiveResponse decodeSetTelemetryKeyActiveResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FEventsWriteEventsResponse decodeWriteEventsResponseResponse(class UPlayFabJsonObject* Response);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabEventsModelDecoder">();
-	}
-	static class UPlayFabEventsModelDecoder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabEventsModelDecoder>();
-	}
-};
-static_assert(alignof(UPlayFabEventsModelDecoder) == 0x000008, "Wrong alignment on UPlayFabEventsModelDecoder");
-static_assert(sizeof(UPlayFabEventsModelDecoder) == 0x000028, "Wrong size on UPlayFabEventsModelDecoder");
-
-// Class PlayFab.PlayFabExperimentationAPI
-// 0x0190 (0x01C0 - 0x0030)
-class UPlayFabExperimentationAPI final : public UOnlineBlueprintCallProxyBase
-{
-public:
-	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0x118];                                     // 0x0040(0x0118)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x0160(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x0168(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_170[0x50];                                     // 0x0170(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UPlayFabExperimentationAPI* CreateExclusionGroup(const struct FExperimentationCreateExclusionGroupRequest& Request, TDelegate<void(const struct FExperimentationCreateExclusionGroupResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabExperimentationAPI* CreateExperiment(const struct FExperimentationCreateExperimentRequest& Request, TDelegate<void(const struct FExperimentationCreateExperimentResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabExperimentationAPI* DeleteExclusionGroup(const struct FExperimentationDeleteExclusionGroupRequest& Request, TDelegate<void(const struct FExperimentationEmptyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabExperimentationAPI* DeleteExperiment(const struct FExperimentationDeleteExperimentRequest& Request, TDelegate<void(const struct FExperimentationEmptyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabExperimentationAPI* GetExclusionGroups(const struct FExperimentationGetExclusionGroupsRequest& Request, TDelegate<void(const struct FExperimentationGetExclusionGroupsResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabExperimentationAPI* GetExclusionGroupTraffic(const struct FExperimentationGetExclusionGroupTrafficRequest& Request, TDelegate<void(const struct FExperimentationGetExclusionGroupTrafficResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabExperimentationAPI* GetExperiments(const struct FExperimentationGetExperimentsRequest& Request, TDelegate<void(const struct FExperimentationGetExperimentsResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabExperimentationAPI* GetLatestScorecard(const struct FExperimentationGetLatestScorecardRequest& Request, TDelegate<void(const struct FExperimentationGetLatestScorecardResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabExperimentationAPI* GetTreatmentAssignment(const struct FExperimentationGetTreatmentAssignmentRequest& Request, TDelegate<void(const struct FExperimentationGetTreatmentAssignmentResult& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabExperimentationAPI* StartExperiment(const struct FExperimentationStartExperimentRequest& Request, TDelegate<void(const struct FExperimentationEmptyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabExperimentationAPI* StopExperiment(const struct FExperimentationStopExperimentRequest& Request, TDelegate<void(const struct FExperimentationEmptyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabExperimentationAPI* UpdateExclusionGroup(const struct FExperimentationUpdateExclusionGroupRequest& Request, TDelegate<void(const struct FExperimentationEmptyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabExperimentationAPI* UpdateExperiment(const struct FExperimentationUpdateExperimentRequest& Request, TDelegate<void(const struct FExperimentationEmptyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-
-	void HelperCreateExclusionGroup(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperCreateExperiment(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperDeleteExclusionGroup(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperDeleteExperiment(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetExclusionGroups(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetExclusionGroupTraffic(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetExperiments(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetLatestScorecard(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetTreatmentAssignment(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperStartExperiment(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperStopExperiment(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperUpdateExclusionGroup(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperUpdateExperiment(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabExperimentationAPI">();
-	}
-	static class UPlayFabExperimentationAPI* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabExperimentationAPI>();
-	}
-};
-static_assert(alignof(UPlayFabExperimentationAPI) == 0x000008, "Wrong alignment on UPlayFabExperimentationAPI");
-static_assert(sizeof(UPlayFabExperimentationAPI) == 0x0001C0, "Wrong size on UPlayFabExperimentationAPI");
-static_assert(offsetof(UPlayFabExperimentationAPI, OnPlayFabResponse) == 0x000030, "Member 'UPlayFabExperimentationAPI::OnPlayFabResponse' has a wrong offset!");
-static_assert(offsetof(UPlayFabExperimentationAPI, CallAuthenticationContext) == 0x000158, "Member 'UPlayFabExperimentationAPI::CallAuthenticationContext' has a wrong offset!");
-static_assert(offsetof(UPlayFabExperimentationAPI, RequestJsonObj) == 0x000160, "Member 'UPlayFabExperimentationAPI::RequestJsonObj' has a wrong offset!");
-static_assert(offsetof(UPlayFabExperimentationAPI, ResponseJsonObj) == 0x000168, "Member 'UPlayFabExperimentationAPI::ResponseJsonObj' has a wrong offset!");
-
-// Class PlayFab.PlayFabExperimentationModelDecoder
-// 0x0000 (0x0028 - 0x0028)
-class UPlayFabExperimentationModelDecoder final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FExperimentationCreateExclusionGroupResult decodeCreateExclusionGroupResultResponse(class UPlayFabJsonObject* Response);
-	static struct FExperimentationCreateExperimentResult decodeCreateExperimentResultResponse(class UPlayFabJsonObject* Response);
-	static struct FExperimentationEmptyResponse decodeEmptyResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FExperimentationGetExclusionGroupsResult decodeGetExclusionGroupsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FExperimentationGetExclusionGroupTrafficResult decodeGetExclusionGroupTrafficResultResponse(class UPlayFabJsonObject* Response);
-	static struct FExperimentationGetExperimentsResult decodeGetExperimentsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FExperimentationGetLatestScorecardResult decodeGetLatestScorecardResultResponse(class UPlayFabJsonObject* Response);
-	static struct FExperimentationGetTreatmentAssignmentResult decodeGetTreatmentAssignmentResultResponse(class UPlayFabJsonObject* Response);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabExperimentationModelDecoder">();
-	}
-	static class UPlayFabExperimentationModelDecoder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabExperimentationModelDecoder>();
-	}
-};
-static_assert(alignof(UPlayFabExperimentationModelDecoder) == 0x000008, "Wrong alignment on UPlayFabExperimentationModelDecoder");
-static_assert(sizeof(UPlayFabExperimentationModelDecoder) == 0x000028, "Wrong size on UPlayFabExperimentationModelDecoder");
+DUMPER7_ASSERTS_UPlayFabEconomyAPI;
 
 // Class PlayFab.PlayFabGroupsAPI
 // 0x0250 (0x0280 - 0x0030)
@@ -1525,265 +1977,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PlayFabGroupsAPI">();
+		STATIC_CLASS_IMPL("PlayFabGroupsAPI")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabGroupsAPI")
 	}
 	static class UPlayFabGroupsAPI* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPlayFabGroupsAPI>();
 	}
 };
-static_assert(alignof(UPlayFabGroupsAPI) == 0x000008, "Wrong alignment on UPlayFabGroupsAPI");
-static_assert(sizeof(UPlayFabGroupsAPI) == 0x000280, "Wrong size on UPlayFabGroupsAPI");
-static_assert(offsetof(UPlayFabGroupsAPI, OnPlayFabResponse) == 0x000030, "Member 'UPlayFabGroupsAPI::OnPlayFabResponse' has a wrong offset!");
-static_assert(offsetof(UPlayFabGroupsAPI, CallAuthenticationContext) == 0x000218, "Member 'UPlayFabGroupsAPI::CallAuthenticationContext' has a wrong offset!");
-static_assert(offsetof(UPlayFabGroupsAPI, RequestJsonObj) == 0x000220, "Member 'UPlayFabGroupsAPI::RequestJsonObj' has a wrong offset!");
-static_assert(offsetof(UPlayFabGroupsAPI, ResponseJsonObj) == 0x000228, "Member 'UPlayFabGroupsAPI::ResponseJsonObj' has a wrong offset!");
-
-// Class PlayFab.PlayFabGroupsModelDecoder
-// 0x0000 (0x0028 - 0x0028)
-class UPlayFabGroupsModelDecoder final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FGroupsApplyToGroupResponse decodeApplyToGroupResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FGroupsCreateGroupResponse decodeCreateGroupResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FGroupsCreateGroupRoleResponse decodeCreateGroupRoleResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FGroupsEmptyResponse decodeEmptyResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FGroupsGetGroupResponse decodeGetGroupResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FGroupsInviteToGroupResponse decodeInviteToGroupResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FGroupsIsMemberResponse decodeIsMemberResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FGroupsListGroupApplicationsResponse decodeListGroupApplicationsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FGroupsListGroupBlocksResponse decodeListGroupBlocksResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FGroupsListGroupInvitationsResponse decodeListGroupInvitationsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FGroupsListGroupMembersResponse decodeListGroupMembersResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FGroupsListMembershipOpportunitiesResponse decodeListMembershipOpportunitiesResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FGroupsListMembershipResponse decodeListMembershipResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FGroupsUpdateGroupResponse decodeUpdateGroupResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FGroupsUpdateGroupRoleResponse decodeUpdateGroupRoleResponseResponse(class UPlayFabJsonObject* Response);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabGroupsModelDecoder">();
-	}
-	static class UPlayFabGroupsModelDecoder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabGroupsModelDecoder>();
-	}
-};
-static_assert(alignof(UPlayFabGroupsModelDecoder) == 0x000008, "Wrong alignment on UPlayFabGroupsModelDecoder");
-static_assert(sizeof(UPlayFabGroupsModelDecoder) == 0x000028, "Wrong size on UPlayFabGroupsModelDecoder");
-
-// Class PlayFab.PlayFabInsightsAPI
-// 0x0120 (0x0150 - 0x0030)
-class UPlayFabInsightsAPI final : public UOnlineBlueprintCallProxyBase
-{
-public:
-	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0xA8];                                      // 0x0040(0x00A8)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_100[0x50];                                     // 0x0100(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UPlayFabInsightsAPI* GetDetails(const struct FInsightsInsightsEmptyRequest& Request, TDelegate<void(const struct FInsightsInsightsGetDetailsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabInsightsAPI* GetLimits(const struct FInsightsInsightsEmptyRequest& Request, TDelegate<void(const struct FInsightsInsightsGetLimitsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabInsightsAPI* GetOperationStatus(const struct FInsightsInsightsGetOperationStatusRequest& Request, TDelegate<void(const struct FInsightsInsightsGetOperationStatusResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabInsightsAPI* GetPendingOperations(const struct FInsightsInsightsGetPendingOperationsRequest& Request, TDelegate<void(const struct FInsightsInsightsGetPendingOperationsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabInsightsAPI* SetPerformance(const struct FInsightsInsightsSetPerformanceRequest& Request, TDelegate<void(const struct FInsightsInsightsOperationResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabInsightsAPI* SetStorageRetention(const struct FInsightsInsightsSetStorageRetentionRequest& Request, TDelegate<void(const struct FInsightsInsightsOperationResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-
-	void HelperGetDetails(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetLimits(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetOperationStatus(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetPendingOperations(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperSetPerformance(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperSetStorageRetention(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabInsightsAPI">();
-	}
-	static class UPlayFabInsightsAPI* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabInsightsAPI>();
-	}
-};
-static_assert(alignof(UPlayFabInsightsAPI) == 0x000008, "Wrong alignment on UPlayFabInsightsAPI");
-static_assert(sizeof(UPlayFabInsightsAPI) == 0x000150, "Wrong size on UPlayFabInsightsAPI");
-static_assert(offsetof(UPlayFabInsightsAPI, OnPlayFabResponse) == 0x000030, "Member 'UPlayFabInsightsAPI::OnPlayFabResponse' has a wrong offset!");
-static_assert(offsetof(UPlayFabInsightsAPI, CallAuthenticationContext) == 0x0000E8, "Member 'UPlayFabInsightsAPI::CallAuthenticationContext' has a wrong offset!");
-static_assert(offsetof(UPlayFabInsightsAPI, RequestJsonObj) == 0x0000F0, "Member 'UPlayFabInsightsAPI::RequestJsonObj' has a wrong offset!");
-static_assert(offsetof(UPlayFabInsightsAPI, ResponseJsonObj) == 0x0000F8, "Member 'UPlayFabInsightsAPI::ResponseJsonObj' has a wrong offset!");
-
-// Class PlayFab.PlayFabInsightsModelDecoder
-// 0x0000 (0x0028 - 0x0028)
-class UPlayFabInsightsModelDecoder final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FInsightsInsightsGetDetailsResponse decodeInsightsGetDetailsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FInsightsInsightsGetLimitsResponse decodeInsightsGetLimitsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FInsightsInsightsGetOperationStatusResponse decodeInsightsGetOperationStatusResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FInsightsInsightsGetPendingOperationsResponse decodeInsightsGetPendingOperationsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FInsightsInsightsOperationResponse decodeInsightsOperationResponseResponse(class UPlayFabJsonObject* Response);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabInsightsModelDecoder">();
-	}
-	static class UPlayFabInsightsModelDecoder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabInsightsModelDecoder>();
-	}
-};
-static_assert(alignof(UPlayFabInsightsModelDecoder) == 0x000008, "Wrong alignment on UPlayFabInsightsModelDecoder");
-static_assert(sizeof(UPlayFabInsightsModelDecoder) == 0x000028, "Wrong size on UPlayFabInsightsModelDecoder");
-
-// Class PlayFab.PlayFabJsonObject
-// 0x0010 (0x0038 - 0x0028)
-class UPlayFabJsonObject final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UPlayFabJsonObject* ConstructJsonObject(class UObject* WorldContextObject);
-
-	bool DecodeJson(const class FString& JsonString);
-	TArray<class UPlayFabJsonValue*> GetArrayField(const class FString& FieldName);
-	TArray<bool> GetBoolArrayField(const class FString& FieldName);
-	TArray<class FString> GetFieldNames();
-	TArray<float> GetNumberArrayField(const class FString& FieldName);
-	TArray<class UPlayFabJsonObject*> GetObjectArrayField(const class FString& FieldName);
-	TArray<class FString> GetStringArrayField(const class FString& FieldName);
-	void MergeJsonObject(class UPlayFabJsonObject* InJsonObject, bool Overwrite);
-	void RemoveField(const class FString& FieldName);
-	void Reset();
-	void SetArrayField(const class FString& FieldName, const TArray<class UPlayFabJsonValue*>& inArray);
-	void SetBoolArrayField(const class FString& FieldName, const TArray<bool>& BoolArray);
-	void SetBoolField(const class FString& FieldName, bool InValue);
-	void SetField(const class FString& FieldName, class UPlayFabJsonValue* JsonValue);
-	void SetFieldNull(const class FString& FieldName);
-	void SetNumberArrayField(const class FString& FieldName, const TArray<float>& NumberArray);
-	void SetNumberField(const class FString& FieldName, float Number);
-	void SetObjectArrayField(const class FString& FieldName, const TArray<class UPlayFabJsonObject*>& ObjectArray);
-	void SetObjectField(const class FString& FieldName, class UPlayFabJsonObject* JsonObject);
-	void SetStringArrayField(const class FString& FieldName, const TArray<class FString>& StringArray);
-	void SetStringField(const class FString& FieldName, const class FString& StringValue);
-
-	class FString EncodeJson() const;
-	bool GetBoolField(const class FString& FieldName) const;
-	class UPlayFabJsonValue* GetField(const class FString& FieldName) const;
-	float GetNumberField(const class FString& FieldName) const;
-	class UPlayFabJsonObject* GetObjectField(const class FString& FieldName) const;
-	class FString GetStringField(const class FString& FieldName) const;
-	bool HasField(const class FString& FieldName) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabJsonObject">();
-	}
-	static class UPlayFabJsonObject* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabJsonObject>();
-	}
-};
-static_assert(alignof(UPlayFabJsonObject) == 0x000008, "Wrong alignment on UPlayFabJsonObject");
-static_assert(sizeof(UPlayFabJsonObject) == 0x000038, "Wrong size on UPlayFabJsonObject");
-
-// Class PlayFab.PlayFabJsonValue
-// 0x0010 (0x0038 - 0x0028)
-class UPlayFabJsonValue final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UPlayFabJsonValue* ConstructJsonValueArray(class UObject* WorldContextObject, const TArray<class UPlayFabJsonValue*>& inArray);
-	static class UPlayFabJsonValue* ConstructJsonValueBool(class UObject* WorldContextObject, bool InValue);
-	static class UPlayFabJsonValue* ConstructJsonValueNumber(class UObject* WorldContextObject, float Number);
-	static class UPlayFabJsonValue* ConstructJsonValueObject(class UObject* WorldContextObject, class UPlayFabJsonObject* JsonObject);
-	static class UPlayFabJsonValue* ConstructJsonValueString(class UObject* WorldContextObject, const class FString& StringValue);
-
-	class UPlayFabJsonObject* AsObject();
-
-	TArray<class UPlayFabJsonValue*> AsArray() const;
-	bool AsBool() const;
-	float AsNumber() const;
-	class FString AsString() const;
-	EPFJson GetType() const;
-	class FString GetTypeString() const;
-	bool IsNull() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabJsonValue">();
-	}
-	static class UPlayFabJsonValue* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabJsonValue>();
-	}
-};
-static_assert(alignof(UPlayFabJsonValue) == 0x000008, "Wrong alignment on UPlayFabJsonValue");
-static_assert(sizeof(UPlayFabJsonValue) == 0x000038, "Wrong size on UPlayFabJsonValue");
-
-// Class PlayFab.PlayFabLocalizationAPI
-// 0x00D0 (0x0100 - 0x0030)
-class UPlayFabLocalizationAPI final : public UOnlineBlueprintCallProxyBase
-{
-public:
-	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0x58];                                      // 0x0040(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_B0[0x50];                                      // 0x00B0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UPlayFabLocalizationAPI* GetLanguageList(const struct FLocalizationGetLanguageListRequest& Request, TDelegate<void(const struct FLocalizationGetLanguageListResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-
-	void HelperGetLanguageList(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabLocalizationAPI">();
-	}
-	static class UPlayFabLocalizationAPI* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabLocalizationAPI>();
-	}
-};
-static_assert(alignof(UPlayFabLocalizationAPI) == 0x000008, "Wrong alignment on UPlayFabLocalizationAPI");
-static_assert(sizeof(UPlayFabLocalizationAPI) == 0x000100, "Wrong size on UPlayFabLocalizationAPI");
-static_assert(offsetof(UPlayFabLocalizationAPI, OnPlayFabResponse) == 0x000030, "Member 'UPlayFabLocalizationAPI::OnPlayFabResponse' has a wrong offset!");
-static_assert(offsetof(UPlayFabLocalizationAPI, CallAuthenticationContext) == 0x000098, "Member 'UPlayFabLocalizationAPI::CallAuthenticationContext' has a wrong offset!");
-static_assert(offsetof(UPlayFabLocalizationAPI, RequestJsonObj) == 0x0000A0, "Member 'UPlayFabLocalizationAPI::RequestJsonObj' has a wrong offset!");
-static_assert(offsetof(UPlayFabLocalizationAPI, ResponseJsonObj) == 0x0000A8, "Member 'UPlayFabLocalizationAPI::ResponseJsonObj' has a wrong offset!");
-
-// Class PlayFab.PlayFabLocalizationModelDecoder
-// 0x0000 (0x0028 - 0x0028)
-class UPlayFabLocalizationModelDecoder final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FLocalizationGetLanguageListResponse decodeGetLanguageListResponseResponse(class UPlayFabJsonObject* Response);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabLocalizationModelDecoder">();
-	}
-	static class UPlayFabLocalizationModelDecoder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabLocalizationModelDecoder>();
-	}
-};
-static_assert(alignof(UPlayFabLocalizationModelDecoder) == 0x000008, "Wrong alignment on UPlayFabLocalizationModelDecoder");
-static_assert(sizeof(UPlayFabLocalizationModelDecoder) == 0x000028, "Wrong size on UPlayFabLocalizationModelDecoder");
+DUMPER7_ASSERTS_UPlayFabGroupsAPI;
 
 // Class PlayFab.PlayFabMultiplayerAPI
 // 0x05A0 (0x05D0 - 0x0030)
@@ -1959,166 +2164,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PlayFabMultiplayerAPI">();
+		STATIC_CLASS_IMPL("PlayFabMultiplayerAPI")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabMultiplayerAPI")
 	}
 	static class UPlayFabMultiplayerAPI* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPlayFabMultiplayerAPI>();
 	}
 };
-static_assert(alignof(UPlayFabMultiplayerAPI) == 0x000008, "Wrong alignment on UPlayFabMultiplayerAPI");
-static_assert(sizeof(UPlayFabMultiplayerAPI) == 0x0005D0, "Wrong size on UPlayFabMultiplayerAPI");
-static_assert(offsetof(UPlayFabMultiplayerAPI, OnPlayFabResponse) == 0x000030, "Member 'UPlayFabMultiplayerAPI::OnPlayFabResponse' has a wrong offset!");
-static_assert(offsetof(UPlayFabMultiplayerAPI, CallAuthenticationContext) == 0x000568, "Member 'UPlayFabMultiplayerAPI::CallAuthenticationContext' has a wrong offset!");
-static_assert(offsetof(UPlayFabMultiplayerAPI, RequestJsonObj) == 0x000570, "Member 'UPlayFabMultiplayerAPI::RequestJsonObj' has a wrong offset!");
-static_assert(offsetof(UPlayFabMultiplayerAPI, ResponseJsonObj) == 0x000578, "Member 'UPlayFabMultiplayerAPI::ResponseJsonObj' has a wrong offset!");
-
-// Class PlayFab.PlayFabMultiplayerModelDecoder
-// 0x0000 (0x0028 - 0x0028)
-class UPlayFabMultiplayerModelDecoder final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FMultiplayerBuildAliasDetailsResponse decodeBuildAliasDetailsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerCancelAllMatchmakingTicketsForPlayerResult decodeCancelAllMatchmakingTicketsForPlayerResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerCancelAllServerBackfillTicketsForPlayerResult decodeCancelAllServerBackfillTicketsForPlayerResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerCancelMatchmakingTicketResult decodeCancelMatchmakingTicketResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerCancelServerBackfillTicketResult decodeCancelServerBackfillTicketResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerCreateBuildWithCustomContainerResponse decodeCreateBuildWithCustomContainerResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerCreateBuildWithManagedContainerResponse decodeCreateBuildWithManagedContainerResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerCreateBuildWithProcessBasedServerResponse decodeCreateBuildWithProcessBasedServerResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerCreateLobbyResult decodeCreateLobbyResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerCreateMatchmakingTicketResult decodeCreateMatchmakingTicketResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerCreateRemoteUserResponse decodeCreateRemoteUserResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerCreateServerBackfillTicketResult decodeCreateServerBackfillTicketResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerCreateTitleMultiplayerServersQuotaChangeResponse decodeCreateTitleMultiplayerServersQuotaChangeResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerEmptyResponse decodeEmptyResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerEnableMultiplayerServersForTitleResponse decodeEnableMultiplayerServersForTitleResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerFindFriendLobbiesResult decodeFindFriendLobbiesResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerFindLobbiesResult decodeFindLobbiesResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerGetAssetDownloadUrlResponse decodeGetAssetDownloadUrlResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerGetAssetUploadUrlResponse decodeGetAssetUploadUrlResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerGetBuildResponse decodeGetBuildResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerGetContainerRegistryCredentialsResponse decodeGetContainerRegistryCredentialsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerGetLobbyResult decodeGetLobbyResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerGetMatchmakingTicketResult decodeGetMatchmakingTicketResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerGetMatchResult decodeGetMatchResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerGetMultiplayerServerDetailsResponse decodeGetMultiplayerServerDetailsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerGetMultiplayerServerLogsResponse decodeGetMultiplayerServerLogsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerGetQueueStatisticsResult decodeGetQueueStatisticsResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerGetRemoteLoginEndpointResponse decodeGetRemoteLoginEndpointResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerGetServerBackfillTicketResult decodeGetServerBackfillTicketResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerGetTitleEnabledForMultiplayerServersStatusResponse decodeGetTitleEnabledForMultiplayerServersStatusResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerGetTitleMultiplayerServersQuotaChangeResponse decodeGetTitleMultiplayerServersQuotaChangeResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerGetTitleMultiplayerServersQuotasResponse decodeGetTitleMultiplayerServersQuotasResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerJoinLobbyAsServerResult decodeJoinLobbyAsServerResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerJoinLobbyResult decodeJoinLobbyResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerJoinMatchmakingTicketResult decodeJoinMatchmakingTicketResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerListAssetSummariesResponse decodeListAssetSummariesResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerListBuildAliasesResponse decodeListBuildAliasesResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerListBuildSummariesResponse decodeListBuildSummariesResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerListCertificateSummariesResponse decodeListCertificateSummariesResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerListContainerImagesResponse decodeListContainerImagesResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerListContainerImageTagsResponse decodeListContainerImageTagsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerListMatchmakingTicketsForPlayerResult decodeListMatchmakingTicketsForPlayerResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerListMultiplayerServersResponse decodeListMultiplayerServersResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerListPartyQosServersResponse decodeListPartyQosServersResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerListQosServersForTitleResponse decodeListQosServersForTitleResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerListServerBackfillTicketsForPlayerResult decodeListServerBackfillTicketsForPlayerResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerListTitleMultiplayerServersQuotaChangesResponse decodeListTitleMultiplayerServersQuotaChangesResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerListVirtualMachineSummariesResponse decodeListVirtualMachineSummariesResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerLobbyEmptyResult decodeLobbyEmptyResultResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerRequestMultiplayerServerResponse decodeRequestMultiplayerServerResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerRequestPartyServiceResponse decodeRequestPartyServiceResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerRolloverContainerRegistryCredentialsResponse decodeRolloverContainerRegistryCredentialsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FMultiplayerSubscribeToLobbyResourceResult decodeSubscribeToLobbyResourceResultResponse(class UPlayFabJsonObject* Response);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabMultiplayerModelDecoder">();
-	}
-	static class UPlayFabMultiplayerModelDecoder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabMultiplayerModelDecoder>();
-	}
-};
-static_assert(alignof(UPlayFabMultiplayerModelDecoder) == 0x000008, "Wrong alignment on UPlayFabMultiplayerModelDecoder");
-static_assert(sizeof(UPlayFabMultiplayerModelDecoder) == 0x000028, "Wrong size on UPlayFabMultiplayerModelDecoder");
-
-// Class PlayFab.PlayFabProfilesAPI
-// 0x0140 (0x0170 - 0x0030)
-class UPlayFabProfilesAPI final : public UOnlineBlueprintCallProxyBase
-{
-public:
-	TMulticastInlineDelegate<void(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful)> OnPlayFabResponse; // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0xC8];                                      // 0x0040(0x00C8)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPlayFabAuthenticationContext*          CallAuthenticationContext;                         // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPlayFabJsonObject*                     RequestJsonObj;                                    // 0x0110(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPlayFabJsonObject*                     ResponseJsonObj;                                   // 0x0118(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_120[0x50];                                     // 0x0120(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UPlayFabProfilesAPI* GetGlobalPolicy(const struct FProfilesGetGlobalPolicyRequest& Request, TDelegate<void(const struct FProfilesGetGlobalPolicyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabProfilesAPI* GetProfile(const struct FProfilesGetEntityProfileRequest& Request, TDelegate<void(const struct FProfilesGetEntityProfileResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabProfilesAPI* GetProfiles(const struct FProfilesGetEntityProfilesRequest& Request, TDelegate<void(const struct FProfilesGetEntityProfilesResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabProfilesAPI* GetTitlePlayersFromMasterPlayerAccountIds(const struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsRequest& Request, TDelegate<void(const struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabProfilesAPI* GetTitlePlayersFromXboxLiveIDs(const struct FProfilesGetTitlePlayersFromXboxLiveIDsRequest& Request, TDelegate<void(const struct FProfilesGetTitlePlayersFromProviderIDsResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabProfilesAPI* SetGlobalPolicy(const struct FProfilesSetGlobalPolicyRequest& Request, TDelegate<void(const struct FProfilesSetGlobalPolicyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabProfilesAPI* SetProfileLanguage(const struct FProfilesSetProfileLanguageRequest& Request, TDelegate<void(const struct FProfilesSetProfileLanguageResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-	static class UPlayFabProfilesAPI* SetProfilePolicy(const struct FProfilesSetEntityProfilePolicyRequest& Request, TDelegate<void(const struct FProfilesSetEntityProfilePolicyResponse& Result, class UObject* customData)> onSuccess, TDelegate<void(const struct FPlayFabError& Error, class UObject* customData)> onFailure, class UObject* customData);
-
-	void HelperGetGlobalPolicy(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetProfile(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetProfiles(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetTitlePlayersFromMasterPlayerAccountIds(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperGetTitlePlayersFromXboxLiveIDs(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperSetGlobalPolicy(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperSetProfileLanguage(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-	void HelperSetProfilePolicy(const struct FPlayFabBaseModel& Response, class UObject* customData, bool successful);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabProfilesAPI">();
-	}
-	static class UPlayFabProfilesAPI* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabProfilesAPI>();
-	}
-};
-static_assert(alignof(UPlayFabProfilesAPI) == 0x000008, "Wrong alignment on UPlayFabProfilesAPI");
-static_assert(sizeof(UPlayFabProfilesAPI) == 0x000170, "Wrong size on UPlayFabProfilesAPI");
-static_assert(offsetof(UPlayFabProfilesAPI, OnPlayFabResponse) == 0x000030, "Member 'UPlayFabProfilesAPI::OnPlayFabResponse' has a wrong offset!");
-static_assert(offsetof(UPlayFabProfilesAPI, CallAuthenticationContext) == 0x000108, "Member 'UPlayFabProfilesAPI::CallAuthenticationContext' has a wrong offset!");
-static_assert(offsetof(UPlayFabProfilesAPI, RequestJsonObj) == 0x000110, "Member 'UPlayFabProfilesAPI::RequestJsonObj' has a wrong offset!");
-static_assert(offsetof(UPlayFabProfilesAPI, ResponseJsonObj) == 0x000118, "Member 'UPlayFabProfilesAPI::ResponseJsonObj' has a wrong offset!");
-
-// Class PlayFab.PlayFabProfilesModelDecoder
-// 0x0000 (0x0028 - 0x0028)
-class UPlayFabProfilesModelDecoder final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FProfilesGetEntityProfileResponse decodeGetEntityProfileResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FProfilesGetEntityProfilesResponse decodeGetEntityProfilesResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FProfilesGetGlobalPolicyResponse decodeGetGlobalPolicyResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsResponse decodeGetTitlePlayersFromMasterPlayerAccountIdsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FProfilesGetTitlePlayersFromProviderIDsResponse decodeGetTitlePlayersFromProviderIDsResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FProfilesSetEntityProfilePolicyResponse decodeSetEntityProfilePolicyResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FProfilesSetGlobalPolicyResponse decodeSetGlobalPolicyResponseResponse(class UPlayFabJsonObject* Response);
-	static struct FProfilesSetProfileLanguageResponse decodeSetProfileLanguageResponseResponse(class UPlayFabJsonObject* Response);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabProfilesModelDecoder">();
-	}
-	static class UPlayFabProfilesModelDecoder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabProfilesModelDecoder>();
-	}
-};
-static_assert(alignof(UPlayFabProfilesModelDecoder) == 0x000008, "Wrong alignment on UPlayFabProfilesModelDecoder");
-static_assert(sizeof(UPlayFabProfilesModelDecoder) == 0x000028, "Wrong size on UPlayFabProfilesModelDecoder");
+DUMPER7_ASSERTS_UPlayFabMultiplayerAPI;
 
 // Class PlayFab.PlayFabServerAPI
 // 0x0940 (0x0970 - 0x0030)
@@ -2410,19 +2467,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PlayFabServerAPI">();
+		STATIC_CLASS_IMPL("PlayFabServerAPI")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabServerAPI")
 	}
 	static class UPlayFabServerAPI* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPlayFabServerAPI>();
 	}
 };
-static_assert(alignof(UPlayFabServerAPI) == 0x000008, "Wrong alignment on UPlayFabServerAPI");
-static_assert(sizeof(UPlayFabServerAPI) == 0x000970, "Wrong size on UPlayFabServerAPI");
-static_assert(offsetof(UPlayFabServerAPI, OnPlayFabResponse) == 0x000030, "Member 'UPlayFabServerAPI::OnPlayFabResponse' has a wrong offset!");
-static_assert(offsetof(UPlayFabServerAPI, CallAuthenticationContext) == 0x000908, "Member 'UPlayFabServerAPI::CallAuthenticationContext' has a wrong offset!");
-static_assert(offsetof(UPlayFabServerAPI, RequestJsonObj) == 0x000910, "Member 'UPlayFabServerAPI::RequestJsonObj' has a wrong offset!");
-static_assert(offsetof(UPlayFabServerAPI, ResponseJsonObj) == 0x000918, "Member 'UPlayFabServerAPI::ResponseJsonObj' has a wrong offset!");
+DUMPER7_ASSERTS_UPlayFabServerAPI;
 
 // Class PlayFab.PlayFabServerModelDecoder
 // 0x0000 (0x0028 - 0x0028)
@@ -2534,37 +2590,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PlayFabServerModelDecoder">();
+		STATIC_CLASS_IMPL("PlayFabServerModelDecoder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabServerModelDecoder")
 	}
 	static class UPlayFabServerModelDecoder* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPlayFabServerModelDecoder>();
 	}
 };
-static_assert(alignof(UPlayFabServerModelDecoder) == 0x000008, "Wrong alignment on UPlayFabServerModelDecoder");
-static_assert(sizeof(UPlayFabServerModelDecoder) == 0x000028, "Wrong size on UPlayFabServerModelDecoder");
-
-// Class PlayFab.PlayFabUtilities
-// 0x0000 (0x0028 - 0x0028)
-class UPlayFabUtilities final : public UBlueprintFunctionLibrary
-{
-public:
-	static class FString getErrorText(int32 Code);
-	static class FString getPhotonAppId(bool Realtime, bool Chat, bool Turnbased);
-	static void setPlayFabSettings(const class FString& GameTitleId, const class FString& PlayFabSecretApiKey, const class FString& ProductionUrl, const class FString& PhotonRealtimeAppId, const class FString& PhotonTurnbasedAppId, const class FString& PhotonChatAppId);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PlayFabUtilities">();
-	}
-	static class UPlayFabUtilities* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayFabUtilities>();
-	}
-};
-static_assert(alignof(UPlayFabUtilities) == 0x000008, "Wrong alignment on UPlayFabUtilities");
-static_assert(sizeof(UPlayFabUtilities) == 0x000028, "Wrong size on UPlayFabUtilities");
+DUMPER7_ASSERTS_UPlayFabServerModelDecoder;
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -19,28 +19,29 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Pickupable_RandomMutator.BP_Pickupable_RandomMutator_C
-// 0x0080 (0x0440 - 0x03C0)
+// 0x0088 (0x0450 - 0x03C8)
 class ABP_Pickupable_RandomMutator_C : public ARPickupableMutator
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      NS_ArtifactDebris_01;                              // 0x03C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   IdentifierDecal;                                   // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Mutator_Item_Coin;                              // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Mutator_Item;                                   // 0x03E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   InteractShape;                                     // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         SpawnTimeline_Intensity_72C01AC745D74A45617B059BF89E592C; // 0x03F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SpawnTimeline_Size_72C01AC745D74A45617B059BF89E592C; // 0x03FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            SpawnTimeline__Direction_72C01AC745D74A45617B059BF89E592C; // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_401[0x7];                                      // 0x0401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     SpawnTimeline;                                     // 0x0408(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         CoinAnimation_PositionZOffset_0E162922428C00F79FFF64835B5FCEFD; // 0x0410(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CoinAnimation_Rotation_0E162922428C00F79FFF64835B5FCEFD; // 0x0414(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            CoinAnimation__Direction_0E162922428C00F79FFF64835B5FCEFD; // 0x0418(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_419[0x7];                                      // 0x0419(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     CoinAnimation;                                     // 0x0420(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                InitialLocation;                                   // 0x0428(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                      Capsule;                                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      NS_ArtifactDebris_01;                              // 0x03E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   IdentifierDecal;                                   // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Mutator_Item_Coin;                              // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Mutator_Item;                                   // 0x03F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   InteractShape;                                     // 0x0400(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         SpawnTimeline_Intensity_72C01AC745D74A45617B059BF89E592C; // 0x0408(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SpawnTimeline_Size_72C01AC745D74A45617B059BF89E592C; // 0x040C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            SpawnTimeline__Direction_72C01AC745D74A45617B059BF89E592C; // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_411[0x7];                                      // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     SpawnTimeline;                                     // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         CoinAnimation_PositionZOffset_0E162922428C00F79FFF64835B5FCEFD; // 0x0420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CoinAnimation_Rotation_0E162922428C00F79FFF64835B5FCEFD; // 0x0424(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            CoinAnimation__Direction_0E162922428C00F79FFF64835B5FCEFD; // 0x0428(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_429[0x7];                                      // 0x0429(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     CoinAnimation;                                     // 0x0430(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                InitialLocation;                                   // 0x0438(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	bool CanInteract(class APlayerController* Controller);
@@ -84,31 +85,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Pickupable_RandomMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Pickupable_RandomMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Pickupable_RandomMutator_C")
 	}
 	static class ABP_Pickupable_RandomMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Pickupable_RandomMutator_C>();
 	}
 };
-static_assert(alignof(ABP_Pickupable_RandomMutator_C) == 0x000008, "Wrong alignment on ABP_Pickupable_RandomMutator_C");
-static_assert(sizeof(ABP_Pickupable_RandomMutator_C) == 0x000440, "Wrong size on ABP_Pickupable_RandomMutator_C");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, UberGraphFrame) == 0x0003C0, "Member 'ABP_Pickupable_RandomMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, NS_ArtifactDebris_01) == 0x0003C8, "Member 'ABP_Pickupable_RandomMutator_C::NS_ArtifactDebris_01' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, IdentifierDecal) == 0x0003D0, "Member 'ABP_Pickupable_RandomMutator_C::IdentifierDecal' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, SM_Mutator_Item_Coin) == 0x0003D8, "Member 'ABP_Pickupable_RandomMutator_C::SM_Mutator_Item_Coin' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, SM_Mutator_Item) == 0x0003E0, "Member 'ABP_Pickupable_RandomMutator_C::SM_Mutator_Item' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, InteractShape) == 0x0003E8, "Member 'ABP_Pickupable_RandomMutator_C::InteractShape' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, StaticMesh) == 0x0003F0, "Member 'ABP_Pickupable_RandomMutator_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, SpawnTimeline_Intensity_72C01AC745D74A45617B059BF89E592C) == 0x0003F8, "Member 'ABP_Pickupable_RandomMutator_C::SpawnTimeline_Intensity_72C01AC745D74A45617B059BF89E592C' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, SpawnTimeline_Size_72C01AC745D74A45617B059BF89E592C) == 0x0003FC, "Member 'ABP_Pickupable_RandomMutator_C::SpawnTimeline_Size_72C01AC745D74A45617B059BF89E592C' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, SpawnTimeline__Direction_72C01AC745D74A45617B059BF89E592C) == 0x000400, "Member 'ABP_Pickupable_RandomMutator_C::SpawnTimeline__Direction_72C01AC745D74A45617B059BF89E592C' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, SpawnTimeline) == 0x000408, "Member 'ABP_Pickupable_RandomMutator_C::SpawnTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, CoinAnimation_PositionZOffset_0E162922428C00F79FFF64835B5FCEFD) == 0x000410, "Member 'ABP_Pickupable_RandomMutator_C::CoinAnimation_PositionZOffset_0E162922428C00F79FFF64835B5FCEFD' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, CoinAnimation_Rotation_0E162922428C00F79FFF64835B5FCEFD) == 0x000414, "Member 'ABP_Pickupable_RandomMutator_C::CoinAnimation_Rotation_0E162922428C00F79FFF64835B5FCEFD' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, CoinAnimation__Direction_0E162922428C00F79FFF64835B5FCEFD) == 0x000418, "Member 'ABP_Pickupable_RandomMutator_C::CoinAnimation__Direction_0E162922428C00F79FFF64835B5FCEFD' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, CoinAnimation) == 0x000420, "Member 'ABP_Pickupable_RandomMutator_C::CoinAnimation' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_RandomMutator_C, InitialLocation) == 0x000428, "Member 'ABP_Pickupable_RandomMutator_C::InitialLocation' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Pickupable_RandomMutator_C;
 
 }
 

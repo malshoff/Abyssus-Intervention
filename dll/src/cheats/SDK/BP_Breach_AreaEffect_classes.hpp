@@ -17,35 +17,32 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Breach_AreaEffect.BP_Breach_AreaEffect_C
-// 0x0030 (0x0480 - 0x0450)
+// 0x0030 (0x0488 - 0x0458)
 class ABP_Breach_AreaEffect_C final : public ARAreaEffect
 {
 public:
-	class UStaticMeshComponent*                   StaticMesh2;                                       // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh1;                                       // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      NS_BreachArea_01;                                  // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDMActorProximitySphereComponent*       DMActorProximitySphere;                            // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        Duration;                                          // 0x0478(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh2;                                       // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh1;                                       // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      NS_BreachArea_01;                                  // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UDMActorProximitySphereComponent*       DMActorProximitySphere;                            // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        Duration;                                          // 0x0480(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Breach_AreaEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_Breach_AreaEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Breach_AreaEffect_C")
 	}
 	static class ABP_Breach_AreaEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Breach_AreaEffect_C>();
 	}
 };
-static_assert(alignof(ABP_Breach_AreaEffect_C) == 0x000008, "Wrong alignment on ABP_Breach_AreaEffect_C");
-static_assert(sizeof(ABP_Breach_AreaEffect_C) == 0x000480, "Wrong size on ABP_Breach_AreaEffect_C");
-static_assert(offsetof(ABP_Breach_AreaEffect_C, StaticMesh2) == 0x000450, "Member 'ABP_Breach_AreaEffect_C::StaticMesh2' has a wrong offset!");
-static_assert(offsetof(ABP_Breach_AreaEffect_C, StaticMesh1) == 0x000458, "Member 'ABP_Breach_AreaEffect_C::StaticMesh1' has a wrong offset!");
-static_assert(offsetof(ABP_Breach_AreaEffect_C, NS_BreachArea_01) == 0x000460, "Member 'ABP_Breach_AreaEffect_C::NS_BreachArea_01' has a wrong offset!");
-static_assert(offsetof(ABP_Breach_AreaEffect_C, StaticMesh) == 0x000468, "Member 'ABP_Breach_AreaEffect_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_Breach_AreaEffect_C, DMActorProximitySphere) == 0x000470, "Member 'ABP_Breach_AreaEffect_C::DMActorProximitySphere' has a wrong offset!");
-static_assert(offsetof(ABP_Breach_AreaEffect_C, Duration) == 0x000478, "Member 'ABP_Breach_AreaEffect_C::Duration' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Breach_AreaEffect_C;
 
 }
 

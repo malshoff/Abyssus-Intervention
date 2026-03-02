@@ -10,63 +10,64 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_RPlayerPawn.BP_RPlayerPawn_C
-// 0x0160 (0x60F8 - 0x5F98)
+// 0x0168 (0x6188 - 0x6020)
 class ABP_RPlayerPawn_C final : public ARPlayerPawn
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x5F98(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USpringArmComponent*                    EmoteSpringArm;                                    // 0x5FA0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWidgetComponent*                       ObjectHighlightWidgetComponent;                    // 0x5FA8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Scene;                                             // 0x5FB0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         TeleportTimeline_Intensity_ABD408E04D7814325E60719C4076DAC0; // 0x5FB8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            TeleportTimeline__Direction_ABD408E04D7814325E60719C4076DAC0; // 0x5FBC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5FBD[0x3];                                     // 0x5FBD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     TeleportTimeline;                                  // 0x5FC0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         VignettePostProcessTimeline_Intensity_FF49911742C51FC5F1374E809BDE6637; // 0x5FC8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            VignettePostProcessTimeline__Direction_FF49911742C51FC5F1374E809BDE6637; // 0x5FCC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5FCD[0x3];                                     // 0x5FCD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     VignettePostProcessTimeline;                       // 0x5FD0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         DamageTakenTimeline_DamageTaken_B58C5A464B8DB4B3EF42F1A987E2BCE6; // 0x5FD8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            DamageTakenTimeline__Direction_B58C5A464B8DB4B3EF42F1A987E2BCE6; // 0x5FDC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5FDD[0x3];                                     // 0x5FDD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     DamageTakenTimeline;                               // 0x5FE0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        Rate_Of_Foot_Steps;                                // 0x5FE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UObject*>                        CachedSkillTreeNodeData;                           // 0x5FF0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FVector                                CachedPingLocation;                                // 0x6000(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CachedPingObject;                                  // 0x6018(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsHoldingPing;                                     // 0x6020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6021[0x7];                                     // 0x6021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        PingOutlineDuration;                               // 0x6028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           PingOutlineTimer;                                  // 0x6030(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               FinalRot;                                          // 0x6038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FRotator                               InitialRot;                                        // 0x6050(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	double                                        MaxSwayDegree;                                     // 0x6068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TimerTickDuration;                                 // 0x6070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6074[0x4];                                     // 0x6074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPlayerPawn*                           SuperSelf;                                         // 0x6078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShowPlayerName;                                    // 0x6080(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6081[0x7];                                     // 0x6081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimitiveComponent*                    CachedPingedComponent;                             // 0x6088(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               BPDefaultControlRotation;                          // 0x6090(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FVector                                BPDefaultCameraPosition;                           // 0x60A8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CameraDistance;                                    // 0x60C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaxCameraHeight;                                   // 0x60C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MinCameraHeight;                                   // 0x60D0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentAngle;                                      // 0x60D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        EmoteCamVertInput;                                 // 0x60E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        EmoteLoopAC;                                       // 0x60E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        GamepadMoveInputThreshold;                         // 0x60F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x6020(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USpringArmComponent*                    EmoteSpringArm;                                    // 0x6028(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWidgetComponent*                       ObjectHighlightWidgetComponent;                    // 0x6030(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x6038(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         TeleportTimeline_Intensity_ABD408E04D7814325E60719C4076DAC0; // 0x6040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            TeleportTimeline__Direction_ABD408E04D7814325E60719C4076DAC0; // 0x6044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6045[0x3];                                     // 0x6045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     TeleportTimeline;                                  // 0x6048(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         VignettePostProcessTimeline_Intensity_FF49911742C51FC5F1374E809BDE6637; // 0x6050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            VignettePostProcessTimeline__Direction_FF49911742C51FC5F1374E809BDE6637; // 0x6054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6055[0x3];                                     // 0x6055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     VignettePostProcessTimeline;                       // 0x6058(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         DamageTakenTimeline_DamageTaken_B58C5A464B8DB4B3EF42F1A987E2BCE6; // 0x6060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            DamageTakenTimeline__Direction_B58C5A464B8DB4B3EF42F1A987E2BCE6; // 0x6064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6065[0x3];                                     // 0x6065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     DamageTakenTimeline;                               // 0x6068(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        Rate_Of_Foot_Steps;                                // 0x6070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UObject*>                        CachedSkillTreeNodeData;                           // 0x6078(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FVector                                CachedPingLocation;                                // 0x6088(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CachedPingObject;                                  // 0x60A0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsHoldingPing;                                     // 0x60A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_60A9[0x7];                                     // 0x60A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        PingOutlineDuration;                               // 0x60B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           PingOutlineTimer;                                  // 0x60B8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               FinalRot;                                          // 0x60C0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               InitialRot;                                        // 0x60D8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	double                                        MaxSwayDegree;                                     // 0x60F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TimerTickDuration;                                 // 0x60F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_60FC[0x4];                                     // 0x60FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPlayerPawn*                           SuperSelf;                                         // 0x6100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShowPlayerName;                                    // 0x6108(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6109[0x7];                                     // 0x6109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPrimitiveComponent*                    CachedPingedComponent;                             // 0x6110(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               BPDefaultControlRotation;                          // 0x6118(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FVector                                BPDefaultCameraPosition;                           // 0x6130(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxCameraHeight;                                   // 0x6148(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MinCameraHeight;                                   // 0x6150(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentAngle;                                      // 0x6158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        EmoteCamVertInput;                                 // 0x6160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        EmoteLoopAC;                                       // 0x6168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        GamepadMoveInputThreshold;                         // 0x6170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_InteractableFlag_C*                 SpawnedFlagEmoteProp;                              // 0x6178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         PickupGiftIndex;                                   // 0x6180(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Add_Assigned_Skill_Tree_Mutators(class URPlayerGScriptComponent* Owner_0);
@@ -85,14 +86,14 @@ public:
 	void Downed(class ARPlayerPawn* Player);
 	void DrawPingOutline_Multicast(class AActor* PingedObject);
 	void DrawPingOutline_Server(class AActor* PingedObject);
-	void EmoteCameraZoomOutImplementation();
-	void EmoteMontageEnded();
 	void ExecuteUbergraph_BP_RPlayerPawn(int32 EntryPoint);
 	void FlushDebugLines();
 	void Get_Object_Pingable_Name(class AActor* Object, class FText* PingableName);
+	class USpringArmComponent* GetEmoteSpringArmComponent();
 	void GetPingStartLocation(struct FVector* StartLocation);
 	void GetPingTargetLocation(struct FVector* TargetLocation);
 	void GetPingVoicelineEvent(class AActor* PingedActor, class FName* Event);
+	void HandleEmoteInterruption();
 	void InpActEvt_IA_LookRight_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_LookRightGamepad_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_LookUp_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
@@ -114,16 +115,9 @@ public:
 	void InpActEvt_IA_UnlockContent_K2Node_EnhancedInputActionEvent_18(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InterruptEmote();
 	bool IsInEmoteState();
-	void MontageInterruped_Multicast();
-	void MontageInterrupted_Server();
-	void OnAbilitiyVisibilitiesToggled(bool Anchor_Visibility, bool DropShield_Visibility, bool AtlanteanCube_Visibility);
-	void OnBlendOut_AC53E0D24995860F498B499655AC06DE(class FName NotifyName);
-	void OnCompleted_AC53E0D24995860F498B499655AC06DE(class FName NotifyName);
-	void OnInterrupted_AC53E0D24995860F498B499655AC06DE(class FName NotifyName);
+	void OnAbilitiyVisibilitiesToggled(bool Anchor_Visibility, bool DropShield_Visibility, bool AtlanteanCube_Visibility, bool Spear_Visibility);
 	void OnInvoke_51E65E3F4376537D07388787BB65EAE7();
 	void OnLandedOnGround();
-	void OnNotifyBegin_AC53E0D24995860F498B499655AC06DE(class FName NotifyName);
-	void OnNotifyEnd_AC53E0D24995860F498B499655AC06DE(class FName NotifyName);
 	void OnPlayerFellOutOfWorld_Event();
 	void OnPlayerStateValid(bool* RetValue);
 	void OnPostProcessVolumeAssigned(class APostProcessVolume* Volume);
@@ -133,7 +127,6 @@ public:
 	void PingOutlinedWithIndicator(class AActor* PingedActor);
 	void PingTickEvent();
 	void PlayDoorTeleportTimeline(float Duration);
-	void PlayEmoteMontage(const class FName EmoteName);
 	void PlayPostProcessDamageTaken(const struct FDamageCombatEvent& DamageCombatEvent);
 	void PlayVignetteTimeline(const float Duration, const float IntensityMultiplier);
 	void PrintSet(const TSet<class FName>& A);
@@ -160,7 +153,7 @@ public:
 	void Sway_Tick(double Delta_Time);
 	void TeleportTimeline__FinishedFunc();
 	void TeleportTimeline__UpdateFunc();
-	void ToggleAbilityVisibility(bool AnchorVisibility, bool DropShieldVisibility, bool AtlanteanCubeVisibility);
+	void ToggleAbilityVisibility(bool AnchorVisibility, bool DropShieldVisibility, bool AtlanteanCubeVisibility, bool SpearVisibility);
 	void ToggleHUD(bool Show);
 	void ToggleWeaponVisibilities(bool bNewMeleeVisibility, bool bNewWeaponVisibility, class FName Key, bool bHideOnServer);
 	void TraceTimer();
@@ -185,51 +178,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_RPlayerPawn_C">();
+		BP_STATIC_CLASS_IMPL("BP_RPlayerPawn_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_RPlayerPawn_C")
 	}
 	static class ABP_RPlayerPawn_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_RPlayerPawn_C>();
 	}
 };
-static_assert(alignof(ABP_RPlayerPawn_C) == 0x000008, "Wrong alignment on ABP_RPlayerPawn_C");
-static_assert(sizeof(ABP_RPlayerPawn_C) == 0x0060F8, "Wrong size on ABP_RPlayerPawn_C");
-static_assert(offsetof(ABP_RPlayerPawn_C, UberGraphFrame) == 0x005F98, "Member 'ABP_RPlayerPawn_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, EmoteSpringArm) == 0x005FA0, "Member 'ABP_RPlayerPawn_C::EmoteSpringArm' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, ObjectHighlightWidgetComponent) == 0x005FA8, "Member 'ABP_RPlayerPawn_C::ObjectHighlightWidgetComponent' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, Scene) == 0x005FB0, "Member 'ABP_RPlayerPawn_C::Scene' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, TeleportTimeline_Intensity_ABD408E04D7814325E60719C4076DAC0) == 0x005FB8, "Member 'ABP_RPlayerPawn_C::TeleportTimeline_Intensity_ABD408E04D7814325E60719C4076DAC0' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, TeleportTimeline__Direction_ABD408E04D7814325E60719C4076DAC0) == 0x005FBC, "Member 'ABP_RPlayerPawn_C::TeleportTimeline__Direction_ABD408E04D7814325E60719C4076DAC0' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, TeleportTimeline) == 0x005FC0, "Member 'ABP_RPlayerPawn_C::TeleportTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, VignettePostProcessTimeline_Intensity_FF49911742C51FC5F1374E809BDE6637) == 0x005FC8, "Member 'ABP_RPlayerPawn_C::VignettePostProcessTimeline_Intensity_FF49911742C51FC5F1374E809BDE6637' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, VignettePostProcessTimeline__Direction_FF49911742C51FC5F1374E809BDE6637) == 0x005FCC, "Member 'ABP_RPlayerPawn_C::VignettePostProcessTimeline__Direction_FF49911742C51FC5F1374E809BDE6637' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, VignettePostProcessTimeline) == 0x005FD0, "Member 'ABP_RPlayerPawn_C::VignettePostProcessTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, DamageTakenTimeline_DamageTaken_B58C5A464B8DB4B3EF42F1A987E2BCE6) == 0x005FD8, "Member 'ABP_RPlayerPawn_C::DamageTakenTimeline_DamageTaken_B58C5A464B8DB4B3EF42F1A987E2BCE6' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, DamageTakenTimeline__Direction_B58C5A464B8DB4B3EF42F1A987E2BCE6) == 0x005FDC, "Member 'ABP_RPlayerPawn_C::DamageTakenTimeline__Direction_B58C5A464B8DB4B3EF42F1A987E2BCE6' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, DamageTakenTimeline) == 0x005FE0, "Member 'ABP_RPlayerPawn_C::DamageTakenTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, Rate_Of_Foot_Steps) == 0x005FE8, "Member 'ABP_RPlayerPawn_C::Rate_Of_Foot_Steps' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, CachedSkillTreeNodeData) == 0x005FF0, "Member 'ABP_RPlayerPawn_C::CachedSkillTreeNodeData' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, CachedPingLocation) == 0x006000, "Member 'ABP_RPlayerPawn_C::CachedPingLocation' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, CachedPingObject) == 0x006018, "Member 'ABP_RPlayerPawn_C::CachedPingObject' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, IsHoldingPing) == 0x006020, "Member 'ABP_RPlayerPawn_C::IsHoldingPing' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, PingOutlineDuration) == 0x006028, "Member 'ABP_RPlayerPawn_C::PingOutlineDuration' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, PingOutlineTimer) == 0x006030, "Member 'ABP_RPlayerPawn_C::PingOutlineTimer' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, FinalRot) == 0x006038, "Member 'ABP_RPlayerPawn_C::FinalRot' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, InitialRot) == 0x006050, "Member 'ABP_RPlayerPawn_C::InitialRot' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, MaxSwayDegree) == 0x006068, "Member 'ABP_RPlayerPawn_C::MaxSwayDegree' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, TimerTickDuration) == 0x006070, "Member 'ABP_RPlayerPawn_C::TimerTickDuration' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, SuperSelf) == 0x006078, "Member 'ABP_RPlayerPawn_C::SuperSelf' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, ShowPlayerName) == 0x006080, "Member 'ABP_RPlayerPawn_C::ShowPlayerName' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, CachedPingedComponent) == 0x006088, "Member 'ABP_RPlayerPawn_C::CachedPingedComponent' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, BPDefaultControlRotation) == 0x006090, "Member 'ABP_RPlayerPawn_C::BPDefaultControlRotation' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, BPDefaultCameraPosition) == 0x0060A8, "Member 'ABP_RPlayerPawn_C::BPDefaultCameraPosition' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, CameraDistance) == 0x0060C0, "Member 'ABP_RPlayerPawn_C::CameraDistance' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, MaxCameraHeight) == 0x0060C8, "Member 'ABP_RPlayerPawn_C::MaxCameraHeight' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, MinCameraHeight) == 0x0060D0, "Member 'ABP_RPlayerPawn_C::MinCameraHeight' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, CurrentAngle) == 0x0060D8, "Member 'ABP_RPlayerPawn_C::CurrentAngle' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, EmoteCamVertInput) == 0x0060E0, "Member 'ABP_RPlayerPawn_C::EmoteCamVertInput' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, EmoteLoopAC) == 0x0060E8, "Member 'ABP_RPlayerPawn_C::EmoteLoopAC' has a wrong offset!");
-static_assert(offsetof(ABP_RPlayerPawn_C, GamepadMoveInputThreshold) == 0x0060F0, "Member 'ABP_RPlayerPawn_C::GamepadMoveInputThreshold' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_RPlayerPawn_C;
 
 }
 

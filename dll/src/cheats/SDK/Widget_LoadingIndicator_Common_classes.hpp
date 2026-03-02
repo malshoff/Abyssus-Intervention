@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_LoadingIndicator_Common.Widget_LoadingIndicator_Common_C
-// 0x0020 (0x02F0 - 0x02D0)
+// 0x0020 (0x0360 - 0x0340)
 class UWidget_LoadingIndicator_Common_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Visibility_Transition;                             // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Image_Indicator;                                   // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          BeginVisible;                                      // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Image_Indicator;                                   // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Visibility_Transition;                             // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	bool                                          BeginVisible;                                      // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Widget_LoadingIndicator_Common(int32 EntryPoint);
@@ -35,19 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_LoadingIndicator_Common_C">();
+		BP_STATIC_CLASS_IMPL("Widget_LoadingIndicator_Common_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_LoadingIndicator_Common_C")
 	}
 	static class UWidget_LoadingIndicator_Common_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_LoadingIndicator_Common_C>();
 	}
 };
-static_assert(alignof(UWidget_LoadingIndicator_Common_C) == 0x000008, "Wrong alignment on UWidget_LoadingIndicator_Common_C");
-static_assert(sizeof(UWidget_LoadingIndicator_Common_C) == 0x0002F0, "Wrong size on UWidget_LoadingIndicator_Common_C");
-static_assert(offsetof(UWidget_LoadingIndicator_Common_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_LoadingIndicator_Common_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_LoadingIndicator_Common_C, Visibility_Transition) == 0x0002D8, "Member 'UWidget_LoadingIndicator_Common_C::Visibility_Transition' has a wrong offset!");
-static_assert(offsetof(UWidget_LoadingIndicator_Common_C, Image_Indicator) == 0x0002E0, "Member 'UWidget_LoadingIndicator_Common_C::Image_Indicator' has a wrong offset!");
-static_assert(offsetof(UWidget_LoadingIndicator_Common_C, BeginVisible) == 0x0002E8, "Member 'UWidget_LoadingIndicator_Common_C::BeginVisible' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_LoadingIndicator_Common_C;
 
 }
 

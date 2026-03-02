@@ -14,17 +14,6 @@
 namespace SDK::Params
 {
 
-// Function Widget_SpectatedPlayerInfo.Widget_SpectatedPlayerInfo_C.OnSpectatedPlayerChanged
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_SpectatedPlayerInfo_C_OnSpectatedPlayerChanged final
-{
-public:
-	class ARPlayerPawn*                           NewSpectatedPlayer;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SpectatedPlayerInfo_C_OnSpectatedPlayerChanged) == 0x000008, "Wrong alignment on Widget_SpectatedPlayerInfo_C_OnSpectatedPlayerChanged");
-static_assert(sizeof(Widget_SpectatedPlayerInfo_C_OnSpectatedPlayerChanged) == 0x000008, "Wrong size on Widget_SpectatedPlayerInfo_C_OnSpectatedPlayerChanged");
-static_assert(offsetof(Widget_SpectatedPlayerInfo_C_OnSpectatedPlayerChanged, NewSpectatedPlayer) == 0x000000, "Member 'Widget_SpectatedPlayerInfo_C_OnSpectatedPlayerChanged::NewSpectatedPlayer' has a wrong offset!");
-
 // Function Widget_SpectatedPlayerInfo.Widget_SpectatedPlayerInfo_C.ExecuteUbergraph_Widget_SpectatedPlayerInfo
 // 0x0068 (0x0068 - 0x0000)
 struct Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo final
@@ -44,18 +33,16 @@ public:
 	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0058(0x0010)()
 };
-static_assert(alignof(Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo) == 0x000008, "Wrong alignment on Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo");
-static_assert(sizeof(Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo) == 0x000068, "Wrong size on Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo");
-static_assert(offsetof(Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo, EntryPoint) == 0x000000, "Member 'Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo, K2Node_CustomEvent_NewSpectatedPlayer) == 0x000018, "Member 'Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo::K2Node_CustomEvent_NewSpectatedPlayer' has a wrong offset!");
-static_assert(offsetof(Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo, CallFunc_GetOwningPlayer_ReturnValue) == 0x000020, "Member 'Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo, K2Node_DynamicCast_AsRGame_Player_Controller) == 0x000030, "Member 'Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo::K2Node_DynamicCast_AsRGame_Player_Controller' has a wrong offset!");
-static_assert(offsetof(Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo, CallFunc_GetSpectateHud_ReturnValue) == 0x000040, "Member 'Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo::CallFunc_GetSpectateHud_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo, CallFunc_GetPlayerName_ReturnValue) == 0x000048, "Member 'Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo, CallFunc_Conv_StringToText_ReturnValue) == 0x000058, "Member 'Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SpectatedPlayerInfo_C_ExecuteUbergraph_Widget_SpectatedPlayerInfo;
+
+// Function Widget_SpectatedPlayerInfo.Widget_SpectatedPlayerInfo_C.OnSpectatedPlayerChanged
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_SpectatedPlayerInfo_C_OnSpectatedPlayerChanged final
+{
+public:
+	class ARPlayerPawn*                           NewSpectatedPlayer;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_SpectatedPlayerInfo_C_OnSpectatedPlayerChanged;
 
 }
 

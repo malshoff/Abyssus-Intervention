@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_SettingsButtonBase.Widget_SettingsButtonBase_C
-// 0x0018 (0x02E8 - 0x02D0)
+// 0x0018 (0x0358 - 0x0340)
 class UWidget_SettingsButtonBase_C final : public UUserWidget
 {
 public:
-	class UTextBlock*                             Setting;                                           // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   SettingName;                                       // 0x02D8(0x0010)(Edit, BlueprintVisible)
+	class UTextBlock*                             Setting;                                           // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   SettingName;                                       // 0x0348(0x0010)(Edit, BlueprintVisible)
 
 public:
 	void Set_Setting_Name(const class FText& InText);
@@ -30,17 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_SettingsButtonBase_C">();
+		BP_STATIC_CLASS_IMPL("Widget_SettingsButtonBase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_SettingsButtonBase_C")
 	}
 	static class UWidget_SettingsButtonBase_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_SettingsButtonBase_C>();
 	}
 };
-static_assert(alignof(UWidget_SettingsButtonBase_C) == 0x000008, "Wrong alignment on UWidget_SettingsButtonBase_C");
-static_assert(sizeof(UWidget_SettingsButtonBase_C) == 0x0002E8, "Wrong size on UWidget_SettingsButtonBase_C");
-static_assert(offsetof(UWidget_SettingsButtonBase_C, Setting) == 0x0002D0, "Member 'UWidget_SettingsButtonBase_C::Setting' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsButtonBase_C, SettingName) == 0x0002D8, "Member 'UWidget_SettingsButtonBase_C::SettingName' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_SettingsButtonBase_C;
 
 }
 

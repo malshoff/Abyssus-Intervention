@@ -11,72 +11,87 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_classes.hpp"
 #include "UMG_structs.hpp"
+#include "RGame_classes.hpp"
 #include "CommonInput_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_DifficultyTree.Widget_DifficultyTree_C
-// 0x0118 (0x0550 - 0x0438)
+// 0x0158 (0x0618 - 0x04C0)
 class UWidget_DifficultyTree_C final : public URCommonActivatableWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Background_Vignette;                               // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 BackgroundShadow;                                  // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_Back;                           // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_Reset;                          // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             DifficultyPointDescription;                        // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             DifficultyPoints;                                  // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Frame;                                             // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_PredeterminedNodesRow;               // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_89;                                          // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_94;                                          // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 InfiniteEnabledBackground;                         // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                OceanicOmens;                                      // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URetainerBox*                           RetainerBox_0;                                     // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_BossesDamage;                            // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_BossesHealth;                            // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_EnemyDamage;                             // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_EnemyHealth;                             // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Title;                                             // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UUniformGridPanel*                      UniformGridPanel;                                  // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_TextButton_C*                   Widget_TextButton_1;                               // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   Widget_TextButton;                                 // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWidget_DifficultyNode_C*               Widget_DifficultyNodeInfinite;                     // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   Widget_TextButton;                                 // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   Widget_TextButton_1;                               // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	float                                         PredeterminedNodeLineOffset;                       // 0x04F0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F4[0x4];                                      // 0x04F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TSoftObjectPtr<class URDifficultyPrimaryAsset>> SoftEndGameDifficultyAssets;              // 0x04F8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	TArray<TSoftObjectPtr<class URDifficultyPrimaryAsset>> SoftPrederminedDifficultyAssets;          // 0x0508(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	class FName                                   EnemyBossBonusMutableKey;                          // 0x0518(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        EnemyDamageBonusPerAssignedPoint;                  // 0x0520(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        EnemyHealthBonusPerAssignedPoint;                  // 0x0528(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BossDamageBonusPerAssignedPoint;                   // 0x0530(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BossHealthBonusPerAssignedPoint;                   // 0x0538(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              OnPointsChanged;                                   // 0x0540(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UWBP_CheckBox_C*                        WBP_CheckBox_RandomMode;                           // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_CheckBox_C*                        WBP_CheckBox_InfiniteMode;                         // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UUniformGridPanel*                      UniformGridPanel;                                  // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Title;                                             // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_EnemyHealth;                             // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_EnemyDamage;                             // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_BossesHealth;                            // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_BossesDamage;                            // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text_TotalAssignedPoints;                          // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URetainerBox*                           RetainerBox_0;                                     // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                OceanicOmens;                                      // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 InfiniteEnabledBackground;                         // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_499;                                         // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_464;                                         // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_285;                                         // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_233;                                         // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_208;                                         // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_94;                                          // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_89;                                          // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image;                                             // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_PredeterminedNodesRow;               // 0x0580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_5;                                   // 0x0588(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_4;                                   // 0x0590(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Frame;                                             // 0x0598(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             DifficultyPoints;                                  // 0x05A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             DifficultyPointDescription;                        // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_Reset;                          // 0x05B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_Back;                           // 0x05B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BackgroundShadow;                                  // 0x05C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Background_Vignette;                               // 0x05C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Enter_Animation;                                   // 0x05D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	float                                         PredeterminedNodeLineOffset;                       // 0x05D8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5DC[0x4];                                      // 0x05DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<TSoftObjectPtr<class URDifficultyPrimaryAsset>> SoftEndGameDifficultyAssets;              // 0x05E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	TArray<TSoftObjectPtr<class URDifficultyPrimaryAsset>> SoftPrederminedDifficultyAssets;          // 0x05F0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	TMulticastInlineDelegate<void()>              OnPointsChanged;                                   // 0x0600(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	int32                                         PointsRequiredForInfinite;                         // 0x0610(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AreAllPredeterminedNodesUnlocked(bool* AllUnlocked);
 	void BndEvt__Widget_DifficultyTree_Button_840_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Widget_DifficultyTree_Widget_TextButton_1_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__Widget_DifficultyTree_Widget_TextButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_ModesScreen_WBP_CheckBox_InfiniteMode_K2Node_ComponentBoundEvent_4_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked);
+	void BndEvt__Widget_ModesScreen_WBP_CheckBox_RandomMode_K2Node_ComponentBoundEvent_3_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked);
 	void Construct();
 	void ConstructEndGameNodes();
 	void ConstructPredeterminedNodes();
 	void DoesNextNodeHavePointsAssigned(class UWidget_DifficultyNode_C* Node, bool* HasPointsAssigned);
 	void ExecuteUbergraph_Widget_DifficultyTree(int32 EntryPoint);
 	void GetAllNodes(TArray<class UWidget_DifficultyNode_C*>* AllNodes);
+	class UWidget* GetInfiniteModeTooltipWidget();
 	void GetNumTotalPointsAssigned(int32* TotalPointsAssigned);
+	class UWidget* GetRandomModeTooltipWidget();
 	void HasAnyEndGameNodePointsAssigned(bool* HasPointsAssigned);
 	void HasInfiniteNodePointsAssigned(bool* HasPointsAssigned);
+	void InitializeModeStates();
 	void Is_Node_Locked(class UWidget_DifficultyNode_C* NodeWidget, bool* IsLocked);
 	void IsNodeEndGameNode(class UWidget* WidgetNode, bool* Value);
 	void IsNodeInPanel(class UWidget* WidgetNode, class UPanelWidget* PanelWidget, bool* Value);
 	void IsNodePredetermined(class UWidget* WidgetNode, bool* Value);
 	void IsTreeCapped(bool* Capped);
+	void PlayEnterAnimation();
 	void ResetNodes();
 	void Update_Enemy_and_Boss_Bonuses();
 	void UpdateDifficultyPointsText();
@@ -88,47 +103,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_DifficultyTree_C">();
+		BP_STATIC_CLASS_IMPL("Widget_DifficultyTree_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_DifficultyTree_C")
 	}
 	static class UWidget_DifficultyTree_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_DifficultyTree_C>();
 	}
 };
-static_assert(alignof(UWidget_DifficultyTree_C) == 0x000008, "Wrong alignment on UWidget_DifficultyTree_C");
-static_assert(sizeof(UWidget_DifficultyTree_C) == 0x000550, "Wrong size on UWidget_DifficultyTree_C");
-static_assert(offsetof(UWidget_DifficultyTree_C, UberGraphFrame) == 0x000438, "Member 'UWidget_DifficultyTree_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, Background_Vignette) == 0x000440, "Member 'UWidget_DifficultyTree_C::Background_Vignette' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, BackgroundShadow) == 0x000448, "Member 'UWidget_DifficultyTree_C::BackgroundShadow' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, CommonActionWidget_Back) == 0x000450, "Member 'UWidget_DifficultyTree_C::CommonActionWidget_Back' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, CommonActionWidget_Reset) == 0x000458, "Member 'UWidget_DifficultyTree_C::CommonActionWidget_Reset' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, DifficultyPointDescription) == 0x000460, "Member 'UWidget_DifficultyTree_C::DifficultyPointDescription' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, DifficultyPoints) == 0x000468, "Member 'UWidget_DifficultyTree_C::DifficultyPoints' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, Frame) == 0x000470, "Member 'UWidget_DifficultyTree_C::Frame' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, HorizontalBox_PredeterminedNodesRow) == 0x000478, "Member 'UWidget_DifficultyTree_C::HorizontalBox_PredeterminedNodesRow' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, Image_89) == 0x000480, "Member 'UWidget_DifficultyTree_C::Image_89' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, Image_94) == 0x000488, "Member 'UWidget_DifficultyTree_C::Image_94' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, InfiniteEnabledBackground) == 0x000490, "Member 'UWidget_DifficultyTree_C::InfiniteEnabledBackground' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, OceanicOmens) == 0x000498, "Member 'UWidget_DifficultyTree_C::OceanicOmens' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, RetainerBox_0) == 0x0004A0, "Member 'UWidget_DifficultyTree_C::RetainerBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, TextBlock_BossesDamage) == 0x0004A8, "Member 'UWidget_DifficultyTree_C::TextBlock_BossesDamage' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, TextBlock_BossesHealth) == 0x0004B0, "Member 'UWidget_DifficultyTree_C::TextBlock_BossesHealth' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, TextBlock_EnemyDamage) == 0x0004B8, "Member 'UWidget_DifficultyTree_C::TextBlock_EnemyDamage' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, TextBlock_EnemyHealth) == 0x0004C0, "Member 'UWidget_DifficultyTree_C::TextBlock_EnemyHealth' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, Title) == 0x0004C8, "Member 'UWidget_DifficultyTree_C::Title' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, UniformGridPanel) == 0x0004D0, "Member 'UWidget_DifficultyTree_C::UniformGridPanel' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, Widget_DifficultyNodeInfinite) == 0x0004D8, "Member 'UWidget_DifficultyTree_C::Widget_DifficultyNodeInfinite' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, Widget_TextButton) == 0x0004E0, "Member 'UWidget_DifficultyTree_C::Widget_TextButton' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, Widget_TextButton_1) == 0x0004E8, "Member 'UWidget_DifficultyTree_C::Widget_TextButton_1' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, PredeterminedNodeLineOffset) == 0x0004F0, "Member 'UWidget_DifficultyTree_C::PredeterminedNodeLineOffset' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, SoftEndGameDifficultyAssets) == 0x0004F8, "Member 'UWidget_DifficultyTree_C::SoftEndGameDifficultyAssets' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, SoftPrederminedDifficultyAssets) == 0x000508, "Member 'UWidget_DifficultyTree_C::SoftPrederminedDifficultyAssets' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, EnemyBossBonusMutableKey) == 0x000518, "Member 'UWidget_DifficultyTree_C::EnemyBossBonusMutableKey' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, EnemyDamageBonusPerAssignedPoint) == 0x000520, "Member 'UWidget_DifficultyTree_C::EnemyDamageBonusPerAssignedPoint' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, EnemyHealthBonusPerAssignedPoint) == 0x000528, "Member 'UWidget_DifficultyTree_C::EnemyHealthBonusPerAssignedPoint' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, BossDamageBonusPerAssignedPoint) == 0x000530, "Member 'UWidget_DifficultyTree_C::BossDamageBonusPerAssignedPoint' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, BossHealthBonusPerAssignedPoint) == 0x000538, "Member 'UWidget_DifficultyTree_C::BossHealthBonusPerAssignedPoint' has a wrong offset!");
-static_assert(offsetof(UWidget_DifficultyTree_C, OnPointsChanged) == 0x000540, "Member 'UWidget_DifficultyTree_C::OnPointsChanged' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_DifficultyTree_C;
 
 }
 

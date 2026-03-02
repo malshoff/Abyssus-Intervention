@@ -37,17 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_GashingShell_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_GashingShell_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_GashingShell_CharacterMutator_C")
 	}
 	static class UBP_GashingShell_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_GashingShell_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_GashingShell_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_GashingShell_CharacterMutator_C");
-static_assert(sizeof(UBP_GashingShell_CharacterMutator_C) == 0x000128, "Wrong size on UBP_GashingShell_CharacterMutator_C");
-static_assert(offsetof(UBP_GashingShell_CharacterMutator_C, UberGraphFrame_BP_GashingShell_CharacterMutator_C) == 0x000118, "Member 'UBP_GashingShell_CharacterMutator_C::UberGraphFrame_BP_GashingShell_CharacterMutator_C' has a wrong offset!");
-static_assert(offsetof(UBP_GashingShell_CharacterMutator_C, AsRPlayerPawn) == 0x000120, "Member 'UBP_GashingShell_CharacterMutator_C::AsRPlayerPawn' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_GashingShell_CharacterMutator_C;
 
 }
 

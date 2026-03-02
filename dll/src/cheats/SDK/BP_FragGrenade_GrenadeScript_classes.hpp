@@ -19,13 +19,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_FragGrenade_GrenadeScript.BP_FragGrenade_GrenadeScript_C
-// 0x0018 (0x0100 - 0x00E8)
+// 0x0020 (0x0108 - 0x00E8)
 class UBP_FragGrenade_GrenadeScript_C final : public URGGrenadeScript
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UNiagaraComponent*                      SpawnedTrailFX;                                    // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UAudioComponent*                        FuseSound;                                         // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             ExplosionSFX;                                      // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_FragGrenade_GrenadeScript(int32 EntryPoint);
@@ -38,18 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FragGrenade_GrenadeScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_FragGrenade_GrenadeScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FragGrenade_GrenadeScript_C")
 	}
 	static class UBP_FragGrenade_GrenadeScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_FragGrenade_GrenadeScript_C>();
 	}
 };
-static_assert(alignof(UBP_FragGrenade_GrenadeScript_C) == 0x000008, "Wrong alignment on UBP_FragGrenade_GrenadeScript_C");
-static_assert(sizeof(UBP_FragGrenade_GrenadeScript_C) == 0x000100, "Wrong size on UBP_FragGrenade_GrenadeScript_C");
-static_assert(offsetof(UBP_FragGrenade_GrenadeScript_C, UberGraphFrame) == 0x0000E8, "Member 'UBP_FragGrenade_GrenadeScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_FragGrenade_GrenadeScript_C, SpawnedTrailFX) == 0x0000F0, "Member 'UBP_FragGrenade_GrenadeScript_C::SpawnedTrailFX' has a wrong offset!");
-static_assert(offsetof(UBP_FragGrenade_GrenadeScript_C, FuseSound) == 0x0000F8, "Member 'UBP_FragGrenade_GrenadeScript_C::FuseSound' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_FragGrenade_GrenadeScript_C;
 
 }
 

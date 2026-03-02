@@ -25,10 +25,7 @@ public:
 	struct FHitResult                             ImpactResult;                                      // 0x0000(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	struct FVector                                ImpactVelocity;                                    // 0x0100(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_0_OnProjectileBounceDelegate__DelegateSignature) == 0x000008, "Wrong alignment on BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_0_OnProjectileBounceDelegate__DelegateSignature");
-static_assert(sizeof(BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_0_OnProjectileBounceDelegate__DelegateSignature) == 0x000118, "Wrong size on BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_0_OnProjectileBounceDelegate__DelegateSignature");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_0_OnProjectileBounceDelegate__DelegateSignature, ImpactResult) == 0x000000, "Member 'BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_0_OnProjectileBounceDelegate__DelegateSignature::ImpactResult' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_0_OnProjectileBounceDelegate__DelegateSignature, ImpactVelocity) == 0x000100, "Member 'BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_0_OnProjectileBounceDelegate__DelegateSignature::ImpactVelocity' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_0_OnProjectileBounceDelegate__DelegateSignature;
 
 // Function BP_SpiritOrb_Rocket.BP_SpiritOrb_Rocket_C.BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_1_ActorComponentDeactivateSignature__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -37,9 +34,7 @@ struct BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementCompo
 public:
 	class UActorComponent*                        Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_1_ActorComponentDeactivateSignature__DelegateSignature) == 0x000008, "Wrong alignment on BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_1_ActorComponentDeactivateSignature__DelegateSignature");
-static_assert(sizeof(BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_1_ActorComponentDeactivateSignature__DelegateSignature) == 0x000008, "Wrong size on BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_1_ActorComponentDeactivateSignature__DelegateSignature");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_1_ActorComponentDeactivateSignature__DelegateSignature, Component) == 0x000000, "Member 'BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_1_ActorComponentDeactivateSignature__DelegateSignature::Component' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpiritOrb_Rocket_C_BndEvt__BP_SpiritOrb_Rocket_ProjectileMovementComponent_K2Node_ComponentBoundEvent_1_ActorComponentDeactivateSignature__DelegateSignature;
 
 // Function BP_SpiritOrb_Rocket.BP_SpiritOrb_Rocket_C.ExecuteUbergraph_BP_SpiritOrb_Rocket
 // 0x03B0 (0x03B0 - 0x0000)
@@ -102,53 +97,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_LessEqual_DoubleDouble_B_ImplicitCast;    // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket) == 0x000010, "Wrong alignment on BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket");
-static_assert(sizeof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket) == 0x0003B0, "Wrong size on BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, EntryPoint) == 0x000000, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_GetGameTimeSinceCreation_ReturnValue) == 0x000008, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_GetGameTimeSinceCreation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000010, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000018, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_Sin_ReturnValue) == 0x000020, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_Sin_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_Sin_ReturnValue_1) == 0x000028, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_Sin_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000030, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000038, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_MakeVector_ReturnValue) == 0x000040, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_K2_AddLocalOffset_SweepHitResult) == 0x000058, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_K2_AddLocalOffset_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_GetRelativeTransform_ReturnValue) == 0x000160, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_GetRelativeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, K2Node_ComponentBoundEvent_ImpactResult) == 0x0001C0, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::K2Node_ComponentBoundEvent_ImpactResult' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, K2Node_ComponentBoundEvent_ImpactVelocity) == 0x0002C0, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::K2Node_ComponentBoundEvent_ImpactVelocity' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_GetOwningPawn_ReturnValue) == 0x0002D8, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_GetOwningPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_IsValid_ReturnValue) == 0x0002E0, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, K2Node_CreateDelegate_OutputDelegate) == 0x0002E4, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x0002F8, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, K2Node_DynamicCast_bSuccess) == 0x000300, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_RandomFloatInRange_ReturnValue) == 0x000308, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_GetMutatorRank_ReturnValue) == 0x000310, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_IsValid_ReturnValue_1) == 0x000314, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x000318, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x00031C, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_HasMutator_ReturnValue) == 0x00031D, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_IsValid_ReturnValue_2) == 0x00031E, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_BooleanAND_ReturnValue) == 0x00031F, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_GetOwner_ReturnValue) == 0x000320, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_IsValid_ReturnValue_3) == 0x000328, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, K2Node_DynamicCast_AsRNPCPawn_Base) == 0x000330, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::K2Node_DynamicCast_AsRNPCPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, K2Node_DynamicCast_bSuccess_1) == 0x000338, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, K2Node_MakeArray_Array) == 0x000340, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_GetPoolManager_ReturnValue) == 0x000350, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_GetPoolManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_GetRandomAliveEnemyPawnInLevel_ReturnValue) == 0x000358, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_GetRandomAliveEnemyPawnInLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000360, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_IsValid_ReturnValue_4) == 0x000368, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_IsValid_ReturnValue_5) == 0x000369, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, K2Node_CustomEvent_Actor) == 0x000370, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::K2Node_CustomEvent_Actor' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, K2Node_DynamicCast_AsBP_Spirit_Orb_Rocket) == 0x000378, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::K2Node_DynamicCast_AsBP_Spirit_Orb_Rocket' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, K2Node_DynamicCast_bSuccess_2) == 0x000380, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_GetPoolManager_ReturnValue_1) == 0x000388, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_GetPoolManager_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, K2Node_ComponentBoundEvent_Component) == 0x000390, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::K2Node_ComponentBoundEvent_Component' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000398, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x0003A0, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket, CallFunc_LessEqual_DoubleDouble_B_ImplicitCast) == 0x0003A8, "Member 'BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket::CallFunc_LessEqual_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpiritOrb_Rocket_C_ExecuteUbergraph_BP_SpiritOrb_Rocket;
 
 // Function BP_SpiritOrb_Rocket.BP_SpiritOrb_Rocket_C.OnPoolExit_Event
 // 0x0008 (0x0008 - 0x0000)
@@ -157,9 +106,7 @@ struct BP_SpiritOrb_Rocket_C_OnPoolExit_Event final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpiritOrb_Rocket_C_OnPoolExit_Event) == 0x000008, "Wrong alignment on BP_SpiritOrb_Rocket_C_OnPoolExit_Event");
-static_assert(sizeof(BP_SpiritOrb_Rocket_C_OnPoolExit_Event) == 0x000008, "Wrong size on BP_SpiritOrb_Rocket_C_OnPoolExit_Event");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_OnPoolExit_Event, Actor) == 0x000000, "Member 'BP_SpiritOrb_Rocket_C_OnPoolExit_Event::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpiritOrb_Rocket_C_OnPoolExit_Event;
 
 // Function BP_SpiritOrb_Rocket.BP_SpiritOrb_Rocket_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -168,9 +115,7 @@ struct BP_SpiritOrb_Rocket_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpiritOrb_Rocket_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_SpiritOrb_Rocket_C_ReceiveTick");
-static_assert(sizeof(BP_SpiritOrb_Rocket_C_ReceiveTick) == 0x000004, "Wrong size on BP_SpiritOrb_Rocket_C_ReceiveTick");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_SpiritOrb_Rocket_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpiritOrb_Rocket_C_ReceiveTick;
 
 // Function BP_SpiritOrb_Rocket.BP_SpiritOrb_Rocket_C.ResetRelativeTransforms
 // 0x0100 (0x0100 - 0x0000)
@@ -179,9 +124,7 @@ struct BP_SpiritOrb_Rocket_C_ResetRelativeTransforms final
 public:
 	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x0000(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(BP_SpiritOrb_Rocket_C_ResetRelativeTransforms) == 0x000008, "Wrong alignment on BP_SpiritOrb_Rocket_C_ResetRelativeTransforms");
-static_assert(sizeof(BP_SpiritOrb_Rocket_C_ResetRelativeTransforms) == 0x000100, "Wrong size on BP_SpiritOrb_Rocket_C_ResetRelativeTransforms");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_ResetRelativeTransforms, CallFunc_K2_SetRelativeTransform_SweepHitResult) == 0x000000, "Member 'BP_SpiritOrb_Rocket_C_ResetRelativeTransforms::CallFunc_K2_SetRelativeTransform_SweepHitResult' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpiritOrb_Rocket_C_ResetRelativeTransforms;
 
 // Function BP_SpiritOrb_Rocket.BP_SpiritOrb_Rocket_C.SetupSpiritPassive7
 // 0x0020 (0x0020 - 0x0000)
@@ -195,13 +138,7 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasMutator_ReturnValue;                   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpiritOrb_Rocket_C_SetupSpiritPassive7) == 0x000008, "Wrong alignment on BP_SpiritOrb_Rocket_C_SetupSpiritPassive7");
-static_assert(sizeof(BP_SpiritOrb_Rocket_C_SetupSpiritPassive7) == 0x000020, "Wrong size on BP_SpiritOrb_Rocket_C_SetupSpiritPassive7");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_SetupSpiritPassive7, CallFunc_GetOwningPawn_ReturnValue) == 0x000000, "Member 'BP_SpiritOrb_Rocket_C_SetupSpiritPassive7::CallFunc_GetOwningPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_SetupSpiritPassive7, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_SpiritOrb_Rocket_C_SetupSpiritPassive7::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_SetupSpiritPassive7, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000010, "Member 'BP_SpiritOrb_Rocket_C_SetupSpiritPassive7::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_SetupSpiritPassive7, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_SpiritOrb_Rocket_C_SetupSpiritPassive7::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_SpiritOrb_Rocket_C_SetupSpiritPassive7, CallFunc_HasMutator_ReturnValue) == 0x000019, "Member 'BP_SpiritOrb_Rocket_C_SetupSpiritPassive7::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpiritOrb_Rocket_C_SetupSpiritPassive7;
 
 }
 

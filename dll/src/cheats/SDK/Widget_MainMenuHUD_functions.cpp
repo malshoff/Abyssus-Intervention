@@ -50,5 +50,65 @@ void UWidget_MainMenuHUD_C::ExecuteUbergraph_Widget_MainMenuHUD(int32 EntryPoint
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function Widget_MainMenuHUD.Widget_MainMenuHUD_C.Fail_EEE4B0094DCBB2A613FD4E8883AB5A2F
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_MainMenuHUD_C::Fail_EEE4B0094DCBB2A613FD4E8883AB5A2F(const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_MainMenuHUD_C", "Fail_EEE4B0094DCBB2A613FD4E8883AB5A2F");
+
+	Params::Widget_MainMenuHUD_C_Fail_EEE4B0094DCBB2A613FD4E8883AB5A2F Parms{};
+
+	Parms.Error = std::move(Error);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_MainMenuHUD.Widget_MainMenuHUD_C.OnWidgetPopped_Event
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URCommonActivatableWidget*        PoppedWidget                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_MainMenuHUD_C::OnWidgetPopped_Event(class URCommonActivatableWidget* PoppedWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_MainMenuHUD_C", "OnWidgetPopped_Event");
+
+	Params::Widget_MainMenuHUD_C_OnWidgetPopped_Event Parms{};
+
+	Parms.PoppedWidget = PoppedWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_MainMenuHUD.Widget_MainMenuHUD_C.Success_EEE4B0094DCBB2A613FD4E8883AB5A2F
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_MainMenuHUD_C::Success_EEE4B0094DCBB2A613FD4E8883AB5A2F(const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_MainMenuHUD_C", "Success_EEE4B0094DCBB2A613FD4E8883AB5A2F");
+
+	Params::Widget_MainMenuHUD_C_Success_EEE4B0094DCBB2A613FD4E8883AB5A2F Parms{};
+
+	Parms.Error = std::move(Error);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 }
 

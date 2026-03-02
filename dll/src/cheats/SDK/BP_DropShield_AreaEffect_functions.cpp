@@ -101,6 +101,26 @@ void ABP_DropShield_AreaEffect_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_DropShield_AreaEffect.BP_DropShield_AreaEffect_C.ReceiveEndPlay
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DropShield_AreaEffect_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DropShield_AreaEffect_C", "ReceiveEndPlay");
+
+	Params::BP_DropShield_AreaEffect_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_DropShield_AreaEffect.BP_DropShield_AreaEffect_C.RestartSpawnFX
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

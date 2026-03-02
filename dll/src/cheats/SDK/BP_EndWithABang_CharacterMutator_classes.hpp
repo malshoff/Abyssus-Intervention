@@ -34,20 +34,23 @@ public:
 	void OnFail_5A473A604F812E1712DF94A31362456B();
 	void OnFinished_5A473A604F812E1712DF94A31362456B();
 	void OnGroundEffectSpawned(class ARAreaEffect* GroundEffect);
+	void PlayExplosionFX(float Radius, const struct FVector& Location);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_EndWithABang_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_EndWithABang_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_EndWithABang_CharacterMutator_C")
 	}
 	static class UBP_EndWithABang_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_EndWithABang_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_EndWithABang_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_EndWithABang_CharacterMutator_C");
-static_assert(sizeof(UBP_EndWithABang_CharacterMutator_C) == 0x000110, "Wrong size on UBP_EndWithABang_CharacterMutator_C");
-static_assert(offsetof(UBP_EndWithABang_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_EndWithABang_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_EndWithABang_CharacterMutator_C;
 
 }
 

@@ -69,51 +69,7 @@ public:
 	class FName                                   K2Node_CustomEvent_NotifyName_9;                   // 0x017C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body) == 0x000008, "Wrong alignment on BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body");
-static_assert(sizeof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body) == 0x000188, "Wrong size on BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, EntryPoint) == 0x000000, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CustomEvent_NotifyName_5) == 0x000014, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CustomEvent_NotifyName_5' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CreateDelegate_OutputDelegate_1) == 0x00001C, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, Temp_name_Variable) == 0x00002C, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::Temp_name_Variable' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CreateDelegate_OutputDelegate_2) == 0x000034, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CustomEvent_NotifyName_4) == 0x000044, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CustomEvent_NotifyName_4' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CustomEvent_NotifyName_3) == 0x00004C, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CustomEvent_NotifyName_3' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CreateDelegate_OutputDelegate_3) == 0x000054, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CustomEvent_NotifyName_2) == 0x000064, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CustomEvent_NotifyName_2' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CreateDelegate_OutputDelegate_4) == 0x00006C, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CustomEvent_NotifyName_1) == 0x00007C, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CustomEvent_NotifyName_1' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CreateDelegate_OutputDelegate_5) == 0x000084, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CustomEvent_NotifyName) == 0x000094, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CustomEvent_NotifyName' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CreateDelegate_OutputDelegate_6) == 0x00009C, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, Temp_name_Variable_1) == 0x0000AC, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::Temp_name_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, CallFunc_GetOwner_ReturnValue) == 0x0000B8, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x0000C0, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_DynamicCast_bSuccess) == 0x0000C8, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, CallFunc_GetEquippedWeapon_ReturnValue) == 0x0000D0, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::CallFunc_GetEquippedWeapon_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, CallFunc_CreateProxyObjectForPlayMontage_ReturnValue) == 0x0000D8, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::CallFunc_CreateProxyObjectForPlayMontage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_1) == 0x0000E0, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, CallFunc_GetAnimInstance_ReturnValue) == 0x0000E8, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, CallFunc_IsAnyMontagePlaying_ReturnValue) == 0x0000F0, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::CallFunc_IsAnyMontagePlaying_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, CallFunc_IsValid_ReturnValue) == 0x0000F1, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, CallFunc_IsValid_ReturnValue_1) == 0x0000F2, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, CallFunc_RandomFloatInRange_ReturnValue) == 0x0000F8, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_Event_EventName) == 0x000100, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_Event_EventName' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_SwitchName_CmpSuccess) == 0x000108, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_SwitchName_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_Event_Socket) == 0x00010C, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_Event_Socket' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_Event_Bool) == 0x000114, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_Event_Bool' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CustomEvent_NotifyName_6) == 0x000118, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CustomEvent_NotifyName_6' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CreateDelegate_OutputDelegate_7) == 0x000120, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CustomEvent_NotifyName_7) == 0x000130, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CustomEvent_NotifyName_7' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CustomEvent_NotifyName_8) == 0x000138, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CustomEvent_NotifyName_8' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CreateDelegate_OutputDelegate_8) == 0x000140, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, CallFunc_GetOwner_ReturnValue_1) == 0x000150, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CreateDelegate_OutputDelegate_9) == 0x000158, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_DynamicCast_AsRPlayer_Pawn_1) == 0x000168, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_DynamicCast_AsRPlayer_Pawn_1' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_DynamicCast_bSuccess_1) == 0x000170, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, CallFunc_GetFName_ReturnValue) == 0x000174, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::CallFunc_GetFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, K2Node_CustomEvent_NotifyName_9) == 0x00017C, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::K2Node_CustomEvent_NotifyName_9' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body, CallFunc_Delay_Duration_ImplicitCast) == 0x000184, "Member 'BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body::CallFunc_Delay_Duration_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FishDiety_Body_C_ExecuteUbergraph_BP_FishDiety_Body;
 
 // Function BP_FishDiety_Body.BP_FishDiety_Body_C.OnAnimationTriggerEvent
 // 0x0008 (0x0008 - 0x0000)
@@ -122,9 +78,7 @@ struct BP_FishDiety_Body_C_OnAnimationTriggerEvent final
 public:
 	class FName                                   EventName;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FishDiety_Body_C_OnAnimationTriggerEvent) == 0x000004, "Wrong alignment on BP_FishDiety_Body_C_OnAnimationTriggerEvent");
-static_assert(sizeof(BP_FishDiety_Body_C_OnAnimationTriggerEvent) == 0x000008, "Wrong size on BP_FishDiety_Body_C_OnAnimationTriggerEvent");
-static_assert(offsetof(BP_FishDiety_Body_C_OnAnimationTriggerEvent, EventName) == 0x000000, "Member 'BP_FishDiety_Body_C_OnAnimationTriggerEvent::EventName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FishDiety_Body_C_OnAnimationTriggerEvent;
 
 // Function BP_FishDiety_Body.BP_FishDiety_Body_C.OnBlendOut_20B1AE3642DCFD74930A35A71CA1FE4F
 // 0x0008 (0x0008 - 0x0000)
@@ -133,9 +87,7 @@ struct BP_FishDiety_Body_C_OnBlendOut_20B1AE3642DCFD74930A35A71CA1FE4F final
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FishDiety_Body_C_OnBlendOut_20B1AE3642DCFD74930A35A71CA1FE4F) == 0x000004, "Wrong alignment on BP_FishDiety_Body_C_OnBlendOut_20B1AE3642DCFD74930A35A71CA1FE4F");
-static_assert(sizeof(BP_FishDiety_Body_C_OnBlendOut_20B1AE3642DCFD74930A35A71CA1FE4F) == 0x000008, "Wrong size on BP_FishDiety_Body_C_OnBlendOut_20B1AE3642DCFD74930A35A71CA1FE4F");
-static_assert(offsetof(BP_FishDiety_Body_C_OnBlendOut_20B1AE3642DCFD74930A35A71CA1FE4F, NotifyName) == 0x000000, "Member 'BP_FishDiety_Body_C_OnBlendOut_20B1AE3642DCFD74930A35A71CA1FE4F::NotifyName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FishDiety_Body_C_OnBlendOut_20B1AE3642DCFD74930A35A71CA1FE4F;
 
 // Function BP_FishDiety_Body.BP_FishDiety_Body_C.OnBlendOut_D4D78B1046B972B176CD81B2A7109B13
 // 0x0008 (0x0008 - 0x0000)
@@ -144,9 +96,7 @@ struct BP_FishDiety_Body_C_OnBlendOut_D4D78B1046B972B176CD81B2A7109B13 final
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FishDiety_Body_C_OnBlendOut_D4D78B1046B972B176CD81B2A7109B13) == 0x000004, "Wrong alignment on BP_FishDiety_Body_C_OnBlendOut_D4D78B1046B972B176CD81B2A7109B13");
-static_assert(sizeof(BP_FishDiety_Body_C_OnBlendOut_D4D78B1046B972B176CD81B2A7109B13) == 0x000008, "Wrong size on BP_FishDiety_Body_C_OnBlendOut_D4D78B1046B972B176CD81B2A7109B13");
-static_assert(offsetof(BP_FishDiety_Body_C_OnBlendOut_D4D78B1046B972B176CD81B2A7109B13, NotifyName) == 0x000000, "Member 'BP_FishDiety_Body_C_OnBlendOut_D4D78B1046B972B176CD81B2A7109B13::NotifyName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FishDiety_Body_C_OnBlendOut_D4D78B1046B972B176CD81B2A7109B13;
 
 // Function BP_FishDiety_Body.BP_FishDiety_Body_C.OnCompleted_20B1AE3642DCFD74930A35A71CA1FE4F
 // 0x0008 (0x0008 - 0x0000)
@@ -155,9 +105,7 @@ struct BP_FishDiety_Body_C_OnCompleted_20B1AE3642DCFD74930A35A71CA1FE4F final
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FishDiety_Body_C_OnCompleted_20B1AE3642DCFD74930A35A71CA1FE4F) == 0x000004, "Wrong alignment on BP_FishDiety_Body_C_OnCompleted_20B1AE3642DCFD74930A35A71CA1FE4F");
-static_assert(sizeof(BP_FishDiety_Body_C_OnCompleted_20B1AE3642DCFD74930A35A71CA1FE4F) == 0x000008, "Wrong size on BP_FishDiety_Body_C_OnCompleted_20B1AE3642DCFD74930A35A71CA1FE4F");
-static_assert(offsetof(BP_FishDiety_Body_C_OnCompleted_20B1AE3642DCFD74930A35A71CA1FE4F, NotifyName) == 0x000000, "Member 'BP_FishDiety_Body_C_OnCompleted_20B1AE3642DCFD74930A35A71CA1FE4F::NotifyName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FishDiety_Body_C_OnCompleted_20B1AE3642DCFD74930A35A71CA1FE4F;
 
 // Function BP_FishDiety_Body.BP_FishDiety_Body_C.OnCompleted_D4D78B1046B972B176CD81B2A7109B13
 // 0x0008 (0x0008 - 0x0000)
@@ -166,9 +114,7 @@ struct BP_FishDiety_Body_C_OnCompleted_D4D78B1046B972B176CD81B2A7109B13 final
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FishDiety_Body_C_OnCompleted_D4D78B1046B972B176CD81B2A7109B13) == 0x000004, "Wrong alignment on BP_FishDiety_Body_C_OnCompleted_D4D78B1046B972B176CD81B2A7109B13");
-static_assert(sizeof(BP_FishDiety_Body_C_OnCompleted_D4D78B1046B972B176CD81B2A7109B13) == 0x000008, "Wrong size on BP_FishDiety_Body_C_OnCompleted_D4D78B1046B972B176CD81B2A7109B13");
-static_assert(offsetof(BP_FishDiety_Body_C_OnCompleted_D4D78B1046B972B176CD81B2A7109B13, NotifyName) == 0x000000, "Member 'BP_FishDiety_Body_C_OnCompleted_D4D78B1046B972B176CD81B2A7109B13::NotifyName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FishDiety_Body_C_OnCompleted_D4D78B1046B972B176CD81B2A7109B13;
 
 // Function BP_FishDiety_Body.BP_FishDiety_Body_C.OnInterrupted_20B1AE3642DCFD74930A35A71CA1FE4F
 // 0x0008 (0x0008 - 0x0000)
@@ -177,9 +123,7 @@ struct BP_FishDiety_Body_C_OnInterrupted_20B1AE3642DCFD74930A35A71CA1FE4F final
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FishDiety_Body_C_OnInterrupted_20B1AE3642DCFD74930A35A71CA1FE4F) == 0x000004, "Wrong alignment on BP_FishDiety_Body_C_OnInterrupted_20B1AE3642DCFD74930A35A71CA1FE4F");
-static_assert(sizeof(BP_FishDiety_Body_C_OnInterrupted_20B1AE3642DCFD74930A35A71CA1FE4F) == 0x000008, "Wrong size on BP_FishDiety_Body_C_OnInterrupted_20B1AE3642DCFD74930A35A71CA1FE4F");
-static_assert(offsetof(BP_FishDiety_Body_C_OnInterrupted_20B1AE3642DCFD74930A35A71CA1FE4F, NotifyName) == 0x000000, "Member 'BP_FishDiety_Body_C_OnInterrupted_20B1AE3642DCFD74930A35A71CA1FE4F::NotifyName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FishDiety_Body_C_OnInterrupted_20B1AE3642DCFD74930A35A71CA1FE4F;
 
 // Function BP_FishDiety_Body.BP_FishDiety_Body_C.OnInterrupted_D4D78B1046B972B176CD81B2A7109B13
 // 0x0008 (0x0008 - 0x0000)
@@ -188,9 +132,7 @@ struct BP_FishDiety_Body_C_OnInterrupted_D4D78B1046B972B176CD81B2A7109B13 final
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FishDiety_Body_C_OnInterrupted_D4D78B1046B972B176CD81B2A7109B13) == 0x000004, "Wrong alignment on BP_FishDiety_Body_C_OnInterrupted_D4D78B1046B972B176CD81B2A7109B13");
-static_assert(sizeof(BP_FishDiety_Body_C_OnInterrupted_D4D78B1046B972B176CD81B2A7109B13) == 0x000008, "Wrong size on BP_FishDiety_Body_C_OnInterrupted_D4D78B1046B972B176CD81B2A7109B13");
-static_assert(offsetof(BP_FishDiety_Body_C_OnInterrupted_D4D78B1046B972B176CD81B2A7109B13, NotifyName) == 0x000000, "Member 'BP_FishDiety_Body_C_OnInterrupted_D4D78B1046B972B176CD81B2A7109B13::NotifyName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FishDiety_Body_C_OnInterrupted_D4D78B1046B972B176CD81B2A7109B13;
 
 // Function BP_FishDiety_Body.BP_FishDiety_Body_C.OnNotifyBegin_20B1AE3642DCFD74930A35A71CA1FE4F
 // 0x0008 (0x0008 - 0x0000)
@@ -199,9 +141,7 @@ struct BP_FishDiety_Body_C_OnNotifyBegin_20B1AE3642DCFD74930A35A71CA1FE4F final
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FishDiety_Body_C_OnNotifyBegin_20B1AE3642DCFD74930A35A71CA1FE4F) == 0x000004, "Wrong alignment on BP_FishDiety_Body_C_OnNotifyBegin_20B1AE3642DCFD74930A35A71CA1FE4F");
-static_assert(sizeof(BP_FishDiety_Body_C_OnNotifyBegin_20B1AE3642DCFD74930A35A71CA1FE4F) == 0x000008, "Wrong size on BP_FishDiety_Body_C_OnNotifyBegin_20B1AE3642DCFD74930A35A71CA1FE4F");
-static_assert(offsetof(BP_FishDiety_Body_C_OnNotifyBegin_20B1AE3642DCFD74930A35A71CA1FE4F, NotifyName) == 0x000000, "Member 'BP_FishDiety_Body_C_OnNotifyBegin_20B1AE3642DCFD74930A35A71CA1FE4F::NotifyName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FishDiety_Body_C_OnNotifyBegin_20B1AE3642DCFD74930A35A71CA1FE4F;
 
 // Function BP_FishDiety_Body.BP_FishDiety_Body_C.OnNotifyBegin_D4D78B1046B972B176CD81B2A7109B13
 // 0x0008 (0x0008 - 0x0000)
@@ -210,9 +150,7 @@ struct BP_FishDiety_Body_C_OnNotifyBegin_D4D78B1046B972B176CD81B2A7109B13 final
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FishDiety_Body_C_OnNotifyBegin_D4D78B1046B972B176CD81B2A7109B13) == 0x000004, "Wrong alignment on BP_FishDiety_Body_C_OnNotifyBegin_D4D78B1046B972B176CD81B2A7109B13");
-static_assert(sizeof(BP_FishDiety_Body_C_OnNotifyBegin_D4D78B1046B972B176CD81B2A7109B13) == 0x000008, "Wrong size on BP_FishDiety_Body_C_OnNotifyBegin_D4D78B1046B972B176CD81B2A7109B13");
-static_assert(offsetof(BP_FishDiety_Body_C_OnNotifyBegin_D4D78B1046B972B176CD81B2A7109B13, NotifyName) == 0x000000, "Member 'BP_FishDiety_Body_C_OnNotifyBegin_D4D78B1046B972B176CD81B2A7109B13::NotifyName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FishDiety_Body_C_OnNotifyBegin_D4D78B1046B972B176CD81B2A7109B13;
 
 // Function BP_FishDiety_Body.BP_FishDiety_Body_C.OnNotifyEnd_20B1AE3642DCFD74930A35A71CA1FE4F
 // 0x0008 (0x0008 - 0x0000)
@@ -221,9 +159,7 @@ struct BP_FishDiety_Body_C_OnNotifyEnd_20B1AE3642DCFD74930A35A71CA1FE4F final
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FishDiety_Body_C_OnNotifyEnd_20B1AE3642DCFD74930A35A71CA1FE4F) == 0x000004, "Wrong alignment on BP_FishDiety_Body_C_OnNotifyEnd_20B1AE3642DCFD74930A35A71CA1FE4F");
-static_assert(sizeof(BP_FishDiety_Body_C_OnNotifyEnd_20B1AE3642DCFD74930A35A71CA1FE4F) == 0x000008, "Wrong size on BP_FishDiety_Body_C_OnNotifyEnd_20B1AE3642DCFD74930A35A71CA1FE4F");
-static_assert(offsetof(BP_FishDiety_Body_C_OnNotifyEnd_20B1AE3642DCFD74930A35A71CA1FE4F, NotifyName) == 0x000000, "Member 'BP_FishDiety_Body_C_OnNotifyEnd_20B1AE3642DCFD74930A35A71CA1FE4F::NotifyName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FishDiety_Body_C_OnNotifyEnd_20B1AE3642DCFD74930A35A71CA1FE4F;
 
 // Function BP_FishDiety_Body.BP_FishDiety_Body_C.OnNotifyEnd_D4D78B1046B972B176CD81B2A7109B13
 // 0x0008 (0x0008 - 0x0000)
@@ -232,9 +168,7 @@ struct BP_FishDiety_Body_C_OnNotifyEnd_D4D78B1046B972B176CD81B2A7109B13 final
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FishDiety_Body_C_OnNotifyEnd_D4D78B1046B972B176CD81B2A7109B13) == 0x000004, "Wrong alignment on BP_FishDiety_Body_C_OnNotifyEnd_D4D78B1046B972B176CD81B2A7109B13");
-static_assert(sizeof(BP_FishDiety_Body_C_OnNotifyEnd_D4D78B1046B972B176CD81B2A7109B13) == 0x000008, "Wrong size on BP_FishDiety_Body_C_OnNotifyEnd_D4D78B1046B972B176CD81B2A7109B13");
-static_assert(offsetof(BP_FishDiety_Body_C_OnNotifyEnd_D4D78B1046B972B176CD81B2A7109B13, NotifyName) == 0x000000, "Member 'BP_FishDiety_Body_C_OnNotifyEnd_D4D78B1046B972B176CD81B2A7109B13::NotifyName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FishDiety_Body_C_OnNotifyEnd_D4D78B1046B972B176CD81B2A7109B13;
 
 // Function BP_FishDiety_Body.BP_FishDiety_Body_C.OnToggleEvent
 // 0x000C (0x000C - 0x0000)
@@ -244,10 +178,7 @@ public:
 	class FName                                   Socket;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Bool;                                              // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FishDiety_Body_C_OnToggleEvent) == 0x000004, "Wrong alignment on BP_FishDiety_Body_C_OnToggleEvent");
-static_assert(sizeof(BP_FishDiety_Body_C_OnToggleEvent) == 0x00000C, "Wrong size on BP_FishDiety_Body_C_OnToggleEvent");
-static_assert(offsetof(BP_FishDiety_Body_C_OnToggleEvent, Socket) == 0x000000, "Member 'BP_FishDiety_Body_C_OnToggleEvent::Socket' has a wrong offset!");
-static_assert(offsetof(BP_FishDiety_Body_C_OnToggleEvent, Bool) == 0x000008, "Member 'BP_FishDiety_Body_C_OnToggleEvent::Bool' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FishDiety_Body_C_OnToggleEvent;
 
 }
 

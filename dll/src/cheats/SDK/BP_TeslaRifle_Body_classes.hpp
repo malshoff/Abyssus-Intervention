@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -42,23 +42,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_TeslaRifle_Body_C">();
+		BP_STATIC_CLASS_IMPL("BP_TeslaRifle_Body_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_TeslaRifle_Body_C")
 	}
 	static class ABP_TeslaRifle_Body_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_TeslaRifle_Body_C>();
 	}
 };
-static_assert(alignof(ABP_TeslaRifle_Body_C) == 0x000008, "Wrong alignment on ABP_TeslaRifle_Body_C");
-static_assert(sizeof(ABP_TeslaRifle_Body_C) == 0x0003E8, "Wrong size on ABP_TeslaRifle_Body_C");
-static_assert(offsetof(ABP_TeslaRifle_Body_C, UberGraphFrame) == 0x000390, "Member 'ABP_TeslaRifle_Body_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_Body_C, BeamVFX) == 0x000398, "Member 'ABP_TeslaRifle_Body_C::BeamVFX' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_Body_C, RNS_TeslaRifle_AttachedArcs_02) == 0x0003A0, "Member 'ABP_TeslaRifle_Body_C::RNS_TeslaRifle_AttachedArcs_02' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_Body_C, RNS_TeslaRifle_AttachedArcs_01) == 0x0003A8, "Member 'ABP_TeslaRifle_Body_C::RNS_TeslaRifle_AttachedArcs_01' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_Body_C, AttachmentSlot) == 0x0003B0, "Member 'ABP_TeslaRifle_Body_C::AttachmentSlot' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_Body_C, HitPosition) == 0x0003B8, "Member 'ABP_TeslaRifle_Body_C::HitPosition' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_Body_C, SpawnedMuzzleCharge) == 0x0003D0, "Member 'ABP_TeslaRifle_Body_C::SpawnedMuzzleCharge' has a wrong offset!");
-static_assert(offsetof(ABP_TeslaRifle_Body_C, SpawnedBeams) == 0x0003D8, "Member 'ABP_TeslaRifle_Body_C::SpawnedBeams' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_TeslaRifle_Body_C;
 
 }
 

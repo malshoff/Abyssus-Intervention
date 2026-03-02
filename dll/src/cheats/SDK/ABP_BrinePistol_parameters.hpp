@@ -24,9 +24,7 @@ struct ABP_BrinePistol_C_AnimGraph final
 public:
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_BrinePistol_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_BrinePistol_C_AnimGraph");
-static_assert(sizeof(ABP_BrinePistol_C_AnimGraph) == 0x000010, "Wrong size on ABP_BrinePistol_C_AnimGraph");
-static_assert(offsetof(ABP_BrinePistol_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'ABP_BrinePistol_C_AnimGraph::AnimGraph_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BrinePistol_C_AnimGraph;
 
 // Function ABP_BrinePistol.ABP_BrinePistol_C.BlueprintUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -35,9 +33,7 @@ struct ABP_BrinePistol_C_BlueprintUpdateAnimation final
 public:
 	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_BrinePistol_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on ABP_BrinePistol_C_BlueprintUpdateAnimation");
-static_assert(sizeof(ABP_BrinePistol_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on ABP_BrinePistol_C_BlueprintUpdateAnimation");
-static_assert(offsetof(ABP_BrinePistol_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'ABP_BrinePistol_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BrinePistol_C_BlueprintUpdateAnimation;
 
 // Function ABP_BrinePistol.ABP_BrinePistol_C.ExecuteUbergraph_ABP_BrinePistol
 // 0x0120 (0x0120 - 0x0000)
@@ -72,33 +68,7 @@ public:
 	float                                         CallFunc_MakeRotator_Roll_ImplicitCast;            // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_MakeRotator_Roll_ImplicitCast_1;          // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol) == 0x000008, "Wrong alignment on ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol");
-static_assert(sizeof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol) == 0x000120, "Wrong size on ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, EntryPoint) == 0x000000, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_BreakTransform_Location) == 0x000008, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_BreakTransform_Rotation) == 0x000020, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_BreakTransform_Scale) == 0x000038, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_BreakTransform_Location_1) == 0x000050, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_BreakTransform_Location_1' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_BreakTransform_Rotation_1) == 0x000068, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_BreakTransform_Scale_1) == 0x000080, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, K2Node_Event_DeltaTimeX) == 0x000098, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::K2Node_Event_DeltaTimeX' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, K2Node_Event_IsPrimaryMod) == 0x00009C, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::K2Node_Event_IsPrimaryMod' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_BreakRotator_Roll) == 0x0000A0, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_BreakRotator_Pitch) == 0x0000A4, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_BreakRotator_Yaw) == 0x0000A8, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_BreakRotator_Roll_1) == 0x0000AC, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_BreakRotator_Pitch_1) == 0x0000B0, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_BreakRotator_Yaw_1) == 0x0000B4, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000B8, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_FInterpTo_ReturnValue) == 0x0000C0, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_FInterpTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_MakeRotator_ReturnValue) == 0x0000C8, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_MakeRotator_ReturnValue_1) == 0x0000E0, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_FInterpTo_DeltaTime_ImplicitCast) == 0x0000F8, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_FInterpTo_DeltaTime_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_FInterpTo_Target_ImplicitCast) == 0x000100, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_FInterpTo_Target_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_FInterpTo_Current_ImplicitCast) == 0x000108, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_FInterpTo_Current_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000110, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x000118, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol, CallFunc_MakeRotator_Roll_ImplicitCast_1) == 0x00011C, "Member 'ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol::CallFunc_MakeRotator_Roll_ImplicitCast_1' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BrinePistol_C_ExecuteUbergraph_ABP_BrinePistol;
 
 // Function ABP_BrinePistol.ABP_BrinePistol_C.OnWeaponFired
 // 0x0001 (0x0001 - 0x0000)
@@ -107,9 +77,7 @@ struct ABP_BrinePistol_C_OnWeaponFired final
 public:
 	bool                                          IsPrimaryMod;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_BrinePistol_C_OnWeaponFired) == 0x000001, "Wrong alignment on ABP_BrinePistol_C_OnWeaponFired");
-static_assert(sizeof(ABP_BrinePistol_C_OnWeaponFired) == 0x000001, "Wrong size on ABP_BrinePistol_C_OnWeaponFired");
-static_assert(offsetof(ABP_BrinePistol_C_OnWeaponFired, IsPrimaryMod) == 0x000000, "Member 'ABP_BrinePistol_C_OnWeaponFired::IsPrimaryMod' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BrinePistol_C_OnWeaponFired;
 
 }
 

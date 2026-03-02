@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "DataflowEngine_structs.hpp"
 
@@ -18,35 +19,158 @@
 namespace SDK
 {
 
-// Class DataflowEngine.Dataflow
-// 0x0060 (0x00C0 - 0x0060)
-class UDataflow final : public UEdGraph
+// Class DataflowEngine.DataflowDebugDrawComponent
+// 0x0000 (0x0580 - 0x0580)
+class UDataflowDebugDrawComponent final : public UDebugDrawComponent
 {
 public:
-	uint8                                         Pad_60[0x38];                                      // 0x0060(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bActive;                                           // 0x0098(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UObject*>                        Targets;                                           // 0x00A0(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
-	class UMaterial*                              Material;                                          // 0x00B0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataflowType                                 Type;                                              // 0x00B8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DataflowDebugDrawComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowDebugDrawComponent")
+	}
+	static class UDataflowDebugDrawComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDataflowDebugDrawComponent>();
+	}
+};
+DUMPER7_ASSERTS_UDataflowDebugDrawComponent;
+
+// Class DataflowEngine.DataflowContextObject
+// 0x0050 (0x0078 - 0x0028)
+class UDataflowContextObject : public UObject
+{
+public:
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDataflowEdNode*                        SelectedNode;                                      // 0x0038(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_40[0x18];                                      // 0x0040(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDataflow*                              DataflowGraph;                                     // 0x0058(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_60[0x18];                                      // 0x0060(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"Dataflow">();
+		STATIC_CLASS_IMPL("DataflowContextObject")
 	}
-	static class UDataflow* GetDefaultObj()
+	static const class FName& StaticName()
 	{
-		return GetDefaultObjImpl<UDataflow>();
+		STATIC_NAME_IMPL(L"DataflowContextObject")
+	}
+	static class UDataflowContextObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDataflowContextObject>();
 	}
 };
-static_assert(alignof(UDataflow) == 0x000008, "Wrong alignment on UDataflow");
-static_assert(sizeof(UDataflow) == 0x0000C0, "Wrong size on UDataflow");
-static_assert(offsetof(UDataflow, bActive) == 0x000098, "Member 'UDataflow::bActive' has a wrong offset!");
-static_assert(offsetof(UDataflow, Targets) == 0x0000A0, "Member 'UDataflow::Targets' has a wrong offset!");
-static_assert(offsetof(UDataflow, Material) == 0x0000B0, "Member 'UDataflow::Material' has a wrong offset!");
-static_assert(offsetof(UDataflow, Type) == 0x0000B8, "Member 'UDataflow::Type' has a wrong offset!");
+DUMPER7_ASSERTS_UDataflowContextObject;
+
+// Class DataflowEngine.DataflowBaseContent
+// 0x0030 (0x00A8 - 0x0078)
+class UDataflowBaseContent : public UDataflowContextObject
+{
+public:
+	class FString                                 DataflowTerminal;                                  // 0x0078(0x0010)(ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UObject*                                TerminalAsset;                                     // 0x0088(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_90[0x8];                                       // 0x0090(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bIsConstructionDirty;                              // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsSimulationDirty;                                // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_9A[0xE];                                       // 0x009A(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DataflowBaseContent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowBaseContent")
+	}
+	static class UDataflowBaseContent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDataflowBaseContent>();
+	}
+};
+DUMPER7_ASSERTS_UDataflowBaseContent;
+
+// Class DataflowEngine.DataflowInstanceInterface
+// 0x0000 (0x0000 - 0x0000)
+class IDataflowInstanceInterface final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DataflowInstanceInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowInstanceInterface")
+	}
+	static class IDataflowInstanceInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IDataflowInstanceInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IDataflowInstanceInterface;
+
+// Class DataflowEngine.DataflowMesh
+// 0x0018 (0x0040 - 0x0028)
+class UDataflowMesh final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInterface*>             Materials;                                         // 0x0030(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DataflowMesh")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowMesh")
+	}
+	static class UDataflowMesh* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDataflowMesh>();
+	}
+};
+DUMPER7_ASSERTS_UDataflowMesh;
+
+// Class DataflowEngine.DataflowSubGraph
+// 0x0018 (0x0078 - 0x0060)
+class UDataflowSubGraph final : public UEdGraph
+{
+public:
+	struct FGuid                                  SubGraphGuid;                                      // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bIsForEach;                                        // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DataflowSubGraph")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowSubGraph")
+	}
+	static class UDataflowSubGraph* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDataflowSubGraph>();
+	}
+};
+DUMPER7_ASSERTS_UDataflowSubGraph;
 
 // Class DataflowEngine.DataflowBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -54,19 +178,31 @@ class UDataflowBlueprintLibrary final : public UBlueprintFunctionLibrary
 {
 public:
 	static void EvaluateTerminalNodeByName(class UDataflow* Dataflow, class FName TerminalNodeName, class UObject* ResultAsset);
+	static bool OverrideDataflowVariableBool(class UObject* Asset, class FName VariableName, bool VariableValue);
+	static bool OverrideDataflowVariableBoolArray(class UObject* Asset, class FName VariableName, const TArray<bool>& VariableArrayValue);
+	static bool OverrideDataflowVariableFloat(class UObject* Asset, class FName VariableName, float VariableValue);
+	static bool OverrideDataflowVariableFloatArray(class UObject* Asset, class FName VariableName, const TArray<float>& VariableArrayValue);
+	static bool OverrideDataflowVariableInt(class UObject* Asset, class FName VariableName, int64 VariableValue);
+	static bool OverrideDataflowVariableIntArray(class UObject* Asset, class FName VariableName, const TArray<int32>& VariableArrayValue);
+	static bool OverrideDataflowVariableObject(class UObject* Asset, class FName VariableName, class UObject* VariableValue);
+	static bool OverrideDataflowVariableObjectArray(class UObject* Asset, class FName VariableName, const TArray<class UObject*>& VariableArrayValue);
+	static bool RegenerateAssetFromDataflow(class UObject* AssetToRegenerate, bool bRegenerateDependentAssets);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataflowBlueprintLibrary">();
+		STATIC_CLASS_IMPL("DataflowBlueprintLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowBlueprintLibrary")
 	}
 	static class UDataflowBlueprintLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDataflowBlueprintLibrary>();
 	}
 };
-static_assert(alignof(UDataflowBlueprintLibrary) == 0x000008, "Wrong alignment on UDataflowBlueprintLibrary");
-static_assert(sizeof(UDataflowBlueprintLibrary) == 0x000028, "Wrong size on UDataflowBlueprintLibrary");
+DUMPER7_ASSERTS_UDataflowBlueprintLibrary;
 
 // Class DataflowEngine.DataflowContentOwner
 // 0x0000 (0x0000 - 0x0000)
@@ -75,7 +211,11 @@ class IDataflowContentOwner final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataflowContentOwner">();
+		STATIC_CLASS_IMPL("DataflowContentOwner")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowContentOwner")
 	}
 	static class IDataflowContentOwner* GetDefaultObj()
 	{
@@ -91,90 +231,35 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IDataflowContentOwner) == 0x000001, "Wrong alignment on IDataflowContentOwner");
-static_assert(sizeof(IDataflowContentOwner) == 0x000001, "Wrong size on IDataflowContentOwner");
-
-// Class DataflowEngine.DataflowContextObject
-// 0x0050 (0x0078 - 0x0028)
-class UDataflowContextObject : public UObject
-{
-public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDataflowEdNode*                        SelectedNode;                                      // 0x0038(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_40[0x18];                                      // 0x0040(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDataflow*                              DataflowGraph;                                     // 0x0058(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_60[0x18];                                      // 0x0060(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"DataflowContextObject">();
-	}
-	static class UDataflowContextObject* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDataflowContextObject>();
-	}
-};
-static_assert(alignof(UDataflowContextObject) == 0x000008, "Wrong alignment on UDataflowContextObject");
-static_assert(sizeof(UDataflowContextObject) == 0x000078, "Wrong size on UDataflowContextObject");
-static_assert(offsetof(UDataflowContextObject, SelectedNode) == 0x000038, "Member 'UDataflowContextObject::SelectedNode' has a wrong offset!");
-static_assert(offsetof(UDataflowContextObject, DataflowGraph) == 0x000058, "Member 'UDataflowContextObject::DataflowGraph' has a wrong offset!");
-
-// Class DataflowEngine.DataflowBaseContent
-// 0x0030 (0x00A8 - 0x0078)
-class UDataflowBaseContent : public UDataflowContextObject
-{
-public:
-	class FString                                 DataflowTerminal;                                  // 0x0078(0x0010)(ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UObject*                                TerminalAsset;                                     // 0x0088(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_90[0x8];                                       // 0x0090(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bIsConstructionDirty;                              // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsSimulationDirty;                                // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_9A[0xE];                                       // 0x009A(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"DataflowBaseContent">();
-	}
-	static class UDataflowBaseContent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDataflowBaseContent>();
-	}
-};
-static_assert(alignof(UDataflowBaseContent) == 0x000008, "Wrong alignment on UDataflowBaseContent");
-static_assert(sizeof(UDataflowBaseContent) == 0x0000A8, "Wrong size on UDataflowBaseContent");
-static_assert(offsetof(UDataflowBaseContent, DataflowTerminal) == 0x000078, "Member 'UDataflowBaseContent::DataflowTerminal' has a wrong offset!");
-static_assert(offsetof(UDataflowBaseContent, TerminalAsset) == 0x000088, "Member 'UDataflowBaseContent::TerminalAsset' has a wrong offset!");
-static_assert(offsetof(UDataflowBaseContent, bIsConstructionDirty) == 0x000098, "Member 'UDataflowBaseContent::bIsConstructionDirty' has a wrong offset!");
-static_assert(offsetof(UDataflowBaseContent, bIsSimulationDirty) == 0x000099, "Member 'UDataflowBaseContent::bIsSimulationDirty' has a wrong offset!");
+DUMPER7_ASSERTS_IDataflowContentOwner;
 
 // Class DataflowEngine.DataflowSkeletalContent
 // 0x0018 (0x00C0 - 0x00A8)
-class UDataflowSkeletalContent final : public UDataflowBaseContent
+class UDataflowSkeletalContent : public UDataflowBaseContent
 {
 public:
-	class USkeletalMesh*                          SkeletalMesh;                                      // 0x00A8(0x0008)(Edit, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UAnimationAsset*                        AnimationAsset;                                    // 0x00B0(0x0008)(Edit, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USkeletalMesh*                          SkeletalMesh;                                      // 0x00A8(0x0008)(Edit, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UAnimationAsset*                        AnimationAsset;                                    // 0x00B0(0x0008)(Edit, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataflowSkeletalContent">();
+		STATIC_CLASS_IMPL("DataflowSkeletalContent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowSkeletalContent")
 	}
 	static class UDataflowSkeletalContent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDataflowSkeletalContent>();
 	}
 };
-static_assert(alignof(UDataflowSkeletalContent) == 0x000008, "Wrong alignment on UDataflowSkeletalContent");
-static_assert(sizeof(UDataflowSkeletalContent) == 0x0000C0, "Wrong size on UDataflowSkeletalContent");
-static_assert(offsetof(UDataflowSkeletalContent, SkeletalMesh) == 0x0000A8, "Member 'UDataflowSkeletalContent::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(UDataflowSkeletalContent, AnimationAsset) == 0x0000B0, "Member 'UDataflowSkeletalContent::AnimationAsset' has a wrong offset!");
+DUMPER7_ASSERTS_UDataflowSkeletalContent;
 
 // Class DataflowEngine.DataflowEdNode
-// 0x0028 (0x00C0 - 0x0098)
+// 0x0040 (0x00D8 - 0x0098)
 class UDataflowEdNode final : public UEdGraphNode
 {
 public:
@@ -182,23 +267,55 @@ public:
 	bool                                          bRenderInAssetEditor;                              // 0x00B8(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bRenderWireframeInAssetEditor;                     // 0x00B9(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bCanEnableRenderWireframe;                         // 0x00BA(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_BB[0x5];                                       // 0x00BB(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BB[0x1D];                                      // 0x00BB(0x001D)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataflowEdNode">();
+		STATIC_CLASS_IMPL("DataflowEdNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowEdNode")
 	}
 	static class UDataflowEdNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDataflowEdNode>();
 	}
 };
-static_assert(alignof(UDataflowEdNode) == 0x000008, "Wrong alignment on UDataflowEdNode");
-static_assert(sizeof(UDataflowEdNode) == 0x0000C0, "Wrong size on UDataflowEdNode");
-static_assert(offsetof(UDataflowEdNode, bRenderInAssetEditor) == 0x0000B8, "Member 'UDataflowEdNode::bRenderInAssetEditor' has a wrong offset!");
-static_assert(offsetof(UDataflowEdNode, bRenderWireframeInAssetEditor) == 0x0000B9, "Member 'UDataflowEdNode::bRenderWireframeInAssetEditor' has a wrong offset!");
-static_assert(offsetof(UDataflowEdNode, bCanEnableRenderWireframe) == 0x0000BA, "Member 'UDataflowEdNode::bCanEnableRenderWireframe' has a wrong offset!");
+DUMPER7_ASSERTS_UDataflowEdNode;
+
+// Class DataflowEngine.Dataflow
+// 0x00A8 (0x0108 - 0x0060)
+class UDataflow final : public UEdGraph
+{
+public:
+	uint8                                         Pad_60[0x48];                                      // 0x0060(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bActive;                                           // 0x00A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UObject*>                        Targets;                                           // 0x00B0(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	class UMaterial*                              Material;                                          // 0x00C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	EDataflowType                                 Type;                                              // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInstancedPropertyBag                  Variables;                                         // 0x00D0(0x0010)(NativeAccessSpecifierPublic)
+	TArray<class UDataflowSubGraph*>              DataflowSubGraphs;                                 // 0x00E0(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_F0[0x18];                                      // 0x00F0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("Dataflow")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Dataflow")
+	}
+	static class UDataflow* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDataflow>();
+	}
+};
+DUMPER7_ASSERTS_UDataflow;
 
 }
 

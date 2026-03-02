@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function Widget_HitReaction.Widget_HitReaction_C.CheckLowHealth
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  MissingHealthPercentage                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bGainedHealth                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -121,7 +121,7 @@ double UWidget_HitReaction_C::LocationToScreenAngle(const struct FVector& A)
 
 
 // Function Widget_HitReaction.Widget_HitReaction_C.OnDamageTaken
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class URHealthComponent*                Component                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // const struct FDamageCombatEvent&        DamageEvent                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)

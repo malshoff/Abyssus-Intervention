@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass WS_BrinepunkButton_01.WS_BrinepunkButton_01_C
-// 0x0000 (0x06B0 - 0x06B0)
+// 0x0000 (0x0710 - 0x0710)
 class UWS_BrinepunkButton_01_C final : public UCommonButtonStyle
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"WS_BrinepunkButton_01_C">();
+		BP_STATIC_CLASS_IMPL("WS_BrinepunkButton_01_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WS_BrinepunkButton_01_C")
 	}
 	static class UWS_BrinepunkButton_01_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWS_BrinepunkButton_01_C>();
 	}
 };
-static_assert(alignof(UWS_BrinepunkButton_01_C) == 0x000010, "Wrong alignment on UWS_BrinepunkButton_01_C");
-static_assert(sizeof(UWS_BrinepunkButton_01_C) == 0x0006B0, "Wrong size on UWS_BrinepunkButton_01_C");
+DUMPER7_ASSERTS_UWS_BrinepunkButton_01_C;
 
 }
 

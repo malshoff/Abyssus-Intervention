@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+#include "EngineCameras_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "EngineCameras_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -36,12 +36,12 @@ public:
 	float                                         AnimBlendOutTime;                                  // 0x0144(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RandomAnimSegmentDuration;                         // 0x0148(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCameraAnimationSequence*               AnimSequence;                                      // 0x0150(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCameraAnimationSequence*               AnimSequence;                                      // 0x0150(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         bRandomAnimSegment : 1;                            // 0x0158(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_159[0x3];                                      // 0x0159(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         OscillatorTimeRemaining;                           // 0x015C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_160[0x78];                                     // 0x0160(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
-	class USequenceCameraShakePattern*            SequenceShakePattern;                              // 0x01D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USequenceCameraShakePattern*            SequenceShakePattern;                              // 0x01D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_1E0[0x10];                                     // 0x01E0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -57,29 +57,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LegacyCameraShake">();
+		STATIC_CLASS_IMPL("LegacyCameraShake")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LegacyCameraShake")
 	}
 	static class ULegacyCameraShake* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULegacyCameraShake>();
 	}
 };
-static_assert(alignof(ULegacyCameraShake) == 0x000010, "Wrong alignment on ULegacyCameraShake");
-static_assert(sizeof(ULegacyCameraShake) == 0x0001F0, "Wrong size on ULegacyCameraShake");
-static_assert(offsetof(ULegacyCameraShake, OscillationDuration) == 0x0000D8, "Member 'ULegacyCameraShake::OscillationDuration' has a wrong offset!");
-static_assert(offsetof(ULegacyCameraShake, OscillationBlendInTime) == 0x0000DC, "Member 'ULegacyCameraShake::OscillationBlendInTime' has a wrong offset!");
-static_assert(offsetof(ULegacyCameraShake, OscillationBlendOutTime) == 0x0000E0, "Member 'ULegacyCameraShake::OscillationBlendOutTime' has a wrong offset!");
-static_assert(offsetof(ULegacyCameraShake, RotOscillation) == 0x0000E4, "Member 'ULegacyCameraShake::RotOscillation' has a wrong offset!");
-static_assert(offsetof(ULegacyCameraShake, LocOscillation) == 0x000108, "Member 'ULegacyCameraShake::LocOscillation' has a wrong offset!");
-static_assert(offsetof(ULegacyCameraShake, FOVOscillation) == 0x00012C, "Member 'ULegacyCameraShake::FOVOscillation' has a wrong offset!");
-static_assert(offsetof(ULegacyCameraShake, AnimPlayRate) == 0x000138, "Member 'ULegacyCameraShake::AnimPlayRate' has a wrong offset!");
-static_assert(offsetof(ULegacyCameraShake, AnimScale) == 0x00013C, "Member 'ULegacyCameraShake::AnimScale' has a wrong offset!");
-static_assert(offsetof(ULegacyCameraShake, AnimBlendInTime) == 0x000140, "Member 'ULegacyCameraShake::AnimBlendInTime' has a wrong offset!");
-static_assert(offsetof(ULegacyCameraShake, AnimBlendOutTime) == 0x000144, "Member 'ULegacyCameraShake::AnimBlendOutTime' has a wrong offset!");
-static_assert(offsetof(ULegacyCameraShake, RandomAnimSegmentDuration) == 0x000148, "Member 'ULegacyCameraShake::RandomAnimSegmentDuration' has a wrong offset!");
-static_assert(offsetof(ULegacyCameraShake, AnimSequence) == 0x000150, "Member 'ULegacyCameraShake::AnimSequence' has a wrong offset!");
-static_assert(offsetof(ULegacyCameraShake, OscillatorTimeRemaining) == 0x00015C, "Member 'ULegacyCameraShake::OscillatorTimeRemaining' has a wrong offset!");
-static_assert(offsetof(ULegacyCameraShake, SequenceShakePattern) == 0x0001D8, "Member 'ULegacyCameraShake::SequenceShakePattern' has a wrong offset!");
+DUMPER7_ASSERTS_ULegacyCameraShake;
 
 // Class EngineCameras.LegacyCameraShakePattern
 // 0x0000 (0x0028 - 0x0028)
@@ -88,15 +77,18 @@ class ULegacyCameraShakePattern final : public UCameraShakePattern
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LegacyCameraShakePattern">();
+		STATIC_CLASS_IMPL("LegacyCameraShakePattern")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LegacyCameraShakePattern")
 	}
 	static class ULegacyCameraShakePattern* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULegacyCameraShakePattern>();
 	}
 };
-static_assert(alignof(ULegacyCameraShakePattern) == 0x000008, "Wrong alignment on ULegacyCameraShakePattern");
-static_assert(sizeof(ULegacyCameraShakePattern) == 0x000028, "Wrong size on ULegacyCameraShakePattern");
+DUMPER7_ASSERTS_ULegacyCameraShakePattern;
 
 // Class EngineCameras.LegacyCameraShakeFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -108,15 +100,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LegacyCameraShakeFunctionLibrary">();
+		STATIC_CLASS_IMPL("LegacyCameraShakeFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LegacyCameraShakeFunctionLibrary")
 	}
 	static class ULegacyCameraShakeFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULegacyCameraShakeFunctionLibrary>();
 	}
 };
-static_assert(alignof(ULegacyCameraShakeFunctionLibrary) == 0x000008, "Wrong alignment on ULegacyCameraShakeFunctionLibrary");
-static_assert(sizeof(ULegacyCameraShakeFunctionLibrary) == 0x000028, "Wrong size on ULegacyCameraShakeFunctionLibrary");
+DUMPER7_ASSERTS_ULegacyCameraShakeFunctionLibrary;
 
 // Class EngineCameras.CameraAnimationCameraModifier
 // 0x0018 (0x0060 - 0x0048)
@@ -142,17 +137,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"CameraAnimationCameraModifier">();
+		STATIC_CLASS_IMPL("CameraAnimationCameraModifier")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraAnimationCameraModifier")
 	}
 	static class UCameraAnimationCameraModifier* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCameraAnimationCameraModifier>();
 	}
 };
-static_assert(alignof(UCameraAnimationCameraModifier) == 0x000008, "Wrong alignment on UCameraAnimationCameraModifier");
-static_assert(sizeof(UCameraAnimationCameraModifier) == 0x000060, "Wrong size on UCameraAnimationCameraModifier");
-static_assert(offsetof(UCameraAnimationCameraModifier, ActiveAnimations) == 0x000048, "Member 'UCameraAnimationCameraModifier::ActiveAnimations' has a wrong offset!");
-static_assert(offsetof(UCameraAnimationCameraModifier, NextInstanceSerialNumber) == 0x000058, "Member 'UCameraAnimationCameraModifier::NextInstanceSerialNumber' has a wrong offset!");
+DUMPER7_ASSERTS_UCameraAnimationCameraModifier;
 
 // Class EngineCameras.EngineCameraAnimationFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -166,15 +162,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EngineCameraAnimationFunctionLibrary">();
+		STATIC_CLASS_IMPL("EngineCameraAnimationFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EngineCameraAnimationFunctionLibrary")
 	}
 	static class UEngineCameraAnimationFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEngineCameraAnimationFunctionLibrary>();
 	}
 };
-static_assert(alignof(UEngineCameraAnimationFunctionLibrary) == 0x000008, "Wrong alignment on UEngineCameraAnimationFunctionLibrary");
-static_assert(sizeof(UEngineCameraAnimationFunctionLibrary) == 0x000028, "Wrong size on UEngineCameraAnimationFunctionLibrary");
+DUMPER7_ASSERTS_UEngineCameraAnimationFunctionLibrary;
 
 // Class EngineCameras.EngineCamerasSubsystem
 // 0x0000 (0x0030 - 0x0030)
@@ -191,36 +190,41 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EngineCamerasSubsystem">();
+		STATIC_CLASS_IMPL("EngineCamerasSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EngineCamerasSubsystem")
 	}
 	static class UEngineCamerasSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEngineCamerasSubsystem>();
 	}
 };
-static_assert(alignof(UEngineCamerasSubsystem) == 0x000008, "Wrong alignment on UEngineCamerasSubsystem");
-static_assert(sizeof(UEngineCamerasSubsystem) == 0x000030, "Wrong size on UEngineCamerasSubsystem");
+DUMPER7_ASSERTS_UEngineCamerasSubsystem;
 
 // Class EngineCameras.CompositeCameraShakePattern
 // 0x0010 (0x0038 - 0x0028)
 class UCompositeCameraShakePattern final : public UCameraShakePattern
 {
 public:
-	TArray<class UCameraShakePattern*>            ChildPatterns;                                     // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UCameraShakePattern*>            ChildPatterns;                                     // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"CompositeCameraShakePattern">();
+		STATIC_CLASS_IMPL("CompositeCameraShakePattern")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CompositeCameraShakePattern")
 	}
 	static class UCompositeCameraShakePattern* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCompositeCameraShakePattern>();
 	}
 };
-static_assert(alignof(UCompositeCameraShakePattern) == 0x000008, "Wrong alignment on UCompositeCameraShakePattern");
-static_assert(sizeof(UCompositeCameraShakePattern) == 0x000038, "Wrong size on UCompositeCameraShakePattern");
-static_assert(offsetof(UCompositeCameraShakePattern, ChildPatterns) == 0x000028, "Member 'UCompositeCameraShakePattern::ChildPatterns' has a wrong offset!");
+DUMPER7_ASSERTS_UCompositeCameraShakePattern;
 
 // Class EngineCameras.DefaultCameraShakeBase
 // 0x0000 (0x00E0 - 0x00E0)
@@ -229,15 +233,18 @@ class UDefaultCameraShakeBase : public UCameraShakeBase
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DefaultCameraShakeBase">();
+		STATIC_CLASS_IMPL("DefaultCameraShakeBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DefaultCameraShakeBase")
 	}
 	static class UDefaultCameraShakeBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDefaultCameraShakeBase>();
 	}
 };
-static_assert(alignof(UDefaultCameraShakeBase) == 0x000010, "Wrong alignment on UDefaultCameraShakeBase");
-static_assert(sizeof(UDefaultCameraShakeBase) == 0x0000E0, "Wrong size on UDefaultCameraShakeBase");
+DUMPER7_ASSERTS_UDefaultCameraShakeBase;
 
 // Class EngineCameras.SimpleCameraShakePattern
 // 0x0030 (0x0058 - 0x0028)
@@ -252,18 +259,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SimpleCameraShakePattern">();
+		STATIC_CLASS_IMPL("SimpleCameraShakePattern")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SimpleCameraShakePattern")
 	}
 	static class USimpleCameraShakePattern* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USimpleCameraShakePattern>();
 	}
 };
-static_assert(alignof(USimpleCameraShakePattern) == 0x000008, "Wrong alignment on USimpleCameraShakePattern");
-static_assert(sizeof(USimpleCameraShakePattern) == 0x000058, "Wrong size on USimpleCameraShakePattern");
-static_assert(offsetof(USimpleCameraShakePattern, Duration) == 0x000028, "Member 'USimpleCameraShakePattern::Duration' has a wrong offset!");
-static_assert(offsetof(USimpleCameraShakePattern, BlendInTime) == 0x00002C, "Member 'USimpleCameraShakePattern::BlendInTime' has a wrong offset!");
-static_assert(offsetof(USimpleCameraShakePattern, BlendOutTime) == 0x000030, "Member 'USimpleCameraShakePattern::BlendOutTime' has a wrong offset!");
+DUMPER7_ASSERTS_USimpleCameraShakePattern;
 
 // Class EngineCameras.PerlinNoiseCameraShakePattern
 // 0x0080 (0x00D8 - 0x0058)
@@ -286,26 +293,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PerlinNoiseCameraShakePattern">();
+		STATIC_CLASS_IMPL("PerlinNoiseCameraShakePattern")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PerlinNoiseCameraShakePattern")
 	}
 	static class UPerlinNoiseCameraShakePattern* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPerlinNoiseCameraShakePattern>();
 	}
 };
-static_assert(alignof(UPerlinNoiseCameraShakePattern) == 0x000008, "Wrong alignment on UPerlinNoiseCameraShakePattern");
-static_assert(sizeof(UPerlinNoiseCameraShakePattern) == 0x0000D8, "Wrong size on UPerlinNoiseCameraShakePattern");
-static_assert(offsetof(UPerlinNoiseCameraShakePattern, LocationAmplitudeMultiplier) == 0x000058, "Member 'UPerlinNoiseCameraShakePattern::LocationAmplitudeMultiplier' has a wrong offset!");
-static_assert(offsetof(UPerlinNoiseCameraShakePattern, LocationFrequencyMultiplier) == 0x00005C, "Member 'UPerlinNoiseCameraShakePattern::LocationFrequencyMultiplier' has a wrong offset!");
-static_assert(offsetof(UPerlinNoiseCameraShakePattern, X) == 0x000060, "Member 'UPerlinNoiseCameraShakePattern::X' has a wrong offset!");
-static_assert(offsetof(UPerlinNoiseCameraShakePattern, Y) == 0x000068, "Member 'UPerlinNoiseCameraShakePattern::Y' has a wrong offset!");
-static_assert(offsetof(UPerlinNoiseCameraShakePattern, Z) == 0x000070, "Member 'UPerlinNoiseCameraShakePattern::Z' has a wrong offset!");
-static_assert(offsetof(UPerlinNoiseCameraShakePattern, RotationAmplitudeMultiplier) == 0x000078, "Member 'UPerlinNoiseCameraShakePattern::RotationAmplitudeMultiplier' has a wrong offset!");
-static_assert(offsetof(UPerlinNoiseCameraShakePattern, RotationFrequencyMultiplier) == 0x00007C, "Member 'UPerlinNoiseCameraShakePattern::RotationFrequencyMultiplier' has a wrong offset!");
-static_assert(offsetof(UPerlinNoiseCameraShakePattern, Pitch) == 0x000080, "Member 'UPerlinNoiseCameraShakePattern::Pitch' has a wrong offset!");
-static_assert(offsetof(UPerlinNoiseCameraShakePattern, Yaw) == 0x000088, "Member 'UPerlinNoiseCameraShakePattern::Yaw' has a wrong offset!");
-static_assert(offsetof(UPerlinNoiseCameraShakePattern, Roll) == 0x000090, "Member 'UPerlinNoiseCameraShakePattern::Roll' has a wrong offset!");
-static_assert(offsetof(UPerlinNoiseCameraShakePattern, FOV) == 0x000098, "Member 'UPerlinNoiseCameraShakePattern::FOV' has a wrong offset!");
+DUMPER7_ASSERTS_UPerlinNoiseCameraShakePattern;
 
 // Class EngineCameras.WaveOscillatorCameraShakePattern
 // 0x00A0 (0x00F8 - 0x0058)
@@ -328,26 +327,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WaveOscillatorCameraShakePattern">();
+		STATIC_CLASS_IMPL("WaveOscillatorCameraShakePattern")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WaveOscillatorCameraShakePattern")
 	}
 	static class UWaveOscillatorCameraShakePattern* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWaveOscillatorCameraShakePattern>();
 	}
 };
-static_assert(alignof(UWaveOscillatorCameraShakePattern) == 0x000008, "Wrong alignment on UWaveOscillatorCameraShakePattern");
-static_assert(sizeof(UWaveOscillatorCameraShakePattern) == 0x0000F8, "Wrong size on UWaveOscillatorCameraShakePattern");
-static_assert(offsetof(UWaveOscillatorCameraShakePattern, LocationAmplitudeMultiplier) == 0x000058, "Member 'UWaveOscillatorCameraShakePattern::LocationAmplitudeMultiplier' has a wrong offset!");
-static_assert(offsetof(UWaveOscillatorCameraShakePattern, LocationFrequencyMultiplier) == 0x00005C, "Member 'UWaveOscillatorCameraShakePattern::LocationFrequencyMultiplier' has a wrong offset!");
-static_assert(offsetof(UWaveOscillatorCameraShakePattern, X) == 0x000060, "Member 'UWaveOscillatorCameraShakePattern::X' has a wrong offset!");
-static_assert(offsetof(UWaveOscillatorCameraShakePattern, Y) == 0x00006C, "Member 'UWaveOscillatorCameraShakePattern::Y' has a wrong offset!");
-static_assert(offsetof(UWaveOscillatorCameraShakePattern, Z) == 0x000078, "Member 'UWaveOscillatorCameraShakePattern::Z' has a wrong offset!");
-static_assert(offsetof(UWaveOscillatorCameraShakePattern, RotationAmplitudeMultiplier) == 0x000084, "Member 'UWaveOscillatorCameraShakePattern::RotationAmplitudeMultiplier' has a wrong offset!");
-static_assert(offsetof(UWaveOscillatorCameraShakePattern, RotationFrequencyMultiplier) == 0x000088, "Member 'UWaveOscillatorCameraShakePattern::RotationFrequencyMultiplier' has a wrong offset!");
-static_assert(offsetof(UWaveOscillatorCameraShakePattern, Pitch) == 0x00008C, "Member 'UWaveOscillatorCameraShakePattern::Pitch' has a wrong offset!");
-static_assert(offsetof(UWaveOscillatorCameraShakePattern, Yaw) == 0x000098, "Member 'UWaveOscillatorCameraShakePattern::Yaw' has a wrong offset!");
-static_assert(offsetof(UWaveOscillatorCameraShakePattern, Roll) == 0x0000A4, "Member 'UWaveOscillatorCameraShakePattern::Roll' has a wrong offset!");
-static_assert(offsetof(UWaveOscillatorCameraShakePattern, FOV) == 0x0000B0, "Member 'UWaveOscillatorCameraShakePattern::FOV' has a wrong offset!");
+DUMPER7_ASSERTS_UWaveOscillatorCameraShakePattern;
 
 // Class EngineCameras.TestCameraShake
 // 0x0000 (0x00E0 - 0x00E0)
@@ -356,15 +347,18 @@ class UTestCameraShake final : public UCameraShakeBase
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TestCameraShake">();
+		STATIC_CLASS_IMPL("TestCameraShake")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TestCameraShake")
 	}
 	static class UTestCameraShake* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTestCameraShake>();
 	}
 };
-static_assert(alignof(UTestCameraShake) == 0x000010, "Wrong alignment on UTestCameraShake");
-static_assert(sizeof(UTestCameraShake) == 0x0000E0, "Wrong size on UTestCameraShake");
+DUMPER7_ASSERTS_UTestCameraShake;
 
 // Class EngineCameras.ConstantCameraShakePattern
 // 0x0030 (0x0088 - 0x0058)
@@ -377,17 +371,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ConstantCameraShakePattern">();
+		STATIC_CLASS_IMPL("ConstantCameraShakePattern")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ConstantCameraShakePattern")
 	}
 	static class UConstantCameraShakePattern* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UConstantCameraShakePattern>();
 	}
 };
-static_assert(alignof(UConstantCameraShakePattern) == 0x000008, "Wrong alignment on UConstantCameraShakePattern");
-static_assert(sizeof(UConstantCameraShakePattern) == 0x000088, "Wrong size on UConstantCameraShakePattern");
-static_assert(offsetof(UConstantCameraShakePattern, LocationOffset) == 0x000058, "Member 'UConstantCameraShakePattern::LocationOffset' has a wrong offset!");
-static_assert(offsetof(UConstantCameraShakePattern, RotationOffset) == 0x000070, "Member 'UConstantCameraShakePattern::RotationOffset' has a wrong offset!");
+DUMPER7_ASSERTS_UConstantCameraShakePattern;
 
 }
 

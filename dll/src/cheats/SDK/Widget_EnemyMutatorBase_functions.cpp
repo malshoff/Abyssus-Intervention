@@ -32,7 +32,7 @@ void UWidget_EnemyMutatorBase_C::Construct()
 
 
 // Function Widget_EnemyMutatorBase.Widget_EnemyMutatorBase_C.ExecuteUbergraph_Widget_EnemyMutatorBase
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

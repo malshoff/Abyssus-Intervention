@@ -20,7 +20,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_DefaultProjectile_Script.BP_DefaultProjectile_Script_C
 // 0x0020 (0x0100 - 0x00E0)
-class UBP_DefaultProjectile_Script_C final : public URGProjectileScript
+class UBP_DefaultProjectile_Script_C : public URGProjectileScript
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
@@ -37,20 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_DefaultProjectile_Script_C">();
+		BP_STATIC_CLASS_IMPL("BP_DefaultProjectile_Script_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_DefaultProjectile_Script_C")
 	}
 	static class UBP_DefaultProjectile_Script_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_DefaultProjectile_Script_C>();
 	}
 };
-static_assert(alignof(UBP_DefaultProjectile_Script_C) == 0x000008, "Wrong alignment on UBP_DefaultProjectile_Script_C");
-static_assert(sizeof(UBP_DefaultProjectile_Script_C) == 0x000100, "Wrong size on UBP_DefaultProjectile_Script_C");
-static_assert(offsetof(UBP_DefaultProjectile_Script_C, UberGraphFrame) == 0x0000E0, "Member 'UBP_DefaultProjectile_Script_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_DefaultProjectile_Script_C, Surface_FXTable_Override) == 0x0000E8, "Member 'UBP_DefaultProjectile_Script_C::Surface_FXTable_Override' has a wrong offset!");
-static_assert(offsetof(UBP_DefaultProjectile_Script_C, Surface_SFXTable_Override) == 0x0000F0, "Member 'UBP_DefaultProjectile_Script_C::Surface_SFXTable_Override' has a wrong offset!");
-static_assert(offsetof(UBP_DefaultProjectile_Script_C, Spawn_Effects_On_Hit) == 0x0000F8, "Member 'UBP_DefaultProjectile_Script_C::Spawn_Effects_On_Hit' has a wrong offset!");
-static_assert(offsetof(UBP_DefaultProjectile_Script_C, DamageSourceBitmask) == 0x0000FC, "Member 'UBP_DefaultProjectile_Script_C::DamageSourceBitmask' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_DefaultProjectile_Script_C;
 
 }
 

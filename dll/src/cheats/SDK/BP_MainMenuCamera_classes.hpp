@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MainMenuCamera.BP_MainMenuCamera_C
-// 0x0020 (0x09F0 - 0x09D0)
+// 0x0020 (0x0A50 - 0x0A30)
 class ABP_MainMenuCamera_C final : public ACameraActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x09D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         FadeTimeline_Fade_02D1E5594822083619A634987489A17D; // 0x09D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            FadeTimeline__Direction_02D1E5594822083619A634987489A17D; // 0x09DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9DD[0x3];                                      // 0x09DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     FadeTimeline;                                      // 0x09E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A30(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         FadeTimeline_Fade_02D1E5594822083619A634987489A17D; // 0x0A38(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            FadeTimeline__Direction_02D1E5594822083619A634987489A17D; // 0x0A3C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A3D[0x3];                                      // 0x0A3D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     FadeTimeline;                                      // 0x0A40(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_MainMenuCamera(int32 EntryPoint);
@@ -38,19 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_MainMenuCamera_C">();
+		BP_STATIC_CLASS_IMPL("BP_MainMenuCamera_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_MainMenuCamera_C")
 	}
 	static class ABP_MainMenuCamera_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_MainMenuCamera_C>();
 	}
 };
-static_assert(alignof(ABP_MainMenuCamera_C) == 0x000010, "Wrong alignment on ABP_MainMenuCamera_C");
-static_assert(sizeof(ABP_MainMenuCamera_C) == 0x0009F0, "Wrong size on ABP_MainMenuCamera_C");
-static_assert(offsetof(ABP_MainMenuCamera_C, UberGraphFrame) == 0x0009D0, "Member 'ABP_MainMenuCamera_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_MainMenuCamera_C, FadeTimeline_Fade_02D1E5594822083619A634987489A17D) == 0x0009D8, "Member 'ABP_MainMenuCamera_C::FadeTimeline_Fade_02D1E5594822083619A634987489A17D' has a wrong offset!");
-static_assert(offsetof(ABP_MainMenuCamera_C, FadeTimeline__Direction_02D1E5594822083619A634987489A17D) == 0x0009DC, "Member 'ABP_MainMenuCamera_C::FadeTimeline__Direction_02D1E5594822083619A634987489A17D' has a wrong offset!");
-static_assert(offsetof(ABP_MainMenuCamera_C, FadeTimeline) == 0x0009E0, "Member 'ABP_MainMenuCamera_C::FadeTimeline' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_MainMenuCamera_C;
 
 }
 

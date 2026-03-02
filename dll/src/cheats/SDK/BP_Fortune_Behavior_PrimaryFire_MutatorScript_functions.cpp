@@ -91,8 +91,9 @@ void UBP_Fortune_Behavior_PrimaryFire_MutatorScript_C::MutatorRankChanged(int32 
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   HealthDamage                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           TriggeringActor                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBP_Fortune_Behavior_PrimaryFire_MutatorScript_C::RunPrimaryFireBehavior(float HealthDamage)
+void UBP_Fortune_Behavior_PrimaryFire_MutatorScript_C::RunPrimaryFireBehavior(float HealthDamage, class AActor* TriggeringActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -102,6 +103,7 @@ void UBP_Fortune_Behavior_PrimaryFire_MutatorScript_C::RunPrimaryFireBehavior(fl
 	Params::BP_Fortune_Behavior_PrimaryFire_MutatorScript_C_RunPrimaryFireBehavior Parms{};
 
 	Parms.HealthDamage = HealthDamage;
+	Parms.TriggeringActor = TriggeringActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ChainLightning_Behavior_Mutator.BP_ChainLightning_Behavior_Mutator_C
-// 0x0090 (0x01A0 - 0x0110)
+// 0x00A0 (0x01B0 - 0x0110)
 class UBP_ChainLightning_Behavior_Mutator_C final : public URGCharBehaviorMutatorScript
 {
 public:
@@ -34,6 +34,9 @@ public:
 	TSoftObjectPtr<class URMutatorPrimaryAsset>   SoftLightningMajorBlessingPA;                      // 0x0168(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, HasGetValueTypeHash)
 	class URMutatorPrimaryAsset*                  CachedLightningMajorBlessingPA;                    // 0x0190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	double                                        HealthDamage;                                      // 0x0198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BounceCap;                                         // 0x01A0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CritExtraBounceFalloff;                            // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_ChainLightning_Behavior_Mutator(int32 EntryPoint);
@@ -42,11 +45,11 @@ public:
 	void K2_DeactivateScript();
 	void MutatorRankChanged(int32 NewRank, class URMutatorPrimaryAsset* MutatorPrimaryAsset);
 	void RemoveDamageModifiers();
-	void RunAbilityBehavior(class AActor* TriggeringActor, int32 DamageSourceMask, float HealthDamage_0, class AActor* OptionalAvatarActor);
+	void RunAbilityBehavior(class AActor* TriggeringActor, int32 DamageSourceMask, float HealthDamage_0, class AActor* OptionalAvatarActor, const struct FRMutableFloat& SpecificCombatEventModifier);
 	void RunBehavior_Multicast(const class AActor* Actor);
 	void RunBehaviour(class AActor* TriggeringActor);
 	void RunMeleeBehavior();
-	void RunPrimaryFireBehavior(float HealthDamage_0);
+	void RunPrimaryFireBehavior(float HealthDamage_0, class AActor* TriggeringActor);
 	void RunSecondaryFireBehavior(class AActor* TriggeringActor, float HealthDamage_0);
 	void Should_Increment_Damage_on_Bounce(bool* Value);
 	void ShouldBonusBounceOnCrit(bool* Value);
@@ -55,25 +58,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ChainLightning_Behavior_Mutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_ChainLightning_Behavior_Mutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ChainLightning_Behavior_Mutator_C")
 	}
 	static class UBP_ChainLightning_Behavior_Mutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ChainLightning_Behavior_Mutator_C>();
 	}
 };
-static_assert(alignof(UBP_ChainLightning_Behavior_Mutator_C) == 0x000008, "Wrong alignment on UBP_ChainLightning_Behavior_Mutator_C");
-static_assert(sizeof(UBP_ChainLightning_Behavior_Mutator_C) == 0x0001A0, "Wrong size on UBP_ChainLightning_Behavior_Mutator_C");
-static_assert(offsetof(UBP_ChainLightning_Behavior_Mutator_C, UberGraphFrame) == 0x000110, "Member 'UBP_ChainLightning_Behavior_Mutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_ChainLightning_Behavior_Mutator_C, ChainCount) == 0x000118, "Member 'UBP_ChainLightning_Behavior_Mutator_C::ChainCount' has a wrong offset!");
-static_assert(offsetof(UBP_ChainLightning_Behavior_Mutator_C, Range) == 0x000120, "Member 'UBP_ChainLightning_Behavior_Mutator_C::Range' has a wrong offset!");
-static_assert(offsetof(UBP_ChainLightning_Behavior_Mutator_C, DamageFallOffPercent) == 0x000128, "Member 'UBP_ChainLightning_Behavior_Mutator_C::DamageFallOffPercent' has a wrong offset!");
-static_assert(offsetof(UBP_ChainLightning_Behavior_Mutator_C, BounceDelay) == 0x000130, "Member 'UBP_ChainLightning_Behavior_Mutator_C::BounceDelay' has a wrong offset!");
-static_assert(offsetof(UBP_ChainLightning_Behavior_Mutator_C, SoftLightningPassive7PA) == 0x000138, "Member 'UBP_ChainLightning_Behavior_Mutator_C::SoftLightningPassive7PA' has a wrong offset!");
-static_assert(offsetof(UBP_ChainLightning_Behavior_Mutator_C, CachedLightningPassive7PA) == 0x000160, "Member 'UBP_ChainLightning_Behavior_Mutator_C::CachedLightningPassive7PA' has a wrong offset!");
-static_assert(offsetof(UBP_ChainLightning_Behavior_Mutator_C, SoftLightningMajorBlessingPA) == 0x000168, "Member 'UBP_ChainLightning_Behavior_Mutator_C::SoftLightningMajorBlessingPA' has a wrong offset!");
-static_assert(offsetof(UBP_ChainLightning_Behavior_Mutator_C, CachedLightningMajorBlessingPA) == 0x000190, "Member 'UBP_ChainLightning_Behavior_Mutator_C::CachedLightningMajorBlessingPA' has a wrong offset!");
-static_assert(offsetof(UBP_ChainLightning_Behavior_Mutator_C, HealthDamage) == 0x000198, "Member 'UBP_ChainLightning_Behavior_Mutator_C::HealthDamage' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_ChainLightning_Behavior_Mutator_C;
 
 }
 

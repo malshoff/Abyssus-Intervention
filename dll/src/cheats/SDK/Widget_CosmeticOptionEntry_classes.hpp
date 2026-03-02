@@ -11,42 +11,42 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "CommonInput_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "CommonInput_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_CosmeticOptionEntry.Widget_CosmeticOptionEntry_C
-// 0x01C0 (0x0490 - 0x02D0)
+// 0x0148 (0x0488 - 0x0340)
 class UWidget_CosmeticOptionEntry_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Hover_Animation;                                   // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ConstructAnimation;                                // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UButton*                                Button_Option;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_Content;                             // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 IconBackgroundShadow;                              // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_207;                                         // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Lock;                                        // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_OptionIcon;                                  // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URetainerBox*                           RetainerBox_0;                                     // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_Challenge;                               // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FPlayerCosmeticOption                  OptionData;                                        // 0x0328(0x00D0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMulticastInlineDelegate<void(const struct FPlayerCosmeticOption& CosmeticOptionData)> OnHoverOption; // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(const struct FPlayerCosmeticOption& CosmeticOptionData)> OnUnhoverOption; // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(const struct FPlayerCosmeticOption& CosmeticOptionData)> OnApplyOption; // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          AllowingDrag;                                      // 0x0428(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldAllowDrag;                                   // 0x0429(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_42A[0x6];                                      // 0x042A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget_CosmeticEmoteSlot_C*            OptionalEmoteSlot;                                 // 0x0430(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UListView*                              ParentListView;                                    // 0x0438(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	TMap<class FString, class FText>              DLCNames;                                          // 0x0440(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             TextBlock_Challenge;                               // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URetainerBox*                           RetainerBox_0;                                     // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_OptionIcon;                                  // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Lock;                                        // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_207;                                         // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IconBackgroundShadow;                              // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_Content;                             // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_Option;                                     // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ConstructAnimation;                                // 0x0388(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hover_Animation;                                   // 0x0390(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class URCosmeticPrimaryAsset*                 CosmeticPA;                                        // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class URCosmeticPrimaryAsset* CosmeticPA)> OnHoverOption;          // 0x03A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class URCosmeticPrimaryAsset* CosmeticPA)> OnUnhoverOption;        // 0x03B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class URCosmeticPrimaryAsset* CosmeticPA)> OnApplyOption;          // 0x03C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          AllowingDrag;                                      // 0x03D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldAllowDrag;                                   // 0x03D1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_3D2[0x6];                                      // 0x03D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_CosmeticEmoteSlot_C*            OptionalEmoteSlot;                                 // 0x03D8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UListView*                              ParentListView;                                    // 0x03E0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	TMap<class FString, class FText>              DLCNames;                                          // 0x03E8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FString, class FString>            DLCLinks;                                          // 0x0438(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ApplyOption();
@@ -56,46 +56,32 @@ public:
 	class UWidget* CustomGamepadLeftNavigation(EUINavigation Navigation_0);
 	void ExecuteUbergraph_Widget_CosmeticOptionEntry(int32 EntryPoint);
 	void IsLocked(bool* Value);
+	void OnBrowserClosed(const class FString& FinalUrl);
 	void OnDragDetected(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation** Operation);
 	void OnInitialized();
 	void OnInputMethodChanged_Event(ECommonInputType bNewInputType);
 	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	struct FEventReply OnPreviewMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void OnQueryEntitlementsCallback(bool bWasSuccessful, const class FString& Error);
+	void SetDragState();
 	void SetLockedInformation();
-	void SetOptionEntryInfo(class UClass* CosmeticContentWidgetClass, const struct FPlayerCosmeticOption& CosmeticOptionData);
+	void SetOptionEntryInfo(class UClass* CosmeticContentWidgetClass, class URCosmeticPrimaryAsset* CosmeticPA_0);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_CosmeticOptionEntry_C">();
+		BP_STATIC_CLASS_IMPL("Widget_CosmeticOptionEntry_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_CosmeticOptionEntry_C")
 	}
 	static class UWidget_CosmeticOptionEntry_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_CosmeticOptionEntry_C>();
 	}
 };
-static_assert(alignof(UWidget_CosmeticOptionEntry_C) == 0x000008, "Wrong alignment on UWidget_CosmeticOptionEntry_C");
-static_assert(sizeof(UWidget_CosmeticOptionEntry_C) == 0x000490, "Wrong size on UWidget_CosmeticOptionEntry_C");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_CosmeticOptionEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, Hover_Animation) == 0x0002D8, "Member 'UWidget_CosmeticOptionEntry_C::Hover_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, ConstructAnimation) == 0x0002E0, "Member 'UWidget_CosmeticOptionEntry_C::ConstructAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, Button_Option) == 0x0002E8, "Member 'UWidget_CosmeticOptionEntry_C::Button_Option' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, HorizontalBox_Content) == 0x0002F0, "Member 'UWidget_CosmeticOptionEntry_C::HorizontalBox_Content' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, IconBackgroundShadow) == 0x0002F8, "Member 'UWidget_CosmeticOptionEntry_C::IconBackgroundShadow' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, Image_207) == 0x000300, "Member 'UWidget_CosmeticOptionEntry_C::Image_207' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, Image_Lock) == 0x000308, "Member 'UWidget_CosmeticOptionEntry_C::Image_Lock' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, Image_OptionIcon) == 0x000310, "Member 'UWidget_CosmeticOptionEntry_C::Image_OptionIcon' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, RetainerBox_0) == 0x000318, "Member 'UWidget_CosmeticOptionEntry_C::RetainerBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, TextBlock_Challenge) == 0x000320, "Member 'UWidget_CosmeticOptionEntry_C::TextBlock_Challenge' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, OptionData) == 0x000328, "Member 'UWidget_CosmeticOptionEntry_C::OptionData' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, OnHoverOption) == 0x0003F8, "Member 'UWidget_CosmeticOptionEntry_C::OnHoverOption' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, OnUnhoverOption) == 0x000408, "Member 'UWidget_CosmeticOptionEntry_C::OnUnhoverOption' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, OnApplyOption) == 0x000418, "Member 'UWidget_CosmeticOptionEntry_C::OnApplyOption' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, AllowingDrag) == 0x000428, "Member 'UWidget_CosmeticOptionEntry_C::AllowingDrag' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, ShouldAllowDrag) == 0x000429, "Member 'UWidget_CosmeticOptionEntry_C::ShouldAllowDrag' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, OptionalEmoteSlot) == 0x000430, "Member 'UWidget_CosmeticOptionEntry_C::OptionalEmoteSlot' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, ParentListView) == 0x000438, "Member 'UWidget_CosmeticOptionEntry_C::ParentListView' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticOptionEntry_C, DLCNames) == 0x000440, "Member 'UWidget_CosmeticOptionEntry_C::DLCNames' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_CosmeticOptionEntry_C;
 
 }
 

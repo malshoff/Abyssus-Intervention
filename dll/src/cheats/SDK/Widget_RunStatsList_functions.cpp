@@ -17,58 +17,15 @@
 namespace SDK
 {
 
-// Function Widget_RunStatsList.Widget_RunStatsList_C.Setup
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    UseSpecificPlayerStats                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FRPlayerStats&             PlayerStats                                            (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWidget_RunStatsList_C::Setup(bool UseSpecificPlayerStats, const struct FRPlayerStats& PlayerStats)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_RunStatsList_C", "Setup");
-
-	Params::Widget_RunStatsList_C_Setup Parms{};
-
-	Parms.UseSpecificPlayerStats = UseSpecificPlayerStats;
-	Parms.PlayerStats = std::move(PlayerStats);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_RunStatsList.Widget_RunStatsList_C.BuildStatWidgets
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    UseSpecificPlayerStats                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FRPlayerStats&             PlayerStats                                            (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWidget_RunStatsList_C::BuildStatWidgets(bool UseSpecificPlayerStats, const struct FRPlayerStats& PlayerStats)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_RunStatsList_C", "BuildStatWidgets");
-
-	Params::Widget_RunStatsList_C_BuildStatWidgets Parms{};
-
-	Parms.UseSpecificPlayerStats = UseSpecificPlayerStats;
-	Parms.PlayerStats = std::move(PlayerStats);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function Widget_RunStatsList.Widget_RunStatsList_C.AddStatItem
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FText&                      StatName                                               (BlueprintVisible, BlueprintReadOnly, Parm)
 // const class FText&                      StatValue                                              (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UTexture2D*                       StatIcon                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// float                                   Progress                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_RunStatsList_C::AddStatItem(const class FText& StatName, const class FText& StatValue, class UTexture2D* StatIcon)
+void UWidget_RunStatsList_C::AddStatItem(const class FText& StatName, const class FText& StatValue, class UTexture2D* StatIcon, float Progress)
 {
 	static class UFunction* Func = nullptr;
 
@@ -80,6 +37,47 @@ void UWidget_RunStatsList_C::AddStatItem(const class FText& StatName, const clas
 	Parms.StatName = std::move(StatName);
 	Parms.StatValue = std::move(StatValue);
 	Parms.StatIcon = StatIcon;
+	Parms.Progress = Progress;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_RunStatsList.Widget_RunStatsList_C.BuildStatWidgets
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FRPlayerStats&             PlayerStats                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWidget_RunStatsList_C::BuildStatWidgets(const struct FRPlayerStats& PlayerStats)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunStatsList_C", "BuildStatWidgets");
+
+	Params::Widget_RunStatsList_C_BuildStatWidgets Parms{};
+
+	Parms.PlayerStats = std::move(PlayerStats);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_RunStatsList.Widget_RunStatsList_C.Setup
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FRPlayerStats&             PlayerStats                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWidget_RunStatsList_C::Setup(const struct FRPlayerStats& PlayerStats)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_RunStatsList_C", "Setup");
+
+	Params::Widget_RunStatsList_C_Setup Parms{};
+
+	Parms.PlayerStats = std::move(PlayerStats);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

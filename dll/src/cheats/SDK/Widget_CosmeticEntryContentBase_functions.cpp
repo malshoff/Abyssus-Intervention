@@ -20,9 +20,9 @@ namespace SDK
 // Function Widget_CosmeticEntryContentBase.Widget_CosmeticEntryContentBase_C.SetContentInfo
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FPlayerCosmeticOption&     CosmeticOptionData                                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// class URCosmeticPrimaryAsset*           CosmeticPA                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CosmeticEntryContentBase_C::SetContentInfo(const struct FPlayerCosmeticOption& CosmeticOptionData)
+void UWidget_CosmeticEntryContentBase_C::SetContentInfo(class URCosmeticPrimaryAsset* CosmeticPA)
 {
 	static class UFunction* Func = nullptr;
 
@@ -31,7 +31,7 @@ void UWidget_CosmeticEntryContentBase_C::SetContentInfo(const struct FPlayerCosm
 
 	Params::Widget_CosmeticEntryContentBase_C_SetContentInfo Parms{};
 
-	Parms.CosmeticOptionData = std::move(CosmeticOptionData);
+	Parms.CosmeticPA = CosmeticPA;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

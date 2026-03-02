@@ -17,13 +17,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_GamepadBindingSettings.Widget_GamepadBindingSettings_C
-// 0x0020 (0x03A8 - 0x0388)
+// 0x0020 (0x0440 - 0x0420)
 class UWidget_GamepadBindingSettings_C final : public UWidget_SettingInputMappingTabBase_C
 {
 public:
-	class UTextBlock*                             Notifier;                                          // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             ScrollBox_0;                                       // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UWidget_Settings_GamepadInput_C*> Widget_Settings_GamepadBindingInputs;             // 0x0398(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
+	class UScrollBox*                             ScrollBox_0;                                       // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Notifier;                                          // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UWidget_Settings_GamepadInput_C*> Widget_Settings_GamepadBindingInputs;             // 0x0430(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 
 public:
 	void BP_GetScrollBoxWidget(class UScrollBox** Result);
@@ -34,18 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_GamepadBindingSettings_C">();
+		BP_STATIC_CLASS_IMPL("Widget_GamepadBindingSettings_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_GamepadBindingSettings_C")
 	}
 	static class UWidget_GamepadBindingSettings_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_GamepadBindingSettings_C>();
 	}
 };
-static_assert(alignof(UWidget_GamepadBindingSettings_C) == 0x000008, "Wrong alignment on UWidget_GamepadBindingSettings_C");
-static_assert(sizeof(UWidget_GamepadBindingSettings_C) == 0x0003A8, "Wrong size on UWidget_GamepadBindingSettings_C");
-static_assert(offsetof(UWidget_GamepadBindingSettings_C, Notifier) == 0x000388, "Member 'UWidget_GamepadBindingSettings_C::Notifier' has a wrong offset!");
-static_assert(offsetof(UWidget_GamepadBindingSettings_C, ScrollBox_0) == 0x000390, "Member 'UWidget_GamepadBindingSettings_C::ScrollBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_GamepadBindingSettings_C, Widget_Settings_GamepadBindingInputs) == 0x000398, "Member 'UWidget_GamepadBindingSettings_C::Widget_Settings_GamepadBindingInputs' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_GamepadBindingSettings_C;
 
 }
 

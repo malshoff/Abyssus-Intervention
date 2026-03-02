@@ -131,8 +131,9 @@ void UBP_ApplyFire_Behavior_Mutator_C::RemoveDamageModifiers()
 // int32                                   DamageSourceMask                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   HealthDamage                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           OptionalAvatarActor                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FRMutableFloat&            SpecificCombatEventModifier                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBP_ApplyFire_Behavior_Mutator_C::RunAbilityBehavior(class AActor* TriggeringActor, int32 DamageSourceMask, float HealthDamage, class AActor* OptionalAvatarActor)
+void UBP_ApplyFire_Behavior_Mutator_C::RunAbilityBehavior(class AActor* TriggeringActor, int32 DamageSourceMask, float HealthDamage, class AActor* OptionalAvatarActor, const struct FRMutableFloat& SpecificCombatEventModifier)
 {
 	static class UFunction* Func = nullptr;
 
@@ -145,6 +146,7 @@ void UBP_ApplyFire_Behavior_Mutator_C::RunAbilityBehavior(class AActor* Triggeri
 	Parms.DamageSourceMask = DamageSourceMask;
 	Parms.HealthDamage = HealthDamage;
 	Parms.OptionalAvatarActor = OptionalAvatarActor;
+	Parms.SpecificCombatEventModifier = std::move(SpecificCombatEventModifier);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -190,8 +192,9 @@ void UBP_ApplyFire_Behavior_Mutator_C::RunMeleeBehavior()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   HealthDamage                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           TriggeringActor                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBP_ApplyFire_Behavior_Mutator_C::RunPrimaryFireBehavior(float HealthDamage)
+void UBP_ApplyFire_Behavior_Mutator_C::RunPrimaryFireBehavior(float HealthDamage, class AActor* TriggeringActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -201,6 +204,7 @@ void UBP_ApplyFire_Behavior_Mutator_C::RunPrimaryFireBehavior(float HealthDamage
 	Params::BP_ApplyFire_Behavior_Mutator_C_RunPrimaryFireBehavior Parms{};
 
 	Parms.HealthDamage = HealthDamage;
+	Parms.TriggeringActor = TriggeringActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

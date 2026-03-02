@@ -19,11 +19,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Chill_StatusEffect_Rework.BP_Chill_StatusEffect_Rework_C
-// 0x0008 (0x04E0 - 0x04D8)
+// 0x0008 (0x04E8 - 0x04E0)
 class UBP_Chill_StatusEffect_Rework_C final : public URStatusEffectAilmentGScript
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void CheckFrostPassive4(bool* Result, double* AdditiveMultiplier);
@@ -31,7 +31,7 @@ public:
 	double GetFrostbuildupPercentage();
 	double GetMaxFrostBuildup();
 	void GetMultiplayerScalingMultiplier(double* Multiplier);
-	double GetShredDamagePercentage();
+	double GetShredDamagePercentage(double* MinShredHealthPercentage);
 	void InstantlyTickOnce();
 	void K2_ActivateScript();
 	void K2_DeactivateScript();
@@ -41,16 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Chill_StatusEffect_Rework_C">();
+		BP_STATIC_CLASS_IMPL("BP_Chill_StatusEffect_Rework_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Chill_StatusEffect_Rework_C")
 	}
 	static class UBP_Chill_StatusEffect_Rework_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Chill_StatusEffect_Rework_C>();
 	}
 };
-static_assert(alignof(UBP_Chill_StatusEffect_Rework_C) == 0x000008, "Wrong alignment on UBP_Chill_StatusEffect_Rework_C");
-static_assert(sizeof(UBP_Chill_StatusEffect_Rework_C) == 0x0004E0, "Wrong size on UBP_Chill_StatusEffect_Rework_C");
-static_assert(offsetof(UBP_Chill_StatusEffect_Rework_C, UberGraphFrame) == 0x0004D8, "Member 'UBP_Chill_StatusEffect_Rework_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Chill_StatusEffect_Rework_C;
 
 }
 

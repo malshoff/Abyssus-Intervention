@@ -19,21 +19,23 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ArtifactUpgrade.BP_ArtifactUpgrade_C
-// 0x0030 (0x03B8 - 0x0388)
+// 0x0040 (0x03D0 - 0x0390)
 class ABP_ArtifactUpgrade_C : public ARPickupableItem
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0388(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0390(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Scene;                                             // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWidget_ArtifactUpgradeSelectScreen_C*  WidgetRef;                                         // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FRLootSelectionOption>          LootOptions;                                       // 0x03A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCapsuleComponent*                      Capsule;                                           // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x03A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWidget_ArtifactUpgradeSelectScreen_C*  WidgetRef;                                         // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FRLootSelectionOption>          LootOptions;                                       // 0x03B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class APlayerController*                      CachedPlayerController;                            // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_ArtifactUpgrade(int32 EntryPoint);
+	void HandleLootOptionSelected(const struct FRLootSelectionOption& LootSelectionOption);
 	void IdleAnimationTick();
 	void OnInteract(class APlayerController* Controller);
-	void OnLootOptionSelected_Event(const struct FRLootSelectionOption& LootSelectionOption);
 	void ReceiveBeginPlay();
 	void StartIdleAnimation();
 	void TriggerPickup(class APlayerController* PlayerController);
@@ -41,20 +43,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ArtifactUpgrade_C">();
+		BP_STATIC_CLASS_IMPL("BP_ArtifactUpgrade_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ArtifactUpgrade_C")
 	}
 	static class ABP_ArtifactUpgrade_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_ArtifactUpgrade_C>();
 	}
 };
-static_assert(alignof(ABP_ArtifactUpgrade_C) == 0x000008, "Wrong alignment on ABP_ArtifactUpgrade_C");
-static_assert(sizeof(ABP_ArtifactUpgrade_C) == 0x0003B8, "Wrong size on ABP_ArtifactUpgrade_C");
-static_assert(offsetof(ABP_ArtifactUpgrade_C, UberGraphFrame) == 0x000388, "Member 'ABP_ArtifactUpgrade_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactUpgrade_C, StaticMesh) == 0x000390, "Member 'ABP_ArtifactUpgrade_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactUpgrade_C, Scene) == 0x000398, "Member 'ABP_ArtifactUpgrade_C::Scene' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactUpgrade_C, WidgetRef) == 0x0003A0, "Member 'ABP_ArtifactUpgrade_C::WidgetRef' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactUpgrade_C, LootOptions) == 0x0003A8, "Member 'ABP_ArtifactUpgrade_C::LootOptions' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_ArtifactUpgrade_C;
 
 }
 

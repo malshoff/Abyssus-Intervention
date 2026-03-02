@@ -17,6 +17,381 @@
 namespace SDK::Params
 {
 
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.ClearFavoriteRating
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_ClearFavoriteRating final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_ClearFavoriteRating;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.ClearIsFlagged
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_ClearIsFlagged final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_ClearIsFlagged;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.ClearIsNoGood
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_ClearIsNoGood final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_ClearIsNoGood;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.ClearIsRecorded
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_ClearIsRecorded final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_ClearIsRecorded;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.ClearIsSubSequence
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_ClearIsSubSequence final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_ClearIsSubSequence;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetFavoriteRating
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetFavoriteRating final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutFavoriteRating;                                 // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetFavoriteRating;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetFavoriteRatingAssetTag
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetFavoriteRatingAssetTag final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetFavoriteRatingAssetTag;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetFavoriteRatingByAssetData
+// 0x0070 (0x0070 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetFavoriteRatingByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutFavoriteRating;                                 // 0x0068(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x006C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetFavoriteRatingByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsFlagged
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsFlagged final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutIsFlagged;                                     // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsFlagged;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsFlaggedAssetTag
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsFlaggedAssetTag final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsFlaggedAssetTag;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsFlaggedByAssetData
+// 0x0070 (0x0070 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsFlaggedByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutIsFlagged;                                     // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0069(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsFlaggedByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsNoGood
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsNoGood final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutNoGood;                                        // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsNoGood;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsNoGoodAssetTag
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsNoGoodAssetTag final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsNoGoodAssetTag;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsNoGoodByAssetData
+// 0x0070 (0x0070 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsNoGoodByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutNoGood;                                        // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0069(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsNoGoodByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsRecorded
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsRecorded final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutIsRecorded;                                    // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsRecorded;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsRecordedAssetTag
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsRecordedAssetTag final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsRecordedAssetTag;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsRecordedByAssetData
+// 0x0070 (0x0070 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsRecordedByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutIsRecorded;                                    // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0069(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsRecordedByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsSubSequence
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsSubSequence final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutIsSubSequence;                                 // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsSubSequence;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsSubSequenceAssetTag
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsSubSequenceAssetTag final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsSubSequenceAssetTag;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsSubSequenceByAssetData
+// 0x0070 (0x0070 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsSubSequenceByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutIsSubSequence;                                 // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0069(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsSubSequenceByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasFavoriteRating
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasFavoriteRating final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasFavoriteRating;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasFavoriteRatingByAssetData
+// 0x0070 (0x0070 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasFavoriteRatingByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasFavoriteRatingByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsFlagged
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsFlagged final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsFlagged;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsFlaggedByAssetData
+// 0x0070 (0x0070 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsFlaggedByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsFlaggedByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsNoGood
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsNoGood final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsNoGood;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsNoGoodByAssetData
+// 0x0070 (0x0070 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsNoGoodByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsNoGoodByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsRecorded
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsRecorded final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsRecorded;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsRecordedByAssetData
+// 0x0070 (0x0070 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsRecordedByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsRecordedByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsSubSequence
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsSubSequence final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsSubSequence;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsSubSequenceByAssetData
+// 0x0070 (0x0070 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsSubSequenceByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsSubSequenceByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.SetFavoriteRating
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_SetFavoriteRating final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InFavoriteRating;                                  // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_SetFavoriteRating;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.SetIsFlagged
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_SetIsFlagged final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsFlagged;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_SetIsFlagged;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.SetIsNoGood
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_SetIsNoGood final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsNoGood;                                       // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_SetIsNoGood;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.SetIsRecorded
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_SetIsRecorded final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsRecorded;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_SetIsRecorded;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.SetIsSubSequence
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_SetIsSubSequence final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsSubSequence;                                  // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_SetIsSubSequence;
+
 // Function LevelSequence.LevelSequence.CopyMetaData
 // 0x0010 (0x0010 - 0x0000)
 struct LevelSequence_CopyMetaData final
@@ -25,10 +400,7 @@ public:
 	class UObject*                                InMetaData;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequence_CopyMetaData) == 0x000008, "Wrong alignment on LevelSequence_CopyMetaData");
-static_assert(sizeof(LevelSequence_CopyMetaData) == 0x000010, "Wrong size on LevelSequence_CopyMetaData");
-static_assert(offsetof(LevelSequence_CopyMetaData, InMetaData) == 0x000000, "Member 'LevelSequence_CopyMetaData::InMetaData' has a wrong offset!");
-static_assert(offsetof(LevelSequence_CopyMetaData, ReturnValue) == 0x000008, "Member 'LevelSequence_CopyMetaData::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequence_CopyMetaData;
 
 // Function LevelSequence.LevelSequence.FindOrAddMetaDataByClass
 // 0x0010 (0x0010 - 0x0000)
@@ -38,10 +410,7 @@ public:
 	TSubclassOf<class UObject>                    InClass;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequence_FindOrAddMetaDataByClass) == 0x000008, "Wrong alignment on LevelSequence_FindOrAddMetaDataByClass");
-static_assert(sizeof(LevelSequence_FindOrAddMetaDataByClass) == 0x000010, "Wrong size on LevelSequence_FindOrAddMetaDataByClass");
-static_assert(offsetof(LevelSequence_FindOrAddMetaDataByClass, InClass) == 0x000000, "Member 'LevelSequence_FindOrAddMetaDataByClass::InClass' has a wrong offset!");
-static_assert(offsetof(LevelSequence_FindOrAddMetaDataByClass, ReturnValue) == 0x000008, "Member 'LevelSequence_FindOrAddMetaDataByClass::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequence_FindOrAddMetaDataByClass;
 
 // Function LevelSequence.LevelSequence.RemoveMetaDataByClass
 // 0x0008 (0x0008 - 0x0000)
@@ -50,9 +419,7 @@ struct LevelSequence_RemoveMetaDataByClass final
 public:
 	TSubclassOf<class UObject>                    InClass;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequence_RemoveMetaDataByClass) == 0x000008, "Wrong alignment on LevelSequence_RemoveMetaDataByClass");
-static_assert(sizeof(LevelSequence_RemoveMetaDataByClass) == 0x000008, "Wrong size on LevelSequence_RemoveMetaDataByClass");
-static_assert(offsetof(LevelSequence_RemoveMetaDataByClass, InClass) == 0x000000, "Member 'LevelSequence_RemoveMetaDataByClass::InClass' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequence_RemoveMetaDataByClass;
 
 // Function LevelSequence.LevelSequence.FindMetaDataByClass
 // 0x0010 (0x0010 - 0x0000)
@@ -62,10 +429,7 @@ public:
 	TSubclassOf<class UObject>                    InClass;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequence_FindMetaDataByClass) == 0x000008, "Wrong alignment on LevelSequence_FindMetaDataByClass");
-static_assert(sizeof(LevelSequence_FindMetaDataByClass) == 0x000010, "Wrong size on LevelSequence_FindMetaDataByClass");
-static_assert(offsetof(LevelSequence_FindMetaDataByClass, InClass) == 0x000000, "Member 'LevelSequence_FindMetaDataByClass::InClass' has a wrong offset!");
-static_assert(offsetof(LevelSequence_FindMetaDataByClass, ReturnValue) == 0x000008, "Member 'LevelSequence_FindMetaDataByClass::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequence_FindMetaDataByClass;
 
 // Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
 // 0x0020 (0x0020 - 0x0000)
@@ -74,9 +438,7 @@ struct LevelSequenceBurnInOptions_SetBurnIn final
 public:
 	struct FSoftClassPath                         InBurnInClass;                                     // 0x0000(0x0020)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceBurnInOptions_SetBurnIn) == 0x000008, "Wrong alignment on LevelSequenceBurnInOptions_SetBurnIn");
-static_assert(sizeof(LevelSequenceBurnInOptions_SetBurnIn) == 0x000020, "Wrong size on LevelSequenceBurnInOptions_SetBurnIn");
-static_assert(offsetof(LevelSequenceBurnInOptions_SetBurnIn, InBurnInClass) == 0x000000, "Member 'LevelSequenceBurnInOptions_SetBurnIn::InBurnInClass' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceBurnInOptions_SetBurnIn;
 
 // Function LevelSequence.LevelSequenceActor.AddBinding
 // 0x0028 (0x0028 - 0x0000)
@@ -88,11 +450,7 @@ public:
 	bool                                          bAllowBindingsFromAsset;                           // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LevelSequenceActor_AddBinding) == 0x000008, "Wrong alignment on LevelSequenceActor_AddBinding");
-static_assert(sizeof(LevelSequenceActor_AddBinding) == 0x000028, "Wrong size on LevelSequenceActor_AddBinding");
-static_assert(offsetof(LevelSequenceActor_AddBinding, Binding) == 0x000000, "Member 'LevelSequenceActor_AddBinding::Binding' has a wrong offset!");
-static_assert(offsetof(LevelSequenceActor_AddBinding, Actor) == 0x000018, "Member 'LevelSequenceActor_AddBinding::Actor' has a wrong offset!");
-static_assert(offsetof(LevelSequenceActor_AddBinding, bAllowBindingsFromAsset) == 0x000020, "Member 'LevelSequenceActor_AddBinding::bAllowBindingsFromAsset' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceActor_AddBinding;
 
 // Function LevelSequence.LevelSequenceActor.AddBindingByTag
 // 0x0018 (0x0018 - 0x0000)
@@ -104,11 +462,7 @@ public:
 	bool                                          bAllowBindingsFromAsset;                           // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LevelSequenceActor_AddBindingByTag) == 0x000008, "Wrong alignment on LevelSequenceActor_AddBindingByTag");
-static_assert(sizeof(LevelSequenceActor_AddBindingByTag) == 0x000018, "Wrong size on LevelSequenceActor_AddBindingByTag");
-static_assert(offsetof(LevelSequenceActor_AddBindingByTag, BindingTag) == 0x000000, "Member 'LevelSequenceActor_AddBindingByTag::BindingTag' has a wrong offset!");
-static_assert(offsetof(LevelSequenceActor_AddBindingByTag, Actor) == 0x000008, "Member 'LevelSequenceActor_AddBindingByTag::Actor' has a wrong offset!");
-static_assert(offsetof(LevelSequenceActor_AddBindingByTag, bAllowBindingsFromAsset) == 0x000010, "Member 'LevelSequenceActor_AddBindingByTag::bAllowBindingsFromAsset' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceActor_AddBindingByTag;
 
 // Function LevelSequence.LevelSequenceActor.RemoveBinding
 // 0x0020 (0x0020 - 0x0000)
@@ -118,10 +472,7 @@ public:
 	struct FMovieSceneObjectBindingID             Binding;                                           // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 Actor;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceActor_RemoveBinding) == 0x000008, "Wrong alignment on LevelSequenceActor_RemoveBinding");
-static_assert(sizeof(LevelSequenceActor_RemoveBinding) == 0x000020, "Wrong size on LevelSequenceActor_RemoveBinding");
-static_assert(offsetof(LevelSequenceActor_RemoveBinding, Binding) == 0x000000, "Member 'LevelSequenceActor_RemoveBinding::Binding' has a wrong offset!");
-static_assert(offsetof(LevelSequenceActor_RemoveBinding, Actor) == 0x000018, "Member 'LevelSequenceActor_RemoveBinding::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceActor_RemoveBinding;
 
 // Function LevelSequence.LevelSequenceActor.RemoveBindingByTag
 // 0x0010 (0x0010 - 0x0000)
@@ -131,10 +482,7 @@ public:
 	class FName                                   Tag;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 Actor;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceActor_RemoveBindingByTag) == 0x000008, "Wrong alignment on LevelSequenceActor_RemoveBindingByTag");
-static_assert(sizeof(LevelSequenceActor_RemoveBindingByTag) == 0x000010, "Wrong size on LevelSequenceActor_RemoveBindingByTag");
-static_assert(offsetof(LevelSequenceActor_RemoveBindingByTag, Tag) == 0x000000, "Member 'LevelSequenceActor_RemoveBindingByTag::Tag' has a wrong offset!");
-static_assert(offsetof(LevelSequenceActor_RemoveBindingByTag, Actor) == 0x000008, "Member 'LevelSequenceActor_RemoveBindingByTag::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceActor_RemoveBindingByTag;
 
 // Function LevelSequence.LevelSequenceActor.ResetBinding
 // 0x0018 (0x0018 - 0x0000)
@@ -143,9 +491,7 @@ struct LevelSequenceActor_ResetBinding final
 public:
 	struct FMovieSceneObjectBindingID             Binding;                                           // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceActor_ResetBinding) == 0x000004, "Wrong alignment on LevelSequenceActor_ResetBinding");
-static_assert(sizeof(LevelSequenceActor_ResetBinding) == 0x000018, "Wrong size on LevelSequenceActor_ResetBinding");
-static_assert(offsetof(LevelSequenceActor_ResetBinding, Binding) == 0x000000, "Member 'LevelSequenceActor_ResetBinding::Binding' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceActor_ResetBinding;
 
 // Function LevelSequence.LevelSequenceActor.SetBinding
 // 0x0030 (0x0030 - 0x0000)
@@ -157,11 +503,7 @@ public:
 	bool                                          bAllowBindingsFromAsset;                           // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LevelSequenceActor_SetBinding) == 0x000008, "Wrong alignment on LevelSequenceActor_SetBinding");
-static_assert(sizeof(LevelSequenceActor_SetBinding) == 0x000030, "Wrong size on LevelSequenceActor_SetBinding");
-static_assert(offsetof(LevelSequenceActor_SetBinding, Binding) == 0x000000, "Member 'LevelSequenceActor_SetBinding::Binding' has a wrong offset!");
-static_assert(offsetof(LevelSequenceActor_SetBinding, Actors) == 0x000018, "Member 'LevelSequenceActor_SetBinding::Actors' has a wrong offset!");
-static_assert(offsetof(LevelSequenceActor_SetBinding, bAllowBindingsFromAsset) == 0x000028, "Member 'LevelSequenceActor_SetBinding::bAllowBindingsFromAsset' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceActor_SetBinding;
 
 // Function LevelSequence.LevelSequenceActor.SetBindingByTag
 // 0x0020 (0x0020 - 0x0000)
@@ -173,11 +515,7 @@ public:
 	bool                                          bAllowBindingsFromAsset;                           // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LevelSequenceActor_SetBindingByTag) == 0x000008, "Wrong alignment on LevelSequenceActor_SetBindingByTag");
-static_assert(sizeof(LevelSequenceActor_SetBindingByTag) == 0x000020, "Wrong size on LevelSequenceActor_SetBindingByTag");
-static_assert(offsetof(LevelSequenceActor_SetBindingByTag, BindingTag) == 0x000000, "Member 'LevelSequenceActor_SetBindingByTag::BindingTag' has a wrong offset!");
-static_assert(offsetof(LevelSequenceActor_SetBindingByTag, Actors) == 0x000008, "Member 'LevelSequenceActor_SetBindingByTag::Actors' has a wrong offset!");
-static_assert(offsetof(LevelSequenceActor_SetBindingByTag, bAllowBindingsFromAsset) == 0x000018, "Member 'LevelSequenceActor_SetBindingByTag::bAllowBindingsFromAsset' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceActor_SetBindingByTag;
 
 // Function LevelSequence.LevelSequenceActor.SetReplicatePlayback
 // 0x0001 (0x0001 - 0x0000)
@@ -186,9 +524,7 @@ struct LevelSequenceActor_SetReplicatePlayback final
 public:
 	bool                                          ReplicatePlayback;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceActor_SetReplicatePlayback) == 0x000001, "Wrong alignment on LevelSequenceActor_SetReplicatePlayback");
-static_assert(sizeof(LevelSequenceActor_SetReplicatePlayback) == 0x000001, "Wrong size on LevelSequenceActor_SetReplicatePlayback");
-static_assert(offsetof(LevelSequenceActor_SetReplicatePlayback, ReplicatePlayback) == 0x000000, "Member 'LevelSequenceActor_SetReplicatePlayback::ReplicatePlayback' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceActor_SetReplicatePlayback;
 
 // Function LevelSequence.LevelSequenceActor.SetSequence
 // 0x0008 (0x0008 - 0x0000)
@@ -197,9 +533,7 @@ struct LevelSequenceActor_SetSequence final
 public:
 	class ULevelSequence*                         InSequence;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceActor_SetSequence) == 0x000008, "Wrong alignment on LevelSequenceActor_SetSequence");
-static_assert(sizeof(LevelSequenceActor_SetSequence) == 0x000008, "Wrong size on LevelSequenceActor_SetSequence");
-static_assert(offsetof(LevelSequenceActor_SetSequence, InSequence) == 0x000000, "Member 'LevelSequenceActor_SetSequence::InSequence' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceActor_SetSequence;
 
 // Function LevelSequence.LevelSequenceActor.FindNamedBinding
 // 0x0020 (0x0020 - 0x0000)
@@ -209,10 +543,7 @@ public:
 	class FName                                   Tag;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMovieSceneObjectBindingID             ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceActor_FindNamedBinding) == 0x000004, "Wrong alignment on LevelSequenceActor_FindNamedBinding");
-static_assert(sizeof(LevelSequenceActor_FindNamedBinding) == 0x000020, "Wrong size on LevelSequenceActor_FindNamedBinding");
-static_assert(offsetof(LevelSequenceActor_FindNamedBinding, Tag) == 0x000000, "Member 'LevelSequenceActor_FindNamedBinding::Tag' has a wrong offset!");
-static_assert(offsetof(LevelSequenceActor_FindNamedBinding, ReturnValue) == 0x000008, "Member 'LevelSequenceActor_FindNamedBinding::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceActor_FindNamedBinding;
 
 // Function LevelSequence.LevelSequenceActor.FindNamedBindings
 // 0x0018 (0x0018 - 0x0000)
@@ -222,10 +553,7 @@ public:
 	class FName                                   Tag;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FMovieSceneObjectBindingID>     ReturnValue;                                       // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceActor_FindNamedBindings) == 0x000008, "Wrong alignment on LevelSequenceActor_FindNamedBindings");
-static_assert(sizeof(LevelSequenceActor_FindNamedBindings) == 0x000018, "Wrong size on LevelSequenceActor_FindNamedBindings");
-static_assert(offsetof(LevelSequenceActor_FindNamedBindings, Tag) == 0x000000, "Member 'LevelSequenceActor_FindNamedBindings::Tag' has a wrong offset!");
-static_assert(offsetof(LevelSequenceActor_FindNamedBindings, ReturnValue) == 0x000008, "Member 'LevelSequenceActor_FindNamedBindings::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceActor_FindNamedBindings;
 
 // Function LevelSequence.LevelSequenceActor.GetSequence
 // 0x0008 (0x0008 - 0x0000)
@@ -234,9 +562,7 @@ struct LevelSequenceActor_GetSequence final
 public:
 	class ULevelSequence*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceActor_GetSequence) == 0x000008, "Wrong alignment on LevelSequenceActor_GetSequence");
-static_assert(sizeof(LevelSequenceActor_GetSequence) == 0x000008, "Wrong size on LevelSequenceActor_GetSequence");
-static_assert(offsetof(LevelSequenceActor_GetSequence, ReturnValue) == 0x000000, "Member 'LevelSequenceActor_GetSequence::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceActor_GetSequence;
 
 // Function LevelSequence.LevelSequenceActor.GetSequencePlayer
 // 0x0008 (0x0008 - 0x0000)
@@ -245,9 +571,7 @@ struct LevelSequenceActor_GetSequencePlayer final
 public:
 	class ULevelSequencePlayer*                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceActor_GetSequencePlayer) == 0x000008, "Wrong alignment on LevelSequenceActor_GetSequencePlayer");
-static_assert(sizeof(LevelSequenceActor_GetSequencePlayer) == 0x000008, "Wrong size on LevelSequenceActor_GetSequencePlayer");
-static_assert(offsetof(LevelSequenceActor_GetSequencePlayer, ReturnValue) == 0x000000, "Member 'LevelSequenceActor_GetSequencePlayer::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceActor_GetSequencePlayer;
 
 // Function LevelSequence.LevelSequenceBurnIn.SetSettings
 // 0x0008 (0x0008 - 0x0000)
@@ -256,9 +580,7 @@ struct LevelSequenceBurnIn_SetSettings final
 public:
 	class UObject*                                InSettings;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceBurnIn_SetSettings) == 0x000008, "Wrong alignment on LevelSequenceBurnIn_SetSettings");
-static_assert(sizeof(LevelSequenceBurnIn_SetSettings) == 0x000008, "Wrong size on LevelSequenceBurnIn_SetSettings");
-static_assert(offsetof(LevelSequenceBurnIn_SetSettings, InSettings) == 0x000000, "Member 'LevelSequenceBurnIn_SetSettings::InSettings' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceBurnIn_SetSettings;
 
 // Function LevelSequence.LevelSequenceBurnIn.GetSettingsClass
 // 0x0008 (0x0008 - 0x0000)
@@ -267,9 +589,7 @@ struct LevelSequenceBurnIn_GetSettingsClass final
 public:
 	TSubclassOf<class ULevelSequenceBurnInInitSettings> ReturnValue;                                 // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceBurnIn_GetSettingsClass) == 0x000008, "Wrong alignment on LevelSequenceBurnIn_GetSettingsClass");
-static_assert(sizeof(LevelSequenceBurnIn_GetSettingsClass) == 0x000008, "Wrong size on LevelSequenceBurnIn_GetSettingsClass");
-static_assert(offsetof(LevelSequenceBurnIn_GetSettingsClass, ReturnValue) == 0x000000, "Member 'LevelSequenceBurnIn_GetSettingsClass::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceBurnIn_GetSettingsClass;
 
 // Function LevelSequence.LevelSequenceDirector.GetBoundActor
 // 0x0020 (0x0020 - 0x0000)
@@ -279,10 +599,7 @@ public:
 	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceDirector_GetBoundActor) == 0x000008, "Wrong alignment on LevelSequenceDirector_GetBoundActor");
-static_assert(sizeof(LevelSequenceDirector_GetBoundActor) == 0x000020, "Wrong size on LevelSequenceDirector_GetBoundActor");
-static_assert(offsetof(LevelSequenceDirector_GetBoundActor, ObjectBinding) == 0x000000, "Member 'LevelSequenceDirector_GetBoundActor::ObjectBinding' has a wrong offset!");
-static_assert(offsetof(LevelSequenceDirector_GetBoundActor, ReturnValue) == 0x000018, "Member 'LevelSequenceDirector_GetBoundActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceDirector_GetBoundActor;
 
 // Function LevelSequence.LevelSequenceDirector.GetBoundActors
 // 0x0028 (0x0028 - 0x0000)
@@ -292,10 +609,7 @@ public:
 	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class AActor*>                         ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceDirector_GetBoundActors) == 0x000008, "Wrong alignment on LevelSequenceDirector_GetBoundActors");
-static_assert(sizeof(LevelSequenceDirector_GetBoundActors) == 0x000028, "Wrong size on LevelSequenceDirector_GetBoundActors");
-static_assert(offsetof(LevelSequenceDirector_GetBoundActors, ObjectBinding) == 0x000000, "Member 'LevelSequenceDirector_GetBoundActors::ObjectBinding' has a wrong offset!");
-static_assert(offsetof(LevelSequenceDirector_GetBoundActors, ReturnValue) == 0x000018, "Member 'LevelSequenceDirector_GetBoundActors::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceDirector_GetBoundActors;
 
 // Function LevelSequence.LevelSequenceDirector.GetBoundObject
 // 0x0020 (0x0020 - 0x0000)
@@ -305,10 +619,7 @@ public:
 	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceDirector_GetBoundObject) == 0x000008, "Wrong alignment on LevelSequenceDirector_GetBoundObject");
-static_assert(sizeof(LevelSequenceDirector_GetBoundObject) == 0x000020, "Wrong size on LevelSequenceDirector_GetBoundObject");
-static_assert(offsetof(LevelSequenceDirector_GetBoundObject, ObjectBinding) == 0x000000, "Member 'LevelSequenceDirector_GetBoundObject::ObjectBinding' has a wrong offset!");
-static_assert(offsetof(LevelSequenceDirector_GetBoundObject, ReturnValue) == 0x000018, "Member 'LevelSequenceDirector_GetBoundObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceDirector_GetBoundObject;
 
 // Function LevelSequence.LevelSequenceDirector.GetBoundObjects
 // 0x0028 (0x0028 - 0x0000)
@@ -318,10 +629,7 @@ public:
 	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UObject*>                        ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceDirector_GetBoundObjects) == 0x000008, "Wrong alignment on LevelSequenceDirector_GetBoundObjects");
-static_assert(sizeof(LevelSequenceDirector_GetBoundObjects) == 0x000028, "Wrong size on LevelSequenceDirector_GetBoundObjects");
-static_assert(offsetof(LevelSequenceDirector_GetBoundObjects, ObjectBinding) == 0x000000, "Member 'LevelSequenceDirector_GetBoundObjects::ObjectBinding' has a wrong offset!");
-static_assert(offsetof(LevelSequenceDirector_GetBoundObjects, ReturnValue) == 0x000018, "Member 'LevelSequenceDirector_GetBoundObjects::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceDirector_GetBoundObjects;
 
 // Function LevelSequence.LevelSequenceDirector.GetSequence
 // 0x0008 (0x0008 - 0x0000)
@@ -330,9 +638,7 @@ struct LevelSequenceDirector_GetSequence final
 public:
 	class UMovieSceneSequence*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceDirector_GetSequence) == 0x000008, "Wrong alignment on LevelSequenceDirector_GetSequence");
-static_assert(sizeof(LevelSequenceDirector_GetSequence) == 0x000008, "Wrong size on LevelSequenceDirector_GetSequence");
-static_assert(offsetof(LevelSequenceDirector_GetSequence, ReturnValue) == 0x000000, "Member 'LevelSequenceDirector_GetSequence::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceDirector_GetSequence;
 
 // Function LevelSequence.LevelSequenceDirector.GetCurrentTime
 // 0x0010 (0x0010 - 0x0000)
@@ -341,9 +647,7 @@ struct LevelSequenceDirector_GetCurrentTime final
 public:
 	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceDirector_GetCurrentTime) == 0x000004, "Wrong alignment on LevelSequenceDirector_GetCurrentTime");
-static_assert(sizeof(LevelSequenceDirector_GetCurrentTime) == 0x000010, "Wrong size on LevelSequenceDirector_GetCurrentTime");
-static_assert(offsetof(LevelSequenceDirector_GetCurrentTime, ReturnValue) == 0x000000, "Member 'LevelSequenceDirector_GetCurrentTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceDirector_GetCurrentTime;
 
 // Function LevelSequence.LevelSequenceDirector.GetRootSequenceTime
 // 0x0010 (0x0010 - 0x0000)
@@ -352,9 +656,7 @@ struct LevelSequenceDirector_GetRootSequenceTime final
 public:
 	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceDirector_GetRootSequenceTime) == 0x000004, "Wrong alignment on LevelSequenceDirector_GetRootSequenceTime");
-static_assert(sizeof(LevelSequenceDirector_GetRootSequenceTime) == 0x000010, "Wrong size on LevelSequenceDirector_GetRootSequenceTime");
-static_assert(offsetof(LevelSequenceDirector_GetRootSequenceTime, ReturnValue) == 0x000000, "Member 'LevelSequenceDirector_GetRootSequenceTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceDirector_GetRootSequenceTime;
 
 // Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer
 // 0x0048 (0x0048 - 0x0000)
@@ -367,13 +669,7 @@ public:
 	class ALevelSequenceActor*                    OutActor;                                          // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ULevelSequencePlayer*                   ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequencePlayer_CreateLevelSequencePlayer) == 0x000008, "Wrong alignment on LevelSequencePlayer_CreateLevelSequencePlayer");
-static_assert(sizeof(LevelSequencePlayer_CreateLevelSequencePlayer) == 0x000048, "Wrong size on LevelSequencePlayer_CreateLevelSequencePlayer");
-static_assert(offsetof(LevelSequencePlayer_CreateLevelSequencePlayer, WorldContextObject) == 0x000000, "Member 'LevelSequencePlayer_CreateLevelSequencePlayer::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LevelSequencePlayer_CreateLevelSequencePlayer, LevelSequence) == 0x000008, "Member 'LevelSequencePlayer_CreateLevelSequencePlayer::LevelSequence' has a wrong offset!");
-static_assert(offsetof(LevelSequencePlayer_CreateLevelSequencePlayer, Settings) == 0x000010, "Member 'LevelSequencePlayer_CreateLevelSequencePlayer::Settings' has a wrong offset!");
-static_assert(offsetof(LevelSequencePlayer_CreateLevelSequencePlayer, OutActor) == 0x000038, "Member 'LevelSequencePlayer_CreateLevelSequencePlayer::OutActor' has a wrong offset!");
-static_assert(offsetof(LevelSequencePlayer_CreateLevelSequencePlayer, ReturnValue) == 0x000040, "Member 'LevelSequencePlayer_CreateLevelSequencePlayer::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequencePlayer_CreateLevelSequencePlayer;
 
 // Function LevelSequence.LevelSequencePlayer.GetActiveCameraComponent
 // 0x0008 (0x0008 - 0x0000)
@@ -382,9 +678,7 @@ struct LevelSequencePlayer_GetActiveCameraComponent final
 public:
 	class UCameraComponent*                       ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequencePlayer_GetActiveCameraComponent) == 0x000008, "Wrong alignment on LevelSequencePlayer_GetActiveCameraComponent");
-static_assert(sizeof(LevelSequencePlayer_GetActiveCameraComponent) == 0x000008, "Wrong size on LevelSequencePlayer_GetActiveCameraComponent");
-static_assert(offsetof(LevelSequencePlayer_GetActiveCameraComponent, ReturnValue) == 0x000000, "Member 'LevelSequencePlayer_GetActiveCameraComponent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequencePlayer_GetActiveCameraComponent;
 
 // Function LevelSequence.LevelSequenceMediaController.SynchronizeToServer
 // 0x0004 (0x0004 - 0x0000)
@@ -393,9 +687,7 @@ struct LevelSequenceMediaController_SynchronizeToServer final
 public:
 	float                                         DesyncThresholdSeconds;                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceMediaController_SynchronizeToServer) == 0x000004, "Wrong alignment on LevelSequenceMediaController_SynchronizeToServer");
-static_assert(sizeof(LevelSequenceMediaController_SynchronizeToServer) == 0x000004, "Wrong size on LevelSequenceMediaController_SynchronizeToServer");
-static_assert(offsetof(LevelSequenceMediaController_SynchronizeToServer, DesyncThresholdSeconds) == 0x000000, "Member 'LevelSequenceMediaController_SynchronizeToServer::DesyncThresholdSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceMediaController_SynchronizeToServer;
 
 // Function LevelSequence.LevelSequenceMediaController.GetMediaComponent
 // 0x0008 (0x0008 - 0x0000)
@@ -404,9 +696,7 @@ struct LevelSequenceMediaController_GetMediaComponent final
 public:
 	class UMediaComponent*                        ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceMediaController_GetMediaComponent) == 0x000008, "Wrong alignment on LevelSequenceMediaController_GetMediaComponent");
-static_assert(sizeof(LevelSequenceMediaController_GetMediaComponent) == 0x000008, "Wrong size on LevelSequenceMediaController_GetMediaComponent");
-static_assert(offsetof(LevelSequenceMediaController_GetMediaComponent, ReturnValue) == 0x000000, "Member 'LevelSequenceMediaController_GetMediaComponent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceMediaController_GetMediaComponent;
 
 // Function LevelSequence.LevelSequenceMediaController.GetSequence
 // 0x0008 (0x0008 - 0x0000)
@@ -415,9 +705,7 @@ struct LevelSequenceMediaController_GetSequence final
 public:
 	class ALevelSequenceActor*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LevelSequenceMediaController_GetSequence) == 0x000008, "Wrong alignment on LevelSequenceMediaController_GetSequence");
-static_assert(sizeof(LevelSequenceMediaController_GetSequence) == 0x000008, "Wrong size on LevelSequenceMediaController_GetSequence");
-static_assert(offsetof(LevelSequenceMediaController_GetSequence, ReturnValue) == 0x000000, "Member 'LevelSequenceMediaController_GetSequence::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelSequenceMediaController_GetSequence;
 
 }
 

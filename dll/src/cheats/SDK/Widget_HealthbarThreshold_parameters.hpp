@@ -25,10 +25,7 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_CustomEvent_InValue;                        // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HealthbarThreshold_C_ExecuteUbergraph_Widget_HealthbarThreshold) == 0x000004, "Wrong alignment on Widget_HealthbarThreshold_C_ExecuteUbergraph_Widget_HealthbarThreshold");
-static_assert(sizeof(Widget_HealthbarThreshold_C_ExecuteUbergraph_Widget_HealthbarThreshold) == 0x000008, "Wrong size on Widget_HealthbarThreshold_C_ExecuteUbergraph_Widget_HealthbarThreshold");
-static_assert(offsetof(Widget_HealthbarThreshold_C_ExecuteUbergraph_Widget_HealthbarThreshold, EntryPoint) == 0x000000, "Member 'Widget_HealthbarThreshold_C_ExecuteUbergraph_Widget_HealthbarThreshold::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_ExecuteUbergraph_Widget_HealthbarThreshold, K2Node_CustomEvent_InValue) == 0x000004, "Member 'Widget_HealthbarThreshold_C_ExecuteUbergraph_Widget_HealthbarThreshold::K2Node_CustomEvent_InValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HealthbarThreshold_C_ExecuteUbergraph_Widget_HealthbarThreshold;
 
 // Function Widget_HealthbarThreshold.Widget_HealthbarThreshold_C.GetSliderValue
 // 0x0018 (0x0018 - 0x0000)
@@ -40,11 +37,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_FunctionResult_Value_ImplicitCast;          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HealthbarThreshold_C_GetSliderValue) == 0x000008, "Wrong alignment on Widget_HealthbarThreshold_C_GetSliderValue");
-static_assert(sizeof(Widget_HealthbarThreshold_C_GetSliderValue) == 0x000018, "Wrong size on Widget_HealthbarThreshold_C_GetSliderValue");
-static_assert(offsetof(Widget_HealthbarThreshold_C_GetSliderValue, Value) == 0x000000, "Member 'Widget_HealthbarThreshold_C_GetSliderValue::Value' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_GetSliderValue, CallFunc_GetValue_ReturnValue) == 0x000008, "Member 'Widget_HealthbarThreshold_C_GetSliderValue::CallFunc_GetValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_GetSliderValue, K2Node_FunctionResult_Value_ImplicitCast) == 0x000010, "Member 'Widget_HealthbarThreshold_C_GetSliderValue::K2Node_FunctionResult_Value_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HealthbarThreshold_C_GetSliderValue;
 
 // Function Widget_HealthbarThreshold.Widget_HealthbarThreshold_C.Increase Slider Vertical Length
 // 0x0580 (0x0580 - 0x0000)
@@ -68,23 +61,7 @@ public:
 	struct FVector2D                              CallFunc_BreakVector2D_InVec_ImplicitCast;         // 0x0560(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FDeprecateSlateVector2D                K2Node_MakeStruct_ImageSize_ImplicitCast;          // 0x0570(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length) == 0x000010, "Wrong alignment on Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length");
-static_assert(sizeof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length) == 0x000580, "Wrong size on Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length");
-static_assert(offsetof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length, Increase) == 0x000000, "Member 'Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length::Increase' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length, CallFunc_BreakVector2D_X) == 0x000008, "Member 'Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length, CallFunc_BreakVector2D_Y) == 0x000010, "Member 'Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length, CallFunc_BreakColor_R) == 0x000018, "Member 'Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length::CallFunc_BreakColor_R' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length, CallFunc_BreakColor_G) == 0x00001C, "Member 'Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length::CallFunc_BreakColor_G' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length, CallFunc_BreakColor_B) == 0x000020, "Member 'Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length::CallFunc_BreakColor_B' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length, CallFunc_BreakColor_A) == 0x000024, "Member 'Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length::CallFunc_BreakColor_A' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000028, "Member 'Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length, CallFunc_MakeColor_ReturnValue) == 0x000030, "Member 'Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length::CallFunc_MakeColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length, CallFunc_MakeVector2D_ReturnValue) == 0x000040, "Member 'Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length, K2Node_MakeStruct_SlateColor) == 0x000050, "Member 'Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length, K2Node_MakeStruct_SlateBrush) == 0x000070, "Member 'Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length::K2Node_MakeStruct_SlateBrush' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length, K2Node_MakeStruct_SliderStyle) == 0x000120, "Member 'Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length::K2Node_MakeStruct_SliderStyle' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length, CallFunc_BreakVector2D_InVec_ImplicitCast) == 0x000560, "Member 'Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length::CallFunc_BreakVector2D_InVec_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length, K2Node_MakeStruct_ImageSize_ImplicitCast) == 0x000570, "Member 'Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length::K2Node_MakeStruct_ImageSize_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HealthbarThreshold_C_Increase_Slider_Vertical_Length;
 
 // Function Widget_HealthbarThreshold.Widget_HealthbarThreshold_C.SetSliderValue
 // 0x0004 (0x0004 - 0x0000)
@@ -93,9 +70,7 @@ struct Widget_HealthbarThreshold_C_SetSliderValue final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HealthbarThreshold_C_SetSliderValue) == 0x000004, "Wrong alignment on Widget_HealthbarThreshold_C_SetSliderValue");
-static_assert(sizeof(Widget_HealthbarThreshold_C_SetSliderValue) == 0x000004, "Wrong size on Widget_HealthbarThreshold_C_SetSliderValue");
-static_assert(offsetof(Widget_HealthbarThreshold_C_SetSliderValue, InValue) == 0x000000, "Member 'Widget_HealthbarThreshold_C_SetSliderValue::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HealthbarThreshold_C_SetSliderValue;
 
 }
 

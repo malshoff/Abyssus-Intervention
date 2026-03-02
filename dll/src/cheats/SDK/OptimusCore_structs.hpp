@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "RigVM_structs.hpp"
-#include "ComputeFramework_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ComputeFramework_structs.hpp"
+#include "RigVM_structs.hpp"
 #include "ControlRig_structs.hpp"
 
 
@@ -205,10 +205,7 @@ public:
 	class FName                                   TypeName;                                          // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UObject>                 TypeObject;                                        // 0x0008(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusDataTypeRef) == 0x000008, "Wrong alignment on FOptimusDataTypeRef");
-static_assert(sizeof(FOptimusDataTypeRef) == 0x000030, "Wrong size on FOptimusDataTypeRef");
-static_assert(offsetof(FOptimusDataTypeRef, TypeName) == 0x000000, "Member 'FOptimusDataTypeRef::TypeName' has a wrong offset!");
-static_assert(offsetof(FOptimusDataTypeRef, TypeObject) == 0x000008, "Member 'FOptimusDataTypeRef::TypeObject' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusDataTypeRef;
 
 // ScriptStruct OptimusCore.Optimus_ShaderBinding
 // 0x0038 (0x0038 - 0x0000)
@@ -218,10 +215,7 @@ public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FOptimusDataTypeRef                    DataType;                                          // 0x0008(0x0030)(Edit, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimus_ShaderBinding) == 0x000008, "Wrong alignment on FOptimus_ShaderBinding");
-static_assert(sizeof(FOptimus_ShaderBinding) == 0x000038, "Wrong size on FOptimus_ShaderBinding");
-static_assert(offsetof(FOptimus_ShaderBinding, Name) == 0x000000, "Member 'FOptimus_ShaderBinding::Name' has a wrong offset!");
-static_assert(offsetof(FOptimus_ShaderBinding, DataType) == 0x000008, "Member 'FOptimus_ShaderBinding::DataType' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimus_ShaderBinding;
 
 // ScriptStruct OptimusCore.OptimusValidatedName
 // 0x0008 (0x0008 - 0x0000)
@@ -230,9 +224,7 @@ struct FOptimusValidatedName final
 public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusValidatedName) == 0x000004, "Wrong alignment on FOptimusValidatedName");
-static_assert(sizeof(FOptimusValidatedName) == 0x000008, "Wrong size on FOptimusValidatedName");
-static_assert(offsetof(FOptimusValidatedName, Name) == 0x000000, "Member 'FOptimusValidatedName::Name' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusValidatedName;
 
 // ScriptStruct OptimusCore.OptimusDataDomain
 // 0x0040 (0x0040 - 0x0000)
@@ -247,13 +239,7 @@ public:
 	class FString                                 Expression;                                        // 0x0020(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FName>                           LevelNames;                                        // 0x0030(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
 };
-static_assert(alignof(FOptimusDataDomain) == 0x000008, "Wrong alignment on FOptimusDataDomain");
-static_assert(sizeof(FOptimusDataDomain) == 0x000040, "Wrong size on FOptimusDataDomain");
-static_assert(offsetof(FOptimusDataDomain, Type) == 0x000000, "Member 'FOptimusDataDomain::Type' has a wrong offset!");
-static_assert(offsetof(FOptimusDataDomain, DimensionNames) == 0x000008, "Member 'FOptimusDataDomain::DimensionNames' has a wrong offset!");
-static_assert(offsetof(FOptimusDataDomain, Multiplier) == 0x000018, "Member 'FOptimusDataDomain::Multiplier' has a wrong offset!");
-static_assert(offsetof(FOptimusDataDomain, Expression) == 0x000020, "Member 'FOptimusDataDomain::Expression' has a wrong offset!");
-static_assert(offsetof(FOptimusDataDomain, LevelNames) == 0x000030, "Member 'FOptimusDataDomain::LevelNames' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusDataDomain;
 
 // ScriptStruct OptimusCore.OptimusParameterBinding
 // 0x0080 (0x0080 - 0x0000)
@@ -267,13 +253,7 @@ public:
 	bool                                          bSupportRead;                                      // 0x0079(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusParameterBinding) == 0x000008, "Wrong alignment on FOptimusParameterBinding");
-static_assert(sizeof(FOptimusParameterBinding) == 0x000080, "Wrong size on FOptimusParameterBinding");
-static_assert(offsetof(FOptimusParameterBinding, Name) == 0x000000, "Member 'FOptimusParameterBinding::Name' has a wrong offset!");
-static_assert(offsetof(FOptimusParameterBinding, DataType) == 0x000008, "Member 'FOptimusParameterBinding::DataType' has a wrong offset!");
-static_assert(offsetof(FOptimusParameterBinding, DataDomain) == 0x000038, "Member 'FOptimusParameterBinding::DataDomain' has a wrong offset!");
-static_assert(offsetof(FOptimusParameterBinding, bSupportAtomicIfCompatibleDataType) == 0x000078, "Member 'FOptimusParameterBinding::bSupportAtomicIfCompatibleDataType' has a wrong offset!");
-static_assert(offsetof(FOptimusParameterBinding, bSupportRead) == 0x000079, "Member 'FOptimusParameterBinding::bSupportRead' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusParameterBinding;
 
 // ScriptStruct OptimusCore.OptimusParameterBindingArray
 // 0x0010 (0x0010 - 0x0000)
@@ -282,9 +262,7 @@ struct FOptimusParameterBindingArray final
 public:
 	TArray<struct FOptimusParameterBinding>       InnerArray;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusParameterBindingArray) == 0x000008, "Wrong alignment on FOptimusParameterBindingArray");
-static_assert(sizeof(FOptimusParameterBindingArray) == 0x000010, "Wrong size on FOptimusParameterBindingArray");
-static_assert(offsetof(FOptimusParameterBindingArray, InnerArray) == 0x000000, "Member 'FOptimusParameterBindingArray::InnerArray' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusParameterBindingArray;
 
 // ScriptStruct OptimusCore.OptimusConstantIdentifier
 // 0x0018 (0x0018 - 0x0000)
@@ -295,11 +273,7 @@ public:
 	class FName                                   GroupName;                                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ConstantName;                                      // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusConstantIdentifier) == 0x000004, "Wrong alignment on FOptimusConstantIdentifier");
-static_assert(sizeof(FOptimusConstantIdentifier) == 0x000018, "Wrong size on FOptimusConstantIdentifier");
-static_assert(offsetof(FOptimusConstantIdentifier, NodePath) == 0x000000, "Member 'FOptimusConstantIdentifier::NodePath' has a wrong offset!");
-static_assert(offsetof(FOptimusConstantIdentifier, GroupName) == 0x000008, "Member 'FOptimusConstantIdentifier::GroupName' has a wrong offset!");
-static_assert(offsetof(FOptimusConstantIdentifier, ConstantName) == 0x000010, "Member 'FOptimusConstantIdentifier::ConstantName' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusConstantIdentifier;
 
 // ScriptStruct OptimusCore.OptimusConstantDefinition
 // 0x0028 (0x0028 - 0x0000)
@@ -309,10 +283,7 @@ public:
 	struct FOptimusConstantIdentifier             ReferencedConstant;                                // 0x0000(0x0018)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Expression;                                        // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusConstantDefinition) == 0x000008, "Wrong alignment on FOptimusConstantDefinition");
-static_assert(sizeof(FOptimusConstantDefinition) == 0x000028, "Wrong size on FOptimusConstantDefinition");
-static_assert(offsetof(FOptimusConstantDefinition, ReferencedConstant) == 0x000000, "Member 'FOptimusConstantDefinition::ReferencedConstant' has a wrong offset!");
-static_assert(offsetof(FOptimusConstantDefinition, Expression) == 0x000018, "Member 'FOptimusConstantDefinition::Expression' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusConstantDefinition;
 
 // ScriptStruct OptimusCore.OptimusConstant
 // 0x0048 (0x0048 - 0x0000)
@@ -324,12 +295,7 @@ public:
 	int32                                         ComponentBindingIndex;                             // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EOptimusConstantType                          Type;                                              // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusConstant) == 0x000008, "Wrong alignment on FOptimusConstant");
-static_assert(sizeof(FOptimusConstant) == 0x000048, "Wrong size on FOptimusConstant");
-static_assert(offsetof(FOptimusConstant, Identifier) == 0x000000, "Member 'FOptimusConstant::Identifier' has a wrong offset!");
-static_assert(offsetof(FOptimusConstant, Definition) == 0x000018, "Member 'FOptimusConstant::Definition' has a wrong offset!");
-static_assert(offsetof(FOptimusConstant, ComponentBindingIndex) == 0x000040, "Member 'FOptimusConstant::ComponentBindingIndex' has a wrong offset!");
-static_assert(offsetof(FOptimusConstant, Type) == 0x000044, "Member 'FOptimusConstant::Type' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusConstant;
 
 // ScriptStruct OptimusCore.OptimusConstantIndex
 // 0x000C (0x000C - 0x0000)
@@ -340,11 +306,7 @@ public:
 	EOptimusConstantType                          Type;                                              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ConstantIndex;                                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusConstantIndex) == 0x000004, "Wrong alignment on FOptimusConstantIndex");
-static_assert(sizeof(FOptimusConstantIndex) == 0x00000C, "Wrong size on FOptimusConstantIndex");
-static_assert(offsetof(FOptimusConstantIndex, KernelIndex) == 0x000000, "Member 'FOptimusConstantIndex::KernelIndex' has a wrong offset!");
-static_assert(offsetof(FOptimusConstantIndex, Type) == 0x000004, "Member 'FOptimusConstantIndex::Type' has a wrong offset!");
-static_assert(offsetof(FOptimusConstantIndex, ConstantIndex) == 0x000008, "Member 'FOptimusConstantIndex::ConstantIndex' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusConstantIndex;
 
 // ScriptStruct OptimusCore.OptimusKernelConstantContainer
 // 0x0070 (0x0070 - 0x0000)
@@ -355,11 +317,7 @@ public:
 	TArray<struct FOptimusConstant>               OutputConstants;                                   // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TMap<class FName, int32>                      GroupNameToBindingIndex;                           // 0x0020(0x0050)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusKernelConstantContainer) == 0x000008, "Wrong alignment on FOptimusKernelConstantContainer");
-static_assert(sizeof(FOptimusKernelConstantContainer) == 0x000070, "Wrong size on FOptimusKernelConstantContainer");
-static_assert(offsetof(FOptimusKernelConstantContainer, InputConstants) == 0x000000, "Member 'FOptimusKernelConstantContainer::InputConstants' has a wrong offset!");
-static_assert(offsetof(FOptimusKernelConstantContainer, OutputConstants) == 0x000010, "Member 'FOptimusKernelConstantContainer::OutputConstants' has a wrong offset!");
-static_assert(offsetof(FOptimusKernelConstantContainer, GroupNameToBindingIndex) == 0x000020, "Member 'FOptimusKernelConstantContainer::GroupNameToBindingIndex' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusKernelConstantContainer;
 
 // ScriptStruct OptimusCore.OptimusConstantContainer
 // 0x0010 (0x0010 - 0x0000)
@@ -368,9 +326,27 @@ struct FOptimusConstantContainer final
 public:
 	TArray<struct FOptimusKernelConstantContainer> KernelContainers;                                 // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 };
-static_assert(alignof(FOptimusConstantContainer) == 0x000008, "Wrong alignment on FOptimusConstantContainer");
-static_assert(sizeof(FOptimusConstantContainer) == 0x000010, "Wrong size on FOptimusConstantContainer");
-static_assert(offsetof(FOptimusConstantContainer, KernelContainers) == 0x000000, "Member 'FOptimusConstantContainer::KernelContainers' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusConstantContainer;
+
+// ScriptStruct OptimusCore.OptimusFunctionNodeGraphHeaderWithGuid
+// 0x0020 (0x0020 - 0x0000)
+struct FOptimusFunctionNodeGraphHeaderWithGuid final
+{
+public:
+	struct FGuid                                  FunctionGraphGuid;                                 // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   FunctionName;                                      // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Category;                                          // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOptimusFunctionNodeGraphHeaderWithGuid;
+
+// ScriptStruct OptimusCore.OptimusFunctionNodeGraphHeaderWithGuidArray
+// 0x0010 (0x0010 - 0x0000)
+struct FOptimusFunctionNodeGraphHeaderWithGuidArray final
+{
+public:
+	TArray<struct FOptimusFunctionNodeGraphHeaderWithGuid> Headers;                                  // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOptimusFunctionNodeGraphHeaderWithGuidArray;
 
 // ScriptStruct OptimusCore.OptimusShaderText
 // 0x0020 (0x0020 - 0x0000)
@@ -380,10 +356,7 @@ public:
 	class FString                                 Declarations;                                      // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ShaderText;                                        // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusShaderText) == 0x000008, "Wrong alignment on FOptimusShaderText");
-static_assert(sizeof(FOptimusShaderText) == 0x000020, "Wrong size on FOptimusShaderText");
-static_assert(offsetof(FOptimusShaderText, Declarations) == 0x000000, "Member 'FOptimusShaderText::Declarations' has a wrong offset!");
-static_assert(offsetof(FOptimusShaderText, ShaderText) == 0x000010, "Member 'FOptimusShaderText::ShaderText' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusShaderText;
 
 // ScriptStruct OptimusCore.OptimusValueIdentifier
 // 0x000C (0x000C - 0x0000)
@@ -394,10 +367,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Name;                                              // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusValueIdentifier) == 0x000004, "Wrong alignment on FOptimusValueIdentifier");
-static_assert(sizeof(FOptimusValueIdentifier) == 0x00000C, "Wrong size on FOptimusValueIdentifier");
-static_assert(offsetof(FOptimusValueIdentifier, Type) == 0x000000, "Member 'FOptimusValueIdentifier::Type' has a wrong offset!");
-static_assert(offsetof(FOptimusValueIdentifier, Name) == 0x000004, "Member 'FOptimusValueIdentifier::Name' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusValueIdentifier;
 
 // ScriptStruct OptimusCore.OptimusValueContainerStruct
 // 0x0010 (0x0010 - 0x0000)
@@ -406,9 +376,7 @@ struct FOptimusValueContainerStruct final
 public:
 	struct FInstancedPropertyBag                  Value;                                             // 0x0000(0x0010)(Edit, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusValueContainerStruct) == 0x000008, "Wrong alignment on FOptimusValueContainerStruct");
-static_assert(sizeof(FOptimusValueContainerStruct) == 0x000010, "Wrong size on FOptimusValueContainerStruct");
-static_assert(offsetof(FOptimusValueContainerStruct, Value) == 0x000000, "Member 'FOptimusValueContainerStruct::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusValueContainerStruct;
 
 // ScriptStruct OptimusCore.OptimusValueDescription
 // 0x0068 (0x0068 - 0x0000)
@@ -421,12 +389,7 @@ public:
 	struct FOptimusValueContainerStruct           Value;                                             // 0x0038(0x0010)(NativeAccessSpecifierPublic)
 	struct FShaderValueContainer                  ShaderValue;                                       // 0x0048(0x0020)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusValueDescription) == 0x000008, "Wrong alignment on FOptimusValueDescription");
-static_assert(sizeof(FOptimusValueDescription) == 0x000068, "Wrong size on FOptimusValueDescription");
-static_assert(offsetof(FOptimusValueDescription, DataType) == 0x000000, "Member 'FOptimusValueDescription::DataType' has a wrong offset!");
-static_assert(offsetof(FOptimusValueDescription, ValueUsage) == 0x000030, "Member 'FOptimusValueDescription::ValueUsage' has a wrong offset!");
-static_assert(offsetof(FOptimusValueDescription, Value) == 0x000038, "Member 'FOptimusValueDescription::Value' has a wrong offset!");
-static_assert(offsetof(FOptimusValueDescription, ShaderValue) == 0x000048, "Member 'FOptimusValueDescription::ShaderValue' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusValueDescription;
 
 // ScriptStruct OptimusCore.OptimusDataInterfacePropertyOverrideInfo
 // 0x0050 (0x0050 - 0x0000)
@@ -435,9 +398,7 @@ struct FOptimusDataInterfacePropertyOverrideInfo final
 public:
 	TMap<class FName, struct FOptimusValueIdentifier> PinNameToValueIdMap;                           // 0x0000(0x0050)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusDataInterfacePropertyOverrideInfo) == 0x000008, "Wrong alignment on FOptimusDataInterfacePropertyOverrideInfo");
-static_assert(sizeof(FOptimusDataInterfacePropertyOverrideInfo) == 0x000050, "Wrong size on FOptimusDataInterfacePropertyOverrideInfo");
-static_assert(offsetof(FOptimusDataInterfacePropertyOverrideInfo, PinNameToValueIdMap) == 0x000000, "Member 'FOptimusDataInterfacePropertyOverrideInfo::PinNameToValueIdMap' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusDataInterfacePropertyOverrideInfo;
 
 // ScriptStruct OptimusCore.RigVMTrait_OptimusDeformer
 // 0x0028 (0x0040 - 0x0018)
@@ -446,9 +407,7 @@ struct FRigVMTrait_OptimusDeformer final : public FRigVMTrait
 public:
 	TSoftObjectPtr<class UOptimusDeformer>        DeformerGraph;                                     // 0x0018(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_OptimusDeformer) == 0x000008, "Wrong alignment on FRigVMTrait_OptimusDeformer");
-static_assert(sizeof(FRigVMTrait_OptimusDeformer) == 0x000040, "Wrong size on FRigVMTrait_OptimusDeformer");
-static_assert(offsetof(FRigVMTrait_OptimusDeformer, DeformerGraph) == 0x000018, "Member 'FRigVMTrait_OptimusDeformer::DeformerGraph' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_OptimusDeformer;
 
 // ScriptStruct OptimusCore.RigVMTrait_OptimusDeformerSettings
 // 0x0018 (0x0030 - 0x0018)
@@ -463,31 +422,23 @@ public:
 	class FName                                   ExcludeChildComponentsWithTag;                     // 0x0024(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMTrait_OptimusDeformerSettings) == 0x000008, "Wrong alignment on FRigVMTrait_OptimusDeformerSettings");
-static_assert(sizeof(FRigVMTrait_OptimusDeformerSettings) == 0x000030, "Wrong size on FRigVMTrait_OptimusDeformerSettings");
-static_assert(offsetof(FRigVMTrait_OptimusDeformerSettings, ExecutionPhase) == 0x000018, "Member 'FRigVMTrait_OptimusDeformerSettings::ExecutionPhase' has a wrong offset!");
-static_assert(offsetof(FRigVMTrait_OptimusDeformerSettings, ExecutionGroup) == 0x00001C, "Member 'FRigVMTrait_OptimusDeformerSettings::ExecutionGroup' has a wrong offset!");
-static_assert(offsetof(FRigVMTrait_OptimusDeformerSettings, DeformChildComponents) == 0x000020, "Member 'FRigVMTrait_OptimusDeformerSettings::DeformChildComponents' has a wrong offset!");
-static_assert(offsetof(FRigVMTrait_OptimusDeformerSettings, ExcludeChildComponentsWithTag) == 0x000024, "Member 'FRigVMTrait_OptimusDeformerSettings::ExcludeChildComponentsWithTag' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_OptimusDeformerSettings;
 
 // ScriptStruct OptimusCore.RigUnit_AddOptimusDeformer
-// 0x0010 (0x0200 - 0x01F0)
+// 0x0010 (0x0020 - 0x0010)
 struct FRigUnit_AddOptimusDeformer final : public FRigUnitMutable
 {
 public:
-	struct FGuid                                  DeformerInstanceGuid;                              // 0x01F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  DeformerInstanceGuid;                              // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigUnit_AddOptimusDeformer) == 0x000010, "Wrong alignment on FRigUnit_AddOptimusDeformer");
-static_assert(sizeof(FRigUnit_AddOptimusDeformer) == 0x000200, "Wrong size on FRigUnit_AddOptimusDeformer");
-static_assert(offsetof(FRigUnit_AddOptimusDeformer, DeformerInstanceGuid) == 0x0001F0, "Member 'FRigUnit_AddOptimusDeformer::DeformerInstanceGuid' has a wrong offset!");
+DUMPER7_ASSERTS_FRigUnit_AddOptimusDeformer;
 
 // ScriptStruct OptimusCore.RigVMTrait_OptimusVariableBase
 // 0x0000 (0x0018 - 0x0018)
 struct FRigVMTrait_OptimusVariableBase : public FRigVMTrait
 {
 };
-static_assert(alignof(FRigVMTrait_OptimusVariableBase) == 0x000008, "Wrong alignment on FRigVMTrait_OptimusVariableBase");
-static_assert(sizeof(FRigVMTrait_OptimusVariableBase) == 0x000018, "Wrong size on FRigVMTrait_OptimusVariableBase");
+DUMPER7_ASSERTS_FRigVMTrait_OptimusVariableBase;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerIntVariable
 // 0x0008 (0x0020 - 0x0018)
@@ -497,9 +448,7 @@ public:
 	int32                                         Value;                                             // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMTrait_SetDeformerIntVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerIntVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerIntVariable) == 0x000020, "Wrong size on FRigVMTrait_SetDeformerIntVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerIntVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerIntVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerIntVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerIntArrayVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -508,9 +457,7 @@ struct FRigVMTrait_SetDeformerIntArrayVariable final : public FRigVMTrait_Optimu
 public:
 	TArray<int32>                                 Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerIntArrayVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerIntArrayVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerIntArrayVariable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerIntArrayVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerIntArrayVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerIntArrayVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerIntArrayVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerInt2Variable
 // 0x0008 (0x0020 - 0x0018)
@@ -519,9 +466,7 @@ struct FRigVMTrait_SetDeformerInt2Variable final : public FRigVMTrait_OptimusVar
 public:
 	struct FIntPoint                              Value;                                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerInt2Variable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerInt2Variable");
-static_assert(sizeof(FRigVMTrait_SetDeformerInt2Variable) == 0x000020, "Wrong size on FRigVMTrait_SetDeformerInt2Variable");
-static_assert(offsetof(FRigVMTrait_SetDeformerInt2Variable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerInt2Variable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerInt2Variable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerInt2ArrayVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -530,9 +475,7 @@ struct FRigVMTrait_SetDeformerInt2ArrayVariable final : public FRigVMTrait_Optim
 public:
 	TArray<struct FIntPoint>                      Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerInt2ArrayVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerInt2ArrayVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerInt2ArrayVariable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerInt2ArrayVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerInt2ArrayVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerInt2ArrayVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerInt2ArrayVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerInt3Variable
 // 0x0010 (0x0028 - 0x0018)
@@ -542,9 +485,7 @@ public:
 	struct FIntVector                             Value;                                             // 0x0018(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMTrait_SetDeformerInt3Variable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerInt3Variable");
-static_assert(sizeof(FRigVMTrait_SetDeformerInt3Variable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerInt3Variable");
-static_assert(offsetof(FRigVMTrait_SetDeformerInt3Variable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerInt3Variable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerInt3Variable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerInt3ArrayVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -553,9 +494,7 @@ struct FRigVMTrait_SetDeformerInt3ArrayVariable final : public FRigVMTrait_Optim
 public:
 	TArray<struct FIntVector>                     Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerInt3ArrayVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerInt3ArrayVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerInt3ArrayVariable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerInt3ArrayVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerInt3ArrayVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerInt3ArrayVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerInt3ArrayVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerInt4Variable
 // 0x0010 (0x0028 - 0x0018)
@@ -564,9 +503,7 @@ struct FRigVMTrait_SetDeformerInt4Variable final : public FRigVMTrait_OptimusVar
 public:
 	struct FIntVector4                            Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerInt4Variable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerInt4Variable");
-static_assert(sizeof(FRigVMTrait_SetDeformerInt4Variable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerInt4Variable");
-static_assert(offsetof(FRigVMTrait_SetDeformerInt4Variable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerInt4Variable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerInt4Variable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerInt4ArrayVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -575,9 +512,7 @@ struct FRigVMTrait_SetDeformerInt4ArrayVariable final : public FRigVMTrait_Optim
 public:
 	TArray<struct FIntVector4>                    Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerInt4ArrayVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerInt4ArrayVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerInt4ArrayVariable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerInt4ArrayVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerInt4ArrayVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerInt4ArrayVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerInt4ArrayVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerFloatVariable
 // 0x0008 (0x0020 - 0x0018)
@@ -586,9 +521,7 @@ struct FRigVMTrait_SetDeformerFloatVariable final : public FRigVMTrait_OptimusVa
 public:
 	double                                        Value;                                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerFloatVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerFloatVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerFloatVariable) == 0x000020, "Wrong size on FRigVMTrait_SetDeformerFloatVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerFloatVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerFloatVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerFloatVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerFloatArrayVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -597,9 +530,7 @@ struct FRigVMTrait_SetDeformerFloatArrayVariable final : public FRigVMTrait_Opti
 public:
 	TArray<double>                                Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerFloatArrayVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerFloatArrayVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerFloatArrayVariable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerFloatArrayVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerFloatArrayVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerFloatArrayVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerFloatArrayVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerVector2Variable
 // 0x0010 (0x0028 - 0x0018)
@@ -608,9 +539,7 @@ struct FRigVMTrait_SetDeformerVector2Variable final : public FRigVMTrait_Optimus
 public:
 	struct FVector2D                              Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerVector2Variable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerVector2Variable");
-static_assert(sizeof(FRigVMTrait_SetDeformerVector2Variable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerVector2Variable");
-static_assert(offsetof(FRigVMTrait_SetDeformerVector2Variable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerVector2Variable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerVector2Variable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerVector2ArrayVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -619,9 +548,7 @@ struct FRigVMTrait_SetDeformerVector2ArrayVariable final : public FRigVMTrait_Op
 public:
 	TArray<struct FVector2D>                      Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerVector2ArrayVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerVector2ArrayVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerVector2ArrayVariable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerVector2ArrayVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerVector2ArrayVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerVector2ArrayVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerVector2ArrayVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerVectorVariable
 // 0x0018 (0x0030 - 0x0018)
@@ -630,9 +557,7 @@ struct FRigVMTrait_SetDeformerVectorVariable final : public FRigVMTrait_OptimusV
 public:
 	struct FVector                                Value;                                             // 0x0018(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerVectorVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerVectorVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerVectorVariable) == 0x000030, "Wrong size on FRigVMTrait_SetDeformerVectorVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerVectorVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerVectorVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerVectorVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerVectorArrayVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -641,9 +566,7 @@ struct FRigVMTrait_SetDeformerVectorArrayVariable final : public FRigVMTrait_Opt
 public:
 	TArray<struct FVector>                        Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerVectorArrayVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerVectorArrayVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerVectorArrayVariable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerVectorArrayVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerVectorArrayVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerVectorArrayVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerVectorArrayVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerVector4Variable
 // 0x0028 (0x0040 - 0x0018)
@@ -653,9 +576,7 @@ public:
 	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector4                               Value;                                             // 0x0020(0x0020)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerVector4Variable) == 0x000010, "Wrong alignment on FRigVMTrait_SetDeformerVector4Variable");
-static_assert(sizeof(FRigVMTrait_SetDeformerVector4Variable) == 0x000040, "Wrong size on FRigVMTrait_SetDeformerVector4Variable");
-static_assert(offsetof(FRigVMTrait_SetDeformerVector4Variable, Value) == 0x000020, "Member 'FRigVMTrait_SetDeformerVector4Variable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerVector4Variable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerVector4ArrayVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -664,9 +585,7 @@ struct FRigVMTrait_SetDeformerVector4ArrayVariable final : public FRigVMTrait_Op
 public:
 	TArray<struct FVector4>                       Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerVector4ArrayVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerVector4ArrayVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerVector4ArrayVariable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerVector4ArrayVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerVector4ArrayVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerVector4ArrayVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerVector4ArrayVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerLinearColorVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -675,9 +594,7 @@ struct FRigVMTrait_SetDeformerLinearColorVariable final : public FRigVMTrait_Opt
 public:
 	struct FLinearColor                           Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerLinearColorVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerLinearColorVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerLinearColorVariable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerLinearColorVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerLinearColorVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerLinearColorVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerLinearColorVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerLinearColorArrayVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -686,9 +603,7 @@ struct FRigVMTrait_SetDeformerLinearColorArrayVariable final : public FRigVMTrai
 public:
 	TArray<struct FLinearColor>                   Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerLinearColorArrayVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerLinearColorArrayVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerLinearColorArrayVariable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerLinearColorArrayVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerLinearColorArrayVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerLinearColorArrayVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerLinearColorArrayVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerQuatVariable
 // 0x0028 (0x0040 - 0x0018)
@@ -698,9 +613,7 @@ public:
 	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  Value;                                             // 0x0020(0x0020)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerQuatVariable) == 0x000010, "Wrong alignment on FRigVMTrait_SetDeformerQuatVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerQuatVariable) == 0x000040, "Wrong size on FRigVMTrait_SetDeformerQuatVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerQuatVariable, Value) == 0x000020, "Member 'FRigVMTrait_SetDeformerQuatVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerQuatVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerQuatArrayVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -709,9 +622,7 @@ struct FRigVMTrait_SetDeformerQuatArrayVariable final : public FRigVMTrait_Optim
 public:
 	TArray<struct FQuat>                          Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerQuatArrayVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerQuatArrayVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerQuatArrayVariable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerQuatArrayVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerQuatArrayVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerQuatArrayVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerQuatArrayVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerRotatorVariable
 // 0x0018 (0x0030 - 0x0018)
@@ -720,9 +631,7 @@ struct FRigVMTrait_SetDeformerRotatorVariable final : public FRigVMTrait_Optimus
 public:
 	struct FRotator                               Value;                                             // 0x0018(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerRotatorVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerRotatorVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerRotatorVariable) == 0x000030, "Wrong size on FRigVMTrait_SetDeformerRotatorVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerRotatorVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerRotatorVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerRotatorVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerRotatorArrayVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -731,9 +640,7 @@ struct FRigVMTrait_SetDeformerRotatorArrayVariable final : public FRigVMTrait_Op
 public:
 	TArray<struct FRotator>                       Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerRotatorArrayVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerRotatorArrayVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerRotatorArrayVariable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerRotatorArrayVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerRotatorArrayVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerRotatorArrayVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerRotatorArrayVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerTransformVariable
 // 0x0068 (0x0080 - 0x0018)
@@ -743,9 +650,7 @@ public:
 	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Value;                                             // 0x0020(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerTransformVariable) == 0x000010, "Wrong alignment on FRigVMTrait_SetDeformerTransformVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerTransformVariable) == 0x000080, "Wrong size on FRigVMTrait_SetDeformerTransformVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerTransformVariable, Value) == 0x000020, "Member 'FRigVMTrait_SetDeformerTransformVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerTransformVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerTransformArrayVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -754,9 +659,7 @@ struct FRigVMTrait_SetDeformerTransformArrayVariable final : public FRigVMTrait_
 public:
 	TArray<struct FTransform>                     Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerTransformArrayVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerTransformArrayVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerTransformArrayVariable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerTransformArrayVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerTransformArrayVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerTransformArrayVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerTransformArrayVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerNameVariable
 // 0x0008 (0x0020 - 0x0018)
@@ -765,9 +668,7 @@ struct FRigVMTrait_SetDeformerNameVariable final : public FRigVMTrait_OptimusVar
 public:
 	class FName                                   Value;                                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerNameVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerNameVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerNameVariable) == 0x000020, "Wrong size on FRigVMTrait_SetDeformerNameVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerNameVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerNameVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerNameVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerNameArrayVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -776,9 +677,7 @@ struct FRigVMTrait_SetDeformerNameArrayVariable final : public FRigVMTrait_Optim
 public:
 	TArray<class FName>                           Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerNameArrayVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerNameArrayVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerNameArrayVariable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerNameArrayVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerNameArrayVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerNameArrayVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerNameArrayVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerBoolVariable
 // 0x0008 (0x0020 - 0x0018)
@@ -788,9 +687,7 @@ public:
 	bool                                          Value;                                             // 0x0018(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMTrait_SetDeformerBoolVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerBoolVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerBoolVariable) == 0x000020, "Wrong size on FRigVMTrait_SetDeformerBoolVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerBoolVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerBoolVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerBoolVariable;
 
 // ScriptStruct OptimusCore.RigVMTrait_SetDeformerBoolArrayVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -799,9 +696,7 @@ struct FRigVMTrait_SetDeformerBoolArrayVariable final : public FRigVMTrait_Optim
 public:
 	TArray<bool>                                  Value;                                             // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMTrait_SetDeformerBoolArrayVariable) == 0x000008, "Wrong alignment on FRigVMTrait_SetDeformerBoolArrayVariable");
-static_assert(sizeof(FRigVMTrait_SetDeformerBoolArrayVariable) == 0x000028, "Wrong size on FRigVMTrait_SetDeformerBoolArrayVariable");
-static_assert(offsetof(FRigVMTrait_SetDeformerBoolArrayVariable, Value) == 0x000018, "Member 'FRigVMTrait_SetDeformerBoolArrayVariable::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRigVMTrait_SetDeformerBoolArrayVariable;
 
 // ScriptStruct OptimusCore.OptimusAction
 // 0x0018 (0x0018 - 0x0000)
@@ -810,8 +705,7 @@ struct alignas(0x08) FOptimusAction
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusAction) == 0x000008, "Wrong alignment on FOptimusAction");
-static_assert(sizeof(FOptimusAction) == 0x000018, "Wrong size on FOptimusAction");
+DUMPER7_ASSERTS_FOptimusAction;
 
 // ScriptStruct OptimusCore.OptimusCompoundAction
 // 0x0010 (0x0028 - 0x0018)
@@ -820,8 +714,7 @@ struct FOptimusCompoundAction final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusCompoundAction) == 0x000008, "Wrong alignment on FOptimusCompoundAction");
-static_assert(sizeof(FOptimusCompoundAction) == 0x000028, "Wrong size on FOptimusCompoundAction");
+DUMPER7_ASSERTS_FOptimusCompoundAction;
 
 // ScriptStruct OptimusCore.OptimusComponentBindingAction_AddBinding
 // 0x0018 (0x0030 - 0x0018)
@@ -830,8 +723,7 @@ struct FOptimusComponentBindingAction_AddBinding final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x18];                                      // 0x0018(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusComponentBindingAction_AddBinding) == 0x000008, "Wrong alignment on FOptimusComponentBindingAction_AddBinding");
-static_assert(sizeof(FOptimusComponentBindingAction_AddBinding) == 0x000030, "Wrong size on FOptimusComponentBindingAction_AddBinding");
+DUMPER7_ASSERTS_FOptimusComponentBindingAction_AddBinding;
 
 // ScriptStruct OptimusCore.OptimusComponentBindingAction_RemoveBinding
 // 0x0030 (0x0048 - 0x0018)
@@ -840,8 +732,7 @@ struct FOptimusComponentBindingAction_RemoveBinding final : public FOptimusActio
 public:
 	uint8                                         Pad_18[0x30];                                      // 0x0018(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusComponentBindingAction_RemoveBinding) == 0x000008, "Wrong alignment on FOptimusComponentBindingAction_RemoveBinding");
-static_assert(sizeof(FOptimusComponentBindingAction_RemoveBinding) == 0x000048, "Wrong size on FOptimusComponentBindingAction_RemoveBinding");
+DUMPER7_ASSERTS_FOptimusComponentBindingAction_RemoveBinding;
 
 // ScriptStruct OptimusCore.OptimusComponentBindingAction_RenameBinding
 // 0x0010 (0x0028 - 0x0018)
@@ -850,8 +741,7 @@ struct FOptimusComponentBindingAction_RenameBinding final : public FOptimusActio
 public:
 	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusComponentBindingAction_RenameBinding) == 0x000008, "Wrong alignment on FOptimusComponentBindingAction_RenameBinding");
-static_assert(sizeof(FOptimusComponentBindingAction_RenameBinding) == 0x000028, "Wrong size on FOptimusComponentBindingAction_RenameBinding");
+DUMPER7_ASSERTS_FOptimusComponentBindingAction_RenameBinding;
 
 // ScriptStruct OptimusCore.OptimusComponentBindingAction_SetComponentSource
 // 0x0028 (0x0040 - 0x0018)
@@ -860,8 +750,7 @@ struct FOptimusComponentBindingAction_SetComponentSource final : public FOptimus
 public:
 	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusComponentBindingAction_SetComponentSource) == 0x000008, "Wrong alignment on FOptimusComponentBindingAction_SetComponentSource");
-static_assert(sizeof(FOptimusComponentBindingAction_SetComponentSource) == 0x000040, "Wrong size on FOptimusComponentBindingAction_SetComponentSource");
+DUMPER7_ASSERTS_FOptimusComponentBindingAction_SetComponentSource;
 
 // ScriptStruct OptimusCore.OptimusNodeAction_RenameNode
 // 0x0030 (0x0048 - 0x0018)
@@ -870,18 +759,25 @@ struct FOptimusNodeAction_RenameNode final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x30];                                      // 0x0018(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeAction_RenameNode) == 0x000008, "Wrong alignment on FOptimusNodeAction_RenameNode");
-static_assert(sizeof(FOptimusNodeAction_RenameNode) == 0x000048, "Wrong size on FOptimusNodeAction_RenameNode");
+DUMPER7_ASSERTS_FOptimusNodeAction_RenameNode;
 
 // ScriptStruct OptimusCore.OptimusNodeAction_MoveNode
-// 0x0030 (0x0048 - 0x0018)
+// 0x0020 (0x0038 - 0x0018)
 struct FOptimusNodeAction_MoveNode final : public FOptimusAction
 {
 public:
-	uint8                                         Pad_18[0x30];                                      // 0x0018(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18[0x20];                                      // 0x0018(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeAction_MoveNode) == 0x000008, "Wrong alignment on FOptimusNodeAction_MoveNode");
-static_assert(sizeof(FOptimusNodeAction_MoveNode) == 0x000048, "Wrong size on FOptimusNodeAction_MoveNode");
+DUMPER7_ASSERTS_FOptimusNodeAction_MoveNode;
+
+// ScriptStruct OptimusCore.OptimusCommentNodeAction_ResizeNode
+// 0x0020 (0x0038 - 0x0018)
+struct FOptimusCommentNodeAction_ResizeNode final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x20];                                      // 0x0018(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusCommentNodeAction_ResizeNode;
 
 // ScriptStruct OptimusCore.OptimusNodeAction_SetPinValue
 // 0x0030 (0x0048 - 0x0018)
@@ -890,8 +786,7 @@ struct FOptimusNodeAction_SetPinValue final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x30];                                      // 0x0018(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeAction_SetPinValue) == 0x000008, "Wrong alignment on FOptimusNodeAction_SetPinValue");
-static_assert(sizeof(FOptimusNodeAction_SetPinValue) == 0x000048, "Wrong size on FOptimusNodeAction_SetPinValue");
+DUMPER7_ASSERTS_FOptimusNodeAction_SetPinValue;
 
 // ScriptStruct OptimusCore.OptimusNodeAction_SetPinName
 // 0x0020 (0x0038 - 0x0018)
@@ -900,8 +795,7 @@ struct FOptimusNodeAction_SetPinName final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x20];                                      // 0x0018(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeAction_SetPinName) == 0x000008, "Wrong alignment on FOptimusNodeAction_SetPinName");
-static_assert(sizeof(FOptimusNodeAction_SetPinName) == 0x000038, "Wrong size on FOptimusNodeAction_SetPinName");
+DUMPER7_ASSERTS_FOptimusNodeAction_SetPinName;
 
 // ScriptStruct OptimusCore.OptimusNodeAction_SetPinType
 // 0x0020 (0x0038 - 0x0018)
@@ -910,8 +804,7 @@ struct FOptimusNodeAction_SetPinType final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x20];                                      // 0x0018(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeAction_SetPinType) == 0x000008, "Wrong alignment on FOptimusNodeAction_SetPinType");
-static_assert(sizeof(FOptimusNodeAction_SetPinType) == 0x000038, "Wrong size on FOptimusNodeAction_SetPinType");
+DUMPER7_ASSERTS_FOptimusNodeAction_SetPinType;
 
 // ScriptStruct OptimusCore.OptimusNodeAction_SetPinDataDomain
 // 0x0090 (0x00A8 - 0x0018)
@@ -920,8 +813,7 @@ struct FOptimusNodeAction_SetPinDataDomain final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x90];                                      // 0x0018(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeAction_SetPinDataDomain) == 0x000008, "Wrong alignment on FOptimusNodeAction_SetPinDataDomain");
-static_assert(sizeof(FOptimusNodeAction_SetPinDataDomain) == 0x0000A8, "Wrong size on FOptimusNodeAction_SetPinDataDomain");
+DUMPER7_ASSERTS_FOptimusNodeAction_SetPinDataDomain;
 
 // ScriptStruct OptimusCore.OptimusNodeAction_AddRemovePin
 // 0x00A0 (0x00B8 - 0x0018)
@@ -930,32 +822,28 @@ struct FOptimusNodeAction_AddRemovePin : public FOptimusAction
 public:
 	uint8                                         Pad_18[0xA0];                                      // 0x0018(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeAction_AddRemovePin) == 0x000008, "Wrong alignment on FOptimusNodeAction_AddRemovePin");
-static_assert(sizeof(FOptimusNodeAction_AddRemovePin) == 0x0000B8, "Wrong size on FOptimusNodeAction_AddRemovePin");
+DUMPER7_ASSERTS_FOptimusNodeAction_AddRemovePin;
 
 // ScriptStruct OptimusCore.OptimusNodeAction_AddPin
 // 0x0000 (0x00B8 - 0x00B8)
 struct FOptimusNodeAction_AddPin final : public FOptimusNodeAction_AddRemovePin
 {
 };
-static_assert(alignof(FOptimusNodeAction_AddPin) == 0x000008, "Wrong alignment on FOptimusNodeAction_AddPin");
-static_assert(sizeof(FOptimusNodeAction_AddPin) == 0x0000B8, "Wrong size on FOptimusNodeAction_AddPin");
+DUMPER7_ASSERTS_FOptimusNodeAction_AddPin;
 
 // ScriptStruct OptimusCore.OptimusNodeAction_AddGroupingPin
 // 0x0000 (0x00B8 - 0x00B8)
 struct FOptimusNodeAction_AddGroupingPin final : public FOptimusNodeAction_AddRemovePin
 {
 };
-static_assert(alignof(FOptimusNodeAction_AddGroupingPin) == 0x000008, "Wrong alignment on FOptimusNodeAction_AddGroupingPin");
-static_assert(sizeof(FOptimusNodeAction_AddGroupingPin) == 0x0000B8, "Wrong size on FOptimusNodeAction_AddGroupingPin");
+DUMPER7_ASSERTS_FOptimusNodeAction_AddGroupingPin;
 
 // ScriptStruct OptimusCore.OptimusNodeAction_RemovePin
 // 0x0000 (0x00B8 - 0x00B8)
 struct FOptimusNodeAction_RemovePin final : public FOptimusNodeAction_AddRemovePin
 {
 };
-static_assert(alignof(FOptimusNodeAction_RemovePin) == 0x000008, "Wrong alignment on FOptimusNodeAction_RemovePin");
-static_assert(sizeof(FOptimusNodeAction_RemovePin) == 0x0000B8, "Wrong size on FOptimusNodeAction_RemovePin");
+DUMPER7_ASSERTS_FOptimusNodeAction_RemovePin;
 
 // ScriptStruct OptimusCore.OptimusNodeAction_MovePin
 // 0x0030 (0x0048 - 0x0018)
@@ -964,18 +852,16 @@ struct FOptimusNodeAction_MovePin final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x30];                                      // 0x0018(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeAction_MovePin) == 0x000008, "Wrong alignment on FOptimusNodeAction_MovePin");
-static_assert(sizeof(FOptimusNodeAction_MovePin) == 0x000048, "Wrong size on FOptimusNodeAction_MovePin");
+DUMPER7_ASSERTS_FOptimusNodeAction_MovePin;
 
 // ScriptStruct OptimusCore.OptimusNodeGraphAction_AddGraph
-// 0x0078 (0x0090 - 0x0018)
+// 0x0068 (0x0080 - 0x0018)
 struct alignas(0x10) FOptimusNodeGraphAction_AddGraph final : public FOptimusAction
 {
 public:
-	uint8                                         Pad_18[0x78];                                      // 0x0018(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18[0x68];                                      // 0x0018(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeGraphAction_AddGraph) == 0x000010, "Wrong alignment on FOptimusNodeGraphAction_AddGraph");
-static_assert(sizeof(FOptimusNodeGraphAction_AddGraph) == 0x000090, "Wrong size on FOptimusNodeGraphAction_AddGraph");
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_AddGraph;
 
 // ScriptStruct OptimusCore.OptimusNodeGraphAction_RemoveGraph
 // 0x0040 (0x0058 - 0x0018)
@@ -984,8 +870,7 @@ struct FOptimusNodeGraphAction_RemoveGraph final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x40];                                      // 0x0018(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeGraphAction_RemoveGraph) == 0x000008, "Wrong alignment on FOptimusNodeGraphAction_RemoveGraph");
-static_assert(sizeof(FOptimusNodeGraphAction_RemoveGraph) == 0x000058, "Wrong size on FOptimusNodeGraphAction_RemoveGraph");
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_RemoveGraph;
 
 // ScriptStruct OptimusCore.OptimusNodeGraphAction_RenameGraph
 // 0x0030 (0x0048 - 0x0018)
@@ -994,28 +879,25 @@ struct FOptimusNodeGraphAction_RenameGraph final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x30];                                      // 0x0018(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeGraphAction_RenameGraph) == 0x000008, "Wrong alignment on FOptimusNodeGraphAction_RenameGraph");
-static_assert(sizeof(FOptimusNodeGraphAction_RenameGraph) == 0x000048, "Wrong size on FOptimusNodeGraphAction_RenameGraph");
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_RenameGraph;
 
 // ScriptStruct OptimusCore.OptimusNodeGraphAction_AddNode
-// 0x0088 (0x00A0 - 0x0018)
+// 0x0078 (0x0090 - 0x0018)
 struct alignas(0x10) FOptimusNodeGraphAction_AddNode final : public FOptimusAction
+{
+public:
+	uint8                                         Pad_18[0x78];                                      // 0x0018(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_AddNode;
+
+// ScriptStruct OptimusCore.OptimusNodeGraphAction_DuplicateNode
+// 0x0088 (0x00A0 - 0x0018)
+struct alignas(0x10) FOptimusNodeGraphAction_DuplicateNode final : public FOptimusAction
 {
 public:
 	uint8                                         Pad_18[0x88];                                      // 0x0018(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeGraphAction_AddNode) == 0x000010, "Wrong alignment on FOptimusNodeGraphAction_AddNode");
-static_assert(sizeof(FOptimusNodeGraphAction_AddNode) == 0x0000A0, "Wrong size on FOptimusNodeGraphAction_AddNode");
-
-// ScriptStruct OptimusCore.OptimusNodeGraphAction_DuplicateNode
-// 0x0098 (0x00B0 - 0x0018)
-struct alignas(0x10) FOptimusNodeGraphAction_DuplicateNode final : public FOptimusAction
-{
-public:
-	uint8                                         Pad_18[0x98];                                      // 0x0018(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FOptimusNodeGraphAction_DuplicateNode) == 0x000010, "Wrong alignment on FOptimusNodeGraphAction_DuplicateNode");
-static_assert(sizeof(FOptimusNodeGraphAction_DuplicateNode) == 0x0000B0, "Wrong size on FOptimusNodeGraphAction_DuplicateNode");
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_DuplicateNode;
 
 // ScriptStruct OptimusCore.OptimusNodeGraphAction_RemoveNode
 // 0x0048 (0x0060 - 0x0018)
@@ -1024,8 +906,7 @@ struct FOptimusNodeGraphAction_RemoveNode final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x48];                                      // 0x0018(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeGraphAction_RemoveNode) == 0x000008, "Wrong alignment on FOptimusNodeGraphAction_RemoveNode");
-static_assert(sizeof(FOptimusNodeGraphAction_RemoveNode) == 0x000060, "Wrong size on FOptimusNodeGraphAction_RemoveNode");
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_RemoveNode;
 
 // ScriptStruct OptimusCore.OptimusNodeGraphAction_AddRemoveNodePair
 // 0x0020 (0x0038 - 0x0018)
@@ -1034,8 +915,7 @@ struct FOptimusNodeGraphAction_AddRemoveNodePair : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x20];                                      // 0x0018(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeGraphAction_AddRemoveNodePair) == 0x000008, "Wrong alignment on FOptimusNodeGraphAction_AddRemoveNodePair");
-static_assert(sizeof(FOptimusNodeGraphAction_AddRemoveNodePair) == 0x000038, "Wrong size on FOptimusNodeGraphAction_AddRemoveNodePair");
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_AddRemoveNodePair;
 
 // ScriptStruct OptimusCore.OptimusNodeGraphAction_AddNodePair
 // 0x0020 (0x0058 - 0x0038)
@@ -1044,16 +924,14 @@ struct FOptimusNodeGraphAction_AddNodePair final : public FOptimusNodeGraphActio
 public:
 	uint8                                         Pad_38[0x20];                                      // 0x0038(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeGraphAction_AddNodePair) == 0x000008, "Wrong alignment on FOptimusNodeGraphAction_AddNodePair");
-static_assert(sizeof(FOptimusNodeGraphAction_AddNodePair) == 0x000058, "Wrong size on FOptimusNodeGraphAction_AddNodePair");
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_AddNodePair;
 
 // ScriptStruct OptimusCore.OptimusNodeGraphAction_RemoveNodePair
 // 0x0000 (0x0038 - 0x0038)
 struct FOptimusNodeGraphAction_RemoveNodePair final : public FOptimusNodeGraphAction_AddRemoveNodePair
 {
 };
-static_assert(alignof(FOptimusNodeGraphAction_RemoveNodePair) == 0x000008, "Wrong alignment on FOptimusNodeGraphAction_RemoveNodePair");
-static_assert(sizeof(FOptimusNodeGraphAction_RemoveNodePair) == 0x000038, "Wrong size on FOptimusNodeGraphAction_RemoveNodePair");
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_RemoveNodePair;
 
 // ScriptStruct OptimusCore.OptimusNodeGraphAction_AddRemoveLink
 // 0x0028 (0x0040 - 0x0018)
@@ -1062,24 +940,21 @@ struct FOptimusNodeGraphAction_AddRemoveLink : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x28];                                      // 0x0018(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeGraphAction_AddRemoveLink) == 0x000008, "Wrong alignment on FOptimusNodeGraphAction_AddRemoveLink");
-static_assert(sizeof(FOptimusNodeGraphAction_AddRemoveLink) == 0x000040, "Wrong size on FOptimusNodeGraphAction_AddRemoveLink");
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_AddRemoveLink;
 
 // ScriptStruct OptimusCore.OptimusNodeGraphAction_AddLink
 // 0x0000 (0x0040 - 0x0040)
 struct FOptimusNodeGraphAction_AddLink final : public FOptimusNodeGraphAction_AddRemoveLink
 {
 };
-static_assert(alignof(FOptimusNodeGraphAction_AddLink) == 0x000008, "Wrong alignment on FOptimusNodeGraphAction_AddLink");
-static_assert(sizeof(FOptimusNodeGraphAction_AddLink) == 0x000040, "Wrong size on FOptimusNodeGraphAction_AddLink");
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_AddLink;
 
 // ScriptStruct OptimusCore.OptimusNodeGraphAction_RemoveLink
 // 0x0000 (0x0040 - 0x0040)
 struct FOptimusNodeGraphAction_RemoveLink final : public FOptimusNodeGraphAction_AddRemoveLink
 {
 };
-static_assert(alignof(FOptimusNodeGraphAction_RemoveLink) == 0x000008, "Wrong alignment on FOptimusNodeGraphAction_RemoveLink");
-static_assert(sizeof(FOptimusNodeGraphAction_RemoveLink) == 0x000040, "Wrong size on FOptimusNodeGraphAction_RemoveLink");
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_RemoveLink;
 
 // ScriptStruct OptimusCore.OptimusNodeGraphAction_ConnectAdderPin
 // 0x0060 (0x00A0 - 0x0040)
@@ -1088,8 +963,7 @@ struct FOptimusNodeGraphAction_ConnectAdderPin final : public FOptimusNodeGraphA
 public:
 	uint8                                         Pad_40[0x60];                                      // 0x0040(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeGraphAction_ConnectAdderPin) == 0x000008, "Wrong alignment on FOptimusNodeGraphAction_ConnectAdderPin");
-static_assert(sizeof(FOptimusNodeGraphAction_ConnectAdderPin) == 0x0000A0, "Wrong size on FOptimusNodeGraphAction_ConnectAdderPin");
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_ConnectAdderPin;
 
 // ScriptStruct OptimusCore.OptimusNodeGraphAction_PackageKernelFunction
 // 0x0098 (0x00B0 - 0x0018)
@@ -1098,8 +972,7 @@ struct FOptimusNodeGraphAction_PackageKernelFunction final : public FOptimusActi
 public:
 	uint8                                         Pad_18[0x98];                                      // 0x0018(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeGraphAction_PackageKernelFunction) == 0x000008, "Wrong alignment on FOptimusNodeGraphAction_PackageKernelFunction");
-static_assert(sizeof(FOptimusNodeGraphAction_PackageKernelFunction) == 0x0000B0, "Wrong size on FOptimusNodeGraphAction_PackageKernelFunction");
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_PackageKernelFunction;
 
 // ScriptStruct OptimusCore.OptimusNodeGraphAction_UnpackageKernelFunction
 // 0x0048 (0x0060 - 0x0018)
@@ -1108,8 +981,7 @@ struct FOptimusNodeGraphAction_UnpackageKernelFunction final : public FOptimusAc
 public:
 	uint8                                         Pad_18[0x48];                                      // 0x0018(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusNodeGraphAction_UnpackageKernelFunction) == 0x000008, "Wrong alignment on FOptimusNodeGraphAction_UnpackageKernelFunction");
-static_assert(sizeof(FOptimusNodeGraphAction_UnpackageKernelFunction) == 0x000060, "Wrong size on FOptimusNodeGraphAction_UnpackageKernelFunction");
+DUMPER7_ASSERTS_FOptimusNodeGraphAction_UnpackageKernelFunction;
 
 // ScriptStruct OptimusCore.OptimusResourceAction_AddResource
 // 0x0078 (0x0090 - 0x0018)
@@ -1118,8 +990,7 @@ struct FOptimusResourceAction_AddResource final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x78];                                      // 0x0018(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusResourceAction_AddResource) == 0x000008, "Wrong alignment on FOptimusResourceAction_AddResource");
-static_assert(sizeof(FOptimusResourceAction_AddResource) == 0x000090, "Wrong size on FOptimusResourceAction_AddResource");
+DUMPER7_ASSERTS_FOptimusResourceAction_AddResource;
 
 // ScriptStruct OptimusCore.OptimusResourceAction_RemoveResource
 // 0x0050 (0x0068 - 0x0018)
@@ -1128,8 +999,7 @@ struct FOptimusResourceAction_RemoveResource final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x50];                                      // 0x0018(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusResourceAction_RemoveResource) == 0x000008, "Wrong alignment on FOptimusResourceAction_RemoveResource");
-static_assert(sizeof(FOptimusResourceAction_RemoveResource) == 0x000068, "Wrong size on FOptimusResourceAction_RemoveResource");
+DUMPER7_ASSERTS_FOptimusResourceAction_RemoveResource;
 
 // ScriptStruct OptimusCore.OptimusResourceAction_RenameResource
 // 0x0010 (0x0028 - 0x0018)
@@ -1138,8 +1008,7 @@ struct FOptimusResourceAction_RenameResource final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusResourceAction_RenameResource) == 0x000008, "Wrong alignment on FOptimusResourceAction_RenameResource");
-static_assert(sizeof(FOptimusResourceAction_RenameResource) == 0x000028, "Wrong size on FOptimusResourceAction_RenameResource");
+DUMPER7_ASSERTS_FOptimusResourceAction_RenameResource;
 
 // ScriptStruct OptimusCore.OptimusResourceAction_SetDataType
 // 0x0068 (0x0080 - 0x0018)
@@ -1148,8 +1017,7 @@ struct FOptimusResourceAction_SetDataType final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x68];                                      // 0x0018(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusResourceAction_SetDataType) == 0x000008, "Wrong alignment on FOptimusResourceAction_SetDataType");
-static_assert(sizeof(FOptimusResourceAction_SetDataType) == 0x000080, "Wrong size on FOptimusResourceAction_SetDataType");
+DUMPER7_ASSERTS_FOptimusResourceAction_SetDataType;
 
 // ScriptStruct OptimusCore.OptimusResourceAction_SetDataDomain
 // 0x0088 (0x00A0 - 0x0018)
@@ -1158,8 +1026,7 @@ struct FOptimusResourceAction_SetDataDomain final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x88];                                      // 0x0018(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusResourceAction_SetDataDomain) == 0x000008, "Wrong alignment on FOptimusResourceAction_SetDataDomain");
-static_assert(sizeof(FOptimusResourceAction_SetDataDomain) == 0x0000A0, "Wrong size on FOptimusResourceAction_SetDataDomain");
+DUMPER7_ASSERTS_FOptimusResourceAction_SetDataDomain;
 
 // ScriptStruct OptimusCore.OptimusVariableAction_AddVariable
 // 0x0038 (0x0050 - 0x0018)
@@ -1168,8 +1035,7 @@ struct FOptimusVariableAction_AddVariable final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x38];                                      // 0x0018(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusVariableAction_AddVariable) == 0x000008, "Wrong alignment on FOptimusVariableAction_AddVariable");
-static_assert(sizeof(FOptimusVariableAction_AddVariable) == 0x000050, "Wrong size on FOptimusVariableAction_AddVariable");
+DUMPER7_ASSERTS_FOptimusVariableAction_AddVariable;
 
 // ScriptStruct OptimusCore.OptimusVariableAction_RemoveVariable
 // 0x0060 (0x0078 - 0x0018)
@@ -1178,8 +1044,7 @@ struct FOptimusVariableAction_RemoveVariable final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x60];                                      // 0x0018(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusVariableAction_RemoveVariable) == 0x000008, "Wrong alignment on FOptimusVariableAction_RemoveVariable");
-static_assert(sizeof(FOptimusVariableAction_RemoveVariable) == 0x000078, "Wrong size on FOptimusVariableAction_RemoveVariable");
+DUMPER7_ASSERTS_FOptimusVariableAction_RemoveVariable;
 
 // ScriptStruct OptimusCore.OptimusVariableAction_RenameVariable
 // 0x0010 (0x0028 - 0x0018)
@@ -1188,8 +1053,7 @@ struct FOptimusVariableAction_RenameVariable final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusVariableAction_RenameVariable) == 0x000008, "Wrong alignment on FOptimusVariableAction_RenameVariable");
-static_assert(sizeof(FOptimusVariableAction_RenameVariable) == 0x000028, "Wrong size on FOptimusVariableAction_RenameVariable");
+DUMPER7_ASSERTS_FOptimusVariableAction_RenameVariable;
 
 // ScriptStruct OptimusCore.OptimusVariableAction_SetDataType
 // 0x0068 (0x0080 - 0x0018)
@@ -1198,8 +1062,7 @@ struct FOptimusVariableAction_SetDataType final : public FOptimusAction
 public:
 	uint8                                         Pad_18[0x68];                                      // 0x0018(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusVariableAction_SetDataType) == 0x000008, "Wrong alignment on FOptimusVariableAction_SetDataType");
-static_assert(sizeof(FOptimusVariableAction_SetDataType) == 0x000080, "Wrong size on FOptimusVariableAction_SetDataType");
+DUMPER7_ASSERTS_FOptimusVariableAction_SetDataType;
 
 // ScriptStruct OptimusCore.OptimusAnimAttributeBufferDescription
 // 0x0068 (0x0068 - 0x0000)
@@ -1212,13 +1075,7 @@ public:
 	class FString                                 HlslId;                                            // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   PinName;                                           // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusAnimAttributeBufferDescription) == 0x000008, "Wrong alignment on FOptimusAnimAttributeBufferDescription");
-static_assert(sizeof(FOptimusAnimAttributeBufferDescription) == 0x000068, "Wrong size on FOptimusAnimAttributeBufferDescription");
-static_assert(offsetof(FOptimusAnimAttributeBufferDescription, Name) == 0x000000, "Member 'FOptimusAnimAttributeBufferDescription::Name' has a wrong offset!");
-static_assert(offsetof(FOptimusAnimAttributeBufferDescription, DataType) == 0x000010, "Member 'FOptimusAnimAttributeBufferDescription::DataType' has a wrong offset!");
-static_assert(offsetof(FOptimusAnimAttributeBufferDescription, DefaultValueStruct) == 0x000040, "Member 'FOptimusAnimAttributeBufferDescription::DefaultValueStruct' has a wrong offset!");
-static_assert(offsetof(FOptimusAnimAttributeBufferDescription, HlslId) == 0x000050, "Member 'FOptimusAnimAttributeBufferDescription::HlslId' has a wrong offset!");
-static_assert(offsetof(FOptimusAnimAttributeBufferDescription, PinName) == 0x000060, "Member 'FOptimusAnimAttributeBufferDescription::PinName' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusAnimAttributeBufferDescription;
 
 // ScriptStruct OptimusCore.OptimusAnimAttributeBufferArray
 // 0x0010 (0x0010 - 0x0000)
@@ -1227,9 +1084,7 @@ struct FOptimusAnimAttributeBufferArray final
 public:
 	TArray<struct FOptimusAnimAttributeBufferDescription> InnerArray;                                // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusAnimAttributeBufferArray) == 0x000008, "Wrong alignment on FOptimusAnimAttributeBufferArray");
-static_assert(sizeof(FOptimusAnimAttributeBufferArray) == 0x000010, "Wrong size on FOptimusAnimAttributeBufferArray");
-static_assert(offsetof(FOptimusAnimAttributeBufferArray, InnerArray) == 0x000000, "Member 'FOptimusAnimAttributeBufferArray::InnerArray' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusAnimAttributeBufferArray;
 
 // ScriptStruct OptimusCore.OptimusAnimAttributeDescription
 // 0x0078 (0x0078 - 0x0000)
@@ -1242,17 +1097,9 @@ public:
 	struct FOptimusValueContainerStruct           DefaultValueStruct;                                // 0x0048(0x0010)(Edit, NativeAccessSpecifierPublic)
 	class FString                                 HlslId;                                            // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   PinName;                                           // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOptimusValueContainer*                 DefaultValue;                                      // 0x0070(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UOptimusValueContainer*                 DefaultValue;                                      // 0x0070(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 };
-static_assert(alignof(FOptimusAnimAttributeDescription) == 0x000008, "Wrong alignment on FOptimusAnimAttributeDescription");
-static_assert(sizeof(FOptimusAnimAttributeDescription) == 0x000078, "Wrong size on FOptimusAnimAttributeDescription");
-static_assert(offsetof(FOptimusAnimAttributeDescription, Name) == 0x000000, "Member 'FOptimusAnimAttributeDescription::Name' has a wrong offset!");
-static_assert(offsetof(FOptimusAnimAttributeDescription, BoneName) == 0x000010, "Member 'FOptimusAnimAttributeDescription::BoneName' has a wrong offset!");
-static_assert(offsetof(FOptimusAnimAttributeDescription, DataType) == 0x000018, "Member 'FOptimusAnimAttributeDescription::DataType' has a wrong offset!");
-static_assert(offsetof(FOptimusAnimAttributeDescription, DefaultValueStruct) == 0x000048, "Member 'FOptimusAnimAttributeDescription::DefaultValueStruct' has a wrong offset!");
-static_assert(offsetof(FOptimusAnimAttributeDescription, HlslId) == 0x000058, "Member 'FOptimusAnimAttributeDescription::HlslId' has a wrong offset!");
-static_assert(offsetof(FOptimusAnimAttributeDescription, PinName) == 0x000068, "Member 'FOptimusAnimAttributeDescription::PinName' has a wrong offset!");
-static_assert(offsetof(FOptimusAnimAttributeDescription, DefaultValue) == 0x000070, "Member 'FOptimusAnimAttributeDescription::DefaultValue' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusAnimAttributeDescription;
 
 // ScriptStruct OptimusCore.OptimusAnimAttributeArray
 // 0x0010 (0x0010 - 0x0000)
@@ -1261,9 +1108,7 @@ struct FOptimusAnimAttributeArray final
 public:
 	TArray<struct FOptimusAnimAttributeDescription> InnerArray;                                      // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusAnimAttributeArray) == 0x000008, "Wrong alignment on FOptimusAnimAttributeArray");
-static_assert(sizeof(FOptimusAnimAttributeArray) == 0x000010, "Wrong size on FOptimusAnimAttributeArray");
-static_assert(offsetof(FOptimusAnimAttributeArray, InnerArray) == 0x000000, "Member 'FOptimusAnimAttributeArray::InnerArray' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusAnimAttributeArray;
 
 // ScriptStruct OptimusCore.OptimusDebugDrawParameters
 // 0x0014 (0x0014 - 0x0000)
@@ -1277,13 +1122,7 @@ public:
 	int32                                         MaxCharacterCount;                                 // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         FontSize;                                          // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusDebugDrawParameters) == 0x000004, "Wrong alignment on FOptimusDebugDrawParameters");
-static_assert(sizeof(FOptimusDebugDrawParameters) == 0x000014, "Wrong size on FOptimusDebugDrawParameters");
-static_assert(offsetof(FOptimusDebugDrawParameters, bForceEnable) == 0x000000, "Member 'FOptimusDebugDrawParameters::bForceEnable' has a wrong offset!");
-static_assert(offsetof(FOptimusDebugDrawParameters, MaxLineCount) == 0x000004, "Member 'FOptimusDebugDrawParameters::MaxLineCount' has a wrong offset!");
-static_assert(offsetof(FOptimusDebugDrawParameters, MaxTriangleCount) == 0x000008, "Member 'FOptimusDebugDrawParameters::MaxTriangleCount' has a wrong offset!");
-static_assert(offsetof(FOptimusDebugDrawParameters, MaxCharacterCount) == 0x00000C, "Member 'FOptimusDebugDrawParameters::MaxCharacterCount' has a wrong offset!");
-static_assert(offsetof(FOptimusDebugDrawParameters, FontSize) == 0x000010, "Member 'FOptimusDebugDrawParameters::FontSize' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusDebugDrawParameters;
 
 // ScriptStruct OptimusCore.OptimusGraphVariableDescription
 // 0x0088 (0x0088 - 0x0000)
@@ -1299,15 +1138,7 @@ public:
 	struct FShaderValueContainer                  ShaderValue;                                       // 0x0040(0x0020)(Deprecated, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UObject>                 SourceObject;                                      // 0x0060(0x0028)(Deprecated, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusGraphVariableDescription) == 0x000008, "Wrong alignment on FOptimusGraphVariableDescription");
-static_assert(sizeof(FOptimusGraphVariableDescription) == 0x000088, "Wrong size on FOptimusGraphVariableDescription");
-static_assert(offsetof(FOptimusGraphVariableDescription, Name) == 0x000000, "Member 'FOptimusGraphVariableDescription::Name' has a wrong offset!");
-static_assert(offsetof(FOptimusGraphVariableDescription, ValueType) == 0x000010, "Member 'FOptimusGraphVariableDescription::ValueType' has a wrong offset!");
-static_assert(offsetof(FOptimusGraphVariableDescription, ValueId) == 0x000018, "Member 'FOptimusGraphVariableDescription::ValueId' has a wrong offset!");
-static_assert(offsetof(FOptimusGraphVariableDescription, Offset) == 0x000024, "Member 'FOptimusGraphVariableDescription::Offset' has a wrong offset!");
-static_assert(offsetof(FOptimusGraphVariableDescription, Value) == 0x000030, "Member 'FOptimusGraphVariableDescription::Value' has a wrong offset!");
-static_assert(offsetof(FOptimusGraphVariableDescription, ShaderValue) == 0x000040, "Member 'FOptimusGraphVariableDescription::ShaderValue' has a wrong offset!");
-static_assert(offsetof(FOptimusGraphVariableDescription, SourceObject) == 0x000060, "Member 'FOptimusGraphVariableDescription::SourceObject' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusGraphVariableDescription;
 
 // ScriptStruct OptimusCore.OptimusNode_ComponentSource_DuplicationInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -1317,10 +1148,7 @@ public:
 	class FName                                   BindingName;                                       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UOptimusComponentSource>    ComponentType;                                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusNode_ComponentSource_DuplicationInfo) == 0x000008, "Wrong alignment on FOptimusNode_ComponentSource_DuplicationInfo");
-static_assert(sizeof(FOptimusNode_ComponentSource_DuplicationInfo) == 0x000010, "Wrong size on FOptimusNode_ComponentSource_DuplicationInfo");
-static_assert(offsetof(FOptimusNode_ComponentSource_DuplicationInfo, BindingName) == 0x000000, "Member 'FOptimusNode_ComponentSource_DuplicationInfo::BindingName' has a wrong offset!");
-static_assert(offsetof(FOptimusNode_ComponentSource_DuplicationInfo, ComponentType) == 0x000008, "Member 'FOptimusNode_ComponentSource_DuplicationInfo::ComponentType' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusNode_ComponentSource_DuplicationInfo;
 
 // ScriptStruct OptimusCore.OptimusSecondaryInputBindingsGroup
 // 0x0018 (0x0018 - 0x0000)
@@ -1330,10 +1158,7 @@ public:
 	struct FOptimusValidatedName                  GroupName;                                         // 0x0000(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FOptimusParameterBindingArray          BindingArray;                                      // 0x0008(0x0010)(Edit, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusSecondaryInputBindingsGroup) == 0x000008, "Wrong alignment on FOptimusSecondaryInputBindingsGroup");
-static_assert(sizeof(FOptimusSecondaryInputBindingsGroup) == 0x000018, "Wrong size on FOptimusSecondaryInputBindingsGroup");
-static_assert(offsetof(FOptimusSecondaryInputBindingsGroup, GroupName) == 0x000000, "Member 'FOptimusSecondaryInputBindingsGroup::GroupName' has a wrong offset!");
-static_assert(offsetof(FOptimusSecondaryInputBindingsGroup, BindingArray) == 0x000008, "Member 'FOptimusSecondaryInputBindingsGroup::BindingArray' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusSecondaryInputBindingsGroup;
 
 // ScriptStruct OptimusCore.OptimusNode_GetVariable_DuplicationInfo
 // 0x0048 (0x0048 - 0x0000)
@@ -1344,11 +1169,7 @@ public:
 	struct FOptimusDataTypeRef                    DataType;                                          // 0x0008(0x0030)(NativeAccessSpecifierPublic)
 	class FString                                 DefaultValue;                                      // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusNode_GetVariable_DuplicationInfo) == 0x000008, "Wrong alignment on FOptimusNode_GetVariable_DuplicationInfo");
-static_assert(sizeof(FOptimusNode_GetVariable_DuplicationInfo) == 0x000048, "Wrong size on FOptimusNode_GetVariable_DuplicationInfo");
-static_assert(offsetof(FOptimusNode_GetVariable_DuplicationInfo, VariableName) == 0x000000, "Member 'FOptimusNode_GetVariable_DuplicationInfo::VariableName' has a wrong offset!");
-static_assert(offsetof(FOptimusNode_GetVariable_DuplicationInfo, DataType) == 0x000008, "Member 'FOptimusNode_GetVariable_DuplicationInfo::DataType' has a wrong offset!");
-static_assert(offsetof(FOptimusNode_GetVariable_DuplicationInfo, DefaultValue) == 0x000038, "Member 'FOptimusNode_GetVariable_DuplicationInfo::DefaultValue' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusNode_GetVariable_DuplicationInfo;
 
 // ScriptStruct OptimusCore.OptimusPinPairInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -1358,10 +1179,7 @@ public:
 	TArray<class FName>                           InputPinPath;                                      // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FName>                           OutputPinPath;                                     // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusPinPairInfo) == 0x000008, "Wrong alignment on FOptimusPinPairInfo");
-static_assert(sizeof(FOptimusPinPairInfo) == 0x000020, "Wrong size on FOptimusPinPairInfo");
-static_assert(offsetof(FOptimusPinPairInfo, InputPinPath) == 0x000000, "Member 'FOptimusPinPairInfo::InputPinPath' has a wrong offset!");
-static_assert(offsetof(FOptimusPinPairInfo, OutputPinPath) == 0x000010, "Member 'FOptimusPinPairInfo::OutputPinPath' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusPinPairInfo;
 
 // ScriptStruct OptimusCore.OptimusLoopTerminalInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -1372,10 +1190,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FOptimusParameterBindingArray          Bindings;                                          // 0x0008(0x0010)(Edit, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusLoopTerminalInfo) == 0x000008, "Wrong alignment on FOptimusLoopTerminalInfo");
-static_assert(sizeof(FOptimusLoopTerminalInfo) == 0x000018, "Wrong size on FOptimusLoopTerminalInfo");
-static_assert(offsetof(FOptimusLoopTerminalInfo, Count) == 0x000000, "Member 'FOptimusLoopTerminalInfo::Count' has a wrong offset!");
-static_assert(offsetof(FOptimusLoopTerminalInfo, Bindings) == 0x000008, "Member 'FOptimusLoopTerminalInfo::Bindings' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusLoopTerminalInfo;
 
 // ScriptStruct OptimusCore.OptimusNode_ResourceAccessorBase_DuplicationInfo
 // 0x0078 (0x0078 - 0x0000)
@@ -1386,11 +1201,7 @@ public:
 	struct FOptimusDataTypeRef                    DataType;                                          // 0x0008(0x0030)(NativeAccessSpecifierPublic)
 	struct FOptimusDataDomain                     DataDomain;                                        // 0x0038(0x0040)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusNode_ResourceAccessorBase_DuplicationInfo) == 0x000008, "Wrong alignment on FOptimusNode_ResourceAccessorBase_DuplicationInfo");
-static_assert(sizeof(FOptimusNode_ResourceAccessorBase_DuplicationInfo) == 0x000078, "Wrong size on FOptimusNode_ResourceAccessorBase_DuplicationInfo");
-static_assert(offsetof(FOptimusNode_ResourceAccessorBase_DuplicationInfo, ResourceName) == 0x000000, "Member 'FOptimusNode_ResourceAccessorBase_DuplicationInfo::ResourceName' has a wrong offset!");
-static_assert(offsetof(FOptimusNode_ResourceAccessorBase_DuplicationInfo, DataType) == 0x000008, "Member 'FOptimusNode_ResourceAccessorBase_DuplicationInfo::DataType' has a wrong offset!");
-static_assert(offsetof(FOptimusNode_ResourceAccessorBase_DuplicationInfo, DataDomain) == 0x000038, "Member 'FOptimusNode_ResourceAccessorBase_DuplicationInfo::DataDomain' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusNode_ResourceAccessorBase_DuplicationInfo;
 
 // ScriptStruct OptimusCore.OptimusDataType
 // 0x0050 (0x0050 - 0x0000)
@@ -1410,18 +1221,7 @@ public:
 	EOptimusDataTypeFlags                         TypeFlags;                                         // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOptimusDataType) == 0x000008, "Wrong alignment on FOptimusDataType");
-static_assert(sizeof(FOptimusDataType) == 0x000050, "Wrong size on FOptimusDataType");
-static_assert(offsetof(FOptimusDataType, TypeName) == 0x000000, "Member 'FOptimusDataType::TypeName' has a wrong offset!");
-static_assert(offsetof(FOptimusDataType, DisplayName) == 0x000008, "Member 'FOptimusDataType::DisplayName' has a wrong offset!");
-static_assert(offsetof(FOptimusDataType, ShaderValueType) == 0x000018, "Member 'FOptimusDataType::ShaderValueType' has a wrong offset!");
-static_assert(offsetof(FOptimusDataType, ShaderValueSize) == 0x000020, "Member 'FOptimusDataType::ShaderValueSize' has a wrong offset!");
-static_assert(offsetof(FOptimusDataType, TypeCategory) == 0x000024, "Member 'FOptimusDataType::TypeCategory' has a wrong offset!");
-static_assert(offsetof(FOptimusDataType, TypeObject) == 0x00002C, "Member 'FOptimusDataType::TypeObject' has a wrong offset!");
-static_assert(offsetof(FOptimusDataType, bHasCustomPinColor) == 0x000034, "Member 'FOptimusDataType::bHasCustomPinColor' has a wrong offset!");
-static_assert(offsetof(FOptimusDataType, CustomPinColor) == 0x000038, "Member 'FOptimusDataType::CustomPinColor' has a wrong offset!");
-static_assert(offsetof(FOptimusDataType, UsageFlags) == 0x000048, "Member 'FOptimusDataType::UsageFlags' has a wrong offset!");
-static_assert(offsetof(FOptimusDataType, TypeFlags) == 0x000049, "Member 'FOptimusDataType::TypeFlags' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusDataType;
 
 // ScriptStruct OptimusCore.OptimusComputeGraphInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -1431,13 +1231,9 @@ public:
 	EOptimusNodeGraphType                         GraphType;                                         // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   GraphName;                                         // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOptimusComputeGraph*                   ComputeGraph;                                      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOptimusComputeGraph*                   ComputeGraph;                                      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 };
-static_assert(alignof(FOptimusComputeGraphInfo) == 0x000008, "Wrong alignment on FOptimusComputeGraphInfo");
-static_assert(sizeof(FOptimusComputeGraphInfo) == 0x000018, "Wrong size on FOptimusComputeGraphInfo");
-static_assert(offsetof(FOptimusComputeGraphInfo, GraphType) == 0x000000, "Member 'FOptimusComputeGraphInfo::GraphType' has a wrong offset!");
-static_assert(offsetof(FOptimusComputeGraphInfo, GraphName) == 0x000004, "Member 'FOptimusComputeGraphInfo::GraphName' has a wrong offset!");
-static_assert(offsetof(FOptimusComputeGraphInfo, ComputeGraph) == 0x000010, "Member 'FOptimusComputeGraphInfo::ComputeGraph' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusComputeGraphInfo;
 
 // ScriptStruct OptimusCore.OptimusDeformerInstanceExecInfo
 // 0x0030 (0x0030 - 0x0000)
@@ -1447,15 +1243,10 @@ public:
 	class FName                                   GraphName;                                         // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EOptimusNodeGraphType                         GraphType;                                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UComputeGraph*                          ComputeGraph;                                      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UComputeGraph*                          ComputeGraph;                                      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	struct FComputeGraphInstance                  ComputeGraphInstance;                              // 0x0018(0x0018)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusDeformerInstanceExecInfo) == 0x000008, "Wrong alignment on FOptimusDeformerInstanceExecInfo");
-static_assert(sizeof(FOptimusDeformerInstanceExecInfo) == 0x000030, "Wrong size on FOptimusDeformerInstanceExecInfo");
-static_assert(offsetof(FOptimusDeformerInstanceExecInfo, GraphName) == 0x000000, "Member 'FOptimusDeformerInstanceExecInfo::GraphName' has a wrong offset!");
-static_assert(offsetof(FOptimusDeformerInstanceExecInfo, GraphType) == 0x000008, "Member 'FOptimusDeformerInstanceExecInfo::GraphType' has a wrong offset!");
-static_assert(offsetof(FOptimusDeformerInstanceExecInfo, ComputeGraph) == 0x000010, "Member 'FOptimusDeformerInstanceExecInfo::ComputeGraph' has a wrong offset!");
-static_assert(offsetof(FOptimusDeformerInstanceExecInfo, ComputeGraphInstance) == 0x000018, "Member 'FOptimusDeformerInstanceExecInfo::ComputeGraphInstance' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusDeformerInstanceExecInfo;
 
 // ScriptStruct OptimusCore.OptimusDeformerInstanceComponentBinding
 // 0x0010 (0x0010 - 0x0000)
@@ -1465,10 +1256,7 @@ public:
 	class FName                                   ProviderName;                                      // 0x0000(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ComponentName;                                     // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusDeformerInstanceComponentBinding) == 0x000004, "Wrong alignment on FOptimusDeformerInstanceComponentBinding");
-static_assert(sizeof(FOptimusDeformerInstanceComponentBinding) == 0x000010, "Wrong size on FOptimusDeformerInstanceComponentBinding");
-static_assert(offsetof(FOptimusDeformerInstanceComponentBinding, ProviderName) == 0x000000, "Member 'FOptimusDeformerInstanceComponentBinding::ProviderName' has a wrong offset!");
-static_assert(offsetof(FOptimusDeformerInstanceComponentBinding, ComponentName) == 0x000008, "Member 'FOptimusDeformerInstanceComponentBinding::ComponentName' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusDeformerInstanceComponentBinding;
 
 // ScriptStruct OptimusCore.OptimusExecutionDomain
 // 0x0020 (0x0020 - 0x0000)
@@ -1480,11 +1268,17 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Expression;                                        // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-static_assert(alignof(FOptimusExecutionDomain) == 0x000008, "Wrong alignment on FOptimusExecutionDomain");
-static_assert(sizeof(FOptimusExecutionDomain) == 0x000020, "Wrong size on FOptimusExecutionDomain");
-static_assert(offsetof(FOptimusExecutionDomain, Type) == 0x000000, "Member 'FOptimusExecutionDomain::Type' has a wrong offset!");
-static_assert(offsetof(FOptimusExecutionDomain, Name) == 0x000004, "Member 'FOptimusExecutionDomain::Name' has a wrong offset!");
-static_assert(offsetof(FOptimusExecutionDomain, Expression) == 0x000010, "Member 'FOptimusExecutionDomain::Expression' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusExecutionDomain;
+
+// ScriptStruct OptimusCore.OptimusFunctionGraphIdentifier
+// 0x0018 (0x0018 - 0x0000)
+struct FOptimusFunctionGraphIdentifier final
+{
+public:
+	class UOptimusDeformer*                       Asset;                                             // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	struct FGuid                                  Guid;                                              // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOptimusFunctionGraphIdentifier;
 
 // ScriptStruct OptimusCore.OptimusFunctionNodeGraphHeader
 // 0x0038 (0x0038 - 0x0000)
@@ -1495,11 +1289,7 @@ public:
 	class FName                                   FunctionName;                                      // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   Category;                                          // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusFunctionNodeGraphHeader) == 0x000008, "Wrong alignment on FOptimusFunctionNodeGraphHeader");
-static_assert(sizeof(FOptimusFunctionNodeGraphHeader) == 0x000038, "Wrong size on FOptimusFunctionNodeGraphHeader");
-static_assert(offsetof(FOptimusFunctionNodeGraphHeader, GraphPath) == 0x000000, "Member 'FOptimusFunctionNodeGraphHeader::GraphPath' has a wrong offset!");
-static_assert(offsetof(FOptimusFunctionNodeGraphHeader, FunctionName) == 0x000028, "Member 'FOptimusFunctionNodeGraphHeader::FunctionName' has a wrong offset!");
-static_assert(offsetof(FOptimusFunctionNodeGraphHeader, Category) == 0x000030, "Member 'FOptimusFunctionNodeGraphHeader::Category' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusFunctionNodeGraphHeader;
 
 // ScriptStruct OptimusCore.OptimusFunctionNodeGraphHeaderArray
 // 0x0010 (0x0010 - 0x0000)
@@ -1508,9 +1298,7 @@ struct FOptimusFunctionNodeGraphHeaderArray final
 public:
 	TArray<struct FOptimusFunctionNodeGraphHeader> Headers;                                          // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusFunctionNodeGraphHeaderArray) == 0x000008, "Wrong alignment on FOptimusFunctionNodeGraphHeaderArray");
-static_assert(sizeof(FOptimusFunctionNodeGraphHeaderArray) == 0x000010, "Wrong size on FOptimusFunctionNodeGraphHeaderArray");
-static_assert(offsetof(FOptimusFunctionNodeGraphHeaderArray, Headers) == 0x000000, "Member 'FOptimusFunctionNodeGraphHeaderArray::Headers' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusFunctionNodeGraphHeaderArray;
 
 // ScriptStruct OptimusCore.OptimusFunctionReferenceNodeSet
 // 0x0050 (0x0050 - 0x0000)
@@ -1519,9 +1307,7 @@ struct FOptimusFunctionReferenceNodeSet final
 public:
 	TSet<TSoftObjectPtr<class UOptimusNode_FunctionReference>> Nodes;                                // 0x0000(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusFunctionReferenceNodeSet) == 0x000008, "Wrong alignment on FOptimusFunctionReferenceNodeSet");
-static_assert(sizeof(FOptimusFunctionReferenceNodeSet) == 0x000050, "Wrong size on FOptimusFunctionReferenceNodeSet");
-static_assert(offsetof(FOptimusFunctionReferenceNodeSet, Nodes) == 0x000000, "Member 'FOptimusFunctionReferenceNodeSet::Nodes' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusFunctionReferenceNodeSet;
 
 // ScriptStruct OptimusCore.OptimusFunctionReferenceData
 // 0x0050 (0x0050 - 0x0000)
@@ -1530,9 +1316,7 @@ struct FOptimusFunctionReferenceData final
 public:
 	TMap<struct FSoftObjectPath, struct FOptimusFunctionReferenceNodeSet> FunctionReferences;        // 0x0000(0x0050)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusFunctionReferenceData) == 0x000008, "Wrong alignment on FOptimusFunctionReferenceData");
-static_assert(sizeof(FOptimusFunctionReferenceData) == 0x000050, "Wrong size on FOptimusFunctionReferenceData");
-static_assert(offsetof(FOptimusFunctionReferenceData, FunctionReferences) == 0x000000, "Member 'FOptimusFunctionReferenceData::FunctionReferences' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusFunctionReferenceData;
 
 // ScriptStruct OptimusCore.OptimusVariableMetaDataEntry
 // 0x0018 (0x0018 - 0x0000)
@@ -1542,10 +1326,7 @@ public:
 	class FName                                   Key;                                               // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOptimusVariableMetaDataEntry) == 0x000008, "Wrong alignment on FOptimusVariableMetaDataEntry");
-static_assert(sizeof(FOptimusVariableMetaDataEntry) == 0x000018, "Wrong size on FOptimusVariableMetaDataEntry");
-static_assert(offsetof(FOptimusVariableMetaDataEntry, Key) == 0x000000, "Member 'FOptimusVariableMetaDataEntry::Key' has a wrong offset!");
-static_assert(offsetof(FOptimusVariableMetaDataEntry, Value) == 0x000008, "Member 'FOptimusVariableMetaDataEntry::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FOptimusVariableMetaDataEntry;
 
 }
 

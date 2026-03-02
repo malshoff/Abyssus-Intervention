@@ -39,22 +39,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator) == 0x000008, "Wrong alignment on BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator");
-static_assert(sizeof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator) == 0x0000B8, "Wrong size on BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x000004, "Member 'BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000008, "Member 'BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000010, "Member 'BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator, CallFunc_GetScriptFName_ReturnValue) == 0x000018, "Member 'BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000020, "Member 'BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000050, "Member 'BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000080, "Member 'BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000088, "Member 'BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn_1) == 0x000090, "Member 'BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn_1' has a wrong offset!");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000098, "Member 'BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator, CallFunc_GetScriptFName_ReturnValue_1) == 0x00009C, "Member 'BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0000A8, "Member 'BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x0000B0, "Member 'BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GiantSlayer_CharacterMutator_C_ExecuteUbergraph_BP_GiantSlayer_CharacterMutator;
 
 // Function BP_GiantSlayer_CharacterMutator.BP_GiantSlayer_CharacterMutator_C.GetMutatorDescription_0
 // 0x0028 (0x0028 - 0x0000)
@@ -66,11 +51,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_GiantSlayer_CharacterMutator_C_GetMutatorDescription_0) == 0x000008, "Wrong alignment on BP_GiantSlayer_CharacterMutator_C_GetMutatorDescription_0");
-static_assert(sizeof(BP_GiantSlayer_CharacterMutator_C_GetMutatorDescription_0) == 0x000028, "Wrong size on BP_GiantSlayer_CharacterMutator_C_GetMutatorDescription_0");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_GetMutatorDescription_0, ReturnValue) == 0x000000, "Member 'BP_GiantSlayer_CharacterMutator_C_GetMutatorDescription_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_GetMutatorDescription_0, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_GiantSlayer_CharacterMutator_C_GetMutatorDescription_0::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_GetMutatorDescription_0, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_GiantSlayer_CharacterMutator_C_GetMutatorDescription_0::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GiantSlayer_CharacterMutator_C_GetMutatorDescription_0;
 
 // Function BP_GiantSlayer_CharacterMutator.BP_GiantSlayer_CharacterMutator_C.GetDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -79,9 +60,7 @@ struct BP_GiantSlayer_CharacterMutator_C_GetDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_GiantSlayer_CharacterMutator_C_GetDescription) == 0x000008, "Wrong alignment on BP_GiantSlayer_CharacterMutator_C_GetDescription");
-static_assert(sizeof(BP_GiantSlayer_CharacterMutator_C_GetDescription) == 0x000010, "Wrong size on BP_GiantSlayer_CharacterMutator_C_GetDescription");
-static_assert(offsetof(BP_GiantSlayer_CharacterMutator_C_GetDescription, ReturnValue) == 0x000000, "Member 'BP_GiantSlayer_CharacterMutator_C_GetDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GiantSlayer_CharacterMutator_C_GetDescription;
 
 }
 

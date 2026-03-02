@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_ObjectiveTracker.Widget_ObjectiveTracker_C
-// 0x0030 (0x0300 - 0x02D0)
+// 0x0030 (0x0370 - 0x0340)
 class UWidget_ObjectiveTracker_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro_Animation;                                   // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Outro_Animation;                                   // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UListView*                              ListView_64;                                       // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class URGObjectiveScript*>             NewVar;                                            // 0x02F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UListView*                              ListView_64;                                       // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Outro_Animation;                                   // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Intro_Animation;                                   // 0x0358(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	TArray<class URGObjectiveScript*>             NewVar;                                            // 0x0360(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void AddNewEntry(class UObject* EntryObject);
@@ -49,20 +49,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_ObjectiveTracker_C">();
+		BP_STATIC_CLASS_IMPL("Widget_ObjectiveTracker_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_ObjectiveTracker_C")
 	}
 	static class UWidget_ObjectiveTracker_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_ObjectiveTracker_C>();
 	}
 };
-static_assert(alignof(UWidget_ObjectiveTracker_C) == 0x000008, "Wrong alignment on UWidget_ObjectiveTracker_C");
-static_assert(sizeof(UWidget_ObjectiveTracker_C) == 0x000300, "Wrong size on UWidget_ObjectiveTracker_C");
-static_assert(offsetof(UWidget_ObjectiveTracker_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_ObjectiveTracker_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_ObjectiveTracker_C, Intro_Animation) == 0x0002D8, "Member 'UWidget_ObjectiveTracker_C::Intro_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_ObjectiveTracker_C, Outro_Animation) == 0x0002E0, "Member 'UWidget_ObjectiveTracker_C::Outro_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_ObjectiveTracker_C, ListView_64) == 0x0002E8, "Member 'UWidget_ObjectiveTracker_C::ListView_64' has a wrong offset!");
-static_assert(offsetof(UWidget_ObjectiveTracker_C, NewVar) == 0x0002F0, "Member 'UWidget_ObjectiveTracker_C::NewVar' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_ObjectiveTracker_C;
 
 }
 

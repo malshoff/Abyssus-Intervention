@@ -19,56 +19,47 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_BaseTooltip.Widget_BaseTooltip_C
-// 0x0088 (0x0358 - 0x02D0)
+// 0x0088 (0x03C8 - 0x0340)
 class UWidget_BaseTooltip_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       SetInfoAnimation;                                  // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                BackgroundBorder;                                  // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URichTextBlock*                         RichDescription;                                   // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URichTextBlock*                         RichDescription_KeywordInfo;                       // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_125;                                       // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Title;                                             // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   MutatorName;                                       // 0x0308(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   MutatorDescription;                                // 0x0318(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   DefaultDescription;                                // 0x0328(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   AdvancedDescription;                               // 0x0338(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   Keyword_Info;                                      // 0x0348(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Title;                                             // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_125;                                       // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URichTextBlock*                         RichDescription_KeywordInfo;                       // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URichTextBlock*                         RichDescription;                                   // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                BackgroundBorder;                                  // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       SetInfoAnimation;                                  // 0x0370(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class FText                                   MutatorName;                                       // 0x0378(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   MutatorDescription;                                // 0x0388(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   DefaultDescription;                                // 0x0398(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   AdvancedDescription;                               // 0x03A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   Keyword_Info;                                      // 0x03B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void ShowExtendedInfo();
-	void SetInfoByPA(class URMutatorPrimaryAsset* PrimaryAsset);
-	void Set_Info(const class FText& Title_0, const class FText& Description, const class FText& AdvancedDescription_0, const class FText& KeywordInfo);
-	void InpActEvt_IA_ShowExtendedInfo_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_ShowExtendedInfo_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void HideExtendedInfo();
 	void ExecuteUbergraph_Widget_BaseTooltip(int32 EntryPoint);
+	void HideExtendedInfo();
+	void InpActEvt_IA_ShowExtendedInfo_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_ShowExtendedInfo_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void Set_Info(const class FText& Title_0, const class FText& Description, const class FText& AdvancedDescription_0, const class FText& KeywordInfo);
+	void SetInfoByPA(class URMutatorPrimaryAsset* PrimaryAsset);
+	void ShowExtendedInfo();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_BaseTooltip_C">();
+		BP_STATIC_CLASS_IMPL("Widget_BaseTooltip_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_BaseTooltip_C")
 	}
 	static class UWidget_BaseTooltip_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_BaseTooltip_C>();
 	}
 };
-static_assert(alignof(UWidget_BaseTooltip_C) == 0x000008, "Wrong alignment on UWidget_BaseTooltip_C");
-static_assert(sizeof(UWidget_BaseTooltip_C) == 0x000358, "Wrong size on UWidget_BaseTooltip_C");
-static_assert(offsetof(UWidget_BaseTooltip_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_BaseTooltip_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_BaseTooltip_C, SetInfoAnimation) == 0x0002D8, "Member 'UWidget_BaseTooltip_C::SetInfoAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_BaseTooltip_C, BackgroundBorder) == 0x0002E0, "Member 'UWidget_BaseTooltip_C::BackgroundBorder' has a wrong offset!");
-static_assert(offsetof(UWidget_BaseTooltip_C, RichDescription) == 0x0002E8, "Member 'UWidget_BaseTooltip_C::RichDescription' has a wrong offset!");
-static_assert(offsetof(UWidget_BaseTooltip_C, RichDescription_KeywordInfo) == 0x0002F0, "Member 'UWidget_BaseTooltip_C::RichDescription_KeywordInfo' has a wrong offset!");
-static_assert(offsetof(UWidget_BaseTooltip_C, SizeBox_125) == 0x0002F8, "Member 'UWidget_BaseTooltip_C::SizeBox_125' has a wrong offset!");
-static_assert(offsetof(UWidget_BaseTooltip_C, Title) == 0x000300, "Member 'UWidget_BaseTooltip_C::Title' has a wrong offset!");
-static_assert(offsetof(UWidget_BaseTooltip_C, MutatorName) == 0x000308, "Member 'UWidget_BaseTooltip_C::MutatorName' has a wrong offset!");
-static_assert(offsetof(UWidget_BaseTooltip_C, MutatorDescription) == 0x000318, "Member 'UWidget_BaseTooltip_C::MutatorDescription' has a wrong offset!");
-static_assert(offsetof(UWidget_BaseTooltip_C, DefaultDescription) == 0x000328, "Member 'UWidget_BaseTooltip_C::DefaultDescription' has a wrong offset!");
-static_assert(offsetof(UWidget_BaseTooltip_C, AdvancedDescription) == 0x000338, "Member 'UWidget_BaseTooltip_C::AdvancedDescription' has a wrong offset!");
-static_assert(offsetof(UWidget_BaseTooltip_C, Keyword_Info) == 0x000348, "Member 'UWidget_BaseTooltip_C::Keyword_Info' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_BaseTooltip_C;
 
 }
 

@@ -136,7 +136,7 @@ void UWidget_TextButton_C::ExecuteUbergraph_Widget_TextButton(int32 EntryPoint)
 
 
 // Function Widget_TextButton.Widget_TextButton_C.PlayHoverAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TextButton_C::PlayHoverAnimation()
 {
@@ -150,7 +150,7 @@ void UWidget_TextButton_C::PlayHoverAnimation()
 
 
 // Function Widget_TextButton.Widget_TextButton_C.PlayUnhoverAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_TextButton_C::PlayUnhoverAnimation()
 {

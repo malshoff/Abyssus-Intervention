@@ -21,9 +21,7 @@ struct W_Button_TabBase_C_SetText final
 public:
 	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(W_Button_TabBase_C_SetText) == 0x000008, "Wrong alignment on W_Button_TabBase_C_SetText");
-static_assert(sizeof(W_Button_TabBase_C_SetText) == 0x000010, "Wrong size on W_Button_TabBase_C_SetText");
-static_assert(offsetof(W_Button_TabBase_C_SetText, Text) == 0x000000, "Member 'W_Button_TabBase_C_SetText::Text' has a wrong offset!");
+DUMPER7_ASSERTS_W_Button_TabBase_C_SetText;
 
 }
 

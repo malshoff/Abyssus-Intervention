@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_MutatorSelectScreen_Forge.Widget_MutatorSelectScreen_Forge_C
-// 0x0000 (0x05D0 - 0x05D0)
+// 0x0000 (0x0660 - 0x0660)
 class UWidget_MutatorSelectScreen_Forge_C final : public UWidget_CommonMutatorSelectScreen_C
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_MutatorSelectScreen_Forge_C">();
+		BP_STATIC_CLASS_IMPL("Widget_MutatorSelectScreen_Forge_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_MutatorSelectScreen_Forge_C")
 	}
 	static class UWidget_MutatorSelectScreen_Forge_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_MutatorSelectScreen_Forge_C>();
 	}
 };
-static_assert(alignof(UWidget_MutatorSelectScreen_Forge_C) == 0x000008, "Wrong alignment on UWidget_MutatorSelectScreen_Forge_C");
-static_assert(sizeof(UWidget_MutatorSelectScreen_Forge_C) == 0x0005D0, "Wrong size on UWidget_MutatorSelectScreen_Forge_C");
+DUMPER7_ASSERTS_UWidget_MutatorSelectScreen_Forge_C;
 
 }
 

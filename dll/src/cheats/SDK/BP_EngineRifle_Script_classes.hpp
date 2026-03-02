@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_EngineRifle_Script.BP_EngineRifle_Script_C
-// 0x01C8 (0x0690 - 0x04C8)
+// 0x01D0 (0x0698 - 0x04C8)
 class UBP_EngineRifle_Script_C final : public UBP_WeaponBase_Script_C
 {
 public:
@@ -30,17 +30,18 @@ public:
 	uint8                                         Pad_4E1[0x7];                                      // 0x04E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        HeatCostPerShot;                                   // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        HeatReductionPerTick;                              // 0x04F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRMutableFloat                         MaxHeat;                                           // 0x04F8(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance)
-	double                                        MaxHeatCooldown;                                   // 0x0620(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        OverheatDuration;                                  // 0x0628(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(double CurrentHeat)> OnHeatUpdated;                                // 0x0630(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              OnOverheated;                                      // 0x0640(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              OnOverheatCleared;                                 // 0x0650(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TArray<TSoftClassPtr<class UClass>>           OverheatingMods;                                   // 0x0660(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	class UAudioComponent*                        BarrelAC;                                          // 0x0670(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     OverheatMaterial;                                  // 0x0678(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             DefaultMotorSFX;                                   // 0x0680(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           OverheatTimer;                                     // 0x0688(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        OverheatHeatReductionPerTick;                      // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRMutableFloat                         MaxHeat;                                           // 0x0500(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance)
+	double                                        MaxHeatCooldown;                                   // 0x0628(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OverheatDuration;                                  // 0x0630(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(double CurrentHeat)> OnHeatUpdated;                                // 0x0638(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              OnOverheated;                                      // 0x0648(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              OnOverheatCleared;                                 // 0x0658(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TArray<TSoftClassPtr<class UClass>>           OverheatingMods;                                   // 0x0668(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	class UAudioComponent*                        BarrelAC;                                          // 0x0678(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     OverheatMaterial;                                  // 0x0680(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             DefaultMotorSFX;                                   // 0x0688(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           OverheatTimer;                                     // 0x0690(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ActivateOverheat();
@@ -58,40 +59,27 @@ public:
 	void K2_OnEquip();
 	void K2_TickScript(float DeltaTime);
 	void OnOverheatingModFire(bool IsPrimaryMod);
+	void OnWeaponVisibilityChanged(const bool bNewVisibility);
 	void PlayBarrelSpinSFX(bool IsPrimaryMod);
-	void ReduceHeat(double HeatReduction);
+	void ReduceHeat(double HeatReduction, double OverheatHeatReduction);
 	void RemoveOverheat();
 	void UpdateOverheatVFX(class ARPlayerPawn* PlayerPawn, class UMaterialInterface* NewOverlayMaterial);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_EngineRifle_Script_C">();
+		BP_STATIC_CLASS_IMPL("BP_EngineRifle_Script_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_EngineRifle_Script_C")
 	}
 	static class UBP_EngineRifle_Script_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_EngineRifle_Script_C>();
 	}
 };
-static_assert(alignof(UBP_EngineRifle_Script_C) == 0x000008, "Wrong alignment on UBP_EngineRifle_Script_C");
-static_assert(sizeof(UBP_EngineRifle_Script_C) == 0x000690, "Wrong size on UBP_EngineRifle_Script_C");
-static_assert(offsetof(UBP_EngineRifle_Script_C, UberGraphFrame_BP_EngineRifle_Script_C) == 0x0004C8, "Member 'UBP_EngineRifle_Script_C::UberGraphFrame_BP_EngineRifle_Script_C' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, PassiveLoop) == 0x0004D0, "Member 'UBP_EngineRifle_Script_C::PassiveLoop' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, CurrentHeat) == 0x0004D8, "Member 'UBP_EngineRifle_Script_C::CurrentHeat' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, BlockHeatReductionOnOverheat) == 0x0004E0, "Member 'UBP_EngineRifle_Script_C::BlockHeatReductionOnOverheat' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, HeatCostPerShot) == 0x0004E8, "Member 'UBP_EngineRifle_Script_C::HeatCostPerShot' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, HeatReductionPerTick) == 0x0004F0, "Member 'UBP_EngineRifle_Script_C::HeatReductionPerTick' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, MaxHeat) == 0x0004F8, "Member 'UBP_EngineRifle_Script_C::MaxHeat' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, MaxHeatCooldown) == 0x000620, "Member 'UBP_EngineRifle_Script_C::MaxHeatCooldown' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, OverheatDuration) == 0x000628, "Member 'UBP_EngineRifle_Script_C::OverheatDuration' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, OnHeatUpdated) == 0x000630, "Member 'UBP_EngineRifle_Script_C::OnHeatUpdated' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, OnOverheated) == 0x000640, "Member 'UBP_EngineRifle_Script_C::OnOverheated' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, OnOverheatCleared) == 0x000650, "Member 'UBP_EngineRifle_Script_C::OnOverheatCleared' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, OverheatingMods) == 0x000660, "Member 'UBP_EngineRifle_Script_C::OverheatingMods' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, BarrelAC) == 0x000670, "Member 'UBP_EngineRifle_Script_C::BarrelAC' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, OverheatMaterial) == 0x000678, "Member 'UBP_EngineRifle_Script_C::OverheatMaterial' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, DefaultMotorSFX) == 0x000680, "Member 'UBP_EngineRifle_Script_C::DefaultMotorSFX' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_Script_C, OverheatTimer) == 0x000688, "Member 'UBP_EngineRifle_Script_C::OverheatTimer' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_EngineRifle_Script_C;
 
 }
 

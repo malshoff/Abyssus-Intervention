@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "RGame_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 #include "CommonInput_structs.hpp"
@@ -20,20 +21,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_SaveSlot.Widget_SaveSlot_C
-// 0x0068 (0x0338 - 0x02D0)
+// 0x0070 (0x03B0 - 0x0340)
 class UWidget_SaveSlot_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonActionWidget*                    CommonActionWidget_116;                            // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                MainButton;                                        // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             SaveDate;                                          // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             SaveSlotName;                                      // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         Stats;                                             // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_Icon_C*                       W_Button_Icon;                                     // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FString                                 SlotName;                                          // 0x0308(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              OnSaveSlotSelected;                                // 0x0318(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              OnSaveSlotDeleted;                                 // 0x0328(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UW_Button_Icon_C*                       W_Button_Icon;                                     // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         Stats;                                             // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             SaveSlotName;                                      // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             SaveDate;                                          // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                MainButton;                                        // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_116;                            // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FString                                 SlotName;                                          // 0x0378(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              OnSaveSlotSelected;                                // 0x0388(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              OnSaveSlotDeleted;                                 // 0x0398(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class URSaveGame*                             SetupSaveGameRef;                                  // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Widget_SaveSlot_Button_599_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
@@ -43,34 +45,29 @@ public:
 	void BP_OnItemSelectionChanged(bool bIsSelected);
 	void Construct();
 	void ExecuteUbergraph_Widget_SaveSlot(int32 EntryPoint);
+	void LoadGameFinished(class URSaveGame* SaveGame);
 	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
 	void OnListItemObjectSet(class UObject* ListItemObject);
+	void OnLoadSessionFinished(class URSaveGameSession* SaveGameSession);
 	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
-	void Setup(class URSaveGame* SaveGame);
+	void Setup(class URSaveGame* SetupSaveGameRef_0, const class FString& LastSaveGameSlot);
 	void YesEvent();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_SaveSlot_C">();
+		BP_STATIC_CLASS_IMPL("Widget_SaveSlot_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_SaveSlot_C")
 	}
 	static class UWidget_SaveSlot_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_SaveSlot_C>();
 	}
 };
-static_assert(alignof(UWidget_SaveSlot_C) == 0x000008, "Wrong alignment on UWidget_SaveSlot_C");
-static_assert(sizeof(UWidget_SaveSlot_C) == 0x000338, "Wrong size on UWidget_SaveSlot_C");
-static_assert(offsetof(UWidget_SaveSlot_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_SaveSlot_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_SaveSlot_C, CommonActionWidget_116) == 0x0002D8, "Member 'UWidget_SaveSlot_C::CommonActionWidget_116' has a wrong offset!");
-static_assert(offsetof(UWidget_SaveSlot_C, MainButton) == 0x0002E0, "Member 'UWidget_SaveSlot_C::MainButton' has a wrong offset!");
-static_assert(offsetof(UWidget_SaveSlot_C, SaveDate) == 0x0002E8, "Member 'UWidget_SaveSlot_C::SaveDate' has a wrong offset!");
-static_assert(offsetof(UWidget_SaveSlot_C, SaveSlotName) == 0x0002F0, "Member 'UWidget_SaveSlot_C::SaveSlotName' has a wrong offset!");
-static_assert(offsetof(UWidget_SaveSlot_C, Stats) == 0x0002F8, "Member 'UWidget_SaveSlot_C::Stats' has a wrong offset!");
-static_assert(offsetof(UWidget_SaveSlot_C, W_Button_Icon) == 0x000300, "Member 'UWidget_SaveSlot_C::W_Button_Icon' has a wrong offset!");
-static_assert(offsetof(UWidget_SaveSlot_C, SlotName) == 0x000308, "Member 'UWidget_SaveSlot_C::SlotName' has a wrong offset!");
-static_assert(offsetof(UWidget_SaveSlot_C, OnSaveSlotSelected) == 0x000318, "Member 'UWidget_SaveSlot_C::OnSaveSlotSelected' has a wrong offset!");
-static_assert(offsetof(UWidget_SaveSlot_C, OnSaveSlotDeleted) == 0x000328, "Member 'UWidget_SaveSlot_C::OnSaveSlotDeleted' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_SaveSlot_C;
 
 }
 

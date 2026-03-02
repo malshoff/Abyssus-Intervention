@@ -174,7 +174,7 @@ void UW_WorkBench_ButtonStyle_C::SetIcon(class UTexture2D* Icon_0)
 
 
 // Function W_WorkBench_ButtonStyle.W_WorkBench_ButtonStyle_C.TransHovered
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UW_WorkBench_ButtonStyle_C::TransHovered()
 {
@@ -188,7 +188,7 @@ void UW_WorkBench_ButtonStyle_C::TransHovered()
 
 
 // Function W_WorkBench_ButtonStyle.W_WorkBench_ButtonStyle_C.TransUnHovered
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UW_WorkBench_ButtonStyle_C::TransUnHovered()
 {

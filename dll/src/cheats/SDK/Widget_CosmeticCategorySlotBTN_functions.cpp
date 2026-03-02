@@ -114,7 +114,7 @@ void UWidget_CosmeticCategorySlotBTN_C::BP_OnItemSelectionChanged(bool bIsSelect
 
 
 // Function Widget_CosmeticCategorySlotBTN.Widget_CosmeticCategorySlotBTN_C.ExecuteUbergraph_Widget_CosmeticCategorySlotBTN
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

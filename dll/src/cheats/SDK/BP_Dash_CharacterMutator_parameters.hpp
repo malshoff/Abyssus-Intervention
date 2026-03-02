@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "RGame_structs.hpp"
 #include "Niagara_structs.hpp"
 
 
@@ -66,40 +66,7 @@ public:
 	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue;          // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator) == 0x000008, "Wrong alignment on BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator");
-static_assert(sizeof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator) == 0x0001B0, "Wrong size on BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_K2_GetPlayerController_ReturnValue) == 0x000008, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_K2_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, Temp_bool_Variable) == 0x000010, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, Temp_bool_Variable_1) == 0x000011, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000018, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000048, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000078, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000080, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn_1) == 0x000088, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn_1' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000090, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_GetRPawnMovementComponent_ReturnValue) == 0x000098, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_GetRPawnMovementComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_GetWorldInputVector_ReturnValue) == 0x0000A0, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_GetWorldInputVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_SpawnSoundAttached_ReturnValue) == 0x0000B8, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_Vector_NormalUnsafe_ReturnValue) == 0x0000C0, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_Vector_NormalUnsafe_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue) == 0x0000D8, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_Vector_IsNearlyZero_ReturnValue) == 0x0000E0, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_Vector_IsNearlyZero_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_IsLocallyControlled_ReturnValue) == 0x0000E1, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_GetActorEyesViewPoint_OutLocation) == 0x0000E8, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_GetActorEyesViewPoint_OutLocation' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_GetActorEyesViewPoint_OutRotation) == 0x000100, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_GetActorEyesViewPoint_OutRotation' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_GetForwardVector_ReturnValue) == 0x000118, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000130, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, Temp_bool_Variable_2) == 0x000148, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_SelectVector_ReturnValue) == 0x000150, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_SelectVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_Normal_ReturnValue) == 0x000168, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_Normal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_BranchByNetRole_Branches) == 0x000180, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_BranchByNetRole_Branches' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, Temp_byte_Variable) == 0x000181, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, K2Node_SwitchEnum_CmpSuccess) == 0x000182, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_K2_GetPlayerController_ReturnValue_1) == 0x000188, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_K2_GetPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_GetShouldAutoPoolNiagara_ReturnValue) == 0x000190, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_GetShouldAutoPoolNiagara_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_StartCameraShake_ReturnValue) == 0x000198, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_StartCameraShake_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, K2Node_Select_Default) == 0x0001A0, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator, CallFunc_SpawnSystemAttached_ReturnValue) == 0x0001A8, "Member 'BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator::CallFunc_SpawnSystemAttached_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Dash_CharacterMutator_C_ExecuteUbergraph_BP_Dash_CharacterMutator;
 
 // Function BP_Dash_CharacterMutator.BP_Dash_CharacterMutator_C.GetDescription
 // 0x0030 (0x0030 - 0x0000)
@@ -110,11 +77,7 @@ public:
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0010(0x0010)(ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0020(0x0010)()
 };
-static_assert(alignof(BP_Dash_CharacterMutator_C_GetDescription) == 0x000008, "Wrong alignment on BP_Dash_CharacterMutator_C_GetDescription");
-static_assert(sizeof(BP_Dash_CharacterMutator_C_GetDescription) == 0x000030, "Wrong size on BP_Dash_CharacterMutator_C_GetDescription");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_GetDescription, ReturnValue) == 0x000000, "Member 'BP_Dash_CharacterMutator_C_GetDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_GetDescription, K2Node_MakeArray_Array) == 0x000010, "Member 'BP_Dash_CharacterMutator_C_GetDescription::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_Dash_CharacterMutator_C_GetDescription, CallFunc_Format_ReturnValue) == 0x000020, "Member 'BP_Dash_CharacterMutator_C_GetDescription::CallFunc_Format_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Dash_CharacterMutator_C_GetDescription;
 
 }
 

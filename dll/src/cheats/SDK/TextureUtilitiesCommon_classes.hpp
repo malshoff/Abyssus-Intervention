@@ -33,21 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TextureImportSettings">();
+		STATIC_CLASS_IMPL("TextureImportSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TextureImportSettings")
 	}
 	static class UTextureImportSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTextureImportSettings>();
 	}
 };
-static_assert(alignof(UTextureImportSettings) == 0x000008, "Wrong alignment on UTextureImportSettings");
-static_assert(sizeof(UTextureImportSettings) == 0x000048, "Wrong size on UTextureImportSettings");
-static_assert(offsetof(UTextureImportSettings, AutoVTSize) == 0x000038, "Member 'UTextureImportSettings::AutoVTSize' has a wrong offset!");
-static_assert(offsetof(UTextureImportSettings, AutoLimitDimension) == 0x00003C, "Member 'UTextureImportSettings::AutoLimitDimension' has a wrong offset!");
-static_assert(offsetof(UTextureImportSettings, bEnableNormalizeNormals) == 0x000040, "Member 'UTextureImportSettings::bEnableNormalizeNormals' has a wrong offset!");
-static_assert(offsetof(UTextureImportSettings, bEnableFastMipFilter) == 0x000041, "Member 'UTextureImportSettings::bEnableFastMipFilter' has a wrong offset!");
-static_assert(offsetof(UTextureImportSettings, CompressedFormatForFloatTextures) == 0x000042, "Member 'UTextureImportSettings::CompressedFormatForFloatTextures' has a wrong offset!");
-static_assert(offsetof(UTextureImportSettings, PNGInfill) == 0x000043, "Member 'UTextureImportSettings::PNGInfill' has a wrong offset!");
+DUMPER7_ASSERTS_UTextureImportSettings;
 
 // Class TextureUtilitiesCommon.TextureImportUserSettings
 // 0x0008 (0x0040 - 0x0038)
@@ -60,16 +57,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TextureImportUserSettings">();
+		STATIC_CLASS_IMPL("TextureImportUserSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TextureImportUserSettings")
 	}
 	static class UTextureImportUserSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTextureImportUserSettings>();
 	}
 };
-static_assert(alignof(UTextureImportUserSettings) == 0x000008, "Wrong alignment on UTextureImportUserSettings");
-static_assert(sizeof(UTextureImportUserSettings) == 0x000040, "Wrong size on UTextureImportUserSettings");
-static_assert(offsetof(UTextureImportUserSettings, PNGInfill) == 0x000038, "Member 'UTextureImportUserSettings::PNGInfill' has a wrong offset!");
+DUMPER7_ASSERTS_UTextureImportUserSettings;
 
 }
 

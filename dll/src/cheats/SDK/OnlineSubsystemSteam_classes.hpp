@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "PacketHandler_classes.hpp"
-#include "OnlineSubsystemUtils_classes.hpp"
 
 
 namespace SDK
@@ -24,57 +23,18 @@ class USteamAuthComponentModuleInterface final : public UHandlerComponentFactory
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SteamAuthComponentModuleInterface">();
+		STATIC_CLASS_IMPL("SteamAuthComponentModuleInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SteamAuthComponentModuleInterface")
 	}
 	static class USteamAuthComponentModuleInterface* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USteamAuthComponentModuleInterface>();
 	}
 };
-static_assert(alignof(USteamAuthComponentModuleInterface) == 0x000008, "Wrong alignment on USteamAuthComponentModuleInterface");
-static_assert(sizeof(USteamAuthComponentModuleInterface) == 0x000028, "Wrong size on USteamAuthComponentModuleInterface");
-
-// Class OnlineSubsystemSteam.SteamNetConnection
-// 0x0008 (0x1E78 - 0x1E70)
-class USteamNetConnection final : public UIpConnection
-{
-public:
-	bool                                          bIsPassthrough;                                    // 0x1E70(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E71[0x7];                                     // 0x1E71(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SteamNetConnection">();
-	}
-	static class USteamNetConnection* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USteamNetConnection>();
-	}
-};
-static_assert(alignof(USteamNetConnection) == 0x000008, "Wrong alignment on USteamNetConnection");
-static_assert(sizeof(USteamNetConnection) == 0x001E78, "Wrong size on USteamNetConnection");
-static_assert(offsetof(USteamNetConnection, bIsPassthrough) == 0x001E70, "Member 'USteamNetConnection::bIsPassthrough' has a wrong offset!");
-
-// Class OnlineSubsystemSteam.SteamNetDriver
-// 0x0008 (0x0988 - 0x0980)
-class USteamNetDriver final : public UIpNetDriver
-{
-public:
-	uint8                                         Pad_980[0x8];                                      // 0x0980(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SteamNetDriver">();
-	}
-	static class USteamNetDriver* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USteamNetDriver>();
-	}
-};
-static_assert(alignof(USteamNetDriver) == 0x000008, "Wrong alignment on USteamNetDriver");
-static_assert(sizeof(USteamNetDriver) == 0x000988, "Wrong size on USteamNetDriver");
+DUMPER7_ASSERTS_USteamAuthComponentModuleInterface;
 
 }
 

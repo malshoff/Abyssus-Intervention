@@ -27,16 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DualShockExternalEndpointSettings">();
+		STATIC_CLASS_IMPL("DualShockExternalEndpointSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DualShockExternalEndpointSettings")
 	}
 	static class UDualShockExternalEndpointSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDualShockExternalEndpointSettings>();
 	}
 };
-static_assert(alignof(UDualShockExternalEndpointSettings) == 0x000008, "Wrong alignment on UDualShockExternalEndpointSettings");
-static_assert(sizeof(UDualShockExternalEndpointSettings) == 0x000030, "Wrong size on UDualShockExternalEndpointSettings");
-static_assert(offsetof(UDualShockExternalEndpointSettings, ControllerIndex) == 0x000028, "Member 'UDualShockExternalEndpointSettings::ControllerIndex' has a wrong offset!");
+DUMPER7_ASSERTS_UDualShockExternalEndpointSettings;
 
 // Class WinDualShock.DualShockSoundfieldEndpointSettings
 // 0x0008 (0x0030 - 0x0028)
@@ -49,16 +51,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DualShockSoundfieldEndpointSettings">();
+		STATIC_CLASS_IMPL("DualShockSoundfieldEndpointSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DualShockSoundfieldEndpointSettings")
 	}
 	static class UDualShockSoundfieldEndpointSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDualShockSoundfieldEndpointSettings>();
 	}
 };
-static_assert(alignof(UDualShockSoundfieldEndpointSettings) == 0x000008, "Wrong alignment on UDualShockSoundfieldEndpointSettings");
-static_assert(sizeof(UDualShockSoundfieldEndpointSettings) == 0x000030, "Wrong size on UDualShockSoundfieldEndpointSettings");
-static_assert(offsetof(UDualShockSoundfieldEndpointSettings, ControllerIndex) == 0x000028, "Member 'UDualShockSoundfieldEndpointSettings::ControllerIndex' has a wrong offset!");
+DUMPER7_ASSERTS_UDualShockSoundfieldEndpointSettings;
 
 // Class WinDualShock.DualShockSpatializationSettings
 // 0x0010 (0x0038 - 0x0028)
@@ -73,18 +77,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DualShockSpatializationSettings">();
+		STATIC_CLASS_IMPL("DualShockSpatializationSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DualShockSpatializationSettings")
 	}
 	static class UDualShockSpatializationSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDualShockSpatializationSettings>();
 	}
 };
-static_assert(alignof(UDualShockSpatializationSettings) == 0x000008, "Wrong alignment on UDualShockSpatializationSettings");
-static_assert(sizeof(UDualShockSpatializationSettings) == 0x000038, "Wrong size on UDualShockSpatializationSettings");
-static_assert(offsetof(UDualShockSpatializationSettings, Spread) == 0x000028, "Member 'UDualShockSpatializationSettings::Spread' has a wrong offset!");
-static_assert(offsetof(UDualShockSpatializationSettings, Priority) == 0x00002C, "Member 'UDualShockSpatializationSettings::Priority' has a wrong offset!");
-static_assert(offsetof(UDualShockSpatializationSettings, Passthrough) == 0x000030, "Member 'UDualShockSpatializationSettings::Passthrough' has a wrong offset!");
+DUMPER7_ASSERTS_UDualShockSpatializationSettings;
 
 }
 

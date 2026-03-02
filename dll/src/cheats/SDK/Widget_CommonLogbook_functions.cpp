@@ -17,192 +17,19 @@
 namespace SDK
 {
 
-// Function Widget_CommonLogbook.Widget_CommonLogbook_C.Tab Highlighted
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonLogbook_C::Tab_Highlighted()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonLogbook_C", "Tab Highlighted");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonLogbook.Widget_CommonLogbook_C.ScrollToChallengeByAsset
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class URPrimaryDataAsset*               Asset                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonLogbook_C::ScrollToChallengeByAsset(class URPrimaryDataAsset* Asset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonLogbook_C", "ScrollToChallengeByAsset");
-
-	Params::Widget_CommonLogbook_C_ScrollToChallengeByAsset Parms{};
-
-	Parms.Asset = Asset;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonLogbook.Widget_CommonLogbook_C.OpenLog
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UClass*                           LogWidget                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UWidget_TextButton_C*             Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonLogbook_C::OpenLog(class UClass* LogWidget, class UWidget_TextButton_C* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonLogbook_C", "OpenLog");
-
-	Params::Widget_CommonLogbook_C_OpenLog Parms{};
-
-	Parms.LogWidget = LogWidget;
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonLogbook.Widget_CommonLogbook_C.OnPanelPopped_1
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonLogbook_C::OnPanelPopped_1()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonLogbook_C", "OnPanelPopped_1");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonLogbook.Widget_CommonLogbook_C.NavigateTabRight
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonLogbook_C::NavigateTabRight()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonLogbook_C", "NavigateTabRight");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonLogbook.Widget_CommonLogbook_C.NavigateTabLeft
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonLogbook_C::NavigateTabLeft()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonLogbook_C", "NavigateTabLeft");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonLogbook.Widget_CommonLogbook_C.GetTabIndexById
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32*                                  Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonLogbook_C::GetTabIndexById(int32* Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonLogbook_C", "GetTabIndexById");
-
-	Params::Widget_CommonLogbook_C_GetTabIndexById Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Index_0 != nullptr)
-		*Index_0 = Parms.Index_0;
-}
-
-
-// Function Widget_CommonLogbook.Widget_CommonLogbook_C.ExecuteUbergraph_Widget_CommonLogbook
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonLogbook_C::ExecuteUbergraph_Widget_CommonLogbook(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonLogbook_C", "ExecuteUbergraph_Widget_CommonLogbook");
-
-	Params::Widget_CommonLogbook_C_ExecuteUbergraph_Widget_CommonLogbook Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonLogbook.Widget_CommonLogbook_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_CommonLogbook_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonLogbook_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonLogbook.Widget_CommonLogbook_C.BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class FName                             TabId                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonLogbook_C::BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature(class FName TabId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonLogbook_C", "BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature");
-
-	Params::Widget_CommonLogbook_C_BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature Parms{};
-
-	Parms.TabId = TabId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonLogbook.Widget_CommonLogbook_C.BndEvt__Widget_CommonLogbook_W_Button_Icon_TabRight_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature
+// Function Widget_CommonLogbook.Widget_CommonLogbook_C.BndEvt__Widget_CommonLogbook_W_Button_Back_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
 // class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonLogbook_C::BndEvt__Widget_CommonLogbook_W_Button_Icon_TabRight_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+void UWidget_CommonLogbook_C::BndEvt__Widget_CommonLogbook_W_Button_Back_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonLogbook_C", "BndEvt__Widget_CommonLogbook_W_Button_Icon_TabRight_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature");
+		Func = Class->GetFunction("Widget_CommonLogbook_C", "BndEvt__Widget_CommonLogbook_W_Button_Back_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_CommonLogbook_C_BndEvt__Widget_CommonLogbook_W_Button_Icon_TabRight_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature Parms{};
+	Params::Widget_CommonLogbook_C_BndEvt__Widget_CommonLogbook_W_Button_Back_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 
@@ -230,19 +57,19 @@ void UWidget_CommonLogbook_C::BndEvt__Widget_CommonLogbook_W_Button_Icon_TabLeft
 }
 
 
-// Function Widget_CommonLogbook.Widget_CommonLogbook_C.BndEvt__Widget_CommonLogbook_W_Button_Back_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
+// Function Widget_CommonLogbook.Widget_CommonLogbook_C.BndEvt__Widget_CommonLogbook_W_Button_Icon_TabRight_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
 // class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonLogbook_C::BndEvt__Widget_CommonLogbook_W_Button_Back_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+void UWidget_CommonLogbook_C::BndEvt__Widget_CommonLogbook_W_Button_Icon_TabRight_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonLogbook_C", "BndEvt__Widget_CommonLogbook_W_Button_Back_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+		Func = Class->GetFunction("Widget_CommonLogbook_C", "BndEvt__Widget_CommonLogbook_W_Button_Icon_TabRight_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_CommonLogbook_C_BndEvt__Widget_CommonLogbook_W_Button_Back_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
+	Params::Widget_CommonLogbook_C_BndEvt__Widget_CommonLogbook_W_Button_Icon_TabRight_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 
@@ -250,8 +77,195 @@ void UWidget_CommonLogbook_C::BndEvt__Widget_CommonLogbook_W_Button_Back_K2Node_
 }
 
 
+// Function Widget_CommonLogbook.Widget_CommonLogbook_C.BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class FName                             TabId                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonLogbook_C::BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature(class FName TabId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonLogbook_C", "BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature");
+
+	Params::Widget_CommonLogbook_C_BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature Parms{};
+
+	Parms.TabId = TabId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonLogbook.Widget_CommonLogbook_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_CommonLogbook_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonLogbook_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonLogbook.Widget_CommonLogbook_C.ExecuteUbergraph_Widget_CommonLogbook
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonLogbook_C::ExecuteUbergraph_Widget_CommonLogbook(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonLogbook_C", "ExecuteUbergraph_Widget_CommonLogbook");
+
+	Params::Widget_CommonLogbook_C_ExecuteUbergraph_Widget_CommonLogbook Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonLogbook.Widget_CommonLogbook_C.FocusDesiredFocusTarget
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonLogbook_C::FocusDesiredFocusTarget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonLogbook_C", "FocusDesiredFocusTarget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonLogbook.Widget_CommonLogbook_C.GetTabIndexById
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32*                                  Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonLogbook_C::GetTabIndexById(int32* Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonLogbook_C", "GetTabIndexById");
+
+	Params::Widget_CommonLogbook_C_GetTabIndexById Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Index_0 != nullptr)
+		*Index_0 = Parms.Index_0;
+}
+
+
+// Function Widget_CommonLogbook.Widget_CommonLogbook_C.NavigateTabLeft
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonLogbook_C::NavigateTabLeft()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonLogbook_C", "NavigateTabLeft");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonLogbook.Widget_CommonLogbook_C.NavigateTabRight
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonLogbook_C::NavigateTabRight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonLogbook_C", "NavigateTabRight");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonLogbook.Widget_CommonLogbook_C.OnPanelPopped_1
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonLogbook_C::OnPanelPopped_1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonLogbook_C", "OnPanelPopped_1");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonLogbook.Widget_CommonLogbook_C.OpenLog
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UClass*                           LogWidget                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UWidget_TextButton_C*             Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonLogbook_C::OpenLog(class UClass* LogWidget, class UWidget_TextButton_C* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonLogbook_C", "OpenLog");
+
+	Params::Widget_CommonLogbook_C_OpenLog Parms{};
+
+	Parms.LogWidget = LogWidget;
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonLogbook.Widget_CommonLogbook_C.ScrollToChallengeByAsset
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URPrimaryDataAsset*               Asset                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonLogbook_C::ScrollToChallengeByAsset(class URPrimaryDataAsset* Asset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonLogbook_C", "ScrollToChallengeByAsset");
+
+	Params::Widget_CommonLogbook_C_ScrollToChallengeByAsset Parms{};
+
+	Parms.Asset = Asset;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonLogbook.Widget_CommonLogbook_C.Tab Highlighted
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonLogbook_C::Tab_Highlighted()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonLogbook_C", "Tab Highlighted");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Widget_CommonLogbook.Widget_CommonLogbook_C.BP_GetDesiredFocusTarget
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// (Event, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 

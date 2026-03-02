@@ -17,12 +17,11 @@ namespace SDK
 {
 
 // ScriptStruct ABP_Ricky_Arms.ABP_Ricky_Arms_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0x1CB8 - 0x1CB8)
+// 0x0000 (0x20E0 - 0x20E0)
 struct ABP_Ricky_Arms::FAnimBlueprintGeneratedConstantData final : public ABP_BasePlayer_Arms::FAnimBlueprintGeneratedConstantData
 {
 };
-static_assert(alignof(ABP_Ricky_Arms::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on ABP_Ricky_Arms::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(ABP_Ricky_Arms::FAnimBlueprintGeneratedConstantData) == 0x001CB8, "Wrong size on ABP_Ricky_Arms::FAnimBlueprintGeneratedConstantData");
+DUMPER7_ASSERTS_ABP_Ricky_Arms__FAnimBlueprintGeneratedConstantData;
 
 }
 

@@ -36,21 +36,7 @@ public:
 	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator) == 0x000008, "Wrong alignment on BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator");
-static_assert(sizeof(BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator) == 0x000050, "Wrong size on BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator, Owner) == 0x000000, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator::Owner' has a wrong offset!");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator, AbilityBehaviorMutatorPrimaryAsset) == 0x000008, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator::AbilityBehaviorMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator, CallFunc_GetCharacterMutator_ReturnValue) == 0x000010, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator::CallFunc_GetCharacterMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator, Temp_int_Array_Index_Variable) == 0x000018, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator, CallFunc_GetCharacterMutatorPrimaryAsset_ReturnValue) == 0x000020, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator::CallFunc_GetCharacterMutatorPrimaryAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator, K2Node_DynamicCast_AsRCharacter_Trigger_Mutator_PA) == 0x000028, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator::K2Node_DynamicCast_AsRCharacter_Trigger_Mutator_PA' has a wrong offset!");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator, Temp_int_Loop_Counter_Variable) == 0x000034, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator, CallFunc_Array_Get_Item) == 0x000038, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator, CallFunc_Array_Length_ReturnValue) == 0x000040, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator, CallFunc_Less_IntInt_ReturnValue) == 0x000044, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator, CallFunc_HasMutator_ReturnValue) == 0x000045, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator, CallFunc_Add_IntInt_ReturnValue) == 0x000048, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DoubleTrouble_CharcterMutator_C_GetAbilityTriggerMutator;
 
 // Function BP_DoubleTrouble_CharcterMutator.BP_DoubleTrouble_CharcterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -62,11 +48,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_DoubleTrouble_CharcterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_DoubleTrouble_CharcterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_DoubleTrouble_CharcterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_DoubleTrouble_CharcterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DoubleTrouble_CharcterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_DoubleTrouble_CharcterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DoubleTrouble_CharcterMutator_C_GetMutatorDescription;
 
 }
 

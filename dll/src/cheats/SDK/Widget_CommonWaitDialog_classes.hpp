@@ -18,20 +18,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_CommonWaitDialog.Widget_CommonWaitDialog_C
-// 0x0070 (0x04A8 - 0x0438)
+// 0x0070 (0x0530 - 0x04C0)
 class UWidget_CommonWaitDialog_C final : public URCommonActivatableWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       DestructAnimation;                                 // 0x0440(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ConstructAnimation;                                // 0x0448(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             Description;                                       // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Header;                                            // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   OkButton;                                          // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   HeaderText;                                        // 0x0468(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   DescriptionText;                                   // 0x0478(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   OkText;                                            // 0x0488(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	TMulticastInlineDelegate<void()>              OkEvent;                                           // 0x0498(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_TextButton_C*                   OkButton;                                          // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Header;                                            // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Description;                                       // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ConstructAnimation;                                // 0x04E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       DestructAnimation;                                 // 0x04E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class FText                                   HeaderText;                                        // 0x04F0(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   DescriptionText;                                   // 0x0500(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   OkText;                                            // 0x0510(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	TMulticastInlineDelegate<void()>              OkEvent;                                           // 0x0520(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
@@ -45,25 +45,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_CommonWaitDialog_C">();
+		BP_STATIC_CLASS_IMPL("Widget_CommonWaitDialog_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_CommonWaitDialog_C")
 	}
 	static class UWidget_CommonWaitDialog_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_CommonWaitDialog_C>();
 	}
 };
-static_assert(alignof(UWidget_CommonWaitDialog_C) == 0x000008, "Wrong alignment on UWidget_CommonWaitDialog_C");
-static_assert(sizeof(UWidget_CommonWaitDialog_C) == 0x0004A8, "Wrong size on UWidget_CommonWaitDialog_C");
-static_assert(offsetof(UWidget_CommonWaitDialog_C, UberGraphFrame) == 0x000438, "Member 'UWidget_CommonWaitDialog_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonWaitDialog_C, DestructAnimation) == 0x000440, "Member 'UWidget_CommonWaitDialog_C::DestructAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonWaitDialog_C, ConstructAnimation) == 0x000448, "Member 'UWidget_CommonWaitDialog_C::ConstructAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonWaitDialog_C, Description) == 0x000450, "Member 'UWidget_CommonWaitDialog_C::Description' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonWaitDialog_C, Header) == 0x000458, "Member 'UWidget_CommonWaitDialog_C::Header' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonWaitDialog_C, OkButton) == 0x000460, "Member 'UWidget_CommonWaitDialog_C::OkButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonWaitDialog_C, HeaderText) == 0x000468, "Member 'UWidget_CommonWaitDialog_C::HeaderText' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonWaitDialog_C, DescriptionText) == 0x000478, "Member 'UWidget_CommonWaitDialog_C::DescriptionText' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonWaitDialog_C, OkText) == 0x000488, "Member 'UWidget_CommonWaitDialog_C::OkText' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonWaitDialog_C, OkEvent) == 0x000498, "Member 'UWidget_CommonWaitDialog_C::OkEvent' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_CommonWaitDialog_C;
 
 }
 

@@ -10,39 +10,37 @@
 
 #include "Basic.hpp"
 
-#include "RGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function BP_Anchor_GrenadeScript.BP_Anchor_GrenadeScript_C.ExecuteUbergraph_BP_Anchor_GrenadeScript
-// 0x0078 (0x0078 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0008(0x0030)(ContainsInstancedReference)
-	class URGScript*                              CallFunc_GetFirstScriptOfType_ReturnValue;         // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARGrenade*                              CallFunc_GetOwningGrenade_ReturnValue;             // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_Anchor_CharacterMutator_C*          K2Node_DynamicCast_AsBP_Anchor_Character_Mutator;  // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARGrenade*                              CallFunc_GetOwningGrenade_ReturnValue_1;           // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ARGrenade*                              CallFunc_GetOwningGrenade_ReturnValue;             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARGrenade*                              CallFunc_GetOwningGrenade_ReturnValue_1;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0038(0x0030)(ContainsInstancedReference)
+	class URGScript*                              CallFunc_GetFirstScriptOfType_ReturnValue;         // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_Anchor_CharacterMutator_C*          K2Node_DynamicCast_AsBP_Anchor_Character_Mutator;  // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARGrenade*                              CallFunc_GetOwningGrenade_ReturnValue_2;           // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_K2_GetPlayerController_ReturnValue;       // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_RSpawnSoundAttached_ReturnValue;          // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript) == 0x000008, "Wrong alignment on BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript");
-static_assert(sizeof(BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript) == 0x000078, "Wrong size on BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript");
-static_assert(offsetof(BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript, EntryPoint) == 0x000000, "Member 'BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript, CallFunc_GetFirstScriptOfType_ReturnValue) == 0x000038, "Member 'BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript::CallFunc_GetFirstScriptOfType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript, CallFunc_GetOwningGrenade_ReturnValue) == 0x000040, "Member 'BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript::CallFunc_GetOwningGrenade_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript, K2Node_DynamicCast_AsBP_Anchor_Character_Mutator) == 0x000048, "Member 'BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript::K2Node_DynamicCast_AsBP_Anchor_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript, CallFunc_GetOwningGrenade_ReturnValue_1) == 0x000058, "Member 'BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript::CallFunc_GetOwningGrenade_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000060, "Member 'BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Anchor_GrenadeScript_C_ExecuteUbergraph_BP_Anchor_GrenadeScript;
 
 }
 

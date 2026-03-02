@@ -32,7 +32,7 @@ void UWidget_OffScreenIndication_PlayerDowned_C::Construct()
 
 
 // Function Widget_OffScreenIndication_PlayerDowned.Widget_OffScreenIndication_PlayerDowned_C.ExecuteUbergraph_Widget_OffScreenIndication_PlayerDowned
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

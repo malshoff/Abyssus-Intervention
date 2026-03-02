@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "EnhancedInput_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -25,9 +25,7 @@ struct BP_SpectatorPawn_C_DitherPlayerModel final
 public:
 	double                                        Alpha;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpectatorPawn_C_DitherPlayerModel) == 0x000008, "Wrong alignment on BP_SpectatorPawn_C_DitherPlayerModel");
-static_assert(sizeof(BP_SpectatorPawn_C_DitherPlayerModel) == 0x000008, "Wrong size on BP_SpectatorPawn_C_DitherPlayerModel");
-static_assert(offsetof(BP_SpectatorPawn_C_DitherPlayerModel, Alpha) == 0x000000, "Member 'BP_SpectatorPawn_C_DitherPlayerModel::Alpha' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpectatorPawn_C_DitherPlayerModel;
 
 // Function BP_SpectatorPawn.BP_SpectatorPawn_C.ExecuteUbergraph_BP_SpectatorPawn
 // 0x0628 (0x0628 - 0x0000)
@@ -150,109 +148,7 @@ public:
 	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x0618(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_VariableSet_TargetArmLength_ImplicitCast;   // 0x0620(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn) == 0x000008, "Wrong alignment on BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn");
-static_assert(sizeof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn) == 0x000628, "Wrong size on BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, EntryPoint) == 0x000000, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_object_Variable) == 0x000008, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x000010, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_K2_SetActorLocation_ReturnValue) == 0x000110, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_real_Variable) == 0x000118, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_real_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_real_Variable_1) == 0x000120, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_real_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_real_Variable_2) == 0x000128, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_real_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_EnhancedInputActionEvent_ActionValue) == 0x000130, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_EnhancedInputActionEvent_ActionValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_EnhancedInputActionEvent_ElapsedTime) == 0x000150, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_EnhancedInputActionEvent_ElapsedTime' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_EnhancedInputActionEvent_TriggeredTime) == 0x000154, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_EnhancedInputActionEvent_TriggeredTime' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_EnhancedInputActionEvent_SourceAction) == 0x000158, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_EnhancedInputActionEvent_SourceAction' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Abs_ReturnValue) == 0x000160, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Conv_InputActionValueToAxis1D_ReturnValue) == 0x000168, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Conv_InputActionValueToAxis1D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000170, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_object_Variable_1) == 0x000178, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_real_Variable_3) == 0x000180, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_real_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_real_Variable_4) == 0x000188, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_real_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_real_Variable_3_0) == 0x000190, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_real_Variable_3_0' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_real_Variable_4_0) == 0x000198, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_real_Variable_4_0' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_real_Variable_5) == 0x0001A0, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_real_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_MakeRotator_ReturnValue) == 0x0001A8, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Abs_ReturnValue_1) == 0x0001C0, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x0001C8, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_Event_DeltaSeconds) == 0x0001CC, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_Event_NewSpectatedPlayer) == 0x0001D0, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_Event_NewSpectatedPlayer' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_K2_GetActorRotation_ReturnValue) == 0x0001D8, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_GetCharacterMaterials_ReturnValue) == 0x0001F0, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_GetCharacterMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_BreakRotator_Roll) == 0x000200, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_BreakRotator_Pitch) == 0x000204, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_BreakRotator_Yaw) == 0x000208, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_IsValid_ReturnValue) == 0x00020C, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000210, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000228, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_IsValid_ReturnValue_1) == 0x000240, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_EnhancedInputActionEvent_ActionValue_1) == 0x000248, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_EnhancedInputActionEvent_ActionValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_EnhancedInputActionEvent_ElapsedTime_1) == 0x000268, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_EnhancedInputActionEvent_ElapsedTime_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_EnhancedInputActionEvent_TriggeredTime_1) == 0x00026C, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_EnhancedInputActionEvent_TriggeredTime_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_EnhancedInputActionEvent_SourceAction_1) == 0x000270, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_EnhancedInputActionEvent_SourceAction_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_real_Variable_0) == 0x000278, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_real_Variable_0' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_real_Variable_1_0) == 0x000280, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_real_Variable_1_0' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Conv_InputActionValueToAxis1D_ReturnValue_1) == 0x000288, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Conv_InputActionValueToAxis1D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_K2_GetActorLocation_ReturnValue_2) == 0x000290, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_K2_GetActorLocation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_K2_GetActorRotation_ReturnValue_1) == 0x0002A8, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_K2_GetActorRotation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_real_Variable_6) == 0x0002C0, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_real_Variable_6' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_BreakRotator_Roll_1) == 0x0002C8, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_BreakRotator_Pitch_1) == 0x0002CC, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_BreakRotator_Yaw_1) == 0x0002D0, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0002D8, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0002E0, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Abs_ReturnValue_2) == 0x0002E8, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Abs_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_MakeRotator_ReturnValue_1) == 0x0002F0, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Greater_DoubleDouble_ReturnValue_2) == 0x000308, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Greater_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_real_Variable_7) == 0x000310, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_real_Variable_7' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_real_Variable_8) == 0x000318, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_real_Variable_8' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_ComposeRotators_ReturnValue) == 0x000320, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_ComposeRotators_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_BreakRotator_Roll_2) == 0x000338, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_BreakRotator_Roll_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_BreakRotator_Pitch_2) == 0x00033C, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_BreakRotator_Pitch_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_BreakRotator_Yaw_2) == 0x000340, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_BreakRotator_Yaw_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_object_Variable_2) == 0x000348, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_object_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000350, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_ClampAngle_ReturnValue) == 0x000358, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_ClampAngle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_MakeRotator_ReturnValue_2) == 0x000360, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_MakeRotator_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_RInterpTo_ReturnValue) == 0x000378, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_RInterpTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_K2_SetActorRotation_ReturnValue) == 0x000390, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_MakeVector_ReturnValue) == 0x000398, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_MakeVector_ReturnValue_1) == 0x0003B0, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Add_VectorVector_ReturnValue) == 0x0003C8, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Add_VectorVector_ReturnValue_1) == 0x0003E0, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_EnhancedInputActionEvent_ActionValue_2) == 0x0003F8, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_EnhancedInputActionEvent_ActionValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_EnhancedInputActionEvent_ElapsedTime_2) == 0x000418, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_EnhancedInputActionEvent_ElapsedTime_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_EnhancedInputActionEvent_TriggeredTime_2) == 0x00041C, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_EnhancedInputActionEvent_TriggeredTime_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_EnhancedInputActionEvent_SourceAction_2) == 0x000420, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_EnhancedInputActionEvent_SourceAction_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_real_Variable_8_0) == 0x000428, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_real_Variable_8_0' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000430, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, Temp_real_Variable_7_0) == 0x000438, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::Temp_real_Variable_7_0' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000440, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Conv_InputActionValueToAxis1D_ReturnValue_2) == 0x000448, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Conv_InputActionValueToAxis1D_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x000450, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_FClamp_ReturnValue) == 0x000458, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_CustomEvent_Alpha) == 0x000460, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_CustomEvent_Alpha' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_GetSocketLocation_ReturnValue) == 0x000468, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000480, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_Event_EndPlayReason) == 0x000498, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_Event_EndPlayReason' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Vector_Distance_ReturnValue) == 0x0004A0, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0004A8, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_FClamp_ReturnValue_1) == 0x0004B0, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_FClamp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_VInterpTo_ReturnValue) == 0x0004B8, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_VInterpTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0004D0, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_K2_SetActorLocation_SweepHitResult_1) == 0x0004D8, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_K2_SetActorLocation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_K2_SetActorLocation_ReturnValue_1) == 0x0005D8, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_K2_SetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x0005DC, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x0005E0, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x0005E8, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_MakeRotator_Yaw_ImplicitCast_1) == 0x0005F0, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_MakeRotator_Yaw_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Add_DoubleDouble_A_ImplicitCast_1) == 0x0005F8, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Add_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_VInterpTo_InterpSpeed_ImplicitCast) == 0x000600, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_VInterpTo_InterpSpeed_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x000604, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_RInterpTo_InterpSpeed_ImplicitCast) == 0x000608, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_RInterpTo_InterpSpeed_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Add_DoubleDouble_A_ImplicitCast_2) == 0x000610, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Add_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x000618, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn, K2Node_VariableSet_TargetArmLength_ImplicitCast) == 0x000620, "Member 'BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn::K2Node_VariableSet_TargetArmLength_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpectatorPawn_C_ExecuteUbergraph_BP_SpectatorPawn;
 
 // Function BP_SpectatorPawn.BP_SpectatorPawn_C.InpActEvt_IA_LookRight_K2Node_EnhancedInputActionEvent_0
 // 0x0030 (0x0030 - 0x0000)
@@ -264,12 +160,7 @@ public:
 	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpectatorPawn_C_InpActEvt_IA_LookRight_K2Node_EnhancedInputActionEvent_0) == 0x000008, "Wrong alignment on BP_SpectatorPawn_C_InpActEvt_IA_LookRight_K2Node_EnhancedInputActionEvent_0");
-static_assert(sizeof(BP_SpectatorPawn_C_InpActEvt_IA_LookRight_K2Node_EnhancedInputActionEvent_0) == 0x000030, "Wrong size on BP_SpectatorPawn_C_InpActEvt_IA_LookRight_K2Node_EnhancedInputActionEvent_0");
-static_assert(offsetof(BP_SpectatorPawn_C_InpActEvt_IA_LookRight_K2Node_EnhancedInputActionEvent_0, ActionValue) == 0x000000, "Member 'BP_SpectatorPawn_C_InpActEvt_IA_LookRight_K2Node_EnhancedInputActionEvent_0::ActionValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_InpActEvt_IA_LookRight_K2Node_EnhancedInputActionEvent_0, ElapsedTime) == 0x000020, "Member 'BP_SpectatorPawn_C_InpActEvt_IA_LookRight_K2Node_EnhancedInputActionEvent_0::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_InpActEvt_IA_LookRight_K2Node_EnhancedInputActionEvent_0, TriggeredTime) == 0x000024, "Member 'BP_SpectatorPawn_C_InpActEvt_IA_LookRight_K2Node_EnhancedInputActionEvent_0::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_InpActEvt_IA_LookRight_K2Node_EnhancedInputActionEvent_0, SourceAction) == 0x000028, "Member 'BP_SpectatorPawn_C_InpActEvt_IA_LookRight_K2Node_EnhancedInputActionEvent_0::SourceAction' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpectatorPawn_C_InpActEvt_IA_LookRight_K2Node_EnhancedInputActionEvent_0;
 
 // Function BP_SpectatorPawn.BP_SpectatorPawn_C.InpActEvt_IA_LookUp_K2Node_EnhancedInputActionEvent_1
 // 0x0030 (0x0030 - 0x0000)
@@ -281,12 +172,7 @@ public:
 	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpectatorPawn_C_InpActEvt_IA_LookUp_K2Node_EnhancedInputActionEvent_1) == 0x000008, "Wrong alignment on BP_SpectatorPawn_C_InpActEvt_IA_LookUp_K2Node_EnhancedInputActionEvent_1");
-static_assert(sizeof(BP_SpectatorPawn_C_InpActEvt_IA_LookUp_K2Node_EnhancedInputActionEvent_1) == 0x000030, "Wrong size on BP_SpectatorPawn_C_InpActEvt_IA_LookUp_K2Node_EnhancedInputActionEvent_1");
-static_assert(offsetof(BP_SpectatorPawn_C_InpActEvt_IA_LookUp_K2Node_EnhancedInputActionEvent_1, ActionValue) == 0x000000, "Member 'BP_SpectatorPawn_C_InpActEvt_IA_LookUp_K2Node_EnhancedInputActionEvent_1::ActionValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_InpActEvt_IA_LookUp_K2Node_EnhancedInputActionEvent_1, ElapsedTime) == 0x000020, "Member 'BP_SpectatorPawn_C_InpActEvt_IA_LookUp_K2Node_EnhancedInputActionEvent_1::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_InpActEvt_IA_LookUp_K2Node_EnhancedInputActionEvent_1, TriggeredTime) == 0x000024, "Member 'BP_SpectatorPawn_C_InpActEvt_IA_LookUp_K2Node_EnhancedInputActionEvent_1::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_InpActEvt_IA_LookUp_K2Node_EnhancedInputActionEvent_1, SourceAction) == 0x000028, "Member 'BP_SpectatorPawn_C_InpActEvt_IA_LookUp_K2Node_EnhancedInputActionEvent_1::SourceAction' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpectatorPawn_C_InpActEvt_IA_LookUp_K2Node_EnhancedInputActionEvent_1;
 
 // Function BP_SpectatorPawn.BP_SpectatorPawn_C.InpActEvt_IA_Zoom_K2Node_EnhancedInputActionEvent_2
 // 0x0030 (0x0030 - 0x0000)
@@ -298,12 +184,7 @@ public:
 	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpectatorPawn_C_InpActEvt_IA_Zoom_K2Node_EnhancedInputActionEvent_2) == 0x000008, "Wrong alignment on BP_SpectatorPawn_C_InpActEvt_IA_Zoom_K2Node_EnhancedInputActionEvent_2");
-static_assert(sizeof(BP_SpectatorPawn_C_InpActEvt_IA_Zoom_K2Node_EnhancedInputActionEvent_2) == 0x000030, "Wrong size on BP_SpectatorPawn_C_InpActEvt_IA_Zoom_K2Node_EnhancedInputActionEvent_2");
-static_assert(offsetof(BP_SpectatorPawn_C_InpActEvt_IA_Zoom_K2Node_EnhancedInputActionEvent_2, ActionValue) == 0x000000, "Member 'BP_SpectatorPawn_C_InpActEvt_IA_Zoom_K2Node_EnhancedInputActionEvent_2::ActionValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_InpActEvt_IA_Zoom_K2Node_EnhancedInputActionEvent_2, ElapsedTime) == 0x000020, "Member 'BP_SpectatorPawn_C_InpActEvt_IA_Zoom_K2Node_EnhancedInputActionEvent_2::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_InpActEvt_IA_Zoom_K2Node_EnhancedInputActionEvent_2, TriggeredTime) == 0x000024, "Member 'BP_SpectatorPawn_C_InpActEvt_IA_Zoom_K2Node_EnhancedInputActionEvent_2::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_InpActEvt_IA_Zoom_K2Node_EnhancedInputActionEvent_2, SourceAction) == 0x000028, "Member 'BP_SpectatorPawn_C_InpActEvt_IA_Zoom_K2Node_EnhancedInputActionEvent_2::SourceAction' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpectatorPawn_C_InpActEvt_IA_Zoom_K2Node_EnhancedInputActionEvent_2;
 
 // Function BP_SpectatorPawn.BP_SpectatorPawn_C.OnSpectatedPlayerChanged
 // 0x0008 (0x0008 - 0x0000)
@@ -312,9 +193,7 @@ struct BP_SpectatorPawn_C_OnSpectatedPlayerChanged final
 public:
 	class ARPlayerPawn*                           NewSpectatedPlayer;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpectatorPawn_C_OnSpectatedPlayerChanged) == 0x000008, "Wrong alignment on BP_SpectatorPawn_C_OnSpectatedPlayerChanged");
-static_assert(sizeof(BP_SpectatorPawn_C_OnSpectatedPlayerChanged) == 0x000008, "Wrong size on BP_SpectatorPawn_C_OnSpectatedPlayerChanged");
-static_assert(offsetof(BP_SpectatorPawn_C_OnSpectatedPlayerChanged, NewSpectatedPlayer) == 0x000000, "Member 'BP_SpectatorPawn_C_OnSpectatedPlayerChanged::NewSpectatedPlayer' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpectatorPawn_C_OnSpectatedPlayerChanged;
 
 // Function BP_SpectatorPawn.BP_SpectatorPawn_C.ReceiveEndPlay
 // 0x0001 (0x0001 - 0x0000)
@@ -323,9 +202,7 @@ struct BP_SpectatorPawn_C_ReceiveEndPlay final
 public:
 	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpectatorPawn_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_SpectatorPawn_C_ReceiveEndPlay");
-static_assert(sizeof(BP_SpectatorPawn_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_SpectatorPawn_C_ReceiveEndPlay");
-static_assert(offsetof(BP_SpectatorPawn_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_SpectatorPawn_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpectatorPawn_C_ReceiveEndPlay;
 
 // Function BP_SpectatorPawn.BP_SpectatorPawn_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -334,9 +211,7 @@ struct BP_SpectatorPawn_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpectatorPawn_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_SpectatorPawn_C_ReceiveTick");
-static_assert(sizeof(BP_SpectatorPawn_C_ReceiveTick) == 0x000004, "Wrong size on BP_SpectatorPawn_C_ReceiveTick");
-static_assert(offsetof(BP_SpectatorPawn_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_SpectatorPawn_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpectatorPawn_C_ReceiveTick;
 
 // Function BP_SpectatorPawn.BP_SpectatorPawn_C.UpdatePlayerMaterials
 // 0x0028 (0x0028 - 0x0000)
@@ -353,16 +228,7 @@ public:
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpectatorPawn_C_UpdatePlayerMaterials) == 0x000008, "Wrong alignment on BP_SpectatorPawn_C_UpdatePlayerMaterials");
-static_assert(sizeof(BP_SpectatorPawn_C_UpdatePlayerMaterials) == 0x000028, "Wrong size on BP_SpectatorPawn_C_UpdatePlayerMaterials");
-static_assert(offsetof(BP_SpectatorPawn_C_UpdatePlayerMaterials, DitherAlpha) == 0x000000, "Member 'BP_SpectatorPawn_C_UpdatePlayerMaterials::DitherAlpha' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_UpdatePlayerMaterials, Temp_int_Array_Index_Variable) == 0x000008, "Member 'BP_SpectatorPawn_C_UpdatePlayerMaterials::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_UpdatePlayerMaterials, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'BP_SpectatorPawn_C_UpdatePlayerMaterials::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_UpdatePlayerMaterials, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'BP_SpectatorPawn_C_UpdatePlayerMaterials::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_UpdatePlayerMaterials, CallFunc_Array_Length_ReturnValue) == 0x000014, "Member 'BP_SpectatorPawn_C_UpdatePlayerMaterials::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_UpdatePlayerMaterials, CallFunc_Array_Get_Item) == 0x000018, "Member 'BP_SpectatorPawn_C_UpdatePlayerMaterials::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_UpdatePlayerMaterials, CallFunc_Less_IntInt_ReturnValue) == 0x000020, "Member 'BP_SpectatorPawn_C_UpdatePlayerMaterials::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpectatorPawn_C_UpdatePlayerMaterials, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000024, "Member 'BP_SpectatorPawn_C_UpdatePlayerMaterials::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpectatorPawn_C_UpdatePlayerMaterials;
 
 }
 

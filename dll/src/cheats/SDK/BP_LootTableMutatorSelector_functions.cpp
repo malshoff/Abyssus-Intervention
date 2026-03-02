@@ -22,9 +22,10 @@ namespace SDK
 // Parameters:
 // const TArray<struct FRLootSelectionOption>&LootOption                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   SoulfragmentRerollsUsed_0                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bHasChosenLoot                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LootTableMutatorSelector_C::AddGeneratedLootOptionForController(const TArray<struct FRLootSelectionOption>& LootOption, class APlayerController* PlayerController, bool bHasChosenLoot)
+void ABP_LootTableMutatorSelector_C::AddGeneratedLootOptionForController(const TArray<struct FRLootSelectionOption>& LootOption, class APlayerController* PlayerController, int32 SoulfragmentRerollsUsed_0, bool bHasChosenLoot)
 {
 	static class UFunction* Func = nullptr;
 
@@ -35,6 +36,7 @@ void ABP_LootTableMutatorSelector_C::AddGeneratedLootOptionForController(const T
 
 	Parms.LootOption = std::move(LootOption);
 	Parms.PlayerController = PlayerController;
+	Parms.SoulfragmentRerollsUsed_0 = SoulfragmentRerollsUsed_0;
 	Parms.bHasChosenLoot = bHasChosenLoot;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -81,13 +83,33 @@ void ABP_LootTableMutatorSelector_C::BndEvt__BP_LootTableMutatorSelector_Interac
 }
 
 
+// Function BP_LootTableMutatorSelector.BP_LootTableMutatorSelector_C.BPCheckAndUpdateLootOptions
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_LootTableMutatorSelector_C::BPCheckAndUpdateLootOptions(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LootTableMutatorSelector_C", "BPCheckAndUpdateLootOptions");
+
+	Params::BP_LootTableMutatorSelector_C_BPCheckAndUpdateLootOptions Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_LootTableMutatorSelector.BP_LootTableMutatorSelector_C.CanInteract
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class APlayerController*                Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APlayerController*                Controller                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool ABP_LootTableMutatorSelector_C::CanInteract(class APlayerController* Controller_0)
+bool ABP_LootTableMutatorSelector_C::CanInteract(class APlayerController* Controller)
 {
 	static class UFunction* Func = nullptr;
 
@@ -96,31 +118,11 @@ bool ABP_LootTableMutatorSelector_C::CanInteract(class APlayerController* Contro
 
 	Params::BP_LootTableMutatorSelector_C_CanInteract Parms{};
 
-	Parms.Controller_0 = Controller_0;
+	Parms.Controller = Controller;
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function BP_LootTableMutatorSelector.BP_LootTableMutatorSelector_C.CheckAndUpdateLootOptions
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AController*                      Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_LootTableMutatorSelector_C::CheckAndUpdateLootOptions(class AController* Controller_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LootTableMutatorSelector_C", "CheckAndUpdateLootOptions");
-
-	Params::BP_LootTableMutatorSelector_C_CheckAndUpdateLootOptions Parms{};
-
-	Parms.Controller_0 = Controller_0;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -185,38 +187,14 @@ void ABP_LootTableMutatorSelector_C::Get_Reward_Spawn_Pos(struct FVector* Pos)
 }
 
 
-// Function BP_LootTableMutatorSelector.BP_LootTableMutatorSelector_C.GetGeneratedLootOptionsForController
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const class FString&                    NetIDString                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// TArray<struct FRLootSelectionOption>*   Loot_Selection_Options                                 (Parm, OutParm)
-
-void ABP_LootTableMutatorSelector_C::GetGeneratedLootOptionsForController(const class FString& NetIDString, TArray<struct FRLootSelectionOption>* Loot_Selection_Options)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LootTableMutatorSelector_C", "GetGeneratedLootOptionsForController");
-
-	Params::BP_LootTableMutatorSelector_C_GetGeneratedLootOptionsForController Parms{};
-
-	Parms.NetIDString = std::move(NetIDString);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Loot_Selection_Options != nullptr)
-		*Loot_Selection_Options = std::move(Parms.Loot_Selection_Options);
-}
-
-
 // Function BP_LootTableMutatorSelector.BP_LootTableMutatorSelector_C.GetNumEquippedMutatorsOfCategory
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class URMutatorRewardCategoryDataAsset* CategoryDA                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APlayerController*                Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APlayerController*                Controller                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // int32*                                  Num                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LootTableMutatorSelector_C::GetNumEquippedMutatorsOfCategory(class URMutatorRewardCategoryDataAsset* CategoryDA, class APlayerController* Controller_0, int32* Num)
+void ABP_LootTableMutatorSelector_C::GetNumEquippedMutatorsOfCategory(class URMutatorRewardCategoryDataAsset* CategoryDA, class APlayerController* Controller, int32* Num)
 {
 	static class UFunction* Func = nullptr;
 
@@ -226,7 +204,7 @@ void ABP_LootTableMutatorSelector_C::GetNumEquippedMutatorsOfCategory(class URMu
 	Params::BP_LootTableMutatorSelector_C_GetNumEquippedMutatorsOfCategory Parms{};
 
 	Parms.CategoryDA = CategoryDA;
-	Parms.Controller_0 = Controller_0;
+	Parms.Controller = Controller;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -266,9 +244,9 @@ void ABP_LootTableMutatorSelector_C::OkEvent_Event()
 // Function BP_LootTableMutatorSelector.BP_LootTableMutatorSelector_C.OnInteract
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class APlayerController*                Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APlayerController*                Controller                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LootTableMutatorSelector_C::OnInteract(class APlayerController* Controller_0)
+void ABP_LootTableMutatorSelector_C::OnInteract(class APlayerController* Controller)
 {
 	static class UFunction* Func = nullptr;
 
@@ -277,7 +255,7 @@ void ABP_LootTableMutatorSelector_C::OnInteract(class APlayerController* Control
 
 	Params::BP_LootTableMutatorSelector_C_OnInteract Parms{};
 
-	Parms.Controller_0 = Controller_0;
+	Parms.Controller = Controller;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -301,8 +279,9 @@ void ABP_LootTableMutatorSelector_C::OnInvoke_CD2A208C4101B7E187420D932C0D4D68()
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const TArray<struct FRLootSelectionOption>&NewLootOptions                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   SoulfragmentRerollsUsed_0                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LootTableMutatorSelector_C::OnLootOptionsChanged(const TArray<struct FRLootSelectionOption>& NewLootOptions)
+void ABP_LootTableMutatorSelector_C::OnLootOptionsChanged(const TArray<struct FRLootSelectionOption>& NewLootOptions, int32 SoulfragmentRerollsUsed_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -312,6 +291,7 @@ void ABP_LootTableMutatorSelector_C::OnLootOptionsChanged(const TArray<struct FR
 	Params::BP_LootTableMutatorSelector_C_OnLootOptionsChanged Parms{};
 
 	Parms.NewLootOptions = std::move(NewLootOptions);
+	Parms.SoulfragmentRerollsUsed_0 = SoulfragmentRerollsUsed_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -385,24 +365,17 @@ void ABP_LootTableMutatorSelector_C::OpenDoors()
 }
 
 
-// Function BP_LootTableMutatorSelector.BP_LootTableMutatorSelector_C.PlayerStateIsValid
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_LootTableMutatorSelector.BP_LootTableMutatorSelector_C.PushBlessingScreen
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_LootTableMutatorSelector_C::PlayerStateIsValid(bool* IsValid)
+void ABP_LootTableMutatorSelector_C::PushBlessingScreen()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LootTableMutatorSelector_C", "PlayerStateIsValid");
+		Func = Class->GetFunction("BP_LootTableMutatorSelector_C", "PushBlessingScreen");
 
-	Params::BP_LootTableMutatorSelector_C_PlayerStateIsValid Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsValid != nullptr)
-		*IsValid = Parms.IsValid;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -423,9 +396,9 @@ void ABP_LootTableMutatorSelector_C::ReceiveBeginPlay()
 // Function BP_LootTableMutatorSelector.BP_LootTableMutatorSelector_C.RemoveCappedCategories
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class APlayerController*                Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class URPlayerGScriptComponent*         GScriptComponent                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LootTableMutatorSelector_C::RemoveCappedCategories(class APlayerController* Controller_0)
+void ABP_LootTableMutatorSelector_C::RemoveCappedCategories(class URPlayerGScriptComponent* GScriptComponent)
 {
 	static class UFunction* Func = nullptr;
 
@@ -434,7 +407,7 @@ void ABP_LootTableMutatorSelector_C::RemoveCappedCategories(class APlayerControl
 
 	Params::BP_LootTableMutatorSelector_C_RemoveCappedCategories Parms{};
 
-	Parms.Controller_0 = Controller_0;
+	Parms.GScriptComponent = GScriptComponent;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -550,6 +523,29 @@ void ABP_LootTableMutatorSelector_C::ShowHighlightServer()
 }
 
 
+// Function BP_LootTableMutatorSelector.BP_LootTableMutatorSelector_C.SubstituteRewardConditionMet
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TSubclassOf<class AActor>               DefaultRewardClass                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_LootTableMutatorSelector_C::SubstituteRewardConditionMet(TSubclassOf<class AActor> DefaultRewardClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LootTableMutatorSelector_C", "SubstituteRewardConditionMet");
+
+	Params::BP_LootTableMutatorSelector_C_SubstituteRewardConditionMet Parms{};
+
+	Parms.DefaultRewardClass = DefaultRewardClass;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_LootTableMutatorSelector.BP_LootTableMutatorSelector_C.UpdateActiveVisuals
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -583,6 +579,26 @@ void ABP_LootTableMutatorSelector_C::UserConstructionScript()
 		Func = Class->GetFunction("BP_LootTableMutatorSelector_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_LootTableMutatorSelector.BP_LootTableMutatorSelector_C.VoiceLines
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URMutatorPrimaryAsset*            MutatorPA                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_LootTableMutatorSelector_C::VoiceLines(class URMutatorPrimaryAsset* MutatorPA)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LootTableMutatorSelector_C", "VoiceLines");
+
+	Params::BP_LootTableMutatorSelector_C_VoiceLines Parms{};
+
+	Parms.MutatorPA = MutatorPA;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

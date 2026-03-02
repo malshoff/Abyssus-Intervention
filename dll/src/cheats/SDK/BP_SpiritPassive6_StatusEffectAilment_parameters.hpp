@@ -28,107 +28,63 @@ public:
 	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpiritPassive6_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive6_StatusEffectAilment) == 0x000008, "Wrong alignment on BP_SpiritPassive6_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive6_StatusEffectAilment");
-static_assert(sizeof(BP_SpiritPassive6_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive6_StatusEffectAilment) == 0x000058, "Wrong size on BP_SpiritPassive6_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive6_StatusEffectAilment");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive6_StatusEffectAilment, EntryPoint) == 0x000000, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive6_StatusEffectAilment::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive6_StatusEffectAilment, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive6_StatusEffectAilment::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive6_StatusEffectAilment, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000018, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive6_StatusEffectAilment::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive6_StatusEffectAilment, K2Node_DynamicCast_AsRPawn_Base) == 0x000048, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive6_StatusEffectAilment::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive6_StatusEffectAilment, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive6_StatusEffectAilment::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpiritPassive6_StatusEffectAilment_C_ExecuteUbergraph_BP_SpiritPassive6_StatusEffectAilment;
 
 // Function BP_SpiritPassive6_StatusEffectAilment.BP_SpiritPassive6_StatusEffectAilment_C.OnOwnerDie
-// 0x01B0 (0x01B0 - 0x0000)
+// 0x02E0 (0x02E0 - 0x0000)
 struct BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie final
 {
 public:
 	class URHealthComponent*                      Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class URPlayerGScriptComponent*               GScriptRef;                                        // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URGCharacterMutatorScript*              CallFunc_GetCharacterMutator_ReturnValue;          // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E5[0x3];                                       // 0x00E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_Spirit_Behavior_Mutator_C*          K2Node_DynamicCast_AsBP_Spirit_Behavior_Mutator;   // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasMutator_ReturnValue;                   // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FA[0x6];                                       // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class URGCharacterMutatorScript*              CallFunc_GetCharacterMutator_ReturnValue_1;        // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetMutatorRank_ReturnValue_1;             // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x010C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10D[0x3];                                      // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue_1; // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBP_Spirit_Behavior_Mutator_C*          K2Node_DynamicCast_AsBP_Spirit_Behavior_Mutator_1; // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasMutator_ReturnValue_1;                 // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_122[0x2];                                      // 0x0122(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetMutatorRank_ReturnValue_2;             // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URGCharacterMutatorScript*              CallFunc_GetCharacterMutator_ReturnValue_2;        // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue_2; // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0134(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_135[0x3];                                      // 0x0135(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_FTrunc_ReturnValue_2;                     // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_Spirit_Behavior_Mutator_C*          K2Node_DynamicCast_AsBP_Spirit_Behavior_Mutator_2; // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasMutator_ReturnValue_2;                 // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasMutator_ReturnValue_3;                 // 0x014A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasMutator_ReturnValue_4;                 // 0x014B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0150(0x0030)(ContainsInstancedReference)
-	bool                                          CallFunc_HasMutator_ReturnValue_5;                 // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_182[0x6];                                      // 0x0182(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class URPlayerGScriptComponent*               K2Node_DynamicCast_AsRPlayer_GScript_Component;    // 0x0188(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FTrunc_A_ImplicitCast_1;                  // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FTrunc_A_ImplicitCast_2;                  // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class URPlayerGScriptComponent*               GScriptRef;                                        // 0x01F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_204[0x4];                                      // 0x0204(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGCharacterMutatorScript*              CallFunc_GetCharacterMutator_ReturnValue;          // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0214(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_215[0x3];                                      // 0x0215(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21C[0x4];                                      // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_Spirit_Behavior_Mutator_C*          K2Node_DynamicCast_AsBP_Spirit_Behavior_Mutator;   // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasMutator_ReturnValue;                   // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22A[0x6];                                      // 0x022A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGCharacterMutatorScript*              CallFunc_GetCharacterMutator_ReturnValue_1;        // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetMutatorRank_ReturnValue_1;             // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x023C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23D[0x3];                                      // 0x023D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue_1; // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0244(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_Spirit_Behavior_Mutator_C*          K2Node_DynamicCast_AsBP_Spirit_Behavior_Mutator_1; // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasMutator_ReturnValue_1;                 // 0x0251(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_252[0x2];                                      // 0x0252(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetMutatorRank_ReturnValue_2;             // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URGCharacterMutatorScript*              CallFunc_GetCharacterMutator_ReturnValue_2;        // 0x0258(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue_2; // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0264(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_265[0x3];                                      // 0x0265(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_FTrunc_ReturnValue_2;                     // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_26C[0x4];                                      // 0x026C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_Spirit_Behavior_Mutator_C*          K2Node_DynamicCast_AsBP_Spirit_Behavior_Mutator_2; // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasMutator_ReturnValue_2;                 // 0x0279(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasMutator_ReturnValue_3;                 // 0x027A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasMutator_ReturnValue_4;                 // 0x027B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0280(0x0030)(ContainsInstancedReference)
+	bool                                          CallFunc_HasMutator_ReturnValue_5;                 // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x02B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B2[0x6];                                      // 0x02B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class URPlayerGScriptComponent*               K2Node_DynamicCast_AsRPlayer_GScript_Component;    // 0x02B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FTrunc_A_ImplicitCast_1;                  // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FTrunc_A_ImplicitCast_2;                  // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie) == 0x000008, "Wrong alignment on BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie");
-static_assert(sizeof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie) == 0x0001B0, "Wrong size on BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, Component) == 0x000000, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::Component' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, DamageEventData) == 0x000008, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, GScriptRef) == 0x0000C8, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::GScriptRef' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_GetMutatorRank_ReturnValue) == 0x0000D0, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_GetCharacterMutator_ReturnValue) == 0x0000D8, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_GetCharacterMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x0000E0, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_IsValid_ReturnValue) == 0x0000E4, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_FTrunc_ReturnValue) == 0x0000E8, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, K2Node_DynamicCast_AsBP_Spirit_Behavior_Mutator) == 0x0000F0, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::K2Node_DynamicCast_AsBP_Spirit_Behavior_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, K2Node_DynamicCast_bSuccess) == 0x0000F8, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_HasMutator_ReturnValue) == 0x0000F9, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_GetCharacterMutator_ReturnValue_1) == 0x000100, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_GetCharacterMutator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_GetMutatorRank_ReturnValue_1) == 0x000108, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_GetMutatorRank_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_IsValid_ReturnValue_1) == 0x00010C, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_GetMutatorValueByArrayIndex_ReturnValue_1) == 0x000110, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_GetMutatorValueByArrayIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_FTrunc_ReturnValue_1) == 0x000114, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, K2Node_DynamicCast_AsBP_Spirit_Behavior_Mutator_1) == 0x000118, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::K2Node_DynamicCast_AsBP_Spirit_Behavior_Mutator_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, K2Node_DynamicCast_bSuccess_1) == 0x000120, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_HasMutator_ReturnValue_1) == 0x000121, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_HasMutator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_GetMutatorRank_ReturnValue_2) == 0x000124, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_GetMutatorRank_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_GetCharacterMutator_ReturnValue_2) == 0x000128, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_GetCharacterMutator_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_GetMutatorValueByArrayIndex_ReturnValue_2) == 0x000130, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_GetMutatorValueByArrayIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_IsValid_ReturnValue_2) == 0x000134, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_FTrunc_ReturnValue_2) == 0x000138, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_FTrunc_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, K2Node_DynamicCast_AsBP_Spirit_Behavior_Mutator_2) == 0x000140, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::K2Node_DynamicCast_AsBP_Spirit_Behavior_Mutator_2' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, K2Node_DynamicCast_bSuccess_2) == 0x000148, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_HasMutator_ReturnValue_2) == 0x000149, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_HasMutator_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_HasMutator_ReturnValue_3) == 0x00014A, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_HasMutator_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_HasMutator_ReturnValue_4) == 0x00014B, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_HasMutator_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000150, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_HasMutator_ReturnValue_5) == 0x000180, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_HasMutator_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_IsValid_ReturnValue_3) == 0x000181, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x000188, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, K2Node_DynamicCast_bSuccess_3) == 0x000190, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_FTrunc_A_ImplicitCast) == 0x000198, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_FTrunc_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_FTrunc_A_ImplicitCast_1) == 0x0001A0, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_FTrunc_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie, CallFunc_FTrunc_A_ImplicitCast_2) == 0x0001A8, "Member 'BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie::CallFunc_FTrunc_A_ImplicitCast_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpiritPassive6_StatusEffectAilment_C_OnOwnerDie;
 
 }
 

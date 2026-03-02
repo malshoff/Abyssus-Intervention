@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // Enum InterchangeCommon.EInterchangeMaterialXShaders
-// NumValues: 0x0009
+// NumValues: 0x000A
 enum class EInterchangeMaterialXShaders : uint8
 {
 	OpenPBRSurface                           = 0,
@@ -25,8 +25,9 @@ enum class EInterchangeMaterialXShaders : uint8
 	SurfaceUnlit                             = 4,
 	UsdPreviewSurface                        = 5,
 	Surface                                  = 6,
-	MaxShaderCount                           = 7,
-	EInterchangeMaterialXShaders_MAX         = 8,
+	Displacement                             = 7,
+	MaxShaderCount                           = 8,
+	EInterchangeMaterialXShaders_MAX         = 9,
 };
 
 // Enum InterchangeCommon.EInterchangeMaterialXBSDF
@@ -65,6 +66,26 @@ enum class EInterchangeMaterialXVDF : uint8
 	Anisotropic                              = 1,
 	MaxVDFCount                              = 2,
 	EInterchangeMaterialXVDF_MAX             = 3,
+};
+
+// Enum InterchangeCommon.EInterchangeUsdPrimvar
+// NumValues: 0x0004
+enum class EInterchangeUsdPrimvar : uint8
+{
+	Standard                                 = 0,
+	Bake                                     = 1,
+	All                                      = 2,
+	EInterchangeUsdPrimvar_MAX               = 3,
+};
+
+// Enum InterchangeCommon.EInterchangeSparseVolumeTextureFormat
+// NumValues: 0x0004
+enum class EInterchangeSparseVolumeTextureFormat : uint8
+{
+	Unorm8                                   = 0,
+	Float16                                  = 1,
+	Float32                                  = 2,
+	EInterchangeSparseVolumeTextureFormat_MAX = 3,
 };
 
 }

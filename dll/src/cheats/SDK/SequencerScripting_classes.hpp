@@ -14,6 +14,7 @@
 #include "MovieScene_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "MovieSceneTracks_structs.hpp"
 
 
 namespace SDK
@@ -29,15 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingKey">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingKey")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingKey")
 	}
 	static class UMovieSceneScriptingKey* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingKey>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingKey) == 0x000008, "Wrong alignment on UMovieSceneScriptingKey");
-static_assert(sizeof(UMovieSceneScriptingKey) == 0x000040, "Wrong size on UMovieSceneScriptingKey");
+DUMPER7_ASSERTS_UMovieSceneScriptingKey;
 
 // Class SequencerScripting.MovieSceneScriptingActorReferenceKey
 // 0x0020 (0x0060 - 0x0040)
@@ -56,15 +60,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingActorReferenceKey">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingActorReferenceKey")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingActorReferenceKey")
 	}
 	static class UMovieSceneScriptingActorReferenceKey* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingActorReferenceKey>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingActorReferenceKey) == 0x000008, "Wrong alignment on UMovieSceneScriptingActorReferenceKey");
-static_assert(sizeof(UMovieSceneScriptingActorReferenceKey) == 0x000060, "Wrong size on UMovieSceneScriptingActorReferenceKey");
+DUMPER7_ASSERTS_UMovieSceneScriptingActorReferenceKey;
 
 // Class SequencerScripting.MovieSceneScriptingChannel
 // 0x0008 (0x0030 - 0x0028)
@@ -76,16 +83,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingChannel">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingChannel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingChannel")
 	}
 	static class UMovieSceneScriptingChannel* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingChannel>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingChannel) == 0x000008, "Wrong alignment on UMovieSceneScriptingChannel");
-static_assert(sizeof(UMovieSceneScriptingChannel) == 0x000030, "Wrong size on UMovieSceneScriptingChannel");
-static_assert(offsetof(UMovieSceneScriptingChannel, ChannelName) == 0x000028, "Member 'UMovieSceneScriptingChannel::ChannelName' has a wrong offset!");
+DUMPER7_ASSERTS_UMovieSceneScriptingChannel;
 
 // Class SequencerScripting.MovieSceneScriptingActorReferenceChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -99,6 +108,7 @@ public:
 	void RemoveDefault();
 	void RemoveKey(class UMovieSceneScriptingKey* Key);
 	void SetDefault(const struct FMovieSceneObjectBindingID& InDefaultValue);
+	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
 
 	struct FMovieSceneObjectBindingID GetDefault() const;
 	TArray<class UMovieSceneScriptingKey*> GetKeys() const;
@@ -108,15 +118,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingActorReferenceChannel">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingActorReferenceChannel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingActorReferenceChannel")
 	}
 	static class UMovieSceneScriptingActorReferenceChannel* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingActorReferenceChannel>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingActorReferenceChannel) == 0x000008, "Wrong alignment on UMovieSceneScriptingActorReferenceChannel");
-static_assert(sizeof(UMovieSceneScriptingActorReferenceChannel) == 0x000060, "Wrong size on UMovieSceneScriptingActorReferenceChannel");
+DUMPER7_ASSERTS_UMovieSceneScriptingActorReferenceChannel;
 
 // Class SequencerScripting.MovieSceneScriptingBoolKey
 // 0x0020 (0x0060 - 0x0040)
@@ -135,15 +148,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingBoolKey">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingBoolKey")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingBoolKey")
 	}
 	static class UMovieSceneScriptingBoolKey* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingBoolKey>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingBoolKey) == 0x000008, "Wrong alignment on UMovieSceneScriptingBoolKey");
-static_assert(sizeof(UMovieSceneScriptingBoolKey) == 0x000060, "Wrong size on UMovieSceneScriptingBoolKey");
+DUMPER7_ASSERTS_UMovieSceneScriptingBoolKey;
 
 // Class SequencerScripting.MovieSceneScriptingBoolChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -157,6 +173,7 @@ public:
 	void RemoveDefault();
 	void RemoveKey(class UMovieSceneScriptingKey* Key);
 	void SetDefault(bool InDefaultValue);
+	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
 
 	struct FSequencerScriptingRange ComputeEffectiveRange() const;
 	TArray<bool> EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate) const;
@@ -169,15 +186,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingBoolChannel">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingBoolChannel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingBoolChannel")
 	}
 	static class UMovieSceneScriptingBoolChannel* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingBoolChannel>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingBoolChannel) == 0x000008, "Wrong alignment on UMovieSceneScriptingBoolChannel");
-static_assert(sizeof(UMovieSceneScriptingBoolChannel) == 0x000060, "Wrong size on UMovieSceneScriptingBoolChannel");
+DUMPER7_ASSERTS_UMovieSceneScriptingBoolChannel;
 
 // Class SequencerScripting.MovieSceneScriptingByteKey
 // 0x0020 (0x0060 - 0x0040)
@@ -196,15 +216,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingByteKey">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingByteKey")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingByteKey")
 	}
 	static class UMovieSceneScriptingByteKey* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingByteKey>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingByteKey) == 0x000008, "Wrong alignment on UMovieSceneScriptingByteKey");
-static_assert(sizeof(UMovieSceneScriptingByteKey) == 0x000060, "Wrong size on UMovieSceneScriptingByteKey");
+DUMPER7_ASSERTS_UMovieSceneScriptingByteKey;
 
 // Class SequencerScripting.MovieSceneScriptingByteChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -218,6 +241,7 @@ public:
 	void RemoveDefault();
 	void RemoveKey(class UMovieSceneScriptingKey* Key);
 	void SetDefault(uint8 InDefaultValue);
+	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
 
 	uint8 GetDefault() const;
 	TArray<class UMovieSceneScriptingKey*> GetKeys() const;
@@ -227,15 +251,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingByteChannel">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingByteChannel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingByteChannel")
 	}
 	static class UMovieSceneScriptingByteChannel* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingByteChannel>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingByteChannel) == 0x000008, "Wrong alignment on UMovieSceneScriptingByteChannel");
-static_assert(sizeof(UMovieSceneScriptingByteChannel) == 0x000060, "Wrong size on UMovieSceneScriptingByteChannel");
+DUMPER7_ASSERTS_UMovieSceneScriptingByteChannel;
 
 // Class SequencerScripting.MovieSceneScriptingDoubleKey
 // 0x0020 (0x0060 - 0x0040)
@@ -268,15 +295,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingDoubleKey">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingDoubleKey")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingDoubleKey")
 	}
 	static class UMovieSceneScriptingDoubleKey* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingDoubleKey>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingDoubleKey) == 0x000008, "Wrong alignment on UMovieSceneScriptingDoubleKey");
-static_assert(sizeof(UMovieSceneScriptingDoubleKey) == 0x000060, "Wrong size on UMovieSceneScriptingDoubleKey");
+DUMPER7_ASSERTS_UMovieSceneScriptingDoubleKey;
 
 // Class SequencerScripting.MovieSceneScriptingDoubleChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -292,6 +322,7 @@ public:
 	void SetDefault(double InDefaultValue);
 	void SetPostInfinityExtrapolation(ERichCurveExtrapolation InExtrapolation);
 	void SetPreInfinityExtrapolation(ERichCurveExtrapolation InExtrapolation);
+	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
 
 	struct FSequencerScriptingRange ComputeEffectiveRange() const;
 	TArray<double> EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate) const;
@@ -306,15 +337,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingDoubleChannel">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingDoubleChannel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingDoubleChannel")
 	}
 	static class UMovieSceneScriptingDoubleChannel* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingDoubleChannel>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingDoubleChannel) == 0x000008, "Wrong alignment on UMovieSceneScriptingDoubleChannel");
-static_assert(sizeof(UMovieSceneScriptingDoubleChannel) == 0x000060, "Wrong size on UMovieSceneScriptingDoubleChannel");
+DUMPER7_ASSERTS_UMovieSceneScriptingDoubleChannel;
 
 // Class SequencerScripting.MovieSceneScriptingEventKey
 // 0x0020 (0x0060 - 0x0040)
@@ -333,15 +367,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingEventKey">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingEventKey")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingEventKey")
 	}
 	static class UMovieSceneScriptingEventKey* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingEventKey>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingEventKey) == 0x000008, "Wrong alignment on UMovieSceneScriptingEventKey");
-static_assert(sizeof(UMovieSceneScriptingEventKey) == 0x000060, "Wrong size on UMovieSceneScriptingEventKey");
+DUMPER7_ASSERTS_UMovieSceneScriptingEventKey;
 
 // Class SequencerScripting.MovieSceneScriptingEventChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -353,6 +390,7 @@ public:
 public:
 	class UMovieSceneScriptingEventKey* AddKey(const struct FFrameNumber& InTime, const struct FMovieSceneEvent& NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit);
 	void RemoveKey(class UMovieSceneScriptingKey* Key);
+	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
 
 	TArray<class UMovieSceneScriptingKey*> GetKeys() const;
 	TArray<class UMovieSceneScriptingKey*> GetKeysByIndex(const TArray<int32>& Indices) const;
@@ -360,15 +398,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingEventChannel">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingEventChannel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingEventChannel")
 	}
 	static class UMovieSceneScriptingEventChannel* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingEventChannel>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingEventChannel) == 0x000008, "Wrong alignment on UMovieSceneScriptingEventChannel");
-static_assert(sizeof(UMovieSceneScriptingEventChannel) == 0x000060, "Wrong size on UMovieSceneScriptingEventChannel");
+DUMPER7_ASSERTS_UMovieSceneScriptingEventChannel;
 
 // Class SequencerScripting.MovieSceneScriptingFloatKey
 // 0x0000 (0x0040 - 0x0040)
@@ -398,15 +439,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingFloatKey">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingFloatKey")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingFloatKey")
 	}
 	static class UMovieSceneScriptingFloatKey* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingFloatKey>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingFloatKey) == 0x000008, "Wrong alignment on UMovieSceneScriptingFloatKey");
-static_assert(sizeof(UMovieSceneScriptingFloatKey) == 0x000040, "Wrong size on UMovieSceneScriptingFloatKey");
+DUMPER7_ASSERTS_UMovieSceneScriptingFloatKey;
 
 // Class SequencerScripting.MovieSceneScriptingActualFloatKey
 // 0x0020 (0x0060 - 0x0040)
@@ -418,15 +462,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingActualFloatKey">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingActualFloatKey")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingActualFloatKey")
 	}
 	static class UMovieSceneScriptingActualFloatKey* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingActualFloatKey>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingActualFloatKey) == 0x000008, "Wrong alignment on UMovieSceneScriptingActualFloatKey");
-static_assert(sizeof(UMovieSceneScriptingActualFloatKey) == 0x000060, "Wrong size on UMovieSceneScriptingActualFloatKey");
+DUMPER7_ASSERTS_UMovieSceneScriptingActualFloatKey;
 
 // Class SequencerScripting.MovieSceneScriptingDoubleAsFloatKey
 // 0x0020 (0x0060 - 0x0040)
@@ -438,15 +485,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingDoubleAsFloatKey">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingDoubleAsFloatKey")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingDoubleAsFloatKey")
 	}
 	static class UMovieSceneScriptingDoubleAsFloatKey* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingDoubleAsFloatKey>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingDoubleAsFloatKey) == 0x000008, "Wrong alignment on UMovieSceneScriptingDoubleAsFloatKey");
-static_assert(sizeof(UMovieSceneScriptingDoubleAsFloatKey) == 0x000060, "Wrong size on UMovieSceneScriptingDoubleAsFloatKey");
+DUMPER7_ASSERTS_UMovieSceneScriptingDoubleAsFloatKey;
 
 // Class SequencerScripting.MovieSceneScriptingFloatChannel
 // 0x0050 (0x0080 - 0x0030)
@@ -462,6 +512,7 @@ public:
 	void SetDefault(float InDefaultValue);
 	void SetPostInfinityExtrapolation(ERichCurveExtrapolation InExtrapolation);
 	void SetPreInfinityExtrapolation(ERichCurveExtrapolation InExtrapolation);
+	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
 
 	struct FSequencerScriptingRange ComputeEffectiveRange() const;
 	TArray<float> EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate) const;
@@ -476,15 +527,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingFloatChannel">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingFloatChannel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingFloatChannel")
 	}
 	static class UMovieSceneScriptingFloatChannel* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingFloatChannel>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingFloatChannel) == 0x000008, "Wrong alignment on UMovieSceneScriptingFloatChannel");
-static_assert(sizeof(UMovieSceneScriptingFloatChannel) == 0x000080, "Wrong size on UMovieSceneScriptingFloatChannel");
+DUMPER7_ASSERTS_UMovieSceneScriptingFloatChannel;
 
 // Class SequencerScripting.MovieSceneScriptingIntegerKey
 // 0x0020 (0x0060 - 0x0040)
@@ -503,15 +557,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingIntegerKey">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingIntegerKey")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingIntegerKey")
 	}
 	static class UMovieSceneScriptingIntegerKey* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingIntegerKey>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingIntegerKey) == 0x000008, "Wrong alignment on UMovieSceneScriptingIntegerKey");
-static_assert(sizeof(UMovieSceneScriptingIntegerKey) == 0x000060, "Wrong size on UMovieSceneScriptingIntegerKey");
+DUMPER7_ASSERTS_UMovieSceneScriptingIntegerKey;
 
 // Class SequencerScripting.MovieSceneScriptingIntegerChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -526,6 +583,7 @@ public:
 	void RemoveKey(class UMovieSceneScriptingKey* Key);
 	void SetDefault(int32 InDefaultValue);
 	void SetInterpolateLinearKeys(bool bInInterpolateLinearKeys);
+	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
 
 	TArray<int32> EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate) const;
 	int32 GetDefault() const;
@@ -538,15 +596,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingIntegerChannel">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingIntegerChannel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingIntegerChannel")
 	}
 	static class UMovieSceneScriptingIntegerChannel* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingIntegerChannel>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingIntegerChannel) == 0x000008, "Wrong alignment on UMovieSceneScriptingIntegerChannel");
-static_assert(sizeof(UMovieSceneScriptingIntegerChannel) == 0x000060, "Wrong size on UMovieSceneScriptingIntegerChannel");
+DUMPER7_ASSERTS_UMovieSceneScriptingIntegerChannel;
 
 // Class SequencerScripting.MovieSceneScriptingObjectPathKey
 // 0x0020 (0x0060 - 0x0040)
@@ -565,15 +626,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingObjectPathKey">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingObjectPathKey")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingObjectPathKey")
 	}
 	static class UMovieSceneScriptingObjectPathKey* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingObjectPathKey>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingObjectPathKey) == 0x000008, "Wrong alignment on UMovieSceneScriptingObjectPathKey");
-static_assert(sizeof(UMovieSceneScriptingObjectPathKey) == 0x000060, "Wrong size on UMovieSceneScriptingObjectPathKey");
+DUMPER7_ASSERTS_UMovieSceneScriptingObjectPathKey;
 
 // Class SequencerScripting.MovieSceneScriptingObjectPathChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -587,6 +651,7 @@ public:
 	void RemoveDefault();
 	void RemoveKey(class UMovieSceneScriptingKey* Key);
 	void SetDefault(class UObject* InDefaultValue);
+	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
 
 	class UObject* GetDefault() const;
 	TArray<class UMovieSceneScriptingKey*> GetKeys() const;
@@ -596,15 +661,86 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingObjectPathChannel">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingObjectPathChannel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingObjectPathChannel")
 	}
 	static class UMovieSceneScriptingObjectPathChannel* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingObjectPathChannel>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingObjectPathChannel) == 0x000008, "Wrong alignment on UMovieSceneScriptingObjectPathChannel");
-static_assert(sizeof(UMovieSceneScriptingObjectPathChannel) == 0x000060, "Wrong size on UMovieSceneScriptingObjectPathChannel");
+DUMPER7_ASSERTS_UMovieSceneScriptingObjectPathChannel;
+
+// Class SequencerScripting.MovieSceneScriptingParticleKey
+// 0x0020 (0x0060 - 0x0040)
+class UMovieSceneScriptingParticleKey final : public UMovieSceneScriptingKey
+{
+public:
+	uint8                                         Pad_40[0x20];                                      // 0x0040(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);
+	void SetValue(EParticleKey InNewValue);
+
+	struct FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit) const;
+	EParticleKey GetValue() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneScriptingParticleKey")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingParticleKey")
+	}
+	static class UMovieSceneScriptingParticleKey* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneScriptingParticleKey>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneScriptingParticleKey;
+
+// Class SequencerScripting.MovieSceneScriptingParticleChannel
+// 0x0030 (0x0060 - 0x0030)
+class UMovieSceneScriptingParticleChannel final : public UMovieSceneScriptingChannel
+{
+public:
+	uint8                                         Pad_30[0x30];                                      // 0x0030(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class UMovieSceneScriptingParticleKey* AddKey(const struct FFrameNumber& InTime, EParticleKey NewParticleValue, float SubFrame, EMovieSceneTimeUnit TimeUnit);
+	void RemoveDefault();
+	void RemoveKey(class UMovieSceneScriptingKey* Key);
+	void SetDefault(EParticleKey InDefaultValue);
+	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
+
+	struct FSequencerScriptingRange ComputeEffectiveRange() const;
+	TArray<EParticleKey> EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate) const;
+	EParticleKey GetDefault() const;
+	TArray<class UMovieSceneScriptingKey*> GetKeys() const;
+	TArray<class UMovieSceneScriptingKey*> GetKeysByIndex(const TArray<int32>& Indices) const;
+	int32 GetNumKeys() const;
+	bool HasDefault() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneScriptingParticleChannel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingParticleChannel")
+	}
+	static class UMovieSceneScriptingParticleChannel* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneScriptingParticleChannel>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneScriptingParticleChannel;
 
 // Class SequencerScripting.MovieSceneScriptingStringKey
 // 0x0020 (0x0060 - 0x0040)
@@ -623,15 +759,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingStringKey">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingStringKey")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingStringKey")
 	}
 	static class UMovieSceneScriptingStringKey* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingStringKey>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingStringKey) == 0x000008, "Wrong alignment on UMovieSceneScriptingStringKey");
-static_assert(sizeof(UMovieSceneScriptingStringKey) == 0x000060, "Wrong size on UMovieSceneScriptingStringKey");
+DUMPER7_ASSERTS_UMovieSceneScriptingStringKey;
 
 // Class SequencerScripting.MovieSceneScriptingStringChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -645,6 +784,7 @@ public:
 	void RemoveDefault();
 	void RemoveKey(class UMovieSceneScriptingKey* Key);
 	void SetDefault(const class FString& InDefaultValue);
+	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
 
 	class FString GetDefault() const;
 	TArray<class UMovieSceneScriptingKey*> GetKeys() const;
@@ -654,15 +794,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneScriptingStringChannel">();
+		STATIC_CLASS_IMPL("MovieSceneScriptingStringChannel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingStringChannel")
 	}
 	static class UMovieSceneScriptingStringChannel* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneScriptingStringChannel>();
 	}
 };
-static_assert(alignof(UMovieSceneScriptingStringChannel) == 0x000008, "Wrong alignment on UMovieSceneScriptingStringChannel");
-static_assert(sizeof(UMovieSceneScriptingStringChannel) == 0x000060, "Wrong size on UMovieSceneScriptingStringChannel");
+DUMPER7_ASSERTS_UMovieSceneScriptingStringChannel;
 
 // Class SequencerScripting.MovieSceneBindingExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -670,6 +813,7 @@ class UMovieSceneBindingExtensions final : public UBlueprintFunctionLibrary
 {
 public:
 	static class UMovieSceneTrack* AddTrack(const struct FMovieSceneBindingProxy& InBinding, TSubclassOf<class UMovieSceneTrack> TrackType);
+	static bool EqualEqual_MovieSceneBindingProxy(const struct FMovieSceneBindingProxy& A, const struct FMovieSceneBindingProxy& B);
 	static TArray<class UMovieSceneTrack*> FindTracksByExactType(const struct FMovieSceneBindingProxy& InBinding, TSubclassOf<class UMovieSceneTrack> TrackType);
 	static TArray<class UMovieSceneTrack*> FindTracksByType(const struct FMovieSceneBindingProxy& InBinding, TSubclassOf<class UMovieSceneTrack> TrackType);
 	static TArray<struct FMovieSceneBindingProxy> GetChildPossessables(const struct FMovieSceneBindingProxy& InBinding);
@@ -683,6 +827,7 @@ public:
 	static TArray<class UMovieSceneTrack*> GetTracks(const struct FMovieSceneBindingProxy& InBinding);
 	static bool IsValid(const struct FMovieSceneBindingProxy& InBinding);
 	static void MoveBindingContents(const struct FMovieSceneBindingProxy& SourceBindingId, const struct FMovieSceneBindingProxy& DestinationBindingId);
+	static bool NotEqual_MovieSceneBindingProxy(const struct FMovieSceneBindingProxy& A, const struct FMovieSceneBindingProxy& B);
 	static void Remove(const struct FMovieSceneBindingProxy& InBinding);
 	static void RemoveTrack(const struct FMovieSceneBindingProxy& InBinding, class UMovieSceneTrack* TrackToRemove);
 	static void SetDisplayName(const struct FMovieSceneBindingProxy& InBinding, const class FText& InDisplayName);
@@ -694,15 +839,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneBindingExtensions">();
+		STATIC_CLASS_IMPL("MovieSceneBindingExtensions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneBindingExtensions")
 	}
 	static class UMovieSceneBindingExtensions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneBindingExtensions>();
 	}
 };
-static_assert(alignof(UMovieSceneBindingExtensions) == 0x000008, "Wrong alignment on UMovieSceneBindingExtensions");
-static_assert(sizeof(UMovieSceneBindingExtensions) == 0x000028, "Wrong size on UMovieSceneBindingExtensions");
+DUMPER7_ASSERTS_UMovieSceneBindingExtensions;
 
 // Class SequencerScripting.MovieSceneEventTrackExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -716,15 +864,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneEventTrackExtensions">();
+		STATIC_CLASS_IMPL("MovieSceneEventTrackExtensions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneEventTrackExtensions")
 	}
 	static class UMovieSceneEventTrackExtensions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneEventTrackExtensions>();
 	}
 };
-static_assert(alignof(UMovieSceneEventTrackExtensions) == 0x000008, "Wrong alignment on UMovieSceneEventTrackExtensions");
-static_assert(sizeof(UMovieSceneEventTrackExtensions) == 0x000028, "Wrong size on UMovieSceneEventTrackExtensions");
+DUMPER7_ASSERTS_UMovieSceneEventTrackExtensions;
 
 // Class SequencerScripting.MovieSceneFolderExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -748,15 +899,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneFolderExtensions">();
+		STATIC_CLASS_IMPL("MovieSceneFolderExtensions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneFolderExtensions")
 	}
 	static class UMovieSceneFolderExtensions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneFolderExtensions>();
 	}
 };
-static_assert(alignof(UMovieSceneFolderExtensions) == 0x000008, "Wrong alignment on UMovieSceneFolderExtensions");
-static_assert(sizeof(UMovieSceneFolderExtensions) == 0x000028, "Wrong size on UMovieSceneFolderExtensions");
+DUMPER7_ASSERTS_UMovieSceneFolderExtensions;
 
 // Class SequencerScripting.MovieSceneMaterialTrackExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -771,15 +925,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneMaterialTrackExtensions">();
+		STATIC_CLASS_IMPL("MovieSceneMaterialTrackExtensions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneMaterialTrackExtensions")
 	}
 	static class UMovieSceneMaterialTrackExtensions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneMaterialTrackExtensions>();
 	}
 };
-static_assert(alignof(UMovieSceneMaterialTrackExtensions) == 0x000008, "Wrong alignment on UMovieSceneMaterialTrackExtensions");
-static_assert(sizeof(UMovieSceneMaterialTrackExtensions) == 0x000028, "Wrong size on UMovieSceneMaterialTrackExtensions");
+DUMPER7_ASSERTS_UMovieSceneMaterialTrackExtensions;
 
 // Class SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -794,15 +951,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieScenePrimitiveMaterialTrackExtensions">();
+		STATIC_CLASS_IMPL("MovieScenePrimitiveMaterialTrackExtensions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieScenePrimitiveMaterialTrackExtensions")
 	}
 	static class UMovieScenePrimitiveMaterialTrackExtensions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieScenePrimitiveMaterialTrackExtensions>();
 	}
 };
-static_assert(alignof(UMovieScenePrimitiveMaterialTrackExtensions) == 0x000008, "Wrong alignment on UMovieScenePrimitiveMaterialTrackExtensions");
-static_assert(sizeof(UMovieScenePrimitiveMaterialTrackExtensions) == 0x000028, "Wrong size on UMovieScenePrimitiveMaterialTrackExtensions");
+DUMPER7_ASSERTS_UMovieScenePrimitiveMaterialTrackExtensions;
 
 // Class SequencerScripting.MovieScenePropertyTrackExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -821,15 +981,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieScenePropertyTrackExtensions">();
+		STATIC_CLASS_IMPL("MovieScenePropertyTrackExtensions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieScenePropertyTrackExtensions")
 	}
 	static class UMovieScenePropertyTrackExtensions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieScenePropertyTrackExtensions>();
 	}
 };
-static_assert(alignof(UMovieScenePropertyTrackExtensions) == 0x000008, "Wrong alignment on UMovieScenePropertyTrackExtensions");
-static_assert(sizeof(UMovieScenePropertyTrackExtensions) == 0x000028, "Wrong size on UMovieScenePropertyTrackExtensions");
+DUMPER7_ASSERTS_UMovieScenePropertyTrackExtensions;
 
 // Class SequencerScripting.MovieSceneSectionExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -864,15 +1027,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneSectionExtensions">();
+		STATIC_CLASS_IMPL("MovieSceneSectionExtensions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneSectionExtensions")
 	}
 	static class UMovieSceneSectionExtensions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneSectionExtensions>();
 	}
 };
-static_assert(alignof(UMovieSceneSectionExtensions) == 0x000008, "Wrong alignment on UMovieSceneSectionExtensions");
-static_assert(sizeof(UMovieSceneSectionExtensions) == 0x000028, "Wrong size on UMovieSceneSectionExtensions");
+DUMPER7_ASSERTS_UMovieSceneSectionExtensions;
 
 // Class SequencerScripting.MovieSceneSequenceExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -952,15 +1118,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneSequenceExtensions">();
+		STATIC_CLASS_IMPL("MovieSceneSequenceExtensions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneSequenceExtensions")
 	}
 	static class UMovieSceneSequenceExtensions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneSequenceExtensions>();
 	}
 };
-static_assert(alignof(UMovieSceneSequenceExtensions) == 0x000008, "Wrong alignment on UMovieSceneSequenceExtensions");
-static_assert(sizeof(UMovieSceneSequenceExtensions) == 0x000028, "Wrong size on UMovieSceneSequenceExtensions");
+DUMPER7_ASSERTS_UMovieSceneSequenceExtensions;
 
 // Class SequencerScripting.MovieSceneTimeWarpExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -977,15 +1146,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneTimeWarpExtensions">();
+		STATIC_CLASS_IMPL("MovieSceneTimeWarpExtensions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneTimeWarpExtensions")
 	}
 	static class UMovieSceneTimeWarpExtensions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneTimeWarpExtensions>();
 	}
 };
-static_assert(alignof(UMovieSceneTimeWarpExtensions) == 0x000008, "Wrong alignment on UMovieSceneTimeWarpExtensions");
-static_assert(sizeof(UMovieSceneTimeWarpExtensions) == 0x000028, "Wrong size on UMovieSceneTimeWarpExtensions");
+DUMPER7_ASSERTS_UMovieSceneTimeWarpExtensions;
 
 // Class SequencerScripting.MovieSceneTrackExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -1009,15 +1181,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneTrackExtensions">();
+		STATIC_CLASS_IMPL("MovieSceneTrackExtensions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneTrackExtensions")
 	}
 	static class UMovieSceneTrackExtensions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneTrackExtensions>();
 	}
 };
-static_assert(alignof(UMovieSceneTrackExtensions) == 0x000008, "Wrong alignment on UMovieSceneTrackExtensions");
-static_assert(sizeof(UMovieSceneTrackExtensions) == 0x000028, "Wrong size on UMovieSceneTrackExtensions");
+DUMPER7_ASSERTS_UMovieSceneTrackExtensions;
 
 // Class SequencerScripting.MovieSceneFloatVectorTrackExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -1030,15 +1205,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneFloatVectorTrackExtensions">();
+		STATIC_CLASS_IMPL("MovieSceneFloatVectorTrackExtensions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneFloatVectorTrackExtensions")
 	}
 	static class UMovieSceneFloatVectorTrackExtensions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneFloatVectorTrackExtensions>();
 	}
 };
-static_assert(alignof(UMovieSceneFloatVectorTrackExtensions) == 0x000008, "Wrong alignment on UMovieSceneFloatVectorTrackExtensions");
-static_assert(sizeof(UMovieSceneFloatVectorTrackExtensions) == 0x000028, "Wrong size on UMovieSceneFloatVectorTrackExtensions");
+DUMPER7_ASSERTS_UMovieSceneFloatVectorTrackExtensions;
 
 // Class SequencerScripting.MovieSceneDoubleVectorTrackExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -1051,15 +1229,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneDoubleVectorTrackExtensions">();
+		STATIC_CLASS_IMPL("MovieSceneDoubleVectorTrackExtensions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneDoubleVectorTrackExtensions")
 	}
 	static class UMovieSceneDoubleVectorTrackExtensions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneDoubleVectorTrackExtensions>();
 	}
 };
-static_assert(alignof(UMovieSceneDoubleVectorTrackExtensions) == 0x000008, "Wrong alignment on UMovieSceneDoubleVectorTrackExtensions");
-static_assert(sizeof(UMovieSceneDoubleVectorTrackExtensions) == 0x000028, "Wrong size on UMovieSceneDoubleVectorTrackExtensions");
+DUMPER7_ASSERTS_UMovieSceneDoubleVectorTrackExtensions;
 
 // Class SequencerScripting.SequencerScriptingRangeExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -1082,15 +1263,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SequencerScriptingRangeExtensions">();
+		STATIC_CLASS_IMPL("SequencerScriptingRangeExtensions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SequencerScriptingRangeExtensions")
 	}
 	static class USequencerScriptingRangeExtensions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USequencerScriptingRangeExtensions>();
 	}
 };
-static_assert(alignof(USequencerScriptingRangeExtensions) == 0x000008, "Wrong alignment on USequencerScriptingRangeExtensions");
-static_assert(sizeof(USequencerScriptingRangeExtensions) == 0x000028, "Wrong size on USequencerScriptingRangeExtensions");
+DUMPER7_ASSERTS_USequencerScriptingRangeExtensions;
 
 }
 

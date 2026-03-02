@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function GLTFExporter.GLTFExportOptions.ResetToDefault
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UGLTFExportOptions::ResetToDefault()
 {
@@ -37,7 +37,7 @@ void UGLTFExportOptions::ResetToDefault()
 
 
 // Function GLTFExporter.GLTFExporter.ExportToGLTF
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UObject*                          Object                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    FilePath                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -75,7 +75,7 @@ bool UGLTFExporter::ExportToGLTF(class UObject* Object, const class FString& Fil
 
 
 // Function GLTFExporter.GLTFProxyOptions.ResetToDefault
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UGLTFProxyOptions::ResetToDefault()
 {

@@ -23,15 +23,18 @@ class UWBP_CheckBox_C final : public UCheckBox
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"WBP_CheckBox_C">();
+		BP_STATIC_CLASS_IMPL("WBP_CheckBox_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WBP_CheckBox_C")
 	}
 	static class UWBP_CheckBox_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWBP_CheckBox_C>();
 	}
 };
-static_assert(alignof(UWBP_CheckBox_C) == 0x000010, "Wrong alignment on UWBP_CheckBox_C");
-static_assert(sizeof(UWBP_CheckBox_C) == 0x000B20, "Wrong size on UWBP_CheckBox_C");
+DUMPER7_ASSERTS_UWBP_CheckBox_C;
 
 }
 

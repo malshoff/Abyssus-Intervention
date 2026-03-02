@@ -19,18 +19,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_DashCooldownBar.Widget_DashCooldownBar_C
-// 0x0040 (0x0310 - 0x02D0)
+// 0x0040 (0x0380 - 0x0340)
 class UWidget_DashCooldownBar_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           ProgressBar;                                       // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           ProgressBar_1;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBP_EngineRifle_Script_C*               AsBPEngineRifleScript;                             // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           AsRPlayerPawn;                                     // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           TickTimer;                                         // 0x0300(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UBP_Activatable_CharacterMutator_C*     CachedDashAbilityScript;                           // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UProgressBar*                           ProgressBar_1;                                     // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           ProgressBar;                                       // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBP_EngineRifle_Script_C*               AsBPEngineRifleScript;                             // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           AsRPlayerPawn;                                     // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           TickTimer;                                         // 0x0370(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UBP_Activatable_CharacterMutator_C*     CachedDashAbilityScript;                           // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Widget_DashCooldownBar(int32 EntryPoint);
@@ -42,23 +42,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_DashCooldownBar_C">();
+		BP_STATIC_CLASS_IMPL("Widget_DashCooldownBar_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_DashCooldownBar_C")
 	}
 	static class UWidget_DashCooldownBar_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_DashCooldownBar_C>();
 	}
 };
-static_assert(alignof(UWidget_DashCooldownBar_C) == 0x000008, "Wrong alignment on UWidget_DashCooldownBar_C");
-static_assert(sizeof(UWidget_DashCooldownBar_C) == 0x000310, "Wrong size on UWidget_DashCooldownBar_C");
-static_assert(offsetof(UWidget_DashCooldownBar_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_DashCooldownBar_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_DashCooldownBar_C, InvalidationBox_0) == 0x0002D8, "Member 'UWidget_DashCooldownBar_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_DashCooldownBar_C, ProgressBar) == 0x0002E0, "Member 'UWidget_DashCooldownBar_C::ProgressBar' has a wrong offset!");
-static_assert(offsetof(UWidget_DashCooldownBar_C, ProgressBar_1) == 0x0002E8, "Member 'UWidget_DashCooldownBar_C::ProgressBar_1' has a wrong offset!");
-static_assert(offsetof(UWidget_DashCooldownBar_C, AsBPEngineRifleScript) == 0x0002F0, "Member 'UWidget_DashCooldownBar_C::AsBPEngineRifleScript' has a wrong offset!");
-static_assert(offsetof(UWidget_DashCooldownBar_C, AsRPlayerPawn) == 0x0002F8, "Member 'UWidget_DashCooldownBar_C::AsRPlayerPawn' has a wrong offset!");
-static_assert(offsetof(UWidget_DashCooldownBar_C, TickTimer) == 0x000300, "Member 'UWidget_DashCooldownBar_C::TickTimer' has a wrong offset!");
-static_assert(offsetof(UWidget_DashCooldownBar_C, CachedDashAbilityScript) == 0x000308, "Member 'UWidget_DashCooldownBar_C::CachedDashAbilityScript' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_DashCooldownBar_C;
 
 }
 

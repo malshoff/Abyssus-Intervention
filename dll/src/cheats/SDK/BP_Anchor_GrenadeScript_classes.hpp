@@ -18,30 +18,36 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Anchor_GrenadeScript.BP_Anchor_GrenadeScript_C
-// 0x0008 (0x00F0 - 0x00E8)
+// 0x0010 (0x00F8 - 0x00E8)
 class UBP_Anchor_GrenadeScript_C final : public URGGrenadeScript
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        LoopAC;                                            // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Anchor_GrenadeScript(int32 EntryPoint);
 	void FireScriptAbility();
+	void K2_ActivateScript();
+	void K2_DeactivateScript();
 	void K2_OnBounce();
+	void K2_ProjectileDisabled();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Anchor_GrenadeScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_Anchor_GrenadeScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Anchor_GrenadeScript_C")
 	}
 	static class UBP_Anchor_GrenadeScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Anchor_GrenadeScript_C>();
 	}
 };
-static_assert(alignof(UBP_Anchor_GrenadeScript_C) == 0x000008, "Wrong alignment on UBP_Anchor_GrenadeScript_C");
-static_assert(sizeof(UBP_Anchor_GrenadeScript_C) == 0x0000F0, "Wrong size on UBP_Anchor_GrenadeScript_C");
-static_assert(offsetof(UBP_Anchor_GrenadeScript_C, UberGraphFrame) == 0x0000E8, "Member 'UBP_Anchor_GrenadeScript_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Anchor_GrenadeScript_C;
 
 }
 

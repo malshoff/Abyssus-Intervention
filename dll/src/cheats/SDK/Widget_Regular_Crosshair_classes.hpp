@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -17,27 +18,34 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_Regular_Crosshair.Widget_Regular_Crosshair_C
-// 0x0010 (0x0350 - 0x0340)
+// 0x0018 (0x03C8 - 0x03B0)
 class UWidget_Regular_Crosshair_C final : public URSpacerCrosshair
 {
 public:
-	class UWidgetAnimation*                       AimOffset;                                         // 0x0340(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UScaleBox*                              ScaleBox_1;                                        // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UScaleBox*                              ScaleBox_1;                                        // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       AimOffset;                                         // 0x03C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void ExecuteUbergraph_Widget_Regular_Crosshair(int32 EntryPoint);
+	void OnCrosshairColorChanged(const struct FLinearColor& NewColor);
+	void OnInitialized();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_Regular_Crosshair_C">();
+		BP_STATIC_CLASS_IMPL("Widget_Regular_Crosshair_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_Regular_Crosshair_C")
 	}
 	static class UWidget_Regular_Crosshair_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_Regular_Crosshair_C>();
 	}
 };
-static_assert(alignof(UWidget_Regular_Crosshair_C) == 0x000008, "Wrong alignment on UWidget_Regular_Crosshair_C");
-static_assert(sizeof(UWidget_Regular_Crosshair_C) == 0x000350, "Wrong size on UWidget_Regular_Crosshair_C");
-static_assert(offsetof(UWidget_Regular_Crosshair_C, AimOffset) == 0x000340, "Member 'UWidget_Regular_Crosshair_C::AimOffset' has a wrong offset!");
-static_assert(offsetof(UWidget_Regular_Crosshair_C, ScaleBox_1) == 0x000348, "Member 'UWidget_Regular_Crosshair_C::ScaleBox_1' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_Regular_Crosshair_C;
 
 }
 

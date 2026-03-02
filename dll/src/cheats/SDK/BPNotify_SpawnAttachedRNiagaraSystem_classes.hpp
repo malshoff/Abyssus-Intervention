@@ -36,21 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPNotify_SpawnAttachedRNiagaraSystem_C">();
+		BP_STATIC_CLASS_IMPL("BPNotify_SpawnAttachedRNiagaraSystem_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPNotify_SpawnAttachedRNiagaraSystem_C")
 	}
 	static class UBPNotify_SpawnAttachedRNiagaraSystem_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPNotify_SpawnAttachedRNiagaraSystem_C>();
 	}
 };
-static_assert(alignof(UBPNotify_SpawnAttachedRNiagaraSystem_C) == 0x000008, "Wrong alignment on UBPNotify_SpawnAttachedRNiagaraSystem_C");
-static_assert(sizeof(UBPNotify_SpawnAttachedRNiagaraSystem_C) == 0x000080, "Wrong size on UBPNotify_SpawnAttachedRNiagaraSystem_C");
-static_assert(offsetof(UBPNotify_SpawnAttachedRNiagaraSystem_C, RSystemClass) == 0x000038, "Member 'UBPNotify_SpawnAttachedRNiagaraSystem_C::RSystemClass' has a wrong offset!");
-static_assert(offsetof(UBPNotify_SpawnAttachedRNiagaraSystem_C, LocationOffset) == 0x000040, "Member 'UBPNotify_SpawnAttachedRNiagaraSystem_C::LocationOffset' has a wrong offset!");
-static_assert(offsetof(UBPNotify_SpawnAttachedRNiagaraSystem_C, RotationOffset) == 0x000058, "Member 'UBPNotify_SpawnAttachedRNiagaraSystem_C::RotationOffset' has a wrong offset!");
-static_assert(offsetof(UBPNotify_SpawnAttachedRNiagaraSystem_C, Attach_Point_Name) == 0x000070, "Member 'UBPNotify_SpawnAttachedRNiagaraSystem_C::Attach_Point_Name' has a wrong offset!");
-static_assert(offsetof(UBPNotify_SpawnAttachedRNiagaraSystem_C, ApplyCosmeticHueShift) == 0x000078, "Member 'UBPNotify_SpawnAttachedRNiagaraSystem_C::ApplyCosmeticHueShift' has a wrong offset!");
-static_assert(offsetof(UBPNotify_SpawnAttachedRNiagaraSystem_C, CosmeticsModType) == 0x000079, "Member 'UBPNotify_SpawnAttachedRNiagaraSystem_C::CosmeticsModType' has a wrong offset!");
+DUMPER7_ASSERTS_UBPNotify_SpawnAttachedRNiagaraSystem_C;
 
 }
 

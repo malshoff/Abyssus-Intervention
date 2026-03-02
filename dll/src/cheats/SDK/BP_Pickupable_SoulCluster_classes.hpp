@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Pickupable_SoulCluster.BP_Pickupable_SoulCluster_C
-// 0x0060 (0x03E8 - 0x0388)
+// 0x0060 (0x03F0 - 0x0390)
 class ABP_Pickupable_SoulCluster_C final : public ARPickupableItem
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0388(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   Coin7;                                             // 0x0390(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Coin6;                                             // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Coin5;                                             // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Coin4;                                             // 0x03A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Coin3;                                             // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Coin2;                                             // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Coin1;                                             // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Coin;                                              // 0x03C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      TrailFX;                                           // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Sphere;                                            // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class ARPickupableItem*                       SuperSelf;                                         // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   Coin7;                                             // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Coin6;                                             // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Coin5;                                             // 0x03A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Coin4;                                             // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Coin3;                                             // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Coin2;                                             // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Coin1;                                             // 0x03C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Coin;                                              // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      TrailFX;                                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Sphere;                                            // 0x03E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class ARPickupableItem*                       SuperSelf;                                         // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	bool CanInteract(class APlayerController* Controller);
@@ -47,27 +47,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Pickupable_SoulCluster_C">();
+		BP_STATIC_CLASS_IMPL("BP_Pickupable_SoulCluster_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Pickupable_SoulCluster_C")
 	}
 	static class ABP_Pickupable_SoulCluster_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Pickupable_SoulCluster_C>();
 	}
 };
-static_assert(alignof(ABP_Pickupable_SoulCluster_C) == 0x000008, "Wrong alignment on ABP_Pickupable_SoulCluster_C");
-static_assert(sizeof(ABP_Pickupable_SoulCluster_C) == 0x0003E8, "Wrong size on ABP_Pickupable_SoulCluster_C");
-static_assert(offsetof(ABP_Pickupable_SoulCluster_C, UberGraphFrame) == 0x000388, "Member 'ABP_Pickupable_SoulCluster_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_SoulCluster_C, Coin7) == 0x000390, "Member 'ABP_Pickupable_SoulCluster_C::Coin7' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_SoulCluster_C, Coin6) == 0x000398, "Member 'ABP_Pickupable_SoulCluster_C::Coin6' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_SoulCluster_C, Coin5) == 0x0003A0, "Member 'ABP_Pickupable_SoulCluster_C::Coin5' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_SoulCluster_C, Coin4) == 0x0003A8, "Member 'ABP_Pickupable_SoulCluster_C::Coin4' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_SoulCluster_C, Coin3) == 0x0003B0, "Member 'ABP_Pickupable_SoulCluster_C::Coin3' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_SoulCluster_C, Coin2) == 0x0003B8, "Member 'ABP_Pickupable_SoulCluster_C::Coin2' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_SoulCluster_C, Coin1) == 0x0003C0, "Member 'ABP_Pickupable_SoulCluster_C::Coin1' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_SoulCluster_C, Coin) == 0x0003C8, "Member 'ABP_Pickupable_SoulCluster_C::Coin' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_SoulCluster_C, TrailFX) == 0x0003D0, "Member 'ABP_Pickupable_SoulCluster_C::TrailFX' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_SoulCluster_C, Sphere) == 0x0003D8, "Member 'ABP_Pickupable_SoulCluster_C::Sphere' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_SoulCluster_C, SuperSelf) == 0x0003E0, "Member 'ABP_Pickupable_SoulCluster_C::SuperSelf' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Pickupable_SoulCluster_C;
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BP_Blood_Behavior_PrimaryFire_Mutator.BP_Blood_Behavior_PrimaryFire_Mutator_C.ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator
-// 0x0110 (0x0110 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator final
 {
 public:
@@ -54,41 +54,12 @@ public:
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_HealthDamage;                         // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_TriggeringActor;                      // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator) == 0x000008, "Wrong alignment on BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator");
-static_assert(sizeof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator) == 0x000110, "Wrong size on BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, EntryPoint) == 0x000000, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_GetMutatorRank_ReturnValue) == 0x000004, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_HasBehaviorMutator_ReturnValue) == 0x000008, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_HasBehaviorMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x00000C, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_GetMutatorValueByArrayIndex_ReturnValue_1) == 0x000010, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_GetMutatorValueByArrayIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_FTrunc_ReturnValue) == 0x000014, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_GetScriptFName_ReturnValue) == 0x000018, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_RollProcChance_OutProcChance) == 0x000020, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_RollProcChance_OutProcChance' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_RollProcChance_ReturnValue) == 0x000024, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_RollProcChance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000028, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000058, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, K2Node_CustomEvent_NewRank) == 0x000064, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::K2Node_CustomEvent_NewRank' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, K2Node_CustomEvent_MutatorPrimaryAsset) == 0x000068, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::K2Node_CustomEvent_MutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000070, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x0000A0, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, K2Node_DynamicCast_bSuccess_1) == 0x0000A8, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x0000B0, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, K2Node_DynamicCast_bSuccess_2) == 0x0000B8, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_GetScriptFName_ReturnValue_1) == 0x0000BC, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_GetMutatorRank_ReturnValue_1) == 0x0000C4, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_GetMutatorRank_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_GetMutatorValueByArrayIndex_ReturnValue_2) == 0x0000C8, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_GetMutatorValueByArrayIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000D0, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, K2Node_CreateDelegate_OutputDelegate) == 0x0000D8, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000E8, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, K2Node_Event_HealthDamage) == 0x0000F0, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::K2Node_Event_HealthDamage' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_FTrunc_A_ImplicitCast) == 0x0000F8, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_FTrunc_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000100, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x000108, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Blood_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Blood_Behavior_PrimaryFire_Mutator;
 
 // Function BP_Blood_Behavior_PrimaryFire_Mutator.BP_Blood_Behavior_PrimaryFire_Mutator_C.MutatorRankChanged
 // 0x0010 (0x0010 - 0x0000)
@@ -99,21 +70,18 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class URMutatorPrimaryAsset*                  MutatorPrimaryAsset;                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Blood_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged) == 0x000008, "Wrong alignment on BP_Blood_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged");
-static_assert(sizeof(BP_Blood_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged) == 0x000010, "Wrong size on BP_Blood_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged, NewRank) == 0x000000, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged::NewRank' has a wrong offset!");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged, MutatorPrimaryAsset) == 0x000008, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged::MutatorPrimaryAsset' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Blood_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged;
 
 // Function BP_Blood_Behavior_PrimaryFire_Mutator.BP_Blood_Behavior_PrimaryFire_Mutator_C.RunPrimaryFireBehavior
-// 0x0004 (0x0004 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct BP_Blood_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior final
 {
 public:
 	float                                         HealthDamage;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 TriggeringActor;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Blood_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior) == 0x000004, "Wrong alignment on BP_Blood_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior");
-static_assert(sizeof(BP_Blood_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior) == 0x000004, "Wrong size on BP_Blood_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior");
-static_assert(offsetof(BP_Blood_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior, HealthDamage) == 0x000000, "Member 'BP_Blood_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior::HealthDamage' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Blood_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior;
 
 }
 

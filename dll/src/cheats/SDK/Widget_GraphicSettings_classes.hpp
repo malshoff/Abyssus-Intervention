@@ -19,25 +19,26 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_GraphicSettings.Widget_GraphicSettings_C
-// 0x0078 (0x0350 - 0x02D8)
+// 0x0080 (0x03C8 - 0x0348)
 class UWidget_GraphicSettings_C final : public UWidget_SettingTabBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_GraphicSettings_C;           // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidget_SettingsOptions_C*              AA;                                                // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsOptions_C*              AAQuality;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 ButtonAutomaticQuality;                            // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsCheckbox_C*             DepthOfField;                                      // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsOptions_C*              EnvDetail;                                         // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsOptions_C*              GI;                                                // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsCheckbox_C*             MotionBlur;                                        // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsOptions_C*              Overall;                                           // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsOptions_C*              PostProcessQuality;                                // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsSlider_C*               ScreenPercentage;                                  // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             ScrollBox_0;                                       // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsOptions_C*              Shadows;                                           // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsOptions_C*              TextDetail;                                        // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsOptions_C*              VisualEffects;                                     // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_GraphicSettings_C;           // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_SettingsOptions_C*              VisualEffects;                                     // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsOptions_C*              TextDetail;                                        // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsOptions_C*              Shadows;                                           // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollBox*                             ScrollBox_0;                                       // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsSlider_C*               ScreenPercentage;                                  // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsOptions_C*              PostProcessQuality;                                // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsOptions_C*              Overall;                                           // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsCheckbox_C*             MotionBlur;                                        // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsOptions_C*              GI;                                                // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             GeneralTextBlock;                                  // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsOptions_C*              EnvDetail;                                         // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsCheckbox_C*             DepthOfField;                                      // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_SimpleText_C*                 ButtonAutomaticQuality;                            // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsOptions_C*              AAQuality;                                         // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SettingsOptions_C*              AA;                                                // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ApplySettings();
@@ -66,34 +67,23 @@ public:
 	void ResetSettings();
 	void SetupExplicitNavigations();
 	void SetWidgetCurrentValues(bool bInit);
+	void UpdateOveralSettingWidget();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_GraphicSettings_C">();
+		BP_STATIC_CLASS_IMPL("Widget_GraphicSettings_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_GraphicSettings_C")
 	}
 	static class UWidget_GraphicSettings_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_GraphicSettings_C>();
 	}
 };
-static_assert(alignof(UWidget_GraphicSettings_C) == 0x000008, "Wrong alignment on UWidget_GraphicSettings_C");
-static_assert(sizeof(UWidget_GraphicSettings_C) == 0x000350, "Wrong size on UWidget_GraphicSettings_C");
-static_assert(offsetof(UWidget_GraphicSettings_C, UberGraphFrame_Widget_GraphicSettings_C) == 0x0002D8, "Member 'UWidget_GraphicSettings_C::UberGraphFrame_Widget_GraphicSettings_C' has a wrong offset!");
-static_assert(offsetof(UWidget_GraphicSettings_C, AA) == 0x0002E0, "Member 'UWidget_GraphicSettings_C::AA' has a wrong offset!");
-static_assert(offsetof(UWidget_GraphicSettings_C, AAQuality) == 0x0002E8, "Member 'UWidget_GraphicSettings_C::AAQuality' has a wrong offset!");
-static_assert(offsetof(UWidget_GraphicSettings_C, ButtonAutomaticQuality) == 0x0002F0, "Member 'UWidget_GraphicSettings_C::ButtonAutomaticQuality' has a wrong offset!");
-static_assert(offsetof(UWidget_GraphicSettings_C, DepthOfField) == 0x0002F8, "Member 'UWidget_GraphicSettings_C::DepthOfField' has a wrong offset!");
-static_assert(offsetof(UWidget_GraphicSettings_C, EnvDetail) == 0x000300, "Member 'UWidget_GraphicSettings_C::EnvDetail' has a wrong offset!");
-static_assert(offsetof(UWidget_GraphicSettings_C, GI) == 0x000308, "Member 'UWidget_GraphicSettings_C::GI' has a wrong offset!");
-static_assert(offsetof(UWidget_GraphicSettings_C, MotionBlur) == 0x000310, "Member 'UWidget_GraphicSettings_C::MotionBlur' has a wrong offset!");
-static_assert(offsetof(UWidget_GraphicSettings_C, Overall) == 0x000318, "Member 'UWidget_GraphicSettings_C::Overall' has a wrong offset!");
-static_assert(offsetof(UWidget_GraphicSettings_C, PostProcessQuality) == 0x000320, "Member 'UWidget_GraphicSettings_C::PostProcessQuality' has a wrong offset!");
-static_assert(offsetof(UWidget_GraphicSettings_C, ScreenPercentage) == 0x000328, "Member 'UWidget_GraphicSettings_C::ScreenPercentage' has a wrong offset!");
-static_assert(offsetof(UWidget_GraphicSettings_C, ScrollBox_0) == 0x000330, "Member 'UWidget_GraphicSettings_C::ScrollBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_GraphicSettings_C, Shadows) == 0x000338, "Member 'UWidget_GraphicSettings_C::Shadows' has a wrong offset!");
-static_assert(offsetof(UWidget_GraphicSettings_C, TextDetail) == 0x000340, "Member 'UWidget_GraphicSettings_C::TextDetail' has a wrong offset!");
-static_assert(offsetof(UWidget_GraphicSettings_C, VisualEffects) == 0x000348, "Member 'UWidget_GraphicSettings_C::VisualEffects' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_GraphicSettings_C;
 
 }
 

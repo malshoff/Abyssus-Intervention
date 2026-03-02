@@ -38,15 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeAnimationTrackSetNode">();
+		STATIC_CLASS_IMPL("InterchangeAnimationTrackSetNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeAnimationTrackSetNode")
 	}
 	static class UInterchangeAnimationTrackSetNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeAnimationTrackSetNode>();
 	}
 };
-static_assert(alignof(UInterchangeAnimationTrackSetNode) == 0x000008, "Wrong alignment on UInterchangeAnimationTrackSetNode");
-static_assert(sizeof(UInterchangeAnimationTrackSetNode) == 0x000090, "Wrong size on UInterchangeAnimationTrackSetNode");
+DUMPER7_ASSERTS_UInterchangeAnimationTrackSetNode;
 
 // Class InterchangeNodes.InterchangeAnimationTrackBaseNode
 // 0x0010 (0x0070 - 0x0060)
@@ -63,15 +66,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeAnimationTrackBaseNode">();
+		STATIC_CLASS_IMPL("InterchangeAnimationTrackBaseNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeAnimationTrackBaseNode")
 	}
 	static class UInterchangeAnimationTrackBaseNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeAnimationTrackBaseNode>();
 	}
 };
-static_assert(alignof(UInterchangeAnimationTrackBaseNode) == 0x000008, "Wrong alignment on UInterchangeAnimationTrackBaseNode");
-static_assert(sizeof(UInterchangeAnimationTrackBaseNode) == 0x000070, "Wrong size on UInterchangeAnimationTrackBaseNode");
+DUMPER7_ASSERTS_UInterchangeAnimationTrackBaseNode;
 
 // Class InterchangeNodes.InterchangeAnimationTrackSetInstanceNode
 // 0x0040 (0x00B0 - 0x0070)
@@ -94,15 +100,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeAnimationTrackSetInstanceNode">();
+		STATIC_CLASS_IMPL("InterchangeAnimationTrackSetInstanceNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeAnimationTrackSetInstanceNode")
 	}
 	static class UInterchangeAnimationTrackSetInstanceNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeAnimationTrackSetInstanceNode>();
 	}
 };
-static_assert(alignof(UInterchangeAnimationTrackSetInstanceNode) == 0x000008, "Wrong alignment on UInterchangeAnimationTrackSetInstanceNode");
-static_assert(sizeof(UInterchangeAnimationTrackSetInstanceNode) == 0x0000B0, "Wrong size on UInterchangeAnimationTrackSetInstanceNode");
+DUMPER7_ASSERTS_UInterchangeAnimationTrackSetInstanceNode;
 
 // Class InterchangeNodes.InterchangeAnimationTrackNode
 // 0x0060 (0x00D0 - 0x0070)
@@ -125,15 +134,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeAnimationTrackNode">();
+		STATIC_CLASS_IMPL("InterchangeAnimationTrackNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeAnimationTrackNode")
 	}
 	static class UInterchangeAnimationTrackNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeAnimationTrackNode>();
 	}
 };
-static_assert(alignof(UInterchangeAnimationTrackNode) == 0x000008, "Wrong alignment on UInterchangeAnimationTrackNode");
-static_assert(sizeof(UInterchangeAnimationTrackNode) == 0x0000D0, "Wrong size on UInterchangeAnimationTrackNode");
+DUMPER7_ASSERTS_UInterchangeAnimationTrackNode;
 
 // Class InterchangeNodes.InterchangeTransformAnimationTrackNode
 // 0x0010 (0x00E0 - 0x00D0)
@@ -150,22 +162,25 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeTransformAnimationTrackNode">();
+		STATIC_CLASS_IMPL("InterchangeTransformAnimationTrackNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeTransformAnimationTrackNode")
 	}
 	static class UInterchangeTransformAnimationTrackNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeTransformAnimationTrackNode>();
 	}
 };
-static_assert(alignof(UInterchangeTransformAnimationTrackNode) == 0x000008, "Wrong alignment on UInterchangeTransformAnimationTrackNode");
-static_assert(sizeof(UInterchangeTransformAnimationTrackNode) == 0x0000E0, "Wrong size on UInterchangeTransformAnimationTrackNode");
+DUMPER7_ASSERTS_UInterchangeTransformAnimationTrackNode;
 
 // Class InterchangeNodes.InterchangeSkeletalAnimationTrackNode
-// 0x0220 (0x0290 - 0x0070)
+// 0x0240 (0x02B0 - 0x0070)
 class UInterchangeSkeletalAnimationTrackNode final : public UInterchangeAnimationTrackBaseNode
 {
 public:
-	uint8                                         Pad_70[0x220];                                     // 0x0070(0x0220)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_70[0x240];                                     // 0x0070(0x0240)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetAnimationPayloadKeyForMorphTargetNodeUid(const class FString& MorphTargetNodeUid, const class FString& InUniqueId, const EInterchangeAnimationPayLoadType& InType);
@@ -174,11 +189,15 @@ public:
 	bool SetCustomAnimationStartTime(const double& StartTime);
 	bool SetCustomAnimationStopTime(const double& StopTime);
 	bool SetCustomSkeletonNodeUid(const class FString& AttributeValue);
+	bool SetCustomSourceTimelineAnimationStartTime(const double& StartTime);
+	bool SetCustomSourceTimelineAnimationStopTime(const double& StopTime);
 
 	bool GetCustomAnimationSampleRate(double* SampleRate) const;
 	bool GetCustomAnimationStartTime(double* StartTime) const;
 	bool GetCustomAnimationStopTime(double* StopTime) const;
 	bool GetCustomSkeletonNodeUid(class FString* AttributeValue) const;
+	bool GetCustomSourceTimelineAnimationStartTime(double* StartTime) const;
+	bool GetCustomSourceTimelineAnimationStopTime(double* StopTime) const;
 	void GetMorphTargetNodeAnimationPayloadKeys(TMap<class FString, class FString>* OutMorphTargetNodeAnimationPayloadKeyUids, TMap<class FString, uint8>* OutMorphTargetNodeAnimationPayloadKeyTypes) const;
 	void GetSceneNodeAnimationPayloadKeys(TMap<class FString, class FString>* OutSceneNodeAnimationPayloadKeyUids, TMap<class FString, uint8>* OutSceneNodeAnimationPayloadKeyTypes) const;
 	bool IsNodeAnimatedWithBakedCurve(const class FString& SceneNodeUid) const;
@@ -186,15 +205,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeSkeletalAnimationTrackNode">();
+		STATIC_CLASS_IMPL("InterchangeSkeletalAnimationTrackNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSkeletalAnimationTrackNode")
 	}
 	static class UInterchangeSkeletalAnimationTrackNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeSkeletalAnimationTrackNode>();
 	}
 };
-static_assert(alignof(UInterchangeSkeletalAnimationTrackNode) == 0x000008, "Wrong alignment on UInterchangeSkeletalAnimationTrackNode");
-static_assert(sizeof(UInterchangeSkeletalAnimationTrackNode) == 0x000290, "Wrong size on UInterchangeSkeletalAnimationTrackNode");
+DUMPER7_ASSERTS_UInterchangeSkeletalAnimationTrackNode;
 
 // Class InterchangeNodes.InterchangePhysicalCameraNode
 // 0x0040 (0x00A0 - 0x0060)
@@ -217,15 +239,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangePhysicalCameraNode">();
+		STATIC_CLASS_IMPL("InterchangePhysicalCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangePhysicalCameraNode")
 	}
 	static class UInterchangePhysicalCameraNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangePhysicalCameraNode>();
 	}
 };
-static_assert(alignof(UInterchangePhysicalCameraNode) == 0x000008, "Wrong alignment on UInterchangePhysicalCameraNode");
-static_assert(sizeof(UInterchangePhysicalCameraNode) == 0x0000A0, "Wrong size on UInterchangePhysicalCameraNode");
+DUMPER7_ASSERTS_UInterchangePhysicalCameraNode;
 
 // Class InterchangeNodes.InterchangeStandardCameraNode
 // 0x0060 (0x00C0 - 0x0060)
@@ -252,15 +277,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeStandardCameraNode">();
+		STATIC_CLASS_IMPL("InterchangeStandardCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeStandardCameraNode")
 	}
 	static class UInterchangeStandardCameraNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeStandardCameraNode>();
 	}
 };
-static_assert(alignof(UInterchangeStandardCameraNode) == 0x000008, "Wrong alignment on UInterchangeStandardCameraNode");
-static_assert(sizeof(UInterchangeStandardCameraNode) == 0x0000C0, "Wrong size on UInterchangeStandardCameraNode");
+DUMPER7_ASSERTS_UInterchangeStandardCameraNode;
 
 // Class InterchangeNodes.InterchangeShaderNode
 // 0x0010 (0x0070 - 0x0060)
@@ -280,15 +308,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeShaderNode">();
+		STATIC_CLASS_IMPL("InterchangeShaderNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeShaderNode")
 	}
 	static class UInterchangeShaderNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeShaderNode>();
 	}
 };
-static_assert(alignof(UInterchangeShaderNode) == 0x000008, "Wrong alignment on UInterchangeShaderNode");
-static_assert(sizeof(UInterchangeShaderNode) == 0x000070, "Wrong size on UInterchangeShaderNode");
+DUMPER7_ASSERTS_UInterchangeShaderNode;
 
 // Class InterchangeNodes.InterchangeDecalMaterialNode
 // 0x0020 (0x0090 - 0x0070)
@@ -300,15 +331,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeDecalMaterialNode">();
+		STATIC_CLASS_IMPL("InterchangeDecalMaterialNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeDecalMaterialNode")
 	}
 	static class UInterchangeDecalMaterialNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeDecalMaterialNode>();
 	}
 };
-static_assert(alignof(UInterchangeDecalMaterialNode) == 0x000008, "Wrong alignment on UInterchangeDecalMaterialNode");
-static_assert(sizeof(UInterchangeDecalMaterialNode) == 0x000090, "Wrong size on UInterchangeDecalMaterialNode");
+DUMPER7_ASSERTS_UInterchangeDecalMaterialNode;
 
 // Class InterchangeNodes.InterchangeDecalNode
 // 0x0030 (0x0090 - 0x0060)
@@ -329,15 +363,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeDecalNode">();
+		STATIC_CLASS_IMPL("InterchangeDecalNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeDecalNode")
 	}
 	static class UInterchangeDecalNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeDecalNode>();
 	}
 };
-static_assert(alignof(UInterchangeDecalNode) == 0x000008, "Wrong alignment on UInterchangeDecalNode");
-static_assert(sizeof(UInterchangeDecalNode) == 0x000090, "Wrong size on UInterchangeDecalNode");
+DUMPER7_ASSERTS_UInterchangeDecalNode;
 
 // Class InterchangeNodes.InterchangeBaseLightNode
 // 0x0040 (0x00A0 - 0x0060)
@@ -360,15 +397,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeBaseLightNode">();
+		STATIC_CLASS_IMPL("InterchangeBaseLightNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeBaseLightNode")
 	}
 	static class UInterchangeBaseLightNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeBaseLightNode>();
 	}
 };
-static_assert(alignof(UInterchangeBaseLightNode) == 0x000008, "Wrong alignment on UInterchangeBaseLightNode");
-static_assert(sizeof(UInterchangeBaseLightNode) == 0x0000A0, "Wrong size on UInterchangeBaseLightNode");
+DUMPER7_ASSERTS_UInterchangeBaseLightNode;
 
 // Class InterchangeNodes.InterchangeLightNode
 // 0x0060 (0x0100 - 0x00A0)
@@ -395,15 +435,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeLightNode">();
+		STATIC_CLASS_IMPL("InterchangeLightNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeLightNode")
 	}
 	static class UInterchangeLightNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeLightNode>();
 	}
 };
-static_assert(alignof(UInterchangeLightNode) == 0x000008, "Wrong alignment on UInterchangeLightNode");
-static_assert(sizeof(UInterchangeLightNode) == 0x000100, "Wrong size on UInterchangeLightNode");
+DUMPER7_ASSERTS_UInterchangeLightNode;
 
 // Class InterchangeNodes.InterchangePointLightNode
 // 0x0020 (0x0120 - 0x0100)
@@ -422,15 +465,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangePointLightNode">();
+		STATIC_CLASS_IMPL("InterchangePointLightNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangePointLightNode")
 	}
 	static class UInterchangePointLightNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangePointLightNode>();
 	}
 };
-static_assert(alignof(UInterchangePointLightNode) == 0x000008, "Wrong alignment on UInterchangePointLightNode");
-static_assert(sizeof(UInterchangePointLightNode) == 0x000120, "Wrong size on UInterchangePointLightNode");
+DUMPER7_ASSERTS_UInterchangePointLightNode;
 
 // Class InterchangeNodes.InterchangeSpotLightNode
 // 0x0020 (0x0140 - 0x0120)
@@ -449,15 +495,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeSpotLightNode">();
+		STATIC_CLASS_IMPL("InterchangeSpotLightNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSpotLightNode")
 	}
 	static class UInterchangeSpotLightNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeSpotLightNode>();
 	}
 };
-static_assert(alignof(UInterchangeSpotLightNode) == 0x000008, "Wrong alignment on UInterchangeSpotLightNode");
-static_assert(sizeof(UInterchangeSpotLightNode) == 0x000140, "Wrong size on UInterchangeSpotLightNode");
+DUMPER7_ASSERTS_UInterchangeSpotLightNode;
 
 // Class InterchangeNodes.InterchangeRectLightNode
 // 0x0020 (0x0120 - 0x0100)
@@ -476,15 +525,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeRectLightNode">();
+		STATIC_CLASS_IMPL("InterchangeRectLightNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeRectLightNode")
 	}
 	static class UInterchangeRectLightNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeRectLightNode>();
 	}
 };
-static_assert(alignof(UInterchangeRectLightNode) == 0x000008, "Wrong alignment on UInterchangeRectLightNode");
-static_assert(sizeof(UInterchangeRectLightNode) == 0x000120, "Wrong size on UInterchangeRectLightNode");
+DUMPER7_ASSERTS_UInterchangeRectLightNode;
 
 // Class InterchangeNodes.InterchangeDirectionalLightNode
 // 0x0000 (0x00A0 - 0x00A0)
@@ -493,15 +545,18 @@ class UInterchangeDirectionalLightNode final : public UInterchangeBaseLightNode
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeDirectionalLightNode">();
+		STATIC_CLASS_IMPL("InterchangeDirectionalLightNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeDirectionalLightNode")
 	}
 	static class UInterchangeDirectionalLightNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeDirectionalLightNode>();
 	}
 };
-static_assert(alignof(UInterchangeDirectionalLightNode) == 0x000008, "Wrong alignment on UInterchangeDirectionalLightNode");
-static_assert(sizeof(UInterchangeDirectionalLightNode) == 0x0000A0, "Wrong size on UInterchangeDirectionalLightNode");
+DUMPER7_ASSERTS_UInterchangeDirectionalLightNode;
 
 // Class InterchangeNodes.InterchangeTextureNode
 // 0x0040 (0x00A0 - 0x0060)
@@ -525,15 +580,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeTextureNode">();
+		STATIC_CLASS_IMPL("InterchangeTextureNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeTextureNode")
 	}
 	static class UInterchangeTextureNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeTextureNode>();
 	}
 };
-static_assert(alignof(UInterchangeTextureNode) == 0x000008, "Wrong alignment on UInterchangeTextureNode");
-static_assert(sizeof(UInterchangeTextureNode) == 0x0000A0, "Wrong size on UInterchangeTextureNode");
+DUMPER7_ASSERTS_UInterchangeTextureNode;
 
 // Class InterchangeNodes.InterchangeTexture2DArrayNode
 // 0x0000 (0x00A0 - 0x00A0)
@@ -542,15 +600,18 @@ class UInterchangeTexture2DArrayNode final : public UInterchangeTextureNode
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeTexture2DArrayNode">();
+		STATIC_CLASS_IMPL("InterchangeTexture2DArrayNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeTexture2DArrayNode")
 	}
 	static class UInterchangeTexture2DArrayNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeTexture2DArrayNode>();
 	}
 };
-static_assert(alignof(UInterchangeTexture2DArrayNode) == 0x000008, "Wrong alignment on UInterchangeTexture2DArrayNode");
-static_assert(sizeof(UInterchangeTexture2DArrayNode) == 0x0000A0, "Wrong size on UInterchangeTexture2DArrayNode");
+DUMPER7_ASSERTS_UInterchangeTexture2DArrayNode;
 
 // Class InterchangeNodes.InterchangeTextureCubeArrayNode
 // 0x0000 (0x00A0 - 0x00A0)
@@ -559,15 +620,18 @@ class UInterchangeTextureCubeArrayNode final : public UInterchangeTextureNode
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeTextureCubeArrayNode">();
+		STATIC_CLASS_IMPL("InterchangeTextureCubeArrayNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeTextureCubeArrayNode")
 	}
 	static class UInterchangeTextureCubeArrayNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeTextureCubeArrayNode>();
 	}
 };
-static_assert(alignof(UInterchangeTextureCubeArrayNode) == 0x000008, "Wrong alignment on UInterchangeTextureCubeArrayNode");
-static_assert(sizeof(UInterchangeTextureCubeArrayNode) == 0x0000A0, "Wrong size on UInterchangeTextureCubeArrayNode");
+DUMPER7_ASSERTS_UInterchangeTextureCubeArrayNode;
 
 // Class InterchangeNodes.InterchangeTextureCubeNode
 // 0x0000 (0x00A0 - 0x00A0)
@@ -576,15 +640,18 @@ class UInterchangeTextureCubeNode final : public UInterchangeTextureNode
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeTextureCubeNode">();
+		STATIC_CLASS_IMPL("InterchangeTextureCubeNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeTextureCubeNode")
 	}
 	static class UInterchangeTextureCubeNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeTextureCubeNode>();
 	}
 };
-static_assert(alignof(UInterchangeTextureCubeNode) == 0x000008, "Wrong alignment on UInterchangeTextureCubeNode");
-static_assert(sizeof(UInterchangeTextureCubeNode) == 0x0000A0, "Wrong size on UInterchangeTextureCubeNode");
+DUMPER7_ASSERTS_UInterchangeTextureCubeNode;
 
 // Class InterchangeNodes.InterchangeTextureLightProfileNode
 // 0x0000 (0x00A0 - 0x00A0)
@@ -593,15 +660,18 @@ class UInterchangeTextureLightProfileNode final : public UInterchangeTextureNode
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeTextureLightProfileNode">();
+		STATIC_CLASS_IMPL("InterchangeTextureLightProfileNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeTextureLightProfileNode")
 	}
 	static class UInterchangeTextureLightProfileNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeTextureLightProfileNode>();
 	}
 };
-static_assert(alignof(UInterchangeTextureLightProfileNode) == 0x000008, "Wrong alignment on UInterchangeTextureLightProfileNode");
-static_assert(sizeof(UInterchangeTextureLightProfileNode) == 0x0000A0, "Wrong size on UInterchangeTextureLightProfileNode");
+DUMPER7_ASSERTS_UInterchangeTextureLightProfileNode;
 
 // Class InterchangeNodes.InterchangeVariantSetNode
 // 0x0040 (0x00A0 - 0x0060)
@@ -625,15 +695,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeVariantSetNode">();
+		STATIC_CLASS_IMPL("InterchangeVariantSetNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeVariantSetNode")
 	}
 	static class UInterchangeVariantSetNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeVariantSetNode>();
 	}
 };
-static_assert(alignof(UInterchangeVariantSetNode) == 0x000008, "Wrong alignment on UInterchangeVariantSetNode");
-static_assert(sizeof(UInterchangeVariantSetNode) == 0x0000A0, "Wrong size on UInterchangeVariantSetNode");
+DUMPER7_ASSERTS_UInterchangeVariantSetNode;
 
 // Class InterchangeNodes.InterchangeSceneVariantSetsNode
 // 0x0020 (0x0080 - 0x0060)
@@ -653,15 +726,95 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeSceneVariantSetsNode">();
+		STATIC_CLASS_IMPL("InterchangeSceneVariantSetsNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSceneVariantSetsNode")
 	}
 	static class UInterchangeSceneVariantSetsNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeSceneVariantSetsNode>();
 	}
 };
-static_assert(alignof(UInterchangeSceneVariantSetsNode) == 0x000008, "Wrong alignment on UInterchangeSceneVariantSetsNode");
-static_assert(sizeof(UInterchangeSceneVariantSetsNode) == 0x000080, "Wrong size on UInterchangeSceneVariantSetsNode");
+DUMPER7_ASSERTS_UInterchangeSceneVariantSetsNode;
+
+// Class InterchangeNodes.InterchangeVolumeNode
+// 0x0060 (0x00C0 - 0x0060)
+class UInterchangeVolumeNode final : public UInterchangeBaseNode
+{
+public:
+	uint8                                         Pad_60[0x60];                                      // 0x0060(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool AddCustomFrameIndexInAnimation(int32 Index_0);
+	bool AddCustomGridDependency(const class FString& DependencyUid);
+	bool RemoveCustomFrameIndexInAnimation(int32 Index_0);
+	bool RemoveCustomGridDependency(const class FString& DependencyUid);
+	bool SetCustomAnimationID(const class FString& AttributeValue);
+	bool SetCustomFileName(const class FString& AttributeValue);
+
+	bool GetCustomAnimationID(class FString* AttributeValue) const;
+	bool GetCustomFileName(class FString* AttributeValue) const;
+	void GetCustomFrameIndexInAnimation(int32 IndexIndex, int32* OutIndex) const;
+	void GetCustomFrameIndicesInAnimation(TArray<int32>* OutAnimationIndices) const;
+	void GetCustomGridDependecies(TArray<class FString>* OutDependencies) const;
+	int32 GetCustomGridDependeciesCount() const;
+	void GetCustomGridDependency(const int32 Index_0, class FString* OutDependency) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeVolumeNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeVolumeNode")
+	}
+	static class UInterchangeVolumeNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeVolumeNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeVolumeNode;
+
+// Class InterchangeNodes.InterchangeVolumeGridNode
+// 0x0060 (0x00C0 - 0x0060)
+class UInterchangeVolumeGridNode final : public UInterchangeBaseNode
+{
+public:
+	uint8                                         Pad_60[0x60];                                      // 0x0060(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomElementType(const EVolumeGridElementType& AttributeValue);
+	bool SetCustomGridActiveAABBMax(const struct FIntVector& AttributeValue);
+	bool SetCustomGridActiveAABBMin(const struct FIntVector& AttributeValue);
+	bool SetCustomGridActiveDimensions(const struct FIntVector& AttributeValue);
+	bool SetCustomGridTransform(const struct FTransform& AttributeValue);
+	bool SetCustomNumComponents(const int32& NumComponents);
+
+	bool GetCustomElementType(EVolumeGridElementType* AttributeValue) const;
+	bool GetCustomGridActiveAABBMax(struct FIntVector* AttributeValue) const;
+	bool GetCustomGridActiveAABBMin(struct FIntVector* AttributeValue) const;
+	bool GetCustomGridActiveDimensions(struct FIntVector* AttributeValue) const;
+	bool GetCustomGridTransform(struct FTransform* AttributeValue) const;
+	bool GetCustomNumComponents(int32* NumComponents) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeVolumeGridNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeVolumeGridNode")
+	}
+	static class UInterchangeVolumeGridNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeVolumeGridNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeVolumeGridNode;
 
 // Class InterchangeNodes.InterchangeVolumeTextureNode
 // 0x0000 (0x00A0 - 0x00A0)
@@ -670,15 +823,18 @@ class UInterchangeVolumeTextureNode final : public UInterchangeTextureNode
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeVolumeTextureNode">();
+		STATIC_CLASS_IMPL("InterchangeVolumeTextureNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeVolumeTextureNode")
 	}
 	static class UInterchangeVolumeTextureNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeVolumeTextureNode>();
 	}
 };
-static_assert(alignof(UInterchangeVolumeTextureNode) == 0x000008, "Wrong alignment on UInterchangeVolumeTextureNode");
-static_assert(sizeof(UInterchangeVolumeTextureNode) == 0x0000A0, "Wrong size on UInterchangeVolumeTextureNode");
+DUMPER7_ASSERTS_UInterchangeVolumeTextureNode;
 
 // Class InterchangeNodes.InterchangeMaterialInstanceNode
 // 0x0010 (0x0070 - 0x0060)
@@ -703,22 +859,52 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeMaterialInstanceNode">();
+		STATIC_CLASS_IMPL("InterchangeMaterialInstanceNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeMaterialInstanceNode")
 	}
 	static class UInterchangeMaterialInstanceNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeMaterialInstanceNode>();
 	}
 };
-static_assert(alignof(UInterchangeMaterialInstanceNode) == 0x000008, "Wrong alignment on UInterchangeMaterialInstanceNode");
-static_assert(sizeof(UInterchangeMaterialInstanceNode) == 0x000070, "Wrong size on UInterchangeMaterialInstanceNode");
+DUMPER7_ASSERTS_UInterchangeMaterialInstanceNode;
 
-// Class InterchangeNodes.InterchangeMeshNode
-// 0x0188 (0x01E8 - 0x0060)
-class UInterchangeMeshNode final : public UInterchangeBaseNode
+// Class InterchangeNodes.InterchangeMaterialReferenceNode
+// 0x0010 (0x0070 - 0x0060)
+class UInterchangeMaterialReferenceNode final : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_60[0x188];                                     // 0x0060(0x0188)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_60[0x10];                                      // 0x0060(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool GetCustomContentPath(class FString* AttributeValue) const;
+	bool SetCustomContentPath(const class FString& AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeMaterialReferenceNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeMaterialReferenceNode")
+	}
+	static class UInterchangeMaterialReferenceNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeMaterialReferenceNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeMaterialReferenceNode;
+
+// Class InterchangeNodes.InterchangeMeshNode
+// 0x0198 (0x01F8 - 0x0060)
+class UInterchangeMeshNode : public UInterchangeBaseNode
+{
+public:
+	uint8                                         Pad_60[0x198];                                     // 0x0060(0x0198)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool RemoveMorphTargetDependencyUid(const class FString& DependencyUid);
@@ -726,6 +912,7 @@ public:
 	bool RemoveSkeletonDependencyUid(const class FString& DependencyUid);
 	bool RemoveSlotMaterialDependencyUid(const class FString& SlotName);
 	bool SetCustomBoundingBox(const struct FBox& AttributeValue);
+	bool SetCustomCollisionType(EInterchangeMeshCollision AttributeValue);
 	bool SetCustomHasSmoothGroup(const bool& AttributeValue);
 	bool SetCustomHasVertexBinormal(const bool& AttributeValue);
 	bool SetCustomHasVertexColor(const bool& AttributeValue);
@@ -737,13 +924,14 @@ public:
 	bool SetMorphTarget(const bool bIsMorphTarget);
 	bool SetMorphTargetDependencyUid(const class FString& DependencyUid);
 	bool SetMorphTargetName(const class FString& MorphTargetName);
-	void SetPayLoadKey(const class FString& PayloadKey, const EInterchangeMeshPayLoadType& PayLoadType);
+	void SetPayLoadKey(const class FString& PayloadKey, const EInterchangeMeshPayLoadType& PayloadType);
 	bool SetSceneInstanceUid(const class FString& DependencyUid);
 	bool SetSkeletonDependencyUid(const class FString& DependencyUid);
 	bool SetSkinnedMesh(const bool bIsSkinnedMesh);
 	bool SetSlotMaterialDependencyUid(const class FString& SlotName, const class FString& MaterialDependencyUid);
 
 	bool GetCustomBoundingBox(struct FBox* AttributeValue) const;
+	bool GetCustomCollisionType(EInterchangeMeshCollision* AttributeValue) const;
 	bool GetCustomHasSmoothGroup(bool* AttributeValue) const;
 	bool GetCustomHasVertexBinormal(bool* AttributeValue) const;
 	bool GetCustomHasVertexColor(bool* AttributeValue) const;
@@ -770,30 +958,70 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeMeshNode">();
+		STATIC_CLASS_IMPL("InterchangeMeshNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeMeshNode")
 	}
 	static class UInterchangeMeshNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeMeshNode>();
 	}
 };
-static_assert(alignof(UInterchangeMeshNode) == 0x000008, "Wrong alignment on UInterchangeMeshNode");
-static_assert(sizeof(UInterchangeMeshNode) == 0x0001E8, "Wrong size on UInterchangeMeshNode");
+DUMPER7_ASSERTS_UInterchangeMeshNode;
+
+// Class InterchangeNodes.InterchangeGeometryCacheNode
+// 0x0040 (0x0238 - 0x01F8)
+class UInterchangeGeometryCacheNode final : public UInterchangeMeshNode
+{
+public:
+	uint8                                         Pad_1F8[0x40];                                     // 0x01F8(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomEndFrame(const int32& AttributeValue);
+	bool SetCustomFrameRate(const double& AttributeValue);
+	bool SetCustomHasConstantTopology(const bool& AttributeValue);
+	bool SetCustomStartFrame(const int32& AttributeValue);
+
+	bool GetCustomEndFrame(int32* AttributeValue) const;
+	bool GetCustomFrameRate(double* AttributeValue) const;
+	bool GetCustomHasConstantTopology(bool* AttributeValue) const;
+	bool GetCustomStartFrame(int32* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeGeometryCacheNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeGeometryCacheNode")
+	}
+	static class UInterchangeGeometryCacheNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeGeometryCacheNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeGeometryCacheNode;
 
 // Class InterchangeNodes.InterchangeSceneNode
-// 0x03A0 (0x0400 - 0x0060)
+// 0x0430 (0x0490 - 0x0060)
 class UInterchangeSceneNode final : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_60[0x3A0];                                     // 0x0060(0x03A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_60[0x430];                                     // 0x0060(0x0430)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool AddSpecializedType(const class FString& SpecializedType);
 	bool RemoveSlotMaterialDependencyUid(const class FString& SlotName);
 	bool RemoveSpecializedType(const class FString& SpecializedType);
+	bool SetAnimationCurveTypeForCurveName(const class FString& CurveName, const EInterchangeAnimationPayLoadType& AnimationCurveType);
+	bool SetCustomActorVisibility(bool bInIsVisible);
 	bool SetCustomAnimationAssetUidToPlay(const class FString& AttributeValue);
 	bool SetCustomAssetInstanceUid(const class FString& AttributeValue);
 	bool SetCustomBindPoseLocalTransform(const class UInterchangeBaseNodeContainer* BaseNodeContainer, const struct FTransform& AttributeValue, bool bResetCache);
+	bool SetCustomComponentVisibility(bool bInIsVisible);
 	bool SetCustomGeometricTransform(const struct FTransform& AttributeValue);
 	bool SetCustomHasBindPose(const bool& bHasBindPose);
 	bool SetCustomLocalTransform(const class UInterchangeBaseNodeContainer* BaseNodeContainer, const struct FTransform& AttributeValue, bool bResetCache);
@@ -803,10 +1031,13 @@ public:
 	bool SetMorphTargetCurveWeight(const class FString& MorphTargetName, const float& Weight);
 	bool SetSlotMaterialDependencyUid(const class FString& SlotName, const class FString& MaterialDependencyUid);
 
+	bool GetAnimationCurveTypeForCurveName(const class FString& CurveName, EInterchangeAnimationPayLoadType* OutCurveAnimationType) const;
+	bool GetCustomActorVisibility(bool* bOutIsVisible) const;
 	bool GetCustomAnimationAssetUidToPlay(class FString* AttributeValue) const;
 	bool GetCustomAssetInstanceUid(class FString* AttributeValue) const;
 	bool GetCustomBindPoseGlobalTransform(const class UInterchangeBaseNodeContainer* BaseNodeContainer, const struct FTransform& GlobalOffsetTransform, struct FTransform* AttributeValue, bool bForceRecache) const;
 	bool GetCustomBindPoseLocalTransform(struct FTransform* AttributeValue) const;
+	bool GetCustomComponentVisibility(bool* bOutIsVisible) const;
 	bool GetCustomGeometricTransform(struct FTransform* AttributeValue) const;
 	bool GetCustomGlobalTransform(const class UInterchangeBaseNodeContainer* BaseNodeContainer, const struct FTransform& GlobalOffsetTransform, struct FTransform* AttributeValue, bool bForceRecache) const;
 	bool GetCustomHasBindPose(bool* bHasBindPose) const;
@@ -826,15 +1057,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeSceneNode">();
+		STATIC_CLASS_IMPL("InterchangeSceneNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSceneNode")
 	}
 	static class UInterchangeSceneNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeSceneNode>();
 	}
 };
-static_assert(alignof(UInterchangeSceneNode) == 0x000008, "Wrong alignment on UInterchangeSceneNode");
-static_assert(sizeof(UInterchangeSceneNode) == 0x000400, "Wrong size on UInterchangeSceneNode");
+DUMPER7_ASSERTS_UInterchangeSceneNode;
 
 // Class InterchangeNodes.InterchangeShaderPortsAPI
 // 0x0000 (0x0028 - 0x0028)
@@ -858,15 +1092,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeShaderPortsAPI">();
+		STATIC_CLASS_IMPL("InterchangeShaderPortsAPI")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeShaderPortsAPI")
 	}
 	static class UInterchangeShaderPortsAPI* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeShaderPortsAPI>();
 	}
 };
-static_assert(alignof(UInterchangeShaderPortsAPI) == 0x000008, "Wrong alignment on UInterchangeShaderPortsAPI");
-static_assert(sizeof(UInterchangeShaderPortsAPI) == 0x000028, "Wrong size on UInterchangeShaderPortsAPI");
+DUMPER7_ASSERTS_UInterchangeShaderPortsAPI;
 
 // Class InterchangeNodes.InterchangeFunctionCallShaderNode
 // 0x0010 (0x0080 - 0x0070)
@@ -883,25 +1120,29 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeFunctionCallShaderNode">();
+		STATIC_CLASS_IMPL("InterchangeFunctionCallShaderNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeFunctionCallShaderNode")
 	}
 	static class UInterchangeFunctionCallShaderNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeFunctionCallShaderNode>();
 	}
 };
-static_assert(alignof(UInterchangeFunctionCallShaderNode) == 0x000008, "Wrong alignment on UInterchangeFunctionCallShaderNode");
-static_assert(sizeof(UInterchangeFunctionCallShaderNode) == 0x000080, "Wrong size on UInterchangeFunctionCallShaderNode");
+DUMPER7_ASSERTS_UInterchangeFunctionCallShaderNode;
 
 // Class InterchangeNodes.InterchangeShaderGraphNode
-// 0x0060 (0x00D0 - 0x0070)
+// 0x0070 (0x00E0 - 0x0070)
 class UInterchangeShaderGraphNode final : public UInterchangeShaderNode
 {
 public:
-	uint8                                         Pad_70[0x60];                                      // 0x0070(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_70[0x70];                                      // 0x0070(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomBlendMode(int32 AttributeValue);
+	bool SetCustomDisplacementCenterMode(float AttributeValue);
 	bool SetCustomIsAShaderFunction(const bool& AttributeValue);
 	bool SetCustomOpacityMaskClipValue(const float& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomScreenSpaceReflections(const bool& AttributeValue);
@@ -909,6 +1150,7 @@ public:
 	bool SetCustomTwoSidedTransmission(const bool& AttributeValue);
 
 	bool GetCustomBlendMode(int32* AttributeValue) const;
+	bool GetCustomDisplacementCenterMode(float* AttributeValue) const;
 	bool GetCustomIsAShaderFunction(bool* AttributeValue) const;
 	bool GetCustomOpacityMaskClipValue(float* AttributeValue) const;
 	bool GetCustomScreenSpaceReflections(bool* AttributeValue) const;
@@ -918,15 +1160,48 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeShaderGraphNode">();
+		STATIC_CLASS_IMPL("InterchangeShaderGraphNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeShaderGraphNode")
 	}
 	static class UInterchangeShaderGraphNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeShaderGraphNode>();
 	}
 };
-static_assert(alignof(UInterchangeShaderGraphNode) == 0x000008, "Wrong alignment on UInterchangeShaderGraphNode");
-static_assert(sizeof(UInterchangeShaderGraphNode) == 0x0000D0, "Wrong size on UInterchangeShaderGraphNode");
+DUMPER7_ASSERTS_UInterchangeShaderGraphNode;
+
+// Class InterchangeNodes.InterchangeSpecularProfileNode
+// 0x0020 (0x0080 - 0x0060)
+class UInterchangeSpecularProfileNode final : public UInterchangeBaseNode
+{
+public:
+	uint8                                         Pad_60[0x20];                                      // 0x0060(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomFormat(uint8 Format);
+	bool SetCustomTexture(const class FString& TextureUid);
+
+	bool GetCustomFormat(uint8* Format) const;
+	bool GetCustomTexture(class FString* TextureUid) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeSpecularProfileNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSpecularProfileNode")
+	}
+	static class UInterchangeSpecularProfileNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeSpecularProfileNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeSpecularProfileNode;
 
 // Class InterchangeNodes.InterchangeTexture2DNode
 // 0x0098 (0x0138 - 0x00A0)
@@ -946,15 +1221,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeTexture2DNode">();
+		STATIC_CLASS_IMPL("InterchangeTexture2DNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeTexture2DNode")
 	}
 	static class UInterchangeTexture2DNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeTexture2DNode>();
 	}
 };
-static_assert(alignof(UInterchangeTexture2DNode) == 0x000008, "Wrong alignment on UInterchangeTexture2DNode");
-static_assert(sizeof(UInterchangeTexture2DNode) == 0x000138, "Wrong size on UInterchangeTexture2DNode");
+DUMPER7_ASSERTS_UInterchangeTexture2DNode;
 
 // Class InterchangeNodes.InterchangeTextureBlurNode
 // 0x0000 (0x0138 - 0x0138)
@@ -963,15 +1241,18 @@ class UInterchangeTextureBlurNode final : public UInterchangeTexture2DNode
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeTextureBlurNode">();
+		STATIC_CLASS_IMPL("InterchangeTextureBlurNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeTextureBlurNode")
 	}
 	static class UInterchangeTextureBlurNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeTextureBlurNode>();
 	}
 };
-static_assert(alignof(UInterchangeTextureBlurNode) == 0x000008, "Wrong alignment on UInterchangeTextureBlurNode");
-static_assert(sizeof(UInterchangeTextureBlurNode) == 0x000138, "Wrong size on UInterchangeTextureBlurNode");
+DUMPER7_ASSERTS_UInterchangeTextureBlurNode;
 
 }
 

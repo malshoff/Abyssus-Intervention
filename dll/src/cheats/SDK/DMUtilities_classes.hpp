@@ -20,14 +20,14 @@ namespace SDK
 {
 
 // Class DMUtilities.DMActorProximityComponentBase
-// 0x00F0 (0x0320 - 0x0230)
+// 0x00F0 (0x0330 - 0x0240)
 #pragma pack(push, 0x1)
 class alignas(0x10) UDMActorProximityComponentBase : public USceneComponent
 {
 public:
-	TSet<class AActor*>                           ActorsInProximity;                                 // 0x0230(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TArray<TSubclassOf<class AActor>>             ActorClassArray;                                   // 0x0280(0x0010)(Edit, ZeroConstructor, EditConst, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_290[0x88];                                     // 0x0290(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSet<class AActor*>                           ActorsInProximity;                                 // 0x0240(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TArray<TSubclassOf<class AActor>>             ActorClassArray;                                   // 0x0290(0x0010)(Edit, ZeroConstructor, EditConst, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A0[0x88];                                     // 0x02A0(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddCheckedClass(TSubclassOf<class AActor> ActorClass, class FName Key);
@@ -38,7 +38,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMActorProximityComponentBase">();
+		STATIC_CLASS_IMPL("DMActorProximityComponentBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMActorProximityComponentBase")
 	}
 	static class UDMActorProximityComponentBase* GetDefaultObj()
 	{
@@ -46,23 +50,20 @@ public:
 	}
 };
 #pragma pack(pop)
-static_assert(alignof(UDMActorProximityComponentBase) == 0x000010, "Wrong alignment on UDMActorProximityComponentBase");
-static_assert(sizeof(UDMActorProximityComponentBase) == 0x000320, "Wrong size on UDMActorProximityComponentBase");
-static_assert(offsetof(UDMActorProximityComponentBase, ActorsInProximity) == 0x000230, "Member 'UDMActorProximityComponentBase::ActorsInProximity' has a wrong offset!");
-static_assert(offsetof(UDMActorProximityComponentBase, ActorClassArray) == 0x000280, "Member 'UDMActorProximityComponentBase::ActorClassArray' has a wrong offset!");
+DUMPER7_ASSERTS_UDMActorProximityComponentBase;
 
 // Class DMUtilities.DMActorProximityBoxComponent
-// 0x0090 (0x03B0 - 0x0320)
+// 0x0090 (0x03C0 - 0x0330)
 class UDMActorProximityBoxComponent final : public UDMActorProximityComponentBase
 {
 public:
-	uint8                                         Pad_318[0x38];                                     // 0x0318(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                BoxExtent;                                         // 0x0350(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AActor* Actor)> OnActorEnterProximity;                       // 0x0368(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AActor* Actor)> OnActorExitProximity;                        // 0x0378(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AActor* Actor)> OnInitialActorEnterProximity;                // 0x0388(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AActor* Actor)> OnAllActorsExitProximity;                    // 0x0398(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A8[0x8];                                      // 0x03A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_328[0x38];                                     // 0x0328(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                BoxExtent;                                         // 0x0360(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AActor* Actor)> OnActorEnterProximity;                       // 0x0378(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AActor* Actor)> OnActorExitProximity;                        // 0x0388(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AActor* Actor)> OnInitialActorEnterProximity;                // 0x0398(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AActor* Actor)> OnAllActorsExitProximity;                    // 0x03A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3B8[0x8];                                      // 0x03B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	struct FVector GetScaledBoxExtent() const;
@@ -71,48 +72,46 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMActorProximityBoxComponent">();
+		STATIC_CLASS_IMPL("DMActorProximityBoxComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMActorProximityBoxComponent")
 	}
 	static class UDMActorProximityBoxComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMActorProximityBoxComponent>();
 	}
 };
-static_assert(alignof(UDMActorProximityBoxComponent) == 0x000010, "Wrong alignment on UDMActorProximityBoxComponent");
-static_assert(sizeof(UDMActorProximityBoxComponent) == 0x0003B0, "Wrong size on UDMActorProximityBoxComponent");
-static_assert(offsetof(UDMActorProximityBoxComponent, BoxExtent) == 0x000350, "Member 'UDMActorProximityBoxComponent::BoxExtent' has a wrong offset!");
-static_assert(offsetof(UDMActorProximityBoxComponent, OnActorEnterProximity) == 0x000368, "Member 'UDMActorProximityBoxComponent::OnActorEnterProximity' has a wrong offset!");
-static_assert(offsetof(UDMActorProximityBoxComponent, OnActorExitProximity) == 0x000378, "Member 'UDMActorProximityBoxComponent::OnActorExitProximity' has a wrong offset!");
-static_assert(offsetof(UDMActorProximityBoxComponent, OnInitialActorEnterProximity) == 0x000388, "Member 'UDMActorProximityBoxComponent::OnInitialActorEnterProximity' has a wrong offset!");
-static_assert(offsetof(UDMActorProximityBoxComponent, OnAllActorsExitProximity) == 0x000398, "Member 'UDMActorProximityBoxComponent::OnAllActorsExitProximity' has a wrong offset!");
+DUMPER7_ASSERTS_UDMActorProximityBoxComponent;
 
 // Class DMUtilities.DMAdvancedGyroComponent
-// 0x0100 (0x0330 - 0x0230)
+// 0x0100 (0x0340 - 0x0240)
 class UDMAdvancedGyroComponent final : public USceneComponent
 {
 public:
-	bool                                          bDrawDebug;                                        // 0x0230(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMultiplyByMass;                                   // 0x0231(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bClampForce;                                       // 0x0232(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_233[0x1];                                      // 0x0233(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TensorScale;                                       // 0x0234(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseHighFidelityMass;                              // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseAggregateTick;                                 // 0x0239(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableAxis1;                                      // 0x023A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_23B[0x5];                                      // 0x023B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Axis1Direction;                                    // 0x0240(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Axis1StiffnessCoefficient;                         // 0x0258(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Axis1DampingCoefficient;                           // 0x025C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Axis1ForceMask;                                    // 0x0260(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            Axis1DampingCurve;                                 // 0x0278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableAxis2;                                      // 0x0280(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Axis2Direction;                                    // 0x0288(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Axis2StiffnessCoefficient;                         // 0x02A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Axis2DampingCoefficient;                           // 0x02A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Axis2ForceMask;                                    // 0x02A8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            Axis2DampingCurve;                                 // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C8[0x68];                                     // 0x02C8(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bDrawDebug;                                        // 0x0240(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMultiplyByMass;                                   // 0x0241(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClampForce;                                       // 0x0242(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_243[0x1];                                      // 0x0243(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TensorScale;                                       // 0x0244(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseHighFidelityMass;                              // 0x0248(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseAggregateTick;                                 // 0x0249(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAxis1;                                      // 0x024A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24B[0x5];                                      // 0x024B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Axis1Direction;                                    // 0x0250(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Axis1StiffnessCoefficient;                         // 0x0268(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Axis1DampingCoefficient;                           // 0x026C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Axis1ForceMask;                                    // 0x0270(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            Axis1DampingCurve;                                 // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAxis2;                                      // 0x0290(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_291[0x7];                                      // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Axis2Direction;                                    // 0x0298(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Axis2StiffnessCoefficient;                         // 0x02B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Axis2DampingCoefficient;                           // 0x02B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Axis2ForceMask;                                    // 0x02B8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            Axis2DampingCurve;                                 // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D8[0x68];                                     // 0x02D8(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetAxis1TargetDirection(const struct FVector& TargetDirection);
@@ -124,33 +123,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMAdvancedGyroComponent">();
+		STATIC_CLASS_IMPL("DMAdvancedGyroComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMAdvancedGyroComponent")
 	}
 	static class UDMAdvancedGyroComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMAdvancedGyroComponent>();
 	}
 };
-static_assert(alignof(UDMAdvancedGyroComponent) == 0x000010, "Wrong alignment on UDMAdvancedGyroComponent");
-static_assert(sizeof(UDMAdvancedGyroComponent) == 0x000330, "Wrong size on UDMAdvancedGyroComponent");
-static_assert(offsetof(UDMAdvancedGyroComponent, bDrawDebug) == 0x000230, "Member 'UDMAdvancedGyroComponent::bDrawDebug' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, bMultiplyByMass) == 0x000231, "Member 'UDMAdvancedGyroComponent::bMultiplyByMass' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, bClampForce) == 0x000232, "Member 'UDMAdvancedGyroComponent::bClampForce' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, TensorScale) == 0x000234, "Member 'UDMAdvancedGyroComponent::TensorScale' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, bUseHighFidelityMass) == 0x000238, "Member 'UDMAdvancedGyroComponent::bUseHighFidelityMass' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, bUseAggregateTick) == 0x000239, "Member 'UDMAdvancedGyroComponent::bUseAggregateTick' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, bEnableAxis1) == 0x00023A, "Member 'UDMAdvancedGyroComponent::bEnableAxis1' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, Axis1Direction) == 0x000240, "Member 'UDMAdvancedGyroComponent::Axis1Direction' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, Axis1StiffnessCoefficient) == 0x000258, "Member 'UDMAdvancedGyroComponent::Axis1StiffnessCoefficient' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, Axis1DampingCoefficient) == 0x00025C, "Member 'UDMAdvancedGyroComponent::Axis1DampingCoefficient' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, Axis1ForceMask) == 0x000260, "Member 'UDMAdvancedGyroComponent::Axis1ForceMask' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, Axis1DampingCurve) == 0x000278, "Member 'UDMAdvancedGyroComponent::Axis1DampingCurve' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, bEnableAxis2) == 0x000280, "Member 'UDMAdvancedGyroComponent::bEnableAxis2' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, Axis2Direction) == 0x000288, "Member 'UDMAdvancedGyroComponent::Axis2Direction' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, Axis2StiffnessCoefficient) == 0x0002A0, "Member 'UDMAdvancedGyroComponent::Axis2StiffnessCoefficient' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, Axis2DampingCoefficient) == 0x0002A4, "Member 'UDMAdvancedGyroComponent::Axis2DampingCoefficient' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, Axis2ForceMask) == 0x0002A8, "Member 'UDMAdvancedGyroComponent::Axis2ForceMask' has a wrong offset!");
-static_assert(offsetof(UDMAdvancedGyroComponent, Axis2DampingCurve) == 0x0002C0, "Member 'UDMAdvancedGyroComponent::Axis2DampingCurve' has a wrong offset!");
+DUMPER7_ASSERTS_UDMAdvancedGyroComponent;
 
 // Class DMUtilities.TickableTargetsWrapper
 // 0x0010 (0x0038 - 0x0028)
@@ -162,59 +146,63 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TickableTargetsWrapper">();
+		STATIC_CLASS_IMPL("TickableTargetsWrapper")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TickableTargetsWrapper")
 	}
 	static class UTickableTargetsWrapper* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTickableTargetsWrapper>();
 	}
 };
-static_assert(alignof(UTickableTargetsWrapper) == 0x000008, "Wrong alignment on UTickableTargetsWrapper");
-static_assert(sizeof(UTickableTargetsWrapper) == 0x000038, "Wrong size on UTickableTargetsWrapper");
-static_assert(offsetof(UTickableTargetsWrapper, Targets) == 0x000028, "Member 'UTickableTargetsWrapper::Targets' has a wrong offset!");
+DUMPER7_ASSERTS_UTickableTargetsWrapper;
 
 // Class DMUtilities.DMShapeComponent
-// 0x0010 (0x0500 - 0x04F0)
-class UDMShapeComponent : public UPrimitiveComponent
+// 0x0020 (0x0540 - 0x0520)
+#pragma pack(push, 0x1)
+class alignas(0x10) UDMShapeComponent : public UPrimitiveComponent
 {
 public:
-	class UBodySetup*                             ShapeBodySetup;                                    // 0x04E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 ShapeColor;                                        // 0x04F0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bDrawOnlyIfSelected : 1;                           // 0x04F4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bShouldCollideWhenPlacing : 1;                     // 0x04F4(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bDynamicObstacle : 1;                              // 0x04F4(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_4F5[0x3];                                      // 0x04F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UNavAreaBase>               AreaClass;                                         // 0x04F8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBodySetup*                             ShapeBodySetup;                                    // 0x0520(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 ShapeColor;                                        // 0x0528(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bDrawOnlyIfSelected : 1;                           // 0x052C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bShouldCollideWhenPlacing : 1;                     // 0x052C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDynamicObstacle : 1;                              // 0x052C(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_52D[0x3];                                      // 0x052D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UNavAreaBase>               AreaClass;                                         // 0x0530(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMShapeComponent">();
+		STATIC_CLASS_IMPL("DMShapeComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMShapeComponent")
 	}
 	static class UDMShapeComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMShapeComponent>();
 	}
 };
-static_assert(alignof(UDMShapeComponent) == 0x000010, "Wrong alignment on UDMShapeComponent");
-static_assert(sizeof(UDMShapeComponent) == 0x000500, "Wrong size on UDMShapeComponent");
-static_assert(offsetof(UDMShapeComponent, ShapeBodySetup) == 0x0004E8, "Member 'UDMShapeComponent::ShapeBodySetup' has a wrong offset!");
-static_assert(offsetof(UDMShapeComponent, ShapeColor) == 0x0004F0, "Member 'UDMShapeComponent::ShapeColor' has a wrong offset!");
-static_assert(offsetof(UDMShapeComponent, AreaClass) == 0x0004F8, "Member 'UDMShapeComponent::AreaClass' has a wrong offset!");
+#pragma pack(pop)
+DUMPER7_ASSERTS_UDMShapeComponent;
 
 // Class DMUtilities.DMAnyShapeComponent
-// 0x0030 (0x0530 - 0x0500)
+// 0x0030 (0x0570 - 0x0540)
 class UDMAnyShapeComponent final : public UDMShapeComponent
 {
 public:
-	EDMCollisionShape                             Shape;                                             // 0x0500(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_501[0x3];                                      // 0x0501(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SphereRadius;                                      // 0x0504(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                BoxExtent;                                         // 0x0508(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CapsuleRadius;                                     // 0x0520(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CapsuleHalfHeight;                                 // 0x0524(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LineThickness;                                     // 0x0528(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_52C[0x4];                                      // 0x052C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EDMCollisionShape                             Shape;                                             // 0x0538(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_539[0x3];                                      // 0x0539(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SphereRadius;                                      // 0x053C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BoxExtent;                                         // 0x0540(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CapsuleRadius;                                     // 0x0558(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CapsuleHalfHeight;                                 // 0x055C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LineThickness;                                     // 0x0560(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_564[0xC];                                      // 0x0564(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetBoxExtent(const struct FVector& InBoxExtent, bool bUpdateOverlaps);
@@ -242,35 +230,31 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMAnyShapeComponent">();
+		STATIC_CLASS_IMPL("DMAnyShapeComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMAnyShapeComponent")
 	}
 	static class UDMAnyShapeComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMAnyShapeComponent>();
 	}
 };
-static_assert(alignof(UDMAnyShapeComponent) == 0x000010, "Wrong alignment on UDMAnyShapeComponent");
-static_assert(sizeof(UDMAnyShapeComponent) == 0x000530, "Wrong size on UDMAnyShapeComponent");
-static_assert(offsetof(UDMAnyShapeComponent, Shape) == 0x000500, "Member 'UDMAnyShapeComponent::Shape' has a wrong offset!");
-static_assert(offsetof(UDMAnyShapeComponent, SphereRadius) == 0x000504, "Member 'UDMAnyShapeComponent::SphereRadius' has a wrong offset!");
-static_assert(offsetof(UDMAnyShapeComponent, BoxExtent) == 0x000508, "Member 'UDMAnyShapeComponent::BoxExtent' has a wrong offset!");
-static_assert(offsetof(UDMAnyShapeComponent, CapsuleRadius) == 0x000520, "Member 'UDMAnyShapeComponent::CapsuleRadius' has a wrong offset!");
-static_assert(offsetof(UDMAnyShapeComponent, CapsuleHalfHeight) == 0x000524, "Member 'UDMAnyShapeComponent::CapsuleHalfHeight' has a wrong offset!");
-static_assert(offsetof(UDMAnyShapeComponent, LineThickness) == 0x000528, "Member 'UDMAnyShapeComponent::LineThickness' has a wrong offset!");
+DUMPER7_ASSERTS_UDMAnyShapeComponent;
 
 // Class DMUtilities.DMConveyorComponent
-// 0x0030 (0x05F0 - 0x05C0)
+// 0x0030 (0x0640 - 0x0610)
 class UDMConveyorComponent final : public UStaticMeshComponent
 {
 public:
-	uint8                                         Pad_5B8[0x8];                                      // 0x05B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Speed;                                             // 0x05C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bConsiderMaterialFriction;                         // 0x05C4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C5[0x3];                                      // 0x05C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ComFactor;                                         // 0x05C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5CC[0x4];                                      // 0x05CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ConveyorDirection;                                 // 0x05D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5E8[0x8];                                      // 0x05E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_610[0x8];                                      // 0x0610(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Speed;                                             // 0x0618(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bConsiderMaterialFriction;                         // 0x061C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61D[0x3];                                      // 0x061D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ComFactor;                                         // 0x0620(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_624[0x4];                                      // 0x0624(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ConveyorDirection;                                 // 0x0628(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	void OnHit(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComponent, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
@@ -278,45 +262,44 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMConveyorComponent">();
+		STATIC_CLASS_IMPL("DMConveyorComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMConveyorComponent")
 	}
 	static class UDMConveyorComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMConveyorComponent>();
 	}
 };
-static_assert(alignof(UDMConveyorComponent) == 0x000010, "Wrong alignment on UDMConveyorComponent");
-static_assert(sizeof(UDMConveyorComponent) == 0x0005F0, "Wrong size on UDMConveyorComponent");
-static_assert(offsetof(UDMConveyorComponent, Speed) == 0x0005C0, "Member 'UDMConveyorComponent::Speed' has a wrong offset!");
-static_assert(offsetof(UDMConveyorComponent, bConsiderMaterialFriction) == 0x0005C4, "Member 'UDMConveyorComponent::bConsiderMaterialFriction' has a wrong offset!");
-static_assert(offsetof(UDMConveyorComponent, ComFactor) == 0x0005C8, "Member 'UDMConveyorComponent::ComFactor' has a wrong offset!");
-static_assert(offsetof(UDMConveyorComponent, ConveyorDirection) == 0x0005D0, "Member 'UDMConveyorComponent::ConveyorDirection' has a wrong offset!");
+DUMPER7_ASSERTS_UDMConveyorComponent;
 
 // Class DMUtilities.DMDragComponent
-// 0x0020 (0x0250 - 0x0230)
+// 0x0020 (0x0260 - 0x0240)
 class UDMDragComponent final : public USceneComponent
 {
 public:
-	float                                         DragCoefficient;                                   // 0x0230(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bApplyAtCOM;                                       // 0x0234(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawDebug;                                        // 0x0235(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_236[0x1A];                                     // 0x0236(0x001A)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         DragCoefficient;                                   // 0x0240(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyAtCOM;                                       // 0x0244(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawDebug;                                        // 0x0245(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_246[0x1A];                                     // 0x0246(0x001A)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMDragComponent">();
+		STATIC_CLASS_IMPL("DMDragComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMDragComponent")
 	}
 	static class UDMDragComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMDragComponent>();
 	}
 };
-static_assert(alignof(UDMDragComponent) == 0x000010, "Wrong alignment on UDMDragComponent");
-static_assert(sizeof(UDMDragComponent) == 0x000250, "Wrong size on UDMDragComponent");
-static_assert(offsetof(UDMDragComponent, DragCoefficient) == 0x000230, "Member 'UDMDragComponent::DragCoefficient' has a wrong offset!");
-static_assert(offsetof(UDMDragComponent, bApplyAtCOM) == 0x000234, "Member 'UDMDragComponent::bApplyAtCOM' has a wrong offset!");
-static_assert(offsetof(UDMDragComponent, bDrawDebug) == 0x000235, "Member 'UDMDragComponent::bDrawDebug' has a wrong offset!");
+DUMPER7_ASSERTS_UDMDragComponent;
 
 // Class DMUtilities.DMGameplayLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -329,33 +312,36 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMGameplayLibrary">();
+		STATIC_CLASS_IMPL("DMGameplayLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMGameplayLibrary")
 	}
 	static class UDMGameplayLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMGameplayLibrary>();
 	}
 };
-static_assert(alignof(UDMGameplayLibrary) == 0x000008, "Wrong alignment on UDMGameplayLibrary");
-static_assert(sizeof(UDMGameplayLibrary) == 0x000028, "Wrong size on UDMGameplayLibrary");
+DUMPER7_ASSERTS_UDMGameplayLibrary;
 
 // Class DMUtilities.DMInterpolatedSpringArm
-// 0x0180 (0x04B0 - 0x0330)
+// 0x0180 (0x04C0 - 0x0340)
 class UDMInterpolatedSpringArm final : public USpringArmComponent
 {
 public:
-	class APawn*                                  OwningPawn;                                        // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_338[0xD0];                                     // 0x0338(0x00D0)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCameraComponent*                       AttachedCameraComp;                                // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FDMSpringArmSettings                   CameraSettings;                                    // 0x0410(0x0070)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bUseFollowRotation;                                // 0x0480(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateControllerRotation;                         // 0x0481(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_482[0x2];                                      // 0x0482(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CameraLengthRotationInterpSpeed;                   // 0x0484(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CameraLengthFollowInterpSpeed;                     // 0x0488(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48C[0x4];                                      // 0x048C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CameraFollowInterpLag;                             // 0x0490(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4A8[0x8];                                      // 0x04A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class APawn*                                  OwningPawn;                                        // 0x0340(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_348[0xD0];                                     // 0x0348(0x00D0)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCameraComponent*                       AttachedCameraComp;                                // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FDMSpringArmSettings                   CameraSettings;                                    // 0x0420(0x0070)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bUseFollowRotation;                                // 0x0490(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateControllerRotation;                         // 0x0491(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_492[0x2];                                      // 0x0492(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CameraLengthRotationInterpSpeed;                   // 0x0494(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CameraLengthFollowInterpSpeed;                     // 0x0498(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49C[0x4];                                      // 0x049C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CameraFollowInterpLag;                             // 0x04A0(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4B8[0x8];                                      // 0x04B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddCameraVelocityPitch(float Val);
@@ -376,23 +362,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMInterpolatedSpringArm">();
+		STATIC_CLASS_IMPL("DMInterpolatedSpringArm")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMInterpolatedSpringArm")
 	}
 	static class UDMInterpolatedSpringArm* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMInterpolatedSpringArm>();
 	}
 };
-static_assert(alignof(UDMInterpolatedSpringArm) == 0x000010, "Wrong alignment on UDMInterpolatedSpringArm");
-static_assert(sizeof(UDMInterpolatedSpringArm) == 0x0004B0, "Wrong size on UDMInterpolatedSpringArm");
-static_assert(offsetof(UDMInterpolatedSpringArm, OwningPawn) == 0x000330, "Member 'UDMInterpolatedSpringArm::OwningPawn' has a wrong offset!");
-static_assert(offsetof(UDMInterpolatedSpringArm, AttachedCameraComp) == 0x000408, "Member 'UDMInterpolatedSpringArm::AttachedCameraComp' has a wrong offset!");
-static_assert(offsetof(UDMInterpolatedSpringArm, CameraSettings) == 0x000410, "Member 'UDMInterpolatedSpringArm::CameraSettings' has a wrong offset!");
-static_assert(offsetof(UDMInterpolatedSpringArm, bUseFollowRotation) == 0x000480, "Member 'UDMInterpolatedSpringArm::bUseFollowRotation' has a wrong offset!");
-static_assert(offsetof(UDMInterpolatedSpringArm, bUpdateControllerRotation) == 0x000481, "Member 'UDMInterpolatedSpringArm::bUpdateControllerRotation' has a wrong offset!");
-static_assert(offsetof(UDMInterpolatedSpringArm, CameraLengthRotationInterpSpeed) == 0x000484, "Member 'UDMInterpolatedSpringArm::CameraLengthRotationInterpSpeed' has a wrong offset!");
-static_assert(offsetof(UDMInterpolatedSpringArm, CameraLengthFollowInterpSpeed) == 0x000488, "Member 'UDMInterpolatedSpringArm::CameraLengthFollowInterpSpeed' has a wrong offset!");
-static_assert(offsetof(UDMInterpolatedSpringArm, CameraFollowInterpLag) == 0x000490, "Member 'UDMInterpolatedSpringArm::CameraFollowInterpLag' has a wrong offset!");
+DUMPER7_ASSERTS_UDMInterpolatedSpringArm;
 
 // Class DMUtilities.DMMathLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -405,15 +386,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMMathLibrary">();
+		STATIC_CLASS_IMPL("DMMathLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMMathLibrary")
 	}
 	static class UDMMathLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMMathLibrary>();
 	}
 };
-static_assert(alignof(UDMMathLibrary) == 0x000008, "Wrong alignment on UDMMathLibrary");
-static_assert(sizeof(UDMMathLibrary) == 0x000028, "Wrong size on UDMMathLibrary");
+DUMPER7_ASSERTS_UDMMathLibrary;
 
 // Class DMUtilities.DMNetworkLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -425,29 +409,32 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMNetworkLibrary">();
+		STATIC_CLASS_IMPL("DMNetworkLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMNetworkLibrary")
 	}
 	static class UDMNetworkLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMNetworkLibrary>();
 	}
 };
-static_assert(alignof(UDMNetworkLibrary) == 0x000008, "Wrong alignment on UDMNetworkLibrary");
-static_assert(sizeof(UDMNetworkLibrary) == 0x000028, "Wrong size on UDMNetworkLibrary");
+DUMPER7_ASSERTS_UDMNetworkLibrary;
 
 // Class DMUtilities.DMPhysicalAnimationComponent
-// 0x0060 (0x0100 - 0x00A0)
+// 0x0060 (0x0118 - 0x00B8)
 class UDMPhysicalAnimationComponent final : public UActorComponent
 {
 public:
-	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 SkeletalMeshComponent;                             // 0x00A8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_B0[0x38];                                      // 0x00B0(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StrengthMultiplyer;                                // 0x00E8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseAggregateTick;                                 // 0x00EC(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseSkelMeshAggrTickPrerequisite;                  // 0x00ED(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLockFree;                                         // 0x00EE(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EF[0x11];                                      // 0x00EF(0x0011)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 SkeletalMeshComponent;                             // 0x00C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_C8[0x38];                                      // 0x00C8(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StrengthMultiplyer;                                // 0x0100(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseAggregateTick;                                 // 0x0104(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseSkelMeshAggrTickPrerequisite;                  // 0x0105(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLockFree;                                         // 0x0106(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_107[0x11];                                     // 0x0107(0x0011)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ApplyPhysicalAnimationProfileBelow(class FName BodyName, class FName ProfileName, bool bIncludeSelf, bool bClearNotFound);
@@ -461,20 +448,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMPhysicalAnimationComponent">();
+		STATIC_CLASS_IMPL("DMPhysicalAnimationComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMPhysicalAnimationComponent")
 	}
 	static class UDMPhysicalAnimationComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMPhysicalAnimationComponent>();
 	}
 };
-static_assert(alignof(UDMPhysicalAnimationComponent) == 0x000008, "Wrong alignment on UDMPhysicalAnimationComponent");
-static_assert(sizeof(UDMPhysicalAnimationComponent) == 0x000100, "Wrong size on UDMPhysicalAnimationComponent");
-static_assert(offsetof(UDMPhysicalAnimationComponent, SkeletalMeshComponent) == 0x0000A8, "Member 'UDMPhysicalAnimationComponent::SkeletalMeshComponent' has a wrong offset!");
-static_assert(offsetof(UDMPhysicalAnimationComponent, StrengthMultiplyer) == 0x0000E8, "Member 'UDMPhysicalAnimationComponent::StrengthMultiplyer' has a wrong offset!");
-static_assert(offsetof(UDMPhysicalAnimationComponent, bUseAggregateTick) == 0x0000EC, "Member 'UDMPhysicalAnimationComponent::bUseAggregateTick' has a wrong offset!");
-static_assert(offsetof(UDMPhysicalAnimationComponent, bUseSkelMeshAggrTickPrerequisite) == 0x0000ED, "Member 'UDMPhysicalAnimationComponent::bUseSkelMeshAggrTickPrerequisite' has a wrong offset!");
-static_assert(offsetof(UDMPhysicalAnimationComponent, bLockFree) == 0x0000EE, "Member 'UDMPhysicalAnimationComponent::bLockFree' has a wrong offset!");
+DUMPER7_ASSERTS_UDMPhysicalAnimationComponent;
 
 // Class DMUtilities.DMPhysicsVolume
 // 0x0060 (0x0308 - 0x02A8)
@@ -493,17 +478,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMPhysicsVolume">();
+		STATIC_CLASS_IMPL("DMPhysicsVolume")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMPhysicsVolume")
 	}
 	static class ADMPhysicsVolume* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ADMPhysicsVolume>();
 	}
 };
-static_assert(alignof(ADMPhysicsVolume) == 0x000008, "Wrong alignment on ADMPhysicsVolume");
-static_assert(sizeof(ADMPhysicsVolume) == 0x000308, "Wrong size on ADMPhysicsVolume");
-static_assert(offsetof(ADMPhysicsVolume, ShapeComponent) == 0x0002A8, "Member 'ADMPhysicsVolume::ShapeComponent' has a wrong offset!");
-static_assert(offsetof(ADMPhysicsVolume, bDrawDebug) == 0x000300, "Member 'ADMPhysicsVolume::bDrawDebug' has a wrong offset!");
+DUMPER7_ASSERTS_ADMPhysicsVolume;
 
 // Class DMUtilities.DMPhysicsVolumeInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -516,7 +502,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMPhysicsVolumeInterface">();
+		STATIC_CLASS_IMPL("DMPhysicsVolumeInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMPhysicsVolumeInterface")
 	}
 	static class IDMPhysicsVolumeInterface* GetDefaultObj()
 	{
@@ -532,8 +522,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IDMPhysicsVolumeInterface) == 0x000001, "Wrong alignment on IDMPhysicsVolumeInterface");
-static_assert(sizeof(IDMPhysicsVolumeInterface) == 0x000001, "Wrong size on IDMPhysicsVolumeInterface");
+DUMPER7_ASSERTS_IDMPhysicsVolumeInterface;
 
 // Class DMUtilities.DMPlatformLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -545,30 +534,33 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMPlatformLibrary">();
+		STATIC_CLASS_IMPL("DMPlatformLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMPlatformLibrary")
 	}
 	static class UDMPlatformLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMPlatformLibrary>();
 	}
 };
-static_assert(alignof(UDMPlatformLibrary) == 0x000008, "Wrong alignment on UDMPlatformLibrary");
-static_assert(sizeof(UDMPlatformLibrary) == 0x000028, "Wrong size on UDMPlatformLibrary");
+DUMPER7_ASSERTS_UDMPlatformLibrary;
 
 // Class DMUtilities.DMRocketThrusterComponent
-// 0x0070 (0x0570 - 0x0500)
+// 0x0070 (0x05B0 - 0x0540)
 class UDMRocketThrusterComponent final : public UArrowComponent
 {
 public:
-	float                                         RocketForce;                                       // 0x0500(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_504[0x4];                                      // 0x0504(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             BoostSound;                                        // 0x0508(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UParticleSystem*                        BoostParticleSystem;                               // 0x0510(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ParticleEffectOffset;                              // 0x0518(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               ParticleEffectRotationOffset;                      // 0x0530(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         ParticleEffectScale;                               // 0x0548(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Throttle;                                          // 0x054C(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_550[0x20];                                     // 0x0550(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         RocketForce;                                       // 0x0538(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_53C[0x4];                                      // 0x053C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             BoostSound;                                        // 0x0540(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UParticleSystem*                        BoostParticleSystem;                               // 0x0548(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ParticleEffectOffset;                              // 0x0550(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               ParticleEffectRotationOffset;                      // 0x0568(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ParticleEffectScale;                               // 0x0580(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Throttle;                                          // 0x0584(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_588[0x28];                                     // 0x0588(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Server_SetThrottle(float newThrottle);
@@ -577,22 +569,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMRocketThrusterComponent">();
+		STATIC_CLASS_IMPL("DMRocketThrusterComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMRocketThrusterComponent")
 	}
 	static class UDMRocketThrusterComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMRocketThrusterComponent>();
 	}
 };
-static_assert(alignof(UDMRocketThrusterComponent) == 0x000010, "Wrong alignment on UDMRocketThrusterComponent");
-static_assert(sizeof(UDMRocketThrusterComponent) == 0x000570, "Wrong size on UDMRocketThrusterComponent");
-static_assert(offsetof(UDMRocketThrusterComponent, RocketForce) == 0x000500, "Member 'UDMRocketThrusterComponent::RocketForce' has a wrong offset!");
-static_assert(offsetof(UDMRocketThrusterComponent, BoostSound) == 0x000508, "Member 'UDMRocketThrusterComponent::BoostSound' has a wrong offset!");
-static_assert(offsetof(UDMRocketThrusterComponent, BoostParticleSystem) == 0x000510, "Member 'UDMRocketThrusterComponent::BoostParticleSystem' has a wrong offset!");
-static_assert(offsetof(UDMRocketThrusterComponent, ParticleEffectOffset) == 0x000518, "Member 'UDMRocketThrusterComponent::ParticleEffectOffset' has a wrong offset!");
-static_assert(offsetof(UDMRocketThrusterComponent, ParticleEffectRotationOffset) == 0x000530, "Member 'UDMRocketThrusterComponent::ParticleEffectRotationOffset' has a wrong offset!");
-static_assert(offsetof(UDMRocketThrusterComponent, ParticleEffectScale) == 0x000548, "Member 'UDMRocketThrusterComponent::ParticleEffectScale' has a wrong offset!");
-static_assert(offsetof(UDMRocketThrusterComponent, Throttle) == 0x00054C, "Member 'UDMRocketThrusterComponent::Throttle' has a wrong offset!");
+DUMPER7_ASSERTS_UDMRocketThrusterComponent;
 
 // Class DMUtilities.DMStringLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -604,22 +592,25 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMStringLibrary">();
+		STATIC_CLASS_IMPL("DMStringLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMStringLibrary")
 	}
 	static class UDMStringLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMStringLibrary>();
 	}
 };
-static_assert(alignof(UDMStringLibrary) == 0x000008, "Wrong alignment on UDMStringLibrary");
-static_assert(sizeof(UDMStringLibrary) == 0x000028, "Wrong size on UDMStringLibrary");
+DUMPER7_ASSERTS_UDMStringLibrary;
 
 // Class DMUtilities.DMSynchronizedClockComponent
-// 0x0020 (0x00C0 - 0x00A0)
+// 0x0020 (0x00D8 - 0x00B8)
 class UDMSynchronizedClockComponent final : public UActorComponent
 {
 public:
-	uint8                                         Pad_A0[0x20];                                      // 0x00A0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B8[0x20];                                      // 0x00B8(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClientUpdateTime(float clientTime, float serverTime);
@@ -628,15 +619,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMSynchronizedClockComponent">();
+		STATIC_CLASS_IMPL("DMSynchronizedClockComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMSynchronizedClockComponent")
 	}
 	static class UDMSynchronizedClockComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMSynchronizedClockComponent>();
 	}
 };
-static_assert(alignof(UDMSynchronizedClockComponent) == 0x000008, "Wrong alignment on UDMSynchronizedClockComponent");
-static_assert(sizeof(UDMSynchronizedClockComponent) == 0x0000C0, "Wrong size on UDMSynchronizedClockComponent");
+DUMPER7_ASSERTS_UDMSynchronizedClockComponent;
 
 // Class DMUtilities.DMSystemLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -657,15 +651,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMSystemLibrary">();
+		STATIC_CLASS_IMPL("DMSystemLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMSystemLibrary")
 	}
 	static class UDMSystemLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMSystemLibrary>();
 	}
 };
-static_assert(alignof(UDMSystemLibrary) == 0x000008, "Wrong alignment on UDMSystemLibrary");
-static_assert(sizeof(UDMSystemLibrary) == 0x000028, "Wrong size on UDMSystemLibrary");
+DUMPER7_ASSERTS_UDMSystemLibrary;
 
 // Class DMUtilities.DMWaterVolume
 // 0x0030 (0x0338 - 0x0308)
@@ -682,64 +679,63 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMWaterVolume">();
+		STATIC_CLASS_IMPL("DMWaterVolume")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMWaterVolume")
 	}
 	static class ADMWaterVolume* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ADMWaterVolume>();
 	}
 };
-static_assert(alignof(ADMWaterVolume) == 0x000008, "Wrong alignment on ADMWaterVolume");
-static_assert(sizeof(ADMWaterVolume) == 0x000338, "Wrong size on ADMWaterVolume");
-static_assert(offsetof(ADMWaterVolume, ArrowComponent) == 0x000308, "Member 'ADMWaterVolume::ArrowComponent' has a wrong offset!");
-static_assert(offsetof(ADMWaterVolume, WaterDensity) == 0x000310, "Member 'ADMWaterVolume::WaterDensity' has a wrong offset!");
-static_assert(offsetof(ADMWaterVolume, WaterDensity_Drag) == 0x000314, "Member 'ADMWaterVolume::WaterDensity_Drag' has a wrong offset!");
-static_assert(offsetof(ADMWaterVolume, FlowDirection) == 0x000318, "Member 'ADMWaterVolume::FlowDirection' has a wrong offset!");
-static_assert(offsetof(ADMWaterVolume, FlowMagnitude) == 0x000330, "Member 'ADMWaterVolume::FlowMagnitude' has a wrong offset!");
+DUMPER7_ASSERTS_ADMWaterVolume;
 
 // Class DMUtilities.DMWheelComponent
-// 0x04D0 (0x09C0 - 0x04F0)
+// 0x04E0 (0x0A00 - 0x0520)
 class UDMWheelComponent final : public UPrimitiveComponent
 {
 public:
-	bool                                          bApplyForceOnImpact;                               // 0x04E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bApplyForceOnRootComponent;                        // 0x04E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4EA[0x6];                                      // 0x04EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            ImpactAngleForceCurve;                             // 0x04F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSweepAsync;                                       // 0x04F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4F9[0x3];                                      // 0x04F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SweepFrequency;                                    // 0x04FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StaticForwardFrictionCOF;                          // 0x0500(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DynamicForwardFrictionCOF;                         // 0x0504(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StaticSidewaysFrictionCOF;                         // 0x0508(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DynamicSidewaysFrictionCOF;                        // 0x050C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DynamicFrictionThreshold;                          // 0x0510(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpringLength;                                      // 0x0514(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpringConstant;                                    // 0x0518(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpringDampingConstant;                             // 0x051C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpringCompression;                                 // 0x0520(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxCompressionForcePercentage;                     // 0x0524(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bApplySpringAtCOM;                                 // 0x0528(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIgnoreMass;                                       // 0x0529(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseHighFidelityMass;                              // 0x052A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EWheelShape                                   WheelShape;                                        // 0x052B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SphereRadius;                                      // 0x052C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                BoxHalfExtent;                                     // 0x0530(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CapsuleRadius;                                     // 0x0548(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CapsuleHalfHeight;                                 // 0x054C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMesh*                            WheelMeshCollision;                                // 0x0550(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseAggregateTick;                                 // 0x0558(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDebug;                                            // 0x0559(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bShouldCollideWhenPlacing : 1;                     // 0x055A(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_55B[0x1];                                      // 0x055B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FColor                                 WheelColor;                                        // 0x055C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 SpringColor;                                       // 0x0560(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bDynamicObstacle : 1;                              // 0x0564(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_565[0x3];                                      // 0x0565(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UNavAreaBase>               AreaClass;                                         // 0x0568(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UBodySetup*                             ShapeBodySetup;                                    // 0x0570(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_578[0x430];                                    // 0x0578(0x0430)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                RelativeWheelSocketLocation;                       // 0x09A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bApplyForceOnImpact;                               // 0x0520(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyForceOnRootComponent;                        // 0x0521(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_522[0x6];                                      // 0x0522(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            ImpactAngleForceCurve;                             // 0x0528(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSweepAsync;                                       // 0x0530(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_531[0x3];                                      // 0x0531(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SweepFrequency;                                    // 0x0534(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StaticForwardFrictionCOF;                          // 0x0538(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DynamicForwardFrictionCOF;                         // 0x053C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StaticSidewaysFrictionCOF;                         // 0x0540(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DynamicSidewaysFrictionCOF;                        // 0x0544(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DynamicFrictionThreshold;                          // 0x0548(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpringLength;                                      // 0x054C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpringConstant;                                    // 0x0550(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpringDampingConstant;                             // 0x0554(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpringCompression;                                 // 0x0558(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxCompressionForcePercentage;                     // 0x055C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplySpringAtCOM;                                 // 0x0560(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreMass;                                       // 0x0561(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseHighFidelityMass;                              // 0x0562(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EWheelShape                                   WheelShape;                                        // 0x0563(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SphereRadius;                                      // 0x0564(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BoxHalfExtent;                                     // 0x0568(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CapsuleRadius;                                     // 0x0580(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CapsuleHalfHeight;                                 // 0x0584(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            WheelMeshCollision;                                // 0x0588(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseAggregateTick;                                 // 0x0590(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDebug;                                            // 0x0591(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bShouldCollideWhenPlacing : 1;                     // 0x0592(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_593[0x1];                                      // 0x0593(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FColor                                 WheelColor;                                        // 0x0594(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 SpringColor;                                       // 0x0598(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bDynamicObstacle : 1;                              // 0x059C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_59D[0x3];                                      // 0x059D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UNavAreaBase>               AreaClass;                                         // 0x05A0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBodySetup*                             ShapeBodySetup;                                    // 0x05A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5B0[0x430];                                    // 0x05B0(0x0430)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                RelativeWheelSocketLocation;                       // 0x09E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_9F8[0x8];                                      // 0x09F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	struct FDMWheelContact GetLastWheelContact() const;
@@ -749,46 +745,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMWheelComponent">();
+		STATIC_CLASS_IMPL("DMWheelComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMWheelComponent")
 	}
 	static class UDMWheelComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMWheelComponent>();
 	}
 };
-static_assert(alignof(UDMWheelComponent) == 0x000010, "Wrong alignment on UDMWheelComponent");
-static_assert(sizeof(UDMWheelComponent) == 0x0009C0, "Wrong size on UDMWheelComponent");
-static_assert(offsetof(UDMWheelComponent, bApplyForceOnImpact) == 0x0004E8, "Member 'UDMWheelComponent::bApplyForceOnImpact' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, bApplyForceOnRootComponent) == 0x0004E9, "Member 'UDMWheelComponent::bApplyForceOnRootComponent' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, ImpactAngleForceCurve) == 0x0004F0, "Member 'UDMWheelComponent::ImpactAngleForceCurve' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, bSweepAsync) == 0x0004F8, "Member 'UDMWheelComponent::bSweepAsync' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, SweepFrequency) == 0x0004FC, "Member 'UDMWheelComponent::SweepFrequency' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, StaticForwardFrictionCOF) == 0x000500, "Member 'UDMWheelComponent::StaticForwardFrictionCOF' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, DynamicForwardFrictionCOF) == 0x000504, "Member 'UDMWheelComponent::DynamicForwardFrictionCOF' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, StaticSidewaysFrictionCOF) == 0x000508, "Member 'UDMWheelComponent::StaticSidewaysFrictionCOF' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, DynamicSidewaysFrictionCOF) == 0x00050C, "Member 'UDMWheelComponent::DynamicSidewaysFrictionCOF' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, DynamicFrictionThreshold) == 0x000510, "Member 'UDMWheelComponent::DynamicFrictionThreshold' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, SpringLength) == 0x000514, "Member 'UDMWheelComponent::SpringLength' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, SpringConstant) == 0x000518, "Member 'UDMWheelComponent::SpringConstant' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, SpringDampingConstant) == 0x00051C, "Member 'UDMWheelComponent::SpringDampingConstant' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, SpringCompression) == 0x000520, "Member 'UDMWheelComponent::SpringCompression' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, MaxCompressionForcePercentage) == 0x000524, "Member 'UDMWheelComponent::MaxCompressionForcePercentage' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, bApplySpringAtCOM) == 0x000528, "Member 'UDMWheelComponent::bApplySpringAtCOM' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, bIgnoreMass) == 0x000529, "Member 'UDMWheelComponent::bIgnoreMass' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, bUseHighFidelityMass) == 0x00052A, "Member 'UDMWheelComponent::bUseHighFidelityMass' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, WheelShape) == 0x00052B, "Member 'UDMWheelComponent::WheelShape' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, SphereRadius) == 0x00052C, "Member 'UDMWheelComponent::SphereRadius' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, BoxHalfExtent) == 0x000530, "Member 'UDMWheelComponent::BoxHalfExtent' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, CapsuleRadius) == 0x000548, "Member 'UDMWheelComponent::CapsuleRadius' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, CapsuleHalfHeight) == 0x00054C, "Member 'UDMWheelComponent::CapsuleHalfHeight' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, WheelMeshCollision) == 0x000550, "Member 'UDMWheelComponent::WheelMeshCollision' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, bUseAggregateTick) == 0x000558, "Member 'UDMWheelComponent::bUseAggregateTick' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, bDebug) == 0x000559, "Member 'UDMWheelComponent::bDebug' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, WheelColor) == 0x00055C, "Member 'UDMWheelComponent::WheelColor' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, SpringColor) == 0x000560, "Member 'UDMWheelComponent::SpringColor' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, AreaClass) == 0x000568, "Member 'UDMWheelComponent::AreaClass' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, ShapeBodySetup) == 0x000570, "Member 'UDMWheelComponent::ShapeBodySetup' has a wrong offset!");
-static_assert(offsetof(UDMWheelComponent, RelativeWheelSocketLocation) == 0x0009A8, "Member 'UDMWheelComponent::RelativeWheelSocketLocation' has a wrong offset!");
+DUMPER7_ASSERTS_UDMWheelComponent;
 
 // Class DMUtilities.DMWindVolume
 // 0x0018 (0x0320 - 0x0308)
@@ -805,44 +773,43 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMWindVolume">();
+		STATIC_CLASS_IMPL("DMWindVolume")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMWindVolume")
 	}
 	static class ADMWindVolume* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ADMWindVolume>();
 	}
 };
-static_assert(alignof(ADMWindVolume) == 0x000008, "Wrong alignment on ADMWindVolume");
-static_assert(sizeof(ADMWindVolume) == 0x000320, "Wrong size on ADMWindVolume");
-static_assert(offsetof(ADMWindVolume, WindSourceComponent) == 0x000308, "Member 'ADMWindVolume::WindSourceComponent' has a wrong offset!");
-static_assert(offsetof(ADMWindVolume, WindSpeed) == 0x000310, "Member 'ADMWindVolume::WindSpeed' has a wrong offset!");
-static_assert(offsetof(ADMWindVolume, bNoDropOff) == 0x000314, "Member 'ADMWindVolume::bNoDropOff' has a wrong offset!");
-static_assert(offsetof(ADMWindVolume, bSuction) == 0x000315, "Member 'ADMWindVolume::bSuction' has a wrong offset!");
-static_assert(offsetof(ADMWindVolume, bUniformFlow) == 0x000316, "Member 'ADMWindVolume::bUniformFlow' has a wrong offset!");
+DUMPER7_ASSERTS_ADMWindVolume;
 
 // Class DMUtilities.DMWingComponent
-// 0x0020 (0x0250 - 0x0230)
+// 0x0020 (0x0260 - 0x0240)
 class UDMWingComponent final : public USceneComponent
 {
 public:
-	float                                         LiftConstant;                                      // 0x0230(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawDebug;                                        // 0x0234(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_235[0x1B];                                     // 0x0235(0x001B)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         LiftConstant;                                      // 0x0240(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawDebug;                                        // 0x0244(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_245[0x1B];                                     // 0x0245(0x001B)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMWingComponent">();
+		STATIC_CLASS_IMPL("DMWingComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMWingComponent")
 	}
 	static class UDMWingComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMWingComponent>();
 	}
 };
-static_assert(alignof(UDMWingComponent) == 0x000010, "Wrong alignment on UDMWingComponent");
-static_assert(sizeof(UDMWingComponent) == 0x000250, "Wrong size on UDMWingComponent");
-static_assert(offsetof(UDMWingComponent, LiftConstant) == 0x000230, "Member 'UDMWingComponent::LiftConstant' has a wrong offset!");
-static_assert(offsetof(UDMWingComponent, bDrawDebug) == 0x000234, "Member 'UDMWingComponent::bDrawDebug' has a wrong offset!");
+DUMPER7_ASSERTS_UDMWingComponent;
 
 }
 

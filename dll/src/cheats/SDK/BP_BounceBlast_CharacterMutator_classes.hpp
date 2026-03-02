@@ -39,19 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BounceBlast_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_BounceBlast_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BounceBlast_CharacterMutator_C")
 	}
 	static class UBP_BounceBlast_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_BounceBlast_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_BounceBlast_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_BounceBlast_CharacterMutator_C");
-static_assert(sizeof(UBP_BounceBlast_CharacterMutator_C) == 0x000120, "Wrong size on UBP_BounceBlast_CharacterMutator_C");
-static_assert(offsetof(UBP_BounceBlast_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_BounceBlast_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_BounceBlast_CharacterMutator_C, BounceRange) == 0x000110, "Member 'UBP_BounceBlast_CharacterMutator_C::BounceRange' has a wrong offset!");
-static_assert(offsetof(UBP_BounceBlast_CharacterMutator_C, Bounces) == 0x000114, "Member 'UBP_BounceBlast_CharacterMutator_C::Bounces' has a wrong offset!");
-static_assert(offsetof(UBP_BounceBlast_CharacterMutator_C, CurrentBounces) == 0x000118, "Member 'UBP_BounceBlast_CharacterMutator_C::CurrentBounces' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_BounceBlast_CharacterMutator_C;
 
 }
 

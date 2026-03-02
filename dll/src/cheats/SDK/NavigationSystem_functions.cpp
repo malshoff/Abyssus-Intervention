@@ -865,7 +865,7 @@ void UNavRelevantComponent::SetNavigationRelevancy(bool bRelevant)
 // Function NavigationSystem.RecastNavMesh.K2_ReplaceAreaInTileBounds
 // (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// const struct FBox&                      Bounds                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FBox&                      Bounds                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class UNavArea>             OldArea                                                (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class UNavArea>             NewArea                                                (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReplaceLinks                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -997,7 +997,7 @@ void ANavModifierVolume::SetAreaClassToReplace(TSubclassOf<class UNavArea> NewAr
 
 
 // Function NavigationSystem.SplineNavModifierComponent.UpdateNavigationWithComponentData
-// (Final, RequiredAPI, Native, Private)
+// (Final, Native, Private)
 
 void USplineNavModifierComponent::UpdateNavigationWithComponentData()
 {

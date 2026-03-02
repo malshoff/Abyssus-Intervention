@@ -11,36 +11,36 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Widget_SettingsBase_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_SettingsSlider.Widget_SettingsSlider_C
-// 0x0098 (0x0370 - 0x02D8)
+// 0x0098 (0x03E0 - 0x0348)
 class UWidget_SettingsSlider_C final : public UWidget_SettingsBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_SettingsSlider_C;            // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Highlighted;                                       // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_64;                                          // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           ProgressBar_131;                                   // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USlider*                                Slider_277;                                        // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ValueText;                                         // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_Icon_C*                       W_Button_Left;                                     // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_Icon_C*                       W_Button_Right;                                    // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsButtonBase_C*           Widget_SettingsButtonBase;                         // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   SettingName;                                       // 0x0320(0x0010)(Edit, BlueprintVisible)
-	bool                                          ShowPercentage;                                    // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_331[0x7];                                      // 0x0331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              SliderRange;                                       // 0x0338(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TextPrecision;                                     // 0x0348(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34C[0x4];                                      // 0x034C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(double Value, double Percent)> OnValueChanged;                     // 0x0350(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	double                                        StepSize;                                          // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bBroadcastValueChanged;                            // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_SettingsSlider_C;            // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_SettingsButtonBase_C*           Widget_SettingsButtonBase;                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_Icon_C*                       W_Button_Right;                                    // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_Icon_C*                       W_Button_Left;                                     // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ValueText;                                         // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USlider*                                Slider_277;                                        // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           ProgressBar_131;                                   // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_64;                                          // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Highlighted;                                       // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   SettingName;                                       // 0x0390(0x0010)(Edit, BlueprintVisible)
+	bool                                          ShowPercentage;                                    // 0x03A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A1[0x7];                                      // 0x03A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              SliderRange;                                       // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TextPrecision;                                     // 0x03B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3BC[0x4];                                      // 0x03BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(double Value, double Percent)> OnValueChanged;                     // 0x03C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	double                                        StepSize;                                          // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bBroadcastValueChanged;                            // 0x03D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Widget_SettingsSlider_Slider_277_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(float Value);
@@ -62,31 +62,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_SettingsSlider_C">();
+		BP_STATIC_CLASS_IMPL("Widget_SettingsSlider_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_SettingsSlider_C")
 	}
 	static class UWidget_SettingsSlider_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_SettingsSlider_C>();
 	}
 };
-static_assert(alignof(UWidget_SettingsSlider_C) == 0x000008, "Wrong alignment on UWidget_SettingsSlider_C");
-static_assert(sizeof(UWidget_SettingsSlider_C) == 0x000370, "Wrong size on UWidget_SettingsSlider_C");
-static_assert(offsetof(UWidget_SettingsSlider_C, UberGraphFrame_Widget_SettingsSlider_C) == 0x0002D8, "Member 'UWidget_SettingsSlider_C::UberGraphFrame_Widget_SettingsSlider_C' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsSlider_C, Highlighted) == 0x0002E0, "Member 'UWidget_SettingsSlider_C::Highlighted' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsSlider_C, Image_64) == 0x0002E8, "Member 'UWidget_SettingsSlider_C::Image_64' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsSlider_C, ProgressBar_131) == 0x0002F0, "Member 'UWidget_SettingsSlider_C::ProgressBar_131' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsSlider_C, Slider_277) == 0x0002F8, "Member 'UWidget_SettingsSlider_C::Slider_277' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsSlider_C, ValueText) == 0x000300, "Member 'UWidget_SettingsSlider_C::ValueText' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsSlider_C, W_Button_Left) == 0x000308, "Member 'UWidget_SettingsSlider_C::W_Button_Left' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsSlider_C, W_Button_Right) == 0x000310, "Member 'UWidget_SettingsSlider_C::W_Button_Right' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsSlider_C, Widget_SettingsButtonBase) == 0x000318, "Member 'UWidget_SettingsSlider_C::Widget_SettingsButtonBase' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsSlider_C, SettingName) == 0x000320, "Member 'UWidget_SettingsSlider_C::SettingName' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsSlider_C, ShowPercentage) == 0x000330, "Member 'UWidget_SettingsSlider_C::ShowPercentage' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsSlider_C, SliderRange) == 0x000338, "Member 'UWidget_SettingsSlider_C::SliderRange' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsSlider_C, TextPrecision) == 0x000348, "Member 'UWidget_SettingsSlider_C::TextPrecision' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsSlider_C, OnValueChanged) == 0x000350, "Member 'UWidget_SettingsSlider_C::OnValueChanged' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsSlider_C, StepSize) == 0x000360, "Member 'UWidget_SettingsSlider_C::StepSize' has a wrong offset!");
-static_assert(offsetof(UWidget_SettingsSlider_C, bBroadcastValueChanged) == 0x000368, "Member 'UWidget_SettingsSlider_C::bBroadcastValueChanged' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_SettingsSlider_C;
 
 }
 

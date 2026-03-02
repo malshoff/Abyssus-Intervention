@@ -17,25 +17,27 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_OverworldManager.BP_OverworldManager_C
-// 0x0008 (0x0558 - 0x0550)
+// 0x0008 (0x0480 - 0x0478)
 class ABP_OverworldManager_C final : public AROverworldManager
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0550(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_OverworldManager_C">();
+		BP_STATIC_CLASS_IMPL("BP_OverworldManager_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_OverworldManager_C")
 	}
 	static class ABP_OverworldManager_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_OverworldManager_C>();
 	}
 };
-static_assert(alignof(ABP_OverworldManager_C) == 0x000008, "Wrong alignment on ABP_OverworldManager_C");
-static_assert(sizeof(ABP_OverworldManager_C) == 0x000558, "Wrong size on ABP_OverworldManager_C");
-static_assert(offsetof(ABP_OverworldManager_C, DefaultSceneRoot) == 0x000550, "Member 'ABP_OverworldManager_C::DefaultSceneRoot' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_OverworldManager_C;
 
 }
 

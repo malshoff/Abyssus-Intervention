@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function BP_GardensBoss_Challenge.BP_GardensBoss_Challenge_C.ExecuteUbergraph_BP_GardensBoss_Challenge
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

@@ -38,20 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FragGrenadeMastery_Challenge_C">();
+		BP_STATIC_CLASS_IMPL("BP_FragGrenadeMastery_Challenge_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FragGrenadeMastery_Challenge_C")
 	}
 	static class UBP_FragGrenadeMastery_Challenge_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_FragGrenadeMastery_Challenge_C>();
 	}
 };
-static_assert(alignof(UBP_FragGrenadeMastery_Challenge_C) == 0x000008, "Wrong alignment on UBP_FragGrenadeMastery_Challenge_C");
-static_assert(sizeof(UBP_FragGrenadeMastery_Challenge_C) == 0x000050, "Wrong size on UBP_FragGrenadeMastery_Challenge_C");
-static_assert(offsetof(UBP_FragGrenadeMastery_Challenge_C, UberGraphFrame) == 0x000030, "Member 'UBP_FragGrenadeMastery_Challenge_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_FragGrenadeMastery_Challenge_C, Uses) == 0x000038, "Member 'UBP_FragGrenadeMastery_Challenge_C::Uses' has a wrong offset!");
-static_assert(offsetof(UBP_FragGrenadeMastery_Challenge_C, UsesRequired) == 0x00003C, "Member 'UBP_FragGrenadeMastery_Challenge_C::UsesRequired' has a wrong offset!");
-static_assert(offsetof(UBP_FragGrenadeMastery_Challenge_C, RPlayer_Pawn) == 0x000040, "Member 'UBP_FragGrenadeMastery_Challenge_C::RPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(UBP_FragGrenadeMastery_Challenge_C, Time) == 0x000048, "Member 'UBP_FragGrenadeMastery_Challenge_C::Time' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_FragGrenadeMastery_Challenge_C;
 
 }
 

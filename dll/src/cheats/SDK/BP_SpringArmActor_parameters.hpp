@@ -25,12 +25,7 @@ public:
 	class AActor*                                 K2Node_CustomEvent_Turret;                         // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_CustomEvent_DestroyedActor;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpringArmActor_C_ExecuteUbergraph_BP_SpringArmActor) == 0x000008, "Wrong alignment on BP_SpringArmActor_C_ExecuteUbergraph_BP_SpringArmActor");
-static_assert(sizeof(BP_SpringArmActor_C_ExecuteUbergraph_BP_SpringArmActor) == 0x000028, "Wrong size on BP_SpringArmActor_C_ExecuteUbergraph_BP_SpringArmActor");
-static_assert(offsetof(BP_SpringArmActor_C_ExecuteUbergraph_BP_SpringArmActor, EntryPoint) == 0x000000, "Member 'BP_SpringArmActor_C_ExecuteUbergraph_BP_SpringArmActor::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_SpringArmActor_C_ExecuteUbergraph_BP_SpringArmActor, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BP_SpringArmActor_C_ExecuteUbergraph_BP_SpringArmActor::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_SpringArmActor_C_ExecuteUbergraph_BP_SpringArmActor, K2Node_CustomEvent_Turret) == 0x000018, "Member 'BP_SpringArmActor_C_ExecuteUbergraph_BP_SpringArmActor::K2Node_CustomEvent_Turret' has a wrong offset!");
-static_assert(offsetof(BP_SpringArmActor_C_ExecuteUbergraph_BP_SpringArmActor, K2Node_CustomEvent_DestroyedActor) == 0x000020, "Member 'BP_SpringArmActor_C_ExecuteUbergraph_BP_SpringArmActor::K2Node_CustomEvent_DestroyedActor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpringArmActor_C_ExecuteUbergraph_BP_SpringArmActor;
 
 // Function BP_SpringArmActor.BP_SpringArmActor_C.OnTurretDestroyed
 // 0x0008 (0x0008 - 0x0000)
@@ -39,9 +34,7 @@ struct BP_SpringArmActor_C_OnTurretDestroyed final
 public:
 	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpringArmActor_C_OnTurretDestroyed) == 0x000008, "Wrong alignment on BP_SpringArmActor_C_OnTurretDestroyed");
-static_assert(sizeof(BP_SpringArmActor_C_OnTurretDestroyed) == 0x000008, "Wrong size on BP_SpringArmActor_C_OnTurretDestroyed");
-static_assert(offsetof(BP_SpringArmActor_C_OnTurretDestroyed, DestroyedActor) == 0x000000, "Member 'BP_SpringArmActor_C_OnTurretDestroyed::DestroyedActor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpringArmActor_C_OnTurretDestroyed;
 
 // Function BP_SpringArmActor.BP_SpringArmActor_C.SetTurretRef
 // 0x0008 (0x0008 - 0x0000)
@@ -50,9 +43,7 @@ struct BP_SpringArmActor_C_SetTurretRef final
 public:
 	class AActor*                                 Turret;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SpringArmActor_C_SetTurretRef) == 0x000008, "Wrong alignment on BP_SpringArmActor_C_SetTurretRef");
-static_assert(sizeof(BP_SpringArmActor_C_SetTurretRef) == 0x000008, "Wrong size on BP_SpringArmActor_C_SetTurretRef");
-static_assert(offsetof(BP_SpringArmActor_C_SetTurretRef, Turret) == 0x000000, "Member 'BP_SpringArmActor_C_SetTurretRef::Turret' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SpringArmActor_C_SetTurretRef;
 
 }
 

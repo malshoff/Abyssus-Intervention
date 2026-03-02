@@ -12,14 +12,37 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "PhysicsCore_structs.hpp"
 #include "GeometryFramework_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "PhysicsCore_structs.hpp"
 
 
 namespace SDK
 {
+
+// Class GeometryFramework.DynamicMeshProcessorBlueprint
+// 0x0000 (0x0028 - 0x0028)
+class UDynamicMeshProcessorBlueprint final : public UObject
+{
+public:
+	void ProcessDynamicMesh(class UDynamicMesh* TargetMesh, bool* bFailed);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DynamicMeshProcessorBlueprint")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DynamicMeshProcessorBlueprint")
+	}
+	static class UDynamicMeshProcessorBlueprint* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDynamicMeshProcessorBlueprint>();
+	}
+};
+DUMPER7_ASSERTS_UDynamicMeshProcessorBlueprint;
 
 // Class GeometryFramework.MeshCommandChangeTarget
 // 0x0000 (0x0000 - 0x0000)
@@ -28,7 +51,11 @@ class IMeshCommandChangeTarget final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MeshCommandChangeTarget">();
+		STATIC_CLASS_IMPL("MeshCommandChangeTarget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MeshCommandChangeTarget")
 	}
 	static class IMeshCommandChangeTarget* GetDefaultObj()
 	{
@@ -44,8 +71,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IMeshCommandChangeTarget) == 0x000001, "Wrong alignment on IMeshCommandChangeTarget");
-static_assert(sizeof(IMeshCommandChangeTarget) == 0x000001, "Wrong size on IMeshCommandChangeTarget");
+DUMPER7_ASSERTS_IMeshCommandChangeTarget;
 
 // Class GeometryFramework.MeshReplacementCommandChangeTarget
 // 0x0000 (0x0000 - 0x0000)
@@ -54,7 +80,11 @@ class IMeshReplacementCommandChangeTarget final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MeshReplacementCommandChangeTarget">();
+		STATIC_CLASS_IMPL("MeshReplacementCommandChangeTarget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MeshReplacementCommandChangeTarget")
 	}
 	static class IMeshReplacementCommandChangeTarget* GetDefaultObj()
 	{
@@ -70,8 +100,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IMeshReplacementCommandChangeTarget) == 0x000001, "Wrong alignment on IMeshReplacementCommandChangeTarget");
-static_assert(sizeof(IMeshReplacementCommandChangeTarget) == 0x000001, "Wrong size on IMeshReplacementCommandChangeTarget");
+DUMPER7_ASSERTS_IMeshReplacementCommandChangeTarget;
 
 // Class GeometryFramework.MeshVertexCommandChangeTarget
 // 0x0000 (0x0000 - 0x0000)
@@ -80,7 +109,11 @@ class IMeshVertexCommandChangeTarget final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MeshVertexCommandChangeTarget">();
+		STATIC_CLASS_IMPL("MeshVertexCommandChangeTarget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MeshVertexCommandChangeTarget")
 	}
 	static class IMeshVertexCommandChangeTarget* GetDefaultObj()
 	{
@@ -96,36 +129,40 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IMeshVertexCommandChangeTarget) == 0x000001, "Wrong alignment on IMeshVertexCommandChangeTarget");
-static_assert(sizeof(IMeshVertexCommandChangeTarget) == 0x000001, "Wrong size on IMeshVertexCommandChangeTarget");
+DUMPER7_ASSERTS_IMeshVertexCommandChangeTarget;
 
 // Class GeometryFramework.BaseDynamicMeshComponent
-// 0x0060 (0x0580 - 0x0520)
+// 0x0080 (0x05F0 - 0x0570)
 class UBaseDynamicMeshComponent : public UMeshComponent
 {
 public:
-	uint8                                         Pad_518[0x20];                                     // 0x0518(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bExplicitShowWireframe;                            // 0x0538(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_539[0x3];                                      // 0x0539(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           WireframeColor;                                    // 0x053C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDynamicMeshComponentColorOverrideMode        ColorMode;                                         // 0x054C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54D[0x3];                                      // 0x054D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FColor                                 ConstantColor;                                     // 0x0550(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDynamicMeshVertexColorTransformMode          ColorSpaceMode;                                    // 0x0554(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableFlatShading;                                // 0x0555(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableViewModeOverrides;                          // 0x0556(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_557[0x1];                                      // 0x0557(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     OverrideRenderMaterial;                            // 0x0558(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     SecondaryRenderMaterial;                           // 0x0560(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_568[0x1];                                      // 0x0568(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bEnableRayTracing;                                 // 0x0569(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDynamicMeshDrawPath                          DrawPath;                                          // 0x056A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EDynamicMeshComponentDistanceFieldMode        DistanceFieldMode;                                 // 0x056B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_56C[0x4];                                      // 0x056C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInterface*>             BaseMaterials;                                     // 0x0570(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_568[0x20];                                     // 0x0568(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bExplicitShowWireframe;                            // 0x0588(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_589[0x3];                                      // 0x0589(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           WireframeColor;                                    // 0x058C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDynamicMeshComponentColorOverrideMode        ColorMode;                                         // 0x059C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59D[0x3];                                      // 0x059D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FColor                                 ConstantColor;                                     // 0x05A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDynamicMeshVertexColorTransformMode          ColorSpaceMode;                                    // 0x05A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableFlatShading;                                // 0x05A5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableViewModeOverrides;                          // 0x05A6(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5A7[0x1];                                      // 0x05A7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     OverrideRenderMaterial;                            // 0x05A8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UMaterialInterface*                     SecondaryRenderMaterial;                           // 0x05B0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_5B8[0x8];                                      // 0x05B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     WireframeMaterialOverride;                         // 0x05C0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UMaterialInterface*                     SecondaryWireframeMaterialOverride;                // 0x05C8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	bool                                          bEnableRayTracing;                                 // 0x05D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDynamicMeshDrawPath                          DrawPath;                                          // 0x05D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EDynamicMeshComponentDistanceFieldMode        DistanceFieldMode;                                 // 0x05D2(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_5D3[0x5];                                      // 0x05D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInterface*>             BaseMaterials;                                     // 0x05D8(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	uint8                                         Pad_5E8[0x8];                                      // 0x05E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClearOverrideRenderMaterial();
+	void ClearOverrideSecondaryWireframeRenderMaterial();
+	void ClearOverrideWireframeRenderMaterial();
 	void ClearSecondaryRenderMaterial();
 	class UDynamicMesh* GetDynamicMesh();
 	void SetColorOverrideMode(EDynamicMeshComponentColorOverrideMode NewMode);
@@ -136,6 +173,8 @@ public:
 	void SetEnableWireframeRenderPass(bool bEnable);
 	void SetMeshDrawPath(EDynamicMeshDrawPath NewDrawPath);
 	void SetOverrideRenderMaterial(class UMaterialInterface* Material);
+	void SetOverrideSecondaryWireframeRenderMaterial(class UMaterialInterface* Material);
+	void SetOverrideWireframeRenderMaterial(class UMaterialInterface* Material);
 	void SetSecondaryBuffersVisibility(bool bSetVisible);
 	void SetSecondaryRenderMaterial(class UMaterialInterface* Material);
 	void SetShadowsEnabled(bool bEnabled);
@@ -150,6 +189,8 @@ public:
 	bool GetFlatShadingEnabled() const;
 	EDynamicMeshDrawPath GetMeshDrawPath() const;
 	class UMaterialInterface* GetOverrideRenderMaterial(int32 MaterialIndex) const;
+	class UMaterialInterface* GetOverrideSecondaryWireframeRenderMaterial() const;
+	class UMaterialInterface* GetOverrideWireframeRenderMaterial() const;
 	bool GetSecondaryBuffersVisibility() const;
 	class UMaterialInterface* GetSecondaryRenderMaterial() const;
 	bool GetShadowsEnabled() const;
@@ -160,51 +201,41 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BaseDynamicMeshComponent">();
+		STATIC_CLASS_IMPL("BaseDynamicMeshComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BaseDynamicMeshComponent")
 	}
 	static class UBaseDynamicMeshComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBaseDynamicMeshComponent>();
 	}
 };
-static_assert(alignof(UBaseDynamicMeshComponent) == 0x000010, "Wrong alignment on UBaseDynamicMeshComponent");
-static_assert(sizeof(UBaseDynamicMeshComponent) == 0x000580, "Wrong size on UBaseDynamicMeshComponent");
-static_assert(offsetof(UBaseDynamicMeshComponent, bExplicitShowWireframe) == 0x000538, "Member 'UBaseDynamicMeshComponent::bExplicitShowWireframe' has a wrong offset!");
-static_assert(offsetof(UBaseDynamicMeshComponent, WireframeColor) == 0x00053C, "Member 'UBaseDynamicMeshComponent::WireframeColor' has a wrong offset!");
-static_assert(offsetof(UBaseDynamicMeshComponent, ColorMode) == 0x00054C, "Member 'UBaseDynamicMeshComponent::ColorMode' has a wrong offset!");
-static_assert(offsetof(UBaseDynamicMeshComponent, ConstantColor) == 0x000550, "Member 'UBaseDynamicMeshComponent::ConstantColor' has a wrong offset!");
-static_assert(offsetof(UBaseDynamicMeshComponent, ColorSpaceMode) == 0x000554, "Member 'UBaseDynamicMeshComponent::ColorSpaceMode' has a wrong offset!");
-static_assert(offsetof(UBaseDynamicMeshComponent, bEnableFlatShading) == 0x000555, "Member 'UBaseDynamicMeshComponent::bEnableFlatShading' has a wrong offset!");
-static_assert(offsetof(UBaseDynamicMeshComponent, bEnableViewModeOverrides) == 0x000556, "Member 'UBaseDynamicMeshComponent::bEnableViewModeOverrides' has a wrong offset!");
-static_assert(offsetof(UBaseDynamicMeshComponent, OverrideRenderMaterial) == 0x000558, "Member 'UBaseDynamicMeshComponent::OverrideRenderMaterial' has a wrong offset!");
-static_assert(offsetof(UBaseDynamicMeshComponent, SecondaryRenderMaterial) == 0x000560, "Member 'UBaseDynamicMeshComponent::SecondaryRenderMaterial' has a wrong offset!");
-static_assert(offsetof(UBaseDynamicMeshComponent, bEnableRayTracing) == 0x000569, "Member 'UBaseDynamicMeshComponent::bEnableRayTracing' has a wrong offset!");
-static_assert(offsetof(UBaseDynamicMeshComponent, DrawPath) == 0x00056A, "Member 'UBaseDynamicMeshComponent::DrawPath' has a wrong offset!");
-static_assert(offsetof(UBaseDynamicMeshComponent, DistanceFieldMode) == 0x00056B, "Member 'UBaseDynamicMeshComponent::DistanceFieldMode' has a wrong offset!");
-static_assert(offsetof(UBaseDynamicMeshComponent, BaseMaterials) == 0x000570, "Member 'UBaseDynamicMeshComponent::BaseMaterials' has a wrong offset!");
+DUMPER7_ASSERTS_UBaseDynamicMeshComponent;
 
 // Class GeometryFramework.DynamicMeshComponent
-// 0x0330 (0x08B0 - 0x0580)
+// 0x0320 (0x0910 - 0x05F0)
 class UDynamicMeshComponent final : public UBaseDynamicMeshComponent
 {
 public:
-	uint8                                         Pad_580[0x8];                                      // 0x0580(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMesh*                           MeshObject;                                        // 0x0588(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_590[0x41];                                     // 0x0590(0x0041)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bAllowsGeometrySelection;                          // 0x05D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_5D2[0xFE];                                     // 0x05D2(0x00FE)(Fixing Size After Last Property [ Dumper-7 ])
-	EDynamicMeshComponentTangentsMode             TangentsType;                                      // 0x06D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_6D1[0xFF];                                     // 0x06D1(0x00FF)(Fixing Size After Last Property [ Dumper-7 ])
-	ECollisionTraceFlag                           CollisionType;                                     // 0x07D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseAsyncCooking;                                  // 0x07D1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableComplexCollision;                           // 0x07D2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDeferCollisionUpdates;                            // 0x07D3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7D4[0x4];                                      // 0x07D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBodySetup*                             MeshBodySetup;                                     // 0x07D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_7E0[0x38];                                     // 0x07E0(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKAggregateGeom                        AggGeom;                                           // 0x0818(0x0080)(Edit, Protected, NativeAccessSpecifierProtected)
-	TArray<class UBodySetup*>                     AsyncBodySetupQueue;                               // 0x0898(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_8A8[0x8];                                      // 0x08A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           MeshObject;                                        // 0x05F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_5F8[0x59];                                     // 0x05F8(0x0059)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bAllowsGeometrySelection;                          // 0x0651(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_652[0xCE];                                     // 0x0652(0x00CE)(Fixing Size After Last Property [ Dumper-7 ])
+	EDynamicMeshComponentTangentsMode             TangentsType;                                      // 0x0720(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_721[0xEF];                                     // 0x0721(0x00EF)(Fixing Size After Last Property [ Dumper-7 ])
+	ECollisionTraceFlag                           CollisionType;                                     // 0x0810(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseAsyncCooking;                                  // 0x0811(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableComplexCollision;                           // 0x0812(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDeferCollisionUpdates;                            // 0x0813(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableMeshUVHitResults;                          // 0x0814(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_815[0x3];                                      // 0x0815(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBodySetup*                             MeshBodySetup;                                     // 0x0818(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_820[0x38];                                     // 0x0820(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKAggregateGeom                        AggGeom;                                           // 0x0858(0x00A0)(Edit, Protected, NativeAccessSpecifierProtected)
+	TArray<class UBodySetup*>                     AsyncBodySetupQueue;                               // 0x08F8(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_908[0x8];                                      // 0x0908(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ConfigureMaterialSet(const TArray<class UMaterialInterface*>& NewMaterialSet, bool bDeleteExtraSlots);
@@ -226,35 +257,28 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DynamicMeshComponent">();
+		STATIC_CLASS_IMPL("DynamicMeshComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DynamicMeshComponent")
 	}
 	static class UDynamicMeshComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDynamicMeshComponent>();
 	}
 };
-static_assert(alignof(UDynamicMeshComponent) == 0x000010, "Wrong alignment on UDynamicMeshComponent");
-static_assert(sizeof(UDynamicMeshComponent) == 0x0008B0, "Wrong size on UDynamicMeshComponent");
-static_assert(offsetof(UDynamicMeshComponent, MeshObject) == 0x000588, "Member 'UDynamicMeshComponent::MeshObject' has a wrong offset!");
-static_assert(offsetof(UDynamicMeshComponent, bAllowsGeometrySelection) == 0x0005D1, "Member 'UDynamicMeshComponent::bAllowsGeometrySelection' has a wrong offset!");
-static_assert(offsetof(UDynamicMeshComponent, TangentsType) == 0x0006D0, "Member 'UDynamicMeshComponent::TangentsType' has a wrong offset!");
-static_assert(offsetof(UDynamicMeshComponent, CollisionType) == 0x0007D0, "Member 'UDynamicMeshComponent::CollisionType' has a wrong offset!");
-static_assert(offsetof(UDynamicMeshComponent, bUseAsyncCooking) == 0x0007D1, "Member 'UDynamicMeshComponent::bUseAsyncCooking' has a wrong offset!");
-static_assert(offsetof(UDynamicMeshComponent, bEnableComplexCollision) == 0x0007D2, "Member 'UDynamicMeshComponent::bEnableComplexCollision' has a wrong offset!");
-static_assert(offsetof(UDynamicMeshComponent, bDeferCollisionUpdates) == 0x0007D3, "Member 'UDynamicMeshComponent::bDeferCollisionUpdates' has a wrong offset!");
-static_assert(offsetof(UDynamicMeshComponent, MeshBodySetup) == 0x0007D8, "Member 'UDynamicMeshComponent::MeshBodySetup' has a wrong offset!");
-static_assert(offsetof(UDynamicMeshComponent, AggGeom) == 0x000818, "Member 'UDynamicMeshComponent::AggGeom' has a wrong offset!");
-static_assert(offsetof(UDynamicMeshComponent, AsyncBodySetupQueue) == 0x000898, "Member 'UDynamicMeshComponent::AsyncBodySetupQueue' has a wrong offset!");
+DUMPER7_ASSERTS_UDynamicMeshComponent;
 
 // Class GeometryFramework.DynamicMeshActor
 // 0x0018 (0x02C0 - 0x02A8)
 class ADynamicMeshActor final : public AActor
 {
 public:
-	class UDynamicMeshComponent*                  DynamicMeshComponent;                              // 0x02A8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UDynamicMeshComponent*                  DynamicMeshComponent;                              // 0x02A8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	bool                                          bEnableComputeMeshPool;                            // 0x02B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMeshPool*                       DynamicMeshPool;                                   // 0x02B8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UDynamicMeshPool*                       DynamicMeshPool;                                   // 0x02B8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	class UDynamicMesh* AllocateComputeMesh();
@@ -268,18 +292,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DynamicMeshActor">();
+		STATIC_CLASS_IMPL("DynamicMeshActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DynamicMeshActor")
 	}
 	static class ADynamicMeshActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ADynamicMeshActor>();
 	}
 };
-static_assert(alignof(ADynamicMeshActor) == 0x000008, "Wrong alignment on ADynamicMeshActor");
-static_assert(sizeof(ADynamicMeshActor) == 0x0002C0, "Wrong size on ADynamicMeshActor");
-static_assert(offsetof(ADynamicMeshActor, DynamicMeshComponent) == 0x0002A8, "Member 'ADynamicMeshActor::DynamicMeshComponent' has a wrong offset!");
-static_assert(offsetof(ADynamicMeshActor, bEnableComputeMeshPool) == 0x0002B0, "Member 'ADynamicMeshActor::bEnableComputeMeshPool' has a wrong offset!");
-static_assert(offsetof(ADynamicMeshActor, DynamicMeshPool) == 0x0002B8, "Member 'ADynamicMeshActor::DynamicMeshPool' has a wrong offset!");
+DUMPER7_ASSERTS_ADynamicMeshActor;
 
 // Class GeometryFramework.DynamicMeshGenerator
 // 0x0000 (0x0028 - 0x0028)
@@ -288,15 +312,18 @@ class UDynamicMeshGenerator final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DynamicMeshGenerator">();
+		STATIC_CLASS_IMPL("DynamicMeshGenerator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DynamicMeshGenerator")
 	}
 	static class UDynamicMeshGenerator* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDynamicMeshGenerator>();
 	}
 };
-static_assert(alignof(UDynamicMeshGenerator) == 0x000008, "Wrong alignment on UDynamicMeshGenerator");
-static_assert(sizeof(UDynamicMeshGenerator) == 0x000028, "Wrong size on UDynamicMeshGenerator");
+DUMPER7_ASSERTS_UDynamicMeshGenerator;
 
 // Class GeometryFramework.DynamicMesh
 // 0x0088 (0x00B0 - 0x0028)
@@ -306,7 +333,7 @@ public:
 	uint8                                         Pad_28[0x48];                                      // 0x0028(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(class UDynamicMesh* Mesh)> MeshModifiedBPEvent;                    // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_80[0x20];                                      // 0x0080(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMeshGenerator*                  MeshGenerator;                                     // 0x00A0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UDynamicMeshGenerator*                  MeshGenerator;                                     // 0x00A0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	bool                                          bEnableMeshGenerator;                              // 0x00A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -320,26 +347,26 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DynamicMesh">();
+		STATIC_CLASS_IMPL("DynamicMesh")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DynamicMesh")
 	}
 	static class UDynamicMesh* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDynamicMesh>();
 	}
 };
-static_assert(alignof(UDynamicMesh) == 0x000008, "Wrong alignment on UDynamicMesh");
-static_assert(sizeof(UDynamicMesh) == 0x0000B0, "Wrong size on UDynamicMesh");
-static_assert(offsetof(UDynamicMesh, MeshModifiedBPEvent) == 0x000070, "Member 'UDynamicMesh::MeshModifiedBPEvent' has a wrong offset!");
-static_assert(offsetof(UDynamicMesh, MeshGenerator) == 0x0000A0, "Member 'UDynamicMesh::MeshGenerator' has a wrong offset!");
-static_assert(offsetof(UDynamicMesh, bEnableMeshGenerator) == 0x0000A8, "Member 'UDynamicMesh::bEnableMeshGenerator' has a wrong offset!");
+DUMPER7_ASSERTS_UDynamicMesh;
 
 // Class GeometryFramework.DynamicMeshPool
 // 0x0020 (0x0048 - 0x0028)
 class UDynamicMeshPool final : public UObject
 {
 public:
-	TArray<class UDynamicMesh*>                   CachedMeshes;                                      // 0x0028(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TArray<class UDynamicMesh*>                   AllCreatedMeshes;                                  // 0x0038(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class UDynamicMesh*>                   CachedMeshes;                                      // 0x0028(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
+	TArray<class UDynamicMesh*>                   AllCreatedMeshes;                                  // 0x0038(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	void FreeAllMeshes();
@@ -350,17 +377,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DynamicMeshPool">();
+		STATIC_CLASS_IMPL("DynamicMeshPool")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DynamicMeshPool")
 	}
 	static class UDynamicMeshPool* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDynamicMeshPool>();
 	}
 };
-static_assert(alignof(UDynamicMeshPool) == 0x000008, "Wrong alignment on UDynamicMeshPool");
-static_assert(sizeof(UDynamicMeshPool) == 0x000048, "Wrong size on UDynamicMeshPool");
-static_assert(offsetof(UDynamicMeshPool, CachedMeshes) == 0x000028, "Member 'UDynamicMeshPool::CachedMeshes' has a wrong offset!");
-static_assert(offsetof(UDynamicMeshPool, AllCreatedMeshes) == 0x000038, "Member 'UDynamicMeshPool::AllCreatedMeshes' has a wrong offset!");
+DUMPER7_ASSERTS_UDynamicMeshPool;
 
 }
 

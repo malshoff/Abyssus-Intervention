@@ -22,10 +22,7 @@ public:
 	TSoftObjectPtr<class AActor>                  OtherActor;                                        // 0x0000(0x0028)(Edit, DisableEditOnTemplate, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ComponentName;                                     // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FDMComponentRef) == 0x000008, "Wrong alignment on FDMComponentRef");
-static_assert(sizeof(FDMComponentRef) == 0x000030, "Wrong size on FDMComponentRef");
-static_assert(offsetof(FDMComponentRef, OtherActor) == 0x000000, "Member 'FDMComponentRef::OtherActor' has a wrong offset!");
-static_assert(offsetof(FDMComponentRef, ComponentName) == 0x000028, "Member 'FDMComponentRef::ComponentName' has a wrong offset!");
+DUMPER7_ASSERTS_FDMComponentRef;
 
 }
 

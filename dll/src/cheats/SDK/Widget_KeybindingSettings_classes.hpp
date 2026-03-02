@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_KeybindingSettings.Widget_KeybindingSettings_C
-// 0x0008 (0x0390 - 0x0388)
+// 0x0008 (0x0428 - 0x0420)
 class UWidget_KeybindingSettings_C final : public UWidget_SettingInputMappingTabBase_C
 {
 public:
-	class UScrollBox*                             ScrollBox_0;                                       // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollBox*                             ScrollBox_0;                                       // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void BP_GetScrollBoxWidget(class UScrollBox** Result);
@@ -32,16 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_KeybindingSettings_C">();
+		BP_STATIC_CLASS_IMPL("Widget_KeybindingSettings_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_KeybindingSettings_C")
 	}
 	static class UWidget_KeybindingSettings_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_KeybindingSettings_C>();
 	}
 };
-static_assert(alignof(UWidget_KeybindingSettings_C) == 0x000008, "Wrong alignment on UWidget_KeybindingSettings_C");
-static_assert(sizeof(UWidget_KeybindingSettings_C) == 0x000390, "Wrong size on UWidget_KeybindingSettings_C");
-static_assert(offsetof(UWidget_KeybindingSettings_C, ScrollBox_0) == 0x000388, "Member 'UWidget_KeybindingSettings_C::ScrollBox_0' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_KeybindingSettings_C;
 
 }
 

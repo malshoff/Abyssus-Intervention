@@ -35,16 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SteadyShield_AreaEffect_Script_C">();
+		BP_STATIC_CLASS_IMPL("BP_SteadyShield_AreaEffect_Script_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SteadyShield_AreaEffect_Script_C")
 	}
 	static class UBP_SteadyShield_AreaEffect_Script_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SteadyShield_AreaEffect_Script_C>();
 	}
 };
-static_assert(alignof(UBP_SteadyShield_AreaEffect_Script_C) == 0x000008, "Wrong alignment on UBP_SteadyShield_AreaEffect_Script_C");
-static_assert(sizeof(UBP_SteadyShield_AreaEffect_Script_C) == 0x0000D0, "Wrong size on UBP_SteadyShield_AreaEffect_Script_C");
-static_assert(offsetof(UBP_SteadyShield_AreaEffect_Script_C, UberGraphFrame) == 0x0000C8, "Member 'UBP_SteadyShield_AreaEffect_Script_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SteadyShield_AreaEffect_Script_C;
 
 }
 

@@ -40,27 +40,29 @@ enum class EConstantQFFTSizeEnum : uint8
 };
 
 // Enum AudioSynesthesia.ELoudnessCurveTypeEnum
-// NumValues: 0x0006
+// NumValues: 0x0007
 enum class ELoudnessCurveTypeEnum : uint8
 {
 	A                                        = 0,
 	B                                        = 1,
 	C                                        = 2,
 	D                                        = 3,
-	None                                     = 4,
-	ELoudnessCurveTypeEnum_MAX               = 5,
+	K                                        = 4,
+	None                                     = 5,
+	ELoudnessCurveTypeEnum_MAX               = 6,
 };
 
 // Enum AudioSynesthesia.ELoudnessNRTCurveTypeEnum
-// NumValues: 0x0006
+// NumValues: 0x0007
 enum class ELoudnessNRTCurveTypeEnum : uint8
 {
 	A                                        = 0,
 	B                                        = 1,
 	C                                        = 2,
 	D                                        = 3,
-	None                                     = 4,
-	ELoudnessNRTCurveTypeEnum_MAX            = 5,
+	K                                        = 4,
+	None                                     = 5,
+	ELoudnessNRTCurveTypeEnum_MAX            = 6,
 };
 
 // Enum AudioSynesthesia.EMeterPeakType
@@ -83,10 +85,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 SpectrumValues;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FConstantQResults) == 0x000008, "Wrong alignment on FConstantQResults");
-static_assert(sizeof(FConstantQResults) == 0x000018, "Wrong size on FConstantQResults");
-static_assert(offsetof(FConstantQResults, TimeSeconds) == 0x000000, "Member 'FConstantQResults::TimeSeconds' has a wrong offset!");
-static_assert(offsetof(FConstantQResults, SpectrumValues) == 0x000008, "Member 'FConstantQResults::SpectrumValues' has a wrong offset!");
+DUMPER7_ASSERTS_FConstantQResults;
 
 // ScriptStruct AudioSynesthesia.LoudnessResults
 // 0x0010 (0x0010 - 0x0000)
@@ -98,12 +97,7 @@ public:
 	float                                         PerceptualEnergy;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TimeSeconds;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FLoudnessResults) == 0x000004, "Wrong alignment on FLoudnessResults");
-static_assert(sizeof(FLoudnessResults) == 0x000010, "Wrong size on FLoudnessResults");
-static_assert(offsetof(FLoudnessResults, Loudness) == 0x000000, "Member 'FLoudnessResults::Loudness' has a wrong offset!");
-static_assert(offsetof(FLoudnessResults, NormalizedLoudness) == 0x000004, "Member 'FLoudnessResults::NormalizedLoudness' has a wrong offset!");
-static_assert(offsetof(FLoudnessResults, PerceptualEnergy) == 0x000008, "Member 'FLoudnessResults::PerceptualEnergy' has a wrong offset!");
-static_assert(offsetof(FLoudnessResults, TimeSeconds) == 0x00000C, "Member 'FLoudnessResults::TimeSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_FLoudnessResults;
 
 // ScriptStruct AudioSynesthesia.MeterResults
 // 0x0014 (0x0014 - 0x0000)
@@ -116,13 +110,7 @@ public:
 	int32                                         NumSamplesClipping;                                // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ClippingValue;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMeterResults) == 0x000004, "Wrong alignment on FMeterResults");
-static_assert(sizeof(FMeterResults) == 0x000014, "Wrong size on FMeterResults");
-static_assert(offsetof(FMeterResults, TimeSeconds) == 0x000000, "Member 'FMeterResults::TimeSeconds' has a wrong offset!");
-static_assert(offsetof(FMeterResults, MeterValue) == 0x000004, "Member 'FMeterResults::MeterValue' has a wrong offset!");
-static_assert(offsetof(FMeterResults, PeakValue) == 0x000008, "Member 'FMeterResults::PeakValue' has a wrong offset!");
-static_assert(offsetof(FMeterResults, NumSamplesClipping) == 0x00000C, "Member 'FMeterResults::NumSamplesClipping' has a wrong offset!");
-static_assert(offsetof(FMeterResults, ClippingValue) == 0x000010, "Member 'FMeterResults::ClippingValue' has a wrong offset!");
+DUMPER7_ASSERTS_FMeterResults;
 
 // ScriptStruct AudioSynesthesia.SynesthesiaSpectrumResults
 // 0x0018 (0x0018 - 0x0000)
@@ -133,10 +121,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 SpectrumValues;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSynesthesiaSpectrumResults) == 0x000008, "Wrong alignment on FSynesthesiaSpectrumResults");
-static_assert(sizeof(FSynesthesiaSpectrumResults) == 0x000018, "Wrong size on FSynesthesiaSpectrumResults");
-static_assert(offsetof(FSynesthesiaSpectrumResults, TimeSeconds) == 0x000000, "Member 'FSynesthesiaSpectrumResults::TimeSeconds' has a wrong offset!");
-static_assert(offsetof(FSynesthesiaSpectrumResults, SpectrumValues) == 0x000008, "Member 'FSynesthesiaSpectrumResults::SpectrumValues' has a wrong offset!");
+DUMPER7_ASSERTS_FSynesthesiaSpectrumResults;
 
 }
 

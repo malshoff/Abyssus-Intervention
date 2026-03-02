@@ -27,15 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"EQC_GetFlyingTargets_C">();
+		BP_STATIC_CLASS_IMPL("EQC_GetFlyingTargets_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EQC_GetFlyingTargets_C")
 	}
 	static class UEQC_GetFlyingTargets_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEQC_GetFlyingTargets_C>();
 	}
 };
-static_assert(alignof(UEQC_GetFlyingTargets_C) == 0x000008, "Wrong alignment on UEQC_GetFlyingTargets_C");
-static_assert(sizeof(UEQC_GetFlyingTargets_C) == 0x000030, "Wrong size on UEQC_GetFlyingTargets_C");
+DUMPER7_ASSERTS_UEQC_GetFlyingTargets_C;
 
 }
 

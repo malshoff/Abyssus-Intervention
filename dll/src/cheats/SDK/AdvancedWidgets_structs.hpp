@@ -29,13 +29,7 @@ public:
 	float                                         SelectorWidth;                                     // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2D4[0xC];                                      // 0x02D4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FColorGradingSpinBoxStyle) == 0x000010, "Wrong alignment on FColorGradingSpinBoxStyle");
-static_assert(sizeof(FColorGradingSpinBoxStyle) == 0x0002E0, "Wrong size on FColorGradingSpinBoxStyle");
-static_assert(offsetof(FColorGradingSpinBoxStyle, BorderBrush) == 0x000010, "Member 'FColorGradingSpinBoxStyle::BorderBrush' has a wrong offset!");
-static_assert(offsetof(FColorGradingSpinBoxStyle, ActiveBorderBrush) == 0x0000C0, "Member 'FColorGradingSpinBoxStyle::ActiveBorderBrush' has a wrong offset!");
-static_assert(offsetof(FColorGradingSpinBoxStyle, HoveredBorderBrush) == 0x000170, "Member 'FColorGradingSpinBoxStyle::HoveredBorderBrush' has a wrong offset!");
-static_assert(offsetof(FColorGradingSpinBoxStyle, SelectorBrush) == 0x000220, "Member 'FColorGradingSpinBoxStyle::SelectorBrush' has a wrong offset!");
-static_assert(offsetof(FColorGradingSpinBoxStyle, SelectorWidth) == 0x0002D0, "Member 'FColorGradingSpinBoxStyle::SelectorWidth' has a wrong offset!");
+DUMPER7_ASSERTS_FColorGradingSpinBoxStyle;
 
 }
 

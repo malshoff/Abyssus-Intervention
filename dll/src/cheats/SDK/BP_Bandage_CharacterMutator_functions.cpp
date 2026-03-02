@@ -117,6 +117,20 @@ void UBP_Bandage_CharacterMutator_C::K2_OnPreDamageTaken(class URHealthComponent
 }
 
 
+// Function BP_Bandage_CharacterMutator.BP_Bandage_CharacterMutator_C.ResetBlockFX
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void UBP_Bandage_CharacterMutator_C::ResetBlockFX()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Bandage_CharacterMutator_C", "ResetBlockFX");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_Bandage_CharacterMutator.BP_Bandage_CharacterMutator_C.GetDescription
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:

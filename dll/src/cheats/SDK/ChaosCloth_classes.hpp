@@ -12,6 +12,7 @@
 
 #include "ClothingSystemRuntimeCommon_structs.hpp"
 #include "ClothingSystemRuntimeCommon_classes.hpp"
+#include "Chaos_structs.hpp"
 #include "ChaosCloth_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ClothingSystemRuntimeInterface_classes.hpp"
@@ -21,7 +22,7 @@ namespace SDK
 {
 
 // Class ChaosCloth.ChaosClothConfig
-// 0x0120 (0x0148 - 0x0028)
+// 0x0158 (0x0180 - 0x0028)
 class UChaosClothConfig final : public UClothConfigCommon
 {
 public:
@@ -80,76 +81,43 @@ public:
 	struct FChaosClothWeightedValue               Pressure;                                          // 0x0108(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FChaosClothWeightedValue               AnimDriveStiffness;                                // 0x0110(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FChaosClothWeightedValue               AnimDriveDamping;                                  // 0x0118(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                LinearVelocityScale;                               // 0x0120(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AngularVelocityScale;                              // 0x0138(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FictitiousAngularScale;                            // 0x013C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseTetrahedralConstraints;                        // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseThinShellVolumeConstraints;                    // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseContinuousCollisionDetection;                  // 0x0142(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_143[0x5];                                      // 0x0143(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EChaosSoftsSimulationSpace                    VelocityScaleSpace;                                // 0x0120(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                LinearVelocityScale;                               // 0x0128(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableLinearVelocityClamping;                     // 0x0140(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector3f                              MaxLinearVelocity;                                 // 0x0144(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableLinearAccelerationClamping;                 // 0x0150(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector3f                              MaxLinearAcceleration;                             // 0x0154(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AngularVelocityScale;                              // 0x0160(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAngularVelocityClamping;                    // 0x0164(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_165[0x3];                                      // 0x0165(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxAngularVelocity;                                // 0x0168(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAngularAccelerationClamping;                // 0x016C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16D[0x3];                                      // 0x016D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxAngularAcceleration;                            // 0x0170(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FictitiousAngularScale;                            // 0x0174(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseTetrahedralConstraints;                        // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseThinShellVolumeConstraints;                    // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseContinuousCollisionDetection;                  // 0x017A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_17B[0x5];                                      // 0x017B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ChaosClothConfig">();
+		STATIC_CLASS_IMPL("ChaosClothConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothConfig")
 	}
 	static class UChaosClothConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UChaosClothConfig>();
 	}
 };
-static_assert(alignof(UChaosClothConfig) == 0x000008, "Wrong alignment on UChaosClothConfig");
-static_assert(sizeof(UChaosClothConfig) == 0x000148, "Wrong size on UChaosClothConfig");
-static_assert(offsetof(UChaosClothConfig, MassMode) == 0x000028, "Member 'UChaosClothConfig::MassMode' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, UniformMass) == 0x00002C, "Member 'UChaosClothConfig::UniformMass' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, TotalMass) == 0x000030, "Member 'UChaosClothConfig::TotalMass' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, Density) == 0x000034, "Member 'UChaosClothConfig::Density' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, MinPerParticleMass) == 0x000038, "Member 'UChaosClothConfig::MinPerParticleMass' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, EdgeStiffnessWeighted) == 0x00003C, "Member 'UChaosClothConfig::EdgeStiffnessWeighted' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, BendingStiffnessWeighted) == 0x000044, "Member 'UChaosClothConfig::BendingStiffnessWeighted' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseBendingElements) == 0x00004C, "Member 'UChaosClothConfig::bUseBendingElements' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, BucklingRatio) == 0x000050, "Member 'UChaosClothConfig::BucklingRatio' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, BucklingStiffnessWeighted) == 0x000054, "Member 'UChaosClothConfig::BucklingStiffnessWeighted' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, FlatnessRatio) == 0x00005C, "Member 'UChaosClothConfig::FlatnessRatio' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, AreaStiffnessWeighted) == 0x000064, "Member 'UChaosClothConfig::AreaStiffnessWeighted' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, VolumeStiffness) == 0x00006C, "Member 'UChaosClothConfig::VolumeStiffness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, TetherStiffness) == 0x000070, "Member 'UChaosClothConfig::TetherStiffness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, TetherScale) == 0x000078, "Member 'UChaosClothConfig::TetherScale' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseGeodesicDistance) == 0x000080, "Member 'UChaosClothConfig::bUseGeodesicDistance' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, ShapeTargetStiffness) == 0x000084, "Member 'UChaosClothConfig::ShapeTargetStiffness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, CollisionThickness) == 0x000088, "Member 'UChaosClothConfig::CollisionThickness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, FrictionCoefficient) == 0x00008C, "Member 'UChaosClothConfig::FrictionCoefficient' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseCCD) == 0x000090, "Member 'UChaosClothConfig::bUseCCD' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseSelfCollisions) == 0x000091, "Member 'UChaosClothConfig::bUseSelfCollisions' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, SelfCollisionThickness) == 0x000094, "Member 'UChaosClothConfig::SelfCollisionThickness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, SelfCollisionFriction) == 0x000098, "Member 'UChaosClothConfig::SelfCollisionFriction' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseSelfIntersections) == 0x00009C, "Member 'UChaosClothConfig::bUseSelfIntersections' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseSelfCollisionSpheres) == 0x00009D, "Member 'UChaosClothConfig::bUseSelfCollisionSpheres' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, SelfCollisionSphereRadius) == 0x0000A0, "Member 'UChaosClothConfig::SelfCollisionSphereRadius' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, SelfCollisionSphereStiffness) == 0x0000A4, "Member 'UChaosClothConfig::SelfCollisionSphereStiffness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, SelfCollisionSphereRadiusCullMultiplier) == 0x0000A8, "Member 'UChaosClothConfig::SelfCollisionSphereRadiusCullMultiplier' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseLegacyBackstop) == 0x0000AC, "Member 'UChaosClothConfig::bUseLegacyBackstop' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, DampingCoefficient) == 0x0000B0, "Member 'UChaosClothConfig::DampingCoefficient' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, LocalDampingCoefficient) == 0x0000B4, "Member 'UChaosClothConfig::LocalDampingCoefficient' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUsePointBasedWindModel) == 0x0000B8, "Member 'UChaosClothConfig::bUsePointBasedWindModel' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, Drag) == 0x0000BC, "Member 'UChaosClothConfig::Drag' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bEnableOuterDrag) == 0x0000C4, "Member 'UChaosClothConfig::bEnableOuterDrag' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, OuterDrag) == 0x0000C8, "Member 'UChaosClothConfig::OuterDrag' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, Lift) == 0x0000D0, "Member 'UChaosClothConfig::Lift' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bEnableOuterLift) == 0x0000D8, "Member 'UChaosClothConfig::bEnableOuterLift' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, OuterLift) == 0x0000DC, "Member 'UChaosClothConfig::OuterLift' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseGravityOverride) == 0x0000E4, "Member 'UChaosClothConfig::bUseGravityOverride' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, GravityScale) == 0x0000E8, "Member 'UChaosClothConfig::GravityScale' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, Gravity) == 0x0000F0, "Member 'UChaosClothConfig::Gravity' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, Pressure) == 0x000108, "Member 'UChaosClothConfig::Pressure' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, AnimDriveStiffness) == 0x000110, "Member 'UChaosClothConfig::AnimDriveStiffness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, AnimDriveDamping) == 0x000118, "Member 'UChaosClothConfig::AnimDriveDamping' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, LinearVelocityScale) == 0x000120, "Member 'UChaosClothConfig::LinearVelocityScale' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, AngularVelocityScale) == 0x000138, "Member 'UChaosClothConfig::AngularVelocityScale' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, FictitiousAngularScale) == 0x00013C, "Member 'UChaosClothConfig::FictitiousAngularScale' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseTetrahedralConstraints) == 0x000140, "Member 'UChaosClothConfig::bUseTetrahedralConstraints' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseThinShellVolumeConstraints) == 0x000141, "Member 'UChaosClothConfig::bUseThinShellVolumeConstraints' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseContinuousCollisionDetection) == 0x000142, "Member 'UChaosClothConfig::bUseContinuousCollisionDetection' has a wrong offset!");
+DUMPER7_ASSERTS_UChaosClothConfig;
 
 // Class ChaosCloth.ChaosClothSharedSimConfig
 // 0x0010 (0x0038 - 0x0028)
@@ -166,20 +134,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ChaosClothSharedSimConfig">();
+		STATIC_CLASS_IMPL("ChaosClothSharedSimConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothSharedSimConfig")
 	}
 	static class UChaosClothSharedSimConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UChaosClothSharedSimConfig>();
 	}
 };
-static_assert(alignof(UChaosClothSharedSimConfig) == 0x000008, "Wrong alignment on UChaosClothSharedSimConfig");
-static_assert(sizeof(UChaosClothSharedSimConfig) == 0x000038, "Wrong size on UChaosClothSharedSimConfig");
-static_assert(offsetof(UChaosClothSharedSimConfig, IterationCount) == 0x000028, "Member 'UChaosClothSharedSimConfig::IterationCount' has a wrong offset!");
-static_assert(offsetof(UChaosClothSharedSimConfig, MaxIterationCount) == 0x00002C, "Member 'UChaosClothSharedSimConfig::MaxIterationCount' has a wrong offset!");
-static_assert(offsetof(UChaosClothSharedSimConfig, SubdivisionCount) == 0x000030, "Member 'UChaosClothSharedSimConfig::SubdivisionCount' has a wrong offset!");
-static_assert(offsetof(UChaosClothSharedSimConfig, bUseLocalSpaceSimulation) == 0x000034, "Member 'UChaosClothSharedSimConfig::bUseLocalSpaceSimulation' has a wrong offset!");
-static_assert(offsetof(UChaosClothSharedSimConfig, bUseXPBDConstraints) == 0x000035, "Member 'UChaosClothSharedSimConfig::bUseXPBDConstraints' has a wrong offset!");
+DUMPER7_ASSERTS_UChaosClothSharedSimConfig;
 
 // Class ChaosCloth.ChaosClothingSimulationFactory
 // 0x0000 (0x0028 - 0x0028)
@@ -188,15 +154,41 @@ class UChaosClothingSimulationFactory final : public UClothingSimulationFactory
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ChaosClothingSimulationFactory">();
+		STATIC_CLASS_IMPL("ChaosClothingSimulationFactory")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothingSimulationFactory")
 	}
 	static class UChaosClothingSimulationFactory* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UChaosClothingSimulationFactory>();
 	}
 };
-static_assert(alignof(UChaosClothingSimulationFactory) == 0x000008, "Wrong alignment on UChaosClothingSimulationFactory");
-static_assert(sizeof(UChaosClothingSimulationFactory) == 0x000028, "Wrong size on UChaosClothingSimulationFactory");
+DUMPER7_ASSERTS_UChaosClothingSimulationFactory;
+
+// Class ChaosCloth.ChaosClothingSimulationInteractor
+// 0x0020 (0x00B0 - 0x0090)
+class UChaosClothingSimulationInteractor final : public UClothingSimulationInteractor
+{
+public:
+	uint8                                         Pad_90[0x20];                                      // 0x0090(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChaosClothingSimulationInteractor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothingSimulationInteractor")
+	}
+	static class UChaosClothingSimulationInteractor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChaosClothingSimulationInteractor>();
+	}
+};
+DUMPER7_ASSERTS_UChaosClothingSimulationInteractor;
 
 // Class ChaosCloth.ChaosClothingInteractor
 // 0x0020 (0x0050 - 0x0030)
@@ -220,41 +212,25 @@ public:
 	void SetMaterialBuckling(const struct FVector2D& BucklingRatio, const struct FVector2D& BucklingStiffness);
 	void SetMaterialLinear(float EdgeStiffness, float BendingStiffness, float AreaStiffness);
 	void SetPressure(const struct FVector2D& Pressure);
+	void SetVelocityClamps(bool bEnableLinearVelocityClamping, const struct FVector& MaxLinearVelocity, bool bEnableLinearAccelerationClamping, const struct FVector& MaxLinearAcceleration, bool bEnableAngularVelocityClamping, float MaxAngularVelocity, bool bEnableAngularAccelerationClamping, float MaxAngularAcceleration);
 	void SetVelocityScale(const struct FVector& LinearVelocityScale, float AngularVelocityScale, float FictitiousAngularScale);
 	void SetWind(const struct FVector2D& Drag, const struct FVector2D& Lift, float AirDensity, const struct FVector& WindVelocity, const struct FVector2D& OuterDrag, const struct FVector2D& OuterLift);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ChaosClothingInteractor">();
+		STATIC_CLASS_IMPL("ChaosClothingInteractor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothingInteractor")
 	}
 	static class UChaosClothingInteractor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UChaosClothingInteractor>();
 	}
 };
-static_assert(alignof(UChaosClothingInteractor) == 0x000008, "Wrong alignment on UChaosClothingInteractor");
-static_assert(sizeof(UChaosClothingInteractor) == 0x000050, "Wrong size on UChaosClothingInteractor");
-
-// Class ChaosCloth.ChaosClothingSimulationInteractor
-// 0x0020 (0x00B0 - 0x0090)
-class UChaosClothingSimulationInteractor final : public UClothingSimulationInteractor
-{
-public:
-	uint8                                         Pad_90[0x20];                                      // 0x0090(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ChaosClothingSimulationInteractor">();
-	}
-	static class UChaosClothingSimulationInteractor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UChaosClothingSimulationInteractor>();
-	}
-};
-static_assert(alignof(UChaosClothingSimulationInteractor) == 0x000008, "Wrong alignment on UChaosClothingSimulationInteractor");
-static_assert(sizeof(UChaosClothingSimulationInteractor) == 0x0000B0, "Wrong size on UChaosClothingSimulationInteractor");
+DUMPER7_ASSERTS_UChaosClothingInteractor;
 
 }
 

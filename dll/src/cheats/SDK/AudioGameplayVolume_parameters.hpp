@@ -23,9 +23,7 @@ struct AudioGameplayVolumeMutator_SetPriority final
 public:
 	int32                                         InPriority;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioGameplayVolumeMutator_SetPriority) == 0x000004, "Wrong alignment on AudioGameplayVolumeMutator_SetPriority");
-static_assert(sizeof(AudioGameplayVolumeMutator_SetPriority) == 0x000004, "Wrong size on AudioGameplayVolumeMutator_SetPriority");
-static_assert(offsetof(AudioGameplayVolumeMutator_SetPriority, InPriority) == 0x000000, "Member 'AudioGameplayVolumeMutator_SetPriority::InPriority' has a wrong offset!");
+DUMPER7_ASSERTS_AudioGameplayVolumeMutator_SetPriority;
 
 // Function AudioGameplayVolume.AttenuationVolumeComponent.SetExteriorVolume
 // 0x0008 (0x0008 - 0x0000)
@@ -35,10 +33,7 @@ public:
 	float                                         Volume;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InterpolateTime;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AttenuationVolumeComponent_SetExteriorVolume) == 0x000004, "Wrong alignment on AttenuationVolumeComponent_SetExteriorVolume");
-static_assert(sizeof(AttenuationVolumeComponent_SetExteriorVolume) == 0x000008, "Wrong size on AttenuationVolumeComponent_SetExteriorVolume");
-static_assert(offsetof(AttenuationVolumeComponent_SetExteriorVolume, Volume) == 0x000000, "Member 'AttenuationVolumeComponent_SetExteriorVolume::Volume' has a wrong offset!");
-static_assert(offsetof(AttenuationVolumeComponent_SetExteriorVolume, InterpolateTime) == 0x000004, "Member 'AttenuationVolumeComponent_SetExteriorVolume::InterpolateTime' has a wrong offset!");
+DUMPER7_ASSERTS_AttenuationVolumeComponent_SetExteriorVolume;
 
 // Function AudioGameplayVolume.AttenuationVolumeComponent.SetInteriorVolume
 // 0x0008 (0x0008 - 0x0000)
@@ -48,10 +43,7 @@ public:
 	float                                         Volume;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InterpolateTime;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AttenuationVolumeComponent_SetInteriorVolume) == 0x000004, "Wrong alignment on AttenuationVolumeComponent_SetInteriorVolume");
-static_assert(sizeof(AttenuationVolumeComponent_SetInteriorVolume) == 0x000008, "Wrong size on AttenuationVolumeComponent_SetInteriorVolume");
-static_assert(offsetof(AttenuationVolumeComponent_SetInteriorVolume, Volume) == 0x000000, "Member 'AttenuationVolumeComponent_SetInteriorVolume::Volume' has a wrong offset!");
-static_assert(offsetof(AttenuationVolumeComponent_SetInteriorVolume, InterpolateTime) == 0x000004, "Member 'AttenuationVolumeComponent_SetInteriorVolume::InterpolateTime' has a wrong offset!");
+DUMPER7_ASSERTS_AttenuationVolumeComponent_SetInteriorVolume;
 
 // Function AudioGameplayVolume.AudioGameplayVolume.SetEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -60,9 +52,7 @@ struct AudioGameplayVolume_SetEnabled final
 public:
 	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioGameplayVolume_SetEnabled) == 0x000001, "Wrong alignment on AudioGameplayVolume_SetEnabled");
-static_assert(sizeof(AudioGameplayVolume_SetEnabled) == 0x000001, "Wrong size on AudioGameplayVolume_SetEnabled");
-static_assert(offsetof(AudioGameplayVolume_SetEnabled, bEnable) == 0x000000, "Member 'AudioGameplayVolume_SetEnabled::bEnable' has a wrong offset!");
+DUMPER7_ASSERTS_AudioGameplayVolume_SetEnabled;
 
 // Function AudioGameplayVolume.FilterVolumeComponent.SetExteriorLPF
 // 0x0008 (0x0008 - 0x0000)
@@ -72,10 +62,7 @@ public:
 	float                                         Volume;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InterpolateTime;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FilterVolumeComponent_SetExteriorLPF) == 0x000004, "Wrong alignment on FilterVolumeComponent_SetExteriorLPF");
-static_assert(sizeof(FilterVolumeComponent_SetExteriorLPF) == 0x000008, "Wrong size on FilterVolumeComponent_SetExteriorLPF");
-static_assert(offsetof(FilterVolumeComponent_SetExteriorLPF, Volume) == 0x000000, "Member 'FilterVolumeComponent_SetExteriorLPF::Volume' has a wrong offset!");
-static_assert(offsetof(FilterVolumeComponent_SetExteriorLPF, InterpolateTime) == 0x000004, "Member 'FilterVolumeComponent_SetExteriorLPF::InterpolateTime' has a wrong offset!");
+DUMPER7_ASSERTS_FilterVolumeComponent_SetExteriorLPF;
 
 // Function AudioGameplayVolume.FilterVolumeComponent.SetInteriorLPF
 // 0x0008 (0x0008 - 0x0000)
@@ -85,10 +72,7 @@ public:
 	float                                         Volume;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InterpolateTime;                                   // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FilterVolumeComponent_SetInteriorLPF) == 0x000004, "Wrong alignment on FilterVolumeComponent_SetInteriorLPF");
-static_assert(sizeof(FilterVolumeComponent_SetInteriorLPF) == 0x000008, "Wrong size on FilterVolumeComponent_SetInteriorLPF");
-static_assert(offsetof(FilterVolumeComponent_SetInteriorLPF, Volume) == 0x000000, "Member 'FilterVolumeComponent_SetInteriorLPF::Volume' has a wrong offset!");
-static_assert(offsetof(FilterVolumeComponent_SetInteriorLPF, InterpolateTime) == 0x000004, "Member 'FilterVolumeComponent_SetInteriorLPF::InterpolateTime' has a wrong offset!");
+DUMPER7_ASSERTS_FilterVolumeComponent_SetInteriorLPF;
 
 // Function AudioGameplayVolume.ReverbVolumeComponent.SetReverbSettings
 // 0x0020 (0x0020 - 0x0000)
@@ -97,9 +81,7 @@ struct ReverbVolumeComponent_SetReverbSettings final
 public:
 	struct FReverbSettings                        NewReverbSettings;                                 // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ReverbVolumeComponent_SetReverbSettings) == 0x000008, "Wrong alignment on ReverbVolumeComponent_SetReverbSettings");
-static_assert(sizeof(ReverbVolumeComponent_SetReverbSettings) == 0x000020, "Wrong size on ReverbVolumeComponent_SetReverbSettings");
-static_assert(offsetof(ReverbVolumeComponent_SetReverbSettings, NewReverbSettings) == 0x000000, "Member 'ReverbVolumeComponent_SetReverbSettings::NewReverbSettings' has a wrong offset!");
+DUMPER7_ASSERTS_ReverbVolumeComponent_SetReverbSettings;
 
 // Function AudioGameplayVolume.SubmixOverrideVolumeComponent.SetSubmixOverrideSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -108,9 +90,7 @@ struct SubmixOverrideVolumeComponent_SetSubmixOverrideSettings final
 public:
 	TArray<struct FAudioVolumeSubmixOverrideSettings> NewSubmixOverrideSettings;                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixOverrideVolumeComponent_SetSubmixOverrideSettings) == 0x000008, "Wrong alignment on SubmixOverrideVolumeComponent_SetSubmixOverrideSettings");
-static_assert(sizeof(SubmixOverrideVolumeComponent_SetSubmixOverrideSettings) == 0x000010, "Wrong size on SubmixOverrideVolumeComponent_SetSubmixOverrideSettings");
-static_assert(offsetof(SubmixOverrideVolumeComponent_SetSubmixOverrideSettings, NewSubmixOverrideSettings) == 0x000000, "Member 'SubmixOverrideVolumeComponent_SetSubmixOverrideSettings::NewSubmixOverrideSettings' has a wrong offset!");
+DUMPER7_ASSERTS_SubmixOverrideVolumeComponent_SetSubmixOverrideSettings;
 
 // Function AudioGameplayVolume.SubmixSendVolumeComponent.SetSubmixSendSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -119,9 +99,7 @@ struct SubmixSendVolumeComponent_SetSubmixSendSettings final
 public:
 	TArray<struct FAudioVolumeSubmixSendSettings> NewSubmixSendSettings;                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixSendVolumeComponent_SetSubmixSendSettings) == 0x000008, "Wrong alignment on SubmixSendVolumeComponent_SetSubmixSendSettings");
-static_assert(sizeof(SubmixSendVolumeComponent_SetSubmixSendSettings) == 0x000010, "Wrong size on SubmixSendVolumeComponent_SetSubmixSendSettings");
-static_assert(offsetof(SubmixSendVolumeComponent_SetSubmixSendSettings, NewSubmixSendSettings) == 0x000000, "Member 'SubmixSendVolumeComponent_SetSubmixSendSettings::NewSubmixSendSettings' has a wrong offset!");
+DUMPER7_ASSERTS_SubmixSendVolumeComponent_SetSubmixSendSettings;
 
 }
 

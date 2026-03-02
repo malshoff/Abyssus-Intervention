@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "RGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK::Params
@@ -23,7 +23,7 @@ struct BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect fina
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue; // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_CustomEvent_Damage;                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaTime;                            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EGScriptNetRole                               CallFunc_BranchByNetRole_Branches;                 // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -35,25 +35,12 @@ public:
 	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0030(0x0030)(ContainsInstancedReference)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue; // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLastDamageEventData                   CallFunc_ApplyHealthDamage_ReturnValue;            // 0x0080(0x0088)(NoDestructor, ContainsInstancedReference)
 	float                                         CallFunc_ApplyHealthDamage_Damage_ImplicitCast;    // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect) == 0x000008, "Wrong alignment on BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect");
-static_assert(sizeof(BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect) == 0x000110, "Wrong size on BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect");
-static_assert(offsetof(BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect, EntryPoint) == 0x000000, "Member 'BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x000004, "Member 'BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect, K2Node_CustomEvent_Damage) == 0x000008, "Member 'BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect::K2Node_CustomEvent_Damage' has a wrong offset!");
-static_assert(offsetof(BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect, K2Node_Event_DeltaTime) == 0x000010, "Member 'BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect::K2Node_Event_DeltaTime' has a wrong offset!");
-static_assert(offsetof(BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect, CallFunc_BranchByNetRole_Branches) == 0x000014, "Member 'BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect::CallFunc_BranchByNetRole_Branches' has a wrong offset!");
-static_assert(offsetof(BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect, CallFunc_K2_GetInstigatorController_ReturnValue) == 0x000018, "Member 'BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect::CallFunc_K2_GetInstigatorController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect, K2Node_SwitchEnum_CmpSuccess) == 0x000020, "Member 'BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect, CallFunc_K2_GetInstigatorPawn_ReturnValue) == 0x000028, "Member 'BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect::CallFunc_K2_GetInstigatorPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000030, "Member 'BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000060, "Member 'BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect, CallFunc_IsValid_ReturnValue) == 0x000078, "Member 'BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect, CallFunc_ApplyHealthDamage_ReturnValue) == 0x000080, "Member 'BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect::CallFunc_ApplyHealthDamage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect, CallFunc_ApplyHealthDamage_Damage_ImplicitCast) == 0x000108, "Member 'BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect::CallFunc_ApplyHealthDamage_Damage_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Shrapnel_StatusEffect_C_ExecuteUbergraph_BP_Shrapnel_StatusEffect;
 
 // Function BP_Shrapnel_StatusEffect.BP_Shrapnel_StatusEffect_C.K2_TickScript
 // 0x0004 (0x0004 - 0x0000)
@@ -62,9 +49,7 @@ struct BP_Shrapnel_StatusEffect_C_K2_TickScript final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Shrapnel_StatusEffect_C_K2_TickScript) == 0x000004, "Wrong alignment on BP_Shrapnel_StatusEffect_C_K2_TickScript");
-static_assert(sizeof(BP_Shrapnel_StatusEffect_C_K2_TickScript) == 0x000004, "Wrong size on BP_Shrapnel_StatusEffect_C_K2_TickScript");
-static_assert(offsetof(BP_Shrapnel_StatusEffect_C_K2_TickScript, DeltaTime) == 0x000000, "Member 'BP_Shrapnel_StatusEffect_C_K2_TickScript::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Shrapnel_StatusEffect_C_K2_TickScript;
 
 // Function BP_Shrapnel_StatusEffect.BP_Shrapnel_StatusEffect_C.OnEffect
 // 0x0008 (0x0008 - 0x0000)
@@ -73,9 +58,7 @@ struct BP_Shrapnel_StatusEffect_C_OnEffect final
 public:
 	double                                        Damage_0;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Shrapnel_StatusEffect_C_OnEffect) == 0x000008, "Wrong alignment on BP_Shrapnel_StatusEffect_C_OnEffect");
-static_assert(sizeof(BP_Shrapnel_StatusEffect_C_OnEffect) == 0x000008, "Wrong size on BP_Shrapnel_StatusEffect_C_OnEffect");
-static_assert(offsetof(BP_Shrapnel_StatusEffect_C_OnEffect, Damage_0) == 0x000000, "Member 'BP_Shrapnel_StatusEffect_C_OnEffect::Damage_0' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Shrapnel_StatusEffect_C_OnEffect;
 
 }
 

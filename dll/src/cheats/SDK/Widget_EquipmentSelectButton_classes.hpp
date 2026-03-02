@@ -11,24 +11,24 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_structs.hpp"
 #include "UMG_classes.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_EquipmentSelectButton.Widget_EquipmentSelectButton_C
-// 0x0038 (0x0308 - 0x02D0)
+// 0x0038 (0x0378 - 0x0340)
 class UWidget_EquipmentSelectButton_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UW_WorkBench_ButtonStyle_C*             W_WorkBench_ButtonStyle;                           // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URPrimaryDataAsset*                     PrimaryAsset;                                      // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UWidget_Workbench2_C*                   WidgetWorkbenchRef;                                // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	TArray<struct FRMutatorPrimaryAssetMeshPair>  MutatorPAMeshPairs;                                // 0x02F0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	bool                                          Equipped;                                          // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UW_WorkBench_ButtonStyle_C*             W_WorkBench_ButtonStyle;                           // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URPrimaryDataAsset*                     PrimaryAsset;                                      // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UWidget_Workbench2_C*                   WidgetWorkbenchRef;                                // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	TArray<struct FRMutatorPrimaryAssetMeshPair>  MutatorPAMeshPairs;                                // 0x0360(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	bool                                          Equipped;                                          // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Widget_EquipmentSelectButton_W_WorkBench_ButtonStyle_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
@@ -47,21 +47,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_EquipmentSelectButton_C">();
+		BP_STATIC_CLASS_IMPL("Widget_EquipmentSelectButton_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_EquipmentSelectButton_C")
 	}
 	static class UWidget_EquipmentSelectButton_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_EquipmentSelectButton_C>();
 	}
 };
-static_assert(alignof(UWidget_EquipmentSelectButton_C) == 0x000008, "Wrong alignment on UWidget_EquipmentSelectButton_C");
-static_assert(sizeof(UWidget_EquipmentSelectButton_C) == 0x000308, "Wrong size on UWidget_EquipmentSelectButton_C");
-static_assert(offsetof(UWidget_EquipmentSelectButton_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_EquipmentSelectButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_EquipmentSelectButton_C, W_WorkBench_ButtonStyle) == 0x0002D8, "Member 'UWidget_EquipmentSelectButton_C::W_WorkBench_ButtonStyle' has a wrong offset!");
-static_assert(offsetof(UWidget_EquipmentSelectButton_C, PrimaryAsset) == 0x0002E0, "Member 'UWidget_EquipmentSelectButton_C::PrimaryAsset' has a wrong offset!");
-static_assert(offsetof(UWidget_EquipmentSelectButton_C, WidgetWorkbenchRef) == 0x0002E8, "Member 'UWidget_EquipmentSelectButton_C::WidgetWorkbenchRef' has a wrong offset!");
-static_assert(offsetof(UWidget_EquipmentSelectButton_C, MutatorPAMeshPairs) == 0x0002F0, "Member 'UWidget_EquipmentSelectButton_C::MutatorPAMeshPairs' has a wrong offset!");
-static_assert(offsetof(UWidget_EquipmentSelectButton_C, Equipped) == 0x000300, "Member 'UWidget_EquipmentSelectButton_C::Equipped' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_EquipmentSelectButton_C;
 
 }
 

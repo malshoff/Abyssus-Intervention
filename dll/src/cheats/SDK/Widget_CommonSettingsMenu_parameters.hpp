@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -26,9 +26,7 @@ struct Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Ap
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Apply_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -37,9 +35,7 @@ struct Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Ba
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -48,9 +44,7 @@ struct Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Ic
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_L_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -59,9 +53,7 @@ struct Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Ic
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Icon_R_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -70,9 +62,7 @@ struct Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Re
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Button_Reset_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -81,9 +71,7 @@ struct Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_Horizonta
 public:
 	class FName                                   TabId;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature) == 0x000004, "Wrong alignment on Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature, TabId) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature::TabId' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_BndEvt__Widget_CommonSettingsMenu_W_HorizontalTabList_K2Node_ComponentBoundEvent_3_OnTabSelected__DelegateSignature;
 
 // Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.ExecuteUbergraph_Widget_CommonSettingsMenu
 // 0x0118 (0x0118 - 0x0000)
@@ -121,32 +109,7 @@ public:
 	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0108(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu) == 0x000008, "Wrong alignment on Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu) == 0x000118, "Wrong size on Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, EntryPoint) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000008, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, CallFunc_GetChildAt_ReturnValue) == 0x000010, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, K2Node_DynamicCast_AsRSetting_Tab_Widget) == 0x000018, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::K2Node_DynamicCast_AsRSetting_Tab_Widget' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, CallFunc_GetRGameUserSettings_ReturnValue_1) == 0x000028, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::CallFunc_GetRGameUserSettings_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, CallFunc_Not_PreBool_ReturnValue) == 0x000030, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, CallFunc_GetRGameUserSettings_ReturnValue_2) == 0x000038, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::CallFunc_GetRGameUserSettings_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, K2Node_ComponentBoundEvent_TabId) == 0x000040, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::K2Node_ComponentBoundEvent_TabId' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, CallFunc_Conv_NameToText_ReturnValue) == 0x000048, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, K2Node_MakeStruct_FormatArgumentData) == 0x000058, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, CallFunc_SelectTabByID_ReturnValue) == 0x0000A0, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::CallFunc_SelectTabByID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, K2Node_MakeArray_Array) == 0x0000A8, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, CallFunc_GetTabButtonBaseByID_ReturnValue) == 0x0000B8, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::CallFunc_GetTabButtonBaseByID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, CallFunc_Format_ReturnValue) == 0x0000C0, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, K2Node_DynamicCast_AsW_Button_Tab_Base) == 0x0000D0, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::K2Node_DynamicCast_AsW_Button_Tab_Base' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, K2Node_DynamicCast_bSuccess_1) == 0x0000D8, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, K2Node_ComponentBoundEvent_Button_4) == 0x0000E0, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::K2Node_ComponentBoundEvent_Button_4' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, K2Node_ComponentBoundEvent_Button_3) == 0x0000E8, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::K2Node_ComponentBoundEvent_Button_3' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, K2Node_ComponentBoundEvent_Button_2) == 0x0000F0, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::K2Node_ComponentBoundEvent_Button_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, K2Node_ComponentBoundEvent_Button_1) == 0x0000F8, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, CallFunc_IsValid_ReturnValue) == 0x000100, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, K2Node_ComponentBoundEvent_Button) == 0x000108, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu, CallFunc_IsValid_ReturnValue_1) == 0x000110, "Member 'Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_ExecuteUbergraph_Widget_CommonSettingsMenu;
 
 // Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.GetTabIndexById
 // 0x0028 (0x0028 - 0x0000)
@@ -160,13 +123,7 @@ public:
 	class UW_Button_TabBase_C*                    K2Node_DynamicCast_AsW_Button_Tab_Base;            // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_GetTabIndexById) == 0x000008, "Wrong alignment on Widget_CommonSettingsMenu_C_GetTabIndexById");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_GetTabIndexById) == 0x000028, "Wrong size on Widget_CommonSettingsMenu_C_GetTabIndexById");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_GetTabIndexById, Index_0) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_GetTabIndexById::Index_0' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_GetTabIndexById, CallFunc_GetActiveTab_ReturnValue) == 0x000004, "Member 'Widget_CommonSettingsMenu_C_GetTabIndexById::CallFunc_GetActiveTab_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_GetTabIndexById, CallFunc_GetTabButtonBaseByID_ReturnValue) == 0x000010, "Member 'Widget_CommonSettingsMenu_C_GetTabIndexById::CallFunc_GetTabButtonBaseByID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_GetTabIndexById, K2Node_DynamicCast_AsW_Button_Tab_Base) == 0x000018, "Member 'Widget_CommonSettingsMenu_C_GetTabIndexById::K2Node_DynamicCast_AsW_Button_Tab_Base' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_GetTabIndexById, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'Widget_CommonSettingsMenu_C_GetTabIndexById::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_GetTabIndexById;
 
 // Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.HighlightedTabNavigateAccept
 // 0x0002 (0x0002 - 0x0000)
@@ -176,10 +133,7 @@ public:
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue_1;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateAccept) == 0x000001, "Wrong alignment on Widget_CommonSettingsMenu_C_HighlightedTabNavigateAccept");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateAccept) == 0x000002, "Wrong size on Widget_CommonSettingsMenu_C_HighlightedTabNavigateAccept");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateAccept, CallFunc_IsVisible_ReturnValue) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_HighlightedTabNavigateAccept::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateAccept, CallFunc_IsVisible_ReturnValue_1) == 0x000001, "Member 'Widget_CommonSettingsMenu_C_HighlightedTabNavigateAccept::CallFunc_IsVisible_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_HighlightedTabNavigateAccept;
 
 // Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.HighlightedTabNavigateLeft
 // 0x0004 (0x0004 - 0x0000)
@@ -191,12 +145,7 @@ public:
 	bool                                          CallFunc_IsVisible_ReturnValue_2;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue_3;                  // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateLeft) == 0x000001, "Wrong alignment on Widget_CommonSettingsMenu_C_HighlightedTabNavigateLeft");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateLeft) == 0x000004, "Wrong size on Widget_CommonSettingsMenu_C_HighlightedTabNavigateLeft");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateLeft, CallFunc_IsVisible_ReturnValue) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_HighlightedTabNavigateLeft::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateLeft, CallFunc_IsVisible_ReturnValue_1) == 0x000001, "Member 'Widget_CommonSettingsMenu_C_HighlightedTabNavigateLeft::CallFunc_IsVisible_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateLeft, CallFunc_IsVisible_ReturnValue_2) == 0x000002, "Member 'Widget_CommonSettingsMenu_C_HighlightedTabNavigateLeft::CallFunc_IsVisible_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateLeft, CallFunc_IsVisible_ReturnValue_3) == 0x000003, "Member 'Widget_CommonSettingsMenu_C_HighlightedTabNavigateLeft::CallFunc_IsVisible_ReturnValue_3' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_HighlightedTabNavigateLeft;
 
 // Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.HighlightedTabNavigateRight
 // 0x0004 (0x0004 - 0x0000)
@@ -208,12 +157,7 @@ public:
 	bool                                          CallFunc_IsVisible_ReturnValue_2;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue_3;                  // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateRight) == 0x000001, "Wrong alignment on Widget_CommonSettingsMenu_C_HighlightedTabNavigateRight");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateRight) == 0x000004, "Wrong size on Widget_CommonSettingsMenu_C_HighlightedTabNavigateRight");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateRight, CallFunc_IsVisible_ReturnValue) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_HighlightedTabNavigateRight::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateRight, CallFunc_IsVisible_ReturnValue_1) == 0x000001, "Member 'Widget_CommonSettingsMenu_C_HighlightedTabNavigateRight::CallFunc_IsVisible_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateRight, CallFunc_IsVisible_ReturnValue_2) == 0x000002, "Member 'Widget_CommonSettingsMenu_C_HighlightedTabNavigateRight::CallFunc_IsVisible_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_HighlightedTabNavigateRight, CallFunc_IsVisible_ReturnValue_3) == 0x000003, "Member 'Widget_CommonSettingsMenu_C_HighlightedTabNavigateRight::CallFunc_IsVisible_ReturnValue_3' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_HighlightedTabNavigateRight;
 
 // Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.NavigateTabLeft
 // 0x0068 (0x0068 - 0x0000)
@@ -241,25 +185,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_NavigateTabLeft) == 0x000008, "Wrong alignment on Widget_CommonSettingsMenu_C_NavigateTabLeft");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_NavigateTabLeft) == 0x000068, "Wrong size on Widget_CommonSettingsMenu_C_NavigateTabLeft");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, Temp_int_Array_Index_Variable) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, CallFunc_Subtract_IntInt_ReturnValue) == 0x000008, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, CallFunc_Less_IntInt_ReturnValue) == 0x00000C, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, CallFunc_GetActiveTab_ReturnValue) == 0x000014, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::CallFunc_GetActiveTab_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, CallFunc_Array_Length_ReturnValue) == 0x00001C, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, CallFunc_Array_Get_Item) == 0x000020, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x000030, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, CallFunc_Conv_TextToString_ReturnValue) == 0x000038, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, CallFunc_SelectInt_ReturnValue) == 0x000048, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, CallFunc_Conv_StringToName_ReturnValue) == 0x00004C, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, CallFunc_GetTabIdAtIndex_ReturnValue) == 0x000054, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::CallFunc_GetTabIdAtIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, CallFunc_EqualEqual_NameName_ReturnValue) == 0x00005C, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, CallFunc_SelectTabByID_ReturnValue) == 0x00005D, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::CallFunc_SelectTabByID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, CallFunc_Array_Length_ReturnValue_1) == 0x000060, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabLeft, CallFunc_Less_IntInt_ReturnValue_1) == 0x000064, "Member 'Widget_CommonSettingsMenu_C_NavigateTabLeft::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_NavigateTabLeft;
 
 // Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.NavigateTabRight
 // 0x0068 (0x0068 - 0x0000)
@@ -286,57 +212,28 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_NavigateTabRight) == 0x000008, "Wrong alignment on Widget_CommonSettingsMenu_C_NavigateTabRight");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_NavigateTabRight) == 0x000068, "Wrong size on Widget_CommonSettingsMenu_C_NavigateTabRight");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, Temp_int_Array_Index_Variable) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, CallFunc_Add_IntInt_ReturnValue_1) == 0x00000C, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, CallFunc_GetActiveTab_ReturnValue) == 0x000010, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::CallFunc_GetActiveTab_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, CallFunc_Array_Get_Item) == 0x000020, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000030, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, CallFunc_Conv_TextToString_ReturnValue) == 0x000038, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, CallFunc_SelectInt_ReturnValue) == 0x000048, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, CallFunc_Conv_StringToName_ReturnValue) == 0x00004C, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, CallFunc_GetTabIdAtIndex_ReturnValue) == 0x000054, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::CallFunc_GetTabIdAtIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, CallFunc_EqualEqual_NameName_ReturnValue) == 0x00005C, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, CallFunc_SelectTabByID_ReturnValue) == 0x00005D, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::CallFunc_SelectTabByID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, CallFunc_Array_Length_ReturnValue_1) == 0x000060, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_NavigateTabRight, CallFunc_Less_IntInt_ReturnValue) == 0x000064, "Member 'Widget_CommonSettingsMenu_C_NavigateTabRight::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_NavigateTabRight;
 
 // Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.OnPreviewKeyDown
-// 0x0388 (0x0388 - 0x0000)
+// 0x0390 (0x0390 - 0x0000)
 struct Widget_CommonSettingsMenu_C_OnPreviewKeyDown final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0130(0x00B8)()
-	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x01E8(0x0018)(HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_202[0x6];                                      // 0x0202(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEventReply                            CallFunc_Handled_ReturnValue_1;                    // 0x0208(0x00B8)()
-	class UWidget_SettingTabBase_C*               K2Node_DynamicCast_AsWidget_Setting_Tab_Base;      // 0x02C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x02D0(0x00B8)()
+	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                            ReturnValue;                                       // 0x0080(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0138(0x00B8)()
+	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x01F0(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x0209(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_20A[0x6];                                      // 0x020A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_Handled_ReturnValue_1;                    // 0x0210(0x00B8)()
+	class UWidget_SettingTabBase_C*               K2Node_DynamicCast_AsWidget_Setting_Tab_Base;      // 0x02C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D1[0x7];                                      // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x02D8(0x00B8)()
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_OnPreviewKeyDown) == 0x000008, "Wrong alignment on Widget_CommonSettingsMenu_C_OnPreviewKeyDown");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_OnPreviewKeyDown) == 0x000388, "Wrong size on Widget_CommonSettingsMenu_C_OnPreviewKeyDown");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_OnPreviewKeyDown, MyGeometry) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_OnPreviewKeyDown::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_OnPreviewKeyDown, InKeyEvent) == 0x000038, "Member 'Widget_CommonSettingsMenu_C_OnPreviewKeyDown::InKeyEvent' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_OnPreviewKeyDown, ReturnValue) == 0x000078, "Member 'Widget_CommonSettingsMenu_C_OnPreviewKeyDown::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_OnPreviewKeyDown, CallFunc_Handled_ReturnValue) == 0x000130, "Member 'Widget_CommonSettingsMenu_C_OnPreviewKeyDown::CallFunc_Handled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_OnPreviewKeyDown, CallFunc_GetKey_ReturnValue) == 0x0001E8, "Member 'Widget_CommonSettingsMenu_C_OnPreviewKeyDown::CallFunc_GetKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_OnPreviewKeyDown, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x000200, "Member 'Widget_CommonSettingsMenu_C_OnPreviewKeyDown::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_OnPreviewKeyDown, CallFunc_EqualEqual_KeyKey_ReturnValue_1) == 0x000201, "Member 'Widget_CommonSettingsMenu_C_OnPreviewKeyDown::CallFunc_EqualEqual_KeyKey_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_OnPreviewKeyDown, CallFunc_Handled_ReturnValue_1) == 0x000208, "Member 'Widget_CommonSettingsMenu_C_OnPreviewKeyDown::CallFunc_Handled_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_OnPreviewKeyDown, K2Node_DynamicCast_AsWidget_Setting_Tab_Base) == 0x0002C0, "Member 'Widget_CommonSettingsMenu_C_OnPreviewKeyDown::K2Node_DynamicCast_AsWidget_Setting_Tab_Base' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_OnPreviewKeyDown, K2Node_DynamicCast_bSuccess) == 0x0002C8, "Member 'Widget_CommonSettingsMenu_C_OnPreviewKeyDown::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_OnPreviewKeyDown, CallFunc_Unhandled_ReturnValue) == 0x0002D0, "Member 'Widget_CommonSettingsMenu_C_OnPreviewKeyDown::CallFunc_Unhandled_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_OnPreviewKeyDown;
 
 // Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.Tab Highlighted
 // 0x0028 (0x0028 - 0x0000)
@@ -352,14 +249,7 @@ public:
 	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetDesiredFocusWidget_ReturnValue;        // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_Tab_Highlighted) == 0x000008, "Wrong alignment on Widget_CommonSettingsMenu_C_Tab_Highlighted");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_Tab_Highlighted) == 0x000028, "Wrong size on Widget_CommonSettingsMenu_C_Tab_Highlighted");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_Tab_Highlighted, Index_0) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_Tab_Highlighted::Index_0' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_Tab_Highlighted, CallFunc_GetChildAt_ReturnValue) == 0x000008, "Member 'Widget_CommonSettingsMenu_C_Tab_Highlighted::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_Tab_Highlighted, K2Node_DynamicCast_AsRSetting_Tab_Widget) == 0x000010, "Member 'Widget_CommonSettingsMenu_C_Tab_Highlighted::K2Node_DynamicCast_AsRSetting_Tab_Widget' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_Tab_Highlighted, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'Widget_CommonSettingsMenu_C_Tab_Highlighted::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_Tab_Highlighted, CallFunc_IsValid_ReturnValue) == 0x000019, "Member 'Widget_CommonSettingsMenu_C_Tab_Highlighted::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_Tab_Highlighted, CallFunc_GetDesiredFocusWidget_ReturnValue) == 0x000020, "Member 'Widget_CommonSettingsMenu_C_Tab_Highlighted::CallFunc_GetDesiredFocusWidget_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_Tab_Highlighted;
 
 // Function Widget_CommonSettingsMenu.Widget_CommonSettingsMenu_C.BP_GetDesiredFocusTarget
 // 0x0010 (0x0010 - 0x0000)
@@ -369,10 +259,7 @@ public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWidget*                                CallFunc_GetDesiredFocusWidget_ReturnValue;        // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonSettingsMenu_C_BP_GetDesiredFocusTarget) == 0x000008, "Wrong alignment on Widget_CommonSettingsMenu_C_BP_GetDesiredFocusTarget");
-static_assert(sizeof(Widget_CommonSettingsMenu_C_BP_GetDesiredFocusTarget) == 0x000010, "Wrong size on Widget_CommonSettingsMenu_C_BP_GetDesiredFocusTarget");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_BP_GetDesiredFocusTarget, ReturnValue) == 0x000000, "Member 'Widget_CommonSettingsMenu_C_BP_GetDesiredFocusTarget::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonSettingsMenu_C_BP_GetDesiredFocusTarget, CallFunc_GetDesiredFocusWidget_ReturnValue) == 0x000008, "Member 'Widget_CommonSettingsMenu_C_BP_GetDesiredFocusTarget::CallFunc_GetDesiredFocusWidget_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonSettingsMenu_C_BP_GetDesiredFocusTarget;
 
 }
 

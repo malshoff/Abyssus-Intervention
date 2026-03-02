@@ -10,51 +10,66 @@
 
 #include "Basic.hpp"
 
+#include "HairStrandsDeformer_structs.hpp"
 #include "OptimusCore_classes.hpp"
 #include "ComputeFramework_classes.hpp"
-#include "HairStrandsDeformer_structs.hpp"
 
 
 namespace SDK
 {
 
-// Class HairStrandsDeformer.OptimusGroomDataInterface
-// 0x0000 (0x0028 - 0x0028)
-class UOptimusGroomDataInterface final : public UOptimusComputeDataInterface
+// Class HairStrandsDeformer.OptimusGroomAttributeReadDataInterface
+// 0x0020 (0x0048 - 0x0028)
+class UOptimusGroomAttributeReadDataInterface final : public UOptimusComputeDataInterface
 {
 public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OptimusGroomDataInterface">();
-	}
-	static class UOptimusGroomDataInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOptimusGroomDataInterface>();
-	}
-};
-static_assert(alignof(UOptimusGroomDataInterface) == 0x000008, "Wrong alignment on UOptimusGroomDataInterface");
-static_assert(sizeof(UOptimusGroomDataInterface) == 0x000028, "Wrong size on UOptimusGroomDataInterface");
-
-// Class HairStrandsDeformer.OptimusGroomDataProvider
-// 0x0008 (0x0030 - 0x0028)
-class UOptimusGroomDataProvider final : public UComputeDataProvider
-{
-public:
-	class UGroomComponent*                        Groom;                                             // 0x0028(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   GroomAttributeName;                                // 0x0028(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EOptimusGroomExecDomain                       GroomAttributeGroup;                               // 0x0030(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EOptimusGroomAttributeTypes                   GroomAttributeType;                                // 0x0031(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_32[0x16];                                      // 0x0032(0x0016)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OptimusGroomDataProvider">();
+		STATIC_CLASS_IMPL("OptimusGroomAttributeReadDataInterface")
 	}
-	static class UOptimusGroomDataProvider* GetDefaultObj()
+	static const class FName& StaticName()
 	{
-		return GetDefaultObjImpl<UOptimusGroomDataProvider>();
+		STATIC_NAME_IMPL(L"OptimusGroomAttributeReadDataInterface")
+	}
+	static class UOptimusGroomAttributeReadDataInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomAttributeReadDataInterface>();
 	}
 };
-static_assert(alignof(UOptimusGroomDataProvider) == 0x000008, "Wrong alignment on UOptimusGroomDataProvider");
-static_assert(sizeof(UOptimusGroomDataProvider) == 0x000030, "Wrong size on UOptimusGroomDataProvider");
-static_assert(offsetof(UOptimusGroomDataProvider, Groom) == 0x000028, "Member 'UOptimusGroomDataProvider::Groom' has a wrong offset!");
+DUMPER7_ASSERTS_UOptimusGroomAttributeReadDataInterface;
+
+// Class HairStrandsDeformer.OptimusGroomAttributeReadDataProvider
+// 0x0018 (0x0040 - 0x0028)
+class UOptimusGroomAttributeReadDataProvider final : public UComputeDataProvider
+{
+public:
+	class UMeshComponent*                         MeshComponent;                                     // 0x0028(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class FName                                   GroomAttributeName;                                // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOptimusGroomExecDomain                       GroomAttributeGroup;                               // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOptimusGroomAttributeTypes                   GroomAttributeType;                                // 0x0039(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OptimusGroomAttributeReadDataProvider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OptimusGroomAttributeReadDataProvider")
+	}
+	static class UOptimusGroomAttributeReadDataProvider* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomAttributeReadDataProvider>();
+	}
+};
+DUMPER7_ASSERTS_UOptimusGroomAttributeReadDataProvider;
 
 // Class HairStrandsDeformer.OptimusGroomExecDataInterface
 // 0x0010 (0x0038 - 0x0028)
@@ -68,134 +83,349 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OptimusGroomExecDataInterface">();
+		STATIC_CLASS_IMPL("OptimusGroomExecDataInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OptimusGroomExecDataInterface")
 	}
 	static class UOptimusGroomExecDataInterface* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UOptimusGroomExecDataInterface>();
 	}
 };
-static_assert(alignof(UOptimusGroomExecDataInterface) == 0x000008, "Wrong alignment on UOptimusGroomExecDataInterface");
-static_assert(sizeof(UOptimusGroomExecDataInterface) == 0x000038, "Wrong size on UOptimusGroomExecDataInterface");
-static_assert(offsetof(UOptimusGroomExecDataInterface, Domain) == 0x000030, "Member 'UOptimusGroomExecDataInterface::Domain' has a wrong offset!");
+DUMPER7_ASSERTS_UOptimusGroomExecDataInterface;
 
 // Class HairStrandsDeformer.OptimusGroomExecDataProvider
 // 0x0010 (0x0038 - 0x0028)
 class UOptimusGroomExecDataProvider final : public UComputeDataProvider
 {
 public:
-	class UGroomComponent*                        GroomComponent;                                    // 0x0028(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMeshComponent*                         MeshComponent;                                     // 0x0028(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	EOptimusGroomExecDomain                       Domain;                                            // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OptimusGroomExecDataProvider">();
+		STATIC_CLASS_IMPL("OptimusGroomExecDataProvider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OptimusGroomExecDataProvider")
 	}
 	static class UOptimusGroomExecDataProvider* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UOptimusGroomExecDataProvider>();
 	}
 };
-static_assert(alignof(UOptimusGroomExecDataProvider) == 0x000008, "Wrong alignment on UOptimusGroomExecDataProvider");
-static_assert(sizeof(UOptimusGroomExecDataProvider) == 0x000038, "Wrong size on UOptimusGroomExecDataProvider");
-static_assert(offsetof(UOptimusGroomExecDataProvider, GroomComponent) == 0x000028, "Member 'UOptimusGroomExecDataProvider::GroomComponent' has a wrong offset!");
-static_assert(offsetof(UOptimusGroomExecDataProvider, Domain) == 0x000030, "Member 'UOptimusGroomExecDataProvider::Domain' has a wrong offset!");
+DUMPER7_ASSERTS_UOptimusGroomExecDataProvider;
 
-// Class HairStrandsDeformer.OptimusGroomGuideDataInterface
+// Class HairStrandsDeformer.OptimusGroomAssetComponentSource
 // 0x0000 (0x0028 - 0x0028)
-class UOptimusGroomGuideDataInterface final : public UOptimusComputeDataInterface
+class UOptimusGroomAssetComponentSource final : public UOptimusComponentSource
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OptimusGroomGuideDataInterface">();
+		STATIC_CLASS_IMPL("OptimusGroomAssetComponentSource")
 	}
-	static class UOptimusGroomGuideDataInterface* GetDefaultObj()
+	static const class FName& StaticName()
 	{
-		return GetDefaultObjImpl<UOptimusGroomGuideDataInterface>();
+		STATIC_NAME_IMPL(L"OptimusGroomAssetComponentSource")
+	}
+	static class UOptimusGroomAssetComponentSource* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomAssetComponentSource>();
 	}
 };
-static_assert(alignof(UOptimusGroomGuideDataInterface) == 0x000008, "Wrong alignment on UOptimusGroomGuideDataInterface");
-static_assert(sizeof(UOptimusGroomGuideDataInterface) == 0x000028, "Wrong size on UOptimusGroomGuideDataInterface");
+DUMPER7_ASSERTS_UOptimusGroomAssetComponentSource;
 
-// Class HairStrandsDeformer.OptimusGroomGuideDataProvider
+// Class HairStrandsDeformer.OptimusGroomSolverComponentSource
+// 0x0000 (0x0028 - 0x0028)
+class UOptimusGroomSolverComponentSource final : public UOptimusComponentSource
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OptimusGroomSolverComponentSource")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OptimusGroomSolverComponentSource")
+	}
+	static class UOptimusGroomSolverComponentSource* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomSolverComponentSource>();
+	}
+};
+DUMPER7_ASSERTS_UOptimusGroomSolverComponentSource;
+
+// Class HairStrandsDeformer.OptimusGroomGuidesReadDataInterface
+// 0x0000 (0x0028 - 0x0028)
+class UOptimusGroomGuidesReadDataInterface final : public UOptimusComputeDataInterface
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OptimusGroomGuidesReadDataInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OptimusGroomGuidesReadDataInterface")
+	}
+	static class UOptimusGroomGuidesReadDataInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomGuidesReadDataInterface>();
+	}
+};
+DUMPER7_ASSERTS_UOptimusGroomGuidesReadDataInterface;
+
+// Class HairStrandsDeformer.OptimusGroomGuidesReadDataProvider
 // 0x0008 (0x0030 - 0x0028)
-class UOptimusGroomGuideDataProvider final : public UComputeDataProvider
+class UOptimusGroomGuidesReadDataProvider final : public UComputeDataProvider
 {
 public:
-	class UGroomComponent*                        Groom;                                             // 0x0028(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMeshComponent*                         MeshComponent;                                     // 0x0028(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OptimusGroomGuideDataProvider">();
+		STATIC_CLASS_IMPL("OptimusGroomGuidesReadDataProvider")
 	}
-	static class UOptimusGroomGuideDataProvider* GetDefaultObj()
+	static const class FName& StaticName()
 	{
-		return GetDefaultObjImpl<UOptimusGroomGuideDataProvider>();
+		STATIC_NAME_IMPL(L"OptimusGroomGuidesReadDataProvider")
+	}
+	static class UOptimusGroomGuidesReadDataProvider* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomGuidesReadDataProvider>();
 	}
 };
-static_assert(alignof(UOptimusGroomGuideDataProvider) == 0x000008, "Wrong alignment on UOptimusGroomGuideDataProvider");
-static_assert(sizeof(UOptimusGroomGuideDataProvider) == 0x000030, "Wrong size on UOptimusGroomGuideDataProvider");
-static_assert(offsetof(UOptimusGroomGuideDataProvider, Groom) == 0x000028, "Member 'UOptimusGroomGuideDataProvider::Groom' has a wrong offset!");
+DUMPER7_ASSERTS_UOptimusGroomGuidesReadDataProvider;
 
-// Class HairStrandsDeformer.OptimusGroomWriteDataInterface
+// Class HairStrandsDeformer.OptimusGroomGuidesWriteDataInterface
 // 0x0000 (0x0028 - 0x0028)
-class UOptimusGroomWriteDataInterface final : public UOptimusComputeDataInterface
+class UOptimusGroomGuidesWriteDataInterface final : public UOptimusComputeDataInterface
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OptimusGroomWriteDataInterface">();
+		STATIC_CLASS_IMPL("OptimusGroomGuidesWriteDataInterface")
 	}
-	static class UOptimusGroomWriteDataInterface* GetDefaultObj()
+	static const class FName& StaticName()
 	{
-		return GetDefaultObjImpl<UOptimusGroomWriteDataInterface>();
+		STATIC_NAME_IMPL(L"OptimusGroomGuidesWriteDataInterface")
+	}
+	static class UOptimusGroomGuidesWriteDataInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomGuidesWriteDataInterface>();
 	}
 };
-static_assert(alignof(UOptimusGroomWriteDataInterface) == 0x000008, "Wrong alignment on UOptimusGroomWriteDataInterface");
-static_assert(sizeof(UOptimusGroomWriteDataInterface) == 0x000028, "Wrong size on UOptimusGroomWriteDataInterface");
+DUMPER7_ASSERTS_UOptimusGroomGuidesWriteDataInterface;
 
-// Class HairStrandsDeformer.OptimusGroomWriteDataProvider
+// Class HairStrandsDeformer.OptimusGroomGuidesWriteDataProvider
 // 0x0010 (0x0038 - 0x0028)
-class UOptimusGroomWriteDataProvider final : public UComputeDataProvider
+class UOptimusGroomGuidesWriteDataProvider final : public UComputeDataProvider
 {
 public:
-	class UGroomComponent*                        GroomComponent;                                    // 0x0028(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMeshComponent*                         MeshComponent;                                     // 0x0028(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OptimusGroomWriteDataProvider">();
+		STATIC_CLASS_IMPL("OptimusGroomGuidesWriteDataProvider")
 	}
-	static class UOptimusGroomWriteDataProvider* GetDefaultObj()
+	static const class FName& StaticName()
 	{
-		return GetDefaultObjImpl<UOptimusGroomWriteDataProvider>();
+		STATIC_NAME_IMPL(L"OptimusGroomGuidesWriteDataProvider")
+	}
+	static class UOptimusGroomGuidesWriteDataProvider* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomGuidesWriteDataProvider>();
 	}
 };
-static_assert(alignof(UOptimusGroomWriteDataProvider) == 0x000008, "Wrong alignment on UOptimusGroomWriteDataProvider");
-static_assert(sizeof(UOptimusGroomWriteDataProvider) == 0x000038, "Wrong size on UOptimusGroomWriteDataProvider");
-static_assert(offsetof(UOptimusGroomWriteDataProvider, GroomComponent) == 0x000028, "Member 'UOptimusGroomWriteDataProvider::GroomComponent' has a wrong offset!");
+DUMPER7_ASSERTS_UOptimusGroomGuidesWriteDataProvider;
 
-// Class HairStrandsDeformer.OptimusGroomComponentSource
+// Class HairStrandsDeformer.OptimusGroomMeshesReadDataInterface
 // 0x0000 (0x0028 - 0x0028)
-class UOptimusGroomComponentSource final : public UOptimusComponentSource
+class UOptimusGroomMeshesReadDataInterface final : public UOptimusComputeDataInterface
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OptimusGroomComponentSource">();
+		STATIC_CLASS_IMPL("OptimusGroomMeshesReadDataInterface")
 	}
-	static class UOptimusGroomComponentSource* GetDefaultObj()
+	static const class FName& StaticName()
 	{
-		return GetDefaultObjImpl<UOptimusGroomComponentSource>();
+		STATIC_NAME_IMPL(L"OptimusGroomMeshesReadDataInterface")
+	}
+	static class UOptimusGroomMeshesReadDataInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomMeshesReadDataInterface>();
 	}
 };
-static_assert(alignof(UOptimusGroomComponentSource) == 0x000008, "Wrong alignment on UOptimusGroomComponentSource");
-static_assert(sizeof(UOptimusGroomComponentSource) == 0x000028, "Wrong size on UOptimusGroomComponentSource");
+DUMPER7_ASSERTS_UOptimusGroomMeshesReadDataInterface;
+
+// Class HairStrandsDeformer.OptimusGroomMeshesReadDataProvider
+// 0x0008 (0x0030 - 0x0028)
+class UOptimusGroomMeshesReadDataProvider final : public UComputeDataProvider
+{
+public:
+	class UMeshComponent*                         MeshComponent;                                     // 0x0028(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OptimusGroomMeshesReadDataProvider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OptimusGroomMeshesReadDataProvider")
+	}
+	static class UOptimusGroomMeshesReadDataProvider* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomMeshesReadDataProvider>();
+	}
+};
+DUMPER7_ASSERTS_UOptimusGroomMeshesReadDataProvider;
+
+// Class HairStrandsDeformer.OptimusGroomSolverReadDataInterface
+// 0x0008 (0x0030 - 0x0028)
+class UOptimusGroomSolverReadDataInterface final : public UOptimusComputeDataInterface
+{
+public:
+	class FName                                   ResetSimulationTrigger;                            // 0x0028(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OptimusGroomSolverReadDataInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OptimusGroomSolverReadDataInterface")
+	}
+	static class UOptimusGroomSolverReadDataInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomSolverReadDataInterface>();
+	}
+};
+DUMPER7_ASSERTS_UOptimusGroomSolverReadDataInterface;
+
+// Class HairStrandsDeformer.OptimusGroomSolverReadDataProvider
+// 0x0028 (0x0050 - 0x0028)
+class UOptimusGroomSolverReadDataProvider final : public UComputeDataProvider
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGroomSolverComponent*                  SolverComponent;                                   // 0x0030(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UOptimusDeformerInstance*               DeformerInstance;                                  // 0x0038(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	uint8                                         Pad_40[0x10];                                      // 0x0040(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OptimusGroomSolverReadDataProvider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OptimusGroomSolverReadDataProvider")
+	}
+	static class UOptimusGroomSolverReadDataProvider* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomSolverReadDataProvider>();
+	}
+};
+DUMPER7_ASSERTS_UOptimusGroomSolverReadDataProvider;
+
+// Class HairStrandsDeformer.OptimusGroomStrandsReadDataInterface
+// 0x0000 (0x0028 - 0x0028)
+class UOptimusGroomStrandsReadDataInterface final : public UOptimusComputeDataInterface
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OptimusGroomStrandsReadDataInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OptimusGroomStrandsReadDataInterface")
+	}
+	static class UOptimusGroomStrandsReadDataInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomStrandsReadDataInterface>();
+	}
+};
+DUMPER7_ASSERTS_UOptimusGroomStrandsReadDataInterface;
+
+// Class HairStrandsDeformer.OptimusGroomStrandsReadDataProvider
+// 0x0008 (0x0030 - 0x0028)
+class UOptimusGroomStrandsReadDataProvider final : public UComputeDataProvider
+{
+public:
+	class UMeshComponent*                         MeshComponent;                                     // 0x0028(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OptimusGroomStrandsReadDataProvider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OptimusGroomStrandsReadDataProvider")
+	}
+	static class UOptimusGroomStrandsReadDataProvider* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomStrandsReadDataProvider>();
+	}
+};
+DUMPER7_ASSERTS_UOptimusGroomStrandsReadDataProvider;
+
+// Class HairStrandsDeformer.OptimusGroomStrandsWriteDataInterface
+// 0x0000 (0x0028 - 0x0028)
+class UOptimusGroomStrandsWriteDataInterface final : public UOptimusComputeDataInterface
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OptimusGroomStrandsWriteDataInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OptimusGroomStrandsWriteDataInterface")
+	}
+	static class UOptimusGroomStrandsWriteDataInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomStrandsWriteDataInterface>();
+	}
+};
+DUMPER7_ASSERTS_UOptimusGroomStrandsWriteDataInterface;
+
+// Class HairStrandsDeformer.OptimusGroomStrandsWriteDataProvider
+// 0x0010 (0x0038 - 0x0028)
+class UOptimusGroomStrandsWriteDataProvider final : public UComputeDataProvider
+{
+public:
+	class UMeshComponent*                         MeshComponent;                                     // 0x0028(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OptimusGroomStrandsWriteDataProvider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OptimusGroomStrandsWriteDataProvider")
+	}
+	static class UOptimusGroomStrandsWriteDataProvider* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOptimusGroomStrandsWriteDataProvider>();
+	}
+};
+DUMPER7_ASSERTS_UOptimusGroomStrandsWriteDataProvider;
 
 }
 

@@ -28,14 +28,7 @@ public:
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base) == 0x000004, "Wrong alignment on Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base");
-static_assert(sizeof(Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base) == 0x00000C, "Wrong size on Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base");
-static_assert(offsetof(Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base, EntryPoint) == 0x000000, "Member 'Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base, Temp_bool_Variable) == 0x000004, "Member 'Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base, Temp_byte_Variable) == 0x000005, "Member 'Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base, Temp_byte_Variable_1) == 0x000006, "Member 'Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base, K2Node_Select_Default) == 0x000007, "Member 'Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base, K2Node_Event_IsDesignTime) == 0x000008, "Member 'Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base::K2Node_Event_IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PlayerFrame_Base_C_ExecuteUbergraph_Widget_PlayerFrame_Base;
 
 // Function Widget_PlayerFrame_Base.Widget_PlayerFrame_Base_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -44,9 +37,7 @@ struct Widget_PlayerFrame_Base_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PlayerFrame_Base_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_PlayerFrame_Base_C_PreConstruct");
-static_assert(sizeof(Widget_PlayerFrame_Base_C_PreConstruct) == 0x000001, "Wrong size on Widget_PlayerFrame_Base_C_PreConstruct");
-static_assert(offsetof(Widget_PlayerFrame_Base_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_PlayerFrame_Base_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PlayerFrame_Base_C_PreConstruct;
 
 }
 

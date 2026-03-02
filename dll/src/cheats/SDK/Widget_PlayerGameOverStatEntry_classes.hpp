@@ -18,41 +18,41 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_PlayerGameOverStatEntry.Widget_PlayerGameOverStatEntry_C
-// 0x0028 (0x02F8 - 0x02D0)
+// 0x0038 (0x0378 - 0x0340)
 class UWidget_PlayerGameOverStatEntry_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Icon;                                              // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_138;                                         // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             StatName;                                          // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             StatValue;                                         // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             StatValue;                                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             StatName;                                          // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           ProgressBar;                                       // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_StatIcon;                                    // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Frame;                                       // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URGameOverScreenStatContainer*          StatContainer;                                     // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnListItemObjectSet(class UObject* ListItemObject);
-	class UWidget* GetToolTipWidget();
-	void ExecuteUbergraph_Widget_PlayerGameOverStatEntry(int32 EntryPoint);
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
 	void BP_OnEntryReleased();
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
+	void ExecuteUbergraph_Widget_PlayerGameOverStatEntry(int32 EntryPoint);
+	class UWidget* GetToolTipWidget();
+	void OnListItemObjectSet(class UObject* ListItemObject);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_PlayerGameOverStatEntry_C">();
+		BP_STATIC_CLASS_IMPL("Widget_PlayerGameOverStatEntry_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_PlayerGameOverStatEntry_C")
 	}
 	static class UWidget_PlayerGameOverStatEntry_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_PlayerGameOverStatEntry_C>();
 	}
 };
-static_assert(alignof(UWidget_PlayerGameOverStatEntry_C) == 0x000008, "Wrong alignment on UWidget_PlayerGameOverStatEntry_C");
-static_assert(sizeof(UWidget_PlayerGameOverStatEntry_C) == 0x0002F8, "Wrong size on UWidget_PlayerGameOverStatEntry_C");
-static_assert(offsetof(UWidget_PlayerGameOverStatEntry_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_PlayerGameOverStatEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverStatEntry_C, Icon) == 0x0002D8, "Member 'UWidget_PlayerGameOverStatEntry_C::Icon' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverStatEntry_C, Image_138) == 0x0002E0, "Member 'UWidget_PlayerGameOverStatEntry_C::Image_138' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverStatEntry_C, StatName) == 0x0002E8, "Member 'UWidget_PlayerGameOverStatEntry_C::StatName' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerGameOverStatEntry_C, StatValue) == 0x0002F0, "Member 'UWidget_PlayerGameOverStatEntry_C::StatValue' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_PlayerGameOverStatEntry_C;
 
 }
 

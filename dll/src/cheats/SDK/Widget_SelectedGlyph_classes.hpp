@@ -19,14 +19,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_SelectedGlyph.Widget_SelectedGlyph_C
-// 0x0020 (0x02F0 - 0x02D0)
+// 0x0020 (0x0360 - 0x0340)
 class UWidget_SelectedGlyph_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Visibility_Transtion;                              // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_20;                             // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInputAction*                           EnchancedInputAction;                              // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonActionWidget*                    CommonActionWidget_20;                             // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Visibility_Transtion;                              // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UInputAction*                           EnchancedInputAction;                              // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Widget_SelectedGlyph(int32 EntryPoint);
@@ -34,23 +34,23 @@ public:
 	void OnInputMethodChanged(ECommonInputType bNewInputType);
 	void PreConstruct(bool IsDesignTime);
 	void SetActionGlyphVisibility(bool Visibe, bool Force);
+	void SetGlyphActive(bool Active);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_SelectedGlyph_C">();
+		BP_STATIC_CLASS_IMPL("Widget_SelectedGlyph_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_SelectedGlyph_C")
 	}
 	static class UWidget_SelectedGlyph_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_SelectedGlyph_C>();
 	}
 };
-static_assert(alignof(UWidget_SelectedGlyph_C) == 0x000008, "Wrong alignment on UWidget_SelectedGlyph_C");
-static_assert(sizeof(UWidget_SelectedGlyph_C) == 0x0002F0, "Wrong size on UWidget_SelectedGlyph_C");
-static_assert(offsetof(UWidget_SelectedGlyph_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_SelectedGlyph_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_SelectedGlyph_C, Visibility_Transtion) == 0x0002D8, "Member 'UWidget_SelectedGlyph_C::Visibility_Transtion' has a wrong offset!");
-static_assert(offsetof(UWidget_SelectedGlyph_C, CommonActionWidget_20) == 0x0002E0, "Member 'UWidget_SelectedGlyph_C::CommonActionWidget_20' has a wrong offset!");
-static_assert(offsetof(UWidget_SelectedGlyph_C, EnchancedInputAction) == 0x0002E8, "Member 'UWidget_SelectedGlyph_C::EnchancedInputAction' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_SelectedGlyph_C;
 
 }
 

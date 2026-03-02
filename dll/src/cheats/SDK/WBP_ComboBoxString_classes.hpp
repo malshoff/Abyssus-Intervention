@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass WBP_ComboBoxString.WBP_ComboBoxString_C
-// 0x0000 (0x19E0 - 0x19E0)
+// 0x0000 (0x1A00 - 0x1A00)
 class UWBP_ComboBoxString_C final : public UComboBoxString
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"WBP_ComboBoxString_C">();
+		BP_STATIC_CLASS_IMPL("WBP_ComboBoxString_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WBP_ComboBoxString_C")
 	}
 	static class UWBP_ComboBoxString_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWBP_ComboBoxString_C>();
 	}
 };
-static_assert(alignof(UWBP_ComboBoxString_C) == 0x000010, "Wrong alignment on UWBP_ComboBoxString_C");
-static_assert(sizeof(UWBP_ComboBoxString_C) == 0x0019E0, "Wrong size on UWBP_ComboBoxString_C");
+DUMPER7_ASSERTS_UWBP_ComboBoxString_C;
 
 }
 

@@ -10,30 +10,143 @@
 
 #include "Basic.hpp"
 
-#include "IrisCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "IrisCore_structs.hpp"
 
 
 namespace SDK
 {
 
-// Class IrisCore.DataStream
+// Class IrisCore.NetObjectFilterConfig
 // 0x0000 (0x0028 - 0x0028)
-class UDataStream : public UObject
+class UNetObjectFilterConfig : public UObject
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataStream">();
+		STATIC_CLASS_IMPL("NetObjectFilterConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetObjectFilterConfig")
+	}
+	static class UNetObjectFilterConfig* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNetObjectFilterConfig>();
+	}
+};
+DUMPER7_ASSERTS_UNetObjectFilterConfig;
+
+// Class IrisCore.AlwaysRelevantNetObjectFilterConfig
+// 0x0000 (0x0028 - 0x0028)
+class UAlwaysRelevantNetObjectFilterConfig final : public UNetObjectFilterConfig
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AlwaysRelevantNetObjectFilterConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AlwaysRelevantNetObjectFilterConfig")
+	}
+	static class UAlwaysRelevantNetObjectFilterConfig* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAlwaysRelevantNetObjectFilterConfig>();
+	}
+};
+DUMPER7_ASSERTS_UAlwaysRelevantNetObjectFilterConfig;
+
+// Class IrisCore.NetObjectFilter
+// 0x0038 (0x0060 - 0x0028)
+class UNetObjectFilter : public UObject
+{
+public:
+	uint8                                         Pad_28[0x38];                                      // 0x0028(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NetObjectFilter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetObjectFilter")
+	}
+	static class UNetObjectFilter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNetObjectFilter>();
+	}
+};
+DUMPER7_ASSERTS_UNetObjectFilter;
+
+// Class IrisCore.AlwaysRelevantNetObjectFilter
+// 0x0000 (0x0060 - 0x0060)
+class UAlwaysRelevantNetObjectFilter final : public UNetObjectFilter
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AlwaysRelevantNetObjectFilter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AlwaysRelevantNetObjectFilter")
+	}
+	static class UAlwaysRelevantNetObjectFilter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAlwaysRelevantNetObjectFilter>();
+	}
+};
+DUMPER7_ASSERTS_UAlwaysRelevantNetObjectFilter;
+
+// Class IrisCore.DataStream
+// 0x0028 (0x0050 - 0x0028)
+class UDataStream : public UObject
+{
+public:
+	uint8                                         Pad_28[0x28];                                      // 0x0028(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DataStream")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataStream")
 	}
 	static class UDataStream* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDataStream>();
 	}
 };
-static_assert(alignof(UDataStream) == 0x000008, "Wrong alignment on UDataStream");
-static_assert(sizeof(UDataStream) == 0x000028, "Wrong size on UDataStream");
+DUMPER7_ASSERTS_UDataStream;
+
+// Class IrisCore.ChunkedDataStream
+// 0x0018 (0x0068 - 0x0050)
+class UChunkedDataStream final : public UDataStream
+{
+public:
+	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UIrisObjectReferencePackageMap*         PackageMap;                                        // 0x0060(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChunkedDataStream")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChunkedDataStream")
+	}
+	static class UChunkedDataStream* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChunkedDataStream>();
+	}
+};
+DUMPER7_ASSERTS_UChunkedDataStream;
 
 // Class IrisCore.DataStreamDefinitions
 // 0x0018 (0x0040 - 0x0028)
@@ -46,36 +159,41 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataStreamDefinitions">();
+		STATIC_CLASS_IMPL("DataStreamDefinitions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataStreamDefinitions")
 	}
 	static class UDataStreamDefinitions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDataStreamDefinitions>();
 	}
 };
-static_assert(alignof(UDataStreamDefinitions) == 0x000008, "Wrong alignment on UDataStreamDefinitions");
-static_assert(sizeof(UDataStreamDefinitions) == 0x000040, "Wrong size on UDataStreamDefinitions");
-static_assert(offsetof(UDataStreamDefinitions, DataStreamDefinitions) == 0x000028, "Member 'UDataStreamDefinitions::DataStreamDefinitions' has a wrong offset!");
+DUMPER7_ASSERTS_UDataStreamDefinitions;
 
 // Class IrisCore.DataStreamManager
-// 0x0008 (0x0030 - 0x0028)
+// 0x0008 (0x0058 - 0x0050)
 class UDataStreamManager final : public UDataStream
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x8];                                       // 0x0050(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataStreamManager">();
+		STATIC_CLASS_IMPL("DataStreamManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataStreamManager")
 	}
 	static class UDataStreamManager* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDataStreamManager>();
 	}
 };
-static_assert(alignof(UDataStreamManager) == 0x000008, "Wrong alignment on UDataStreamManager");
-static_assert(sizeof(UDataStreamManager) == 0x000030, "Wrong size on UDataStreamManager");
+DUMPER7_ASSERTS_UDataStreamManager;
 
 // Class IrisCore.NetObjectPrioritizerConfig
 // 0x0000 (0x0028 - 0x0028)
@@ -84,15 +202,18 @@ class UNetObjectPrioritizerConfig : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetObjectPrioritizerConfig">();
+		STATIC_CLASS_IMPL("NetObjectPrioritizerConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetObjectPrioritizerConfig")
 	}
 	static class UNetObjectPrioritizerConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetObjectPrioritizerConfig>();
 	}
 };
-static_assert(alignof(UNetObjectPrioritizerConfig) == 0x000008, "Wrong alignment on UNetObjectPrioritizerConfig");
-static_assert(sizeof(UNetObjectPrioritizerConfig) == 0x000028, "Wrong size on UNetObjectPrioritizerConfig");
+DUMPER7_ASSERTS_UNetObjectPrioritizerConfig;
 
 // Class IrisCore.FieldOfViewNetObjectPrioritizerConfig
 // 0x0030 (0x0058 - 0x0028)
@@ -115,27 +236,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FieldOfViewNetObjectPrioritizerConfig">();
+		STATIC_CLASS_IMPL("FieldOfViewNetObjectPrioritizerConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FieldOfViewNetObjectPrioritizerConfig")
 	}
 	static class UFieldOfViewNetObjectPrioritizerConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFieldOfViewNetObjectPrioritizerConfig>();
 	}
 };
-static_assert(alignof(UFieldOfViewNetObjectPrioritizerConfig) == 0x000008, "Wrong alignment on UFieldOfViewNetObjectPrioritizerConfig");
-static_assert(sizeof(UFieldOfViewNetObjectPrioritizerConfig) == 0x000058, "Wrong size on UFieldOfViewNetObjectPrioritizerConfig");
-static_assert(offsetof(UFieldOfViewNetObjectPrioritizerConfig, InnerSphereRadius) == 0x000028, "Member 'UFieldOfViewNetObjectPrioritizerConfig::InnerSphereRadius' has a wrong offset!");
-static_assert(offsetof(UFieldOfViewNetObjectPrioritizerConfig, InnerSpherePriority) == 0x00002C, "Member 'UFieldOfViewNetObjectPrioritizerConfig::InnerSpherePriority' has a wrong offset!");
-static_assert(offsetof(UFieldOfViewNetObjectPrioritizerConfig, OuterSphereRadius) == 0x000030, "Member 'UFieldOfViewNetObjectPrioritizerConfig::OuterSphereRadius' has a wrong offset!");
-static_assert(offsetof(UFieldOfViewNetObjectPrioritizerConfig, OuterSpherePriority) == 0x000034, "Member 'UFieldOfViewNetObjectPrioritizerConfig::OuterSpherePriority' has a wrong offset!");
-static_assert(offsetof(UFieldOfViewNetObjectPrioritizerConfig, ConeFieldOfViewDegrees) == 0x000038, "Member 'UFieldOfViewNetObjectPrioritizerConfig::ConeFieldOfViewDegrees' has a wrong offset!");
-static_assert(offsetof(UFieldOfViewNetObjectPrioritizerConfig, InnerConeLength) == 0x00003C, "Member 'UFieldOfViewNetObjectPrioritizerConfig::InnerConeLength' has a wrong offset!");
-static_assert(offsetof(UFieldOfViewNetObjectPrioritizerConfig, ConeLength) == 0x000040, "Member 'UFieldOfViewNetObjectPrioritizerConfig::ConeLength' has a wrong offset!");
-static_assert(offsetof(UFieldOfViewNetObjectPrioritizerConfig, MinConePriority) == 0x000044, "Member 'UFieldOfViewNetObjectPrioritizerConfig::MinConePriority' has a wrong offset!");
-static_assert(offsetof(UFieldOfViewNetObjectPrioritizerConfig, MaxConePriority) == 0x000048, "Member 'UFieldOfViewNetObjectPrioritizerConfig::MaxConePriority' has a wrong offset!");
-static_assert(offsetof(UFieldOfViewNetObjectPrioritizerConfig, LineOfSightWidth) == 0x00004C, "Member 'UFieldOfViewNetObjectPrioritizerConfig::LineOfSightWidth' has a wrong offset!");
-static_assert(offsetof(UFieldOfViewNetObjectPrioritizerConfig, LineOfSightPriority) == 0x000050, "Member 'UFieldOfViewNetObjectPrioritizerConfig::LineOfSightPriority' has a wrong offset!");
-static_assert(offsetof(UFieldOfViewNetObjectPrioritizerConfig, OutsidePriority) == 0x000054, "Member 'UFieldOfViewNetObjectPrioritizerConfig::OutsidePriority' has a wrong offset!");
+DUMPER7_ASSERTS_UFieldOfViewNetObjectPrioritizerConfig;
 
 // Class IrisCore.NetObjectPrioritizer
 // 0x0000 (0x0028 - 0x0028)
@@ -144,15 +256,18 @@ class UNetObjectPrioritizer : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetObjectPrioritizer">();
+		STATIC_CLASS_IMPL("NetObjectPrioritizer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetObjectPrioritizer")
 	}
 	static class UNetObjectPrioritizer* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetObjectPrioritizer>();
 	}
 };
-static_assert(alignof(UNetObjectPrioritizer) == 0x000008, "Wrong alignment on UNetObjectPrioritizer");
-static_assert(sizeof(UNetObjectPrioritizer) == 0x000028, "Wrong size on UNetObjectPrioritizer");
+DUMPER7_ASSERTS_UNetObjectPrioritizer;
 
 // Class IrisCore.LocationBasedNetObjectPrioritizer
 // 0x0038 (0x0060 - 0x0028)
@@ -164,15 +279,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LocationBasedNetObjectPrioritizer">();
+		STATIC_CLASS_IMPL("LocationBasedNetObjectPrioritizer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LocationBasedNetObjectPrioritizer")
 	}
 	static class ULocationBasedNetObjectPrioritizer* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULocationBasedNetObjectPrioritizer>();
 	}
 };
-static_assert(alignof(ULocationBasedNetObjectPrioritizer) == 0x000008, "Wrong alignment on ULocationBasedNetObjectPrioritizer");
-static_assert(sizeof(ULocationBasedNetObjectPrioritizer) == 0x000060, "Wrong size on ULocationBasedNetObjectPrioritizer");
+DUMPER7_ASSERTS_ULocationBasedNetObjectPrioritizer;
 
 // Class IrisCore.FieldOfViewNetObjectPrioritizer
 // 0x0008 (0x0068 - 0x0060)
@@ -184,32 +302,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FieldOfViewNetObjectPrioritizer">();
+		STATIC_CLASS_IMPL("FieldOfViewNetObjectPrioritizer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FieldOfViewNetObjectPrioritizer")
 	}
 	static class UFieldOfViewNetObjectPrioritizer* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFieldOfViewNetObjectPrioritizer>();
 	}
 };
-static_assert(alignof(UFieldOfViewNetObjectPrioritizer) == 0x000008, "Wrong alignment on UFieldOfViewNetObjectPrioritizer");
-static_assert(sizeof(UFieldOfViewNetObjectPrioritizer) == 0x000068, "Wrong size on UFieldOfViewNetObjectPrioritizer");
-
-// Class IrisCore.NetObjectFilterConfig
-// 0x0000 (0x0028 - 0x0028)
-class UNetObjectFilterConfig : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NetObjectFilterConfig">();
-	}
-	static class UNetObjectFilterConfig* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNetObjectFilterConfig>();
-	}
-};
-static_assert(alignof(UNetObjectFilterConfig) == 0x000008, "Wrong alignment on UNetObjectFilterConfig");
-static_assert(sizeof(UNetObjectFilterConfig) == 0x000028, "Wrong size on UNetObjectFilterConfig");
+DUMPER7_ASSERTS_UFieldOfViewNetObjectPrioritizer;
 
 // Class IrisCore.FilterOutNetObjectFilterConfig
 // 0x0000 (0x0028 - 0x0028)
@@ -218,35 +322,18 @@ class UFilterOutNetObjectFilterConfig final : public UNetObjectFilterConfig
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FilterOutNetObjectFilterConfig">();
+		STATIC_CLASS_IMPL("FilterOutNetObjectFilterConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FilterOutNetObjectFilterConfig")
 	}
 	static class UFilterOutNetObjectFilterConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFilterOutNetObjectFilterConfig>();
 	}
 };
-static_assert(alignof(UFilterOutNetObjectFilterConfig) == 0x000008, "Wrong alignment on UFilterOutNetObjectFilterConfig");
-static_assert(sizeof(UFilterOutNetObjectFilterConfig) == 0x000028, "Wrong size on UFilterOutNetObjectFilterConfig");
-
-// Class IrisCore.NetObjectFilter
-// 0x0038 (0x0060 - 0x0028)
-class UNetObjectFilter : public UObject
-{
-public:
-	uint8                                         Pad_28[0x38];                                      // 0x0028(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NetObjectFilter">();
-	}
-	static class UNetObjectFilter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNetObjectFilter>();
-	}
-};
-static_assert(alignof(UNetObjectFilter) == 0x000008, "Wrong alignment on UNetObjectFilter");
-static_assert(sizeof(UNetObjectFilter) == 0x000060, "Wrong size on UNetObjectFilter");
+DUMPER7_ASSERTS_UFilterOutNetObjectFilterConfig;
 
 // Class IrisCore.FilterOutNetObjectFilter
 // 0x0000 (0x0060 - 0x0060)
@@ -255,35 +342,41 @@ class UFilterOutNetObjectFilter final : public UNetObjectFilter
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FilterOutNetObjectFilter">();
+		STATIC_CLASS_IMPL("FilterOutNetObjectFilter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FilterOutNetObjectFilter")
 	}
 	static class UFilterOutNetObjectFilter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFilterOutNetObjectFilter>();
 	}
 };
-static_assert(alignof(UFilterOutNetObjectFilter) == 0x000008, "Wrong alignment on UFilterOutNetObjectFilter");
-static_assert(sizeof(UFilterOutNetObjectFilter) == 0x000060, "Wrong size on UFilterOutNetObjectFilter");
+DUMPER7_ASSERTS_UFilterOutNetObjectFilter;
 
 // Class IrisCore.IrisObjectReferencePackageMap
-// 0x0018 (0x00F8 - 0x00E0)
+// 0x0020 (0x0100 - 0x00E0)
 class UIrisObjectReferencePackageMap final : public UPackageMap
 {
 public:
-	uint8                                         Pad_E0[0x18];                                      // 0x00E0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E0[0x20];                                      // 0x00E0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"IrisObjectReferencePackageMap">();
+		STATIC_CLASS_IMPL("IrisObjectReferencePackageMap")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"IrisObjectReferencePackageMap")
 	}
 	static class UIrisObjectReferencePackageMap* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UIrisObjectReferencePackageMap>();
 	}
 };
-static_assert(alignof(UIrisObjectReferencePackageMap) == 0x000008, "Wrong alignment on UIrisObjectReferencePackageMap");
-static_assert(sizeof(UIrisObjectReferencePackageMap) == 0x0000F8, "Wrong size on UIrisObjectReferencePackageMap");
+DUMPER7_ASSERTS_UIrisObjectReferencePackageMap;
 
 // Class IrisCore.NetBlobHandler
 // 0x0010 (0x0038 - 0x0028)
@@ -295,15 +388,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetBlobHandler">();
+		STATIC_CLASS_IMPL("NetBlobHandler")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetBlobHandler")
 	}
 	static class UNetBlobHandler* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetBlobHandler>();
 	}
 };
-static_assert(alignof(UNetBlobHandler) == 0x000008, "Wrong alignment on UNetBlobHandler");
-static_assert(sizeof(UNetBlobHandler) == 0x000038, "Wrong size on UNetBlobHandler");
+DUMPER7_ASSERTS_UNetBlobHandler;
 
 // Class IrisCore.NetBlobHandlerDefinitions
 // 0x0010 (0x0038 - 0x0028)
@@ -315,16 +411,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetBlobHandlerDefinitions">();
+		STATIC_CLASS_IMPL("NetBlobHandlerDefinitions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetBlobHandlerDefinitions")
 	}
 	static class UNetBlobHandlerDefinitions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetBlobHandlerDefinitions>();
 	}
 };
-static_assert(alignof(UNetBlobHandlerDefinitions) == 0x000008, "Wrong alignment on UNetBlobHandlerDefinitions");
-static_assert(sizeof(UNetBlobHandlerDefinitions) == 0x000038, "Wrong size on UNetBlobHandlerDefinitions");
-static_assert(offsetof(UNetBlobHandlerDefinitions, NetBlobHandlerDefinitions) == 0x000028, "Member 'UNetBlobHandlerDefinitions::NetBlobHandlerDefinitions' has a wrong offset!");
+DUMPER7_ASSERTS_UNetBlobHandlerDefinitions;
 
 // Class IrisCore.NetObjectBlobHandler
 // 0x0000 (0x0038 - 0x0038)
@@ -333,15 +431,18 @@ class UNetObjectBlobHandler final : public UNetBlobHandler
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetObjectBlobHandler">();
+		STATIC_CLASS_IMPL("NetObjectBlobHandler")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetObjectBlobHandler")
 	}
 	static class UNetObjectBlobHandler* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetObjectBlobHandler>();
 	}
 };
-static_assert(alignof(UNetObjectBlobHandler) == 0x000008, "Wrong alignment on UNetObjectBlobHandler");
-static_assert(sizeof(UNetObjectBlobHandler) == 0x000038, "Wrong size on UNetObjectBlobHandler");
+DUMPER7_ASSERTS_UNetObjectBlobHandler;
 
 // Class IrisCore.NetObjectConnectionFilterConfig
 // 0x0008 (0x0030 - 0x0028)
@@ -354,16 +455,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetObjectConnectionFilterConfig">();
+		STATIC_CLASS_IMPL("NetObjectConnectionFilterConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetObjectConnectionFilterConfig")
 	}
 	static class UNetObjectConnectionFilterConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetObjectConnectionFilterConfig>();
 	}
 };
-static_assert(alignof(UNetObjectConnectionFilterConfig) == 0x000008, "Wrong alignment on UNetObjectConnectionFilterConfig");
-static_assert(sizeof(UNetObjectConnectionFilterConfig) == 0x000030, "Wrong size on UNetObjectConnectionFilterConfig");
-static_assert(offsetof(UNetObjectConnectionFilterConfig, MaxObjectCount) == 0x000028, "Member 'UNetObjectConnectionFilterConfig::MaxObjectCount' has a wrong offset!");
+DUMPER7_ASSERTS_UNetObjectConnectionFilterConfig;
 
 // Class IrisCore.NetObjectConnectionFilter
 // 0x0048 (0x00A8 - 0x0060)
@@ -375,15 +478,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetObjectConnectionFilter">();
+		STATIC_CLASS_IMPL("NetObjectConnectionFilter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetObjectConnectionFilter")
 	}
 	static class UNetObjectConnectionFilter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetObjectConnectionFilter>();
 	}
 };
-static_assert(alignof(UNetObjectConnectionFilter) == 0x000008, "Wrong alignment on UNetObjectConnectionFilter");
-static_assert(sizeof(UNetObjectConnectionFilter) == 0x0000A8, "Wrong size on UNetObjectConnectionFilter");
+DUMPER7_ASSERTS_UNetObjectConnectionFilter;
 
 // Class IrisCore.NetObjectCountLimiterConfig
 // 0x0018 (0x0040 - 0x0028)
@@ -400,20 +506,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetObjectCountLimiterConfig">();
+		STATIC_CLASS_IMPL("NetObjectCountLimiterConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetObjectCountLimiterConfig")
 	}
 	static class UNetObjectCountLimiterConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetObjectCountLimiterConfig>();
 	}
 };
-static_assert(alignof(UNetObjectCountLimiterConfig) == 0x000008, "Wrong alignment on UNetObjectCountLimiterConfig");
-static_assert(sizeof(UNetObjectCountLimiterConfig) == 0x000040, "Wrong size on UNetObjectCountLimiterConfig");
-static_assert(offsetof(UNetObjectCountLimiterConfig, Mode) == 0x000028, "Member 'UNetObjectCountLimiterConfig::Mode' has a wrong offset!");
-static_assert(offsetof(UNetObjectCountLimiterConfig, MaxObjectCount) == 0x00002C, "Member 'UNetObjectCountLimiterConfig::MaxObjectCount' has a wrong offset!");
-static_assert(offsetof(UNetObjectCountLimiterConfig, Priority) == 0x000030, "Member 'UNetObjectCountLimiterConfig::Priority' has a wrong offset!");
-static_assert(offsetof(UNetObjectCountLimiterConfig, OwningConnectionPriority) == 0x000034, "Member 'UNetObjectCountLimiterConfig::OwningConnectionPriority' has a wrong offset!");
-static_assert(offsetof(UNetObjectCountLimiterConfig, bEnableOwnedObjectsFastLane) == 0x000038, "Member 'UNetObjectCountLimiterConfig::bEnableOwnedObjectsFastLane' has a wrong offset!");
+DUMPER7_ASSERTS_UNetObjectCountLimiterConfig;
 
 // Class IrisCore.NetObjectCountLimiter
 // 0x0068 (0x0090 - 0x0028)
@@ -425,15 +529,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetObjectCountLimiter">();
+		STATIC_CLASS_IMPL("NetObjectCountLimiter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetObjectCountLimiter")
 	}
 	static class UNetObjectCountLimiter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetObjectCountLimiter>();
 	}
 };
-static_assert(alignof(UNetObjectCountLimiter) == 0x000008, "Wrong alignment on UNetObjectCountLimiter");
-static_assert(sizeof(UNetObjectCountLimiter) == 0x000090, "Wrong size on UNetObjectCountLimiter");
+DUMPER7_ASSERTS_UNetObjectCountLimiter;
 
 // Class IrisCore.NetObjectFactory
 // 0x0010 (0x0038 - 0x0028)
@@ -445,15 +552,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetObjectFactory">();
+		STATIC_CLASS_IMPL("NetObjectFactory")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetObjectFactory")
 	}
 	static class UNetObjectFactory* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetObjectFactory>();
 	}
 };
-static_assert(alignof(UNetObjectFactory) == 0x000008, "Wrong alignment on UNetObjectFactory");
-static_assert(sizeof(UNetObjectFactory) == 0x000038, "Wrong size on UNetObjectFactory");
+DUMPER7_ASSERTS_UNetObjectFactory;
 
 // Class IrisCore.NetObjectFilterDefinitions
 // 0x0010 (0x0038 - 0x0028)
@@ -465,19 +575,21 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetObjectFilterDefinitions">();
+		STATIC_CLASS_IMPL("NetObjectFilterDefinitions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetObjectFilterDefinitions")
 	}
 	static class UNetObjectFilterDefinitions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetObjectFilterDefinitions>();
 	}
 };
-static_assert(alignof(UNetObjectFilterDefinitions) == 0x000008, "Wrong alignment on UNetObjectFilterDefinitions");
-static_assert(sizeof(UNetObjectFilterDefinitions) == 0x000038, "Wrong size on UNetObjectFilterDefinitions");
-static_assert(offsetof(UNetObjectFilterDefinitions, NetObjectFilterDefinitions) == 0x000028, "Member 'UNetObjectFilterDefinitions::NetObjectFilterDefinitions' has a wrong offset!");
+DUMPER7_ASSERTS_UNetObjectFilterDefinitions;
 
 // Class IrisCore.NetObjectGridFilterConfig
-// 0x0030 (0x0058 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UNetObjectGridFilterConfig final : public UNetObjectFilterConfig
 {
 public:
@@ -486,72 +598,72 @@ public:
 	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CellSizeX;                                         // 0x0030(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CellSizeY;                                         // 0x0034(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxCullDistance;                                   // 0x0038(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DefaultCullDistance;                               // 0x003C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseExactCullDistance;                             // 0x0040(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FNetObjectGridFilterProfile>    FilterProfiles;                                    // 0x0048(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	float                                         DefaultCullDistance;                               // 0x0038(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseExactCullDistance;                             // 0x003C(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FNetObjectGridFilterProfile>    FilterProfiles;                                    // 0x0040(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetObjectGridFilterConfig">();
+		STATIC_CLASS_IMPL("NetObjectGridFilterConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetObjectGridFilterConfig")
 	}
 	static class UNetObjectGridFilterConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetObjectGridFilterConfig>();
 	}
 };
-static_assert(alignof(UNetObjectGridFilterConfig) == 0x000008, "Wrong alignment on UNetObjectGridFilterConfig");
-static_assert(sizeof(UNetObjectGridFilterConfig) == 0x000058, "Wrong size on UNetObjectGridFilterConfig");
-static_assert(offsetof(UNetObjectGridFilterConfig, ViewPosRelevancyFrameCount) == 0x000028, "Member 'UNetObjectGridFilterConfig::ViewPosRelevancyFrameCount' has a wrong offset!");
-static_assert(offsetof(UNetObjectGridFilterConfig, DefaultFrameCountBeforeCulling) == 0x00002C, "Member 'UNetObjectGridFilterConfig::DefaultFrameCountBeforeCulling' has a wrong offset!");
-static_assert(offsetof(UNetObjectGridFilterConfig, CellSizeX) == 0x000030, "Member 'UNetObjectGridFilterConfig::CellSizeX' has a wrong offset!");
-static_assert(offsetof(UNetObjectGridFilterConfig, CellSizeY) == 0x000034, "Member 'UNetObjectGridFilterConfig::CellSizeY' has a wrong offset!");
-static_assert(offsetof(UNetObjectGridFilterConfig, MaxCullDistance) == 0x000038, "Member 'UNetObjectGridFilterConfig::MaxCullDistance' has a wrong offset!");
-static_assert(offsetof(UNetObjectGridFilterConfig, DefaultCullDistance) == 0x00003C, "Member 'UNetObjectGridFilterConfig::DefaultCullDistance' has a wrong offset!");
-static_assert(offsetof(UNetObjectGridFilterConfig, bUseExactCullDistance) == 0x000040, "Member 'UNetObjectGridFilterConfig::bUseExactCullDistance' has a wrong offset!");
-static_assert(offsetof(UNetObjectGridFilterConfig, FilterProfiles) == 0x000048, "Member 'UNetObjectGridFilterConfig::FilterProfiles' has a wrong offset!");
+DUMPER7_ASSERTS_UNetObjectGridFilterConfig;
 
 // Class IrisCore.NetObjectGridFilter
-// 0x00F8 (0x0158 - 0x0060)
+// 0x0128 (0x0188 - 0x0060)
 class UNetObjectGridFilter : public UNetObjectFilter
 {
 public:
-	uint8                                         Pad_60[0xF8];                                      // 0x0060(0x00F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_60[0x128];                                     // 0x0060(0x0128)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetObjectGridFilter">();
+		STATIC_CLASS_IMPL("NetObjectGridFilter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetObjectGridFilter")
 	}
 	static class UNetObjectGridFilter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetObjectGridFilter>();
 	}
 };
-static_assert(alignof(UNetObjectGridFilter) == 0x000008, "Wrong alignment on UNetObjectGridFilter");
-static_assert(sizeof(UNetObjectGridFilter) == 0x000158, "Wrong size on UNetObjectGridFilter");
+DUMPER7_ASSERTS_UNetObjectGridFilter;
 
 // Class IrisCore.NetObjectGridWorldLocFilter
-// 0x0008 (0x0160 - 0x0158)
+// 0x0008 (0x0190 - 0x0188)
 class UNetObjectGridWorldLocFilter final : public UNetObjectGridFilter
 {
 public:
-	uint8                                         Pad_158[0x8];                                      // 0x0158(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_188[0x8];                                      // 0x0188(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetObjectGridWorldLocFilter">();
+		STATIC_CLASS_IMPL("NetObjectGridWorldLocFilter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetObjectGridWorldLocFilter")
 	}
 	static class UNetObjectGridWorldLocFilter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetObjectGridWorldLocFilter>();
 	}
 };
-static_assert(alignof(UNetObjectGridWorldLocFilter) == 0x000008, "Wrong alignment on UNetObjectGridWorldLocFilter");
-static_assert(sizeof(UNetObjectGridWorldLocFilter) == 0x000160, "Wrong size on UNetObjectGridWorldLocFilter");
+DUMPER7_ASSERTS_UNetObjectGridWorldLocFilter;
 
 // Class IrisCore.NetObjectPrioritizerDefinitions
 // 0x0010 (0x0038 - 0x0028)
@@ -563,16 +675,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetObjectPrioritizerDefinitions">();
+		STATIC_CLASS_IMPL("NetObjectPrioritizerDefinitions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetObjectPrioritizerDefinitions")
 	}
 	static class UNetObjectPrioritizerDefinitions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetObjectPrioritizerDefinitions>();
 	}
 };
-static_assert(alignof(UNetObjectPrioritizerDefinitions) == 0x000008, "Wrong alignment on UNetObjectPrioritizerDefinitions");
-static_assert(sizeof(UNetObjectPrioritizerDefinitions) == 0x000038, "Wrong size on UNetObjectPrioritizerDefinitions");
-static_assert(offsetof(UNetObjectPrioritizerDefinitions, NetObjectPrioritizerDefinitions) == 0x000028, "Member 'UNetObjectPrioritizerDefinitions::NetObjectPrioritizerDefinitions' has a wrong offset!");
+DUMPER7_ASSERTS_UNetObjectPrioritizerDefinitions;
 
 // Class IrisCore.NetRPCHandler
 // 0x0008 (0x0040 - 0x0038)
@@ -584,35 +698,64 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetRPCHandler">();
+		STATIC_CLASS_IMPL("NetRPCHandler")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetRPCHandler")
 	}
 	static class UNetRPCHandler* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetRPCHandler>();
 	}
 };
-static_assert(alignof(UNetRPCHandler) == 0x000008, "Wrong alignment on UNetRPCHandler");
-static_assert(sizeof(UNetRPCHandler) == 0x000040, "Wrong size on UNetRPCHandler");
+DUMPER7_ASSERTS_UNetRPCHandler;
 
 // Class IrisCore.NetTokenDataStream
-// 0x0050 (0x0078 - 0x0028)
+// 0x0050 (0x00A0 - 0x0050)
 class UNetTokenDataStream final : public UDataStream
 {
 public:
-	uint8                                         Pad_28[0x50];                                      // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x50];                                      // 0x0050(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetTokenDataStream">();
+		STATIC_CLASS_IMPL("NetTokenDataStream")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetTokenDataStream")
 	}
 	static class UNetTokenDataStream* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetTokenDataStream>();
 	}
 };
-static_assert(alignof(UNetTokenDataStream) == 0x000008, "Wrong alignment on UNetTokenDataStream");
-static_assert(sizeof(UNetTokenDataStream) == 0x000078, "Wrong size on UNetTokenDataStream");
+DUMPER7_ASSERTS_UNetTokenDataStream;
+
+// Class IrisCore.NetTokenTypeIdConfig
+// 0x0010 (0x0038 - 0x0028)
+class UNetTokenTypeIdConfig final : public UObject
+{
+public:
+	TArray<struct FNetTokenStoreTypeIdPair>       ReservedTypeIds;                                   // 0x0028(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NetTokenTypeIdConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetTokenTypeIdConfig")
+	}
+	static class UNetTokenTypeIdConfig* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNetTokenTypeIdConfig>();
+	}
+};
+DUMPER7_ASSERTS_UNetTokenTypeIdConfig;
 
 // Class IrisCore.NopNetObjectFilterConfig
 // 0x0000 (0x0028 - 0x0028)
@@ -621,15 +764,18 @@ class UNopNetObjectFilterConfig final : public UNetObjectFilterConfig
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NopNetObjectFilterConfig">();
+		STATIC_CLASS_IMPL("NopNetObjectFilterConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NopNetObjectFilterConfig")
 	}
 	static class UNopNetObjectFilterConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNopNetObjectFilterConfig>();
 	}
 };
-static_assert(alignof(UNopNetObjectFilterConfig) == 0x000008, "Wrong alignment on UNopNetObjectFilterConfig");
-static_assert(sizeof(UNopNetObjectFilterConfig) == 0x000028, "Wrong size on UNopNetObjectFilterConfig");
+DUMPER7_ASSERTS_UNopNetObjectFilterConfig;
 
 // Class IrisCore.NopNetObjectFilter
 // 0x0000 (0x0060 - 0x0060)
@@ -638,58 +784,66 @@ class UNopNetObjectFilter final : public UNetObjectFilter
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NopNetObjectFilter">();
+		STATIC_CLASS_IMPL("NopNetObjectFilter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NopNetObjectFilter")
 	}
 	static class UNopNetObjectFilter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNopNetObjectFilter>();
 	}
 };
-static_assert(alignof(UNopNetObjectFilter) == 0x000008, "Wrong alignment on UNopNetObjectFilter");
-static_assert(sizeof(UNopNetObjectFilter) == 0x000060, "Wrong size on UNopNetObjectFilter");
+DUMPER7_ASSERTS_UNopNetObjectFilter;
 
 // Class IrisCore.ReplicationBridge
-// 0x00E8 (0x0110 - 0x0028)
+// 0x0140 (0x0168 - 0x0028)
 class UReplicationBridge : public UObject
 {
 public:
-	uint8                                         Pad_28[0xE8];                                      // 0x0028(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x140];                                     // 0x0028(0x0140)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ReplicationBridge">();
+		STATIC_CLASS_IMPL("ReplicationBridge")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ReplicationBridge")
 	}
 	static class UReplicationBridge* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UReplicationBridge>();
 	}
 };
-static_assert(alignof(UReplicationBridge) == 0x000008, "Wrong alignment on UReplicationBridge");
-static_assert(sizeof(UReplicationBridge) == 0x000110, "Wrong size on UReplicationBridge");
+DUMPER7_ASSERTS_UReplicationBridge;
 
 // Class IrisCore.ObjectReplicationBridge
-// 0x04E0 (0x05F0 - 0x0110)
+// 0x04D8 (0x0640 - 0x0168)
 class alignas(0x10) UObjectReplicationBridge : public UReplicationBridge
 {
 public:
-	uint8                                         Pad_110[0x478];                                    // 0x0110(0x0478)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UNetObjectFactory*>              NetObjectFactories;                                // 0x0588(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_598[0x58];                                     // 0x0598(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_168[0x418];                                    // 0x0168(0x0418)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UNetObjectFactory*>              NetObjectFactories;                                // 0x0580(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_590[0xB0];                                     // 0x0590(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ObjectReplicationBridge">();
+		STATIC_CLASS_IMPL("ObjectReplicationBridge")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ObjectReplicationBridge")
 	}
 	static class UObjectReplicationBridge* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UObjectReplicationBridge>();
 	}
 };
-static_assert(alignof(UObjectReplicationBridge) == 0x000010, "Wrong alignment on UObjectReplicationBridge");
-static_assert(sizeof(UObjectReplicationBridge) == 0x0005F0, "Wrong size on UObjectReplicationBridge");
-static_assert(offsetof(UObjectReplicationBridge, NetObjectFactories) == 0x000588, "Member 'UObjectReplicationBridge::NetObjectFactories' has a wrong offset!");
+DUMPER7_ASSERTS_UObjectReplicationBridge;
 
 // Class IrisCore.ObjectReplicationBridgeConfig
 // 0x0088 (0x00B0 - 0x0028)
@@ -711,25 +865,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ObjectReplicationBridgeConfig">();
+		STATIC_CLASS_IMPL("ObjectReplicationBridgeConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ObjectReplicationBridgeConfig")
 	}
 	static class UObjectReplicationBridgeConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UObjectReplicationBridgeConfig>();
 	}
 };
-static_assert(alignof(UObjectReplicationBridgeConfig) == 0x000008, "Wrong alignment on UObjectReplicationBridgeConfig");
-static_assert(sizeof(UObjectReplicationBridgeConfig) == 0x0000B0, "Wrong size on UObjectReplicationBridgeConfig");
-static_assert(offsetof(UObjectReplicationBridgeConfig, PollConfigs) == 0x000028, "Member 'UObjectReplicationBridgeConfig::PollConfigs' has a wrong offset!");
-static_assert(offsetof(UObjectReplicationBridgeConfig, FilterConfigs) == 0x000038, "Member 'UObjectReplicationBridgeConfig::FilterConfigs' has a wrong offset!");
-static_assert(offsetof(UObjectReplicationBridgeConfig, PrioritizerConfigs) == 0x000048, "Member 'UObjectReplicationBridgeConfig::PrioritizerConfigs' has a wrong offset!");
-static_assert(offsetof(UObjectReplicationBridgeConfig, DeltaCompressionConfigs) == 0x000058, "Member 'UObjectReplicationBridgeConfig::DeltaCompressionConfigs' has a wrong offset!");
-static_assert(offsetof(UObjectReplicationBridgeConfig, CriticalClassConfigs) == 0x000068, "Member 'UObjectReplicationBridgeConfig::CriticalClassConfigs' has a wrong offset!");
-static_assert(offsetof(UObjectReplicationBridgeConfig, bAllClassesCritical) == 0x000078, "Member 'UObjectReplicationBridgeConfig::bAllClassesCritical' has a wrong offset!");
-static_assert(offsetof(UObjectReplicationBridgeConfig, TypeStatsConfigs) == 0x000080, "Member 'UObjectReplicationBridgeConfig::TypeStatsConfigs' has a wrong offset!");
-static_assert(offsetof(UObjectReplicationBridgeConfig, DefaultSpatialFilterName) == 0x000090, "Member 'UObjectReplicationBridgeConfig::DefaultSpatialFilterName' has a wrong offset!");
-static_assert(offsetof(UObjectReplicationBridgeConfig, RequiredNetDriverChannelClassName) == 0x000098, "Member 'UObjectReplicationBridgeConfig::RequiredNetDriverChannelClassName' has a wrong offset!");
-static_assert(offsetof(UObjectReplicationBridgeConfig, CriticalActorClasses) == 0x0000A0, "Member 'UObjectReplicationBridgeConfig::CriticalActorClasses' has a wrong offset!");
+DUMPER7_ASSERTS_UObjectReplicationBridgeConfig;
 
 // Class IrisCore.SequentialPartialNetBlobHandlerConfig
 // 0x0008 (0x0030 - 0x0028)
@@ -742,17 +889,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SequentialPartialNetBlobHandlerConfig">();
+		STATIC_CLASS_IMPL("SequentialPartialNetBlobHandlerConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SequentialPartialNetBlobHandlerConfig")
 	}
 	static class USequentialPartialNetBlobHandlerConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USequentialPartialNetBlobHandlerConfig>();
 	}
 };
-static_assert(alignof(USequentialPartialNetBlobHandlerConfig) == 0x000008, "Wrong alignment on USequentialPartialNetBlobHandlerConfig");
-static_assert(sizeof(USequentialPartialNetBlobHandlerConfig) == 0x000030, "Wrong size on USequentialPartialNetBlobHandlerConfig");
-static_assert(offsetof(USequentialPartialNetBlobHandlerConfig, MaxPartBitCount) == 0x000028, "Member 'USequentialPartialNetBlobHandlerConfig::MaxPartBitCount' has a wrong offset!");
-static_assert(offsetof(USequentialPartialNetBlobHandlerConfig, MaxPartCount) == 0x00002C, "Member 'USequentialPartialNetBlobHandlerConfig::MaxPartCount' has a wrong offset!");
+DUMPER7_ASSERTS_USequentialPartialNetBlobHandlerConfig;
 
 // Class IrisCore.PartialNetObjectAttachmentHandlerConfig
 // 0x0010 (0x0040 - 0x0030)
@@ -767,18 +915,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PartialNetObjectAttachmentHandlerConfig">();
+		STATIC_CLASS_IMPL("PartialNetObjectAttachmentHandlerConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PartialNetObjectAttachmentHandlerConfig")
 	}
 	static class UPartialNetObjectAttachmentHandlerConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPartialNetObjectAttachmentHandlerConfig>();
 	}
 };
-static_assert(alignof(UPartialNetObjectAttachmentHandlerConfig) == 0x000008, "Wrong alignment on UPartialNetObjectAttachmentHandlerConfig");
-static_assert(sizeof(UPartialNetObjectAttachmentHandlerConfig) == 0x000040, "Wrong size on UPartialNetObjectAttachmentHandlerConfig");
-static_assert(offsetof(UPartialNetObjectAttachmentHandlerConfig, BitCountSplitThreshold) == 0x000030, "Member 'UPartialNetObjectAttachmentHandlerConfig::BitCountSplitThreshold' has a wrong offset!");
-static_assert(offsetof(UPartialNetObjectAttachmentHandlerConfig, ClientUnreliableBitCountSplitThreshold) == 0x000034, "Member 'UPartialNetObjectAttachmentHandlerConfig::ClientUnreliableBitCountSplitThreshold' has a wrong offset!");
-static_assert(offsetof(UPartialNetObjectAttachmentHandlerConfig, ServerUnreliableBitCountSplitThreshold) == 0x000038, "Member 'UPartialNetObjectAttachmentHandlerConfig::ServerUnreliableBitCountSplitThreshold' has a wrong offset!");
+DUMPER7_ASSERTS_UPartialNetObjectAttachmentHandlerConfig;
 
 // Class IrisCore.SequentialPartialNetBlobHandler
 // 0x0010 (0x0048 - 0x0038)
@@ -790,15 +938,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SequentialPartialNetBlobHandler">();
+		STATIC_CLASS_IMPL("SequentialPartialNetBlobHandler")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SequentialPartialNetBlobHandler")
 	}
 	static class USequentialPartialNetBlobHandler* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USequentialPartialNetBlobHandler>();
 	}
 };
-static_assert(alignof(USequentialPartialNetBlobHandler) == 0x000008, "Wrong alignment on USequentialPartialNetBlobHandler");
-static_assert(sizeof(USequentialPartialNetBlobHandler) == 0x000048, "Wrong size on USequentialPartialNetBlobHandler");
+DUMPER7_ASSERTS_USequentialPartialNetBlobHandler;
 
 // Class IrisCore.PartialNetObjectAttachmentHandler
 // 0x0108 (0x0150 - 0x0048)
@@ -810,35 +961,41 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PartialNetObjectAttachmentHandler">();
+		STATIC_CLASS_IMPL("PartialNetObjectAttachmentHandler")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PartialNetObjectAttachmentHandler")
 	}
 	static class UPartialNetObjectAttachmentHandler* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPartialNetObjectAttachmentHandler>();
 	}
 };
-static_assert(alignof(UPartialNetObjectAttachmentHandler) == 0x000008, "Wrong alignment on UPartialNetObjectAttachmentHandler");
-static_assert(sizeof(UPartialNetObjectAttachmentHandler) == 0x000150, "Wrong size on UPartialNetObjectAttachmentHandler");
+DUMPER7_ASSERTS_UPartialNetObjectAttachmentHandler;
 
 // Class IrisCore.ReplicationDataStream
-// 0x0010 (0x0038 - 0x0028)
+// 0x0010 (0x0060 - 0x0050)
 class UReplicationDataStream final : public UDataStream
 {
 public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ReplicationDataStream">();
+		STATIC_CLASS_IMPL("ReplicationDataStream")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ReplicationDataStream")
 	}
 	static class UReplicationDataStream* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UReplicationDataStream>();
 	}
 };
-static_assert(alignof(UReplicationDataStream) == 0x000008, "Wrong alignment on UReplicationDataStream");
-static_assert(sizeof(UReplicationDataStream) == 0x000038, "Wrong size on UReplicationDataStream");
+DUMPER7_ASSERTS_UReplicationDataStream;
 
 // Class IrisCore.ReplicationFilteringConfig
 // 0x0018 (0x0040 - 0x0028)
@@ -854,19 +1011,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ReplicationFilteringConfig">();
+		STATIC_CLASS_IMPL("ReplicationFilteringConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ReplicationFilteringConfig")
 	}
 	static class UReplicationFilteringConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UReplicationFilteringConfig>();
 	}
 };
-static_assert(alignof(UReplicationFilteringConfig) == 0x000008, "Wrong alignment on UReplicationFilteringConfig");
-static_assert(sizeof(UReplicationFilteringConfig) == 0x000040, "Wrong size on UReplicationFilteringConfig");
-static_assert(offsetof(UReplicationFilteringConfig, bEnableObjectScopeHysteresis) == 0x000028, "Member 'UReplicationFilteringConfig::bEnableObjectScopeHysteresis' has a wrong offset!");
-static_assert(offsetof(UReplicationFilteringConfig, DefaultHysteresisFrameCount) == 0x000029, "Member 'UReplicationFilteringConfig::DefaultHysteresisFrameCount' has a wrong offset!");
-static_assert(offsetof(UReplicationFilteringConfig, HysteresisUpdateConnectionThrottling) == 0x00002A, "Member 'UReplicationFilteringConfig::HysteresisUpdateConnectionThrottling' has a wrong offset!");
-static_assert(offsetof(UReplicationFilteringConfig, HysteresisProfiles) == 0x000030, "Member 'UReplicationFilteringConfig::HysteresisProfiles' has a wrong offset!");
+DUMPER7_ASSERTS_UReplicationFilteringConfig;
 
 // Class IrisCore.ReplicationSystem
 // 0x0030 (0x0058 - 0x0028)
@@ -874,22 +1030,24 @@ class UReplicationSystem final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UReplicationBridge*                     ReplicationBridge;                                 // 0x0038(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UReplicationBridge*                     ReplicationBridge;                                 // 0x0038(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_40[0x18];                                      // 0x0040(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ReplicationSystem">();
+		STATIC_CLASS_IMPL("ReplicationSystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ReplicationSystem")
 	}
 	static class UReplicationSystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UReplicationSystem>();
 	}
 };
-static_assert(alignof(UReplicationSystem) == 0x000008, "Wrong alignment on UReplicationSystem");
-static_assert(sizeof(UReplicationSystem) == 0x000058, "Wrong size on UReplicationSystem");
-static_assert(offsetof(UReplicationSystem, ReplicationBridge) == 0x000038, "Member 'UReplicationSystem::ReplicationBridge' has a wrong offset!");
+DUMPER7_ASSERTS_UReplicationSystem;
 
 // Class IrisCore.SphereNetObjectPrioritizerConfig
 // 0x0018 (0x0040 - 0x0028)
@@ -906,20 +1064,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SphereNetObjectPrioritizerConfig">();
+		STATIC_CLASS_IMPL("SphereNetObjectPrioritizerConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SphereNetObjectPrioritizerConfig")
 	}
 	static class USphereNetObjectPrioritizerConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USphereNetObjectPrioritizerConfig>();
 	}
 };
-static_assert(alignof(USphereNetObjectPrioritizerConfig) == 0x000008, "Wrong alignment on USphereNetObjectPrioritizerConfig");
-static_assert(sizeof(USphereNetObjectPrioritizerConfig) == 0x000040, "Wrong size on USphereNetObjectPrioritizerConfig");
-static_assert(offsetof(USphereNetObjectPrioritizerConfig, InnerRadius) == 0x000028, "Member 'USphereNetObjectPrioritizerConfig::InnerRadius' has a wrong offset!");
-static_assert(offsetof(USphereNetObjectPrioritizerConfig, OuterRadius) == 0x00002C, "Member 'USphereNetObjectPrioritizerConfig::OuterRadius' has a wrong offset!");
-static_assert(offsetof(USphereNetObjectPrioritizerConfig, InnerPriority) == 0x000030, "Member 'USphereNetObjectPrioritizerConfig::InnerPriority' has a wrong offset!");
-static_assert(offsetof(USphereNetObjectPrioritizerConfig, OuterPriority) == 0x000034, "Member 'USphereNetObjectPrioritizerConfig::OuterPriority' has a wrong offset!");
-static_assert(offsetof(USphereNetObjectPrioritizerConfig, OutsidePriority) == 0x000038, "Member 'USphereNetObjectPrioritizerConfig::OutsidePriority' has a wrong offset!");
+DUMPER7_ASSERTS_USphereNetObjectPrioritizerConfig;
 
 // Class IrisCore.SphereNetObjectPrioritizer
 // 0x0008 (0x0068 - 0x0060)
@@ -931,15 +1087,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SphereNetObjectPrioritizer">();
+		STATIC_CLASS_IMPL("SphereNetObjectPrioritizer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SphereNetObjectPrioritizer")
 	}
 	static class USphereNetObjectPrioritizer* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USphereNetObjectPrioritizer>();
 	}
 };
-static_assert(alignof(USphereNetObjectPrioritizer) == 0x000008, "Wrong alignment on USphereNetObjectPrioritizer");
-static_assert(sizeof(USphereNetObjectPrioritizer) == 0x000068, "Wrong size on USphereNetObjectPrioritizer");
+DUMPER7_ASSERTS_USphereNetObjectPrioritizer;
 
 // Class IrisCore.SphereWithOwnerBoostNetObjectPrioritizerConfig
 // 0x0008 (0x0048 - 0x0040)
@@ -952,16 +1111,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SphereWithOwnerBoostNetObjectPrioritizerConfig">();
+		STATIC_CLASS_IMPL("SphereWithOwnerBoostNetObjectPrioritizerConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SphereWithOwnerBoostNetObjectPrioritizerConfig")
 	}
 	static class USphereWithOwnerBoostNetObjectPrioritizerConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USphereWithOwnerBoostNetObjectPrioritizerConfig>();
 	}
 };
-static_assert(alignof(USphereWithOwnerBoostNetObjectPrioritizerConfig) == 0x000008, "Wrong alignment on USphereWithOwnerBoostNetObjectPrioritizerConfig");
-static_assert(sizeof(USphereWithOwnerBoostNetObjectPrioritizerConfig) == 0x000048, "Wrong size on USphereWithOwnerBoostNetObjectPrioritizerConfig");
-static_assert(offsetof(USphereWithOwnerBoostNetObjectPrioritizerConfig, OwnerPriorityBoost) == 0x000040, "Member 'USphereWithOwnerBoostNetObjectPrioritizerConfig::OwnerPriorityBoost' has a wrong offset!");
+DUMPER7_ASSERTS_USphereWithOwnerBoostNetObjectPrioritizerConfig;
 
 // Class IrisCore.SphereWithOwnerBoostNetObjectPrioritizer
 // 0x0038 (0x00A0 - 0x0068)
@@ -973,59 +1134,70 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SphereWithOwnerBoostNetObjectPrioritizer">();
+		STATIC_CLASS_IMPL("SphereWithOwnerBoostNetObjectPrioritizer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SphereWithOwnerBoostNetObjectPrioritizer")
 	}
 	static class USphereWithOwnerBoostNetObjectPrioritizer* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USphereWithOwnerBoostNetObjectPrioritizer>();
 	}
 };
-static_assert(alignof(USphereWithOwnerBoostNetObjectPrioritizer) == 0x000008, "Wrong alignment on USphereWithOwnerBoostNetObjectPrioritizer");
-static_assert(sizeof(USphereWithOwnerBoostNetObjectPrioritizer) == 0x0000A0, "Wrong size on USphereWithOwnerBoostNetObjectPrioritizer");
+DUMPER7_ASSERTS_USphereWithOwnerBoostNetObjectPrioritizer;
 
 // Class IrisCore.ReplicationStateDescriptorConfig
-// 0x0010 (0x0038 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UReplicationStateDescriptorConfig final : public UObject
 {
 public:
 	TArray<struct FSupportsStructNetSerializerConfig> SupportsStructNetSerializerList;               // 0x0028(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
+	TArray<struct FReplicationStateDescriptorClassPushModelConfig> EnsureFullyPushModelClassNames;   // 0x0038(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
+	bool                                          bEnsureAllClassesAreFullyPushModel;                // 0x0048(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ReplicationStateDescriptorConfig">();
+		STATIC_CLASS_IMPL("ReplicationStateDescriptorConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ReplicationStateDescriptorConfig")
 	}
 	static class UReplicationStateDescriptorConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UReplicationStateDescriptorConfig>();
 	}
 };
-static_assert(alignof(UReplicationStateDescriptorConfig) == 0x000008, "Wrong alignment on UReplicationStateDescriptorConfig");
-static_assert(sizeof(UReplicationStateDescriptorConfig) == 0x000038, "Wrong size on UReplicationStateDescriptorConfig");
-static_assert(offsetof(UReplicationStateDescriptorConfig, SupportsStructNetSerializerList) == 0x000028, "Member 'UReplicationStateDescriptorConfig::SupportsStructNetSerializerList' has a wrong offset!");
+DUMPER7_ASSERTS_UReplicationStateDescriptorConfig;
 
 // Class IrisCore.WorldLocationsConfig
-// 0x0030 (0x0058 - 0x0028)
+// 0x0038 (0x0060 - 0x0028)
 class UWorldLocationsConfig final : public UObject
 {
 public:
 	struct FVector                                MinPos;                                            // 0x0028(0x0018)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                MaxPos;                                            // 0x0040(0x0018)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxNetCullDistance;                                // 0x0058(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WorldLocationsConfig">();
+		STATIC_CLASS_IMPL("WorldLocationsConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WorldLocationsConfig")
 	}
 	static class UWorldLocationsConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWorldLocationsConfig>();
 	}
 };
-static_assert(alignof(UWorldLocationsConfig) == 0x000008, "Wrong alignment on UWorldLocationsConfig");
-static_assert(sizeof(UWorldLocationsConfig) == 0x000058, "Wrong size on UWorldLocationsConfig");
-static_assert(offsetof(UWorldLocationsConfig, MinPos) == 0x000028, "Member 'UWorldLocationsConfig::MinPos' has a wrong offset!");
-static_assert(offsetof(UWorldLocationsConfig, MaxPos) == 0x000040, "Member 'UWorldLocationsConfig::MaxPos' has a wrong offset!");
+DUMPER7_ASSERTS_UWorldLocationsConfig;
 
 }
 

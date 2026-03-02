@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function AudioGameplayVolume.AudioGameplayVolumeMutator.SetPriority
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   InPriority                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -43,7 +43,7 @@ void UAudioGameplayVolumeMutator::SetPriority(int32 InPriority)
 
 
 // Function AudioGameplayVolume.AttenuationVolumeComponent.SetExteriorVolume
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Volume                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   InterpolateTime                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -70,7 +70,7 @@ void UAttenuationVolumeComponent::SetExteriorVolume(float Volume, float Interpol
 
 
 // Function AudioGameplayVolume.AttenuationVolumeComponent.SetInteriorVolume
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Volume                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   InterpolateTime                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -97,7 +97,7 @@ void UAttenuationVolumeComponent::SetInteriorVolume(float Volume, float Interpol
 
 
 // Function AudioGameplayVolume.AudioGameplayVolume.OnListenerEnter
-// (Native, Event, Public, BlueprintEvent)
+// (RequiredAPI, Native, Event, Public, BlueprintEvent)
 
 void AAudioGameplayVolume::OnListenerEnter()
 {
@@ -116,7 +116,7 @@ void AAudioGameplayVolume::OnListenerEnter()
 
 
 // Function AudioGameplayVolume.AudioGameplayVolume.OnListenerExit
-// (Native, Event, Public, BlueprintEvent)
+// (RequiredAPI, Native, Event, Public, BlueprintEvent)
 
 void AAudioGameplayVolume::OnListenerExit()
 {
@@ -135,7 +135,7 @@ void AAudioGameplayVolume::OnListenerExit()
 
 
 // Function AudioGameplayVolume.AudioGameplayVolume.OnRep_bEnabled
-// (Native, Protected)
+// (RequiredAPI, Native, Protected)
 
 void AAudioGameplayVolume::OnRep_bEnabled()
 {
@@ -154,7 +154,7 @@ void AAudioGameplayVolume::OnRep_bEnabled()
 
 
 // Function AudioGameplayVolume.AudioGameplayVolume.SetEnabled
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bEnable                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -179,7 +179,7 @@ void AAudioGameplayVolume::SetEnabled(bool bEnable)
 
 
 // Function AudioGameplayVolume.FilterVolumeComponent.SetExteriorLPF
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Volume                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   InterpolateTime                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -206,7 +206,7 @@ void UFilterVolumeComponent::SetExteriorLPF(float Volume, float InterpolateTime)
 
 
 // Function AudioGameplayVolume.FilterVolumeComponent.SetInteriorLPF
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Volume                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   InterpolateTime                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -233,7 +233,7 @@ void UFilterVolumeComponent::SetInteriorLPF(float Volume, float InterpolateTime)
 
 
 // Function AudioGameplayVolume.ReverbVolumeComponent.SetReverbSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FReverbSettings&           NewReverbSettings                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -258,7 +258,7 @@ void UReverbVolumeComponent::SetReverbSettings(const struct FReverbSettings& New
 
 
 // Function AudioGameplayVolume.SubmixOverrideVolumeComponent.SetSubmixOverrideSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<struct FAudioVolumeSubmixOverrideSettings>&NewSubmixOverrideSettings                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -283,7 +283,7 @@ void USubmixOverrideVolumeComponent::SetSubmixOverrideSettings(const TArray<stru
 
 
 // Function AudioGameplayVolume.SubmixSendVolumeComponent.SetSubmixSendSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<struct FAudioVolumeSubmixSendSettings>&NewSubmixSendSettings                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 

@@ -207,7 +207,7 @@ void UWidget_ObjectiveTracker_Entry_C::PreConstruct(bool IsDesignTime)
 
 
 // Function Widget_ObjectiveTracker_Entry.Widget_ObjectiveTracker_Entry_C.UpdateObjective
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FText&                      UpdateInfo                                             (BlueprintVisible, BlueprintReadOnly, Parm)
 

@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_SubtitleEntry.Widget_SubtitleEntry_C
-// 0x0020 (0x02F0 - 0x02D0)
+// 0x0020 (0x0360 - 0x0340)
 class UWidget_SubtitleEntry_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             DisplayName;                                       // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Separator;                                         // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             SubtitleContent;                                   // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             SubtitleContent;                                   // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Separator;                                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             DisplayName;                                       // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Widget_SubtitleEntry(int32 EntryPoint);
@@ -35,19 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_SubtitleEntry_C">();
+		BP_STATIC_CLASS_IMPL("Widget_SubtitleEntry_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_SubtitleEntry_C")
 	}
 	static class UWidget_SubtitleEntry_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_SubtitleEntry_C>();
 	}
 };
-static_assert(alignof(UWidget_SubtitleEntry_C) == 0x000008, "Wrong alignment on UWidget_SubtitleEntry_C");
-static_assert(sizeof(UWidget_SubtitleEntry_C) == 0x0002F0, "Wrong size on UWidget_SubtitleEntry_C");
-static_assert(offsetof(UWidget_SubtitleEntry_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_SubtitleEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_SubtitleEntry_C, DisplayName) == 0x0002D8, "Member 'UWidget_SubtitleEntry_C::DisplayName' has a wrong offset!");
-static_assert(offsetof(UWidget_SubtitleEntry_C, Separator) == 0x0002E0, "Member 'UWidget_SubtitleEntry_C::Separator' has a wrong offset!");
-static_assert(offsetof(UWidget_SubtitleEntry_C, SubtitleContent) == 0x0002E8, "Member 'UWidget_SubtitleEntry_C::SubtitleContent' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_SubtitleEntry_C;
 
 }
 

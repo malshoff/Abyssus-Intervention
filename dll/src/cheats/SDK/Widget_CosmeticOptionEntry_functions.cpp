@@ -97,7 +97,7 @@ class UWidget* UWidget_CosmeticOptionEntry_C::CustomGamepadLeftNavigation(EUINav
 
 
 // Function Widget_CosmeticOptionEntry.Widget_CosmeticOptionEntry_C.ExecuteUbergraph_Widget_CosmeticOptionEntry
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -134,6 +134,26 @@ void UWidget_CosmeticOptionEntry_C::IsLocked(bool* Value)
 
 	if (Value != nullptr)
 		*Value = Parms.Value;
+}
+
+
+// Function Widget_CosmeticOptionEntry.Widget_CosmeticOptionEntry_C.OnBrowserClosed
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    FinalUrl                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CosmeticOptionEntry_C::OnBrowserClosed(const class FString& FinalUrl)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CosmeticOptionEntry_C", "OnBrowserClosed");
+
+	Params::Widget_CosmeticOptionEntry_C_OnBrowserClosed Parms{};
+
+	Parms.FinalUrl = std::move(FinalUrl);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -247,6 +267,42 @@ struct FEventReply UWidget_CosmeticOptionEntry_C::OnPreviewMouseButtonDown(const
 }
 
 
+// Function Widget_CosmeticOptionEntry.Widget_CosmeticOptionEntry_C.OnQueryEntitlementsCallback
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CosmeticOptionEntry_C::OnQueryEntitlementsCallback(bool bWasSuccessful, const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CosmeticOptionEntry_C", "OnQueryEntitlementsCallback");
+
+	Params::Widget_CosmeticOptionEntry_C_OnQueryEntitlementsCallback Parms{};
+
+	Parms.bWasSuccessful = bWasSuccessful;
+	Parms.Error = std::move(Error);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CosmeticOptionEntry.Widget_CosmeticOptionEntry_C.SetDragState
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_CosmeticOptionEntry_C::SetDragState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CosmeticOptionEntry_C", "SetDragState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Widget_CosmeticOptionEntry.Widget_CosmeticOptionEntry_C.SetLockedInformation
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -265,9 +321,9 @@ void UWidget_CosmeticOptionEntry_C::SetLockedInformation()
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                           CosmeticContentWidgetClass                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FPlayerCosmeticOption&     CosmeticOptionData                                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// class URCosmeticPrimaryAsset*           CosmeticPA_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CosmeticOptionEntry_C::SetOptionEntryInfo(class UClass* CosmeticContentWidgetClass, const struct FPlayerCosmeticOption& CosmeticOptionData)
+void UWidget_CosmeticOptionEntry_C::SetOptionEntryInfo(class UClass* CosmeticContentWidgetClass, class URCosmeticPrimaryAsset* CosmeticPA_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -277,7 +333,7 @@ void UWidget_CosmeticOptionEntry_C::SetOptionEntryInfo(class UClass* CosmeticCon
 	Params::Widget_CosmeticOptionEntry_C_SetOptionEntryInfo Parms{};
 
 	Parms.CosmeticContentWidgetClass = CosmeticContentWidgetClass;
-	Parms.CosmeticOptionData = std::move(CosmeticOptionData);
+	Parms.CosmeticPA_0 = CosmeticPA_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

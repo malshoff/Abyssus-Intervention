@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "GameplayTags_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
@@ -33,6 +33,7 @@ public:
 	static bool DoesTagAssetInterfaceHaveTag(TScriptInterface<class IGameplayTagAssetInterface> TagContainerInterface, const struct FGameplayTag& Tag);
 	static bool EqualEqual_GameplayTag(const struct FGameplayTag& A, const struct FGameplayTag& B);
 	static bool EqualEqual_GameplayTagContainer(const struct FGameplayTagContainer& A, const struct FGameplayTagContainer& B);
+	static struct FGameplayTagContainer Filter(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bExactMatch);
 	static void GetAllActorsOfClassMatchingTagQuery(class UObject* WorldContextObject, TSubclassOf<class AActor> ActorClass, const struct FGameplayTagQuery& GameplayTagQuery, TArray<class AActor*>* OutActors);
 	static class FString GetDebugStringFromGameplayTag(const struct FGameplayTag& GameplayTag);
 	static class FString GetDebugStringFromGameplayTagContainer(const struct FGameplayTagContainer& TagContainer);
@@ -64,15 +65,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BlueprintGameplayTagLibrary">();
+		STATIC_CLASS_IMPL("BlueprintGameplayTagLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlueprintGameplayTagLibrary")
 	}
 	static class UBlueprintGameplayTagLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBlueprintGameplayTagLibrary>();
 	}
 };
-static_assert(alignof(UBlueprintGameplayTagLibrary) == 0x000008, "Wrong alignment on UBlueprintGameplayTagLibrary");
-static_assert(sizeof(UBlueprintGameplayTagLibrary) == 0x000028, "Wrong size on UBlueprintGameplayTagLibrary");
+DUMPER7_ASSERTS_UBlueprintGameplayTagLibrary;
 
 // Class GameplayTags.GameplayTagAssetInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -87,7 +91,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTagAssetInterface">();
+		STATIC_CLASS_IMPL("GameplayTagAssetInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTagAssetInterface")
 	}
 	static class IGameplayTagAssetInterface* GetDefaultObj()
 	{
@@ -103,8 +111,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IGameplayTagAssetInterface) == 0x000001, "Wrong alignment on IGameplayTagAssetInterface");
-static_assert(sizeof(IGameplayTagAssetInterface) == 0x000001, "Wrong size on IGameplayTagAssetInterface");
+DUMPER7_ASSERTS_IGameplayTagAssetInterface;
 
 // Class GameplayTags.EditableGameplayTagQuery
 // 0x0070 (0x0098 - 0x0028)
@@ -113,24 +120,24 @@ class UEditableGameplayTagQuery final : public UObject
 public:
 	class FString                                 UserDescription;                                   // 0x0028(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UEditableGameplayTagQueryExpression*    RootExpression;                                    // 0x0048(0x0008)(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEditableGameplayTagQueryExpression*    RootExpression;                                    // 0x0048(0x0008)(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	struct FGameplayTagQuery                      TagQueryExportText_Helper;                         // 0x0050(0x0048)(NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQuery">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQuery")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQuery")
 	}
 	static class UEditableGameplayTagQuery* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQuery>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQuery) == 0x000008, "Wrong alignment on UEditableGameplayTagQuery");
-static_assert(sizeof(UEditableGameplayTagQuery) == 0x000098, "Wrong size on UEditableGameplayTagQuery");
-static_assert(offsetof(UEditableGameplayTagQuery, UserDescription) == 0x000028, "Member 'UEditableGameplayTagQuery::UserDescription' has a wrong offset!");
-static_assert(offsetof(UEditableGameplayTagQuery, RootExpression) == 0x000048, "Member 'UEditableGameplayTagQuery::RootExpression' has a wrong offset!");
-static_assert(offsetof(UEditableGameplayTagQuery, TagQueryExportText_Helper) == 0x000050, "Member 'UEditableGameplayTagQuery::TagQueryExportText_Helper' has a wrong offset!");
+DUMPER7_ASSERTS_UEditableGameplayTagQuery;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression
 // 0x0000 (0x0028 - 0x0028)
@@ -139,15 +146,18 @@ class UEditableGameplayTagQueryExpression : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQueryExpression">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression")
 	}
 	static class UEditableGameplayTagQueryExpression* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression");
-static_assert(sizeof(UEditableGameplayTagQueryExpression) == 0x000028, "Wrong size on UEditableGameplayTagQueryExpression");
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AnyTagsMatch
 // 0x0020 (0x0048 - 0x0028)
@@ -159,16 +169,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQueryExpression_AnyTagsMatch">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression_AnyTagsMatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression_AnyTagsMatch")
 	}
 	static class UEditableGameplayTagQueryExpression_AnyTagsMatch* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AnyTagsMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_AnyTagsMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_AnyTagsMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_AnyTagsMatch) == 0x000048, "Wrong size on UEditableGameplayTagQueryExpression_AnyTagsMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_AnyTagsMatch, Tags) == 0x000028, "Member 'UEditableGameplayTagQueryExpression_AnyTagsMatch::Tags' has a wrong offset!");
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AnyTagsMatch;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch
 // 0x0020 (0x0048 - 0x0028)
@@ -180,16 +192,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQueryExpression_AllTagsMatch">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression_AllTagsMatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression_AllTagsMatch")
 	}
 	static class UEditableGameplayTagQueryExpression_AllTagsMatch* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AllTagsMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_AllTagsMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_AllTagsMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_AllTagsMatch) == 0x000048, "Wrong size on UEditableGameplayTagQueryExpression_AllTagsMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_AllTagsMatch, Tags) == 0x000028, "Member 'UEditableGameplayTagQueryExpression_AllTagsMatch::Tags' has a wrong offset!");
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AllTagsMatch;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_NoTagsMatch
 // 0x0020 (0x0048 - 0x0028)
@@ -201,79 +215,87 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQueryExpression_NoTagsMatch">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression_NoTagsMatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression_NoTagsMatch")
 	}
 	static class UEditableGameplayTagQueryExpression_NoTagsMatch* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_NoTagsMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_NoTagsMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_NoTagsMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_NoTagsMatch) == 0x000048, "Wrong size on UEditableGameplayTagQueryExpression_NoTagsMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_NoTagsMatch, Tags) == 0x000028, "Member 'UEditableGameplayTagQueryExpression_NoTagsMatch::Tags' has a wrong offset!");
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_NoTagsMatch;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch
 // 0x0010 (0x0038 - 0x0028)
 class UEditableGameplayTagQueryExpression_AnyExprMatch final : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQueryExpression_AnyExprMatch">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression_AnyExprMatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression_AnyExprMatch")
 	}
 	static class UEditableGameplayTagQueryExpression_AnyExprMatch* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AnyExprMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_AnyExprMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_AnyExprMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_AnyExprMatch) == 0x000038, "Wrong size on UEditableGameplayTagQueryExpression_AnyExprMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_AnyExprMatch, Expressions) == 0x000028, "Member 'UEditableGameplayTagQueryExpression_AnyExprMatch::Expressions' has a wrong offset!");
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AnyExprMatch;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch
 // 0x0010 (0x0038 - 0x0028)
 class UEditableGameplayTagQueryExpression_AllExprMatch final : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQueryExpression_AllExprMatch">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression_AllExprMatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression_AllExprMatch")
 	}
 	static class UEditableGameplayTagQueryExpression_AllExprMatch* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AllExprMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_AllExprMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_AllExprMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_AllExprMatch) == 0x000038, "Wrong size on UEditableGameplayTagQueryExpression_AllExprMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_AllExprMatch, Expressions) == 0x000028, "Member 'UEditableGameplayTagQueryExpression_AllExprMatch::Expressions' has a wrong offset!");
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AllExprMatch;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch
 // 0x0010 (0x0038 - 0x0028)
 class UEditableGameplayTagQueryExpression_NoExprMatch final : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQueryExpression_NoExprMatch">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression_NoExprMatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression_NoExprMatch")
 	}
 	static class UEditableGameplayTagQueryExpression_NoExprMatch* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_NoExprMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_NoExprMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_NoExprMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_NoExprMatch) == 0x000038, "Wrong size on UEditableGameplayTagQueryExpression_NoExprMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_NoExprMatch, Expressions) == 0x000028, "Member 'UEditableGameplayTagQueryExpression_NoExprMatch::Expressions' has a wrong offset!");
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_NoExprMatch;
 
 // Class GameplayTags.GameplayTagsManager
 // 0x0278 (0x02A0 - 0x0028)
@@ -283,45 +305,48 @@ public:
 	uint8                                         Pad_28[0x160];                                     // 0x0028(0x0160)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FName, struct FGameplayTagSource>  TagSources;                                        // 0x0188(0x0050)(NativeAccessSpecifierPrivate)
 	uint8                                         Pad_1D8[0xB8];                                     // 0x01D8(0x00B8)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UDataTable*>                     GameplayTagTables;                                 // 0x0290(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UDataTable*>                     GameplayTagTables;                                 // 0x0290(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTagsManager">();
+		STATIC_CLASS_IMPL("GameplayTagsManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTagsManager")
 	}
 	static class UGameplayTagsManager* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTagsManager>();
 	}
 };
-static_assert(alignof(UGameplayTagsManager) == 0x000008, "Wrong alignment on UGameplayTagsManager");
-static_assert(sizeof(UGameplayTagsManager) == 0x0002A0, "Wrong size on UGameplayTagsManager");
-static_assert(offsetof(UGameplayTagsManager, TagSources) == 0x000188, "Member 'UGameplayTagsManager::TagSources' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsManager, GameplayTagTables) == 0x000290, "Member 'UGameplayTagsManager::GameplayTagTables' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayTagsManager;
 
 // Class GameplayTags.GameplayTagsList
-// 0x0020 (0x0048 - 0x0028)
+// 0x0030 (0x0058 - 0x0028)
 class UGameplayTagsList : public UObject
 {
 public:
 	class FString                                 ConfigFileName;                                    // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayTagTableRow>           GameplayTagList;                                   // 0x0038(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayTagRedirect>           GameplayTagRedirects;                              // 0x0038(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayTagTableRow>           GameplayTagList;                                   // 0x0048(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTagsList">();
+		STATIC_CLASS_IMPL("GameplayTagsList")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTagsList")
 	}
 	static class UGameplayTagsList* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTagsList>();
 	}
 };
-static_assert(alignof(UGameplayTagsList) == 0x000008, "Wrong alignment on UGameplayTagsList");
-static_assert(sizeof(UGameplayTagsList) == 0x000048, "Wrong size on UGameplayTagsList");
-static_assert(offsetof(UGameplayTagsList, ConfigFileName) == 0x000028, "Member 'UGameplayTagsList::ConfigFileName' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsList, GameplayTagList) == 0x000038, "Member 'UGameplayTagsList::GameplayTagList' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayTagsList;
 
 // Class GameplayTags.RestrictedGameplayTagsList
 // 0x0020 (0x0048 - 0x0028)
@@ -334,35 +359,35 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"RestrictedGameplayTagsList">();
+		STATIC_CLASS_IMPL("RestrictedGameplayTagsList")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RestrictedGameplayTagsList")
 	}
 	static class URestrictedGameplayTagsList* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<URestrictedGameplayTagsList>();
 	}
 };
-static_assert(alignof(URestrictedGameplayTagsList) == 0x000008, "Wrong alignment on URestrictedGameplayTagsList");
-static_assert(sizeof(URestrictedGameplayTagsList) == 0x000048, "Wrong size on URestrictedGameplayTagsList");
-static_assert(offsetof(URestrictedGameplayTagsList, ConfigFileName) == 0x000028, "Member 'URestrictedGameplayTagsList::ConfigFileName' has a wrong offset!");
-static_assert(offsetof(URestrictedGameplayTagsList, RestrictedGameplayTagList) == 0x000038, "Member 'URestrictedGameplayTagsList::RestrictedGameplayTagList' has a wrong offset!");
+DUMPER7_ASSERTS_URestrictedGameplayTagsList;
 
 // Class GameplayTags.GameplayTagsSettings
-// 0x0070 (0x00B8 - 0x0048)
+// 0x0060 (0x00B8 - 0x0058)
 class UGameplayTagsSettings final : public UGameplayTagsList
 {
 public:
-	bool                                          ImportTagsFromConfig;                              // 0x0048(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          WarnOnInvalidTags;                                 // 0x0049(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ClearInvalidTags;                                  // 0x004A(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AllowEditorTagUnloading;                           // 0x004B(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AllowGameTagUnloading;                             // 0x004C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FastReplication;                                   // 0x004D(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDynamicReplication;                               // 0x004E(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4F[0x1];                                       // 0x004F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 InvalidTagCharacters;                              // 0x0050(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayTagCategoryRemap>      CategoryRemapping;                                 // 0x0060(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<struct FSoftObjectPath>                GameplayTagTableList;                              // 0x0070(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayTagRedirect>           GameplayTagRedirects;                              // 0x0080(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	bool                                          ImportTagsFromConfig;                              // 0x0058(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          WarnOnInvalidTags;                                 // 0x0059(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ClearInvalidTags;                                  // 0x005A(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AllowEditorTagUnloading;                           // 0x005B(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AllowGameTagUnloading;                             // 0x005C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FastReplication;                                   // 0x005D(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDynamicReplication;                               // 0x005E(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5F[0x1];                                       // 0x005F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 InvalidTagCharacters;                              // 0x0060(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayTagCategoryRemap>      CategoryRemapping;                                 // 0x0070(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FSoftObjectPath>                GameplayTagTableList;                              // 0x0080(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<class FName>                           CommonlyReplicatedTags;                            // 0x0090(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	int32                                         NumBitsForContainerSize;                           // 0x00A0(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NetIndexFirstBitSegment;                           // 0x00A4(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -371,30 +396,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTagsSettings">();
+		STATIC_CLASS_IMPL("GameplayTagsSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTagsSettings")
 	}
 	static class UGameplayTagsSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTagsSettings>();
 	}
 };
-static_assert(alignof(UGameplayTagsSettings) == 0x000008, "Wrong alignment on UGameplayTagsSettings");
-static_assert(sizeof(UGameplayTagsSettings) == 0x0000B8, "Wrong size on UGameplayTagsSettings");
-static_assert(offsetof(UGameplayTagsSettings, ImportTagsFromConfig) == 0x000048, "Member 'UGameplayTagsSettings::ImportTagsFromConfig' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, WarnOnInvalidTags) == 0x000049, "Member 'UGameplayTagsSettings::WarnOnInvalidTags' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, ClearInvalidTags) == 0x00004A, "Member 'UGameplayTagsSettings::ClearInvalidTags' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, AllowEditorTagUnloading) == 0x00004B, "Member 'UGameplayTagsSettings::AllowEditorTagUnloading' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, AllowGameTagUnloading) == 0x00004C, "Member 'UGameplayTagsSettings::AllowGameTagUnloading' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, FastReplication) == 0x00004D, "Member 'UGameplayTagsSettings::FastReplication' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, bDynamicReplication) == 0x00004E, "Member 'UGameplayTagsSettings::bDynamicReplication' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, InvalidTagCharacters) == 0x000050, "Member 'UGameplayTagsSettings::InvalidTagCharacters' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, CategoryRemapping) == 0x000060, "Member 'UGameplayTagsSettings::CategoryRemapping' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, GameplayTagTableList) == 0x000070, "Member 'UGameplayTagsSettings::GameplayTagTableList' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, GameplayTagRedirects) == 0x000080, "Member 'UGameplayTagsSettings::GameplayTagRedirects' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, CommonlyReplicatedTags) == 0x000090, "Member 'UGameplayTagsSettings::CommonlyReplicatedTags' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, NumBitsForContainerSize) == 0x0000A0, "Member 'UGameplayTagsSettings::NumBitsForContainerSize' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, NetIndexFirstBitSegment) == 0x0000A4, "Member 'UGameplayTagsSettings::NetIndexFirstBitSegment' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, RestrictedConfigFiles) == 0x0000A8, "Member 'UGameplayTagsSettings::RestrictedConfigFiles' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayTagsSettings;
 
 // Class GameplayTags.GameplayTagsDeveloperSettings
 // 0x0018 (0x0050 - 0x0038)
@@ -407,17 +420,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTagsDeveloperSettings">();
+		STATIC_CLASS_IMPL("GameplayTagsDeveloperSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTagsDeveloperSettings")
 	}
 	static class UGameplayTagsDeveloperSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTagsDeveloperSettings>();
 	}
 };
-static_assert(alignof(UGameplayTagsDeveloperSettings) == 0x000008, "Wrong alignment on UGameplayTagsDeveloperSettings");
-static_assert(sizeof(UGameplayTagsDeveloperSettings) == 0x000050, "Wrong size on UGameplayTagsDeveloperSettings");
-static_assert(offsetof(UGameplayTagsDeveloperSettings, DeveloperConfigName) == 0x000038, "Member 'UGameplayTagsDeveloperSettings::DeveloperConfigName' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsDeveloperSettings, FavoriteTagSource) == 0x000048, "Member 'UGameplayTagsDeveloperSettings::FavoriteTagSource' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayTagsDeveloperSettings;
 
 }
 

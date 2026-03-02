@@ -31,19 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NNEDenoiserAsset">();
+		STATIC_CLASS_IMPL("NNEDenoiserAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNEDenoiserAsset")
 	}
 	static class UNNEDenoiserAsset* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNNEDenoiserAsset>();
 	}
 };
-static_assert(alignof(UNNEDenoiserAsset) == 0x000008, "Wrong alignment on UNNEDenoiserAsset");
-static_assert(sizeof(UNNEDenoiserAsset) == 0x0000B8, "Wrong size on UNNEDenoiserAsset");
-static_assert(offsetof(UNNEDenoiserAsset, ModelData) == 0x000030, "Member 'UNNEDenoiserAsset::ModelData' has a wrong offset!");
-static_assert(offsetof(UNNEDenoiserAsset, InputMapping) == 0x000058, "Member 'UNNEDenoiserAsset::InputMapping' has a wrong offset!");
-static_assert(offsetof(UNNEDenoiserAsset, OutputMapping) == 0x000080, "Member 'UNNEDenoiserAsset::OutputMapping' has a wrong offset!");
-static_assert(offsetof(UNNEDenoiserAsset, TilingConfig) == 0x0000A8, "Member 'UNNEDenoiserAsset::TilingConfig' has a wrong offset!");
+DUMPER7_ASSERTS_UNNEDenoiserAsset;
 
 // Class NNEDenoiser.NNEDenoiserTemporalAsset
 // 0x0088 (0x00B8 - 0x0030)
@@ -58,19 +57,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NNEDenoiserTemporalAsset">();
+		STATIC_CLASS_IMPL("NNEDenoiserTemporalAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNEDenoiserTemporalAsset")
 	}
 	static class UNNEDenoiserTemporalAsset* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNNEDenoiserTemporalAsset>();
 	}
 };
-static_assert(alignof(UNNEDenoiserTemporalAsset) == 0x000008, "Wrong alignment on UNNEDenoiserTemporalAsset");
-static_assert(sizeof(UNNEDenoiserTemporalAsset) == 0x0000B8, "Wrong size on UNNEDenoiserTemporalAsset");
-static_assert(offsetof(UNNEDenoiserTemporalAsset, ModelData) == 0x000030, "Member 'UNNEDenoiserTemporalAsset::ModelData' has a wrong offset!");
-static_assert(offsetof(UNNEDenoiserTemporalAsset, InputMapping) == 0x000058, "Member 'UNNEDenoiserTemporalAsset::InputMapping' has a wrong offset!");
-static_assert(offsetof(UNNEDenoiserTemporalAsset, OutputMapping) == 0x000080, "Member 'UNNEDenoiserTemporalAsset::OutputMapping' has a wrong offset!");
-static_assert(offsetof(UNNEDenoiserTemporalAsset, TilingConfig) == 0x0000A8, "Member 'UNNEDenoiserTemporalAsset::TilingConfig' has a wrong offset!");
+DUMPER7_ASSERTS_UNNEDenoiserTemporalAsset;
 
 // Class NNEDenoiser.NNEDenoiserSettings
 // 0x0068 (0x00A0 - 0x0038)
@@ -79,25 +77,26 @@ class UNNEDenoiserSettings final : public UDeveloperSettingsBackedByCVars
 public:
 	TSoftObjectPtr<class UNNEDenoiserAsset>       DenoiserAsset;                                     // 0x0038(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_60[0x28];                                      // 0x0060(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	EDenoiserRuntimeType                          RuntimeType;                                       // 0x0088(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaximumTileSizeOverride;                           // 0x0088(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDenoiserRuntimeType                          RuntimeType;                                       // 0x008C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 RuntimeName;                                       // 0x0090(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NNEDenoiserSettings">();
+		STATIC_CLASS_IMPL("NNEDenoiserSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNEDenoiserSettings")
 	}
 	static class UNNEDenoiserSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNNEDenoiserSettings>();
 	}
 };
-static_assert(alignof(UNNEDenoiserSettings) == 0x000008, "Wrong alignment on UNNEDenoiserSettings");
-static_assert(sizeof(UNNEDenoiserSettings) == 0x0000A0, "Wrong size on UNNEDenoiserSettings");
-static_assert(offsetof(UNNEDenoiserSettings, DenoiserAsset) == 0x000038, "Member 'UNNEDenoiserSettings::DenoiserAsset' has a wrong offset!");
-static_assert(offsetof(UNNEDenoiserSettings, RuntimeType) == 0x000088, "Member 'UNNEDenoiserSettings::RuntimeType' has a wrong offset!");
-static_assert(offsetof(UNNEDenoiserSettings, RuntimeName) == 0x000090, "Member 'UNNEDenoiserSettings::RuntimeName' has a wrong offset!");
+DUMPER7_ASSERTS_UNNEDenoiserSettings;
 
 }
 

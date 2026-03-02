@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "RGame_structs.hpp"
 #include "UMG_structs.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK::Params
@@ -26,115 +26,78 @@ public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_CanInteract) == 0x000008, "Wrong alignment on BP_SkillTree_C_CanInteract");
-static_assert(sizeof(BP_SkillTree_C_CanInteract) == 0x000010, "Wrong size on BP_SkillTree_C_CanInteract");
-static_assert(offsetof(BP_SkillTree_C_CanInteract, Controller) == 0x000000, "Member 'BP_SkillTree_C_CanInteract::Controller' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_CanInteract, ReturnValue) == 0x000008, "Member 'BP_SkillTree_C_CanInteract::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_CanInteract;
 
 // Function BP_SkillTree.BP_SkillTree_C.ExecuteUbergraph_BP_SkillTree
-// 0x0120 (0x0120 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetPointsSpentOnNode_SpentSoulFragments;  // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_GetEffectMaterial_ReturnValue;            // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      K2Node_Event_controller_2;                         // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      K2Node_Event_controller_1;                         // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_InteractingActor;                     // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_NewVisible;                           // 0x0040(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      K2Node_Event_controller_2;                         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      K2Node_Event_controller_1;                         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class APlayerController*                K2Node_Event_PlayerController;                     // 0x0018(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_InteractingActor;                     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_NewVisible;                           // 0x0028(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      K2Node_Event_controller;                           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerController*                     K2Node_DynamicCast_AsRPlayer_Controller;           // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      K2Node_Event_controller;                           // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerController*                     K2Node_DynamicCast_AsRPlayer_Controller;           // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget_SkillTree2_C*                   CallFunc_PushWidget_OutWidget;                     // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocalPlayerController_ReturnValue;      // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 NumPointsAssigned, int32 NumMaxPoints)> K2Node_CreateDelegate_OutputDelegate; // 0x0078(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8B[0x5];                                       // 0x008B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARGameState*                            CallFunc_GetRGameState_ReturnValue;                // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerState*                           K2Node_CustomEvent_PlayerState;                    // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetPercentPointsAssigned_Percent;         // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class APlayerState* PlayerState)> K2Node_CreateDelegate_OutputDelegate_1;         // 0x00A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_CustomEvent_Percentage;                     // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1;  // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C3[0x5];                                       // 0x00C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Lerp_ReturnValue;                         // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue_1;                       // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetPercentPointsAssigned_Percent_1;       // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FA[0x6];                                       // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetPercentPointsAssigned_Percent_2;       // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ARRadarManager*                         CallFunc_GetRadarManager_ReturnValue;              // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_112[0x2];                                      // 0x0112(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast_1; // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget_SkillTree2_C*                   CallFunc_PushWidget_OutWidget;                     // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocalPlayerController_ReturnValue;      // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_53[0x5];                                       // 0x0053(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 NumPointsAssigned, int32 NumMaxPoints)> K2Node_CreateDelegate_OutputDelegate; // 0x0060(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_73[0x5];                                       // 0x0073(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARGameState*                            CallFunc_GetRGameState_ReturnValue;                // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerState*                           K2Node_CustomEvent_PlayerState;                    // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetPercentPointsAssigned_Percent;         // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_Percentage;                     // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1;  // 0x009A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9B[0x5];                                       // 0x009B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Lerp_ReturnValue;                         // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Lerp_ReturnValue_1;                       // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Lerp_ReturnValue_2;                       // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetPercentPointsAssigned_Percent_1;       // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetPercentPointsAssigned_Percent_2;       // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ARRadarManager*                         CallFunc_GetRadarManager_ReturnValue;              // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetPointsSpentOnNode_SpentSoulFragments;  // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_GetEffectMaterial_ReturnValue;            // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_K2_GetScalarParameterValue_ReturnValue;   // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetPercentPointsAssigned_Percent_3;       // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class APlayerState* PlayerState)> K2Node_CreateDelegate_OutputDelegate_1;         // 0x0128(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13A[0x6];                                      // 0x013A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Lerp_A_ImplicitCast;                      // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Lerp_Alpha_ImplicitCast;                  // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast_1; // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree) == 0x000008, "Wrong alignment on BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree");
-static_assert(sizeof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree) == 0x000120, "Wrong size on BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, EntryPoint) == 0x000000, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_GetPointsSpentOnNode_SpentSoulFragments) == 0x000008, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_GetPointsSpentOnNode_SpentSoulFragments' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x00000C, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_SelectFloat_ReturnValue) == 0x000010, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_GetEffectMaterial_ReturnValue) == 0x000018, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_GetEffectMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_HasAuthority_ReturnValue) == 0x000020, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, K2Node_Event_controller_2) == 0x000028, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::K2Node_Event_controller_2' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, K2Node_Event_controller_1) == 0x000030, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::K2Node_Event_controller_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, K2Node_Event_InteractingActor) == 0x000038, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::K2Node_Event_InteractingActor' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, K2Node_Event_NewVisible) == 0x000040, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::K2Node_Event_NewVisible' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, K2Node_Event_controller) == 0x000048, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::K2Node_Event_controller' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, K2Node_DynamicCast_AsRPlayer_Controller) == 0x000050, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::K2Node_DynamicCast_AsRPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_PushWidget_OutWidget) == 0x000060, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_PushWidget_OutWidget' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_IsValid_ReturnValue_1) == 0x000068, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_IsLocalPlayerController_ReturnValue) == 0x000069, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000070, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, K2Node_CreateDelegate_OutputDelegate) == 0x000078, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_Greater_IntInt_ReturnValue) == 0x000088, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, Temp_bool_IsClosed_Variable) == 0x000089, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, Temp_bool_Has_Been_Initd_Variable) == 0x00008A, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_GetRGameState_ReturnValue) == 0x000090, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_GetRGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, K2Node_CustomEvent_PlayerState) == 0x000098, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::K2Node_CustomEvent_PlayerState' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_GetPercentPointsAssigned_Percent) == 0x0000A0, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_GetPercentPointsAssigned_Percent' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000A8, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, K2Node_CustomEvent_Percentage) == 0x0000B8, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::K2Node_CustomEvent_Percentage' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0000C0, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x0000C1, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1) == 0x0000C2, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_Lerp_ReturnValue) == 0x0000C8, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_Lerp_ReturnValue_1) == 0x0000D0, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_Lerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_MakeVector_ReturnValue) == 0x0000D8, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_GetPercentPointsAssigned_Percent_1) == 0x0000F0, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_GetPercentPointsAssigned_Percent_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, Temp_byte_Variable) == 0x0000F8, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, Temp_byte_Variable_1) == 0x0000F9, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_GetPercentPointsAssigned_Percent_2) == 0x000100, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_GetPercentPointsAssigned_Percent_2' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_GetRadarManager_ReturnValue) == 0x000108, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_GetRadarManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, Temp_bool_Variable) == 0x000110, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, K2Node_Select_Default) == 0x000111, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000114, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_SetScalarParameterValue_Value_ImplicitCast_1) == 0x000118, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_SetScalarParameterValue_Value_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree, CallFunc_SetFloatParameter_Param_ImplicitCast) == 0x00011C, "Member 'BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree::CallFunc_SetFloatParameter_Param_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_ExecuteUbergraph_BP_SkillTree;
 
 // Function BP_SkillTree.BP_SkillTree_C.GetPercentPointsAssigned
 // 0x00F0 (0x00F0 - 0x0000)
@@ -186,45 +149,17 @@ public:
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_GetPercentPointsAssigned) == 0x000008, "Wrong alignment on BP_SkillTree_C_GetPercentPointsAssigned");
-static_assert(sizeof(BP_SkillTree_C_GetPercentPointsAssigned) == 0x0000F0, "Wrong size on BP_SkillTree_C_GetPercentPointsAssigned");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, Percent) == 0x000000, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::Percent' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, NumTotalPoints) == 0x000008, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::NumTotalPoints' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, NumPointsAssigned) == 0x00000C, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::NumPointsAssigned' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, Temp_int_Array_Index_Variable) == 0x000010, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, Temp_int_Array_Index_Variable_1) == 0x00001C, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000020, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000028, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x000029, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000030, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, Temp_int_Loop_Counter_Variable_1) == 0x000038, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Add_IntInt_ReturnValue_1) == 0x00003C, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Add_IntInt_ReturnValue_2) == 0x000040, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, Temp_int_Variable) == 0x000044, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_GetAssetManager_ReturnValue) == 0x000048, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_GetAssetManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_IsValid_ReturnValue) == 0x000050, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_GetAllSkillTreeCategoryPrimaryAssets_ReturnValue) == 0x000058, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_GetAllSkillTreeCategoryPrimaryAssets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Array_Get_Item) == 0x000068, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Array_Length_ReturnValue) == 0x000070, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Less_IntInt_ReturnValue) == 0x000074, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Array_Get_Item_1) == 0x000078, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Array_Length_ReturnValue_1) == 0x0000A8, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue) == 0x0000B0, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000B8, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_IsValid_ReturnValue_1) == 0x0000B9, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, K2Node_DynamicCast_AsRMutator_Primary_Asset) == 0x0000C0, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::K2Node_DynamicCast_AsRMutator_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, K2Node_DynamicCast_bSuccess) == 0x0000C8, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x0000C9, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_GetSkillTreeAssignedPoints_ReturnValue) == 0x0000CC, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_GetSkillTreeAssignedPoints_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Add_IntInt_ReturnValue_3) == 0x0000D0, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Array_IsEmpty_ReturnValue) == 0x0000D4, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Array_IsValidIndex_ReturnValue) == 0x0000D5, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Array_Length_ReturnValue_2) == 0x0000D8, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Add_IntInt_ReturnValue_4) == 0x0000DC, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x0000E0, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_GetPercentPointsAssigned, CallFunc_SafeDivide_ReturnValue) == 0x0000E8, "Member 'BP_SkillTree_C_GetPercentPointsAssigned::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_GetPercentPointsAssigned;
+
+// Function BP_SkillTree.BP_SkillTree_C.IsShareable
+// 0x0010 (0x0010 - 0x0000)
+struct BP_SkillTree_C_IsShareable final
+{
+public:
+	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SkillTree_C_IsShareable;
 
 // Function BP_SkillTree.BP_SkillTree_C.OnFocus
 // 0x0008 (0x0008 - 0x0000)
@@ -233,9 +168,7 @@ struct BP_SkillTree_C_OnFocus final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_OnFocus) == 0x000008, "Wrong alignment on BP_SkillTree_C_OnFocus");
-static_assert(sizeof(BP_SkillTree_C_OnFocus) == 0x000008, "Wrong size on BP_SkillTree_C_OnFocus");
-static_assert(offsetof(BP_SkillTree_C_OnFocus, Controller) == 0x000000, "Member 'BP_SkillTree_C_OnFocus::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_OnFocus;
 
 // Function BP_SkillTree.BP_SkillTree_C.OnFocusGone
 // 0x0008 (0x0008 - 0x0000)
@@ -244,9 +177,7 @@ struct BP_SkillTree_C_OnFocusGone final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_OnFocusGone) == 0x000008, "Wrong alignment on BP_SkillTree_C_OnFocusGone");
-static_assert(sizeof(BP_SkillTree_C_OnFocusGone) == 0x000008, "Wrong size on BP_SkillTree_C_OnFocusGone");
-static_assert(offsetof(BP_SkillTree_C_OnFocusGone, Controller) == 0x000000, "Member 'BP_SkillTree_C_OnFocusGone::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_OnFocusGone;
 
 // Function BP_SkillTree.BP_SkillTree_C.OnInteract
 // 0x0008 (0x0008 - 0x0000)
@@ -255,9 +186,7 @@ struct BP_SkillTree_C_OnInteract final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_OnInteract) == 0x000008, "Wrong alignment on BP_SkillTree_C_OnInteract");
-static_assert(sizeof(BP_SkillTree_C_OnInteract) == 0x000008, "Wrong size on BP_SkillTree_C_OnInteract");
-static_assert(offsetof(BP_SkillTree_C_OnInteract, Controller) == 0x000000, "Member 'BP_SkillTree_C_OnInteract::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_OnInteract;
 
 // Function BP_SkillTree.BP_SkillTree_C.OnPlayerJoined_Event
 // 0x0008 (0x0008 - 0x0000)
@@ -266,9 +195,7 @@ struct BP_SkillTree_C_OnPlayerJoined_Event final
 public:
 	class APlayerState*                           PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_OnPlayerJoined_Event) == 0x000008, "Wrong alignment on BP_SkillTree_C_OnPlayerJoined_Event");
-static_assert(sizeof(BP_SkillTree_C_OnPlayerJoined_Event) == 0x000008, "Wrong size on BP_SkillTree_C_OnPlayerJoined_Event");
-static_assert(offsetof(BP_SkillTree_C_OnPlayerJoined_Event, PlayerState) == 0x000000, "Member 'BP_SkillTree_C_OnPlayerJoined_Event::PlayerState' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_OnPlayerJoined_Event;
 
 // Function BP_SkillTree.BP_SkillTree_C.OnSkillTreeUpdated
 // 0x00B0 (0x00B0 - 0x0000)
@@ -292,22 +219,16 @@ public:
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue_3;           // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_SafeDivide_ReturnValue_1;                 // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_OnSkillTreeUpdated) == 0x000008, "Wrong alignment on BP_SkillTree_C_OnSkillTreeUpdated");
-static_assert(sizeof(BP_SkillTree_C_OnSkillTreeUpdated) == 0x0000B0, "Wrong size on BP_SkillTree_C_OnSkillTreeUpdated");
-static_assert(offsetof(BP_SkillTree_C_OnSkillTreeUpdated, NumPointsAssigned) == 0x000000, "Member 'BP_SkillTree_C_OnSkillTreeUpdated::NumPointsAssigned' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_OnSkillTreeUpdated, NumMaxPoints) == 0x000004, "Member 'BP_SkillTree_C_OnSkillTreeUpdated::NumMaxPoints' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_OnSkillTreeUpdated, PercentAssignedPoints) == 0x000008, "Member 'BP_SkillTree_C_OnSkillTreeUpdated::PercentAssignedPoints' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_OnSkillTreeUpdated, Temp_int_Variable) == 0x000010, "Member 'BP_SkillTree_C_OnSkillTreeUpdated::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_OnSkillTreeUpdated, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000060, "Member 'BP_SkillTree_C_OnSkillTreeUpdated::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_OnSkillTreeUpdated, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000068, "Member 'BP_SkillTree_C_OnSkillTreeUpdated::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_OnSkillTreeUpdated, CallFunc_SafeDivide_ReturnValue) == 0x000070, "Member 'BP_SkillTree_C_OnSkillTreeUpdated::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_OnSkillTreeUpdated, CallFunc_Conv_IntToDouble_ReturnValue_2) == 0x000078, "Member 'BP_SkillTree_C_OnSkillTreeUpdated::CallFunc_Conv_IntToDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_OnSkillTreeUpdated, CallFunc_GetIsDemoBuild_ReturnValue) == 0x000080, "Member 'BP_SkillTree_C_OnSkillTreeUpdated::CallFunc_GetIsDemoBuild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_OnSkillTreeUpdated, CallFunc_Map_Values_Values) == 0x000088, "Member 'BP_SkillTree_C_OnSkillTreeUpdated::CallFunc_Map_Values_Values' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_OnSkillTreeUpdated, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000098, "Member 'BP_SkillTree_C_OnSkillTreeUpdated::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_OnSkillTreeUpdated, CallFunc_Clamp_ReturnValue) == 0x00009C, "Member 'BP_SkillTree_C_OnSkillTreeUpdated::CallFunc_Clamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_OnSkillTreeUpdated, CallFunc_Conv_IntToDouble_ReturnValue_3) == 0x0000A0, "Member 'BP_SkillTree_C_OnSkillTreeUpdated::CallFunc_Conv_IntToDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_OnSkillTreeUpdated, CallFunc_SafeDivide_ReturnValue_1) == 0x0000A8, "Member 'BP_SkillTree_C_OnSkillTreeUpdated::CallFunc_SafeDivide_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_OnSkillTreeUpdated;
+
+// Function BP_SkillTree.BP_SkillTree_C.ShareInteractableActor
+// 0x0008 (0x0008 - 0x0000)
+struct BP_SkillTree_C_ShareInteractableActor final
+{
+public:
+	const class APlayerController*                PlayerController;                                  // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SkillTree_C_ShareInteractableActor;
 
 // Function BP_SkillTree.BP_SkillTree_C.ToggleInteractionIndicatorVisibility
 // 0x0010 (0x0010 - 0x0000)
@@ -317,10 +238,7 @@ public:
 	class AActor*                                 InteractingActor;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          NewVisible;                                        // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_ToggleInteractionIndicatorVisibility) == 0x000008, "Wrong alignment on BP_SkillTree_C_ToggleInteractionIndicatorVisibility");
-static_assert(sizeof(BP_SkillTree_C_ToggleInteractionIndicatorVisibility) == 0x000010, "Wrong size on BP_SkillTree_C_ToggleInteractionIndicatorVisibility");
-static_assert(offsetof(BP_SkillTree_C_ToggleInteractionIndicatorVisibility, InteractingActor) == 0x000000, "Member 'BP_SkillTree_C_ToggleInteractionIndicatorVisibility::InteractingActor' has a wrong offset!");
-static_assert(offsetof(BP_SkillTree_C_ToggleInteractionIndicatorVisibility, NewVisible) == 0x000008, "Member 'BP_SkillTree_C_ToggleInteractionIndicatorVisibility::NewVisible' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_ToggleInteractionIndicatorVisibility;
 
 // Function BP_SkillTree.BP_SkillTree_C.UpdateVisuals
 // 0x0008 (0x0008 - 0x0000)
@@ -329,9 +247,7 @@ struct BP_SkillTree_C_UpdateVisuals final
 public:
 	double                                        Percentage;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_UpdateVisuals) == 0x000008, "Wrong alignment on BP_SkillTree_C_UpdateVisuals");
-static_assert(sizeof(BP_SkillTree_C_UpdateVisuals) == 0x000008, "Wrong size on BP_SkillTree_C_UpdateVisuals");
-static_assert(offsetof(BP_SkillTree_C_UpdateVisuals, Percentage) == 0x000000, "Member 'BP_SkillTree_C_UpdateVisuals::Percentage' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_UpdateVisuals;
 
 // Function BP_SkillTree.BP_SkillTree_C.GetInteractableAlternativeDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -340,9 +256,7 @@ struct BP_SkillTree_C_GetInteractableAlternativeDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_SkillTree_C_GetInteractableAlternativeDescription) == 0x000008, "Wrong alignment on BP_SkillTree_C_GetInteractableAlternativeDescription");
-static_assert(sizeof(BP_SkillTree_C_GetInteractableAlternativeDescription) == 0x000010, "Wrong size on BP_SkillTree_C_GetInteractableAlternativeDescription");
-static_assert(offsetof(BP_SkillTree_C_GetInteractableAlternativeDescription, ReturnValue) == 0x000000, "Member 'BP_SkillTree_C_GetInteractableAlternativeDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_GetInteractableAlternativeDescription;
 
 // Function BP_SkillTree.BP_SkillTree_C.GetInteractableCost
 // 0x0004 (0x0004 - 0x0000)
@@ -351,9 +265,7 @@ struct BP_SkillTree_C_GetInteractableCost final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_GetInteractableCost) == 0x000004, "Wrong alignment on BP_SkillTree_C_GetInteractableCost");
-static_assert(sizeof(BP_SkillTree_C_GetInteractableCost) == 0x000004, "Wrong size on BP_SkillTree_C_GetInteractableCost");
-static_assert(offsetof(BP_SkillTree_C_GetInteractableCost, ReturnValue) == 0x000000, "Member 'BP_SkillTree_C_GetInteractableCost::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_GetInteractableCost;
 
 // Function BP_SkillTree.BP_SkillTree_C.GetInteractableCostCurrencyType
 // 0x0010 (0x0010 - 0x0000)
@@ -362,9 +274,7 @@ struct BP_SkillTree_C_GetInteractableCostCurrencyType final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_SkillTree_C_GetInteractableCostCurrencyType) == 0x000008, "Wrong alignment on BP_SkillTree_C_GetInteractableCostCurrencyType");
-static_assert(sizeof(BP_SkillTree_C_GetInteractableCostCurrencyType) == 0x000010, "Wrong size on BP_SkillTree_C_GetInteractableCostCurrencyType");
-static_assert(offsetof(BP_SkillTree_C_GetInteractableCostCurrencyType, ReturnValue) == 0x000000, "Member 'BP_SkillTree_C_GetInteractableCostCurrencyType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_GetInteractableCostCurrencyType;
 
 // Function BP_SkillTree.BP_SkillTree_C.GetInteractableDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -373,9 +283,7 @@ struct BP_SkillTree_C_GetInteractableDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_SkillTree_C_GetInteractableDescription) == 0x000008, "Wrong alignment on BP_SkillTree_C_GetInteractableDescription");
-static_assert(sizeof(BP_SkillTree_C_GetInteractableDescription) == 0x000010, "Wrong size on BP_SkillTree_C_GetInteractableDescription");
-static_assert(offsetof(BP_SkillTree_C_GetInteractableDescription, ReturnValue) == 0x000000, "Member 'BP_SkillTree_C_GetInteractableDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_GetInteractableDescription;
 
 // Function BP_SkillTree.BP_SkillTree_C.GetInteractableName
 // 0x0010 (0x0010 - 0x0000)
@@ -384,9 +292,7 @@ struct BP_SkillTree_C_GetInteractableName final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_SkillTree_C_GetInteractableName) == 0x000008, "Wrong alignment on BP_SkillTree_C_GetInteractableName");
-static_assert(sizeof(BP_SkillTree_C_GetInteractableName) == 0x000010, "Wrong size on BP_SkillTree_C_GetInteractableName");
-static_assert(offsetof(BP_SkillTree_C_GetInteractableName, ReturnValue) == 0x000000, "Member 'BP_SkillTree_C_GetInteractableName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_GetInteractableName;
 
 // Function BP_SkillTree.BP_SkillTree_C.GetInteractableSubHeader
 // 0x0010 (0x0010 - 0x0000)
@@ -395,9 +301,7 @@ struct BP_SkillTree_C_GetInteractableSubHeader final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_SkillTree_C_GetInteractableSubHeader) == 0x000008, "Wrong alignment on BP_SkillTree_C_GetInteractableSubHeader");
-static_assert(sizeof(BP_SkillTree_C_GetInteractableSubHeader) == 0x000010, "Wrong size on BP_SkillTree_C_GetInteractableSubHeader");
-static_assert(offsetof(BP_SkillTree_C_GetInteractableSubHeader, ReturnValue) == 0x000000, "Member 'BP_SkillTree_C_GetInteractableSubHeader::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_GetInteractableSubHeader;
 
 // Function BP_SkillTree.BP_SkillTree_C.GetInteractionIndicatorWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -406,9 +310,7 @@ struct BP_SkillTree_C_GetInteractionIndicatorWidget final
 public:
 	class UWidgetComponent*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_GetInteractionIndicatorWidget) == 0x000008, "Wrong alignment on BP_SkillTree_C_GetInteractionIndicatorWidget");
-static_assert(sizeof(BP_SkillTree_C_GetInteractionIndicatorWidget) == 0x000008, "Wrong size on BP_SkillTree_C_GetInteractionIndicatorWidget");
-static_assert(offsetof(BP_SkillTree_C_GetInteractionIndicatorWidget, ReturnValue) == 0x000000, "Member 'BP_SkillTree_C_GetInteractionIndicatorWidget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_GetInteractionIndicatorWidget;
 
 // Function BP_SkillTree.BP_SkillTree_C.GetRadarIconColor
 // 0x0010 (0x0010 - 0x0000)
@@ -417,9 +319,7 @@ struct BP_SkillTree_C_GetRadarIconColor final
 public:
 	struct FLinearColor                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_GetRadarIconColor) == 0x000004, "Wrong alignment on BP_SkillTree_C_GetRadarIconColor");
-static_assert(sizeof(BP_SkillTree_C_GetRadarIconColor) == 0x000010, "Wrong size on BP_SkillTree_C_GetRadarIconColor");
-static_assert(offsetof(BP_SkillTree_C_GetRadarIconColor, ReturnValue) == 0x000000, "Member 'BP_SkillTree_C_GetRadarIconColor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_GetRadarIconColor;
 
 // Function BP_SkillTree.BP_SkillTree_C.GetRadarIconSize
 // 0x0010 (0x0010 - 0x0000)
@@ -428,9 +328,7 @@ struct BP_SkillTree_C_GetRadarIconSize final
 public:
 	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_GetRadarIconSize) == 0x000008, "Wrong alignment on BP_SkillTree_C_GetRadarIconSize");
-static_assert(sizeof(BP_SkillTree_C_GetRadarIconSize) == 0x000010, "Wrong size on BP_SkillTree_C_GetRadarIconSize");
-static_assert(offsetof(BP_SkillTree_C_GetRadarIconSize, ReturnValue) == 0x000000, "Member 'BP_SkillTree_C_GetRadarIconSize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_GetRadarIconSize;
 
 // Function BP_SkillTree.BP_SkillTree_C.GetRadarObjectIcon
 // 0x0008 (0x0008 - 0x0000)
@@ -439,9 +337,7 @@ struct BP_SkillTree_C_GetRadarObjectIcon final
 public:
 	class USlateBrushAsset*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_GetRadarObjectIcon) == 0x000008, "Wrong alignment on BP_SkillTree_C_GetRadarObjectIcon");
-static_assert(sizeof(BP_SkillTree_C_GetRadarObjectIcon) == 0x000008, "Wrong size on BP_SkillTree_C_GetRadarObjectIcon");
-static_assert(offsetof(BP_SkillTree_C_GetRadarObjectIcon, ReturnValue) == 0x000000, "Member 'BP_SkillTree_C_GetRadarObjectIcon::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_GetRadarObjectIcon;
 
 // Function BP_SkillTree.BP_SkillTree_C.ShouldShowOnRadar
 // 0x0001 (0x0001 - 0x0000)
@@ -450,9 +346,7 @@ struct BP_SkillTree_C_ShouldShowOnRadar final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkillTree_C_ShouldShowOnRadar) == 0x000001, "Wrong alignment on BP_SkillTree_C_ShouldShowOnRadar");
-static_assert(sizeof(BP_SkillTree_C_ShouldShowOnRadar) == 0x000001, "Wrong size on BP_SkillTree_C_ShouldShowOnRadar");
-static_assert(offsetof(BP_SkillTree_C_ShouldShowOnRadar, ReturnValue) == 0x000000, "Member 'BP_SkillTree_C_ShouldShowOnRadar::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkillTree_C_ShouldShowOnRadar;
 
 }
 

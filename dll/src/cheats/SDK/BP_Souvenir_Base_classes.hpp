@@ -19,7 +19,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_Souvenir_Base.BP_Souvenir_Base_C
 // 0x0088 (0x0338 - 0x02B0)
-class ABP_Souvenir_Base_C : public ARSouvenirBase
+class ABP_Souvenir_Base_C final : public ARSouvenirBase
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
@@ -41,10 +41,12 @@ public:
 public:
 	bool CanInteract(class APlayerController* Controller);
 	void ExecuteUbergraph_BP_Souvenir_Base(int32 EntryPoint);
+	bool IsShareable(class APlayerController* PlayerController);
 	void OnFocus(class APlayerController* Controller);
 	void OnFocusGone(class APlayerController* Controller);
 	void OnInteract(class APlayerController* Controller);
 	void ReceiveBeginPlay();
+	void ShareInteractableActor(const class APlayerController* PlayerController);
 	void ToggleInteractionIndicatorVisibility(class AActor* InteractingActor, const bool NewVisible);
 	void UserConstructionScript();
 
@@ -59,27 +61,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Souvenir_Base_C">();
+		BP_STATIC_CLASS_IMPL("BP_Souvenir_Base_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Souvenir_Base_C")
 	}
 	static class ABP_Souvenir_Base_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Souvenir_Base_C>();
 	}
 };
-static_assert(alignof(ABP_Souvenir_Base_C) == 0x000008, "Wrong alignment on ABP_Souvenir_Base_C");
-static_assert(sizeof(ABP_Souvenir_Base_C) == 0x000338, "Wrong size on ABP_Souvenir_Base_C");
-static_assert(offsetof(ABP_Souvenir_Base_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_Souvenir_Base_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Souvenir_Base_C, BPC_InteractableIndicator) == 0x0002B8, "Member 'ABP_Souvenir_Base_C::BPC_InteractableIndicator' has a wrong offset!");
-static_assert(offsetof(ABP_Souvenir_Base_C, StaticMesh) == 0x0002C0, "Member 'ABP_Souvenir_Base_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_Souvenir_Base_C, EnemyType) == 0x0002C8, "Member 'ABP_Souvenir_Base_C::EnemyType' has a wrong offset!");
-static_assert(offsetof(ABP_Souvenir_Base_C, SouvenirMesh) == 0x0002D8, "Member 'ABP_Souvenir_Base_C::SouvenirMesh' has a wrong offset!");
-static_assert(offsetof(ABP_Souvenir_Base_C, Header_Text) == 0x0002E0, "Member 'ABP_Souvenir_Base_C::Header_Text' has a wrong offset!");
-static_assert(offsetof(ABP_Souvenir_Base_C, Description_Text) == 0x0002F0, "Member 'ABP_Souvenir_Base_C::Description_Text' has a wrong offset!");
-static_assert(offsetof(ABP_Souvenir_Base_C, AlwaysVisible) == 0x000300, "Member 'ABP_Souvenir_Base_C::AlwaysVisible' has a wrong offset!");
-static_assert(offsetof(ABP_Souvenir_Base_C, Item_Description) == 0x000308, "Member 'ABP_Souvenir_Base_C::Item_Description' has a wrong offset!");
-static_assert(offsetof(ABP_Souvenir_Base_C, SouvenirUnlocked) == 0x000318, "Member 'ABP_Souvenir_Base_C::SouvenirUnlocked' has a wrong offset!");
-static_assert(offsetof(ABP_Souvenir_Base_C, Challenge_Id) == 0x00031C, "Member 'ABP_Souvenir_Base_C::Challenge_Id' has a wrong offset!");
-static_assert(offsetof(ABP_Souvenir_Base_C, ItemDescription) == 0x000328, "Member 'ABP_Souvenir_Base_C::ItemDescription' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Souvenir_Base_C;
 
 }
 

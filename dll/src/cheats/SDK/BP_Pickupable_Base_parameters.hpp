@@ -34,16 +34,7 @@ public:
 	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0050(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base) == 0x000008, "Wrong alignment on BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base");
-static_assert(sizeof(BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base) == 0x000158, "Wrong size on BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base");
-static_assert(offsetof(BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base, EntryPoint) == 0x000000, "Member 'BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base, CallFunc_GetRNavigationManager_ReturnValue) == 0x000008, "Member 'BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base::CallFunc_GetRNavigationManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000018, "Member 'BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base, CallFunc_GetClosestNavigableLocation_ReturnValue) == 0x000030, "Member 'BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base::CallFunc_GetClosestNavigableLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base, CallFunc_IsLocationWithinNavigableWorld_ReturnValue) == 0x000048, "Member 'BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base::CallFunc_IsLocationWithinNavigableWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x000050, "Member 'BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base, CallFunc_K2_SetActorLocation_ReturnValue) == 0x000150, "Member 'BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Base_C_ExecuteUbergraph_BP_Pickupable_Base;
 
 }
 

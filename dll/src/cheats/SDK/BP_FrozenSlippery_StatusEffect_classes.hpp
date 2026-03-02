@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
@@ -19,52 +20,54 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_FrozenSlippery_StatusEffect.BP_FrozenSlippery_StatusEffect_C
-// 0x0028 (0x0518 - 0x04F0)
+// 0x0058 (0x0550 - 0x04F8)
 class UBP_FrozenSlippery_StatusEffect_C final : public URGFrozenSlipperyStatusEffect
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         PreGroundDecelleration;                            // 0x04F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ResetAoEDelay;                                     // 0x04FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        SlideLoopAC;                                       // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class UBP_Frozen_StatusEffect_Rework_C*> FrozenEffects;                                   // 0x0508(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         PreGroundDecelleration;                            // 0x0500(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ResetAoEDelay;                                     // 0x0504(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        SlideLoopAC;                                       // 0x0508(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class UBP_Frozen_StatusEffect_Rework_C*> FrozenEffects;                                   // 0x0510(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
+	struct FVector                                ActorHitLocation;                                  // 0x0520(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Out_Max_Radius;                                    // 0x0538(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_53C[0x4];                                      // 0x053C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UBP_Frozen_StatusEffect_Rework_C*> CachedFrozenEffects;                             // 0x0540(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void AddFrozenEffect(class UBP_Frozen_StatusEffect_Rework_C* FrozenEffect);
 	void AoeSlamFX(const struct FVector& Origin, double Radius);
 	void CheckFrostPassive3(bool* Result, double* Multiplier);
 	void ExecuteUbergraph_BP_FrozenSlippery_StatusEffect(int32 EntryPoint);
-	bool HasLocalInstigator();
+	class APawn* GetLocalInstigator();
 	void InstantlyTickOnce();
 	void K2_ActivateScript();
 	void K2_DeactivateScript();
 	void K2_TickScript(float DeltaTime);
 	void OnActorHit(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-	void OnCancelled_660D05504B5C177D59D832BC6E9331A9();
-	void OnCancelled_AF428CCB46FC306EAC4F4FB6465C830B();
+	void OnCancelled_5F280F9548C7109D9FB612AB6D2C26A2();
+	void OnCancelled_B2CC0F264F25A80A934789A5D874CCE3();
 	void OnDamageTaken(class URHealthComponent* Component, const struct FDamageCombatEvent& DamageEvent);
-	void OnFinish_660D05504B5C177D59D832BC6E9331A9();
-	void OnFinish_AF428CCB46FC306EAC4F4FB6465C830B();
+	void OnFinish_5F280F9548C7109D9FB612AB6D2C26A2();
+	void OnFinish_B2CC0F264F25A80A934789A5D874CCE3();
 	void RemoveFrozenEffect(class UBP_Frozen_StatusEffect_Rework_C* FrozenEffect);
 	void ResetAoeSlam();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FrozenSlippery_StatusEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_FrozenSlippery_StatusEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FrozenSlippery_StatusEffect_C")
 	}
 	static class UBP_FrozenSlippery_StatusEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_FrozenSlippery_StatusEffect_C>();
 	}
 };
-static_assert(alignof(UBP_FrozenSlippery_StatusEffect_C) == 0x000008, "Wrong alignment on UBP_FrozenSlippery_StatusEffect_C");
-static_assert(sizeof(UBP_FrozenSlippery_StatusEffect_C) == 0x000518, "Wrong size on UBP_FrozenSlippery_StatusEffect_C");
-static_assert(offsetof(UBP_FrozenSlippery_StatusEffect_C, UberGraphFrame) == 0x0004F0, "Member 'UBP_FrozenSlippery_StatusEffect_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_FrozenSlippery_StatusEffect_C, PreGroundDecelleration) == 0x0004F8, "Member 'UBP_FrozenSlippery_StatusEffect_C::PreGroundDecelleration' has a wrong offset!");
-static_assert(offsetof(UBP_FrozenSlippery_StatusEffect_C, ResetAoEDelay) == 0x0004FC, "Member 'UBP_FrozenSlippery_StatusEffect_C::ResetAoEDelay' has a wrong offset!");
-static_assert(offsetof(UBP_FrozenSlippery_StatusEffect_C, SlideLoopAC) == 0x000500, "Member 'UBP_FrozenSlippery_StatusEffect_C::SlideLoopAC' has a wrong offset!");
-static_assert(offsetof(UBP_FrozenSlippery_StatusEffect_C, FrozenEffects) == 0x000508, "Member 'UBP_FrozenSlippery_StatusEffect_C::FrozenEffects' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_FrozenSlippery_StatusEffect_C;
 
 }
 

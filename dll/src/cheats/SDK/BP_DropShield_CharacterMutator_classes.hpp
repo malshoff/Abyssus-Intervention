@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "RGame_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "BP_Activatable_CharacterMutator_classes.hpp"
 
 
@@ -20,20 +20,20 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_DropShield_CharacterMutator.BP_DropShield_CharacterMutator_C
-// 0x0190 (0x1030 - 0x0EA0)
+// 0x0190 (0x1038 - 0x0EA8)
 class UBP_DropShield_CharacterMutator_C final : public UBP_Activatable_CharacterMutator_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_DropShield_CharacterMutator_C;   // 0x0EA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FRMutableFloat                         AreaEffectSizeMultiplier;                          // 0x0EA8(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMulticastInlineDelegate<void(class ARAreaEffect* GroundEffect)> OnGroundEffectSpawned;          // 0x0FD0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(double NewSizeMultiplier)> OnAreaEffectSizeUpdated;                // 0x0FE0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(int32 ShieldAmount)> OnActiveShieldsUpdated;                       // 0x0FF0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	int32                                         ShieldAmount;                                      // 0x1000(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1004[0x4];                                     // 0x1004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARAreaEffect*                           Ground_Effect;                                     // 0x1008(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CachedSpawnLocation;                               // 0x1010(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           As_RPlayer_Pawn;                                   // 0x1028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_DropShield_CharacterMutator_C;   // 0x0EA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FRMutableFloat                         AreaEffectSizeMultiplier;                          // 0x0EB0(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMulticastInlineDelegate<void(class ARAreaEffect* GroundEffect)> OnGroundEffectSpawned;          // 0x0FD8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(double NewSizeMultiplier)> OnAreaEffectSizeUpdated;                // 0x0FE8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(int32 ShieldAmount)> OnActiveShieldsUpdated;                       // 0x0FF8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	int32                                         ShieldAmount;                                      // 0x1008(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_100C[0x4];                                     // 0x100C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARAreaEffect*                           Ground_Effect;                                     // 0x1010(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CachedSpawnLocation;                               // 0x1018(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           As_RPlayer_Pawn;                                   // 0x1030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ActiveShieldsUpdated();
@@ -50,34 +50,30 @@ public:
 	void OnInterrupted_B6CE43B04BFD94450B0EEC907B5CBE82(class FName NotifyName);
 	void OnNotifyBegin_B6CE43B04BFD94450B0EEC907B5CBE82(class FName NotifyName);
 	void OnNotifyEnd_B6CE43B04BFD94450B0EEC907B5CBE82(class FName NotifyName);
+	void OnPlayerFailsafeTeleported();
 	void OnSizeMultiplierUpdated(double CustomMulti);
 	void OnToggleEvent(class FName Socket, bool Bool);
 	void SpawnShield();
 	void ToggleWeaponVisibility(bool NewVisible);
+	void UpdateLocationAndSize(const struct FVector& Location, const struct FVector& Size);
 
 	class FText GetDescription() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_DropShield_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_DropShield_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_DropShield_CharacterMutator_C")
 	}
 	static class UBP_DropShield_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_DropShield_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_DropShield_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_DropShield_CharacterMutator_C");
-static_assert(sizeof(UBP_DropShield_CharacterMutator_C) == 0x001030, "Wrong size on UBP_DropShield_CharacterMutator_C");
-static_assert(offsetof(UBP_DropShield_CharacterMutator_C, UberGraphFrame_BP_DropShield_CharacterMutator_C) == 0x000EA0, "Member 'UBP_DropShield_CharacterMutator_C::UberGraphFrame_BP_DropShield_CharacterMutator_C' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_CharacterMutator_C, AreaEffectSizeMultiplier) == 0x000EA8, "Member 'UBP_DropShield_CharacterMutator_C::AreaEffectSizeMultiplier' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_CharacterMutator_C, OnGroundEffectSpawned) == 0x000FD0, "Member 'UBP_DropShield_CharacterMutator_C::OnGroundEffectSpawned' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_CharacterMutator_C, OnAreaEffectSizeUpdated) == 0x000FE0, "Member 'UBP_DropShield_CharacterMutator_C::OnAreaEffectSizeUpdated' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_CharacterMutator_C, OnActiveShieldsUpdated) == 0x000FF0, "Member 'UBP_DropShield_CharacterMutator_C::OnActiveShieldsUpdated' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_CharacterMutator_C, ShieldAmount) == 0x001000, "Member 'UBP_DropShield_CharacterMutator_C::ShieldAmount' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_CharacterMutator_C, Ground_Effect) == 0x001008, "Member 'UBP_DropShield_CharacterMutator_C::Ground_Effect' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_CharacterMutator_C, CachedSpawnLocation) == 0x001010, "Member 'UBP_DropShield_CharacterMutator_C::CachedSpawnLocation' has a wrong offset!");
-static_assert(offsetof(UBP_DropShield_CharacterMutator_C, As_RPlayer_Pawn) == 0x001028, "Member 'UBP_DropShield_CharacterMutator_C::As_RPlayer_Pawn' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_DropShield_CharacterMutator_C;
 
 }
 

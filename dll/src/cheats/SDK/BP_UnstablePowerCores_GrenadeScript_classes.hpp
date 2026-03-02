@@ -31,16 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_UnstablePowerCores_GrenadeScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_UnstablePowerCores_GrenadeScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_UnstablePowerCores_GrenadeScript_C")
 	}
 	static class UBP_UnstablePowerCores_GrenadeScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_UnstablePowerCores_GrenadeScript_C>();
 	}
 };
-static_assert(alignof(UBP_UnstablePowerCores_GrenadeScript_C) == 0x000008, "Wrong alignment on UBP_UnstablePowerCores_GrenadeScript_C");
-static_assert(sizeof(UBP_UnstablePowerCores_GrenadeScript_C) == 0x000118, "Wrong size on UBP_UnstablePowerCores_GrenadeScript_C");
-static_assert(offsetof(UBP_UnstablePowerCores_GrenadeScript_C, UberGraphFrame_BP_UnstablePowerCores_GrenadeScript_C) == 0x000110, "Member 'UBP_UnstablePowerCores_GrenadeScript_C::UberGraphFrame_BP_UnstablePowerCores_GrenadeScript_C' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_UnstablePowerCores_GrenadeScript_C;
 
 }
 

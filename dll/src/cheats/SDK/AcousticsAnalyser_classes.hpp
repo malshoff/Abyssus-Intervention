@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "AcousticsAnalyser_structs.hpp"
-#include "DeveloperSettings_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "AudioMixer_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
+#include "DeveloperSettings_classes.hpp"
 
 
 namespace SDK
@@ -26,14 +26,14 @@ class UAcousticsSettings final : public UDataAsset
 {
 public:
 	struct FAcousticsAnalysisSettings             Settings;                                          // 0x0030(0x00E8)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	class USubmixEffectReverbPreset*              ReverbSubmixPreset;                                // 0x0118(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USubmixEffectStereoDelayPreset*         SlapbackDelay;                                     // 0x0120(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USubmixEffectReverbPreset*              ReverbSubmixPreset;                                // 0x0118(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class USubmixEffectStereoDelayPreset*         SlapbackDelay;                                     // 0x0120(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	bool                                          bEnableAnalysis;                                   // 0x0128(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bApplyFallbackReverbSettings;                      // 0x0129(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12A[0x2];                                      // 0x012A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSubmixEffectReverbSettings            FallBackReverbSetting;                             // 0x012C(0x0040)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            GainCurve;                                         // 0x0170(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            GainCurve;                                         // 0x0170(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	bool                                          bPrintDebugs;                                      // 0x0178(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDrawDebugLines;                                   // 0x0179(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDrawDebugPoints;                                  // 0x017A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -45,29 +45,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AcousticsSettings">();
+		STATIC_CLASS_IMPL("AcousticsSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AcousticsSettings")
 	}
 	static class UAcousticsSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAcousticsSettings>();
 	}
 };
-static_assert(alignof(UAcousticsSettings) == 0x000008, "Wrong alignment on UAcousticsSettings");
-static_assert(sizeof(UAcousticsSettings) == 0x000188, "Wrong size on UAcousticsSettings");
-static_assert(offsetof(UAcousticsSettings, Settings) == 0x000030, "Member 'UAcousticsSettings::Settings' has a wrong offset!");
-static_assert(offsetof(UAcousticsSettings, ReverbSubmixPreset) == 0x000118, "Member 'UAcousticsSettings::ReverbSubmixPreset' has a wrong offset!");
-static_assert(offsetof(UAcousticsSettings, SlapbackDelay) == 0x000120, "Member 'UAcousticsSettings::SlapbackDelay' has a wrong offset!");
-static_assert(offsetof(UAcousticsSettings, bEnableAnalysis) == 0x000128, "Member 'UAcousticsSettings::bEnableAnalysis' has a wrong offset!");
-static_assert(offsetof(UAcousticsSettings, bApplyFallbackReverbSettings) == 0x000129, "Member 'UAcousticsSettings::bApplyFallbackReverbSettings' has a wrong offset!");
-static_assert(offsetof(UAcousticsSettings, FallBackReverbSetting) == 0x00012C, "Member 'UAcousticsSettings::FallBackReverbSetting' has a wrong offset!");
-static_assert(offsetof(UAcousticsSettings, GainCurve) == 0x000170, "Member 'UAcousticsSettings::GainCurve' has a wrong offset!");
-static_assert(offsetof(UAcousticsSettings, bPrintDebugs) == 0x000178, "Member 'UAcousticsSettings::bPrintDebugs' has a wrong offset!");
-static_assert(offsetof(UAcousticsSettings, bDrawDebugLines) == 0x000179, "Member 'UAcousticsSettings::bDrawDebugLines' has a wrong offset!");
-static_assert(offsetof(UAcousticsSettings, bDrawDebugPoints) == 0x00017A, "Member 'UAcousticsSettings::bDrawDebugPoints' has a wrong offset!");
-static_assert(offsetof(UAcousticsSettings, bDisableStationaryTimeOut) == 0x00017B, "Member 'UAcousticsSettings::bDisableStationaryTimeOut' has a wrong offset!");
-static_assert(offsetof(UAcousticsSettings, StationaryTime) == 0x00017C, "Member 'UAcousticsSettings::StationaryTime' has a wrong offset!");
-static_assert(offsetof(UAcousticsSettings, HasMovedDistance) == 0x000180, "Member 'UAcousticsSettings::HasMovedDistance' has a wrong offset!");
-static_assert(offsetof(UAcousticsSettings, TickTime) == 0x000184, "Member 'UAcousticsSettings::TickTime' has a wrong offset!");
+DUMPER7_ASSERTS_UAcousticsSettings;
 
 // Class AcousticsAnalyser.AcousticsConfiguration
 // 0x0020 (0x0058 - 0x0038)
@@ -79,23 +68,25 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AcousticsConfiguration">();
+		STATIC_CLASS_IMPL("AcousticsConfiguration")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AcousticsConfiguration")
 	}
 	static class UAcousticsConfiguration* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAcousticsConfiguration>();
 	}
 };
-static_assert(alignof(UAcousticsConfiguration) == 0x000008, "Wrong alignment on UAcousticsConfiguration");
-static_assert(sizeof(UAcousticsConfiguration) == 0x000058, "Wrong size on UAcousticsConfiguration");
-static_assert(offsetof(UAcousticsConfiguration, DefaultAcousticsSettings) == 0x000038, "Member 'UAcousticsConfiguration::DefaultAcousticsSettings' has a wrong offset!");
+DUMPER7_ASSERTS_UAcousticsConfiguration;
 
 // Class AcousticsAnalyser.AcousticsWorldSubsystem
 // 0x00C0 (0x0100 - 0x0040)
 class UAcousticsWorldSubsystem final : public UTickableWorldSubsystem
 {
 public:
-	class UAcousticsSettings*                     AcousticsSettings;                                 // 0x0040(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UAcousticsSettings*                     AcousticsSettings;                                 // 0x0040(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_48[0xB8];                                      // 0x0048(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -106,16 +97,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AcousticsWorldSubsystem">();
+		STATIC_CLASS_IMPL("AcousticsWorldSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AcousticsWorldSubsystem")
 	}
 	static class UAcousticsWorldSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAcousticsWorldSubsystem>();
 	}
 };
-static_assert(alignof(UAcousticsWorldSubsystem) == 0x000008, "Wrong alignment on UAcousticsWorldSubsystem");
-static_assert(sizeof(UAcousticsWorldSubsystem) == 0x000100, "Wrong size on UAcousticsWorldSubsystem");
-static_assert(offsetof(UAcousticsWorldSubsystem, AcousticsSettings) == 0x000040, "Member 'UAcousticsWorldSubsystem::AcousticsSettings' has a wrong offset!");
+DUMPER7_ASSERTS_UAcousticsWorldSubsystem;
 
 }
 

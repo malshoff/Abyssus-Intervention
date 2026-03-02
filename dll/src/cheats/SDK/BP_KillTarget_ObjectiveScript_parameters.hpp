@@ -37,19 +37,7 @@ public:
 	TDelegate<void(class ARNPCPawnBase* EnemyPawn)> K2Node_CreateDelegate_OutputDelegate_2;          // 0x0044(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class ARNPCPawnBase* EnemyPawn)> K2Node_CreateDelegate_OutputDelegate_3;          // 0x0054(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript) == 0x000008, "Wrong alignment on BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript");
-static_assert(sizeof(BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript) == 0x000068, "Wrong size on BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript, EntryPoint) == 0x000000, "Member 'BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript, CallFunc_IsServer_ReturnValue) == 0x000014, "Member 'BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript::CallFunc_IsServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript, CallFunc_GetSpawnManager_ReturnValue) == 0x000018, "Member 'BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript::CallFunc_GetSpawnManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript, CallFunc_IsServer_ReturnValue_1) == 0x000020, "Member 'BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript::CallFunc_IsServer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript, CallFunc_IsValid_ReturnValue) == 0x000021, "Member 'BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript, K2Node_CreateDelegate_OutputDelegate_1) == 0x000024, "Member 'BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript, CallFunc_GetSpawnManager_ReturnValue_1) == 0x000038, "Member 'BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript::CallFunc_GetSpawnManager_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript, CallFunc_IsValid_ReturnValue_1) == 0x000040, "Member 'BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript, K2Node_CreateDelegate_OutputDelegate_2) == 0x000044, "Member 'BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript, K2Node_CreateDelegate_OutputDelegate_3) == 0x000054, "Member 'BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KillTarget_ObjectiveScript_C_ExecuteUbergraph_BP_KillTarget_ObjectiveScript;
 
 // Function BP_KillTarget_ObjectiveScript.BP_KillTarget_ObjectiveScript_C.GetNumKills
 // 0x0004 (0x0004 - 0x0000)
@@ -58,9 +46,7 @@ struct BP_KillTarget_ObjectiveScript_C_GetNumKills final
 public:
 	int32                                         NumKills_0;                                        // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KillTarget_ObjectiveScript_C_GetNumKills) == 0x000004, "Wrong alignment on BP_KillTarget_ObjectiveScript_C_GetNumKills");
-static_assert(sizeof(BP_KillTarget_ObjectiveScript_C_GetNumKills) == 0x000004, "Wrong size on BP_KillTarget_ObjectiveScript_C_GetNumKills");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_GetNumKills, NumKills_0) == 0x000000, "Member 'BP_KillTarget_ObjectiveScript_C_GetNumKills::NumKills_0' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KillTarget_ObjectiveScript_C_GetNumKills;
 
 // Function BP_KillTarget_ObjectiveScript.BP_KillTarget_ObjectiveScript_C.OnEnemyKilled
 // 0x0080 (0x0080 - 0x0000)
@@ -92,27 +78,7 @@ public:
 	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled) == 0x000008, "Wrong alignment on BP_KillTarget_ObjectiveScript_C_OnEnemyKilled");
-static_assert(sizeof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled) == 0x000080, "Wrong size on BP_KillTarget_ObjectiveScript_C_OnEnemyKilled");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, EnemyPawn) == 0x000000, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::EnemyPawn' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_GetObjectiveManager_ReturnValue) == 0x000008, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_GetObjectiveManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_GetHealthComponent_ReturnValue) == 0x000010, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_GetHealthComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_GetInstigatorFromLastDamageEvent_ReturnValue) == 0x000018, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_GetInstigatorFromLastDamageEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_IsServer_ReturnValue) == 0x000020, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_IsServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_K2_GetPawn_ReturnValue) == 0x000028, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000030, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_Array_Add_ReturnValue) == 0x00003C, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000040, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_GetSpawnManager_ReturnValue) == 0x000048, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_GetSpawnManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_GetProgressionText_ReturnValue) == 0x000050, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_GetProgressionText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_IsValid_ReturnValue) == 0x000060, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_GetCurrentSpawnAreaSegment_ReturnValue) == 0x000068, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_GetCurrentSpawnAreaSegment_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_IsValid_ReturnValue_1) == 0x000070, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x000071, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_Add_IntInt_ReturnValue) == 0x000074, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_Clamp_ReturnValue) == 0x000078, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_Clamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemyKilled, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x00007C, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemyKilled::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KillTarget_ObjectiveScript_C_OnEnemyKilled;
 
 // Function BP_KillTarget_ObjectiveScript.BP_KillTarget_ObjectiveScript_C.OnEnemySpawned
 // 0x0030 (0x0030 - 0x0000)
@@ -132,19 +98,7 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValidSoftClassReference_ReturnValue;    // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KillTarget_ObjectiveScript_C_OnEnemySpawned) == 0x000008, "Wrong alignment on BP_KillTarget_ObjectiveScript_C_OnEnemySpawned");
-static_assert(sizeof(BP_KillTarget_ObjectiveScript_C_OnEnemySpawned) == 0x000030, "Wrong size on BP_KillTarget_ObjectiveScript_C_OnEnemySpawned");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemySpawned, EnemyPawn) == 0x000000, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemySpawned::EnemyPawn' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemySpawned, K2Node_DynamicCast_AsREnemy_Pawn_Base) == 0x000008, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemySpawned::K2Node_DynamicCast_AsREnemy_Pawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemySpawned, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemySpawned::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemySpawned, CallFunc_LoadClassFromSoftClassPtr_ReturnValue) == 0x000018, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemySpawned::CallFunc_LoadClassFromSoftClassPtr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemySpawned, K2Node_ClassDynamicCast_AsRGEnemy_Mutator_Script) == 0x000020, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemySpawned::K2Node_ClassDynamicCast_AsRGEnemy_Mutator_Script' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemySpawned, K2Node_ClassDynamicCast_bSuccess) == 0x000028, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemySpawned::K2Node_ClassDynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemySpawned, CallFunc_IsValidClass_ReturnValue) == 0x000029, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemySpawned::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemySpawned, CallFunc_IsValid_ReturnValue) == 0x00002A, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemySpawned::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemySpawned, CallFunc_GetIsAlive_ReturnValue) == 0x00002B, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemySpawned::CallFunc_GetIsAlive_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemySpawned, CallFunc_Less_IntInt_ReturnValue) == 0x00002C, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemySpawned::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnEnemySpawned, CallFunc_IsValidSoftClassReference_ReturnValue) == 0x00002D, "Member 'BP_KillTarget_ObjectiveScript_C_OnEnemySpawned::CallFunc_IsValidSoftClassReference_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KillTarget_ObjectiveScript_C_OnEnemySpawned;
 
 // Function BP_KillTarget_ObjectiveScript.BP_KillTarget_ObjectiveScript_C.OnRep_NumKills
 // 0x0018 (0x0018 - 0x0000)
@@ -155,10 +109,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetProgressionText_ReturnValue;           // 0x0008(0x0010)()
 };
-static_assert(alignof(BP_KillTarget_ObjectiveScript_C_OnRep_NumKills) == 0x000008, "Wrong alignment on BP_KillTarget_ObjectiveScript_C_OnRep_NumKills");
-static_assert(sizeof(BP_KillTarget_ObjectiveScript_C_OnRep_NumKills) == 0x000018, "Wrong size on BP_KillTarget_ObjectiveScript_C_OnRep_NumKills");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnRep_NumKills, CallFunc_IsServer_ReturnValue) == 0x000000, "Member 'BP_KillTarget_ObjectiveScript_C_OnRep_NumKills::CallFunc_IsServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_OnRep_NumKills, CallFunc_GetProgressionText_ReturnValue) == 0x000008, "Member 'BP_KillTarget_ObjectiveScript_C_OnRep_NumKills::CallFunc_GetProgressionText_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KillTarget_ObjectiveScript_C_OnRep_NumKills;
 
 // Function BP_KillTarget_ObjectiveScript.BP_KillTarget_ObjectiveScript_C.GetProgressionText
 // 0x00D0 (0x00D0 - 0x0000)
@@ -173,15 +124,7 @@ public:
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00B0(0x0010)(ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00C0(0x0010)()
 };
-static_assert(alignof(BP_KillTarget_ObjectiveScript_C_GetProgressionText) == 0x000008, "Wrong alignment on BP_KillTarget_ObjectiveScript_C_GetProgressionText");
-static_assert(sizeof(BP_KillTarget_ObjectiveScript_C_GetProgressionText) == 0x0000D0, "Wrong size on BP_KillTarget_ObjectiveScript_C_GetProgressionText");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_GetProgressionText, ReturnValue) == 0x000000, "Member 'BP_KillTarget_ObjectiveScript_C_GetProgressionText::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_GetProgressionText, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000010, "Member 'BP_KillTarget_ObjectiveScript_C_GetProgressionText::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_GetProgressionText, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000018, "Member 'BP_KillTarget_ObjectiveScript_C_GetProgressionText::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_GetProgressionText, K2Node_MakeStruct_FormatArgumentData) == 0x000020, "Member 'BP_KillTarget_ObjectiveScript_C_GetProgressionText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_GetProgressionText, K2Node_MakeStruct_FormatArgumentData_1) == 0x000068, "Member 'BP_KillTarget_ObjectiveScript_C_GetProgressionText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_GetProgressionText, K2Node_MakeArray_Array) == 0x0000B0, "Member 'BP_KillTarget_ObjectiveScript_C_GetProgressionText::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_KillTarget_ObjectiveScript_C_GetProgressionText, CallFunc_Format_ReturnValue) == 0x0000C0, "Member 'BP_KillTarget_ObjectiveScript_C_GetProgressionText::CallFunc_Format_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KillTarget_ObjectiveScript_C_GetProgressionText;
 
 }
 

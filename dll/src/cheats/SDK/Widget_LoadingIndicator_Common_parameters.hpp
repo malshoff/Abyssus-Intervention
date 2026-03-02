@@ -22,10 +22,7 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_Visible;                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_LoadingIndicator_Common_C_ExecuteUbergraph_Widget_LoadingIndicator_Common) == 0x000004, "Wrong alignment on Widget_LoadingIndicator_Common_C_ExecuteUbergraph_Widget_LoadingIndicator_Common");
-static_assert(sizeof(Widget_LoadingIndicator_Common_C_ExecuteUbergraph_Widget_LoadingIndicator_Common) == 0x000008, "Wrong size on Widget_LoadingIndicator_Common_C_ExecuteUbergraph_Widget_LoadingIndicator_Common");
-static_assert(offsetof(Widget_LoadingIndicator_Common_C_ExecuteUbergraph_Widget_LoadingIndicator_Common, EntryPoint) == 0x000000, "Member 'Widget_LoadingIndicator_Common_C_ExecuteUbergraph_Widget_LoadingIndicator_Common::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_LoadingIndicator_Common_C_ExecuteUbergraph_Widget_LoadingIndicator_Common, K2Node_CustomEvent_Visible) == 0x000004, "Member 'Widget_LoadingIndicator_Common_C_ExecuteUbergraph_Widget_LoadingIndicator_Common::K2Node_CustomEvent_Visible' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_LoadingIndicator_Common_C_ExecuteUbergraph_Widget_LoadingIndicator_Common;
 
 // Function Widget_LoadingIndicator_Common.Widget_LoadingIndicator_Common_C.SetLoadingIndicatorVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -34,9 +31,7 @@ struct Widget_LoadingIndicator_Common_C_SetLoadingIndicatorVisibility final
 public:
 	bool                                          Visible;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_LoadingIndicator_Common_C_SetLoadingIndicatorVisibility) == 0x000001, "Wrong alignment on Widget_LoadingIndicator_Common_C_SetLoadingIndicatorVisibility");
-static_assert(sizeof(Widget_LoadingIndicator_Common_C_SetLoadingIndicatorVisibility) == 0x000001, "Wrong size on Widget_LoadingIndicator_Common_C_SetLoadingIndicatorVisibility");
-static_assert(offsetof(Widget_LoadingIndicator_Common_C_SetLoadingIndicatorVisibility, Visible) == 0x000000, "Member 'Widget_LoadingIndicator_Common_C_SetLoadingIndicatorVisibility::Visible' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_LoadingIndicator_Common_C_SetLoadingIndicatorVisibility;
 
 }
 

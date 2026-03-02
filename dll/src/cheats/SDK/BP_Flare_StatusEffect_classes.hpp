@@ -19,20 +19,20 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Flare_StatusEffect.BP_Flare_StatusEffect_C
-// 0x0068 (0x0540 - 0x04D8)
+// 0x0068 (0x0548 - 0x04E0)
 class UBP_Flare_StatusEffect_C final : public URStatusEffectAilmentGScript
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	double                                        TriggerThreashold;                                 // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentDamageTaken;                                // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bLocked;                                           // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F1[0x7];                                      // 0x04F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnFlared;                                          // 0x04F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	float                                         FlareChance;                                       // 0x0508(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50C[0x4];                                      // 0x050C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class URMutatorPrimaryAsset>   SoftFirePassive8Reference;                         // 0x0510(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	class UBP_Burning_StatusEffect_C*             CachedBurningEffect;                               // 0x0538(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	double                                        TriggerThreashold;                                 // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentDamageTaken;                                // 0x04F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Blocked;                                           // 0x04F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4F9[0x7];                                      // 0x04F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnFlared;                                          // 0x0500(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	float                                         FlareChance;                                       // 0x0510(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_514[0x4];                                      // 0x0514(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class URMutatorPrimaryAsset>   SoftFirePassive8Reference;                         // 0x0518(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UBP_Burning_StatusEffect_C*             CachedBurningEffect;                               // 0x0540(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CheckAndTriggerPassive8Behavior();
@@ -42,28 +42,23 @@ public:
 	void K2_ActivateScript();
 	void K2_DeactivateScript();
 	void StacksChanged();
-	void TriggerFlareDamage();
+	void TriggerFlareDamage(double ExtraMultiplier);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Flare_StatusEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_Flare_StatusEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Flare_StatusEffect_C")
 	}
 	static class UBP_Flare_StatusEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Flare_StatusEffect_C>();
 	}
 };
-static_assert(alignof(UBP_Flare_StatusEffect_C) == 0x000008, "Wrong alignment on UBP_Flare_StatusEffect_C");
-static_assert(sizeof(UBP_Flare_StatusEffect_C) == 0x000540, "Wrong size on UBP_Flare_StatusEffect_C");
-static_assert(offsetof(UBP_Flare_StatusEffect_C, UberGraphFrame) == 0x0004D8, "Member 'UBP_Flare_StatusEffect_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Flare_StatusEffect_C, TriggerThreashold) == 0x0004E0, "Member 'UBP_Flare_StatusEffect_C::TriggerThreashold' has a wrong offset!");
-static_assert(offsetof(UBP_Flare_StatusEffect_C, CurrentDamageTaken) == 0x0004E8, "Member 'UBP_Flare_StatusEffect_C::CurrentDamageTaken' has a wrong offset!");
-static_assert(offsetof(UBP_Flare_StatusEffect_C, bLocked) == 0x0004F0, "Member 'UBP_Flare_StatusEffect_C::bLocked' has a wrong offset!");
-static_assert(offsetof(UBP_Flare_StatusEffect_C, OnFlared) == 0x0004F8, "Member 'UBP_Flare_StatusEffect_C::OnFlared' has a wrong offset!");
-static_assert(offsetof(UBP_Flare_StatusEffect_C, FlareChance) == 0x000508, "Member 'UBP_Flare_StatusEffect_C::FlareChance' has a wrong offset!");
-static_assert(offsetof(UBP_Flare_StatusEffect_C, SoftFirePassive8Reference) == 0x000510, "Member 'UBP_Flare_StatusEffect_C::SoftFirePassive8Reference' has a wrong offset!");
-static_assert(offsetof(UBP_Flare_StatusEffect_C, CachedBurningEffect) == 0x000538, "Member 'UBP_Flare_StatusEffect_C::CachedBurningEffect' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Flare_StatusEffect_C;
 
 }
 

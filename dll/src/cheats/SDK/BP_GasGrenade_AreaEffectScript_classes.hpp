@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -18,32 +19,37 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_GasGrenade_AreaEffectScript.BP_GasGrenade_AreaEffectScript_C
-// 0x0010 (0x00D8 - 0x00C8)
+// 0x0140 (0x0208 - 0x00C8)
 class UBP_GasGrenade_AreaEffectScript_C final : public URGAreaEffectScript
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	double                                        Damage;                                            // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        LoopAC;                                            // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FRMutableFloat                         AbilityTriggerProcChanceModifier;                  // 0x00E0(0x0128)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_BP_GasGrenade_AreaEffectScript(int32 EntryPoint);
 	void K2_ActivateScript();
+	void K2_DeactivateScript();
+	void K2_PreLevelTransition();
 	void K2_TickScript(float DeltaTime);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_GasGrenade_AreaEffectScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_GasGrenade_AreaEffectScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_GasGrenade_AreaEffectScript_C")
 	}
 	static class UBP_GasGrenade_AreaEffectScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_GasGrenade_AreaEffectScript_C>();
 	}
 };
-static_assert(alignof(UBP_GasGrenade_AreaEffectScript_C) == 0x000008, "Wrong alignment on UBP_GasGrenade_AreaEffectScript_C");
-static_assert(sizeof(UBP_GasGrenade_AreaEffectScript_C) == 0x0000D8, "Wrong size on UBP_GasGrenade_AreaEffectScript_C");
-static_assert(offsetof(UBP_GasGrenade_AreaEffectScript_C, UberGraphFrame) == 0x0000C8, "Member 'UBP_GasGrenade_AreaEffectScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_GasGrenade_AreaEffectScript_C, Damage) == 0x0000D0, "Member 'UBP_GasGrenade_AreaEffectScript_C::Damage' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_GasGrenade_AreaEffectScript_C;
 
 }
 

@@ -51,6 +51,34 @@ void UBP_Anchor_GrenadeScript_C::FireScriptAbility()
 }
 
 
+// Function BP_Anchor_GrenadeScript.BP_Anchor_GrenadeScript_C.K2_ActivateScript
+// (Event, Public, BlueprintEvent)
+
+void UBP_Anchor_GrenadeScript_C::K2_ActivateScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Anchor_GrenadeScript_C", "K2_ActivateScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Anchor_GrenadeScript.BP_Anchor_GrenadeScript_C.K2_DeactivateScript
+// (Event, Public, BlueprintEvent)
+
+void UBP_Anchor_GrenadeScript_C::K2_DeactivateScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Anchor_GrenadeScript_C", "K2_DeactivateScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_Anchor_GrenadeScript.BP_Anchor_GrenadeScript_C.K2_OnBounce
 // (Event, Public, BlueprintEvent)
 
@@ -60,6 +88,20 @@ void UBP_Anchor_GrenadeScript_C::K2_OnBounce()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_Anchor_GrenadeScript_C", "K2_OnBounce");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Anchor_GrenadeScript.BP_Anchor_GrenadeScript_C.K2_ProjectileDisabled
+// (Event, Public, BlueprintEvent)
+
+void UBP_Anchor_GrenadeScript_C::K2_ProjectileDisabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Anchor_GrenadeScript_C", "K2_ProjectileDisabled");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -19,44 +18,40 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C
-// 0x0040 (0x0310 - 0x02D0)
+// 0x0038 (0x0378 - 0x0340)
 class UWidget_PlayerDownedScreen_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       IdleAnimation;                                     // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             DownText;                                          // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             FriendText;                                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_56;                                          // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URStatusEffectGScript*                  DownedStatusEffect;                                // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FText                                   DownedText;                                        // 0x0300(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Image_56;                                          // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             FriendText;                                        // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             DownText;                                          // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       IdleAnimation;                                     // 0x0360(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class FText                                   DownedText;                                        // 0x0368(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void RegisterDefeatDownedPlayerEvents();
-	void OnPlayerPawnKilled(class ARPlayerPawn* Player);
-	void ExecuteUbergraph_Widget_PlayerDownedScreen(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_Widget_PlayerDownedScreen(int32 EntryPoint);
+	void OnPlayerPawnKilled(class ARPlayerPawn* Player);
+	void OnRevivedCastInterrupted(class ARPlayerPawn* RevivingPlayer);
+	void OnRevivedCastStarted_Event(class ARPlayerPawn* RevivingPlayer, float CastTime, float CurrentCastTime);
+	void RegisterDefeatDownedPlayerEvents();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_PlayerDownedScreen_C">();
+		BP_STATIC_CLASS_IMPL("Widget_PlayerDownedScreen_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_PlayerDownedScreen_C")
 	}
 	static class UWidget_PlayerDownedScreen_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_PlayerDownedScreen_C>();
 	}
 };
-static_assert(alignof(UWidget_PlayerDownedScreen_C) == 0x000008, "Wrong alignment on UWidget_PlayerDownedScreen_C");
-static_assert(sizeof(UWidget_PlayerDownedScreen_C) == 0x000310, "Wrong size on UWidget_PlayerDownedScreen_C");
-static_assert(offsetof(UWidget_PlayerDownedScreen_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_PlayerDownedScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerDownedScreen_C, IdleAnimation) == 0x0002D8, "Member 'UWidget_PlayerDownedScreen_C::IdleAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerDownedScreen_C, DownText) == 0x0002E0, "Member 'UWidget_PlayerDownedScreen_C::DownText' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerDownedScreen_C, FriendText) == 0x0002E8, "Member 'UWidget_PlayerDownedScreen_C::FriendText' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerDownedScreen_C, Image_56) == 0x0002F0, "Member 'UWidget_PlayerDownedScreen_C::Image_56' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerDownedScreen_C, DownedStatusEffect) == 0x0002F8, "Member 'UWidget_PlayerDownedScreen_C::DownedStatusEffect' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerDownedScreen_C, DownedText) == 0x000300, "Member 'UWidget_PlayerDownedScreen_C::DownedText' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_PlayerDownedScreen_C;
 
 }
 

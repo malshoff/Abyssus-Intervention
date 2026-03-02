@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "CommonInput_structs.hpp"
 #include "Slate_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "RGame_structs.hpp"
 
 
@@ -26,9 +26,7 @@ struct Widget_Settings_KeybindInput_C_BndEvt__Widget_Settings_KeybindInput_Input
 public:
 	struct FInputChord                            SelectedKey;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_KeybindInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature) == 0x000008, "Wrong alignment on Widget_Settings_KeybindInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature");
-static_assert(sizeof(Widget_Settings_KeybindInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature) == 0x000020, "Wrong size on Widget_Settings_KeybindInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature, SelectedKey) == 0x000000, "Member 'Widget_Settings_KeybindInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature::SelectedKey' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Settings_KeybindInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature;
 
 // Function Widget_Settings_KeybindInput.Widget_Settings_KeybindInput_C.DesimulateLeftMouseClickForGamepad
 // 0x0078 (0x0078 - 0x0000)
@@ -45,16 +43,7 @@ public:
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad) == 0x000008, "Wrong alignment on Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad");
-static_assert(sizeof(Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad) == 0x000078, "Wrong size on Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad, InputChord) == 0x000000, "Member 'Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad::InputChord' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad, OutInputChord) == 0x000020, "Member 'Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad::OutInputChord' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000040, "Member 'Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad, CallFunc_GetCurrentInputType_ReturnValue) == 0x000048, "Member 'Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad::CallFunc_GetCurrentInputType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad, K2Node_MakeStruct_InputChord) == 0x000050, "Member 'Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad::K2Node_MakeStruct_InputChord' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000070, "Member 'Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x000071, "Member 'Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad, CallFunc_BooleanAND_ReturnValue) == 0x000072, "Member 'Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Settings_KeybindInput_C_DesimulateLeftMouseClickForGamepad;
 
 // Function Widget_Settings_KeybindInput.Widget_Settings_KeybindInput_C.ExecuteUbergraph_Widget_Settings_KeybindInput
 // 0x0078 (0x0078 - 0x0000)
@@ -71,16 +60,7 @@ public:
 	class URGameUserSettings*                     CallFunc_GetRGameUserSettings_ReturnValue;         // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EGamepadIconScheme                            K2Node_CustomEvent_NewIconScheme;                  // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput) == 0x000008, "Wrong alignment on Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput");
-static_assert(sizeof(Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput) == 0x000078, "Wrong size on Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput, EntryPoint) == 0x000000, "Member 'Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput, K2Node_ComponentBoundEvent_SelectedKey) == 0x000018, "Member 'Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput::K2Node_ComponentBoundEvent_SelectedKey' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput, K2Node_Event_InFocusEvent_1) == 0x000038, "Member 'Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput::K2Node_Event_InFocusEvent_1' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput, CallFunc_DesimulateLeftMouseClickForGamepad_OutInputChord) == 0x000040, "Member 'Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput::CallFunc_DesimulateLeftMouseClickForGamepad_OutInputChord' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput, K2Node_Event_InFocusEvent) == 0x000060, "Member 'Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput::K2Node_Event_InFocusEvent' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000068, "Member 'Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput, K2Node_CustomEvent_NewIconScheme) == 0x000070, "Member 'Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput::K2Node_CustomEvent_NewIconScheme' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Settings_KeybindInput_C_ExecuteUbergraph_Widget_Settings_KeybindInput;
 
 // Function Widget_Settings_KeybindInput.Widget_Settings_KeybindInput_C.GetInputKeySelector
 // 0x0008 (0x0008 - 0x0000)
@@ -89,9 +69,7 @@ struct Widget_Settings_KeybindInput_C_GetInputKeySelector final
 public:
 	class UInputKeySelector*                      OutSelector;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_KeybindInput_C_GetInputKeySelector) == 0x000008, "Wrong alignment on Widget_Settings_KeybindInput_C_GetInputKeySelector");
-static_assert(sizeof(Widget_Settings_KeybindInput_C_GetInputKeySelector) == 0x000008, "Wrong size on Widget_Settings_KeybindInput_C_GetInputKeySelector");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_GetInputKeySelector, OutSelector) == 0x000000, "Member 'Widget_Settings_KeybindInput_C_GetInputKeySelector::OutSelector' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Settings_KeybindInput_C_GetInputKeySelector;
 
 // Function Widget_Settings_KeybindInput.Widget_Settings_KeybindInput_C.IsSelectingKeyChanged
 // 0x0020 (0x0020 - 0x0000)
@@ -106,14 +84,7 @@ public:
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_KeybindInput_C_IsSelectingKeyChanged) == 0x000008, "Wrong alignment on Widget_Settings_KeybindInput_C_IsSelectingKeyChanged");
-static_assert(sizeof(Widget_Settings_KeybindInput_C_IsSelectingKeyChanged) == 0x000020, "Wrong size on Widget_Settings_KeybindInput_C_IsSelectingKeyChanged");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_IsSelectingKeyChanged, CallFunc_GetInputKeySelector_OutSelector) == 0x000000, "Member 'Widget_Settings_KeybindInput_C_IsSelectingKeyChanged::CallFunc_GetInputKeySelector_OutSelector' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_IsSelectingKeyChanged, CallFunc_GetIsSelectingKey_ReturnValue) == 0x000008, "Member 'Widget_Settings_KeybindInput_C_IsSelectingKeyChanged::CallFunc_GetIsSelectingKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_IsSelectingKeyChanged, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000010, "Member 'Widget_Settings_KeybindInput_C_IsSelectingKeyChanged::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_IsSelectingKeyChanged, CallFunc_GetCurrentInputType_ReturnValue) == 0x000018, "Member 'Widget_Settings_KeybindInput_C_IsSelectingKeyChanged::CallFunc_GetCurrentInputType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_IsSelectingKeyChanged, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000019, "Member 'Widget_Settings_KeybindInput_C_IsSelectingKeyChanged::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_IsSelectingKeyChanged, CallFunc_BooleanAND_ReturnValue) == 0x00001A, "Member 'Widget_Settings_KeybindInput_C_IsSelectingKeyChanged::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Settings_KeybindInput_C_IsSelectingKeyChanged;
 
 // Function Widget_Settings_KeybindInput.Widget_Settings_KeybindInput_C.OnAddedToFocusPath
 // 0x0008 (0x0008 - 0x0000)
@@ -122,9 +93,7 @@ struct Widget_Settings_KeybindInput_C_OnAddedToFocusPath final
 public:
 	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-static_assert(alignof(Widget_Settings_KeybindInput_C_OnAddedToFocusPath) == 0x000004, "Wrong alignment on Widget_Settings_KeybindInput_C_OnAddedToFocusPath");
-static_assert(sizeof(Widget_Settings_KeybindInput_C_OnAddedToFocusPath) == 0x000008, "Wrong size on Widget_Settings_KeybindInput_C_OnAddedToFocusPath");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_OnAddedToFocusPath, InFocusEvent) == 0x000000, "Member 'Widget_Settings_KeybindInput_C_OnAddedToFocusPath::InFocusEvent' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Settings_KeybindInput_C_OnAddedToFocusPath;
 
 // Function Widget_Settings_KeybindInput.Widget_Settings_KeybindInput_C.OnGamepadIconSchemeChanged_Event
 // 0x0001 (0x0001 - 0x0000)
@@ -133,9 +102,7 @@ struct Widget_Settings_KeybindInput_C_OnGamepadIconSchemeChanged_Event final
 public:
 	EGamepadIconScheme                            NewIconScheme;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_KeybindInput_C_OnGamepadIconSchemeChanged_Event) == 0x000001, "Wrong alignment on Widget_Settings_KeybindInput_C_OnGamepadIconSchemeChanged_Event");
-static_assert(sizeof(Widget_Settings_KeybindInput_C_OnGamepadIconSchemeChanged_Event) == 0x000001, "Wrong size on Widget_Settings_KeybindInput_C_OnGamepadIconSchemeChanged_Event");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_OnGamepadIconSchemeChanged_Event, NewIconScheme) == 0x000000, "Member 'Widget_Settings_KeybindInput_C_OnGamepadIconSchemeChanged_Event::NewIconScheme' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Settings_KeybindInput_C_OnGamepadIconSchemeChanged_Event;
 
 // Function Widget_Settings_KeybindInput.Widget_Settings_KeybindInput_C.OnRemovedFromFocusPath
 // 0x0008 (0x0008 - 0x0000)
@@ -144,9 +111,7 @@ struct Widget_Settings_KeybindInput_C_OnRemovedFromFocusPath final
 public:
 	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-static_assert(alignof(Widget_Settings_KeybindInput_C_OnRemovedFromFocusPath) == 0x000004, "Wrong alignment on Widget_Settings_KeybindInput_C_OnRemovedFromFocusPath");
-static_assert(sizeof(Widget_Settings_KeybindInput_C_OnRemovedFromFocusPath) == 0x000008, "Wrong size on Widget_Settings_KeybindInput_C_OnRemovedFromFocusPath");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_OnRemovedFromFocusPath, InFocusEvent) == 0x000000, "Member 'Widget_Settings_KeybindInput_C_OnRemovedFromFocusPath::InFocusEvent' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Settings_KeybindInput_C_OnRemovedFromFocusPath;
 
 // Function Widget_Settings_KeybindInput.Widget_Settings_KeybindInput_C.SetIsGamepadInput
 // 0x0028 (0x0028 - 0x0000)
@@ -157,10 +122,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputChord                            K2Node_MakeStruct_InputChord;                      // 0x0008(0x0020)(HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_KeybindInput_C_SetIsGamepadInput) == 0x000008, "Wrong alignment on Widget_Settings_KeybindInput_C_SetIsGamepadInput");
-static_assert(sizeof(Widget_Settings_KeybindInput_C_SetIsGamepadInput) == 0x000028, "Wrong size on Widget_Settings_KeybindInput_C_SetIsGamepadInput");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_SetIsGamepadInput, bIsGamepadInput) == 0x000000, "Member 'Widget_Settings_KeybindInput_C_SetIsGamepadInput::bIsGamepadInput' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_SetIsGamepadInput, K2Node_MakeStruct_InputChord) == 0x000008, "Member 'Widget_Settings_KeybindInput_C_SetIsGamepadInput::K2Node_MakeStruct_InputChord' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Settings_KeybindInput_C_SetIsGamepadInput;
 
 // Function Widget_Settings_KeybindInput.Widget_Settings_KeybindInput_C.UpdateGamepadHelperIcon
 // 0x00E0 (0x00E0 - 0x0000)
@@ -171,11 +133,7 @@ public:
 	struct FSlateBrush                            CallFunc_GetCommonInputKeyBrush_ReturnValue;       // 0x0020(0x00B0)()
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_KeybindInput_C_UpdateGamepadHelperIcon) == 0x000010, "Wrong alignment on Widget_Settings_KeybindInput_C_UpdateGamepadHelperIcon");
-static_assert(sizeof(Widget_Settings_KeybindInput_C_UpdateGamepadHelperIcon) == 0x0000E0, "Wrong size on Widget_Settings_KeybindInput_C_UpdateGamepadHelperIcon");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_UpdateGamepadHelperIcon, InputChord) == 0x000000, "Member 'Widget_Settings_KeybindInput_C_UpdateGamepadHelperIcon::InputChord' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_UpdateGamepadHelperIcon, CallFunc_GetCommonInputKeyBrush_ReturnValue) == 0x000020, "Member 'Widget_Settings_KeybindInput_C_UpdateGamepadHelperIcon::CallFunc_GetCommonInputKeyBrush_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_KeybindInput_C_UpdateGamepadHelperIcon, CallFunc_IsValid_ReturnValue) == 0x0000D0, "Member 'Widget_Settings_KeybindInput_C_UpdateGamepadHelperIcon::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Settings_KeybindInput_C_UpdateGamepadHelperIcon;
 
 }
 

@@ -17,6 +17,17 @@
 namespace SDK::Params
 {
 
+// Function GeometryFramework.DynamicMeshProcessorBlueprint.ProcessDynamicMesh
+// 0x0010 (0x0010 - 0x0000)
+struct DynamicMeshProcessorBlueprint_ProcessDynamicMesh final
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFailed;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DynamicMeshProcessorBlueprint_ProcessDynamicMesh;
+
 // Function GeometryFramework.BaseDynamicMeshComponent.GetDynamicMesh
 // 0x0008 (0x0008 - 0x0000)
 struct BaseDynamicMeshComponent_GetDynamicMesh final
@@ -24,9 +35,7 @@ struct BaseDynamicMeshComponent_GetDynamicMesh final
 public:
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_GetDynamicMesh) == 0x000008, "Wrong alignment on BaseDynamicMeshComponent_GetDynamicMesh");
-static_assert(sizeof(BaseDynamicMeshComponent_GetDynamicMesh) == 0x000008, "Wrong size on BaseDynamicMeshComponent_GetDynamicMesh");
-static_assert(offsetof(BaseDynamicMeshComponent_GetDynamicMesh, ReturnValue) == 0x000000, "Member 'BaseDynamicMeshComponent_GetDynamicMesh::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetDynamicMesh;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetColorOverrideMode
 // 0x0001 (0x0001 - 0x0000)
@@ -35,9 +44,7 @@ struct BaseDynamicMeshComponent_SetColorOverrideMode final
 public:
 	EDynamicMeshComponentColorOverrideMode        NewMode;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_SetColorOverrideMode) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_SetColorOverrideMode");
-static_assert(sizeof(BaseDynamicMeshComponent_SetColorOverrideMode) == 0x000001, "Wrong size on BaseDynamicMeshComponent_SetColorOverrideMode");
-static_assert(offsetof(BaseDynamicMeshComponent_SetColorOverrideMode, NewMode) == 0x000000, "Member 'BaseDynamicMeshComponent_SetColorOverrideMode::NewMode' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_SetColorOverrideMode;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetConstantOverrideColor
 // 0x0004 (0x0004 - 0x0000)
@@ -46,9 +53,7 @@ struct BaseDynamicMeshComponent_SetConstantOverrideColor final
 public:
 	struct FColor                                 NewColor;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_SetConstantOverrideColor) == 0x000004, "Wrong alignment on BaseDynamicMeshComponent_SetConstantOverrideColor");
-static_assert(sizeof(BaseDynamicMeshComponent_SetConstantOverrideColor) == 0x000004, "Wrong size on BaseDynamicMeshComponent_SetConstantOverrideColor");
-static_assert(offsetof(BaseDynamicMeshComponent_SetConstantOverrideColor, NewColor) == 0x000000, "Member 'BaseDynamicMeshComponent_SetConstantOverrideColor::NewColor' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_SetConstantOverrideColor;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetDistanceFieldMode
 // 0x0001 (0x0001 - 0x0000)
@@ -57,9 +62,7 @@ struct BaseDynamicMeshComponent_SetDistanceFieldMode final
 public:
 	EDynamicMeshComponentDistanceFieldMode        NewDistFieldMode;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_SetDistanceFieldMode) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_SetDistanceFieldMode");
-static_assert(sizeof(BaseDynamicMeshComponent_SetDistanceFieldMode) == 0x000001, "Wrong size on BaseDynamicMeshComponent_SetDistanceFieldMode");
-static_assert(offsetof(BaseDynamicMeshComponent_SetDistanceFieldMode, NewDistFieldMode) == 0x000000, "Member 'BaseDynamicMeshComponent_SetDistanceFieldMode::NewDistFieldMode' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_SetDistanceFieldMode;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetEnableFlatShading
 // 0x0001 (0x0001 - 0x0000)
@@ -68,9 +71,7 @@ struct BaseDynamicMeshComponent_SetEnableFlatShading final
 public:
 	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_SetEnableFlatShading) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_SetEnableFlatShading");
-static_assert(sizeof(BaseDynamicMeshComponent_SetEnableFlatShading) == 0x000001, "Wrong size on BaseDynamicMeshComponent_SetEnableFlatShading");
-static_assert(offsetof(BaseDynamicMeshComponent_SetEnableFlatShading, bEnable) == 0x000000, "Member 'BaseDynamicMeshComponent_SetEnableFlatShading::bEnable' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_SetEnableFlatShading;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetEnableRaytracing
 // 0x0001 (0x0001 - 0x0000)
@@ -79,9 +80,7 @@ struct BaseDynamicMeshComponent_SetEnableRaytracing final
 public:
 	bool                                          bSetEnabled;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_SetEnableRaytracing) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_SetEnableRaytracing");
-static_assert(sizeof(BaseDynamicMeshComponent_SetEnableRaytracing) == 0x000001, "Wrong size on BaseDynamicMeshComponent_SetEnableRaytracing");
-static_assert(offsetof(BaseDynamicMeshComponent_SetEnableRaytracing, bSetEnabled) == 0x000000, "Member 'BaseDynamicMeshComponent_SetEnableRaytracing::bSetEnabled' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_SetEnableRaytracing;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetEnableWireframeRenderPass
 // 0x0001 (0x0001 - 0x0000)
@@ -90,9 +89,7 @@ struct BaseDynamicMeshComponent_SetEnableWireframeRenderPass final
 public:
 	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_SetEnableWireframeRenderPass) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_SetEnableWireframeRenderPass");
-static_assert(sizeof(BaseDynamicMeshComponent_SetEnableWireframeRenderPass) == 0x000001, "Wrong size on BaseDynamicMeshComponent_SetEnableWireframeRenderPass");
-static_assert(offsetof(BaseDynamicMeshComponent_SetEnableWireframeRenderPass, bEnable) == 0x000000, "Member 'BaseDynamicMeshComponent_SetEnableWireframeRenderPass::bEnable' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_SetEnableWireframeRenderPass;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetMeshDrawPath
 // 0x0001 (0x0001 - 0x0000)
@@ -101,9 +98,7 @@ struct BaseDynamicMeshComponent_SetMeshDrawPath final
 public:
 	EDynamicMeshDrawPath                          NewDrawPath;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_SetMeshDrawPath) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_SetMeshDrawPath");
-static_assert(sizeof(BaseDynamicMeshComponent_SetMeshDrawPath) == 0x000001, "Wrong size on BaseDynamicMeshComponent_SetMeshDrawPath");
-static_assert(offsetof(BaseDynamicMeshComponent_SetMeshDrawPath, NewDrawPath) == 0x000000, "Member 'BaseDynamicMeshComponent_SetMeshDrawPath::NewDrawPath' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_SetMeshDrawPath;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetOverrideRenderMaterial
 // 0x0008 (0x0008 - 0x0000)
@@ -112,9 +107,25 @@ struct BaseDynamicMeshComponent_SetOverrideRenderMaterial final
 public:
 	class UMaterialInterface*                     Material;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_SetOverrideRenderMaterial) == 0x000008, "Wrong alignment on BaseDynamicMeshComponent_SetOverrideRenderMaterial");
-static_assert(sizeof(BaseDynamicMeshComponent_SetOverrideRenderMaterial) == 0x000008, "Wrong size on BaseDynamicMeshComponent_SetOverrideRenderMaterial");
-static_assert(offsetof(BaseDynamicMeshComponent_SetOverrideRenderMaterial, Material) == 0x000000, "Member 'BaseDynamicMeshComponent_SetOverrideRenderMaterial::Material' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_SetOverrideRenderMaterial;
+
+// Function GeometryFramework.BaseDynamicMeshComponent.SetOverrideSecondaryWireframeRenderMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct BaseDynamicMeshComponent_SetOverrideSecondaryWireframeRenderMaterial final
+{
+public:
+	class UMaterialInterface*                     Material;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_SetOverrideSecondaryWireframeRenderMaterial;
+
+// Function GeometryFramework.BaseDynamicMeshComponent.SetOverrideWireframeRenderMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct BaseDynamicMeshComponent_SetOverrideWireframeRenderMaterial final
+{
+public:
+	class UMaterialInterface*                     Material;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_SetOverrideWireframeRenderMaterial;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetSecondaryBuffersVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -123,9 +134,7 @@ struct BaseDynamicMeshComponent_SetSecondaryBuffersVisibility final
 public:
 	bool                                          bSetVisible;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_SetSecondaryBuffersVisibility) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_SetSecondaryBuffersVisibility");
-static_assert(sizeof(BaseDynamicMeshComponent_SetSecondaryBuffersVisibility) == 0x000001, "Wrong size on BaseDynamicMeshComponent_SetSecondaryBuffersVisibility");
-static_assert(offsetof(BaseDynamicMeshComponent_SetSecondaryBuffersVisibility, bSetVisible) == 0x000000, "Member 'BaseDynamicMeshComponent_SetSecondaryBuffersVisibility::bSetVisible' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_SetSecondaryBuffersVisibility;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetSecondaryRenderMaterial
 // 0x0008 (0x0008 - 0x0000)
@@ -134,9 +143,7 @@ struct BaseDynamicMeshComponent_SetSecondaryRenderMaterial final
 public:
 	class UMaterialInterface*                     Material;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_SetSecondaryRenderMaterial) == 0x000008, "Wrong alignment on BaseDynamicMeshComponent_SetSecondaryRenderMaterial");
-static_assert(sizeof(BaseDynamicMeshComponent_SetSecondaryRenderMaterial) == 0x000008, "Wrong size on BaseDynamicMeshComponent_SetSecondaryRenderMaterial");
-static_assert(offsetof(BaseDynamicMeshComponent_SetSecondaryRenderMaterial, Material) == 0x000000, "Member 'BaseDynamicMeshComponent_SetSecondaryRenderMaterial::Material' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_SetSecondaryRenderMaterial;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetShadowsEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -145,9 +152,7 @@ struct BaseDynamicMeshComponent_SetShadowsEnabled final
 public:
 	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_SetShadowsEnabled) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_SetShadowsEnabled");
-static_assert(sizeof(BaseDynamicMeshComponent_SetShadowsEnabled) == 0x000001, "Wrong size on BaseDynamicMeshComponent_SetShadowsEnabled");
-static_assert(offsetof(BaseDynamicMeshComponent_SetShadowsEnabled, bEnabled) == 0x000000, "Member 'BaseDynamicMeshComponent_SetShadowsEnabled::bEnabled' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_SetShadowsEnabled;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetVertexColorSpaceTransformMode
 // 0x0001 (0x0001 - 0x0000)
@@ -156,9 +161,7 @@ struct BaseDynamicMeshComponent_SetVertexColorSpaceTransformMode final
 public:
 	EDynamicMeshVertexColorTransformMode          NewMode;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_SetVertexColorSpaceTransformMode) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_SetVertexColorSpaceTransformMode");
-static_assert(sizeof(BaseDynamicMeshComponent_SetVertexColorSpaceTransformMode) == 0x000001, "Wrong size on BaseDynamicMeshComponent_SetVertexColorSpaceTransformMode");
-static_assert(offsetof(BaseDynamicMeshComponent_SetVertexColorSpaceTransformMode, NewMode) == 0x000000, "Member 'BaseDynamicMeshComponent_SetVertexColorSpaceTransformMode::NewMode' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_SetVertexColorSpaceTransformMode;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetViewModeOverridesEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -167,9 +170,7 @@ struct BaseDynamicMeshComponent_SetViewModeOverridesEnabled final
 public:
 	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_SetViewModeOverridesEnabled) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_SetViewModeOverridesEnabled");
-static_assert(sizeof(BaseDynamicMeshComponent_SetViewModeOverridesEnabled) == 0x000001, "Wrong size on BaseDynamicMeshComponent_SetViewModeOverridesEnabled");
-static_assert(offsetof(BaseDynamicMeshComponent_SetViewModeOverridesEnabled, bEnabled) == 0x000000, "Member 'BaseDynamicMeshComponent_SetViewModeOverridesEnabled::bEnabled' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_SetViewModeOverridesEnabled;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetColorOverrideMode
 // 0x0001 (0x0001 - 0x0000)
@@ -178,9 +179,7 @@ struct BaseDynamicMeshComponent_GetColorOverrideMode final
 public:
 	EDynamicMeshComponentColorOverrideMode        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_GetColorOverrideMode) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_GetColorOverrideMode");
-static_assert(sizeof(BaseDynamicMeshComponent_GetColorOverrideMode) == 0x000001, "Wrong size on BaseDynamicMeshComponent_GetColorOverrideMode");
-static_assert(offsetof(BaseDynamicMeshComponent_GetColorOverrideMode, ReturnValue) == 0x000000, "Member 'BaseDynamicMeshComponent_GetColorOverrideMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetColorOverrideMode;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetConstantOverrideColor
 // 0x0004 (0x0004 - 0x0000)
@@ -189,9 +188,7 @@ struct BaseDynamicMeshComponent_GetConstantOverrideColor final
 public:
 	struct FColor                                 ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_GetConstantOverrideColor) == 0x000004, "Wrong alignment on BaseDynamicMeshComponent_GetConstantOverrideColor");
-static_assert(sizeof(BaseDynamicMeshComponent_GetConstantOverrideColor) == 0x000004, "Wrong size on BaseDynamicMeshComponent_GetConstantOverrideColor");
-static_assert(offsetof(BaseDynamicMeshComponent_GetConstantOverrideColor, ReturnValue) == 0x000000, "Member 'BaseDynamicMeshComponent_GetConstantOverrideColor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetConstantOverrideColor;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetDistanceFieldMode
 // 0x0001 (0x0001 - 0x0000)
@@ -200,9 +197,7 @@ struct BaseDynamicMeshComponent_GetDistanceFieldMode final
 public:
 	EDynamicMeshComponentDistanceFieldMode        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_GetDistanceFieldMode) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_GetDistanceFieldMode");
-static_assert(sizeof(BaseDynamicMeshComponent_GetDistanceFieldMode) == 0x000001, "Wrong size on BaseDynamicMeshComponent_GetDistanceFieldMode");
-static_assert(offsetof(BaseDynamicMeshComponent_GetDistanceFieldMode, ReturnValue) == 0x000000, "Member 'BaseDynamicMeshComponent_GetDistanceFieldMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetDistanceFieldMode;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetEnableRaytracing
 // 0x0001 (0x0001 - 0x0000)
@@ -211,9 +206,7 @@ struct BaseDynamicMeshComponent_GetEnableRaytracing final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_GetEnableRaytracing) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_GetEnableRaytracing");
-static_assert(sizeof(BaseDynamicMeshComponent_GetEnableRaytracing) == 0x000001, "Wrong size on BaseDynamicMeshComponent_GetEnableRaytracing");
-static_assert(offsetof(BaseDynamicMeshComponent_GetEnableRaytracing, ReturnValue) == 0x000000, "Member 'BaseDynamicMeshComponent_GetEnableRaytracing::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetEnableRaytracing;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetEnableWireframeRenderPass
 // 0x0001 (0x0001 - 0x0000)
@@ -222,9 +215,7 @@ struct BaseDynamicMeshComponent_GetEnableWireframeRenderPass final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_GetEnableWireframeRenderPass) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_GetEnableWireframeRenderPass");
-static_assert(sizeof(BaseDynamicMeshComponent_GetEnableWireframeRenderPass) == 0x000001, "Wrong size on BaseDynamicMeshComponent_GetEnableWireframeRenderPass");
-static_assert(offsetof(BaseDynamicMeshComponent_GetEnableWireframeRenderPass, ReturnValue) == 0x000000, "Member 'BaseDynamicMeshComponent_GetEnableWireframeRenderPass::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetEnableWireframeRenderPass;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetFlatShadingEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -233,9 +224,7 @@ struct BaseDynamicMeshComponent_GetFlatShadingEnabled final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_GetFlatShadingEnabled) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_GetFlatShadingEnabled");
-static_assert(sizeof(BaseDynamicMeshComponent_GetFlatShadingEnabled) == 0x000001, "Wrong size on BaseDynamicMeshComponent_GetFlatShadingEnabled");
-static_assert(offsetof(BaseDynamicMeshComponent_GetFlatShadingEnabled, ReturnValue) == 0x000000, "Member 'BaseDynamicMeshComponent_GetFlatShadingEnabled::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetFlatShadingEnabled;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetMeshDrawPath
 // 0x0001 (0x0001 - 0x0000)
@@ -244,9 +233,7 @@ struct BaseDynamicMeshComponent_GetMeshDrawPath final
 public:
 	EDynamicMeshDrawPath                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_GetMeshDrawPath) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_GetMeshDrawPath");
-static_assert(sizeof(BaseDynamicMeshComponent_GetMeshDrawPath) == 0x000001, "Wrong size on BaseDynamicMeshComponent_GetMeshDrawPath");
-static_assert(offsetof(BaseDynamicMeshComponent_GetMeshDrawPath, ReturnValue) == 0x000000, "Member 'BaseDynamicMeshComponent_GetMeshDrawPath::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetMeshDrawPath;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetOverrideRenderMaterial
 // 0x0010 (0x0010 - 0x0000)
@@ -257,10 +244,25 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_GetOverrideRenderMaterial) == 0x000008, "Wrong alignment on BaseDynamicMeshComponent_GetOverrideRenderMaterial");
-static_assert(sizeof(BaseDynamicMeshComponent_GetOverrideRenderMaterial) == 0x000010, "Wrong size on BaseDynamicMeshComponent_GetOverrideRenderMaterial");
-static_assert(offsetof(BaseDynamicMeshComponent_GetOverrideRenderMaterial, MaterialIndex) == 0x000000, "Member 'BaseDynamicMeshComponent_GetOverrideRenderMaterial::MaterialIndex' has a wrong offset!");
-static_assert(offsetof(BaseDynamicMeshComponent_GetOverrideRenderMaterial, ReturnValue) == 0x000008, "Member 'BaseDynamicMeshComponent_GetOverrideRenderMaterial::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetOverrideRenderMaterial;
+
+// Function GeometryFramework.BaseDynamicMeshComponent.GetOverrideSecondaryWireframeRenderMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct BaseDynamicMeshComponent_GetOverrideSecondaryWireframeRenderMaterial final
+{
+public:
+	class UMaterialInterface*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetOverrideSecondaryWireframeRenderMaterial;
+
+// Function GeometryFramework.BaseDynamicMeshComponent.GetOverrideWireframeRenderMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct BaseDynamicMeshComponent_GetOverrideWireframeRenderMaterial final
+{
+public:
+	class UMaterialInterface*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetOverrideWireframeRenderMaterial;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetSecondaryBuffersVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -269,9 +271,7 @@ struct BaseDynamicMeshComponent_GetSecondaryBuffersVisibility final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_GetSecondaryBuffersVisibility) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_GetSecondaryBuffersVisibility");
-static_assert(sizeof(BaseDynamicMeshComponent_GetSecondaryBuffersVisibility) == 0x000001, "Wrong size on BaseDynamicMeshComponent_GetSecondaryBuffersVisibility");
-static_assert(offsetof(BaseDynamicMeshComponent_GetSecondaryBuffersVisibility, ReturnValue) == 0x000000, "Member 'BaseDynamicMeshComponent_GetSecondaryBuffersVisibility::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetSecondaryBuffersVisibility;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetSecondaryRenderMaterial
 // 0x0008 (0x0008 - 0x0000)
@@ -280,9 +280,7 @@ struct BaseDynamicMeshComponent_GetSecondaryRenderMaterial final
 public:
 	class UMaterialInterface*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_GetSecondaryRenderMaterial) == 0x000008, "Wrong alignment on BaseDynamicMeshComponent_GetSecondaryRenderMaterial");
-static_assert(sizeof(BaseDynamicMeshComponent_GetSecondaryRenderMaterial) == 0x000008, "Wrong size on BaseDynamicMeshComponent_GetSecondaryRenderMaterial");
-static_assert(offsetof(BaseDynamicMeshComponent_GetSecondaryRenderMaterial, ReturnValue) == 0x000000, "Member 'BaseDynamicMeshComponent_GetSecondaryRenderMaterial::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetSecondaryRenderMaterial;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetShadowsEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -291,9 +289,7 @@ struct BaseDynamicMeshComponent_GetShadowsEnabled final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_GetShadowsEnabled) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_GetShadowsEnabled");
-static_assert(sizeof(BaseDynamicMeshComponent_GetShadowsEnabled) == 0x000001, "Wrong size on BaseDynamicMeshComponent_GetShadowsEnabled");
-static_assert(offsetof(BaseDynamicMeshComponent_GetShadowsEnabled, ReturnValue) == 0x000000, "Member 'BaseDynamicMeshComponent_GetShadowsEnabled::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetShadowsEnabled;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetVertexColorSpaceTransformMode
 // 0x0001 (0x0001 - 0x0000)
@@ -302,9 +298,7 @@ struct BaseDynamicMeshComponent_GetVertexColorSpaceTransformMode final
 public:
 	EDynamicMeshVertexColorTransformMode          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_GetVertexColorSpaceTransformMode) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_GetVertexColorSpaceTransformMode");
-static_assert(sizeof(BaseDynamicMeshComponent_GetVertexColorSpaceTransformMode) == 0x000001, "Wrong size on BaseDynamicMeshComponent_GetVertexColorSpaceTransformMode");
-static_assert(offsetof(BaseDynamicMeshComponent_GetVertexColorSpaceTransformMode, ReturnValue) == 0x000000, "Member 'BaseDynamicMeshComponent_GetVertexColorSpaceTransformMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetVertexColorSpaceTransformMode;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetViewModeOverridesEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -313,9 +307,7 @@ struct BaseDynamicMeshComponent_GetViewModeOverridesEnabled final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BaseDynamicMeshComponent_GetViewModeOverridesEnabled) == 0x000001, "Wrong alignment on BaseDynamicMeshComponent_GetViewModeOverridesEnabled");
-static_assert(sizeof(BaseDynamicMeshComponent_GetViewModeOverridesEnabled) == 0x000001, "Wrong size on BaseDynamicMeshComponent_GetViewModeOverridesEnabled");
-static_assert(offsetof(BaseDynamicMeshComponent_GetViewModeOverridesEnabled, ReturnValue) == 0x000000, "Member 'BaseDynamicMeshComponent_GetViewModeOverridesEnabled::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_GetViewModeOverridesEnabled;
 
 // Function GeometryFramework.BaseDynamicMeshComponent.HasOverrideRenderMaterial
 // 0x0008 (0x0008 - 0x0000)
@@ -326,10 +318,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BaseDynamicMeshComponent_HasOverrideRenderMaterial) == 0x000004, "Wrong alignment on BaseDynamicMeshComponent_HasOverrideRenderMaterial");
-static_assert(sizeof(BaseDynamicMeshComponent_HasOverrideRenderMaterial) == 0x000008, "Wrong size on BaseDynamicMeshComponent_HasOverrideRenderMaterial");
-static_assert(offsetof(BaseDynamicMeshComponent_HasOverrideRenderMaterial, K) == 0x000000, "Member 'BaseDynamicMeshComponent_HasOverrideRenderMaterial::K' has a wrong offset!");
-static_assert(offsetof(BaseDynamicMeshComponent_HasOverrideRenderMaterial, ReturnValue) == 0x000004, "Member 'BaseDynamicMeshComponent_HasOverrideRenderMaterial::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BaseDynamicMeshComponent_HasOverrideRenderMaterial;
 
 // Function GeometryFramework.DynamicMeshComponent.ConfigureMaterialSet
 // 0x0018 (0x0018 - 0x0000)
@@ -340,10 +329,7 @@ public:
 	bool                                          bDeleteExtraSlots;                                 // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(DynamicMeshComponent_ConfigureMaterialSet) == 0x000008, "Wrong alignment on DynamicMeshComponent_ConfigureMaterialSet");
-static_assert(sizeof(DynamicMeshComponent_ConfigureMaterialSet) == 0x000018, "Wrong size on DynamicMeshComponent_ConfigureMaterialSet");
-static_assert(offsetof(DynamicMeshComponent_ConfigureMaterialSet, NewMaterialSet) == 0x000000, "Member 'DynamicMeshComponent_ConfigureMaterialSet::NewMaterialSet' has a wrong offset!");
-static_assert(offsetof(DynamicMeshComponent_ConfigureMaterialSet, bDeleteExtraSlots) == 0x000010, "Member 'DynamicMeshComponent_ConfigureMaterialSet::bDeleteExtraSlots' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshComponent_ConfigureMaterialSet;
 
 // Function GeometryFramework.DynamicMeshComponent.NotifyMeshVertexAttributesModified
 // 0x0004 (0x0004 - 0x0000)
@@ -355,12 +341,7 @@ public:
 	bool                                          bUVs;                                              // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bColors;                                           // 0x0003(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshComponent_NotifyMeshVertexAttributesModified) == 0x000001, "Wrong alignment on DynamicMeshComponent_NotifyMeshVertexAttributesModified");
-static_assert(sizeof(DynamicMeshComponent_NotifyMeshVertexAttributesModified) == 0x000004, "Wrong size on DynamicMeshComponent_NotifyMeshVertexAttributesModified");
-static_assert(offsetof(DynamicMeshComponent_NotifyMeshVertexAttributesModified, bPositions) == 0x000000, "Member 'DynamicMeshComponent_NotifyMeshVertexAttributesModified::bPositions' has a wrong offset!");
-static_assert(offsetof(DynamicMeshComponent_NotifyMeshVertexAttributesModified, bNormals) == 0x000001, "Member 'DynamicMeshComponent_NotifyMeshVertexAttributesModified::bNormals' has a wrong offset!");
-static_assert(offsetof(DynamicMeshComponent_NotifyMeshVertexAttributesModified, bUVs) == 0x000002, "Member 'DynamicMeshComponent_NotifyMeshVertexAttributesModified::bUVs' has a wrong offset!");
-static_assert(offsetof(DynamicMeshComponent_NotifyMeshVertexAttributesModified, bColors) == 0x000003, "Member 'DynamicMeshComponent_NotifyMeshVertexAttributesModified::bColors' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshComponent_NotifyMeshVertexAttributesModified;
 
 // Function GeometryFramework.DynamicMeshComponent.SetAllowsGeometrySelection
 // 0x0001 (0x0001 - 0x0000)
@@ -369,9 +350,7 @@ struct DynamicMeshComponent_SetAllowsGeometrySelection final
 public:
 	bool                                          bInAllowsGeometrySelection;                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshComponent_SetAllowsGeometrySelection) == 0x000001, "Wrong alignment on DynamicMeshComponent_SetAllowsGeometrySelection");
-static_assert(sizeof(DynamicMeshComponent_SetAllowsGeometrySelection) == 0x000001, "Wrong size on DynamicMeshComponent_SetAllowsGeometrySelection");
-static_assert(offsetof(DynamicMeshComponent_SetAllowsGeometrySelection, bInAllowsGeometrySelection) == 0x000000, "Member 'DynamicMeshComponent_SetAllowsGeometrySelection::bInAllowsGeometrySelection' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshComponent_SetAllowsGeometrySelection;
 
 // Function GeometryFramework.DynamicMeshComponent.SetComplexAsSimpleCollisionEnabled
 // 0x0002 (0x0002 - 0x0000)
@@ -381,10 +360,7 @@ public:
 	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bImmediateUpdate;                                  // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshComponent_SetComplexAsSimpleCollisionEnabled) == 0x000001, "Wrong alignment on DynamicMeshComponent_SetComplexAsSimpleCollisionEnabled");
-static_assert(sizeof(DynamicMeshComponent_SetComplexAsSimpleCollisionEnabled) == 0x000002, "Wrong size on DynamicMeshComponent_SetComplexAsSimpleCollisionEnabled");
-static_assert(offsetof(DynamicMeshComponent_SetComplexAsSimpleCollisionEnabled, bEnabled) == 0x000000, "Member 'DynamicMeshComponent_SetComplexAsSimpleCollisionEnabled::bEnabled' has a wrong offset!");
-static_assert(offsetof(DynamicMeshComponent_SetComplexAsSimpleCollisionEnabled, bImmediateUpdate) == 0x000001, "Member 'DynamicMeshComponent_SetComplexAsSimpleCollisionEnabled::bImmediateUpdate' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshComponent_SetComplexAsSimpleCollisionEnabled;
 
 // Function GeometryFramework.DynamicMeshComponent.SetDeferredCollisionUpdatesEnabled
 // 0x0002 (0x0002 - 0x0000)
@@ -394,10 +370,7 @@ public:
 	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bImmediateUpdate;                                  // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshComponent_SetDeferredCollisionUpdatesEnabled) == 0x000001, "Wrong alignment on DynamicMeshComponent_SetDeferredCollisionUpdatesEnabled");
-static_assert(sizeof(DynamicMeshComponent_SetDeferredCollisionUpdatesEnabled) == 0x000002, "Wrong size on DynamicMeshComponent_SetDeferredCollisionUpdatesEnabled");
-static_assert(offsetof(DynamicMeshComponent_SetDeferredCollisionUpdatesEnabled, bEnabled) == 0x000000, "Member 'DynamicMeshComponent_SetDeferredCollisionUpdatesEnabled::bEnabled' has a wrong offset!");
-static_assert(offsetof(DynamicMeshComponent_SetDeferredCollisionUpdatesEnabled, bImmediateUpdate) == 0x000001, "Member 'DynamicMeshComponent_SetDeferredCollisionUpdatesEnabled::bImmediateUpdate' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshComponent_SetDeferredCollisionUpdatesEnabled;
 
 // Function GeometryFramework.DynamicMeshComponent.SetDynamicMesh
 // 0x0008 (0x0008 - 0x0000)
@@ -406,9 +379,7 @@ struct DynamicMeshComponent_SetDynamicMesh final
 public:
 	class UDynamicMesh*                           NewMesh;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshComponent_SetDynamicMesh) == 0x000008, "Wrong alignment on DynamicMeshComponent_SetDynamicMesh");
-static_assert(sizeof(DynamicMeshComponent_SetDynamicMesh) == 0x000008, "Wrong size on DynamicMeshComponent_SetDynamicMesh");
-static_assert(offsetof(DynamicMeshComponent_SetDynamicMesh, NewMesh) == 0x000000, "Member 'DynamicMeshComponent_SetDynamicMesh::NewMesh' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshComponent_SetDynamicMesh;
 
 // Function GeometryFramework.DynamicMeshComponent.SetTangentsType
 // 0x0001 (0x0001 - 0x0000)
@@ -417,9 +388,7 @@ struct DynamicMeshComponent_SetTangentsType final
 public:
 	EDynamicMeshComponentTangentsMode             NewTangentsType;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshComponent_SetTangentsType) == 0x000001, "Wrong alignment on DynamicMeshComponent_SetTangentsType");
-static_assert(sizeof(DynamicMeshComponent_SetTangentsType) == 0x000001, "Wrong size on DynamicMeshComponent_SetTangentsType");
-static_assert(offsetof(DynamicMeshComponent_SetTangentsType, NewTangentsType) == 0x000000, "Member 'DynamicMeshComponent_SetTangentsType::NewTangentsType' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshComponent_SetTangentsType;
 
 // Function GeometryFramework.DynamicMeshComponent.UpdateCollision
 // 0x0001 (0x0001 - 0x0000)
@@ -428,9 +397,7 @@ struct DynamicMeshComponent_UpdateCollision final
 public:
 	bool                                          bOnlyIfPending;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshComponent_UpdateCollision) == 0x000001, "Wrong alignment on DynamicMeshComponent_UpdateCollision");
-static_assert(sizeof(DynamicMeshComponent_UpdateCollision) == 0x000001, "Wrong size on DynamicMeshComponent_UpdateCollision");
-static_assert(offsetof(DynamicMeshComponent_UpdateCollision, bOnlyIfPending) == 0x000000, "Member 'DynamicMeshComponent_UpdateCollision::bOnlyIfPending' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshComponent_UpdateCollision;
 
 // Function GeometryFramework.DynamicMeshComponent.ValidateMaterialSlots
 // 0x0003 (0x0003 - 0x0000)
@@ -441,11 +408,7 @@ public:
 	bool                                          bDeleteExtraSlots;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshComponent_ValidateMaterialSlots) == 0x000001, "Wrong alignment on DynamicMeshComponent_ValidateMaterialSlots");
-static_assert(sizeof(DynamicMeshComponent_ValidateMaterialSlots) == 0x000003, "Wrong size on DynamicMeshComponent_ValidateMaterialSlots");
-static_assert(offsetof(DynamicMeshComponent_ValidateMaterialSlots, bCreateIfMissing) == 0x000000, "Member 'DynamicMeshComponent_ValidateMaterialSlots::bCreateIfMissing' has a wrong offset!");
-static_assert(offsetof(DynamicMeshComponent_ValidateMaterialSlots, bDeleteExtraSlots) == 0x000001, "Member 'DynamicMeshComponent_ValidateMaterialSlots::bDeleteExtraSlots' has a wrong offset!");
-static_assert(offsetof(DynamicMeshComponent_ValidateMaterialSlots, ReturnValue) == 0x000002, "Member 'DynamicMeshComponent_ValidateMaterialSlots::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshComponent_ValidateMaterialSlots;
 
 // Function GeometryFramework.DynamicMeshComponent.AllowsGeometrySelection
 // 0x0001 (0x0001 - 0x0000)
@@ -454,9 +417,7 @@ struct DynamicMeshComponent_AllowsGeometrySelection final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshComponent_AllowsGeometrySelection) == 0x000001, "Wrong alignment on DynamicMeshComponent_AllowsGeometrySelection");
-static_assert(sizeof(DynamicMeshComponent_AllowsGeometrySelection) == 0x000001, "Wrong size on DynamicMeshComponent_AllowsGeometrySelection");
-static_assert(offsetof(DynamicMeshComponent_AllowsGeometrySelection, ReturnValue) == 0x000000, "Member 'DynamicMeshComponent_AllowsGeometrySelection::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshComponent_AllowsGeometrySelection;
 
 // Function GeometryFramework.DynamicMeshComponent.GetTangentsType
 // 0x0001 (0x0001 - 0x0000)
@@ -465,9 +426,7 @@ struct DynamicMeshComponent_GetTangentsType final
 public:
 	EDynamicMeshComponentTangentsMode             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshComponent_GetTangentsType) == 0x000001, "Wrong alignment on DynamicMeshComponent_GetTangentsType");
-static_assert(sizeof(DynamicMeshComponent_GetTangentsType) == 0x000001, "Wrong size on DynamicMeshComponent_GetTangentsType");
-static_assert(offsetof(DynamicMeshComponent_GetTangentsType, ReturnValue) == 0x000000, "Member 'DynamicMeshComponent_GetTangentsType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshComponent_GetTangentsType;
 
 // Function GeometryFramework.DynamicMeshComponent.GetTangentsTypePure
 // 0x0001 (0x0001 - 0x0000)
@@ -476,9 +435,7 @@ struct DynamicMeshComponent_GetTangentsTypePure final
 public:
 	EDynamicMeshComponentTangentsMode             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshComponent_GetTangentsTypePure) == 0x000001, "Wrong alignment on DynamicMeshComponent_GetTangentsTypePure");
-static_assert(sizeof(DynamicMeshComponent_GetTangentsTypePure) == 0x000001, "Wrong size on DynamicMeshComponent_GetTangentsTypePure");
-static_assert(offsetof(DynamicMeshComponent_GetTangentsTypePure, ReturnValue) == 0x000000, "Member 'DynamicMeshComponent_GetTangentsTypePure::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshComponent_GetTangentsTypePure;
 
 // Function GeometryFramework.DynamicMeshActor.AllocateComputeMesh
 // 0x0008 (0x0008 - 0x0000)
@@ -487,9 +444,7 @@ struct DynamicMeshActor_AllocateComputeMesh final
 public:
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshActor_AllocateComputeMesh) == 0x000008, "Wrong alignment on DynamicMeshActor_AllocateComputeMesh");
-static_assert(sizeof(DynamicMeshActor_AllocateComputeMesh) == 0x000008, "Wrong size on DynamicMeshActor_AllocateComputeMesh");
-static_assert(offsetof(DynamicMeshActor_AllocateComputeMesh, ReturnValue) == 0x000000, "Member 'DynamicMeshActor_AllocateComputeMesh::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshActor_AllocateComputeMesh;
 
 // Function GeometryFramework.DynamicMeshActor.GetComputeMeshPool
 // 0x0008 (0x0008 - 0x0000)
@@ -498,9 +453,7 @@ struct DynamicMeshActor_GetComputeMeshPool final
 public:
 	class UDynamicMeshPool*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshActor_GetComputeMeshPool) == 0x000008, "Wrong alignment on DynamicMeshActor_GetComputeMeshPool");
-static_assert(sizeof(DynamicMeshActor_GetComputeMeshPool) == 0x000008, "Wrong size on DynamicMeshActor_GetComputeMeshPool");
-static_assert(offsetof(DynamicMeshActor_GetComputeMeshPool, ReturnValue) == 0x000000, "Member 'DynamicMeshActor_GetComputeMeshPool::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshActor_GetComputeMeshPool;
 
 // Function GeometryFramework.DynamicMeshActor.ReleaseComputeMesh
 // 0x0010 (0x0010 - 0x0000)
@@ -511,10 +464,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(DynamicMeshActor_ReleaseComputeMesh) == 0x000008, "Wrong alignment on DynamicMeshActor_ReleaseComputeMesh");
-static_assert(sizeof(DynamicMeshActor_ReleaseComputeMesh) == 0x000010, "Wrong size on DynamicMeshActor_ReleaseComputeMesh");
-static_assert(offsetof(DynamicMeshActor_ReleaseComputeMesh, Mesh) == 0x000000, "Member 'DynamicMeshActor_ReleaseComputeMesh::Mesh' has a wrong offset!");
-static_assert(offsetof(DynamicMeshActor_ReleaseComputeMesh, ReturnValue) == 0x000008, "Member 'DynamicMeshActor_ReleaseComputeMesh::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshActor_ReleaseComputeMesh;
 
 // Function GeometryFramework.DynamicMeshActor.GetDynamicMeshComponent
 // 0x0008 (0x0008 - 0x0000)
@@ -523,9 +473,7 @@ struct DynamicMeshActor_GetDynamicMeshComponent final
 public:
 	class UDynamicMeshComponent*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshActor_GetDynamicMeshComponent) == 0x000008, "Wrong alignment on DynamicMeshActor_GetDynamicMeshComponent");
-static_assert(sizeof(DynamicMeshActor_GetDynamicMeshComponent) == 0x000008, "Wrong size on DynamicMeshActor_GetDynamicMeshComponent");
-static_assert(offsetof(DynamicMeshActor_GetDynamicMeshComponent, ReturnValue) == 0x000000, "Member 'DynamicMeshActor_GetDynamicMeshComponent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshActor_GetDynamicMeshComponent;
 
 // Function GeometryFramework.DynamicMesh.Reset
 // 0x0008 (0x0008 - 0x0000)
@@ -534,9 +482,7 @@ struct DynamicMesh_Reset final
 public:
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMesh_Reset) == 0x000008, "Wrong alignment on DynamicMesh_Reset");
-static_assert(sizeof(DynamicMesh_Reset) == 0x000008, "Wrong size on DynamicMesh_Reset");
-static_assert(offsetof(DynamicMesh_Reset, ReturnValue) == 0x000000, "Member 'DynamicMesh_Reset::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMesh_Reset;
 
 // Function GeometryFramework.DynamicMesh.ResetToCube
 // 0x0008 (0x0008 - 0x0000)
@@ -545,9 +491,7 @@ struct DynamicMesh_ResetToCube final
 public:
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMesh_ResetToCube) == 0x000008, "Wrong alignment on DynamicMesh_ResetToCube");
-static_assert(sizeof(DynamicMesh_ResetToCube) == 0x000008, "Wrong size on DynamicMesh_ResetToCube");
-static_assert(offsetof(DynamicMesh_ResetToCube, ReturnValue) == 0x000000, "Member 'DynamicMesh_ResetToCube::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMesh_ResetToCube;
 
 // Function GeometryFramework.DynamicMesh.GetTriangleCount
 // 0x0004 (0x0004 - 0x0000)
@@ -556,9 +500,7 @@ struct DynamicMesh_GetTriangleCount final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMesh_GetTriangleCount) == 0x000004, "Wrong alignment on DynamicMesh_GetTriangleCount");
-static_assert(sizeof(DynamicMesh_GetTriangleCount) == 0x000004, "Wrong size on DynamicMesh_GetTriangleCount");
-static_assert(offsetof(DynamicMesh_GetTriangleCount, ReturnValue) == 0x000000, "Member 'DynamicMesh_GetTriangleCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMesh_GetTriangleCount;
 
 // Function GeometryFramework.DynamicMesh.IsEmpty
 // 0x0001 (0x0001 - 0x0000)
@@ -567,9 +509,7 @@ struct DynamicMesh_IsEmpty final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMesh_IsEmpty) == 0x000001, "Wrong alignment on DynamicMesh_IsEmpty");
-static_assert(sizeof(DynamicMesh_IsEmpty) == 0x000001, "Wrong size on DynamicMesh_IsEmpty");
-static_assert(offsetof(DynamicMesh_IsEmpty, ReturnValue) == 0x000000, "Member 'DynamicMesh_IsEmpty::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMesh_IsEmpty;
 
 // Function GeometryFramework.DynamicMeshPool.RequestMesh
 // 0x0008 (0x0008 - 0x0000)
@@ -578,9 +518,7 @@ struct DynamicMeshPool_RequestMesh final
 public:
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshPool_RequestMesh) == 0x000008, "Wrong alignment on DynamicMeshPool_RequestMesh");
-static_assert(sizeof(DynamicMeshPool_RequestMesh) == 0x000008, "Wrong size on DynamicMeshPool_RequestMesh");
-static_assert(offsetof(DynamicMeshPool_RequestMesh, ReturnValue) == 0x000000, "Member 'DynamicMeshPool_RequestMesh::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshPool_RequestMesh;
 
 // Function GeometryFramework.DynamicMeshPool.ReturnMesh
 // 0x0008 (0x0008 - 0x0000)
@@ -589,9 +527,7 @@ struct DynamicMeshPool_ReturnMesh final
 public:
 	class UDynamicMesh*                           Mesh;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicMeshPool_ReturnMesh) == 0x000008, "Wrong alignment on DynamicMeshPool_ReturnMesh");
-static_assert(sizeof(DynamicMeshPool_ReturnMesh) == 0x000008, "Wrong size on DynamicMeshPool_ReturnMesh");
-static_assert(offsetof(DynamicMeshPool_ReturnMesh, Mesh) == 0x000000, "Member 'DynamicMeshPool_ReturnMesh::Mesh' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicMeshPool_ReturnMesh;
 
 }
 

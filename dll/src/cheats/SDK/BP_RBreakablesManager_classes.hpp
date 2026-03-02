@@ -26,16 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_RBreakablesManager_C">();
+		BP_STATIC_CLASS_IMPL("BP_RBreakablesManager_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_RBreakablesManager_C")
 	}
 	static class ABP_RBreakablesManager_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_RBreakablesManager_C>();
 	}
 };
-static_assert(alignof(ABP_RBreakablesManager_C) == 0x000008, "Wrong alignment on ABP_RBreakablesManager_C");
-static_assert(sizeof(ABP_RBreakablesManager_C) == 0x000328, "Wrong size on ABP_RBreakablesManager_C");
-static_assert(offsetof(ABP_RBreakablesManager_C, DefaultSceneRoot) == 0x000320, "Member 'ABP_RBreakablesManager_C::DefaultSceneRoot' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_RBreakablesManager_C;
 
 }
 

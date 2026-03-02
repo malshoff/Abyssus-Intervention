@@ -21,9 +21,7 @@ struct AcousticsWorldSubsystem_IsSubsystemInGameWorld final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AcousticsWorldSubsystem_IsSubsystemInGameWorld) == 0x000001, "Wrong alignment on AcousticsWorldSubsystem_IsSubsystemInGameWorld");
-static_assert(sizeof(AcousticsWorldSubsystem_IsSubsystemInGameWorld) == 0x000001, "Wrong size on AcousticsWorldSubsystem_IsSubsystemInGameWorld");
-static_assert(offsetof(AcousticsWorldSubsystem_IsSubsystemInGameWorld, ReturnValue) == 0x000000, "Member 'AcousticsWorldSubsystem_IsSubsystemInGameWorld::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AcousticsWorldSubsystem_IsSubsystemInGameWorld;
 
 }
 

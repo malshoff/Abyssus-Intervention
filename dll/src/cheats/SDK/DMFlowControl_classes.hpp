@@ -26,15 +26,18 @@ class UFCDummyBlueprintProxy final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FCDummyBlueprintProxy">();
+		STATIC_CLASS_IMPL("FCDummyBlueprintProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FCDummyBlueprintProxy")
 	}
 	static class UFCDummyBlueprintProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFCDummyBlueprintProxy>();
 	}
 };
-static_assert(alignof(UFCDummyBlueprintProxy) == 0x000008, "Wrong alignment on UFCDummyBlueprintProxy");
-static_assert(sizeof(UFCDummyBlueprintProxy) == 0x000028, "Wrong size on UFCDummyBlueprintProxy");
+DUMPER7_ASSERTS_UFCDummyBlueprintProxy;
 
 // Class DMFlowControl.FCInvokeBlueprintProxy
 // 0x0010 (0x0038 - 0x0028)
@@ -46,16 +49,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FCInvokeBlueprintProxy">();
+		STATIC_CLASS_IMPL("FCInvokeBlueprintProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FCInvokeBlueprintProxy")
 	}
 	static class UFCInvokeBlueprintProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFCInvokeBlueprintProxy>();
 	}
 };
-static_assert(alignof(UFCInvokeBlueprintProxy) == 0x000008, "Wrong alignment on UFCInvokeBlueprintProxy");
-static_assert(sizeof(UFCInvokeBlueprintProxy) == 0x000038, "Wrong size on UFCInvokeBlueprintProxy");
-static_assert(offsetof(UFCInvokeBlueprintProxy, OnInvoke) == 0x000028, "Member 'UFCInvokeBlueprintProxy::OnInvoke' has a wrong offset!");
+DUMPER7_ASSERTS_UFCInvokeBlueprintProxy;
 
 // Class DMFlowControl.FCLerpFloatBlueprintProxy
 // 0x0020 (0x0048 - 0x0028)
@@ -68,17 +73,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FCLerpFloatBlueprintProxy">();
+		STATIC_CLASS_IMPL("FCLerpFloatBlueprintProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FCLerpFloatBlueprintProxy")
 	}
 	static class UFCLerpFloatBlueprintProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFCLerpFloatBlueprintProxy>();
 	}
 };
-static_assert(alignof(UFCLerpFloatBlueprintProxy) == 0x000008, "Wrong alignment on UFCLerpFloatBlueprintProxy");
-static_assert(sizeof(UFCLerpFloatBlueprintProxy) == 0x000048, "Wrong size on UFCLerpFloatBlueprintProxy");
-static_assert(offsetof(UFCLerpFloatBlueprintProxy, Tick) == 0x000028, "Member 'UFCLerpFloatBlueprintProxy::Tick' has a wrong offset!");
-static_assert(offsetof(UFCLerpFloatBlueprintProxy, OnFinish) == 0x000038, "Member 'UFCLerpFloatBlueprintProxy::OnFinish' has a wrong offset!");
+DUMPER7_ASSERTS_UFCLerpFloatBlueprintProxy;
 
 // Class DMFlowControl.FCLerpVectorBlueprintProxy
 // 0x0020 (0x0048 - 0x0028)
@@ -91,17 +97,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FCLerpVectorBlueprintProxy">();
+		STATIC_CLASS_IMPL("FCLerpVectorBlueprintProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FCLerpVectorBlueprintProxy")
 	}
 	static class UFCLerpVectorBlueprintProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFCLerpVectorBlueprintProxy>();
 	}
 };
-static_assert(alignof(UFCLerpVectorBlueprintProxy) == 0x000008, "Wrong alignment on UFCLerpVectorBlueprintProxy");
-static_assert(sizeof(UFCLerpVectorBlueprintProxy) == 0x000048, "Wrong size on UFCLerpVectorBlueprintProxy");
-static_assert(offsetof(UFCLerpVectorBlueprintProxy, Tick) == 0x000028, "Member 'UFCLerpVectorBlueprintProxy::Tick' has a wrong offset!");
-static_assert(offsetof(UFCLerpVectorBlueprintProxy, OnFinish) == 0x000038, "Member 'UFCLerpVectorBlueprintProxy::OnFinish' has a wrong offset!");
+DUMPER7_ASSERTS_UFCLerpVectorBlueprintProxy;
 
 // Class DMFlowControl.FCLerpRotatorBlueprintProxy
 // 0x0020 (0x0048 - 0x0028)
@@ -114,17 +121,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FCLerpRotatorBlueprintProxy">();
+		STATIC_CLASS_IMPL("FCLerpRotatorBlueprintProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FCLerpRotatorBlueprintProxy")
 	}
 	static class UFCLerpRotatorBlueprintProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFCLerpRotatorBlueprintProxy>();
 	}
 };
-static_assert(alignof(UFCLerpRotatorBlueprintProxy) == 0x000008, "Wrong alignment on UFCLerpRotatorBlueprintProxy");
-static_assert(sizeof(UFCLerpRotatorBlueprintProxy) == 0x000048, "Wrong size on UFCLerpRotatorBlueprintProxy");
-static_assert(offsetof(UFCLerpRotatorBlueprintProxy, Tick) == 0x000028, "Member 'UFCLerpRotatorBlueprintProxy::Tick' has a wrong offset!");
-static_assert(offsetof(UFCLerpRotatorBlueprintProxy, OnFinish) == 0x000038, "Member 'UFCLerpRotatorBlueprintProxy::OnFinish' has a wrong offset!");
+DUMPER7_ASSERTS_UFCLerpRotatorBlueprintProxy;
 
 // Class DMFlowControl.FCLerpTransformBlueprintProxy
 // 0x0020 (0x0048 - 0x0028)
@@ -137,17 +145,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FCLerpTransformBlueprintProxy">();
+		STATIC_CLASS_IMPL("FCLerpTransformBlueprintProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FCLerpTransformBlueprintProxy")
 	}
 	static class UFCLerpTransformBlueprintProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFCLerpTransformBlueprintProxy>();
 	}
 };
-static_assert(alignof(UFCLerpTransformBlueprintProxy) == 0x000008, "Wrong alignment on UFCLerpTransformBlueprintProxy");
-static_assert(sizeof(UFCLerpTransformBlueprintProxy) == 0x000048, "Wrong size on UFCLerpTransformBlueprintProxy");
-static_assert(offsetof(UFCLerpTransformBlueprintProxy, Tick) == 0x000028, "Member 'UFCLerpTransformBlueprintProxy::Tick' has a wrong offset!");
-static_assert(offsetof(UFCLerpTransformBlueprintProxy, OnFinish) == 0x000038, "Member 'UFCLerpTransformBlueprintProxy::OnFinish' has a wrong offset!");
+DUMPER7_ASSERTS_UFCLerpTransformBlueprintProxy;
 
 // Class DMFlowControl.DMFlowControlLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -164,15 +173,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMFlowControlLibrary">();
+		STATIC_CLASS_IMPL("DMFlowControlLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMFlowControlLibrary")
 	}
 	static class UDMFlowControlLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMFlowControlLibrary>();
 	}
 };
-static_assert(alignof(UDMFlowControlLibrary) == 0x000008, "Wrong alignment on UDMFlowControlLibrary");
-static_assert(sizeof(UDMFlowControlLibrary) == 0x000028, "Wrong size on UDMFlowControlLibrary");
+DUMPER7_ASSERTS_UDMFlowControlLibrary;
 
 }
 

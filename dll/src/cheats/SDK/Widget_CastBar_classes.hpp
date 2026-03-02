@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_CastBar.Widget_CastBar_C
-// 0x0030 (0x0300 - 0x02D0)
+// 0x0030 (0x0370 - 0x0340)
 class UWidget_CastBar_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Frame;                                             // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ProgressFillImage;                                 // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	double                                        CastTime;                                          // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentCastTime;                                   // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 ProgressFillImage;                                 // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Frame;                                             // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	double                                        CastTime;                                          // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentCastTime;                                   // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CREATEDELEGATE_PROXYFUNCTION_0(float CastTime_0, float CurrentCastTime_0);
@@ -41,21 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_CastBar_C">();
+		BP_STATIC_CLASS_IMPL("Widget_CastBar_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_CastBar_C")
 	}
 	static class UWidget_CastBar_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_CastBar_C>();
 	}
 };
-static_assert(alignof(UWidget_CastBar_C) == 0x000008, "Wrong alignment on UWidget_CastBar_C");
-static_assert(sizeof(UWidget_CastBar_C) == 0x000300, "Wrong size on UWidget_CastBar_C");
-static_assert(offsetof(UWidget_CastBar_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_CastBar_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_CastBar_C, Frame) == 0x0002D8, "Member 'UWidget_CastBar_C::Frame' has a wrong offset!");
-static_assert(offsetof(UWidget_CastBar_C, InvalidationBox_0) == 0x0002E0, "Member 'UWidget_CastBar_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_CastBar_C, ProgressFillImage) == 0x0002E8, "Member 'UWidget_CastBar_C::ProgressFillImage' has a wrong offset!");
-static_assert(offsetof(UWidget_CastBar_C, CastTime) == 0x0002F0, "Member 'UWidget_CastBar_C::CastTime' has a wrong offset!");
-static_assert(offsetof(UWidget_CastBar_C, CurrentCastTime) == 0x0002F8, "Member 'UWidget_CastBar_C::CurrentCastTime' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_CastBar_C;
 
 }
 

@@ -17,6 +17,143 @@
 namespace SDK::Params
 {
 
+// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.ExecuteUbergraph_BP_AutomaticBase_ModScript
+// 0x03A8 (0x03A8 - 0x0000)
+struct BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetPostWeaponModFireRate_FireRate;        // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundAttenuation*                      Temp_object_Variable;                              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetTriggerParameter_self_CastInput; // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuartzTimeSignature                   K2Node_MakeStruct_QuartzTimeSignature;             // 0x0038(0x0018)()
+	class URGWeaponScript*                        CallFunc_GetWeaponScript_ReturnValue;              // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FQuartzClockSettings                   K2Node_MakeStruct_QuartzClockSettings;             // 0x0058(0x0020)()
+	float                                         CallFunc_GetROFTime_ReturnValue;                   // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName ClockName, EQuartzCommandQuantization QuantizationType, int32 NumBars, int32 Beat, float BeatFraction)> K2Node_CreateDelegate_OutputDelegate; // 0x007C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UQuartzClockHandle*                     CallFunc_StartClock_ClockHandle;                   // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_CustomEvent_ClockName;                      // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EQuartzCommandQuantization                    K2Node_CustomEvent_QuantizationType;               // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_CustomEvent_NumBars;                        // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_Beat;                           // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_CustomEvent_BeatFraction;                   // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWeaponHoldingFire_ReturnValue;          // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UQuartzClockHandle*                     CallFunc_StopClock_ClockHandle;                    // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URGWeaponScript*                        CallFunc_GetWeaponScript_ReturnValue_1;            // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetROFTime_ReturnValue_1;                 // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x00E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E5[0x3];                                       // 0x00E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x00E8(0x0030)(ContainsInstancedReference)
+	class FName                                   CallFunc_GetFName_ReturnValue;                     // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue_1;          // 0x0120(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0130(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)> Temp_delegate_Variable; // 0x0148(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USoundAttenuation*                      CallFunc_GetWeapon2DAttenuation_ReturnValue;       // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetIntegerWeaponStat_ReturnValue;         // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_164[0x4];                                      // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0168(0x0030)(ContainsInstancedReference)
+	class UQuartzSubsystem*                       CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller;      // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A9[0x3];                                      // 0x01A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x01AC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue_2;          // 0x01B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_2;     // 0x01D0(0x0030)(ContainsInstancedReference)
+	bool                                          CallFunc_IsGamePaused_ReturnValue;                 // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller_1;    // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_211[0x3];                                      // 0x0211(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetFName_ReturnValue_1;                   // 0x0214(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21C[0x4];                                      // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue_3;          // 0x0220(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0230(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FQuartzQuantizationBoundary            Temp_struct_Variable;                              // 0x0240(0x0020)(ConstParm)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue_1;          // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             K2Node_Event_SoundTemplate;                        // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_271[0x7];                                      // 0x0271(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARWeapon*                               CallFunc_GetWeaponActor_ReturnValue;               // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetTriggerParameter_self_CastInput_1; // 0x0288(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetFloatParameter_self_CastInput; // 0x0298(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsScriptLocallyControlled_ReturnValue; // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A9[0x7];                                      // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_K2_GetPlayerController_ReturnValue;       // 0x02B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)> Temp_delegate_Variable_1; // 0x02B8(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USoundAttenuation*                      K2Node_Select_Default;                             // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URGWeaponScript*                        CallFunc_GetWeaponScript_ReturnValue_2;            // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x02D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetAmmoInClip_ReturnValue;                // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E4[0x4];                                      // 0x02E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue; // 0x02E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetIntegerWeaponStat_ReturnValue_1;       // 0x02F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F4[0x4];                                      // 0x02F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x02F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetIntegerWeaponStat_ReturnValue_2;       // 0x0300(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_304[0x4];                                      // 0x0304(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuartzQuantizationBoundary            Temp_struct_Variable_1;                            // 0x0308(0x0020)(ConstParm)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_329[0x7];                                      // 0x0329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UQuartzClockHandle*                     CallFunc_SetSecondsPerTick_ClockHandle;            // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0338(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_33C[0x4];                                      // 0x033C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x0348(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWeaponHoldingFire_ReturnValue_1;        // 0x0350(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_351[0x7];                                      // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetFloatParameter_self_CastInput_1; // 0x0358(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UQuartzSubsystem*                       CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0368(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UQuartzClockHandle*                     CallFunc_SetSecondsPerTick_ClockHandle_1;          // 0x0370(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UQuartzClockHandle*                     CallFunc_CreateNewClock_ReturnValue;               // 0x0378(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UQuartzClockHandle*                     CallFunc_SubscribeToQuantizationEvent_ClockHandle; // 0x0380(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaTime;                            // 0x0388(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWeaponHoldingFire_ReturnValue_2;        // 0x038C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_38D[0x3];                                      // 0x038D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetBoolParameter_self_CastInput; // 0x0390(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_InFloat_ImplicitCast;   // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_InFloat_ImplicitCast_1; // 0x03A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript;
+
+// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.GetPostWeaponModFireRate
+// 0x0018 (0x0018 - 0x0000)
+struct BP_AutomaticBase_ModScript_C_GetPostWeaponModFireRate final
+{
+public:
+	double                                        FireRate;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetFloatWeaponStat_ReturnValue;           // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_FunctionResult_FireRate_ImplicitCast;       // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AutomaticBase_ModScript_C_GetPostWeaponModFireRate;
+
+// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.K2_TickScript
+// 0x0004 (0x0004 - 0x0000)
+struct BP_AutomaticBase_ModScript_C_K2_TickScript final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AutomaticBase_ModScript_C_K2_TickScript;
+
 // Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.OnBeat
 // 0x0018 (0x0018 - 0x0000)
 struct BP_AutomaticBase_ModScript_C_OnBeat final
@@ -29,131 +166,16 @@ public:
 	int32                                         Beat;                                              // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         BeatFraction;                                      // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AutomaticBase_ModScript_C_OnBeat) == 0x000004, "Wrong alignment on BP_AutomaticBase_ModScript_C_OnBeat");
-static_assert(sizeof(BP_AutomaticBase_ModScript_C_OnBeat) == 0x000018, "Wrong size on BP_AutomaticBase_ModScript_C_OnBeat");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_OnBeat, ClockName) == 0x000000, "Member 'BP_AutomaticBase_ModScript_C_OnBeat::ClockName' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_OnBeat, QuantizationType) == 0x000008, "Member 'BP_AutomaticBase_ModScript_C_OnBeat::QuantizationType' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_OnBeat, NumBars) == 0x00000C, "Member 'BP_AutomaticBase_ModScript_C_OnBeat::NumBars' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_OnBeat, Beat) == 0x000010, "Member 'BP_AutomaticBase_ModScript_C_OnBeat::Beat' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_OnBeat, BeatFraction) == 0x000014, "Member 'BP_AutomaticBase_ModScript_C_OnBeat::BeatFraction' has a wrong offset!");
+DUMPER7_ASSERTS_BP_AutomaticBase_ModScript_C_OnBeat;
 
-// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.ExecuteUbergraph_BP_AutomaticBase_ModScript
-// 0x0288 (0x0288 - 0x0000)
-struct BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript final
+// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.SpawnWeaponFireSFX
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AutomaticBase_ModScript_C_SpawnWeaponFireSFX final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGamePaused_ReturnValue;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuartzQuantizationBoundary            Temp_struct_Variable;                              // 0x0008(0x0020)(ConstParm)
-	class UQuartzSubsystem*                       CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)> Temp_delegate_Variable; // 0x0030(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FQuartzTimeSignature                   K2Node_MakeStruct_QuartzTimeSignature;             // 0x0040(0x0018)()
-	class URGWeaponScript*                        CallFunc_GetWeaponScript_ReturnValue;              // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FQuartzClockSettings                   K2Node_MakeStruct_QuartzClockSettings;             // 0x0060(0x0020)()
-	float                                         CallFunc_GetROFTime_ReturnValue;                   // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName ClockName, EQuartzCommandQuantization QuantizationType, int32 NumBars, int32 Beat, float BeatFraction)> K2Node_CreateDelegate_OutputDelegate; // 0x0084(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UQuartzClockHandle*                     CallFunc_StartClock_ClockHandle;                   // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_CustomEvent_ClockName;                      // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EQuartzCommandQuantization                    K2Node_CustomEvent_QuantizationType;               // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_NumBars;                        // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_Beat;                           // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_CustomEvent_BeatFraction;                   // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWeaponHoldingFire_ReturnValue;          // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BA[0x6];                                       // 0x00BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UQuartzClockHandle*                     CallFunc_StopClock_ClockHandle;                    // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URGWeaponScript*                        CallFunc_GetWeaponScript_ReturnValue_1;            // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetROFTime_ReturnValue_1;                 // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuartzQuantizationBoundary            Temp_struct_Variable_1;                            // 0x00F0(0x0020)(ConstParm)
-	class UQuartzClockHandle*                     CallFunc_SetSecondsPerTick_ClockHandle;            // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0118(0x0030)(ContainsInstancedReference)
-	class FName                                   CallFunc_GetFName_ReturnValue;                     // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue_1;          // 0x0150(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)> Temp_delegate_Variable_1; // 0x0160(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0170(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetIntegerWeaponStat_ReturnValue;         // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0190(0x0030)(ContainsInstancedReference)
-	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller;      // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UQuartzClockHandle*                     CallFunc_SetSecondsPerTick_ClockHandle_1;          // 0x01D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UQuartzClockHandle*                     CallFunc_SubscribeToQuantizationEvent_ClockHandle; // 0x01D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UQuartzSubsystem*                       CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UQuartzClockHandle*                     CallFunc_CreateNewClock_ReturnValue;               // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue_2;          // 0x0200(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_2;     // 0x0210(0x0030)(ContainsInstancedReference)
-	class FName                                   CallFunc_GetFName_ReturnValue_1;                   // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller_1;    // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue_3;          // 0x0258(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0268(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue_1;          // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SoundTemplate;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript) == 0x000008, "Wrong alignment on BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript");
-static_assert(sizeof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript) == 0x000288, "Wrong size on BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, EntryPoint) == 0x000000, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_IsGamePaused_ReturnValue) == 0x000004, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_IsGamePaused_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, Temp_struct_Variable) == 0x000008, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000028, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, Temp_delegate_Variable) == 0x000030, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::Temp_delegate_Variable' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, K2Node_MakeStruct_QuartzTimeSignature) == 0x000040, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::K2Node_MakeStruct_QuartzTimeSignature' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_GetWeaponScript_ReturnValue) == 0x000058, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_GetWeaponScript_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, K2Node_MakeStruct_QuartzClockSettings) == 0x000060, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::K2Node_MakeStruct_QuartzClockSettings' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_GetROFTime_ReturnValue) == 0x000080, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_GetROFTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, K2Node_CreateDelegate_OutputDelegate) == 0x000084, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_StartClock_ClockHandle) == 0x000098, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_StartClock_ClockHandle' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, K2Node_CustomEvent_ClockName) == 0x0000A0, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::K2Node_CustomEvent_ClockName' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, K2Node_CustomEvent_QuantizationType) == 0x0000A8, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::K2Node_CustomEvent_QuantizationType' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, K2Node_CustomEvent_NumBars) == 0x0000AC, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::K2Node_CustomEvent_NumBars' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, K2Node_CustomEvent_Beat) == 0x0000B0, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::K2Node_CustomEvent_Beat' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, K2Node_CustomEvent_BeatFraction) == 0x0000B4, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::K2Node_CustomEvent_BeatFraction' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_Greater_IntInt_ReturnValue) == 0x0000B8, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_IsWeaponHoldingFire_ReturnValue) == 0x0000B9, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_IsWeaponHoldingFire_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_StopClock_ClockHandle) == 0x0000C0, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_StopClock_ClockHandle' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_GetScriptFName_ReturnValue) == 0x0000C8, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_GetWeaponScript_ReturnValue_1) == 0x0000D0, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_GetWeaponScript_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_Conv_NameToString_ReturnValue) == 0x0000D8, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_GetROFTime_ReturnValue_1) == 0x0000E8, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_GetROFTime_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, Temp_struct_Variable_1) == 0x0000F0, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_SetSecondsPerTick_ClockHandle) == 0x000110, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_SetSecondsPerTick_ClockHandle' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000118, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_GetFName_ReturnValue) == 0x000148, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_GetFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_Conv_NameToString_ReturnValue_1) == 0x000150, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_Conv_NameToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, Temp_delegate_Variable_1) == 0x000160, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::Temp_delegate_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_Concat_StrStr_ReturnValue) == 0x000170, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_Conv_StringToName_ReturnValue) == 0x000180, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_GetIntegerWeaponStat_ReturnValue) == 0x000188, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_GetIntegerWeaponStat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000190, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, K2Node_DynamicCast_AsRGame_Player_Controller) == 0x0001C0, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::K2Node_DynamicCast_AsRGame_Player_Controller' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, K2Node_DynamicCast_bSuccess) == 0x0001C8, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_SetSecondsPerTick_ClockHandle_1) == 0x0001D0, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_SetSecondsPerTick_ClockHandle_1' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_SubscribeToQuantizationEvent_ClockHandle) == 0x0001D8, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_SubscribeToQuantizationEvent_ClockHandle' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_Array_AddUnique_ReturnValue) == 0x0001E0, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_GetWorldSubsystem_ReturnValue_1) == 0x0001E8, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_GetWorldSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_GetScriptFName_ReturnValue_1) == 0x0001F0, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_CreateNewClock_ReturnValue) == 0x0001F8, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_CreateNewClock_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_Conv_NameToString_ReturnValue_2) == 0x000200, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_Conv_NameToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x000210, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_GetFName_ReturnValue_1) == 0x000240, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_GetFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, K2Node_DynamicCast_AsRGame_Player_Controller_1) == 0x000248, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::K2Node_DynamicCast_AsRGame_Player_Controller_1' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, K2Node_DynamicCast_bSuccess_1) == 0x000250, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_Conv_NameToString_ReturnValue_3) == 0x000258, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_Conv_NameToString_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000268, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_Conv_StringToName_ReturnValue_1) == 0x000278, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_Conv_StringToName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript, CallFunc_Array_RemoveItem_ReturnValue) == 0x000280, "Member 'BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_AutomaticBase_ModScript_C_SpawnWeaponFireSFX;
 
 // Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.GetDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -162,9 +184,7 @@ struct BP_AutomaticBase_ModScript_C_GetDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_AutomaticBase_ModScript_C_GetDescription) == 0x000008, "Wrong alignment on BP_AutomaticBase_ModScript_C_GetDescription");
-static_assert(sizeof(BP_AutomaticBase_ModScript_C_GetDescription) == 0x000010, "Wrong size on BP_AutomaticBase_ModScript_C_GetDescription");
-static_assert(offsetof(BP_AutomaticBase_ModScript_C_GetDescription, ReturnValue) == 0x000000, "Member 'BP_AutomaticBase_ModScript_C_GetDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_AutomaticBase_ModScript_C_GetDescription;
 
 }
 

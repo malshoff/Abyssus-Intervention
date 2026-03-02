@@ -39,20 +39,7 @@ public:
 	int32                                         CallFunc_GetNumTentaclesSpawned_NumTentaclesSpawned; // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles) == 0x000008, "Wrong alignment on BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles");
-static_assert(sizeof(BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles) == 0x000070, "Wrong size on BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles, Value) == 0x000000, "Member 'BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles::Value' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x000038, "Member 'BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles, CallFunc_HasMutator_ReturnValue) == 0x000041, "Member 'BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles, CallFunc_GetCharacterMutator_ReturnValue) == 0x000048, "Member 'BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles::CallFunc_GetCharacterMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles, CallFunc_IsValid_ReturnValue) == 0x000050, "Member 'BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles, K2Node_DynamicCast_AsBP_Ocean_God_Passive_Character_Mutator_Script) == 0x000058, "Member 'BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles::K2Node_DynamicCast_AsBP_Ocean_God_Passive_Character_Mutator_Script' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles, K2Node_DynamicCast_bSuccess_1) == 0x000060, "Member 'BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles, CallFunc_GetNumMaxTentacles_ReturnValue) == 0x000064, "Member 'BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles::CallFunc_GetNumMaxTentacles_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles, CallFunc_GetNumTentaclesSpawned_NumTentaclesSpawned) == 0x000068, "Member 'BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles::CallFunc_GetNumTentaclesSpawned_NumTentaclesSpawned' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x00006C, "Member 'BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Ocean_Behavior_MutatorScript_C_BP_HasSpawnedNumMaxTentacles;
 
 // Function BP_Ocean_Behavior_MutatorScript.BP_Ocean_Behavior_MutatorScript_C.ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript
 // 0x00F0 (0x00F0 - 0x0000)
@@ -73,18 +60,7 @@ public:
 	class ABP_OceanGod_Tentacle_C*                CallFunc_FinishSpawningActor_ReturnValue;          // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_SetDoublePropertyByName_Value_ImplicitCast; // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript) == 0x000010, "Wrong alignment on BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript");
-static_assert(sizeof(BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript) == 0x0000F0, "Wrong size on BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript, EntryPoint) == 0x000000, "Member 'BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript, K2Node_Event_Location) == 0x000038, "Member 'BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript::K2Node_Event_Location' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript, K2Node_Event_TriggerDamage) == 0x000050, "Member 'BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript::K2Node_Event_TriggerDamage' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript, K2Node_DynamicCast_AsPawn) == 0x000058, "Member 'BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript::K2Node_DynamicCast_AsPawn' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript, CallFunc_Conv_VectorToTransform_ReturnValue) == 0x000070, "Member 'BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript::CallFunc_Conv_VectorToTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x0000D0, "Member 'BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript, CallFunc_FinishSpawningActor_ReturnValue) == 0x0000D8, "Member 'BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript, CallFunc_SetDoublePropertyByName_Value_ImplicitCast) == 0x0000E0, "Member 'BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript::CallFunc_SetDoublePropertyByName_Value_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Ocean_Behavior_MutatorScript_C_ExecuteUbergraph_BP_Ocean_Behavior_MutatorScript;
 
 // Function BP_Ocean_Behavior_MutatorScript.BP_Ocean_Behavior_MutatorScript_C.HasSpawnedNumMaxTentacles
 // 0x0002 (0x0002 - 0x0000)
@@ -94,10 +70,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BP_HasSpawnedNumMaxTentacles_Value;       // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Ocean_Behavior_MutatorScript_C_HasSpawnedNumMaxTentacles) == 0x000001, "Wrong alignment on BP_Ocean_Behavior_MutatorScript_C_HasSpawnedNumMaxTentacles");
-static_assert(sizeof(BP_Ocean_Behavior_MutatorScript_C_HasSpawnedNumMaxTentacles) == 0x000002, "Wrong size on BP_Ocean_Behavior_MutatorScript_C_HasSpawnedNumMaxTentacles");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_HasSpawnedNumMaxTentacles, ReturnValue) == 0x000000, "Member 'BP_Ocean_Behavior_MutatorScript_C_HasSpawnedNumMaxTentacles::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_HasSpawnedNumMaxTentacles, CallFunc_BP_HasSpawnedNumMaxTentacles_Value) == 0x000001, "Member 'BP_Ocean_Behavior_MutatorScript_C_HasSpawnedNumMaxTentacles::CallFunc_BP_HasSpawnedNumMaxTentacles_Value' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Ocean_Behavior_MutatorScript_C_HasSpawnedNumMaxTentacles;
 
 // Function BP_Ocean_Behavior_MutatorScript.BP_Ocean_Behavior_MutatorScript_C.SpawnTentacle
 // 0x0020 (0x0020 - 0x0000)
@@ -107,10 +80,7 @@ public:
 	struct FVector                                Location;                                          // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         TriggerDamage;                                     // 0x0018(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Ocean_Behavior_MutatorScript_C_SpawnTentacle) == 0x000008, "Wrong alignment on BP_Ocean_Behavior_MutatorScript_C_SpawnTentacle");
-static_assert(sizeof(BP_Ocean_Behavior_MutatorScript_C_SpawnTentacle) == 0x000020, "Wrong size on BP_Ocean_Behavior_MutatorScript_C_SpawnTentacle");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_SpawnTentacle, Location) == 0x000000, "Member 'BP_Ocean_Behavior_MutatorScript_C_SpawnTentacle::Location' has a wrong offset!");
-static_assert(offsetof(BP_Ocean_Behavior_MutatorScript_C_SpawnTentacle, TriggerDamage) == 0x000018, "Member 'BP_Ocean_Behavior_MutatorScript_C_SpawnTentacle::TriggerDamage' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Ocean_Behavior_MutatorScript_C_SpawnTentacle;
 
 }
 

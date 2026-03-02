@@ -288,6 +288,26 @@ void UBP_EngineRifle_Script_C::OnOverheatingModFire(bool IsPrimaryMod)
 }
 
 
+// Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.OnWeaponVisibilityChanged
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const bool                              bNewVisibility                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_EngineRifle_Script_C::OnWeaponVisibilityChanged(const bool bNewVisibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EngineRifle_Script_C", "OnWeaponVisibilityChanged");
+
+	Params::BP_EngineRifle_Script_C_OnWeaponVisibilityChanged Parms{};
+
+	Parms.bNewVisibility = bNewVisibility;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.PlayBarrelSpinSFX
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -312,8 +332,9 @@ void UBP_EngineRifle_Script_C::PlayBarrelSpinSFX(bool IsPrimaryMod)
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  HeatReduction                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  OverheatHeatReduction                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_EngineRifle_Script_C::ReduceHeat(double HeatReduction)
+void UBP_EngineRifle_Script_C::ReduceHeat(double HeatReduction, double OverheatHeatReduction)
 {
 	static class UFunction* Func = nullptr;
 
@@ -323,13 +344,14 @@ void UBP_EngineRifle_Script_C::ReduceHeat(double HeatReduction)
 	Params::BP_EngineRifle_Script_C_ReduceHeat Parms{};
 
 	Parms.HeatReduction = HeatReduction;
+	Parms.OverheatHeatReduction = OverheatHeatReduction;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.RemoveOverheat
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBP_EngineRifle_Script_C::RemoveOverheat()
 {

@@ -18,19 +18,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_CosmeticCategorySlotBTN.Widget_CosmeticCategorySlotBTN_C
-// 0x0050 (0x0320 - 0x02D0)
+// 0x0050 (0x0390 - 0x0340)
 class UWidget_CosmeticCategorySlotBTN_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Hover_Animation;                                   // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Construct_Animation;                               // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 BackgroundShadow;                                  // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_74;                                  // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                MainButton;                                        // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 TabImage;                                          // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class URCosmeticCategoryPrimaryAsset* CosmeticPA, class UUserWidget* SelfWidget)> OnClicked; // 0x0308(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class URCosmeticCategoryPrimaryAsset*         CosmeticCategoryPA;                                // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 TabImage;                                          // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                MainButton;                                        // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_74;                                  // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BackgroundShadow;                                  // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Construct_Animation;                               // 0x0368(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hover_Animation;                                   // 0x0370(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class URCosmeticCategoryPrimaryAsset* CosmeticPA, class UUserWidget* SelfWidget)> OnClicked; // 0x0378(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class URCosmeticCategoryPrimaryAsset*         CosmeticCategoryPA;                                // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Widget_CosmeticCategorySlotBTN_MainButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
@@ -47,24 +47,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_CosmeticCategorySlotBTN_C">();
+		BP_STATIC_CLASS_IMPL("Widget_CosmeticCategorySlotBTN_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_CosmeticCategorySlotBTN_C")
 	}
 	static class UWidget_CosmeticCategorySlotBTN_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_CosmeticCategorySlotBTN_C>();
 	}
 };
-static_assert(alignof(UWidget_CosmeticCategorySlotBTN_C) == 0x000008, "Wrong alignment on UWidget_CosmeticCategorySlotBTN_C");
-static_assert(sizeof(UWidget_CosmeticCategorySlotBTN_C) == 0x000320, "Wrong size on UWidget_CosmeticCategorySlotBTN_C");
-static_assert(offsetof(UWidget_CosmeticCategorySlotBTN_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_CosmeticCategorySlotBTN_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticCategorySlotBTN_C, Hover_Animation) == 0x0002D8, "Member 'UWidget_CosmeticCategorySlotBTN_C::Hover_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticCategorySlotBTN_C, Construct_Animation) == 0x0002E0, "Member 'UWidget_CosmeticCategorySlotBTN_C::Construct_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticCategorySlotBTN_C, BackgroundShadow) == 0x0002E8, "Member 'UWidget_CosmeticCategorySlotBTN_C::BackgroundShadow' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticCategorySlotBTN_C, HorizontalBox_74) == 0x0002F0, "Member 'UWidget_CosmeticCategorySlotBTN_C::HorizontalBox_74' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticCategorySlotBTN_C, MainButton) == 0x0002F8, "Member 'UWidget_CosmeticCategorySlotBTN_C::MainButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticCategorySlotBTN_C, TabImage) == 0x000300, "Member 'UWidget_CosmeticCategorySlotBTN_C::TabImage' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticCategorySlotBTN_C, OnClicked) == 0x000308, "Member 'UWidget_CosmeticCategorySlotBTN_C::OnClicked' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticCategorySlotBTN_C, CosmeticCategoryPA) == 0x000318, "Member 'UWidget_CosmeticCategorySlotBTN_C::CosmeticCategoryPA' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_CosmeticCategorySlotBTN_C;
 
 }
 

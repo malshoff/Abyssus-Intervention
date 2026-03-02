@@ -51,6 +51,34 @@ void UBP_GasGrenade_AreaEffectScript_C::K2_ActivateScript()
 }
 
 
+// Function BP_GasGrenade_AreaEffectScript.BP_GasGrenade_AreaEffectScript_C.K2_DeactivateScript
+// (Event, Public, BlueprintEvent)
+
+void UBP_GasGrenade_AreaEffectScript_C::K2_DeactivateScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GasGrenade_AreaEffectScript_C", "K2_DeactivateScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GasGrenade_AreaEffectScript.BP_GasGrenade_AreaEffectScript_C.K2_PreLevelTransition
+// (Event, Public, BlueprintEvent)
+
+void UBP_GasGrenade_AreaEffectScript_C::K2_PreLevelTransition()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GasGrenade_AreaEffectScript_C", "K2_PreLevelTransition");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_GasGrenade_AreaEffectScript.BP_GasGrenade_AreaEffectScript_C.K2_TickScript
 // (Event, Public, BlueprintEvent)
 // Parameters:

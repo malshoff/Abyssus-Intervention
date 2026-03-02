@@ -51,28 +51,6 @@ void UWidget_PlayerAvatarElement_C::ExecuteUbergraph_Widget_PlayerAvatarElement(
 }
 
 
-// Function Widget_PlayerAvatarElement.Widget_PlayerAvatarElement_C.OnGetPlayerAvatarComplete
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UTexture2D*                       Texture                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_PlayerAvatarElement_C::OnGetPlayerAvatarComplete(bool bSuccess, class UTexture2D* Texture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerAvatarElement_C", "OnGetPlayerAvatarComplete");
-
-	Params::Widget_PlayerAvatarElement_C_OnGetPlayerAvatarComplete Parms{};
-
-	Parms.bSuccess = bSuccess;
-	Parms.Texture = Texture;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function Widget_PlayerAvatarElement.Widget_PlayerAvatarElement_C.OnInitialized
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -121,26 +99,13 @@ void UWidget_PlayerAvatarElement_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function Widget_PlayerAvatarElement.Widget_PlayerAvatarElement_C.RefreshFrame
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UWidget_PlayerAvatarElement_C::RefreshFrame()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerAvatarElement_C", "RefreshFrame");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Widget_PlayerAvatarElement.Widget_PlayerAvatarElement_C.SetPlayerState
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerState*                     PlayerState_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FRPlayerStats&             RPlayerStats                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_PlayerAvatarElement_C::SetPlayerState(class APlayerState* PlayerState_0)
+void UWidget_PlayerAvatarElement_C::SetPlayerState(class APlayerState* PlayerState_0, const struct FRPlayerStats& RPlayerStats)
 {
 	static class UFunction* Func = nullptr;
 
@@ -150,6 +115,7 @@ void UWidget_PlayerAvatarElement_C::SetPlayerState(class APlayerState* PlayerSta
 	Params::Widget_PlayerAvatarElement_C_SetPlayerState Parms{};
 
 	Parms.PlayerState_0 = PlayerState_0;
+	Parms.RPlayerStats = std::move(RPlayerStats);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

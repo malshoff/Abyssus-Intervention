@@ -18,14 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Pickupable_Key.BP_Pickupable_Key_C
-// 0x0020 (0x03C0 - 0x03A0)
+// 0x0028 (0x03D0 - 0x03A8)
 class ABP_Pickupable_Key_C final : public ABP_Pickupable_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Pickupable_Key_C;                // 0x03A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   Key;                                               // 0x03A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Bobber;                                            // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class ARPickupableItem*                       SuperSelf;                                         // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Pickupable_Key_C;                // 0x03A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCapsuleComponent*                      Capsule;                                           // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Key;                                               // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Bobber;                                            // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class ARPickupableItem*                       SuperSelf;                                         // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	bool CanInteract(class APlayerController* Controller);
@@ -42,19 +43,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Pickupable_Key_C">();
+		BP_STATIC_CLASS_IMPL("BP_Pickupable_Key_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Pickupable_Key_C")
 	}
 	static class ABP_Pickupable_Key_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Pickupable_Key_C>();
 	}
 };
-static_assert(alignof(ABP_Pickupable_Key_C) == 0x000008, "Wrong alignment on ABP_Pickupable_Key_C");
-static_assert(sizeof(ABP_Pickupable_Key_C) == 0x0003C0, "Wrong size on ABP_Pickupable_Key_C");
-static_assert(offsetof(ABP_Pickupable_Key_C, UberGraphFrame_BP_Pickupable_Key_C) == 0x0003A0, "Member 'ABP_Pickupable_Key_C::UberGraphFrame_BP_Pickupable_Key_C' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_Key_C, Key) == 0x0003A8, "Member 'ABP_Pickupable_Key_C::Key' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_Key_C, Bobber) == 0x0003B0, "Member 'ABP_Pickupable_Key_C::Bobber' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_Key_C, SuperSelf) == 0x0003B8, "Member 'ABP_Pickupable_Key_C::SuperSelf' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Pickupable_Key_C;
 
 }
 

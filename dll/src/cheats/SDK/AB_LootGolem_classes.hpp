@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass AB_LootGolem.AB_LootGolem_C
-// 0x0000 (0x0D50 - 0x0D50)
+// 0x0000 (0x0D70 - 0x0D70)
 class UAB_LootGolem_C final : public UABP_Golem_Sentry_C
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"AB_LootGolem_C">();
+		BP_STATIC_CLASS_IMPL("AB_LootGolem_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AB_LootGolem_C")
 	}
 	static class UAB_LootGolem_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAB_LootGolem_C>();
 	}
 };
-static_assert(alignof(UAB_LootGolem_C) == 0x000010, "Wrong alignment on UAB_LootGolem_C");
-static_assert(sizeof(UAB_LootGolem_C) == 0x000D50, "Wrong size on UAB_LootGolem_C");
+DUMPER7_ASSERTS_UAB_LootGolem_C;
 
 }
 

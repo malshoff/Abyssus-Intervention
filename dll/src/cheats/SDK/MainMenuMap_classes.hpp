@@ -33,17 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"MainMenuMap_C">();
+		BP_STATIC_CLASS_IMPL("MainMenuMap_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MainMenuMap_C")
 	}
 	static class AMainMenuMap_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AMainMenuMap_C>();
 	}
 };
-static_assert(alignof(AMainMenuMap_C) == 0x000008, "Wrong alignment on AMainMenuMap_C");
-static_assert(sizeof(AMainMenuMap_C) == 0x0002C0, "Wrong size on AMainMenuMap_C");
-static_assert(offsetof(AMainMenuMap_C, UberGraphFrame) == 0x0002B0, "Member 'AMainMenuMap_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AMainMenuMap_C, MenuMusic) == 0x0002B8, "Member 'AMainMenuMap_C::MenuMusic' has a wrong offset!");
+DUMPER7_ASSERTS_AMainMenuMap_C;
 
 }
 

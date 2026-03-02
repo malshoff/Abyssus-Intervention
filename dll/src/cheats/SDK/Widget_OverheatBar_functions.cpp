@@ -52,7 +52,7 @@ void UWidget_OverheatBar_C::OnInitialized()
 
 
 // Function Widget_OverheatBar.Widget_OverheatBar_C.OnOverheatCleared
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_OverheatBar_C::OnOverheatCleared()
 {
@@ -66,7 +66,7 @@ void UWidget_OverheatBar_C::OnOverheatCleared()
 
 
 // Function Widget_OverheatBar.Widget_OverheatBar_C.OnOverheated
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_OverheatBar_C::OnOverheated()
 {
@@ -100,7 +100,7 @@ void UWidget_OverheatBar_C::OnVisibilityChanged_Event(ESlateVisibility InVisibil
 
 
 // Function Widget_OverheatBar.Widget_OverheatBar_C.UpdateOverheatAmount
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_OverheatBar_C::UpdateOverheatAmount()
 {

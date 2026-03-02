@@ -35,18 +35,7 @@ public:
 	bool                                          K2Node_CustomEvent_NewValue;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen) == 0x000008, "Wrong alignment on Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen");
-static_assert(sizeof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen) == 0x000040, "Wrong size on Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen");
-static_assert(offsetof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen, EntryPoint) == 0x000000, "Member 'Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen, Temp_bool_Variable) == 0x000004, "Member 'Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen, Temp_byte_Variable) == 0x000018, "Member 'Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen, Temp_byte_Variable_1) == 0x000019, "Member 'Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000020, "Member 'Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen, CallFunc_GetShowPlayerHUD_ReturnValue) == 0x000028, "Member 'Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen::CallFunc_GetShowPlayerHUD_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen, CallFunc_GetRGameUserSettings_ReturnValue_1) == 0x000030, "Member 'Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen::CallFunc_GetRGameUserSettings_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen, K2Node_CustomEvent_NewValue) == 0x000038, "Member 'Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen::K2Node_CustomEvent_NewValue' has a wrong offset!");
-static_assert(offsetof(Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen, K2Node_Select_Default) == 0x000039, "Member 'Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_NotificationScreen_C_ExecuteUbergraph_Widget_NotificationScreen;
 
 // Function Widget_NotificationScreen.Widget_NotificationScreen_C.OnShowHUDUpdated_Event_0
 // 0x0001 (0x0001 - 0x0000)
@@ -55,9 +44,7 @@ struct Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0 final
 public:
 	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0) == 0x000001, "Wrong alignment on Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0");
-static_assert(sizeof(Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0) == 0x000001, "Wrong size on Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0");
-static_assert(offsetof(Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0, NewValue) == 0x000000, "Member 'Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0::NewValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_NotificationScreen_C_OnShowHUDUpdated_Event_0;
 
 }
 

@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function CommonUI.CommonActionWidget.GetIconDynamicMaterial
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMaterialInstanceDynamic*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -42,8 +42,27 @@ class UMaterialInstanceDynamic* UCommonActionWidget::GetIconDynamicMaterial()
 }
 
 
+// Function CommonUI.CommonActionWidget.OnEnhancedInputMappingsRebuilt
+// (Final, RequiredAPI, Native, Protected)
+
+void UCommonActionWidget::OnEnhancedInputMappingsRebuilt()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonActionWidget", "OnEnhancedInputMappingsRebuilt");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function CommonUI.CommonActionWidget.SetEnhancedInputAction
-// (Final, Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UInputAction*                     InInputAction                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -68,7 +87,7 @@ void UCommonActionWidget::SetEnhancedInputAction(class UInputAction* InInputActi
 
 
 // Function CommonUI.CommonActionWidget.SetIconRimBrush
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FSlateBrush&               InIconRimBrush                                         (Parm, NativeAccessSpecifierPublic)
 
@@ -93,7 +112,7 @@ void UCommonActionWidget::SetIconRimBrush(const struct FSlateBrush& InIconRimBru
 
 
 // Function CommonUI.CommonActionWidget.SetInputAction
-// (Final, Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FDataTableRowHandle&       InputActionRow                                         (Parm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -118,7 +137,7 @@ void UCommonActionWidget::SetInputAction(const struct FDataTableRowHandle& Input
 
 
 // Function CommonUI.CommonActionWidget.SetInputActionBinding
-// (Final, Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FUIActionBindingHandle&    BindingHandle                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -143,7 +162,7 @@ void UCommonActionWidget::SetInputActionBinding(const struct FUIActionBindingHan
 
 
 // Function CommonUI.CommonActionWidget.SetInputActions
-// (Final, Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const TArray<struct FDataTableRowHandle>&NewInputActions                                        (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 
@@ -168,7 +187,7 @@ void UCommonActionWidget::SetInputActions(const TArray<struct FDataTableRowHandl
 
 
 // Function CommonUI.CommonActionWidget.GetDisplayText
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -192,8 +211,33 @@ class FText UCommonActionWidget::GetDisplayText() const
 }
 
 
+// Function CommonUI.CommonActionWidget.GetEnhancedInputAction
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class UInputAction*               ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+const class UInputAction* UCommonActionWidget::GetEnhancedInputAction() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonActionWidget", "GetEnhancedInputAction");
+
+	Params::CommonActionWidget_GetEnhancedInputAction Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function CommonUI.CommonActionWidget.GetIcon
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FSlateBrush                      ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -218,7 +262,7 @@ struct FSlateBrush UCommonActionWidget::GetIcon() const
 
 
 // Function CommonUI.CommonActionWidget.IsHeldAction
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -243,7 +287,7 @@ bool UCommonActionWidget::IsHeldAction() const
 
 
 // Function CommonUI.CommonUserWidget.RegisterScrollRecipientExternal
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UWidget*                    AnalogScrollRecipient                                  (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -268,7 +312,7 @@ void UCommonUserWidget::RegisterScrollRecipientExternal(const class UWidget* Ana
 
 
 // Function CommonUI.CommonUserWidget.SetConsumePointerInput
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bInConsumePointerInput                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -293,7 +337,7 @@ void UCommonUserWidget::SetConsumePointerInput(bool bInConsumePointerInput)
 
 
 // Function CommonUI.CommonUserWidget.UnregisterScrollRecipientExternal
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UWidget*                    AnalogScrollRecipient                                  (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -318,7 +362,7 @@ void UCommonUserWidget::UnregisterScrollRecipientExternal(const class UWidget* A
 
 
 // Function CommonUI.CommonActivatableWidget.ActivateWidget
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonActivatableWidget::ActivateWidget()
 {
@@ -337,7 +381,7 @@ void UCommonActivatableWidget::ActivateWidget()
 
 
 // Function CommonUI.CommonActivatableWidget.BindVisibilityToActivation
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UCommonActivatableWidget*         ActivatableWidget                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -362,7 +406,7 @@ void UCommonActivatableWidget::BindVisibilityToActivation(class UCommonActivatab
 
 
 // Function CommonUI.CommonActivatableWidget.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
+// (RequiredAPI, Event, Protected, BlueprintEvent)
 
 void UCommonActivatableWidget::BP_OnActivated()
 {
@@ -376,7 +420,7 @@ void UCommonActivatableWidget::BP_OnActivated()
 
 
 // Function CommonUI.CommonActivatableWidget.BP_OnDeactivated
-// (Event, Protected, BlueprintEvent)
+// (RequiredAPI, Event, Protected, BlueprintEvent)
 
 void UCommonActivatableWidget::BP_OnDeactivated()
 {
@@ -390,7 +434,7 @@ void UCommonActivatableWidget::BP_OnDeactivated()
 
 
 // Function CommonUI.CommonActivatableWidget.BP_OnHandleBackAction
-// (Event, Protected, BlueprintEvent)
+// (RequiredAPI, Event, Protected, BlueprintEvent)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -410,7 +454,7 @@ bool UCommonActivatableWidget::BP_OnHandleBackAction()
 
 
 // Function CommonUI.CommonActivatableWidget.ClearFocusRestorationTarget
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonActivatableWidget::ClearFocusRestorationTarget()
 {
@@ -429,7 +473,7 @@ void UCommonActivatableWidget::ClearFocusRestorationTarget()
 
 
 // Function CommonUI.CommonActivatableWidget.DeactivateWidget
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonActivatableWidget::DeactivateWidget()
 {
@@ -448,7 +492,7 @@ void UCommonActivatableWidget::DeactivateWidget()
 
 
 // Function CommonUI.CommonActivatableWidget.RequestRefreshFocus
-// (Final, Native, Protected, BlueprintCallable)
+// (Final, RequiredAPI, Native, Protected, BlueprintCallable)
 
 void UCommonActivatableWidget::RequestRefreshFocus()
 {
@@ -467,7 +511,7 @@ void UCommonActivatableWidget::RequestRefreshFocus()
 
 
 // Function CommonUI.CommonActivatableWidget.SetBindVisibilities
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // ESlateVisibility                        OnActivatedVisibility                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ESlateVisibility                        OnDeactivatedVisibility                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -496,7 +540,7 @@ void UCommonActivatableWidget::SetBindVisibilities(ESlateVisibility OnActivatedV
 
 
 // Function CommonUI.CommonActivatableWidget.BP_GetDesiredFocusTarget
-// (Event, Protected, BlueprintEvent, Const)
+// (RequiredAPI, Event, Protected, BlueprintEvent, Const)
 // Parameters:
 // class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -516,7 +560,7 @@ class UWidget* UCommonActivatableWidget::BP_GetDesiredFocusTarget() const
 
 
 // Function CommonUI.CommonActivatableWidget.BP_GetDesiredInputConfig
-// (Event, Protected, BlueprintEvent, Const)
+// (RequiredAPI, Event, Protected, BlueprintEvent, Const)
 // Parameters:
 // struct FUIInputConfig                   ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -536,7 +580,7 @@ struct FUIInputConfig UCommonActivatableWidget::BP_GetDesiredInputConfig() const
 
 
 // Function CommonUI.CommonActivatableWidget.GetDesiredFocusTarget
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -586,7 +630,7 @@ bool UCommonActivatableWidget::IsActivated() const
 
 
 // Function CommonUI.CommonAnimatedSwitcher.ActivateNextWidget
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bCanWrap                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -611,7 +655,7 @@ void UCommonAnimatedSwitcher::ActivateNextWidget(bool bCanWrap)
 
 
 // Function CommonUI.CommonAnimatedSwitcher.ActivatePreviousWidget
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bCanWrap                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -636,7 +680,7 @@ void UCommonAnimatedSwitcher::ActivatePreviousWidget(bool bCanWrap)
 
 
 // Function CommonUI.CommonAnimatedSwitcher.SetDisableTransitionAnimation
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bDisableAnimation                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -661,7 +705,7 @@ void UCommonAnimatedSwitcher::SetDisableTransitionAnimation(bool bDisableAnimati
 
 
 // Function CommonUI.CommonAnimatedSwitcher.HasWidgets
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -686,7 +730,7 @@ bool UCommonAnimatedSwitcher::HasWidgets() const
 
 
 // Function CommonUI.CommonAnimatedSwitcher.IsCurrentlySwitching
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -711,7 +755,7 @@ bool UCommonAnimatedSwitcher::IsCurrentlySwitching() const
 
 
 // Function CommonUI.CommonAnimatedSwitcher.IsTransitionPlaying
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -736,7 +780,7 @@ bool UCommonAnimatedSwitcher::IsTransitionPlaying() const
 
 
 // Function CommonUI.CommonBorderStyle.GetBackgroundBrush
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FSlateBrush*                     Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
 
@@ -762,7 +806,7 @@ void UCommonBorderStyle::GetBackgroundBrush(struct FSlateBrush* Brush) const
 
 
 // Function CommonUI.CommonBorder.SetStyle
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // TSubclassOf<class UCommonBorderStyle>   InStyle                                                (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1393,6 +1437,20 @@ void UCommonButtonBase::BP_OnReleased()
 }
 
 
+// Function CommonUI.CommonButtonBase.BP_OnRequiresHoldChanged
+// (RequiredAPI, Event, Protected, BlueprintEvent)
+
+void UCommonButtonBase::BP_OnRequiresHoldChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonBase", "BP_OnRequiresHoldChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function CommonUI.CommonButtonBase.BP_OnSelected
 // (RequiredAPI, Event, Protected, BlueprintEvent)
 
@@ -1491,7 +1549,7 @@ bool UCommonButtonBase::GetConvertInputActionToHold()
 
 
 // Function CommonUI.CommonButtonBase.HandleButtonClicked
-// (Final, RequiredAPI, Native, Protected)
+// (RequiredAPI, Native, Protected)
 
 void UCommonButtonBase::HandleButtonClicked()
 {
@@ -1510,7 +1568,7 @@ void UCommonButtonBase::HandleButtonClicked()
 
 
 // Function CommonUI.CommonButtonBase.HandleButtonPressed
-// (Final, RequiredAPI, Native, Protected)
+// (RequiredAPI, Native, Protected)
 
 void UCommonButtonBase::HandleButtonPressed()
 {
@@ -1529,7 +1587,7 @@ void UCommonButtonBase::HandleButtonPressed()
 
 
 // Function CommonUI.CommonButtonBase.HandleButtonReleased
-// (Final, RequiredAPI, Native, Protected)
+// (RequiredAPI, Native, Protected)
 
 void UCommonButtonBase::HandleButtonReleased()
 {
@@ -1863,6 +1921,31 @@ void UCommonButtonBase::OnTriggeringInputActionChanged(const struct FDataTableRo
 }
 
 
+// Function CommonUI.CommonButtonBase.SetClickedSoundOverride
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class USoundBase*                       Sound                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonButtonBase::SetClickedSoundOverride(class USoundBase* Sound)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonBase", "SetClickedSoundOverride");
+
+	Params::CommonButtonBase_SetClickedSoundOverride Parms{};
+
+	Parms.Sound = Sound;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function CommonUI.CommonButtonBase.SetClickMethod
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
@@ -2142,6 +2225,31 @@ void UCommonButtonBase::SetIsToggleable(bool bInIsToggleable)
 }
 
 
+// Function CommonUI.CommonButtonBase.SetLockedClickedSoundOverride
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class USoundBase*                       Sound                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonButtonBase::SetLockedClickedSoundOverride(class USoundBase* Sound)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonBase", "SetLockedClickedSoundOverride");
+
+	Params::CommonButtonBase_SetLockedClickedSoundOverride Parms{};
+
+	Parms.Sound = Sound;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function CommonUI.CommonButtonBase.SetLockedHoveredSoundOverride
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
@@ -2182,6 +2290,33 @@ void UCommonButtonBase::SetLockedPressedSoundOverride(class USoundBase* Sound)
 	Params::CommonButtonBase_SetLockedPressedSoundOverride Parms{};
 
 	Parms.Sound = Sound;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonButtonBase.SetMaxDimensions
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   InMaxWidth                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InMaxHeight                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonButtonBase::SetMaxDimensions(int32 InMaxWidth, int32 InMaxHeight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonBase", "SetMaxDimensions");
+
+	Params::CommonButtonBase_SetMaxDimensions Parms{};
+
+	Parms.InMaxWidth = InMaxWidth;
+	Parms.InMaxHeight = InMaxHeight;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2284,6 +2419,31 @@ void UCommonButtonBase::SetRequiresHold(bool bInRequiresHold)
 	Params::CommonButtonBase_SetRequiresHold Parms{};
 
 	Parms.bInRequiresHold = bInRequiresHold;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonButtonBase.SetSelectedClickedSoundOverride
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class USoundBase*                       Sound                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonButtonBase::SetSelectedClickedSoundOverride(class USoundBase* Sound)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonBase", "SetSelectedClickedSoundOverride");
+
+	Params::CommonButtonBase_SetSelectedClickedSoundOverride Parms{};
+
+	Parms.Sound = Sound;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2948,6 +3108,31 @@ class UCommonButtonStyle* UCommonButtonBase::GetStyle() const
 }
 
 
+// Function CommonUI.CommonButtonBase.IsHoverSimulationOnTouchAvailable
+// (Final, Native, Private, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCommonButtonBase::IsHoverSimulationOnTouchAvailable() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonBase", "IsHoverSimulationOnTouchAvailable");
+
+	Params::CommonButtonBase_IsHoverSimulationOnTouchAvailable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function CommonUI.CommonButtonBase.IsInteractionEnabled
 // (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -2999,7 +3184,7 @@ bool UCommonButtonBase::IsPressed() const
 
 
 // Function CommonUI.CommonTextBlock.GetMargin
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FMargin                    ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -3024,7 +3209,7 @@ const struct FMargin UCommonTextBlock::GetMargin()
 
 
 // Function CommonUI.CommonTextBlock.ResetScrollState
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonTextBlock::ResetScrollState()
 {
@@ -3043,7 +3228,7 @@ void UCommonTextBlock::ResetScrollState()
 
 
 // Function CommonUI.CommonTextBlock.SetApplyLineHeightToBottomLine
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    InApplyLineHeightToBottomLine                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3068,7 +3253,7 @@ void UCommonTextBlock::SetApplyLineHeightToBottomLine(bool InApplyLineHeightToBo
 
 
 // Function CommonUI.CommonTextBlock.SetLineHeightPercentage
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InLineHeightPercentage                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3093,7 +3278,7 @@ void UCommonTextBlock::SetLineHeightPercentage(float InLineHeightPercentage)
 
 
 // Function CommonUI.CommonTextBlock.SetMargin
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FMargin&                   InMargin                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -3118,7 +3303,7 @@ void UCommonTextBlock::SetMargin(const struct FMargin& InMargin)
 
 
 // Function CommonUI.CommonTextBlock.SetMobileFontSizeMultiplier
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InMobileFontSizeMultiplier                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3143,7 +3328,7 @@ void UCommonTextBlock::SetMobileFontSizeMultiplier(float InMobileFontSizeMultipl
 
 
 // Function CommonUI.CommonTextBlock.SetScrollingEnabled
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bInIsScrollingEnabled                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3167,8 +3352,33 @@ void UCommonTextBlock::SetScrollingEnabled(bool bInIsScrollingEnabled)
 }
 
 
+// Function CommonUI.CommonTextBlock.SetScrollOrientation
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// EOrientation                            InScrollOrientation                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonTextBlock::SetScrollOrientation(EOrientation InScrollOrientation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonTextBlock", "SetScrollOrientation");
+
+	Params::CommonTextBlock_SetScrollOrientation Parms{};
+
+	Parms.InScrollOrientation = InScrollOrientation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function CommonUI.CommonTextBlock.SetStyle
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // TSubclassOf<class UCommonTextStyle>     InStyle                                                (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3193,7 +3403,7 @@ void UCommonTextBlock::SetStyle(TSubclassOf<class UCommonTextStyle> InStyle)
 
 
 // Function CommonUI.CommonTextBlock.SetTextCase
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bUseAllCaps                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3218,7 +3428,7 @@ void UCommonTextBlock::SetTextCase(bool bUseAllCaps)
 
 
 // Function CommonUI.CommonTextBlock.SetWrapTextWidth
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   InWrapTextAt                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3243,7 +3453,7 @@ void UCommonTextBlock::SetWrapTextWidth(int32 InWrapTextAt)
 
 
 // Function CommonUI.CommonTextBlock.GetMobileFontSizeMultiplier
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3268,7 +3478,7 @@ float UCommonTextBlock::GetMobileFontSizeMultiplier() const
 
 
 // Function CommonUI.CommonDateTimeTextBlock.SetCountDownCompletionText
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FText&                      InCompletionText                                       (ConstParm, Parm, NativeAccessSpecifierPublic)
 
@@ -3293,7 +3503,7 @@ void UCommonDateTimeTextBlock::SetCountDownCompletionText(const class FText& InC
 
 
 // Function CommonUI.CommonDateTimeTextBlock.SetDateTimeValue
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // const struct FDateTime&                 InDateTime                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bShowAsCountdown                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3322,7 +3532,7 @@ void UCommonDateTimeTextBlock::SetDateTimeValue(const struct FDateTime& InDateTi
 
 
 // Function CommonUI.CommonDateTimeTextBlock.SetTimespanValue
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // const struct FTimespan&                 InTimespan                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3347,7 +3557,7 @@ void UCommonDateTimeTextBlock::SetTimespanValue(const struct FTimespan& InTimesp
 
 
 // Function CommonUI.CommonDateTimeTextBlock.GetDateTime
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FDateTime                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3372,7 +3582,7 @@ struct FDateTime UCommonDateTimeTextBlock::GetDateTime() const
 
 
 // Function CommonUI.CommonLazyImage.SetBrushFromLazyDisplayAsset
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TSoftObjectPtr<class UObject>&    LazyObject                                             (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bMatchTextureSize                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3399,7 +3609,7 @@ void UCommonLazyImage::SetBrushFromLazyDisplayAsset(const TSoftObjectPtr<class U
 
 
 // Function CommonUI.CommonLazyImage.SetBrushFromLazyMaterial
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TSoftObjectPtr<class UMaterialInterface>&LazyMaterial                                           (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3424,7 +3634,7 @@ void UCommonLazyImage::SetBrushFromLazyMaterial(const TSoftObjectPtr<class UMate
 
 
 // Function CommonUI.CommonLazyImage.SetBrushFromLazyTexture
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TSoftObjectPtr<class UTexture2D>& LazyTexture                                            (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bMatchSize                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3451,7 +3661,7 @@ void UCommonLazyImage::SetBrushFromLazyTexture(const TSoftObjectPtr<class UTextu
 
 
 // Function CommonUI.CommonLazyImage.SetMaterialTextureParamName
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             TextureParamName                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3476,7 +3686,7 @@ void UCommonLazyImage::SetMaterialTextureParamName(class FName TextureParamName)
 
 
 // Function CommonUI.CommonLazyImage.IsLoading
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3501,7 +3711,7 @@ bool UCommonLazyImage::IsLoading() const
 
 
 // Function CommonUI.CommonLazyWidget.SetLazyContent
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const TSoftClassPtr<class UClass>       SoftWidget                                             (ConstParm, Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3551,7 +3761,7 @@ class UUserWidget* UCommonLazyWidget::GetContent() const
 
 
 // Function CommonUI.CommonLazyWidget.IsLoading
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3576,7 +3786,7 @@ bool UCommonLazyWidget::IsLoading() const
 
 
 // Function CommonUI.CommonListView.SetEntrySpacing
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InEntrySpacing                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3601,7 +3811,7 @@ void UCommonListView::SetEntrySpacing(float InEntrySpacing)
 
 
 // Function CommonUI.LoadGuardSlot.SetHorizontalAlignment
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // EHorizontalAlignment                    InHorizontalAlignment                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3626,7 +3836,7 @@ void ULoadGuardSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAli
 
 
 // Function CommonUI.LoadGuardSlot.SetPadding
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FMargin&                   InPadding                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -3651,7 +3861,7 @@ void ULoadGuardSlot::SetPadding(const struct FMargin& InPadding)
 
 
 // Function CommonUI.LoadGuardSlot.SetVerticalAlignment
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // EVerticalAlignment                      InVerticalAlignment                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3676,7 +3886,7 @@ void ULoadGuardSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment
 
 
 // Function CommonUI.CommonLoadGuard.BP_GuardAndLoadAsset
-// (Final, Native, Private, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Private, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TSoftObjectPtr<class UObject>&    InLazyAsset                                            (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(class UObject* Object)>&OnAssetLoaded                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3703,7 +3913,7 @@ void UCommonLoadGuard::BP_GuardAndLoadAsset(const TSoftObjectPtr<class UObject>&
 
 
 // Function CommonUI.CommonLoadGuard.SetIsLoading
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bInIsLoading                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3728,7 +3938,7 @@ void UCommonLoadGuard::SetIsLoading(bool bInIsLoading)
 
 
 // Function CommonUI.CommonLoadGuard.SetLoadingText
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class FText&                      InLoadingText                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -3753,7 +3963,7 @@ void UCommonLoadGuard::SetLoadingText(const class FText& InLoadingText)
 
 
 // Function CommonUI.CommonLoadGuard.IsLoading
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3778,7 +3988,7 @@ bool UCommonLoadGuard::IsLoading() const
 
 
 // Function CommonUI.CommonNumericTextBlock.InterpolateToValue
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             TargetValue                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   MaximumInterpolationDuration                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3809,7 +4019,7 @@ void UCommonNumericTextBlock::InterpolateToValue(const float TargetValue, float 
 
 
 // Function CommonUI.CommonNumericTextBlock.SetCurrentValue
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             NewValue                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3834,7 +4044,7 @@ void UCommonNumericTextBlock::SetCurrentValue(const float NewValue)
 
 
 // Function CommonUI.CommonNumericTextBlock.SetNumericType
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // ECommonNumericType                      InNumericType                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3859,7 +4069,7 @@ void UCommonNumericTextBlock::SetNumericType(ECommonNumericType InNumericType)
 
 
 // Function CommonUI.CommonNumericTextBlock.GetTargetValue
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3884,7 +4094,7 @@ float UCommonNumericTextBlock::GetTargetValue() const
 
 
 // Function CommonUI.CommonNumericTextBlock.IsInterpolatingNumericValue
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3909,7 +4119,7 @@ bool UCommonNumericTextBlock::IsInterpolatingNumericValue() const
 
 
 // Function CommonUI.CommonPoolableWidgetInterface.OnAcquireFromPool
-// (Native, Event, Protected, BlueprintEvent)
+// (RequiredAPI, Native, Event, Protected, BlueprintEvent)
 
 void ICommonPoolableWidgetInterface::OnAcquireFromPool()
 {
@@ -3928,7 +4138,7 @@ void ICommonPoolableWidgetInterface::OnAcquireFromPool()
 
 
 // Function CommonUI.CommonPoolableWidgetInterface.OnReleaseToPool
-// (Native, Event, Protected, BlueprintEvent)
+// (RequiredAPI, Native, Event, Protected, BlueprintEvent)
 
 void ICommonPoolableWidgetInterface::OnReleaseToPool()
 {
@@ -3947,7 +4157,7 @@ void ICommonPoolableWidgetInterface::OnReleaseToPool()
 
 
 // Function CommonUI.CommonRichTextBlock.SetScrollingEnabled
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bInIsScrollingEnabled                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3971,8 +4181,33 @@ void UCommonRichTextBlock::SetScrollingEnabled(bool bInIsScrollingEnabled)
 }
 
 
+// Function CommonUI.CommonRichTextBlock.SetStyle
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TSubclassOf<class UCommonTextStyle>&InStyle                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonRichTextBlock::SetStyle(const TSubclassOf<class UCommonTextStyle>& InStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonRichTextBlock", "SetStyle");
+
+	Params::CommonRichTextBlock_SetStyle Parms{};
+
+	Parms.InStyle = InStyle;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function CommonUI.CommonRotator.BP_OnOptionSelected
-// (Event, Protected, BlueprintEvent)
+// (RequiredAPI, Event, Protected, BlueprintEvent)
 // Parameters:
 // int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3992,7 +4227,7 @@ void UCommonRotator::BP_OnOptionSelected(int32 Index_0)
 
 
 // Function CommonUI.CommonRotator.BP_OnOptionsPopulated
-// (Event, Protected, BlueprintEvent)
+// (RequiredAPI, Event, Protected, BlueprintEvent)
 // Parameters:
 // int32                                   Count                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4012,7 +4247,7 @@ void UCommonRotator::BP_OnOptionsPopulated(int32 Count)
 
 
 // Function CommonUI.CommonRotator.PopulateTextLabels
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const TArray<class FText>&              Labels                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 
@@ -4037,7 +4272,7 @@ void UCommonRotator::PopulateTextLabels(const TArray<class FText>& Labels)
 
 
 // Function CommonUI.CommonRotator.SetSelectedItem
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4062,7 +4297,7 @@ void UCommonRotator::SetSelectedItem(int32 InValue)
 
 
 // Function CommonUI.CommonRotator.ShiftTextLeft
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonRotator::ShiftTextLeft()
 {
@@ -4081,7 +4316,7 @@ void UCommonRotator::ShiftTextLeft()
 
 
 // Function CommonUI.CommonRotator.ShiftTextRight
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonRotator::ShiftTextRight()
 {
@@ -4125,7 +4360,7 @@ int32 UCommonRotator::GetSelectedIndex() const
 
 
 // Function CommonUI.CommonRotator.GetSelectedText
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -4150,7 +4385,7 @@ class FText UCommonRotator::GetSelectedText() const
 
 
 // Function CommonUI.CommonTabListWidgetBase.DisableTabWithReason
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             TabNameID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FText&                      Reason                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
@@ -4177,7 +4412,7 @@ void UCommonTabListWidgetBase::DisableTabWithReason(class FName TabNameID, const
 
 
 // Function CommonUI.CommonTabListWidgetBase.HandleNextTabInputAction
-// (Final, Native, Protected, HasOutParams)
+// (Final, RequiredAPI, Native, Protected, HasOutParams)
 // Parameters:
 // bool*                                   bPassThrough                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4203,7 +4438,7 @@ void UCommonTabListWidgetBase::HandleNextTabInputAction(bool* bPassThrough)
 
 
 // Function CommonUI.CommonTabListWidgetBase.HandlePostLinkedSwitcherChanged_BP
-// (Event, Protected, BlueprintEvent)
+// (RequiredAPI, Event, Protected, BlueprintEvent)
 
 void UCommonTabListWidgetBase::HandlePostLinkedSwitcherChanged_BP()
 {
@@ -4217,7 +4452,7 @@ void UCommonTabListWidgetBase::HandlePostLinkedSwitcherChanged_BP()
 
 
 // Function CommonUI.CommonTabListWidgetBase.HandlePreLinkedSwitcherChanged_BP
-// (Event, Protected, BlueprintEvent)
+// (RequiredAPI, Event, Protected, BlueprintEvent)
 
 void UCommonTabListWidgetBase::HandlePreLinkedSwitcherChanged_BP()
 {
@@ -4231,7 +4466,7 @@ void UCommonTabListWidgetBase::HandlePreLinkedSwitcherChanged_BP()
 
 
 // Function CommonUI.CommonTabListWidgetBase.HandlePreviousTabInputAction
-// (Final, Native, Protected, HasOutParams)
+// (Final, RequiredAPI, Native, Protected, HasOutParams)
 // Parameters:
 // bool*                                   bPassThrough                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4257,7 +4492,7 @@ void UCommonTabListWidgetBase::HandlePreviousTabInputAction(bool* bPassThrough)
 
 
 // Function CommonUI.CommonTabListWidgetBase.HandleTabButtonSelected
-// (Final, Native, Protected)
+// (Final, RequiredAPI, Native, Protected)
 // Parameters:
 // class UCommonButtonBase*                SelectedTabButton                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ButtonIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4284,7 +4519,7 @@ void UCommonTabListWidgetBase::HandleTabButtonSelected(class UCommonButtonBase* 
 
 
 // Function CommonUI.CommonTabListWidgetBase.HandleTabCreation
-// (Native, Event, Protected, BlueprintEvent)
+// (RequiredAPI, Native, Event, Protected, BlueprintEvent)
 // Parameters:
 // class FName                             TabNameID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UCommonButtonBase*                TabButton                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4311,7 +4546,7 @@ void UCommonTabListWidgetBase::HandleTabCreation(class FName TabNameID, class UC
 
 
 // Function CommonUI.CommonTabListWidgetBase.HandleTabRemoval
-// (Native, Event, Protected, BlueprintEvent)
+// (RequiredAPI, Native, Event, Protected, BlueprintEvent)
 // Parameters:
 // class FName                             TabNameID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UCommonButtonBase*                TabButton                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4338,7 +4573,7 @@ void UCommonTabListWidgetBase::HandleTabRemoval(class FName TabNameID, class UCo
 
 
 // Function CommonUI.CommonTabListWidgetBase.RegisterTab
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             TabNameID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class UCommonButtonBase>    ButtonWidgetType                                       (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4371,8 +4606,38 @@ bool UCommonTabListWidgetBase::RegisterTab(class FName TabNameID, TSubclassOf<cl
 }
 
 
+// Function CommonUI.CommonTabListWidgetBase.RegisterTabContentWidget
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FName                       TabNameID                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UWidget*                          ContentWidget                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCommonTabListWidgetBase::RegisterTabContentWidget(const class FName TabNameID, class UWidget* ContentWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonTabListWidgetBase", "RegisterTabContentWidget");
+
+	Params::CommonTabListWidgetBase_RegisterTabContentWidget Parms{};
+
+	Parms.TabNameID = TabNameID;
+	Parms.ContentWidget = ContentWidget;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function CommonUI.CommonTabListWidgetBase.RemoveAllTabs
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonTabListWidgetBase::RemoveAllTabs()
 {
@@ -4391,7 +4656,7 @@ void UCommonTabListWidgetBase::RemoveAllTabs()
 
 
 // Function CommonUI.CommonTabListWidgetBase.RemoveTab
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             TabNameID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4419,7 +4684,7 @@ bool UCommonTabListWidgetBase::RemoveTab(class FName TabNameID)
 
 
 // Function CommonUI.CommonTabListWidgetBase.SelectTabByID
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             TabNameID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSuppressClickFeedback                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4449,7 +4714,7 @@ bool UCommonTabListWidgetBase::SelectTabByID(class FName TabNameID, bool bSuppre
 
 
 // Function CommonUI.CommonTabListWidgetBase.SetLinkedSwitcher
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UCommonAnimatedSwitcher*          CommonSwitcher                                         (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4474,7 +4739,7 @@ void UCommonTabListWidgetBase::SetLinkedSwitcher(class UCommonAnimatedSwitcher* 
 
 
 // Function CommonUI.CommonTabListWidgetBase.SetListeningForInput
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bShouldListen                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4499,7 +4764,7 @@ void UCommonTabListWidgetBase::SetListeningForInput(bool bShouldListen)
 
 
 // Function CommonUI.CommonTabListWidgetBase.SetTabEnabled
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             TabNameID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bEnable                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4526,7 +4791,7 @@ void UCommonTabListWidgetBase::SetTabEnabled(class FName TabNameID, bool bEnable
 
 
 // Function CommonUI.CommonTabListWidgetBase.SetTabInteractionEnabled
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             TabNameID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bEnable                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4553,7 +4818,7 @@ void UCommonTabListWidgetBase::SetTabInteractionEnabled(class FName TabNameID, b
 
 
 // Function CommonUI.CommonTabListWidgetBase.SetTabVisibility
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             TabNameID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ESlateVisibility                        NewVisibility                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4605,7 +4870,7 @@ class FName UCommonTabListWidgetBase::GetActiveTab() const
 
 
 // Function CommonUI.CommonTabListWidgetBase.GetLinkedSwitcher
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UCommonAnimatedSwitcher*          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4630,7 +4895,7 @@ class UCommonAnimatedSwitcher* UCommonTabListWidgetBase::GetLinkedSwitcher() con
 
 
 // Function CommonUI.CommonTabListWidgetBase.GetSelectedTabId
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4655,7 +4920,7 @@ class FName UCommonTabListWidgetBase::GetSelectedTabId() const
 
 
 // Function CommonUI.CommonTabListWidgetBase.GetTabButtonBaseByID
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             TabNameID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UCommonButtonBase*                ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4683,7 +4948,7 @@ class UCommonButtonBase* UCommonTabListWidgetBase::GetTabButtonBaseByID(class FN
 
 
 // Function CommonUI.CommonTabListWidgetBase.GetTabCount
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4708,7 +4973,7 @@ int32 UCommonTabListWidgetBase::GetTabCount() const
 
 
 // Function CommonUI.CommonTabListWidgetBase.GetTabIdAtIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4735,8 +5000,36 @@ class FName UCommonTabListWidgetBase::GetTabIdAtIndex(int32 Index_0) const
 }
 
 
+// Function CommonUI.CommonTabListWidgetBase.HasTabContentWidget
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FName                       TabNameID                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCommonTabListWidgetBase::HasTabContentWidget(const class FName TabNameID) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonTabListWidgetBase", "HasTabContentWidget");
+
+	Params::CommonTabListWidgetBase_HasTabContentWidget Parms{};
+
+	Parms.TabNameID = TabNameID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function CommonUI.CommonTextStyle.GetApplyLineHeightToBottomLine
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4761,7 +5054,7 @@ bool UCommonTextStyle::GetApplyLineHeightToBottomLine() const
 
 
 // Function CommonUI.CommonTextStyle.GetColor
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FLinearColor*                    OutColor                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4787,7 +5080,7 @@ void UCommonTextStyle::GetColor(struct FLinearColor* OutColor) const
 
 
 // Function CommonUI.CommonTextStyle.GetFont
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FSlateFontInfo*                  OutFont                                                (Parm, OutParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4813,7 +5106,7 @@ void UCommonTextStyle::GetFont(struct FSlateFontInfo* OutFont) const
 
 
 // Function CommonUI.CommonTextStyle.GetLineHeightPercentage
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4838,7 +5131,7 @@ float UCommonTextStyle::GetLineHeightPercentage() const
 
 
 // Function CommonUI.CommonTextStyle.GetMargin
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FMargin*                         OutMargin                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -4864,7 +5157,7 @@ void UCommonTextStyle::GetMargin(struct FMargin* OutMargin) const
 
 
 // Function CommonUI.CommonTextStyle.GetShadowColor
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FLinearColor*                    OutColor                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4890,7 +5183,7 @@ void UCommonTextStyle::GetShadowColor(struct FLinearColor* OutColor) const
 
 
 // Function CommonUI.CommonTextStyle.GetShadowOffset
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector2D*                       OutShadowOffset                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4916,7 +5209,7 @@ void UCommonTextStyle::GetShadowOffset(struct FVector2D* OutShadowOffset) const
 
 
 // Function CommonUI.CommonTextStyle.GetStrikeBrush
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FSlateBrush*                     OutStrikeBrush                                         (Parm, OutParm, NativeAccessSpecifierPublic)
 
@@ -4942,7 +5235,7 @@ void UCommonTextStyle::GetStrikeBrush(struct FSlateBrush* OutStrikeBrush) const
 
 
 // Function CommonUI.CommonUILibrary.FindParentWidgetOfType
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UWidget*                          StartingWidget                                         (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class UWidget>              Type                                                   (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4972,7 +5265,7 @@ class UWidget* UCommonUILibrary::FindParentWidgetOfType(class UWidget* StartingW
 
 
 // Function CommonUI.CommonUISubsystemBase.GetEnhancedInputActionButtonIcon
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class UInputAction*               InputAction                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class ULocalPlayer*               LocalPlayer                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5002,7 +5295,7 @@ struct FSlateBrush UCommonUISubsystemBase::GetEnhancedInputActionButtonIcon(cons
 
 
 // Function CommonUI.CommonUISubsystemBase.GetInputActionButtonIcon
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FDataTableRowHandle&       InputActionRowHandle                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // ECommonInputType                        InputType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5034,7 +5327,7 @@ struct FSlateBrush UCommonUISubsystemBase::GetInputActionButtonIcon(const struct
 
 
 // Function CommonUI.CommonVideoPlayer.Close
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonVideoPlayer::Close()
 {
@@ -5053,7 +5346,7 @@ void UCommonVideoPlayer::Close()
 
 
 // Function CommonUI.CommonVideoPlayer.Pause
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonVideoPlayer::Pause()
 {
@@ -5072,7 +5365,7 @@ void UCommonVideoPlayer::Pause()
 
 
 // Function CommonUI.CommonVideoPlayer.Play
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonVideoPlayer::Play()
 {
@@ -5091,7 +5384,7 @@ void UCommonVideoPlayer::Play()
 
 
 // Function CommonUI.CommonVideoPlayer.PlayFromStart
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonVideoPlayer::PlayFromStart()
 {
@@ -5110,7 +5403,7 @@ void UCommonVideoPlayer::PlayFromStart()
 
 
 // Function CommonUI.CommonVideoPlayer.Reverse
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonVideoPlayer::Reverse()
 {
@@ -5129,7 +5422,7 @@ void UCommonVideoPlayer::Reverse()
 
 
 // Function CommonUI.CommonVideoPlayer.Seek
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   PlaybackTime                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5154,7 +5447,7 @@ void UCommonVideoPlayer::Seek(float PlaybackTime)
 
 
 // Function CommonUI.CommonVideoPlayer.SetIsMuted
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bInIsMuted                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5179,7 +5472,7 @@ void UCommonVideoPlayer::SetIsMuted(bool bInIsMuted)
 
 
 // Function CommonUI.CommonVideoPlayer.SetLooping
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bShouldLoopPlayback                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5204,7 +5497,7 @@ void UCommonVideoPlayer::SetLooping(bool bShouldLoopPlayback)
 
 
 // Function CommonUI.CommonVideoPlayer.SetPlaybackRate
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   PlaybackRate                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5229,7 +5522,7 @@ void UCommonVideoPlayer::SetPlaybackRate(float PlaybackRate)
 
 
 // Function CommonUI.CommonVideoPlayer.SetShouldMatchSize
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bInMatchSize                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5254,7 +5547,7 @@ void UCommonVideoPlayer::SetShouldMatchSize(bool bInMatchSize)
 
 
 // Function CommonUI.CommonVideoPlayer.SetVideo
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMediaSource*                     NewVideo                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5279,7 +5572,7 @@ void UCommonVideoPlayer::SetVideo(class UMediaSource* NewVideo)
 
 
 // Function CommonUI.CommonVideoPlayer.GetPlaybackRate
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5304,7 +5597,7 @@ float UCommonVideoPlayer::GetPlaybackRate() const
 
 
 // Function CommonUI.CommonVideoPlayer.GetPlaybackTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5329,7 +5622,7 @@ float UCommonVideoPlayer::GetPlaybackTime() const
 
 
 // Function CommonUI.CommonVideoPlayer.GetVideoDuration
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5354,7 +5647,7 @@ float UCommonVideoPlayer::GetVideoDuration() const
 
 
 // Function CommonUI.CommonVideoPlayer.IsLooping
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5404,7 +5697,7 @@ bool UCommonVideoPlayer::IsMuted() const
 
 
 // Function CommonUI.CommonVideoPlayer.IsPaused
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5429,7 +5722,7 @@ bool UCommonVideoPlayer::IsPaused() const
 
 
 // Function CommonUI.CommonVideoPlayer.IsPlaying
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5454,7 +5747,7 @@ bool UCommonVideoPlayer::IsPlaying() const
 
 
 // Function CommonUI.CommonVisibilitySwitcher.ActivateVisibleSlot
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonVisibilitySwitcher::ActivateVisibleSlot()
 {
@@ -5473,7 +5766,7 @@ void UCommonVisibilitySwitcher::ActivateVisibleSlot()
 
 
 // Function CommonUI.CommonVisibilitySwitcher.DeactivateVisibleSlot
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonVisibilitySwitcher::DeactivateVisibleSlot()
 {
@@ -5492,7 +5785,7 @@ void UCommonVisibilitySwitcher::DeactivateVisibleSlot()
 
 
 // Function CommonUI.CommonVisibilitySwitcher.DecrementActiveWidgetIndex
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bAllowWrapping                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5517,7 +5810,7 @@ void UCommonVisibilitySwitcher::DecrementActiveWidgetIndex(bool bAllowWrapping)
 
 
 // Function CommonUI.CommonVisibilitySwitcher.IncrementActiveWidgetIndex
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bAllowWrapping                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5542,7 +5835,7 @@ void UCommonVisibilitySwitcher::IncrementActiveWidgetIndex(bool bAllowWrapping)
 
 
 // Function CommonUI.CommonVisibilitySwitcher.SetActiveWidget
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UWidget*                    Widget                                                 (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5567,7 +5860,7 @@ void UCommonVisibilitySwitcher::SetActiveWidget(const class UWidget* Widget)
 
 
 // Function CommonUI.CommonVisibilitySwitcher.SetActiveWidgetIndex
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5592,7 +5885,7 @@ void UCommonVisibilitySwitcher::SetActiveWidgetIndex(int32 Index_0)
 
 
 // Function CommonUI.CommonVisibilitySwitcher.GetActiveWidget
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5667,7 +5960,7 @@ bool UCommonVisibilitySwitcher::IsCurrentlySwitching() const
 
 
 // Function CommonUI.UCommonVisibilityWidgetBase.GetRegisteredPlatforms
-// (Final, Native, Static, Protected)
+// (Final, RequiredAPI, Native, Static, Protected)
 // Parameters:
 // const TArray<class FName>               ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -5692,7 +5985,7 @@ const TArray<class FName> UUCommonVisibilityWidgetBase::GetRegisteredPlatforms()
 
 
 // Function CommonUI.CommonWidgetCarousel.BeginAutoScrolling
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   ScrollInterval                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5717,7 +6010,7 @@ void UCommonWidgetCarousel::BeginAutoScrolling(float ScrollInterval)
 
 
 // Function CommonUI.CommonWidgetCarousel.EndAutoScrolling
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonWidgetCarousel::EndAutoScrolling()
 {
@@ -5736,7 +6029,7 @@ void UCommonWidgetCarousel::EndAutoScrolling()
 
 
 // Function CommonUI.CommonWidgetCarousel.NextPage
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonWidgetCarousel::NextPage()
 {
@@ -5755,7 +6048,7 @@ void UCommonWidgetCarousel::NextPage()
 
 
 // Function CommonUI.CommonWidgetCarousel.PreviousPage
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonWidgetCarousel::PreviousPage()
 {
@@ -5774,7 +6067,7 @@ void UCommonWidgetCarousel::PreviousPage()
 
 
 // Function CommonUI.CommonWidgetCarousel.SetActiveWidget
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UWidget*                          Widget                                                 (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5799,7 +6092,7 @@ void UCommonWidgetCarousel::SetActiveWidget(class UWidget* Widget)
 
 
 // Function CommonUI.CommonWidgetCarousel.SetActiveWidgetIndex
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5824,7 +6117,7 @@ void UCommonWidgetCarousel::SetActiveWidgetIndex(int32 Index_0)
 
 
 // Function CommonUI.CommonWidgetCarousel.SetMoveSpeed
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InMoveSpeed                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5849,7 +6142,7 @@ void UCommonWidgetCarousel::SetMoveSpeed(float InMoveSpeed)
 
 
 // Function CommonUI.CommonWidgetCarousel.GetActiveWidgetIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5874,7 +6167,7 @@ int32 UCommonWidgetCarousel::GetActiveWidgetIndex() const
 
 
 // Function CommonUI.CommonWidgetCarousel.GetMoveSpeed
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5899,7 +6192,7 @@ float UCommonWidgetCarousel::GetMoveSpeed() const
 
 
 // Function CommonUI.CommonWidgetCarousel.GetWidgetAtIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5927,7 +6220,7 @@ class UWidget* UCommonWidgetCarousel::GetWidgetAtIndex(int32 Index_0) const
 
 
 // Function CommonUI.CommonWidgetCarouselNavBar.HandleButtonClicked
-// (Final, Native, Protected)
+// (Final, RequiredAPI, Native, Protected)
 // Parameters:
 // class UCommonButtonBase*                AssociatedButton                                       (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ButtonIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5954,7 +6247,7 @@ void UCommonWidgetCarouselNavBar::HandleButtonClicked(class UCommonButtonBase* A
 
 
 // Function CommonUI.CommonWidgetCarouselNavBar.HandlePageChanged
-// (Final, Native, Protected)
+// (Final, RequiredAPI, Native, Protected)
 // Parameters:
 // class UCommonWidgetCarousel*            CommonCarousel                                         (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   PageIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5981,7 +6274,7 @@ void UCommonWidgetCarouselNavBar::HandlePageChanged(class UCommonWidgetCarousel*
 
 
 // Function CommonUI.CommonWidgetCarouselNavBar.SetLinkedCarousel
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UCommonWidgetCarousel*            CommonCarousel                                         (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6006,7 +6299,7 @@ void UCommonWidgetCarouselNavBar::SetLinkedCarousel(class UCommonWidgetCarousel*
 
 
 // Function CommonUI.CommonWidgetGroupBase.AddWidget
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UWidget*                          InWidget                                               (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6031,7 +6324,7 @@ void UCommonWidgetGroupBase::AddWidget(class UWidget* InWidget)
 
 
 // Function CommonUI.CommonWidgetGroupBase.AddWidgets
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<class UWidget*>&           Widgets                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
@@ -6056,7 +6349,7 @@ void UCommonWidgetGroupBase::AddWidgets(const TArray<class UWidget*>& Widgets)
 
 
 // Function CommonUI.CommonWidgetGroupBase.RemoveAll
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonWidgetGroupBase::RemoveAll()
 {
@@ -6075,7 +6368,7 @@ void UCommonWidgetGroupBase::RemoveAll()
 
 
 // Function CommonUI.CommonWidgetGroupBase.RemoveWidget
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UWidget*                          InWidget                                               (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6100,7 +6393,7 @@ void UCommonWidgetGroupBase::RemoveWidget(class UWidget* InWidget)
 
 
 // Function CommonUI.CommonButtonGroupBase.DeselectAll
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonButtonGroupBase::DeselectAll()
 {
@@ -6119,7 +6412,7 @@ void UCommonButtonGroupBase::DeselectAll()
 
 
 // Function CommonUI.CommonButtonGroupBase.OnButtonBaseHovered
-// (Native, Protected)
+// (RequiredAPI, Native, Protected)
 // Parameters:
 // class UCommonButtonBase*                BaseButton                                             (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6144,7 +6437,7 @@ void UCommonButtonGroupBase::OnButtonBaseHovered(class UCommonButtonBase* BaseBu
 
 
 // Function CommonUI.CommonButtonGroupBase.OnButtonBaseUnhovered
-// (Native, Protected)
+// (RequiredAPI, Native, Protected)
 // Parameters:
 // class UCommonButtonBase*                BaseButton                                             (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6169,7 +6462,7 @@ void UCommonButtonGroupBase::OnButtonBaseUnhovered(class UCommonButtonBase* Base
 
 
 // Function CommonUI.CommonButtonGroupBase.OnHandleButtonBaseClicked
-// (Native, Protected)
+// (RequiredAPI, Native, Protected)
 // Parameters:
 // class UCommonButtonBase*                BaseButton                                             (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6194,7 +6487,7 @@ void UCommonButtonGroupBase::OnHandleButtonBaseClicked(class UCommonButtonBase* 
 
 
 // Function CommonUI.CommonButtonGroupBase.OnHandleButtonBaseDoubleClicked
-// (Native, Protected)
+// (RequiredAPI, Native, Protected)
 // Parameters:
 // class UCommonButtonBase*                BaseButton                                             (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6219,7 +6512,7 @@ void UCommonButtonGroupBase::OnHandleButtonBaseDoubleClicked(class UCommonButton
 
 
 // Function CommonUI.CommonButtonGroupBase.OnHandleButtonBaseLockClicked
-// (Native, Protected)
+// (RequiredAPI, Native, Protected)
 // Parameters:
 // class UCommonButtonBase*                BaseButton                                             (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6244,7 +6537,7 @@ void UCommonButtonGroupBase::OnHandleButtonBaseLockClicked(class UCommonButtonBa
 
 
 // Function CommonUI.CommonButtonGroupBase.OnHandleButtonBaseLockDoubleClicked
-// (Native, Protected)
+// (RequiredAPI, Native, Protected)
 // Parameters:
 // class UCommonButtonBase*                BaseButton                                             (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6269,7 +6562,7 @@ void UCommonButtonGroupBase::OnHandleButtonBaseLockDoubleClicked(class UCommonBu
 
 
 // Function CommonUI.CommonButtonGroupBase.OnSelectionStateChangedBase
-// (Native, Protected)
+// (RequiredAPI, Native, Protected)
 // Parameters:
 // class UCommonButtonBase*                BaseButton                                             (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsSelected                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6296,7 +6589,7 @@ void UCommonButtonGroupBase::OnSelectionStateChangedBase(class UCommonButtonBase
 
 
 // Function CommonUI.CommonButtonGroupBase.SelectButtonAtIndex
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   ButtonIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const bool                              bAllowSound                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6323,7 +6616,7 @@ void UCommonButtonGroupBase::SelectButtonAtIndex(int32 ButtonIndex, const bool b
 
 
 // Function CommonUI.CommonButtonGroupBase.SelectNextButton
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bAllowWrap                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6348,7 +6641,7 @@ void UCommonButtonGroupBase::SelectNextButton(bool bAllowWrap)
 
 
 // Function CommonUI.CommonButtonGroupBase.SelectPreviousButton
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bAllowWrap                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6373,7 +6666,7 @@ void UCommonButtonGroupBase::SelectPreviousButton(bool bAllowWrap)
 
 
 // Function CommonUI.CommonButtonGroupBase.SetSelectionRequired
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bRequireSelection                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6398,7 +6691,7 @@ void UCommonButtonGroupBase::SetSelectionRequired(bool bRequireSelection)
 
 
 // Function CommonUI.CommonButtonGroupBase.FindButtonIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class UCommonButtonBase*          ButtonToFind                                           (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6426,7 +6719,7 @@ int32 UCommonButtonGroupBase::FindButtonIndex(const class UCommonButtonBase* But
 
 
 // Function CommonUI.CommonButtonGroupBase.GetButtonBaseAtIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UCommonButtonBase*                ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6454,7 +6747,7 @@ class UCommonButtonBase* UCommonButtonGroupBase::GetButtonBaseAtIndex(int32 Inde
 
 
 // Function CommonUI.CommonButtonGroupBase.GetButtonCount
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6479,7 +6772,7 @@ int32 UCommonButtonGroupBase::GetButtonCount() const
 
 
 // Function CommonUI.CommonButtonGroupBase.GetHoveredButtonIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6504,7 +6797,7 @@ int32 UCommonButtonGroupBase::GetHoveredButtonIndex() const
 
 
 // Function CommonUI.CommonButtonGroupBase.GetSelectedButtonBase
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UCommonButtonBase*                ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6529,7 +6822,7 @@ class UCommonButtonBase* UCommonButtonGroupBase::GetSelectedButtonBase() const
 
 
 // Function CommonUI.CommonButtonGroupBase.GetSelectedButtonIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6554,7 +6847,7 @@ int32 UCommonButtonGroupBase::GetSelectedButtonIndex() const
 
 
 // Function CommonUI.CommonButtonGroupBase.HasAnyButtons
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6578,8 +6871,27 @@ bool UCommonButtonGroupBase::HasAnyButtons() const
 }
 
 
+// Function CommonUI.CommonBoundActionBar.HandleInputMappingsRebuiltUpdated
+// (Final, RequiredAPI, Native, Private)
+
+void UCommonBoundActionBar::HandleInputMappingsRebuiltUpdated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonBoundActionBar", "HandleInputMappingsRebuiltUpdated");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function CommonUI.CommonBoundActionBar.SetDisplayOwningPlayerActionsOnly
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bShouldOnlyDisplayOwningPlayerActions                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6604,7 +6916,7 @@ void UCommonBoundActionBar::SetDisplayOwningPlayerActionsOnly(bool bShouldOnlyDi
 
 
 // Function CommonUI.CommonBoundActionButton.OnUpdateInputAction
-// (Event, Protected, BlueprintEvent)
+// (RequiredAPI, Event, Protected, BlueprintEvent)
 
 void UCommonBoundActionButton::OnUpdateInputAction()
 {
@@ -6618,7 +6930,7 @@ void UCommonBoundActionButton::OnUpdateInputAction()
 
 
 // Function CommonUI.CommonActivatableWidgetContainerBase.BP_AddWidget
-// (Final, Native, Private, BlueprintCallable)
+// (Final, RequiredAPI, Native, Private, BlueprintCallable)
 // Parameters:
 // TSubclassOf<class UCommonActivatableWidget>ActivatableWidgetClass                                 (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UCommonActivatableWidget*         ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6646,7 +6958,7 @@ class UCommonActivatableWidget* UCommonActivatableWidgetContainerBase::BP_AddWid
 
 
 // Function CommonUI.CommonActivatableWidgetContainerBase.ClearWidgets
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCommonActivatableWidgetContainerBase::ClearWidgets()
 {
@@ -6665,7 +6977,7 @@ void UCommonActivatableWidgetContainerBase::ClearWidgets()
 
 
 // Function CommonUI.CommonActivatableWidgetContainerBase.RemoveWidget
-// (Final, Native, Private, BlueprintCallable)
+// (Final, RequiredAPI, Native, Private, BlueprintCallable)
 // Parameters:
 // class UCommonActivatableWidget*         WidgetToRemove                                         (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6690,7 +7002,7 @@ void UCommonActivatableWidgetContainerBase::RemoveWidget(class UCommonActivatabl
 
 
 // Function CommonUI.CommonActivatableWidgetContainerBase.SetTransitionDuration
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Duration                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6715,7 +7027,7 @@ void UCommonActivatableWidgetContainerBase::SetTransitionDuration(float Duration
 
 
 // Function CommonUI.CommonActivatableWidgetContainerBase.GetActiveWidget
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UCommonActivatableWidget*         ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6740,7 +7052,7 @@ class UCommonActivatableWidget* UCommonActivatableWidgetContainerBase::GetActive
 
 
 // Function CommonUI.CommonActivatableWidgetContainerBase.GetTransitionDuration
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

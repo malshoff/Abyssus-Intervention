@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 
 
 namespace SDK
 {
 
 // ScriptStruct ABP_Syringe.ABP_Syringe_C.AnimBlueprintGeneratedConstantData
-// 0x015F (0x0160 - 0x0001)
+// 0x0187 (0x0188 - 0x0001)
 struct ABP_Syringe::FAnimBlueprintGeneratedConstantData final : public FAnimBlueprintConstantData
 {
 public:
@@ -29,30 +29,12 @@ public:
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimNodeFunctionRef                   __StructProperty_10;                               // 0x0018(0x0020)(BlueprintVisible, NoDestructor)
 	struct FAnimSubsystem_PropertyAccess          AnimBlueprintExtension_PropertyAccess;             // 0x0038(0x0080)()
-	struct FAnimSubsystem_Base                    AnimBlueprintExtension_Base;                       // 0x00B8(0x0018)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Root;                           // 0x00D0(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalRefPose;                   // 0x0100(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot;                           // 0x0130(0x0030)()
+	struct FAnimSubsystem_Base                    AnimBlueprintExtension_Base;                       // 0x00B8(0x0040)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Root;                           // 0x00F8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalRefPose;                   // 0x0128(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot;                           // 0x0158(0x0030)()
 };
-static_assert(alignof(ABP_Syringe::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on ABP_Syringe::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(ABP_Syringe::FAnimBlueprintGeneratedConstantData) == 0x000160, "Wrong size on ABP_Syringe::FAnimBlueprintGeneratedConstantData");
-static_assert(offsetof(ABP_Syringe::FAnimBlueprintGeneratedConstantData, __NameProperty_7) == 0x000004, "Member 'ABP_Syringe::FAnimBlueprintGeneratedConstantData::__NameProperty_7' has a wrong offset!");
-static_assert(offsetof(ABP_Syringe::FAnimBlueprintGeneratedConstantData, __NameProperty_8) == 0x00000C, "Member 'ABP_Syringe::FAnimBlueprintGeneratedConstantData::__NameProperty_8' has a wrong offset!");
-static_assert(offsetof(ABP_Syringe::FAnimBlueprintGeneratedConstantData, __ByteProperty_9) == 0x000014, "Member 'ABP_Syringe::FAnimBlueprintGeneratedConstantData::__ByteProperty_9' has a wrong offset!");
-static_assert(offsetof(ABP_Syringe::FAnimBlueprintGeneratedConstantData, __StructProperty_10) == 0x000018, "Member 'ABP_Syringe::FAnimBlueprintGeneratedConstantData::__StructProperty_10' has a wrong offset!");
-static_assert(offsetof(ABP_Syringe::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_PropertyAccess) == 0x000038, "Member 'ABP_Syringe::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(ABP_Syringe::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_Base) == 0x0000B8, "Member 'ABP_Syringe::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(ABP_Syringe::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root) == 0x0000D0, "Member 'ABP_Syringe::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(ABP_Syringe::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LocalRefPose) == 0x000100, "Member 'ABP_Syringe::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LocalRefPose' has a wrong offset!");
-static_assert(offsetof(ABP_Syringe::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot) == 0x000130, "Member 'ABP_Syringe::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot' has a wrong offset!");
-
-// ScriptStruct ABP_Syringe.ABP_Syringe_C.AnimBlueprintGeneratedMutableData
-// 0x0000 (0x0001 - 0x0001)
-struct ABP_Syringe::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-};
-static_assert(alignof(ABP_Syringe::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong alignment on ABP_Syringe::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(ABP_Syringe::FAnimBlueprintGeneratedMutableData) == 0x000001, "Wrong size on ABP_Syringe::FAnimBlueprintGeneratedMutableData");
+DUMPER7_ASSERTS_ABP_Syringe__FAnimBlueprintGeneratedConstantData;
 
 }
 

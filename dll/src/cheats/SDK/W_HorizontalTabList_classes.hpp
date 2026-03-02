@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass W_HorizontalTabList.W_HorizontalTabList_C
-// 0x0030 (0x04A8 - 0x0478)
+// 0x0030 (0x0518 - 0x04E8)
 class UW_HorizontalTabList_C final : public UCommonTabListWidgetBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0478(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UHorizontalBox*                         HorizontalBox_Tabs;                                // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class FText>                           TabNames;                                          // 0x0488(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly)
-	class FName                                   TabToSelect;                                       // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsInitialConstruct;                                // 0x04A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UHorizontalBox*                         HorizontalBox_Tabs;                                // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class FText>                           TabNames;                                          // 0x04F8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly)
+	class FName                                   TabToSelect;                                       // 0x0508(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsInitialConstruct;                                // 0x0510(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -38,20 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"W_HorizontalTabList_C">();
+		BP_STATIC_CLASS_IMPL("W_HorizontalTabList_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"W_HorizontalTabList_C")
 	}
 	static class UW_HorizontalTabList_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UW_HorizontalTabList_C>();
 	}
 };
-static_assert(alignof(UW_HorizontalTabList_C) == 0x000008, "Wrong alignment on UW_HorizontalTabList_C");
-static_assert(sizeof(UW_HorizontalTabList_C) == 0x0004A8, "Wrong size on UW_HorizontalTabList_C");
-static_assert(offsetof(UW_HorizontalTabList_C, UberGraphFrame) == 0x000478, "Member 'UW_HorizontalTabList_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UW_HorizontalTabList_C, HorizontalBox_Tabs) == 0x000480, "Member 'UW_HorizontalTabList_C::HorizontalBox_Tabs' has a wrong offset!");
-static_assert(offsetof(UW_HorizontalTabList_C, TabNames) == 0x000488, "Member 'UW_HorizontalTabList_C::TabNames' has a wrong offset!");
-static_assert(offsetof(UW_HorizontalTabList_C, TabToSelect) == 0x000498, "Member 'UW_HorizontalTabList_C::TabToSelect' has a wrong offset!");
-static_assert(offsetof(UW_HorizontalTabList_C, IsInitialConstruct) == 0x0004A0, "Member 'UW_HorizontalTabList_C::IsInitialConstruct' has a wrong offset!");
+DUMPER7_ASSERTS_UW_HorizontalTabList_C;
 
 }
 

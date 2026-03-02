@@ -167,6 +167,29 @@ void ABP_HealAltar_C::HasRequiredMutatorPA(class APlayerController* PlayerContro
 }
 
 
+// Function BP_HealAltar.BP_HealAltar_C.IsShareable
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_HealAltar_C::IsShareable(class APlayerController* PlayerController_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HealAltar_C", "IsShareable");
+
+	Params::BP_HealAltar_C_IsShareable Parms{};
+
+	Parms.PlayerController_0 = PlayerController_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_HealAltar.BP_HealAltar_C.OnFocus
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -287,6 +310,46 @@ void ABP_HealAltar_C::ReceiveDestroyed()
 		Func = Class->GetFunction("BP_HealAltar_C", "ReceiveDestroyed");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_HealAltar.BP_HealAltar_C.ShareInteractableActor
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class APlayerController*          PlayerController_0                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_HealAltar_C::ShareInteractableActor(const class APlayerController* PlayerController_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HealAltar_C", "ShareInteractableActor");
+
+	Params::BP_HealAltar_C_ShareInteractableActor Parms{};
+
+	Parms.PlayerController_0 = PlayerController_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_HealAltar.BP_HealAltar_C.ToggleAudioLoop
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Condition                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_HealAltar_C::ToggleAudioLoop(bool Condition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HealAltar_C", "ToggleAudioLoop");
+
+	Params::BP_HealAltar_C_ToggleAudioLoop Parms{};
+
+	Parms.Condition = Condition;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

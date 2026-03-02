@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "GLTFExporter_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "GLTFExporter_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 
@@ -53,12 +53,13 @@ public:
 	EGLTFTextureImageFormat                       TextureImageFormat;                                // 0x00A3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TextureImageQuality;                               // 0x00A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bExportTextureTransforms;                          // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAdjustNormalmaps;                                 // 0x00A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportHiddenInGame;                               // 0x00AA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportLights;                                     // 0x00AB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportCameras;                                    // 0x00AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGLTFMaterialVariantMode                      ExportMaterialVariants;                            // 0x00AD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AE[0x2];                                       // 0x00AE(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bExportLightmaps;                                  // 0x00A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAdjustNormalmaps;                                 // 0x00AA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportHiddenInGame;                               // 0x00AB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportLights;                                     // 0x00AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportCameras;                                    // 0x00AD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGLTFMaterialVariantMode                      ExportMaterialVariants;                            // 0x00AE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AF[0x1];                                       // 0x00AF(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ResetToDefault();
@@ -66,48 +67,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GLTFExportOptions">();
+		STATIC_CLASS_IMPL("GLTFExportOptions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFExportOptions")
 	}
 	static class UGLTFExportOptions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGLTFExportOptions>();
 	}
 };
-static_assert(alignof(UGLTFExportOptions) == 0x000008, "Wrong alignment on UGLTFExportOptions");
-static_assert(sizeof(UGLTFExportOptions) == 0x0000B0, "Wrong size on UGLTFExportOptions");
-static_assert(offsetof(UGLTFExportOptions, ExportUniformScale) == 0x000028, "Member 'UGLTFExportOptions::ExportUniformScale' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportPreviewMesh) == 0x00002C, "Member 'UGLTFExportOptions::bExportPreviewMesh' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bSkipNearDefaultValues) == 0x00002D, "Member 'UGLTFExportOptions::bSkipNearDefaultValues' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bIncludeCopyrightNotice) == 0x00002E, "Member 'UGLTFExportOptions::bIncludeCopyrightNotice' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportProxyMaterials) == 0x00002F, "Member 'UGLTFExportOptions::bExportProxyMaterials' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bUseImporterMaterialMapping) == 0x000030, "Member 'UGLTFExportOptions::bUseImporterMaterialMapping' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportUnlitMaterials) == 0x000031, "Member 'UGLTFExportOptions::bExportUnlitMaterials' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportClearCoatMaterials) == 0x000032, "Member 'UGLTFExportOptions::bExportClearCoatMaterials' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportClothMaterials) == 0x000033, "Member 'UGLTFExportOptions::bExportClothMaterials' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportThinTranslucentMaterials) == 0x000034, "Member 'UGLTFExportOptions::bExportThinTranslucentMaterials' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportSpecularGlossinessMaterials) == 0x000035, "Member 'UGLTFExportOptions::bExportSpecularGlossinessMaterials' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportEmissiveStrength) == 0x000036, "Member 'UGLTFExportOptions::bExportEmissiveStrength' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, BakeMaterialInputs) == 0x000037, "Member 'UGLTFExportOptions::BakeMaterialInputs' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, DefaultMaterialBakeSize) == 0x000038, "Member 'UGLTFExportOptions::DefaultMaterialBakeSize' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, DefaultMaterialBakeFilter) == 0x000044, "Member 'UGLTFExportOptions::DefaultMaterialBakeFilter' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, DefaultMaterialBakeTiling) == 0x000045, "Member 'UGLTFExportOptions::DefaultMaterialBakeTiling' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, DefaultInputBakeSettings) == 0x000048, "Member 'UGLTFExportOptions::DefaultInputBakeSettings' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, DefaultLevelOfDetail) == 0x000098, "Member 'UGLTFExportOptions::DefaultLevelOfDetail' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportSourceModel) == 0x00009C, "Member 'UGLTFExportOptions::bExportSourceModel' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportVertexColors) == 0x00009D, "Member 'UGLTFExportOptions::bExportVertexColors' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportVertexSkinWeights) == 0x00009E, "Member 'UGLTFExportOptions::bExportVertexSkinWeights' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bMakeSkinnedMeshesRoot) == 0x00009F, "Member 'UGLTFExportOptions::bMakeSkinnedMeshesRoot' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bUseMeshQuantization) == 0x0000A0, "Member 'UGLTFExportOptions::bUseMeshQuantization' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportLevelSequences) == 0x0000A1, "Member 'UGLTFExportOptions::bExportLevelSequences' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportAnimationSequences) == 0x0000A2, "Member 'UGLTFExportOptions::bExportAnimationSequences' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, TextureImageFormat) == 0x0000A3, "Member 'UGLTFExportOptions::TextureImageFormat' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, TextureImageQuality) == 0x0000A4, "Member 'UGLTFExportOptions::TextureImageQuality' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportTextureTransforms) == 0x0000A8, "Member 'UGLTFExportOptions::bExportTextureTransforms' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bAdjustNormalmaps) == 0x0000A9, "Member 'UGLTFExportOptions::bAdjustNormalmaps' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportHiddenInGame) == 0x0000AA, "Member 'UGLTFExportOptions::bExportHiddenInGame' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportLights) == 0x0000AB, "Member 'UGLTFExportOptions::bExportLights' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, bExportCameras) == 0x0000AC, "Member 'UGLTFExportOptions::bExportCameras' has a wrong offset!");
-static_assert(offsetof(UGLTFExportOptions, ExportMaterialVariants) == 0x0000AD, "Member 'UGLTFExportOptions::ExportMaterialVariants' has a wrong offset!");
+DUMPER7_ASSERTS_UGLTFExportOptions;
 
 // Class GLTFExporter.GLTFExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -119,15 +90,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GLTFExporter">();
+		STATIC_CLASS_IMPL("GLTFExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFExporter")
 	}
 	static class UGLTFExporter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGLTFExporter>();
 	}
 };
-static_assert(alignof(UGLTFExporter) == 0x000008, "Wrong alignment on UGLTFExporter");
-static_assert(sizeof(UGLTFExporter) == 0x000078, "Wrong size on UGLTFExporter");
+DUMPER7_ASSERTS_UGLTFExporter;
 
 // Class GLTFExporter.GLTFAnimSequenceExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -136,15 +110,18 @@ class UGLTFAnimSequenceExporter final : public UGLTFExporter
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GLTFAnimSequenceExporter">();
+		STATIC_CLASS_IMPL("GLTFAnimSequenceExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFAnimSequenceExporter")
 	}
 	static class UGLTFAnimSequenceExporter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGLTFAnimSequenceExporter>();
 	}
 };
-static_assert(alignof(UGLTFAnimSequenceExporter) == 0x000008, "Wrong alignment on UGLTFAnimSequenceExporter");
-static_assert(sizeof(UGLTFAnimSequenceExporter) == 0x000078, "Wrong size on UGLTFAnimSequenceExporter");
+DUMPER7_ASSERTS_UGLTFAnimSequenceExporter;
 
 // Class GLTFExporter.GLTFLevelExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -153,15 +130,18 @@ class UGLTFLevelExporter final : public UGLTFExporter
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GLTFLevelExporter">();
+		STATIC_CLASS_IMPL("GLTFLevelExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFLevelExporter")
 	}
 	static class UGLTFLevelExporter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGLTFLevelExporter>();
 	}
 };
-static_assert(alignof(UGLTFLevelExporter) == 0x000008, "Wrong alignment on UGLTFLevelExporter");
-static_assert(sizeof(UGLTFLevelExporter) == 0x000078, "Wrong size on UGLTFLevelExporter");
+DUMPER7_ASSERTS_UGLTFLevelExporter;
 
 // Class GLTFExporter.GLTFLevelSequenceExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -170,15 +150,18 @@ class UGLTFLevelSequenceExporter final : public UGLTFExporter
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GLTFLevelSequenceExporter">();
+		STATIC_CLASS_IMPL("GLTFLevelSequenceExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFLevelSequenceExporter")
 	}
 	static class UGLTFLevelSequenceExporter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGLTFLevelSequenceExporter>();
 	}
 };
-static_assert(alignof(UGLTFLevelSequenceExporter) == 0x000008, "Wrong alignment on UGLTFLevelSequenceExporter");
-static_assert(sizeof(UGLTFLevelSequenceExporter) == 0x000078, "Wrong size on UGLTFLevelSequenceExporter");
+DUMPER7_ASSERTS_UGLTFLevelSequenceExporter;
 
 // Class GLTFExporter.GLTFLevelVariantSetsExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -187,15 +170,18 @@ class UGLTFLevelVariantSetsExporter final : public UGLTFExporter
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GLTFLevelVariantSetsExporter">();
+		STATIC_CLASS_IMPL("GLTFLevelVariantSetsExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFLevelVariantSetsExporter")
 	}
 	static class UGLTFLevelVariantSetsExporter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGLTFLevelVariantSetsExporter>();
 	}
 };
-static_assert(alignof(UGLTFLevelVariantSetsExporter) == 0x000008, "Wrong alignment on UGLTFLevelVariantSetsExporter");
-static_assert(sizeof(UGLTFLevelVariantSetsExporter) == 0x000078, "Wrong size on UGLTFLevelVariantSetsExporter");
+DUMPER7_ASSERTS_UGLTFLevelVariantSetsExporter;
 
 // Class GLTFExporter.GLTFMaterialExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -204,15 +190,18 @@ class UGLTFMaterialExporter final : public UGLTFExporter
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GLTFMaterialExporter">();
+		STATIC_CLASS_IMPL("GLTFMaterialExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFMaterialExporter")
 	}
 	static class UGLTFMaterialExporter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGLTFMaterialExporter>();
 	}
 };
-static_assert(alignof(UGLTFMaterialExporter) == 0x000008, "Wrong alignment on UGLTFMaterialExporter");
-static_assert(sizeof(UGLTFMaterialExporter) == 0x000078, "Wrong size on UGLTFMaterialExporter");
+DUMPER7_ASSERTS_UGLTFMaterialExporter;
 
 // Class GLTFExporter.GLTFSkeletalMeshExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -221,15 +210,18 @@ class UGLTFSkeletalMeshExporter final : public UGLTFExporter
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GLTFSkeletalMeshExporter">();
+		STATIC_CLASS_IMPL("GLTFSkeletalMeshExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFSkeletalMeshExporter")
 	}
 	static class UGLTFSkeletalMeshExporter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGLTFSkeletalMeshExporter>();
 	}
 };
-static_assert(alignof(UGLTFSkeletalMeshExporter) == 0x000008, "Wrong alignment on UGLTFSkeletalMeshExporter");
-static_assert(sizeof(UGLTFSkeletalMeshExporter) == 0x000078, "Wrong size on UGLTFSkeletalMeshExporter");
+DUMPER7_ASSERTS_UGLTFSkeletalMeshExporter;
 
 // Class GLTFExporter.GLTFStaticMeshExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -238,15 +230,18 @@ class UGLTFStaticMeshExporter final : public UGLTFExporter
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GLTFStaticMeshExporter">();
+		STATIC_CLASS_IMPL("GLTFStaticMeshExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFStaticMeshExporter")
 	}
 	static class UGLTFStaticMeshExporter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGLTFStaticMeshExporter>();
 	}
 };
-static_assert(alignof(UGLTFStaticMeshExporter) == 0x000008, "Wrong alignment on UGLTFStaticMeshExporter");
-static_assert(sizeof(UGLTFStaticMeshExporter) == 0x000078, "Wrong size on UGLTFStaticMeshExporter");
+DUMPER7_ASSERTS_UGLTFStaticMeshExporter;
 
 // Class GLTFExporter.GLTFProxyOptions
 // 0x0068 (0x0090 - 0x0028)
@@ -268,28 +263,25 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GLTFProxyOptions">();
+		STATIC_CLASS_IMPL("GLTFProxyOptions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFProxyOptions")
 	}
 	static class UGLTFProxyOptions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGLTFProxyOptions>();
 	}
 };
-static_assert(alignof(UGLTFProxyOptions) == 0x000008, "Wrong alignment on UGLTFProxyOptions");
-static_assert(sizeof(UGLTFProxyOptions) == 0x000090, "Wrong size on UGLTFProxyOptions");
-static_assert(offsetof(UGLTFProxyOptions, bBakeMaterialInputs) == 0x000028, "Member 'UGLTFProxyOptions::bBakeMaterialInputs' has a wrong offset!");
-static_assert(offsetof(UGLTFProxyOptions, bUseThinTranslucentShadingModel) == 0x000029, "Member 'UGLTFProxyOptions::bUseThinTranslucentShadingModel' has a wrong offset!");
-static_assert(offsetof(UGLTFProxyOptions, DefaultMaterialBakeSize) == 0x00002C, "Member 'UGLTFProxyOptions::DefaultMaterialBakeSize' has a wrong offset!");
-static_assert(offsetof(UGLTFProxyOptions, DefaultMaterialBakeFilter) == 0x000038, "Member 'UGLTFProxyOptions::DefaultMaterialBakeFilter' has a wrong offset!");
-static_assert(offsetof(UGLTFProxyOptions, DefaultMaterialBakeTiling) == 0x000039, "Member 'UGLTFProxyOptions::DefaultMaterialBakeTiling' has a wrong offset!");
-static_assert(offsetof(UGLTFProxyOptions, DefaultInputBakeSettings) == 0x000040, "Member 'UGLTFProxyOptions::DefaultInputBakeSettings' has a wrong offset!");
+DUMPER7_ASSERTS_UGLTFProxyOptions;
 
 // Class GLTFExporter.GLTFMaterialExportOptions
 // 0x0070 (0x0098 - 0x0028)
 class UGLTFMaterialExportOptions final : public UAssetUserData
 {
 public:
-	class UMaterialInterface*                     Proxy;                                             // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     Proxy;                                             // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	struct FGLTFOverrideMaterialBakeSettings      Default;                                           // 0x0030(0x0014)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<EGLTFMaterialPropertyGroup, struct FGLTFOverrideMaterialBakeSettings> Inputs;               // 0x0048(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
@@ -297,18 +289,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GLTFMaterialExportOptions">();
+		STATIC_CLASS_IMPL("GLTFMaterialExportOptions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFMaterialExportOptions")
 	}
 	static class UGLTFMaterialExportOptions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGLTFMaterialExportOptions>();
 	}
 };
-static_assert(alignof(UGLTFMaterialExportOptions) == 0x000008, "Wrong alignment on UGLTFMaterialExportOptions");
-static_assert(sizeof(UGLTFMaterialExportOptions) == 0x000098, "Wrong size on UGLTFMaterialExportOptions");
-static_assert(offsetof(UGLTFMaterialExportOptions, Proxy) == 0x000028, "Member 'UGLTFMaterialExportOptions::Proxy' has a wrong offset!");
-static_assert(offsetof(UGLTFMaterialExportOptions, Default) == 0x000030, "Member 'UGLTFMaterialExportOptions::Default' has a wrong offset!");
-static_assert(offsetof(UGLTFMaterialExportOptions, Inputs) == 0x000048, "Member 'UGLTFMaterialExportOptions::Inputs' has a wrong offset!");
+DUMPER7_ASSERTS_UGLTFMaterialExportOptions;
 
 }
 

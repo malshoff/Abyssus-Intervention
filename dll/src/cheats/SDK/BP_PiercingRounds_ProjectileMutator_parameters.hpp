@@ -39,21 +39,7 @@ public:
 	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator) == 0x000008, "Wrong alignment on BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator");
-static_assert(sizeof(BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator) == 0x000070, "Wrong size on BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator, EntryPoint) == 0x000000, "Member 'BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator, K2Node_CustomEvent_Projectile) == 0x000008, "Member 'BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator::K2Node_CustomEvent_Projectile' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator, CallFunc_GetOwningProjectile_ReturnValue) == 0x000010, "Member 'BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator::CallFunc_GetOwningProjectile_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator, CallFunc_GetOwningProjectile_ReturnValue_1) == 0x000018, "Member 'BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator::CallFunc_GetOwningProjectile_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000020, "Member 'BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator, CallFunc_GetOwningProjectile_ReturnValue_2) == 0x000030, "Member 'BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator::CallFunc_GetOwningProjectile_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator, CallFunc_GetMutatorRank_ReturnValue) == 0x000038, "Member 'BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator, CallFunc_MakeLiteralDouble_ReturnValue) == 0x000040, "Member 'BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator::CallFunc_MakeLiteralDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x000048, "Member 'BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000050, "Member 'BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000058, "Member 'BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x000060, "Member 'BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000068, "Member 'BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PiercingRounds_ProjectileMutator_C_ExecuteUbergraph_BP_PiercingRounds_ProjectileMutator;
 
 // Function BP_PiercingRounds_ProjectileMutator.BP_PiercingRounds_ProjectileMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -65,11 +51,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_PiercingRounds_ProjectileMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_PiercingRounds_ProjectileMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_PiercingRounds_ProjectileMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_PiercingRounds_ProjectileMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_PiercingRounds_ProjectileMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_PiercingRounds_ProjectileMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_PiercingRounds_ProjectileMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PiercingRounds_ProjectileMutator_C_GetMutatorDescription;
 
 // Function BP_PiercingRounds_ProjectileMutator.BP_PiercingRounds_ProjectileMutator_C.OnProjectilePierce
 // 0x0008 (0x0008 - 0x0000)
@@ -78,9 +60,7 @@ struct BP_PiercingRounds_ProjectileMutator_C_OnProjectilePierce final
 public:
 	class ARProjectileBase*                       Projectile;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PiercingRounds_ProjectileMutator_C_OnProjectilePierce) == 0x000008, "Wrong alignment on BP_PiercingRounds_ProjectileMutator_C_OnProjectilePierce");
-static_assert(sizeof(BP_PiercingRounds_ProjectileMutator_C_OnProjectilePierce) == 0x000008, "Wrong size on BP_PiercingRounds_ProjectileMutator_C_OnProjectilePierce");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_OnProjectilePierce, Projectile) == 0x000000, "Member 'BP_PiercingRounds_ProjectileMutator_C_OnProjectilePierce::Projectile' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PiercingRounds_ProjectileMutator_C_OnProjectilePierce;
 
 // Function BP_PiercingRounds_ProjectileMutator.BP_PiercingRounds_ProjectileMutator_C.GetDescription
 // 0x0030 (0x0030 - 0x0000)
@@ -91,11 +71,7 @@ public:
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0010(0x0010)(ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0020(0x0010)()
 };
-static_assert(alignof(BP_PiercingRounds_ProjectileMutator_C_GetDescription) == 0x000008, "Wrong alignment on BP_PiercingRounds_ProjectileMutator_C_GetDescription");
-static_assert(sizeof(BP_PiercingRounds_ProjectileMutator_C_GetDescription) == 0x000030, "Wrong size on BP_PiercingRounds_ProjectileMutator_C_GetDescription");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_GetDescription, ReturnValue) == 0x000000, "Member 'BP_PiercingRounds_ProjectileMutator_C_GetDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_GetDescription, K2Node_MakeArray_Array) == 0x000010, "Member 'BP_PiercingRounds_ProjectileMutator_C_GetDescription::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_PiercingRounds_ProjectileMutator_C_GetDescription, CallFunc_Format_ReturnValue) == 0x000020, "Member 'BP_PiercingRounds_ProjectileMutator_C_GetDescription::CallFunc_Format_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PiercingRounds_ProjectileMutator_C_GetDescription;
 
 }
 

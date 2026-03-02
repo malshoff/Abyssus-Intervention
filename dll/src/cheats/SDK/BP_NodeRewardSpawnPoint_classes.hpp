@@ -10,45 +10,46 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_NodeRewardSpawnPoint.BP_NodeRewardSpawnPoint_C
-// 0x00E8 (0x0390 - 0x02A8)
+// 0x00E8 (0x03A0 - 0x02B8)
 class ABP_NodeRewardSpawnPoint_C final : public ARNodeRewardSpawnPoint
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UArrowComponent*                        Arrow;                                             // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           NodeRewardType;                                    // 0x02C8(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	TSoftClassPtr<class UClass>                   SoftRewardClass;                                   // 0x02D0(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TSoftObjectPtr<class URMutatorPrimaryAsset>   SoftRequiredMutatorPA;                             // 0x02F8(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash)
-	bool                                          bShouldReplicateReward;                            // 0x0320(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          RequiresFirstNode;                                 // 0x0321(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_322[0x6];                                      // 0x0322(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   LastEncounterRoomReward;                           // 0x0328(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, HasGetValueTypeHash)
-	class AREnemySpawnAreaSegment*                AssociatedSpawnAreaSegment;                        // 0x0350(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	bool                                          bAllowIfAnyPlayerHasRequiredMutator;               // 0x0358(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_359[0x7];                                      // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRUniqueCharmSpawn>             UniqueCharmSpawn;                                  // 0x0360(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
-	bool                                          FoundPlayerInArray;                                // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_371[0x7];                                      // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URMutatorPrimaryAsset*                  ReconnectedCharmPA;                                // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          CharmPickedUp;                                     // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UArrowComponent*                        Arrow;                                             // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           NodeRewardType;                                    // 0x02D8(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   SoftRewardClass;                                   // 0x02E0(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TSoftObjectPtr<class URMutatorPrimaryAsset>   SoftRequiredMutatorPA;                             // 0x0308(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash)
+	bool                                          bShouldReplicateReward;                            // 0x0330(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RequiresFirstNode;                                 // 0x0331(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_332[0x6];                                      // 0x0332(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   LastEncounterRoomReward;                           // 0x0338(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, HasGetValueTypeHash)
+	class AREnemySpawnAreaSegment*                AssociatedSpawnAreaSegment;                        // 0x0360(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	bool                                          bAllowIfAnyPlayerHasRequiredMutator;               // 0x0368(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_369[0x7];                                      // 0x0369(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRUniqueCharmSpawn>             UniqueCharmSpawn;                                  // 0x0370(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
+	bool                                          FoundPlayerInArray;                                // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_381[0x7];                                      // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPickupableCharm*                      SpawnedCharm;                                      // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class URMutatorPrimaryAsset*                  ReconnectedCharmPA;                                // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          CharmPickedUp;                                     // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPickupableCharm*                      SpawnedCharm;                                      // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CheckAndUpdateCharmSpawn(class AController* Controller);
 	void CheckSkillTreePoints();
+	void CustomSpawnTrigger();
 	void ExecuteUbergraph_BP_NodeRewardSpawnPoint(int32 EntryPoint);
 	void GetCurrentOverworldNodeRewardClass(class UClass** RewardClass);
 	void GetRewardClass(class UClass** RewardClass);
@@ -69,32 +70,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_NodeRewardSpawnPoint_C">();
+		BP_STATIC_CLASS_IMPL("BP_NodeRewardSpawnPoint_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_NodeRewardSpawnPoint_C")
 	}
 	static class ABP_NodeRewardSpawnPoint_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_NodeRewardSpawnPoint_C>();
 	}
 };
-static_assert(alignof(ABP_NodeRewardSpawnPoint_C) == 0x000008, "Wrong alignment on ABP_NodeRewardSpawnPoint_C");
-static_assert(sizeof(ABP_NodeRewardSpawnPoint_C) == 0x000390, "Wrong size on ABP_NodeRewardSpawnPoint_C");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, UberGraphFrame) == 0x0002A8, "Member 'ABP_NodeRewardSpawnPoint_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, SkeletalMesh) == 0x0002B0, "Member 'ABP_NodeRewardSpawnPoint_C::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, Arrow) == 0x0002B8, "Member 'ABP_NodeRewardSpawnPoint_C::Arrow' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, DefaultSceneRoot) == 0x0002C0, "Member 'ABP_NodeRewardSpawnPoint_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, NodeRewardType) == 0x0002C8, "Member 'ABP_NodeRewardSpawnPoint_C::NodeRewardType' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, SoftRewardClass) == 0x0002D0, "Member 'ABP_NodeRewardSpawnPoint_C::SoftRewardClass' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, SoftRequiredMutatorPA) == 0x0002F8, "Member 'ABP_NodeRewardSpawnPoint_C::SoftRequiredMutatorPA' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, bShouldReplicateReward) == 0x000320, "Member 'ABP_NodeRewardSpawnPoint_C::bShouldReplicateReward' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, RequiresFirstNode) == 0x000321, "Member 'ABP_NodeRewardSpawnPoint_C::RequiresFirstNode' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, LastEncounterRoomReward) == 0x000328, "Member 'ABP_NodeRewardSpawnPoint_C::LastEncounterRoomReward' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, AssociatedSpawnAreaSegment) == 0x000350, "Member 'ABP_NodeRewardSpawnPoint_C::AssociatedSpawnAreaSegment' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, bAllowIfAnyPlayerHasRequiredMutator) == 0x000358, "Member 'ABP_NodeRewardSpawnPoint_C::bAllowIfAnyPlayerHasRequiredMutator' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, UniqueCharmSpawn) == 0x000360, "Member 'ABP_NodeRewardSpawnPoint_C::UniqueCharmSpawn' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, FoundPlayerInArray) == 0x000370, "Member 'ABP_NodeRewardSpawnPoint_C::FoundPlayerInArray' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, ReconnectedCharmPA) == 0x000378, "Member 'ABP_NodeRewardSpawnPoint_C::ReconnectedCharmPA' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, CharmPickedUp) == 0x000380, "Member 'ABP_NodeRewardSpawnPoint_C::CharmPickedUp' has a wrong offset!");
-static_assert(offsetof(ABP_NodeRewardSpawnPoint_C, SpawnedCharm) == 0x000388, "Member 'ABP_NodeRewardSpawnPoint_C::SpawnedCharm' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_NodeRewardSpawnPoint_C;
 
 }
 

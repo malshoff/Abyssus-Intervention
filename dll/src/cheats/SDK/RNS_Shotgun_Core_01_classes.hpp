@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass RNS_Shotgun_Core_01.RNS_Shotgun_Core_01_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x07B0 - 0x07B0)
 class URNS_Shotgun_Core_01_C final : public URNiagaraComponent
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"RNS_Shotgun_Core_01_C">();
+		BP_STATIC_CLASS_IMPL("RNS_Shotgun_Core_01_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RNS_Shotgun_Core_01_C")
 	}
 	static class URNS_Shotgun_Core_01_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<URNS_Shotgun_Core_01_C>();
 	}
 };
-static_assert(alignof(URNS_Shotgun_Core_01_C) == 0x000010, "Wrong alignment on URNS_Shotgun_Core_01_C");
-static_assert(sizeof(URNS_Shotgun_Core_01_C) == 0x000750, "Wrong size on URNS_Shotgun_Core_01_C");
+DUMPER7_ASSERTS_URNS_Shotgun_Core_01_C;
 
 }
 

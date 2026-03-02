@@ -18,12 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_OceanGod_PlayerBuff_StatusEffect.BP_OceanGod_PlayerBuff_StatusEffect_C
-// 0x0010 (0x04E8 - 0x04D8)
+// 0x0008 (0x04E8 - 0x04E0)
 class UBP_OceanGod_PlayerBuff_StatusEffect_C final : public URStatusEffectGScript
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	int32                                         MovementSpeedReductionPercentage;                  // 0x04E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_OceanGod_PlayerBuff_StatusEffect(int32 EntryPoint);
@@ -34,17 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_OceanGod_PlayerBuff_StatusEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_OceanGod_PlayerBuff_StatusEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_OceanGod_PlayerBuff_StatusEffect_C")
 	}
 	static class UBP_OceanGod_PlayerBuff_StatusEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_OceanGod_PlayerBuff_StatusEffect_C>();
 	}
 };
-static_assert(alignof(UBP_OceanGod_PlayerBuff_StatusEffect_C) == 0x000008, "Wrong alignment on UBP_OceanGod_PlayerBuff_StatusEffect_C");
-static_assert(sizeof(UBP_OceanGod_PlayerBuff_StatusEffect_C) == 0x0004E8, "Wrong size on UBP_OceanGod_PlayerBuff_StatusEffect_C");
-static_assert(offsetof(UBP_OceanGod_PlayerBuff_StatusEffect_C, UberGraphFrame) == 0x0004D8, "Member 'UBP_OceanGod_PlayerBuff_StatusEffect_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_OceanGod_PlayerBuff_StatusEffect_C, MovementSpeedReductionPercentage) == 0x0004E0, "Member 'UBP_OceanGod_PlayerBuff_StatusEffect_C::MovementSpeedReductionPercentage' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_OceanGod_PlayerBuff_StatusEffect_C;
 
 }
 

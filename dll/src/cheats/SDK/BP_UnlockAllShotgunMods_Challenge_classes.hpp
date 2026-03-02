@@ -35,17 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_UnlockAllShotgunMods_Challenge_C">();
+		BP_STATIC_CLASS_IMPL("BP_UnlockAllShotgunMods_Challenge_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_UnlockAllShotgunMods_Challenge_C")
 	}
 	static class UBP_UnlockAllShotgunMods_Challenge_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_UnlockAllShotgunMods_Challenge_C>();
 	}
 };
-static_assert(alignof(UBP_UnlockAllShotgunMods_Challenge_C) == 0x000008, "Wrong alignment on UBP_UnlockAllShotgunMods_Challenge_C");
-static_assert(sizeof(UBP_UnlockAllShotgunMods_Challenge_C) == 0x000048, "Wrong size on UBP_UnlockAllShotgunMods_Challenge_C");
-static_assert(offsetof(UBP_UnlockAllShotgunMods_Challenge_C, UberGraphFrame) == 0x000030, "Member 'UBP_UnlockAllShotgunMods_Challenge_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_UnlockAllShotgunMods_Challenge_C, ChallengesRequired) == 0x000038, "Member 'UBP_UnlockAllShotgunMods_Challenge_C::ChallengesRequired' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_UnlockAllShotgunMods_Challenge_C;
 
 }
 

@@ -17,6 +17,153 @@
 namespace SDK::Params
 {
 
+// Function IKRig.IKRetargetAlignPoleVectorController.GetSettings
+// 0x0028 (0x0028 - 0x0000)
+struct IKRetargetAlignPoleVectorController_GetSettings final
+{
+public:
+	struct FIKRetargetAlignPoleVectorOpSettings   ReturnValue;                                       // 0x0000(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetAlignPoleVectorController_GetSettings;
+
+// Function IKRig.IKRetargetAlignPoleVectorController.SetSettings
+// 0x0028 (0x0028 - 0x0000)
+struct IKRetargetAlignPoleVectorController_SetSettings final
+{
+public:
+	struct FIKRetargetAlignPoleVectorOpSettings   InSettings;                                        // 0x0000(0x0028)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetAlignPoleVectorController_SetSettings;
+
+// Function IKRig.IKRetargetCopyBasePoseController.GetSettings
+// 0x0020 (0x0020 - 0x0000)
+struct IKRetargetCopyBasePoseController_GetSettings final
+{
+public:
+	struct FIKRetargetCopyBasePoseOpSettings      ReturnValue;                                       // 0x0000(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetCopyBasePoseController_GetSettings;
+
+// Function IKRig.IKRetargetCopyBasePoseController.SetSettings
+// 0x0020 (0x0020 - 0x0000)
+struct IKRetargetCopyBasePoseController_SetSettings final
+{
+public:
+	struct FIKRetargetCopyBasePoseOpSettings      InSettings;                                        // 0x0000(0x0020)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetCopyBasePoseController_SetSettings;
+
+// Function IKRig.IKRetargetCurveRemapController.GetSettings
+// 0x0028 (0x0028 - 0x0000)
+struct IKRetargetCurveRemapController_GetSettings final
+{
+public:
+	struct FIKRetargetCurveRemapOpSettings        ReturnValue;                                       // 0x0000(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetCurveRemapController_GetSettings;
+
+// Function IKRig.IKRetargetCurveRemapController.SetSettings
+// 0x0028 (0x0028 - 0x0000)
+struct IKRetargetCurveRemapController_SetSettings final
+{
+public:
+	struct FIKRetargetCurveRemapOpSettings        InSettings;                                        // 0x0000(0x0028)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetCurveRemapController_SetSettings;
+
+// Function IKRig.IKRigSolverControllerBase.GetEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct IKRigSolverControllerBase_GetEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigSolverControllerBase_GetEnabled;
+
+// Function IKRig.IKRigSolverControllerBase.SetEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct IKRigSolverControllerBase_SetEnabled final
+{
+public:
+	bool                                          bIsEnabled;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigSolverControllerBase_SetEnabled;
+
+// Function IKRig.IKRigSetTransformController.GetSolverSettings
+// 0x0028 (0x0028 - 0x0000)
+struct IKRigSetTransformController_GetSolverSettings final
+{
+public:
+	struct FIKRigSetTransformSettings             ReturnValue;                                       // 0x0000(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigSetTransformController_GetSolverSettings;
+
+// Function IKRig.IKRigSetTransformController.SetSolverSettings
+// 0x0028 (0x0028 - 0x0000)
+struct IKRigSetTransformController_SetSolverSettings final
+{
+public:
+	struct FIKRigSetTransformSettings             InSettings;                                        // 0x0000(0x0028)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigSetTransformController_SetSolverSettings;
+
+// Function IKRig.IKRetargetFKChainsController.GetSettings
+// 0x0040 (0x0040 - 0x0000)
+struct IKRetargetFKChainsController_GetSettings final
+{
+public:
+	struct FIKRetargetFKChainsOpSettings          ReturnValue;                                       // 0x0000(0x0040)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetFKChainsController_GetSettings;
+
+// Function IKRig.IKRetargetFKChainsController.SetSettings
+// 0x0040 (0x0040 - 0x0000)
+struct IKRetargetFKChainsController_SetSettings final
+{
+public:
+	struct FIKRetargetFKChainsOpSettings          InSettings;                                        // 0x0000(0x0040)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetFKChainsController_SetSettings;
+
+// Function IKRig.IKRetargetIKChainsController.GetSettings
+// 0x0038 (0x0038 - 0x0000)
+struct IKRetargetIKChainsController_GetSettings final
+{
+public:
+	struct FIKRetargetIKChainsOpSettings          ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetIKChainsController_GetSettings;
+
+// Function IKRig.IKRetargetIKChainsController.SetSettings
+// 0x0038 (0x0038 - 0x0000)
+struct IKRetargetIKChainsController_SetSettings final
+{
+public:
+	struct FIKRetargetIKChainsOpSettings          InSettings;                                        // 0x0000(0x0038)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetIKChainsController_SetSettings;
+
+// Function IKRig.RetargetProfileLibrary.CopyRetargetProfileFromRetargetAsset
+// 0x0130 (0x0130 - 0x0000)
+struct RetargetProfileLibrary_CopyRetargetProfileFromRetargetAsset final
+{
+public:
+	const class UIKRetargeter*                    InRetargetAsset;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRetargetProfile                       ReturnValue;                                       // 0x0008(0x0128)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RetargetProfileLibrary_CopyRetargetProfileFromRetargetAsset;
+
+// Function IKRig.RetargetProfileLibrary.GetOpControllerFromRetargetProfile
+// 0x0138 (0x0138 - 0x0000)
+struct RetargetProfileLibrary_GetOpControllerFromRetargetProfile final
+{
+public:
+	struct FRetargetProfile                       InRetargetProfile;                                 // 0x0000(0x0128)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FName                                   InRetargetOpName;                                  // 0x0128(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UIKRetargetOpControllerBase*            ReturnValue;                                       // 0x0130(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RetargetProfileLibrary_GetOpControllerFromRetargetProfile;
+
 // Function IKRig.IKGoalCreatorInterface.AddIKGoals
 // 0x0050 (0x0050 - 0x0000)
 struct IKGoalCreatorInterface_AddIKGoals final
@@ -24,20 +171,287 @@ struct IKGoalCreatorInterface_AddIKGoals final
 public:
 	TMap<class FName, struct FIKRigGoal>          OutGoals;                                          // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(IKGoalCreatorInterface_AddIKGoals) == 0x000008, "Wrong alignment on IKGoalCreatorInterface_AddIKGoals");
-static_assert(sizeof(IKGoalCreatorInterface_AddIKGoals) == 0x000050, "Wrong size on IKGoalCreatorInterface_AddIKGoals");
-static_assert(offsetof(IKGoalCreatorInterface_AddIKGoals, OutGoals) == 0x000000, "Member 'IKGoalCreatorInterface_AddIKGoals::OutGoals' has a wrong offset!");
+DUMPER7_ASSERTS_IKGoalCreatorInterface_AddIKGoals;
+
+// Function IKRig.IKRetargetPelvisMotionController.GetSettings
+// 0x00C8 (0x00C8 - 0x0000)
+struct IKRetargetPelvisMotionController_GetSettings final
+{
+public:
+	struct FIKRetargetPelvisMotionOpSettings      ReturnValue;                                       // 0x0000(0x00C8)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetPelvisMotionController_GetSettings;
+
+// Function IKRig.IKRetargetPelvisMotionController.GetSourcePelvisBone
+// 0x0008 (0x0008 - 0x0000)
+struct IKRetargetPelvisMotionController_GetSourcePelvisBone final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetPelvisMotionController_GetSourcePelvisBone;
+
+// Function IKRig.IKRetargetPelvisMotionController.GetTargetPelvisBone
+// 0x0008 (0x0008 - 0x0000)
+struct IKRetargetPelvisMotionController_GetTargetPelvisBone final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetPelvisMotionController_GetTargetPelvisBone;
+
+// Function IKRig.IKRetargetPelvisMotionController.SetSettings
+// 0x00C8 (0x00C8 - 0x0000)
+struct IKRetargetPelvisMotionController_SetSettings final
+{
+public:
+	struct FIKRetargetPelvisMotionOpSettings      InSettings;                                        // 0x0000(0x00C8)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetPelvisMotionController_SetSettings;
+
+// Function IKRig.IKRetargetPelvisMotionController.SetSourcePelvisBone
+// 0x0008 (0x0008 - 0x0000)
+struct IKRetargetPelvisMotionController_SetSourcePelvisBone final
+{
+public:
+	class FName                                   InSourcePelvisBone;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetPelvisMotionController_SetSourcePelvisBone;
+
+// Function IKRig.IKRetargetPelvisMotionController.SetTargetPelvisBone
+// 0x0008 (0x0008 - 0x0000)
+struct IKRetargetPelvisMotionController_SetTargetPelvisBone final
+{
+public:
+	class FName                                   InTargetPelvisBone;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetPelvisMotionController_SetTargetPelvisBone;
+
+// Function IKRig.IKRetargetPinBoneController.GetAllBonePairs
+// 0x0050 (0x0050 - 0x0000)
+struct IKRetargetPinBoneController_GetAllBonePairs final
+{
+public:
+	TMap<class FName, class FName>                ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetPinBoneController_GetAllBonePairs;
+
+// Function IKRig.IKRetargetPinBoneController.GetSettings
+// 0x00F0 (0x00F0 - 0x0000)
+struct IKRetargetPinBoneController_GetSettings final
+{
+public:
+	struct FIKRetargetPinBoneOpSettings           ReturnValue;                                       // 0x0000(0x00F0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetPinBoneController_GetSettings;
+
+// Function IKRig.IKRetargetPinBoneController.SetBonePair
+// 0x0010 (0x0010 - 0x0000)
+struct IKRetargetPinBoneController_SetBonePair final
+{
+public:
+	class FName                                   InBoneToCopyFrom;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InBoneToCopyTo;                                    // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetPinBoneController_SetBonePair;
+
+// Function IKRig.IKRetargetPinBoneController.SetSettings
+// 0x00F0 (0x00F0 - 0x0000)
+struct IKRetargetPinBoneController_SetSettings final
+{
+public:
+	struct FIKRetargetPinBoneOpSettings           InSettings;                                        // 0x0000(0x00F0)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetPinBoneController_SetSettings;
+
+// Function IKRig.IKRetargetAdditivePoseController.GetSettings
+// 0x0020 (0x0020 - 0x0000)
+struct IKRetargetAdditivePoseController_GetSettings final
+{
+public:
+	struct FIKRetargetAdditivePoseOpSettings      ReturnValue;                                       // 0x0000(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetAdditivePoseController_GetSettings;
+
+// Function IKRig.IKRetargetAdditivePoseController.SetSettings
+// 0x0020 (0x0020 - 0x0000)
+struct IKRetargetAdditivePoseController_SetSettings final
+{
+public:
+	struct FIKRetargetAdditivePoseOpSettings      InSettings;                                        // 0x0000(0x0020)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetAdditivePoseController_SetSettings;
+
+// Function IKRig.IKRetargetRootMotionController.GetSettings
+// 0x00C0 (0x00C0 - 0x0000)
+struct IKRetargetRootMotionController_GetSettings final
+{
+public:
+	struct FIKRetargetRootMotionOpSettings        ReturnValue;                                       // 0x0000(0x00C0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetRootMotionController_GetSettings;
+
+// Function IKRig.IKRetargetRootMotionController.GetSourceRootBone
+// 0x0008 (0x0008 - 0x0000)
+struct IKRetargetRootMotionController_GetSourceRootBone final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetRootMotionController_GetSourceRootBone;
+
+// Function IKRig.IKRetargetRootMotionController.GetTargetPelvisBone
+// 0x0008 (0x0008 - 0x0000)
+struct IKRetargetRootMotionController_GetTargetPelvisBone final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetRootMotionController_GetTargetPelvisBone;
+
+// Function IKRig.IKRetargetRootMotionController.GetTargetRootBone
+// 0x0008 (0x0008 - 0x0000)
+struct IKRetargetRootMotionController_GetTargetRootBone final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetRootMotionController_GetTargetRootBone;
+
+// Function IKRig.IKRetargetRootMotionController.SetSettings
+// 0x00C0 (0x00C0 - 0x0000)
+struct IKRetargetRootMotionController_SetSettings final
+{
+public:
+	struct FIKRetargetRootMotionOpSettings        InSettings;                                        // 0x0000(0x00C0)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetRootMotionController_SetSettings;
+
+// Function IKRig.IKRetargetRootMotionController.SetSourceRootBone
+// 0x0008 (0x0008 - 0x0000)
+struct IKRetargetRootMotionController_SetSourceRootBone final
+{
+public:
+	class FName                                   InSourceRootBone;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetRootMotionController_SetSourceRootBone;
+
+// Function IKRig.IKRetargetRootMotionController.SetTargetPelvisBone
+// 0x0008 (0x0008 - 0x0000)
+struct IKRetargetRootMotionController_SetTargetPelvisBone final
+{
+public:
+	class FName                                   InTargetPelvisBone;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetRootMotionController_SetTargetPelvisBone;
+
+// Function IKRig.IKRetargetRootMotionController.SetTargetRootBone
+// 0x0008 (0x0008 - 0x0000)
+struct IKRetargetRootMotionController_SetTargetRootBone final
+{
+public:
+	class FName                                   InTargetRootBone;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetRootMotionController_SetTargetRootBone;
+
+// Function IKRig.IKRigFBIKSolver.GetBoneSettings
+// 0x0010 (0x0010 - 0x0000)
+struct IKRigFBIKSolver_GetBoneSettings final
+{
+public:
+	TArray<class UIKRig_FBIKBoneSettings*>        ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigFBIKSolver_GetBoneSettings;
+
+// Function IKRig.IKRigFBIKSolver.GetEffectors
+// 0x0010 (0x0010 - 0x0000)
+struct IKRigFBIKSolver_GetEffectors final
+{
+public:
+	TArray<class UIKRig_FBIKEffector*>            ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigFBIKSolver_GetEffectors;
+
+// Function IKRig.IKRetargetRunIKRigController.GetSettings
+// 0x0040 (0x0040 - 0x0000)
+struct IKRetargetRunIKRigController_GetSettings final
+{
+public:
+	struct FIKRetargetRunIKRigOpSettings          ReturnValue;                                       // 0x0000(0x0040)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetRunIKRigController_GetSettings;
+
+// Function IKRig.IKRetargetRunIKRigController.SetSettings
+// 0x0040 (0x0040 - 0x0000)
+struct IKRetargetRunIKRigController_SetSettings final
+{
+public:
+	struct FIKRetargetRunIKRigOpSettings          InSettings;                                        // 0x0000(0x0040)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetRunIKRigController_SetSettings;
+
+// Function IKRig.IKRetargetScaleSourceController.GetSettings
+// 0x0018 (0x0018 - 0x0000)
+struct IKRetargetScaleSourceController_GetSettings final
+{
+public:
+	struct FIKRetargetScaleSourceOpSettings       ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetScaleSourceController_GetSettings;
+
+// Function IKRig.IKRetargetScaleSourceController.SetSettings
+// 0x0018 (0x0018 - 0x0000)
+struct IKRetargetScaleSourceController_SetSettings final
+{
+public:
+	struct FIKRetargetScaleSourceOpSettings       InSettings;                                        // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetScaleSourceController_SetSettings;
+
+// Function IKRig.IKRetargetSpeedPlantingController.GetSettings
+// 0x0038 (0x0038 - 0x0000)
+struct IKRetargetSpeedPlantingController_GetSettings final
+{
+public:
+	struct FIKRetargetSpeedPlantingOpSettings     ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetSpeedPlantingController_GetSettings;
+
+// Function IKRig.IKRetargetSpeedPlantingController.SetSettings
+// 0x0038 (0x0038 - 0x0000)
+struct IKRetargetSpeedPlantingController_SetSettings final
+{
+public:
+	struct FIKRetargetSpeedPlantingOpSettings     InSettings;                                        // 0x0000(0x0038)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetSpeedPlantingController_SetSettings;
+
+// Function IKRig.IKRetargetStrideWarpingController.GetSettings
+// 0x0060 (0x0060 - 0x0000)
+struct IKRetargetStrideWarpingController_GetSettings final
+{
+public:
+	struct FIKRetargetStrideWarpingOpSettings     ReturnValue;                                       // 0x0000(0x0060)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetStrideWarpingController_GetSettings;
+
+// Function IKRig.IKRetargetStrideWarpingController.SetSettings
+// 0x0060 (0x0060 - 0x0000)
+struct IKRetargetStrideWarpingController_SetSettings final
+{
+public:
+	struct FIKRetargetStrideWarpingOpSettings     InSettings;                                        // 0x0000(0x0060)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetStrideWarpingController_SetSettings;
 
 // Function IKRig.IKRigComponent.SetIKRigGoal
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct IKRigComponent_SetIKRigGoal final
 {
 public:
-	struct FIKRigGoal                             Goal;                                              // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIKRigGoal                             Goal;                                              // 0x0000(0x00B0)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(IKRigComponent_SetIKRigGoal) == 0x000010, "Wrong alignment on IKRigComponent_SetIKRigGoal");
-static_assert(sizeof(IKRigComponent_SetIKRigGoal) == 0x0000A0, "Wrong size on IKRigComponent_SetIKRigGoal");
-static_assert(offsetof(IKRigComponent_SetIKRigGoal, Goal) == 0x000000, "Member 'IKRigComponent_SetIKRigGoal::Goal' has a wrong offset!");
+DUMPER7_ASSERTS_IKRigComponent_SetIKRigGoal;
 
 // Function IKRig.IKRigComponent.SetIKRigGoalPositionAndRotation
 // 0x0050 (0x0050 - 0x0000)
@@ -51,13 +465,7 @@ public:
 	float                                         RotationAlpha;                                     // 0x0044(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(IKRigComponent_SetIKRigGoalPositionAndRotation) == 0x000010, "Wrong alignment on IKRigComponent_SetIKRigGoalPositionAndRotation");
-static_assert(sizeof(IKRigComponent_SetIKRigGoalPositionAndRotation) == 0x000050, "Wrong size on IKRigComponent_SetIKRigGoalPositionAndRotation");
-static_assert(offsetof(IKRigComponent_SetIKRigGoalPositionAndRotation, GoalName) == 0x000000, "Member 'IKRigComponent_SetIKRigGoalPositionAndRotation::GoalName' has a wrong offset!");
-static_assert(offsetof(IKRigComponent_SetIKRigGoalPositionAndRotation, Position) == 0x000008, "Member 'IKRigComponent_SetIKRigGoalPositionAndRotation::Position' has a wrong offset!");
-static_assert(offsetof(IKRigComponent_SetIKRigGoalPositionAndRotation, Rotation) == 0x000020, "Member 'IKRigComponent_SetIKRigGoalPositionAndRotation::Rotation' has a wrong offset!");
-static_assert(offsetof(IKRigComponent_SetIKRigGoalPositionAndRotation, PositionAlpha) == 0x000040, "Member 'IKRigComponent_SetIKRigGoalPositionAndRotation::PositionAlpha' has a wrong offset!");
-static_assert(offsetof(IKRigComponent_SetIKRigGoalPositionAndRotation, RotationAlpha) == 0x000044, "Member 'IKRigComponent_SetIKRigGoalPositionAndRotation::RotationAlpha' has a wrong offset!");
+DUMPER7_ASSERTS_IKRigComponent_SetIKRigGoalPositionAndRotation;
 
 // Function IKRig.IKRigComponent.SetIKRigGoalTransform
 // 0x0080 (0x0080 - 0x0000)
@@ -71,89 +479,64 @@ public:
 	float                                         RotationAlpha;                                     // 0x0074(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(IKRigComponent_SetIKRigGoalTransform) == 0x000010, "Wrong alignment on IKRigComponent_SetIKRigGoalTransform");
-static_assert(sizeof(IKRigComponent_SetIKRigGoalTransform) == 0x000080, "Wrong size on IKRigComponent_SetIKRigGoalTransform");
-static_assert(offsetof(IKRigComponent_SetIKRigGoalTransform, GoalName) == 0x000000, "Member 'IKRigComponent_SetIKRigGoalTransform::GoalName' has a wrong offset!");
-static_assert(offsetof(IKRigComponent_SetIKRigGoalTransform, Transform) == 0x000010, "Member 'IKRigComponent_SetIKRigGoalTransform::Transform' has a wrong offset!");
-static_assert(offsetof(IKRigComponent_SetIKRigGoalTransform, PositionAlpha) == 0x000070, "Member 'IKRigComponent_SetIKRigGoalTransform::PositionAlpha' has a wrong offset!");
-static_assert(offsetof(IKRigComponent_SetIKRigGoalTransform, RotationAlpha) == 0x000074, "Member 'IKRigComponent_SetIKRigGoalTransform::RotationAlpha' has a wrong offset!");
+DUMPER7_ASSERTS_IKRigComponent_SetIKRigGoalTransform;
 
 // Function IKRig.IKRetargeter.GetChainSettingsFromRetargetAsset
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct IKRetargeter_GetChainSettingsFromRetargetAsset final
 {
 public:
 	const class UIKRetargeter*                    RetargetAsset;                                     // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   TargetChainName;                                   // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   OptionalProfileName;                               // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTargetChainSettings                   ReturnValue;                                       // 0x0018(0x00B0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTargetChainSettings                   ReturnValue;                                       // 0x0018(0x00B8)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(IKRetargeter_GetChainSettingsFromRetargetAsset) == 0x000008, "Wrong alignment on IKRetargeter_GetChainSettingsFromRetargetAsset");
-static_assert(sizeof(IKRetargeter_GetChainSettingsFromRetargetAsset) == 0x0000C8, "Wrong size on IKRetargeter_GetChainSettingsFromRetargetAsset");
-static_assert(offsetof(IKRetargeter_GetChainSettingsFromRetargetAsset, RetargetAsset) == 0x000000, "Member 'IKRetargeter_GetChainSettingsFromRetargetAsset::RetargetAsset' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_GetChainSettingsFromRetargetAsset, TargetChainName) == 0x000008, "Member 'IKRetargeter_GetChainSettingsFromRetargetAsset::TargetChainName' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_GetChainSettingsFromRetargetAsset, OptionalProfileName) == 0x000010, "Member 'IKRetargeter_GetChainSettingsFromRetargetAsset::OptionalProfileName' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_GetChainSettingsFromRetargetAsset, ReturnValue) == 0x000018, "Member 'IKRetargeter_GetChainSettingsFromRetargetAsset::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_IKRetargeter_GetChainSettingsFromRetargetAsset;
 
 // Function IKRig.IKRetargeter.GetChainSettingsFromRetargetProfile
-// 0x01C0 (0x01C0 - 0x0000)
+// 0x01E8 (0x01E8 - 0x0000)
 struct IKRetargeter_GetChainSettingsFromRetargetProfile final
 {
 public:
-	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0108)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FName                                   TargetChainName;                                   // 0x0108(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTargetChainSettings                   ReturnValue;                                       // 0x0110(0x00B0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0128)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FName                                   TargetChainName;                                   // 0x0128(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTargetChainSettings                   ReturnValue;                                       // 0x0130(0x00B8)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(IKRetargeter_GetChainSettingsFromRetargetProfile) == 0x000008, "Wrong alignment on IKRetargeter_GetChainSettingsFromRetargetProfile");
-static_assert(sizeof(IKRetargeter_GetChainSettingsFromRetargetProfile) == 0x0001C0, "Wrong size on IKRetargeter_GetChainSettingsFromRetargetProfile");
-static_assert(offsetof(IKRetargeter_GetChainSettingsFromRetargetProfile, RetargetProfile) == 0x000000, "Member 'IKRetargeter_GetChainSettingsFromRetargetProfile::RetargetProfile' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_GetChainSettingsFromRetargetProfile, TargetChainName) == 0x000108, "Member 'IKRetargeter_GetChainSettingsFromRetargetProfile::TargetChainName' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_GetChainSettingsFromRetargetProfile, ReturnValue) == 0x000110, "Member 'IKRetargeter_GetChainSettingsFromRetargetProfile::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_IKRetargeter_GetChainSettingsFromRetargetProfile;
 
 // Function IKRig.IKRetargeter.GetChainUsingGoalFromRetargetAsset
-// 0x00C0 (0x00C0 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct IKRetargeter_GetChainUsingGoalFromRetargetAsset final
 {
 public:
 	const class UIKRetargeter*                    RetargetAsset;                                     // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   IKGoalName;                                        // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTargetChainSettings                   ReturnValue;                                       // 0x0010(0x00B0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTargetChainSettings                   ReturnValue;                                       // 0x0010(0x00B8)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(IKRetargeter_GetChainUsingGoalFromRetargetAsset) == 0x000008, "Wrong alignment on IKRetargeter_GetChainUsingGoalFromRetargetAsset");
-static_assert(sizeof(IKRetargeter_GetChainUsingGoalFromRetargetAsset) == 0x0000C0, "Wrong size on IKRetargeter_GetChainUsingGoalFromRetargetAsset");
-static_assert(offsetof(IKRetargeter_GetChainUsingGoalFromRetargetAsset, RetargetAsset) == 0x000000, "Member 'IKRetargeter_GetChainUsingGoalFromRetargetAsset::RetargetAsset' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_GetChainUsingGoalFromRetargetAsset, IKGoalName) == 0x000008, "Member 'IKRetargeter_GetChainUsingGoalFromRetargetAsset::IKGoalName' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_GetChainUsingGoalFromRetargetAsset, ReturnValue) == 0x000010, "Member 'IKRetargeter_GetChainUsingGoalFromRetargetAsset::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_IKRetargeter_GetChainUsingGoalFromRetargetAsset;
 
 // Function IKRig.IKRetargeter.GetGlobalSettingsFromRetargetAsset
-// 0x0038 (0x0038 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct IKRetargeter_GetGlobalSettingsFromRetargetAsset final
 {
 public:
 	const class UIKRetargeter*                    RetargetAsset;                                     // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   OptionalProfileName;                               // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRetargetGlobalSettings                OutSettings;                                       // 0x0010(0x0024)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FRetargetGlobalSettings                OutSettings;                                       // 0x0010(0x0034)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(IKRetargeter_GetGlobalSettingsFromRetargetAsset) == 0x000008, "Wrong alignment on IKRetargeter_GetGlobalSettingsFromRetargetAsset");
-static_assert(sizeof(IKRetargeter_GetGlobalSettingsFromRetargetAsset) == 0x000038, "Wrong size on IKRetargeter_GetGlobalSettingsFromRetargetAsset");
-static_assert(offsetof(IKRetargeter_GetGlobalSettingsFromRetargetAsset, RetargetAsset) == 0x000000, "Member 'IKRetargeter_GetGlobalSettingsFromRetargetAsset::RetargetAsset' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_GetGlobalSettingsFromRetargetAsset, OptionalProfileName) == 0x000008, "Member 'IKRetargeter_GetGlobalSettingsFromRetargetAsset::OptionalProfileName' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_GetGlobalSettingsFromRetargetAsset, OutSettings) == 0x000010, "Member 'IKRetargeter_GetGlobalSettingsFromRetargetAsset::OutSettings' has a wrong offset!");
+DUMPER7_ASSERTS_IKRetargeter_GetGlobalSettingsFromRetargetAsset;
 
 // Function IKRig.IKRetargeter.GetGlobalSettingsFromRetargetProfile
-// 0x0130 (0x0130 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct IKRetargeter_GetGlobalSettingsFromRetargetProfile final
 {
 public:
-	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0108)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FRetargetGlobalSettings                ReturnValue;                                       // 0x0108(0x0024)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0128)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FRetargetGlobalSettings                ReturnValue;                                       // 0x0128(0x0034)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15C[0x4];                                      // 0x015C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(IKRetargeter_GetGlobalSettingsFromRetargetProfile) == 0x000008, "Wrong alignment on IKRetargeter_GetGlobalSettingsFromRetargetProfile");
-static_assert(sizeof(IKRetargeter_GetGlobalSettingsFromRetargetProfile) == 0x000130, "Wrong size on IKRetargeter_GetGlobalSettingsFromRetargetProfile");
-static_assert(offsetof(IKRetargeter_GetGlobalSettingsFromRetargetProfile, RetargetProfile) == 0x000000, "Member 'IKRetargeter_GetGlobalSettingsFromRetargetProfile::RetargetProfile' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_GetGlobalSettingsFromRetargetProfile, ReturnValue) == 0x000108, "Member 'IKRetargeter_GetGlobalSettingsFromRetargetProfile::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_IKRetargeter_GetGlobalSettingsFromRetargetProfile;
 
 // Function IKRig.IKRetargeter.GetRootSettingsFromRetargetAsset
 // 0x0078 (0x0078 - 0x0000)
@@ -164,112 +547,83 @@ public:
 	class FName                                   OptionalProfileName;                               // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FTargetRootSettings                    OutSettings;                                       // 0x0010(0x0068)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(IKRetargeter_GetRootSettingsFromRetargetAsset) == 0x000008, "Wrong alignment on IKRetargeter_GetRootSettingsFromRetargetAsset");
-static_assert(sizeof(IKRetargeter_GetRootSettingsFromRetargetAsset) == 0x000078, "Wrong size on IKRetargeter_GetRootSettingsFromRetargetAsset");
-static_assert(offsetof(IKRetargeter_GetRootSettingsFromRetargetAsset, RetargetAsset) == 0x000000, "Member 'IKRetargeter_GetRootSettingsFromRetargetAsset::RetargetAsset' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_GetRootSettingsFromRetargetAsset, OptionalProfileName) == 0x000008, "Member 'IKRetargeter_GetRootSettingsFromRetargetAsset::OptionalProfileName' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_GetRootSettingsFromRetargetAsset, OutSettings) == 0x000010, "Member 'IKRetargeter_GetRootSettingsFromRetargetAsset::OutSettings' has a wrong offset!");
+DUMPER7_ASSERTS_IKRetargeter_GetRootSettingsFromRetargetAsset;
 
 // Function IKRig.IKRetargeter.GetRootSettingsFromRetargetProfile
-// 0x0170 (0x0170 - 0x0000)
+// 0x0190 (0x0190 - 0x0000)
 struct IKRetargeter_GetRootSettingsFromRetargetProfile final
 {
 public:
-	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0108)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FTargetRootSettings                    ReturnValue;                                       // 0x0108(0x0068)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0128)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FTargetRootSettings                    ReturnValue;                                       // 0x0128(0x0068)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(IKRetargeter_GetRootSettingsFromRetargetProfile) == 0x000008, "Wrong alignment on IKRetargeter_GetRootSettingsFromRetargetProfile");
-static_assert(sizeof(IKRetargeter_GetRootSettingsFromRetargetProfile) == 0x000170, "Wrong size on IKRetargeter_GetRootSettingsFromRetargetProfile");
-static_assert(offsetof(IKRetargeter_GetRootSettingsFromRetargetProfile, RetargetProfile) == 0x000000, "Member 'IKRetargeter_GetRootSettingsFromRetargetProfile::RetargetProfile' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_GetRootSettingsFromRetargetProfile, ReturnValue) == 0x000108, "Member 'IKRetargeter_GetRootSettingsFromRetargetProfile::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_IKRetargeter_GetRootSettingsFromRetargetProfile;
 
 // Function IKRig.IKRetargeter.SetChainFKSettingsInRetargetProfile
-// 0x0130 (0x0130 - 0x0000)
+// 0x0150 (0x0150 - 0x0000)
 struct IKRetargeter_SetChainFKSettingsInRetargetProfile final
 {
 public:
-	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0108)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FTargetChainFKSettings                 FKSettings;                                        // 0x0108(0x001C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   TargetChainName;                                   // 0x0124(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0128)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FTargetChainFKSettings                 FKSettings;                                        // 0x0128(0x001C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   TargetChainName;                                   // 0x0144(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(IKRetargeter_SetChainFKSettingsInRetargetProfile) == 0x000008, "Wrong alignment on IKRetargeter_SetChainFKSettingsInRetargetProfile");
-static_assert(sizeof(IKRetargeter_SetChainFKSettingsInRetargetProfile) == 0x000130, "Wrong size on IKRetargeter_SetChainFKSettingsInRetargetProfile");
-static_assert(offsetof(IKRetargeter_SetChainFKSettingsInRetargetProfile, RetargetProfile) == 0x000000, "Member 'IKRetargeter_SetChainFKSettingsInRetargetProfile::RetargetProfile' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_SetChainFKSettingsInRetargetProfile, FKSettings) == 0x000108, "Member 'IKRetargeter_SetChainFKSettingsInRetargetProfile::FKSettings' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_SetChainFKSettingsInRetargetProfile, TargetChainName) == 0x000124, "Member 'IKRetargeter_SetChainFKSettingsInRetargetProfile::TargetChainName' has a wrong offset!");
+DUMPER7_ASSERTS_IKRetargeter_SetChainFKSettingsInRetargetProfile;
 
 // Function IKRig.IKRetargeter.SetChainIKSettingsInRetargetProfile
-// 0x0188 (0x0188 - 0x0000)
+// 0x01B0 (0x01B0 - 0x0000)
 struct IKRetargeter_SetChainIKSettingsInRetargetProfile final
 {
 public:
-	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0108)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FTargetChainIKSettings                 IKSettings;                                        // 0x0108(0x0078)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   TargetChainName;                                   // 0x0180(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0128)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FTargetChainIKSettings                 IKSettings;                                        // 0x0128(0x0080)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   TargetChainName;                                   // 0x01A8(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(IKRetargeter_SetChainIKSettingsInRetargetProfile) == 0x000008, "Wrong alignment on IKRetargeter_SetChainIKSettingsInRetargetProfile");
-static_assert(sizeof(IKRetargeter_SetChainIKSettingsInRetargetProfile) == 0x000188, "Wrong size on IKRetargeter_SetChainIKSettingsInRetargetProfile");
-static_assert(offsetof(IKRetargeter_SetChainIKSettingsInRetargetProfile, RetargetProfile) == 0x000000, "Member 'IKRetargeter_SetChainIKSettingsInRetargetProfile::RetargetProfile' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_SetChainIKSettingsInRetargetProfile, IKSettings) == 0x000108, "Member 'IKRetargeter_SetChainIKSettingsInRetargetProfile::IKSettings' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_SetChainIKSettingsInRetargetProfile, TargetChainName) == 0x000180, "Member 'IKRetargeter_SetChainIKSettingsInRetargetProfile::TargetChainName' has a wrong offset!");
+DUMPER7_ASSERTS_IKRetargeter_SetChainIKSettingsInRetargetProfile;
 
 // Function IKRig.IKRetargeter.SetChainSettingsInRetargetProfile
-// 0x01C0 (0x01C0 - 0x0000)
+// 0x01E8 (0x01E8 - 0x0000)
 struct IKRetargeter_SetChainSettingsInRetargetProfile final
 {
 public:
-	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0108)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FTargetChainSettings                   ChainSettings_0;                                   // 0x0108(0x00B0)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   TargetChainName;                                   // 0x01B8(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0128)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FTargetChainSettings                   ChainSettings_0;                                   // 0x0128(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   TargetChainName;                                   // 0x01E0(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(IKRetargeter_SetChainSettingsInRetargetProfile) == 0x000008, "Wrong alignment on IKRetargeter_SetChainSettingsInRetargetProfile");
-static_assert(sizeof(IKRetargeter_SetChainSettingsInRetargetProfile) == 0x0001C0, "Wrong size on IKRetargeter_SetChainSettingsInRetargetProfile");
-static_assert(offsetof(IKRetargeter_SetChainSettingsInRetargetProfile, RetargetProfile) == 0x000000, "Member 'IKRetargeter_SetChainSettingsInRetargetProfile::RetargetProfile' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_SetChainSettingsInRetargetProfile, ChainSettings_0) == 0x000108, "Member 'IKRetargeter_SetChainSettingsInRetargetProfile::ChainSettings_0' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_SetChainSettingsInRetargetProfile, TargetChainName) == 0x0001B8, "Member 'IKRetargeter_SetChainSettingsInRetargetProfile::TargetChainName' has a wrong offset!");
+DUMPER7_ASSERTS_IKRetargeter_SetChainSettingsInRetargetProfile;
 
 // Function IKRig.IKRetargeter.SetChainSpeedPlantSettingsInRetargetProfile
-// 0x0128 (0x0128 - 0x0000)
+// 0x0148 (0x0148 - 0x0000)
 struct IKRetargeter_SetChainSpeedPlantSettingsInRetargetProfile final
 {
 public:
-	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0108)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FTargetChainSpeedPlantSettings         SpeedPlantSettings;                                // 0x0108(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   TargetChainName;                                   // 0x0120(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0128)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FTargetChainSpeedPlantSettings         SpeedPlantSettings;                                // 0x0128(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   TargetChainName;                                   // 0x0140(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(IKRetargeter_SetChainSpeedPlantSettingsInRetargetProfile) == 0x000008, "Wrong alignment on IKRetargeter_SetChainSpeedPlantSettingsInRetargetProfile");
-static_assert(sizeof(IKRetargeter_SetChainSpeedPlantSettingsInRetargetProfile) == 0x000128, "Wrong size on IKRetargeter_SetChainSpeedPlantSettingsInRetargetProfile");
-static_assert(offsetof(IKRetargeter_SetChainSpeedPlantSettingsInRetargetProfile, RetargetProfile) == 0x000000, "Member 'IKRetargeter_SetChainSpeedPlantSettingsInRetargetProfile::RetargetProfile' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_SetChainSpeedPlantSettingsInRetargetProfile, SpeedPlantSettings) == 0x000108, "Member 'IKRetargeter_SetChainSpeedPlantSettingsInRetargetProfile::SpeedPlantSettings' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_SetChainSpeedPlantSettingsInRetargetProfile, TargetChainName) == 0x000120, "Member 'IKRetargeter_SetChainSpeedPlantSettingsInRetargetProfile::TargetChainName' has a wrong offset!");
+DUMPER7_ASSERTS_IKRetargeter_SetChainSpeedPlantSettingsInRetargetProfile;
 
 // Function IKRig.IKRetargeter.SetGlobalSettingsInRetargetProfile
-// 0x0130 (0x0130 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct IKRetargeter_SetGlobalSettingsInRetargetProfile final
 {
 public:
-	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0108)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FRetargetGlobalSettings                GlobalSettings_0;                                  // 0x0108(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0128)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FRetargetGlobalSettings                GlobalSettings_0;                                  // 0x0128(0x0034)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15C[0x4];                                      // 0x015C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(IKRetargeter_SetGlobalSettingsInRetargetProfile) == 0x000008, "Wrong alignment on IKRetargeter_SetGlobalSettingsInRetargetProfile");
-static_assert(sizeof(IKRetargeter_SetGlobalSettingsInRetargetProfile) == 0x000130, "Wrong size on IKRetargeter_SetGlobalSettingsInRetargetProfile");
-static_assert(offsetof(IKRetargeter_SetGlobalSettingsInRetargetProfile, RetargetProfile) == 0x000000, "Member 'IKRetargeter_SetGlobalSettingsInRetargetProfile::RetargetProfile' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_SetGlobalSettingsInRetargetProfile, GlobalSettings_0) == 0x000108, "Member 'IKRetargeter_SetGlobalSettingsInRetargetProfile::GlobalSettings_0' has a wrong offset!");
+DUMPER7_ASSERTS_IKRetargeter_SetGlobalSettingsInRetargetProfile;
 
 // Function IKRig.IKRetargeter.SetRootSettingsInRetargetProfile
-// 0x0170 (0x0170 - 0x0000)
+// 0x0190 (0x0190 - 0x0000)
 struct IKRetargeter_SetRootSettingsInRetargetProfile final
 {
 public:
-	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0108)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FTargetRootSettings                    RootSettings_0;                                    // 0x0108(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0128)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FTargetRootSettings                    RootSettings_0;                                    // 0x0128(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(IKRetargeter_SetRootSettingsInRetargetProfile) == 0x000008, "Wrong alignment on IKRetargeter_SetRootSettingsInRetargetProfile");
-static_assert(sizeof(IKRetargeter_SetRootSettingsInRetargetProfile) == 0x000170, "Wrong size on IKRetargeter_SetRootSettingsInRetargetProfile");
-static_assert(offsetof(IKRetargeter_SetRootSettingsInRetargetProfile, RetargetProfile) == 0x000000, "Member 'IKRetargeter_SetRootSettingsInRetargetProfile::RetargetProfile' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_SetRootSettingsInRetargetProfile, RootSettings_0) == 0x000108, "Member 'IKRetargeter_SetRootSettingsInRetargetProfile::RootSettings_0' has a wrong offset!");
+DUMPER7_ASSERTS_IKRetargeter_SetRootSettingsInRetargetProfile;
 
 // Function IKRig.IKRetargeter.HasSourceIKRig
 // 0x0001 (0x0001 - 0x0000)
@@ -278,9 +632,7 @@ struct IKRetargeter_HasSourceIKRig final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(IKRetargeter_HasSourceIKRig) == 0x000001, "Wrong alignment on IKRetargeter_HasSourceIKRig");
-static_assert(sizeof(IKRetargeter_HasSourceIKRig) == 0x000001, "Wrong size on IKRetargeter_HasSourceIKRig");
-static_assert(offsetof(IKRetargeter_HasSourceIKRig, ReturnValue) == 0x000000, "Member 'IKRetargeter_HasSourceIKRig::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_IKRetargeter_HasSourceIKRig;
 
 // Function IKRig.IKRetargeter.HasTargetIKRig
 // 0x0001 (0x0001 - 0x0000)
@@ -289,31 +641,139 @@ struct IKRetargeter_HasTargetIKRig final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(IKRetargeter_HasTargetIKRig) == 0x000001, "Wrong alignment on IKRetargeter_HasTargetIKRig");
-static_assert(sizeof(IKRetargeter_HasTargetIKRig) == 0x000001, "Wrong size on IKRetargeter_HasTargetIKRig");
-static_assert(offsetof(IKRetargeter_HasTargetIKRig, ReturnValue) == 0x000000, "Member 'IKRetargeter_HasTargetIKRig::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_IKRetargeter_HasTargetIKRig;
 
-// Function IKRig.IKRigFBIKSolver.GetBoneSettings
-// 0x0010 (0x0010 - 0x0000)
-struct IKRigFBIKSolver_GetBoneSettings final
+// Function IKRig.IKRigBodyMoverController.GetGoalSettings
+// 0x0028 (0x0028 - 0x0000)
+struct IKRigBodyMoverController_GetGoalSettings final
 {
 public:
-	TArray<class UIKRig_FBIKBoneSettings*>        ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	class FName                                   InGoalName;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIKRigBodyMoverGoalSettings            ReturnValue;                                       // 0x0008(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(IKRigFBIKSolver_GetBoneSettings) == 0x000008, "Wrong alignment on IKRigFBIKSolver_GetBoneSettings");
-static_assert(sizeof(IKRigFBIKSolver_GetBoneSettings) == 0x000010, "Wrong size on IKRigFBIKSolver_GetBoneSettings");
-static_assert(offsetof(IKRigFBIKSolver_GetBoneSettings, ReturnValue) == 0x000000, "Member 'IKRigFBIKSolver_GetBoneSettings::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_IKRigBodyMoverController_GetGoalSettings;
 
-// Function IKRig.IKRigFBIKSolver.GetEffectors
-// 0x0010 (0x0010 - 0x0000)
-struct IKRigFBIKSolver_GetEffectors final
+// Function IKRig.IKRigBodyMoverController.GetSolverSettings
+// 0x0040 (0x0040 - 0x0000)
+struct IKRigBodyMoverController_GetSolverSettings final
 {
 public:
-	TArray<class UIKRig_FBIKEffector*>            ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	struct FIKRigBodyMoverSettings                ReturnValue;                                       // 0x0000(0x0040)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(IKRigFBIKSolver_GetEffectors) == 0x000008, "Wrong alignment on IKRigFBIKSolver_GetEffectors");
-static_assert(sizeof(IKRigFBIKSolver_GetEffectors) == 0x000010, "Wrong size on IKRigFBIKSolver_GetEffectors");
-static_assert(offsetof(IKRigFBIKSolver_GetEffectors, ReturnValue) == 0x000000, "Member 'IKRigFBIKSolver_GetEffectors::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_IKRigBodyMoverController_GetSolverSettings;
+
+// Function IKRig.IKRigBodyMoverController.SetGoalSettings
+// 0x0028 (0x0028 - 0x0000)
+struct IKRigBodyMoverController_SetGoalSettings final
+{
+public:
+	class FName                                   InGoalName;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIKRigBodyMoverGoalSettings            InSettings;                                        // 0x0008(0x0020)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigBodyMoverController_SetGoalSettings;
+
+// Function IKRig.IKRigBodyMoverController.SetSolverSettings
+// 0x0040 (0x0040 - 0x0000)
+struct IKRigBodyMoverController_SetSolverSettings final
+{
+public:
+	struct FIKRigBodyMoverSettings                InSettings;                                        // 0x0000(0x0040)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigBodyMoverController_SetSolverSettings;
+
+// Function IKRig.IKRigFBIKController.GetBoneSettings
+// 0x0060 (0x0060 - 0x0000)
+struct IKRigFBIKController_GetBoneSettings final
+{
+public:
+	class FName                                   InBoneName;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIKRigFBIKBoneSettings                 ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigFBIKController_GetBoneSettings;
+
+// Function IKRig.IKRigFBIKController.GetGoalSettings
+// 0x0038 (0x0038 - 0x0000)
+struct IKRigFBIKController_GetGoalSettings final
+{
+public:
+	class FName                                   InGoalName;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIKRigFBIKGoalSettings                 ReturnValue;                                       // 0x0008(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigFBIKController_GetGoalSettings;
+
+// Function IKRig.IKRigFBIKController.GetSolverSettings
+// 0x0050 (0x0050 - 0x0000)
+struct IKRigFBIKController_GetSolverSettings final
+{
+public:
+	struct FIKRigFBIKSettings                     ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigFBIKController_GetSolverSettings;
+
+// Function IKRig.IKRigFBIKController.SetBoneSettings
+// 0x0060 (0x0060 - 0x0000)
+struct IKRigFBIKController_SetBoneSettings final
+{
+public:
+	class FName                                   InBoneName;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIKRigFBIKBoneSettings                 InSettings;                                        // 0x0008(0x0058)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigFBIKController_SetBoneSettings;
+
+// Function IKRig.IKRigFBIKController.SetGoalSettings
+// 0x0038 (0x0038 - 0x0000)
+struct IKRigFBIKController_SetGoalSettings final
+{
+public:
+	class FName                                   InGoalName;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIKRigFBIKGoalSettings                 InSettings;                                        // 0x0008(0x0030)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigFBIKController_SetGoalSettings;
+
+// Function IKRig.IKRigFBIKController.SetSolverSettings
+// 0x0050 (0x0050 - 0x0000)
+struct IKRigFBIKController_SetSolverSettings final
+{
+public:
+	struct FIKRigFBIKSettings                     InSettings;                                        // 0x0000(0x0050)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigFBIKController_SetSolverSettings;
+
+// Function IKRig.IKRigLimbSolverController.GetSolverSettings
+// 0x0048 (0x0048 - 0x0000)
+struct IKRigLimbSolverController_GetSolverSettings final
+{
+public:
+	struct FIKRigLimbSolverSettings               ReturnValue;                                       // 0x0000(0x0048)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigLimbSolverController_GetSolverSettings;
+
+// Function IKRig.IKRigLimbSolverController.SetSolverSettings
+// 0x0048 (0x0048 - 0x0000)
+struct IKRigLimbSolverController_SetSolverSettings final
+{
+public:
+	struct FIKRigLimbSolverSettings               InSettings;                                        // 0x0000(0x0048)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigLimbSolverController_SetSolverSettings;
+
+// Function IKRig.IKRigPoleSolverController.GetSolverSettings
+// 0x0028 (0x0028 - 0x0000)
+struct IKRigPoleSolverController_GetSolverSettings final
+{
+public:
+	struct FIKRigPoleSolverSettings               ReturnValue;                                       // 0x0000(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigPoleSolverController_GetSolverSettings;
+
+// Function IKRig.IKRigPoleSolverController.SetSolverSettings
+// 0x0028 (0x0028 - 0x0000)
+struct IKRigPoleSolverController_SetSolverSettings final
+{
+public:
+	struct FIKRigPoleSolverSettings               InSettings;                                        // 0x0000(0x0028)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRigPoleSolverController_SetSolverSettings;
 
 }
 

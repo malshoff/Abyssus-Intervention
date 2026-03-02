@@ -32,7 +32,7 @@ void UWidget_OffScreenIndication_Door_C::Construct()
 
 
 // Function Widget_OffScreenIndication_Door.Widget_OffScreenIndication_Door_C.ExecuteUbergraph_Widget_OffScreenIndication_Door
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

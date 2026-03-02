@@ -30,16 +30,7 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast; // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge) == 0x000008, "Wrong alignment on BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge");
-static_assert(sizeof(BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge) == 0x000040, "Wrong size on BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge");
-static_assert(offsetof(BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge, EntryPoint) == 0x000000, "Member 'BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge, K2Node_CustomEvent_Delta) == 0x000014, "Member 'BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge::K2Node_CustomEvent_Delta' has a wrong offset!");
-static_assert(offsetof(BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge, K2Node_CustomEvent_NewTotal) == 0x000018, "Member 'BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge::K2Node_CustomEvent_NewTotal' has a wrong offset!");
-static_assert(offsetof(BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000020, "Member 'BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge, CallFunc_GetChallengeManager_ReturnValue) == 0x000028, "Member 'BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000030, "Member 'BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge, CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast) == 0x000038, "Member 'BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge::CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HaveSoulShards_Challenge_C_ExecuteUbergraph_BP_HaveSoulShards_Challenge;
 
 // Function BP_HaveSoulShards_Challenge.BP_HaveSoulShards_Challenge_C.OnGoldRecieved
 // 0x0008 (0x0008 - 0x0000)
@@ -49,10 +40,7 @@ public:
 	float                                         Delta;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         NewTotal;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HaveSoulShards_Challenge_C_OnGoldRecieved) == 0x000004, "Wrong alignment on BP_HaveSoulShards_Challenge_C_OnGoldRecieved");
-static_assert(sizeof(BP_HaveSoulShards_Challenge_C_OnGoldRecieved) == 0x000008, "Wrong size on BP_HaveSoulShards_Challenge_C_OnGoldRecieved");
-static_assert(offsetof(BP_HaveSoulShards_Challenge_C_OnGoldRecieved, Delta) == 0x000000, "Member 'BP_HaveSoulShards_Challenge_C_OnGoldRecieved::Delta' has a wrong offset!");
-static_assert(offsetof(BP_HaveSoulShards_Challenge_C_OnGoldRecieved, NewTotal) == 0x000004, "Member 'BP_HaveSoulShards_Challenge_C_OnGoldRecieved::NewTotal' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HaveSoulShards_Challenge_C_OnGoldRecieved;
 
 }
 

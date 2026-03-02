@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "CommonInput_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
@@ -30,36 +31,25 @@ public:
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton) == 0x000008, "Wrong alignment on Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton");
-static_assert(sizeof(Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton) == 0x000018, "Wrong size on Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton");
-static_assert(offsetof(Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton, EntryPoint) == 0x000000, "Member 'Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000008, "Member 'Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton, CallFunc_GetCurrentInputType_ReturnValue) == 0x000010, "Member 'Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton::CallFunc_GetCurrentInputType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000011, "Member 'Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton, CallFunc_Greater_IntInt_ReturnValue) == 0x000012, "Member 'Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton, K2Node_Event_IsDesignTime) == 0x000013, "Member 'Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton::K2Node_Event_IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_TextButton_C_ExecuteUbergraph_Widget_TextButton;
 
 // Function Widget_TextButton.Widget_TextButton_C.PlayHoverAnimation
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct Widget_TextButton_C_PlayHoverAnimation final
 {
 public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_TextButton_C_PlayHoverAnimation) == 0x000008, "Wrong alignment on Widget_TextButton_C_PlayHoverAnimation");
-static_assert(sizeof(Widget_TextButton_C_PlayHoverAnimation) == 0x000008, "Wrong size on Widget_TextButton_C_PlayHoverAnimation");
-static_assert(offsetof(Widget_TextButton_C_PlayHoverAnimation, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'Widget_TextButton_C_PlayHoverAnimation::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_TextButton_C_PlayHoverAnimation;
 
 // Function Widget_TextButton.Widget_TextButton_C.PlayUnhoverAnimation
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct Widget_TextButton_C_PlayUnhoverAnimation final
 {
 public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_TextButton_C_PlayUnhoverAnimation) == 0x000008, "Wrong alignment on Widget_TextButton_C_PlayUnhoverAnimation");
-static_assert(sizeof(Widget_TextButton_C_PlayUnhoverAnimation) == 0x000008, "Wrong size on Widget_TextButton_C_PlayUnhoverAnimation");
-static_assert(offsetof(Widget_TextButton_C_PlayUnhoverAnimation, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'Widget_TextButton_C_PlayUnhoverAnimation::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_TextButton_C_PlayUnhoverAnimation;
 
 // Function Widget_TextButton.Widget_TextButton_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -68,9 +58,7 @@ struct Widget_TextButton_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_TextButton_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_TextButton_C_PreConstruct");
-static_assert(sizeof(Widget_TextButton_C_PreConstruct) == 0x000001, "Wrong size on Widget_TextButton_C_PreConstruct");
-static_assert(offsetof(Widget_TextButton_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_TextButton_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_TextButton_C_PreConstruct;
 
 // Function Widget_TextButton.Widget_TextButton_C.SetFontSize
 // 0x0078 (0x0078 - 0x0000)
@@ -83,12 +71,7 @@ public:
 	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x0010(0x0060)(HasGetValueTypeHash)
 	float                                         K2Node_MakeStruct_Size_ImplicitCast;               // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_TextButton_C_SetFontSize) == 0x000008, "Wrong alignment on Widget_TextButton_C_SetFontSize");
-static_assert(sizeof(Widget_TextButton_C_SetFontSize) == 0x000078, "Wrong size on Widget_TextButton_C_SetFontSize");
-static_assert(offsetof(Widget_TextButton_C_SetFontSize, Size) == 0x000000, "Member 'Widget_TextButton_C_SetFontSize::Size' has a wrong offset!");
-static_assert(offsetof(Widget_TextButton_C_SetFontSize, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000008, "Member 'Widget_TextButton_C_SetFontSize::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_TextButton_C_SetFontSize, K2Node_MakeStruct_SlateFontInfo) == 0x000010, "Member 'Widget_TextButton_C_SetFontSize::K2Node_MakeStruct_SlateFontInfo' has a wrong offset!");
-static_assert(offsetof(Widget_TextButton_C_SetFontSize, K2Node_MakeStruct_Size_ImplicitCast) == 0x000070, "Member 'Widget_TextButton_C_SetFontSize::K2Node_MakeStruct_Size_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_TextButton_C_SetFontSize;
 
 // Function Widget_TextButton.Widget_TextButton_C.SetText
 // 0x0018 (0x0018 - 0x0000)
@@ -98,10 +81,7 @@ public:
 	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 	ETextTransformPolicy                          TransformPolicy;                                   // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_TextButton_C_SetText) == 0x000008, "Wrong alignment on Widget_TextButton_C_SetText");
-static_assert(sizeof(Widget_TextButton_C_SetText) == 0x000018, "Wrong size on Widget_TextButton_C_SetText");
-static_assert(offsetof(Widget_TextButton_C_SetText, InText) == 0x000000, "Member 'Widget_TextButton_C_SetText::InText' has a wrong offset!");
-static_assert(offsetof(Widget_TextButton_C_SetText, TransformPolicy) == 0x000010, "Member 'Widget_TextButton_C_SetText::TransformPolicy' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_TextButton_C_SetText;
 
 // Function Widget_TextButton.Widget_TextButton_C.SetTextStyle
 // 0x0078 (0x0078 - 0x0000)
@@ -111,10 +91,7 @@ public:
 	struct FSlateFontInfo                         InFontInfo;                                        // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	struct FSlateColor                            Color;                                             // 0x0060(0x0014)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_TextButton_C_SetTextStyle) == 0x000008, "Wrong alignment on Widget_TextButton_C_SetTextStyle");
-static_assert(sizeof(Widget_TextButton_C_SetTextStyle) == 0x000078, "Wrong size on Widget_TextButton_C_SetTextStyle");
-static_assert(offsetof(Widget_TextButton_C_SetTextStyle, InFontInfo) == 0x000000, "Member 'Widget_TextButton_C_SetTextStyle::InFontInfo' has a wrong offset!");
-static_assert(offsetof(Widget_TextButton_C_SetTextStyle, Color) == 0x000060, "Member 'Widget_TextButton_C_SetTextStyle::Color' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_TextButton_C_SetTextStyle;
 
 }
 

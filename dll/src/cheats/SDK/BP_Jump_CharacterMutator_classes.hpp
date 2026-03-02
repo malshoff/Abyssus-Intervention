@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Jump_CharacterMutator.BP_Jump_CharacterMutator_C
-// 0x0010 (0x0EB0 - 0x0EA0)
+// 0x0010 (0x0EB8 - 0x0EA8)
 class UBP_Jump_CharacterMutator_C final : public UBP_Activatable_CharacterMutator_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Jump_CharacterMutator_C;         // 0x0EA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          WasGroundedBeforeJumping;                          // 0x0EA8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EA9[0x3];                                      // 0x0EA9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Jump_Height_Multiplier;                            // 0x0EAC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Jump_CharacterMutator_C;         // 0x0EA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          WasGroundedBeforeJumping;                          // 0x0EB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EB1[0x3];                                      // 0x0EB1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Jump_Height_Multiplier;                            // 0x0EB4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Jump_CharacterMutator(int32 EntryPoint);
@@ -39,18 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Jump_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Jump_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Jump_CharacterMutator_C")
 	}
 	static class UBP_Jump_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Jump_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_Jump_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_Jump_CharacterMutator_C");
-static_assert(sizeof(UBP_Jump_CharacterMutator_C) == 0x000EB0, "Wrong size on UBP_Jump_CharacterMutator_C");
-static_assert(offsetof(UBP_Jump_CharacterMutator_C, UberGraphFrame_BP_Jump_CharacterMutator_C) == 0x000EA0, "Member 'UBP_Jump_CharacterMutator_C::UberGraphFrame_BP_Jump_CharacterMutator_C' has a wrong offset!");
-static_assert(offsetof(UBP_Jump_CharacterMutator_C, WasGroundedBeforeJumping) == 0x000EA8, "Member 'UBP_Jump_CharacterMutator_C::WasGroundedBeforeJumping' has a wrong offset!");
-static_assert(offsetof(UBP_Jump_CharacterMutator_C, Jump_Height_Multiplier) == 0x000EAC, "Member 'UBP_Jump_CharacterMutator_C::Jump_Height_Multiplier' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Jump_CharacterMutator_C;
 
 }
 

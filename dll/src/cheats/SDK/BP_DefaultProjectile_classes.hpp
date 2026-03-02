@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_DefaultProjectile.BP_DefaultProjectile_C
-// 0x0008 (0x05E0 - 0x05D8)
-class ABP_DefaultProjectile_C final : public ARProjectile
+// 0x0008 (0x0610 - 0x0608)
+class ABP_DefaultProjectile_C : public ARProjectile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0608(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_DefaultProjectile(int32 EntryPoint);
@@ -31,16 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_DefaultProjectile_C">();
+		BP_STATIC_CLASS_IMPL("BP_DefaultProjectile_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_DefaultProjectile_C")
 	}
 	static class ABP_DefaultProjectile_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_DefaultProjectile_C>();
 	}
 };
-static_assert(alignof(ABP_DefaultProjectile_C) == 0x000008, "Wrong alignment on ABP_DefaultProjectile_C");
-static_assert(sizeof(ABP_DefaultProjectile_C) == 0x0005E0, "Wrong size on ABP_DefaultProjectile_C");
-static_assert(offsetof(ABP_DefaultProjectile_C, UberGraphFrame) == 0x0005D8, "Member 'ABP_DefaultProjectile_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_DefaultProjectile_C;
 
 }
 

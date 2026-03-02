@@ -37,6 +37,26 @@ void ABP_ArtifactUpgrade_C::ExecuteUbergraph_BP_ArtifactUpgrade(int32 EntryPoint
 }
 
 
+// Function BP_ArtifactUpgrade.BP_ArtifactUpgrade_C.HandleLootOptionSelected
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FRLootSelectionOption&     LootSelectionOption                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+
+void ABP_ArtifactUpgrade_C::HandleLootOptionSelected(const struct FRLootSelectionOption& LootSelectionOption)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ArtifactUpgrade_C", "HandleLootOptionSelected");
+
+	Params::BP_ArtifactUpgrade_C_HandleLootOptionSelected Parms{};
+
+	Parms.LootSelectionOption = std::move(LootSelectionOption);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_ArtifactUpgrade.BP_ArtifactUpgrade_C.IdleAnimationTick
 // (BlueprintCallable, BlueprintEvent)
 
@@ -66,26 +86,6 @@ void ABP_ArtifactUpgrade_C::OnInteract(class APlayerController* Controller)
 	Params::BP_ArtifactUpgrade_C_OnInteract Parms{};
 
 	Parms.Controller = Controller;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ArtifactUpgrade.BP_ArtifactUpgrade_C.OnLootOptionSelected_Event
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FRLootSelectionOption&     LootSelectionOption                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-
-void ABP_ArtifactUpgrade_C::OnLootOptionSelected_Event(const struct FRLootSelectionOption& LootSelectionOption)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ArtifactUpgrade_C", "OnLootOptionSelected_Event");
-
-	Params::BP_ArtifactUpgrade_C_OnLootOptionSelected_Event Parms{};
-
-	Parms.LootSelectionOption = std::move(LootSelectionOption);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

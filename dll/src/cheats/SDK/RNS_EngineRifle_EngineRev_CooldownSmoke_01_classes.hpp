@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass RNS_EngineRifle_EngineRev_CooldownSmoke_01.RNS_EngineRifle_EngineRev_CooldownSmoke_01_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x07B0 - 0x07B0)
 class URNS_EngineRifle_EngineRev_CooldownSmoke_01_C final : public URNiagaraComponent
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"RNS_EngineRifle_EngineRev_CooldownSmoke_01_C">();
+		BP_STATIC_CLASS_IMPL("RNS_EngineRifle_EngineRev_CooldownSmoke_01_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RNS_EngineRifle_EngineRev_CooldownSmoke_01_C")
 	}
 	static class URNS_EngineRifle_EngineRev_CooldownSmoke_01_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<URNS_EngineRifle_EngineRev_CooldownSmoke_01_C>();
 	}
 };
-static_assert(alignof(URNS_EngineRifle_EngineRev_CooldownSmoke_01_C) == 0x000010, "Wrong alignment on URNS_EngineRifle_EngineRev_CooldownSmoke_01_C");
-static_assert(sizeof(URNS_EngineRifle_EngineRev_CooldownSmoke_01_C) == 0x000750, "Wrong size on URNS_EngineRifle_EngineRev_CooldownSmoke_01_C");
+DUMPER7_ASSERTS_URNS_EngineRifle_EngineRev_CooldownSmoke_01_C;
 
 }
 

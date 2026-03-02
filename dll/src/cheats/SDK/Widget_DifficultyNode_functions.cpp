@@ -163,6 +163,27 @@ void UWidget_DifficultyNode_C::GetCurrentTierDescription(class FText* Descriptio
 }
 
 
+// Function Widget_DifficultyNode.Widget_DifficultyNode_C.GetMutatorPrimaryAssetDifficultyIdName
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FName*                            Name_0                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_DifficultyNode_C::GetMutatorPrimaryAssetDifficultyIdName(class FName* Name_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_DifficultyNode_C", "GetMutatorPrimaryAssetDifficultyIdName");
+
+	Params::Widget_DifficultyNode_C_GetMutatorPrimaryAssetDifficultyIdName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Name_0 != nullptr)
+		*Name_0 = Parms.Name_0;
+}
+
+
 // Function Widget_DifficultyNode.Widget_DifficultyNode_C.GetMutatorPrimaryAssetName
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -176,27 +197,6 @@ void UWidget_DifficultyNode_C::GetMutatorPrimaryAssetName(class FName* Name_0)
 		Func = Class->GetFunction("Widget_DifficultyNode_C", "GetMutatorPrimaryAssetName");
 
 	Params::Widget_DifficultyNode_C_GetMutatorPrimaryAssetName Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Name_0 != nullptr)
-		*Name_0 = Parms.Name_0;
-}
-
-
-// Function Widget_DifficultyNode.Widget_DifficultyNode_C.GetMutatorPrimaryAssetSkillTreeIdName
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FName*                            Name_0                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_DifficultyNode_C::GetMutatorPrimaryAssetSkillTreeIdName(class FName* Name_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_DifficultyNode_C", "GetMutatorPrimaryAssetSkillTreeIdName");
-
-	Params::Widget_DifficultyNode_C_GetMutatorPrimaryAssetSkillTreeIdName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -489,6 +489,20 @@ void UWidget_DifficultyNode_C::PreConstruct(bool IsDesignTime)
 	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_DifficultyNode.Widget_DifficultyNode_C.RefreshDifficultyEffectPostDeduct
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_DifficultyNode_C::RefreshDifficultyEffectPostDeduct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_DifficultyNode_C", "RefreshDifficultyEffectPostDeduct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

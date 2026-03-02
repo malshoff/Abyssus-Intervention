@@ -132,14 +132,7 @@ public:
 	float                                         EndpointRadius;                                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Size;                                              // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSteamAudioBakedDataInfo) == 0x000008, "Wrong alignment on FSteamAudioBakedDataInfo");
-static_assert(sizeof(FSteamAudioBakedDataInfo) == 0x000038, "Wrong size on FSteamAudioBakedDataInfo");
-static_assert(offsetof(FSteamAudioBakedDataInfo, Name) == 0x000000, "Member 'FSteamAudioBakedDataInfo::Name' has a wrong offset!");
-static_assert(offsetof(FSteamAudioBakedDataInfo, Type) == 0x000010, "Member 'FSteamAudioBakedDataInfo::Type' has a wrong offset!");
-static_assert(offsetof(FSteamAudioBakedDataInfo, Variation) == 0x000014, "Member 'FSteamAudioBakedDataInfo::Variation' has a wrong offset!");
-static_assert(offsetof(FSteamAudioBakedDataInfo, EndpointCenter) == 0x000018, "Member 'FSteamAudioBakedDataInfo::EndpointCenter' has a wrong offset!");
-static_assert(offsetof(FSteamAudioBakedDataInfo, EndpointRadius) == 0x000030, "Member 'FSteamAudioBakedDataInfo::EndpointRadius' has a wrong offset!");
-static_assert(offsetof(FSteamAudioBakedDataInfo, Size) == 0x000034, "Member 'FSteamAudioBakedDataInfo::Size' has a wrong offset!");
+DUMPER7_ASSERTS_FSteamAudioBakedDataInfo;
 
 // ScriptStruct SteamAudio.SteamAudioReverbSubmixPluginSettings
 // 0x0002 (0x0002 - 0x0000)
@@ -149,10 +142,7 @@ public:
 	bool                                          bApplyReverb;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bApplyHRTF;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSteamAudioReverbSubmixPluginSettings) == 0x000001, "Wrong alignment on FSteamAudioReverbSubmixPluginSettings");
-static_assert(sizeof(FSteamAudioReverbSubmixPluginSettings) == 0x000002, "Wrong size on FSteamAudioReverbSubmixPluginSettings");
-static_assert(offsetof(FSteamAudioReverbSubmixPluginSettings, bApplyReverb) == 0x000000, "Member 'FSteamAudioReverbSubmixPluginSettings::bApplyReverb' has a wrong offset!");
-static_assert(offsetof(FSteamAudioReverbSubmixPluginSettings, bApplyHRTF) == 0x000001, "Member 'FSteamAudioReverbSubmixPluginSettings::bApplyHRTF' has a wrong offset!");
+DUMPER7_ASSERTS_FSteamAudioReverbSubmixPluginSettings;
 
 }
 

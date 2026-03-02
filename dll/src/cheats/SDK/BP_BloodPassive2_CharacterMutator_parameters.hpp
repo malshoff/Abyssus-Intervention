@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BP_BloodPassive2_CharacterMutator.BP_BloodPassive2_CharacterMutator_C.ExecuteUbergraph_BP_BloodPassive2_CharacterMutator
-// 0x0218 (0x0218 - 0x0000)
+// 0x0348 (0x0348 - 0x0000)
 struct BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator final
 {
 public:
@@ -45,44 +45,19 @@ public:
 	float                                         K2Node_CustomEvent_healthDelta_1;                  // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FHealCombatEvent                       K2Node_CustomEvent_HealEvent_1;                    // 0x0118(0x0038)(ContainsInstancedReference)
 	class URHealthComponent*                      K2Node_CustomEvent_Component_1;                    // 0x0150(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEvent;                    // 0x0158(0x00C0)()
+	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEvent;                    // 0x0158(0x01F0)()
 };
-static_assert(alignof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator) == 0x000008, "Wrong alignment on BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator");
-static_assert(sizeof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator) == 0x000218, "Wrong size on BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_CustomEvent_Component) == 0x000008, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_CustomEvent_Component' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_CustomEvent_currentHealth) == 0x000010, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_CustomEvent_currentHealth' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_CustomEvent_healthDelta) == 0x000014, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_CustomEvent_healthDelta' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_CustomEvent_HealEvent) == 0x000018, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_CustomEvent_HealEvent' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000050, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x000060, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_2) == 0x000070, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000080, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x0000B0, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x0000E0, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x0000E8, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x0000F0, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x0000F8, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, CallFunc_GetScriptFName_ReturnValue) == 0x0000FC, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_CustomEvent_Component_2) == 0x000108, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_CustomEvent_Component_2' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_CustomEvent_currentHealth_1) == 0x000110, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_CustomEvent_currentHealth_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_CustomEvent_healthDelta_1) == 0x000114, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_CustomEvent_healthDelta_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_CustomEvent_HealEvent_1) == 0x000118, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_CustomEvent_HealEvent_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_CustomEvent_Component_1) == 0x000150, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_CustomEvent_Component_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator, K2Node_CustomEvent_DamageEvent) == 0x000158, "Member 'BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator::K2Node_CustomEvent_DamageEvent' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BloodPassive2_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive2_CharacterMutator;
 
 // Function BP_BloodPassive2_CharacterMutator.BP_BloodPassive2_CharacterMutator_C.OnDamageTaken_Event
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_BloodPassive2_CharacterMutator_C_OnDamageTaken_Event final
 {
 public:
 	class URHealthComponent*                      Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEvent;                                       // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEvent;                                       // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_BloodPassive2_CharacterMutator_C_OnDamageTaken_Event) == 0x000008, "Wrong alignment on BP_BloodPassive2_CharacterMutator_C_OnDamageTaken_Event");
-static_assert(sizeof(BP_BloodPassive2_CharacterMutator_C_OnDamageTaken_Event) == 0x0000C8, "Wrong size on BP_BloodPassive2_CharacterMutator_C_OnDamageTaken_Event");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_OnDamageTaken_Event, Component) == 0x000000, "Member 'BP_BloodPassive2_CharacterMutator_C_OnDamageTaken_Event::Component' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_OnDamageTaken_Event, DamageEvent) == 0x000008, "Member 'BP_BloodPassive2_CharacterMutator_C_OnDamageTaken_Event::DamageEvent' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BloodPassive2_CharacterMutator_C_OnDamageTaken_Event;
 
 // Function BP_BloodPassive2_CharacterMutator.BP_BloodPassive2_CharacterMutator_C.OnHealthChanged_Event
 // 0x0048 (0x0048 - 0x0000)
@@ -94,12 +69,7 @@ public:
 	float                                         healthDelta;                                       // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FHealCombatEvent                       HealEvent;                                         // 0x0010(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 };
-static_assert(alignof(BP_BloodPassive2_CharacterMutator_C_OnHealthChanged_Event) == 0x000008, "Wrong alignment on BP_BloodPassive2_CharacterMutator_C_OnHealthChanged_Event");
-static_assert(sizeof(BP_BloodPassive2_CharacterMutator_C_OnHealthChanged_Event) == 0x000048, "Wrong size on BP_BloodPassive2_CharacterMutator_C_OnHealthChanged_Event");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_OnHealthChanged_Event, Component) == 0x000000, "Member 'BP_BloodPassive2_CharacterMutator_C_OnHealthChanged_Event::Component' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_OnHealthChanged_Event, currentHealth) == 0x000008, "Member 'BP_BloodPassive2_CharacterMutator_C_OnHealthChanged_Event::currentHealth' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_OnHealthChanged_Event, healthDelta) == 0x00000C, "Member 'BP_BloodPassive2_CharacterMutator_C_OnHealthChanged_Event::healthDelta' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_OnHealthChanged_Event, HealEvent) == 0x000010, "Member 'BP_BloodPassive2_CharacterMutator_C_OnHealthChanged_Event::HealEvent' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BloodPassive2_CharacterMutator_C_OnHealthChanged_Event;
 
 // Function BP_BloodPassive2_CharacterMutator.BP_BloodPassive2_CharacterMutator_C.OnHealthRegained_Event
 // 0x0048 (0x0048 - 0x0000)
@@ -111,12 +81,7 @@ public:
 	float                                         healthDelta;                                       // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FHealCombatEvent                       HealEvent;                                         // 0x0010(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 };
-static_assert(alignof(BP_BloodPassive2_CharacterMutator_C_OnHealthRegained_Event) == 0x000008, "Wrong alignment on BP_BloodPassive2_CharacterMutator_C_OnHealthRegained_Event");
-static_assert(sizeof(BP_BloodPassive2_CharacterMutator_C_OnHealthRegained_Event) == 0x000048, "Wrong size on BP_BloodPassive2_CharacterMutator_C_OnHealthRegained_Event");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_OnHealthRegained_Event, Component) == 0x000000, "Member 'BP_BloodPassive2_CharacterMutator_C_OnHealthRegained_Event::Component' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_OnHealthRegained_Event, currentHealth) == 0x000008, "Member 'BP_BloodPassive2_CharacterMutator_C_OnHealthRegained_Event::currentHealth' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_OnHealthRegained_Event, healthDelta) == 0x00000C, "Member 'BP_BloodPassive2_CharacterMutator_C_OnHealthRegained_Event::healthDelta' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_OnHealthRegained_Event, HealEvent) == 0x000010, "Member 'BP_BloodPassive2_CharacterMutator_C_OnHealthRegained_Event::HealEvent' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BloodPassive2_CharacterMutator_C_OnHealthRegained_Event;
 
 // Function BP_BloodPassive2_CharacterMutator.BP_BloodPassive2_CharacterMutator_C.UpdateBonusDamage
 // 0x0088 (0x0088 - 0x0000)
@@ -139,22 +104,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage) == 0x000008, "Wrong alignment on BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage");
-static_assert(sizeof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage) == 0x000088, "Wrong size on BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage, RHealthComponent) == 0x000000, "Member 'BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage::RHealthComponent' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage, CallFunc_GetMissingHealthPercentage_ReturnValue) == 0x000038, "Member 'BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage::CallFunc_GetMissingHealthPercentage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage, CallFunc_GetMutatorRank_ReturnValue) == 0x00003C, "Member 'BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage, K2Node_DynamicCast_AsRPawn_Base) == 0x000040, "Member 'BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x00004C, "Member 'BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000050, "Member 'BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000058, "Member 'BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage, CallFunc_GetScriptFName_ReturnValue) == 0x000060, "Member 'BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000068, "Member 'BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x000070, "Member 'BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000078, "Member 'BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x000080, "Member 'BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BloodPassive2_CharacterMutator_C_UpdateBonusDamage;
 
 }
 

@@ -18,64 +18,52 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_ChoiceDialog.Widget_ChoiceDialog_C
-// 0x00A8 (0x04E0 - 0x0438)
+// 0x00A8 (0x0568 - 0x04C0)
 class UWidget_ChoiceDialog_C final : public URCommonActivatableWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       DestructAnimation;                                 // 0x0440(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ConstructAnimation;                                // 0x0448(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_214;                            // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_396;                            // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Description;                                       // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Header;                                            // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 NoButton;                                          // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 YesButton;                                         // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   HeaderText;                                        // 0x0480(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   DescriptionText;                                   // 0x0490(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   YesText;                                           // 0x04A0(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   NoText;                                            // 0x04B0(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	TMulticastInlineDelegate<void()>              YesEvent;                                          // 0x04C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              NoEvent;                                           // 0x04D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UW_Button_SimpleText_C*                 YesButton;                                         // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_SimpleText_C*                 NoButton;                                          // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Header;                                            // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Description;                                       // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_396;                            // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_214;                            // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ConstructAnimation;                                // 0x04F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       DestructAnimation;                                 // 0x0500(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class FText                                   HeaderText;                                        // 0x0508(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   DescriptionText;                                   // 0x0518(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   YesText;                                           // 0x0528(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   NoText;                                            // 0x0538(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	TMulticastInlineDelegate<void()>              YesEvent;                                          // 0x0548(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              NoEvent;                                           // 0x0558(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void SetupTexts();
-	void OnInitialized();
-	void Initialize(const class FText& HeaderText_0, const class FText& DescriptionText_0, const class FText& YesText_0, const class FText& NoText_0);
-	void ExecuteUbergraph_Widget_ChoiceDialog(int32 EntryPoint);
-	void DestructAnimationFinished();
-	void Construct();
-	void ClosePanel();
-	void BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void ClosePanel();
+	void Construct();
+	void DestructAnimationFinished();
+	void ExecuteUbergraph_Widget_ChoiceDialog(int32 EntryPoint);
+	void Initialize(const class FText& HeaderText_0, const class FText& DescriptionText_0, const class FText& YesText_0, const class FText& NoText_0);
+	void OnInitialized();
+	void SetupTexts();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_ChoiceDialog_C">();
+		BP_STATIC_CLASS_IMPL("Widget_ChoiceDialog_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_ChoiceDialog_C")
 	}
 	static class UWidget_ChoiceDialog_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_ChoiceDialog_C>();
 	}
 };
-static_assert(alignof(UWidget_ChoiceDialog_C) == 0x000008, "Wrong alignment on UWidget_ChoiceDialog_C");
-static_assert(sizeof(UWidget_ChoiceDialog_C) == 0x0004E0, "Wrong size on UWidget_ChoiceDialog_C");
-static_assert(offsetof(UWidget_ChoiceDialog_C, UberGraphFrame) == 0x000438, "Member 'UWidget_ChoiceDialog_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceDialog_C, DestructAnimation) == 0x000440, "Member 'UWidget_ChoiceDialog_C::DestructAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceDialog_C, ConstructAnimation) == 0x000448, "Member 'UWidget_ChoiceDialog_C::ConstructAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceDialog_C, CommonActionWidget_214) == 0x000450, "Member 'UWidget_ChoiceDialog_C::CommonActionWidget_214' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceDialog_C, CommonActionWidget_396) == 0x000458, "Member 'UWidget_ChoiceDialog_C::CommonActionWidget_396' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceDialog_C, Description) == 0x000460, "Member 'UWidget_ChoiceDialog_C::Description' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceDialog_C, Header) == 0x000468, "Member 'UWidget_ChoiceDialog_C::Header' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceDialog_C, NoButton) == 0x000470, "Member 'UWidget_ChoiceDialog_C::NoButton' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceDialog_C, YesButton) == 0x000478, "Member 'UWidget_ChoiceDialog_C::YesButton' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceDialog_C, HeaderText) == 0x000480, "Member 'UWidget_ChoiceDialog_C::HeaderText' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceDialog_C, DescriptionText) == 0x000490, "Member 'UWidget_ChoiceDialog_C::DescriptionText' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceDialog_C, YesText) == 0x0004A0, "Member 'UWidget_ChoiceDialog_C::YesText' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceDialog_C, NoText) == 0x0004B0, "Member 'UWidget_ChoiceDialog_C::NoText' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceDialog_C, YesEvent) == 0x0004C0, "Member 'UWidget_ChoiceDialog_C::YesEvent' has a wrong offset!");
-static_assert(offsetof(UWidget_ChoiceDialog_C, NoEvent) == 0x0004D0, "Member 'UWidget_ChoiceDialog_C::NoEvent' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_ChoiceDialog_C;
 
 }
 

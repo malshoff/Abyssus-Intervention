@@ -27,29 +27,16 @@ public:
 	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(int32 AbilityIndex)>           K2Node_CreateDelegate_OutputDelegate;              // 0x0024(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_AbilityIndex;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 AbilityIndex)>           K2Node_CreateDelegate_OutputDelegate;              // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ARGameState*                            CallFunc_GetRGameState_ReturnValue;                // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0048(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0058(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_AbilityIndex;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue;          // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0050(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0060(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge) == 0x000008, "Wrong alignment on BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge");
-static_assert(sizeof(BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge) == 0x000070, "Wrong size on BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge");
-static_assert(offsetof(BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge, EntryPoint) == 0x000000, "Member 'BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge, CallFunc_K2_GetPawn_ReturnValue) == 0x000008, "Member 'BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge, CallFunc_Not_PreBool_ReturnValue) == 0x000010, "Member 'BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000018, "Member 'BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge, K2Node_CreateDelegate_OutputDelegate) == 0x000024, "Member 'BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge, CallFunc_GetChallengeManager_ReturnValue) == 0x000038, "Member 'BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge, CallFunc_GetRGameState_ReturnValue) == 0x000040, "Member 'BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge::CallFunc_GetRGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge, K2Node_CreateDelegate_OutputDelegate_1) == 0x000048, "Member 'BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge, K2Node_CreateDelegate_OutputDelegate_2) == 0x000058, "Member 'BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge, K2Node_CustomEvent_AbilityIndex) == 0x000068, "Member 'BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge::K2Node_CustomEvent_AbilityIndex' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00006C, "Member 'BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WinWithoutHealing_Challenge_C_ExecuteUbergraph_BP_WinWithoutHealing_Challenge;
 
 // Function BP_WinWithoutHealing_Challenge.BP_WinWithoutHealing_Challenge_C.OnAbilityUsed_Event
 // 0x0004 (0x0004 - 0x0000)
@@ -58,9 +45,7 @@ struct BP_WinWithoutHealing_Challenge_C_OnAbilityUsed_Event final
 public:
 	int32                                         AbilityIndex;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WinWithoutHealing_Challenge_C_OnAbilityUsed_Event) == 0x000004, "Wrong alignment on BP_WinWithoutHealing_Challenge_C_OnAbilityUsed_Event");
-static_assert(sizeof(BP_WinWithoutHealing_Challenge_C_OnAbilityUsed_Event) == 0x000004, "Wrong size on BP_WinWithoutHealing_Challenge_C_OnAbilityUsed_Event");
-static_assert(offsetof(BP_WinWithoutHealing_Challenge_C_OnAbilityUsed_Event, AbilityIndex) == 0x000000, "Member 'BP_WinWithoutHealing_Challenge_C_OnAbilityUsed_Event::AbilityIndex' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WinWithoutHealing_Challenge_C_OnAbilityUsed_Event;
 
 }
 

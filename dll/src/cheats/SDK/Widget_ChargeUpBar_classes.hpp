@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_ChargeUpBar.Widget_ChargeUpBar_C
-// 0x0020 (0x02F0 - 0x02D0)
+// 0x0020 (0x0360 - 0x0340)
 class UWidget_ChargeUpBar_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UProgressBar*                           ChargeUpProgressBar;                               // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Frame_Image;                                       // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Frame_Image;                                       // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           ChargeUpProgressBar;                               // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Widget_ChargeUpBar(int32 EntryPoint);
@@ -34,19 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_ChargeUpBar_C">();
+		BP_STATIC_CLASS_IMPL("Widget_ChargeUpBar_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_ChargeUpBar_C")
 	}
 	static class UWidget_ChargeUpBar_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_ChargeUpBar_C>();
 	}
 };
-static_assert(alignof(UWidget_ChargeUpBar_C) == 0x000008, "Wrong alignment on UWidget_ChargeUpBar_C");
-static_assert(sizeof(UWidget_ChargeUpBar_C) == 0x0002F0, "Wrong size on UWidget_ChargeUpBar_C");
-static_assert(offsetof(UWidget_ChargeUpBar_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_ChargeUpBar_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_ChargeUpBar_C, ChargeUpProgressBar) == 0x0002D8, "Member 'UWidget_ChargeUpBar_C::ChargeUpProgressBar' has a wrong offset!");
-static_assert(offsetof(UWidget_ChargeUpBar_C, Frame_Image) == 0x0002E0, "Member 'UWidget_ChargeUpBar_C::Frame_Image' has a wrong offset!");
-static_assert(offsetof(UWidget_ChargeUpBar_C, InvalidationBox_0) == 0x0002E8, "Member 'UWidget_ChargeUpBar_C::InvalidationBox_0' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_ChargeUpBar_C;
 
 }
 

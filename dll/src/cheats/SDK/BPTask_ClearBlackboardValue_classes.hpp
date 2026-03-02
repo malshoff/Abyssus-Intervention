@@ -33,17 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPTask_ClearBlackboardValue_C">();
+		BP_STATIC_CLASS_IMPL("BPTask_ClearBlackboardValue_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPTask_ClearBlackboardValue_C")
 	}
 	static class UBPTask_ClearBlackboardValue_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPTask_ClearBlackboardValue_C>();
 	}
 };
-static_assert(alignof(UBPTask_ClearBlackboardValue_C) == 0x000008, "Wrong alignment on UBPTask_ClearBlackboardValue_C");
-static_assert(sizeof(UBPTask_ClearBlackboardValue_C) == 0x0000D8, "Wrong size on UBPTask_ClearBlackboardValue_C");
-static_assert(offsetof(UBPTask_ClearBlackboardValue_C, UberGraphFrame) == 0x0000A8, "Member 'UBPTask_ClearBlackboardValue_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBPTask_ClearBlackboardValue_C, BlackboardKey) == 0x0000B0, "Member 'UBPTask_ClearBlackboardValue_C::BlackboardKey' has a wrong offset!");
+DUMPER7_ASSERTS_UBPTask_ClearBlackboardValue_C;
 
 }
 

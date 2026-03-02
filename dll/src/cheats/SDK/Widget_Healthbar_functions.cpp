@@ -241,72 +241,6 @@ void UWidget_Healthbar_C::OnMaximumBarrierChanged(class URHealthComponent* Compo
 }
 
 
-// Function Widget_Healthbar.Widget_Healthbar_C.OnMaximumPlatingsUpdated
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class URHealthComponent*                Component                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   MaximumPlating                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_Healthbar_C::OnMaximumPlatingsUpdated(class URHealthComponent* Component, int32 MaximumPlating)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Healthbar_C", "OnMaximumPlatingsUpdated");
-
-	Params::Widget_Healthbar_C_OnMaximumPlatingsUpdated Parms{};
-
-	Parms.Component = Component;
-	Parms.MaximumPlating = MaximumPlating;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_Healthbar.Widget_Healthbar_C.OnPlatingRegained
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class URHealthComponent*                Component                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   currentPlatings                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_Healthbar_C::OnPlatingRegained(class URHealthComponent* Component, int32 currentPlatings)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Healthbar_C", "OnPlatingRegained");
-
-	Params::Widget_Healthbar_C_OnPlatingRegained Parms{};
-
-	Parms.Component = Component;
-	Parms.currentPlatings = currentPlatings;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_Healthbar.Widget_Healthbar_C.OnPlatingsUpdated
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class URHealthComponent*                Component                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   currentPlatings                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_Healthbar_C::OnPlatingsUpdated(class URHealthComponent* Component, int32 currentPlatings)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Healthbar_C", "OnPlatingsUpdated");
-
-	Params::Widget_Healthbar_C_OnPlatingsUpdated Parms{};
-
-	Parms.Component = Component;
-	Parms.currentPlatings = currentPlatings;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function Widget_Healthbar.Widget_Healthbar_C.StartHealthAnimation
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -338,26 +272,6 @@ void UWidget_Healthbar_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 
 	Parms.MyGeometry = std::move(MyGeometry);
 	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_Healthbar.Widget_Healthbar_C.Update Platings
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Plating_Stacks                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_Healthbar_C::Update_Platings(int32 Plating_Stacks)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Healthbar_C", "Update Platings");
-
-	Params::Widget_Healthbar_C_Update_Platings Parms{};
-
-	Parms.Plating_Stacks = Plating_Stacks;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

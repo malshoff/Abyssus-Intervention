@@ -17,34 +17,197 @@
 namespace SDK
 {
 
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.UnlockPopulateSessionBrowser
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.BndEvt__Widget_CommonSessionBrowser_W_Button_Back_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonSessionBrowser_C::UnlockPopulateSessionBrowser()
+void UWidget_CommonSessionBrowser_C::BndEvt__Widget_CommonSessionBrowser_W_Button_Back_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "UnlockPopulateSessionBrowser");
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "BndEvt__Widget_CommonSessionBrowser_W_Button_Back_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_CommonSessionBrowser_C_BndEvt__Widget_CommonSessionBrowser_W_Button_Back_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.BndEvt__Widget_CommonSessionBrowser_W_Button_Refresh_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonSessionBrowser_C::BndEvt__Widget_CommonSessionBrowser_W_Button_Refresh_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "BndEvt__Widget_CommonSessionBrowser_W_Button_Refresh_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_CommonSessionBrowser_C_BndEvt__Widget_CommonSessionBrowser_W_Button_Refresh_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.BndEvt__Widget_CommonSessionBrowser_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonSessionBrowser_C::BndEvt__Widget_CommonSessionBrowser_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "BndEvt__Widget_CommonSessionBrowser_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_CommonSessionBrowser_C_BndEvt__Widget_CommonSessionBrowser_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.BndEvt__Widget_SessionBrowser_Fix_SessionList_K2Node_ComponentBoundEvent_1_OnListEntryInitializedDynamic__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonSessionBrowser_C::BndEvt__Widget_SessionBrowser_Fix_SessionList_K2Node_ComponentBoundEvent_1_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "BndEvt__Widget_SessionBrowser_Fix_SessionList_K2Node_ComponentBoundEvent_1_OnListEntryInitializedDynamic__DelegateSignature");
+
+	Params::Widget_CommonSessionBrowser_C_BndEvt__Widget_SessionBrowser_Fix_SessionList_K2Node_ComponentBoundEvent_1_OnListEntryInitializedDynamic__DelegateSignature Parms{};
+
+	Parms.Item = Item;
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.BndEvt__Widget_SessionBrowser_MaxPlayers_Filter_K2Node_ComponentBoundEvent_8_OnFilterChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const class FString&                    Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CommonSessionBrowser_C::BndEvt__Widget_SessionBrowser_MaxPlayers_Filter_K2Node_ComponentBoundEvent_8_OnFilterChanged__DelegateSignature(const class FString& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "BndEvt__Widget_SessionBrowser_MaxPlayers_Filter_K2Node_ComponentBoundEvent_8_OnFilterChanged__DelegateSignature");
+
+	Params::Widget_CommonSessionBrowser_C_BndEvt__Widget_SessionBrowser_MaxPlayers_Filter_K2Node_ComponentBoundEvent_8_OnFilterChanged__DelegateSignature Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.BndEvt__Widget_SessionBrowser_MinPlayers_Filter_K2Node_ComponentBoundEvent_7_OnFilterChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const class FString&                    Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CommonSessionBrowser_C::BndEvt__Widget_SessionBrowser_MinPlayers_Filter_K2Node_ComponentBoundEvent_7_OnFilterChanged__DelegateSignature(const class FString& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "BndEvt__Widget_SessionBrowser_MinPlayers_Filter_K2Node_ComponentBoundEvent_7_OnFilterChanged__DelegateSignature");
+
+	Params::Widget_CommonSessionBrowser_C_BndEvt__Widget_SessionBrowser_MinPlayers_Filter_K2Node_ComponentBoundEvent_7_OnFilterChanged__DelegateSignature Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.BuildFilter
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TMap<class FName, struct FDMSearchSetting>*OutFilterMap                                           (Parm, OutParm)
+
+void UWidget_CommonSessionBrowser_C::BuildFilter(TMap<class FName, struct FDMSearchSetting>* OutFilterMap)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "BuildFilter");
+
+	Params::Widget_CommonSessionBrowser_C_BuildFilter Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutFilterMap != nullptr)
+		*OutFilterMap = std::move(Parms.OutFilterMap);
+}
+
+
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_CommonSessionBrowser_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.Success_89DC13C346A98A5EE7ADA9A586F0AEA2
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.ExecuteUbergraph_Widget_CommonSessionBrowser
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonSessionBrowser_C::ExecuteUbergraph_Widget_CommonSessionBrowser(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "ExecuteUbergraph_Widget_CommonSessionBrowser");
+
+	Params::Widget_CommonSessionBrowser_C_ExecuteUbergraph_Widget_CommonSessionBrowser Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.Fail_89DC13C346A98A5EE7ADA9A586F0AEA2
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // const TArray<struct FBlueprintSessionResult>&Result                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_CommonSessionBrowser_C::Success_89DC13C346A98A5EE7ADA9A586F0AEA2(const class FString& Error, const TArray<struct FBlueprintSessionResult>& Result)
+void UWidget_CommonSessionBrowser_C::Fail_89DC13C346A98A5EE7ADA9A586F0AEA2(const class FString& Error, const TArray<struct FBlueprintSessionResult>& Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "Success_89DC13C346A98A5EE7ADA9A586F0AEA2");
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "Fail_89DC13C346A98A5EE7ADA9A586F0AEA2");
 
-	Params::Widget_CommonSessionBrowser_C_Success_89DC13C346A98A5EE7ADA9A586F0AEA2 Parms{};
+	Params::Widget_CommonSessionBrowser_C_Fail_89DC13C346A98A5EE7ADA9A586F0AEA2 Parms{};
 
 	Parms.Error = std::move(Error);
 	Parms.Result = std::move(Result);
@@ -53,49 +216,15 @@ void UWidget_CommonSessionBrowser_C::Success_89DC13C346A98A5EE7ADA9A586F0AEA2(co
 }
 
 
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.SetRefreshButtonsEnabled
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.FindSessions
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Enabled                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonSessionBrowser_C::SetRefreshButtonsEnabled(bool Enabled)
+void UWidget_CommonSessionBrowser_C::FindSessions()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "SetRefreshButtonsEnabled");
-
-	Params::Widget_CommonSessionBrowser_C_SetRefreshButtonsEnabled Parms{};
-
-	Parms.Enabled = Enabled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.PopulateSessionBrowser
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonSessionBrowser_C::PopulateSessionBrowser()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "PopulateSessionBrowser");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.NoSessionsFound
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonSessionBrowser_C::NoSessionsFound()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "NoSessionsFound");
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "FindSessions");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -124,34 +253,68 @@ class UWidget* UWidget_CommonSessionBrowser_C::NavigateToFirstSession(EUINavigat
 }
 
 
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.FindSessions
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.NoSessionsFound
 // (BlueprintCallable, BlueprintEvent)
 
-void UWidget_CommonSessionBrowser_C::FindSessions()
+void UWidget_CommonSessionBrowser_C::NoSessionsFound()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "FindSessions");
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "NoSessionsFound");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.Fail_89DC13C346A98A5EE7ADA9A586F0AEA2
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.PopulateSessionBrowser
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonSessionBrowser_C::PopulateSessionBrowser()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "PopulateSessionBrowser");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.SetRefreshButtonsEnabled
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Enabled                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonSessionBrowser_C::SetRefreshButtonsEnabled(bool Enabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "SetRefreshButtonsEnabled");
+
+	Params::Widget_CommonSessionBrowser_C_SetRefreshButtonsEnabled Parms{};
+
+	Parms.Enabled = Enabled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.Success_89DC13C346A98A5EE7ADA9A586F0AEA2
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // const TArray<struct FBlueprintSessionResult>&Result                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_CommonSessionBrowser_C::Fail_89DC13C346A98A5EE7ADA9A586F0AEA2(const class FString& Error, const TArray<struct FBlueprintSessionResult>& Result)
+void UWidget_CommonSessionBrowser_C::Success_89DC13C346A98A5EE7ADA9A586F0AEA2(const class FString& Error, const TArray<struct FBlueprintSessionResult>& Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "Fail_89DC13C346A98A5EE7ADA9A586F0AEA2");
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "Success_89DC13C346A98A5EE7ADA9A586F0AEA2");
 
-	Params::Widget_CommonSessionBrowser_C_Fail_89DC13C346A98A5EE7ADA9A586F0AEA2 Parms{};
+	Params::Widget_CommonSessionBrowser_C_Success_89DC13C346A98A5EE7ADA9A586F0AEA2 Parms{};
 
 	Parms.Error = std::move(Error);
 	Parms.Result = std::move(Result);
@@ -160,180 +323,17 @@ void UWidget_CommonSessionBrowser_C::Fail_89DC13C346A98A5EE7ADA9A586F0AEA2(const
 }
 
 
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.ExecuteUbergraph_Widget_CommonSessionBrowser
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.UnlockPopulateSessionBrowser
+// (BlueprintCallable, BlueprintEvent)
 
-void UWidget_CommonSessionBrowser_C::ExecuteUbergraph_Widget_CommonSessionBrowser(int32 EntryPoint)
+void UWidget_CommonSessionBrowser_C::UnlockPopulateSessionBrowser()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "ExecuteUbergraph_Widget_CommonSessionBrowser");
-
-	Params::Widget_CommonSessionBrowser_C_ExecuteUbergraph_Widget_CommonSessionBrowser Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_CommonSessionBrowser_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "Construct");
+		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "UnlockPopulateSessionBrowser");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.BuildFilter
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// TMap<class FName, struct FDMSearchSetting>*OutFilterMap                                           (Parm, OutParm)
-
-void UWidget_CommonSessionBrowser_C::BuildFilter(TMap<class FName, struct FDMSearchSetting>* OutFilterMap)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "BuildFilter");
-
-	Params::Widget_CommonSessionBrowser_C_BuildFilter Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutFilterMap != nullptr)
-		*OutFilterMap = std::move(Parms.OutFilterMap);
-}
-
-
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.BndEvt__Widget_SessionBrowser_MinPlayers_Filter_K2Node_ComponentBoundEvent_7_OnFilterChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const class FString&                    Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWidget_CommonSessionBrowser_C::BndEvt__Widget_SessionBrowser_MinPlayers_Filter_K2Node_ComponentBoundEvent_7_OnFilterChanged__DelegateSignature(const class FString& Text)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "BndEvt__Widget_SessionBrowser_MinPlayers_Filter_K2Node_ComponentBoundEvent_7_OnFilterChanged__DelegateSignature");
-
-	Params::Widget_CommonSessionBrowser_C_BndEvt__Widget_SessionBrowser_MinPlayers_Filter_K2Node_ComponentBoundEvent_7_OnFilterChanged__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.BndEvt__Widget_SessionBrowser_MaxPlayers_Filter_K2Node_ComponentBoundEvent_8_OnFilterChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const class FString&                    Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWidget_CommonSessionBrowser_C::BndEvt__Widget_SessionBrowser_MaxPlayers_Filter_K2Node_ComponentBoundEvent_8_OnFilterChanged__DelegateSignature(const class FString& Text)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "BndEvt__Widget_SessionBrowser_MaxPlayers_Filter_K2Node_ComponentBoundEvent_8_OnFilterChanged__DelegateSignature");
-
-	Params::Widget_CommonSessionBrowser_C_BndEvt__Widget_SessionBrowser_MaxPlayers_Filter_K2Node_ComponentBoundEvent_8_OnFilterChanged__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.BndEvt__Widget_SessionBrowser_Fix_SessionList_K2Node_ComponentBoundEvent_1_OnListEntryInitializedDynamic__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UUserWidget*                      Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonSessionBrowser_C::BndEvt__Widget_SessionBrowser_Fix_SessionList_K2Node_ComponentBoundEvent_1_OnListEntryInitializedDynamic__DelegateSignature(class UObject* Item, class UUserWidget* Widget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "BndEvt__Widget_SessionBrowser_Fix_SessionList_K2Node_ComponentBoundEvent_1_OnListEntryInitializedDynamic__DelegateSignature");
-
-	Params::Widget_CommonSessionBrowser_C_BndEvt__Widget_SessionBrowser_Fix_SessionList_K2Node_ComponentBoundEvent_1_OnListEntryInitializedDynamic__DelegateSignature Parms{};
-
-	Parms.Item = Item;
-	Parms.Widget = Widget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.BndEvt__Widget_CommonSessionBrowser_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonSessionBrowser_C::BndEvt__Widget_CommonSessionBrowser_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "BndEvt__Widget_CommonSessionBrowser_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonSessionBrowser_C_BndEvt__Widget_CommonSessionBrowser_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.BndEvt__Widget_CommonSessionBrowser_W_Button_Refresh_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonSessionBrowser_C::BndEvt__Widget_CommonSessionBrowser_W_Button_Refresh_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "BndEvt__Widget_CommonSessionBrowser_W_Button_Refresh_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonSessionBrowser_C_BndEvt__Widget_CommonSessionBrowser_W_Button_Refresh_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonSessionBrowser.Widget_CommonSessionBrowser_C.BndEvt__Widget_CommonSessionBrowser_W_Button_Back_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonSessionBrowser_C::BndEvt__Widget_CommonSessionBrowser_W_Button_Back_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionBrowser_C", "BndEvt__Widget_CommonSessionBrowser_W_Button_Back_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_CommonSessionBrowser_C_BndEvt__Widget_CommonSessionBrowser_W_Button_Back_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

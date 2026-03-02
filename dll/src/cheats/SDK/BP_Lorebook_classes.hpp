@@ -39,10 +39,12 @@ public:
 	void BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentExit__DelegateSignature(class AActor* Actor);
 	bool CanInteract(class APlayerController* Controller);
 	void ExecuteUbergraph_BP_Lorebook(int32 EntryPoint);
+	bool IsShareable(class APlayerController* PlayerController);
 	void OnFocus(class APlayerController* Controller);
 	void OnFocusGone(class APlayerController* Controller);
 	void OnInteract(class APlayerController* Controller);
 	void ReceiveBeginPlay();
+	void ShareInteractableActor(const class APlayerController* PlayerController);
 	void ToggleInteractionIndicatorVisibility(class AActor* InteractingActor, const bool NewVisible);
 
 	class FText GetInteractableAlternativeDescription() const;
@@ -56,25 +58,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Lorebook_C">();
+		BP_STATIC_CLASS_IMPL("BP_Lorebook_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Lorebook_C")
 	}
 	static class ABP_Lorebook_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Lorebook_C>();
 	}
 };
-static_assert(alignof(ABP_Lorebook_C) == 0x000008, "Wrong alignment on ABP_Lorebook_C");
-static_assert(sizeof(ABP_Lorebook_C) == 0x000318, "Wrong size on ABP_Lorebook_C");
-static_assert(offsetof(ABP_Lorebook_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_Lorebook_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Lorebook_C, DMActorProximityBox) == 0x0002B8, "Member 'ABP_Lorebook_C::DMActorProximityBox' has a wrong offset!");
-static_assert(offsetof(ABP_Lorebook_C, IndicatorWidget) == 0x0002C0, "Member 'ABP_Lorebook_C::IndicatorWidget' has a wrong offset!");
-static_assert(offsetof(ABP_Lorebook_C, PointLight) == 0x0002C8, "Member 'ABP_Lorebook_C::PointLight' has a wrong offset!");
-static_assert(offsetof(ABP_Lorebook_C, InteractableMesh) == 0x0002D0, "Member 'ABP_Lorebook_C::InteractableMesh' has a wrong offset!");
-static_assert(offsetof(ABP_Lorebook_C, StaticMesh) == 0x0002D8, "Member 'ABP_Lorebook_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_Lorebook_C, Header_Text) == 0x0002E0, "Member 'ABP_Lorebook_C::Header_Text' has a wrong offset!");
-static_assert(offsetof(ABP_Lorebook_C, Description_Text) == 0x0002F0, "Member 'ABP_Lorebook_C::Description_Text' has a wrong offset!");
-static_assert(offsetof(ABP_Lorebook_C, HasInteracted) == 0x000300, "Member 'ABP_Lorebook_C::HasInteracted' has a wrong offset!");
-static_assert(offsetof(ABP_Lorebook_C, Item_Description) == 0x000308, "Member 'ABP_Lorebook_C::Item_Description' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Lorebook_C;
 
 }
 

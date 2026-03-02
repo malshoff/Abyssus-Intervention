@@ -42,22 +42,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_EnemySpawnDecoy_C">();
+		BP_STATIC_CLASS_IMPL("BP_EnemySpawnDecoy_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_EnemySpawnDecoy_C")
 	}
 	static class ABP_EnemySpawnDecoy_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_EnemySpawnDecoy_C>();
 	}
 };
-static_assert(alignof(ABP_EnemySpawnDecoy_C) == 0x000008, "Wrong alignment on ABP_EnemySpawnDecoy_C");
-static_assert(sizeof(ABP_EnemySpawnDecoy_C) == 0x000360, "Wrong size on ABP_EnemySpawnDecoy_C");
-static_assert(offsetof(ABP_EnemySpawnDecoy_C, UberGraphFrame) == 0x000328, "Member 'ABP_EnemySpawnDecoy_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_EnemySpawnDecoy_C, AttachedFX) == 0x000330, "Member 'ABP_EnemySpawnDecoy_C::AttachedFX' has a wrong offset!");
-static_assert(offsetof(ABP_EnemySpawnDecoy_C, SpawnTimeline_Intensity_5793435149A3CE023B333A8DE9D53DB8) == 0x000338, "Member 'ABP_EnemySpawnDecoy_C::SpawnTimeline_Intensity_5793435149A3CE023B333A8DE9D53DB8' has a wrong offset!");
-static_assert(offsetof(ABP_EnemySpawnDecoy_C, SpawnTimeline__Direction_5793435149A3CE023B333A8DE9D53DB8) == 0x00033C, "Member 'ABP_EnemySpawnDecoy_C::SpawnTimeline__Direction_5793435149A3CE023B333A8DE9D53DB8' has a wrong offset!");
-static_assert(offsetof(ABP_EnemySpawnDecoy_C, SpawnTimeline) == 0x000340, "Member 'ABP_EnemySpawnDecoy_C::SpawnTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_EnemySpawnDecoy_C, IsUsed) == 0x000348, "Member 'ABP_EnemySpawnDecoy_C::IsUsed' has a wrong offset!");
-static_assert(offsetof(ABP_EnemySpawnDecoy_C, DynamicMaterials) == 0x000350, "Member 'ABP_EnemySpawnDecoy_C::DynamicMaterials' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_EnemySpawnDecoy_C;
 
 }
 

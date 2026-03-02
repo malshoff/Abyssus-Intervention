@@ -11,61 +11,62 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_classes.hpp"
 #include "UMG_structs.hpp"
+#include "RGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_HUD.Widget_HUD_C
-// 0x0218 (0x0660 - 0x0448)
+// 0x0220 (0x06F0 - 0x04D0)
 class UWidget_HUD_C final : public URGameHud
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0448(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 HealthbarBackground;                               // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 HealthbarShadow;                                   // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           NonCrosshairCanvas;                                // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ReviveIcon;                                        // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_AbillitAndAmmoContainer_C*      Widget_AbillitAndAmmoContainer;                    // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_Barrier_C*                      Widget_Barrier;                                    // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_BarrierGauge_C*                 Widget_BarrierGauge;                               // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_BossHealthbar_C*                Widget_BossHealthbar;                              // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_CastBar_C*                      Widget_CastBar;                                    // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_ChallengeComplete_HUD_C*        Widget_ChallengeComplete_HUD;                      // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_ChargeUpBar_C*                  Widget_ChargeUpBar;                                // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_ComparisonTooltip_C*            Widget_ComparisonTooltip;                          // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_Crosshair_DamageIndicator_C*    Widget_Crosshair_DamageIndicator;                  // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_DashCooldownBar_C*              Widget_DashCooldownBar;                            // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_DashScreen_C*                   Widget_DashScreen;                                 // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_DPSMeter_C*                     Widget_DPSMeter;                                   // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_FadeOutScreen_C*                Widget_FadeOutScreen;                              // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_GameTimer_C*                    Widget_GameTimer;                                  // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_Healthbar_C*                    Widget_Healthbar;                                  // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_HitReaction_C*                  Widget_HitReaction;                                // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_HUD_Radar_Container_C*          Widget_HUD_Radar_Container;                        // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_HUDPlayerList_C*                Widget_HUDPlayerList;                              // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_InteractPrompt_Image_C*         Widget_InteractPrompt_Image;                       // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_InteractTooltip_C*              Widget_InteractTooltip;                            // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_ObjectiveTracker_C*             Widget_ObjectiveTracker;                           // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_ObjectiveTracker_Announcer_C*   Widget_ObjectiveTracker_Announcer;                 // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_OffScreenIndication_Door_C*     Widget_OffScreenIndication_Door;                   // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_OverheatBar_C*                  Widget_OverheatBar;                                // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_Overworld_EnterNode_C*          Widget_Overworld_EnterNode;                        // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_PlayerStatusEffectContainer_C*  Widget_PlayerStatusEffectContainer;                // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_RoomObjective_C*                Widget_RoomObjective;                              // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SoulShardCount_C*               Widget_SoulShardCount;                             // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SpiritGauge_C*                  Widget_SpiritGauge;                                // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SubtitleContainer_C*            Widget_SubtitleContainer;                          // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TimerBar_C*                     Widget_TimerBar;                                   // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_WaitingForPlayers_C*            Widget_WaitingForPlayers;                          // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UUserWidget*>                    OSIWidgets;                                        // 0x0570(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	struct FTimerHandle                           OSITickTimer;                                      // 0x0580(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class USoundBase>              SoftPlayerDownedSound;                             // 0x0588(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TMap<class UWidget*, double>                  WidgetsOffsetMapX_9;                               // 0x05B0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TMap<class UWidget*, double>                  WidgetsOffsetMapX_10;                              // 0x0600(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class UWidget*>                        EdgerWidgets;                                      // 0x0650(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_WaitingForPlayers_C*            Widget_WaitingForPlayers;                          // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TimerBar_C*                     Widget_TimerBar;                                   // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TeleportToEncounter_C*          Widget_TeleportToEncounter;                        // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SubtitleContainer_C*            Widget_SubtitleContainer;                          // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SpiritGauge_C*                  Widget_SpiritGauge;                                // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SoulShardCount_C*               Widget_SoulShardCount;                             // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_RoomObjective_C*                Widget_RoomObjective;                              // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_PlayerStatusEffectContainer_C*  Widget_PlayerStatusEffectContainer;                // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_Overworld_EnterNode_C*          Widget_Overworld_EnterNode;                        // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_OverheatBar_C*                  Widget_OverheatBar;                                // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_OffScreenIndication_Door_C*     Widget_OffScreenIndication_Door;                   // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_ObjectiveTracker_Announcer_C*   Widget_ObjectiveTracker_Announcer;                 // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_ObjectiveTracker_C*             Widget_ObjectiveTracker;                           // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_InteractTooltip_C*              Widget_InteractTooltip;                            // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_InteractPrompt_Image_C*         Widget_InteractPrompt_Image;                       // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_HUDPlayerList_C*                Widget_HUDPlayerList;                              // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_HUD_Radar_Container_C*          Widget_HUD_Radar_Container;                        // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_HitReaction_C*                  Widget_HitReaction;                                // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_Healthbar_C*                    Widget_Healthbar;                                  // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_HarpoonGun_ComboPointContainer_C* Widget_HarpoonGun_ComboPointContainer;           // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_FadeOutScreen_C*                Widget_FadeOutScreen;                              // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_DPSMeter_C*                     Widget_DPSMeter;                                   // 0x0580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_DashScreen_C*                   Widget_DashScreen;                                 // 0x0588(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_DashCooldownBar_C*              Widget_DashCooldownBar;                            // 0x0590(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_Crosshair_DamageIndicator_C*    Widget_Crosshair_DamageIndicator;                  // 0x0598(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_ComparisonTooltip_C*            Widget_ComparisonTooltip;                          // 0x05A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_ChargeUpBar_C*                  Widget_ChargeUpBar;                                // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_ChallengeComplete_HUD_C*        Widget_ChallengeComplete_HUD;                      // 0x05B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_CastBar_C*                      Widget_CastBar;                                    // 0x05B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_BossHealthbar_C*                Widget_BossHealthbar;                              // 0x05C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_BarrierGauge_C*                 Widget_BarrierGauge;                               // 0x05C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_Barrier_C*                      Widget_Barrier;                                    // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_AbillitAndAmmoContainer_C*      Widget_AbillitAndAmmoContainer;                    // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ReviveIcon;                                        // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           NonCrosshairCanvas;                                // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HealthbarShadow;                                   // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HealthbarBackground;                               // 0x05F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UUserWidget*>                    OSIWidgets;                                        // 0x0600(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FTimerHandle                           OSITickTimer;                                      // 0x0610(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class USoundBase>              SoftPlayerDownedSound;                             // 0x0618(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TMap<class UWidget*, double>                  WidgetsOffsetMapX_9;                               // 0x0640(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TMap<class UWidget*, double>                  WidgetsOffsetMapX_10;                              // 0x0690(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class UWidget*>                        EdgerWidgets;                                      // 0x06E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void CalculateOffsetFromAspectRatio(double* Offset);
@@ -94,6 +95,7 @@ public:
 	void SetBarrierGaugeReset();
 	void SetBarrierGaugeVisibility(ESlateVisibility BarrierGaugeVisibility);
 	void SetChargeUpBarVisibility(ESlateVisibility ChargeUpBarVilibility);
+	void SetHarpoonGunComboPointsVisibility(ESlateVisibility OverheatBarVilibility);
 	void SetInteractTooltipVisibility(ESlateVisibility Visibility_0);
 	void SetOverheatBarVisibility(ESlateVisibility OverheatBarVilibility);
 	void SetPreventBossHealthbarRemovalOnDeath(bool bShouldPrevent);
@@ -103,6 +105,7 @@ public:
 	void SetSpiritGaugeVisibility(ESlateVisibility SpiritGaugeVisibility);
 	void SetTimerBarVisibility(ESlateVisibility InVisibility);
 	void SetupAspectRatioOffsets();
+	void ShowTeleportToActiveEncounterWidget(const bool bNewShow);
 	void StartOSITick();
 	void UpdateBarrierGaugePercent(float Threshold);
 	void UpdateBossHealthWidget(class ARBossPawnBase* BossPawn, ESlateVisibility BossHealthVisibility);
@@ -115,58 +118,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_HUD_C">();
+		BP_STATIC_CLASS_IMPL("Widget_HUD_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_HUD_C")
 	}
 	static class UWidget_HUD_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_HUD_C>();
 	}
 };
-static_assert(alignof(UWidget_HUD_C) == 0x000008, "Wrong alignment on UWidget_HUD_C");
-static_assert(sizeof(UWidget_HUD_C) == 0x000660, "Wrong size on UWidget_HUD_C");
-static_assert(offsetof(UWidget_HUD_C, UberGraphFrame) == 0x000448, "Member 'UWidget_HUD_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, HealthbarBackground) == 0x000450, "Member 'UWidget_HUD_C::HealthbarBackground' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, HealthbarShadow) == 0x000458, "Member 'UWidget_HUD_C::HealthbarShadow' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, NonCrosshairCanvas) == 0x000460, "Member 'UWidget_HUD_C::NonCrosshairCanvas' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, ReviveIcon) == 0x000468, "Member 'UWidget_HUD_C::ReviveIcon' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_AbillitAndAmmoContainer) == 0x000470, "Member 'UWidget_HUD_C::Widget_AbillitAndAmmoContainer' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_Barrier) == 0x000478, "Member 'UWidget_HUD_C::Widget_Barrier' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_BarrierGauge) == 0x000480, "Member 'UWidget_HUD_C::Widget_BarrierGauge' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_BossHealthbar) == 0x000488, "Member 'UWidget_HUD_C::Widget_BossHealthbar' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_CastBar) == 0x000490, "Member 'UWidget_HUD_C::Widget_CastBar' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_ChallengeComplete_HUD) == 0x000498, "Member 'UWidget_HUD_C::Widget_ChallengeComplete_HUD' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_ChargeUpBar) == 0x0004A0, "Member 'UWidget_HUD_C::Widget_ChargeUpBar' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_ComparisonTooltip) == 0x0004A8, "Member 'UWidget_HUD_C::Widget_ComparisonTooltip' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_Crosshair_DamageIndicator) == 0x0004B0, "Member 'UWidget_HUD_C::Widget_Crosshair_DamageIndicator' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_DashCooldownBar) == 0x0004B8, "Member 'UWidget_HUD_C::Widget_DashCooldownBar' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_DashScreen) == 0x0004C0, "Member 'UWidget_HUD_C::Widget_DashScreen' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_DPSMeter) == 0x0004C8, "Member 'UWidget_HUD_C::Widget_DPSMeter' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_FadeOutScreen) == 0x0004D0, "Member 'UWidget_HUD_C::Widget_FadeOutScreen' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_GameTimer) == 0x0004D8, "Member 'UWidget_HUD_C::Widget_GameTimer' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_Healthbar) == 0x0004E0, "Member 'UWidget_HUD_C::Widget_Healthbar' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_HitReaction) == 0x0004E8, "Member 'UWidget_HUD_C::Widget_HitReaction' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_HUD_Radar_Container) == 0x0004F0, "Member 'UWidget_HUD_C::Widget_HUD_Radar_Container' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_HUDPlayerList) == 0x0004F8, "Member 'UWidget_HUD_C::Widget_HUDPlayerList' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_InteractPrompt_Image) == 0x000500, "Member 'UWidget_HUD_C::Widget_InteractPrompt_Image' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_InteractTooltip) == 0x000508, "Member 'UWidget_HUD_C::Widget_InteractTooltip' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_ObjectiveTracker) == 0x000510, "Member 'UWidget_HUD_C::Widget_ObjectiveTracker' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_ObjectiveTracker_Announcer) == 0x000518, "Member 'UWidget_HUD_C::Widget_ObjectiveTracker_Announcer' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_OffScreenIndication_Door) == 0x000520, "Member 'UWidget_HUD_C::Widget_OffScreenIndication_Door' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_OverheatBar) == 0x000528, "Member 'UWidget_HUD_C::Widget_OverheatBar' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_Overworld_EnterNode) == 0x000530, "Member 'UWidget_HUD_C::Widget_Overworld_EnterNode' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_PlayerStatusEffectContainer) == 0x000538, "Member 'UWidget_HUD_C::Widget_PlayerStatusEffectContainer' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_RoomObjective) == 0x000540, "Member 'UWidget_HUD_C::Widget_RoomObjective' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_SoulShardCount) == 0x000548, "Member 'UWidget_HUD_C::Widget_SoulShardCount' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_SpiritGauge) == 0x000550, "Member 'UWidget_HUD_C::Widget_SpiritGauge' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_SubtitleContainer) == 0x000558, "Member 'UWidget_HUD_C::Widget_SubtitleContainer' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_TimerBar) == 0x000560, "Member 'UWidget_HUD_C::Widget_TimerBar' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, Widget_WaitingForPlayers) == 0x000568, "Member 'UWidget_HUD_C::Widget_WaitingForPlayers' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, OSIWidgets) == 0x000570, "Member 'UWidget_HUD_C::OSIWidgets' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, OSITickTimer) == 0x000580, "Member 'UWidget_HUD_C::OSITickTimer' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, SoftPlayerDownedSound) == 0x000588, "Member 'UWidget_HUD_C::SoftPlayerDownedSound' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, WidgetsOffsetMapX_9) == 0x0005B0, "Member 'UWidget_HUD_C::WidgetsOffsetMapX_9' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, WidgetsOffsetMapX_10) == 0x000600, "Member 'UWidget_HUD_C::WidgetsOffsetMapX_10' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_C, EdgerWidgets) == 0x000650, "Member 'UWidget_HUD_C::EdgerWidgets' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_HUD_C;
 
 }
 

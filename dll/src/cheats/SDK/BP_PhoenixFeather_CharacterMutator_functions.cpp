@@ -144,5 +144,31 @@ void UBP_PhoenixFeather_CharacterMutator_C::PlayFX()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function BP_PhoenixFeather_CharacterMutator.BP_PhoenixFeather_CharacterMutator_C.ShouldProc
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double                                  Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class URHealthComponent*                HealthComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool*                                   ShouldProc_0                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PhoenixFeather_CharacterMutator_C::ShouldProc(double Damage, class URHealthComponent* HealthComponent, bool* ShouldProc_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PhoenixFeather_CharacterMutator_C", "ShouldProc");
+
+	Params::BP_PhoenixFeather_CharacterMutator_C_ShouldProc Parms{};
+
+	Parms.Damage = Damage;
+	Parms.HealthComponent = HealthComponent;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ShouldProc_0 != nullptr)
+		*ShouldProc_0 = Parms.ShouldProc_0;
+}
+
 }
 

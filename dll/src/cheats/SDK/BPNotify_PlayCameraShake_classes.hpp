@@ -31,17 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPNotify_PlayCameraShake_C">();
+		BP_STATIC_CLASS_IMPL("BPNotify_PlayCameraShake_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPNotify_PlayCameraShake_C")
 	}
 	static class UBPNotify_PlayCameraShake_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPNotify_PlayCameraShake_C>();
 	}
 };
-static_assert(alignof(UBPNotify_PlayCameraShake_C) == 0x000008, "Wrong alignment on UBPNotify_PlayCameraShake_C");
-static_assert(sizeof(UBPNotify_PlayCameraShake_C) == 0x000048, "Wrong size on UBPNotify_PlayCameraShake_C");
-static_assert(offsetof(UBPNotify_PlayCameraShake_C, CameraShakeBlueprint) == 0x000038, "Member 'UBPNotify_PlayCameraShake_C::CameraShakeBlueprint' has a wrong offset!");
-static_assert(offsetof(UBPNotify_PlayCameraShake_C, Intensity) == 0x000040, "Member 'UBPNotify_PlayCameraShake_C::Intensity' has a wrong offset!");
+DUMPER7_ASSERTS_UBPNotify_PlayCameraShake_C;
 
 }
 

@@ -19,13 +19,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_CosmeticEmoteDragged.Widget_CosmeticEmoteDragged_C
-// 0x00C0 (0x0390 - 0x02D0)
+// 0x00C0 (0x0400 - 0x0340)
 class UWidget_CosmeticEmoteDragged_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Image;                                             // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FSlateBrush                            InBrush;                                           // 0x02E0(0x00B0)(Edit, BlueprintVisible, BlueprintReadOnly, ExposeOnSpawn)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Image;                                             // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FSlateBrush                            InBrush;                                           // 0x0350(0x00B0)(Edit, BlueprintVisible, BlueprintReadOnly, ExposeOnSpawn)
 
 public:
 	void ExecuteUbergraph_Widget_CosmeticEmoteDragged(int32 EntryPoint);
@@ -34,18 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_CosmeticEmoteDragged_C">();
+		BP_STATIC_CLASS_IMPL("Widget_CosmeticEmoteDragged_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_CosmeticEmoteDragged_C")
 	}
 	static class UWidget_CosmeticEmoteDragged_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_CosmeticEmoteDragged_C>();
 	}
 };
-static_assert(alignof(UWidget_CosmeticEmoteDragged_C) == 0x000010, "Wrong alignment on UWidget_CosmeticEmoteDragged_C");
-static_assert(sizeof(UWidget_CosmeticEmoteDragged_C) == 0x000390, "Wrong size on UWidget_CosmeticEmoteDragged_C");
-static_assert(offsetof(UWidget_CosmeticEmoteDragged_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_CosmeticEmoteDragged_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticEmoteDragged_C, Image) == 0x0002D8, "Member 'UWidget_CosmeticEmoteDragged_C::Image' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticEmoteDragged_C, InBrush) == 0x0002E0, "Member 'UWidget_CosmeticEmoteDragged_C::InBrush' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_CosmeticEmoteDragged_C;
 
 }
 

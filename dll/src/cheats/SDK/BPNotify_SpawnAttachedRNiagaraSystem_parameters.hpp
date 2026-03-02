@@ -34,18 +34,7 @@ public:
 	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue;          // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify) == 0x000008, "Wrong alignment on BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify");
-static_assert(sizeof(BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify) == 0x000078, "Wrong size on BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify");
-static_assert(offsetof(BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify, MeshComp) == 0x000000, "Member 'BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify::MeshComp' has a wrong offset!");
-static_assert(offsetof(BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify, Animation) == 0x000008, "Member 'BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify::Animation' has a wrong offset!");
-static_assert(offsetof(BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify, EventReference) == 0x000010, "Member 'BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify::EventReference' has a wrong offset!");
-static_assert(offsetof(BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify, ReturnValue) == 0x000040, "Member 'BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify, K2Node_DynamicCast_AsRWeapon) == 0x000050, "Member 'BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify::K2Node_DynamicCast_AsRWeapon' has a wrong offset!");
-static_assert(offsetof(BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify, CallFunc_GetEquippedWeaponModPrimaryAsset_ReturnValue) == 0x000060, "Member 'BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify::CallFunc_GetEquippedWeaponModPrimaryAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify, CallFunc_SpawnSystemAttached_ReturnValue) == 0x000068, "Member 'BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify::CallFunc_SpawnSystemAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify, CallFunc_IsValidClass_ReturnValue) == 0x000070, "Member 'BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPNotify_SpawnAttachedRNiagaraSystem_C_Received_Notify;
 
 }
 

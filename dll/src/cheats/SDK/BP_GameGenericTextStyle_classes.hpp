@@ -23,15 +23,18 @@ class UBP_GameGenericTextStyle_C final : public UCommonTextStyle
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_GameGenericTextStyle_C">();
+		BP_STATIC_CLASS_IMPL("BP_GameGenericTextStyle_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_GameGenericTextStyle_C")
 	}
 	static class UBP_GameGenericTextStyle_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_GameGenericTextStyle_C>();
 	}
 };
-static_assert(alignof(UBP_GameGenericTextStyle_C) == 0x000010, "Wrong alignment on UBP_GameGenericTextStyle_C");
-static_assert(sizeof(UBP_GameGenericTextStyle_C) == 0x000190, "Wrong size on UBP_GameGenericTextStyle_C");
+DUMPER7_ASSERTS_UBP_GameGenericTextStyle_C;
 
 }
 

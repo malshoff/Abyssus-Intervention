@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_FragGrenade_Grenade.BP_FragGrenade_Grenade_C
-// 0x0030 (0x0718 - 0x06E8)
+// 0x0030 (0x0728 - 0x06F8)
 class ABP_FragGrenade_Grenade_C final : public ARGrenade
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      Trail;                                             // 0x06F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         EmissiveTimeline_Emissive_36DD8EB745D93F6005C17ABFFAA8215A; // 0x06F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            EmissiveTimeline__Direction_36DD8EB745D93F6005C17ABFFAA8215A; // 0x06FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6FD[0x3];                                      // 0x06FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     EmissiveTimeline;                                  // 0x0700(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInstanceDynamic*>       DynamicMaterialInstances;                          // 0x0708(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      Trail;                                             // 0x0700(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         EmissiveTimeline_Emissive_36DD8EB745D93F6005C17ABFFAA8215A; // 0x0708(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            EmissiveTimeline__Direction_36DD8EB745D93F6005C17ABFFAA8215A; // 0x070C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_70D[0x3];                                      // 0x070D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     EmissiveTimeline;                                  // 0x0710(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       DynamicMaterialInstances;                          // 0x0718(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void BndEvt__BP_FragGrenade_Grenade_ProjectileMovementComponent_K2Node_ComponentBoundEvent_0_ActorComponentActivatedSignature__DelegateSignature(class UActorComponent* Component, bool bReset);
@@ -43,21 +43,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FragGrenade_Grenade_C">();
+		BP_STATIC_CLASS_IMPL("BP_FragGrenade_Grenade_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FragGrenade_Grenade_C")
 	}
 	static class ABP_FragGrenade_Grenade_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_FragGrenade_Grenade_C>();
 	}
 };
-static_assert(alignof(ABP_FragGrenade_Grenade_C) == 0x000008, "Wrong alignment on ABP_FragGrenade_Grenade_C");
-static_assert(sizeof(ABP_FragGrenade_Grenade_C) == 0x000718, "Wrong size on ABP_FragGrenade_Grenade_C");
-static_assert(offsetof(ABP_FragGrenade_Grenade_C, UberGraphFrame) == 0x0006E8, "Member 'ABP_FragGrenade_Grenade_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_FragGrenade_Grenade_C, Trail) == 0x0006F0, "Member 'ABP_FragGrenade_Grenade_C::Trail' has a wrong offset!");
-static_assert(offsetof(ABP_FragGrenade_Grenade_C, EmissiveTimeline_Emissive_36DD8EB745D93F6005C17ABFFAA8215A) == 0x0006F8, "Member 'ABP_FragGrenade_Grenade_C::EmissiveTimeline_Emissive_36DD8EB745D93F6005C17ABFFAA8215A' has a wrong offset!");
-static_assert(offsetof(ABP_FragGrenade_Grenade_C, EmissiveTimeline__Direction_36DD8EB745D93F6005C17ABFFAA8215A) == 0x0006FC, "Member 'ABP_FragGrenade_Grenade_C::EmissiveTimeline__Direction_36DD8EB745D93F6005C17ABFFAA8215A' has a wrong offset!");
-static_assert(offsetof(ABP_FragGrenade_Grenade_C, EmissiveTimeline) == 0x000700, "Member 'ABP_FragGrenade_Grenade_C::EmissiveTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_FragGrenade_Grenade_C, DynamicMaterialInstances) == 0x000708, "Member 'ABP_FragGrenade_Grenade_C::DynamicMaterialInstances' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_FragGrenade_Grenade_C;
 
 }
 

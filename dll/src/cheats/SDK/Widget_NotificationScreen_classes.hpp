@@ -11,21 +11,21 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_classes.hpp"
 #include "UMG_structs.hpp"
+#include "RGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_NotificationScreen.Widget_NotificationScreen_C
-// 0x0018 (0x0370 - 0x0358)
+// 0x0018 (0x03E0 - 0x03C8)
 class UWidget_NotificationScreen_C final : public URNotificationScreenWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0358(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USizeBox*                               SizeBox_0;                                         // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBox_253;                                   // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UVerticalBox*                           VerticalBox_253;                                   // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_0;                                         // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -36,18 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_NotificationScreen_C">();
+		BP_STATIC_CLASS_IMPL("Widget_NotificationScreen_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_NotificationScreen_C")
 	}
 	static class UWidget_NotificationScreen_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_NotificationScreen_C>();
 	}
 };
-static_assert(alignof(UWidget_NotificationScreen_C) == 0x000008, "Wrong alignment on UWidget_NotificationScreen_C");
-static_assert(sizeof(UWidget_NotificationScreen_C) == 0x000370, "Wrong size on UWidget_NotificationScreen_C");
-static_assert(offsetof(UWidget_NotificationScreen_C, UberGraphFrame) == 0x000358, "Member 'UWidget_NotificationScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_NotificationScreen_C, SizeBox_0) == 0x000360, "Member 'UWidget_NotificationScreen_C::SizeBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_NotificationScreen_C, VerticalBox_253) == 0x000368, "Member 'UWidget_NotificationScreen_C::VerticalBox_253' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_NotificationScreen_C;
 
 }
 

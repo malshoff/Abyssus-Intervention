@@ -85,27 +85,6 @@ void UWidget_Settings_GamepadInput_C::ExecuteUbergraph_Widget_Settings_GamepadIn
 }
 
 
-// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.GetInputKeySelector
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UInputKeySelector**               OutSelector                                            (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_Settings_GamepadInput_C::GetInputKeySelector(class UInputKeySelector** OutSelector)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Settings_GamepadInput_C", "GetInputKeySelector");
-
-	Params::Widget_Settings_GamepadInput_C_GetInputKeySelector Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutSelector != nullptr)
-		*OutSelector = Parms.OutSelector;
-}
-
-
 // Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.OnAddedToFocusPath
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -143,6 +122,27 @@ void UWidget_Settings_GamepadInput_C::OnRemovedFromFocusPath(const struct FFocus
 	Parms.InFocusEvent = std::move(InFocusEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.GetInputKeySelector
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UInputKeySelector**               OutSelector                                            (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_Settings_GamepadInput_C::GetInputKeySelector(class UInputKeySelector** OutSelector)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_Settings_GamepadInput_C", "GetInputKeySelector");
+
+	Params::Widget_Settings_GamepadInput_C_GetInputKeySelector Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutSelector != nullptr)
+		*OutSelector = Parms.OutSelector;
 }
 
 }

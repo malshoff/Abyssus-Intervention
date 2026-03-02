@@ -60,38 +60,7 @@ public:
 	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProximitySphere*                       CallFunc_GetProximitySphere_ReturnValue;           // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator) == 0x000010, "Wrong alignment on BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator");
-static_assert(sizeof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator) == 0x000150, "Wrong size on BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, EntryPoint) == 0x000000, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, CallFunc_GetOwner_ReturnValue) == 0x000008, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, CallFunc_GetPlayerController_ReturnValue) == 0x000010, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_DynamicCast_AsRInteractable_Interface) == 0x000018, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_DynamicCast_AsRInteractable_Interface' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, CallFunc_CanInteract_ReturnValue) == 0x000029, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::CallFunc_CanInteract_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, CallFunc_Not_PreBool_ReturnValue) == 0x00002A, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_CustomEvent_Actor_1) == 0x000030, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_CustomEvent_Actor_1' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_CustomEvent_Actor) == 0x000038, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_CustomEvent_Actor' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_DynamicCast_AsPawn) == 0x000040, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_DynamicCast_AsPawn' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_DynamicCast_bSuccess_1) == 0x000048, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_DynamicCast_AsPawn_1) == 0x000050, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_DynamicCast_AsPawn_1' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_DynamicCast_bSuccess_2) == 0x000058, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, CallFunc_GetController_ReturnValue) == 0x000060, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::CallFunc_GetController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, CallFunc_GetController_ReturnValue_1) == 0x000068, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::CallFunc_GetController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_DynamicCast_AsPlayer_Controller) == 0x000070, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_DynamicCast_AsPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_DynamicCast_bSuccess_3) == 0x000078, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_DynamicCast_AsPlayer_Controller_1) == 0x000080, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_DynamicCast_AsPlayer_Controller_1' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_DynamicCast_bSuccess_4) == 0x000088, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, CallFunc_IsLocalPlayerController_ReturnValue) == 0x000089, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, CallFunc_IsLocalPlayerController_ReturnValue_1) == 0x00008A, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::CallFunc_IsLocalPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, CallFunc_GetOwner_ReturnValue_1) == 0x000090, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_CreateDelegate_OutputDelegate) == 0x000098, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000A8, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, CallFunc_GetRelativeTransform_ReturnValue) == 0x0000C0, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::CallFunc_GetRelativeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, CallFunc_AddComponentByClass_ReturnValue) == 0x000120, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::CallFunc_AddComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, CallFunc_GetWidget_ReturnValue) == 0x000128, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::CallFunc_GetWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_DynamicCast_AsWidget_Interaction_Indicator) == 0x000130, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_DynamicCast_AsWidget_Interaction_Indicator' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, K2Node_DynamicCast_bSuccess_5) == 0x000138, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator, CallFunc_GetProximitySphere_ReturnValue) == 0x000140, "Member 'BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator::CallFunc_GetProximitySphere_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPC_InteractableIndicator_C_ExecuteUbergraph_BPC_InteractableIndicator;
 
 // Function BPC_InteractableIndicator.BPC_InteractableIndicator_C.OnActorEnterProximity
 // 0x0008 (0x0008 - 0x0000)
@@ -100,9 +69,7 @@ struct BPC_InteractableIndicator_C_OnActorEnterProximity final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPC_InteractableIndicator_C_OnActorEnterProximity) == 0x000008, "Wrong alignment on BPC_InteractableIndicator_C_OnActorEnterProximity");
-static_assert(sizeof(BPC_InteractableIndicator_C_OnActorEnterProximity) == 0x000008, "Wrong size on BPC_InteractableIndicator_C_OnActorEnterProximity");
-static_assert(offsetof(BPC_InteractableIndicator_C_OnActorEnterProximity, Actor) == 0x000000, "Member 'BPC_InteractableIndicator_C_OnActorEnterProximity::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_BPC_InteractableIndicator_C_OnActorEnterProximity;
 
 // Function BPC_InteractableIndicator.BPC_InteractableIndicator_C.OnActorExitProximity
 // 0x0008 (0x0008 - 0x0000)
@@ -111,9 +78,7 @@ struct BPC_InteractableIndicator_C_OnActorExitProximity final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPC_InteractableIndicator_C_OnActorExitProximity) == 0x000008, "Wrong alignment on BPC_InteractableIndicator_C_OnActorExitProximity");
-static_assert(sizeof(BPC_InteractableIndicator_C_OnActorExitProximity) == 0x000008, "Wrong size on BPC_InteractableIndicator_C_OnActorExitProximity");
-static_assert(offsetof(BPC_InteractableIndicator_C_OnActorExitProximity, Actor) == 0x000000, "Member 'BPC_InteractableIndicator_C_OnActorExitProximity::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_BPC_InteractableIndicator_C_OnActorExitProximity;
 
 }
 

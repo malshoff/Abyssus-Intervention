@@ -97,27 +97,17 @@ public:
 	class FString                                 BindingFunctionNameOverride;                       // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 BindingFunctionNamespace;                          // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FComputeGraphEdge) == 0x000008, "Wrong alignment on FComputeGraphEdge");
-static_assert(sizeof(FComputeGraphEdge) == 0x000038, "Wrong size on FComputeGraphEdge");
-static_assert(offsetof(FComputeGraphEdge, KernelIndex) == 0x000000, "Member 'FComputeGraphEdge::KernelIndex' has a wrong offset!");
-static_assert(offsetof(FComputeGraphEdge, KernelBindingIndex) == 0x000004, "Member 'FComputeGraphEdge::KernelBindingIndex' has a wrong offset!");
-static_assert(offsetof(FComputeGraphEdge, DataInterfaceIndex) == 0x000008, "Member 'FComputeGraphEdge::DataInterfaceIndex' has a wrong offset!");
-static_assert(offsetof(FComputeGraphEdge, DataInterfaceBindingIndex) == 0x00000C, "Member 'FComputeGraphEdge::DataInterfaceBindingIndex' has a wrong offset!");
-static_assert(offsetof(FComputeGraphEdge, bKernelInput) == 0x000010, "Member 'FComputeGraphEdge::bKernelInput' has a wrong offset!");
-static_assert(offsetof(FComputeGraphEdge, BindingFunctionNameOverride) == 0x000018, "Member 'FComputeGraphEdge::BindingFunctionNameOverride' has a wrong offset!");
-static_assert(offsetof(FComputeGraphEdge, BindingFunctionNamespace) == 0x000028, "Member 'FComputeGraphEdge::BindingFunctionNamespace' has a wrong offset!");
+DUMPER7_ASSERTS_FComputeGraphEdge;
 
 // ScriptStruct ComputeFramework.ComputeGraphInstance
 // 0x0018 (0x0018 - 0x0000)
 struct FComputeGraphInstance final
 {
 public:
-	TArray<class UComputeDataProvider*>           DataProviders;                                     // 0x0000(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UComputeDataProvider*>           DataProviders;                                     // 0x0000(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FComputeGraphInstance) == 0x000008, "Wrong alignment on FComputeGraphInstance");
-static_assert(sizeof(FComputeGraphInstance) == 0x000018, "Wrong size on FComputeGraphInstance");
-static_assert(offsetof(FComputeGraphInstance, DataProviders) == 0x000000, "Member 'FComputeGraphInstance::DataProviders' has a wrong offset!");
+DUMPER7_ASSERTS_FComputeGraphInstance;
 
 // ScriptStruct ComputeFramework.ComputeKernelPermutationBool
 // 0x0018 (0x0018 - 0x0000)
@@ -128,10 +118,7 @@ public:
 	bool                                          Value;                                             // 0x0010(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FComputeKernelPermutationBool) == 0x000008, "Wrong alignment on FComputeKernelPermutationBool");
-static_assert(sizeof(FComputeKernelPermutationBool) == 0x000018, "Wrong size on FComputeKernelPermutationBool");
-static_assert(offsetof(FComputeKernelPermutationBool, Name) == 0x000000, "Member 'FComputeKernelPermutationBool::Name' has a wrong offset!");
-static_assert(offsetof(FComputeKernelPermutationBool, Value) == 0x000010, "Member 'FComputeKernelPermutationBool::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FComputeKernelPermutationBool;
 
 // ScriptStruct ComputeFramework.ComputeKernelPermutationSet
 // 0x0010 (0x0010 - 0x0000)
@@ -140,9 +127,7 @@ struct FComputeKernelPermutationSet final
 public:
 	TArray<struct FComputeKernelPermutationBool>  BooleanOptions;                                    // 0x0000(0x0010)(Edit, EditFixedSize, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FComputeKernelPermutationSet) == 0x000008, "Wrong alignment on FComputeKernelPermutationSet");
-static_assert(sizeof(FComputeKernelPermutationSet) == 0x000010, "Wrong size on FComputeKernelPermutationSet");
-static_assert(offsetof(FComputeKernelPermutationSet, BooleanOptions) == 0x000000, "Member 'FComputeKernelPermutationSet::BooleanOptions' has a wrong offset!");
+DUMPER7_ASSERTS_FComputeKernelPermutationSet;
 
 // ScriptStruct ComputeFramework.ComputeKernelDefinition
 // 0x0020 (0x0020 - 0x0000)
@@ -152,10 +137,7 @@ public:
 	class FString                                 Symbol;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Define;                                            // 0x0010(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FComputeKernelDefinition) == 0x000008, "Wrong alignment on FComputeKernelDefinition");
-static_assert(sizeof(FComputeKernelDefinition) == 0x000020, "Wrong size on FComputeKernelDefinition");
-static_assert(offsetof(FComputeKernelDefinition, Symbol) == 0x000000, "Member 'FComputeKernelDefinition::Symbol' has a wrong offset!");
-static_assert(offsetof(FComputeKernelDefinition, Define) == 0x000010, "Member 'FComputeKernelDefinition::Define' has a wrong offset!");
+DUMPER7_ASSERTS_FComputeKernelDefinition;
 
 // ScriptStruct ComputeFramework.ComputeKernelDefinitionSet
 // 0x0010 (0x0010 - 0x0000)
@@ -164,9 +146,7 @@ struct FComputeKernelDefinitionSet final
 public:
 	TArray<struct FComputeKernelDefinition>       Defines;                                           // 0x0000(0x0010)(Edit, EditFixedSize, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FComputeKernelDefinitionSet) == 0x000008, "Wrong alignment on FComputeKernelDefinitionSet");
-static_assert(sizeof(FComputeKernelDefinitionSet) == 0x000010, "Wrong size on FComputeKernelDefinitionSet");
-static_assert(offsetof(FComputeKernelDefinitionSet, Defines) == 0x000000, "Member 'FComputeKernelDefinitionSet::Defines' has a wrong offset!");
+DUMPER7_ASSERTS_FComputeKernelDefinitionSet;
 
 // ScriptStruct ComputeFramework.ComputeKernelPermutationVector
 // 0x0058 (0x0058 - 0x0000)
@@ -177,10 +157,7 @@ public:
 	uint32                                        BitCount;                                          // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FComputeKernelPermutationVector) == 0x000008, "Wrong alignment on FComputeKernelPermutationVector");
-static_assert(sizeof(FComputeKernelPermutationVector) == 0x000058, "Wrong size on FComputeKernelPermutationVector");
-static_assert(offsetof(FComputeKernelPermutationVector, Permutations) == 0x000000, "Member 'FComputeKernelPermutationVector::Permutations' has a wrong offset!");
-static_assert(offsetof(FComputeKernelPermutationVector, BitCount) == 0x000050, "Member 'FComputeKernelPermutationVector::BitCount' has a wrong offset!");
+DUMPER7_ASSERTS_FComputeKernelPermutationVector;
 
 // ScriptStruct ComputeFramework.ShaderValueTypeHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -189,8 +166,7 @@ struct alignas(0x08) FShaderValueTypeHandle final
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FShaderValueTypeHandle) == 0x000008, "Wrong alignment on FShaderValueTypeHandle");
-static_assert(sizeof(FShaderValueTypeHandle) == 0x000008, "Wrong size on FShaderValueTypeHandle");
+DUMPER7_ASSERTS_FShaderValueTypeHandle;
 
 // ScriptStruct ComputeFramework.ArrayShaderValue
 // 0x0010 (0x0010 - 0x0000)
@@ -199,9 +175,7 @@ struct FArrayShaderValue final
 public:
 	TArray<uint8>                                 ArrayOfValues;                                     // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FArrayShaderValue) == 0x000008, "Wrong alignment on FArrayShaderValue");
-static_assert(sizeof(FArrayShaderValue) == 0x000010, "Wrong size on FArrayShaderValue");
-static_assert(offsetof(FArrayShaderValue, ArrayOfValues) == 0x000000, "Member 'FArrayShaderValue::ArrayOfValues' has a wrong offset!");
+DUMPER7_ASSERTS_FArrayShaderValue;
 
 // ScriptStruct ComputeFramework.ShaderValueContainer
 // 0x0020 (0x0020 - 0x0000)
@@ -211,10 +185,7 @@ public:
 	TArray<uint8>                                 ShaderValue;                                       // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FArrayShaderValue>              ArrayList;                                         // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FShaderValueContainer) == 0x000008, "Wrong alignment on FShaderValueContainer");
-static_assert(sizeof(FShaderValueContainer) == 0x000020, "Wrong size on FShaderValueContainer");
-static_assert(offsetof(FShaderValueContainer, ShaderValue) == 0x000000, "Member 'FShaderValueContainer::ShaderValue' has a wrong offset!");
-static_assert(offsetof(FShaderValueContainer, ArrayList) == 0x000010, "Member 'FShaderValueContainer::ArrayList' has a wrong offset!");
+DUMPER7_ASSERTS_FShaderValueContainer;
 
 // ScriptStruct ComputeFramework.ShaderValueType
 // 0x0020 (0x0020 - 0x0000)
@@ -228,12 +199,7 @@ public:
 	bool                                          bIsDynamicArray;                                   // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x13];                                       // 0x000D(0x0013)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FShaderValueType) == 0x000008, "Wrong alignment on FShaderValueType");
-static_assert(sizeof(FShaderValueType) == 0x000020, "Wrong size on FShaderValueType");
-static_assert(offsetof(FShaderValueType, Type) == 0x000000, "Member 'FShaderValueType::Type' has a wrong offset!");
-static_assert(offsetof(FShaderValueType, DimensionType) == 0x000001, "Member 'FShaderValueType::DimensionType' has a wrong offset!");
-static_assert(offsetof(FShaderValueType, Name) == 0x000004, "Member 'FShaderValueType::Name' has a wrong offset!");
-static_assert(offsetof(FShaderValueType, bIsDynamicArray) == 0x00000C, "Member 'FShaderValueType::bIsDynamicArray' has a wrong offset!");
+DUMPER7_ASSERTS_FShaderValueType;
 
 // ScriptStruct ComputeFramework.ShaderParamTypeDefinition
 // 0x0030 (0x0030 - 0x0000)
@@ -249,15 +215,7 @@ public:
 	EShaderParamModifier                          Modifier;                                          // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FShaderParamTypeDefinition) == 0x000008, "Wrong alignment on FShaderParamTypeDefinition");
-static_assert(sizeof(FShaderParamTypeDefinition) == 0x000030, "Wrong size on FShaderParamTypeDefinition");
-static_assert(offsetof(FShaderParamTypeDefinition, TypeDeclaration) == 0x000000, "Member 'FShaderParamTypeDefinition::TypeDeclaration' has a wrong offset!");
-static_assert(offsetof(FShaderParamTypeDefinition, Name) == 0x000010, "Member 'FShaderParamTypeDefinition::Name' has a wrong offset!");
-static_assert(offsetof(FShaderParamTypeDefinition, ValueType) == 0x000020, "Member 'FShaderParamTypeDefinition::ValueType' has a wrong offset!");
-static_assert(offsetof(FShaderParamTypeDefinition, ArrayElementCount) == 0x000028, "Member 'FShaderParamTypeDefinition::ArrayElementCount' has a wrong offset!");
-static_assert(offsetof(FShaderParamTypeDefinition, BindingType) == 0x00002A, "Member 'FShaderParamTypeDefinition::BindingType' has a wrong offset!");
-static_assert(offsetof(FShaderParamTypeDefinition, ResourceType) == 0x00002B, "Member 'FShaderParamTypeDefinition::ResourceType' has a wrong offset!");
-static_assert(offsetof(FShaderParamTypeDefinition, Modifier) == 0x00002C, "Member 'FShaderParamTypeDefinition::Modifier' has a wrong offset!");
+DUMPER7_ASSERTS_FShaderParamTypeDefinition;
 
 // ScriptStruct ComputeFramework.ShaderFunctionDefinition
 // 0x0028 (0x0028 - 0x0000)
@@ -269,11 +227,7 @@ public:
 	bool                                          bHasReturnType;                                    // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FShaderFunctionDefinition) == 0x000008, "Wrong alignment on FShaderFunctionDefinition");
-static_assert(sizeof(FShaderFunctionDefinition) == 0x000028, "Wrong size on FShaderFunctionDefinition");
-static_assert(offsetof(FShaderFunctionDefinition, Name) == 0x000000, "Member 'FShaderFunctionDefinition::Name' has a wrong offset!");
-static_assert(offsetof(FShaderFunctionDefinition, ParamTypes) == 0x000010, "Member 'FShaderFunctionDefinition::ParamTypes' has a wrong offset!");
-static_assert(offsetof(FShaderFunctionDefinition, bHasReturnType) == 0x000020, "Member 'FShaderFunctionDefinition::bHasReturnType' has a wrong offset!");
+DUMPER7_ASSERTS_FShaderFunctionDefinition;
 
 }
 

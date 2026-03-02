@@ -24,9 +24,7 @@ struct AudioGameplayCondition_ConditionMet final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioGameplayCondition_ConditionMet) == 0x000001, "Wrong alignment on AudioGameplayCondition_ConditionMet");
-static_assert(sizeof(AudioGameplayCondition_ConditionMet) == 0x000001, "Wrong size on AudioGameplayCondition_ConditionMet");
-static_assert(offsetof(AudioGameplayCondition_ConditionMet, ReturnValue) == 0x000000, "Member 'AudioGameplayCondition_ConditionMet::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioGameplayCondition_ConditionMet;
 
 // Function AudioGameplay.AudioGameplayCondition.ConditionMet_Position
 // 0x0020 (0x0020 - 0x0000)
@@ -37,10 +35,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(AudioGameplayCondition_ConditionMet_Position) == 0x000008, "Wrong alignment on AudioGameplayCondition_ConditionMet_Position");
-static_assert(sizeof(AudioGameplayCondition_ConditionMet_Position) == 0x000020, "Wrong size on AudioGameplayCondition_ConditionMet_Position");
-static_assert(offsetof(AudioGameplayCondition_ConditionMet_Position, Position) == 0x000000, "Member 'AudioGameplayCondition_ConditionMet_Position::Position' has a wrong offset!");
-static_assert(offsetof(AudioGameplayCondition_ConditionMet_Position, ReturnValue) == 0x000018, "Member 'AudioGameplayCondition_ConditionMet_Position::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioGameplayCondition_ConditionMet_Position;
 
 // Function AudioGameplay.AudioComponentGroup.StaticGetOrCreateComponentGroup
 // 0x0010 (0x0010 - 0x0000)
@@ -50,10 +45,7 @@ public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UAudioComponentGroup*                   ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_StaticGetOrCreateComponentGroup) == 0x000008, "Wrong alignment on AudioComponentGroup_StaticGetOrCreateComponentGroup");
-static_assert(sizeof(AudioComponentGroup_StaticGetOrCreateComponentGroup) == 0x000010, "Wrong size on AudioComponentGroup_StaticGetOrCreateComponentGroup");
-static_assert(offsetof(AudioComponentGroup_StaticGetOrCreateComponentGroup, Actor) == 0x000000, "Member 'AudioComponentGroup_StaticGetOrCreateComponentGroup::Actor' has a wrong offset!");
-static_assert(offsetof(AudioComponentGroup_StaticGetOrCreateComponentGroup, ReturnValue) == 0x000008, "Member 'AudioComponentGroup_StaticGetOrCreateComponentGroup::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_StaticGetOrCreateComponentGroup;
 
 // Function AudioGameplay.AudioComponentGroup.AddExtension
 // 0x0010 (0x0010 - 0x0000)
@@ -62,9 +54,7 @@ struct AudioComponentGroup_AddExtension final
 public:
 	TScriptInterface<class IAudioComponentGroupExtension> NewExtension;                              // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_AddExtension) == 0x000008, "Wrong alignment on AudioComponentGroup_AddExtension");
-static_assert(sizeof(AudioComponentGroup_AddExtension) == 0x000010, "Wrong size on AudioComponentGroup_AddExtension");
-static_assert(offsetof(AudioComponentGroup_AddExtension, NewExtension) == 0x000000, "Member 'AudioComponentGroup_AddExtension::NewExtension' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_AddExtension;
 
 // Function AudioGameplay.AudioComponentGroup.AddExternalComponent
 // 0x0008 (0x0008 - 0x0000)
@@ -73,9 +63,7 @@ struct AudioComponentGroup_AddExternalComponent final
 public:
 	class UAudioComponent*                        ComponentToAdd;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_AddExternalComponent) == 0x000008, "Wrong alignment on AudioComponentGroup_AddExternalComponent");
-static_assert(sizeof(AudioComponentGroup_AddExternalComponent) == 0x000008, "Wrong size on AudioComponentGroup_AddExternalComponent");
-static_assert(offsetof(AudioComponentGroup_AddExternalComponent, ComponentToAdd) == 0x000000, "Member 'AudioComponentGroup_AddExternalComponent::ComponentToAdd' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_AddExternalComponent;
 
 // Function AudioGameplay.AudioComponentGroup.BroadcastEvent
 // 0x0008 (0x0008 - 0x0000)
@@ -84,9 +72,7 @@ struct AudioComponentGroup_BroadcastEvent final
 public:
 	class FName                                   EventName;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_BroadcastEvent) == 0x000004, "Wrong alignment on AudioComponentGroup_BroadcastEvent");
-static_assert(sizeof(AudioComponentGroup_BroadcastEvent) == 0x000008, "Wrong size on AudioComponentGroup_BroadcastEvent");
-static_assert(offsetof(AudioComponentGroup_BroadcastEvent, EventName) == 0x000000, "Member 'AudioComponentGroup_BroadcastEvent::EventName' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_BroadcastEvent;
 
 // Function AudioGameplay.AudioComponentGroup.RemoveExtension
 // 0x0010 (0x0010 - 0x0000)
@@ -95,9 +81,7 @@ struct AudioComponentGroup_RemoveExtension final
 public:
 	TScriptInterface<class IAudioComponentGroupExtension> NewExtension;                              // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_RemoveExtension) == 0x000008, "Wrong alignment on AudioComponentGroup_RemoveExtension");
-static_assert(sizeof(AudioComponentGroup_RemoveExtension) == 0x000010, "Wrong size on AudioComponentGroup_RemoveExtension");
-static_assert(offsetof(AudioComponentGroup_RemoveExtension, NewExtension) == 0x000000, "Member 'AudioComponentGroup_RemoveExtension::NewExtension' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_RemoveExtension;
 
 // Function AudioGameplay.AudioComponentGroup.RemoveExternalComponent
 // 0x0008 (0x0008 - 0x0000)
@@ -106,9 +90,7 @@ struct AudioComponentGroup_RemoveExternalComponent final
 public:
 	class UAudioComponent*                        ComponentToRemove;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_RemoveExternalComponent) == 0x000008, "Wrong alignment on AudioComponentGroup_RemoveExternalComponent");
-static_assert(sizeof(AudioComponentGroup_RemoveExternalComponent) == 0x000008, "Wrong size on AudioComponentGroup_RemoveExternalComponent");
-static_assert(offsetof(AudioComponentGroup_RemoveExternalComponent, ComponentToRemove) == 0x000000, "Member 'AudioComponentGroup_RemoveExternalComponent::ComponentToRemove' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_RemoveExternalComponent;
 
 // Function AudioGameplay.AudioComponentGroup.SetLowPassFilter
 // 0x0004 (0x0004 - 0x0000)
@@ -117,9 +99,7 @@ struct AudioComponentGroup_SetLowPassFilter final
 public:
 	float                                         InFrequency;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_SetLowPassFilter) == 0x000004, "Wrong alignment on AudioComponentGroup_SetLowPassFilter");
-static_assert(sizeof(AudioComponentGroup_SetLowPassFilter) == 0x000004, "Wrong size on AudioComponentGroup_SetLowPassFilter");
-static_assert(offsetof(AudioComponentGroup_SetLowPassFilter, InFrequency) == 0x000000, "Member 'AudioComponentGroup_SetLowPassFilter::InFrequency' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_SetLowPassFilter;
 
 // Function AudioGameplay.AudioComponentGroup.SetPitchMultiplier
 // 0x0004 (0x0004 - 0x0000)
@@ -128,9 +108,7 @@ struct AudioComponentGroup_SetPitchMultiplier final
 public:
 	float                                         InPitch;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_SetPitchMultiplier) == 0x000004, "Wrong alignment on AudioComponentGroup_SetPitchMultiplier");
-static_assert(sizeof(AudioComponentGroup_SetPitchMultiplier) == 0x000004, "Wrong size on AudioComponentGroup_SetPitchMultiplier");
-static_assert(offsetof(AudioComponentGroup_SetPitchMultiplier, InPitch) == 0x000000, "Member 'AudioComponentGroup_SetPitchMultiplier::InPitch' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_SetPitchMultiplier;
 
 // Function AudioGameplay.AudioComponentGroup.SetVolumeMultiplier
 // 0x0004 (0x0004 - 0x0000)
@@ -139,9 +117,7 @@ struct AudioComponentGroup_SetVolumeMultiplier final
 public:
 	float                                         InVolume;                                          // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_SetVolumeMultiplier) == 0x000004, "Wrong alignment on AudioComponentGroup_SetVolumeMultiplier");
-static_assert(sizeof(AudioComponentGroup_SetVolumeMultiplier) == 0x000004, "Wrong size on AudioComponentGroup_SetVolumeMultiplier");
-static_assert(offsetof(AudioComponentGroup_SetVolumeMultiplier, InVolume) == 0x000000, "Member 'AudioComponentGroup_SetVolumeMultiplier::InVolume' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_SetVolumeMultiplier;
 
 // Function AudioGameplay.AudioComponentGroup.StopSound
 // 0x0010 (0x0010 - 0x0000)
@@ -152,10 +128,7 @@ public:
 	float                                         FadeTime;                                          // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(AudioComponentGroup_StopSound) == 0x000008, "Wrong alignment on AudioComponentGroup_StopSound");
-static_assert(sizeof(AudioComponentGroup_StopSound) == 0x000010, "Wrong size on AudioComponentGroup_StopSound");
-static_assert(offsetof(AudioComponentGroup_StopSound, Sound) == 0x000000, "Member 'AudioComponentGroup_StopSound::Sound' has a wrong offset!");
-static_assert(offsetof(AudioComponentGroup_StopSound, FadeTime) == 0x000008, "Member 'AudioComponentGroup_StopSound::FadeTime' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_StopSound;
 
 // Function AudioGameplay.AudioComponentGroup.SubscribeToBool
 // 0x0018 (0x0018 - 0x0000)
@@ -165,10 +138,7 @@ public:
 	class FName                                   ParamName;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(const bool ParamValue)>        Delegate;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_SubscribeToBool) == 0x000004, "Wrong alignment on AudioComponentGroup_SubscribeToBool");
-static_assert(sizeof(AudioComponentGroup_SubscribeToBool) == 0x000018, "Wrong size on AudioComponentGroup_SubscribeToBool");
-static_assert(offsetof(AudioComponentGroup_SubscribeToBool, ParamName) == 0x000000, "Member 'AudioComponentGroup_SubscribeToBool::ParamName' has a wrong offset!");
-static_assert(offsetof(AudioComponentGroup_SubscribeToBool, Delegate) == 0x000008, "Member 'AudioComponentGroup_SubscribeToBool::Delegate' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_SubscribeToBool;
 
 // Function AudioGameplay.AudioComponentGroup.SubscribeToEvent
 // 0x0018 (0x0018 - 0x0000)
@@ -178,10 +148,7 @@ public:
 	class FName                                   EventName;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(const class FName& EventName)> Delegate;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_SubscribeToEvent) == 0x000004, "Wrong alignment on AudioComponentGroup_SubscribeToEvent");
-static_assert(sizeof(AudioComponentGroup_SubscribeToEvent) == 0x000018, "Wrong size on AudioComponentGroup_SubscribeToEvent");
-static_assert(offsetof(AudioComponentGroup_SubscribeToEvent, EventName) == 0x000000, "Member 'AudioComponentGroup_SubscribeToEvent::EventName' has a wrong offset!");
-static_assert(offsetof(AudioComponentGroup_SubscribeToEvent, Delegate) == 0x000008, "Member 'AudioComponentGroup_SubscribeToEvent::Delegate' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_SubscribeToEvent;
 
 // Function AudioGameplay.AudioComponentGroup.SubscribeToStringParam
 // 0x0018 (0x0018 - 0x0000)
@@ -191,10 +158,7 @@ public:
 	class FName                                   ParamName;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(const class FString& Value)>   Delegate;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_SubscribeToStringParam) == 0x000004, "Wrong alignment on AudioComponentGroup_SubscribeToStringParam");
-static_assert(sizeof(AudioComponentGroup_SubscribeToStringParam) == 0x000018, "Wrong size on AudioComponentGroup_SubscribeToStringParam");
-static_assert(offsetof(AudioComponentGroup_SubscribeToStringParam, ParamName) == 0x000000, "Member 'AudioComponentGroup_SubscribeToStringParam::ParamName' has a wrong offset!");
-static_assert(offsetof(AudioComponentGroup_SubscribeToStringParam, Delegate) == 0x000008, "Member 'AudioComponentGroup_SubscribeToStringParam::Delegate' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_SubscribeToStringParam;
 
 // Function AudioGameplay.AudioComponentGroup.UnsubscribeObject
 // 0x0008 (0x0008 - 0x0000)
@@ -203,9 +167,7 @@ struct AudioComponentGroup_UnsubscribeObject final
 public:
 	const class UObject*                          Object;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_UnsubscribeObject) == 0x000008, "Wrong alignment on AudioComponentGroup_UnsubscribeObject");
-static_assert(sizeof(AudioComponentGroup_UnsubscribeObject) == 0x000008, "Wrong size on AudioComponentGroup_UnsubscribeObject");
-static_assert(offsetof(AudioComponentGroup_UnsubscribeObject, Object) == 0x000000, "Member 'AudioComponentGroup_UnsubscribeObject::Object' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_UnsubscribeObject;
 
 // Function AudioGameplay.AudioComponentGroup.GetBoolParamValue
 // 0x000C (0x000C - 0x0000)
@@ -216,10 +178,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(AudioComponentGroup_GetBoolParamValue) == 0x000004, "Wrong alignment on AudioComponentGroup_GetBoolParamValue");
-static_assert(sizeof(AudioComponentGroup_GetBoolParamValue) == 0x00000C, "Wrong size on AudioComponentGroup_GetBoolParamValue");
-static_assert(offsetof(AudioComponentGroup_GetBoolParamValue, ParamName) == 0x000000, "Member 'AudioComponentGroup_GetBoolParamValue::ParamName' has a wrong offset!");
-static_assert(offsetof(AudioComponentGroup_GetBoolParamValue, ReturnValue) == 0x000008, "Member 'AudioComponentGroup_GetBoolParamValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_GetBoolParamValue;
 
 // Function AudioGameplay.AudioComponentGroup.GetFloatParamValue
 // 0x000C (0x000C - 0x0000)
@@ -229,10 +188,7 @@ public:
 	class FName                                   ParamName;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_GetFloatParamValue) == 0x000004, "Wrong alignment on AudioComponentGroup_GetFloatParamValue");
-static_assert(sizeof(AudioComponentGroup_GetFloatParamValue) == 0x00000C, "Wrong size on AudioComponentGroup_GetFloatParamValue");
-static_assert(offsetof(AudioComponentGroup_GetFloatParamValue, ParamName) == 0x000000, "Member 'AudioComponentGroup_GetFloatParamValue::ParamName' has a wrong offset!");
-static_assert(offsetof(AudioComponentGroup_GetFloatParamValue, ReturnValue) == 0x000008, "Member 'AudioComponentGroup_GetFloatParamValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_GetFloatParamValue;
 
 // Function AudioGameplay.AudioComponentGroup.GetStringParamValue
 // 0x0018 (0x0018 - 0x0000)
@@ -242,10 +198,7 @@ public:
 	class FName                                   ParamName;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_GetStringParamValue) == 0x000008, "Wrong alignment on AudioComponentGroup_GetStringParamValue");
-static_assert(sizeof(AudioComponentGroup_GetStringParamValue) == 0x000018, "Wrong size on AudioComponentGroup_GetStringParamValue");
-static_assert(offsetof(AudioComponentGroup_GetStringParamValue, ParamName) == 0x000000, "Member 'AudioComponentGroup_GetStringParamValue::ParamName' has a wrong offset!");
-static_assert(offsetof(AudioComponentGroup_GetStringParamValue, ReturnValue) == 0x000008, "Member 'AudioComponentGroup_GetStringParamValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_GetStringParamValue;
 
 // Function AudioGameplay.AudioComponentGroup.IsPlayingAny
 // 0x0001 (0x0001 - 0x0000)
@@ -254,9 +207,7 @@ struct AudioComponentGroup_IsPlayingAny final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_IsPlayingAny) == 0x000001, "Wrong alignment on AudioComponentGroup_IsPlayingAny");
-static_assert(sizeof(AudioComponentGroup_IsPlayingAny) == 0x000001, "Wrong size on AudioComponentGroup_IsPlayingAny");
-static_assert(offsetof(AudioComponentGroup_IsPlayingAny, ReturnValue) == 0x000000, "Member 'AudioComponentGroup_IsPlayingAny::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_IsPlayingAny;
 
 // Function AudioGameplay.AudioComponentGroup.IsVirtualized
 // 0x0001 (0x0001 - 0x0000)
@@ -265,9 +216,7 @@ struct AudioComponentGroup_IsVirtualized final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioComponentGroup_IsVirtualized) == 0x000001, "Wrong alignment on AudioComponentGroup_IsVirtualized");
-static_assert(sizeof(AudioComponentGroup_IsVirtualized) == 0x000001, "Wrong size on AudioComponentGroup_IsVirtualized");
-static_assert(offsetof(AudioComponentGroup_IsVirtualized, ReturnValue) == 0x000000, "Member 'AudioComponentGroup_IsVirtualized::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioComponentGroup_IsVirtualized;
 
 // Function AudioGameplay.AudioParameterComponent.GetParameters
 // 0x0010 (0x0010 - 0x0000)
@@ -276,9 +225,7 @@ struct AudioParameterComponent_GetParameters final
 public:
 	TArray<struct FAudioParameter>                ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioParameterComponent_GetParameters) == 0x000008, "Wrong alignment on AudioParameterComponent_GetParameters");
-static_assert(sizeof(AudioParameterComponent_GetParameters) == 0x000010, "Wrong size on AudioParameterComponent_GetParameters");
-static_assert(offsetof(AudioParameterComponent_GetParameters, ReturnValue) == 0x000000, "Member 'AudioParameterComponent_GetParameters::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioParameterComponent_GetParameters;
 
 }
 

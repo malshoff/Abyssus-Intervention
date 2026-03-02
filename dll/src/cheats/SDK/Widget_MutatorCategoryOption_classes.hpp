@@ -11,51 +11,51 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
-#include "CommonInput_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "RGame_classes.hpp"
+#include "UMG_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CommonInput_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_MutatorCategoryOption.Widget_MutatorCategoryOption_C
-// 0x0158 (0x0448 - 0x02F0)
-class UWidget_MutatorCategoryOption_C final : public URLootOptionWidget
+// 0x0158 (0x04B8 - 0x0360)
+class UWidget_MutatorCategoryOption_C : public URLootOptionWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       DissolveAnimation;                                 // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       HoverTrasition;                                    // 0x0300(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       PressedAnimation;                                  // 0x0308(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       LootAnimation;                                     // 0x0310(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 BacgroundGradient;                                 // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                BackgroundFrame;                                   // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 BackgroundLightFX;                                 // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                Body;                                              // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URichTextBlock*                         DescriptionText;                                   // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URichTextBlock*                         HeaderText;                                        // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LootFX_01;                                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                MainButton;                                        // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URetainerBox*                           RetainerBox_Tilt;                                  // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_Altar_God_C*                  W_Button_Altar_God;                                // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWidget_SelectedGlyph_C*                Widget_SelectedGlyph;                              // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_KeywordTooltip_C*               TooltipW;                                          // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FWidgetTransform                       TargetTransform;                                   // 0x0378(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FWidgetTransform                       HoverTransform;                                    // 0x03B0(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	float                                         LerpSpeed;                                         // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3EC[0x4];                                      // 0x03EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               RetainerDMI;                                       // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              TargetMousePosition2D;                             // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              NormalizedMousePosition2D;                         // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BackgroundDepth;                                   // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41C[0x4];                                      // 0x041C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     BodyMaterial;                                      // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     LightFXMaterial;                                   // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     LootFXMaterial;                                    // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     FrameMaterial;                                     // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             FrameTexture;                                      // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UW_Button_Altar_God_C*                  W_Button_Altar_God;                                // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URetainerBox*                           RetainerBox_Tilt;                                  // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                MainButton;                                        // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 LootFX_01;                                         // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URichTextBlock*                         HeaderText;                                        // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URichTextBlock*                         DescriptionText;                                   // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                Body;                                              // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BackgroundLightFX;                                 // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                BackgroundFrame;                                   // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BacgroundGradient;                                 // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       LootAnimation;                                     // 0x03C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       PressedAnimation;                                  // 0x03C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       HoverTrasition;                                    // 0x03D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       DissolveAnimation;                                 // 0x03D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidget_KeywordTooltip_C*               TooltipW;                                          // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetTransform                       TargetTransform;                                   // 0x03E8(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FWidgetTransform                       HoverTransform;                                    // 0x0420(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	float                                         LerpSpeed;                                         // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45C[0x4];                                      // 0x045C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               RetainerDMI;                                       // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              TargetMousePosition2D;                             // 0x0468(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              NormalizedMousePosition2D;                         // 0x0478(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BackgroundDepth;                                   // 0x0488(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_48C[0x4];                                      // 0x048C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     BodyMaterial;                                      // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     LightFXMaterial;                                   // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     LootFXMaterial;                                    // 0x04A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     FrameMaterial;                                     // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             FrameTexture;                                      // 0x04B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddGodPassiveToDescriptionIfCategory(const class FText& InDescription, class URMutatorRewardCategoryDataAsset* Target, class FText* OutDescription);
@@ -84,44 +84,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_MutatorCategoryOption_C">();
+		BP_STATIC_CLASS_IMPL("Widget_MutatorCategoryOption_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_MutatorCategoryOption_C")
 	}
 	static class UWidget_MutatorCategoryOption_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_MutatorCategoryOption_C>();
 	}
 };
-static_assert(alignof(UWidget_MutatorCategoryOption_C) == 0x000008, "Wrong alignment on UWidget_MutatorCategoryOption_C");
-static_assert(sizeof(UWidget_MutatorCategoryOption_C) == 0x000448, "Wrong size on UWidget_MutatorCategoryOption_C");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, UberGraphFrame) == 0x0002F0, "Member 'UWidget_MutatorCategoryOption_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, DissolveAnimation) == 0x0002F8, "Member 'UWidget_MutatorCategoryOption_C::DissolveAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, HoverTrasition) == 0x000300, "Member 'UWidget_MutatorCategoryOption_C::HoverTrasition' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, PressedAnimation) == 0x000308, "Member 'UWidget_MutatorCategoryOption_C::PressedAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, LootAnimation) == 0x000310, "Member 'UWidget_MutatorCategoryOption_C::LootAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, BacgroundGradient) == 0x000318, "Member 'UWidget_MutatorCategoryOption_C::BacgroundGradient' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, BackgroundFrame) == 0x000320, "Member 'UWidget_MutatorCategoryOption_C::BackgroundFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, BackgroundLightFX) == 0x000328, "Member 'UWidget_MutatorCategoryOption_C::BackgroundLightFX' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, Body) == 0x000330, "Member 'UWidget_MutatorCategoryOption_C::Body' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, DescriptionText) == 0x000338, "Member 'UWidget_MutatorCategoryOption_C::DescriptionText' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, HeaderText) == 0x000340, "Member 'UWidget_MutatorCategoryOption_C::HeaderText' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, LootFX_01) == 0x000348, "Member 'UWidget_MutatorCategoryOption_C::LootFX_01' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, MainButton) == 0x000350, "Member 'UWidget_MutatorCategoryOption_C::MainButton' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, RetainerBox_Tilt) == 0x000358, "Member 'UWidget_MutatorCategoryOption_C::RetainerBox_Tilt' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, W_Button_Altar_God) == 0x000360, "Member 'UWidget_MutatorCategoryOption_C::W_Button_Altar_God' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, Widget_SelectedGlyph) == 0x000368, "Member 'UWidget_MutatorCategoryOption_C::Widget_SelectedGlyph' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, TooltipW) == 0x000370, "Member 'UWidget_MutatorCategoryOption_C::TooltipW' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, TargetTransform) == 0x000378, "Member 'UWidget_MutatorCategoryOption_C::TargetTransform' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, HoverTransform) == 0x0003B0, "Member 'UWidget_MutatorCategoryOption_C::HoverTransform' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, LerpSpeed) == 0x0003E8, "Member 'UWidget_MutatorCategoryOption_C::LerpSpeed' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, RetainerDMI) == 0x0003F0, "Member 'UWidget_MutatorCategoryOption_C::RetainerDMI' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, TargetMousePosition2D) == 0x0003F8, "Member 'UWidget_MutatorCategoryOption_C::TargetMousePosition2D' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, NormalizedMousePosition2D) == 0x000408, "Member 'UWidget_MutatorCategoryOption_C::NormalizedMousePosition2D' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, BackgroundDepth) == 0x000418, "Member 'UWidget_MutatorCategoryOption_C::BackgroundDepth' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, BodyMaterial) == 0x000420, "Member 'UWidget_MutatorCategoryOption_C::BodyMaterial' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, LightFXMaterial) == 0x000428, "Member 'UWidget_MutatorCategoryOption_C::LightFXMaterial' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, LootFXMaterial) == 0x000430, "Member 'UWidget_MutatorCategoryOption_C::LootFXMaterial' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, FrameMaterial) == 0x000438, "Member 'UWidget_MutatorCategoryOption_C::FrameMaterial' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorCategoryOption_C, FrameTexture) == 0x000440, "Member 'UWidget_MutatorCategoryOption_C::FrameTexture' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_MutatorCategoryOption_C;
 
 }
 

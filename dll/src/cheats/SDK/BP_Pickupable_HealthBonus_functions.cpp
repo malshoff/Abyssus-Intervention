@@ -60,27 +60,6 @@ void ABP_Pickupable_HealthBonus_C::ExecuteUbergraph_BP_Pickupable_HealthBonus(in
 }
 
 
-// Function BP_Pickupable_HealthBonus.BP_Pickupable_HealthBonus_C.GetBloodPassive1Bonus
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// double*                                 PercentBonus                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Pickupable_HealthBonus_C::GetBloodPassive1Bonus(double* PercentBonus)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Pickupable_HealthBonus_C", "GetBloodPassive1Bonus");
-
-	Params::BP_Pickupable_HealthBonus_C_GetBloodPassive1Bonus Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (PercentBonus != nullptr)
-		*PercentBonus = Parms.PercentBonus;
-}
-
-
 // Function BP_Pickupable_HealthBonus.BP_Pickupable_HealthBonus_C.OnInteract
 // (Event, Public, BlueprintEvent)
 // Parameters:

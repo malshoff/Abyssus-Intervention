@@ -17,12 +17,11 @@ namespace SDK
 {
 
 // ScriptStruct AB_LootGolem.AB_LootGolem_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0x0368 - 0x0368)
+// 0x0000 (0x0390 - 0x0390)
 struct AB_LootGolem::FAnimBlueprintGeneratedConstantData final : public ABP_Golem_Sentry::FAnimBlueprintGeneratedConstantData
 {
 };
-static_assert(alignof(AB_LootGolem::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on AB_LootGolem::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(AB_LootGolem::FAnimBlueprintGeneratedConstantData) == 0x000368, "Wrong size on AB_LootGolem::FAnimBlueprintGeneratedConstantData");
+DUMPER7_ASSERTS_AB_LootGolem__FAnimBlueprintGeneratedConstantData;
 
 }
 

@@ -504,5 +504,19 @@ void UWidget_GraphicSettings_C::SetWidgetCurrentValues(bool bInit)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function Widget_GraphicSettings.Widget_GraphicSettings_C.UpdateOveralSettingWidget
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_GraphicSettings_C::UpdateOveralSettingWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_GraphicSettings_C", "UpdateOveralSettingWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 }
 

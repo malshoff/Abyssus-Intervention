@@ -17,48 +17,36 @@
 namespace SDK
 {
 
-// Function Widget_PlayerGameOverPlayerTile.Widget_PlayerGameOverPlayerTile_C.SetSelected
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    New_Selected                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Widget_PlayerGameOverPlayerTile.Widget_PlayerGameOverPlayerTile_C.BndEvt__Widget_PlayerGameOverPlayerTile_Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_PlayerGameOverPlayerTile_C::SetSelected(bool New_Selected)
+void UWidget_PlayerGameOverPlayerTile_C::BndEvt__Widget_PlayerGameOverPlayerTile_Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverPlayerTile_C", "SetSelected");
+		Func = Class->GetFunction("Widget_PlayerGameOverPlayerTile_C", "BndEvt__Widget_PlayerGameOverPlayerTile_Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
-	Params::Widget_PlayerGameOverPlayerTile_C_SetSelected Parms{};
-
-	Parms.New_Selected = New_Selected;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_PlayerGameOverPlayerTile.Widget_PlayerGameOverPlayerTile_C.Get_Icon_ToolTipWidget
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function Widget_PlayerGameOverPlayerTile.Widget_PlayerGameOverPlayerTile_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-class UWidget* UWidget_PlayerGameOverPlayerTile_C::Get_Icon_ToolTipWidget()
+void UWidget_PlayerGameOverPlayerTile_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverPlayerTile_C", "Get_Icon_ToolTipWidget");
+		Func = Class->GetFunction("Widget_PlayerGameOverPlayerTile_C", "Construct");
 
-	Params::Widget_PlayerGameOverPlayerTile_C_Get_Icon_ToolTipWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function Widget_PlayerGameOverPlayerTile.Widget_PlayerGameOverPlayerTile_C.ExecuteUbergraph_Widget_PlayerGameOverPlayerTile
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -77,31 +65,103 @@ void UWidget_PlayerGameOverPlayerTile_C::ExecuteUbergraph_Widget_PlayerGameOverP
 }
 
 
-// Function Widget_PlayerGameOverPlayerTile.Widget_PlayerGameOverPlayerTile_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_PlayerGameOverPlayerTile.Widget_PlayerGameOverPlayerTile_C.GetToolTipWidget
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_PlayerGameOverPlayerTile_C::Construct()
+class UWidget* UWidget_PlayerGameOverPlayerTile_C::GetToolTipWidget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverPlayerTile_C", "Construct");
+		Func = Class->GetFunction("Widget_PlayerGameOverPlayerTile_C", "GetToolTipWidget");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Widget_PlayerGameOverPlayerTile_C_GetToolTipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
-// Function Widget_PlayerGameOverPlayerTile.Widget_PlayerGameOverPlayerTile_C.BndEvt__Widget_PlayerGameOverPlayerTile_Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function Widget_PlayerGameOverPlayerTile.Widget_PlayerGameOverPlayerTile_C.OnAddedToFocusPath
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
-void UWidget_PlayerGameOverPlayerTile_C::BndEvt__Widget_PlayerGameOverPlayerTile_Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+void UWidget_PlayerGameOverPlayerTile_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverPlayerTile_C", "BndEvt__Widget_PlayerGameOverPlayerTile_Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+		Func = Class->GetFunction("Widget_PlayerGameOverPlayerTile_C", "OnAddedToFocusPath");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Widget_PlayerGameOverPlayerTile_C_OnAddedToFocusPath Parms{};
+
+	Parms.InFocusEvent = std::move(InFocusEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerGameOverPlayerTile.Widget_PlayerGameOverPlayerTile_C.OnRemovedFromFocusPath
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+
+void UWidget_PlayerGameOverPlayerTile_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerGameOverPlayerTile_C", "OnRemovedFromFocusPath");
+
+	Params::Widget_PlayerGameOverPlayerTile_C_OnRemovedFromFocusPath Parms{};
+
+	Parms.InFocusEvent = std::move(InFocusEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerGameOverPlayerTile.Widget_PlayerGameOverPlayerTile_C.SetSelected
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Selected                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_PlayerGameOverPlayerTile_C::SetSelected(bool Selected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerGameOverPlayerTile_C", "SetSelected");
+
+	Params::Widget_PlayerGameOverPlayerTile_C_SetSelected Parms{};
+
+	Parms.Selected = Selected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerGameOverPlayerTile.Widget_PlayerGameOverPlayerTile_C.UpdateGamepadFocus
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    HasFocus                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_PlayerGameOverPlayerTile_C::UpdateGamepadFocus(bool HasFocus)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerGameOverPlayerTile_C", "UpdateGamepadFocus");
+
+	Params::Widget_PlayerGameOverPlayerTile_C_UpdateGamepadFocus Parms{};
+
+	Parms.HasFocus = HasFocus;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

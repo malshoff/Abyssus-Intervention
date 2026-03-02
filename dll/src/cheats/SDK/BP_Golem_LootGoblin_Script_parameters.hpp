@@ -29,13 +29,7 @@ public:
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class URPawnMovementComponent*                CallFunc_GetRPawnMovementComponent_ReturnValue;    // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Golem_LootGoblin_Script_C_ExecuteUbergraph_BP_Golem_LootGoblin_Script) == 0x000008, "Wrong alignment on BP_Golem_LootGoblin_Script_C_ExecuteUbergraph_BP_Golem_LootGoblin_Script");
-static_assert(sizeof(BP_Golem_LootGoblin_Script_C_ExecuteUbergraph_BP_Golem_LootGoblin_Script) == 0x000050, "Wrong size on BP_Golem_LootGoblin_Script_C_ExecuteUbergraph_BP_Golem_LootGoblin_Script");
-static_assert(offsetof(BP_Golem_LootGoblin_Script_C_ExecuteUbergraph_BP_Golem_LootGoblin_Script, EntryPoint) == 0x000000, "Member 'BP_Golem_LootGoblin_Script_C_ExecuteUbergraph_BP_Golem_LootGoblin_Script::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Golem_LootGoblin_Script_C_ExecuteUbergraph_BP_Golem_LootGoblin_Script, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Golem_LootGoblin_Script_C_ExecuteUbergraph_BP_Golem_LootGoblin_Script::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Golem_LootGoblin_Script_C_ExecuteUbergraph_BP_Golem_LootGoblin_Script, K2Node_DynamicCast_AsREnemy_Pawn_Base) == 0x000038, "Member 'BP_Golem_LootGoblin_Script_C_ExecuteUbergraph_BP_Golem_LootGoblin_Script::K2Node_DynamicCast_AsREnemy_Pawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Golem_LootGoblin_Script_C_ExecuteUbergraph_BP_Golem_LootGoblin_Script, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_Golem_LootGoblin_Script_C_ExecuteUbergraph_BP_Golem_LootGoblin_Script::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Golem_LootGoblin_Script_C_ExecuteUbergraph_BP_Golem_LootGoblin_Script, CallFunc_GetRPawnMovementComponent_ReturnValue) == 0x000048, "Member 'BP_Golem_LootGoblin_Script_C_ExecuteUbergraph_BP_Golem_LootGoblin_Script::CallFunc_GetRPawnMovementComponent_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Golem_LootGoblin_Script_C_ExecuteUbergraph_BP_Golem_LootGoblin_Script;
 
 }
 

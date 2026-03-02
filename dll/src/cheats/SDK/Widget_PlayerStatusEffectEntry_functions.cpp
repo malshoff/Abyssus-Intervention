@@ -72,7 +72,7 @@ void UWidget_PlayerStatusEffectEntry_C::SetCooldownProgress(float Progress)
 
 
 // Function Widget_PlayerStatusEffectEntry.Widget_PlayerStatusEffectEntry_C.Setup
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class URStatusEffectGScript*            InStatusEffectScript                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 

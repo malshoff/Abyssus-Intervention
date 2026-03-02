@@ -18,33 +18,31 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_OceanGod_Tentacle_PlayerBuff_Projectile.BP_OceanGod_Tentacle_PlayerBuff_Projectile_C
-// 0x0028 (0x0648 - 0x0620)
+// 0x0028 (0x0678 - 0x0650)
 class ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C final : public ABP_OceanGod_Tentacle_ProjectileBase_C
 {
 public:
-	class AActor*                                 IntendedTarget_0;                                  // 0x0620(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	struct FTimerHandle                           AccellerationTimerEvent_0;                         // 0x0628(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        Total2DDistance_0;                                 // 0x0630(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DistancePercentegeToStartHoming_0;                 // 0x0638(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          TargetsEnemies_0;                                  // 0x0640(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 IntendedTarget_0;                                  // 0x0650(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FTimerHandle                           AccellerationTimerEvent_0;                         // 0x0658(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        Total2DDistance_0;                                 // 0x0660(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DistancePercentegeToStartHoming_0;                 // 0x0668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          TargetsEnemies_0;                                  // 0x0670(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_OceanGod_Tentacle_PlayerBuff_Projectile_C">();
+		BP_STATIC_CLASS_IMPL("BP_OceanGod_Tentacle_PlayerBuff_Projectile_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_OceanGod_Tentacle_PlayerBuff_Projectile_C")
 	}
 	static class ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C>();
 	}
 };
-static_assert(alignof(ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C) == 0x000008, "Wrong alignment on ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C");
-static_assert(sizeof(ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C) == 0x000648, "Wrong size on ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C");
-static_assert(offsetof(ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C, IntendedTarget_0) == 0x000620, "Member 'ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C::IntendedTarget_0' has a wrong offset!");
-static_assert(offsetof(ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C, AccellerationTimerEvent_0) == 0x000628, "Member 'ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C::AccellerationTimerEvent_0' has a wrong offset!");
-static_assert(offsetof(ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C, Total2DDistance_0) == 0x000630, "Member 'ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C::Total2DDistance_0' has a wrong offset!");
-static_assert(offsetof(ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C, DistancePercentegeToStartHoming_0) == 0x000638, "Member 'ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C::DistancePercentegeToStartHoming_0' has a wrong offset!");
-static_assert(offsetof(ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C, TargetsEnemies_0) == 0x000640, "Member 'ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C::TargetsEnemies_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_OceanGod_Tentacle_PlayerBuff_Projectile_C;
 
 }
 

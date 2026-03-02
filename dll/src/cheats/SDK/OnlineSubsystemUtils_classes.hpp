@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "OnlineSubsystemUtils_structs.hpp"
-#include "Engine_classes.hpp"
-#include "CoreUObject_classes.hpp"
 #include "OnlineSubsystem_structs.hpp"
+#include "Engine_classes.hpp"
+#include "OnlineSubsystemUtils_structs.hpp"
 #include "AudioMixer_classes.hpp"
+#include "CoreUObject_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
@@ -26,21 +26,24 @@ namespace SDK
 class UAchievementBlueprintLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static void GetCachedAchievementDescription(class UObject* WorldContextObject, class APlayerController* PlayerController, class FName AchievementID, bool* bFoundID, class FText* Title, class FText* LockedDescription, class FText* UnlockedDescription, bool* bHidden);
-	static void GetCachedAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, class FName AchievementID, bool* bFoundID, float* Progress);
+	static void GetCachedAchievementDescription(class UObject* WorldContextObject, class APlayerController* PlayerController, class FName AchievementId, bool* bFoundID, class FText* Title, class FText* LockedDescription, class FText* UnlockedDescription, bool* bHidden);
+	static void GetCachedAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, class FName AchievementId, bool* bFoundID, float* Progress);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AchievementBlueprintLibrary">();
+		STATIC_CLASS_IMPL("AchievementBlueprintLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AchievementBlueprintLibrary")
 	}
 	static class UAchievementBlueprintLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAchievementBlueprintLibrary>();
 	}
 };
-static_assert(alignof(UAchievementBlueprintLibrary) == 0x000008, "Wrong alignment on UAchievementBlueprintLibrary");
-static_assert(sizeof(UAchievementBlueprintLibrary) == 0x000028, "Wrong size on UAchievementBlueprintLibrary");
+DUMPER7_ASSERTS_UAchievementBlueprintLibrary;
 
 // Class OnlineSubsystemUtils.AchievementQueryCallbackProxy
 // 0x0038 (0x0068 - 0x0030)
@@ -58,17 +61,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AchievementQueryCallbackProxy">();
+		STATIC_CLASS_IMPL("AchievementQueryCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AchievementQueryCallbackProxy")
 	}
 	static class UAchievementQueryCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAchievementQueryCallbackProxy>();
 	}
 };
-static_assert(alignof(UAchievementQueryCallbackProxy) == 0x000008, "Wrong alignment on UAchievementQueryCallbackProxy");
-static_assert(sizeof(UAchievementQueryCallbackProxy) == 0x000068, "Wrong size on UAchievementQueryCallbackProxy");
-static_assert(offsetof(UAchievementQueryCallbackProxy, onSuccess) == 0x000030, "Member 'UAchievementQueryCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(UAchievementQueryCallbackProxy, onFailure) == 0x000040, "Member 'UAchievementQueryCallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UAchievementQueryCallbackProxy;
 
 // Class OnlineSubsystemUtils.AchievementWriteCallbackProxy
 // 0x0078 (0x00A8 - 0x0030)
@@ -88,19 +92,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AchievementWriteCallbackProxy">();
+		STATIC_CLASS_IMPL("AchievementWriteCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AchievementWriteCallbackProxy")
 	}
 	static class UAchievementWriteCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAchievementWriteCallbackProxy>();
 	}
 };
-static_assert(alignof(UAchievementWriteCallbackProxy) == 0x000008, "Wrong alignment on UAchievementWriteCallbackProxy");
-static_assert(sizeof(UAchievementWriteCallbackProxy) == 0x0000A8, "Wrong size on UAchievementWriteCallbackProxy");
-static_assert(offsetof(UAchievementWriteCallbackProxy, OnWriteSuccess) == 0x000030, "Member 'UAchievementWriteCallbackProxy::OnWriteSuccess' has a wrong offset!");
-static_assert(offsetof(UAchievementWriteCallbackProxy, OnWriteFailure) == 0x000040, "Member 'UAchievementWriteCallbackProxy::OnWriteFailure' has a wrong offset!");
-static_assert(offsetof(UAchievementWriteCallbackProxy, onSuccess) == 0x000050, "Member 'UAchievementWriteCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(UAchievementWriteCallbackProxy, onFailure) == 0x000060, "Member 'UAchievementWriteCallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UAchievementWriteCallbackProxy;
 
 // Class OnlineSubsystemUtils.ConnectionCallbackProxy
 // 0x0048 (0x0078 - 0x0030)
@@ -117,17 +120,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ConnectionCallbackProxy">();
+		STATIC_CLASS_IMPL("ConnectionCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ConnectionCallbackProxy")
 	}
 	static class UConnectionCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UConnectionCallbackProxy>();
 	}
 };
-static_assert(alignof(UConnectionCallbackProxy) == 0x000008, "Wrong alignment on UConnectionCallbackProxy");
-static_assert(sizeof(UConnectionCallbackProxy) == 0x000078, "Wrong size on UConnectionCallbackProxy");
-static_assert(offsetof(UConnectionCallbackProxy, onSuccess) == 0x000030, "Member 'UConnectionCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(UConnectionCallbackProxy, onFailure) == 0x000040, "Member 'UConnectionCallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UConnectionCallbackProxy;
 
 // Class OnlineSubsystemUtils.CreateSessionCallbackProxy
 // 0x0068 (0x0098 - 0x0030)
@@ -144,17 +148,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"CreateSessionCallbackProxy">();
+		STATIC_CLASS_IMPL("CreateSessionCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CreateSessionCallbackProxy")
 	}
 	static class UCreateSessionCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCreateSessionCallbackProxy>();
 	}
 };
-static_assert(alignof(UCreateSessionCallbackProxy) == 0x000008, "Wrong alignment on UCreateSessionCallbackProxy");
-static_assert(sizeof(UCreateSessionCallbackProxy) == 0x000098, "Wrong size on UCreateSessionCallbackProxy");
-static_assert(offsetof(UCreateSessionCallbackProxy, onSuccess) == 0x000030, "Member 'UCreateSessionCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(UCreateSessionCallbackProxy, onFailure) == 0x000040, "Member 'UCreateSessionCallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UCreateSessionCallbackProxy;
 
 // Class OnlineSubsystemUtils.DestroySessionCallbackProxy
 // 0x0048 (0x0078 - 0x0030)
@@ -171,17 +176,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DestroySessionCallbackProxy">();
+		STATIC_CLASS_IMPL("DestroySessionCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DestroySessionCallbackProxy")
 	}
 	static class UDestroySessionCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDestroySessionCallbackProxy>();
 	}
 };
-static_assert(alignof(UDestroySessionCallbackProxy) == 0x000008, "Wrong alignment on UDestroySessionCallbackProxy");
-static_assert(sizeof(UDestroySessionCallbackProxy) == 0x000078, "Wrong size on UDestroySessionCallbackProxy");
-static_assert(offsetof(UDestroySessionCallbackProxy, onSuccess) == 0x000030, "Member 'UDestroySessionCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(UDestroySessionCallbackProxy, onFailure) == 0x000040, "Member 'UDestroySessionCallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UDestroySessionCallbackProxy;
 
 // Class OnlineSubsystemUtils.EndMatchCallbackProxy
 // 0x0050 (0x0080 - 0x0030)
@@ -198,17 +204,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EndMatchCallbackProxy">();
+		STATIC_CLASS_IMPL("EndMatchCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EndMatchCallbackProxy")
 	}
 	static class UEndMatchCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEndMatchCallbackProxy>();
 	}
 };
-static_assert(alignof(UEndMatchCallbackProxy) == 0x000008, "Wrong alignment on UEndMatchCallbackProxy");
-static_assert(sizeof(UEndMatchCallbackProxy) == 0x000080, "Wrong size on UEndMatchCallbackProxy");
-static_assert(offsetof(UEndMatchCallbackProxy, onSuccess) == 0x000030, "Member 'UEndMatchCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(UEndMatchCallbackProxy, onFailure) == 0x000040, "Member 'UEndMatchCallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UEndMatchCallbackProxy;
 
 // Class OnlineSubsystemUtils.EndTurnCallbackProxy
 // 0x0048 (0x0078 - 0x0030)
@@ -225,17 +232,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EndTurnCallbackProxy">();
+		STATIC_CLASS_IMPL("EndTurnCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EndTurnCallbackProxy")
 	}
 	static class UEndTurnCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEndTurnCallbackProxy>();
 	}
 };
-static_assert(alignof(UEndTurnCallbackProxy) == 0x000008, "Wrong alignment on UEndTurnCallbackProxy");
-static_assert(sizeof(UEndTurnCallbackProxy) == 0x000078, "Wrong size on UEndTurnCallbackProxy");
-static_assert(offsetof(UEndTurnCallbackProxy, onSuccess) == 0x000030, "Member 'UEndTurnCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(UEndTurnCallbackProxy, onFailure) == 0x000040, "Member 'UEndTurnCallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UEndTurnCallbackProxy;
 
 // Class OnlineSubsystemUtils.FindSessionsCallbackProxy
 // 0x0060 (0x0090 - 0x0030)
@@ -256,17 +264,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FindSessionsCallbackProxy">();
+		STATIC_CLASS_IMPL("FindSessionsCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FindSessionsCallbackProxy")
 	}
 	static class UFindSessionsCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFindSessionsCallbackProxy>();
 	}
 };
-static_assert(alignof(UFindSessionsCallbackProxy) == 0x000008, "Wrong alignment on UFindSessionsCallbackProxy");
-static_assert(sizeof(UFindSessionsCallbackProxy) == 0x000090, "Wrong size on UFindSessionsCallbackProxy");
-static_assert(offsetof(UFindSessionsCallbackProxy, onSuccess) == 0x000030, "Member 'UFindSessionsCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(UFindSessionsCallbackProxy, onFailure) == 0x000040, "Member 'UFindSessionsCallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UFindSessionsCallbackProxy;
 
 // Class OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy
 // 0x0058 (0x0088 - 0x0030)
@@ -283,17 +292,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FindTurnBasedMatchCallbackProxy">();
+		STATIC_CLASS_IMPL("FindTurnBasedMatchCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FindTurnBasedMatchCallbackProxy")
 	}
 	static class UFindTurnBasedMatchCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFindTurnBasedMatchCallbackProxy>();
 	}
 };
-static_assert(alignof(UFindTurnBasedMatchCallbackProxy) == 0x000008, "Wrong alignment on UFindTurnBasedMatchCallbackProxy");
-static_assert(sizeof(UFindTurnBasedMatchCallbackProxy) == 0x000088, "Wrong size on UFindTurnBasedMatchCallbackProxy");
-static_assert(offsetof(UFindTurnBasedMatchCallbackProxy, onSuccess) == 0x000030, "Member 'UFindTurnBasedMatchCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(UFindTurnBasedMatchCallbackProxy, onFailure) == 0x000040, "Member 'UFindTurnBasedMatchCallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UFindTurnBasedMatchCallbackProxy;
 
 // Class OnlineSubsystemUtils.InAppPurchaseCallbackProxy2
 // 0x0080 (0x00A8 - 0x0028)
@@ -312,17 +322,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InAppPurchaseCallbackProxy2">();
+		STATIC_CLASS_IMPL("InAppPurchaseCallbackProxy2")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InAppPurchaseCallbackProxy2")
 	}
 	static class UInAppPurchaseCallbackProxy2* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInAppPurchaseCallbackProxy2>();
 	}
 };
-static_assert(alignof(UInAppPurchaseCallbackProxy2) == 0x000008, "Wrong alignment on UInAppPurchaseCallbackProxy2");
-static_assert(sizeof(UInAppPurchaseCallbackProxy2) == 0x0000A8, "Wrong size on UInAppPurchaseCallbackProxy2");
-static_assert(offsetof(UInAppPurchaseCallbackProxy2, onSuccess) == 0x000028, "Member 'UInAppPurchaseCallbackProxy2::onSuccess' has a wrong offset!");
-static_assert(offsetof(UInAppPurchaseCallbackProxy2, onFailure) == 0x000038, "Member 'UInAppPurchaseCallbackProxy2::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UInAppPurchaseCallbackProxy2;
 
 // Class OnlineSubsystemUtils.InAppPurchaseCheckoutCallbackProxy
 // 0x0078 (0x00A0 - 0x0028)
@@ -339,48 +350,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InAppPurchaseCheckoutCallbackProxy">();
+		STATIC_CLASS_IMPL("InAppPurchaseCheckoutCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InAppPurchaseCheckoutCallbackProxy")
 	}
 	static class UInAppPurchaseCheckoutCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInAppPurchaseCheckoutCallbackProxy>();
 	}
 };
-static_assert(alignof(UInAppPurchaseCheckoutCallbackProxy) == 0x000008, "Wrong alignment on UInAppPurchaseCheckoutCallbackProxy");
-static_assert(sizeof(UInAppPurchaseCheckoutCallbackProxy) == 0x0000A0, "Wrong size on UInAppPurchaseCheckoutCallbackProxy");
-static_assert(offsetof(UInAppPurchaseCheckoutCallbackProxy, onSuccess) == 0x000028, "Member 'UInAppPurchaseCheckoutCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(UInAppPurchaseCheckoutCallbackProxy, onFailure) == 0x000038, "Member 'UInAppPurchaseCheckoutCallbackProxy::onFailure' has a wrong offset!");
-
-// Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl
-// 0x0170 (0x0198 - 0x0028)
-class UOnlineEngineInterfaceImpl2 final : public UOnlineEngineInterface
-{
-public:
-	TMap<class FName, class FName>                MappedUniqueNetIdTypes;                            // 0x0028(0x0050)(Config, NativeAccessSpecifierPrivate)
-	TArray<class FName>                           CompatibleUniqueNetIdTypes;                        // 0x0078(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
-	class FName                                   VoiceSubsystemNameOverride;                        // 0x0088(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_90[0xF8];                                      // 0x0090(0x00F8)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bOnlineServicesCompatibilityEnabled;               // 0x0188(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineEngineInterface*                 OnlineServicesCompatibilityInterface;              // 0x0190(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineEngineInterfaceImpl">();
-	}
-	static class UOnlineEngineInterfaceImpl2* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineEngineInterfaceImpl2>();
-	}
-};
-static_assert(alignof(UOnlineEngineInterfaceImpl2) == 0x000008, "Wrong alignment on UOnlineEngineInterfaceImpl2");
-static_assert(sizeof(UOnlineEngineInterfaceImpl2) == 0x000198, "Wrong size on UOnlineEngineInterfaceImpl2");
-static_assert(offsetof(UOnlineEngineInterfaceImpl2, MappedUniqueNetIdTypes) == 0x000028, "Member 'UOnlineEngineInterfaceImpl2::MappedUniqueNetIdTypes' has a wrong offset!");
-static_assert(offsetof(UOnlineEngineInterfaceImpl2, CompatibleUniqueNetIdTypes) == 0x000078, "Member 'UOnlineEngineInterfaceImpl2::CompatibleUniqueNetIdTypes' has a wrong offset!");
-static_assert(offsetof(UOnlineEngineInterfaceImpl2, VoiceSubsystemNameOverride) == 0x000088, "Member 'UOnlineEngineInterfaceImpl2::VoiceSubsystemNameOverride' has a wrong offset!");
-static_assert(offsetof(UOnlineEngineInterfaceImpl2, bOnlineServicesCompatibilityEnabled) == 0x000188, "Member 'UOnlineEngineInterfaceImpl2::bOnlineServicesCompatibilityEnabled' has a wrong offset!");
-static_assert(offsetof(UOnlineEngineInterfaceImpl2, OnlineServicesCompatibilityInterface) == 0x000190, "Member 'UOnlineEngineInterfaceImpl2::OnlineServicesCompatibilityInterface' has a wrong offset!");
+DUMPER7_ASSERTS_UInAppPurchaseCheckoutCallbackProxy;
 
 // Class OnlineSubsystemUtils.InAppPurchaseFinalizeProxy
 // 0x0000 (0x0028 - 0x0028)
@@ -392,15 +373,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InAppPurchaseFinalizeProxy">();
+		STATIC_CLASS_IMPL("InAppPurchaseFinalizeProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InAppPurchaseFinalizeProxy")
 	}
 	static class UInAppPurchaseFinalizeProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInAppPurchaseFinalizeProxy>();
 	}
 };
-static_assert(alignof(UInAppPurchaseFinalizeProxy) == 0x000008, "Wrong alignment on UInAppPurchaseFinalizeProxy");
-static_assert(sizeof(UInAppPurchaseFinalizeProxy) == 0x000028, "Wrong size on UInAppPurchaseFinalizeProxy");
+DUMPER7_ASSERTS_UInAppPurchaseFinalizeProxy;
 
 // Class OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2
 // 0x0040 (0x0068 - 0x0028)
@@ -417,44 +401,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InAppPurchaseQueryCallbackProxy2">();
+		STATIC_CLASS_IMPL("InAppPurchaseQueryCallbackProxy2")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InAppPurchaseQueryCallbackProxy2")
 	}
 	static class UInAppPurchaseQueryCallbackProxy2* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInAppPurchaseQueryCallbackProxy2>();
 	}
 };
-static_assert(alignof(UInAppPurchaseQueryCallbackProxy2) == 0x000008, "Wrong alignment on UInAppPurchaseQueryCallbackProxy2");
-static_assert(sizeof(UInAppPurchaseQueryCallbackProxy2) == 0x000068, "Wrong size on UInAppPurchaseQueryCallbackProxy2");
-static_assert(offsetof(UInAppPurchaseQueryCallbackProxy2, onSuccess) == 0x000028, "Member 'UInAppPurchaseQueryCallbackProxy2::onSuccess' has a wrong offset!");
-static_assert(offsetof(UInAppPurchaseQueryCallbackProxy2, onFailure) == 0x000038, "Member 'UInAppPurchaseQueryCallbackProxy2::onFailure' has a wrong offset!");
-
-// Class OnlineSubsystemUtils.LeaderboardQueryCallbackProxy
-// 0x0078 (0x00A0 - 0x0028)
-class ULeaderboardQueryCallbackProxy final : public UObject
-{
-public:
-	TMulticastInlineDelegate<void(int32 LeaderboardValue)> onSuccess;                                // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(int32 LeaderboardValue)> onFailure;                                // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48[0x58];                                      // 0x0048(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class ULeaderboardQueryCallbackProxy* CreateProxyObjectForIntQuery(class APlayerController* PlayerController, const class FString& StatName);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"LeaderboardQueryCallbackProxy">();
-	}
-	static class ULeaderboardQueryCallbackProxy* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULeaderboardQueryCallbackProxy>();
-	}
-};
-static_assert(alignof(ULeaderboardQueryCallbackProxy) == 0x000008, "Wrong alignment on ULeaderboardQueryCallbackProxy");
-static_assert(sizeof(ULeaderboardQueryCallbackProxy) == 0x0000A0, "Wrong size on ULeaderboardQueryCallbackProxy");
-static_assert(offsetof(ULeaderboardQueryCallbackProxy, onSuccess) == 0x000028, "Member 'ULeaderboardQueryCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(ULeaderboardQueryCallbackProxy, onFailure) == 0x000038, "Member 'ULeaderboardQueryCallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UInAppPurchaseQueryCallbackProxy2;
 
 // Class OnlineSubsystemUtils.InAppPurchaseReceiptsCallbackProxy
 // 0x0060 (0x0088 - 0x0028)
@@ -473,17 +431,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InAppPurchaseReceiptsCallbackProxy">();
+		STATIC_CLASS_IMPL("InAppPurchaseReceiptsCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InAppPurchaseReceiptsCallbackProxy")
 	}
 	static class UInAppPurchaseReceiptsCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInAppPurchaseReceiptsCallbackProxy>();
 	}
 };
-static_assert(alignof(UInAppPurchaseReceiptsCallbackProxy) == 0x000008, "Wrong alignment on UInAppPurchaseReceiptsCallbackProxy");
-static_assert(sizeof(UInAppPurchaseReceiptsCallbackProxy) == 0x000088, "Wrong size on UInAppPurchaseReceiptsCallbackProxy");
-static_assert(offsetof(UInAppPurchaseReceiptsCallbackProxy, onSuccess) == 0x000028, "Member 'UInAppPurchaseReceiptsCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(UInAppPurchaseReceiptsCallbackProxy, onFailure) == 0x000038, "Member 'UInAppPurchaseReceiptsCallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UInAppPurchaseReceiptsCallbackProxy;
 
 // Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2
 // 0x0088 (0x00B0 - 0x0028)
@@ -500,141 +459,80 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InAppPurchaseRestoreCallbackProxy2">();
+		STATIC_CLASS_IMPL("InAppPurchaseRestoreCallbackProxy2")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InAppPurchaseRestoreCallbackProxy2")
 	}
 	static class UInAppPurchaseRestoreCallbackProxy2* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInAppPurchaseRestoreCallbackProxy2>();
 	}
 };
-static_assert(alignof(UInAppPurchaseRestoreCallbackProxy2) == 0x000008, "Wrong alignment on UInAppPurchaseRestoreCallbackProxy2");
-static_assert(sizeof(UInAppPurchaseRestoreCallbackProxy2) == 0x0000B0, "Wrong size on UInAppPurchaseRestoreCallbackProxy2");
-static_assert(offsetof(UInAppPurchaseRestoreCallbackProxy2, onSuccess) == 0x000028, "Member 'UInAppPurchaseRestoreCallbackProxy2::onSuccess' has a wrong offset!");
-static_assert(offsetof(UInAppPurchaseRestoreCallbackProxy2, onFailure) == 0x000038, "Member 'UInAppPurchaseRestoreCallbackProxy2::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UInAppPurchaseRestoreCallbackProxy2;
 
 // Class OnlineSubsystemUtils.IpConnection
-// 0x0090 (0x1E70 - 0x1DE0)
+// 0x0080 (0x1EB0 - 0x1E30)
 class UIpConnection : public UNetConnection
 {
 public:
-	uint8                                         Pad_1DE0[0x74];                                    // 0x1DE0(0x0074)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SocketErrorDisconnectDelay;                        // 0x1E54(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1E58[0x18];                                    // 0x1E58(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E28[0x6C];                                    // 0x1E28(0x006C)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SocketErrorDisconnectDelay;                        // 0x1E94(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1E98[0x18];                                    // 0x1E98(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"IpConnection">();
+		STATIC_CLASS_IMPL("IpConnection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"IpConnection")
 	}
 	static class UIpConnection* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UIpConnection>();
 	}
 };
-static_assert(alignof(UIpConnection) == 0x000008, "Wrong alignment on UIpConnection");
-static_assert(sizeof(UIpConnection) == 0x001E70, "Wrong size on UIpConnection");
-static_assert(offsetof(UIpConnection, SocketErrorDisconnectDelay) == 0x001E54, "Member 'UIpConnection::SocketErrorDisconnectDelay' has a wrong offset!");
+DUMPER7_ASSERTS_UIpConnection;
 
 // Class OnlineSubsystemUtils.IpNetDriver
-// 0x00B0 (0x0980 - 0x08D0)
+// 0x00B0 (0x09A0 - 0x08F0)
 class UIpNetDriver : public UNetDriver
 {
 public:
-	uint8                                         LogPortUnreach : 1;                                // 0x08D0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         AllowPlayerPortUnreach : 1;                        // 0x08D0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bExitOnBindFailure : 1;                            // 0x08D0(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_8D1[0x3];                                      // 0x08D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        MaxPortCountToTry;                                 // 0x08D4(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8D8[0x4];                                      // 0x08D8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        ServerDesiredSocketReceiveBufferBytes;             // 0x08DC(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint32                                        ServerDesiredSocketSendBufferBytes;                // 0x08E0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint32                                        ClientDesiredSocketReceiveBufferBytes;             // 0x08E4(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint32                                        ClientDesiredSocketSendBufferBytes;                // 0x08E8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_8EC[0x4];                                      // 0x08EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        MaxSecondsInReceive;                               // 0x08F0(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         NbPacketsBetweenReceiveTimeTest;                   // 0x08F8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         ResolutionConnectionTimeout;                       // 0x08FC(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_900[0x80];                                     // 0x0900(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         LogPortUnreach : 1;                                // 0x08F0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         AllowPlayerPortUnreach : 1;                        // 0x08F0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bExitOnBindFailure : 1;                            // 0x08F0(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_8F1[0x3];                                      // 0x08F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        MaxPortCountToTry;                                 // 0x08F4(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8F8[0x4];                                      // 0x08F8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        ServerDesiredSocketReceiveBufferBytes;             // 0x08FC(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint32                                        ServerDesiredSocketSendBufferBytes;                // 0x0900(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint32                                        ClientDesiredSocketReceiveBufferBytes;             // 0x0904(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint32                                        ClientDesiredSocketSendBufferBytes;                // 0x0908(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_90C[0x4];                                      // 0x090C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        MaxSecondsInReceive;                               // 0x0910(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         NbPacketsBetweenReceiveTimeTest;                   // 0x0918(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         ResolutionConnectionTimeout;                       // 0x091C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_920[0x80];                                     // 0x0920(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"IpNetDriver">();
+		STATIC_CLASS_IMPL("IpNetDriver")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"IpNetDriver")
 	}
 	static class UIpNetDriver* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UIpNetDriver>();
 	}
 };
-static_assert(alignof(UIpNetDriver) == 0x000008, "Wrong alignment on UIpNetDriver");
-static_assert(sizeof(UIpNetDriver) == 0x000980, "Wrong size on UIpNetDriver");
-static_assert(offsetof(UIpNetDriver, MaxPortCountToTry) == 0x0008D4, "Member 'UIpNetDriver::MaxPortCountToTry' has a wrong offset!");
-static_assert(offsetof(UIpNetDriver, ServerDesiredSocketReceiveBufferBytes) == 0x0008DC, "Member 'UIpNetDriver::ServerDesiredSocketReceiveBufferBytes' has a wrong offset!");
-static_assert(offsetof(UIpNetDriver, ServerDesiredSocketSendBufferBytes) == 0x0008E0, "Member 'UIpNetDriver::ServerDesiredSocketSendBufferBytes' has a wrong offset!");
-static_assert(offsetof(UIpNetDriver, ClientDesiredSocketReceiveBufferBytes) == 0x0008E4, "Member 'UIpNetDriver::ClientDesiredSocketReceiveBufferBytes' has a wrong offset!");
-static_assert(offsetof(UIpNetDriver, ClientDesiredSocketSendBufferBytes) == 0x0008E8, "Member 'UIpNetDriver::ClientDesiredSocketSendBufferBytes' has a wrong offset!");
-static_assert(offsetof(UIpNetDriver, MaxSecondsInReceive) == 0x0008F0, "Member 'UIpNetDriver::MaxSecondsInReceive' has a wrong offset!");
-static_assert(offsetof(UIpNetDriver, NbPacketsBetweenReceiveTimeTest) == 0x0008F8, "Member 'UIpNetDriver::NbPacketsBetweenReceiveTimeTest' has a wrong offset!");
-static_assert(offsetof(UIpNetDriver, ResolutionConnectionTimeout) == 0x0008FC, "Member 'UIpNetDriver::ResolutionConnectionTimeout' has a wrong offset!");
-
-// Class OnlineSubsystemUtils.OnlineBeacon
-// 0x0030 (0x02D8 - 0x02A8)
-class AOnlineBeacon : public AActor
-{
-public:
-	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         BeaconConnectionInitialTimeout;                    // 0x02B0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         BeaconConnectionTimeout;                           // 0x02B4(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UNetDriver*                             NetDriver;                                         // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2C0[0x18];                                     // 0x02C0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineBeacon">();
-	}
-	static class AOnlineBeacon* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AOnlineBeacon>();
-	}
-};
-static_assert(alignof(AOnlineBeacon) == 0x000008, "Wrong alignment on AOnlineBeacon");
-static_assert(sizeof(AOnlineBeacon) == 0x0002D8, "Wrong size on AOnlineBeacon");
-static_assert(offsetof(AOnlineBeacon, BeaconConnectionInitialTimeout) == 0x0002B0, "Member 'AOnlineBeacon::BeaconConnectionInitialTimeout' has a wrong offset!");
-static_assert(offsetof(AOnlineBeacon, BeaconConnectionTimeout) == 0x0002B4, "Member 'AOnlineBeacon::BeaconConnectionTimeout' has a wrong offset!");
-static_assert(offsetof(AOnlineBeacon, NetDriver) == 0x0002B8, "Member 'AOnlineBeacon::NetDriver' has a wrong offset!");
-
-// Class OnlineSubsystemUtils.OnlineBeaconHost
-// 0x0110 (0x03E8 - 0x02D8)
-class AOnlineBeaconHost : public AOnlineBeacon
-{
-public:
-	int32                                         ListenPort;                                        // 0x02D8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bReuseAddressAndPort;                              // 0x02DC(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAuthRequired;                                     // 0x02DD(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2DE[0x2];                                      // 0x02DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        MaxAuthTokenSize;                                  // 0x02E0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2E4[0x54];                                     // 0x02E4(0x0054)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AOnlineBeaconClient*>            ClientActors;                                      // 0x0338(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_348[0xA0];                                     // 0x0348(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineBeaconHost">();
-	}
-	static class AOnlineBeaconHost* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AOnlineBeaconHost>();
-	}
-};
-static_assert(alignof(AOnlineBeaconHost) == 0x000008, "Wrong alignment on AOnlineBeaconHost");
-static_assert(sizeof(AOnlineBeaconHost) == 0x0003E8, "Wrong size on AOnlineBeaconHost");
-static_assert(offsetof(AOnlineBeaconHost, ListenPort) == 0x0002D8, "Member 'AOnlineBeaconHost::ListenPort' has a wrong offset!");
-static_assert(offsetof(AOnlineBeaconHost, bReuseAddressAndPort) == 0x0002DC, "Member 'AOnlineBeaconHost::bReuseAddressAndPort' has a wrong offset!");
-static_assert(offsetof(AOnlineBeaconHost, bAuthRequired) == 0x0002DD, "Member 'AOnlineBeaconHost::bAuthRequired' has a wrong offset!");
-static_assert(offsetof(AOnlineBeaconHost, MaxAuthTokenSize) == 0x0002E0, "Member 'AOnlineBeaconHost::MaxAuthTokenSize' has a wrong offset!");
-static_assert(offsetof(AOnlineBeaconHost, ClientActors) == 0x000338, "Member 'AOnlineBeaconHost::ClientActors' has a wrong offset!");
+DUMPER7_ASSERTS_UIpNetDriver;
 
 // Class OnlineSubsystemUtils.JoinSessionCallbackProxy
 // 0x0168 (0x0198 - 0x0030)
@@ -651,17 +549,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"JoinSessionCallbackProxy">();
+		STATIC_CLASS_IMPL("JoinSessionCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"JoinSessionCallbackProxy")
 	}
 	static class UJoinSessionCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UJoinSessionCallbackProxy>();
 	}
 };
-static_assert(alignof(UJoinSessionCallbackProxy) == 0x000008, "Wrong alignment on UJoinSessionCallbackProxy");
-static_assert(sizeof(UJoinSessionCallbackProxy) == 0x000198, "Wrong size on UJoinSessionCallbackProxy");
-static_assert(offsetof(UJoinSessionCallbackProxy, onSuccess) == 0x000030, "Member 'UJoinSessionCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(UJoinSessionCallbackProxy, onFailure) == 0x000040, "Member 'UJoinSessionCallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UJoinSessionCallbackProxy;
 
 // Class OnlineSubsystemUtils.LeaderboardBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -673,15 +572,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LeaderboardBlueprintLibrary">();
+		STATIC_CLASS_IMPL("LeaderboardBlueprintLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LeaderboardBlueprintLibrary")
 	}
 	static class ULeaderboardBlueprintLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULeaderboardBlueprintLibrary>();
 	}
 };
-static_assert(alignof(ULeaderboardBlueprintLibrary) == 0x000008, "Wrong alignment on ULeaderboardBlueprintLibrary");
-static_assert(sizeof(ULeaderboardBlueprintLibrary) == 0x000028, "Wrong size on ULeaderboardBlueprintLibrary");
+DUMPER7_ASSERTS_ULeaderboardBlueprintLibrary;
 
 // Class OnlineSubsystemUtils.LeaderboardFlushCallbackProxy
 // 0x0040 (0x0068 - 0x0028)
@@ -698,17 +600,46 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LeaderboardFlushCallbackProxy">();
+		STATIC_CLASS_IMPL("LeaderboardFlushCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LeaderboardFlushCallbackProxy")
 	}
 	static class ULeaderboardFlushCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULeaderboardFlushCallbackProxy>();
 	}
 };
-static_assert(alignof(ULeaderboardFlushCallbackProxy) == 0x000008, "Wrong alignment on ULeaderboardFlushCallbackProxy");
-static_assert(sizeof(ULeaderboardFlushCallbackProxy) == 0x000068, "Wrong size on ULeaderboardFlushCallbackProxy");
-static_assert(offsetof(ULeaderboardFlushCallbackProxy, onSuccess) == 0x000028, "Member 'ULeaderboardFlushCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(ULeaderboardFlushCallbackProxy, onFailure) == 0x000038, "Member 'ULeaderboardFlushCallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_ULeaderboardFlushCallbackProxy;
+
+// Class OnlineSubsystemUtils.LeaderboardQueryCallbackProxy
+// 0x0078 (0x00A0 - 0x0028)
+class ULeaderboardQueryCallbackProxy final : public UObject
+{
+public:
+	TMulticastInlineDelegate<void(int32 LeaderboardValue)> onSuccess;                                // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(int32 LeaderboardValue)> onFailure;                                // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x58];                                      // 0x0048(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class ULeaderboardQueryCallbackProxy* CreateProxyObjectForIntQuery(class APlayerController* PlayerController, const class FString& StatName);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LeaderboardQueryCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LeaderboardQueryCallbackProxy")
+	}
+	static class ULeaderboardQueryCallbackProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULeaderboardQueryCallbackProxy>();
+	}
+};
+DUMPER7_ASSERTS_ULeaderboardQueryCallbackProxy;
 
 // Class OnlineSubsystemUtils.LogoutCallbackProxy
 // 0x0038 (0x0068 - 0x0030)
@@ -725,25 +656,53 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LogoutCallbackProxy">();
+		STATIC_CLASS_IMPL("LogoutCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LogoutCallbackProxy")
 	}
 	static class ULogoutCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULogoutCallbackProxy>();
 	}
 };
-static_assert(alignof(ULogoutCallbackProxy) == 0x000008, "Wrong alignment on ULogoutCallbackProxy");
-static_assert(sizeof(ULogoutCallbackProxy) == 0x000068, "Wrong size on ULogoutCallbackProxy");
-static_assert(offsetof(ULogoutCallbackProxy, onSuccess) == 0x000030, "Member 'ULogoutCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(ULogoutCallbackProxy, onFailure) == 0x000040, "Member 'ULogoutCallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_ULogoutCallbackProxy;
+
+// Class OnlineSubsystemUtils.OnlineBeacon
+// 0x0030 (0x02D8 - 0x02A8)
+class AOnlineBeacon : public AActor
+{
+public:
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         BeaconConnectionInitialTimeout;                    // 0x02B0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         BeaconConnectionTimeout;                           // 0x02B4(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UNetDriver*                             NetDriver;                                         // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_2C0[0x18];                                     // 0x02C0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnlineBeacon")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineBeacon")
+	}
+	static class AOnlineBeacon* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AOnlineBeacon>();
+	}
+};
+DUMPER7_ASSERTS_AOnlineBeacon;
 
 // Class OnlineSubsystemUtils.OnlineBeaconClient
 // 0x0060 (0x0338 - 0x02D8)
 class AOnlineBeaconClient : public AOnlineBeacon
 {
 public:
-	class AOnlineBeaconHostObject*                BeaconOwner;                                       // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UNetConnection*                         BeaconConnection;                                  // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class AOnlineBeaconHostObject*                BeaconOwner;                                       // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UNetConnection*                         BeaconConnection;                                  // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	EBeaconConnectionState                        ConnectionState;                                   // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_2E9[0x4F];                                     // 0x02E9(0x004F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -753,18 +712,48 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OnlineBeaconClient">();
+		STATIC_CLASS_IMPL("OnlineBeaconClient")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineBeaconClient")
 	}
 	static class AOnlineBeaconClient* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AOnlineBeaconClient>();
 	}
 };
-static_assert(alignof(AOnlineBeaconClient) == 0x000008, "Wrong alignment on AOnlineBeaconClient");
-static_assert(sizeof(AOnlineBeaconClient) == 0x000338, "Wrong size on AOnlineBeaconClient");
-static_assert(offsetof(AOnlineBeaconClient, BeaconOwner) == 0x0002D8, "Member 'AOnlineBeaconClient::BeaconOwner' has a wrong offset!");
-static_assert(offsetof(AOnlineBeaconClient, BeaconConnection) == 0x0002E0, "Member 'AOnlineBeaconClient::BeaconConnection' has a wrong offset!");
-static_assert(offsetof(AOnlineBeaconClient, ConnectionState) == 0x0002E8, "Member 'AOnlineBeaconClient::ConnectionState' has a wrong offset!");
+DUMPER7_ASSERTS_AOnlineBeaconClient;
+
+// Class OnlineSubsystemUtils.OnlineBeaconHost
+// 0x0110 (0x03E8 - 0x02D8)
+class AOnlineBeaconHost : public AOnlineBeacon
+{
+public:
+	int32                                         ListenPort;                                        // 0x02D8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReuseAddressAndPort;                              // 0x02DC(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAuthRequired;                                     // 0x02DD(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2DE[0x2];                                      // 0x02DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        MaxAuthTokenSize;                                  // 0x02E0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2E4[0x54];                                     // 0x02E4(0x0054)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AOnlineBeaconClient*>            ClientActors;                                      // 0x0338(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_348[0xA0];                                     // 0x0348(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnlineBeaconHost")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineBeaconHost")
+	}
+	static class AOnlineBeaconHost* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AOnlineBeaconHost>();
+	}
+};
+DUMPER7_ASSERTS_AOnlineBeaconHost;
 
 // Class OnlineSubsystemUtils.OnlineBeaconHostObject
 // 0x0028 (0x02D0 - 0x02A8)
@@ -773,23 +762,75 @@ class AOnlineBeaconHostObject : public AActor
 public:
 	class FString                                 BeaconTypeName;                                    // 0x02A8(0x0010)(ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class AOnlineBeaconClient>        ClientBeaconActorClass;                            // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class AOnlineBeaconClient*>            ClientActors;                                      // 0x02C0(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class AOnlineBeaconClient*>            ClientActors;                                      // 0x02C0(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OnlineBeaconHostObject">();
+		STATIC_CLASS_IMPL("OnlineBeaconHostObject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineBeaconHostObject")
 	}
 	static class AOnlineBeaconHostObject* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AOnlineBeaconHostObject>();
 	}
 };
-static_assert(alignof(AOnlineBeaconHostObject) == 0x000008, "Wrong alignment on AOnlineBeaconHostObject");
-static_assert(sizeof(AOnlineBeaconHostObject) == 0x0002D0, "Wrong size on AOnlineBeaconHostObject");
-static_assert(offsetof(AOnlineBeaconHostObject, BeaconTypeName) == 0x0002A8, "Member 'AOnlineBeaconHostObject::BeaconTypeName' has a wrong offset!");
-static_assert(offsetof(AOnlineBeaconHostObject, ClientBeaconActorClass) == 0x0002B8, "Member 'AOnlineBeaconHostObject::ClientBeaconActorClass' has a wrong offset!");
-static_assert(offsetof(AOnlineBeaconHostObject, ClientActors) == 0x0002C0, "Member 'AOnlineBeaconHostObject::ClientActors' has a wrong offset!");
+DUMPER7_ASSERTS_AOnlineBeaconHostObject;
+
+// Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl
+// 0x0170 (0x0198 - 0x0028)
+class UOnlineEngineInterfaceImpl2 final : public UOnlineEngineInterface
+{
+public:
+	TMap<class FName, class FName>                MappedUniqueNetIdTypes;                            // 0x0028(0x0050)(Config, NativeAccessSpecifierPrivate)
+	TArray<class FName>                           CompatibleUniqueNetIdTypes;                        // 0x0078(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
+	class FName                                   VoiceSubsystemNameOverride;                        // 0x0088(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_90[0xF8];                                      // 0x0090(0x00F8)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bOnlineServicesCompatibilityEnabled;               // 0x0188(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineEngineInterface*                 OnlineServicesCompatibilityInterface;              // 0x0190(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnlineEngineInterfaceImpl")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineEngineInterfaceImpl")
+	}
+	static class UOnlineEngineInterfaceImpl2* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineEngineInterfaceImpl2>();
+	}
+};
+DUMPER7_ASSERTS_UOnlineEngineInterfaceImpl2;
+
+// Class OnlineSubsystemUtils.OnlinePIEConfig
+// 0x0010 (0x0038 - 0x0028)
+class UOnlinePIEConfig final : public UObject
+{
+public:
+	TArray<class FString>                         LoginTypesAllowingDuplicates;                      // 0x0028(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnlinePIEConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlinePIEConfig")
+	}
+	static class UOnlinePIEConfig* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlinePIEConfig>();
+	}
+};
+DUMPER7_ASSERTS_UOnlinePIEConfig;
 
 // Class OnlineSubsystemUtils.OnlinePIESettings
 // 0x0018 (0x0050 - 0x0038)
@@ -803,17 +844,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OnlinePIESettings">();
+		STATIC_CLASS_IMPL("OnlinePIESettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlinePIESettings")
 	}
 	static class UOnlinePIESettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UOnlinePIESettings>();
 	}
 };
-static_assert(alignof(UOnlinePIESettings) == 0x000008, "Wrong alignment on UOnlinePIESettings");
-static_assert(sizeof(UOnlinePIESettings) == 0x000050, "Wrong size on UOnlinePIESettings");
-static_assert(offsetof(UOnlinePIESettings, bOnlinePIEEnabled) == 0x000038, "Member 'UOnlinePIESettings::bOnlinePIEEnabled' has a wrong offset!");
-static_assert(offsetof(UOnlinePIESettings, Logins) == 0x000040, "Member 'UOnlinePIESettings::Logins' has a wrong offset!");
+DUMPER7_ASSERTS_UOnlinePIESettings;
 
 // Class OnlineSubsystemUtils.OnlineServicesEngineInterfaceImpl
 // 0x0000 (0x0028 - 0x0028)
@@ -822,15 +864,18 @@ class UOnlineServicesEngineInterfaceImpl final : public UOnlineEngineInterface
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OnlineServicesEngineInterfaceImpl">();
+		STATIC_CLASS_IMPL("OnlineServicesEngineInterfaceImpl")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineServicesEngineInterfaceImpl")
 	}
 	static class UOnlineServicesEngineInterfaceImpl* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UOnlineServicesEngineInterfaceImpl>();
 	}
 };
-static_assert(alignof(UOnlineServicesEngineInterfaceImpl) == 0x000008, "Wrong alignment on UOnlineServicesEngineInterfaceImpl");
-static_assert(sizeof(UOnlineServicesEngineInterfaceImpl) == 0x000028, "Wrong size on UOnlineServicesEngineInterfaceImpl");
+DUMPER7_ASSERTS_UOnlineServicesEngineInterfaceImpl;
 
 // Class OnlineSubsystemUtils.OnlineSessionClient
 // 0x01B8 (0x01E0 - 0x0028)
@@ -845,17 +890,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OnlineSessionClient">();
+		STATIC_CLASS_IMPL("OnlineSessionClient")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineSessionClient")
 	}
 	static class UOnlineSessionClient* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UOnlineSessionClient>();
 	}
 };
-static_assert(alignof(UOnlineSessionClient) == 0x000008, "Wrong alignment on UOnlineSessionClient");
-static_assert(sizeof(UOnlineSessionClient) == 0x0001E0, "Wrong size on UOnlineSessionClient");
-static_assert(offsetof(UOnlineSessionClient, bIsFromInvite) == 0x0001D8, "Member 'UOnlineSessionClient::bIsFromInvite' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionClient, bHandlingDisconnect) == 0x0001D9, "Member 'UOnlineSessionClient::bHandlingDisconnect' has a wrong offset!");
+DUMPER7_ASSERTS_UOnlineSessionClient;
 
 // Class OnlineSubsystemUtils.PartyBeaconClient
 // 0x00C8 (0x0400 - 0x0338)
@@ -884,27 +930,25 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PartyBeaconClient">();
+		STATIC_CLASS_IMPL("PartyBeaconClient")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PartyBeaconClient")
 	}
 	static class APartyBeaconClient* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<APartyBeaconClient>();
 	}
 };
-static_assert(alignof(APartyBeaconClient) == 0x000008, "Wrong alignment on APartyBeaconClient");
-static_assert(sizeof(APartyBeaconClient) == 0x000400, "Wrong size on APartyBeaconClient");
-static_assert(offsetof(APartyBeaconClient, DestSessionId) == 0x000368, "Member 'APartyBeaconClient::DestSessionId' has a wrong offset!");
-static_assert(offsetof(APartyBeaconClient, PendingReservation) == 0x000378, "Member 'APartyBeaconClient::PendingReservation' has a wrong offset!");
-static_assert(offsetof(APartyBeaconClient, RequestType) == 0x0003D0, "Member 'APartyBeaconClient::RequestType' has a wrong offset!");
-static_assert(offsetof(APartyBeaconClient, bPendingReservationSent) == 0x0003D1, "Member 'APartyBeaconClient::bPendingReservationSent' has a wrong offset!");
-static_assert(offsetof(APartyBeaconClient, bCancelReservation) == 0x0003D2, "Member 'APartyBeaconClient::bCancelReservation' has a wrong offset!");
+DUMPER7_ASSERTS_APartyBeaconClient;
 
 // Class OnlineSubsystemUtils.PartyBeaconHost
 // 0x0078 (0x0348 - 0x02D0)
 class APartyBeaconHost final : public AOnlineBeaconHostObject
 {
 public:
-	class UPartyBeaconState*                      State;                                             // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPartyBeaconState*                      State;                                             // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_2D8[0x60];                                     // 0x02D8(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bLogoutOnSessionTimeout;                           // 0x0338(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bIsValidationStrRequired;                          // 0x0339(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -916,20 +960,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PartyBeaconHost">();
+		STATIC_CLASS_IMPL("PartyBeaconHost")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PartyBeaconHost")
 	}
 	static class APartyBeaconHost* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<APartyBeaconHost>();
 	}
 };
-static_assert(alignof(APartyBeaconHost) == 0x000008, "Wrong alignment on APartyBeaconHost");
-static_assert(sizeof(APartyBeaconHost) == 0x000348, "Wrong size on APartyBeaconHost");
-static_assert(offsetof(APartyBeaconHost, State) == 0x0002D0, "Member 'APartyBeaconHost::State' has a wrong offset!");
-static_assert(offsetof(APartyBeaconHost, bLogoutOnSessionTimeout) == 0x000338, "Member 'APartyBeaconHost::bLogoutOnSessionTimeout' has a wrong offset!");
-static_assert(offsetof(APartyBeaconHost, bIsValidationStrRequired) == 0x000339, "Member 'APartyBeaconHost::bIsValidationStrRequired' has a wrong offset!");
-static_assert(offsetof(APartyBeaconHost, SessionTimeoutSecs) == 0x00033C, "Member 'APartyBeaconHost::SessionTimeoutSecs' has a wrong offset!");
-static_assert(offsetof(APartyBeaconHost, TravelSessionTimeoutSecs) == 0x000340, "Member 'APartyBeaconHost::TravelSessionTimeoutSecs' has a wrong offset!");
+DUMPER7_ASSERTS_APartyBeaconHost;
 
 // Class OnlineSubsystemUtils.PartyBeaconState
 // 0x0078 (0x00A0 - 0x0028)
@@ -957,29 +999,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PartyBeaconState">();
+		STATIC_CLASS_IMPL("PartyBeaconState")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PartyBeaconState")
 	}
 	static class UPartyBeaconState* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPartyBeaconState>();
 	}
 };
-static_assert(alignof(UPartyBeaconState) == 0x000008, "Wrong alignment on UPartyBeaconState");
-static_assert(sizeof(UPartyBeaconState) == 0x0000A0, "Wrong size on UPartyBeaconState");
-static_assert(offsetof(UPartyBeaconState, SessionName) == 0x000028, "Member 'UPartyBeaconState::SessionName' has a wrong offset!");
-static_assert(offsetof(UPartyBeaconState, NumConsumedReservations) == 0x000030, "Member 'UPartyBeaconState::NumConsumedReservations' has a wrong offset!");
-static_assert(offsetof(UPartyBeaconState, MaxReservations) == 0x000034, "Member 'UPartyBeaconState::MaxReservations' has a wrong offset!");
-static_assert(offsetof(UPartyBeaconState, NumTeams) == 0x000038, "Member 'UPartyBeaconState::NumTeams' has a wrong offset!");
-static_assert(offsetof(UPartyBeaconState, NumPlayersPerTeam) == 0x00003C, "Member 'UPartyBeaconState::NumPlayersPerTeam' has a wrong offset!");
-static_assert(offsetof(UPartyBeaconState, TeamAssignmentMethod) == 0x000040, "Member 'UPartyBeaconState::TeamAssignmentMethod' has a wrong offset!");
-static_assert(offsetof(UPartyBeaconState, ReservedHostTeamNum) == 0x000048, "Member 'UPartyBeaconState::ReservedHostTeamNum' has a wrong offset!");
-static_assert(offsetof(UPartyBeaconState, ForceTeamNum) == 0x00004C, "Member 'UPartyBeaconState::ForceTeamNum' has a wrong offset!");
-static_assert(offsetof(UPartyBeaconState, bRestrictCrossConsole) == 0x000050, "Member 'UPartyBeaconState::bRestrictCrossConsole' has a wrong offset!");
-static_assert(offsetof(UPartyBeaconState, PlatformCrossplayRestrictions) == 0x000058, "Member 'UPartyBeaconState::PlatformCrossplayRestrictions' has a wrong offset!");
-static_assert(offsetof(UPartyBeaconState, PlatformTypeMapping) == 0x000068, "Member 'UPartyBeaconState::PlatformTypeMapping' has a wrong offset!");
-static_assert(offsetof(UPartyBeaconState, bEnableRemovalRequests) == 0x000078, "Member 'UPartyBeaconState::bEnableRemovalRequests' has a wrong offset!");
-static_assert(offsetof(UPartyBeaconState, bRespectCompetitiveIntegrity) == 0x000079, "Member 'UPartyBeaconState::bRespectCompetitiveIntegrity' has a wrong offset!");
-static_assert(offsetof(UPartyBeaconState, Reservations) == 0x000080, "Member 'UPartyBeaconState::Reservations' has a wrong offset!");
+DUMPER7_ASSERTS_UPartyBeaconState;
 
 // Class OnlineSubsystemUtils.QuitMatchCallbackProxy
 // 0x0048 (0x0078 - 0x0030)
@@ -996,17 +1027,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"QuitMatchCallbackProxy">();
+		STATIC_CLASS_IMPL("QuitMatchCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"QuitMatchCallbackProxy")
 	}
 	static class UQuitMatchCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UQuitMatchCallbackProxy>();
 	}
 };
-static_assert(alignof(UQuitMatchCallbackProxy) == 0x000008, "Wrong alignment on UQuitMatchCallbackProxy");
-static_assert(sizeof(UQuitMatchCallbackProxy) == 0x000078, "Wrong size on UQuitMatchCallbackProxy");
-static_assert(offsetof(UQuitMatchCallbackProxy, onSuccess) == 0x000030, "Member 'UQuitMatchCallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(UQuitMatchCallbackProxy, onFailure) == 0x000040, "Member 'UQuitMatchCallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UQuitMatchCallbackProxy;
 
 // Class OnlineSubsystemUtils.ShowLoginUICallbackProxy
 // 0x0030 (0x0060 - 0x0030)
@@ -1023,17 +1055,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ShowLoginUICallbackProxy">();
+		STATIC_CLASS_IMPL("ShowLoginUICallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ShowLoginUICallbackProxy")
 	}
 	static class UShowLoginUICallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UShowLoginUICallbackProxy>();
 	}
 };
-static_assert(alignof(UShowLoginUICallbackProxy) == 0x000008, "Wrong alignment on UShowLoginUICallbackProxy");
-static_assert(sizeof(UShowLoginUICallbackProxy) == 0x000060, "Wrong size on UShowLoginUICallbackProxy");
-static_assert(offsetof(UShowLoginUICallbackProxy, onSuccess) == 0x000030, "Member 'UShowLoginUICallbackProxy::onSuccess' has a wrong offset!");
-static_assert(offsetof(UShowLoginUICallbackProxy, onFailure) == 0x000040, "Member 'UShowLoginUICallbackProxy::onFailure' has a wrong offset!");
+DUMPER7_ASSERTS_UShowLoginUICallbackProxy;
 
 // Class OnlineSubsystemUtils.SpectatorBeaconClient
 // 0x00F8 (0x0430 - 0x0338)
@@ -1059,27 +1092,25 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SpectatorBeaconClient">();
+		STATIC_CLASS_IMPL("SpectatorBeaconClient")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SpectatorBeaconClient")
 	}
 	static class ASpectatorBeaconClient* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ASpectatorBeaconClient>();
 	}
 };
-static_assert(alignof(ASpectatorBeaconClient) == 0x000008, "Wrong alignment on ASpectatorBeaconClient");
-static_assert(sizeof(ASpectatorBeaconClient) == 0x000430, "Wrong size on ASpectatorBeaconClient");
-static_assert(offsetof(ASpectatorBeaconClient, DestSessionId) == 0x000368, "Member 'ASpectatorBeaconClient::DestSessionId' has a wrong offset!");
-static_assert(offsetof(ASpectatorBeaconClient, PendingReservation) == 0x000378, "Member 'ASpectatorBeaconClient::PendingReservation' has a wrong offset!");
-static_assert(offsetof(ASpectatorBeaconClient, RequestType) == 0x000400, "Member 'ASpectatorBeaconClient::RequestType' has a wrong offset!");
-static_assert(offsetof(ASpectatorBeaconClient, bPendingReservationSent) == 0x000401, "Member 'ASpectatorBeaconClient::bPendingReservationSent' has a wrong offset!");
-static_assert(offsetof(ASpectatorBeaconClient, bCancelReservation) == 0x000402, "Member 'ASpectatorBeaconClient::bCancelReservation' has a wrong offset!");
+DUMPER7_ASSERTS_ASpectatorBeaconClient;
 
 // Class OnlineSubsystemUtils.SpectatorBeaconHost
 // 0x0078 (0x0348 - 0x02D0)
 class ASpectatorBeaconHost final : public AOnlineBeaconHostObject
 {
 public:
-	class USpectatorBeaconState*                  State;                                             // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USpectatorBeaconState*                  State;                                             // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	uint8                                         Pad_2D8[0x60];                                     // 0x02D8(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bLogoutOnSessionTimeout;                           // 0x0338(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bIsValidationStrRequired;                          // 0x0339(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -1091,20 +1122,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SpectatorBeaconHost">();
+		STATIC_CLASS_IMPL("SpectatorBeaconHost")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SpectatorBeaconHost")
 	}
 	static class ASpectatorBeaconHost* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ASpectatorBeaconHost>();
 	}
 };
-static_assert(alignof(ASpectatorBeaconHost) == 0x000008, "Wrong alignment on ASpectatorBeaconHost");
-static_assert(sizeof(ASpectatorBeaconHost) == 0x000348, "Wrong size on ASpectatorBeaconHost");
-static_assert(offsetof(ASpectatorBeaconHost, State) == 0x0002D0, "Member 'ASpectatorBeaconHost::State' has a wrong offset!");
-static_assert(offsetof(ASpectatorBeaconHost, bLogoutOnSessionTimeout) == 0x000338, "Member 'ASpectatorBeaconHost::bLogoutOnSessionTimeout' has a wrong offset!");
-static_assert(offsetof(ASpectatorBeaconHost, bIsValidationStrRequired) == 0x000339, "Member 'ASpectatorBeaconHost::bIsValidationStrRequired' has a wrong offset!");
-static_assert(offsetof(ASpectatorBeaconHost, SessionTimeoutSecs) == 0x00033C, "Member 'ASpectatorBeaconHost::SessionTimeoutSecs' has a wrong offset!");
-static_assert(offsetof(ASpectatorBeaconHost, TravelSessionTimeoutSecs) == 0x000340, "Member 'ASpectatorBeaconHost::TravelSessionTimeoutSecs' has a wrong offset!");
+DUMPER7_ASSERTS_ASpectatorBeaconHost;
 
 // Class OnlineSubsystemUtils.SpectatorBeaconState
 // 0x0038 (0x0060 - 0x0028)
@@ -1122,20 +1151,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SpectatorBeaconState">();
+		STATIC_CLASS_IMPL("SpectatorBeaconState")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SpectatorBeaconState")
 	}
 	static class USpectatorBeaconState* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USpectatorBeaconState>();
 	}
 };
-static_assert(alignof(USpectatorBeaconState) == 0x000008, "Wrong alignment on USpectatorBeaconState");
-static_assert(sizeof(USpectatorBeaconState) == 0x000060, "Wrong size on USpectatorBeaconState");
-static_assert(offsetof(USpectatorBeaconState, SessionName) == 0x000028, "Member 'USpectatorBeaconState::SessionName' has a wrong offset!");
-static_assert(offsetof(USpectatorBeaconState, NumConsumedReservations) == 0x000030, "Member 'USpectatorBeaconState::NumConsumedReservations' has a wrong offset!");
-static_assert(offsetof(USpectatorBeaconState, MaxReservations) == 0x000034, "Member 'USpectatorBeaconState::MaxReservations' has a wrong offset!");
-static_assert(offsetof(USpectatorBeaconState, bRestrictCrossConsole) == 0x000038, "Member 'USpectatorBeaconState::bRestrictCrossConsole' has a wrong offset!");
-static_assert(offsetof(USpectatorBeaconState, Reservations) == 0x000040, "Member 'USpectatorBeaconState::Reservations' has a wrong offset!");
+DUMPER7_ASSERTS_USpectatorBeaconState;
 
 // Class OnlineSubsystemUtils.TestBeaconClient
 // 0x0000 (0x0338 - 0x0338)
@@ -1148,15 +1175,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TestBeaconClient">();
+		STATIC_CLASS_IMPL("TestBeaconClient")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TestBeaconClient")
 	}
 	static class ATestBeaconClient* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATestBeaconClient>();
 	}
 };
-static_assert(alignof(ATestBeaconClient) == 0x000008, "Wrong alignment on ATestBeaconClient");
-static_assert(sizeof(ATestBeaconClient) == 0x000338, "Wrong size on ATestBeaconClient");
+DUMPER7_ASSERTS_ATestBeaconClient;
 
 // Class OnlineSubsystemUtils.TestBeaconHost
 // 0x0000 (0x02D0 - 0x02D0)
@@ -1165,15 +1195,18 @@ class ATestBeaconHost final : public AOnlineBeaconHostObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TestBeaconHost">();
+		STATIC_CLASS_IMPL("TestBeaconHost")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TestBeaconHost")
 	}
 	static class ATestBeaconHost* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATestBeaconHost>();
 	}
 };
-static_assert(alignof(ATestBeaconHost) == 0x000008, "Wrong alignment on ATestBeaconHost");
-static_assert(sizeof(ATestBeaconHost) == 0x0002D0, "Wrong size on ATestBeaconHost");
+DUMPER7_ASSERTS_ATestBeaconHost;
 
 // Class OnlineSubsystemUtils.OnlineBeaconUnitTestClient
 // 0x0000 (0x0338 - 0x0338)
@@ -1182,15 +1215,18 @@ class AOnlineBeaconUnitTestClient final : public AOnlineBeaconClient
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OnlineBeaconUnitTestClient">();
+		STATIC_CLASS_IMPL("OnlineBeaconUnitTestClient")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineBeaconUnitTestClient")
 	}
 	static class AOnlineBeaconUnitTestClient* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AOnlineBeaconUnitTestClient>();
 	}
 };
-static_assert(alignof(AOnlineBeaconUnitTestClient) == 0x000008, "Wrong alignment on AOnlineBeaconUnitTestClient");
-static_assert(sizeof(AOnlineBeaconUnitTestClient) == 0x000338, "Wrong size on AOnlineBeaconUnitTestClient");
+DUMPER7_ASSERTS_AOnlineBeaconUnitTestClient;
 
 // Class OnlineSubsystemUtils.OnlineBeaconUnitTestHost
 // 0x0000 (0x03E8 - 0x03E8)
@@ -1199,15 +1235,18 @@ class AOnlineBeaconUnitTestHost final : public AOnlineBeaconHost
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OnlineBeaconUnitTestHost">();
+		STATIC_CLASS_IMPL("OnlineBeaconUnitTestHost")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineBeaconUnitTestHost")
 	}
 	static class AOnlineBeaconUnitTestHost* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AOnlineBeaconUnitTestHost>();
 	}
 };
-static_assert(alignof(AOnlineBeaconUnitTestHost) == 0x000008, "Wrong alignment on AOnlineBeaconUnitTestHost");
-static_assert(sizeof(AOnlineBeaconUnitTestHost) == 0x0003E8, "Wrong size on AOnlineBeaconUnitTestHost");
+DUMPER7_ASSERTS_AOnlineBeaconUnitTestHost;
 
 // Class OnlineSubsystemUtils.OnlineBeaconUnitTestHostObject
 // 0x0000 (0x02D0 - 0x02D0)
@@ -1216,49 +1255,58 @@ class AOnlineBeaconUnitTestHostObject final : public AOnlineBeaconHostObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OnlineBeaconUnitTestHostObject">();
+		STATIC_CLASS_IMPL("OnlineBeaconUnitTestHostObject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineBeaconUnitTestHostObject")
 	}
 	static class AOnlineBeaconUnitTestHostObject* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AOnlineBeaconUnitTestHostObject>();
 	}
 };
-static_assert(alignof(AOnlineBeaconUnitTestHostObject) == 0x000008, "Wrong alignment on AOnlineBeaconUnitTestHostObject");
-static_assert(sizeof(AOnlineBeaconUnitTestHostObject) == 0x0002D0, "Wrong size on AOnlineBeaconUnitTestHostObject");
+DUMPER7_ASSERTS_AOnlineBeaconUnitTestHostObject;
 
 // Class OnlineSubsystemUtils.OnlineBeaconUnitTestNetConnection
-// 0x0000 (0x1E70 - 0x1E70)
+// 0x0000 (0x1EB0 - 0x1EB0)
 class UOnlineBeaconUnitTestNetConnection final : public UIpConnection
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OnlineBeaconUnitTestNetConnection">();
+		STATIC_CLASS_IMPL("OnlineBeaconUnitTestNetConnection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineBeaconUnitTestNetConnection")
 	}
 	static class UOnlineBeaconUnitTestNetConnection* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UOnlineBeaconUnitTestNetConnection>();
 	}
 };
-static_assert(alignof(UOnlineBeaconUnitTestNetConnection) == 0x000008, "Wrong alignment on UOnlineBeaconUnitTestNetConnection");
-static_assert(sizeof(UOnlineBeaconUnitTestNetConnection) == 0x001E70, "Wrong size on UOnlineBeaconUnitTestNetConnection");
+DUMPER7_ASSERTS_UOnlineBeaconUnitTestNetConnection;
 
 // Class OnlineSubsystemUtils.OnlineBeaconUnitTestNetDriver
-// 0x0000 (0x0980 - 0x0980)
+// 0x0000 (0x09A0 - 0x09A0)
 class UOnlineBeaconUnitTestNetDriver final : public UIpNetDriver
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OnlineBeaconUnitTestNetDriver">();
+		STATIC_CLASS_IMPL("OnlineBeaconUnitTestNetDriver")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineBeaconUnitTestNetDriver")
 	}
 	static class UOnlineBeaconUnitTestNetDriver* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UOnlineBeaconUnitTestNetDriver>();
 	}
 };
-static_assert(alignof(UOnlineBeaconUnitTestNetDriver) == 0x000008, "Wrong alignment on UOnlineBeaconUnitTestNetDriver");
-static_assert(sizeof(UOnlineBeaconUnitTestNetDriver) == 0x000980, "Wrong size on UOnlineBeaconUnitTestNetDriver");
+DUMPER7_ASSERTS_UOnlineBeaconUnitTestNetDriver;
 
 // Class OnlineSubsystemUtils.TurnBasedBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -1273,22 +1321,25 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TurnBasedBlueprintLibrary">();
+		STATIC_CLASS_IMPL("TurnBasedBlueprintLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TurnBasedBlueprintLibrary")
 	}
 	static class UTurnBasedBlueprintLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTurnBasedBlueprintLibrary>();
 	}
 };
-static_assert(alignof(UTurnBasedBlueprintLibrary) == 0x000008, "Wrong alignment on UTurnBasedBlueprintLibrary");
-static_assert(sizeof(UTurnBasedBlueprintLibrary) == 0x000028, "Wrong size on UTurnBasedBlueprintLibrary");
+DUMPER7_ASSERTS_UTurnBasedBlueprintLibrary;
 
 // Class OnlineSubsystemUtils.VoipListenerSynthComponent
-// 0x0060 (0x08F0 - 0x0890)
+// 0x0060 (0x0900 - 0x08A0)
 class UVoipListenerSynthComponent final : public USynthComponent
 {
 public:
-	uint8                                         Pad_890[0x60];                                     // 0x0890(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8A0[0x60];                                     // 0x08A0(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool IsIdling();
@@ -1296,15 +1347,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"VoipListenerSynthComponent">();
+		STATIC_CLASS_IMPL("VoipListenerSynthComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"VoipListenerSynthComponent")
 	}
 	static class UVoipListenerSynthComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UVoipListenerSynthComponent>();
 	}
 };
-static_assert(alignof(UVoipListenerSynthComponent) == 0x000010, "Wrong alignment on UVoipListenerSynthComponent");
-static_assert(sizeof(UVoipListenerSynthComponent) == 0x0008F0, "Wrong size on UVoipListenerSynthComponent");
+DUMPER7_ASSERTS_UVoipListenerSynthComponent;
 
 }
 

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "Slate_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CommonUI_classes.hpp"
 
@@ -21,47 +21,47 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass W_Button_Altar_Blessing.W_Button_Altar_Blessing_C
-// 0x02F0 (0x16A0 - 0x13B0)
+// 0x02F0 (0x1820 - 0x1530)
 class UW_Button_Altar_Blessing_C final : public UCommonButtonBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x13B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Discard_Animation;                                 // 0x13B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Select_Animation;                                  // 0x13C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Construct_Animation;                               // 0x13C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Trans_Hovered;                                     // 0x13D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 BacgroundFrame;                                    // 0x13D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ButtonHitBox;                                      // 0x13E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 GoldSelection;                                     // 0x13E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Frame;                                       // 0x13F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LightFX;                                           // 0x13F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LootFlashFX;                                       // 0x1400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URetainerBox*                           RetainerBox_0;                                     // 0x1408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URichTextBlock*                         RichTextBlock_Body;                                // 0x1410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URichTextBlock*                         RichTextBlock_StatInfo;                            // 0x1418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_Root;                                      // 0x1420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Text_Header;                                       // 0x1428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_Altar_God_C*                  W_Button_Altar_God;                                // 0x1430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SelectedGlyph_C*                Widget_SelectedGlyph;                              // 0x1438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTexture2D*                             Icon;                                              // 0x1440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1448[0x8];                                     // 0x1448(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            IconBrush;                                         // 0x1450(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   TopMarginText;                                     // 0x1500(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   HeaderText;                                        // 0x1510(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   DescriptionText;                                   // 0x1520(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	double                                        IconScale;                                         // 0x1530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateFontInfo                         HeaderFont;                                        // 0x1538(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	ETextJustify                                  HeaderJustification;                               // 0x1598(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1599[0x7];                                     // 0x1599(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            BGBrush;                                           // 0x15A0(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UTexture2D*                             BgBackground;                                      // 0x1650(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              SizeOverride;                                      // 0x1658(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              TargetMousePosition2D;                             // 0x1668(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              NormalizedMousePosition2D;                         // 0x1678(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LerpSpeed;                                         // 0x1688(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_168C[0x4];                                     // 0x168C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               RetainerDMI;                                       // 0x1690(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	float                                         BackgroundDepth;                                   // 0x1698(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1530(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_SelectedGlyph_C*                Widget_SelectedGlyph;                              // 0x1538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_Altar_God_C*                  W_Button_Altar_God;                                // 0x1540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text_Header;                                       // 0x1548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_Root;                                      // 0x1550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URichTextBlock*                         RichTextBlock_StatInfo;                            // 0x1558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URichTextBlock*                         RichTextBlock_Body;                                // 0x1560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URetainerBox*                           RetainerBox_0;                                     // 0x1568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 LootFlashFX;                                       // 0x1570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 LightFX;                                           // 0x1578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Frame;                                       // 0x1580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 GoldSelection;                                     // 0x1588(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ButtonHitBox;                                      // 0x1590(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BacgroundFrame;                                    // 0x1598(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Trans_Hovered;                                     // 0x15A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Construct_Animation;                               // 0x15A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Select_Animation;                                  // 0x15B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Discard_Animation;                                 // 0x15B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             Icon;                                              // 0x15C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15C8[0x8];                                     // 0x15C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            IconBrush;                                         // 0x15D0(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   TopMarginText;                                     // 0x1680(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   HeaderText;                                        // 0x1690(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   DescriptionText;                                   // 0x16A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	double                                        IconScale;                                         // 0x16B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateFontInfo                         HeaderFont;                                        // 0x16B8(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	ETextJustify                                  HeaderJustification;                               // 0x1718(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1719[0x7];                                     // 0x1719(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            BGBrush;                                           // 0x1720(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UTexture2D*                             BgBackground;                                      // 0x17D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              SizeOverride;                                      // 0x17D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              TargetMousePosition2D;                             // 0x17E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              NormalizedMousePosition2D;                         // 0x17F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LerpSpeed;                                         // 0x1808(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_180C[0x4];                                     // 0x180C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               RetainerDMI;                                       // 0x1810(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         BackgroundDepth;                                   // 0x1818(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BP_OnClicked();
@@ -81,49 +81,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"W_Button_Altar_Blessing_C">();
+		BP_STATIC_CLASS_IMPL("W_Button_Altar_Blessing_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"W_Button_Altar_Blessing_C")
 	}
 	static class UW_Button_Altar_Blessing_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UW_Button_Altar_Blessing_C>();
 	}
 };
-static_assert(alignof(UW_Button_Altar_Blessing_C) == 0x000010, "Wrong alignment on UW_Button_Altar_Blessing_C");
-static_assert(sizeof(UW_Button_Altar_Blessing_C) == 0x0016A0, "Wrong size on UW_Button_Altar_Blessing_C");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, UberGraphFrame) == 0x0013B0, "Member 'UW_Button_Altar_Blessing_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, Discard_Animation) == 0x0013B8, "Member 'UW_Button_Altar_Blessing_C::Discard_Animation' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, Select_Animation) == 0x0013C0, "Member 'UW_Button_Altar_Blessing_C::Select_Animation' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, Construct_Animation) == 0x0013C8, "Member 'UW_Button_Altar_Blessing_C::Construct_Animation' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, Trans_Hovered) == 0x0013D0, "Member 'UW_Button_Altar_Blessing_C::Trans_Hovered' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, BacgroundFrame) == 0x0013D8, "Member 'UW_Button_Altar_Blessing_C::BacgroundFrame' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, ButtonHitBox) == 0x0013E0, "Member 'UW_Button_Altar_Blessing_C::ButtonHitBox' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, GoldSelection) == 0x0013E8, "Member 'UW_Button_Altar_Blessing_C::GoldSelection' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, Image_Frame) == 0x0013F0, "Member 'UW_Button_Altar_Blessing_C::Image_Frame' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, LightFX) == 0x0013F8, "Member 'UW_Button_Altar_Blessing_C::LightFX' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, LootFlashFX) == 0x001400, "Member 'UW_Button_Altar_Blessing_C::LootFlashFX' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, RetainerBox_0) == 0x001408, "Member 'UW_Button_Altar_Blessing_C::RetainerBox_0' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, RichTextBlock_Body) == 0x001410, "Member 'UW_Button_Altar_Blessing_C::RichTextBlock_Body' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, RichTextBlock_StatInfo) == 0x001418, "Member 'UW_Button_Altar_Blessing_C::RichTextBlock_StatInfo' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, SizeBox_Root) == 0x001420, "Member 'UW_Button_Altar_Blessing_C::SizeBox_Root' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, Text_Header) == 0x001428, "Member 'UW_Button_Altar_Blessing_C::Text_Header' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, W_Button_Altar_God) == 0x001430, "Member 'UW_Button_Altar_Blessing_C::W_Button_Altar_God' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, Widget_SelectedGlyph) == 0x001438, "Member 'UW_Button_Altar_Blessing_C::Widget_SelectedGlyph' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, Icon) == 0x001440, "Member 'UW_Button_Altar_Blessing_C::Icon' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, IconBrush) == 0x001450, "Member 'UW_Button_Altar_Blessing_C::IconBrush' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, TopMarginText) == 0x001500, "Member 'UW_Button_Altar_Blessing_C::TopMarginText' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, HeaderText) == 0x001510, "Member 'UW_Button_Altar_Blessing_C::HeaderText' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, DescriptionText) == 0x001520, "Member 'UW_Button_Altar_Blessing_C::DescriptionText' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, IconScale) == 0x001530, "Member 'UW_Button_Altar_Blessing_C::IconScale' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, HeaderFont) == 0x001538, "Member 'UW_Button_Altar_Blessing_C::HeaderFont' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, HeaderJustification) == 0x001598, "Member 'UW_Button_Altar_Blessing_C::HeaderJustification' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, BGBrush) == 0x0015A0, "Member 'UW_Button_Altar_Blessing_C::BGBrush' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, BgBackground) == 0x001650, "Member 'UW_Button_Altar_Blessing_C::BgBackground' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, SizeOverride) == 0x001658, "Member 'UW_Button_Altar_Blessing_C::SizeOverride' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, TargetMousePosition2D) == 0x001668, "Member 'UW_Button_Altar_Blessing_C::TargetMousePosition2D' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, NormalizedMousePosition2D) == 0x001678, "Member 'UW_Button_Altar_Blessing_C::NormalizedMousePosition2D' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, LerpSpeed) == 0x001688, "Member 'UW_Button_Altar_Blessing_C::LerpSpeed' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, RetainerDMI) == 0x001690, "Member 'UW_Button_Altar_Blessing_C::RetainerDMI' has a wrong offset!");
-static_assert(offsetof(UW_Button_Altar_Blessing_C, BackgroundDepth) == 0x001698, "Member 'UW_Button_Altar_Blessing_C::BackgroundDepth' has a wrong offset!");
+DUMPER7_ASSERTS_UW_Button_Altar_Blessing_C;
 
 }
 

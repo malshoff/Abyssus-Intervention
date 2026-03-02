@@ -10,46 +10,38 @@
 
 #include "Basic.hpp"
 
+#include "RGame_structs.hpp"
+
 
 namespace SDK::Params
 {
 
 // Function BP_GoldLure_CharacterMutator.BP_GoldLure_CharacterMutator_C.ExecuteUbergraph_BP_GoldLure_CharacterMutator
-// 0x0040 (0x0040 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class AREnemySpawnManager*                    CallFunc_GetSpawnManager_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsServer_ReturnValue_1;                   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AREnemySpawnManager*                    CallFunc_GetSpawnManager_ReturnValue_1;            // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Temp_name_Variable;                                // 0x002C(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0008(0x0030)(ContainsInstancedReference)
+	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetFName_ReturnValue;                     // 0x003C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AREnemySpawnManager*                    CallFunc_GetSpawnManager_ReturnValue;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsServer_ReturnValue_1;                   // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AREnemySpawnManager*                    CallFunc_GetSpawnManager_ReturnValue_1;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Temp_real_Variable;                                // 0x0064(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0070(0x0030)(ContainsInstancedReference)
+	class FName                                   CallFunc_GetFName_ReturnValue_1;                   // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator) == 0x000008, "Wrong alignment on BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator");
-static_assert(sizeof(BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator) == 0x000040, "Wrong size on BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator");
-static_assert(offsetof(BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator, CallFunc_GetScriptFName_ReturnValue) == 0x000004, "Member 'BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator, CallFunc_IsServer_ReturnValue) == 0x00000C, "Member 'BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator::CallFunc_IsServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator, CallFunc_GetSpawnManager_ReturnValue) == 0x000010, "Member 'BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator::CallFunc_GetSpawnManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator, CallFunc_IsServer_ReturnValue_1) == 0x000019, "Member 'BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator::CallFunc_IsServer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator, CallFunc_GetSpawnManager_ReturnValue_1) == 0x000020, "Member 'BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator::CallFunc_GetSpawnManager_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator, CallFunc_IsValid_ReturnValue_1) == 0x000028, "Member 'BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator, Temp_name_Variable) == 0x00002C, "Member 'BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator::Temp_name_Variable' has a wrong offset!");
-static_assert(offsetof(BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator, CallFunc_GetMutatorRank_ReturnValue) == 0x000034, "Member 'BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator, CallFunc_Map_Remove_ReturnValue) == 0x000038, "Member 'BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator::CallFunc_Map_Remove_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x00003C, "Member 'BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GoldLure_CharacterMutator_C_ExecuteUbergraph_BP_GoldLure_CharacterMutator;
 
 }
 

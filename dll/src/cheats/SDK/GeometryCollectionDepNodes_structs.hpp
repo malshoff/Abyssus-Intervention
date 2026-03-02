@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
+#include "DataflowCore_structs.hpp"
 #include "DataflowEnginePlugin_structs.hpp"
 #include "Chaos_structs.hpp"
-#include "DataflowCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -52,65 +52,46 @@ enum class EDataflowTransferNodeBoundingVolume : uint8
 };
 
 // ScriptStruct GeometryCollectionDepNodes.GeometryCollectionTransferVertexScalarAttributeNode
-// 0x0190 (0x0328 - 0x0198)
+// 0x0190 (0x0410 - 0x0280)
 struct FGeometryCollectionTransferVertexScalarAttributeNode final : public FDataflowNode
 {
 public:
-	struct FManagedArrayCollection                Collection;                                        // 0x0198(0x00B0)(NativeAccessSpecifierPublic)
-	struct FManagedArrayCollection                FromCollection;                                    // 0x0248(0x00B0)(NativeAccessSpecifierPublic)
-	struct FCollectionAttributeKey                AttributeKey;                                      // 0x02F8(0x0020)(Edit, NativeAccessSpecifierPublic)
-	EDataflowTransferNodeBoundingVolume           BoundingVolumeType;                                // 0x0318(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataflowTransferNodeSampleScale              SampleScale;                                       // 0x0319(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDataflowTransferNodeFalloff                  Falloff;                                           // 0x031A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31B[0x1];                                      // 0x031B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FalloffThreshold;                                  // 0x031C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EdgeMultiplier;                                    // 0x0320(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BoundMultiplier;                                   // 0x0324(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FManagedArrayCollection                Collection;                                        // 0x0280(0x00B0)(NativeAccessSpecifierPublic)
+	struct FManagedArrayCollection                FromCollection;                                    // 0x0330(0x00B0)(NativeAccessSpecifierPublic)
+	struct FCollectionAttributeKey                AttributeKey;                                      // 0x03E0(0x0020)(Edit, NativeAccessSpecifierPublic)
+	EDataflowTransferNodeBoundingVolume           BoundingVolumeType;                                // 0x0400(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataflowTransferNodeSampleScale              SampleScale;                                       // 0x0401(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataflowTransferNodeFalloff                  Falloff;                                           // 0x0402(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_403[0x1];                                      // 0x0403(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FalloffThreshold;                                  // 0x0404(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EdgeMultiplier;                                    // 0x0408(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoundMultiplier;                                   // 0x040C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGeometryCollectionTransferVertexScalarAttributeNode) == 0x000008, "Wrong alignment on FGeometryCollectionTransferVertexScalarAttributeNode");
-static_assert(sizeof(FGeometryCollectionTransferVertexScalarAttributeNode) == 0x000328, "Wrong size on FGeometryCollectionTransferVertexScalarAttributeNode");
-static_assert(offsetof(FGeometryCollectionTransferVertexScalarAttributeNode, Collection) == 0x000198, "Member 'FGeometryCollectionTransferVertexScalarAttributeNode::Collection' has a wrong offset!");
-static_assert(offsetof(FGeometryCollectionTransferVertexScalarAttributeNode, FromCollection) == 0x000248, "Member 'FGeometryCollectionTransferVertexScalarAttributeNode::FromCollection' has a wrong offset!");
-static_assert(offsetof(FGeometryCollectionTransferVertexScalarAttributeNode, AttributeKey) == 0x0002F8, "Member 'FGeometryCollectionTransferVertexScalarAttributeNode::AttributeKey' has a wrong offset!");
-static_assert(offsetof(FGeometryCollectionTransferVertexScalarAttributeNode, BoundingVolumeType) == 0x000318, "Member 'FGeometryCollectionTransferVertexScalarAttributeNode::BoundingVolumeType' has a wrong offset!");
-static_assert(offsetof(FGeometryCollectionTransferVertexScalarAttributeNode, SampleScale) == 0x000319, "Member 'FGeometryCollectionTransferVertexScalarAttributeNode::SampleScale' has a wrong offset!");
-static_assert(offsetof(FGeometryCollectionTransferVertexScalarAttributeNode, Falloff) == 0x00031A, "Member 'FGeometryCollectionTransferVertexScalarAttributeNode::Falloff' has a wrong offset!");
-static_assert(offsetof(FGeometryCollectionTransferVertexScalarAttributeNode, FalloffThreshold) == 0x00031C, "Member 'FGeometryCollectionTransferVertexScalarAttributeNode::FalloffThreshold' has a wrong offset!");
-static_assert(offsetof(FGeometryCollectionTransferVertexScalarAttributeNode, EdgeMultiplier) == 0x000320, "Member 'FGeometryCollectionTransferVertexScalarAttributeNode::EdgeMultiplier' has a wrong offset!");
-static_assert(offsetof(FGeometryCollectionTransferVertexScalarAttributeNode, BoundMultiplier) == 0x000324, "Member 'FGeometryCollectionTransferVertexScalarAttributeNode::BoundMultiplier' has a wrong offset!");
+DUMPER7_ASSERTS_FGeometryCollectionTransferVertexScalarAttributeNode;
 
 // ScriptStruct GeometryCollectionDepNodes.SetVertexColorInCollectionFromFloatArrayDataflowNode
-// 0x00C8 (0x0260 - 0x0198)
+// 0x00C8 (0x0348 - 0x0280)
 struct FSetVertexColorInCollectionFromFloatArrayDataflowNode final : public FDataflowNode
 {
 public:
-	struct FManagedArrayCollection                Collection;                                        // 0x0198(0x00B0)(NativeAccessSpecifierPublic)
-	TArray<float>                                 FloatArray;                                        // 0x0248(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x0258(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25C[0x4];                                      // 0x025C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FManagedArrayCollection                Collection;                                        // 0x0280(0x00B0)(NativeAccessSpecifierPublic)
+	TArray<float>                                 FloatArray;                                        // 0x0330(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         Scale;                                             // 0x0340(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_344[0x4];                                      // 0x0344(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FSetVertexColorInCollectionFromFloatArrayDataflowNode) == 0x000008, "Wrong alignment on FSetVertexColorInCollectionFromFloatArrayDataflowNode");
-static_assert(sizeof(FSetVertexColorInCollectionFromFloatArrayDataflowNode) == 0x000260, "Wrong size on FSetVertexColorInCollectionFromFloatArrayDataflowNode");
-static_assert(offsetof(FSetVertexColorInCollectionFromFloatArrayDataflowNode, Collection) == 0x000198, "Member 'FSetVertexColorInCollectionFromFloatArrayDataflowNode::Collection' has a wrong offset!");
-static_assert(offsetof(FSetVertexColorInCollectionFromFloatArrayDataflowNode, FloatArray) == 0x000248, "Member 'FSetVertexColorInCollectionFromFloatArrayDataflowNode::FloatArray' has a wrong offset!");
-static_assert(offsetof(FSetVertexColorInCollectionFromFloatArrayDataflowNode, Scale) == 0x000258, "Member 'FSetVertexColorInCollectionFromFloatArrayDataflowNode::Scale' has a wrong offset!");
+DUMPER7_ASSERTS_FSetVertexColorInCollectionFromFloatArrayDataflowNode;
 
 // ScriptStruct GeometryCollectionDepNodes.SetVertexColorInCollectionFromVertexSelectionDataflowNode
-// 0x00F0 (0x0288 - 0x0198)
+// 0x00F8 (0x0378 - 0x0280)
 struct FSetVertexColorInCollectionFromVertexSelectionDataflowNode final : public FDataflowNode
 {
 public:
-	struct FManagedArrayCollection                Collection;                                        // 0x0198(0x00B0)(NativeAccessSpecifierPublic)
-	struct FDataflowVertexSelection               VertexSelection;                                   // 0x0248(0x0020)(NativeAccessSpecifierPublic)
-	struct FLinearColor                           SelectedColor;                                     // 0x0268(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           NonSelectedColor;                                  // 0x0278(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FManagedArrayCollection                Collection;                                        // 0x0280(0x00B0)(NativeAccessSpecifierPublic)
+	struct FDataflowVertexSelection               VertexSelection;                                   // 0x0330(0x0028)(NativeAccessSpecifierPublic)
+	struct FLinearColor                           SelectedColor;                                     // 0x0358(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           NonSelectedColor;                                  // 0x0368(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSetVertexColorInCollectionFromVertexSelectionDataflowNode) == 0x000008, "Wrong alignment on FSetVertexColorInCollectionFromVertexSelectionDataflowNode");
-static_assert(sizeof(FSetVertexColorInCollectionFromVertexSelectionDataflowNode) == 0x000288, "Wrong size on FSetVertexColorInCollectionFromVertexSelectionDataflowNode");
-static_assert(offsetof(FSetVertexColorInCollectionFromVertexSelectionDataflowNode, Collection) == 0x000198, "Member 'FSetVertexColorInCollectionFromVertexSelectionDataflowNode::Collection' has a wrong offset!");
-static_assert(offsetof(FSetVertexColorInCollectionFromVertexSelectionDataflowNode, VertexSelection) == 0x000248, "Member 'FSetVertexColorInCollectionFromVertexSelectionDataflowNode::VertexSelection' has a wrong offset!");
-static_assert(offsetof(FSetVertexColorInCollectionFromVertexSelectionDataflowNode, SelectedColor) == 0x000268, "Member 'FSetVertexColorInCollectionFromVertexSelectionDataflowNode::SelectedColor' has a wrong offset!");
-static_assert(offsetof(FSetVertexColorInCollectionFromVertexSelectionDataflowNode, NonSelectedColor) == 0x000278, "Member 'FSetVertexColorInCollectionFromVertexSelectionDataflowNode::NonSelectedColor' has a wrong offset!");
+DUMPER7_ASSERTS_FSetVertexColorInCollectionFromVertexSelectionDataflowNode;
 
 }
 

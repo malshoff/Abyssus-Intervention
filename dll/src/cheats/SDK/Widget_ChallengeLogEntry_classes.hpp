@@ -18,56 +18,49 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_ChallengeLogEntry.Widget_ChallengeLogEntry_C
-// 0x0060 (0x0358 - 0x02F8)
+// 0x0068 (0x03D0 - 0x0368)
 class UWidget_ChallengeLogEntry_C final : public URChallengeLogEntryWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FocusHighlightAnimation;                           // 0x0300(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       UnhoverAnimation;                                  // 0x0308(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       HoverAnimation;                                    // 0x0310(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UButton*                                Button_208;                                        // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 FocusHighlight;                                    // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 FocusHighlightBacground;                           // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 FrameImage;                                        // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 HoverHighlight;                                    // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LockedIcon_02;                                     // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ProgressBarBackground;                             // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             RewardDescription;                                 // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             RewardDescription;                                 // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ProgressBarBackground;                             // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 LockedIcon_02;                                     // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HoverHighlight;                                    // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 FrameImage;                                        // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 FocusHighlightBacground;                           // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 FocusHighlight;                                    // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_208;                                        // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       HoverAnimation;                                    // 0x03B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       UnhoverAnimation;                                  // 0x03B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FocusHighlightAnimation;                           // 0x03C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class URChallengeGridItem*                    CurrentChallenge;                                  // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime);
-	void OnListItemObjectSet(class UObject* ListItemObject);
-	class UWidget* GetToolTipWidget();
-	void ExecuteUbergraph_Widget_ChallengeLogEntry(int32 EntryPoint);
-	void BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
 	void ApplyScrollHighlight();
+	void BndEvt__Widget_ChallengeLogEntry_Button_208_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__Widget_MutatorLogEntry_Button_208_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
+	void ExecuteUbergraph_Widget_ChallengeLogEntry(int32 EntryPoint);
+	class UWidget* GetToolTipWidget();
+	void OnListItemObjectSet(class UObject* ListItemObject);
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_ChallengeLogEntry_C">();
+		BP_STATIC_CLASS_IMPL("Widget_ChallengeLogEntry_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_ChallengeLogEntry_C")
 	}
 	static class UWidget_ChallengeLogEntry_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_ChallengeLogEntry_C>();
 	}
 };
-static_assert(alignof(UWidget_ChallengeLogEntry_C) == 0x000008, "Wrong alignment on UWidget_ChallengeLogEntry_C");
-static_assert(sizeof(UWidget_ChallengeLogEntry_C) == 0x000358, "Wrong size on UWidget_ChallengeLogEntry_C");
-static_assert(offsetof(UWidget_ChallengeLogEntry_C, UberGraphFrame) == 0x0002F8, "Member 'UWidget_ChallengeLogEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLogEntry_C, FocusHighlightAnimation) == 0x000300, "Member 'UWidget_ChallengeLogEntry_C::FocusHighlightAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLogEntry_C, UnhoverAnimation) == 0x000308, "Member 'UWidget_ChallengeLogEntry_C::UnhoverAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLogEntry_C, HoverAnimation) == 0x000310, "Member 'UWidget_ChallengeLogEntry_C::HoverAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLogEntry_C, Button_208) == 0x000318, "Member 'UWidget_ChallengeLogEntry_C::Button_208' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLogEntry_C, FocusHighlight) == 0x000320, "Member 'UWidget_ChallengeLogEntry_C::FocusHighlight' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLogEntry_C, FocusHighlightBacground) == 0x000328, "Member 'UWidget_ChallengeLogEntry_C::FocusHighlightBacground' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLogEntry_C, FrameImage) == 0x000330, "Member 'UWidget_ChallengeLogEntry_C::FrameImage' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLogEntry_C, HoverHighlight) == 0x000338, "Member 'UWidget_ChallengeLogEntry_C::HoverHighlight' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLogEntry_C, LockedIcon_02) == 0x000340, "Member 'UWidget_ChallengeLogEntry_C::LockedIcon_02' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLogEntry_C, ProgressBarBackground) == 0x000348, "Member 'UWidget_ChallengeLogEntry_C::ProgressBarBackground' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLogEntry_C, RewardDescription) == 0x000350, "Member 'UWidget_ChallengeLogEntry_C::RewardDescription' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_ChallengeLogEntry_C;
 
 }
 

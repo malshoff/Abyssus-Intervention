@@ -22,10 +22,7 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticEmoteDragged_C_ExecuteUbergraph_Widget_CosmeticEmoteDragged) == 0x000004, "Wrong alignment on Widget_CosmeticEmoteDragged_C_ExecuteUbergraph_Widget_CosmeticEmoteDragged");
-static_assert(sizeof(Widget_CosmeticEmoteDragged_C_ExecuteUbergraph_Widget_CosmeticEmoteDragged) == 0x000008, "Wrong size on Widget_CosmeticEmoteDragged_C_ExecuteUbergraph_Widget_CosmeticEmoteDragged");
-static_assert(offsetof(Widget_CosmeticEmoteDragged_C_ExecuteUbergraph_Widget_CosmeticEmoteDragged, EntryPoint) == 0x000000, "Member 'Widget_CosmeticEmoteDragged_C_ExecuteUbergraph_Widget_CosmeticEmoteDragged::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticEmoteDragged_C_ExecuteUbergraph_Widget_CosmeticEmoteDragged, K2Node_Event_IsDesignTime) == 0x000004, "Member 'Widget_CosmeticEmoteDragged_C_ExecuteUbergraph_Widget_CosmeticEmoteDragged::K2Node_Event_IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticEmoteDragged_C_ExecuteUbergraph_Widget_CosmeticEmoteDragged;
 
 // Function Widget_CosmeticEmoteDragged.Widget_CosmeticEmoteDragged_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -34,9 +31,7 @@ struct Widget_CosmeticEmoteDragged_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CosmeticEmoteDragged_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_CosmeticEmoteDragged_C_PreConstruct");
-static_assert(sizeof(Widget_CosmeticEmoteDragged_C_PreConstruct) == 0x000001, "Wrong size on Widget_CosmeticEmoteDragged_C_PreConstruct");
-static_assert(offsetof(Widget_CosmeticEmoteDragged_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_CosmeticEmoteDragged_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticEmoteDragged_C_PreConstruct;
 
 }
 

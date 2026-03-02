@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Activatable_CharacterMutator.BP_Activatable_CharacterMutator_C
-// 0x0038 (0x0EA0 - 0x0E68)
+// 0x0040 (0x0EA8 - 0x0E68)
 class UBP_Activatable_CharacterMutator_C : public URGAbilityCharacterMutatorScript
 {
 public:
@@ -32,6 +32,7 @@ public:
 	uint8                                         Pad_E89[0x7];                                      // 0x0E89(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundBase*                             CooldownFinishedSFX;                               // 0x0E90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	double                                        LeftoverCooldown;                                  // 0x0E98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSkipSFXOnNextRechargeComplete;                    // 0x0EA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddStacks(int32 Delta);
@@ -68,23 +69,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Activatable_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Activatable_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Activatable_CharacterMutator_C")
 	}
 	static class UBP_Activatable_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Activatable_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_Activatable_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_Activatable_CharacterMutator_C");
-static_assert(sizeof(UBP_Activatable_CharacterMutator_C) == 0x000EA0, "Wrong size on UBP_Activatable_CharacterMutator_C");
-static_assert(offsetof(UBP_Activatable_CharacterMutator_C, UberGraphFrame) == 0x000E68, "Member 'UBP_Activatable_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Activatable_CharacterMutator_C, AbilityIcon) == 0x000E70, "Member 'UBP_Activatable_CharacterMutator_C::AbilityIcon' has a wrong offset!");
-static_assert(offsetof(UBP_Activatable_CharacterMutator_C, SweetSpotIncrements) == 0x000E78, "Member 'UBP_Activatable_CharacterMutator_C::SweetSpotIncrements' has a wrong offset!");
-static_assert(offsetof(UBP_Activatable_CharacterMutator_C, bChargeStarted) == 0x000E7C, "Member 'UBP_Activatable_CharacterMutator_C::bChargeStarted' has a wrong offset!");
-static_assert(offsetof(UBP_Activatable_CharacterMutator_C, RechargeTimerHandleBP) == 0x000E80, "Member 'UBP_Activatable_CharacterMutator_C::RechargeTimerHandleBP' has a wrong offset!");
-static_assert(offsetof(UBP_Activatable_CharacterMutator_C, IsEquippable) == 0x000E88, "Member 'UBP_Activatable_CharacterMutator_C::IsEquippable' has a wrong offset!");
-static_assert(offsetof(UBP_Activatable_CharacterMutator_C, CooldownFinishedSFX) == 0x000E90, "Member 'UBP_Activatable_CharacterMutator_C::CooldownFinishedSFX' has a wrong offset!");
-static_assert(offsetof(UBP_Activatable_CharacterMutator_C, LeftoverCooldown) == 0x000E98, "Member 'UBP_Activatable_CharacterMutator_C::LeftoverCooldown' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Activatable_CharacterMutator_C;
 
 }
 

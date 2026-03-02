@@ -19,19 +19,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_OverheatBar.Widget_OverheatBar_C
-// 0x0048 (0x0318 - 0x02D0)
+// 0x0048 (0x0388 - 0x0340)
 class UWidget_OverheatBar_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Heat_Transition;                                   // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Overheated_Transition;                             // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Overheated_Image;                                  // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           OverheatProgressbar;                               // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBP_EngineRifle_Script_C*               AsBPEngineRifleScript;                             // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           AsRPlayerPawn;                                     // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           TickTimer;                                         // 0x0310(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UProgressBar*                           OverheatProgressbar;                               // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Overheated_Image;                                  // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Overheated_Transition;                             // 0x0360(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Heat_Transition;                                   // 0x0368(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBP_EngineRifle_Script_C*               AsBPEngineRifleScript;                             // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           AsRPlayerPawn;                                     // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           TickTimer;                                         // 0x0380(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Widget_OverheatBar(int32 EntryPoint);
@@ -44,24 +44,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_OverheatBar_C">();
+		BP_STATIC_CLASS_IMPL("Widget_OverheatBar_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_OverheatBar_C")
 	}
 	static class UWidget_OverheatBar_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_OverheatBar_C>();
 	}
 };
-static_assert(alignof(UWidget_OverheatBar_C) == 0x000008, "Wrong alignment on UWidget_OverheatBar_C");
-static_assert(sizeof(UWidget_OverheatBar_C) == 0x000318, "Wrong size on UWidget_OverheatBar_C");
-static_assert(offsetof(UWidget_OverheatBar_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_OverheatBar_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_OverheatBar_C, Heat_Transition) == 0x0002D8, "Member 'UWidget_OverheatBar_C::Heat_Transition' has a wrong offset!");
-static_assert(offsetof(UWidget_OverheatBar_C, Overheated_Transition) == 0x0002E0, "Member 'UWidget_OverheatBar_C::Overheated_Transition' has a wrong offset!");
-static_assert(offsetof(UWidget_OverheatBar_C, InvalidationBox_0) == 0x0002E8, "Member 'UWidget_OverheatBar_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_OverheatBar_C, Overheated_Image) == 0x0002F0, "Member 'UWidget_OverheatBar_C::Overheated_Image' has a wrong offset!");
-static_assert(offsetof(UWidget_OverheatBar_C, OverheatProgressbar) == 0x0002F8, "Member 'UWidget_OverheatBar_C::OverheatProgressbar' has a wrong offset!");
-static_assert(offsetof(UWidget_OverheatBar_C, AsBPEngineRifleScript) == 0x000300, "Member 'UWidget_OverheatBar_C::AsBPEngineRifleScript' has a wrong offset!");
-static_assert(offsetof(UWidget_OverheatBar_C, AsRPlayerPawn) == 0x000308, "Member 'UWidget_OverheatBar_C::AsRPlayerPawn' has a wrong offset!");
-static_assert(offsetof(UWidget_OverheatBar_C, TickTimer) == 0x000310, "Member 'UWidget_OverheatBar_C::TickTimer' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_OverheatBar_C;
 
 }
 

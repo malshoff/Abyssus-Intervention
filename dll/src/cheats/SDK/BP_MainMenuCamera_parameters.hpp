@@ -33,17 +33,7 @@ public:
 	float                                         K2Node_SetFieldsInStruct_DepthOfFieldVignetteSize_ImplicitCast; // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetPlayRate_NewRate_ImplicitCast;         // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera) == 0x000008, "Wrong alignment on BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera");
-static_assert(sizeof(BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera) == 0x000048, "Wrong size on BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera");
-static_assert(offsetof(BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera, EntryPoint) == 0x000000, "Member 'BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera, CallFunc_Lerp_ReturnValue) == 0x000008, "Member 'BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera, CallFunc_LinearColorLerp_ReturnValue) == 0x000010, "Member 'BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera::CallFunc_LinearColorLerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000020, "Member 'BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera, CallFunc_GetPlayerController_ReturnValue) == 0x000028, "Member 'BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera, K2Node_CustomEvent_FadeIn) == 0x000030, "Member 'BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera::K2Node_CustomEvent_FadeIn' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera, CallFunc_Lerp_Alpha_ImplicitCast) == 0x000038, "Member 'BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera::CallFunc_Lerp_Alpha_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera, K2Node_SetFieldsInStruct_DepthOfFieldVignetteSize_ImplicitCast) == 0x000040, "Member 'BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera::K2Node_SetFieldsInStruct_DepthOfFieldVignetteSize_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera, CallFunc_SetPlayRate_NewRate_ImplicitCast) == 0x000044, "Member 'BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera::CallFunc_SetPlayRate_NewRate_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainMenuCamera_C_ExecuteUbergraph_BP_MainMenuCamera;
 
 // Function BP_MainMenuCamera.BP_MainMenuCamera_C.StartFade
 // 0x0001 (0x0001 - 0x0000)
@@ -52,9 +42,7 @@ struct BP_MainMenuCamera_C_StartFade final
 public:
 	bool                                          FadeIn;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MainMenuCamera_C_StartFade) == 0x000001, "Wrong alignment on BP_MainMenuCamera_C_StartFade");
-static_assert(sizeof(BP_MainMenuCamera_C_StartFade) == 0x000001, "Wrong size on BP_MainMenuCamera_C_StartFade");
-static_assert(offsetof(BP_MainMenuCamera_C_StartFade, FadeIn) == 0x000000, "Member 'BP_MainMenuCamera_C_StartFade::FadeIn' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainMenuCamera_C_StartFade;
 
 }
 

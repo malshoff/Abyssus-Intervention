@@ -29,15 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ChaosVDRuntimeBlueprintLibrary">();
+		STATIC_CLASS_IMPL("ChaosVDRuntimeBlueprintLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosVDRuntimeBlueprintLibrary")
 	}
 	static class UChaosVDRuntimeBlueprintLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UChaosVDRuntimeBlueprintLibrary>();
 	}
 };
-static_assert(alignof(UChaosVDRuntimeBlueprintLibrary) == 0x000008, "Wrong alignment on UChaosVDRuntimeBlueprintLibrary");
-static_assert(sizeof(UChaosVDRuntimeBlueprintLibrary) == 0x000028, "Wrong size on UChaosVDRuntimeBlueprintLibrary");
+DUMPER7_ASSERTS_UChaosVDRuntimeBlueprintLibrary;
 
 }
 

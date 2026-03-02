@@ -24,10 +24,7 @@ public:
 	int32                                         ID;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Positive;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_JumpPadPrototype_C_Activate) == 0x000004, "Wrong alignment on BP_JumpPadPrototype_C_Activate");
-static_assert(sizeof(BP_JumpPadPrototype_C_Activate) == 0x000008, "Wrong size on BP_JumpPadPrototype_C_Activate");
-static_assert(offsetof(BP_JumpPadPrototype_C_Activate, ID) == 0x000000, "Member 'BP_JumpPadPrototype_C_Activate::ID' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_Activate, Positive) == 0x000004, "Member 'BP_JumpPadPrototype_C_Activate::Positive' has a wrong offset!");
+DUMPER7_ASSERTS_BP_JumpPadPrototype_C_Activate;
 
 // Function BP_JumpPadPrototype.BP_JumpPadPrototype_C.ExecuteUbergraph_BP_JumpPadPrototype
 // 0x00E0 (0x00E0 - 0x0000)
@@ -64,31 +61,7 @@ public:
 	int32                                         K2Node_Event_ID;                                   // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_Positive;                             // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype) == 0x000008, "Wrong alignment on BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype");
-static_assert(sizeof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype) == 0x0000E0, "Wrong size on BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, EntryPoint) == 0x000000, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, Temp_bool_Variable) == 0x000004, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, CallFunc_Not_PreBool_ReturnValue) == 0x000005, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, Temp_object_Variable) == 0x000008, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, Temp_object_Variable_1) == 0x000010, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, K2Node_Event_OtherActor) == 0x000018, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::K2Node_Event_OtherActor' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000020, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000030, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, CallFunc_GetRPawnMovementComponent_ReturnValue) == 0x000048, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::CallFunc_GetRPawnMovementComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, CallFunc_IsLocallyControlled_ReturnValue) == 0x000050, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, CallFunc_GetCharacterMutator_ReturnValue) == 0x000058, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::CallFunc_GetCharacterMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, K2Node_Select_Default) == 0x000060, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, CallFunc_IsValid_ReturnValue) == 0x000068, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, K2Node_DynamicCast_AsBP_Jump_Character_Mutator) == 0x000070, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::K2Node_DynamicCast_AsBP_Jump_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, K2Node_DynamicCast_bSuccess_1) == 0x000078, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, CallFunc_GetActorUpVector_ReturnValue) == 0x000080, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::CallFunc_GetActorUpVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000098, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, CallFunc_Multiply_VectorVector_ReturnValue) == 0x0000B0, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, CallFunc_SpawnSoundAtLocation_ReturnValue) == 0x0000C8, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::CallFunc_SpawnSoundAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, CallFunc_IsValid_ReturnValue_1) == 0x0000D0, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, K2Node_Event_ID) == 0x0000D4, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::K2Node_Event_ID' has a wrong offset!");
-static_assert(offsetof(BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype, K2Node_Event_Positive) == 0x0000D8, "Member 'BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype::K2Node_Event_Positive' has a wrong offset!");
+DUMPER7_ASSERTS_BP_JumpPadPrototype_C_ExecuteUbergraph_BP_JumpPadPrototype;
 
 // Function BP_JumpPadPrototype.BP_JumpPadPrototype_C.ReceiveActorBeginOverlap
 // 0x0008 (0x0008 - 0x0000)
@@ -97,9 +70,7 @@ struct BP_JumpPadPrototype_C_ReceiveActorBeginOverlap final
 public:
 	class AActor*                                 OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_JumpPadPrototype_C_ReceiveActorBeginOverlap) == 0x000008, "Wrong alignment on BP_JumpPadPrototype_C_ReceiveActorBeginOverlap");
-static_assert(sizeof(BP_JumpPadPrototype_C_ReceiveActorBeginOverlap) == 0x000008, "Wrong size on BP_JumpPadPrototype_C_ReceiveActorBeginOverlap");
-static_assert(offsetof(BP_JumpPadPrototype_C_ReceiveActorBeginOverlap, OtherActor) == 0x000000, "Member 'BP_JumpPadPrototype_C_ReceiveActorBeginOverlap::OtherActor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_JumpPadPrototype_C_ReceiveActorBeginOverlap;
 
 // Function BP_JumpPadPrototype.BP_JumpPadPrototype_C.SetJumpPadEnable
 // 0x0001 (0x0001 - 0x0000)
@@ -108,9 +79,7 @@ struct BP_JumpPadPrototype_C_SetJumpPadEnable final
 public:
 	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_JumpPadPrototype_C_SetJumpPadEnable) == 0x000001, "Wrong alignment on BP_JumpPadPrototype_C_SetJumpPadEnable");
-static_assert(sizeof(BP_JumpPadPrototype_C_SetJumpPadEnable) == 0x000001, "Wrong size on BP_JumpPadPrototype_C_SetJumpPadEnable");
-static_assert(offsetof(BP_JumpPadPrototype_C_SetJumpPadEnable, Enable) == 0x000000, "Member 'BP_JumpPadPrototype_C_SetJumpPadEnable::Enable' has a wrong offset!");
+DUMPER7_ASSERTS_BP_JumpPadPrototype_C_SetJumpPadEnable;
 
 }
 

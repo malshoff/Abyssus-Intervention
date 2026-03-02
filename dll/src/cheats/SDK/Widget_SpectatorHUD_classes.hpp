@@ -17,25 +17,27 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_SpectatorHUD.Widget_SpectatorHUD_C
-// 0x0008 (0x02F0 - 0x02E8)
+// 0x0008 (0x0360 - 0x0358)
 class UWidget_SpectatorHUD_C final : public URSpectateHud
 {
 public:
-	class UWidget_SpectatedPlayerInfo_C*          Widget_SpectatedPlayerInfo;                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_SpectatedPlayerInfo_C*          Widget_SpectatedPlayerInfo;                        // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_SpectatorHUD_C">();
+		BP_STATIC_CLASS_IMPL("Widget_SpectatorHUD_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_SpectatorHUD_C")
 	}
 	static class UWidget_SpectatorHUD_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_SpectatorHUD_C>();
 	}
 };
-static_assert(alignof(UWidget_SpectatorHUD_C) == 0x000008, "Wrong alignment on UWidget_SpectatorHUD_C");
-static_assert(sizeof(UWidget_SpectatorHUD_C) == 0x0002F0, "Wrong size on UWidget_SpectatorHUD_C");
-static_assert(offsetof(UWidget_SpectatorHUD_C, Widget_SpectatedPlayerInfo) == 0x0002E8, "Member 'UWidget_SpectatorHUD_C::Widget_SpectatedPlayerInfo' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_SpectatorHUD_C;
 
 }
 

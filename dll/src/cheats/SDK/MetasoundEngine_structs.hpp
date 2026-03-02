@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "AudioExtensions_structs.hpp"
-#include "MetasoundFrontend_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "MetasoundFrontend_structs.hpp"
 
 
 namespace SDK
@@ -60,12 +60,7 @@ public:
 	struct FPerPlatformInt                        SampleRate;                                        // 0x0018(0x0004)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
 	struct FPerPlatformFloat                      BlockRate;                                         // 0x001C(0x0004)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMetaSoundQualitySettings) == 0x000004, "Wrong alignment on FMetaSoundQualitySettings");
-static_assert(sizeof(FMetaSoundQualitySettings) == 0x000020, "Wrong size on FMetaSoundQualitySettings");
-static_assert(offsetof(FMetaSoundQualitySettings, UniqueID) == 0x000000, "Member 'FMetaSoundQualitySettings::UniqueID' has a wrong offset!");
-static_assert(offsetof(FMetaSoundQualitySettings, Name) == 0x000010, "Member 'FMetaSoundQualitySettings::Name' has a wrong offset!");
-static_assert(offsetof(FMetaSoundQualitySettings, SampleRate) == 0x000018, "Member 'FMetaSoundQualitySettings::SampleRate' has a wrong offset!");
-static_assert(offsetof(FMetaSoundQualitySettings, BlockRate) == 0x00001C, "Member 'FMetaSoundQualitySettings::BlockRate' has a wrong offset!");
+DUMPER7_ASSERTS_FMetaSoundQualitySettings;
 
 // ScriptStruct MetasoundEngine.MetaSoundOutput
 // 0x0008 (0x0010 - 0x0008)
@@ -74,19 +69,16 @@ struct alignas(0x08) FMetaSoundOutput final : public FSoundGeneratorOutput
 public:
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FMetaSoundOutput) == 0x000008, "Wrong alignment on FMetaSoundOutput");
-static_assert(sizeof(FMetaSoundOutput) == 0x000010, "Wrong size on FMetaSoundOutput");
+DUMPER7_ASSERTS_FMetaSoundOutput;
 
 // ScriptStruct MetasoundEngine.DefaultMetaSoundAssetAutoUpdateSettings
 // 0x0020 (0x0020 - 0x0000)
 struct FDefaultMetaSoundAssetAutoUpdateSettings final
 {
 public:
-	struct FSoftObjectPath                        Metasound;                                         // 0x0000(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        MetaSound;                                         // 0x0000(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FDefaultMetaSoundAssetAutoUpdateSettings) == 0x000008, "Wrong alignment on FDefaultMetaSoundAssetAutoUpdateSettings");
-static_assert(sizeof(FDefaultMetaSoundAssetAutoUpdateSettings) == 0x000020, "Wrong size on FDefaultMetaSoundAssetAutoUpdateSettings");
-static_assert(offsetof(FDefaultMetaSoundAssetAutoUpdateSettings, Metasound) == 0x000000, "Member 'FDefaultMetaSoundAssetAutoUpdateSettings::Metasound' has a wrong offset!");
+DUMPER7_ASSERTS_FDefaultMetaSoundAssetAutoUpdateSettings;
 
 // ScriptStruct MetasoundEngine.MetaSoundPageSettings
 // 0x0018 (0x0018 - 0x0000)
@@ -96,10 +88,7 @@ public:
 	struct FGuid                                  UniqueID;                                          // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   Name;                                              // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMetaSoundPageSettings) == 0x000004, "Wrong alignment on FMetaSoundPageSettings");
-static_assert(sizeof(FMetaSoundPageSettings) == 0x000018, "Wrong size on FMetaSoundPageSettings");
-static_assert(offsetof(FMetaSoundPageSettings, UniqueID) == 0x000000, "Member 'FMetaSoundPageSettings::UniqueID' has a wrong offset!");
-static_assert(offsetof(FMetaSoundPageSettings, Name) == 0x000010, "Member 'FMetaSoundPageSettings::Name' has a wrong offset!");
+DUMPER7_ASSERTS_FMetaSoundPageSettings;
 
 // ScriptStruct MetasoundEngine.MetaSoundAssetDirectory
 // 0x0010 (0x0010 - 0x0000)
@@ -108,9 +97,7 @@ struct FMetaSoundAssetDirectory final
 public:
 	struct FDirectoryPath                         Directory;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMetaSoundAssetDirectory) == 0x000008, "Wrong alignment on FMetaSoundAssetDirectory");
-static_assert(sizeof(FMetaSoundAssetDirectory) == 0x000010, "Wrong size on FMetaSoundAssetDirectory");
-static_assert(offsetof(FMetaSoundAssetDirectory, Directory) == 0x000000, "Member 'FMetaSoundAssetDirectory::Directory' has a wrong offset!");
+DUMPER7_ASSERTS_FMetaSoundAssetDirectory;
 
 // ScriptStruct MetasoundEngine.MetaSoundAsyncAssetDependencies
 // 0x0030 (0x0030 - 0x0000)
@@ -118,28 +105,24 @@ struct FMetaSoundAsyncAssetDependencies final
 {
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                Metasound;                                         // 0x0008(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                MetaSound;                                         // 0x0008(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	uint8                                         Pad_10[0x20];                                      // 0x0010(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FMetaSoundAsyncAssetDependencies) == 0x000008, "Wrong alignment on FMetaSoundAsyncAssetDependencies");
-static_assert(sizeof(FMetaSoundAsyncAssetDependencies) == 0x000030, "Wrong size on FMetaSoundAsyncAssetDependencies");
-static_assert(offsetof(FMetaSoundAsyncAssetDependencies, Metasound) == 0x000008, "Member 'FMetaSoundAsyncAssetDependencies::Metasound' has a wrong offset!");
+DUMPER7_ASSERTS_FMetaSoundAsyncAssetDependencies;
 
 // ScriptStruct MetasoundEngine.MetaSoundBuilderNodeInputHandle
 // 0x0000 (0x0020 - 0x0020)
 struct FMetaSoundBuilderNodeInputHandle final : public FMetasoundFrontendVertexHandle
 {
 };
-static_assert(alignof(FMetaSoundBuilderNodeInputHandle) == 0x000004, "Wrong alignment on FMetaSoundBuilderNodeInputHandle");
-static_assert(sizeof(FMetaSoundBuilderNodeInputHandle) == 0x000020, "Wrong size on FMetaSoundBuilderNodeInputHandle");
+DUMPER7_ASSERTS_FMetaSoundBuilderNodeInputHandle;
 
 // ScriptStruct MetasoundEngine.MetaSoundBuilderNodeOutputHandle
 // 0x0000 (0x0020 - 0x0020)
 struct FMetaSoundBuilderNodeOutputHandle final : public FMetasoundFrontendVertexHandle
 {
 };
-static_assert(alignof(FMetaSoundBuilderNodeOutputHandle) == 0x000004, "Wrong alignment on FMetaSoundBuilderNodeOutputHandle");
-static_assert(sizeof(FMetaSoundBuilderNodeOutputHandle) == 0x000020, "Wrong size on FMetaSoundBuilderNodeOutputHandle");
+DUMPER7_ASSERTS_FMetaSoundBuilderNodeOutputHandle;
 
 // ScriptStruct MetasoundEngine.MetaSoundNodeHandle
 // 0x0010 (0x0010 - 0x0000)
@@ -148,9 +131,7 @@ struct FMetaSoundNodeHandle final
 public:
 	struct FGuid                                  NodeID;                                            // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMetaSoundNodeHandle) == 0x000004, "Wrong alignment on FMetaSoundNodeHandle");
-static_assert(sizeof(FMetaSoundNodeHandle) == 0x000010, "Wrong size on FMetaSoundNodeHandle");
-static_assert(offsetof(FMetaSoundNodeHandle, NodeID) == 0x000000, "Member 'FMetaSoundNodeHandle::NodeID' has a wrong offset!");
+DUMPER7_ASSERTS_FMetaSoundNodeHandle;
 
 // ScriptStruct MetasoundEngine.MetaSoundBuilderOptions
 // 0x0020 (0x0020 - 0x0000)
@@ -163,12 +144,7 @@ public:
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IMetaSoundDocumentInterface> ExistingMetaSound;                           // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMetaSoundBuilderOptions) == 0x000008, "Wrong alignment on FMetaSoundBuilderOptions");
-static_assert(sizeof(FMetaSoundBuilderOptions) == 0x000020, "Wrong size on FMetaSoundBuilderOptions");
-static_assert(offsetof(FMetaSoundBuilderOptions, Name) == 0x000000, "Member 'FMetaSoundBuilderOptions::Name' has a wrong offset!");
-static_assert(offsetof(FMetaSoundBuilderOptions, bForceUniqueClassName) == 0x000008, "Member 'FMetaSoundBuilderOptions::bForceUniqueClassName' has a wrong offset!");
-static_assert(offsetof(FMetaSoundBuilderOptions, bAddToRegistry) == 0x000009, "Member 'FMetaSoundBuilderOptions::bAddToRegistry' has a wrong offset!");
-static_assert(offsetof(FMetaSoundBuilderOptions, ExistingMetaSound) == 0x000010, "Member 'FMetaSoundBuilderOptions::ExistingMetaSound' has a wrong offset!");
+DUMPER7_ASSERTS_FMetaSoundBuilderOptions;
 
 }
 

@@ -19,31 +19,31 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_CameraRig.ABP_CameraRig_C
-// 0x0870 (0x0C30 - 0x03C0)
+// 0x0870 (0x0C50 - 0x03E0)
 class UABP_CameraRig_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_3B8[0x8];                                      // 0x03B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x03C8(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03D0(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03D8(0x0020)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x03F8(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x0420(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x0448(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x0470(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x0498(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x04E0(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x0500(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x0548(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0568(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x05B0(0x0020)()
-	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x05D0(0x0010)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x05E0(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x0600(0x00C8)()
-	uint8                                         Pad_6C8[0x8];                                      // 0x06C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_Inertialization              AnimGraphNode_Inertialization;                     // 0x06D0(0x0550)()
-	bool                                          Downed;                                            // 0x0C20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D8[0x8];                                      // 0x03D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x03E8(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03F0(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03F8(0x0020)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x0418(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x0440(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x0468(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x0490(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x04B8(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x0500(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x0520(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x0568(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0588(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x05D0(0x0020)()
+	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x05F0(0x0010)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x0600(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x0620(0x00C8)()
+	uint8                                         Pad_6E8[0x8];                                      // 0x06E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_Inertialization              AnimGraphNode_Inertialization;                     // 0x06F0(0x0550)()
+	bool                                          Downed;                                            // 0x0C40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -56,34 +56,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_CameraRig_C">();
+		BP_STATIC_CLASS_IMPL("ABP_CameraRig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_CameraRig_C")
 	}
 	static class UABP_CameraRig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_CameraRig_C>();
 	}
 };
-static_assert(alignof(UABP_CameraRig_C) == 0x000010, "Wrong alignment on UABP_CameraRig_C");
-static_assert(sizeof(UABP_CameraRig_C) == 0x000C30, "Wrong size on UABP_CameraRig_C");
-static_assert(offsetof(UABP_CameraRig_C, UberGraphFrame) == 0x0003C0, "Member 'UABP_CameraRig_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimBlueprintExtension_PropertyAccess) == 0x0003C8, "Member 'UABP_CameraRig_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimBlueprintExtension_Base) == 0x0003D0, "Member 'UABP_CameraRig_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimGraphNode_Root) == 0x0003D8, "Member 'UABP_CameraRig_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimGraphNode_TransitionResult_3) == 0x0003F8, "Member 'UABP_CameraRig_C::AnimGraphNode_TransitionResult_3' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimGraphNode_TransitionResult_2) == 0x000420, "Member 'UABP_CameraRig_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimGraphNode_TransitionResult_1) == 0x000448, "Member 'UABP_CameraRig_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimGraphNode_TransitionResult) == 0x000470, "Member 'UABP_CameraRig_C::AnimGraphNode_TransitionResult' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimGraphNode_SequencePlayer_2) == 0x000498, "Member 'UABP_CameraRig_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimGraphNode_StateResult_3) == 0x0004E0, "Member 'UABP_CameraRig_C::AnimGraphNode_StateResult_3' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimGraphNode_SequencePlayer_1) == 0x000500, "Member 'UABP_CameraRig_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimGraphNode_StateResult_2) == 0x000548, "Member 'UABP_CameraRig_C::AnimGraphNode_StateResult_2' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimGraphNode_SequencePlayer) == 0x000568, "Member 'UABP_CameraRig_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimGraphNode_StateResult_1) == 0x0005B0, "Member 'UABP_CameraRig_C::AnimGraphNode_StateResult_1' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimGraphNode_LocalRefPose) == 0x0005D0, "Member 'UABP_CameraRig_C::AnimGraphNode_LocalRefPose' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimGraphNode_StateResult) == 0x0005E0, "Member 'UABP_CameraRig_C::AnimGraphNode_StateResult' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimGraphNode_StateMachine) == 0x000600, "Member 'UABP_CameraRig_C::AnimGraphNode_StateMachine' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, AnimGraphNode_Inertialization) == 0x0006D0, "Member 'UABP_CameraRig_C::AnimGraphNode_Inertialization' has a wrong offset!");
-static_assert(offsetof(UABP_CameraRig_C, Downed) == 0x000C20, "Member 'UABP_CameraRig_C::Downed' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_CameraRig_C;
 
 }
 

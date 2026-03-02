@@ -22,10 +22,7 @@ public:
 	class FText                                   Title;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class FText                                   Description;                                       // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_InteractKeywordTooltip_C_Set_Info) == 0x000008, "Wrong alignment on Widget_InteractKeywordTooltip_C_Set_Info");
-static_assert(sizeof(Widget_InteractKeywordTooltip_C_Set_Info) == 0x000020, "Wrong size on Widget_InteractKeywordTooltip_C_Set_Info");
-static_assert(offsetof(Widget_InteractKeywordTooltip_C_Set_Info, Title) == 0x000000, "Member 'Widget_InteractKeywordTooltip_C_Set_Info::Title' has a wrong offset!");
-static_assert(offsetof(Widget_InteractKeywordTooltip_C_Set_Info, Description) == 0x000010, "Member 'Widget_InteractKeywordTooltip_C_Set_Info::Description' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_InteractKeywordTooltip_C_Set_Info;
 
 }
 

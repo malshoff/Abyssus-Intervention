@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_GameTimer.Widget_GameTimer_C
-// 0x0018 (0x02E8 - 0x02D0)
+// 0x0018 (0x0358 - 0x0340)
 class UWidget_GameTimer_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             TextBlock_0;                                       // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FTimerHandle                           UpdateTimer;                                       // 0x02E0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             TextBlock_0;                                       // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FTimerHandle                           UpdateTimer;                                       // 0x0350(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -35,18 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_GameTimer_C">();
+		BP_STATIC_CLASS_IMPL("Widget_GameTimer_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_GameTimer_C")
 	}
 	static class UWidget_GameTimer_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_GameTimer_C>();
 	}
 };
-static_assert(alignof(UWidget_GameTimer_C) == 0x000008, "Wrong alignment on UWidget_GameTimer_C");
-static_assert(sizeof(UWidget_GameTimer_C) == 0x0002E8, "Wrong size on UWidget_GameTimer_C");
-static_assert(offsetof(UWidget_GameTimer_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_GameTimer_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_GameTimer_C, TextBlock_0) == 0x0002D8, "Member 'UWidget_GameTimer_C::TextBlock_0' has a wrong offset!");
-static_assert(offsetof(UWidget_GameTimer_C, UpdateTimer) == 0x0002E0, "Member 'UWidget_GameTimer_C::UpdateTimer' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_GameTimer_C;
 
 }
 

@@ -17,195 +17,19 @@
 namespace SDK
 {
 
-// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.SetTitleText
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWidget_PlayerGameOverScreen_C::SetTitleText(const class FText& Text)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "SetTitleText");
-
-	Params::Widget_PlayerGameOverScreen_C_SetTitleText Parms{};
-
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.SelectPlayerTile
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          PressedWidget                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_PlayerGameOverScreen_C::SelectPlayerTile(class UWidget* PressedWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "SelectPlayerTile");
-
-	Params::Widget_PlayerGameOverScreen_C_SelectPlayerTile Parms{};
-
-	Parms.PressedWidget = PressedWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.SelectNextPlayerTile
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    SelectPrevious                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_PlayerGameOverScreen_C::SelectNextPlayerTile(bool SelectPrevious)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "SelectNextPlayerTile");
-
-	Params::Widget_PlayerGameOverScreen_C_SelectNextPlayerTile Parms{};
-
-	Parms.SelectPrevious = SelectPrevious;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.SavePlayerStats
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_PlayerGameOverScreen_C::SavePlayerStats()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "SavePlayerStats");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.PushChallengePopups
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_PlayerGameOverScreen_C::PushChallengePopups()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "PushChallengePopups");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.OnPressedPlayerTIle
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          PressedWidget                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_PlayerGameOverScreen_C::OnPressedPlayerTIle(class UWidget* PressedWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "OnPressedPlayerTIle");
-
-	Params::Widget_PlayerGameOverScreen_C_OnPressedPlayerTIle Parms{};
-
-	Parms.PressedWidget = PressedWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.ExecuteUbergraph_Widget_PlayerGameOverScreen
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_PlayerGameOverScreen_C::ExecuteUbergraph_Widget_PlayerGameOverScreen(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "ExecuteUbergraph_Widget_PlayerGameOverScreen");
-
-	Params::Widget_PlayerGameOverScreen_C_ExecuteUbergraph_Widget_PlayerGameOverScreen Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.ConstructButtons
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UWidget_PlayerGameOverScreen_C::ConstructButtons()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "ConstructButtons");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_PlayerGameOverScreen_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
+// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.BndEvt__Widget_PlayerGameOverScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
 // class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_PlayerGameOverScreen_C::BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+void UWidget_PlayerGameOverScreen_C::BndEvt__Widget_PlayerGameOverScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
+		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "BndEvt__Widget_PlayerGameOverScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_PlayerGameOverScreen_C_BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Left_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_PlayerGameOverScreen_C::BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Left_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Left_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_PlayerGameOverScreen_C_BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Left_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
+	Params::Widget_PlayerGameOverScreen_C_BndEvt__Widget_PlayerGameOverScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 
@@ -233,21 +57,191 @@ void UWidget_PlayerGameOverScreen_C::BndEvt__Widget_PlayerGameOverScreen_W_Butto
 }
 
 
-// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.BndEvt__Widget_PlayerGameOverScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature
+// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Left_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
 // class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_PlayerGameOverScreen_C::BndEvt__Widget_PlayerGameOverScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+void UWidget_PlayerGameOverScreen_C::BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Left_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "BndEvt__Widget_PlayerGameOverScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature");
+		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Left_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_PlayerGameOverScreen_C_BndEvt__Widget_PlayerGameOverScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature Parms{};
+	Params::Widget_PlayerGameOverScreen_C_BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Left_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_PlayerGameOverScreen_C::BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_PlayerGameOverScreen_C_BndEvt__Widget_PlayerGameOverScreen_W_PageButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_PlayerGameOverScreen_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.ConstructButtons
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_PlayerGameOverScreen_C::ConstructButtons()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "ConstructButtons");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.ExecuteUbergraph_Widget_PlayerGameOverScreen
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_PlayerGameOverScreen_C::ExecuteUbergraph_Widget_PlayerGameOverScreen(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "ExecuteUbergraph_Widget_PlayerGameOverScreen");
+
+	Params::Widget_PlayerGameOverScreen_C_ExecuteUbergraph_Widget_PlayerGameOverScreen Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.HandleSelectPlayerTile
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget_PlayerGameOverPlayerTile_C*SelectedPlayerTile                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_PlayerGameOverScreen_C::HandleSelectPlayerTile(class UWidget_PlayerGameOverPlayerTile_C* SelectedPlayerTile)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "HandleSelectPlayerTile");
+
+	Params::Widget_PlayerGameOverScreen_C_HandleSelectPlayerTile Parms{};
+
+	Parms.SelectedPlayerTile = SelectedPlayerTile;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_PlayerGameOverScreen_C::OnInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "OnInitialized");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.OnInputMethodChanged_Event
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECommonInputType                        bNewInputType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_PlayerGameOverScreen_C::OnInputMethodChanged_Event(ECommonInputType bNewInputType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "OnInputMethodChanged_Event");
+
+	Params::Widget_PlayerGameOverScreen_C_OnInputMethodChanged_Event Parms{};
+
+	Parms.bNewInputType = bNewInputType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.PushChallengePopups
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_PlayerGameOverScreen_C::PushChallengePopups()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "PushChallengePopups");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.SavePlayerStats
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_PlayerGameOverScreen_C::SavePlayerStats()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "SavePlayerStats");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_PlayerGameOverScreen.Widget_PlayerGameOverScreen_C.SetTitleText
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWidget_PlayerGameOverScreen_C::SetTitleText(const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerGameOverScreen_C", "SetTitleText");
+
+	Params::Widget_PlayerGameOverScreen_C_SetTitleText Parms{};
+
+	Parms.Text = std::move(Text);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

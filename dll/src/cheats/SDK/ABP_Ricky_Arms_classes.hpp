@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Ricky_Arms.ABP_Ricky_Arms_C
-// 0x0000 (0x48E0 - 0x48E0)
+// 0x0000 (0x4EF0 - 0x4EF0)
 class UABP_Ricky_Arms_C final : public UABP_BasePlayer_Arms_C
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_Ricky_Arms_C">();
+		BP_STATIC_CLASS_IMPL("ABP_Ricky_Arms_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_Ricky_Arms_C")
 	}
 	static class UABP_Ricky_Arms_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_Ricky_Arms_C>();
 	}
 };
-static_assert(alignof(UABP_Ricky_Arms_C) == 0x000010, "Wrong alignment on UABP_Ricky_Arms_C");
-static_assert(sizeof(UABP_Ricky_Arms_C) == 0x0048E0, "Wrong size on UABP_Ricky_Arms_C");
+DUMPER7_ASSERTS_UABP_Ricky_Arms_C;
 
 }
 

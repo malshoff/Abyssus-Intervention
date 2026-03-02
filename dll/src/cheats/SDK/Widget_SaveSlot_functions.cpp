@@ -139,6 +139,26 @@ void UWidget_SaveSlot_C::ExecuteUbergraph_Widget_SaveSlot(int32 EntryPoint)
 }
 
 
+// Function Widget_SaveSlot.Widget_SaveSlot_C.LoadGameFinished
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URSaveGame*                       SaveGame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SaveSlot_C::LoadGameFinished(class URSaveGame* SaveGame)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SaveSlot_C", "LoadGameFinished");
+
+	Params::Widget_SaveSlot_C_LoadGameFinished Parms{};
+
+	Parms.SaveGame = SaveGame;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Widget_SaveSlot.Widget_SaveSlot_C.OnAddedToFocusPath
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -179,6 +199,26 @@ void UWidget_SaveSlot_C::OnListItemObjectSet(class UObject* ListItemObject)
 }
 
 
+// Function Widget_SaveSlot.Widget_SaveSlot_C.OnLoadSessionFinished
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URSaveGameSession*                SaveGameSession                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SaveSlot_C::OnLoadSessionFinished(class URSaveGameSession* SaveGameSession)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SaveSlot_C", "OnLoadSessionFinished");
+
+	Params::Widget_SaveSlot_C_OnLoadSessionFinished Parms{};
+
+	Parms.SaveGameSession = SaveGameSession;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Widget_SaveSlot.Widget_SaveSlot_C.OnRemovedFromFocusPath
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -202,9 +242,10 @@ void UWidget_SaveSlot_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocu
 // Function Widget_SaveSlot.Widget_SaveSlot_C.Setup
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class URSaveGame*                       SaveGame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class URSaveGame*                       SetupSaveGameRef_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    LastSaveGameSlot                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWidget_SaveSlot_C::Setup(class URSaveGame* SaveGame)
+void UWidget_SaveSlot_C::Setup(class URSaveGame* SetupSaveGameRef_0, const class FString& LastSaveGameSlot)
 {
 	static class UFunction* Func = nullptr;
 
@@ -213,7 +254,8 @@ void UWidget_SaveSlot_C::Setup(class URSaveGame* SaveGame)
 
 	Params::Widget_SaveSlot_C_Setup Parms{};
 
-	Parms.SaveGame = SaveGame;
+	Parms.SetupSaveGameRef_0 = SetupSaveGameRef_0;
+	Parms.LastSaveGameSlot = std::move(LastSaveGameSlot);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

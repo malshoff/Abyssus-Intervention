@@ -11,25 +11,25 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "RGame_structs.hpp"
 #include "Widget_Settings_KeyMappingBase_classes.hpp"
 #include "CommonInput_structs.hpp"
-#include "RGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_Settings_KeybindInput.Widget_Settings_KeybindInput_C
-// 0x0030 (0x03C0 - 0x0390)
+// 0x0030 (0x0458 - 0x0428)
 class UWidget_Settings_KeybindInput_C final : public UWidget_Settings_KeyMappingBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_Settings_KeybindInput_C;     // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Highlighted;                                       // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_392;                                         // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInputKeySelector*                      InputKeySelector;                                  // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 KeyImage;                                          // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_SettingsButtonBase_C*           TextKeybindDisplayName;                            // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_Settings_KeybindInput_C;     // 0x0428(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_SettingsButtonBase_C*           TextKeybindDisplayName;                            // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 KeyImage;                                          // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInputKeySelector*                      InputKeySelector;                                  // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_392;                                         // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Highlighted;                                       // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature(const struct FInputChord& SelectedKey);
@@ -49,21 +49,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_Settings_KeybindInput_C">();
+		BP_STATIC_CLASS_IMPL("Widget_Settings_KeybindInput_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_Settings_KeybindInput_C")
 	}
 	static class UWidget_Settings_KeybindInput_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_Settings_KeybindInput_C>();
 	}
 };
-static_assert(alignof(UWidget_Settings_KeybindInput_C) == 0x000008, "Wrong alignment on UWidget_Settings_KeybindInput_C");
-static_assert(sizeof(UWidget_Settings_KeybindInput_C) == 0x0003C0, "Wrong size on UWidget_Settings_KeybindInput_C");
-static_assert(offsetof(UWidget_Settings_KeybindInput_C, UberGraphFrame_Widget_Settings_KeybindInput_C) == 0x000390, "Member 'UWidget_Settings_KeybindInput_C::UberGraphFrame_Widget_Settings_KeybindInput_C' has a wrong offset!");
-static_assert(offsetof(UWidget_Settings_KeybindInput_C, Highlighted) == 0x000398, "Member 'UWidget_Settings_KeybindInput_C::Highlighted' has a wrong offset!");
-static_assert(offsetof(UWidget_Settings_KeybindInput_C, Image_392) == 0x0003A0, "Member 'UWidget_Settings_KeybindInput_C::Image_392' has a wrong offset!");
-static_assert(offsetof(UWidget_Settings_KeybindInput_C, InputKeySelector) == 0x0003A8, "Member 'UWidget_Settings_KeybindInput_C::InputKeySelector' has a wrong offset!");
-static_assert(offsetof(UWidget_Settings_KeybindInput_C, KeyImage) == 0x0003B0, "Member 'UWidget_Settings_KeybindInput_C::KeyImage' has a wrong offset!");
-static_assert(offsetof(UWidget_Settings_KeybindInput_C, TextKeybindDisplayName) == 0x0003B8, "Member 'UWidget_Settings_KeybindInput_C::TextKeybindDisplayName' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_Settings_KeybindInput_C;
 
 }
 

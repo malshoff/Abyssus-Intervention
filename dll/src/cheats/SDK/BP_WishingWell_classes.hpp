@@ -10,48 +10,50 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_WishingWell.BP_WishingWell_C
-// 0x00C8 (0x04B8 - 0x03F0)
+// 0x00D8 (0x04C8 - 0x03F0)
 class ABP_WishingWell_C final : public ARLootableContainer
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      ActiveEffect;                                      // 0x03F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0400(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight1;                                       // 0x0408(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDMActorProximityBoxComponent*          VoiceProximity;                                    // 0x0410(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        ActivatedFXLocation;                               // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDecalComponent*                        Decal;                                             // 0x0420(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWidgetComponent*                       Widget_InteractableIndicator;                      // 0x0428(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDMActorProximityBoxComponent*          Proximity_InteractableIndicator;                   // 0x0430(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight2;                                       // 0x0438(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Interactable_WhishingWell;                      // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   OverflowingWater;                                  // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   WaterDisk;                                         // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight;                                        // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      GodrayVFX;                                         // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Scene;                                             // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	int32                                         NumRewardsAvailable;                               // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_474[0x4];                                      // 0x0474(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     DefaultMaterial;                                   // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FColor                                 DefaultTextColor;                                  // 0x0480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         UsesLeft;                                          // 0x0484(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RewardChance;                                      // 0x0488(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LuckyCharmChance;                                  // 0x048C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TimesFailed;                                       // 0x0490(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_494[0x4];                                      // 0x0494(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      PlayerController;                                  // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FRUniqueWishingWell>            WishingWellInteractionCosts;                       // 0x04A0(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
-	bool                                          FoundPlayerInArray;                                // 0x04B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        SW_Fountain_Small_Loop;                            // 0x03F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        SW_WishingWell_Active_Loop;                        // 0x0400(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      ActiveEffect;                                      // 0x0408(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0410(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight1;                                       // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UDMActorProximityBoxComponent*          VoiceProximity;                                    // 0x0420(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        ActivatedFXLocation;                               // 0x0428(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UDecalComponent*                        Decal;                                             // 0x0430(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWidgetComponent*                       Widget_InteractableIndicator;                      // 0x0438(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UDMActorProximityBoxComponent*          Proximity_InteractableIndicator;                   // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight2;                                       // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Interactable_WhishingWell;                      // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   OverflowingWater;                                  // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   WaterDisk;                                         // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight;                                        // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      GodrayVFX;                                         // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumRewardsAvailable;                               // 0x0480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_484[0x4];                                      // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     DefaultMaterial;                                   // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FColor                                 DefaultTextColor;                                  // 0x0490(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         UsesLeft;                                          // 0x0494(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RewardChance;                                      // 0x0498(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LuckyCharmChance;                                  // 0x049C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TimesFailed;                                       // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A4[0x4];                                      // 0x04A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      PlayerController;                                  // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FRUniqueWishingWell>            WishingWellInteractionCosts;                       // 0x04B0(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
+	bool                                          FoundPlayerInArray;                                // 0x04C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddWishingWellCostForController(int32 NewInteractionCost, int32 UsesLeft_0, class APlayerController* PlayerController_0);
@@ -68,6 +70,8 @@ public:
 	void PlayerStateIsValid(bool* IsValid);
 	void PlayLocalFX(int32 Cost);
 	void ReceiveBeginPlay();
+	void SubstituteConditionMutator(bool* Value);
+	bool SubstituteRewardConditionMet(TSubclassOf<class AActor> DefaultRewardClass);
 	void UpdateInteractionText();
 	void UserConstructionScript();
 
@@ -79,41 +83,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_WishingWell_C">();
+		BP_STATIC_CLASS_IMPL("BP_WishingWell_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_WishingWell_C")
 	}
 	static class ABP_WishingWell_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_WishingWell_C>();
 	}
 };
-static_assert(alignof(ABP_WishingWell_C) == 0x000008, "Wrong alignment on ABP_WishingWell_C");
-static_assert(sizeof(ABP_WishingWell_C) == 0x0004B8, "Wrong size on ABP_WishingWell_C");
-static_assert(offsetof(ABP_WishingWell_C, UberGraphFrame) == 0x0003F0, "Member 'ABP_WishingWell_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, ActiveEffect) == 0x0003F8, "Member 'ABP_WishingWell_C::ActiveEffect' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, StaticMesh) == 0x000400, "Member 'ABP_WishingWell_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, PointLight1) == 0x000408, "Member 'ABP_WishingWell_C::PointLight1' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, VoiceProximity) == 0x000410, "Member 'ABP_WishingWell_C::VoiceProximity' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, ActivatedFXLocation) == 0x000418, "Member 'ABP_WishingWell_C::ActivatedFXLocation' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, Decal) == 0x000420, "Member 'ABP_WishingWell_C::Decal' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, Widget_InteractableIndicator) == 0x000428, "Member 'ABP_WishingWell_C::Widget_InteractableIndicator' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, Proximity_InteractableIndicator) == 0x000430, "Member 'ABP_WishingWell_C::Proximity_InteractableIndicator' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, PointLight2) == 0x000438, "Member 'ABP_WishingWell_C::PointLight2' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, SM_Interactable_WhishingWell) == 0x000440, "Member 'ABP_WishingWell_C::SM_Interactable_WhishingWell' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, OverflowingWater) == 0x000448, "Member 'ABP_WishingWell_C::OverflowingWater' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, WaterDisk) == 0x000450, "Member 'ABP_WishingWell_C::WaterDisk' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, PointLight) == 0x000458, "Member 'ABP_WishingWell_C::PointLight' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, GodrayVFX) == 0x000460, "Member 'ABP_WishingWell_C::GodrayVFX' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, Scene) == 0x000468, "Member 'ABP_WishingWell_C::Scene' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, NumRewardsAvailable) == 0x000470, "Member 'ABP_WishingWell_C::NumRewardsAvailable' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, DefaultMaterial) == 0x000478, "Member 'ABP_WishingWell_C::DefaultMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, DefaultTextColor) == 0x000480, "Member 'ABP_WishingWell_C::DefaultTextColor' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, UsesLeft) == 0x000484, "Member 'ABP_WishingWell_C::UsesLeft' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, RewardChance) == 0x000488, "Member 'ABP_WishingWell_C::RewardChance' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, LuckyCharmChance) == 0x00048C, "Member 'ABP_WishingWell_C::LuckyCharmChance' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, TimesFailed) == 0x000490, "Member 'ABP_WishingWell_C::TimesFailed' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, PlayerController) == 0x000498, "Member 'ABP_WishingWell_C::PlayerController' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, WishingWellInteractionCosts) == 0x0004A0, "Member 'ABP_WishingWell_C::WishingWellInteractionCosts' has a wrong offset!");
-static_assert(offsetof(ABP_WishingWell_C, FoundPlayerInArray) == 0x0004B0, "Member 'ABP_WishingWell_C::FoundPlayerInArray' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_WishingWell_C;
 
 }
 

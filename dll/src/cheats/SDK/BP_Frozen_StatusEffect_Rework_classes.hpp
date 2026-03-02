@@ -19,22 +19,22 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Frozen_StatusEffect_Rework.BP_Frozen_StatusEffect_Rework_C
-// 0x0018 (0x04F0 - 0x04D8)
+// 0x0018 (0x04F8 - 0x04E0)
 class UBP_Frozen_StatusEffect_Rework_C final : public URStatusEffectAilmentGScript
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UMaterialInterface*                     CachedOverlayMaterial;                             // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	EAICombatPathingType                          PreGravityPathingType;                             // 0x04E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E9[0x3];                                      // 0x04E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         GravityMultiplier;                                 // 0x04EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMaterialInterface*                     CachedOverlayMaterial;                             // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	EAICombatPathingType                          PreGravityPathingType;                             // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4F1[0x3];                                      // 0x04F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         GravityMultiplier;                                 // 0x04F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ApplyOverlayMaterial();
 	void CheckFrostPassive4(bool* Result, double* AdditiveMultiplier);
 	void CheckFrostPassive5(bool Activate);
 	void CheckFrostPassive8(bool* HasPassive8);
-	void CheckFrostPassive9(bool* HasPassive9);
+	void CheckFrostPassive9(bool* Result, double* AdditiveMultiplier, double* MinShredHealthPercentage);
 	void DisableFlyingEnemies();
 	void EnableFlyingEnemies();
 	void ExecuteUbergraph_BP_Frozen_StatusEffect_Rework(int32 EntryPoint);
@@ -50,19 +50,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Frozen_StatusEffect_Rework_C">();
+		BP_STATIC_CLASS_IMPL("BP_Frozen_StatusEffect_Rework_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Frozen_StatusEffect_Rework_C")
 	}
 	static class UBP_Frozen_StatusEffect_Rework_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Frozen_StatusEffect_Rework_C>();
 	}
 };
-static_assert(alignof(UBP_Frozen_StatusEffect_Rework_C) == 0x000008, "Wrong alignment on UBP_Frozen_StatusEffect_Rework_C");
-static_assert(sizeof(UBP_Frozen_StatusEffect_Rework_C) == 0x0004F0, "Wrong size on UBP_Frozen_StatusEffect_Rework_C");
-static_assert(offsetof(UBP_Frozen_StatusEffect_Rework_C, UberGraphFrame) == 0x0004D8, "Member 'UBP_Frozen_StatusEffect_Rework_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Frozen_StatusEffect_Rework_C, CachedOverlayMaterial) == 0x0004E0, "Member 'UBP_Frozen_StatusEffect_Rework_C::CachedOverlayMaterial' has a wrong offset!");
-static_assert(offsetof(UBP_Frozen_StatusEffect_Rework_C, PreGravityPathingType) == 0x0004E8, "Member 'UBP_Frozen_StatusEffect_Rework_C::PreGravityPathingType' has a wrong offset!");
-static_assert(offsetof(UBP_Frozen_StatusEffect_Rework_C, GravityMultiplier) == 0x0004EC, "Member 'UBP_Frozen_StatusEffect_Rework_C::GravityMultiplier' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Frozen_StatusEffect_Rework_C;
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BP_Spirit_Behavior_Ability_Mutator.BP_Spirit_Behavior_Ability_Mutator_C.ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator
-// 0x0130 (0x0130 - 0x0000)
+// 0x0258 (0x0258 - 0x0000)
 struct BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator final
 {
 public:
@@ -46,39 +46,14 @@ public:
 	int32                                         K2Node_Event_DamageSourceMask;                     // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_HealthDamage;                         // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_Event_OptionalAvatarActor;                  // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_1;                 // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRMutableFloat                         K2Node_Event_SpecificCombatEventModifier;          // 0x0110(0x0128)()
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_1;                 // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_241[0x7];                                      // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator) == 0x000008, "Wrong alignment on BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator");
-static_assert(sizeof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator) == 0x000130, "Wrong size on BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, EntryPoint) == 0x000000, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, CallFunc_GetScriptFName_ReturnValue) == 0x000038, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000040, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, K2Node_CustomEvent_NewRank) == 0x00004C, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::K2Node_CustomEvent_NewRank' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, K2Node_CustomEvent_MutatorPrimaryAsset) == 0x000050, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::K2Node_CustomEvent_MutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000058, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, CallFunc_GetScriptFName_ReturnValue_1) == 0x000088, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x000090, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, K2Node_DynamicCast_bSuccess_1) == 0x000098, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, CallFunc_GetMutatorRank_ReturnValue) == 0x00009C, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x0000A0, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000A8, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, K2Node_CreateDelegate_OutputDelegate) == 0x0000B0, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000C0, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x0000C8, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, K2Node_Event_TriggeringActor) == 0x0000F8, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::K2Node_Event_TriggeringActor' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, K2Node_Event_DamageSourceMask) == 0x000100, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::K2Node_Event_DamageSourceMask' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, K2Node_Event_HealthDamage) == 0x000104, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::K2Node_Event_HealthDamage' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, K2Node_Event_OptionalAvatarActor) == 0x000108, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::K2Node_Event_OptionalAvatarActor' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x000110, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, K2Node_DynamicCast_bSuccess_2) == 0x000118, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000120, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x000128, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Spirit_Behavior_Ability_Mutator_C_ExecuteUbergraph_BP_Spirit_Behavior_Ability_Mutator;
 
 // Function BP_Spirit_Behavior_Ability_Mutator.BP_Spirit_Behavior_Ability_Mutator_C.MutatorRankChanged
 // 0x0010 (0x0010 - 0x0000)
@@ -89,13 +64,10 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class URMutatorPrimaryAsset*                  MutatorPrimaryAsset;                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Spirit_Behavior_Ability_Mutator_C_MutatorRankChanged) == 0x000008, "Wrong alignment on BP_Spirit_Behavior_Ability_Mutator_C_MutatorRankChanged");
-static_assert(sizeof(BP_Spirit_Behavior_Ability_Mutator_C_MutatorRankChanged) == 0x000010, "Wrong size on BP_Spirit_Behavior_Ability_Mutator_C_MutatorRankChanged");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_MutatorRankChanged, NewRank) == 0x000000, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_MutatorRankChanged::NewRank' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_MutatorRankChanged, MutatorPrimaryAsset) == 0x000008, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_MutatorRankChanged::MutatorPrimaryAsset' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Spirit_Behavior_Ability_Mutator_C_MutatorRankChanged;
 
 // Function BP_Spirit_Behavior_Ability_Mutator.BP_Spirit_Behavior_Ability_Mutator_C.RunAbilityBehavior
-// 0x0018 (0x0018 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct BP_Spirit_Behavior_Ability_Mutator_C_RunAbilityBehavior final
 {
 public:
@@ -103,13 +75,9 @@ public:
 	int32                                         DamageSourceMask;                                  // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         HealthDamage;                                      // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 OptionalAvatarActor;                               // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FRMutableFloat                         SpecificCombatEventModifier;                       // 0x0018(0x0128)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_Spirit_Behavior_Ability_Mutator_C_RunAbilityBehavior) == 0x000008, "Wrong alignment on BP_Spirit_Behavior_Ability_Mutator_C_RunAbilityBehavior");
-static_assert(sizeof(BP_Spirit_Behavior_Ability_Mutator_C_RunAbilityBehavior) == 0x000018, "Wrong size on BP_Spirit_Behavior_Ability_Mutator_C_RunAbilityBehavior");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_RunAbilityBehavior, TriggeringActor) == 0x000000, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_RunAbilityBehavior::TriggeringActor' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_RunAbilityBehavior, DamageSourceMask) == 0x000008, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_RunAbilityBehavior::DamageSourceMask' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_RunAbilityBehavior, HealthDamage) == 0x00000C, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_RunAbilityBehavior::HealthDamage' has a wrong offset!");
-static_assert(offsetof(BP_Spirit_Behavior_Ability_Mutator_C_RunAbilityBehavior, OptionalAvatarActor) == 0x000010, "Member 'BP_Spirit_Behavior_Ability_Mutator_C_RunAbilityBehavior::OptionalAvatarActor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Spirit_Behavior_Ability_Mutator_C_RunAbilityBehavior;
 
 }
 

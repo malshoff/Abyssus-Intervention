@@ -25,49 +25,58 @@ class ULiveLinkController final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkController">();
+		STATIC_CLASS_IMPL("LiveLinkController")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkController")
 	}
 	static class ULiveLinkController* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkController>();
 	}
 };
-static_assert(alignof(ULiveLinkController) == 0x000008, "Wrong alignment on ULiveLinkController");
-static_assert(sizeof(ULiveLinkController) == 0x000028, "Wrong size on ULiveLinkController");
+DUMPER7_ASSERTS_ULiveLinkController;
 
 // Class LiveLinkInterface.LiveLinkFrameInterpolationProcessor
 // 0x0000 (0x0028 - 0x0028)
-class ULiveLinkFrameInterpolationProcessor : public UObject
+class ULiveLinkFrameInterpolationProcessor final : public UObject
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkFrameInterpolationProcessor">();
+		STATIC_CLASS_IMPL("LiveLinkFrameInterpolationProcessor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkFrameInterpolationProcessor")
 	}
 	static class ULiveLinkFrameInterpolationProcessor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkFrameInterpolationProcessor>();
 	}
 };
-static_assert(alignof(ULiveLinkFrameInterpolationProcessor) == 0x000008, "Wrong alignment on ULiveLinkFrameInterpolationProcessor");
-static_assert(sizeof(ULiveLinkFrameInterpolationProcessor) == 0x000028, "Wrong size on ULiveLinkFrameInterpolationProcessor");
+DUMPER7_ASSERTS_ULiveLinkFrameInterpolationProcessor;
 
 // Class LiveLinkInterface.LiveLinkFramePreProcessor
 // 0x0000 (0x0028 - 0x0028)
-class ULiveLinkFramePreProcessor : public UObject
+class ULiveLinkFramePreProcessor final : public UObject
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkFramePreProcessor">();
+		STATIC_CLASS_IMPL("LiveLinkFramePreProcessor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkFramePreProcessor")
 	}
 	static class ULiveLinkFramePreProcessor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkFramePreProcessor>();
 	}
 };
-static_assert(alignof(ULiveLinkFramePreProcessor) == 0x000008, "Wrong alignment on ULiveLinkFramePreProcessor");
-static_assert(sizeof(ULiveLinkFramePreProcessor) == 0x000028, "Wrong size on ULiveLinkFramePreProcessor");
+DUMPER7_ASSERTS_ULiveLinkFramePreProcessor;
 
 // Class LiveLinkInterface.LiveLinkRole
 // 0x0000 (0x0028 - 0x0028)
@@ -76,15 +85,18 @@ class ULiveLinkRole : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkRole">();
+		STATIC_CLASS_IMPL("LiveLinkRole")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkRole")
 	}
 	static class ULiveLinkRole* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkRole>();
 	}
 };
-static_assert(alignof(ULiveLinkRole) == 0x000008, "Wrong alignment on ULiveLinkRole");
-static_assert(sizeof(ULiveLinkRole) == 0x000028, "Wrong size on ULiveLinkRole");
+DUMPER7_ASSERTS_ULiveLinkRole;
 
 // Class LiveLinkInterface.LiveLinkBasicRole
 // 0x0000 (0x0028 - 0x0028)
@@ -93,15 +105,18 @@ class ULiveLinkBasicRole : public ULiveLinkRole
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkBasicRole">();
+		STATIC_CLASS_IMPL("LiveLinkBasicRole")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkBasicRole")
 	}
 	static class ULiveLinkBasicRole* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkBasicRole>();
 	}
 };
-static_assert(alignof(ULiveLinkBasicRole) == 0x000008, "Wrong alignment on ULiveLinkBasicRole");
-static_assert(sizeof(ULiveLinkBasicRole) == 0x000028, "Wrong size on ULiveLinkBasicRole");
+DUMPER7_ASSERTS_ULiveLinkBasicRole;
 
 // Class LiveLinkInterface.LiveLinkInputDeviceRole
 // 0x0000 (0x0028 - 0x0028)
@@ -110,19 +125,22 @@ class ULiveLinkInputDeviceRole final : public ULiveLinkBasicRole
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkInputDeviceRole">();
+		STATIC_CLASS_IMPL("LiveLinkInputDeviceRole")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkInputDeviceRole")
 	}
 	static class ULiveLinkInputDeviceRole* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkInputDeviceRole>();
 	}
 };
-static_assert(alignof(ULiveLinkInputDeviceRole) == 0x000008, "Wrong alignment on ULiveLinkInputDeviceRole");
-static_assert(sizeof(ULiveLinkInputDeviceRole) == 0x000028, "Wrong size on ULiveLinkInputDeviceRole");
+DUMPER7_ASSERTS_ULiveLinkInputDeviceRole;
 
 // Class LiveLinkInterface.LiveLinkSubjectRemapper
 // 0x0058 (0x0080 - 0x0028)
-class ULiveLinkSubjectRemapper : public UObject
+class ULiveLinkSubjectRemapper final : public UObject
 {
 public:
 	TMap<class FName, class FName>                BoneNameMap;                                       // 0x0028(0x0050)(Edit, NativeAccessSpecifierPublic)
@@ -131,16 +149,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkSubjectRemapper">();
+		STATIC_CLASS_IMPL("LiveLinkSubjectRemapper")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkSubjectRemapper")
 	}
 	static class ULiveLinkSubjectRemapper* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkSubjectRemapper>();
 	}
 };
-static_assert(alignof(ULiveLinkSubjectRemapper) == 0x000008, "Wrong alignment on ULiveLinkSubjectRemapper");
-static_assert(sizeof(ULiveLinkSubjectRemapper) == 0x000080, "Wrong size on ULiveLinkSubjectRemapper");
-static_assert(offsetof(ULiveLinkSubjectRemapper, BoneNameMap) == 0x000028, "Member 'ULiveLinkSubjectRemapper::BoneNameMap' has a wrong offset!");
+DUMPER7_ASSERTS_ULiveLinkSubjectRemapper;
 
 // Class LiveLinkInterface.LiveLinkSourceSettings
 // 0x0088 (0x00B0 - 0x0028)
@@ -157,20 +177,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkSourceSettings">();
+		STATIC_CLASS_IMPL("LiveLinkSourceSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkSourceSettings")
 	}
 	static class ULiveLinkSourceSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkSourceSettings>();
 	}
 };
-static_assert(alignof(ULiveLinkSourceSettings) == 0x000008, "Wrong alignment on ULiveLinkSourceSettings");
-static_assert(sizeof(ULiveLinkSourceSettings) == 0x0000B0, "Wrong size on ULiveLinkSourceSettings");
-static_assert(offsetof(ULiveLinkSourceSettings, Mode) == 0x000028, "Member 'ULiveLinkSourceSettings::Mode' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSourceSettings, BufferSettings) == 0x000030, "Member 'ULiveLinkSourceSettings::BufferSettings' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSourceSettings, ConnectionString) == 0x000090, "Member 'ULiveLinkSourceSettings::ConnectionString' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSourceSettings, Factory) == 0x0000A0, "Member 'ULiveLinkSourceSettings::Factory' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSourceSettings, ParentSubject) == 0x0000A8, "Member 'ULiveLinkSourceSettings::ParentSubject' has a wrong offset!");
+DUMPER7_ASSERTS_ULiveLinkSourceSettings;
 
 // Class LiveLinkInterface.LiveLinkCurveRemapSettings
 // 0x0050 (0x0100 - 0x00B0)
@@ -182,50 +200,58 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkCurveRemapSettings">();
+		STATIC_CLASS_IMPL("LiveLinkCurveRemapSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkCurveRemapSettings")
 	}
 	static class ULiveLinkCurveRemapSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkCurveRemapSettings>();
 	}
 };
-static_assert(alignof(ULiveLinkCurveRemapSettings) == 0x000008, "Wrong alignment on ULiveLinkCurveRemapSettings");
-static_assert(sizeof(ULiveLinkCurveRemapSettings) == 0x000100, "Wrong size on ULiveLinkCurveRemapSettings");
-static_assert(offsetof(ULiveLinkCurveRemapSettings, CurveConversionSettings) == 0x0000B0, "Member 'ULiveLinkCurveRemapSettings::CurveConversionSettings' has a wrong offset!");
+DUMPER7_ASSERTS_ULiveLinkCurveRemapSettings;
 
 // Class LiveLinkInterface.LiveLinkFrameTranslator
 // 0x0000 (0x0028 - 0x0028)
-class ULiveLinkFrameTranslator : public UObject
+class ULiveLinkFrameTranslator final : public UObject
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkFrameTranslator">();
+		STATIC_CLASS_IMPL("LiveLinkFrameTranslator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkFrameTranslator")
 	}
 	static class ULiveLinkFrameTranslator* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkFrameTranslator>();
 	}
 };
-static_assert(alignof(ULiveLinkFrameTranslator) == 0x000008, "Wrong alignment on ULiveLinkFrameTranslator");
-static_assert(sizeof(ULiveLinkFrameTranslator) == 0x000028, "Wrong size on ULiveLinkFrameTranslator");
+DUMPER7_ASSERTS_ULiveLinkFrameTranslator;
 
 // Class LiveLinkInterface.LiveLinkSourceFactory
 // 0x0000 (0x0028 - 0x0028)
-class ULiveLinkSourceFactory : public UObject
+class ULiveLinkSourceFactory final : public UObject
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkSourceFactory">();
+		STATIC_CLASS_IMPL("LiveLinkSourceFactory")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkSourceFactory")
 	}
 	static class ULiveLinkSourceFactory* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkSourceFactory>();
 	}
 };
-static_assert(alignof(ULiveLinkSourceFactory) == 0x000008, "Wrong alignment on ULiveLinkSourceFactory");
-static_assert(sizeof(ULiveLinkSourceFactory) == 0x000028, "Wrong size on ULiveLinkSourceFactory");
+DUMPER7_ASSERTS_ULiveLinkSourceFactory;
 
 // Class LiveLinkInterface.LiveLinkDefaultSourceSettings
 // 0x0008 (0x0030 - 0x0028)
@@ -238,16 +264,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkDefaultSourceSettings">();
+		STATIC_CLASS_IMPL("LiveLinkDefaultSourceSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkDefaultSourceSettings")
 	}
 	static class ULiveLinkDefaultSourceSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkDefaultSourceSettings>();
 	}
 };
-static_assert(alignof(ULiveLinkDefaultSourceSettings) == 0x000008, "Wrong alignment on ULiveLinkDefaultSourceSettings");
-static_assert(sizeof(ULiveLinkDefaultSourceSettings) == 0x000030, "Wrong size on ULiveLinkDefaultSourceSettings");
-static_assert(offsetof(ULiveLinkDefaultSourceSettings, DefaultSourceFrameBufferSize) == 0x000028, "Member 'ULiveLinkDefaultSourceSettings::DefaultSourceFrameBufferSize' has a wrong offset!");
+DUMPER7_ASSERTS_ULiveLinkDefaultSourceSettings;
 
 // Class LiveLinkInterface.LiveLinkDefaultSubjectSettings
 // 0x0008 (0x0030 - 0x0028)
@@ -255,93 +283,87 @@ class ULiveLinkDefaultSubjectSettings final : public UObject
 {
 public:
 	bool                                          bRebroadcastSubjectsByDefault;                     // 0x0028(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowEditingRebroadcastProperty;                  // 0x0029(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowEditingRebroadcastProperty;                  // 0x0029(0x0001)(ZeroConstructor, Config, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkDefaultSubjectSettings">();
+		STATIC_CLASS_IMPL("LiveLinkDefaultSubjectSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkDefaultSubjectSettings")
 	}
 	static class ULiveLinkDefaultSubjectSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkDefaultSubjectSettings>();
 	}
 };
-static_assert(alignof(ULiveLinkDefaultSubjectSettings) == 0x000008, "Wrong alignment on ULiveLinkDefaultSubjectSettings");
-static_assert(sizeof(ULiveLinkDefaultSubjectSettings) == 0x000030, "Wrong size on ULiveLinkDefaultSubjectSettings");
-static_assert(offsetof(ULiveLinkDefaultSubjectSettings, bRebroadcastSubjectsByDefault) == 0x000028, "Member 'ULiveLinkDefaultSubjectSettings::bRebroadcastSubjectsByDefault' has a wrong offset!");
-static_assert(offsetof(ULiveLinkDefaultSubjectSettings, bAllowEditingRebroadcastProperty) == 0x000029, "Member 'ULiveLinkDefaultSubjectSettings::bAllowEditingRebroadcastProperty' has a wrong offset!");
+DUMPER7_ASSERTS_ULiveLinkDefaultSubjectSettings;
 
 // Class LiveLinkInterface.LiveLinkSubjectSettings
-// 0x0070 (0x0098 - 0x0028)
+// 0x0078 (0x00A0 - 0x0028)
 class ULiveLinkSubjectSettings final : public UObject
 {
 public:
-	TArray<class ULiveLinkFramePreProcessor*>     PreProcessors;                                     // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-	class ULiveLinkFrameInterpolationProcessor*   InterpolationProcessor;                            // 0x0038(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class ULiveLinkFrameTranslator*>       Translators;                                       // 0x0040(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-	class ULiveLinkSubjectRemapper*               Remapper;                                          // 0x0050(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class ULiveLinkFramePreProcessor*>     PreProcessors;                                     // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	class ULiveLinkFrameInterpolationProcessor*   InterpolationProcessor;                            // 0x0038(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<class ULiveLinkFrameTranslator*>       Translators;                                       // 0x0040(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	class ULiveLinkSubjectRemapper*               Remapper;                                          // 0x0050(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	TSubclassOf<class ULiveLinkRole>              Role;                                              // 0x0058(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FFrameRate                             FrameRate;                                         // 0x0060(0x0008)(Edit, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowModifyingRebroadcast;                        // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRebroadcastSubject;                               // 0x0069(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6A[0x2];                                       // 0x006A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bRebroadcastSubject;                               // 0x0068(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   OriginalSourceName;                                // 0x006C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLiveLinkSubjectKey                    Key;                                               // 0x0074(0x0018)(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_8C[0xC];                                       // 0x008C(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8C[0xC];                                       // 0x008C(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bAllowModifyingRebroadcast;                        // 0x0098(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkSubjectSettings">();
+		STATIC_CLASS_IMPL("LiveLinkSubjectSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkSubjectSettings")
 	}
 	static class ULiveLinkSubjectSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkSubjectSettings>();
 	}
 };
-static_assert(alignof(ULiveLinkSubjectSettings) == 0x000008, "Wrong alignment on ULiveLinkSubjectSettings");
-static_assert(sizeof(ULiveLinkSubjectSettings) == 0x000098, "Wrong size on ULiveLinkSubjectSettings");
-static_assert(offsetof(ULiveLinkSubjectSettings, PreProcessors) == 0x000028, "Member 'ULiveLinkSubjectSettings::PreProcessors' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSubjectSettings, InterpolationProcessor) == 0x000038, "Member 'ULiveLinkSubjectSettings::InterpolationProcessor' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSubjectSettings, Translators) == 0x000040, "Member 'ULiveLinkSubjectSettings::Translators' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSubjectSettings, Remapper) == 0x000050, "Member 'ULiveLinkSubjectSettings::Remapper' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSubjectSettings, Role) == 0x000058, "Member 'ULiveLinkSubjectSettings::Role' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSubjectSettings, FrameRate) == 0x000060, "Member 'ULiveLinkSubjectSettings::FrameRate' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSubjectSettings, bAllowModifyingRebroadcast) == 0x000068, "Member 'ULiveLinkSubjectSettings::bAllowModifyingRebroadcast' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSubjectSettings, bRebroadcastSubject) == 0x000069, "Member 'ULiveLinkSubjectSettings::bRebroadcastSubject' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSubjectSettings, OriginalSourceName) == 0x00006C, "Member 'ULiveLinkSubjectSettings::OriginalSourceName' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSubjectSettings, Key) == 0x000074, "Member 'ULiveLinkSubjectSettings::Key' has a wrong offset!");
+DUMPER7_ASSERTS_ULiveLinkSubjectSettings;
 
 // Class LiveLinkInterface.LiveLinkVirtualSubject
-// 0x0148 (0x0170 - 0x0028)
-class ULiveLinkVirtualSubject : public UObject
+// 0x0150 (0x0178 - 0x0028)
+class ULiveLinkVirtualSubject final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class ULiveLinkRole>              Role;                                              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<struct FLiveLinkSubjectName>           Subjects;                                          // 0x0038(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<class ULiveLinkFrameTranslator*>       FrameTranslators;                                  // 0x0048(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class ULiveLinkFrameTranslator*>       FrameTranslators;                                  // 0x0048(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
 	bool                                          bRebroadcastSubject;                               // 0x0058(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_59[0x117];                                     // 0x0059(0x0117)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x11F];                                     // 0x0059(0x011F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkVirtualSubject">();
+		STATIC_CLASS_IMPL("LiveLinkVirtualSubject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkVirtualSubject")
 	}
 	static class ULiveLinkVirtualSubject* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkVirtualSubject>();
 	}
 };
-static_assert(alignof(ULiveLinkVirtualSubject) == 0x000008, "Wrong alignment on ULiveLinkVirtualSubject");
-static_assert(sizeof(ULiveLinkVirtualSubject) == 0x000170, "Wrong size on ULiveLinkVirtualSubject");
-static_assert(offsetof(ULiveLinkVirtualSubject, Role) == 0x000030, "Member 'ULiveLinkVirtualSubject::Role' has a wrong offset!");
-static_assert(offsetof(ULiveLinkVirtualSubject, Subjects) == 0x000038, "Member 'ULiveLinkVirtualSubject::Subjects' has a wrong offset!");
-static_assert(offsetof(ULiveLinkVirtualSubject, FrameTranslators) == 0x000048, "Member 'ULiveLinkVirtualSubject::FrameTranslators' has a wrong offset!");
-static_assert(offsetof(ULiveLinkVirtualSubject, bRebroadcastSubject) == 0x000058, "Member 'ULiveLinkVirtualSubject::bRebroadcastSubject' has a wrong offset!");
+DUMPER7_ASSERTS_ULiveLinkVirtualSubject;
 
 // Class LiveLinkInterface.LiveLinkAnimationRole
 // 0x0000 (0x0028 - 0x0028)
@@ -350,15 +372,18 @@ class ULiveLinkAnimationRole final : public ULiveLinkBasicRole
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkAnimationRole">();
+		STATIC_CLASS_IMPL("LiveLinkAnimationRole")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkAnimationRole")
 	}
 	static class ULiveLinkAnimationRole* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkAnimationRole>();
 	}
 };
-static_assert(alignof(ULiveLinkAnimationRole) == 0x000008, "Wrong alignment on ULiveLinkAnimationRole");
-static_assert(sizeof(ULiveLinkAnimationRole) == 0x000028, "Wrong size on ULiveLinkAnimationRole");
+DUMPER7_ASSERTS_ULiveLinkAnimationRole;
 
 // Class LiveLinkInterface.LiveLinkTransformRole
 // 0x0000 (0x0028 - 0x0028)
@@ -367,15 +392,18 @@ class ULiveLinkTransformRole : public ULiveLinkBasicRole
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkTransformRole">();
+		STATIC_CLASS_IMPL("LiveLinkTransformRole")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkTransformRole")
 	}
 	static class ULiveLinkTransformRole* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkTransformRole>();
 	}
 };
-static_assert(alignof(ULiveLinkTransformRole) == 0x000008, "Wrong alignment on ULiveLinkTransformRole");
-static_assert(sizeof(ULiveLinkTransformRole) == 0x000028, "Wrong size on ULiveLinkTransformRole");
+DUMPER7_ASSERTS_ULiveLinkTransformRole;
 
 // Class LiveLinkInterface.LiveLinkCameraRole
 // 0x0000 (0x0028 - 0x0028)
@@ -384,15 +412,18 @@ class ULiveLinkCameraRole final : public ULiveLinkTransformRole
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkCameraRole">();
+		STATIC_CLASS_IMPL("LiveLinkCameraRole")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkCameraRole")
 	}
 	static class ULiveLinkCameraRole* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkCameraRole>();
 	}
 };
-static_assert(alignof(ULiveLinkCameraRole) == 0x000008, "Wrong alignment on ULiveLinkCameraRole");
-static_assert(sizeof(ULiveLinkCameraRole) == 0x000028, "Wrong size on ULiveLinkCameraRole");
+DUMPER7_ASSERTS_ULiveLinkCameraRole;
 
 // Class LiveLinkInterface.LiveLinkLightRole
 // 0x0000 (0x0028 - 0x0028)
@@ -401,15 +432,38 @@ class ULiveLinkLightRole final : public ULiveLinkTransformRole
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkLightRole">();
+		STATIC_CLASS_IMPL("LiveLinkLightRole")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkLightRole")
 	}
 	static class ULiveLinkLightRole* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULiveLinkLightRole>();
 	}
 };
-static_assert(alignof(ULiveLinkLightRole) == 0x000008, "Wrong alignment on ULiveLinkLightRole");
-static_assert(sizeof(ULiveLinkLightRole) == 0x000028, "Wrong size on ULiveLinkLightRole");
+DUMPER7_ASSERTS_ULiveLinkLightRole;
+
+// Class LiveLinkInterface.LiveLinkLocatorRole
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkLocatorRole final : public ULiveLinkBasicRole
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LiveLinkLocatorRole")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkLocatorRole")
+	}
+	static class ULiveLinkLocatorRole* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkLocatorRole>();
+	}
+};
+DUMPER7_ASSERTS_ULiveLinkLocatorRole;
 
 }
 

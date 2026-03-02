@@ -17,6 +17,123 @@
 namespace SDK
 {
 
+// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.ExecuteUbergraph_BP_AutomaticBase_ModScript
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_AutomaticBase_ModScript_C::ExecuteUbergraph_BP_AutomaticBase_ModScript(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AutomaticBase_ModScript_C", "ExecuteUbergraph_BP_AutomaticBase_ModScript");
+
+	Params::BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.FinishFire
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_AutomaticBase_ModScript_C::FinishFire()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AutomaticBase_ModScript_C", "FinishFire");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.Fire
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_AutomaticBase_ModScript_C::Fire()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AutomaticBase_ModScript_C", "Fire");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.GetPostWeaponModFireRate
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double*                                 FireRate                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_AutomaticBase_ModScript_C::GetPostWeaponModFireRate(double* FireRate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AutomaticBase_ModScript_C", "GetPostWeaponModFireRate");
+
+	Params::BP_AutomaticBase_ModScript_C_GetPostWeaponModFireRate Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (FireRate != nullptr)
+		*FireRate = Parms.FireRate;
+}
+
+
+// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.K2_ActivateScript
+// (Event, Public, BlueprintEvent)
+
+void UBP_AutomaticBase_ModScript_C::K2_ActivateScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AutomaticBase_ModScript_C", "K2_ActivateScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.K2_DeactivateScript
+// (Event, Public, BlueprintEvent)
+
+void UBP_AutomaticBase_ModScript_C::K2_DeactivateScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AutomaticBase_ModScript_C", "K2_DeactivateScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.K2_TickScript
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_AutomaticBase_ModScript_C::K2_TickScript(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AutomaticBase_ModScript_C", "K2_TickScript");
+
+	Params::BP_AutomaticBase_ModScript_C_K2_TickScript Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.OnBeat
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -45,63 +162,21 @@ void UBP_AutomaticBase_ModScript_C::OnBeat(class FName ClockName, EQuartzCommand
 }
 
 
-// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.K2_DeactivateScript
-// (Event, Public, BlueprintEvent)
-
-void UBP_AutomaticBase_ModScript_C::K2_DeactivateScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AutomaticBase_ModScript_C", "K2_DeactivateScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.K2_ActivateScript
-// (Event, Public, BlueprintEvent)
-
-void UBP_AutomaticBase_ModScript_C::K2_ActivateScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AutomaticBase_ModScript_C", "K2_ActivateScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.Fire
+// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.SpawnWeaponFireSFX
 // (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_AutomaticBase_ModScript_C::Fire()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AutomaticBase_ModScript_C", "Fire");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C.ExecuteUbergraph_BP_AutomaticBase_ModScript
-// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USoundBase*                       SoundTemplate                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AutomaticBase_ModScript_C::ExecuteUbergraph_BP_AutomaticBase_ModScript(int32 EntryPoint)
+void UBP_AutomaticBase_ModScript_C::SpawnWeaponFireSFX(class USoundBase* SoundTemplate)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AutomaticBase_ModScript_C", "ExecuteUbergraph_BP_AutomaticBase_ModScript");
+		Func = Class->GetFunction("BP_AutomaticBase_ModScript_C", "SpawnWeaponFireSFX");
 
-	Params::BP_AutomaticBase_ModScript_C_ExecuteUbergraph_BP_AutomaticBase_ModScript Parms{};
+	Params::BP_AutomaticBase_ModScript_C_SpawnWeaponFireSFX Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.SoundTemplate = SoundTemplate;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

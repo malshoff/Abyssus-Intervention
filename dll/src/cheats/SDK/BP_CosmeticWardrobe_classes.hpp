@@ -40,18 +40,20 @@ public:
 
 public:
 	void ApplyCurrentSaveGameCosmetics();
+	void ApplyPreviewVFX(class URCosmeticPrimaryAsset* CosmeticPA, class USceneComponent* AttachToComponent);
 	bool CanInteract(class APlayerController* Controller);
-	void CosmeticPreview(const struct FPlayerCosmeticOption& CosmeticOptionData);
-	void CosmeticPreviewEnd(const struct FPlayerCosmeticOption& CosmeticOptionData);
+	void CosmeticPreview(class URCosmeticPrimaryAsset* CosmeticPA);
+	void CosmeticPreviewEnd();
 	void ExecuteUbergraph_BP_CosmeticWardrobe(int32 EntryPoint);
 	void GetPlayerCurrentPaintJobMaterial(class UMaterialInstance** MaterialInstance);
+	bool IsShareable(class APlayerController* PlayerController);
 	void OnBlendOut_775D592C4E557A80499F199E957797F1(class FName NotifyName);
 	void OnBlendOut_947F2FB5458A06D17B2B06BA920BCEC0(class FName NotifyName);
 	void OnCompleted_775D592C4E557A80499F199E957797F1(class FName NotifyName);
 	void OnCompleted_947F2FB5458A06D17B2B06BA920BCEC0(class FName NotifyName);
-	void OnCosmeticsApplied_Event(const struct FPlayerCosmeticOption& CosmeticOptionData, class APlayerController* PlayerController);
-	void OnCosmeticsPreviewed_Event(const struct FPlayerCosmeticOption& CosmeticOptionData);
-	void OnCosmeticsPreviewedEnd_Event(const struct FPlayerCosmeticOption& CosmeticOptionData);
+	void OnCosmeticsApplied_Event(class URCosmeticPrimaryAsset* CosmeticPA, class APlayerController* PlayerController);
+	void OnCosmeticsPreviewed_Event(class URCosmeticPrimaryAsset* CosmeticPA);
+	void OnCosmeticsPreviewedEnd_Event(class URCosmeticPrimaryAsset* CosmeticPA);
 	void OnFocus(class APlayerController* Controller);
 	void OnFocusGone(class APlayerController* Controller);
 	void OnInteract(class APlayerController* Controller);
@@ -65,8 +67,10 @@ public:
 	void OnNotifyEnd_947F2FB5458A06D17B2B06BA920BCEC0(class FName NotifyName);
 	void PlayVoiceLinePreview(const struct FPlayerVoiceSettings& PlayerVoiceSettings);
 	void ReceiveBeginPlay();
+	void RemovePreviewVFX(class USceneComponent* AttachToComponent);
 	void RotateCharacter();
 	void SetCameraToWardrobeFocus(bool bFocusWardrobe, float BlendTime, EViewTargetBlendFunction BlendFunc);
+	void ShareInteractableActor(const class APlayerController* PlayerController);
 	void ToggleInteractionIndicatorVisibility(class AActor* InteractingActor, const bool NewVisible);
 
 	class FText GetInteractableAlternativeDescription() const;
@@ -84,29 +88,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_CosmeticWardrobe_C">();
+		BP_STATIC_CLASS_IMPL("BP_CosmeticWardrobe_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_CosmeticWardrobe_C")
 	}
 	static class ABP_CosmeticWardrobe_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_CosmeticWardrobe_C>();
 	}
 };
-static_assert(alignof(ABP_CosmeticWardrobe_C) == 0x000008, "Wrong alignment on ABP_CosmeticWardrobe_C");
-static_assert(sizeof(ABP_CosmeticWardrobe_C) == 0x000320, "Wrong size on ABP_CosmeticWardrobe_C");
-static_assert(offsetof(ABP_CosmeticWardrobe_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_CosmeticWardrobe_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_CosmeticWardrobe_C, SuitSKM) == 0x0002B8, "Member 'ABP_CosmeticWardrobe_C::SuitSKM' has a wrong offset!");
-static_assert(offsetof(ABP_CosmeticWardrobe_C, Pivot) == 0x0002C0, "Member 'ABP_CosmeticWardrobe_C::Pivot' has a wrong offset!");
-static_assert(offsetof(ABP_CosmeticWardrobe_C, BPC_InteractableIndicator) == 0x0002C8, "Member 'ABP_CosmeticWardrobe_C::BPC_InteractableIndicator' has a wrong offset!");
-static_assert(offsetof(ABP_CosmeticWardrobe_C, HeadSM) == 0x0002D0, "Member 'ABP_CosmeticWardrobe_C::HeadSM' has a wrong offset!");
-static_assert(offsetof(ABP_CosmeticWardrobe_C, SpotLight) == 0x0002D8, "Member 'ABP_CosmeticWardrobe_C::SpotLight' has a wrong offset!");
-static_assert(offsetof(ABP_CosmeticWardrobe_C, Camera) == 0x0002E0, "Member 'ABP_CosmeticWardrobe_C::Camera' has a wrong offset!");
-static_assert(offsetof(ABP_CosmeticWardrobe_C, SM_Human_Furniture_Cabinet_02) == 0x0002E8, "Member 'ABP_CosmeticWardrobe_C::SM_Human_Furniture_Cabinet_02' has a wrong offset!");
-static_assert(offsetof(ABP_CosmeticWardrobe_C, DefaultSceneRoot) == 0x0002F0, "Member 'ABP_CosmeticWardrobe_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_CosmeticWardrobe_C, CachedPlayerController) == 0x0002F8, "Member 'ABP_CosmeticWardrobe_C::CachedPlayerController' has a wrong offset!");
-static_assert(offsetof(ABP_CosmeticWardrobe_C, OutWidget) == 0x000300, "Member 'ABP_CosmeticWardrobe_C::OutWidget' has a wrong offset!");
-static_assert(offsetof(ABP_CosmeticWardrobe_C, AddativeRotationTarget) == 0x000308, "Member 'ABP_CosmeticWardrobe_C::AddativeRotationTarget' has a wrong offset!");
-static_assert(offsetof(ABP_CosmeticWardrobe_C, RotationTimer) == 0x000310, "Member 'ABP_CosmeticWardrobe_C::RotationTimer' has a wrong offset!");
-static_assert(offsetof(ABP_CosmeticWardrobe_C, VoiceLineDatatable) == 0x000318, "Member 'ABP_CosmeticWardrobe_C::VoiceLineDatatable' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_CosmeticWardrobe_C;
 
 }
 

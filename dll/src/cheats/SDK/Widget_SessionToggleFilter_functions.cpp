@@ -17,63 +17,97 @@
 namespace SDK
 {
 
-// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.BndEvt__Widget_SessionToggleFilter_CheckBox_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsChecked                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_SessionToggleFilter_C::PreConstruct(bool IsDesignTime)
+void UWidget_SessionToggleFilter_C::BndEvt__Widget_SessionToggleFilter_CheckBox_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "PreConstruct");
+		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "BndEvt__Widget_SessionToggleFilter_CheckBox_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
 
-	Params::Widget_SessionToggleFilter_C_PreConstruct Parms{};
+	Params::Widget_SessionToggleFilter_C_BndEvt__Widget_SessionToggleFilter_CheckBox_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.bIsChecked = bIsChecked;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.OnListItemObjectSet
+// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.BP_OnEntryReleased
+// (Event, Protected, BlueprintEvent)
+
+void UWidget_SessionToggleFilter_C::BP_OnEntryReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "BP_OnEntryReleased");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.BP_OnItemExpansionChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_SessionToggleFilter_C::OnListItemObjectSet(class UObject* ListItemObject)
+void UWidget_SessionToggleFilter_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "OnListItemObjectSet");
+		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "BP_OnItemExpansionChanged");
 
-	Params::Widget_SessionToggleFilter_C_OnListItemObjectSet Parms{};
+	Params::Widget_SessionToggleFilter_C_BP_OnItemExpansionChanged Parms{};
 
-	Parms.ListItemObject = ListItemObject;
+	Parms.bIsExpanded = bIsExpanded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.GetValue
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.BP_OnItemSelectionChanged
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UWidget_SessionToggleFilter_C::GetValue()
+void UWidget_SessionToggleFilter_C::BP_OnItemSelectionChanged(bool bIsSelected)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "GetValue");
+		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "BP_OnItemSelectionChanged");
 
-	Params::Widget_SessionToggleFilter_C_GetValue Parms{};
+	Params::Widget_SessionToggleFilter_C_BP_OnItemSelectionChanged Parms{};
+
+	Parms.bIsSelected = bIsSelected;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	return Parms.ReturnValue;
+
+// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.ExecuteUbergraph_Widget_SessionToggleFilter
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SessionToggleFilter_C::ExecuteUbergraph_Widget_SessionToggleFilter(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "ExecuteUbergraph_Widget_SessionToggleFilter");
+
+	Params::Widget_SessionToggleFilter_C_ExecuteUbergraph_Widget_SessionToggleFilter Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -102,95 +136,61 @@ void UWidget_SessionToggleFilter_C::GetFilter(class FName* Key, class FString* V
 }
 
 
-// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.ExecuteUbergraph_Widget_SessionToggleFilter
-// (Final, UbergraphFunction)
+// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.GetValue
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_SessionToggleFilter_C::ExecuteUbergraph_Widget_SessionToggleFilter(int32 EntryPoint)
+bool UWidget_SessionToggleFilter_C::GetValue()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "ExecuteUbergraph_Widget_SessionToggleFilter");
+		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "GetValue");
 
-	Params::Widget_SessionToggleFilter_C_ExecuteUbergraph_Widget_SessionToggleFilter Parms{};
+	Params::Widget_SessionToggleFilter_C_GetValue Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.OnListItemObjectSet
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_SessionToggleFilter_C::OnListItemObjectSet(class UObject* ListItemObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "OnListItemObjectSet");
+
+	Params::Widget_SessionToggleFilter_C_OnListItemObjectSet Parms{};
+
+	Parms.ListItemObject = ListItemObject;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.BP_OnItemSelectionChanged
-// (Event, Protected, BlueprintEvent)
+// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_SessionToggleFilter_C::BP_OnItemSelectionChanged(bool bIsSelected)
+void UWidget_SessionToggleFilter_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "BP_OnItemSelectionChanged");
+		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "PreConstruct");
 
-	Params::Widget_SessionToggleFilter_C_BP_OnItemSelectionChanged Parms{};
+	Params::Widget_SessionToggleFilter_C_PreConstruct Parms{};
 
-	Parms.bIsSelected = bIsSelected;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.BP_OnItemExpansionChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SessionToggleFilter_C::BP_OnItemExpansionChanged(bool bIsExpanded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "BP_OnItemExpansionChanged");
-
-	Params::Widget_SessionToggleFilter_C_BP_OnItemExpansionChanged Parms{};
-
-	Parms.bIsExpanded = bIsExpanded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.BP_OnEntryReleased
-// (Event, Protected, BlueprintEvent)
-
-void UWidget_SessionToggleFilter_C::BP_OnEntryReleased()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "BP_OnEntryReleased");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_SessionToggleFilter.Widget_SessionToggleFilter_C.BndEvt__Widget_SessionToggleFilter_CheckBox_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    bIsChecked                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SessionToggleFilter_C::BndEvt__Widget_SessionToggleFilter_CheckBox_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SessionToggleFilter_C", "BndEvt__Widget_SessionToggleFilter_CheckBox_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
-
-	Params::Widget_SessionToggleFilter_C_BndEvt__Widget_SessionToggleFilter_CheckBox_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
-
-	Parms.bIsChecked = bIsChecked;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

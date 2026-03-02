@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_classes.hpp"
 #include "UMG_structs.hpp"
+#include "RGame_classes.hpp"
 
 
 namespace SDK
@@ -61,26 +61,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Spirit_Behavior_Mutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Spirit_Behavior_Mutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Spirit_Behavior_Mutator_C")
 	}
 	static class UBP_Spirit_Behavior_Mutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Spirit_Behavior_Mutator_C>();
 	}
 };
-static_assert(alignof(UBP_Spirit_Behavior_Mutator_C) == 0x000008, "Wrong alignment on UBP_Spirit_Behavior_Mutator_C");
-static_assert(sizeof(UBP_Spirit_Behavior_Mutator_C) == 0x000198, "Wrong size on UBP_Spirit_Behavior_Mutator_C");
-static_assert(offsetof(UBP_Spirit_Behavior_Mutator_C, UberGraphFrame) == 0x000148, "Member 'UBP_Spirit_Behavior_Mutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Spirit_Behavior_Mutator_C, OrbSpawnInterval) == 0x000150, "Member 'UBP_Spirit_Behavior_Mutator_C::OrbSpawnInterval' has a wrong offset!");
-static_assert(offsetof(UBP_Spirit_Behavior_Mutator_C, OrbsSpawnHorizontalOffset) == 0x000158, "Member 'UBP_Spirit_Behavior_Mutator_C::OrbsSpawnHorizontalOffset' has a wrong offset!");
-static_assert(offsetof(UBP_Spirit_Behavior_Mutator_C, OrbsSpawnVerticalOffset) == 0x00015C, "Member 'UBP_Spirit_Behavior_Mutator_C::OrbsSpawnVerticalOffset' has a wrong offset!");
-static_assert(offsetof(UBP_Spirit_Behavior_Mutator_C, LoopActive) == 0x000160, "Member 'UBP_Spirit_Behavior_Mutator_C::LoopActive' has a wrong offset!");
-static_assert(offsetof(UBP_Spirit_Behavior_Mutator_C, CurrentTriggerDamage) == 0x000168, "Member 'UBP_Spirit_Behavior_Mutator_C::CurrentTriggerDamage' has a wrong offset!");
-static_assert(offsetof(UBP_Spirit_Behavior_Mutator_C, CurrentTriggerTarget) == 0x000170, "Member 'UBP_Spirit_Behavior_Mutator_C::CurrentTriggerTarget' has a wrong offset!");
-static_assert(offsetof(UBP_Spirit_Behavior_Mutator_C, CurrentSpiritSpawnAmount) == 0x000178, "Member 'UBP_Spirit_Behavior_Mutator_C::CurrentSpiritSpawnAmount' has a wrong offset!");
-static_assert(offsetof(UBP_Spirit_Behavior_Mutator_C, SpawnSpiritOrbTimerEvent) == 0x000180, "Member 'UBP_Spirit_Behavior_Mutator_C::SpawnSpiritOrbTimerEvent' has a wrong offset!");
-static_assert(offsetof(UBP_Spirit_Behavior_Mutator_C, SpawningLoopAC) == 0x000188, "Member 'UBP_Spirit_Behavior_Mutator_C::SpawningLoopAC' has a wrong offset!");
-static_assert(offsetof(UBP_Spirit_Behavior_Mutator_C, AvatarActor) == 0x000190, "Member 'UBP_Spirit_Behavior_Mutator_C::AvatarActor' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Spirit_Behavior_Mutator_C;
 
 }
 

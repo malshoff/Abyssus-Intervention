@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BP_FirePassive9_CharacterMutator.BP_FirePassive9_CharacterMutator_C.ExecuteUbergraph_BP_FirePassive9_CharacterMutator
-// 0x0308 (0x0308 - 0x0000)
+// 0x0438 (0x0438 - 0x0000)
 struct BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator final
 {
 public:
@@ -75,53 +75,10 @@ public:
 	TDelegate<void(class URHealthComponent* Component, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_4; // 0x021C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_22C[0x4];                                      // 0x022C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class URHealthComponent*                      K2Node_CustomEvent_Component;                      // 0x0230(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0238(0x00C0)()
-	TDelegate<void(class URHealthComponent* Component, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_5; // 0x02F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0238(0x01F0)()
+	TDelegate<void(class URHealthComponent* Component, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_5; // 0x0428(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator) == 0x000008, "Wrong alignment on BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator");
-static_assert(sizeof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator) == 0x000308, "Wrong size on BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000038, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_CustomEvent_StatusEffectScript_1) == 0x000048, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_CustomEvent_StatusEffectScript_1' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000050, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000060, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_IsObjectASoftClass_ReturnValue) == 0x000090, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_IsObjectASoftClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_GetHealthComponent_ReturnValue) == 0x000098, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_GetHealthComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_IsObjectChildOfSoftClass_ReturnValue) == 0x0000A0, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_IsObjectChildOfSoftClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_IsValid_ReturnValue) == 0x0000A1, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_BooleanOR_ReturnValue) == 0x0000A2, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000A4, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_CustomEvent_StatusEffectScript) == 0x0000B8, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_CustomEvent_StatusEffectScript' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_IsValid_ReturnValue_1) == 0x0000C0, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x0000C8, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_IsObjectASoftClass_ReturnValue_1) == 0x0000F8, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_IsObjectASoftClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_GetHealthComponent_ReturnValue_1) == 0x000100, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_GetHealthComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_IsObjectChildOfSoftClass_ReturnValue_1) == 0x000108, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_IsObjectChildOfSoftClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_IsValid_ReturnValue_2) == 0x000109, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_BooleanOR_ReturnValue_1) == 0x00010A, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_3) == 0x000110, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_4) == 0x000140, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_GetGScriptComponentFromActor_ReturnValue) == 0x000170, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_GetGScriptComponentFromActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x000178, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000180, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_2) == 0x000188, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_2' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_DynamicCast_bSuccess_2) == 0x000190, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_GetActorStatusEffect_ReturnValue) == 0x000198, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_GetActorStatusEffect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x0001A0, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_IsValid_ReturnValue_3) == 0x0001A8, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_5) == 0x0001B0, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_2) == 0x0001E0, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_3) == 0x0001F0, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_3) == 0x000200, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_3' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_DynamicCast_bSuccess_3) == 0x000208, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_GetActorStatusEffect_ReturnValue_1) == 0x000210, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_GetActorStatusEffect_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, CallFunc_IsValid_ReturnValue_4) == 0x000218, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_4) == 0x00021C, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_CustomEvent_Component) == 0x000230, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_CustomEvent_Component' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_CustomEvent_DamageEventData) == 0x000238, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_CustomEvent_DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_5) == 0x0002F8, "Member 'BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FirePassive9_CharacterMutator_C_ExecuteUbergraph_BP_FirePassive9_CharacterMutator;
 
 // Function BP_FirePassive9_CharacterMutator.BP_FirePassive9_CharacterMutator_C.OnAppliedStatusEffectRemoved
 // 0x0008 (0x0008 - 0x0000)
@@ -130,9 +87,7 @@ struct BP_FirePassive9_CharacterMutator_C_OnAppliedStatusEffectRemoved final
 public:
 	class URStatusEffectGScript*                  StatusEffectScript;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FirePassive9_CharacterMutator_C_OnAppliedStatusEffectRemoved) == 0x000008, "Wrong alignment on BP_FirePassive9_CharacterMutator_C_OnAppliedStatusEffectRemoved");
-static_assert(sizeof(BP_FirePassive9_CharacterMutator_C_OnAppliedStatusEffectRemoved) == 0x000008, "Wrong size on BP_FirePassive9_CharacterMutator_C_OnAppliedStatusEffectRemoved");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_OnAppliedStatusEffectRemoved, StatusEffectScript) == 0x000000, "Member 'BP_FirePassive9_CharacterMutator_C_OnAppliedStatusEffectRemoved::StatusEffectScript' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FirePassive9_CharacterMutator_C_OnAppliedStatusEffectRemoved;
 
 // Function BP_FirePassive9_CharacterMutator.BP_FirePassive9_CharacterMutator_C.OnStatusEffectApplied
 // 0x0008 (0x0008 - 0x0000)
@@ -141,22 +96,17 @@ struct BP_FirePassive9_CharacterMutator_C_OnStatusEffectApplied final
 public:
 	class URStatusEffectGScript*                  StatusEffectScript;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FirePassive9_CharacterMutator_C_OnStatusEffectApplied) == 0x000008, "Wrong alignment on BP_FirePassive9_CharacterMutator_C_OnStatusEffectApplied");
-static_assert(sizeof(BP_FirePassive9_CharacterMutator_C_OnStatusEffectApplied) == 0x000008, "Wrong size on BP_FirePassive9_CharacterMutator_C_OnStatusEffectApplied");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_OnStatusEffectApplied, StatusEffectScript) == 0x000000, "Member 'BP_FirePassive9_CharacterMutator_C_OnStatusEffectApplied::StatusEffectScript' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FirePassive9_CharacterMutator_C_OnStatusEffectApplied;
 
 // Function BP_FirePassive9_CharacterMutator.BP_FirePassive9_CharacterMutator_C.OnTargetHealthDepleted
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_FirePassive9_CharacterMutator_C_OnTargetHealthDepleted final
 {
 public:
 	class URHealthComponent*                      Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_FirePassive9_CharacterMutator_C_OnTargetHealthDepleted) == 0x000008, "Wrong alignment on BP_FirePassive9_CharacterMutator_C_OnTargetHealthDepleted");
-static_assert(sizeof(BP_FirePassive9_CharacterMutator_C_OnTargetHealthDepleted) == 0x0000C8, "Wrong size on BP_FirePassive9_CharacterMutator_C_OnTargetHealthDepleted");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_OnTargetHealthDepleted, Component) == 0x000000, "Member 'BP_FirePassive9_CharacterMutator_C_OnTargetHealthDepleted::Component' has a wrong offset!");
-static_assert(offsetof(BP_FirePassive9_CharacterMutator_C_OnTargetHealthDepleted, DamageEventData) == 0x000008, "Member 'BP_FirePassive9_CharacterMutator_C_OnTargetHealthDepleted::DamageEventData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FirePassive9_CharacterMutator_C_OnTargetHealthDepleted;
 
 }
 

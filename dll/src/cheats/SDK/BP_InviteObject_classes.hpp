@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_classes.hpp"
 #include "UMG_structs.hpp"
+#include "RGame_classes.hpp"
 
 
 namespace SDK
@@ -35,12 +35,14 @@ public:
 	void BndEvt__BP_InviteObject_ProximityBox_Highlight_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentExit__DelegateSignature(class AActor* Actor);
 	bool CanInteract(class APlayerController* Controller);
 	void ExecuteUbergraph_BP_InviteObject(int32 EntryPoint);
+	bool IsShareable(class APlayerController* PlayerController);
 	void OnFocus(class APlayerController* Controller);
 	void OnFocusGone(class APlayerController* Controller);
 	void OnInteract(class APlayerController* Controller);
 	void ReceiveBeginPlay();
 	void SetHighlightActive(bool Active);
 	void SetupHighlight();
+	void ShareInteractableActor(const class APlayerController* PlayerController);
 	void ToggleInteractionIndicatorVisibility(class AActor* InteractingActor, const bool NewVisible);
 
 	class FText GetInteractableAlternativeDescription() const;
@@ -58,21 +60,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_InviteObject_C">();
+		BP_STATIC_CLASS_IMPL("BP_InviteObject_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_InviteObject_C")
 	}
 	static class ABP_InviteObject_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_InviteObject_C>();
 	}
 };
-static_assert(alignof(ABP_InviteObject_C) == 0x000008, "Wrong alignment on ABP_InviteObject_C");
-static_assert(sizeof(ABP_InviteObject_C) == 0x0002E0, "Wrong size on ABP_InviteObject_C");
-static_assert(offsetof(ABP_InviteObject_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_InviteObject_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_InviteObject_C, ProximityBox_Highlight) == 0x0002B8, "Member 'ABP_InviteObject_C::ProximityBox_Highlight' has a wrong offset!");
-static_assert(offsetof(ABP_InviteObject_C, ObjectHighlightWidgetComponent) == 0x0002C0, "Member 'ABP_InviteObject_C::ObjectHighlightWidgetComponent' has a wrong offset!");
-static_assert(offsetof(ABP_InviteObject_C, BPC_InteractableIndicator) == 0x0002C8, "Member 'ABP_InviteObject_C::BPC_InteractableIndicator' has a wrong offset!");
-static_assert(offsetof(ABP_InviteObject_C, StaticMesh) == 0x0002D0, "Member 'ABP_InviteObject_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_InviteObject_C, ShouldShowHighlight) == 0x0002D8, "Member 'ABP_InviteObject_C::ShouldShowHighlight' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_InviteObject_C;
 
 }
 

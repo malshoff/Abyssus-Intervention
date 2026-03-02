@@ -66,7 +66,7 @@ void ABP_EnemySpawnManager_C::ExecuteUbergraph_BP_EnemySpawnManager(int32 EntryP
 
 
 // Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.GetEliteVFXAssets
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UNiagaraSystem**                  NiagaraSystemAsset                                     (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
@@ -108,7 +108,7 @@ void ABP_EnemySpawnManager_C::GetPooledSpawnBP(class ABP_EnemySpawnDecoy_C** Spa
 
 
 // Function BP_EnemySpawnManager.BP_EnemySpawnManager_C.GetVFXAssets
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMaterialInstance**               DecoyMaterial                                          (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UNiagaraSystem**                  NiagaraSystemAsset                                     (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)

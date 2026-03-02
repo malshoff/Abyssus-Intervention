@@ -49,22 +49,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Fan_Charm_WeaponMutatorScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_Fan_Charm_WeaponMutatorScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Fan_Charm_WeaponMutatorScript_C")
 	}
 	static class UBP_Fan_Charm_WeaponMutatorScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Fan_Charm_WeaponMutatorScript_C>();
 	}
 };
-static_assert(alignof(UBP_Fan_Charm_WeaponMutatorScript_C) == 0x000008, "Wrong alignment on UBP_Fan_Charm_WeaponMutatorScript_C");
-static_assert(sizeof(UBP_Fan_Charm_WeaponMutatorScript_C) == 0x000138, "Wrong size on UBP_Fan_Charm_WeaponMutatorScript_C");
-static_assert(offsetof(UBP_Fan_Charm_WeaponMutatorScript_C, UberGraphFrame) == 0x0000D0, "Member 'UBP_Fan_Charm_WeaponMutatorScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Fan_Charm_WeaponMutatorScript_C, CachedBlacklistedWeaponMods) == 0x0000D8, "Member 'UBP_Fan_Charm_WeaponMutatorScript_C::CachedBlacklistedWeaponMods' has a wrong offset!");
-static_assert(offsetof(UBP_Fan_Charm_WeaponMutatorScript_C, SoftBlacklistedWeaponMods) == 0x0000E8, "Member 'UBP_Fan_Charm_WeaponMutatorScript_C::SoftBlacklistedWeaponMods' has a wrong offset!");
-static_assert(offsetof(UBP_Fan_Charm_WeaponMutatorScript_C, SoftEndSecondaryFireMods) == 0x0000F8, "Member 'UBP_Fan_Charm_WeaponMutatorScript_C::SoftEndSecondaryFireMods' has a wrong offset!");
-static_assert(offsetof(UBP_Fan_Charm_WeaponMutatorScript_C, CachedEndSecondaryMods) == 0x000108, "Member 'UBP_Fan_Charm_WeaponMutatorScript_C::CachedEndSecondaryMods' has a wrong offset!");
-static_assert(offsetof(UBP_Fan_Charm_WeaponMutatorScript_C, SoftProjSpawnedMods) == 0x000118, "Member 'UBP_Fan_Charm_WeaponMutatorScript_C::SoftProjSpawnedMods' has a wrong offset!");
-static_assert(offsetof(UBP_Fan_Charm_WeaponMutatorScript_C, CachedProjSpawnedMods) == 0x000128, "Member 'UBP_Fan_Charm_WeaponMutatorScript_C::CachedProjSpawnedMods' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Fan_Charm_WeaponMutatorScript_C;
 
 }
 

@@ -23,15 +23,18 @@ class UBP_GenericInputData_C final : public UCommonUIInputData
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_GenericInputData_C">();
+		BP_STATIC_CLASS_IMPL("BP_GenericInputData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_GenericInputData_C")
 	}
 	static class UBP_GenericInputData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_GenericInputData_C>();
 	}
 };
-static_assert(alignof(UBP_GenericInputData_C) == 0x000008, "Wrong alignment on UBP_GenericInputData_C");
-static_assert(sizeof(UBP_GenericInputData_C) == 0x000080, "Wrong size on UBP_GenericInputData_C");
+DUMPER7_ASSERTS_UBP_GenericInputData_C;
 
 }
 

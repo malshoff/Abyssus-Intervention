@@ -51,6 +51,20 @@ void ABP_NodeRewardSpawnPoint_C::CheckSkillTreePoints()
 }
 
 
+// Function BP_NodeRewardSpawnPoint.BP_NodeRewardSpawnPoint_C.CustomSpawnTrigger
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_NodeRewardSpawnPoint_C::CustomSpawnTrigger()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_NodeRewardSpawnPoint_C", "CustomSpawnTrigger");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_NodeRewardSpawnPoint.BP_NodeRewardSpawnPoint_C.ExecuteUbergraph_BP_NodeRewardSpawnPoint
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:

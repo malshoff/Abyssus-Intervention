@@ -11,13 +11,14 @@
 #include "Basic.hpp"
 
 #include "RGame_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function Widget_SoulShardCount.Widget_SoulShardCount_C.ExecuteUbergraph_Widget_SoulShardCount
-// 0x0220 (0x0220 - 0x0000)
+// 0x0290 (0x0290 - 0x0000)
 struct Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount final
 {
 public:
@@ -41,37 +42,15 @@ public:
 	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Round_ReturnValue;                        // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FRDisconnectedPlayerData               K2Node_CustomEvent_PlayerData;                     // 0x0088(0x0170)()
-	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller;      // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_201[0x3];                                      // 0x0201(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(int32 Delta, int32 NewTotal)>  K2Node_CreateDelegate_OutputDelegate_4;            // 0x0204(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_214[0x4];                                      // 0x0214(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Round_A_ImplicitCast;                     // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRDisconnectedPlayerData               K2Node_CustomEvent_PlayerData;                     // 0x0088(0x01E0)()
+	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller;      // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_271[0x3];                                      // 0x0271(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(int32 Delta, int32 NewTotal)>  K2Node_CreateDelegate_OutputDelegate_4;            // 0x0274(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_284[0x4];                                      // 0x0284(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Round_A_ImplicitCast;                     // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount) == 0x000008, "Wrong alignment on Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount");
-static_assert(sizeof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount) == 0x000220, "Wrong size on Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, EntryPoint) == 0x000000, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, CallFunc_CreateInvokeProxyObject_ReturnValue) == 0x000018, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::CallFunc_CreateInvokeProxyObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, K2Node_CreateDelegate_OutputDelegate_1) == 0x000020, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, K2Node_CustomEvent_Delta_1) == 0x000034, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::K2Node_CustomEvent_Delta_1' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, K2Node_CustomEvent_NewTotal_1) == 0x000038, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::K2Node_CustomEvent_NewTotal_1' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, K2Node_CreateDelegate_OutputDelegate_2) == 0x00003C, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, K2Node_CreateDelegate_OutputDelegate_3) == 0x00004C, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, CallFunc_GetOwningPlayer_ReturnValue) == 0x000060, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, K2Node_CustomEvent_Delta) == 0x000068, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::K2Node_CustomEvent_Delta' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, K2Node_CustomEvent_NewTotal) == 0x00006C, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::K2Node_CustomEvent_NewTotal' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, K2Node_DynamicCast_AsRPlayer_State) == 0x000070, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::K2Node_DynamicCast_AsRPlayer_State' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, CallFunc_Round_ReturnValue) == 0x00007C, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::CallFunc_Round_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x000080, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, K2Node_CustomEvent_PlayerData) == 0x000088, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::K2Node_CustomEvent_PlayerData' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, K2Node_DynamicCast_AsRGame_Player_Controller) == 0x0001F8, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::K2Node_DynamicCast_AsRGame_Player_Controller' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, K2Node_DynamicCast_bSuccess_1) == 0x000200, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, K2Node_CreateDelegate_OutputDelegate_4) == 0x000204, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount, CallFunc_Round_A_ImplicitCast) == 0x000218, "Member 'Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount::CallFunc_Round_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SoulShardCount_C_ExecuteUbergraph_Widget_SoulShardCount;
 
 // Function Widget_SoulShardCount.Widget_SoulShardCount_C.IsPlayerStateValid
 // 0x0020 (0x0020 - 0x0000)
@@ -84,12 +63,7 @@ public:
 	class ARPlayerState*                          K2Node_DynamicCast_AsRPlayer_State;                // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SoulShardCount_C_IsPlayerStateValid) == 0x000008, "Wrong alignment on Widget_SoulShardCount_C_IsPlayerStateValid");
-static_assert(sizeof(Widget_SoulShardCount_C_IsPlayerStateValid) == 0x000020, "Wrong size on Widget_SoulShardCount_C_IsPlayerStateValid");
-static_assert(offsetof(Widget_SoulShardCount_C_IsPlayerStateValid, RetValue) == 0x000000, "Member 'Widget_SoulShardCount_C_IsPlayerStateValid::RetValue' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_IsPlayerStateValid, CallFunc_GetOwningPlayer_ReturnValue) == 0x000008, "Member 'Widget_SoulShardCount_C_IsPlayerStateValid::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_IsPlayerStateValid, K2Node_DynamicCast_AsRPlayer_State) == 0x000010, "Member 'Widget_SoulShardCount_C_IsPlayerStateValid::K2Node_DynamicCast_AsRPlayer_State' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_IsPlayerStateValid, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'Widget_SoulShardCount_C_IsPlayerStateValid::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SoulShardCount_C_IsPlayerStateValid;
 
 // Function Widget_SoulShardCount.Widget_SoulShardCount_C.OnGoldReceived
 // 0x0008 (0x0008 - 0x0000)
@@ -99,10 +73,7 @@ public:
 	float                                         Delta;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         NewTotal;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SoulShardCount_C_OnGoldReceived) == 0x000004, "Wrong alignment on Widget_SoulShardCount_C_OnGoldReceived");
-static_assert(sizeof(Widget_SoulShardCount_C_OnGoldReceived) == 0x000008, "Wrong size on Widget_SoulShardCount_C_OnGoldReceived");
-static_assert(offsetof(Widget_SoulShardCount_C_OnGoldReceived, Delta) == 0x000000, "Member 'Widget_SoulShardCount_C_OnGoldReceived::Delta' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_OnGoldReceived, NewTotal) == 0x000004, "Member 'Widget_SoulShardCount_C_OnGoldReceived::NewTotal' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SoulShardCount_C_OnGoldReceived;
 
 // Function Widget_SoulShardCount.Widget_SoulShardCount_C.OnKeyRecieved
 // 0x0008 (0x0008 - 0x0000)
@@ -112,37 +83,28 @@ public:
 	int32                                         Delta;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         NewTotal;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SoulShardCount_C_OnKeyRecieved) == 0x000004, "Wrong alignment on Widget_SoulShardCount_C_OnKeyRecieved");
-static_assert(sizeof(Widget_SoulShardCount_C_OnKeyRecieved) == 0x000008, "Wrong size on Widget_SoulShardCount_C_OnKeyRecieved");
-static_assert(offsetof(Widget_SoulShardCount_C_OnKeyRecieved, Delta) == 0x000000, "Member 'Widget_SoulShardCount_C_OnKeyRecieved::Delta' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_OnKeyRecieved, NewTotal) == 0x000004, "Member 'Widget_SoulShardCount_C_OnKeyRecieved::NewTotal' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SoulShardCount_C_OnKeyRecieved;
 
 // Function Widget_SoulShardCount.Widget_SoulShardCount_C.OnLocalPlayerReconnect
-// 0x0170 (0x0170 - 0x0000)
+// 0x01E0 (0x01E0 - 0x0000)
 struct Widget_SoulShardCount_C_OnLocalPlayerReconnect final
 {
 public:
-	struct FRDisconnectedPlayerData               PlayerData;                                        // 0x0000(0x0170)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FRDisconnectedPlayerData               PlayerData;                                        // 0x0000(0x01E0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_SoulShardCount_C_OnLocalPlayerReconnect) == 0x000008, "Wrong alignment on Widget_SoulShardCount_C_OnLocalPlayerReconnect");
-static_assert(sizeof(Widget_SoulShardCount_C_OnLocalPlayerReconnect) == 0x000170, "Wrong size on Widget_SoulShardCount_C_OnLocalPlayerReconnect");
-static_assert(offsetof(Widget_SoulShardCount_C_OnLocalPlayerReconnect, PlayerData) == 0x000000, "Member 'Widget_SoulShardCount_C_OnLocalPlayerReconnect::PlayerData' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SoulShardCount_C_OnLocalPlayerReconnect;
 
 // Function Widget_SoulShardCount.Widget_SoulShardCount_C.UpdateGoldCount
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct Widget_SoulShardCount_C_UpdateGoldCount final
 {
 public:
 	int32                                         GoldAmount;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue;         // 0x0018(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SoulShardCount_C_UpdateGoldCount) == 0x000008, "Wrong alignment on Widget_SoulShardCount_C_UpdateGoldCount");
-static_assert(sizeof(Widget_SoulShardCount_C_UpdateGoldCount) == 0x000020, "Wrong size on Widget_SoulShardCount_C_UpdateGoldCount");
-static_assert(offsetof(Widget_SoulShardCount_C_UpdateGoldCount, GoldAmount) == 0x000000, "Member 'Widget_SoulShardCount_C_UpdateGoldCount::GoldAmount' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_UpdateGoldCount, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'Widget_SoulShardCount_C_UpdateGoldCount::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_UpdateGoldCount, CallFunc_PlayAnimationForward_ReturnValue) == 0x000018, "Member 'Widget_SoulShardCount_C_UpdateGoldCount::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SoulShardCount_C_UpdateGoldCount;
 
 // Function Widget_SoulShardCount.Widget_SoulShardCount_C.UpdateKeyCount
 // 0x0018 (0x0018 - 0x0000)
@@ -153,10 +115,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
 };
-static_assert(alignof(Widget_SoulShardCount_C_UpdateKeyCount) == 0x000008, "Wrong alignment on Widget_SoulShardCount_C_UpdateKeyCount");
-static_assert(sizeof(Widget_SoulShardCount_C_UpdateKeyCount) == 0x000018, "Wrong size on Widget_SoulShardCount_C_UpdateKeyCount");
-static_assert(offsetof(Widget_SoulShardCount_C_UpdateKeyCount, KeyAmount) == 0x000000, "Member 'Widget_SoulShardCount_C_UpdateKeyCount::KeyAmount' has a wrong offset!");
-static_assert(offsetof(Widget_SoulShardCount_C_UpdateKeyCount, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'Widget_SoulShardCount_C_UpdateKeyCount::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SoulShardCount_C_UpdateKeyCount;
 
 }
 

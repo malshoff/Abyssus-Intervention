@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -19,21 +19,21 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_FishDiety.ABP_FishDiety_C
-// 0x03A0 (0x0900 - 0x0560)
+// 0x03A0 (0x0920 - 0x0580)
 class UABP_FishDiety_C final : public URWeaponAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0560(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0568(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0570(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0578(0x0020)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_1;                        // 0x0598(0x0128)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x06C0(0x0020)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x06E0(0x0128)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0808(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x0850(0x0048)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0898(0x0020)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x08B8(0x0048)()
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0580(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0588(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0590(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0598(0x0020)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_1;                        // 0x05B8(0x0128)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x06E0(0x0020)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0700(0x0128)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0828(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x0870(0x0048)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x08B8(0x0020)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x08D8(0x0048)()
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -44,26 +44,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_FishDiety_C">();
+		BP_STATIC_CLASS_IMPL("ABP_FishDiety_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_FishDiety_C")
 	}
 	static class UABP_FishDiety_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_FishDiety_C>();
 	}
 };
-static_assert(alignof(UABP_FishDiety_C) == 0x000010, "Wrong alignment on UABP_FishDiety_C");
-static_assert(sizeof(UABP_FishDiety_C) == 0x000900, "Wrong size on UABP_FishDiety_C");
-static_assert(offsetof(UABP_FishDiety_C, UberGraphFrame) == 0x000560, "Member 'UABP_FishDiety_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_FishDiety_C, AnimBlueprintExtension_PropertyAccess) == 0x000568, "Member 'UABP_FishDiety_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UABP_FishDiety_C, AnimBlueprintExtension_Base) == 0x000570, "Member 'UABP_FishDiety_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UABP_FishDiety_C, AnimGraphNode_Root) == 0x000578, "Member 'UABP_FishDiety_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_FishDiety_C, AnimGraphNode_ModifyBone_1) == 0x000598, "Member 'UABP_FishDiety_C::AnimGraphNode_ModifyBone_1' has a wrong offset!");
-static_assert(offsetof(UABP_FishDiety_C, AnimGraphNode_LocalToComponentSpace) == 0x0006C0, "Member 'UABP_FishDiety_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABP_FishDiety_C, AnimGraphNode_ModifyBone) == 0x0006E0, "Member 'UABP_FishDiety_C::AnimGraphNode_ModifyBone' has a wrong offset!");
-static_assert(offsetof(UABP_FishDiety_C, AnimGraphNode_SequencePlayer) == 0x000808, "Member 'UABP_FishDiety_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UABP_FishDiety_C, AnimGraphNode_Slot_1) == 0x000850, "Member 'UABP_FishDiety_C::AnimGraphNode_Slot_1' has a wrong offset!");
-static_assert(offsetof(UABP_FishDiety_C, AnimGraphNode_ComponentToLocalSpace) == 0x000898, "Member 'UABP_FishDiety_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UABP_FishDiety_C, AnimGraphNode_Slot) == 0x0008B8, "Member 'UABP_FishDiety_C::AnimGraphNode_Slot' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_FishDiety_C;
 
 }
 

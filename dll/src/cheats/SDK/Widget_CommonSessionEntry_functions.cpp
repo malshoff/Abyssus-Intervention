@@ -17,119 +17,75 @@
 namespace SDK
 {
 
-// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.Success_610F2A964857303568015A863AB4A5A6
+// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.AcceptEvent
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    TravelURL                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FText&                      Input                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_CommonSessionEntry_C::Success_610F2A964857303568015A863AB4A5A6(const class FString& TravelURL, const class FString& Error)
+void UWidget_CommonSessionEntry_C::AcceptEvent(const class FText& Input)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "Success_610F2A964857303568015A863AB4A5A6");
+		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "AcceptEvent");
 
-	Params::Widget_CommonSessionEntry_C_Success_610F2A964857303568015A863AB4A5A6 Parms{};
+	Params::Widget_CommonSessionEntry_C_AcceptEvent Parms{};
 
-	Parms.TravelURL = std::move(TravelURL);
-	Parms.Error = std::move(Error);
+	Parms.Input = std::move(Input);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.Setup
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.BndEvt__Widget_GameSessionEntry_Widget_TextButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const struct FBlueprintSessionResult&   SessionInfo_0                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UWidget_TextButton_C*             Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonSessionEntry_C::Setup(const struct FBlueprintSessionResult& SessionInfo_0)
+void UWidget_CommonSessionEntry_C::BndEvt__Widget_GameSessionEntry_Widget_TextButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "Setup");
+		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "BndEvt__Widget_GameSessionEntry_Widget_TextButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature");
 
-	Params::Widget_CommonSessionEntry_C_Setup Parms{};
+	Params::Widget_CommonSessionEntry_C_BndEvt__Widget_GameSessionEntry_Widget_TextButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature Parms{};
 
-	Parms.SessionInfo_0 = std::move(SessionInfo_0);
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.OnListItemObjectSet
+// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.BP_OnEntryReleased
 // (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonSessionEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
+void UWidget_CommonSessionEntry_C::BP_OnEntryReleased()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "OnListItemObjectSet");
-
-	Params::Widget_CommonSessionEntry_C_OnListItemObjectSet Parms{};
-
-	Parms.ListItemObject = ListItemObject;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.JoinSession
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_CommonSessionEntry_C::JoinSession()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "JoinSession");
+		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "BP_OnEntryReleased");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.Fail_610F2A964857303568015A863AB4A5A6
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.BP_OnItemExpansionChanged
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// const class FString&                    TravelURL                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonSessionEntry_C::Fail_610F2A964857303568015A863AB4A5A6(const class FString& TravelURL, const class FString& Error)
+void UWidget_CommonSessionEntry_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "Fail_610F2A964857303568015A863AB4A5A6");
+		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "BP_OnItemExpansionChanged");
 
-	Params::Widget_CommonSessionEntry_C_Fail_610F2A964857303568015A863AB4A5A6 Parms{};
+	Params::Widget_CommonSessionEntry_C_BP_OnItemExpansionChanged Parms{};
 
-	Parms.TravelURL = std::move(TravelURL);
-	Parms.Error = std::move(Error);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.ExecuteUbergraph_Widget_CommonSessionEntry
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_CommonSessionEntry_C::ExecuteUbergraph_Widget_CommonSessionEntry(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "ExecuteUbergraph_Widget_CommonSessionEntry");
-
-	Params::Widget_CommonSessionEntry_C_ExecuteUbergraph_Widget_CommonSessionEntry Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.bIsExpanded = bIsExpanded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -155,75 +111,119 @@ void UWidget_CommonSessionEntry_C::BP_OnItemSelectionChanged(bool bIsSelected)
 }
 
 
-// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.BP_OnItemExpansionChanged
-// (Event, Protected, BlueprintEvent)
+// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.ExecuteUbergraph_Widget_CommonSessionEntry
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonSessionEntry_C::BP_OnItemExpansionChanged(bool bIsExpanded)
+void UWidget_CommonSessionEntry_C::ExecuteUbergraph_Widget_CommonSessionEntry(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "BP_OnItemExpansionChanged");
+		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "ExecuteUbergraph_Widget_CommonSessionEntry");
 
-	Params::Widget_CommonSessionEntry_C_BP_OnItemExpansionChanged Parms{};
+	Params::Widget_CommonSessionEntry_C_ExecuteUbergraph_Widget_CommonSessionEntry Parms{};
 
-	Parms.bIsExpanded = bIsExpanded;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.BP_OnEntryReleased
-// (Event, Protected, BlueprintEvent)
+// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.Fail_610F2A964857303568015A863AB4A5A6
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    TravelURL                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWidget_CommonSessionEntry_C::BP_OnEntryReleased()
+void UWidget_CommonSessionEntry_C::Fail_610F2A964857303568015A863AB4A5A6(const class FString& TravelURL, const class FString& Error)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "BP_OnEntryReleased");
+		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "Fail_610F2A964857303568015A863AB4A5A6");
+
+	Params::Widget_CommonSessionEntry_C_Fail_610F2A964857303568015A863AB4A5A6 Parms{};
+
+	Parms.TravelURL = std::move(TravelURL);
+	Parms.Error = std::move(Error);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.JoinSession
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_CommonSessionEntry_C::JoinSession()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "JoinSession");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.BndEvt__Widget_GameSessionEntry_Widget_TextButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature
-// (BlueprintEvent)
+// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.OnListItemObjectSet
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UWidget_TextButton_C*             Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_CommonSessionEntry_C::BndEvt__Widget_GameSessionEntry_Widget_TextButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button)
+void UWidget_CommonSessionEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "BndEvt__Widget_GameSessionEntry_Widget_TextButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature");
+		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "OnListItemObjectSet");
 
-	Params::Widget_CommonSessionEntry_C_BndEvt__Widget_GameSessionEntry_Widget_TextButton_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature Parms{};
+	Params::Widget_CommonSessionEntry_C_OnListItemObjectSet Parms{};
 
-	Parms.Button = Button;
+	Parms.ListItemObject = ListItemObject;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.AcceptEvent
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.Setup
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FText&                      Input                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FBlueprintSessionResult&   SessionInfo_0                                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_CommonSessionEntry_C::AcceptEvent(const class FText& Input)
+void UWidget_CommonSessionEntry_C::Setup(const struct FBlueprintSessionResult& SessionInfo_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "AcceptEvent");
+		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "Setup");
 
-	Params::Widget_CommonSessionEntry_C_AcceptEvent Parms{};
+	Params::Widget_CommonSessionEntry_C_Setup Parms{};
 
-	Parms.Input = std::move(Input);
+	Parms.SessionInfo_0 = std::move(SessionInfo_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSessionEntry.Widget_CommonSessionEntry_C.Success_610F2A964857303568015A863AB4A5A6
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    TravelURL                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWidget_CommonSessionEntry_C::Success_610F2A964857303568015A863AB4A5A6(const class FString& TravelURL, const class FString& Error)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSessionEntry_C", "Success_610F2A964857303568015A863AB4A5A6");
+
+	Params::Widget_CommonSessionEntry_C_Success_610F2A964857303568015A863AB4A5A6 Parms{};
+
+	Parms.TravelURL = std::move(TravelURL);
+	Parms.Error = std::move(Error);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

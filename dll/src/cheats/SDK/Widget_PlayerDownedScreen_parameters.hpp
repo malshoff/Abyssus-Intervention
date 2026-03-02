@@ -10,25 +10,42 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct Widget_PlayerDownedScreen_C_Tick final
+// Function Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C.ExecuteUbergraph_Widget_PlayerDownedScreen
+// 0x00B0 (0x00B0 - 0x0000)
+struct Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen final
 {
 public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class ARPlayerPawn* RevivingPlayer)> K2Node_CreateDelegate_OutputDelegate;        // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_GetOwningPlayerPawn_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x002C(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0040(0x0010)()
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ARPlayerPawn*>                   CallFunc_GetAllActorsOfClass_OutActors;            // 0x0058(0x0010)(ReferenceParm)
+	TDelegate<void(class ARPlayerPawn* Player)>   K2Node_CreateDelegate_OutputDelegate_1;            // 0x0068(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           CallFunc_Array_Get_Item;                           // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPlayerPawn*                           K2Node_CustomEvent_RevivingPlayer_1;               // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_CustomEvent_CastTime;                       // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_CustomEvent_CurrentCastTime;                // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_CustomEvent_RevivingPlayer;                 // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class ARPlayerPawn* RevivingPlayer, float CastTime, float CurrentCastTime)> K2Node_CreateDelegate_OutputDelegate_2; // 0x00A0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PlayerDownedScreen_C_Tick) == 0x000004, "Wrong alignment on Widget_PlayerDownedScreen_C_Tick");
-static_assert(sizeof(Widget_PlayerDownedScreen_C_Tick) == 0x00003C, "Wrong size on Widget_PlayerDownedScreen_C_Tick");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_Tick, MyGeometry) == 0x000000, "Member 'Widget_PlayerDownedScreen_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_Tick, InDeltaTime) == 0x000038, "Member 'Widget_PlayerDownedScreen_C_Tick::InDeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen;
 
 // Function Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C.OnPlayerPawnKilled
 // 0x0058 (0x0058 - 0x0000)
@@ -50,93 +67,27 @@ public:
 	class URStatusEffectGScript*                  K2Node_DynamicCast_AsRStatus_Effect_GScript;       // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PlayerDownedScreen_C_OnPlayerPawnKilled) == 0x000008, "Wrong alignment on Widget_PlayerDownedScreen_C_OnPlayerPawnKilled");
-static_assert(sizeof(Widget_PlayerDownedScreen_C_OnPlayerPawnKilled) == 0x000058, "Wrong size on Widget_PlayerDownedScreen_C_OnPlayerPawnKilled");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_OnPlayerPawnKilled, Player) == 0x000000, "Member 'Widget_PlayerDownedScreen_C_OnPlayerPawnKilled::Player' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_OnPlayerPawnKilled, Temp_int_Array_Index_Variable) == 0x000008, "Member 'Widget_PlayerDownedScreen_C_OnPlayerPawnKilled::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_OnPlayerPawnKilled, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'Widget_PlayerDownedScreen_C_OnPlayerPawnKilled::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_OnPlayerPawnKilled, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'Widget_PlayerDownedScreen_C_OnPlayerPawnKilled::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_OnPlayerPawnKilled, CallFunc_GetAllActorsOfClass_OutActors) == 0x000018, "Member 'Widget_PlayerDownedScreen_C_OnPlayerPawnKilled::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_OnPlayerPawnKilled, CallFunc_Array_Get_Item) == 0x000028, "Member 'Widget_PlayerDownedScreen_C_OnPlayerPawnKilled::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_OnPlayerPawnKilled, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'Widget_PlayerDownedScreen_C_OnPlayerPawnKilled::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_OnPlayerPawnKilled, CallFunc_GetGScriptCategory_ReturnValue) == 0x000034, "Member 'Widget_PlayerDownedScreen_C_OnPlayerPawnKilled::CallFunc_GetGScriptCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_OnPlayerPawnKilled, CallFunc_Less_IntInt_ReturnValue) == 0x00003C, "Member 'Widget_PlayerDownedScreen_C_OnPlayerPawnKilled::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_OnPlayerPawnKilled, CallFunc_GetScriptInCategory_ReturnValue) == 0x000040, "Member 'Widget_PlayerDownedScreen_C_OnPlayerPawnKilled::CallFunc_GetScriptInCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_OnPlayerPawnKilled, K2Node_DynamicCast_AsRStatus_Effect_GScript) == 0x000048, "Member 'Widget_PlayerDownedScreen_C_OnPlayerPawnKilled::K2Node_DynamicCast_AsRStatus_Effect_GScript' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_OnPlayerPawnKilled, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'Widget_PlayerDownedScreen_C_OnPlayerPawnKilled::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PlayerDownedScreen_C_OnPlayerPawnKilled;
 
-// Function Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C.ExecuteUbergraph_Widget_PlayerDownedScreen
-// 0x0108 (0x0108 - 0x0000)
-struct Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen final
+// Function Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C.OnRevivedCastInterrupted
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_PlayerDownedScreen_C_OnRevivedCastInterrupted final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class ARPlayerPawn* Player)>   K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17[0x1];                                       // 0x0017(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0018(0x0010)()
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x002C(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_GetOwningPlayerPawn_ReturnValue;          // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetGScriptCategory_ReturnValue;           // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URGScriptComponent*                     CallFunc_GetGScriptComponent_ReturnValue;          // 0x0090(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class URGScript*                              CallFunc_GetScriptInCategory_ReturnValue;          // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class URStatusEffectGScript*                  K2Node_DynamicCast_AsRStatus_Effect_GScript;       // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsTimerPausedHandle_ReturnValue;       // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x00AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x00AB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x00B0(0x0010)()
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default_1;                           // 0x00C8(0x0010)()
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class ARPlayerPawn*>                   CallFunc_GetAllActorsOfClass_OutActors;            // 0x00E0(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPlayerPawn*                           CallFunc_Array_Get_Item;                           // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           RevivingPlayer;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen) == 0x000008, "Wrong alignment on Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen");
-static_assert(sizeof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen) == 0x000108, "Wrong size on Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, EntryPoint) == 0x000000, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, Temp_byte_Variable) == 0x000014, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, Temp_byte_Variable_1) == 0x000015, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, Temp_bool_Variable) == 0x000016, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, Temp_text_Variable) == 0x000018, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, Temp_int_Array_Index_Variable) == 0x000028, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, K2Node_Event_MyGeometry) == 0x00002C, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, K2Node_Event_InDeltaTime) == 0x000064, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000068, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000070, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, CallFunc_PlayAnimation_ReturnValue) == 0x000080, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, CallFunc_GetGScriptCategory_ReturnValue) == 0x000088, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::CallFunc_GetGScriptCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, CallFunc_GetGScriptComponent_ReturnValue) == 0x000090, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::CallFunc_GetGScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, CallFunc_GetScriptInCategory_ReturnValue) == 0x000098, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::CallFunc_GetScriptInCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, K2Node_DynamicCast_AsRStatus_Effect_GScript) == 0x0000A0, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::K2Node_DynamicCast_AsRStatus_Effect_GScript' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, K2Node_DynamicCast_bSuccess_1) == 0x0000A8, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, CallFunc_K2_IsTimerPausedHandle_ReturnValue) == 0x0000A9, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::CallFunc_K2_IsTimerPausedHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, Temp_bool_Variable_1) == 0x0000AA, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, K2Node_Select_Default) == 0x0000AB, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, CallFunc_GetText_ReturnValue) == 0x0000B0, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, Temp_int_Loop_Counter_Variable) == 0x0000C0, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, K2Node_Select_Default_1) == 0x0000C8, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, CallFunc_Add_IntInt_ReturnValue) == 0x0000D8, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, CallFunc_GetAllActorsOfClass_OutActors) == 0x0000E0, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, CallFunc_Array_Length_ReturnValue) == 0x0000F0, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, CallFunc_Array_Get_Item) == 0x0000F8, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen, CallFunc_Less_IntInt_ReturnValue) == 0x000100, "Member 'Widget_PlayerDownedScreen_C_ExecuteUbergraph_Widget_PlayerDownedScreen::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PlayerDownedScreen_C_OnRevivedCastInterrupted;
+
+// Function Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C.OnRevivedCastStarted_Event
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_PlayerDownedScreen_C_OnRevivedCastStarted_Event final
+{
+public:
+	class ARPlayerPawn*                           RevivingPlayer;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CastTime;                                          // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CurrentCastTime;                                   // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_PlayerDownedScreen_C_OnRevivedCastStarted_Event;
 
 }
 

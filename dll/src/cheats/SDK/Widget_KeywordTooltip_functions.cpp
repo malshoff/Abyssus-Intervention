@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function Widget_KeywordTooltip.Widget_KeywordTooltip_C.Set Info
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FText&                      Title_0                                                (BlueprintVisible, BlueprintReadOnly, Parm)
 // const class FText&                      Description_0                                          (BlueprintVisible, BlueprintReadOnly, Parm)

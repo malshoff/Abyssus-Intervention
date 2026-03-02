@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "AudioWidgets_structs.hpp"
 #include "UMG_classes.hpp"
 #include "SlateCore_structs.hpp"
 #include "SlateCore_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -38,18 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioMaterialButton">();
+		STATIC_CLASS_IMPL("AudioMaterialButton")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialButton")
 	}
 	static class UAudioMaterialButton* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioMaterialButton>();
 	}
 };
-static_assert(alignof(UAudioMaterialButton) == 0x000008, "Wrong alignment on UAudioMaterialButton");
-static_assert(sizeof(UAudioMaterialButton) == 0x000218, "Wrong size on UAudioMaterialButton");
-static_assert(offsetof(UAudioMaterialButton, WidgetStyle) == 0x000168, "Member 'UAudioMaterialButton::WidgetStyle' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialButton, OnButtonPressedChangedEvent) == 0x0001F0, "Member 'UAudioMaterialButton::OnButtonPressedChangedEvent' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialButton, bIsPressed) == 0x000200, "Member 'UAudioMaterialButton::bIsPressed' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioMaterialButton;
 
 // Class AudioWidgets.AudioMaterialEnvelope
 // 0x0080 (0x01E8 - 0x0168)
@@ -63,17 +63,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioMaterialEnvelope">();
+		STATIC_CLASS_IMPL("AudioMaterialEnvelope")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialEnvelope")
 	}
 	static class UAudioMaterialEnvelope* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioMaterialEnvelope>();
 	}
 };
-static_assert(alignof(UAudioMaterialEnvelope) == 0x000008, "Wrong alignment on UAudioMaterialEnvelope");
-static_assert(sizeof(UAudioMaterialEnvelope) == 0x0001E8, "Wrong size on UAudioMaterialEnvelope");
-static_assert(offsetof(UAudioMaterialEnvelope, WidgetStyle) == 0x000168, "Member 'UAudioMaterialEnvelope::WidgetStyle' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialEnvelope, EnvelopeSettings) == 0x0001B0, "Member 'UAudioMaterialEnvelope::EnvelopeSettings' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioMaterialEnvelope;
 
 // Class AudioWidgets.AudioMaterialKnob
 // 0x0208 (0x0370 - 0x0168)
@@ -86,7 +87,7 @@ public:
 	float                                         Value;                                             // 0x0340(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         TuneSpeed;                                         // 0x0344(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         FineTuneSpeed;                                     // 0x0348(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bLocked;                                           // 0x034C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          Blocked;                                           // 0x034C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bMouseUsesStep;                                    // 0x034D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_34E[0x2];                                      // 0x034E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         StepSize;                                          // 0x0350(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -110,23 +111,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioMaterialKnob">();
+		STATIC_CLASS_IMPL("AudioMaterialKnob")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialKnob")
 	}
 	static class UAudioMaterialKnob* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioMaterialKnob>();
 	}
 };
-static_assert(alignof(UAudioMaterialKnob) == 0x000010, "Wrong alignment on UAudioMaterialKnob");
-static_assert(sizeof(UAudioMaterialKnob) == 0x000370, "Wrong size on UAudioMaterialKnob");
-static_assert(offsetof(UAudioMaterialKnob, WidgetStyle) == 0x000170, "Member 'UAudioMaterialKnob::WidgetStyle' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialKnob, OnKnobValueChanged) == 0x000330, "Member 'UAudioMaterialKnob::OnKnobValueChanged' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialKnob, Value) == 0x000340, "Member 'UAudioMaterialKnob::Value' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialKnob, TuneSpeed) == 0x000344, "Member 'UAudioMaterialKnob::TuneSpeed' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialKnob, FineTuneSpeed) == 0x000348, "Member 'UAudioMaterialKnob::FineTuneSpeed' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialKnob, bLocked) == 0x00034C, "Member 'UAudioMaterialKnob::bLocked' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialKnob, bMouseUsesStep) == 0x00034D, "Member 'UAudioMaterialKnob::bMouseUsesStep' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialKnob, StepSize) == 0x000350, "Member 'UAudioMaterialKnob::StepSize' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioMaterialKnob;
 
 // Class AudioWidgets.AudioMaterialMeter
 // 0x0128 (0x0290 - 0x0168)
@@ -148,19 +144,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioMaterialMeter">();
+		STATIC_CLASS_IMPL("AudioMaterialMeter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialMeter")
 	}
 	static class UAudioMaterialMeter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioMaterialMeter>();
 	}
 };
-static_assert(alignof(UAudioMaterialMeter) == 0x000008, "Wrong alignment on UAudioMaterialMeter");
-static_assert(sizeof(UAudioMaterialMeter) == 0x000290, "Wrong size on UAudioMaterialMeter");
-static_assert(offsetof(UAudioMaterialMeter, WidgetStyle) == 0x000168, "Member 'UAudioMaterialMeter::WidgetStyle' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialMeter, Orientation) == 0x000258, "Member 'UAudioMaterialMeter::Orientation' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialMeter, MeterChannelInfoDelegate) == 0x00025C, "Member 'UAudioMaterialMeter::MeterChannelInfoDelegate' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialMeter, MeterChannelInfo) == 0x000280, "Member 'UAudioMaterialMeter::MeterChannelInfo' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioMaterialMeter;
 
 // Class AudioWidgets.AudioMaterialSlider
 // 0x0198 (0x0300 - 0x0168)
@@ -175,7 +170,7 @@ public:
 	uint8                                         Pad_2D5[0x3];                                      // 0x02D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TuneSpeed;                                         // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         FineTuneSpeed;                                     // 0x02DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bLocked;                                           // 0x02E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          Blocked;                                           // 0x02E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bMouseUsesStep;                                    // 0x02E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_2E2[0x2];                                      // 0x02E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         StepSize;                                          // 0x02E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -199,24 +194,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioMaterialSlider">();
+		STATIC_CLASS_IMPL("AudioMaterialSlider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialSlider")
 	}
 	static class UAudioMaterialSlider* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioMaterialSlider>();
 	}
 };
-static_assert(alignof(UAudioMaterialSlider) == 0x000010, "Wrong alignment on UAudioMaterialSlider");
-static_assert(sizeof(UAudioMaterialSlider) == 0x000300, "Wrong size on UAudioMaterialSlider");
-static_assert(offsetof(UAudioMaterialSlider, WidgetStyle) == 0x000170, "Member 'UAudioMaterialSlider::WidgetStyle' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialSlider, OnValueChanged) == 0x0002C0, "Member 'UAudioMaterialSlider::OnValueChanged' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialSlider, Value) == 0x0002D0, "Member 'UAudioMaterialSlider::Value' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialSlider, Orientation) == 0x0002D4, "Member 'UAudioMaterialSlider::Orientation' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialSlider, TuneSpeed) == 0x0002D8, "Member 'UAudioMaterialSlider::TuneSpeed' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialSlider, FineTuneSpeed) == 0x0002DC, "Member 'UAudioMaterialSlider::FineTuneSpeed' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialSlider, bLocked) == 0x0002E0, "Member 'UAudioMaterialSlider::bLocked' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialSlider, bMouseUsesStep) == 0x0002E1, "Member 'UAudioMaterialSlider::bMouseUsesStep' has a wrong offset!");
-static_assert(offsetof(UAudioMaterialSlider, StepSize) == 0x0002E4, "Member 'UAudioMaterialSlider::StepSize' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioMaterialSlider;
 
 // Class AudioWidgets.AudioMaterialKnobWidgetStyle
 // 0x01C0 (0x01F0 - 0x0030)
@@ -228,16 +217,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioMaterialKnobWidgetStyle">();
+		STATIC_CLASS_IMPL("AudioMaterialKnobWidgetStyle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialKnobWidgetStyle")
 	}
 	static class UAudioMaterialKnobWidgetStyle* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioMaterialKnobWidgetStyle>();
 	}
 };
-static_assert(alignof(UAudioMaterialKnobWidgetStyle) == 0x000010, "Wrong alignment on UAudioMaterialKnobWidgetStyle");
-static_assert(sizeof(UAudioMaterialKnobWidgetStyle) == 0x0001F0, "Wrong size on UAudioMaterialKnobWidgetStyle");
-static_assert(offsetof(UAudioMaterialKnobWidgetStyle, KnobStyle) == 0x000030, "Member 'UAudioMaterialKnobWidgetStyle::KnobStyle' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioMaterialKnobWidgetStyle;
 
 // Class AudioWidgets.AudioMaterialMeterWidgetStyle
 // 0x00F0 (0x0120 - 0x0030)
@@ -249,16 +240,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioMaterialMeterWidgetStyle">();
+		STATIC_CLASS_IMPL("AudioMaterialMeterWidgetStyle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialMeterWidgetStyle")
 	}
 	static class UAudioMaterialMeterWidgetStyle* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioMaterialMeterWidgetStyle>();
 	}
 };
-static_assert(alignof(UAudioMaterialMeterWidgetStyle) == 0x000008, "Wrong alignment on UAudioMaterialMeterWidgetStyle");
-static_assert(sizeof(UAudioMaterialMeterWidgetStyle) == 0x000120, "Wrong size on UAudioMaterialMeterWidgetStyle");
-static_assert(offsetof(UAudioMaterialMeterWidgetStyle, MeterStyle) == 0x000030, "Member 'UAudioMaterialMeterWidgetStyle::MeterStyle' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioMaterialMeterWidgetStyle;
 
 // Class AudioWidgets.AudioMaterialButtonWidgetStyle
 // 0x0088 (0x00B8 - 0x0030)
@@ -270,16 +263,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioMaterialButtonWidgetStyle">();
+		STATIC_CLASS_IMPL("AudioMaterialButtonWidgetStyle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialButtonWidgetStyle")
 	}
 	static class UAudioMaterialButtonWidgetStyle* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioMaterialButtonWidgetStyle>();
 	}
 };
-static_assert(alignof(UAudioMaterialButtonWidgetStyle) == 0x000008, "Wrong alignment on UAudioMaterialButtonWidgetStyle");
-static_assert(sizeof(UAudioMaterialButtonWidgetStyle) == 0x0000B8, "Wrong size on UAudioMaterialButtonWidgetStyle");
-static_assert(offsetof(UAudioMaterialButtonWidgetStyle, ButtonStyle) == 0x000030, "Member 'UAudioMaterialButtonWidgetStyle::ButtonStyle' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioMaterialButtonWidgetStyle;
 
 // Class AudioWidgets.AudioMaterialSliderWidgetStyle
 // 0x0150 (0x0180 - 0x0030)
@@ -291,16 +286,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioMaterialSliderWidgetStyle">();
+		STATIC_CLASS_IMPL("AudioMaterialSliderWidgetStyle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialSliderWidgetStyle")
 	}
 	static class UAudioMaterialSliderWidgetStyle* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioMaterialSliderWidgetStyle>();
 	}
 };
-static_assert(alignof(UAudioMaterialSliderWidgetStyle) == 0x000010, "Wrong alignment on UAudioMaterialSliderWidgetStyle");
-static_assert(sizeof(UAudioMaterialSliderWidgetStyle) == 0x000180, "Wrong size on UAudioMaterialSliderWidgetStyle");
-static_assert(offsetof(UAudioMaterialSliderWidgetStyle, SliderStyle) == 0x000030, "Member 'UAudioMaterialSliderWidgetStyle::SliderStyle' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioMaterialSliderWidgetStyle;
 
 // Class AudioWidgets.AudioMeter
 // 0x04E8 (0x0650 - 0x0168)
@@ -337,26 +334,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioMeter">();
+		STATIC_CLASS_IMPL("AudioMeter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMeter")
 	}
 	static class UAudioMeter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioMeter>();
 	}
 };
-static_assert(alignof(UAudioMeter) == 0x000010, "Wrong alignment on UAudioMeter");
-static_assert(sizeof(UAudioMeter) == 0x000650, "Wrong size on UAudioMeter");
-static_assert(offsetof(UAudioMeter, MeterChannelInfo) == 0x000168, "Member 'UAudioMeter::MeterChannelInfo' has a wrong offset!");
-static_assert(offsetof(UAudioMeter, MeterChannelInfoDelegate) == 0x000178, "Member 'UAudioMeter::MeterChannelInfoDelegate' has a wrong offset!");
-static_assert(offsetof(UAudioMeter, WidgetStyle) == 0x000190, "Member 'UAudioMeter::WidgetStyle' has a wrong offset!");
-static_assert(offsetof(UAudioMeter, Orientation) == 0x0005C0, "Member 'UAudioMeter::Orientation' has a wrong offset!");
-static_assert(offsetof(UAudioMeter, BackgroundColor) == 0x0005C4, "Member 'UAudioMeter::BackgroundColor' has a wrong offset!");
-static_assert(offsetof(UAudioMeter, MeterBackgroundColor) == 0x0005D4, "Member 'UAudioMeter::MeterBackgroundColor' has a wrong offset!");
-static_assert(offsetof(UAudioMeter, MeterValueColor) == 0x0005E4, "Member 'UAudioMeter::MeterValueColor' has a wrong offset!");
-static_assert(offsetof(UAudioMeter, MeterPeakColor) == 0x0005F4, "Member 'UAudioMeter::MeterPeakColor' has a wrong offset!");
-static_assert(offsetof(UAudioMeter, MeterClippingColor) == 0x000604, "Member 'UAudioMeter::MeterClippingColor' has a wrong offset!");
-static_assert(offsetof(UAudioMeter, MeterScaleColor) == 0x000614, "Member 'UAudioMeter::MeterScaleColor' has a wrong offset!");
-static_assert(offsetof(UAudioMeter, MeterScaleLabelColor) == 0x000624, "Member 'UAudioMeter::MeterScaleLabelColor' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioMeter;
 
 // Class AudioWidgets.AudioOscilloscope
 // 0x04C8 (0x0630 - 0x0168)
@@ -365,7 +354,7 @@ class UAudioOscilloscope final : public UWidget
 public:
 	uint8                                         Pad_168[0x8];                                      // 0x0168(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAudioOscilloscopePanelStyle           OscilloscopeStyle;                                 // 0x0170(0x0440)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class UAudioBus*                              AudioBus;                                          // 0x05B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAudioBus*                              AudioBus;                                          // 0x05B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	float                                         MaxTimeWindowMs;                                   // 0x05B8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TimeWindowMs;                                      // 0x05BC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AnalysisPeriodMs;                                  // 0x05C0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -390,29 +379,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioOscilloscope">();
+		STATIC_CLASS_IMPL("AudioOscilloscope")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioOscilloscope")
 	}
 	static class UAudioOscilloscope* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioOscilloscope>();
 	}
 };
-static_assert(alignof(UAudioOscilloscope) == 0x000010, "Wrong alignment on UAudioOscilloscope");
-static_assert(sizeof(UAudioOscilloscope) == 0x000630, "Wrong size on UAudioOscilloscope");
-static_assert(offsetof(UAudioOscilloscope, OscilloscopeStyle) == 0x000170, "Member 'UAudioOscilloscope::OscilloscopeStyle' has a wrong offset!");
-static_assert(offsetof(UAudioOscilloscope, AudioBus) == 0x0005B0, "Member 'UAudioOscilloscope::AudioBus' has a wrong offset!");
-static_assert(offsetof(UAudioOscilloscope, MaxTimeWindowMs) == 0x0005B8, "Member 'UAudioOscilloscope::MaxTimeWindowMs' has a wrong offset!");
-static_assert(offsetof(UAudioOscilloscope, TimeWindowMs) == 0x0005BC, "Member 'UAudioOscilloscope::TimeWindowMs' has a wrong offset!");
-static_assert(offsetof(UAudioOscilloscope, AnalysisPeriodMs) == 0x0005C0, "Member 'UAudioOscilloscope::AnalysisPeriodMs' has a wrong offset!");
-static_assert(offsetof(UAudioOscilloscope, bShowTimeGrid) == 0x0005C4, "Member 'UAudioOscilloscope::bShowTimeGrid' has a wrong offset!");
-static_assert(offsetof(UAudioOscilloscope, TimeGridLabelsUnit) == 0x0005C5, "Member 'UAudioOscilloscope::TimeGridLabelsUnit' has a wrong offset!");
-static_assert(offsetof(UAudioOscilloscope, bShowAmplitudeGrid) == 0x0005C6, "Member 'UAudioOscilloscope::bShowAmplitudeGrid' has a wrong offset!");
-static_assert(offsetof(UAudioOscilloscope, bShowAmplitudeLabels) == 0x0005C7, "Member 'UAudioOscilloscope::bShowAmplitudeLabels' has a wrong offset!");
-static_assert(offsetof(UAudioOscilloscope, AmplitudeGridLabelsUnit) == 0x0005C8, "Member 'UAudioOscilloscope::AmplitudeGridLabelsUnit' has a wrong offset!");
-static_assert(offsetof(UAudioOscilloscope, TriggerMode) == 0x0005C9, "Member 'UAudioOscilloscope::TriggerMode' has a wrong offset!");
-static_assert(offsetof(UAudioOscilloscope, TriggerThreshold) == 0x0005CC, "Member 'UAudioOscilloscope::TriggerThreshold' has a wrong offset!");
-static_assert(offsetof(UAudioOscilloscope, PanelLayoutType) == 0x0005D0, "Member 'UAudioOscilloscope::PanelLayoutType' has a wrong offset!");
-static_assert(offsetof(UAudioOscilloscope, ChannelToAnalyze) == 0x0005D4, "Member 'UAudioOscilloscope::ChannelToAnalyze' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioOscilloscope;
 
 // Class AudioWidgets.AudioRadialSlider
 // 0x01F8 (0x0360 - 0x0168)
@@ -458,31 +436,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioRadialSlider">();
+		STATIC_CLASS_IMPL("AudioRadialSlider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioRadialSlider")
 	}
 	static class UAudioRadialSlider* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioRadialSlider>();
 	}
 };
-static_assert(alignof(UAudioRadialSlider) == 0x000010, "Wrong alignment on UAudioRadialSlider");
-static_assert(sizeof(UAudioRadialSlider) == 0x000360, "Wrong size on UAudioRadialSlider");
-static_assert(offsetof(UAudioRadialSlider, Value) == 0x000168, "Member 'UAudioRadialSlider::Value' has a wrong offset!");
-static_assert(offsetof(UAudioRadialSlider, ValueDelegate) == 0x00016C, "Member 'UAudioRadialSlider::ValueDelegate' has a wrong offset!");
-static_assert(offsetof(UAudioRadialSlider, WidgetLayout) == 0x00017C, "Member 'UAudioRadialSlider::WidgetLayout' has a wrong offset!");
-static_assert(offsetof(UAudioRadialSlider, CenterBackgroundColor) == 0x000180, "Member 'UAudioRadialSlider::CenterBackgroundColor' has a wrong offset!");
-static_assert(offsetof(UAudioRadialSlider, SliderProgressColor) == 0x000190, "Member 'UAudioRadialSlider::SliderProgressColor' has a wrong offset!");
-static_assert(offsetof(UAudioRadialSlider, SliderBarColor) == 0x0001A0, "Member 'UAudioRadialSlider::SliderBarColor' has a wrong offset!");
-static_assert(offsetof(UAudioRadialSlider, HandStartEndRatio) == 0x0001B0, "Member 'UAudioRadialSlider::HandStartEndRatio' has a wrong offset!");
-static_assert(offsetof(UAudioRadialSlider, UnitsText) == 0x0001C0, "Member 'UAudioRadialSlider::UnitsText' has a wrong offset!");
-static_assert(offsetof(UAudioRadialSlider, TextLabelBackgroundColor) == 0x0001D0, "Member 'UAudioRadialSlider::TextLabelBackgroundColor' has a wrong offset!");
-static_assert(offsetof(UAudioRadialSlider, ShowLabelOnlyOnHover) == 0x0001E0, "Member 'UAudioRadialSlider::ShowLabelOnlyOnHover' has a wrong offset!");
-static_assert(offsetof(UAudioRadialSlider, ShowUnitsText) == 0x0001E1, "Member 'UAudioRadialSlider::ShowUnitsText' has a wrong offset!");
-static_assert(offsetof(UAudioRadialSlider, IsUnitsTextReadOnly) == 0x0001E2, "Member 'UAudioRadialSlider::IsUnitsTextReadOnly' has a wrong offset!");
-static_assert(offsetof(UAudioRadialSlider, IsValueTextReadOnly) == 0x0001E3, "Member 'UAudioRadialSlider::IsValueTextReadOnly' has a wrong offset!");
-static_assert(offsetof(UAudioRadialSlider, SliderThickness) == 0x0001E4, "Member 'UAudioRadialSlider::SliderThickness' has a wrong offset!");
-static_assert(offsetof(UAudioRadialSlider, OutputRange) == 0x0001E8, "Member 'UAudioRadialSlider::OutputRange' has a wrong offset!");
-static_assert(offsetof(UAudioRadialSlider, OnValueChanged) == 0x0001F8, "Member 'UAudioRadialSlider::OnValueChanged' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioRadialSlider;
 
 // Class AudioWidgets.AudioVolumeRadialSlider
 // 0x0000 (0x0360 - 0x0360)
@@ -491,15 +456,18 @@ class UAudioVolumeRadialSlider final : public UAudioRadialSlider
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioVolumeRadialSlider">();
+		STATIC_CLASS_IMPL("AudioVolumeRadialSlider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioVolumeRadialSlider")
 	}
 	static class UAudioVolumeRadialSlider* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioVolumeRadialSlider>();
 	}
 };
-static_assert(alignof(UAudioVolumeRadialSlider) == 0x000010, "Wrong alignment on UAudioVolumeRadialSlider");
-static_assert(sizeof(UAudioVolumeRadialSlider) == 0x000360, "Wrong size on UAudioVolumeRadialSlider");
+DUMPER7_ASSERTS_UAudioVolumeRadialSlider;
 
 // Class AudioWidgets.AudioFrequencyRadialSlider
 // 0x0000 (0x0360 - 0x0360)
@@ -508,15 +476,18 @@ class UAudioFrequencyRadialSlider final : public UAudioRadialSlider
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioFrequencyRadialSlider">();
+		STATIC_CLASS_IMPL("AudioFrequencyRadialSlider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioFrequencyRadialSlider")
 	}
 	static class UAudioFrequencyRadialSlider* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioFrequencyRadialSlider>();
 	}
 };
-static_assert(alignof(UAudioFrequencyRadialSlider) == 0x000010, "Wrong alignment on UAudioFrequencyRadialSlider");
-static_assert(sizeof(UAudioFrequencyRadialSlider) == 0x000360, "Wrong size on UAudioFrequencyRadialSlider");
+DUMPER7_ASSERTS_UAudioFrequencyRadialSlider;
 
 // Class AudioWidgets.AudioSliderBase
 // 0x0748 (0x08B0 - 0x0168)
@@ -564,34 +535,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioSliderBase">();
+		STATIC_CLASS_IMPL("AudioSliderBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioSliderBase")
 	}
 	static class UAudioSliderBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioSliderBase>();
 	}
 };
-static_assert(alignof(UAudioSliderBase) == 0x000010, "Wrong alignment on UAudioSliderBase");
-static_assert(sizeof(UAudioSliderBase) == 0x0008B0, "Wrong size on UAudioSliderBase");
-static_assert(offsetof(UAudioSliderBase, Value) == 0x000168, "Member 'UAudioSliderBase::Value' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, UnitsText) == 0x000170, "Member 'UAudioSliderBase::UnitsText' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, TextLabelBackgroundColor) == 0x000180, "Member 'UAudioSliderBase::TextLabelBackgroundColor' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, TextLabelBackgroundColorDelegate) == 0x000190, "Member 'UAudioSliderBase::TextLabelBackgroundColorDelegate' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, ShowLabelOnlyOnHover) == 0x0001A0, "Member 'UAudioSliderBase::ShowLabelOnlyOnHover' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, ShowUnitsText) == 0x0001A1, "Member 'UAudioSliderBase::ShowUnitsText' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, IsUnitsTextReadOnly) == 0x0001A2, "Member 'UAudioSliderBase::IsUnitsTextReadOnly' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, IsValueTextReadOnly) == 0x0001A3, "Member 'UAudioSliderBase::IsValueTextReadOnly' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, ValueDelegate) == 0x0001A4, "Member 'UAudioSliderBase::ValueDelegate' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, SliderBackgroundColor) == 0x0001B4, "Member 'UAudioSliderBase::SliderBackgroundColor' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, SliderBackgroundColorDelegate) == 0x0001C4, "Member 'UAudioSliderBase::SliderBackgroundColorDelegate' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, SliderBarColor) == 0x0001D4, "Member 'UAudioSliderBase::SliderBarColor' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, SliderBarColorDelegate) == 0x0001E4, "Member 'UAudioSliderBase::SliderBarColorDelegate' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, SliderThumbColor) == 0x0001F4, "Member 'UAudioSliderBase::SliderThumbColor' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, SliderThumbColorDelegate) == 0x000204, "Member 'UAudioSliderBase::SliderThumbColorDelegate' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, WidgetBackgroundColor) == 0x000214, "Member 'UAudioSliderBase::WidgetBackgroundColor' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, WidgetBackgroundColorDelegate) == 0x000224, "Member 'UAudioSliderBase::WidgetBackgroundColorDelegate' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, Orientation) == 0x000234, "Member 'UAudioSliderBase::Orientation' has a wrong offset!");
-static_assert(offsetof(UAudioSliderBase, OnValueChanged) == 0x000238, "Member 'UAudioSliderBase::OnValueChanged' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioSliderBase;
 
 // Class AudioWidgets.AudioSlider
 // 0x0010 (0x08C0 - 0x08B0)
@@ -604,17 +559,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioSlider">();
+		STATIC_CLASS_IMPL("AudioSlider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioSlider")
 	}
 	static class UAudioSlider* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioSlider>();
 	}
 };
-static_assert(alignof(UAudioSlider) == 0x000010, "Wrong alignment on UAudioSlider");
-static_assert(sizeof(UAudioSlider) == 0x0008C0, "Wrong size on UAudioSlider");
-static_assert(offsetof(UAudioSlider, LinToOutputCurve) == 0x0008B0, "Member 'UAudioSlider::LinToOutputCurve' has a wrong offset!");
-static_assert(offsetof(UAudioSlider, OutputToLinCurve) == 0x0008B8, "Member 'UAudioSlider::OutputToLinCurve' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioSlider;
 
 // Class AudioWidgets.AudioVolumeSlider
 // 0x0000 (0x08C0 - 0x08C0)
@@ -623,15 +579,18 @@ class UAudioVolumeSlider final : public UAudioSlider
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioVolumeSlider">();
+		STATIC_CLASS_IMPL("AudioVolumeSlider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioVolumeSlider")
 	}
 	static class UAudioVolumeSlider* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioVolumeSlider>();
 	}
 };
-static_assert(alignof(UAudioVolumeSlider) == 0x000010, "Wrong alignment on UAudioVolumeSlider");
-static_assert(sizeof(UAudioVolumeSlider) == 0x0008C0, "Wrong size on UAudioVolumeSlider");
+DUMPER7_ASSERTS_UAudioVolumeSlider;
 
 // Class AudioWidgets.AudioFrequencySlider
 // 0x0010 (0x08C0 - 0x08B0)
@@ -643,16 +602,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioFrequencySlider">();
+		STATIC_CLASS_IMPL("AudioFrequencySlider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioFrequencySlider")
 	}
 	static class UAudioFrequencySlider* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioFrequencySlider>();
 	}
 };
-static_assert(alignof(UAudioFrequencySlider) == 0x000010, "Wrong alignment on UAudioFrequencySlider");
-static_assert(sizeof(UAudioFrequencySlider) == 0x0008C0, "Wrong size on UAudioFrequencySlider");
-static_assert(offsetof(UAudioFrequencySlider, OutputRange) == 0x0008B0, "Member 'UAudioFrequencySlider::OutputRange' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioFrequencySlider;
 
 // Class AudioWidgets.AudioVectorscope
 // 0x0218 (0x0380 - 0x0168)
@@ -661,7 +622,7 @@ class UAudioVectorscope final : public UWidget
 public:
 	uint8                                         Pad_168[0x8];                                      // 0x0168(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAudioVectorscopePanelStyle            VectorscopeStyle;                                  // 0x0170(0x01A0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class UAudioBus*                              AudioBus;                                          // 0x0310(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAudioBus*                              AudioBus;                                          // 0x0310(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	bool                                          bShowGrid;                                         // 0x0318(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_319[0x3];                                      // 0x0319(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         GridDivisions;                                     // 0x031C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -678,23 +639,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioVectorscope">();
+		STATIC_CLASS_IMPL("AudioVectorscope")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioVectorscope")
 	}
 	static class UAudioVectorscope* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioVectorscope>();
 	}
 };
-static_assert(alignof(UAudioVectorscope) == 0x000010, "Wrong alignment on UAudioVectorscope");
-static_assert(sizeof(UAudioVectorscope) == 0x000380, "Wrong size on UAudioVectorscope");
-static_assert(offsetof(UAudioVectorscope, VectorscopeStyle) == 0x000170, "Member 'UAudioVectorscope::VectorscopeStyle' has a wrong offset!");
-static_assert(offsetof(UAudioVectorscope, AudioBus) == 0x000310, "Member 'UAudioVectorscope::AudioBus' has a wrong offset!");
-static_assert(offsetof(UAudioVectorscope, bShowGrid) == 0x000318, "Member 'UAudioVectorscope::bShowGrid' has a wrong offset!");
-static_assert(offsetof(UAudioVectorscope, GridDivisions) == 0x00031C, "Member 'UAudioVectorscope::GridDivisions' has a wrong offset!");
-static_assert(offsetof(UAudioVectorscope, MaxDisplayPersistenceMs) == 0x000320, "Member 'UAudioVectorscope::MaxDisplayPersistenceMs' has a wrong offset!");
-static_assert(offsetof(UAudioVectorscope, DisplayPersistenceMs) == 0x000324, "Member 'UAudioVectorscope::DisplayPersistenceMs' has a wrong offset!");
-static_assert(offsetof(UAudioVectorscope, Scale) == 0x000328, "Member 'UAudioVectorscope::Scale' has a wrong offset!");
-static_assert(offsetof(UAudioVectorscope, PanelLayoutType) == 0x00032C, "Member 'UAudioVectorscope::PanelLayoutType' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioVectorscope;
 
 }
 

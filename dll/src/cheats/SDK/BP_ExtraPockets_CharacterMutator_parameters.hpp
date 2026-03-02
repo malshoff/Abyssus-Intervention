@@ -33,17 +33,7 @@ public:
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ExtraPockets_CharacterMutator_C_AddChargeBonus) == 0x000008, "Wrong alignment on BP_ExtraPockets_CharacterMutator_C_AddChargeBonus");
-static_assert(sizeof(BP_ExtraPockets_CharacterMutator_C_AddChargeBonus) == 0x000068, "Wrong size on BP_ExtraPockets_CharacterMutator_C_AddChargeBonus");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_AddChargeBonus, MutatorRank) == 0x000000, "Member 'BP_ExtraPockets_CharacterMutator_C_AddChargeBonus::MutatorRank' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_AddChargeBonus, CallFunc_GetScriptFName_ReturnValue) == 0x000004, "Member 'BP_ExtraPockets_CharacterMutator_C_AddChargeBonus::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_AddChargeBonus, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x00000C, "Member 'BP_ExtraPockets_CharacterMutator_C_AddChargeBonus::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_AddChargeBonus, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000010, "Member 'BP_ExtraPockets_CharacterMutator_C_AddChargeBonus::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_AddChargeBonus, CallFunc_FTrunc_ReturnValue) == 0x000040, "Member 'BP_ExtraPockets_CharacterMutator_C_AddChargeBonus::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_AddChargeBonus, CallFunc_GetEquippedActivatableAbility_ReturnValue) == 0x000048, "Member 'BP_ExtraPockets_CharacterMutator_C_AddChargeBonus::CallFunc_GetEquippedActivatableAbility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_AddChargeBonus, K2Node_DynamicCast_AsBP_Activatable_Character_Mutator) == 0x000050, "Member 'BP_ExtraPockets_CharacterMutator_C_AddChargeBonus::K2Node_DynamicCast_AsBP_Activatable_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_AddChargeBonus, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'BP_ExtraPockets_CharacterMutator_C_AddChargeBonus::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_AddChargeBonus, CallFunc_FTrunc_A_ImplicitCast) == 0x000060, "Member 'BP_ExtraPockets_CharacterMutator_C_AddChargeBonus::CallFunc_FTrunc_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ExtraPockets_CharacterMutator_C_AddChargeBonus;
 
 // Function BP_ExtraPockets_CharacterMutator.BP_ExtraPockets_CharacterMutator_C.ExecuteUbergraph_BP_ExtraPockets_CharacterMutator
 // 0x0110 (0x0110 - 0x0000)
@@ -78,28 +68,7 @@ public:
 	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(int32 NewRank, class URMutatorPrimaryAsset* MutatorPrimaryAsset)> K2Node_CreateDelegate_OutputDelegate; // 0x0100(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator) == 0x000008, "Wrong alignment on BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator");
-static_assert(sizeof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator) == 0x000110, "Wrong size on BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x000038, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000048, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, CallFunc_GetScriptFName_ReturnValue) == 0x000078, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, CallFunc_GetEquippedActivatableAbility_ReturnValue) == 0x000080, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::CallFunc_GetEquippedActivatableAbility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, K2Node_DynamicCast_AsBP_Activatable_Character_Mutator) == 0x000088, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::K2Node_DynamicCast_AsBP_Activatable_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000090, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x000098, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, K2Node_CustomEvent_NewRank) == 0x0000C8, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::K2Node_CustomEvent_NewRank' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, K2Node_CustomEvent_MutatorPrimaryAsset) == 0x0000D0, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::K2Node_CustomEvent_MutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x0000D8, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, K2Node_DynamicCast_AsRPlayer_GScript_Component_1) == 0x0000E0, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::K2Node_DynamicCast_AsRPlayer_GScript_Component_1' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, K2Node_DynamicCast_bSuccess_2) == 0x0000E8, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, CallFunc_HasMutator_ReturnValue) == 0x0000E9, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, K2Node_DynamicCast_AsRPlayer_GScript_Component_2) == 0x0000F0, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::K2Node_DynamicCast_AsRPlayer_GScript_Component_2' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, K2Node_DynamicCast_bSuccess_3) == 0x0000F8, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, CallFunc_GetMutatorRank_ReturnValue) == 0x0000FC, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000100, "Member 'BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ExtraPockets_CharacterMutator_C_ExecuteUbergraph_BP_ExtraPockets_CharacterMutator;
 
 // Function BP_ExtraPockets_CharacterMutator.BP_ExtraPockets_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -111,11 +80,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_ExtraPockets_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_ExtraPockets_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_ExtraPockets_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_ExtraPockets_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_ExtraPockets_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_ExtraPockets_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_ExtraPockets_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ExtraPockets_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_ExtraPockets_CharacterMutator.BP_ExtraPockets_CharacterMutator_C.OnMutatorChangedRank_Event
 // 0x0010 (0x0010 - 0x0000)
@@ -126,10 +91,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class URMutatorPrimaryAsset*                  MutatorPrimaryAsset;                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ExtraPockets_CharacterMutator_C_OnMutatorChangedRank_Event) == 0x000008, "Wrong alignment on BP_ExtraPockets_CharacterMutator_C_OnMutatorChangedRank_Event");
-static_assert(sizeof(BP_ExtraPockets_CharacterMutator_C_OnMutatorChangedRank_Event) == 0x000010, "Wrong size on BP_ExtraPockets_CharacterMutator_C_OnMutatorChangedRank_Event");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_OnMutatorChangedRank_Event, NewRank) == 0x000000, "Member 'BP_ExtraPockets_CharacterMutator_C_OnMutatorChangedRank_Event::NewRank' has a wrong offset!");
-static_assert(offsetof(BP_ExtraPockets_CharacterMutator_C_OnMutatorChangedRank_Event, MutatorPrimaryAsset) == 0x000008, "Member 'BP_ExtraPockets_CharacterMutator_C_OnMutatorChangedRank_Event::MutatorPrimaryAsset' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ExtraPockets_CharacterMutator_C_OnMutatorChangedRank_Event;
 
 }
 

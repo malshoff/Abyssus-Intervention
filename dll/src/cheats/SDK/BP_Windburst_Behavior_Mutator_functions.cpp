@@ -104,6 +104,34 @@ double UBP_Windburst_Behavior_Mutator_C::GetDamageToDeal(double HitDamage)
 }
 
 
+// Function BP_Windburst_Behavior_Mutator.BP_Windburst_Behavior_Mutator_C.GetGeometryActorsInArea
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FVector&                   Origin                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Radius                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class AActor*                     OriginActor                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FHitResult>*              Array                                                  (Parm, OutParm, ContainsInstancedReference)
+
+void UBP_Windburst_Behavior_Mutator_C::GetGeometryActorsInArea(const struct FVector& Origin, float Radius, const class AActor* OriginActor, TArray<struct FHitResult>* Array)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Windburst_Behavior_Mutator_C", "GetGeometryActorsInArea");
+
+	Params::BP_Windburst_Behavior_Mutator_C_GetGeometryActorsInArea Parms{};
+
+	Parms.Origin = std::move(Origin);
+	Parms.Radius = Radius;
+	Parms.OriginActor = OriginActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Array != nullptr)
+		*Array = std::move(Parms.Array);
+}
+
+
 // Function BP_Windburst_Behavior_Mutator.BP_Windburst_Behavior_Mutator_C.K2_ActivateScript
 // (Event, Public, BlueprintEvent)
 
@@ -210,42 +238,6 @@ void UBP_Windburst_Behavior_Mutator_C::OnCancelled_766292D94D3F6D4A914C788BE3B67
 }
 
 
-// Function BP_Windburst_Behavior_Mutator.BP_Windburst_Behavior_Mutator_C.OnExplosion_976B8F71410D6673DEBF549771C1545B
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// float                                   ActualExplosionRadius                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_Windburst_Behavior_Mutator_C::OnExplosion_976B8F71410D6673DEBF549771C1545B(const TArray<struct FHitResult>& HitResults, float ActualExplosionRadius)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Windburst_Behavior_Mutator_C", "OnExplosion_976B8F71410D6673DEBF549771C1545B");
-
-	Params::BP_Windburst_Behavior_Mutator_C_OnExplosion_976B8F71410D6673DEBF549771C1545B Parms{};
-
-	Parms.HitResults = std::move(HitResults);
-	Parms.ActualExplosionRadius = ActualExplosionRadius;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Windburst_Behavior_Mutator.BP_Windburst_Behavior_Mutator_C.OnFail_976B8F71410D6673DEBF549771C1545B
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Windburst_Behavior_Mutator_C::OnFail_976B8F71410D6673DEBF549771C1545B()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Windburst_Behavior_Mutator_C", "OnFail_976B8F71410D6673DEBF549771C1545B");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_Windburst_Behavior_Mutator.BP_Windburst_Behavior_Mutator_C.OnFinish_766292D94D3F6D4A914C788BE3B676F2
 // (BlueprintCallable, BlueprintEvent)
 
@@ -255,20 +247,6 @@ void UBP_Windburst_Behavior_Mutator_C::OnFinish_766292D94D3F6D4A914C788BE3B676F2
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_Windburst_Behavior_Mutator_C", "OnFinish_766292D94D3F6D4A914C788BE3B676F2");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Windburst_Behavior_Mutator.BP_Windburst_Behavior_Mutator_C.OnFinished_976B8F71410D6673DEBF549771C1545B
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Windburst_Behavior_Mutator_C::OnFinished_976B8F71410D6673DEBF549771C1545B()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Windburst_Behavior_Mutator_C", "OnFinished_976B8F71410D6673DEBF549771C1545B");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -339,8 +317,9 @@ void UBP_Windburst_Behavior_Mutator_C::RemoveDamageModifiers()
 // int32                                   DamageSourceMask                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   HealthDamage_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           OptionalAvatarActor                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FRMutableFloat&            SpecificCombatEventModifier                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBP_Windburst_Behavior_Mutator_C::RunAbilityBehavior(class AActor* TriggeringActor, int32 DamageSourceMask, float HealthDamage_0, class AActor* OptionalAvatarActor)
+void UBP_Windburst_Behavior_Mutator_C::RunAbilityBehavior(class AActor* TriggeringActor, int32 DamageSourceMask, float HealthDamage_0, class AActor* OptionalAvatarActor, const struct FRMutableFloat& SpecificCombatEventModifier)
 {
 	static class UFunction* Func = nullptr;
 
@@ -353,6 +332,7 @@ void UBP_Windburst_Behavior_Mutator_C::RunAbilityBehavior(class AActor* Triggeri
 	Parms.DamageSourceMask = DamageSourceMask;
 	Parms.HealthDamage_0 = HealthDamage_0;
 	Parms.OptionalAvatarActor = OptionalAvatarActor;
+	Parms.SpecificCombatEventModifier = std::move(SpecificCombatEventModifier);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -396,8 +376,9 @@ void UBP_Windburst_Behavior_Mutator_C::RunMeleeBehavior()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   HealthDamage_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           TriggeringActor                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBP_Windburst_Behavior_Mutator_C::RunPrimaryFireBehavior(float HealthDamage_0)
+void UBP_Windburst_Behavior_Mutator_C::RunPrimaryFireBehavior(float HealthDamage_0, class AActor* TriggeringActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -407,6 +388,7 @@ void UBP_Windburst_Behavior_Mutator_C::RunPrimaryFireBehavior(float HealthDamage
 	Params::BP_Windburst_Behavior_Mutator_C_RunPrimaryFireBehavior Parms{};
 
 	Parms.HealthDamage_0 = HealthDamage_0;
+	Parms.TriggeringActor = TriggeringActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

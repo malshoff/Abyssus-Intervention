@@ -45,27 +45,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_JumpPadPrototype_C">();
+		BP_STATIC_CLASS_IMPL("BP_JumpPadPrototype_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_JumpPadPrototype_C")
 	}
 	static class ABP_JumpPadPrototype_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_JumpPadPrototype_C>();
 	}
 };
-static_assert(alignof(ABP_JumpPadPrototype_C) == 0x000008, "Wrong alignment on ABP_JumpPadPrototype_C");
-static_assert(sizeof(ABP_JumpPadPrototype_C) == 0x000300, "Wrong size on ABP_JumpPadPrototype_C");
-static_assert(offsetof(ABP_JumpPadPrototype_C, UberGraphFrame) == 0x0002A8, "Member 'ABP_JumpPadPrototype_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_JumpPadPrototype_C, MSS_JumpPad_Updraft_Loop) == 0x0002B0, "Member 'ABP_JumpPadPrototype_C::MSS_JumpPad_Updraft_Loop' has a wrong offset!");
-static_assert(offsetof(ABP_JumpPadPrototype_C, PointLight) == 0x0002B8, "Member 'ABP_JumpPadPrototype_C::PointLight' has a wrong offset!");
-static_assert(offsetof(ABP_JumpPadPrototype_C, Decal) == 0x0002C0, "Member 'ABP_JumpPadPrototype_C::Decal' has a wrong offset!");
-static_assert(offsetof(ABP_JumpPadPrototype_C, Cylinder) == 0x0002C8, "Member 'ABP_JumpPadPrototype_C::Cylinder' has a wrong offset!");
-static_assert(offsetof(ABP_JumpPadPrototype_C, MeshVFX) == 0x0002D0, "Member 'ABP_JumpPadPrototype_C::MeshVFX' has a wrong offset!");
-static_assert(offsetof(ABP_JumpPadPrototype_C, NS_JumpPad_Attached_01) == 0x0002D8, "Member 'ABP_JumpPadPrototype_C::NS_JumpPad_Attached_01' has a wrong offset!");
-static_assert(offsetof(ABP_JumpPadPrototype_C, StaticMesh) == 0x0002E0, "Member 'ABP_JumpPadPrototype_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_JumpPadPrototype_C, DefaultSceneRoot) == 0x0002E8, "Member 'ABP_JumpPadPrototype_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_JumpPadPrototype_C, LaunchForce) == 0x0002F0, "Member 'ABP_JumpPadPrototype_C::LaunchForce' has a wrong offset!");
-static_assert(offsetof(ABP_JumpPadPrototype_C, EnabledFromStart) == 0x0002F8, "Member 'ABP_JumpPadPrototype_C::EnabledFromStart' has a wrong offset!");
-static_assert(offsetof(ABP_JumpPadPrototype_C, Enabled) == 0x0002F9, "Member 'ABP_JumpPadPrototype_C::Enabled' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_JumpPadPrototype_C;
 
 }
 

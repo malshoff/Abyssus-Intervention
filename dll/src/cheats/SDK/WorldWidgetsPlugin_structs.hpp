@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -87,33 +87,7 @@ public:
 	struct FVector2D                              MinMaxPriority;                                    // 0x00D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_E0[0x50];                                      // 0x00E0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FWorldWidgetInfo) == 0x000008, "Wrong alignment on FWorldWidgetInfo");
-static_assert(sizeof(FWorldWidgetInfo) == 0x000130, "Wrong size on FWorldWidgetInfo");
-static_assert(offsetof(FWorldWidgetInfo, bAutoDestroy) == 0x000030, "Member 'FWorldWidgetInfo::bAutoDestroy' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, autoDestroyTime) == 0x000034, "Member 'FWorldWidgetInfo::autoDestroyTime' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, bHidden) == 0x000038, "Member 'FWorldWidgetInfo::bHidden' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, bIsHitTestVisibleWidget) == 0x000039, "Member 'FWorldWidgetInfo::bIsHitTestVisibleWidget' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, lockScreenType) == 0x00003A, "Member 'FWorldWidgetInfo::lockScreenType' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, lockProjectionType) == 0x00003B, "Member 'FWorldWidgetInfo::lockProjectionType' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, bLockWidgetFromCenter) == 0x00003C, "Member 'FWorldWidgetInfo::bLockWidgetFromCenter' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, bUseBoxIntersect) == 0x00003D, "Member 'FWorldWidgetInfo::bUseBoxIntersect' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, centerSize) == 0x000040, "Member 'FWorldWidgetInfo::centerSize' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, edgePadding) == 0x000050, "Member 'FWorldWidgetInfo::edgePadding' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, worldOffset) == 0x000060, "Member 'FWorldWidgetInfo::worldOffset' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, Alignment) == 0x000078, "Member 'FWorldWidgetInfo::Alignment' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, customWidgetSize) == 0x000088, "Member 'FWorldWidgetInfo::customWidgetSize' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, bScaleWidgetWithDistance) == 0x000098, "Member 'FWorldWidgetInfo::bScaleWidgetWithDistance' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, ScalingInterpSpeed) == 0x00009C, "Member 'FWorldWidgetInfo::ScalingInterpSpeed' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, bClampWidgetDistanceScaling) == 0x0000A0, "Member 'FWorldWidgetInfo::bClampWidgetDistanceScaling' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, distanceScaleClampMinMax) == 0x0000A8, "Member 'FWorldWidgetInfo::distanceScaleClampMinMax' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, bDoDistanceCheckAgainstPawn) == 0x0000B8, "Member 'FWorldWidgetInfo::bDoDistanceCheckAgainstPawn' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, maxWidgetDistance) == 0x0000BC, "Member 'FWorldWidgetInfo::maxWidgetDistance' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, widgetFadeType) == 0x0000C0, "Member 'FWorldWidgetInfo::widgetFadeType' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, bHideBehindOtherActors) == 0x0000C1, "Member 'FWorldWidgetInfo::bHideBehindOtherActors' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, HideWidgetCheckScale) == 0x0000C4, "Member 'FWorldWidgetInfo::HideWidgetCheckScale' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, Priority) == 0x0000C8, "Member 'FWorldWidgetInfo::Priority' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, bUseMinMaxPriority) == 0x0000CC, "Member 'FWorldWidgetInfo::bUseMinMaxPriority' has a wrong offset!");
-static_assert(offsetof(FWorldWidgetInfo, MinMaxPriority) == 0x0000D0, "Member 'FWorldWidgetInfo::MinMaxPriority' has a wrong offset!");
+DUMPER7_ASSERTS_FWorldWidgetInfo;
 
 }
 

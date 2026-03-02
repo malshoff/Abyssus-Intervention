@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "HeadMountedDisplay_structs.hpp"
 #include "Engine_classes.hpp"
+#include "HeadMountedDisplay_structs.hpp"
 #include "InputCore_structs.hpp"
 
 
@@ -28,27 +28,30 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"HandKeypointConversion">();
+		STATIC_CLASS_IMPL("HandKeypointConversion")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HandKeypointConversion")
 	}
 	static class UHandKeypointConversion* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UHandKeypointConversion>();
 	}
 };
-static_assert(alignof(UHandKeypointConversion) == 0x000008, "Wrong alignment on UHandKeypointConversion");
-static_assert(sizeof(UHandKeypointConversion) == 0x000028, "Wrong size on UHandKeypointConversion");
+DUMPER7_ASSERTS_UHandKeypointConversion;
 
 // Class HeadMountedDisplay.MotionControllerComponent
-// 0x0140 (0x0630 - 0x04F0)
+// 0x0140 (0x0660 - 0x0520)
 class UMotionControllerComponent final : public UPrimitiveComponent
 {
 public:
-	int32                                         PlayerIndex;                                       // 0x04E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   MotionSource;                                      // 0x04EC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bDisableLowLatencyUpdate : 1;                      // 0x04F4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_4F5[0x3];                                      // 0x04F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	ETrackingStatus                               CurrentTrackingStatus;                             // 0x04F8(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4F9[0x137];                                    // 0x04F9(0x0137)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         PlayerIndex;                                       // 0x0520(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   MotionSource;                                      // 0x0524(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bDisableLowLatencyUpdate : 1;                      // 0x052C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_52D[0x3];                                      // 0x052D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	ETrackingStatus                               CurrentTrackingStatus;                             // 0x0530(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_531[0x12F];                                    // 0x0531(0x012F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	struct FVector GetHandJointPosition(int32 jointIndex, bool* bValueFound);
@@ -67,18 +70,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MotionControllerComponent">();
+		STATIC_CLASS_IMPL("MotionControllerComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MotionControllerComponent")
 	}
 	static class UMotionControllerComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMotionControllerComponent>();
 	}
 };
-static_assert(alignof(UMotionControllerComponent) == 0x000010, "Wrong alignment on UMotionControllerComponent");
-static_assert(sizeof(UMotionControllerComponent) == 0x000630, "Wrong size on UMotionControllerComponent");
-static_assert(offsetof(UMotionControllerComponent, PlayerIndex) == 0x0004E8, "Member 'UMotionControllerComponent::PlayerIndex' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, MotionSource) == 0x0004EC, "Member 'UMotionControllerComponent::MotionSource' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, CurrentTrackingStatus) == 0x0004F8, "Member 'UMotionControllerComponent::CurrentTrackingStatus' has a wrong offset!");
+DUMPER7_ASSERTS_UMotionControllerComponent;
 
 }
 

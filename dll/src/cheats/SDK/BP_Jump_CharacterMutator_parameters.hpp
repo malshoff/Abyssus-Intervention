@@ -59,38 +59,7 @@ public:
 	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator) == 0x000008, "Wrong alignment on BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator");
-static_assert(sizeof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator) == 0x000178, "Wrong size on BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, CallFunc_K2_IsScriptLocallyControlled_ReturnValue) == 0x000004, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::CallFunc_K2_IsScriptLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, Temp_object_Variable) == 0x000008, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, Temp_object_Variable_1) == 0x000010, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000018, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000048, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, CallFunc_GetRPawnMovementComponent_ReturnValue) == 0x000058, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::CallFunc_GetRPawnMovementComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000060, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, K2Node_CustomEvent_EventName) == 0x000090, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::K2Node_CustomEvent_EventName' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x000098, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x0000A0, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, CallFunc_EqualEqual_NameName_ReturnValue) == 0x0000A1, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, CallFunc_GetRPawnMovementComponent_ReturnValue_1) == 0x0000A8, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::CallFunc_GetRPawnMovementComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, Temp_bool_Variable) == 0x0000B0, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, CallFunc_IsMovingOnGround_ReturnValue) == 0x0000B1, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::CallFunc_IsMovingOnGround_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, K2Node_Select_Default) == 0x0000B8, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, CallFunc_K2_GetPlayerController_ReturnValue) == 0x0000C0, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::CallFunc_K2_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, CallFunc_TryJump_ReturnValue) == 0x0000C8, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::CallFunc_TryJump_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, K2Node_CustomEvent_Sound) == 0x0000D0, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::K2Node_CustomEvent_Sound' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, K2Node_CustomEvent_AttachToComponent) == 0x0000D8, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::K2Node_CustomEvent_AttachToComponent' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x0000E0, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, CallFunc_SpawnSoundAttached_ReturnValue) == 0x0000F8, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, CallFunc_Add_VectorVector_ReturnValue) == 0x000100, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue) == 0x000118, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, CallFunc_SpawnSystemAtLocation_ReturnValue) == 0x000120, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::CallFunc_SpawnSystemAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x000128, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000158, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000168, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator, K2Node_DynamicCast_bSuccess_2) == 0x000170, "Member 'BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Jump_CharacterMutator_C_ExecuteUbergraph_BP_Jump_CharacterMutator;
 
 // Function BP_Jump_CharacterMutator.BP_Jump_CharacterMutator_C.Landed
 // 0x0008 (0x0008 - 0x0000)
@@ -99,9 +68,7 @@ struct BP_Jump_CharacterMutator_C_Landed final
 public:
 	class FName                                   EventName;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Jump_CharacterMutator_C_Landed) == 0x000004, "Wrong alignment on BP_Jump_CharacterMutator_C_Landed");
-static_assert(sizeof(BP_Jump_CharacterMutator_C_Landed) == 0x000008, "Wrong size on BP_Jump_CharacterMutator_C_Landed");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_Landed, EventName) == 0x000000, "Member 'BP_Jump_CharacterMutator_C_Landed::EventName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Jump_CharacterMutator_C_Landed;
 
 // Function BP_Jump_CharacterMutator.BP_Jump_CharacterMutator_C.SpawnJumpFX
 // 0x0010 (0x0010 - 0x0000)
@@ -111,10 +78,7 @@ public:
 	class USoundBase*                             Sound;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        AttachToComponent;                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Jump_CharacterMutator_C_SpawnJumpFX) == 0x000008, "Wrong alignment on BP_Jump_CharacterMutator_C_SpawnJumpFX");
-static_assert(sizeof(BP_Jump_CharacterMutator_C_SpawnJumpFX) == 0x000010, "Wrong size on BP_Jump_CharacterMutator_C_SpawnJumpFX");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_SpawnJumpFX, Sound) == 0x000000, "Member 'BP_Jump_CharacterMutator_C_SpawnJumpFX::Sound' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_SpawnJumpFX, AttachToComponent) == 0x000008, "Member 'BP_Jump_CharacterMutator_C_SpawnJumpFX::AttachToComponent' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Jump_CharacterMutator_C_SpawnJumpFX;
 
 // Function BP_Jump_CharacterMutator.BP_Jump_CharacterMutator_C.GetDescription
 // 0x0030 (0x0030 - 0x0000)
@@ -125,11 +89,7 @@ public:
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0010(0x0010)(ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0020(0x0010)()
 };
-static_assert(alignof(BP_Jump_CharacterMutator_C_GetDescription) == 0x000008, "Wrong alignment on BP_Jump_CharacterMutator_C_GetDescription");
-static_assert(sizeof(BP_Jump_CharacterMutator_C_GetDescription) == 0x000030, "Wrong size on BP_Jump_CharacterMutator_C_GetDescription");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_GetDescription, ReturnValue) == 0x000000, "Member 'BP_Jump_CharacterMutator_C_GetDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_GetDescription, K2Node_MakeArray_Array) == 0x000010, "Member 'BP_Jump_CharacterMutator_C_GetDescription::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_Jump_CharacterMutator_C_GetDescription, CallFunc_Format_ReturnValue) == 0x000020, "Member 'BP_Jump_CharacterMutator_C_GetDescription::CallFunc_Format_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Jump_CharacterMutator_C_GetDescription;
 
 }
 

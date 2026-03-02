@@ -31,14 +31,7 @@ public:
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class URStatusEffectGScript*                  CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator) == 0x000008, "Wrong alignment on BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator");
-static_assert(sizeof(BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator) == 0x000058, "Wrong size on BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator");
-static_assert(offsetof(BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator, K2Node_Event_KilledActor) == 0x000038, "Member 'BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator::K2Node_Event_KilledActor' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000040, "Member 'BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x000050, "Member 'BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ConsistentKiller_CharacterMutator_C_ExecuteUbergraph_BP_ConsistentKiller_CharacterMutator;
 
 // Function BP_ConsistentKiller_CharacterMutator.BP_ConsistentKiller_CharacterMutator_C.GetMutatorDescription_0
 // 0x0028 (0x0028 - 0x0000)
@@ -50,11 +43,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_ConsistentKiller_CharacterMutator_C_GetMutatorDescription_0) == 0x000008, "Wrong alignment on BP_ConsistentKiller_CharacterMutator_C_GetMutatorDescription_0");
-static_assert(sizeof(BP_ConsistentKiller_CharacterMutator_C_GetMutatorDescription_0) == 0x000028, "Wrong size on BP_ConsistentKiller_CharacterMutator_C_GetMutatorDescription_0");
-static_assert(offsetof(BP_ConsistentKiller_CharacterMutator_C_GetMutatorDescription_0, ReturnValue) == 0x000000, "Member 'BP_ConsistentKiller_CharacterMutator_C_GetMutatorDescription_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_CharacterMutator_C_GetMutatorDescription_0, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_ConsistentKiller_CharacterMutator_C_GetMutatorDescription_0::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_CharacterMutator_C_GetMutatorDescription_0, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_ConsistentKiller_CharacterMutator_C_GetMutatorDescription_0::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ConsistentKiller_CharacterMutator_C_GetMutatorDescription_0;
 
 // Function BP_ConsistentKiller_CharacterMutator.BP_ConsistentKiller_CharacterMutator_C.K2_OnEnemyKilled
 // 0x0008 (0x0008 - 0x0000)
@@ -63,9 +52,7 @@ struct BP_ConsistentKiller_CharacterMutator_C_K2_OnEnemyKilled final
 public:
 	class AActor*                                 KilledActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ConsistentKiller_CharacterMutator_C_K2_OnEnemyKilled) == 0x000008, "Wrong alignment on BP_ConsistentKiller_CharacterMutator_C_K2_OnEnemyKilled");
-static_assert(sizeof(BP_ConsistentKiller_CharacterMutator_C_K2_OnEnemyKilled) == 0x000008, "Wrong size on BP_ConsistentKiller_CharacterMutator_C_K2_OnEnemyKilled");
-static_assert(offsetof(BP_ConsistentKiller_CharacterMutator_C_K2_OnEnemyKilled, KilledActor) == 0x000000, "Member 'BP_ConsistentKiller_CharacterMutator_C_K2_OnEnemyKilled::KilledActor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ConsistentKiller_CharacterMutator_C_K2_OnEnemyKilled;
 
 // Function BP_ConsistentKiller_CharacterMutator.BP_ConsistentKiller_CharacterMutator_C.GetDescription
 // 0x0030 (0x0030 - 0x0000)
@@ -76,11 +63,7 @@ public:
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0010(0x0010)(ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0020(0x0010)()
 };
-static_assert(alignof(BP_ConsistentKiller_CharacterMutator_C_GetDescription) == 0x000008, "Wrong alignment on BP_ConsistentKiller_CharacterMutator_C_GetDescription");
-static_assert(sizeof(BP_ConsistentKiller_CharacterMutator_C_GetDescription) == 0x000030, "Wrong size on BP_ConsistentKiller_CharacterMutator_C_GetDescription");
-static_assert(offsetof(BP_ConsistentKiller_CharacterMutator_C_GetDescription, ReturnValue) == 0x000000, "Member 'BP_ConsistentKiller_CharacterMutator_C_GetDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_CharacterMutator_C_GetDescription, K2Node_MakeArray_Array) == 0x000010, "Member 'BP_ConsistentKiller_CharacterMutator_C_GetDescription::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_ConsistentKiller_CharacterMutator_C_GetDescription, CallFunc_Format_ReturnValue) == 0x000020, "Member 'BP_ConsistentKiller_CharacterMutator_C_GetDescription::CallFunc_Format_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ConsistentKiller_CharacterMutator_C_GetDescription;
 
 }
 

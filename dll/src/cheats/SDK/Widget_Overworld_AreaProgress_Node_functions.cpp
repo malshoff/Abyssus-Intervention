@@ -46,7 +46,7 @@ void UWidget_Overworld_AreaProgress_Node_C::DimVisitedNode()
 
 
 // Function Widget_Overworld_AreaProgress_Node.Widget_Overworld_AreaProgress_Node_C.ExecuteUbergraph_Widget_Overworld_AreaProgress_Node
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

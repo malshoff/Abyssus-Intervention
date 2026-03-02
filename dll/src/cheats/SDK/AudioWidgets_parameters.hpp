@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "AudioWidgets_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -25,9 +25,7 @@ struct AudioMaterialButton_SetIsPressed final
 public:
 	bool                                          InPressed;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialButton_SetIsPressed) == 0x000001, "Wrong alignment on AudioMaterialButton_SetIsPressed");
-static_assert(sizeof(AudioMaterialButton_SetIsPressed) == 0x000001, "Wrong size on AudioMaterialButton_SetIsPressed");
-static_assert(offsetof(AudioMaterialButton_SetIsPressed, InPressed) == 0x000000, "Member 'AudioMaterialButton_SetIsPressed::InPressed' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialButton_SetIsPressed;
 
 // Function AudioWidgets.AudioMaterialButton.GetIsPressed
 // 0x0001 (0x0001 - 0x0000)
@@ -36,9 +34,7 @@ struct AudioMaterialButton_GetIsPressed final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialButton_GetIsPressed) == 0x000001, "Wrong alignment on AudioMaterialButton_GetIsPressed");
-static_assert(sizeof(AudioMaterialButton_GetIsPressed) == 0x000001, "Wrong size on AudioMaterialButton_GetIsPressed");
-static_assert(offsetof(AudioMaterialButton_GetIsPressed, ReturnValue) == 0x000000, "Member 'AudioMaterialButton_GetIsPressed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialButton_GetIsPressed;
 
 // Function AudioWidgets.AudioMaterialKnob.GetValue
 // 0x0004 (0x0004 - 0x0000)
@@ -47,9 +43,7 @@ struct AudioMaterialKnob_GetValue final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialKnob_GetValue) == 0x000004, "Wrong alignment on AudioMaterialKnob_GetValue");
-static_assert(sizeof(AudioMaterialKnob_GetValue) == 0x000004, "Wrong size on AudioMaterialKnob_GetValue");
-static_assert(offsetof(AudioMaterialKnob_GetValue, ReturnValue) == 0x000000, "Member 'AudioMaterialKnob_GetValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialKnob_GetValue;
 
 // Function AudioWidgets.AudioMaterialKnob.SetFineTuneSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -58,9 +52,7 @@ struct AudioMaterialKnob_SetFineTuneSpeed final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialKnob_SetFineTuneSpeed) == 0x000004, "Wrong alignment on AudioMaterialKnob_SetFineTuneSpeed");
-static_assert(sizeof(AudioMaterialKnob_SetFineTuneSpeed) == 0x000004, "Wrong size on AudioMaterialKnob_SetFineTuneSpeed");
-static_assert(offsetof(AudioMaterialKnob_SetFineTuneSpeed, InValue) == 0x000000, "Member 'AudioMaterialKnob_SetFineTuneSpeed::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialKnob_SetFineTuneSpeed;
 
 // Function AudioWidgets.AudioMaterialKnob.SetLocked
 // 0x0001 (0x0001 - 0x0000)
@@ -69,9 +61,7 @@ struct AudioMaterialKnob_SetLocked final
 public:
 	bool                                          InLocked;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialKnob_SetLocked) == 0x000001, "Wrong alignment on AudioMaterialKnob_SetLocked");
-static_assert(sizeof(AudioMaterialKnob_SetLocked) == 0x000001, "Wrong size on AudioMaterialKnob_SetLocked");
-static_assert(offsetof(AudioMaterialKnob_SetLocked, InLocked) == 0x000000, "Member 'AudioMaterialKnob_SetLocked::InLocked' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialKnob_SetLocked;
 
 // Function AudioWidgets.AudioMaterialKnob.SetMouseUsesStep
 // 0x0001 (0x0001 - 0x0000)
@@ -80,9 +70,7 @@ struct AudioMaterialKnob_SetMouseUsesStep final
 public:
 	bool                                          InUsesStep;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialKnob_SetMouseUsesStep) == 0x000001, "Wrong alignment on AudioMaterialKnob_SetMouseUsesStep");
-static_assert(sizeof(AudioMaterialKnob_SetMouseUsesStep) == 0x000001, "Wrong size on AudioMaterialKnob_SetMouseUsesStep");
-static_assert(offsetof(AudioMaterialKnob_SetMouseUsesStep, InUsesStep) == 0x000000, "Member 'AudioMaterialKnob_SetMouseUsesStep::InUsesStep' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialKnob_SetMouseUsesStep;
 
 // Function AudioWidgets.AudioMaterialKnob.SetStepSize
 // 0x0004 (0x0004 - 0x0000)
@@ -91,9 +79,7 @@ struct AudioMaterialKnob_SetStepSize final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialKnob_SetStepSize) == 0x000004, "Wrong alignment on AudioMaterialKnob_SetStepSize");
-static_assert(sizeof(AudioMaterialKnob_SetStepSize) == 0x000004, "Wrong size on AudioMaterialKnob_SetStepSize");
-static_assert(offsetof(AudioMaterialKnob_SetStepSize, InValue) == 0x000000, "Member 'AudioMaterialKnob_SetStepSize::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialKnob_SetStepSize;
 
 // Function AudioWidgets.AudioMaterialKnob.SetTuneSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -102,9 +88,7 @@ struct AudioMaterialKnob_SetTuneSpeed final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialKnob_SetTuneSpeed) == 0x000004, "Wrong alignment on AudioMaterialKnob_SetTuneSpeed");
-static_assert(sizeof(AudioMaterialKnob_SetTuneSpeed) == 0x000004, "Wrong size on AudioMaterialKnob_SetTuneSpeed");
-static_assert(offsetof(AudioMaterialKnob_SetTuneSpeed, InValue) == 0x000000, "Member 'AudioMaterialKnob_SetTuneSpeed::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialKnob_SetTuneSpeed;
 
 // Function AudioWidgets.AudioMaterialKnob.SetValue
 // 0x0004 (0x0004 - 0x0000)
@@ -113,9 +97,7 @@ struct AudioMaterialKnob_SetValue final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialKnob_SetValue) == 0x000004, "Wrong alignment on AudioMaterialKnob_SetValue");
-static_assert(sizeof(AudioMaterialKnob_SetValue) == 0x000004, "Wrong size on AudioMaterialKnob_SetValue");
-static_assert(offsetof(AudioMaterialKnob_SetValue, InValue) == 0x000000, "Member 'AudioMaterialKnob_SetValue::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialKnob_SetValue;
 
 // Function AudioWidgets.AudioMaterialKnob.GetFineTuneSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -124,9 +106,7 @@ struct AudioMaterialKnob_GetFineTuneSpeed final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialKnob_GetFineTuneSpeed) == 0x000004, "Wrong alignment on AudioMaterialKnob_GetFineTuneSpeed");
-static_assert(sizeof(AudioMaterialKnob_GetFineTuneSpeed) == 0x000004, "Wrong size on AudioMaterialKnob_GetFineTuneSpeed");
-static_assert(offsetof(AudioMaterialKnob_GetFineTuneSpeed, ReturnValue) == 0x000000, "Member 'AudioMaterialKnob_GetFineTuneSpeed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialKnob_GetFineTuneSpeed;
 
 // Function AudioWidgets.AudioMaterialKnob.GetIsLocked
 // 0x0001 (0x0001 - 0x0000)
@@ -135,9 +115,7 @@ struct AudioMaterialKnob_GetIsLocked final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialKnob_GetIsLocked) == 0x000001, "Wrong alignment on AudioMaterialKnob_GetIsLocked");
-static_assert(sizeof(AudioMaterialKnob_GetIsLocked) == 0x000001, "Wrong size on AudioMaterialKnob_GetIsLocked");
-static_assert(offsetof(AudioMaterialKnob_GetIsLocked, ReturnValue) == 0x000000, "Member 'AudioMaterialKnob_GetIsLocked::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialKnob_GetIsLocked;
 
 // Function AudioWidgets.AudioMaterialKnob.GetMouseUsesStep
 // 0x0001 (0x0001 - 0x0000)
@@ -146,9 +124,7 @@ struct AudioMaterialKnob_GetMouseUsesStep final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialKnob_GetMouseUsesStep) == 0x000001, "Wrong alignment on AudioMaterialKnob_GetMouseUsesStep");
-static_assert(sizeof(AudioMaterialKnob_GetMouseUsesStep) == 0x000001, "Wrong size on AudioMaterialKnob_GetMouseUsesStep");
-static_assert(offsetof(AudioMaterialKnob_GetMouseUsesStep, ReturnValue) == 0x000000, "Member 'AudioMaterialKnob_GetMouseUsesStep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialKnob_GetMouseUsesStep;
 
 // Function AudioWidgets.AudioMaterialKnob.GetStepSize
 // 0x0004 (0x0004 - 0x0000)
@@ -157,9 +133,7 @@ struct AudioMaterialKnob_GetStepSize final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialKnob_GetStepSize) == 0x000004, "Wrong alignment on AudioMaterialKnob_GetStepSize");
-static_assert(sizeof(AudioMaterialKnob_GetStepSize) == 0x000004, "Wrong size on AudioMaterialKnob_GetStepSize");
-static_assert(offsetof(AudioMaterialKnob_GetStepSize, ReturnValue) == 0x000000, "Member 'AudioMaterialKnob_GetStepSize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialKnob_GetStepSize;
 
 // Function AudioWidgets.AudioMaterialKnob.GetTuneSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -168,9 +142,7 @@ struct AudioMaterialKnob_GetTuneSpeed final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialKnob_GetTuneSpeed) == 0x000004, "Wrong alignment on AudioMaterialKnob_GetTuneSpeed");
-static_assert(sizeof(AudioMaterialKnob_GetTuneSpeed) == 0x000004, "Wrong size on AudioMaterialKnob_GetTuneSpeed");
-static_assert(offsetof(AudioMaterialKnob_GetTuneSpeed, ReturnValue) == 0x000000, "Member 'AudioMaterialKnob_GetTuneSpeed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialKnob_GetTuneSpeed;
 
 // Function AudioWidgets.AudioMaterialMeter.SetMeterChannelInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -179,9 +151,7 @@ struct AudioMaterialMeter_SetMeterChannelInfo final
 public:
 	TArray<struct FMeterChannelInfo>              InMeterChannelInfo;                                // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialMeter_SetMeterChannelInfo) == 0x000008, "Wrong alignment on AudioMaterialMeter_SetMeterChannelInfo");
-static_assert(sizeof(AudioMaterialMeter_SetMeterChannelInfo) == 0x000010, "Wrong size on AudioMaterialMeter_SetMeterChannelInfo");
-static_assert(offsetof(AudioMaterialMeter_SetMeterChannelInfo, InMeterChannelInfo) == 0x000000, "Member 'AudioMaterialMeter_SetMeterChannelInfo::InMeterChannelInfo' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialMeter_SetMeterChannelInfo;
 
 // Function AudioWidgets.AudioMaterialMeter.GetMeterChannelInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -190,9 +160,7 @@ struct AudioMaterialMeter_GetMeterChannelInfo final
 public:
 	TArray<struct FMeterChannelInfo>              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialMeter_GetMeterChannelInfo) == 0x000008, "Wrong alignment on AudioMaterialMeter_GetMeterChannelInfo");
-static_assert(sizeof(AudioMaterialMeter_GetMeterChannelInfo) == 0x000010, "Wrong size on AudioMaterialMeter_GetMeterChannelInfo");
-static_assert(offsetof(AudioMaterialMeter_GetMeterChannelInfo, ReturnValue) == 0x000000, "Member 'AudioMaterialMeter_GetMeterChannelInfo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialMeter_GetMeterChannelInfo;
 
 // Function AudioWidgets.AudioMaterialSlider.SetFineTuneSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -201,9 +169,7 @@ struct AudioMaterialSlider_SetFineTuneSpeed final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialSlider_SetFineTuneSpeed) == 0x000004, "Wrong alignment on AudioMaterialSlider_SetFineTuneSpeed");
-static_assert(sizeof(AudioMaterialSlider_SetFineTuneSpeed) == 0x000004, "Wrong size on AudioMaterialSlider_SetFineTuneSpeed");
-static_assert(offsetof(AudioMaterialSlider_SetFineTuneSpeed, InValue) == 0x000000, "Member 'AudioMaterialSlider_SetFineTuneSpeed::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialSlider_SetFineTuneSpeed;
 
 // Function AudioWidgets.AudioMaterialSlider.SetLocked
 // 0x0001 (0x0001 - 0x0000)
@@ -212,9 +178,7 @@ struct AudioMaterialSlider_SetLocked final
 public:
 	bool                                          bInLocked;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialSlider_SetLocked) == 0x000001, "Wrong alignment on AudioMaterialSlider_SetLocked");
-static_assert(sizeof(AudioMaterialSlider_SetLocked) == 0x000001, "Wrong size on AudioMaterialSlider_SetLocked");
-static_assert(offsetof(AudioMaterialSlider_SetLocked, bInLocked) == 0x000000, "Member 'AudioMaterialSlider_SetLocked::bInLocked' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialSlider_SetLocked;
 
 // Function AudioWidgets.AudioMaterialSlider.SetMouseUsesStep
 // 0x0001 (0x0001 - 0x0000)
@@ -223,9 +187,7 @@ struct AudioMaterialSlider_SetMouseUsesStep final
 public:
 	bool                                          bInUsesStep;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialSlider_SetMouseUsesStep) == 0x000001, "Wrong alignment on AudioMaterialSlider_SetMouseUsesStep");
-static_assert(sizeof(AudioMaterialSlider_SetMouseUsesStep) == 0x000001, "Wrong size on AudioMaterialSlider_SetMouseUsesStep");
-static_assert(offsetof(AudioMaterialSlider_SetMouseUsesStep, bInUsesStep) == 0x000000, "Member 'AudioMaterialSlider_SetMouseUsesStep::bInUsesStep' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialSlider_SetMouseUsesStep;
 
 // Function AudioWidgets.AudioMaterialSlider.SetStepSize
 // 0x0004 (0x0004 - 0x0000)
@@ -234,9 +196,7 @@ struct AudioMaterialSlider_SetStepSize final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialSlider_SetStepSize) == 0x000004, "Wrong alignment on AudioMaterialSlider_SetStepSize");
-static_assert(sizeof(AudioMaterialSlider_SetStepSize) == 0x000004, "Wrong size on AudioMaterialSlider_SetStepSize");
-static_assert(offsetof(AudioMaterialSlider_SetStepSize, InValue) == 0x000000, "Member 'AudioMaterialSlider_SetStepSize::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialSlider_SetStepSize;
 
 // Function AudioWidgets.AudioMaterialSlider.SetTuneSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -245,9 +205,7 @@ struct AudioMaterialSlider_SetTuneSpeed final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialSlider_SetTuneSpeed) == 0x000004, "Wrong alignment on AudioMaterialSlider_SetTuneSpeed");
-static_assert(sizeof(AudioMaterialSlider_SetTuneSpeed) == 0x000004, "Wrong size on AudioMaterialSlider_SetTuneSpeed");
-static_assert(offsetof(AudioMaterialSlider_SetTuneSpeed, InValue) == 0x000000, "Member 'AudioMaterialSlider_SetTuneSpeed::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialSlider_SetTuneSpeed;
 
 // Function AudioWidgets.AudioMaterialSlider.SetValue
 // 0x0004 (0x0004 - 0x0000)
@@ -256,9 +214,7 @@ struct AudioMaterialSlider_SetValue final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialSlider_SetValue) == 0x000004, "Wrong alignment on AudioMaterialSlider_SetValue");
-static_assert(sizeof(AudioMaterialSlider_SetValue) == 0x000004, "Wrong size on AudioMaterialSlider_SetValue");
-static_assert(offsetof(AudioMaterialSlider_SetValue, InValue) == 0x000000, "Member 'AudioMaterialSlider_SetValue::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialSlider_SetValue;
 
 // Function AudioWidgets.AudioMaterialSlider.GetFineTuneSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -267,9 +223,7 @@ struct AudioMaterialSlider_GetFineTuneSpeed final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialSlider_GetFineTuneSpeed) == 0x000004, "Wrong alignment on AudioMaterialSlider_GetFineTuneSpeed");
-static_assert(sizeof(AudioMaterialSlider_GetFineTuneSpeed) == 0x000004, "Wrong size on AudioMaterialSlider_GetFineTuneSpeed");
-static_assert(offsetof(AudioMaterialSlider_GetFineTuneSpeed, ReturnValue) == 0x000000, "Member 'AudioMaterialSlider_GetFineTuneSpeed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialSlider_GetFineTuneSpeed;
 
 // Function AudioWidgets.AudioMaterialSlider.GetIsLocked
 // 0x0001 (0x0001 - 0x0000)
@@ -278,9 +232,7 @@ struct AudioMaterialSlider_GetIsLocked final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialSlider_GetIsLocked) == 0x000001, "Wrong alignment on AudioMaterialSlider_GetIsLocked");
-static_assert(sizeof(AudioMaterialSlider_GetIsLocked) == 0x000001, "Wrong size on AudioMaterialSlider_GetIsLocked");
-static_assert(offsetof(AudioMaterialSlider_GetIsLocked, ReturnValue) == 0x000000, "Member 'AudioMaterialSlider_GetIsLocked::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialSlider_GetIsLocked;
 
 // Function AudioWidgets.AudioMaterialSlider.GetMouseUsesStep
 // 0x0001 (0x0001 - 0x0000)
@@ -289,9 +241,7 @@ struct AudioMaterialSlider_GetMouseUsesStep final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialSlider_GetMouseUsesStep) == 0x000001, "Wrong alignment on AudioMaterialSlider_GetMouseUsesStep");
-static_assert(sizeof(AudioMaterialSlider_GetMouseUsesStep) == 0x000001, "Wrong size on AudioMaterialSlider_GetMouseUsesStep");
-static_assert(offsetof(AudioMaterialSlider_GetMouseUsesStep, ReturnValue) == 0x000000, "Member 'AudioMaterialSlider_GetMouseUsesStep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialSlider_GetMouseUsesStep;
 
 // Function AudioWidgets.AudioMaterialSlider.GetStepSize
 // 0x0004 (0x0004 - 0x0000)
@@ -300,9 +250,7 @@ struct AudioMaterialSlider_GetStepSize final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialSlider_GetStepSize) == 0x000004, "Wrong alignment on AudioMaterialSlider_GetStepSize");
-static_assert(sizeof(AudioMaterialSlider_GetStepSize) == 0x000004, "Wrong size on AudioMaterialSlider_GetStepSize");
-static_assert(offsetof(AudioMaterialSlider_GetStepSize, ReturnValue) == 0x000000, "Member 'AudioMaterialSlider_GetStepSize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialSlider_GetStepSize;
 
 // Function AudioWidgets.AudioMaterialSlider.GetTuneSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -311,9 +259,7 @@ struct AudioMaterialSlider_GetTuneSpeed final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialSlider_GetTuneSpeed) == 0x000004, "Wrong alignment on AudioMaterialSlider_GetTuneSpeed");
-static_assert(sizeof(AudioMaterialSlider_GetTuneSpeed) == 0x000004, "Wrong size on AudioMaterialSlider_GetTuneSpeed");
-static_assert(offsetof(AudioMaterialSlider_GetTuneSpeed, ReturnValue) == 0x000000, "Member 'AudioMaterialSlider_GetTuneSpeed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialSlider_GetTuneSpeed;
 
 // Function AudioWidgets.AudioMaterialSlider.GetValue
 // 0x0004 (0x0004 - 0x0000)
@@ -322,9 +268,7 @@ struct AudioMaterialSlider_GetValue final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMaterialSlider_GetValue) == 0x000004, "Wrong alignment on AudioMaterialSlider_GetValue");
-static_assert(sizeof(AudioMaterialSlider_GetValue) == 0x000004, "Wrong size on AudioMaterialSlider_GetValue");
-static_assert(offsetof(AudioMaterialSlider_GetValue, ReturnValue) == 0x000000, "Member 'AudioMaterialSlider_GetValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMaterialSlider_GetValue;
 
 // Function AudioWidgets.AudioMeter.SetBackgroundColor
 // 0x0010 (0x0010 - 0x0000)
@@ -333,9 +277,7 @@ struct AudioMeter_SetBackgroundColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMeter_SetBackgroundColor) == 0x000004, "Wrong alignment on AudioMeter_SetBackgroundColor");
-static_assert(sizeof(AudioMeter_SetBackgroundColor) == 0x000010, "Wrong size on AudioMeter_SetBackgroundColor");
-static_assert(offsetof(AudioMeter_SetBackgroundColor, InValue) == 0x000000, "Member 'AudioMeter_SetBackgroundColor::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMeter_SetBackgroundColor;
 
 // Function AudioWidgets.AudioMeter.SetMeterBackgroundColor
 // 0x0010 (0x0010 - 0x0000)
@@ -344,9 +286,7 @@ struct AudioMeter_SetMeterBackgroundColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMeter_SetMeterBackgroundColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterBackgroundColor");
-static_assert(sizeof(AudioMeter_SetMeterBackgroundColor) == 0x000010, "Wrong size on AudioMeter_SetMeterBackgroundColor");
-static_assert(offsetof(AudioMeter_SetMeterBackgroundColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterBackgroundColor::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMeter_SetMeterBackgroundColor;
 
 // Function AudioWidgets.AudioMeter.SetMeterChannelInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -355,9 +295,7 @@ struct AudioMeter_SetMeterChannelInfo final
 public:
 	TArray<struct FMeterChannelInfo>              InMeterChannelInfo;                                // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMeter_SetMeterChannelInfo) == 0x000008, "Wrong alignment on AudioMeter_SetMeterChannelInfo");
-static_assert(sizeof(AudioMeter_SetMeterChannelInfo) == 0x000010, "Wrong size on AudioMeter_SetMeterChannelInfo");
-static_assert(offsetof(AudioMeter_SetMeterChannelInfo, InMeterChannelInfo) == 0x000000, "Member 'AudioMeter_SetMeterChannelInfo::InMeterChannelInfo' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMeter_SetMeterChannelInfo;
 
 // Function AudioWidgets.AudioMeter.SetMeterClippingColor
 // 0x0010 (0x0010 - 0x0000)
@@ -366,9 +304,7 @@ struct AudioMeter_SetMeterClippingColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMeter_SetMeterClippingColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterClippingColor");
-static_assert(sizeof(AudioMeter_SetMeterClippingColor) == 0x000010, "Wrong size on AudioMeter_SetMeterClippingColor");
-static_assert(offsetof(AudioMeter_SetMeterClippingColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterClippingColor::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMeter_SetMeterClippingColor;
 
 // Function AudioWidgets.AudioMeter.SetMeterPeakColor
 // 0x0010 (0x0010 - 0x0000)
@@ -377,9 +313,7 @@ struct AudioMeter_SetMeterPeakColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMeter_SetMeterPeakColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterPeakColor");
-static_assert(sizeof(AudioMeter_SetMeterPeakColor) == 0x000010, "Wrong size on AudioMeter_SetMeterPeakColor");
-static_assert(offsetof(AudioMeter_SetMeterPeakColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterPeakColor::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMeter_SetMeterPeakColor;
 
 // Function AudioWidgets.AudioMeter.SetMeterScaleColor
 // 0x0010 (0x0010 - 0x0000)
@@ -388,9 +322,7 @@ struct AudioMeter_SetMeterScaleColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMeter_SetMeterScaleColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterScaleColor");
-static_assert(sizeof(AudioMeter_SetMeterScaleColor) == 0x000010, "Wrong size on AudioMeter_SetMeterScaleColor");
-static_assert(offsetof(AudioMeter_SetMeterScaleColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterScaleColor::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMeter_SetMeterScaleColor;
 
 // Function AudioWidgets.AudioMeter.SetMeterScaleLabelColor
 // 0x0010 (0x0010 - 0x0000)
@@ -399,9 +331,7 @@ struct AudioMeter_SetMeterScaleLabelColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMeter_SetMeterScaleLabelColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterScaleLabelColor");
-static_assert(sizeof(AudioMeter_SetMeterScaleLabelColor) == 0x000010, "Wrong size on AudioMeter_SetMeterScaleLabelColor");
-static_assert(offsetof(AudioMeter_SetMeterScaleLabelColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterScaleLabelColor::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMeter_SetMeterScaleLabelColor;
 
 // Function AudioWidgets.AudioMeter.SetMeterValueColor
 // 0x0010 (0x0010 - 0x0000)
@@ -410,9 +340,7 @@ struct AudioMeter_SetMeterValueColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMeter_SetMeterValueColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterValueColor");
-static_assert(sizeof(AudioMeter_SetMeterValueColor) == 0x000010, "Wrong size on AudioMeter_SetMeterValueColor");
-static_assert(offsetof(AudioMeter_SetMeterValueColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterValueColor::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMeter_SetMeterValueColor;
 
 // Function AudioWidgets.AudioMeter.GetMeterChannelInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -421,9 +349,7 @@ struct AudioMeter_GetMeterChannelInfo final
 public:
 	TArray<struct FMeterChannelInfo>              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioMeter_GetMeterChannelInfo) == 0x000008, "Wrong alignment on AudioMeter_GetMeterChannelInfo");
-static_assert(sizeof(AudioMeter_GetMeterChannelInfo) == 0x000010, "Wrong size on AudioMeter_GetMeterChannelInfo");
-static_assert(offsetof(AudioMeter_GetMeterChannelInfo, ReturnValue) == 0x000000, "Member 'AudioMeter_GetMeterChannelInfo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioMeter_GetMeterChannelInfo;
 
 // Function AudioWidgets.AudioOscilloscope.CanTriggeringBeSet
 // 0x0001 (0x0001 - 0x0000)
@@ -432,9 +358,7 @@ struct AudioOscilloscope_CanTriggeringBeSet final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioOscilloscope_CanTriggeringBeSet) == 0x000001, "Wrong alignment on AudioOscilloscope_CanTriggeringBeSet");
-static_assert(sizeof(AudioOscilloscope_CanTriggeringBeSet) == 0x000001, "Wrong size on AudioOscilloscope_CanTriggeringBeSet");
-static_assert(offsetof(AudioOscilloscope_CanTriggeringBeSet, ReturnValue) == 0x000000, "Member 'AudioOscilloscope_CanTriggeringBeSet::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioOscilloscope_CanTriggeringBeSet;
 
 // Function AudioWidgets.AudioRadialSlider.GetOutputValue
 // 0x0008 (0x0008 - 0x0000)
@@ -444,10 +368,7 @@ public:
 	float                                         InSliderValue;                                     // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioRadialSlider_GetOutputValue) == 0x000004, "Wrong alignment on AudioRadialSlider_GetOutputValue");
-static_assert(sizeof(AudioRadialSlider_GetOutputValue) == 0x000008, "Wrong size on AudioRadialSlider_GetOutputValue");
-static_assert(offsetof(AudioRadialSlider_GetOutputValue, InSliderValue) == 0x000000, "Member 'AudioRadialSlider_GetOutputValue::InSliderValue' has a wrong offset!");
-static_assert(offsetof(AudioRadialSlider_GetOutputValue, ReturnValue) == 0x000004, "Member 'AudioRadialSlider_GetOutputValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioRadialSlider_GetOutputValue;
 
 // Function AudioWidgets.AudioRadialSlider.GetSliderValue
 // 0x0008 (0x0008 - 0x0000)
@@ -457,10 +378,7 @@ public:
 	float                                         OutputValue;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioRadialSlider_GetSliderValue) == 0x000004, "Wrong alignment on AudioRadialSlider_GetSliderValue");
-static_assert(sizeof(AudioRadialSlider_GetSliderValue) == 0x000008, "Wrong size on AudioRadialSlider_GetSliderValue");
-static_assert(offsetof(AudioRadialSlider_GetSliderValue, OutputValue) == 0x000000, "Member 'AudioRadialSlider_GetSliderValue::OutputValue' has a wrong offset!");
-static_assert(offsetof(AudioRadialSlider_GetSliderValue, ReturnValue) == 0x000004, "Member 'AudioRadialSlider_GetSliderValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioRadialSlider_GetSliderValue;
 
 // Function AudioWidgets.AudioRadialSlider.SetCenterBackgroundColor
 // 0x0010 (0x0010 - 0x0000)
@@ -469,9 +387,7 @@ struct AudioRadialSlider_SetCenterBackgroundColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioRadialSlider_SetCenterBackgroundColor) == 0x000004, "Wrong alignment on AudioRadialSlider_SetCenterBackgroundColor");
-static_assert(sizeof(AudioRadialSlider_SetCenterBackgroundColor) == 0x000010, "Wrong size on AudioRadialSlider_SetCenterBackgroundColor");
-static_assert(offsetof(AudioRadialSlider_SetCenterBackgroundColor, InValue) == 0x000000, "Member 'AudioRadialSlider_SetCenterBackgroundColor::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioRadialSlider_SetCenterBackgroundColor;
 
 // Function AudioWidgets.AudioRadialSlider.SetHandStartEndRatio
 // 0x0010 (0x0010 - 0x0000)
@@ -480,9 +396,7 @@ struct AudioRadialSlider_SetHandStartEndRatio final
 public:
 	struct FVector2D                              InHandStartEndRatio;                               // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioRadialSlider_SetHandStartEndRatio) == 0x000008, "Wrong alignment on AudioRadialSlider_SetHandStartEndRatio");
-static_assert(sizeof(AudioRadialSlider_SetHandStartEndRatio) == 0x000010, "Wrong size on AudioRadialSlider_SetHandStartEndRatio");
-static_assert(offsetof(AudioRadialSlider_SetHandStartEndRatio, InHandStartEndRatio) == 0x000000, "Member 'AudioRadialSlider_SetHandStartEndRatio::InHandStartEndRatio' has a wrong offset!");
+DUMPER7_ASSERTS_AudioRadialSlider_SetHandStartEndRatio;
 
 // Function AudioWidgets.AudioRadialSlider.SetOutputRange
 // 0x0010 (0x0010 - 0x0000)
@@ -491,9 +405,7 @@ struct AudioRadialSlider_SetOutputRange final
 public:
 	struct FVector2D                              InOutputRange;                                     // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioRadialSlider_SetOutputRange) == 0x000008, "Wrong alignment on AudioRadialSlider_SetOutputRange");
-static_assert(sizeof(AudioRadialSlider_SetOutputRange) == 0x000010, "Wrong size on AudioRadialSlider_SetOutputRange");
-static_assert(offsetof(AudioRadialSlider_SetOutputRange, InOutputRange) == 0x000000, "Member 'AudioRadialSlider_SetOutputRange::InOutputRange' has a wrong offset!");
+DUMPER7_ASSERTS_AudioRadialSlider_SetOutputRange;
 
 // Function AudioWidgets.AudioRadialSlider.SetShowLabelOnlyOnHover
 // 0x0001 (0x0001 - 0x0000)
@@ -502,9 +414,7 @@ struct AudioRadialSlider_SetShowLabelOnlyOnHover final
 public:
 	bool                                          bShowLabelOnlyOnHover;                             // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioRadialSlider_SetShowLabelOnlyOnHover) == 0x000001, "Wrong alignment on AudioRadialSlider_SetShowLabelOnlyOnHover");
-static_assert(sizeof(AudioRadialSlider_SetShowLabelOnlyOnHover) == 0x000001, "Wrong size on AudioRadialSlider_SetShowLabelOnlyOnHover");
-static_assert(offsetof(AudioRadialSlider_SetShowLabelOnlyOnHover, bShowLabelOnlyOnHover) == 0x000000, "Member 'AudioRadialSlider_SetShowLabelOnlyOnHover::bShowLabelOnlyOnHover' has a wrong offset!");
+DUMPER7_ASSERTS_AudioRadialSlider_SetShowLabelOnlyOnHover;
 
 // Function AudioWidgets.AudioRadialSlider.SetShowUnitsText
 // 0x0001 (0x0001 - 0x0000)
@@ -513,9 +423,7 @@ struct AudioRadialSlider_SetShowUnitsText final
 public:
 	bool                                          bShowUnitsText;                                    // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioRadialSlider_SetShowUnitsText) == 0x000001, "Wrong alignment on AudioRadialSlider_SetShowUnitsText");
-static_assert(sizeof(AudioRadialSlider_SetShowUnitsText) == 0x000001, "Wrong size on AudioRadialSlider_SetShowUnitsText");
-static_assert(offsetof(AudioRadialSlider_SetShowUnitsText, bShowUnitsText) == 0x000000, "Member 'AudioRadialSlider_SetShowUnitsText::bShowUnitsText' has a wrong offset!");
+DUMPER7_ASSERTS_AudioRadialSlider_SetShowUnitsText;
 
 // Function AudioWidgets.AudioRadialSlider.SetSliderBarColor
 // 0x0010 (0x0010 - 0x0000)
@@ -524,9 +432,7 @@ struct AudioRadialSlider_SetSliderBarColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioRadialSlider_SetSliderBarColor) == 0x000004, "Wrong alignment on AudioRadialSlider_SetSliderBarColor");
-static_assert(sizeof(AudioRadialSlider_SetSliderBarColor) == 0x000010, "Wrong size on AudioRadialSlider_SetSliderBarColor");
-static_assert(offsetof(AudioRadialSlider_SetSliderBarColor, InValue) == 0x000000, "Member 'AudioRadialSlider_SetSliderBarColor::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioRadialSlider_SetSliderBarColor;
 
 // Function AudioWidgets.AudioRadialSlider.SetSliderProgressColor
 // 0x0010 (0x0010 - 0x0000)
@@ -535,9 +441,7 @@ struct AudioRadialSlider_SetSliderProgressColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioRadialSlider_SetSliderProgressColor) == 0x000004, "Wrong alignment on AudioRadialSlider_SetSliderProgressColor");
-static_assert(sizeof(AudioRadialSlider_SetSliderProgressColor) == 0x000010, "Wrong size on AudioRadialSlider_SetSliderProgressColor");
-static_assert(offsetof(AudioRadialSlider_SetSliderProgressColor, InValue) == 0x000000, "Member 'AudioRadialSlider_SetSliderProgressColor::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioRadialSlider_SetSliderProgressColor;
 
 // Function AudioWidgets.AudioRadialSlider.SetSliderThickness
 // 0x0004 (0x0004 - 0x0000)
@@ -546,9 +450,7 @@ struct AudioRadialSlider_SetSliderThickness final
 public:
 	float                                         InThickness;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioRadialSlider_SetSliderThickness) == 0x000004, "Wrong alignment on AudioRadialSlider_SetSliderThickness");
-static_assert(sizeof(AudioRadialSlider_SetSliderThickness) == 0x000004, "Wrong size on AudioRadialSlider_SetSliderThickness");
-static_assert(offsetof(AudioRadialSlider_SetSliderThickness, InThickness) == 0x000000, "Member 'AudioRadialSlider_SetSliderThickness::InThickness' has a wrong offset!");
+DUMPER7_ASSERTS_AudioRadialSlider_SetSliderThickness;
 
 // Function AudioWidgets.AudioRadialSlider.SetTextLabelBackgroundColor
 // 0x0014 (0x0014 - 0x0000)
@@ -557,9 +459,7 @@ struct AudioRadialSlider_SetTextLabelBackgroundColor final
 public:
 	struct FSlateColor                            InColor;                                           // 0x0000(0x0014)(Parm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioRadialSlider_SetTextLabelBackgroundColor) == 0x000004, "Wrong alignment on AudioRadialSlider_SetTextLabelBackgroundColor");
-static_assert(sizeof(AudioRadialSlider_SetTextLabelBackgroundColor) == 0x000014, "Wrong size on AudioRadialSlider_SetTextLabelBackgroundColor");
-static_assert(offsetof(AudioRadialSlider_SetTextLabelBackgroundColor, InColor) == 0x000000, "Member 'AudioRadialSlider_SetTextLabelBackgroundColor::InColor' has a wrong offset!");
+DUMPER7_ASSERTS_AudioRadialSlider_SetTextLabelBackgroundColor;
 
 // Function AudioWidgets.AudioRadialSlider.SetUnitsText
 // 0x0010 (0x0010 - 0x0000)
@@ -568,9 +468,7 @@ struct AudioRadialSlider_SetUnitsText final
 public:
 	class FText                                   Units;                                             // 0x0000(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioRadialSlider_SetUnitsText) == 0x000008, "Wrong alignment on AudioRadialSlider_SetUnitsText");
-static_assert(sizeof(AudioRadialSlider_SetUnitsText) == 0x000010, "Wrong size on AudioRadialSlider_SetUnitsText");
-static_assert(offsetof(AudioRadialSlider_SetUnitsText, Units) == 0x000000, "Member 'AudioRadialSlider_SetUnitsText::Units' has a wrong offset!");
+DUMPER7_ASSERTS_AudioRadialSlider_SetUnitsText;
 
 // Function AudioWidgets.AudioRadialSlider.SetUnitsTextReadOnly
 // 0x0001 (0x0001 - 0x0000)
@@ -579,9 +477,7 @@ struct AudioRadialSlider_SetUnitsTextReadOnly final
 public:
 	bool                                          bIsReadOnly;                                       // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioRadialSlider_SetUnitsTextReadOnly) == 0x000001, "Wrong alignment on AudioRadialSlider_SetUnitsTextReadOnly");
-static_assert(sizeof(AudioRadialSlider_SetUnitsTextReadOnly) == 0x000001, "Wrong size on AudioRadialSlider_SetUnitsTextReadOnly");
-static_assert(offsetof(AudioRadialSlider_SetUnitsTextReadOnly, bIsReadOnly) == 0x000000, "Member 'AudioRadialSlider_SetUnitsTextReadOnly::bIsReadOnly' has a wrong offset!");
+DUMPER7_ASSERTS_AudioRadialSlider_SetUnitsTextReadOnly;
 
 // Function AudioWidgets.AudioRadialSlider.SetValueTextReadOnly
 // 0x0001 (0x0001 - 0x0000)
@@ -590,9 +486,7 @@ struct AudioRadialSlider_SetValueTextReadOnly final
 public:
 	bool                                          bIsReadOnly;                                       // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioRadialSlider_SetValueTextReadOnly) == 0x000001, "Wrong alignment on AudioRadialSlider_SetValueTextReadOnly");
-static_assert(sizeof(AudioRadialSlider_SetValueTextReadOnly) == 0x000001, "Wrong size on AudioRadialSlider_SetValueTextReadOnly");
-static_assert(offsetof(AudioRadialSlider_SetValueTextReadOnly, bIsReadOnly) == 0x000000, "Member 'AudioRadialSlider_SetValueTextReadOnly::bIsReadOnly' has a wrong offset!");
+DUMPER7_ASSERTS_AudioRadialSlider_SetValueTextReadOnly;
 
 // Function AudioWidgets.AudioRadialSlider.SetWidgetLayout
 // 0x0001 (0x0001 - 0x0000)
@@ -601,9 +495,7 @@ struct AudioRadialSlider_SetWidgetLayout final
 public:
 	EAudioRadialSliderLayout                      InLayout;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioRadialSlider_SetWidgetLayout) == 0x000001, "Wrong alignment on AudioRadialSlider_SetWidgetLayout");
-static_assert(sizeof(AudioRadialSlider_SetWidgetLayout) == 0x000001, "Wrong size on AudioRadialSlider_SetWidgetLayout");
-static_assert(offsetof(AudioRadialSlider_SetWidgetLayout, InLayout) == 0x000000, "Member 'AudioRadialSlider_SetWidgetLayout::InLayout' has a wrong offset!");
+DUMPER7_ASSERTS_AudioRadialSlider_SetWidgetLayout;
 
 // Function AudioWidgets.AudioSliderBase.GetLinValue
 // 0x0008 (0x0008 - 0x0000)
@@ -613,10 +505,7 @@ public:
 	float                                         OutputValue;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioSliderBase_GetLinValue) == 0x000004, "Wrong alignment on AudioSliderBase_GetLinValue");
-static_assert(sizeof(AudioSliderBase_GetLinValue) == 0x000008, "Wrong size on AudioSliderBase_GetLinValue");
-static_assert(offsetof(AudioSliderBase_GetLinValue, OutputValue) == 0x000000, "Member 'AudioSliderBase_GetLinValue::OutputValue' has a wrong offset!");
-static_assert(offsetof(AudioSliderBase_GetLinValue, ReturnValue) == 0x000004, "Member 'AudioSliderBase_GetLinValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioSliderBase_GetLinValue;
 
 // Function AudioWidgets.AudioSliderBase.GetOutputValue
 // 0x0008 (0x0008 - 0x0000)
@@ -626,10 +515,7 @@ public:
 	float                                         InSliderValue;                                     // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioSliderBase_GetOutputValue) == 0x000004, "Wrong alignment on AudioSliderBase_GetOutputValue");
-static_assert(sizeof(AudioSliderBase_GetOutputValue) == 0x000008, "Wrong size on AudioSliderBase_GetOutputValue");
-static_assert(offsetof(AudioSliderBase_GetOutputValue, InSliderValue) == 0x000000, "Member 'AudioSliderBase_GetOutputValue::InSliderValue' has a wrong offset!");
-static_assert(offsetof(AudioSliderBase_GetOutputValue, ReturnValue) == 0x000004, "Member 'AudioSliderBase_GetOutputValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioSliderBase_GetOutputValue;
 
 // Function AudioWidgets.AudioSliderBase.GetSliderValue
 // 0x0008 (0x0008 - 0x0000)
@@ -639,10 +525,7 @@ public:
 	float                                         OutputValue;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioSliderBase_GetSliderValue) == 0x000004, "Wrong alignment on AudioSliderBase_GetSliderValue");
-static_assert(sizeof(AudioSliderBase_GetSliderValue) == 0x000008, "Wrong size on AudioSliderBase_GetSliderValue");
-static_assert(offsetof(AudioSliderBase_GetSliderValue, OutputValue) == 0x000000, "Member 'AudioSliderBase_GetSliderValue::OutputValue' has a wrong offset!");
-static_assert(offsetof(AudioSliderBase_GetSliderValue, ReturnValue) == 0x000004, "Member 'AudioSliderBase_GetSliderValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioSliderBase_GetSliderValue;
 
 // Function AudioWidgets.AudioSliderBase.SetShowLabelOnlyOnHover
 // 0x0001 (0x0001 - 0x0000)
@@ -651,9 +534,7 @@ struct AudioSliderBase_SetShowLabelOnlyOnHover final
 public:
 	bool                                          bShowLabelOnlyOnHover;                             // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioSliderBase_SetShowLabelOnlyOnHover) == 0x000001, "Wrong alignment on AudioSliderBase_SetShowLabelOnlyOnHover");
-static_assert(sizeof(AudioSliderBase_SetShowLabelOnlyOnHover) == 0x000001, "Wrong size on AudioSliderBase_SetShowLabelOnlyOnHover");
-static_assert(offsetof(AudioSliderBase_SetShowLabelOnlyOnHover, bShowLabelOnlyOnHover) == 0x000000, "Member 'AudioSliderBase_SetShowLabelOnlyOnHover::bShowLabelOnlyOnHover' has a wrong offset!");
+DUMPER7_ASSERTS_AudioSliderBase_SetShowLabelOnlyOnHover;
 
 // Function AudioWidgets.AudioSliderBase.SetShowUnitsText
 // 0x0001 (0x0001 - 0x0000)
@@ -662,9 +543,7 @@ struct AudioSliderBase_SetShowUnitsText final
 public:
 	bool                                          bShowUnitsText;                                    // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioSliderBase_SetShowUnitsText) == 0x000001, "Wrong alignment on AudioSliderBase_SetShowUnitsText");
-static_assert(sizeof(AudioSliderBase_SetShowUnitsText) == 0x000001, "Wrong size on AudioSliderBase_SetShowUnitsText");
-static_assert(offsetof(AudioSliderBase_SetShowUnitsText, bShowUnitsText) == 0x000000, "Member 'AudioSliderBase_SetShowUnitsText::bShowUnitsText' has a wrong offset!");
+DUMPER7_ASSERTS_AudioSliderBase_SetShowUnitsText;
 
 // Function AudioWidgets.AudioSliderBase.SetSliderBackgroundColor
 // 0x0010 (0x0010 - 0x0000)
@@ -673,9 +552,7 @@ struct AudioSliderBase_SetSliderBackgroundColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioSliderBase_SetSliderBackgroundColor) == 0x000004, "Wrong alignment on AudioSliderBase_SetSliderBackgroundColor");
-static_assert(sizeof(AudioSliderBase_SetSliderBackgroundColor) == 0x000010, "Wrong size on AudioSliderBase_SetSliderBackgroundColor");
-static_assert(offsetof(AudioSliderBase_SetSliderBackgroundColor, InValue) == 0x000000, "Member 'AudioSliderBase_SetSliderBackgroundColor::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioSliderBase_SetSliderBackgroundColor;
 
 // Function AudioWidgets.AudioSliderBase.SetSliderBarColor
 // 0x0010 (0x0010 - 0x0000)
@@ -684,9 +561,7 @@ struct AudioSliderBase_SetSliderBarColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioSliderBase_SetSliderBarColor) == 0x000004, "Wrong alignment on AudioSliderBase_SetSliderBarColor");
-static_assert(sizeof(AudioSliderBase_SetSliderBarColor) == 0x000010, "Wrong size on AudioSliderBase_SetSliderBarColor");
-static_assert(offsetof(AudioSliderBase_SetSliderBarColor, InValue) == 0x000000, "Member 'AudioSliderBase_SetSliderBarColor::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioSliderBase_SetSliderBarColor;
 
 // Function AudioWidgets.AudioSliderBase.SetSliderThumbColor
 // 0x0010 (0x0010 - 0x0000)
@@ -695,9 +570,7 @@ struct AudioSliderBase_SetSliderThumbColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioSliderBase_SetSliderThumbColor) == 0x000004, "Wrong alignment on AudioSliderBase_SetSliderThumbColor");
-static_assert(sizeof(AudioSliderBase_SetSliderThumbColor) == 0x000010, "Wrong size on AudioSliderBase_SetSliderThumbColor");
-static_assert(offsetof(AudioSliderBase_SetSliderThumbColor, InValue) == 0x000000, "Member 'AudioSliderBase_SetSliderThumbColor::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioSliderBase_SetSliderThumbColor;
 
 // Function AudioWidgets.AudioSliderBase.SetTextLabelBackgroundColor
 // 0x0014 (0x0014 - 0x0000)
@@ -706,9 +579,7 @@ struct AudioSliderBase_SetTextLabelBackgroundColor final
 public:
 	struct FSlateColor                            InColor;                                           // 0x0000(0x0014)(Parm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioSliderBase_SetTextLabelBackgroundColor) == 0x000004, "Wrong alignment on AudioSliderBase_SetTextLabelBackgroundColor");
-static_assert(sizeof(AudioSliderBase_SetTextLabelBackgroundColor) == 0x000014, "Wrong size on AudioSliderBase_SetTextLabelBackgroundColor");
-static_assert(offsetof(AudioSliderBase_SetTextLabelBackgroundColor, InColor) == 0x000000, "Member 'AudioSliderBase_SetTextLabelBackgroundColor::InColor' has a wrong offset!");
+DUMPER7_ASSERTS_AudioSliderBase_SetTextLabelBackgroundColor;
 
 // Function AudioWidgets.AudioSliderBase.SetUnitsText
 // 0x0010 (0x0010 - 0x0000)
@@ -717,9 +588,7 @@ struct AudioSliderBase_SetUnitsText final
 public:
 	class FText                                   Units;                                             // 0x0000(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioSliderBase_SetUnitsText) == 0x000008, "Wrong alignment on AudioSliderBase_SetUnitsText");
-static_assert(sizeof(AudioSliderBase_SetUnitsText) == 0x000010, "Wrong size on AudioSliderBase_SetUnitsText");
-static_assert(offsetof(AudioSliderBase_SetUnitsText, Units) == 0x000000, "Member 'AudioSliderBase_SetUnitsText::Units' has a wrong offset!");
+DUMPER7_ASSERTS_AudioSliderBase_SetUnitsText;
 
 // Function AudioWidgets.AudioSliderBase.SetUnitsTextReadOnly
 // 0x0001 (0x0001 - 0x0000)
@@ -728,9 +597,7 @@ struct AudioSliderBase_SetUnitsTextReadOnly final
 public:
 	bool                                          bIsReadOnly;                                       // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioSliderBase_SetUnitsTextReadOnly) == 0x000001, "Wrong alignment on AudioSliderBase_SetUnitsTextReadOnly");
-static_assert(sizeof(AudioSliderBase_SetUnitsTextReadOnly) == 0x000001, "Wrong size on AudioSliderBase_SetUnitsTextReadOnly");
-static_assert(offsetof(AudioSliderBase_SetUnitsTextReadOnly, bIsReadOnly) == 0x000000, "Member 'AudioSliderBase_SetUnitsTextReadOnly::bIsReadOnly' has a wrong offset!");
+DUMPER7_ASSERTS_AudioSliderBase_SetUnitsTextReadOnly;
 
 // Function AudioWidgets.AudioSliderBase.SetValueTextReadOnly
 // 0x0001 (0x0001 - 0x0000)
@@ -739,9 +606,7 @@ struct AudioSliderBase_SetValueTextReadOnly final
 public:
 	bool                                          bIsReadOnly;                                       // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioSliderBase_SetValueTextReadOnly) == 0x000001, "Wrong alignment on AudioSliderBase_SetValueTextReadOnly");
-static_assert(sizeof(AudioSliderBase_SetValueTextReadOnly) == 0x000001, "Wrong size on AudioSliderBase_SetValueTextReadOnly");
-static_assert(offsetof(AudioSliderBase_SetValueTextReadOnly, bIsReadOnly) == 0x000000, "Member 'AudioSliderBase_SetValueTextReadOnly::bIsReadOnly' has a wrong offset!");
+DUMPER7_ASSERTS_AudioSliderBase_SetValueTextReadOnly;
 
 // Function AudioWidgets.AudioSliderBase.SetWidgetBackgroundColor
 // 0x0010 (0x0010 - 0x0000)
@@ -750,9 +615,7 @@ struct AudioSliderBase_SetWidgetBackgroundColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AudioSliderBase_SetWidgetBackgroundColor) == 0x000004, "Wrong alignment on AudioSliderBase_SetWidgetBackgroundColor");
-static_assert(sizeof(AudioSliderBase_SetWidgetBackgroundColor) == 0x000010, "Wrong size on AudioSliderBase_SetWidgetBackgroundColor");
-static_assert(offsetof(AudioSliderBase_SetWidgetBackgroundColor, InValue) == 0x000000, "Member 'AudioSliderBase_SetWidgetBackgroundColor::InValue' has a wrong offset!");
+DUMPER7_ASSERTS_AudioSliderBase_SetWidgetBackgroundColor;
 
 }
 

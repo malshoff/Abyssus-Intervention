@@ -12,56 +12,69 @@
 
 #include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_DPSMeter.Widget_DPSMeter_C
-// 0x0050 (0x0320 - 0x02D0)
+// 0x02C0 (0x0600 - 0x0340)
 class UWidget_DPSMeter_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             ActualDamageDealt;                                 // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ActualDamageDealt_1;                               // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ActualDPS;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	double                                        TotalDamageDealt;                                  // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DamageDelta;                                       // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DPS;                                               // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ResetTime;                                         // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Time;                                              // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             TotalDamage;                                       // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             MinDamage;                                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             MaxDamage;                                         // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             AverageDPSValue;                                   // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ActualDPS;                                         // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ActualDamageDealt_1;                               // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	double                                        TotalDamageDealt;                                  // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageDelta;                                       // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DPS;                                               // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ResetTime;                                         // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Time;                                              // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     LastDamageEvent;                                   // 0x03A8(0x01F0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                EncounterDamages;                                  // 0x0598(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                EncounterDurations;                                // 0x05A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                EncounterMaxDamage;                                // 0x05B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                EncounterMinDamage;                                // 0x05C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         EncounterIndex;                                    // 0x05D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EncounterActive;                                   // 0x05DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5DD[0x3];                                      // 0x05DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CurrentEncounterTimeStamp;                         // 0x05E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentEncounterDamage;                            // 0x05E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentEncounterMinDamage;                         // 0x05F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentEncounterMaxDamage;                         // 0x05F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
 	void ExecuteUbergraph_Widget_DPSMeter(int32 EntryPoint);
-	void OnCombatEntered_Event_0();
+	void OnCombatEntered_Event();
+	void OnCombatLeft();
 	void OnDamageDealt(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData);
+	void SetEncounterArray(const TArray<double>& TargetArray, double Value);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void UpdateCurrentEncounterDamage(const struct FDamageCombatEvent& DamageCombatEvent);
+	void UpdateEncounterAvarage(int32 Steps);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_DPSMeter_C">();
+		BP_STATIC_CLASS_IMPL("Widget_DPSMeter_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_DPSMeter_C")
 	}
 	static class UWidget_DPSMeter_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_DPSMeter_C>();
 	}
 };
-static_assert(alignof(UWidget_DPSMeter_C) == 0x000008, "Wrong alignment on UWidget_DPSMeter_C");
-static_assert(sizeof(UWidget_DPSMeter_C) == 0x000320, "Wrong size on UWidget_DPSMeter_C");
-static_assert(offsetof(UWidget_DPSMeter_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_DPSMeter_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_DPSMeter_C, ActualDamageDealt) == 0x0002D8, "Member 'UWidget_DPSMeter_C::ActualDamageDealt' has a wrong offset!");
-static_assert(offsetof(UWidget_DPSMeter_C, ActualDamageDealt_1) == 0x0002E0, "Member 'UWidget_DPSMeter_C::ActualDamageDealt_1' has a wrong offset!");
-static_assert(offsetof(UWidget_DPSMeter_C, ActualDPS) == 0x0002E8, "Member 'UWidget_DPSMeter_C::ActualDPS' has a wrong offset!");
-static_assert(offsetof(UWidget_DPSMeter_C, InvalidationBox_0) == 0x0002F0, "Member 'UWidget_DPSMeter_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_DPSMeter_C, TotalDamageDealt) == 0x0002F8, "Member 'UWidget_DPSMeter_C::TotalDamageDealt' has a wrong offset!");
-static_assert(offsetof(UWidget_DPSMeter_C, DamageDelta) == 0x000300, "Member 'UWidget_DPSMeter_C::DamageDelta' has a wrong offset!");
-static_assert(offsetof(UWidget_DPSMeter_C, DPS) == 0x000308, "Member 'UWidget_DPSMeter_C::DPS' has a wrong offset!");
-static_assert(offsetof(UWidget_DPSMeter_C, ResetTime) == 0x000310, "Member 'UWidget_DPSMeter_C::ResetTime' has a wrong offset!");
-static_assert(offsetof(UWidget_DPSMeter_C, Time) == 0x000318, "Member 'UWidget_DPSMeter_C::Time' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_DPSMeter_C;
 
 }
 

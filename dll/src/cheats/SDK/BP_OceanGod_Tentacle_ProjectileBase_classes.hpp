@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -19,18 +19,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_OceanGod_Tentacle_ProjectileBase.BP_OceanGod_Tentacle_ProjectileBase_C
-// 0x0048 (0x0620 - 0x05D8)
+// 0x0048 (0x0650 - 0x0608)
 class ABP_OceanGod_Tentacle_ProjectileBase_C : public ARProjectile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   TrailMesh;                                         // 0x05E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 IntendedTarget;                                    // 0x05E8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	struct FTimerHandle                           AccellerationTimerEvent;                           // 0x05F0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          TargetsEnemies;                                    // 0x05F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F9[0x7];                                      // 0x05F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                StartLocation;                                     // 0x0600(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MinDistanceToStartHoming;                          // 0x0618(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0608(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   TrailMesh;                                         // 0x0610(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 IntendedTarget;                                    // 0x0618(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FTimerHandle                           AccellerationTimerEvent;                           // 0x0620(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          TargetsEnemies;                                    // 0x0628(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_629[0x7];                                      // 0x0629(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                StartLocation;                                     // 0x0630(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MinDistanceToStartHoming;                          // 0x0648(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AccellerationTimer();
@@ -43,22 +43,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_OceanGod_Tentacle_ProjectileBase_C">();
+		BP_STATIC_CLASS_IMPL("BP_OceanGod_Tentacle_ProjectileBase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_OceanGod_Tentacle_ProjectileBase_C")
 	}
 	static class ABP_OceanGod_Tentacle_ProjectileBase_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_OceanGod_Tentacle_ProjectileBase_C>();
 	}
 };
-static_assert(alignof(ABP_OceanGod_Tentacle_ProjectileBase_C) == 0x000008, "Wrong alignment on ABP_OceanGod_Tentacle_ProjectileBase_C");
-static_assert(sizeof(ABP_OceanGod_Tentacle_ProjectileBase_C) == 0x000620, "Wrong size on ABP_OceanGod_Tentacle_ProjectileBase_C");
-static_assert(offsetof(ABP_OceanGod_Tentacle_ProjectileBase_C, UberGraphFrame) == 0x0005D8, "Member 'ABP_OceanGod_Tentacle_ProjectileBase_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_OceanGod_Tentacle_ProjectileBase_C, TrailMesh) == 0x0005E0, "Member 'ABP_OceanGod_Tentacle_ProjectileBase_C::TrailMesh' has a wrong offset!");
-static_assert(offsetof(ABP_OceanGod_Tentacle_ProjectileBase_C, IntendedTarget) == 0x0005E8, "Member 'ABP_OceanGod_Tentacle_ProjectileBase_C::IntendedTarget' has a wrong offset!");
-static_assert(offsetof(ABP_OceanGod_Tentacle_ProjectileBase_C, AccellerationTimerEvent) == 0x0005F0, "Member 'ABP_OceanGod_Tentacle_ProjectileBase_C::AccellerationTimerEvent' has a wrong offset!");
-static_assert(offsetof(ABP_OceanGod_Tentacle_ProjectileBase_C, TargetsEnemies) == 0x0005F8, "Member 'ABP_OceanGod_Tentacle_ProjectileBase_C::TargetsEnemies' has a wrong offset!");
-static_assert(offsetof(ABP_OceanGod_Tentacle_ProjectileBase_C, StartLocation) == 0x000600, "Member 'ABP_OceanGod_Tentacle_ProjectileBase_C::StartLocation' has a wrong offset!");
-static_assert(offsetof(ABP_OceanGod_Tentacle_ProjectileBase_C, MinDistanceToStartHoming) == 0x000618, "Member 'ABP_OceanGod_Tentacle_ProjectileBase_C::MinDistanceToStartHoming' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_OceanGod_Tentacle_ProjectileBase_C;
 
 }
 

@@ -160,5 +160,27 @@ void UBP_EndWithABang_CharacterMutator_C::OnGroundEffectSpawned(class ARAreaEffe
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function BP_EndWithABang_CharacterMutator.BP_EndWithABang_CharacterMutator_C.PlayExplosionFX
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Radius                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_EndWithABang_CharacterMutator_C::PlayExplosionFX(float Radius, const struct FVector& Location)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EndWithABang_CharacterMutator_C", "PlayExplosionFX");
+
+	Params::BP_EndWithABang_CharacterMutator_C_PlayExplosionFX Parms{};
+
+	Parms.Radius = Radius;
+	Parms.Location = std::move(Location);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 }
 

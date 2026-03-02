@@ -230,6 +230,52 @@ void UWidget_CommonMutatorSelectScreen_C::GetGodMutatorChoiceData(class URMutato
 }
 
 
+// Function Widget_CommonMutatorSelectScreen.Widget_CommonMutatorSelectScreen_C.GetNumEquippedMutatorsOfCategory
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class URMutatorRewardCategoryDataAsset* CategoryDA                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APlayerController*                Controller                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32*                                  Num                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonMutatorSelectScreen_C::GetNumEquippedMutatorsOfCategory(class URMutatorRewardCategoryDataAsset* CategoryDA, class APlayerController* Controller, int32* Num)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonMutatorSelectScreen_C", "GetNumEquippedMutatorsOfCategory");
+
+	Params::Widget_CommonMutatorSelectScreen_C_GetNumEquippedMutatorsOfCategory Parms{};
+
+	Parms.CategoryDA = CategoryDA;
+	Parms.Controller = Controller;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Num != nullptr)
+		*Num = Parms.Num;
+}
+
+
+// Function Widget_CommonMutatorSelectScreen.Widget_CommonMutatorSelectScreen_C.GetSoulfragmentRerollCost
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 UWidget_CommonMutatorSelectScreen_C::GetSoulfragmentRerollCost()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonMutatorSelectScreen_C", "GetSoulfragmentRerollCost");
+
+	Params::Widget_CommonMutatorSelectScreen_C_GetSoulfragmentRerollCost Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Widget_CommonMutatorSelectScreen.Widget_CommonMutatorSelectScreen_C.HasSelectedCategory
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -252,7 +298,7 @@ void UWidget_CommonMutatorSelectScreen_C::HasSelectedCategory(bool* Value)
 
 
 // Function Widget_CommonMutatorSelectScreen.Widget_CommonMutatorSelectScreen_C.Initialize
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FRLootSelectionOption>&   LootOptions_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // const struct FGameplayTag&              LootSelectionType_0                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
@@ -320,7 +366,7 @@ void UWidget_CommonMutatorSelectScreen_C::Playfab_PlayerChoseGodCategoryMutator(
 
 
 // Function Widget_CommonMutatorSelectScreen.Widget_CommonMutatorSelectScreen_C.PlayLootAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_CommonMutatorSelectScreen_C::PlayLootAnimation()
 {
@@ -350,6 +396,34 @@ void UWidget_CommonMutatorSelectScreen_C::PreConstruct(bool IsDesignTime)
 	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonMutatorSelectScreen.Widget_CommonMutatorSelectScreen_C.RemoveCappedCategories
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URPlayerGScriptComponent*         PlayerGScriptComponent                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// TArray<class URMutatorRewardCategoryDataAsset*>&InAssets                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<class URMutatorRewardCategoryDataAsset*>*OutAssets                                              (Parm, OutParm)
+
+void UWidget_CommonMutatorSelectScreen_C::RemoveCappedCategories(class URPlayerGScriptComponent* PlayerGScriptComponent, TArray<class URMutatorRewardCategoryDataAsset*>& InAssets, TArray<class URMutatorRewardCategoryDataAsset*>* OutAssets)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonMutatorSelectScreen_C", "RemoveCappedCategories");
+
+	Params::Widget_CommonMutatorSelectScreen_C_RemoveCappedCategories Parms{};
+
+	Parms.PlayerGScriptComponent = PlayerGScriptComponent;
+	Parms.InAssets = std::move(InAssets);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	InAssets = std::move(Parms.InAssets);
+
+	if (OutAssets != nullptr)
+		*OutAssets = std::move(Parms.OutAssets);
 }
 
 

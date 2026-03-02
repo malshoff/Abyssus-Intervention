@@ -114,8 +114,9 @@ void UBP_Blood_Behavior_Ability_Mutator_C::MutatorRankChanged(int32 NewRank, cla
 // int32                                   DamageSourceMask                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   HealthDamage                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           OptionalAvatarActor                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FRMutableFloat&            SpecificCombatEventModifier                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBP_Blood_Behavior_Ability_Mutator_C::RunAbilityBehavior(class AActor* TriggeringActor, int32 DamageSourceMask, float HealthDamage, class AActor* OptionalAvatarActor)
+void UBP_Blood_Behavior_Ability_Mutator_C::RunAbilityBehavior(class AActor* TriggeringActor, int32 DamageSourceMask, float HealthDamage, class AActor* OptionalAvatarActor, const struct FRMutableFloat& SpecificCombatEventModifier)
 {
 	static class UFunction* Func = nullptr;
 
@@ -128,6 +129,7 @@ void UBP_Blood_Behavior_Ability_Mutator_C::RunAbilityBehavior(class AActor* Trig
 	Parms.DamageSourceMask = DamageSourceMask;
 	Parms.HealthDamage = HealthDamage;
 	Parms.OptionalAvatarActor = OptionalAvatarActor;
+	Parms.SpecificCombatEventModifier = std::move(SpecificCombatEventModifier);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

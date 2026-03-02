@@ -34,185 +34,104 @@ public:
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_VariableSet_OverheatDuration_ImplicitCast;  // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_Script_C_CheckBinaryCooling) == 0x000008, "Wrong alignment on BP_EngineRifle_Script_C_CheckBinaryCooling");
-static_assert(sizeof(BP_EngineRifle_Script_C_CheckBinaryCooling) == 0x000060, "Wrong size on BP_EngineRifle_Script_C_CheckBinaryCooling");
-static_assert(offsetof(BP_EngineRifle_Script_C_CheckBinaryCooling, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000000, "Member 'BP_EngineRifle_Script_C_CheckBinaryCooling::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_CheckBinaryCooling, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x000030, "Member 'BP_EngineRifle_Script_C_CheckBinaryCooling::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_CheckBinaryCooling, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'BP_EngineRifle_Script_C_CheckBinaryCooling::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_CheckBinaryCooling, CallFunc_GetWeaponMutator_ReturnValue) == 0x000040, "Member 'BP_EngineRifle_Script_C_CheckBinaryCooling::CallFunc_GetWeaponMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_CheckBinaryCooling, CallFunc_GetMutatorRank_ReturnValue) == 0x000048, "Member 'BP_EngineRifle_Script_C_CheckBinaryCooling::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_CheckBinaryCooling, CallFunc_IsValid_ReturnValue) == 0x00004C, "Member 'BP_EngineRifle_Script_C_CheckBinaryCooling::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_CheckBinaryCooling, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x000050, "Member 'BP_EngineRifle_Script_C_CheckBinaryCooling::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_CheckBinaryCooling, K2Node_VariableSet_OverheatDuration_ImplicitCast) == 0x000058, "Member 'BP_EngineRifle_Script_C_CheckBinaryCooling::K2Node_VariableSet_OverheatDuration_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_CheckBinaryCooling;
 
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.ExecuteUbergraph_BP_EngineRifle_Script
-// 0x0260 (0x0260 - 0x0000)
+// 0x0250 (0x0250 - 0x0000)
 struct BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARWeapon*                               CallFunc_GetWeaponActor_ReturnValue;               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USoundAttenuation*                      Temp_object_Variable;                              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USoundAttenuation*                      Temp_object_Variable_1;                            // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundAttenuation*                      CallFunc_GetWeapon2DAttenuation_ReturnValue;       // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0048(0x0030)(ContainsInstancedReference)
-	class UAudioComponent*                        CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue; // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class USoundAttenuation*                      Temp_object_Variable_2;                            // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPlayerPawn*                           K2Node_CustomEvent_Playerpawn;                     // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     K2Node_CustomEvent_NewOverlayMaterial;             // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x00A0(0x0030)(ContainsInstancedReference)
-	class ARWeapon*                               CallFunc_GetEquippedWeapon_ReturnValue;            // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URGScriptComponent*                     CallFunc_K2_GetRGScriptComponent_ReturnValue;      // 0x00E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetEquippedWeaponCategory_ReturnValue;    // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x00FC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaTime;                            // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0110(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsHoldingOverheatingModFire_Value;        // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class URGWeaponModScript*>             K2Node_MakeArray_Array;                            // 0x0120(0x0010)(ReferenceParm)
+	class USoundAttenuation*                      Temp_object_Variable;                              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USoundAttenuation*                      Temp_object_Variable_1;                            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B[0x1];                                       // 0x001B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundAttenuation*                      CallFunc_GetWeapon2DAttenuation_ReturnValue;       // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0040(0x0030)(ContainsInstancedReference)
+	class USoundAttenuation*                      Temp_object_Variable_2;                            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_CustomEvent_Playerpawn;                     // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     K2Node_CustomEvent_NewOverlayMaterial;             // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARWeapon*                               CallFunc_GetEquippedWeapon_ReturnValue;            // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0098(0x0030)(ContainsInstancedReference)
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGScriptComponent*                     CallFunc_K2_GetRGScriptComponent_ReturnValue;      // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetEquippedWeaponCategory_ReturnValue;    // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x00E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaTime;                            // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0100(0x0008)(NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsHoldingOverheatingModFire_Value;        // 0x010C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10D[0x3];                                      // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class URGWeaponModScript*>             K2Node_MakeArray_Array;                            // 0x0110(0x0010)(ReferenceParm)
+	TDelegate<void(bool IsPrimaryMod)>            K2Node_CreateDelegate_OutputDelegate_1;            // 0x0120(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class URGWeaponModScript*                     CallFunc_Array_Get_Item;                           // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsOverheatingMod_Value;                   // 0x013C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x013D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x013C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsOverheatingMod_Value;                   // 0x013D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_13E[0x2];                                      // 0x013E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool IsPrimaryMod)>            K2Node_CreateDelegate_OutputDelegate_1;            // 0x0140(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class URGWeaponModScript*>             K2Node_MakeArray_Array_1;                          // 0x0158(0x0010)(ReferenceParm)
-	TDelegate<void(bool IsPrimaryMod)>            K2Node_CreateDelegate_OutputDelegate_2;            // 0x0168(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class URGWeaponModScript*                     CallFunc_Array_Get_Item_1;                         // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsOverheatingMod_Value_1;                 // 0x0184(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0185(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_186[0x2];                                      // 0x0186(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_K2_GetPlayerController_ReturnValue;       // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool IsPrimaryMod)>            K2Node_CreateDelegate_OutputDelegate_2;            // 0x0140(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class URGWeaponModScript*>             K2Node_MakeArray_Array_1;                          // 0x0150(0x0010)(ReferenceParm)
+	class APlayerController*                      CallFunc_K2_GetPlayerController_ReturnValue;       // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URGWeaponModScript*                     CallFunc_Array_Get_Item_1;                         // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller;      // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsOverheatingMod_Value_1;                 // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17A[0x6];                                      // 0x017A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGameHud*                              CallFunc_GetGameHud_ReturnValue;                   // 0x0180(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocalPlayerController_ReturnValue;      // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18A[0x2];                                      // 0x018A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller;      // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URGameHud*                              CallFunc_GetGameHud_ReturnValue;                   // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocalPlayerController_ReturnValue;      // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B2[0x2];                                      // 0x01B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool IsPrimaryMod)>            K2Node_CreateDelegate_OutputDelegate_3;            // 0x01B4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsPrimaryMod;                   // 0x01C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C5[0x3];                                      // 0x01C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARWeapon*                               CallFunc_GetWeaponActor_ReturnValue_1;             // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsScriptLocallyControlled_ReturnValue; // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D2[0x6];                                      // 0x01D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundAttenuation*                      K2Node_Select_Default;                             // 0x01D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x01E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetTriggerParameter_self_CastInput; // 0x01E8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URGScriptComponent*                     CallFunc_K2_GetRGScriptComponent_ReturnValue_1;    // 0x01F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetEquippedWeaponCategory_ReturnValue_1;  // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_K2_GetPlayerController_ReturnValue_1;     // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue_1; // 0x0210(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class ARWeapon*                               CallFunc_GetWeaponActor_ReturnValue_2;             // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsScriptLocallyControlled_ReturnValue_1; // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_K2_GetPlayerController_ReturnValue_2;     // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USoundAttenuation*                      K2Node_Select_Default_1;                           // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             CallFunc_GetMotorSFX_MotorSound;                   // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue_1;         // 0x0240(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue_2;         // 0x0248(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue_2; // 0x0250(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_192[0x2];                                      // 0x0192(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool IsPrimaryMod)>            K2Node_CreateDelegate_OutputDelegate_3;            // 0x0194(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsPrimaryMod;                   // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A5[0x3];                                      // 0x01A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARWeapon*                               CallFunc_GetWeaponActor_ReturnValue;               // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsScriptLocallyControlled_ReturnValue; // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B2[0x6];                                      // 0x01B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundAttenuation*                      K2Node_Select_Default;                             // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGScriptComponent*                     CallFunc_K2_GetRGScriptComponent_ReturnValue_1;    // 0x01C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetTriggerParameter_self_CastInput; // 0x01D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetEquippedWeaponCategory_ReturnValue_1;  // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_K2_GetPlayerController_ReturnValue_1;     // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_RSpawnSoundAttached_ReturnValue;          // 0x01F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class ARWeapon*                               CallFunc_GetWeaponActor_ReturnValue_1;             // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsScriptLocallyControlled_ReturnValue_1; // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_K2_GetPlayerController_ReturnValue_2;     // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USoundAttenuation*                      K2Node_Select_Default_1;                           // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             CallFunc_GetMotorSFX_MotorSound;                   // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_RSpawnSoundAttached_ReturnValue_1;        // 0x0220(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class ARWeapon*                               CallFunc_GetWeaponActor_ReturnValue_2;             // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bNewVisibility;                       // 0x0230(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_RSpawnSoundAttached_ReturnValue_2;        // 0x0240(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x0248(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AdjustVolume_AdjustVolumeLevel_ImplicitCast; // 0x024C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script) == 0x000008, "Wrong alignment on BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script");
-static_assert(sizeof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script) == 0x000260, "Wrong size on BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, EntryPoint) == 0x000000, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_GetWeaponActor_ReturnValue) == 0x000008, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_GetWeaponActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, Temp_object_Variable) == 0x000010, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, Temp_object_Variable_1) == 0x000018, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, Temp_bool_Has_Been_Initd_Variable) == 0x000021, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, Temp_int_Loop_Counter_Variable) == 0x000024, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_Add_IntInt_ReturnValue) == 0x000028, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, Temp_int_Array_Index_Variable) == 0x00002C, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_IsValid_ReturnValue_1) == 0x000030, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, Temp_int_Loop_Counter_Variable_1) == 0x000034, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, Temp_bool_IsClosed_Variable) == 0x000038, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_Add_IntInt_ReturnValue_1) == 0x00003C, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_GetWeapon2DAttenuation_ReturnValue) == 0x000040, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_GetWeapon2DAttenuation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000048, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue) == 0x000078, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, Temp_object_Variable_2) == 0x000080, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::Temp_object_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, Temp_bool_Variable) == 0x000088, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_CustomEvent_Playerpawn) == 0x000090, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_CustomEvent_Playerpawn' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_CustomEvent_NewOverlayMaterial) == 0x000098, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_CustomEvent_NewOverlayMaterial' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x0000A0, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_GetEquippedWeapon_ReturnValue) == 0x0000D0, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_GetEquippedWeapon_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x0000D8, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_DynamicCast_bSuccess) == 0x0000E0, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_K2_GetRGScriptComponent_ReturnValue) == 0x0000E8, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_K2_GetRGScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_GetEquippedWeaponCategory_ReturnValue) == 0x0000F0, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_GetEquippedWeaponCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, Temp_int_Array_Index_Variable_1) == 0x0000F8, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_CreateDelegate_OutputDelegate) == 0x0000FC, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_Event_DeltaTime) == 0x00010C, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_Event_DeltaTime' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000110, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_IsHoldingOverheatingModFire_Value) == 0x000118, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_IsHoldingOverheatingModFire_Value' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_MakeArray_Array) == 0x000120, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_Array_Get_Item) == 0x000130, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_Array_Length_ReturnValue) == 0x000138, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_IsOverheatingMod_Value) == 0x00013C, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_IsOverheatingMod_Value' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_Less_IntInt_ReturnValue) == 0x00013D, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_CreateDelegate_OutputDelegate_1) == 0x000140, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, Temp_bool_Variable_1) == 0x000150, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_MakeArray_Array_1) == 0x000158, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_CreateDelegate_OutputDelegate_2) == 0x000168, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_Array_Get_Item_1) == 0x000178, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_Array_Length_ReturnValue_1) == 0x000180, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_IsOverheatingMod_Value_1) == 0x000184, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_IsOverheatingMod_Value_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_Less_IntInt_ReturnValue_1) == 0x000185, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_K2_GetPlayerController_ReturnValue) == 0x000188, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_K2_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_IsServer_ReturnValue) == 0x000190, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_IsServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_DynamicCast_AsRGame_Player_Controller) == 0x000198, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_DynamicCast_AsRGame_Player_Controller' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_DynamicCast_bSuccess_1) == 0x0001A0, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_GetGameHud_ReturnValue) == 0x0001A8, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_GetGameHud_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_IsLocalPlayerController_ReturnValue) == 0x0001B0, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_IsValid_ReturnValue_2) == 0x0001B1, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_CreateDelegate_OutputDelegate_3) == 0x0001B4, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_CustomEvent_IsPrimaryMod) == 0x0001C4, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_CustomEvent_IsPrimaryMod' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_GetWeaponActor_ReturnValue_1) == 0x0001C8, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_GetWeaponActor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_K2_IsScriptLocallyControlled_ReturnValue) == 0x0001D0, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_K2_IsScriptLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_IsValid_ReturnValue_3) == 0x0001D1, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_Select_Default) == 0x0001D8, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_SpawnSoundAttached_ReturnValue) == 0x0001E0, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_SetTriggerParameter_self_CastInput) == 0x0001E8, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_SetTriggerParameter_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_K2_GetRGScriptComponent_ReturnValue_1) == 0x0001F8, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_K2_GetRGScriptComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_GetEquippedWeaponCategory_ReturnValue_1) == 0x000200, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_GetEquippedWeaponCategory_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_K2_GetPlayerController_ReturnValue_1) == 0x000208, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_K2_GetPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue_1) == 0x000210, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_GetWeaponActor_ReturnValue_2) == 0x000218, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_GetWeaponActor_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_K2_IsScriptLocallyControlled_ReturnValue_1) == 0x000220, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_K2_IsScriptLocallyControlled_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_K2_GetPlayerController_ReturnValue_2) == 0x000228, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_K2_GetPlayerController_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, K2Node_Select_Default_1) == 0x000230, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_GetMotorSFX_MotorSound) == 0x000238, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_GetMotorSFX_MotorSound' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_SpawnSoundAttached_ReturnValue_1) == 0x000240, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_SpawnSoundAttached_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_SpawnSoundAttached_ReturnValue_2) == 0x000248, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_SpawnSoundAttached_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue_2) == 0x000250, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast) == 0x000258, "Member 'BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_ExecuteUbergraph_BP_EngineRifle_Script;
 
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.ForceSetHeat
 // 0x0008 (0x0008 - 0x0000)
@@ -221,9 +140,7 @@ struct BP_EngineRifle_Script_C_ForceSetHeat final
 public:
 	double                                        NewHeat;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_Script_C_ForceSetHeat) == 0x000008, "Wrong alignment on BP_EngineRifle_Script_C_ForceSetHeat");
-static_assert(sizeof(BP_EngineRifle_Script_C_ForceSetHeat) == 0x000008, "Wrong size on BP_EngineRifle_Script_C_ForceSetHeat");
-static_assert(offsetof(BP_EngineRifle_Script_C_ForceSetHeat, NewHeat) == 0x000000, "Member 'BP_EngineRifle_Script_C_ForceSetHeat::NewHeat' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_ForceSetHeat;
 
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.GetMotorSFX
 // 0x0110 (0x0110 - 0x0000)
@@ -244,18 +161,7 @@ public:
 	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundBase*                             K2Node_Select_Default;                             // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_Script_C_GetMotorSFX) == 0x000010, "Wrong alignment on BP_EngineRifle_Script_C_GetMotorSFX");
-static_assert(sizeof(BP_EngineRifle_Script_C_GetMotorSFX) == 0x000110, "Wrong size on BP_EngineRifle_Script_C_GetMotorSFX");
-static_assert(offsetof(BP_EngineRifle_Script_C_GetMotorSFX, MotorSound) == 0x000000, "Member 'BP_EngineRifle_Script_C_GetMotorSFX::MotorSound' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_GetMotorSFX, Temp_bool_Variable) == 0x000008, "Member 'BP_EngineRifle_Script_C_GetMotorSFX::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_GetMotorSFX, CallFunc_GetWeaponActor_ReturnValue) == 0x000010, "Member 'BP_EngineRifle_Script_C_GetMotorSFX::CallFunc_GetWeaponActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_GetMotorSFX, CallFunc_GetEquippedWeaponModPrimaryAsset_ReturnValue) == 0x000018, "Member 'BP_EngineRifle_Script_C_GetMotorSFX::CallFunc_GetEquippedWeaponModPrimaryAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_GetMotorSFX, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x000020, "Member 'BP_EngineRifle_Script_C_GetMotorSFX::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_GetMotorSFX, CallFunc_Array_Get_Item) == 0x000030, "Member 'BP_EngineRifle_Script_C_GetMotorSFX::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_GetMotorSFX, CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue) == 0x0000F0, "Member 'BP_EngineRifle_Script_C_GetMotorSFX::CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_GetMotorSFX, K2Node_DynamicCast_AsSound_Wave) == 0x0000F8, "Member 'BP_EngineRifle_Script_C_GetMotorSFX::K2Node_DynamicCast_AsSound_Wave' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_GetMotorSFX, K2Node_DynamicCast_bSuccess) == 0x000100, "Member 'BP_EngineRifle_Script_C_GetMotorSFX::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_GetMotorSFX, K2Node_Select_Default) == 0x000108, "Member 'BP_EngineRifle_Script_C_GetMotorSFX::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_GetMotorSFX;
 
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.IncreaseHeat
 // 0x0010 (0x0010 - 0x0000)
@@ -265,10 +171,7 @@ public:
 	double                                        HeatIncrease;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_Script_C_IncreaseHeat) == 0x000008, "Wrong alignment on BP_EngineRifle_Script_C_IncreaseHeat");
-static_assert(sizeof(BP_EngineRifle_Script_C_IncreaseHeat) == 0x000010, "Wrong size on BP_EngineRifle_Script_C_IncreaseHeat");
-static_assert(offsetof(BP_EngineRifle_Script_C_IncreaseHeat, HeatIncrease) == 0x000000, "Member 'BP_EngineRifle_Script_C_IncreaseHeat::HeatIncrease' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IncreaseHeat, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000008, "Member 'BP_EngineRifle_Script_C_IncreaseHeat::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_IncreaseHeat;
 
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.InitOverheatBarVisibility
 // 0x0028 (0x0028 - 0x0000)
@@ -283,14 +186,7 @@ public:
 	class URGameHud*                              CallFunc_GetGameHud_ReturnValue;                   // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_Script_C_InitOverheatBarVisibility) == 0x000008, "Wrong alignment on BP_EngineRifle_Script_C_InitOverheatBarVisibility");
-static_assert(sizeof(BP_EngineRifle_Script_C_InitOverheatBarVisibility) == 0x000028, "Wrong size on BP_EngineRifle_Script_C_InitOverheatBarVisibility");
-static_assert(offsetof(BP_EngineRifle_Script_C_InitOverheatBarVisibility, CallFunc_K2_GetPlayerController_ReturnValue) == 0x000000, "Member 'BP_EngineRifle_Script_C_InitOverheatBarVisibility::CallFunc_K2_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_InitOverheatBarVisibility, K2Node_DynamicCast_AsRGame_Player_Controller) == 0x000008, "Member 'BP_EngineRifle_Script_C_InitOverheatBarVisibility::K2Node_DynamicCast_AsRGame_Player_Controller' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_InitOverheatBarVisibility, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_EngineRifle_Script_C_InitOverheatBarVisibility::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_InitOverheatBarVisibility, CallFunc_IsLocalPlayerController_ReturnValue) == 0x000011, "Member 'BP_EngineRifle_Script_C_InitOverheatBarVisibility::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_InitOverheatBarVisibility, CallFunc_GetGameHud_ReturnValue) == 0x000018, "Member 'BP_EngineRifle_Script_C_InitOverheatBarVisibility::CallFunc_GetGameHud_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_InitOverheatBarVisibility, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_EngineRifle_Script_C_InitOverheatBarVisibility::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_InitOverheatBarVisibility;
 
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.IsHoldingOverheatingModFire
 // 0x0068 (0x0068 - 0x0000)
@@ -322,29 +218,7 @@ public:
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0066(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValidSoftClassReference_ReturnValue;    // 0x0067(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire) == 0x000008, "Wrong alignment on BP_EngineRifle_Script_C_IsHoldingOverheatingModFire");
-static_assert(sizeof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire) == 0x000068, "Wrong size on BP_EngineRifle_Script_C_IsHoldingOverheatingModFire");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, Value) == 0x000000, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::Value' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_IsValid_ReturnValue_1) == 0x000011, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_IsWeaponHoldingFire_ReturnValue) == 0x000012, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_IsWeaponHoldingFire_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_IsWeaponHoldingFire_ReturnValue_1) == 0x000013, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_IsWeaponHoldingFire_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_GetObjectClass_ReturnValue) == 0x000018, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_GetObjectClass_ReturnValue_1) == 0x000020, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_GetObjectClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_LoadClassFromSoftClassPtr_ReturnValue) == 0x000058, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_LoadClassFromSoftClassPtr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_Less_IntInt_ReturnValue) == 0x000060, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_EqualEqual_ClassClass_ReturnValue) == 0x000061, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_EqualEqual_ClassClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_BooleanAND_ReturnValue) == 0x000062, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_EqualEqual_ClassClass_ReturnValue_1) == 0x000063, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_EqualEqual_ClassClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_IsValidClass_ReturnValue) == 0x000064, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_BooleanAND_ReturnValue_1) == 0x000065, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_BooleanOR_ReturnValue) == 0x000066, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsHoldingOverheatingModFire, CallFunc_IsValidSoftClassReference_ReturnValue) == 0x000067, "Member 'BP_EngineRifle_Script_C_IsHoldingOverheatingModFire::CallFunc_IsValidSoftClassReference_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_IsHoldingOverheatingModFire;
 
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.IsOverheated
 // 0x0002 (0x0002 - 0x0000)
@@ -354,10 +228,7 @@ public:
 	bool                                          IsOverheated_0;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_K2_IsTimerActiveHandle_ReturnValue;       // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_Script_C_IsOverheated) == 0x000001, "Wrong alignment on BP_EngineRifle_Script_C_IsOverheated");
-static_assert(sizeof(BP_EngineRifle_Script_C_IsOverheated) == 0x000002, "Wrong size on BP_EngineRifle_Script_C_IsOverheated");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheated, IsOverheated_0) == 0x000000, "Member 'BP_EngineRifle_Script_C_IsOverheated::IsOverheated_0' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheated, CallFunc_K2_IsTimerActiveHandle_ReturnValue) == 0x000001, "Member 'BP_EngineRifle_Script_C_IsOverheated::CallFunc_K2_IsTimerActiveHandle_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_IsOverheated;
 
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.IsOverheatingMod
 // 0x0068 (0x0068 - 0x0000)
@@ -383,23 +254,7 @@ public:
 	bool                                          CallFunc_IsValidClass_ReturnValue_1;               // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValidSoftClassReference_ReturnValue;    // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_Script_C_IsOverheatingMod) == 0x000008, "Wrong alignment on BP_EngineRifle_Script_C_IsOverheatingMod");
-static_assert(sizeof(BP_EngineRifle_Script_C_IsOverheatingMod) == 0x000068, "Wrong size on BP_EngineRifle_Script_C_IsOverheatingMod");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheatingMod, Mod) == 0x000000, "Member 'BP_EngineRifle_Script_C_IsOverheatingMod::Mod' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheatingMod, Value) == 0x000008, "Member 'BP_EngineRifle_Script_C_IsOverheatingMod::Value' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheatingMod, CallFunc_IsValid_ReturnValue) == 0x000009, "Member 'BP_EngineRifle_Script_C_IsOverheatingMod::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheatingMod, CallFunc_GetObjectClass_ReturnValue) == 0x000010, "Member 'BP_EngineRifle_Script_C_IsOverheatingMod::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheatingMod, CallFunc_IsValidClass_ReturnValue) == 0x000018, "Member 'BP_EngineRifle_Script_C_IsOverheatingMod::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheatingMod, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'BP_EngineRifle_Script_C_IsOverheatingMod::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheatingMod, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'BP_EngineRifle_Script_C_IsOverheatingMod::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheatingMod, CallFunc_Add_IntInt_ReturnValue) == 0x000024, "Member 'BP_EngineRifle_Script_C_IsOverheatingMod::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheatingMod, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_EngineRifle_Script_C_IsOverheatingMod::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheatingMod, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'BP_EngineRifle_Script_C_IsOverheatingMod::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheatingMod, CallFunc_LoadClassFromSoftClassPtr_ReturnValue) == 0x000058, "Member 'BP_EngineRifle_Script_C_IsOverheatingMod::CallFunc_LoadClassFromSoftClassPtr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheatingMod, CallFunc_Less_IntInt_ReturnValue) == 0x000060, "Member 'BP_EngineRifle_Script_C_IsOverheatingMod::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheatingMod, CallFunc_EqualEqual_ClassClass_ReturnValue) == 0x000061, "Member 'BP_EngineRifle_Script_C_IsOverheatingMod::CallFunc_EqualEqual_ClassClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheatingMod, CallFunc_IsValidClass_ReturnValue_1) == 0x000062, "Member 'BP_EngineRifle_Script_C_IsOverheatingMod::CallFunc_IsValidClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_IsOverheatingMod, CallFunc_IsValidSoftClassReference_ReturnValue) == 0x000063, "Member 'BP_EngineRifle_Script_C_IsOverheatingMod::CallFunc_IsValidSoftClassReference_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_IsOverheatingMod;
 
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.K2_TickScript
 // 0x0004 (0x0004 - 0x0000)
@@ -408,9 +263,7 @@ struct BP_EngineRifle_Script_C_K2_TickScript final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_Script_C_K2_TickScript) == 0x000004, "Wrong alignment on BP_EngineRifle_Script_C_K2_TickScript");
-static_assert(sizeof(BP_EngineRifle_Script_C_K2_TickScript) == 0x000004, "Wrong size on BP_EngineRifle_Script_C_K2_TickScript");
-static_assert(offsetof(BP_EngineRifle_Script_C_K2_TickScript, DeltaTime) == 0x000000, "Member 'BP_EngineRifle_Script_C_K2_TickScript::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_K2_TickScript;
 
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.OnOverheatingModFire
 // 0x0018 (0x0018 - 0x0000)
@@ -424,12 +277,16 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Greater_DoubleDouble_B_ImplicitCast;      // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_Script_C_OnOverheatingModFire) == 0x000008, "Wrong alignment on BP_EngineRifle_Script_C_OnOverheatingModFire");
-static_assert(sizeof(BP_EngineRifle_Script_C_OnOverheatingModFire) == 0x000018, "Wrong size on BP_EngineRifle_Script_C_OnOverheatingModFire");
-static_assert(offsetof(BP_EngineRifle_Script_C_OnOverheatingModFire, IsPrimaryMod) == 0x000000, "Member 'BP_EngineRifle_Script_C_OnOverheatingModFire::IsPrimaryMod' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_OnOverheatingModFire, CallFunc_GetMutableFloatCurrentValue_ReturnValue) == 0x000004, "Member 'BP_EngineRifle_Script_C_OnOverheatingModFire::CallFunc_GetMutableFloatCurrentValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_OnOverheatingModFire, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000008, "Member 'BP_EngineRifle_Script_C_OnOverheatingModFire::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_OnOverheatingModFire, CallFunc_Greater_DoubleDouble_B_ImplicitCast) == 0x000010, "Member 'BP_EngineRifle_Script_C_OnOverheatingModFire::CallFunc_Greater_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_OnOverheatingModFire;
+
+// Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.OnWeaponVisibilityChanged
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EngineRifle_Script_C_OnWeaponVisibilityChanged final
+{
+public:
+	bool                                          bNewVisibility;                                    // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_OnWeaponVisibilityChanged;
 
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.PlayBarrelSpinSFX
 // 0x0001 (0x0001 - 0x0000)
@@ -438,29 +295,33 @@ struct BP_EngineRifle_Script_C_PlayBarrelSpinSFX final
 public:
 	bool                                          IsPrimaryMod;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_Script_C_PlayBarrelSpinSFX) == 0x000001, "Wrong alignment on BP_EngineRifle_Script_C_PlayBarrelSpinSFX");
-static_assert(sizeof(BP_EngineRifle_Script_C_PlayBarrelSpinSFX) == 0x000001, "Wrong size on BP_EngineRifle_Script_C_PlayBarrelSpinSFX");
-static_assert(offsetof(BP_EngineRifle_Script_C_PlayBarrelSpinSFX, IsPrimaryMod) == 0x000000, "Member 'BP_EngineRifle_Script_C_PlayBarrelSpinSFX::IsPrimaryMod' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_PlayBarrelSpinSFX;
 
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.ReduceHeat
-// 0x0028 (0x0028 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct BP_EngineRifle_Script_C_ReduceHeat final
 {
 public:
 	double                                        HeatReduction;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutableFloatCurrentValue_ReturnValue;  // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_Max_ImplicitCast;                  // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OverheatHeatReduction;                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsOverheated_IsOverheated;                // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsOverheated_IsOverheated_1;              // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutableFloatCurrentValue_ReturnValue;  // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue;      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FClamp_Max_ImplicitCast;                  // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_Script_C_ReduceHeat) == 0x000008, "Wrong alignment on BP_EngineRifle_Script_C_ReduceHeat");
-static_assert(sizeof(BP_EngineRifle_Script_C_ReduceHeat) == 0x000028, "Wrong size on BP_EngineRifle_Script_C_ReduceHeat");
-static_assert(offsetof(BP_EngineRifle_Script_C_ReduceHeat, HeatReduction) == 0x000000, "Member 'BP_EngineRifle_Script_C_ReduceHeat::HeatReduction' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ReduceHeat, CallFunc_GetMutableFloatCurrentValue_ReturnValue) == 0x000008, "Member 'BP_EngineRifle_Script_C_ReduceHeat::CallFunc_GetMutableFloatCurrentValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ReduceHeat, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000010, "Member 'BP_EngineRifle_Script_C_ReduceHeat::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ReduceHeat, CallFunc_FClamp_ReturnValue) == 0x000018, "Member 'BP_EngineRifle_Script_C_ReduceHeat::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_ReduceHeat, CallFunc_FClamp_Max_ImplicitCast) == 0x000020, "Member 'BP_EngineRifle_Script_C_ReduceHeat::CallFunc_FClamp_Max_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_ReduceHeat;
 
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.RemoveOverheat
 // 0x0078 (0x0078 - 0x0000)
@@ -484,21 +345,7 @@ public:
 	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_ReduceHeat_HeatReduction_ImplicitCast;    // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_Script_C_RemoveOverheat) == 0x000008, "Wrong alignment on BP_EngineRifle_Script_C_RemoveOverheat");
-static_assert(sizeof(BP_EngineRifle_Script_C_RemoveOverheat) == 0x000078, "Wrong size on BP_EngineRifle_Script_C_RemoveOverheat");
-static_assert(offsetof(BP_EngineRifle_Script_C_RemoveOverheat, CallFunc_GetMutableFloatCurrentValue_ReturnValue) == 0x000000, "Member 'BP_EngineRifle_Script_C_RemoveOverheat::CallFunc_GetMutableFloatCurrentValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_RemoveOverheat, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_EngineRifle_Script_C_RemoveOverheat::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_RemoveOverheat, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000038, "Member 'BP_EngineRifle_Script_C_RemoveOverheat::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_RemoveOverheat, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_EngineRifle_Script_C_RemoveOverheat::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_RemoveOverheat, CallFunc_GetEquippedWeapon_ReturnValue) == 0x000048, "Member 'BP_EngineRifle_Script_C_RemoveOverheat::CallFunc_GetEquippedWeapon_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_RemoveOverheat, CallFunc_GetChallengeManager_ReturnValue) == 0x000050, "Member 'BP_EngineRifle_Script_C_RemoveOverheat::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_RemoveOverheat, CallFunc_GetOverlayMaterial_ReturnValue) == 0x000058, "Member 'BP_EngineRifle_Script_C_RemoveOverheat::CallFunc_GetOverlayMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_RemoveOverheat, K2Node_DynamicCast_AsMaterial_Instance_Dynamic) == 0x000060, "Member 'BP_EngineRifle_Script_C_RemoveOverheat::K2Node_DynamicCast_AsMaterial_Instance_Dynamic' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_RemoveOverheat, K2Node_DynamicCast_bSuccess_1) == 0x000068, "Member 'BP_EngineRifle_Script_C_RemoveOverheat::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_RemoveOverheat, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000069, "Member 'BP_EngineRifle_Script_C_RemoveOverheat::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_RemoveOverheat, CallFunc_EqualEqual_ObjectObject_ReturnValue_1) == 0x00006A, "Member 'BP_EngineRifle_Script_C_RemoveOverheat::CallFunc_EqualEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_RemoveOverheat, CallFunc_IsValid_ReturnValue) == 0x00006B, "Member 'BP_EngineRifle_Script_C_RemoveOverheat::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_RemoveOverheat, CallFunc_ReduceHeat_HeatReduction_ImplicitCast) == 0x000070, "Member 'BP_EngineRifle_Script_C_RemoveOverheat::CallFunc_ReduceHeat_HeatReduction_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_RemoveOverheat;
 
 // Function BP_EngineRifle_Script.BP_EngineRifle_Script_C.UpdateOverheatVFX
 // 0x0010 (0x0010 - 0x0000)
@@ -508,10 +355,7 @@ public:
 	class ARPlayerPawn*                           PlayerPawn;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInterface*                     NewOverlayMaterial;                                // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_Script_C_UpdateOverheatVFX) == 0x000008, "Wrong alignment on BP_EngineRifle_Script_C_UpdateOverheatVFX");
-static_assert(sizeof(BP_EngineRifle_Script_C_UpdateOverheatVFX) == 0x000010, "Wrong size on BP_EngineRifle_Script_C_UpdateOverheatVFX");
-static_assert(offsetof(BP_EngineRifle_Script_C_UpdateOverheatVFX, PlayerPawn) == 0x000000, "Member 'BP_EngineRifle_Script_C_UpdateOverheatVFX::PlayerPawn' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_Script_C_UpdateOverheatVFX, NewOverlayMaterial) == 0x000008, "Member 'BP_EngineRifle_Script_C_UpdateOverheatVFX::NewOverlayMaterial' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_Script_C_UpdateOverheatVFX;
 
 }
 

@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function BPFL_WidgetUtility.BPFL_WidgetUtility_C.PlayAnimation
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UUserWidget*                      Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // bool                                    Reverse                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

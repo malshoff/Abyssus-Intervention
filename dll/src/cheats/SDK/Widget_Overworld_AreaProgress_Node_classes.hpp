@@ -19,24 +19,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_Overworld_AreaProgress_Node.Widget_Overworld_AreaProgress_Node_C
-// 0x0068 (0x0338 - 0x02D0)
+// 0x0068 (0x03A8 - 0x0340)
 class UWidget_Overworld_AreaProgress_Node_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Construct_Animation;                               // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Current_Transition;                                // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Visited_Transition;                                // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 BackgroundShadow;                                  // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 BackgroundShadow_1;                                // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Contenticon;                                       // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 CorruptedIcon;                                     // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 NodeFrame;                                         // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PlayerIcon;                                        // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	double                                        Duration;                                          // 0x0320(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         NodeID;                                            // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_32C[0x4];                                      // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             Icon;                                              // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 PlayerIcon;                                        // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 NodeFrame;                                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 CorruptedIcon;                                     // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Contenticon;                                       // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BackgroundShadow_1;                                // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BackgroundShadow;                                  // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Visited_Transition;                                // 0x0378(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Current_Transition;                                // 0x0380(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Construct_Animation;                               // 0x0388(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	double                                        Duration;                                          // 0x0390(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NodeID;                                            // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_39C[0x4];                                      // 0x039C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             Icon;                                              // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -49,28 +49,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_Overworld_AreaProgress_Node_C">();
+		BP_STATIC_CLASS_IMPL("Widget_Overworld_AreaProgress_Node_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_Overworld_AreaProgress_Node_C")
 	}
 	static class UWidget_Overworld_AreaProgress_Node_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_Overworld_AreaProgress_Node_C>();
 	}
 };
-static_assert(alignof(UWidget_Overworld_AreaProgress_Node_C) == 0x000008, "Wrong alignment on UWidget_Overworld_AreaProgress_Node_C");
-static_assert(sizeof(UWidget_Overworld_AreaProgress_Node_C) == 0x000338, "Wrong size on UWidget_Overworld_AreaProgress_Node_C");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_Node_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_Overworld_AreaProgress_Node_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_Node_C, Construct_Animation) == 0x0002D8, "Member 'UWidget_Overworld_AreaProgress_Node_C::Construct_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_Node_C, Current_Transition) == 0x0002E0, "Member 'UWidget_Overworld_AreaProgress_Node_C::Current_Transition' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_Node_C, Visited_Transition) == 0x0002E8, "Member 'UWidget_Overworld_AreaProgress_Node_C::Visited_Transition' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_Node_C, BackgroundShadow) == 0x0002F0, "Member 'UWidget_Overworld_AreaProgress_Node_C::BackgroundShadow' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_Node_C, BackgroundShadow_1) == 0x0002F8, "Member 'UWidget_Overworld_AreaProgress_Node_C::BackgroundShadow_1' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_Node_C, Contenticon) == 0x000300, "Member 'UWidget_Overworld_AreaProgress_Node_C::Contenticon' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_Node_C, CorruptedIcon) == 0x000308, "Member 'UWidget_Overworld_AreaProgress_Node_C::CorruptedIcon' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_Node_C, NodeFrame) == 0x000310, "Member 'UWidget_Overworld_AreaProgress_Node_C::NodeFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_Node_C, PlayerIcon) == 0x000318, "Member 'UWidget_Overworld_AreaProgress_Node_C::PlayerIcon' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_Node_C, Duration) == 0x000320, "Member 'UWidget_Overworld_AreaProgress_Node_C::Duration' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_Node_C, NodeID) == 0x000328, "Member 'UWidget_Overworld_AreaProgress_Node_C::NodeID' has a wrong offset!");
-static_assert(offsetof(UWidget_Overworld_AreaProgress_Node_C, Icon) == 0x000330, "Member 'UWidget_Overworld_AreaProgress_Node_C::Icon' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_Overworld_AreaProgress_Node_C;
 
 }
 

@@ -29,16 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPNotify_WeaponAnimationTriggerEvent_C">();
+		BP_STATIC_CLASS_IMPL("BPNotify_WeaponAnimationTriggerEvent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPNotify_WeaponAnimationTriggerEvent_C")
 	}
 	static class UBPNotify_WeaponAnimationTriggerEvent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPNotify_WeaponAnimationTriggerEvent_C>();
 	}
 };
-static_assert(alignof(UBPNotify_WeaponAnimationTriggerEvent_C) == 0x000008, "Wrong alignment on UBPNotify_WeaponAnimationTriggerEvent_C");
-static_assert(sizeof(UBPNotify_WeaponAnimationTriggerEvent_C) == 0x000040, "Wrong size on UBPNotify_WeaponAnimationTriggerEvent_C");
-static_assert(offsetof(UBPNotify_WeaponAnimationTriggerEvent_C, EventName) == 0x000038, "Member 'UBPNotify_WeaponAnimationTriggerEvent_C::EventName' has a wrong offset!");
+DUMPER7_ASSERTS_UBPNotify_WeaponAnimationTriggerEvent_C;
 
 }
 

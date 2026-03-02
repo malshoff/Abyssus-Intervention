@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -19,23 +19,23 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_OffScreenIndication_Door.Widget_OffScreenIndication_Door_C
-// 0x0070 (0x0340 - 0x02D0)
+// 0x0070 (0x03B0 - 0x0340)
 class UWidget_OffScreenIndication_Door_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Pulse;                                             // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                Border_0;                                          // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_DirectionIcon;                               // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_DoorIcon;                                    // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay;                                           // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	double                                        UpdateTimeStamp;                                   // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 TargetActor;                                       // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        Radius;                                            // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Close_Radius;                                      // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Critical_Danger;                                   // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_321[0x7];                                      // 0x0321(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Dangerous_Location;                                // 0x0328(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UOverlay*                               Overlay;                                           // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_DoorIcon;                                    // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_DirectionIcon;                               // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                Border_0;                                          // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Pulse;                                             // 0x0368(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	double                                        UpdateTimeStamp;                                   // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 TargetActor;                                       // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        Radius;                                            // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Close_Radius;                                      // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Critical_Danger;                                   // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Dangerous_Location;                                // 0x0398(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -46,27 +46,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_OffScreenIndication_Door_C">();
+		BP_STATIC_CLASS_IMPL("Widget_OffScreenIndication_Door_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_OffScreenIndication_Door_C")
 	}
 	static class UWidget_OffScreenIndication_Door_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_OffScreenIndication_Door_C>();
 	}
 };
-static_assert(alignof(UWidget_OffScreenIndication_Door_C) == 0x000008, "Wrong alignment on UWidget_OffScreenIndication_Door_C");
-static_assert(sizeof(UWidget_OffScreenIndication_Door_C) == 0x000340, "Wrong size on UWidget_OffScreenIndication_Door_C");
-static_assert(offsetof(UWidget_OffScreenIndication_Door_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_OffScreenIndication_Door_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_OffScreenIndication_Door_C, Pulse) == 0x0002D8, "Member 'UWidget_OffScreenIndication_Door_C::Pulse' has a wrong offset!");
-static_assert(offsetof(UWidget_OffScreenIndication_Door_C, Border_0) == 0x0002E0, "Member 'UWidget_OffScreenIndication_Door_C::Border_0' has a wrong offset!");
-static_assert(offsetof(UWidget_OffScreenIndication_Door_C, Image_DirectionIcon) == 0x0002E8, "Member 'UWidget_OffScreenIndication_Door_C::Image_DirectionIcon' has a wrong offset!");
-static_assert(offsetof(UWidget_OffScreenIndication_Door_C, Image_DoorIcon) == 0x0002F0, "Member 'UWidget_OffScreenIndication_Door_C::Image_DoorIcon' has a wrong offset!");
-static_assert(offsetof(UWidget_OffScreenIndication_Door_C, Overlay) == 0x0002F8, "Member 'UWidget_OffScreenIndication_Door_C::Overlay' has a wrong offset!");
-static_assert(offsetof(UWidget_OffScreenIndication_Door_C, UpdateTimeStamp) == 0x000300, "Member 'UWidget_OffScreenIndication_Door_C::UpdateTimeStamp' has a wrong offset!");
-static_assert(offsetof(UWidget_OffScreenIndication_Door_C, TargetActor) == 0x000308, "Member 'UWidget_OffScreenIndication_Door_C::TargetActor' has a wrong offset!");
-static_assert(offsetof(UWidget_OffScreenIndication_Door_C, Radius) == 0x000310, "Member 'UWidget_OffScreenIndication_Door_C::Radius' has a wrong offset!");
-static_assert(offsetof(UWidget_OffScreenIndication_Door_C, Close_Radius) == 0x000318, "Member 'UWidget_OffScreenIndication_Door_C::Close_Radius' has a wrong offset!");
-static_assert(offsetof(UWidget_OffScreenIndication_Door_C, Critical_Danger) == 0x000320, "Member 'UWidget_OffScreenIndication_Door_C::Critical_Danger' has a wrong offset!");
-static_assert(offsetof(UWidget_OffScreenIndication_Door_C, Dangerous_Location) == 0x000328, "Member 'UWidget_OffScreenIndication_Door_C::Dangerous_Location' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_OffScreenIndication_Door_C;
 
 }
 

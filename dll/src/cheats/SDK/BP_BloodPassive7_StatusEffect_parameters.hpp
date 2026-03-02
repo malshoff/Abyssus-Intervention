@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BP_BloodPassive7_StatusEffect.BP_BloodPassive7_StatusEffect_C.ExecuteUbergraph_BP_BloodPassive7_StatusEffect
-// 0x01C8 (0x01C8 - 0x0000)
+// 0x02F8 (0x02F8 - 0x0000)
 struct BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect final
 {
 public:
@@ -26,72 +26,44 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0010(0x0030)(ContainsInstancedReference)
 	class URHealthComponent*                      K2Node_CustomEvent_Component;                      // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0048(0x00C0)()
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARNPCPawnBase*                          K2Node_DynamicCast_AsRNPCPawn_Base;                // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPlayerState*                          K2Node_DynamicCast_AsRPlayer_State;                // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetPostAdditivesValueByKey_ReturnValue;   // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0148(0x0030)(ContainsInstancedReference)
-	class FName                                   CallFunc_MakeLiteralName_ReturnValue_1;            // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetPostAdditivesValueByKey_ReturnValue_1; // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_184[0x4];                                      // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARNPCPawnBase*                          K2Node_DynamicCast_AsRNPCPawn_Base_1;              // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class URHealthComponent* Component, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate; // 0x01A0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_AddMutableFloatPostAdditive_Val_ImplicitCast; // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0048(0x01F0)()
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_244[0x4];                                      // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARNPCPawnBase*                          K2Node_DynamicCast_AsRNPCPawn_Base;                // 0x0258(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_261[0x7];                                      // 0x0261(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPlayerState*                          K2Node_DynamicCast_AsRPlayer_State;                // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_271[0x3];                                      // 0x0271(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetPostAdditivesValueByKey_ReturnValue;   // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0278(0x0030)(ContainsInstancedReference)
+	class FName                                   CallFunc_MakeLiteralName_ReturnValue_1;            // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetPostAdditivesValueByKey_ReturnValue_1; // 0x02B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B4[0x4];                                      // 0x02B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARNPCPawnBase*                          K2Node_DynamicCast_AsRNPCPawn_Base_1;              // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class URHealthComponent* Component, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate; // 0x02D0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x02E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x02E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AddMutableFloatPostAdditive_Val_ImplicitCast; // 0x02F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect) == 0x000008, "Wrong alignment on BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect");
-static_assert(sizeof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect) == 0x0001C8, "Wrong size on BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, EntryPoint) == 0x000000, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, CallFunc_MakeLiteralName_ReturnValue) == 0x000004, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000010, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, K2Node_CustomEvent_Component) == 0x000040, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::K2Node_CustomEvent_Component' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, K2Node_CustomEvent_DamageEventData) == 0x000048, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::K2Node_CustomEvent_DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, CallFunc_GetOwner_ReturnValue) == 0x000108, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x000110, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, K2Node_DynamicCast_AsRPawn_Base) == 0x000118, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, K2Node_DynamicCast_bSuccess) == 0x000120, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, K2Node_DynamicCast_AsRNPCPawn_Base) == 0x000128, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::K2Node_DynamicCast_AsRNPCPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, K2Node_DynamicCast_bSuccess_1) == 0x000130, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, K2Node_DynamicCast_AsRPlayer_State) == 0x000138, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::K2Node_DynamicCast_AsRPlayer_State' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, K2Node_DynamicCast_bSuccess_2) == 0x000140, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, CallFunc_GetPostAdditivesValueByKey_ReturnValue) == 0x000144, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::CallFunc_GetPostAdditivesValueByKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000148, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, CallFunc_MakeLiteralName_ReturnValue_1) == 0x000178, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::CallFunc_MakeLiteralName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, CallFunc_GetPostAdditivesValueByKey_ReturnValue_1) == 0x000180, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::CallFunc_GetPostAdditivesValueByKey_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, K2Node_DynamicCast_AsRNPCPawn_Base_1) == 0x000188, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::K2Node_DynamicCast_AsRNPCPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, K2Node_DynamicCast_bSuccess_3) == 0x000190, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000198, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, K2Node_CreateDelegate_OutputDelegate) == 0x0001A0, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x0001B0, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x0001B8, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect, CallFunc_AddMutableFloatPostAdditive_Val_ImplicitCast) == 0x0001C0, "Member 'BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect::CallFunc_AddMutableFloatPostAdditive_Val_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BloodPassive7_StatusEffect_C_ExecuteUbergraph_BP_BloodPassive7_StatusEffect;
 
 // Function BP_BloodPassive7_StatusEffect.BP_BloodPassive7_StatusEffect_C.OnHealthDepleted_Event
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_BloodPassive7_StatusEffect_C_OnHealthDepleted_Event final
 {
 public:
 	class URHealthComponent*                      Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_BloodPassive7_StatusEffect_C_OnHealthDepleted_Event) == 0x000008, "Wrong alignment on BP_BloodPassive7_StatusEffect_C_OnHealthDepleted_Event");
-static_assert(sizeof(BP_BloodPassive7_StatusEffect_C_OnHealthDepleted_Event) == 0x0000C8, "Wrong size on BP_BloodPassive7_StatusEffect_C_OnHealthDepleted_Event");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_OnHealthDepleted_Event, Component) == 0x000000, "Member 'BP_BloodPassive7_StatusEffect_C_OnHealthDepleted_Event::Component' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive7_StatusEffect_C_OnHealthDepleted_Event, DamageEventData) == 0x000008, "Member 'BP_BloodPassive7_StatusEffect_C_OnHealthDepleted_Event::DamageEventData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BloodPassive7_StatusEffect_C_OnHealthDepleted_Event;
 
 }
 

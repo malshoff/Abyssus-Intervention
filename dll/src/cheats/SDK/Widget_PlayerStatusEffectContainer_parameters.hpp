@@ -51,34 +51,7 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x00A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer) == 0x000008, "Wrong alignment on Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer");
-static_assert(sizeof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer) == 0x0000A8, "Wrong size on Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, EntryPoint) == 0x000000, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, Temp_bool_True_if_break_was_hit_Variable) == 0x000004, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, Temp_int_Array_Index_Variable) == 0x000008, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, CallFunc_Not_PreBool_ReturnValue) == 0x00000C, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000020, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, K2Node_CustomEvent_StatusEffectScript_1) == 0x000028, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::K2Node_CustomEvent_StatusEffectScript_1' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, K2Node_DynamicCast_AsRPawn_Base) == 0x000030, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, CallFunc_IsValid_ReturnValue) == 0x000039, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, Temp_int_Loop_Counter_Variable) == 0x00003C, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, CallFunc_GetOwningPlayer_ReturnValue) == 0x000040, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, CallFunc_Create_ReturnValue) == 0x000048, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, CallFunc_Add_IntInt_ReturnValue) == 0x000050, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, CallFunc_AddChild_ReturnValue) == 0x000058, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::CallFunc_AddChild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, K2Node_CustomEvent_StatusEffectScript) == 0x000060, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::K2Node_CustomEvent_StatusEffectScript' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, CallFunc_GetAllChildren_ReturnValue) == 0x000068, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::CallFunc_GetAllChildren_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, K2Node_CreateDelegate_OutputDelegate_1) == 0x000078, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, CallFunc_Array_Get_Item) == 0x000088, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, K2Node_DynamicCast_AsWidget_Player_Status_Effect_Entry) == 0x000090, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::K2Node_DynamicCast_AsWidget_Player_Status_Effect_Entry' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, K2Node_DynamicCast_bSuccess_1) == 0x000098, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, CallFunc_Array_Length_ReturnValue) == 0x00009C, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, CallFunc_RemoveChild_ReturnValue) == 0x0000A0, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::CallFunc_RemoveChild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, CallFunc_Less_IntInt_ReturnValue) == 0x0000A1, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, CallFunc_BooleanAND_ReturnValue) == 0x0000A2, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x0000A3, "Member 'Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PlayerStatusEffectContainer_C_ExecuteUbergraph_Widget_PlayerStatusEffectContainer;
 
 // Function Widget_PlayerStatusEffectContainer.Widget_PlayerStatusEffectContainer_C.OnAppliedStatusEffectRemoved_Event
 // 0x0008 (0x0008 - 0x0000)
@@ -87,9 +60,7 @@ struct Widget_PlayerStatusEffectContainer_C_OnAppliedStatusEffectRemoved_Event f
 public:
 	class URStatusEffectGScript*                  StatusEffectScript;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PlayerStatusEffectContainer_C_OnAppliedStatusEffectRemoved_Event) == 0x000008, "Wrong alignment on Widget_PlayerStatusEffectContainer_C_OnAppliedStatusEffectRemoved_Event");
-static_assert(sizeof(Widget_PlayerStatusEffectContainer_C_OnAppliedStatusEffectRemoved_Event) == 0x000008, "Wrong size on Widget_PlayerStatusEffectContainer_C_OnAppliedStatusEffectRemoved_Event");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_OnAppliedStatusEffectRemoved_Event, StatusEffectScript) == 0x000000, "Member 'Widget_PlayerStatusEffectContainer_C_OnAppliedStatusEffectRemoved_Event::StatusEffectScript' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PlayerStatusEffectContainer_C_OnAppliedStatusEffectRemoved_Event;
 
 // Function Widget_PlayerStatusEffectContainer.Widget_PlayerStatusEffectContainer_C.StatusEffectAttached
 // 0x0008 (0x0008 - 0x0000)
@@ -98,9 +69,7 @@ struct Widget_PlayerStatusEffectContainer_C_StatusEffectAttached final
 public:
 	class URStatusEffectGScript*                  StatusEffectScript;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PlayerStatusEffectContainer_C_StatusEffectAttached) == 0x000008, "Wrong alignment on Widget_PlayerStatusEffectContainer_C_StatusEffectAttached");
-static_assert(sizeof(Widget_PlayerStatusEffectContainer_C_StatusEffectAttached) == 0x000008, "Wrong size on Widget_PlayerStatusEffectContainer_C_StatusEffectAttached");
-static_assert(offsetof(Widget_PlayerStatusEffectContainer_C_StatusEffectAttached, StatusEffectScript) == 0x000000, "Member 'Widget_PlayerStatusEffectContainer_C_StatusEffectAttached::StatusEffectScript' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PlayerStatusEffectContainer_C_StatusEffectAttached;
 
 }
 

@@ -207,7 +207,7 @@ void UW_Button_Altar_God_C::SimulateUnhover()
 
 
 // Function W_Button_Altar_God.W_Button_Altar_God_C.Trans Un Hovered
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UW_Button_Altar_God_C::Trans_Un_Hovered()
 {
@@ -221,7 +221,7 @@ void UW_Button_Altar_God_C::Trans_Un_Hovered()
 
 
 // Function W_Button_Altar_God.W_Button_Altar_God_C.TransHovered
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UW_Button_Altar_God_C::TransHovered()
 {

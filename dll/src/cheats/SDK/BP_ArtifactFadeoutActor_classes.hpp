@@ -49,28 +49,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ArtifactFadeoutActor_C">();
+		BP_STATIC_CLASS_IMPL("BP_ArtifactFadeoutActor_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ArtifactFadeoutActor_C")
 	}
 	static class ABP_ArtifactFadeoutActor_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_ArtifactFadeoutActor_C>();
 	}
 };
-static_assert(alignof(ABP_ArtifactFadeoutActor_C) == 0x000008, "Wrong alignment on ABP_ArtifactFadeoutActor_C");
-static_assert(sizeof(ABP_ArtifactFadeoutActor_C) == 0x000320, "Wrong size on ABP_ArtifactFadeoutActor_C");
-static_assert(offsetof(ABP_ArtifactFadeoutActor_C, UberGraphFrame) == 0x0002A8, "Member 'ABP_ArtifactFadeoutActor_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactFadeoutActor_C, IdentifierDecal) == 0x0002B0, "Member 'ABP_ArtifactFadeoutActor_C::IdentifierDecal' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactFadeoutActor_C, SM_Mutator_Item) == 0x0002B8, "Member 'ABP_ArtifactFadeoutActor_C::SM_Mutator_Item' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactFadeoutActor_C, SM_Mutator_Item_Coin) == 0x0002C0, "Member 'ABP_ArtifactFadeoutActor_C::SM_Mutator_Item_Coin' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactFadeoutActor_C, DefaultSceneRoot) == 0x0002C8, "Member 'ABP_ArtifactFadeoutActor_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactFadeoutActor_C, CutoutTimeline_CutoutAmount_4FC364F84F27BD353DC60E8D7F97B267) == 0x0002D0, "Member 'ABP_ArtifactFadeoutActor_C::CutoutTimeline_CutoutAmount_4FC364F84F27BD353DC60E8D7F97B267' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactFadeoutActor_C, CutoutTimeline__Direction_4FC364F84F27BD353DC60E8D7F97B267) == 0x0002D4, "Member 'ABP_ArtifactFadeoutActor_C::CutoutTimeline__Direction_4FC364F84F27BD353DC60E8D7F97B267' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactFadeoutActor_C, CutoutTimeline) == 0x0002D8, "Member 'ABP_ArtifactFadeoutActor_C::CutoutTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactFadeoutActor_C, WasPicked) == 0x0002E0, "Member 'ABP_ArtifactFadeoutActor_C::WasPicked' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactFadeoutActor_C, DecalIcon) == 0x0002E8, "Member 'ABP_ArtifactFadeoutActor_C::DecalIcon' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactFadeoutActor_C, SpinningRotation) == 0x0002F0, "Member 'ABP_ArtifactFadeoutActor_C::SpinningRotation' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactFadeoutActor_C, CutoutMaterials) == 0x000308, "Member 'ABP_ArtifactFadeoutActor_C::CutoutMaterials' has a wrong offset!");
-static_assert(offsetof(ABP_ArtifactFadeoutActor_C, DecalIconMaterial) == 0x000318, "Member 'ABP_ArtifactFadeoutActor_C::DecalIconMaterial' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_ArtifactFadeoutActor_C;
 
 }
 

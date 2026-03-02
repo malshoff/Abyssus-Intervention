@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function BP_SanctuaryBoss_Challenge.BP_SanctuaryBoss_Challenge_C.ExecuteUbergraph_BP_SanctuaryBoss_Challenge
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

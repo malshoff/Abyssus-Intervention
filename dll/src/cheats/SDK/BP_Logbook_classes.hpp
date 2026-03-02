@@ -36,11 +36,13 @@ public:
 	bool CanInteract(class APlayerController* Controller);
 	void ExecuteUbergraph_BP_Logbook(int32 EntryPoint);
 	void HideHighlight();
+	bool IsShareable(class APlayerController* PlayerController);
 	void OnFocus(class APlayerController* Controller);
 	void OnFocusGone(class APlayerController* Controller);
 	void OnInteract(class APlayerController* Controller);
 	void ReceiveBeginPlay();
 	void SetupHighlight();
+	void ShareInteractableActor(const class APlayerController* PlayerController);
 	void ToggleInteractionIndicatorVisibility(class AActor* InteractingActor, const bool NewVisible);
 
 	class FText GetInteractableAlternativeDescription() const;
@@ -58,22 +60,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Logbook_C">();
+		BP_STATIC_CLASS_IMPL("BP_Logbook_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Logbook_C")
 	}
 	static class ABP_Logbook_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Logbook_C>();
 	}
 };
-static_assert(alignof(ABP_Logbook_C) == 0x000008, "Wrong alignment on ABP_Logbook_C");
-static_assert(sizeof(ABP_Logbook_C) == 0x0002E8, "Wrong size on ABP_Logbook_C");
-static_assert(offsetof(ABP_Logbook_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_Logbook_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Logbook_C, Widget) == 0x0002B8, "Member 'ABP_Logbook_C::Widget' has a wrong offset!");
-static_assert(offsetof(ABP_Logbook_C, DMActorProximityBox) == 0x0002C0, "Member 'ABP_Logbook_C::DMActorProximityBox' has a wrong offset!");
-static_assert(offsetof(ABP_Logbook_C, ObjectHighlightWidgetComponent) == 0x0002C8, "Member 'ABP_Logbook_C::ObjectHighlightWidgetComponent' has a wrong offset!");
-static_assert(offsetof(ABP_Logbook_C, InteractableMesh) == 0x0002D0, "Member 'ABP_Logbook_C::InteractableMesh' has a wrong offset!");
-static_assert(offsetof(ABP_Logbook_C, Static_Mesh) == 0x0002D8, "Member 'ABP_Logbook_C::Static_Mesh' has a wrong offset!");
-static_assert(offsetof(ABP_Logbook_C, ShouldShowHighlight) == 0x0002E0, "Member 'ABP_Logbook_C::ShouldShowHighlight' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Logbook_C;
 
 }
 

@@ -59,29 +59,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_RoomObjectiveObject_ChargingPlate_C">();
+		BP_STATIC_CLASS_IMPL("BP_RoomObjectiveObject_ChargingPlate_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_RoomObjectiveObject_ChargingPlate_C")
 	}
 	static class ABP_RoomObjectiveObject_ChargingPlate_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_RoomObjectiveObject_ChargingPlate_C>();
 	}
 };
-static_assert(alignof(ABP_RoomObjectiveObject_ChargingPlate_C) == 0x000008, "Wrong alignment on ABP_RoomObjectiveObject_ChargingPlate_C");
-static_assert(sizeof(ABP_RoomObjectiveObject_ChargingPlate_C) == 0x0003B8, "Wrong size on ABP_RoomObjectiveObject_ChargingPlate_C");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargingPlate_C, UberGraphFrame) == 0x000340, "Member 'ABP_RoomObjectiveObject_ChargingPlate_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargingPlate_C, MSS_PlateObjective_Charge_Loop) == 0x000348, "Member 'ABP_RoomObjectiveObject_ChargingPlate_C::MSS_PlateObjective_Charge_Loop' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargingPlate_C, MSS_PlateObjective_Loop) == 0x000350, "Member 'ABP_RoomObjectiveObject_ChargingPlate_C::MSS_PlateObjective_Loop' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargingPlate_C, Decal1) == 0x000358, "Member 'ABP_RoomObjectiveObject_ChargingPlate_C::Decal1' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargingPlate_C, NS_ChargePlateObjective_Active_01) == 0x000360, "Member 'ABP_RoomObjectiveObject_ChargingPlate_C::NS_ChargePlateObjective_Active_01' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargingPlate_C, MeshVFX) == 0x000368, "Member 'ABP_RoomObjectiveObject_ChargingPlate_C::MeshVFX' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargingPlate_C, ActiveDecal) == 0x000370, "Member 'ABP_RoomObjectiveObject_ChargingPlate_C::ActiveDecal' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargingPlate_C, SpotLight) == 0x000378, "Member 'ABP_RoomObjectiveObject_ChargingPlate_C::SpotLight' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargingPlate_C, PointLight1) == 0x000380, "Member 'ABP_RoomObjectiveObject_ChargingPlate_C::PointLight1' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargingPlate_C, SM_GameplayObject_RoomObjective_ChargingPlate_VFX_01) == 0x000388, "Member 'ABP_RoomObjectiveObject_ChargingPlate_C::SM_GameplayObject_RoomObjective_ChargingPlate_VFX_01' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargingPlate_C, ProximityBox) == 0x000390, "Member 'ABP_RoomObjectiveObject_ChargingPlate_C::ProximityBox' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargingPlate_C, bShowOnRadar) == 0x000398, "Member 'ABP_RoomObjectiveObject_ChargingPlate_C::bShowOnRadar' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargingPlate_C, RPlayerPawnsInProximityBox) == 0x0003A0, "Member 'ABP_RoomObjectiveObject_ChargingPlate_C::RPlayerPawnsInProximityBox' has a wrong offset!");
-static_assert(offsetof(ABP_RoomObjectiveObject_ChargingPlate_C, SuperSelf) == 0x0003B0, "Member 'ABP_RoomObjectiveObject_ChargingPlate_C::SuperSelf' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_RoomObjectiveObject_ChargingPlate_C;
 
 }
 

@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Pickupable_HealthOrb.BP_Pickupable_HealthOrb_C
-// 0x0030 (0x03D0 - 0x03A0)
+// 0x0030 (0x03D8 - 0x03A8)
 class ABP_Pickupable_HealthOrb_C final : public ABP_Pickupable_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Pickupable_HealthOrb_C;          // 0x03A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   Sphere;                                            // 0x03A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      NS_HealDrop;                                       // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class ARPawnBase*                             PawnRef;                                           // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         Amount;                                            // 0x03C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C4[0x4];                                      // 0x03C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPickupableItem*                       SuperSelf;                                         // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Pickupable_HealthOrb_C;          // 0x03A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   Sphere;                                            // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      NS_HealDrop;                                       // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class ARPawnBase*                             PawnRef;                                           // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         Amount;                                            // 0x03C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPickupableItem*                       SuperSelf;                                         // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	bool CanInteract(class APlayerController* Controller);
@@ -43,21 +43,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Pickupable_HealthOrb_C">();
+		BP_STATIC_CLASS_IMPL("BP_Pickupable_HealthOrb_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Pickupable_HealthOrb_C")
 	}
 	static class ABP_Pickupable_HealthOrb_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Pickupable_HealthOrb_C>();
 	}
 };
-static_assert(alignof(ABP_Pickupable_HealthOrb_C) == 0x000008, "Wrong alignment on ABP_Pickupable_HealthOrb_C");
-static_assert(sizeof(ABP_Pickupable_HealthOrb_C) == 0x0003D0, "Wrong size on ABP_Pickupable_HealthOrb_C");
-static_assert(offsetof(ABP_Pickupable_HealthOrb_C, UberGraphFrame_BP_Pickupable_HealthOrb_C) == 0x0003A0, "Member 'ABP_Pickupable_HealthOrb_C::UberGraphFrame_BP_Pickupable_HealthOrb_C' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_HealthOrb_C, Sphere) == 0x0003A8, "Member 'ABP_Pickupable_HealthOrb_C::Sphere' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_HealthOrb_C, NS_HealDrop) == 0x0003B0, "Member 'ABP_Pickupable_HealthOrb_C::NS_HealDrop' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_HealthOrb_C, PawnRef) == 0x0003B8, "Member 'ABP_Pickupable_HealthOrb_C::PawnRef' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_HealthOrb_C, Amount) == 0x0003C0, "Member 'ABP_Pickupable_HealthOrb_C::Amount' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_HealthOrb_C, SuperSelf) == 0x0003C8, "Member 'ABP_Pickupable_HealthOrb_C::SuperSelf' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Pickupable_HealthOrb_C;
 
 }
 

@@ -39,18 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Fortune_Passive2_CharacterMutatorScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_Fortune_Passive2_CharacterMutatorScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Fortune_Passive2_CharacterMutatorScript_C")
 	}
 	static class UBP_Fortune_Passive2_CharacterMutatorScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Fortune_Passive2_CharacterMutatorScript_C>();
 	}
 };
-static_assert(alignof(UBP_Fortune_Passive2_CharacterMutatorScript_C) == 0x000008, "Wrong alignment on UBP_Fortune_Passive2_CharacterMutatorScript_C");
-static_assert(sizeof(UBP_Fortune_Passive2_CharacterMutatorScript_C) == 0x000128, "Wrong size on UBP_Fortune_Passive2_CharacterMutatorScript_C");
-static_assert(offsetof(UBP_Fortune_Passive2_CharacterMutatorScript_C, UberGraphFrame) == 0x000108, "Member 'UBP_Fortune_Passive2_CharacterMutatorScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Fortune_Passive2_CharacterMutatorScript_C, CurrentGainedGold) == 0x000110, "Member 'UBP_Fortune_Passive2_CharacterMutatorScript_C::CurrentGainedGold' has a wrong offset!");
-static_assert(offsetof(UBP_Fortune_Passive2_CharacterMutatorScript_C, LootOptions) == 0x000118, "Member 'UBP_Fortune_Passive2_CharacterMutatorScript_C::LootOptions' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Fortune_Passive2_CharacterMutatorScript_C;
 
 }
 

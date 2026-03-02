@@ -37,6 +37,26 @@ void UWidget_CommonInputDialog_C::BndEvt__Widget_CommonInputDialog_W_NoBTN_K2Nod
 }
 
 
+// Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.BndEvt__Widget_CommonInputDialog_W_YesBTN_1_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonInputDialog_C::BndEvt__Widget_CommonInputDialog_W_YesBTN_1_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonInputDialog_C", "BndEvt__Widget_CommonInputDialog_W_YesBTN_1_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_CommonInputDialog_C_BndEvt__Widget_CommonInputDialog_W_YesBTN_1_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Widget_CommonInputDialog.Widget_CommonInputDialog_C.BndEvt__Widget_CommonInputDialog_W_YesBTN_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:

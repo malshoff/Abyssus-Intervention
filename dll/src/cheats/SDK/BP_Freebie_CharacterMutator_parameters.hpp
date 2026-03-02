@@ -15,7 +15,7 @@ namespace SDK::Params
 {
 
 // Function BP_Freebie_CharacterMutator.BP_Freebie_CharacterMutator_C.ExecuteUbergraph_BP_Freebie_CharacterMutator
-// 0x00C0 (0x00C0 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator final
 {
 public:
@@ -36,49 +36,9 @@ public:
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Get_Remaining_Recharge_Cooldown_BP_RemainingRechargeCooldown; // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URGScriptComponent*                     CallFunc_K2_GetRGScriptComponent_ReturnValue_1;    // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URGAbilityCharacterMutatorScript*       CallFunc_GetEquippedActivatableAbility_ReturnValue_1; // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetMutatorRank_ReturnValue_1;             // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue_1; // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URGScriptComponent*                     CallFunc_K2_GetRGScriptComponent_ReturnValue_2;    // 0x0090(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URGAbilityCharacterMutatorScript*       CallFunc_GetEquippedActivatableAbility_ReturnValue_2; // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator) == 0x000008, "Wrong alignment on BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator");
-static_assert(sizeof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator) == 0x0000C0, "Wrong size on BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_GetMutatorRank_ReturnValue) == 0x000004, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, K2Node_Event_abilityScript) == 0x000008, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::K2Node_Event_abilityScript' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x000010, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_K2_GetRGScriptComponent_ReturnValue) == 0x000020, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_K2_GetRGScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_RandomFloat_ReturnValue) == 0x000028, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_RandomFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_GetEquippedActivatableAbility_ReturnValue) == 0x000030, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_GetEquippedActivatableAbility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000038, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000039, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, K2Node_DynamicCast_AsBP_Activatable_Character_Mutator) == 0x000040, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::K2Node_DynamicCast_AsBP_Activatable_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_Get_Remaining_Recharge_Cooldown_BP_RemainingRechargeCooldown) == 0x000050, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_Get_Remaining_Recharge_Cooldown_BP_RemainingRechargeCooldown' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000058, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_K2_GetRGScriptComponent_ReturnValue_1) == 0x000060, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_K2_GetRGScriptComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_GetScriptFName_ReturnValue) == 0x000068, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_GetEquippedActivatableAbility_ReturnValue_1) == 0x000070, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_GetEquippedActivatableAbility_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_GetMutatorRank_ReturnValue_1) == 0x000078, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_GetMutatorRank_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue_1) == 0x00007C, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000080, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000088, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_K2_GetRGScriptComponent_ReturnValue_2) == 0x000090, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_K2_GetRGScriptComponent_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_GetScriptFName_ReturnValue_1) == 0x000098, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_GetEquippedActivatableAbility_ReturnValue_2) == 0x0000A0, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_GetEquippedActivatableAbility_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0000A8, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x0000B0, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x0000B8, "Member 'BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Freebie_CharacterMutator_C_ExecuteUbergraph_BP_Freebie_CharacterMutator;
 
 // Function BP_Freebie_CharacterMutator.BP_Freebie_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -90,11 +50,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_Freebie_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_Freebie_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_Freebie_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_Freebie_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_Freebie_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_Freebie_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_Freebie_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Freebie_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_Freebie_CharacterMutator.BP_Freebie_CharacterMutator_C.K2_OnAbilityFired
 // 0x0008 (0x0008 - 0x0000)
@@ -103,9 +59,7 @@ struct BP_Freebie_CharacterMutator_C_K2_OnAbilityFired final
 public:
 	class URGScript*                              AbilityScript;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Freebie_CharacterMutator_C_K2_OnAbilityFired) == 0x000008, "Wrong alignment on BP_Freebie_CharacterMutator_C_K2_OnAbilityFired");
-static_assert(sizeof(BP_Freebie_CharacterMutator_C_K2_OnAbilityFired) == 0x000008, "Wrong size on BP_Freebie_CharacterMutator_C_K2_OnAbilityFired");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_K2_OnAbilityFired, AbilityScript) == 0x000000, "Member 'BP_Freebie_CharacterMutator_C_K2_OnAbilityFired::AbilityScript' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Freebie_CharacterMutator_C_K2_OnAbilityFired;
 
 // Function BP_Freebie_CharacterMutator.BP_Freebie_CharacterMutator_C.GetDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -114,9 +68,7 @@ struct BP_Freebie_CharacterMutator_C_GetDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_Freebie_CharacterMutator_C_GetDescription) == 0x000008, "Wrong alignment on BP_Freebie_CharacterMutator_C_GetDescription");
-static_assert(sizeof(BP_Freebie_CharacterMutator_C_GetDescription) == 0x000010, "Wrong size on BP_Freebie_CharacterMutator_C_GetDescription");
-static_assert(offsetof(BP_Freebie_CharacterMutator_C_GetDescription, ReturnValue) == 0x000000, "Member 'BP_Freebie_CharacterMutator_C_GetDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Freebie_CharacterMutator_C_GetDescription;
 
 }
 

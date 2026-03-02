@@ -143,28 +143,6 @@ void UWidget_Barrier_C::OnMaximumBarrierChanged(class URHealthComponent* Compone
 }
 
 
-// Function Widget_Barrier.Widget_Barrier_C.OnMaximumHealthChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class URHealthComponent*                Component                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// float                                   MaximumHealth_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_Barrier_C::OnMaximumHealthChanged(class URHealthComponent* Component, float MaximumHealth_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_Barrier_C", "OnMaximumHealthChanged");
-
-	Params::Widget_Barrier_C_OnMaximumHealthChanged Parms{};
-
-	Parms.Component = Component;
-	Parms.MaximumHealth_0 = MaximumHealth_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function Widget_Barrier.Widget_Barrier_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:

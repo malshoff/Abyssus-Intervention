@@ -36,18 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPTask_RunGScript_C">();
+		BP_STATIC_CLASS_IMPL("BPTask_RunGScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPTask_RunGScript_C")
 	}
 	static class UBPTask_RunGScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPTask_RunGScript_C>();
 	}
 };
-static_assert(alignof(UBPTask_RunGScript_C) == 0x000008, "Wrong alignment on UBPTask_RunGScript_C");
-static_assert(sizeof(UBPTask_RunGScript_C) == 0x0000C0, "Wrong size on UBPTask_RunGScript_C");
-static_assert(offsetof(UBPTask_RunGScript_C, UberGraphFrame) == 0x0000A8, "Member 'UBPTask_RunGScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBPTask_RunGScript_C, Function_Name) == 0x0000B0, "Member 'UBPTask_RunGScript_C::Function_Name' has a wrong offset!");
-static_assert(offsetof(UBPTask_RunGScript_C, Function) == 0x0000B4, "Member 'UBPTask_RunGScript_C::Function' has a wrong offset!");
+DUMPER7_ASSERTS_UBPTask_RunGScript_C;
 
 }
 

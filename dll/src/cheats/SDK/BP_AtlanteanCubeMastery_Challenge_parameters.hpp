@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BP_AtlanteanCubeMastery_Challenge.BP_AtlanteanCubeMastery_Challenge_C.ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge
-// 0x0110 (0x0110 - 0x0000)
+// 0x0240 (0x0240 - 0x0000)
 struct BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge final
 {
 public:
@@ -30,46 +30,27 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ARPawnBase*                             K2Node_CustomEvent_Pawn;                           // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0040(0x00C0)()
-	bool                                          CallFunc_IsObjectChildOfSoftClass_ReturnValue;     // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue;      // 0x0101(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0102(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsObjectASoftClass_ReturnValue;           // 0x0103(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0105(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_106[0x2];                                      // 0x0106(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast; // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0040(0x01F0)()
+	bool                                          CallFunc_IsObjectChildOfSoftClass_ReturnValue;     // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue;      // 0x0231(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0232(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsObjectASoftClass_ReturnValue;           // 0x0233(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0234(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0235(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_236[0x2];                                      // 0x0236(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast; // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge) == 0x000008, "Wrong alignment on BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge");
-static_assert(sizeof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge) == 0x000110, "Wrong size on BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge, EntryPoint) == 0x000000, "Member 'BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge, CallFunc_GetChallengeManager_ReturnValue) == 0x000008, "Member 'BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge, CallFunc_K2_GetPawn_ReturnValue) == 0x000020, "Member 'BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000028, "Member 'BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge, K2Node_CustomEvent_Pawn) == 0x000038, "Member 'BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge::K2Node_CustomEvent_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge, K2Node_CustomEvent_DamageEventData) == 0x000040, "Member 'BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge::K2Node_CustomEvent_DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge, CallFunc_IsObjectChildOfSoftClass_ReturnValue) == 0x000100, "Member 'BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge::CallFunc_IsObjectChildOfSoftClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge, CallFunc_DamageSourceMaskHasFlag_ReturnValue) == 0x000101, "Member 'BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge::CallFunc_DamageSourceMaskHasFlag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000102, "Member 'BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge, CallFunc_IsObjectASoftClass_ReturnValue) == 0x000103, "Member 'BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge::CallFunc_IsObjectASoftClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge, CallFunc_BooleanAND_ReturnValue) == 0x000104, "Member 'BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge, CallFunc_BooleanOR_ReturnValue) == 0x000105, "Member 'BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge, CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast) == 0x000108, "Member 'BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge::CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_AtlanteanCubeMastery_Challenge_C_ExecuteUbergraph_BP_AtlanteanCubeMastery_Challenge;
 
 // Function BP_AtlanteanCubeMastery_Challenge.BP_AtlanteanCubeMastery_Challenge_C.OnDealtDamage
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_AtlanteanCubeMastery_Challenge_C_OnDealtDamage final
 {
 public:
 	class ARPawnBase*                             Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_AtlanteanCubeMastery_Challenge_C_OnDealtDamage) == 0x000008, "Wrong alignment on BP_AtlanteanCubeMastery_Challenge_C_OnDealtDamage");
-static_assert(sizeof(BP_AtlanteanCubeMastery_Challenge_C_OnDealtDamage) == 0x0000C8, "Wrong size on BP_AtlanteanCubeMastery_Challenge_C_OnDealtDamage");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_OnDealtDamage, Pawn) == 0x000000, "Member 'BP_AtlanteanCubeMastery_Challenge_C_OnDealtDamage::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_AtlanteanCubeMastery_Challenge_C_OnDealtDamage, DamageEventData) == 0x000008, "Member 'BP_AtlanteanCubeMastery_Challenge_C_OnDealtDamage::DamageEventData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_AtlanteanCubeMastery_Challenge_C_OnDealtDamage;
 
 }
 

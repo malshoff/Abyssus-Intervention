@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_classes.hpp"
@@ -25,10 +24,9 @@ class UBP_CosmeticEmote_DragDropOperation_C final : public UDragDropOperation
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0090(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class URCosmeticPrimaryAsset*                 CosmeticEmotePA;                                   // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	struct FSlateBrush                            ItemIMG;                                           // 0x00A0(0x00B0)(Edit, BlueprintVisible, ExposeOnSpawn)
-	struct FGameplayTag                           EmoteTag;                                          // 0x0150(0x0008)(Edit, BlueprintVisible, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class APlayerController*                      PlayerController;                                  // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class APlayerController*                      PlayerController;                                  // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void DragCancelled(const struct FPointerEvent& PointerEvent);
@@ -39,19 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_CosmeticEmote_DragDropOperation_C">();
+		BP_STATIC_CLASS_IMPL("BP_CosmeticEmote_DragDropOperation_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_CosmeticEmote_DragDropOperation_C")
 	}
 	static class UBP_CosmeticEmote_DragDropOperation_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_CosmeticEmote_DragDropOperation_C>();
 	}
 };
-static_assert(alignof(UBP_CosmeticEmote_DragDropOperation_C) == 0x000010, "Wrong alignment on UBP_CosmeticEmote_DragDropOperation_C");
-static_assert(sizeof(UBP_CosmeticEmote_DragDropOperation_C) == 0x000160, "Wrong size on UBP_CosmeticEmote_DragDropOperation_C");
-static_assert(offsetof(UBP_CosmeticEmote_DragDropOperation_C, UberGraphFrame) == 0x000090, "Member 'UBP_CosmeticEmote_DragDropOperation_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_CosmeticEmote_DragDropOperation_C, ItemIMG) == 0x0000A0, "Member 'UBP_CosmeticEmote_DragDropOperation_C::ItemIMG' has a wrong offset!");
-static_assert(offsetof(UBP_CosmeticEmote_DragDropOperation_C, EmoteTag) == 0x000150, "Member 'UBP_CosmeticEmote_DragDropOperation_C::EmoteTag' has a wrong offset!");
-static_assert(offsetof(UBP_CosmeticEmote_DragDropOperation_C, PlayerController) == 0x000158, "Member 'UBP_CosmeticEmote_DragDropOperation_C::PlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_CosmeticEmote_DragDropOperation_C;
 
 }
 

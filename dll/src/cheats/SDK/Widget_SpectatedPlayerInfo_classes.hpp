@@ -18,38 +18,36 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_SpectatedPlayerInfo.Widget_SpectatedPlayerInfo_C
-// 0x0028 (0x02F8 - 0x02D0)
+// 0x0028 (0x0368 - 0x0340)
 class UWidget_SpectatedPlayerInfo_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 NextPlayerIcon;                                    // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             PlayerName;                                        // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PreviousPlayerIcon;                                // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_Divider_C*                      Widget_Divider;                                    // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_Divider_C*                      Widget_Divider;                                    // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PreviousPlayerIcon;                                // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             PlayerName;                                        // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 NextPlayerIcon;                                    // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void OnSpectatedPlayerChanged(class ARPlayerPawn* NewSpectatedPlayer);
-	void ExecuteUbergraph_Widget_SpectatedPlayerInfo(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_Widget_SpectatedPlayerInfo(int32 EntryPoint);
+	void OnSpectatedPlayerChanged(class ARPlayerPawn* NewSpectatedPlayer);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_SpectatedPlayerInfo_C">();
+		BP_STATIC_CLASS_IMPL("Widget_SpectatedPlayerInfo_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_SpectatedPlayerInfo_C")
 	}
 	static class UWidget_SpectatedPlayerInfo_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_SpectatedPlayerInfo_C>();
 	}
 };
-static_assert(alignof(UWidget_SpectatedPlayerInfo_C) == 0x000008, "Wrong alignment on UWidget_SpectatedPlayerInfo_C");
-static_assert(sizeof(UWidget_SpectatedPlayerInfo_C) == 0x0002F8, "Wrong size on UWidget_SpectatedPlayerInfo_C");
-static_assert(offsetof(UWidget_SpectatedPlayerInfo_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_SpectatedPlayerInfo_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_SpectatedPlayerInfo_C, NextPlayerIcon) == 0x0002D8, "Member 'UWidget_SpectatedPlayerInfo_C::NextPlayerIcon' has a wrong offset!");
-static_assert(offsetof(UWidget_SpectatedPlayerInfo_C, PlayerName) == 0x0002E0, "Member 'UWidget_SpectatedPlayerInfo_C::PlayerName' has a wrong offset!");
-static_assert(offsetof(UWidget_SpectatedPlayerInfo_C, PreviousPlayerIcon) == 0x0002E8, "Member 'UWidget_SpectatedPlayerInfo_C::PreviousPlayerIcon' has a wrong offset!");
-static_assert(offsetof(UWidget_SpectatedPlayerInfo_C, Widget_Divider) == 0x0002F0, "Member 'UWidget_SpectatedPlayerInfo_C::Widget_Divider' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_SpectatedPlayerInfo_C;
 
 }
 

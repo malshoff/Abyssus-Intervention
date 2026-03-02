@@ -305,34 +305,6 @@ void ABP_RPlayerPawn_C::DrawPingOutline_Server(class AActor* PingedObject)
 }
 
 
-// Function BP_RPlayerPawn.BP_RPlayerPawn_C.EmoteCameraZoomOutImplementation
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_RPlayerPawn_C::EmoteCameraZoomOutImplementation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RPlayerPawn_C", "EmoteCameraZoomOutImplementation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_RPlayerPawn.BP_RPlayerPawn_C.EmoteMontageEnded
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_RPlayerPawn_C::EmoteMontageEnded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RPlayerPawn_C", "EmoteMontageEnded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_RPlayerPawn.BP_RPlayerPawn_C.ExecuteUbergraph_BP_RPlayerPawn
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -388,6 +360,26 @@ void ABP_RPlayerPawn_C::Get_Object_Pingable_Name(class AActor* Object, class FTe
 
 	if (PingableName != nullptr)
 		*PingableName = std::move(Parms.PingableName);
+}
+
+
+// Function BP_RPlayerPawn.BP_RPlayerPawn_C.GetEmoteSpringArmComponent
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class USpringArmComponent*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class USpringArmComponent* ABP_RPlayerPawn_C::GetEmoteSpringArmComponent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RPlayerPawn_C", "GetEmoteSpringArmComponent");
+
+	Params::BP_RPlayerPawn_C_GetEmoteSpringArmComponent Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -454,6 +446,20 @@ void ABP_RPlayerPawn_C::GetPingVoicelineEvent(class AActor* PingedActor, class F
 
 	if (Event != nullptr)
 		*Event = Parms.Event;
+}
+
+
+// Function BP_RPlayerPawn.BP_RPlayerPawn_C.HandleEmoteInterruption
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void ABP_RPlayerPawn_C::HandleEmoteInterruption()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RPlayerPawn_C", "HandleEmoteInterruption");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -985,42 +991,15 @@ bool ABP_RPlayerPawn_C::IsInEmoteState()
 }
 
 
-// Function BP_RPlayerPawn.BP_RPlayerPawn_C.MontageInterruped_Multicast
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_RPlayerPawn_C::MontageInterruped_Multicast()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RPlayerPawn_C", "MontageInterruped_Multicast");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_RPlayerPawn.BP_RPlayerPawn_C.MontageInterrupted_Server
-// (Net, NetServer, BlueprintCallable, BlueprintEvent)
-
-void ABP_RPlayerPawn_C::MontageInterrupted_Server()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RPlayerPawn_C", "MontageInterrupted_Server");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_RPlayerPawn.BP_RPlayerPawn_C.OnAbilitiyVisibilitiesToggled
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    Anchor_Visibility                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    DropShield_Visibility                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    AtlanteanCube_Visibility                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Spear_Visibility                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_RPlayerPawn_C::OnAbilitiyVisibilitiesToggled(bool Anchor_Visibility, bool DropShield_Visibility, bool AtlanteanCube_Visibility)
+void ABP_RPlayerPawn_C::OnAbilitiyVisibilitiesToggled(bool Anchor_Visibility, bool DropShield_Visibility, bool AtlanteanCube_Visibility, bool Spear_Visibility)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1032,66 +1011,7 @@ void ABP_RPlayerPawn_C::OnAbilitiyVisibilitiesToggled(bool Anchor_Visibility, bo
 	Parms.Anchor_Visibility = Anchor_Visibility;
 	Parms.DropShield_Visibility = DropShield_Visibility;
 	Parms.AtlanteanCube_Visibility = AtlanteanCube_Visibility;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_RPlayerPawn.BP_RPlayerPawn_C.OnBlendOut_AC53E0D24995860F498B499655AC06DE
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_RPlayerPawn_C::OnBlendOut_AC53E0D24995860F498B499655AC06DE(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RPlayerPawn_C", "OnBlendOut_AC53E0D24995860F498B499655AC06DE");
-
-	Params::BP_RPlayerPawn_C_OnBlendOut_AC53E0D24995860F498B499655AC06DE Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_RPlayerPawn.BP_RPlayerPawn_C.OnCompleted_AC53E0D24995860F498B499655AC06DE
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_RPlayerPawn_C::OnCompleted_AC53E0D24995860F498B499655AC06DE(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RPlayerPawn_C", "OnCompleted_AC53E0D24995860F498B499655AC06DE");
-
-	Params::BP_RPlayerPawn_C_OnCompleted_AC53E0D24995860F498B499655AC06DE Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_RPlayerPawn.BP_RPlayerPawn_C.OnInterrupted_AC53E0D24995860F498B499655AC06DE
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_RPlayerPawn_C::OnInterrupted_AC53E0D24995860F498B499655AC06DE(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RPlayerPawn_C", "OnInterrupted_AC53E0D24995860F498B499655AC06DE");
-
-	Params::BP_RPlayerPawn_C_OnInterrupted_AC53E0D24995860F498B499655AC06DE Parms{};
-
-	Parms.NotifyName = NotifyName;
+	Parms.Spear_Visibility = Spear_Visibility;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1122,46 +1042,6 @@ void ABP_RPlayerPawn_C::OnLandedOnGround()
 		Func = Class->GetFunction("BP_RPlayerPawn_C", "OnLandedOnGround");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_RPlayerPawn.BP_RPlayerPawn_C.OnNotifyBegin_AC53E0D24995860F498B499655AC06DE
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_RPlayerPawn_C::OnNotifyBegin_AC53E0D24995860F498B499655AC06DE(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RPlayerPawn_C", "OnNotifyBegin_AC53E0D24995860F498B499655AC06DE");
-
-	Params::BP_RPlayerPawn_C_OnNotifyBegin_AC53E0D24995860F498B499655AC06DE Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_RPlayerPawn.BP_RPlayerPawn_C.OnNotifyEnd_AC53E0D24995860F498B499655AC06DE
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_RPlayerPawn_C::OnNotifyEnd_AC53E0D24995860F498B499655AC06DE(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RPlayerPawn_C", "OnNotifyEnd_AC53E0D24995860F498B499655AC06DE");
-
-	Params::BP_RPlayerPawn_C_OnNotifyEnd_AC53E0D24995860F498B499655AC06DE Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -1323,26 +1203,6 @@ void ABP_RPlayerPawn_C::PlayDoorTeleportTimeline(float Duration)
 	Params::BP_RPlayerPawn_C_PlayDoorTeleportTimeline Parms{};
 
 	Parms.Duration = Duration;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_RPlayerPawn.BP_RPlayerPawn_C.PlayEmoteMontage
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const class FName                       EmoteName                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_RPlayerPawn_C::PlayEmoteMontage(const class FName EmoteName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RPlayerPawn_C", "PlayEmoteMontage");
-
-	Params::BP_RPlayerPawn_C_PlayEmoteMontage Parms{};
-
-	Parms.EmoteName = EmoteName;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1834,8 +1694,9 @@ void ABP_RPlayerPawn_C::TeleportTimeline__UpdateFunc()
 // bool                                    AnchorVisibility                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    DropShieldVisibility                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    AtlanteanCubeVisibility                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    SpearVisibility                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_RPlayerPawn_C::ToggleAbilityVisibility(bool AnchorVisibility, bool DropShieldVisibility, bool AtlanteanCubeVisibility)
+void ABP_RPlayerPawn_C::ToggleAbilityVisibility(bool AnchorVisibility, bool DropShieldVisibility, bool AtlanteanCubeVisibility, bool SpearVisibility)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1847,6 +1708,7 @@ void ABP_RPlayerPawn_C::ToggleAbilityVisibility(bool AnchorVisibility, bool Drop
 	Parms.AnchorVisibility = AnchorVisibility;
 	Parms.DropShieldVisibility = DropShieldVisibility;
 	Parms.AtlanteanCubeVisibility = AtlanteanCubeVisibility;
+	Parms.SpearVisibility = SpearVisibility;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

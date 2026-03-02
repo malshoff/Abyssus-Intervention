@@ -23,9 +23,7 @@ struct BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_Com
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature) == 0x000008, "Wrong alignment on BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature");
-static_assert(sizeof(BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature) == 0x000008, "Wrong size on BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature, Actor) == 0x000000, "Member 'BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature;
 
 // Function BP_UnlockWeapon_Base.BP_UnlockWeapon_Base_C.BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentExit__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -34,9 +32,7 @@ struct BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_Com
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentExit__DelegateSignature) == 0x000008, "Wrong alignment on BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentExit__DelegateSignature");
-static_assert(sizeof(BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentExit__DelegateSignature) == 0x000008, "Wrong size on BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentExit__DelegateSignature");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentExit__DelegateSignature, Actor) == 0x000000, "Member 'BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentExit__DelegateSignature::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UnlockWeapon_Base_C_BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentExit__DelegateSignature;
 
 // Function BP_UnlockWeapon_Base.BP_UnlockWeapon_Base_C.ExecuteUbergraph_BP_UnlockWeapon_Base
 // 0x00C0 (0x00C0 - 0x0000)
@@ -78,35 +74,7 @@ public:
 	bool                                          CallFunc_IsChallengeCompleted_ReturnValue;         // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base) == 0x000008, "Wrong alignment on BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base");
-static_assert(sizeof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base) == 0x0000C0, "Wrong size on BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, EntryPoint) == 0x000000, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, K2Node_Event_InteractingActor) == 0x000008, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::K2Node_Event_InteractingActor' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, K2Node_Event_NewVisible) == 0x000010, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::K2Node_Event_NewVisible' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, CallFunc_GetInteractionIndicatorWidget_ReturnValue) == 0x000018, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::CallFunc_GetInteractionIndicatorWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, K2Node_DynamicCast_AsPawn) == 0x000020, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::K2Node_DynamicCast_AsPawn' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, CallFunc_IsValid_ReturnValue) == 0x000029, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, CallFunc_GetController_ReturnValue) == 0x000030, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::CallFunc_GetController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, K2Node_DynamicCast_AsPlayer_Controller) == 0x000038, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::K2Node_DynamicCast_AsPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, CallFunc_IsLocalPlayerController_ReturnValue) == 0x000041, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, K2Node_ComponentBoundEvent_Actor_1) == 0x000048, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::K2Node_ComponentBoundEvent_Actor_1' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, K2Node_ComponentBoundEvent_Actor) == 0x000050, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::K2Node_ComponentBoundEvent_Actor' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, K2Node_Event_controller) == 0x000058, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::K2Node_Event_controller' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, CallFunc_GetInteractionIndicatorWidget_ReturnValue_1) == 0x000060, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::CallFunc_GetInteractionIndicatorWidget_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, CallFunc_K2_GetPawn_ReturnValue) == 0x000068, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, CallFunc_IsValid_ReturnValue_1) == 0x000070, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000078, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, K2Node_DynamicCast_bSuccess_2) == 0x000080, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, CallFunc_GetChallengeManager_ReturnValue) == 0x000088, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, CallFunc_Pickup_ReturnValue) == 0x000090, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::CallFunc_Pickup_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, CallFunc_IsLocalPlayerController_ReturnValue_1) == 0x000091, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::CallFunc_IsLocalPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, Temp_struct_Variable) == 0x000098, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x0000A8, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, CallFunc_GetChallengeManager_ReturnValue_1) == 0x0000B0, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::CallFunc_GetChallengeManager_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, CallFunc_IsChallengeCompleted_ReturnValue) == 0x0000B8, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::CallFunc_IsChallengeCompleted_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base, CallFunc_EqualEqual_NameName_ReturnValue) == 0x0000B9, "Member 'BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UnlockWeapon_Base_C_ExecuteUbergraph_BP_UnlockWeapon_Base;
 
 // Function BP_UnlockWeapon_Base.BP_UnlockWeapon_Base_C.OnInteract
 // 0x0008 (0x0008 - 0x0000)
@@ -115,9 +83,7 @@ struct BP_UnlockWeapon_Base_C_OnInteract final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UnlockWeapon_Base_C_OnInteract) == 0x000008, "Wrong alignment on BP_UnlockWeapon_Base_C_OnInteract");
-static_assert(sizeof(BP_UnlockWeapon_Base_C_OnInteract) == 0x000008, "Wrong size on BP_UnlockWeapon_Base_C_OnInteract");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_OnInteract, Controller) == 0x000000, "Member 'BP_UnlockWeapon_Base_C_OnInteract::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UnlockWeapon_Base_C_OnInteract;
 
 // Function BP_UnlockWeapon_Base.BP_UnlockWeapon_Base_C.ToggleInteractionIndicatorVisibility
 // 0x0010 (0x0010 - 0x0000)
@@ -127,10 +93,7 @@ public:
 	class AActor*                                 InteractingActor;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          NewVisible;                                        // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UnlockWeapon_Base_C_ToggleInteractionIndicatorVisibility) == 0x000008, "Wrong alignment on BP_UnlockWeapon_Base_C_ToggleInteractionIndicatorVisibility");
-static_assert(sizeof(BP_UnlockWeapon_Base_C_ToggleInteractionIndicatorVisibility) == 0x000010, "Wrong size on BP_UnlockWeapon_Base_C_ToggleInteractionIndicatorVisibility");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ToggleInteractionIndicatorVisibility, InteractingActor) == 0x000000, "Member 'BP_UnlockWeapon_Base_C_ToggleInteractionIndicatorVisibility::InteractingActor' has a wrong offset!");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_ToggleInteractionIndicatorVisibility, NewVisible) == 0x000008, "Member 'BP_UnlockWeapon_Base_C_ToggleInteractionIndicatorVisibility::NewVisible' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UnlockWeapon_Base_C_ToggleInteractionIndicatorVisibility;
 
 // Function BP_UnlockWeapon_Base.BP_UnlockWeapon_Base_C.GetInteractionIndicatorWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -139,9 +102,7 @@ struct BP_UnlockWeapon_Base_C_GetInteractionIndicatorWidget final
 public:
 	class UWidgetComponent*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UnlockWeapon_Base_C_GetInteractionIndicatorWidget) == 0x000008, "Wrong alignment on BP_UnlockWeapon_Base_C_GetInteractionIndicatorWidget");
-static_assert(sizeof(BP_UnlockWeapon_Base_C_GetInteractionIndicatorWidget) == 0x000008, "Wrong size on BP_UnlockWeapon_Base_C_GetInteractionIndicatorWidget");
-static_assert(offsetof(BP_UnlockWeapon_Base_C_GetInteractionIndicatorWidget, ReturnValue) == 0x000000, "Member 'BP_UnlockWeapon_Base_C_GetInteractionIndicatorWidget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UnlockWeapon_Base_C_GetInteractionIndicatorWidget;
 
 }
 

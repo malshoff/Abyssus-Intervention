@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // Enum InterchangeNodes.EInterchangePropertyTracks
-// NumValues: 0x013F
+// NumValues: 0x0142
 enum class EInterchangePropertyTracks : uint32
 {
 	AffectDistanceFieldLighting              = 0,
@@ -56,7 +56,7 @@ enum class EInterchangePropertyTracks : uint32
 	TranslucencySortDistanceOffset           = 35,
 	VisibleInRayTracing                      = 36,
 	VisibleInSceneCaptureOnly                = 37,
-	Visibility                               = 38,
+	ActorHiddenInGame                        = 38,
 	LightAffectGlobalIllumination            = 39,
 	LightAffectReflection                    = 40,
 	LightAffectTranslucentLighting           = 41,
@@ -286,57 +286,60 @@ enum class EInterchangePropertyTracks : uint32
 	CameraPostProcessSettingsLumenSceneLightingUpdateSpeed = 265,
 	CameraPostProcessSettingsLumenSceneViewDistance = 266,
 	CameraPostProcessSettingsLumenSkylightLeaking = 267,
-	CameraPostProcessSettingsMotionBlurAmount = 268,
-	CameraPostProcessSettingsMotionBlurMax   = 269,
-	CameraPostProcessSettingsMotionBlurPerObjectSize = 270,
-	CameraPostProcessSettingsPathTracingMaxBounces = 271,
-	CameraPostProcessSettingsPathTracingMaxPathIntensity = 272,
-	CameraPostProcessSettingsRayTracingAO    = 273,
-	CameraPostProcessSettingsRayTracingAOIntensity = 274,
-	CameraPostProcessSettingsRayTracingAORadius = 275,
-	CameraPostProcessSettingsRayTracingAOSamplesPerPixel = 276,
-	CameraPostProcessSettingsRayTracingTranslucencyMaxRoughness = 277,
-	CameraPostProcessSettingsRayTracingTranslucencyRefraction = 278,
-	CameraPostProcessSettingsRayTracingTranslucencyRefractionRays = 279,
-	CameraPostProcessSettingsRayTracingTranslucencySamplesPerPixel = 280,
-	CameraPostProcessSettingsRayTracingTranslucencyShadows = 281,
-	CameraPostProcessSettingsReflectionMethod = 282,
-	CameraPostProcessSettingsSceneColorTint  = 283,
-	CameraPostProcessSettingsSceneFringeIntensity = 284,
-	CameraPostProcessSettingsScreenSpaceReflectionIntensity = 285,
-	CameraPostProcessSettingsScreenSpaceReflectionMaxRoughness = 286,
-	CameraPostProcessSettingsScreenSpaceReflectionQuality = 287,
-	CameraPostProcessSettingsSharpen         = 288,
-	CameraPostProcessSettingsTemperatureType = 289,
-	CameraPostProcessSettingsToneCurveAmount = 290,
-	CameraPostProcessSettingsTranslucencyType = 291,
-	CameraPostProcessSettingsVignetteIntensity = 292,
-	CameraPostProcessSettingsWhiteTemp       = 293,
-	CameraPostProcessSettingsWhiteTint       = 294,
-	CameraProjectionMode                     = 295,
-	CameraUpdateOrthoPlanes                  = 296,
-	CameraUseCameraHeightAsViewTarget        = 297,
-	CameraUseFieldOfViewForLOD               = 298,
-	MeshOverlayMaterialMaxDrawDistance       = 299,
-	SkinnedMeshCapsuleIndirectShadowMinVisibility = 300,
-	SkinnedMeshCastCapsuleDirectShadow       = 301,
-	SkinnedMeshCastCapsuleIndirectShadow     = 302,
-	SkinnedMeshRenderStatic                  = 303,
-	SkinnedMeshVisibilityBasedAnimTickOption = 304,
-	SkeletalMesh                             = 305,
-	SkeletalMeshAllowClothActors             = 306,
-	SkeletalMeshAnimationMode                = 307,
-	SkeletalMeshClothBlendWeight             = 308,
-	SkeletalMeshClothMaxDistanceScale        = 309,
-	StaticMeshDistanceFieldSelfShadowBias    = 310,
-	StaticMeshEvaluateWorldPositionOffset    = 311,
-	StaticMeshEvaluateWorldPositionOffsetInRayTracing = 312,
-	StaticMeshForcedLodModel                 = 313,
-	StaticMeshReverseCulling                 = 314,
-	StaticMeshWorldPositionOffsetDisableDistance = 315,
-	StaticMesh                               = 316,
+	CameraPostProcessSettingsLumenSkylightLeakingTint = 268,
+	CameraPostProcessSettingsMotionBlurAmount = 269,
+	CameraPostProcessSettingsMotionBlurMax   = 270,
+	CameraPostProcessSettingsMotionBlurPerObjectSize = 271,
+	CameraPostProcessSettingsPathTracingMaxBounces = 272,
+	CameraPostProcessSettingsPathTracingMaxPathIntensity = 273,
+	CameraPostProcessSettingsRayTracingAO    = 274,
+	CameraPostProcessSettingsRayTracingAOIntensity = 275,
+	CameraPostProcessSettingsRayTracingAORadius = 276,
+	CameraPostProcessSettingsRayTracingAOSamplesPerPixel = 277,
+	CameraPostProcessSettingsRayTracingTranslucencyMaxRoughness = 278,
+	CameraPostProcessSettingsRayTracingTranslucencyRefraction = 279,
+	CameraPostProcessSettingsRayTracingTranslucencyRefractionRays = 280,
+	CameraPostProcessSettingsRayTracingTranslucencySamplesPerPixel = 281,
+	CameraPostProcessSettingsRayTracingTranslucencyShadows = 282,
+	CameraPostProcessSettingsReflectionMethod = 283,
+	CameraPostProcessSettingsSceneColorTint  = 284,
+	CameraPostProcessSettingsSceneFringeIntensity = 285,
+	CameraPostProcessSettingsScreenSpaceReflectionIntensity = 286,
+	CameraPostProcessSettingsScreenSpaceReflectionMaxRoughness = 287,
+	CameraPostProcessSettingsScreenSpaceReflectionQuality = 288,
+	CameraPostProcessSettingsSharpen         = 289,
+	CameraPostProcessSettingsTemperatureType = 290,
+	CameraPostProcessSettingsToneCurveAmount = 291,
+	CameraPostProcessSettingsTranslucencyType = 292,
+	CameraPostProcessSettingsVignetteIntensity = 293,
+	CameraPostProcessSettingsWhiteTemp       = 294,
+	CameraPostProcessSettingsWhiteTint       = 295,
+	CameraProjectionMode                     = 296,
+	CameraUpdateOrthoPlanes                  = 297,
+	CameraUseCameraHeightAsViewTarget        = 298,
+	CameraUseFieldOfViewForLOD               = 299,
+	MeshOverlayMaterialMaxDrawDistance       = 300,
+	SkinnedMeshCapsuleIndirectShadowMinVisibility = 301,
+	SkinnedMeshCastCapsuleDirectShadow       = 302,
+	SkinnedMeshCastCapsuleIndirectShadow     = 303,
+	SkinnedMeshRenderStatic                  = 304,
+	SkinnedMeshVisibilityBasedAnimTickOption = 305,
+	SkeletalMesh                             = 306,
+	SkeletalMeshAllowClothActors             = 307,
+	SkeletalMeshAnimationMode                = 308,
+	SkeletalMeshClothBlendWeight             = 309,
+	SkeletalMeshClothMaxDistanceScale        = 310,
+	StaticMeshDistanceFieldSelfShadowBias    = 311,
+	StaticMeshEvaluateWorldPositionOffset    = 312,
+	StaticMeshEvaluateWorldPositionOffsetInRayTracing = 313,
+	StaticMeshForcedLodModel                 = 314,
+	StaticMeshReverseCulling                 = 315,
+	StaticMeshWorldPositionOffsetDisableDistance = 316,
+	StaticMesh                               = 317,
+	HeterogeneousVolumeFrame                 = 318,
 	None                                     = 18446744073709551615,
-	EInterchangePropertyTracks_MAX           = 317,
+	Visibility                               = 38,
+	EInterchangePropertyTracks_MAX           = 319,
 };
 
 // Enum InterchangeNodes.EInterchangeAnimationPayLoadType
@@ -397,6 +400,16 @@ enum class EInterchangeMeshCollision : uint8
 	EInterchangeMeshCollision_MAX            = 256,
 };
 
+// Enum InterchangeNodes.EInterchangeMotionVectorsHandling
+// NumValues: 0x0004
+enum class EInterchangeMotionVectorsHandling : uint8
+{
+	NoMotionVectors                          = 0,
+	ImportVelocitiesAsMotionVectors          = 1,
+	CalculateMotionVectorsDuringImport       = 2,
+	EInterchangeMotionVectorsHandling_MAX    = 3,
+};
+
 // Enum InterchangeNodes.EInterchangeTextureWrapMode
 // NumValues: 0x0004
 enum class EInterchangeTextureWrapMode : uint8
@@ -440,15 +453,27 @@ enum class EInterchangeTextureColorSpace : uint8
 	TCS_MAX                                  = 100,
 };
 
-// Enum InterchangeNodes.EInterchangeMeshPayLoadType
+// Enum InterchangeNodes.EVolumeGridElementType
 // NumValues: 0x0005
+enum class EVolumeGridElementType : uint8
+{
+	Unknown                                  = 0,
+	Half                                     = 1,
+	Float                                    = 2,
+	Double                                   = 3,
+	EVolumeGridElementType_MAX               = 4,
+};
+
+// Enum InterchangeNodes.EInterchangeMeshPayLoadType
+// NumValues: 0x0006
 enum class EInterchangeMeshPayLoadType : uint8
 {
 	NONE                                     = 0,
 	STATIC                                   = 1,
 	SKELETAL                                 = 2,
 	MORPHTARGET                              = 3,
-	EInterchangeMeshPayLoadType_MAX          = 4,
+	ANIMATED                                 = 4,
+	EInterchangeMeshPayLoadType_MAX          = 5,
 };
 
 // ScriptStruct InterchangeNodes.InterchangeAnimationPayLoadKey
@@ -460,10 +485,7 @@ public:
 	EInterchangeAnimationPayLoadType              Type;                                              // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FInterchangeAnimationPayLoadKey) == 0x000008, "Wrong alignment on FInterchangeAnimationPayLoadKey");
-static_assert(sizeof(FInterchangeAnimationPayLoadKey) == 0x000018, "Wrong size on FInterchangeAnimationPayLoadKey");
-static_assert(offsetof(FInterchangeAnimationPayLoadKey, UniqueID) == 0x000000, "Member 'FInterchangeAnimationPayLoadKey::UniqueID' has a wrong offset!");
-static_assert(offsetof(FInterchangeAnimationPayLoadKey, Type) == 0x000010, "Member 'FInterchangeAnimationPayLoadKey::Type' has a wrong offset!");
+DUMPER7_ASSERTS_FInterchangeAnimationPayLoadKey;
 
 // ScriptStruct InterchangeNodes.InterchangeMeshPayLoadKey
 // 0x0018 (0x0018 - 0x0000)
@@ -472,12 +494,10 @@ struct FInterchangeMeshPayLoadKey final
 public:
 	class FString                                 UniqueID;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EInterchangeMeshPayLoadType                   Type;                                              // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         FrameNumber;                                       // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FInterchangeMeshPayLoadKey) == 0x000008, "Wrong alignment on FInterchangeMeshPayLoadKey");
-static_assert(sizeof(FInterchangeMeshPayLoadKey) == 0x000018, "Wrong size on FInterchangeMeshPayLoadKey");
-static_assert(offsetof(FInterchangeMeshPayLoadKey, UniqueID) == 0x000000, "Member 'FInterchangeMeshPayLoadKey::UniqueID' has a wrong offset!");
-static_assert(offsetof(FInterchangeMeshPayLoadKey, Type) == 0x000010, "Member 'FInterchangeMeshPayLoadKey::Type' has a wrong offset!");
+DUMPER7_ASSERTS_FInterchangeMeshPayLoadKey;
 
 }
 

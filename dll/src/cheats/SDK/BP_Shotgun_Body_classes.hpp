@@ -54,27 +54,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Shotgun_Body_C">();
+		BP_STATIC_CLASS_IMPL("BP_Shotgun_Body_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Shotgun_Body_C")
 	}
 	static class ABP_Shotgun_Body_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Shotgun_Body_C>();
 	}
 };
-static_assert(alignof(ABP_Shotgun_Body_C) == 0x000008, "Wrong alignment on ABP_Shotgun_Body_C");
-static_assert(sizeof(ABP_Shotgun_Body_C) == 0x0003F0, "Wrong size on ABP_Shotgun_Body_C");
-static_assert(offsetof(ABP_Shotgun_Body_C, UberGraphFrame) == 0x000390, "Member 'ABP_Shotgun_Body_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_Body_C, RNS_Shotgun_Core_01) == 0x000398, "Member 'ABP_Shotgun_Body_C::RNS_Shotgun_Core_01' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_Body_C, RNS_Shotgun_BackAttachment_01) == 0x0003A0, "Member 'ABP_Shotgun_Body_C::RNS_Shotgun_BackAttachment_01' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_Body_C, AttachmentSlot) == 0x0003A8, "Member 'ABP_Shotgun_Body_C::AttachmentSlot' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_Body_C, ReloadTimeline_Intensity_AF3DBE62486805C12031CE95A5699AF5) == 0x0003B0, "Member 'ABP_Shotgun_Body_C::ReloadTimeline_Intensity_AF3DBE62486805C12031CE95A5699AF5' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_Body_C, ReloadTimeline__Direction_AF3DBE62486805C12031CE95A5699AF5) == 0x0003B4, "Member 'ABP_Shotgun_Body_C::ReloadTimeline__Direction_AF3DBE62486805C12031CE95A5699AF5' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_Body_C, ReloadTimeline) == 0x0003B8, "Member 'ABP_Shotgun_Body_C::ReloadTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_Body_C, CoreDynamicMaterial) == 0x0003C0, "Member 'ABP_Shotgun_Body_C::CoreDynamicMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_Body_C, DynamicMaterialEmissiveName) == 0x0003C8, "Member 'ABP_Shotgun_Body_C::DynamicMaterialEmissiveName' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_Body_C, DefaultCoreEmissiveStr) == 0x0003D0, "Member 'ABP_Shotgun_Body_C::DefaultCoreEmissiveStr' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_Body_C, SpawnedCosmetics) == 0x0003D8, "Member 'ABP_Shotgun_Body_C::SpawnedCosmetics' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_Body_C, PumpActionSFX) == 0x0003E8, "Member 'ABP_Shotgun_Body_C::PumpActionSFX' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Shotgun_Body_C;
 
 }
 

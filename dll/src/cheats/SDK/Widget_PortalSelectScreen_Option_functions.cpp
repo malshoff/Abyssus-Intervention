@@ -17,25 +17,135 @@
 namespace SDK
 {
 
-// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_PortalSelectScreen_Option_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UWidget_PortalSelectScreen_Option_C::BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "Tick");
+		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
 
-	Params::Widget_PortalSelectScreen_Option_C_Tick Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
+
+// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_PortalSelectScreen_Option_C::BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_PortalSelectScreen_Option_C::BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_PortalSelectScreen_Option_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.ExecuteUbergraph_Widget_PortalSelectScreen_Option
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_PortalSelectScreen_Option_C::ExecuteUbergraph_Widget_PortalSelectScreen_Option(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "ExecuteUbergraph_Widget_PortalSelectScreen_Option");
+
+	Params::Widget_PortalSelectScreen_Option_C_ExecuteUbergraph_Widget_PortalSelectScreen_Option Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.Finished_28CA7F7E4C0E0AF0BAD3B59378F37F8E
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_PortalSelectScreen_Option_C::Finished_28CA7F7E4C0E0AF0BAD3B59378F37F8E()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "Finished_28CA7F7E4C0E0AF0BAD3B59378F37F8E");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.Get Description
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText*                            Description                                            (Parm, OutParm)
+
+void UWidget_PortalSelectScreen_Option_C::Get_Description(class FText* Description)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "Get Description");
+
+	Params::Widget_PortalSelectScreen_Option_C_Get_Description Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Description != nullptr)
+		*Description = std::move(Parms.Description);
+}
+
+
+// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.GetExtraDescription
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText*                            Result                                                 (Parm, OutParm)
+
+void UWidget_PortalSelectScreen_Option_C::GetExtraDescription(class FText* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "GetExtraDescription");
+
+	Params::Widget_PortalSelectScreen_Option_C_GetExtraDescription Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
 }
 
 
@@ -64,135 +174,25 @@ struct FEventReply UWidget_PortalSelectScreen_Option_C::OnMouseMove(const struct
 }
 
 
-// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.GetExtraDescription
-// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText*                            Result                                                 (Parm, OutParm)
-
-void UWidget_PortalSelectScreen_Option_C::GetExtraDescription(class FText* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "GetExtraDescription");
-
-	Params::Widget_PortalSelectScreen_Option_C_GetExtraDescription Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
-}
-
-
-// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.Get Description
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText*                            Description                                            (Parm, OutParm)
-
-void UWidget_PortalSelectScreen_Option_C::Get_Description(class FText* Description)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "Get Description");
-
-	Params::Widget_PortalSelectScreen_Option_C_Get_Description Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Description != nullptr)
-		*Description = std::move(Parms.Description);
-}
-
-
-// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.Finished_28CA7F7E4C0E0AF0BAD3B59378F37F8E
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_PortalSelectScreen_Option_C::Finished_28CA7F7E4C0E0AF0BAD3B59378F37F8E()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "Finished_28CA7F7E4C0E0AF0BAD3B59378F37F8E");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.ExecuteUbergraph_Widget_PortalSelectScreen_Option
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_PortalSelectScreen_Option_C::ExecuteUbergraph_Widget_PortalSelectScreen_Option(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "ExecuteUbergraph_Widget_PortalSelectScreen_Option");
-
-	Params::Widget_PortalSelectScreen_Option_C_ExecuteUbergraph_Widget_PortalSelectScreen_Option Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.Construct
+// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_PortalSelectScreen_Option_C::Construct()
+void UWidget_PortalSelectScreen_Option_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "Construct");
+		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "Tick");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::Widget_PortalSelectScreen_Option_C_Tick Parms{};
 
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
 
-// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWidget_PortalSelectScreen_Option_C::BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWidget_PortalSelectScreen_Option_C::BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_PortalSelectScreen_Option.Widget_PortalSelectScreen_Option_C.BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWidget_PortalSelectScreen_Option_C::BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PortalSelectScreen_Option_C", "BndEvt__Widget_PortalSelectScreen_Option_Button_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

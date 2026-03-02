@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "RGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -20,7 +20,7 @@ namespace SDK::Params
 {
 
 // Function Widget_HitReaction.Widget_HitReaction_C.CheckLowHealth
-// 0x0040 (0x0040 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct Widget_HitReaction_C_CheckLowHealth final
 {
 public:
@@ -36,27 +36,13 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_MapRangeClamped_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsAnimationPlaying_ReturnValue;           // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x002C(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_IsAnimationPlaying_ReturnValue;           // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HitReaction_C_CheckLowHealth) == 0x000008, "Wrong alignment on Widget_HitReaction_C_CheckLowHealth");
-static_assert(sizeof(Widget_HitReaction_C_CheckLowHealth) == 0x000040, "Wrong size on Widget_HitReaction_C_CheckLowHealth");
-static_assert(offsetof(Widget_HitReaction_C_CheckLowHealth, MissingHealthPercentage) == 0x000000, "Member 'Widget_HitReaction_C_CheckLowHealth::MissingHealthPercentage' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_CheckLowHealth, bGainedHealth) == 0x000008, "Member 'Widget_HitReaction_C_CheckLowHealth::bGainedHealth' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_CheckLowHealth, Temp_bool_Variable) == 0x000009, "Member 'Widget_HitReaction_C_CheckLowHealth::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_CheckLowHealth, Temp_byte_Variable) == 0x00000A, "Member 'Widget_HitReaction_C_CheckLowHealth::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_CheckLowHealth, Temp_byte_Variable_1) == 0x00000B, "Member 'Widget_HitReaction_C_CheckLowHealth::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_CheckLowHealth, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x00000C, "Member 'Widget_HitReaction_C_CheckLowHealth::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_CheckLowHealth, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000010, "Member 'Widget_HitReaction_C_CheckLowHealth::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_CheckLowHealth, K2Node_Select_Default) == 0x000018, "Member 'Widget_HitReaction_C_CheckLowHealth::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_CheckLowHealth, CallFunc_MapRangeClamped_ReturnValue) == 0x000020, "Member 'Widget_HitReaction_C_CheckLowHealth::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_CheckLowHealth, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000028, "Member 'Widget_HitReaction_C_CheckLowHealth::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_CheckLowHealth, CallFunc_PlayAnimation_ReturnValue) == 0x000030, "Member 'Widget_HitReaction_C_CheckLowHealth::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_CheckLowHealth, CallFunc_IsAnimationPlaying_ReturnValue) == 0x000038, "Member 'Widget_HitReaction_C_CheckLowHealth::CallFunc_IsAnimationPlaying_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_CheckLowHealth, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x00003C, "Member 'Widget_HitReaction_C_CheckLowHealth::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HitReaction_C_CheckLowHealth;
 
 // Function Widget_HitReaction.Widget_HitReaction_C.ExecuteUbergraph_Widget_HitReaction
 // 0x0198 (0x0198 - 0x0000)
@@ -102,42 +88,7 @@ public:
 	double                                        K2Node_MathExpression_Max_ImplicitCast;            // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_MathExpression_Current_ImplicitCast;        // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction) == 0x000008, "Wrong alignment on Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction");
-static_assert(sizeof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction) == 0x000198, "Wrong size on Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, EntryPoint) == 0x000000, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, K2Node_CreateDelegate_OutputDelegate_1) == 0x000014, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000028, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_GetHealthComponent_ReturnValue) == 0x000030, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_GetHealthComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_GetOwningPlayerPawn_ReturnValue_1) == 0x000038, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_GetOwningPlayerPawn_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_GetMissingHealthPercentage_ReturnValue) == 0x000040, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_GetMissingHealthPercentage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000048, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_GetHealthComponent_ReturnValue_1) == 0x000058, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_GetHealthComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, K2Node_CreateDelegate_OutputDelegate_2) == 0x000060, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_IsValid_ReturnValue) == 0x000070, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, K2Node_CreateDelegate_OutputDelegate_3) == 0x000074, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, K2Node_Event_MyGeometry) == 0x000084, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, K2Node_Event_InDeltaTime) == 0x0000BC, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_GetOwningPlayer_ReturnValue) == 0x0000C0, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_K2_GetPawn_ReturnValue) == 0x0000C8, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_GetDynamicMaterial_ReturnValue) == 0x0000D0, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_K2_GetActorLocation_ReturnValue) == 0x0000D8, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_GetPlayerCameraManager_ReturnValue) == 0x0000F0, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_GetPlayerCameraManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x0000F8, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_GetCameraRotation_ReturnValue) == 0x000108, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_GetCameraRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_GetForwardVector_ReturnValue) == 0x000120, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_Conv_VectorToLinearColor_ReturnValue_1) == 0x000138, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_Conv_VectorToLinearColor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, K2Node_CreateDelegate_OutputDelegate_4) == 0x000148, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, K2Node_CustomEvent_Component) == 0x000158, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::K2Node_CustomEvent_Component' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, K2Node_CustomEvent_MaximumHealth) == 0x000160, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::K2Node_CustomEvent_MaximumHealth' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_GetCurrentHealth_ReturnValue) == 0x000164, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_GetCurrentHealth_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, K2Node_MathExpression_ReturnValue) == 0x000168, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::K2Node_MathExpression_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x000170, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_Divide_DoubleDouble_B_ImplicitCast) == 0x000178, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_Divide_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, CallFunc_CheckLowHealth_MissingHealthPercentage_ImplicitCast) == 0x000180, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::CallFunc_CheckLowHealth_MissingHealthPercentage_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, K2Node_MathExpression_Max_ImplicitCast) == 0x000188, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::K2Node_MathExpression_Max_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction, K2Node_MathExpression_Current_ImplicitCast) == 0x000190, "Member 'Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction::K2Node_MathExpression_Current_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HitReaction_C_ExecuteUbergraph_Widget_HitReaction;
 
 // Function Widget_HitReaction.Widget_HitReaction_C.GetShotFromDirection
 // 0x0090 (0x0090 - 0x0000)
@@ -154,16 +105,7 @@ public:
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HitReaction_C_GetShotFromDirection) == 0x000008, "Wrong alignment on Widget_HitReaction_C_GetShotFromDirection");
-static_assert(sizeof(Widget_HitReaction_C_GetShotFromDirection) == 0x000090, "Wrong size on Widget_HitReaction_C_GetShotFromDirection");
-static_assert(offsetof(Widget_HitReaction_C_GetShotFromDirection, Instigator) == 0x000000, "Member 'Widget_HitReaction_C_GetShotFromDirection::Instigator' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_GetShotFromDirection, Direction) == 0x000008, "Member 'Widget_HitReaction_C_GetShotFromDirection::Direction' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_GetShotFromDirection, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000020, "Member 'Widget_HitReaction_C_GetShotFromDirection::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_GetShotFromDirection, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'Widget_HitReaction_C_GetShotFromDirection::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_GetShotFromDirection, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000030, "Member 'Widget_HitReaction_C_GetShotFromDirection::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_GetShotFromDirection, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000048, "Member 'Widget_HitReaction_C_GetShotFromDirection::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_GetShotFromDirection, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000060, "Member 'Widget_HitReaction_C_GetShotFromDirection::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_GetShotFromDirection, CallFunc_Normal_ReturnValue) == 0x000078, "Member 'Widget_HitReaction_C_GetShotFromDirection::CallFunc_Normal_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HitReaction_C_GetShotFromDirection;
 
 // Function Widget_HitReaction.Widget_HitReaction_C.LocationToScreenAngle
 // 0x0140 (0x0140 - 0x0000)
@@ -189,120 +131,66 @@ public:
 	double                                        CallFunc_DegAtan2_ReturnValue;                     // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HitReaction_C_LocationToScreenAngle) == 0x000010, "Wrong alignment on Widget_HitReaction_C_LocationToScreenAngle");
-static_assert(sizeof(Widget_HitReaction_C_LocationToScreenAngle) == 0x000140, "Wrong size on Widget_HitReaction_C_LocationToScreenAngle");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, A) == 0x000000, "Member 'Widget_HitReaction_C_LocationToScreenAngle::A' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, ReturnValue) == 0x000018, "Member 'Widget_HitReaction_C_LocationToScreenAngle::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_GetPlayerController_ReturnValue) == 0x000020, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000028, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_K2_GetComponentToWorld_ReturnValue) == 0x000040, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_K2_GetComponentToWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_Subtract_VectorVector_ReturnValue) == 0x0000A0, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_InverseTransformDirection_ReturnValue) == 0x0000B8, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_InverseTransformDirection_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_BreakVector_X) == 0x0000D0, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_BreakVector_Y) == 0x0000D8, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_BreakVector_Z) == 0x0000E0, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000E8, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000F0, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_MakeVector2D_ReturnValue) == 0x0000F8, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_Normal2D_ReturnValue) == 0x000108, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_Normal2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_BreakVector2D_X) == 0x000118, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_BreakVector2D_Y) == 0x000120, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_DegAtan2_ReturnValue) == 0x000128, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_DegAtan2_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_LocationToScreenAngle, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000130, "Member 'Widget_HitReaction_C_LocationToScreenAngle::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HitReaction_C_LocationToScreenAngle;
 
 // Function Widget_HitReaction.Widget_HitReaction_C.OnDamageTaken
-// 0x01D0 (0x01D0 - 0x0000)
+// 0x0310 (0x0310 - 0x0000)
 struct Widget_HitReaction_C_OnDamageTaken final
 {
 public:
 	class URHealthComponent*                      Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEvent;                                       // 0x0008(0x00C0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	double                                        ScreenAngle;                                       // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetMaxHealth_ReturnValue;                 // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x00E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X;                            // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LocationToScreenAngle_ReturnValue;        // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0168(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LocationToScreenAngle_ReturnValue_1;      // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_B_ImplicitCast;       // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast_1;     // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast_1; // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     DamageEvent;                                       // 0x0008(0x01F0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	double                                        ScreenAngle;                                       // 0x01F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0200(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_211[0x3];                                      // 0x0211(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetMaxHealth_ReturnValue;                 // 0x0214(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X;                            // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue_1;              // 0x0258(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0268(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0288(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_LocationToScreenAngle_ReturnValue;        // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x02A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_LocationToScreenAngle_ReturnValue_1;      // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x02E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x02E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_B_ImplicitCast;       // 0x02F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x02F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2FC[0x4];                                      // 0x02FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast_1;     // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast_1; // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HitReaction_C_OnDamageTaken) == 0x000008, "Wrong alignment on Widget_HitReaction_C_OnDamageTaken");
-static_assert(sizeof(Widget_HitReaction_C_OnDamageTaken) == 0x0001D0, "Wrong size on Widget_HitReaction_C_OnDamageTaken");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, Component) == 0x000000, "Member 'Widget_HitReaction_C_OnDamageTaken::Component' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, DamageEvent) == 0x000008, "Member 'Widget_HitReaction_C_OnDamageTaken::DamageEvent' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, ScreenAngle) == 0x0000C8, "Member 'Widget_HitReaction_C_OnDamageTaken::ScreenAngle' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_PlayAnimation_ReturnValue) == 0x0000D0, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0000D8, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_GetMaxHealth_ReturnValue) == 0x0000DC, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_GetMaxHealth_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000E0, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x0000E8, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000100, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_BreakVector_X) == 0x000108, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_BreakVector_Y) == 0x000110, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_BreakVector_Z) == 0x000118, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_PlayAnimation_ReturnValue_1) == 0x000120, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_MakeVector_ReturnValue) == 0x000128, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_IsValid_ReturnValue) == 0x000140, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000148, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_LocationToScreenAngle_ReturnValue) == 0x000160, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_LocationToScreenAngle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000168, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_LocationToScreenAngle_ReturnValue_1) == 0x000180, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_LocationToScreenAngle_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000188, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000190, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_FClamp_ReturnValue) == 0x000198, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x0001A0, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x0001A8, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_Divide_DoubleDouble_B_ImplicitCast) == 0x0001B0, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_Divide_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x0001B8, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_Divide_DoubleDouble_A_ImplicitCast_1) == 0x0001C0, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_Divide_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTaken, CallFunc_SetScalarParameterValue_Value_ImplicitCast_1) == 0x0001C8, "Member 'Widget_HitReaction_C_OnDamageTaken::CallFunc_SetScalarParameterValue_Value_ImplicitCast_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HitReaction_C_OnDamageTaken;
 
 // Function Widget_HitReaction.Widget_HitReaction_C.OnDamageTakenTemp
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct Widget_HitReaction_C_OnDamageTakenTemp final
 {
 public:
 	class URHealthComponent*                      Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEvent;                                       // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEvent;                                       // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_HitReaction_C_OnDamageTakenTemp) == 0x000008, "Wrong alignment on Widget_HitReaction_C_OnDamageTakenTemp");
-static_assert(sizeof(Widget_HitReaction_C_OnDamageTakenTemp) == 0x0000C8, "Wrong size on Widget_HitReaction_C_OnDamageTakenTemp");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTakenTemp, Component) == 0x000000, "Member 'Widget_HitReaction_C_OnDamageTakenTemp::Component' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnDamageTakenTemp, DamageEvent) == 0x000008, "Member 'Widget_HitReaction_C_OnDamageTakenTemp::DamageEvent' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HitReaction_C_OnDamageTakenTemp;
 
 // Function Widget_HitReaction.Widget_HitReaction_C.OnHealthDepleted
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct Widget_HitReaction_C_OnHealthDepleted final
 {
 public:
 	class URHealthComponent*                      Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_HitReaction_C_OnHealthDepleted) == 0x000008, "Wrong alignment on Widget_HitReaction_C_OnHealthDepleted");
-static_assert(sizeof(Widget_HitReaction_C_OnHealthDepleted) == 0x0000C8, "Wrong size on Widget_HitReaction_C_OnHealthDepleted");
-static_assert(offsetof(Widget_HitReaction_C_OnHealthDepleted, Component) == 0x000000, "Member 'Widget_HitReaction_C_OnHealthDepleted::Component' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnHealthDepleted, DamageEventData) == 0x000008, "Member 'Widget_HitReaction_C_OnHealthDepleted::DamageEventData' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HitReaction_C_OnHealthDepleted;
 
 // Function Widget_HitReaction.Widget_HitReaction_C.OnHealthRegained
 // 0x0078 (0x0078 - 0x0000)
@@ -321,18 +209,7 @@ public:
 	double                                        K2Node_MathExpression_Current_ImplicitCast;        // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_MathExpression_Max_ImplicitCast;            // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HitReaction_C_OnHealthRegained) == 0x000008, "Wrong alignment on Widget_HitReaction_C_OnHealthRegained");
-static_assert(sizeof(Widget_HitReaction_C_OnHealthRegained) == 0x000078, "Wrong size on Widget_HitReaction_C_OnHealthRegained");
-static_assert(offsetof(Widget_HitReaction_C_OnHealthRegained, Component) == 0x000000, "Member 'Widget_HitReaction_C_OnHealthRegained::Component' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnHealthRegained, currentHealth) == 0x000008, "Member 'Widget_HitReaction_C_OnHealthRegained::currentHealth' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnHealthRegained, healthDelta) == 0x00000C, "Member 'Widget_HitReaction_C_OnHealthRegained::healthDelta' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnHealthRegained, HealEvent) == 0x000010, "Member 'Widget_HitReaction_C_OnHealthRegained::HealEvent' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnHealthRegained, CallFunc_GetMaxHealth_ReturnValue) == 0x000048, "Member 'Widget_HitReaction_C_OnHealthRegained::CallFunc_GetMaxHealth_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnHealthRegained, K2Node_MathExpression_ReturnValue) == 0x000050, "Member 'Widget_HitReaction_C_OnHealthRegained::K2Node_MathExpression_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnHealthRegained, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x000058, "Member 'Widget_HitReaction_C_OnHealthRegained::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnHealthRegained, CallFunc_Divide_DoubleDouble_B_ImplicitCast) == 0x000060, "Member 'Widget_HitReaction_C_OnHealthRegained::CallFunc_Divide_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnHealthRegained, K2Node_MathExpression_Current_ImplicitCast) == 0x000068, "Member 'Widget_HitReaction_C_OnHealthRegained::K2Node_MathExpression_Current_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnHealthRegained, K2Node_MathExpression_Max_ImplicitCast) == 0x000070, "Member 'Widget_HitReaction_C_OnHealthRegained::K2Node_MathExpression_Max_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HitReaction_C_OnHealthRegained;
 
 // Function Widget_HitReaction.Widget_HitReaction_C.OnMaximumHealthChanged
 // 0x0010 (0x0010 - 0x0000)
@@ -342,10 +219,7 @@ public:
 	class URHealthComponent*                      Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	float                                         MaximumHealth;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HitReaction_C_OnMaximumHealthChanged) == 0x000008, "Wrong alignment on Widget_HitReaction_C_OnMaximumHealthChanged");
-static_assert(sizeof(Widget_HitReaction_C_OnMaximumHealthChanged) == 0x000010, "Wrong size on Widget_HitReaction_C_OnMaximumHealthChanged");
-static_assert(offsetof(Widget_HitReaction_C_OnMaximumHealthChanged, Component) == 0x000000, "Member 'Widget_HitReaction_C_OnMaximumHealthChanged::Component' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_OnMaximumHealthChanged, MaximumHealth) == 0x000008, "Member 'Widget_HitReaction_C_OnMaximumHealthChanged::MaximumHealth' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HitReaction_C_OnMaximumHealthChanged;
 
 // Function Widget_HitReaction.Widget_HitReaction_C.OnPlayerPawnRespawned
 // 0x0008 (0x0008 - 0x0000)
@@ -354,9 +228,7 @@ struct Widget_HitReaction_C_OnPlayerPawnRespawned final
 public:
 	class ARPlayerPawn*                           Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HitReaction_C_OnPlayerPawnRespawned) == 0x000008, "Wrong alignment on Widget_HitReaction_C_OnPlayerPawnRespawned");
-static_assert(sizeof(Widget_HitReaction_C_OnPlayerPawnRespawned) == 0x000008, "Wrong size on Widget_HitReaction_C_OnPlayerPawnRespawned");
-static_assert(offsetof(Widget_HitReaction_C_OnPlayerPawnRespawned, Player) == 0x000000, "Member 'Widget_HitReaction_C_OnPlayerPawnRespawned::Player' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HitReaction_C_OnPlayerPawnRespawned;
 
 // Function Widget_HitReaction.Widget_HitReaction_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -366,10 +238,7 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_HitReaction_C_Tick) == 0x000004, "Wrong alignment on Widget_HitReaction_C_Tick");
-static_assert(sizeof(Widget_HitReaction_C_Tick) == 0x00003C, "Wrong size on Widget_HitReaction_C_Tick");
-static_assert(offsetof(Widget_HitReaction_C_Tick, MyGeometry) == 0x000000, "Member 'Widget_HitReaction_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_HitReaction_C_Tick, InDeltaTime) == 0x000038, "Member 'Widget_HitReaction_C_Tick::InDeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_HitReaction_C_Tick;
 
 }
 

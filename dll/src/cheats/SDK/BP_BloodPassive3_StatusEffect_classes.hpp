@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BloodPassive3_StatusEffect.BP_BloodPassive3_StatusEffect_C
-// 0x0010 (0x04E8 - 0x04D8)
+// 0x0010 (0x04F0 - 0x04E0)
 class UBP_BloodPassive3_StatusEffect_C final : public URStatusEffectAilmentGScript
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FTimerHandle                           Timer;                                             // 0x04E0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FTimerHandle                           Timer;                                             // 0x04E8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void DrainRestoreHealth(double DamageDone, class ARPawnBase* DamageCauser);
@@ -34,17 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BloodPassive3_StatusEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_BloodPassive3_StatusEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BloodPassive3_StatusEffect_C")
 	}
 	static class UBP_BloodPassive3_StatusEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_BloodPassive3_StatusEffect_C>();
 	}
 };
-static_assert(alignof(UBP_BloodPassive3_StatusEffect_C) == 0x000008, "Wrong alignment on UBP_BloodPassive3_StatusEffect_C");
-static_assert(sizeof(UBP_BloodPassive3_StatusEffect_C) == 0x0004E8, "Wrong size on UBP_BloodPassive3_StatusEffect_C");
-static_assert(offsetof(UBP_BloodPassive3_StatusEffect_C, UberGraphFrame) == 0x0004D8, "Member 'UBP_BloodPassive3_StatusEffect_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_BloodPassive3_StatusEffect_C, Timer) == 0x0004E0, "Member 'UBP_BloodPassive3_StatusEffect_C::Timer' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_BloodPassive3_StatusEffect_C;
 
 }
 

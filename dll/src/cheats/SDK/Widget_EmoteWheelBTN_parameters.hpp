@@ -10,62 +10,22 @@
 
 #include "Basic.hpp"
 
-#include "RGame_structs.hpp"
-#include "GameplayTags_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.SetHighlighted
-// 0x0020 (0x0020 - 0x0000)
-struct Widget_EmoteWheelBTN_C_SetHighlighted final
+// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.ExecuteUbergraph_Widget_EmoteWheelBTN
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_EmoteWheelBTN_C_ExecuteUbergraph_Widget_EmoteWheelBTN final
 {
 public:
-	bool                                          NewHighlighted;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Reset;                                             // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PlaybackSpeed;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_EmoteWheelBTN_C_SetHighlighted) == 0x000008, "Wrong alignment on Widget_EmoteWheelBTN_C_SetHighlighted");
-static_assert(sizeof(Widget_EmoteWheelBTN_C_SetHighlighted) == 0x000020, "Wrong size on Widget_EmoteWheelBTN_C_SetHighlighted");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_SetHighlighted, NewHighlighted) == 0x000000, "Member 'Widget_EmoteWheelBTN_C_SetHighlighted::NewHighlighted' has a wrong offset!");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_SetHighlighted, Reset) == 0x000001, "Member 'Widget_EmoteWheelBTN_C_SetHighlighted::Reset' has a wrong offset!");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_SetHighlighted, PlaybackSpeed) == 0x000004, "Member 'Widget_EmoteWheelBTN_C_SetHighlighted::PlaybackSpeed' has a wrong offset!");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_SetHighlighted, CallFunc_Not_PreBool_ReturnValue) == 0x000008, "Member 'Widget_EmoteWheelBTN_C_SetHighlighted::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_SetHighlighted, CallFunc_PlayAnimationReverse_ReturnValue) == 0x000010, "Member 'Widget_EmoteWheelBTN_C_SetHighlighted::CallFunc_PlayAnimationReverse_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_SetHighlighted, CallFunc_PlayAnimationForward_ReturnValue) == 0x000018, "Member 'Widget_EmoteWheelBTN_C_SetHighlighted::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
-
-// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.SetEmoteFromPlayerData
-// 0x01A0 (0x01A0 - 0x0000)
-struct Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData final
-{
-public:
-	bool                                          CallFunc_IsGameplayTagValid_ReturnValue;           // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEmoteDataTableRow                     CallFunc_GetEmoteDataTableRowByTag_ReturnValue;    // 0x0010(0x0110)()
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller;      // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, struct FGameplayTag>              CallFunc_GetCurrentPlayerEmotes_ReturnValue;       // 0x0138(0x0050)()
-	struct FGameplayTag                           CallFunc_Map_Find_Value;                           // 0x0188(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData) == 0x000010, "Wrong alignment on Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData");
-static_assert(sizeof(Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData) == 0x0001A0, "Wrong size on Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData, CallFunc_IsGameplayTagValid_ReturnValue) == 0x000000, "Member 'Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData::CallFunc_IsGameplayTagValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData, CallFunc_GetEmoteDataTableRowByTag_ReturnValue) == 0x000010, "Member 'Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData::CallFunc_GetEmoteDataTableRowByTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData, CallFunc_GetOwningPlayer_ReturnValue) == 0x000120, "Member 'Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData, K2Node_DynamicCast_AsRGame_Player_Controller) == 0x000128, "Member 'Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData::K2Node_DynamicCast_AsRGame_Player_Controller' has a wrong offset!");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData, K2Node_DynamicCast_bSuccess) == 0x000130, "Member 'Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData, CallFunc_GetCurrentPlayerEmotes_ReturnValue) == 0x000138, "Member 'Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData::CallFunc_GetCurrentPlayerEmotes_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData, CallFunc_Map_Find_Value) == 0x000188, "Member 'Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData, CallFunc_Map_Find_ReturnValue) == 0x000190, "Member 'Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_EmoteWheelBTN_C_ExecuteUbergraph_Widget_EmoteWheelBTN;
 
 // Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -74,24 +34,38 @@ struct Widget_EmoteWheelBTN_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_EmoteWheelBTN_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_EmoteWheelBTN_C_PreConstruct");
-static_assert(sizeof(Widget_EmoteWheelBTN_C_PreConstruct) == 0x000001, "Wrong size on Widget_EmoteWheelBTN_C_PreConstruct");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_EmoteWheelBTN_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_EmoteWheelBTN_C_PreConstruct;
 
-// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.ExecuteUbergraph_Widget_EmoteWheelBTN
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_EmoteWheelBTN_C_ExecuteUbergraph_Widget_EmoteWheelBTN final
+// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.SetEmoteFromPlayerData
+// 0x0078 (0x0078 - 0x0000)
+struct Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGameplayTagValid_ReturnValue;           // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARGamePlayerController*                 K2Node_DynamicCast_AsRGame_Player_Controller;      // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, class URCosmeticPrimaryAsset*>    CallFunc_GetCurrentPlayerEmotes_ReturnValue;       // 0x0018(0x0050)()
+	class URCosmeticPrimaryAsset*                 CallFunc_Map_Find_Value;                           // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_EmoteWheelBTN_C_ExecuteUbergraph_Widget_EmoteWheelBTN) == 0x000004, "Wrong alignment on Widget_EmoteWheelBTN_C_ExecuteUbergraph_Widget_EmoteWheelBTN");
-static_assert(sizeof(Widget_EmoteWheelBTN_C_ExecuteUbergraph_Widget_EmoteWheelBTN) == 0x000008, "Wrong size on Widget_EmoteWheelBTN_C_ExecuteUbergraph_Widget_EmoteWheelBTN");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_ExecuteUbergraph_Widget_EmoteWheelBTN, EntryPoint) == 0x000000, "Member 'Widget_EmoteWheelBTN_C_ExecuteUbergraph_Widget_EmoteWheelBTN::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_ExecuteUbergraph_Widget_EmoteWheelBTN, CallFunc_IsGameplayTagValid_ReturnValue) == 0x000004, "Member 'Widget_EmoteWheelBTN_C_ExecuteUbergraph_Widget_EmoteWheelBTN::CallFunc_IsGameplayTagValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_EmoteWheelBTN_C_ExecuteUbergraph_Widget_EmoteWheelBTN, K2Node_Event_IsDesignTime) == 0x000005, "Member 'Widget_EmoteWheelBTN_C_ExecuteUbergraph_Widget_EmoteWheelBTN::K2Node_Event_IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_EmoteWheelBTN_C_SetEmoteFromPlayerData;
+
+// Function Widget_EmoteWheelBTN.Widget_EmoteWheelBTN_C.SetHighlighted
+// 0x002C (0x002C - 0x0000)
+struct Widget_EmoteWheelBTN_C_SetHighlighted final
+{
+public:
+	bool                                          NewHighlighted;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Reset;                                             // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PlaybackSpeed;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationReverse_ReturnValue;         // 0x000C(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue;         // 0x001C(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_EmoteWheelBTN_C_SetHighlighted;
 
 }
 

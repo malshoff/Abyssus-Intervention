@@ -31,17 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPCM_Syringe_Heal_C">();
+		BP_STATIC_CLASS_IMPL("BPCM_Syringe_Heal_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPCM_Syringe_Heal_C")
 	}
 	static class UBPCM_Syringe_Heal_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPCM_Syringe_Heal_C>();
 	}
 };
-static_assert(alignof(UBPCM_Syringe_Heal_C) == 0x000008, "Wrong alignment on UBPCM_Syringe_Heal_C");
-static_assert(sizeof(UBPCM_Syringe_Heal_C) == 0x0000D8, "Wrong size on UBPCM_Syringe_Heal_C");
-static_assert(offsetof(UBPCM_Syringe_Heal_C, MaterialInstance) == 0x000048, "Member 'UBPCM_Syringe_Heal_C::MaterialInstance' has a wrong offset!");
-static_assert(offsetof(UBPCM_Syringe_Heal_C, Curve) == 0x000050, "Member 'UBPCM_Syringe_Heal_C::Curve' has a wrong offset!");
+DUMPER7_ASSERTS_UBPCM_Syringe_Heal_C;
 
 }
 

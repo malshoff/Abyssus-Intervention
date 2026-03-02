@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function Widget_DungeonHUD.Widget_DungeonHUD_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_DungeonHUD_C::OnInitialized()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_DungeonHUD_C", "OnInitialized");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Widget_DungeonHUD.Widget_DungeonHUD_C.ExecuteUbergraph_Widget_DungeonHUD
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UWidget_DungeonHUD_C::ExecuteUbergraph_Widget_DungeonHUD(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_DungeonHUD.Widget_DungeonHUD_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_DungeonHUD_C::OnInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_DungeonHUD_C", "OnInitialized");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

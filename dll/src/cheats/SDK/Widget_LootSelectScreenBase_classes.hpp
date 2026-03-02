@@ -19,15 +19,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_LootSelectScreenBase.Widget_LootSelectScreenBase_C
-// 0x0040 (0x04C0 - 0x0480)
+// 0x0040 (0x0548 - 0x0508)
 class UWidget_LootSelectScreenBase_C : public URCommonLootSelectScreen
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0480(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TSoftClassPtr<class UClass>                   LootOptionWidgetClass;                             // 0x0488(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash)
-	EOrientation                                  OptionsOrientation;                                // 0x04B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B1[0x7];                                      // 0x04B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             PostLootSelectedSound;                             // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0508(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TSoftClassPtr<class UClass>                   LootOptionWidgetClass;                             // 0x0510(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash)
+	EOrientation                                  OptionsOrientation;                                // 0x0538(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_539[0x7];                                      // 0x0539(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             PostLootSelectedSound;                             // 0x0540(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -41,19 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_LootSelectScreenBase_C">();
+		BP_STATIC_CLASS_IMPL("Widget_LootSelectScreenBase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_LootSelectScreenBase_C")
 	}
 	static class UWidget_LootSelectScreenBase_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_LootSelectScreenBase_C>();
 	}
 };
-static_assert(alignof(UWidget_LootSelectScreenBase_C) == 0x000008, "Wrong alignment on UWidget_LootSelectScreenBase_C");
-static_assert(sizeof(UWidget_LootSelectScreenBase_C) == 0x0004C0, "Wrong size on UWidget_LootSelectScreenBase_C");
-static_assert(offsetof(UWidget_LootSelectScreenBase_C, UberGraphFrame) == 0x000480, "Member 'UWidget_LootSelectScreenBase_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_LootSelectScreenBase_C, LootOptionWidgetClass) == 0x000488, "Member 'UWidget_LootSelectScreenBase_C::LootOptionWidgetClass' has a wrong offset!");
-static_assert(offsetof(UWidget_LootSelectScreenBase_C, OptionsOrientation) == 0x0004B0, "Member 'UWidget_LootSelectScreenBase_C::OptionsOrientation' has a wrong offset!");
-static_assert(offsetof(UWidget_LootSelectScreenBase_C, PostLootSelectedSound) == 0x0004B8, "Member 'UWidget_LootSelectScreenBase_C::PostLootSelectedSound' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_LootSelectScreenBase_C;
 
 }
 

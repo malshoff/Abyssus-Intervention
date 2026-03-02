@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "AudioExtensions_structs.hpp"
-#include "SlateCore_structs.hpp"
 
 
 namespace SDK
@@ -59,7 +58,7 @@ enum class ECrosshairAlignmentOption : uint8
 };
 
 // Enum RGame.ECombatEventType
-// NumValues: 0x0008
+// NumValues: 0x0009
 enum class ECombatEventType : uint8
 {
 	Damage                                   = 0,
@@ -69,7 +68,8 @@ enum class ECombatEventType : uint8
 	SetBarrier                               = 4,
 	ReviveStarted                            = 5,
 	ReviveFinished                           = 6,
-	ECombatEventType_MAX                     = 7,
+	TeslaLightningOrbZapDamage               = 7,
+	ECombatEventType_MAX                     = 8,
 };
 
 // Enum RGame.EDashEndedReason
@@ -88,6 +88,26 @@ enum class EGamepadIconScheme : uint8
 	E_Generic                                = 0,
 	E_Playstation                            = 1,
 	E_MAX                                    = 2,
+};
+
+// Enum RGame.EAnnouncementFilterType
+// NumValues: 0x0005
+enum class EAnnouncementFilterType : uint8
+{
+	ChangelistEquals                         = 0,
+	ChangelistLesserThan                     = 1,
+	ChangelistGreaterThan                    = 2,
+	Platform                                 = 3,
+	EAnnouncementFilterType_MAX              = 4,
+};
+
+// Enum RGame.EAnnouncementType
+// NumValues: 0x0003
+enum class EAnnouncementType : uint8
+{
+	Info                                     = 0,
+	Warning                                  = 1,
+	EAnnouncementType_MAX                    = 2,
 };
 
 // Enum RGame.EFloatWeaponStat
@@ -506,6 +526,16 @@ enum class ELoadoutSlot : uint8
 	ELoadoutSlot_MAX                         = 8,
 };
 
+// Enum RGame.EVoicePitch
+// NumValues: 0x0004
+enum class EVoicePitch : uint8
+{
+	Low                                      = 0,
+	Mid                                      = 1,
+	High                                     = 2,
+	EVoicePitch_MAX                          = 3,
+};
+
 // Enum RGame.EMutatorType
 // NumValues: 0x0004
 enum class EMutatorType : uint8
@@ -613,7 +643,7 @@ enum class EWeaponDropRarity : uint8
 };
 
 // Enum RGame.EDamageSource
-// NumValues: 0x001C
+// NumValues: 0x001D
 enum class EDamageSource : uint8
 {
 	E_DamageSource_First                     = 0,
@@ -642,6 +672,7 @@ enum class EDamageSource : uint8
 	E_DamageSource_Indirect                  = 8388608,
 	E_DamageSource_Windburst                 = 16777216,
 	E_DamageSource_Defender                  = 33554432,
+	E_DamageSource_AncientSpear              = 67108864,
 	E_DamageSource_Last                      = 1073741824,
 	E_DamageSource_MAX                       = 1073741825,
 };
@@ -733,7 +764,7 @@ enum class EPlinthRewardType : uint8
 };
 
 // Enum RGame.ERFloatingTextType
-// NumValues: 0x0019
+// NumValues: 0x001A
 enum class ERFloatingTextType : uint8
 {
 	E_Default                                = 0,
@@ -760,17 +791,19 @@ enum class ERFloatingTextType : uint8
 	E_SpiritOrb                              = 21,
 	E_Defender                               = 22,
 	E_Drain                                  = 23,
-	E_MAX                                    = 24,
+	E_True                                   = 24,
+	E_MAX                                    = 25,
 };
 
 // Enum RGame.ERSavedGameResult
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class ERSavedGameResult : uint8
 {
 	E_SUCCESS                                = 0,
 	E_FAILURE                                = 1,
 	E_OVERWRITE                              = 2,
-	E_MAX                                    = 3,
+	E_INPROGRESS                             = 3,
+	E_MAX                                    = 4,
 };
 
 // Enum RGame.ERNotificationSeverity
@@ -881,50 +914,33 @@ enum class ERDLCRequirementType : uint8
 	E_MAX                                    = 2,
 };
 
-// Enum RGame.EVoicePitch
-// NumValues: 0x0004
-enum class EVoicePitch : uint8
+// Enum RGame.ERPlatformType
+// NumValues: 0x0005
+enum class ERPlatformType : uint8
 {
-	Low                                      = 0,
-	Mid                                      = 1,
-	High                                     = 2,
-	EVoicePitch_MAX                          = 3,
+	E_Windows                                = 0,
+	E_Playstation                            = 1,
+	E_Xbox                                   = 2,
+	E_None                                   = 3,
+	E_MAX                                    = 4,
 };
 
-// ScriptStruct RGame.REnemyTableRow
-// 0x0040 (0x0048 - 0x0008)
-struct FREnemyTableRow final : public FTableRowBase
+// ScriptStruct RGame.RLightningDamageCombatEventData
+// 0x0020 (0x0020 - 0x0000)
+struct FRLightningDamageCombatEventData final
 {
 public:
-	TSoftClassPtr<class UClass>                   SoftEnemyClass;                                    // 0x0008(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   EnemyName;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	class FName                                   EnemyId;                                           // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 InitialTarget;                                     // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanFork;                                          // 0x0008(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CritBonusBounceChance;                             // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanTargetSame;                                    // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RemainingLightningBounces;                         // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TotalBounces;                                      // 0x0018(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GuaranteedCritOnBounceLeftIndex;                   // 0x001C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FREnemyTableRow) == 0x000008, "Wrong alignment on FREnemyTableRow");
-static_assert(sizeof(FREnemyTableRow) == 0x000048, "Wrong size on FREnemyTableRow");
-static_assert(offsetof(FREnemyTableRow, SoftEnemyClass) == 0x000008, "Member 'FREnemyTableRow::SoftEnemyClass' has a wrong offset!");
-static_assert(offsetof(FREnemyTableRow, EnemyName) == 0x000030, "Member 'FREnemyTableRow::EnemyName' has a wrong offset!");
-static_assert(offsetof(FREnemyTableRow, EnemyId) == 0x000040, "Member 'FREnemyTableRow::EnemyId' has a wrong offset!");
-
-// ScriptStruct RGame.RSpawnableEnemyEntry
-// 0x0048 (0x0048 - 0x0000)
-struct FRSpawnableEnemyEntry final
-{
-public:
-	TSoftClassPtr<class UClass>                   SoftEnemyClass;                                    // 0x0000(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpawnWeight;                                       // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              DifficultyRequirement;                             // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxTotalLimit;                                     // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxAliveLimit;                                     // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRSpawnableEnemyEntry) == 0x000008, "Wrong alignment on FRSpawnableEnemyEntry");
-static_assert(sizeof(FRSpawnableEnemyEntry) == 0x000048, "Wrong size on FRSpawnableEnemyEntry");
-static_assert(offsetof(FRSpawnableEnemyEntry, SoftEnemyClass) == 0x000000, "Member 'FRSpawnableEnemyEntry::SoftEnemyClass' has a wrong offset!");
-static_assert(offsetof(FRSpawnableEnemyEntry, SpawnWeight) == 0x000028, "Member 'FRSpawnableEnemyEntry::SpawnWeight' has a wrong offset!");
-static_assert(offsetof(FRSpawnableEnemyEntry, DifficultyRequirement) == 0x000030, "Member 'FRSpawnableEnemyEntry::DifficultyRequirement' has a wrong offset!");
-static_assert(offsetof(FRSpawnableEnemyEntry, MaxTotalLimit) == 0x000040, "Member 'FRSpawnableEnemyEntry::MaxTotalLimit' has a wrong offset!");
-static_assert(offsetof(FRSpawnableEnemyEntry, MaxAliveLimit) == 0x000044, "Member 'FRSpawnableEnemyEntry::MaxAliveLimit' has a wrong offset!");
+DUMPER7_ASSERTS_FRLightningDamageCombatEventData;
 
 // ScriptStruct RGame.RMutableFloat
 // 0x0128 (0x0128 - 0x0000)
@@ -938,50 +954,64 @@ public:
 	struct FVector2D                              MinMaxRange;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_20[0x108];                                     // 0x0020(0x0108)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRMutableFloat) == 0x000008, "Wrong alignment on FRMutableFloat");
-static_assert(sizeof(FRMutableFloat) == 0x000128, "Wrong size on FRMutableFloat");
-static_assert(offsetof(FRMutableFloat, CurrentValue) == 0x000000, "Member 'FRMutableFloat::CurrentValue' has a wrong offset!");
-static_assert(offsetof(FRMutableFloat, Value) == 0x000004, "Member 'FRMutableFloat::Value' has a wrong offset!");
-static_assert(offsetof(FRMutableFloat, AbsoluteValue) == 0x000008, "Member 'FRMutableFloat::AbsoluteValue' has a wrong offset!");
-static_assert(offsetof(FRMutableFloat, MinMaxRange) == 0x000010, "Member 'FRMutableFloat::MinMaxRange' has a wrong offset!");
+DUMPER7_ASSERTS_FRMutableFloat;
 
-// ScriptStruct RGame.REnemySpawnDataDTEntry
-// 0x01B8 (0x01C0 - 0x0008)
-struct FREnemySpawnDataDTEntry final : public FTableRowBase
-{
-public:
-	struct FGameplayTagContainer                  EnemyTags;                                         // 0x0008(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<struct FRSpawnableEnemyEntry>          SpawnableEnemies;                                  // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FVector2D                              ExtraResourcesRequirement;                         // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpawnAmountMultiplier;                             // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRMutableFloat                         OddsOfBonusEnemy;                                  // 0x0050(0x0128)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FRSpawnableEnemyEntry                  BonusEnemy;                                        // 0x0178(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FREnemySpawnDataDTEntry) == 0x000008, "Wrong alignment on FREnemySpawnDataDTEntry");
-static_assert(sizeof(FREnemySpawnDataDTEntry) == 0x0001C0, "Wrong size on FREnemySpawnDataDTEntry");
-static_assert(offsetof(FREnemySpawnDataDTEntry, EnemyTags) == 0x000008, "Member 'FREnemySpawnDataDTEntry::EnemyTags' has a wrong offset!");
-static_assert(offsetof(FREnemySpawnDataDTEntry, SpawnableEnemies) == 0x000028, "Member 'FREnemySpawnDataDTEntry::SpawnableEnemies' has a wrong offset!");
-static_assert(offsetof(FREnemySpawnDataDTEntry, ExtraResourcesRequirement) == 0x000038, "Member 'FREnemySpawnDataDTEntry::ExtraResourcesRequirement' has a wrong offset!");
-static_assert(offsetof(FREnemySpawnDataDTEntry, SpawnAmountMultiplier) == 0x000048, "Member 'FREnemySpawnDataDTEntry::SpawnAmountMultiplier' has a wrong offset!");
-static_assert(offsetof(FREnemySpawnDataDTEntry, OddsOfBonusEnemy) == 0x000050, "Member 'FREnemySpawnDataDTEntry::OddsOfBonusEnemy' has a wrong offset!");
-static_assert(offsetof(FREnemySpawnDataDTEntry, BonusEnemy) == 0x000178, "Member 'FREnemySpawnDataDTEntry::BonusEnemy' has a wrong offset!");
-
-// ScriptStruct RGame.RNodeChoiceVoteData
+// ScriptStruct RGame.BaseCombatEvent
 // 0x0018 (0x0018 - 0x0000)
-struct FRNodeChoiceVoteData final
+struct alignas(0x08) FBaseCombatEvent
 {
 public:
-	int32                                         PlayerId;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URNodeChoicePrimaryAsset*               VotedNodeChoicePA;                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URNodeChoicePrimaryAsset*               VotedNodeChoiceRewardPA;                           // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Timestamp;                                         // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	ECombatEventType                              EventType;                                         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRNodeChoiceVoteData) == 0x000008, "Wrong alignment on FRNodeChoiceVoteData");
-static_assert(sizeof(FRNodeChoiceVoteData) == 0x000018, "Wrong size on FRNodeChoiceVoteData");
-static_assert(offsetof(FRNodeChoiceVoteData, PlayerId) == 0x000000, "Member 'FRNodeChoiceVoteData::PlayerId' has a wrong offset!");
-static_assert(offsetof(FRNodeChoiceVoteData, VotedNodeChoicePA) == 0x000008, "Member 'FRNodeChoiceVoteData::VotedNodeChoicePA' has a wrong offset!");
-static_assert(offsetof(FRNodeChoiceVoteData, VotedNodeChoiceRewardPA) == 0x000010, "Member 'FRNodeChoiceVoteData::VotedNodeChoiceRewardPA' has a wrong offset!");
+DUMPER7_ASSERTS_FBaseCombatEvent;
+
+// ScriptStruct RGame.DamageCombatEvent
+// 0x01D8 (0x01F0 - 0x0018)
+struct FDamageCombatEvent : public FBaseCombatEvent
+{
+public:
+	class AActor*                                 Instigator;                                        // 0x0018(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 AvatarActor;                                       // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRLightningDamageCombatEventData       LightningDamageCombatEventData;                    // 0x0028(0x0020)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	class AActor*                                 Target;                                            // 0x0048(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HealthDamage;                                      // 0x0050(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ArmorDamage;                                       // 0x0054(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BarrierDamage;                                     // 0x0058(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OverkillDamage;                                    // 0x005C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCritical;                                         // 0x0060(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bKillingBlow;                                      // 0x0061(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector_NetQuantize                    HitLocation;                                       // 0x0068(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector_NetQuantize                    ShotFromDirection;                                 // 0x0080(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DamageSourceMask;                                  // 0x0098(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetCurrentHealth;                               // 0x009C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetPreviousHealth;                              // 0x00A0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetCurrentArmor;                                // 0x00A4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetPreviousArmor;                               // 0x00A8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetCurrentBarrier;                              // 0x00AC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetPreviousBarrier;                             // 0x00B0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPredictedForLocalClientInstigator;                // 0x00B4(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWasForceKilled;                                   // 0x00B5(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B6[0x2];                                       // 0x00B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 DamageCausedBy;                                    // 0x00B8(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRMutableFloat                         SpecificCombatEventModifier;                       // 0x00C0(0x0128)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	int32                                         PrimaryDamageSourceMask;                           // 0x01E8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDamageCombatEvent;
+
+// ScriptStruct RGame.TeslaLightningOrbZapDamageEvent
+// 0x0008 (0x01F8 - 0x01F0)
+struct FTeslaLightningOrbZapDamageEvent final : public FDamageCombatEvent
+{
+public:
+	class AActor*                                 OriginActor;                                       // 0x01F0(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTeslaLightningOrbZapDamageEvent;
 
 // ScriptStruct RGame.RInteractionData
 // 0x0060 (0x0060 - 0x0000)
@@ -997,255 +1027,19 @@ public:
 	class FText                                   AlternativeDescription;                            // 0x0048(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	class AActor*                                 InteractableActor;                                 // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRInteractionData) == 0x000008, "Wrong alignment on FRInteractionData");
-static_assert(sizeof(FRInteractionData) == 0x000060, "Wrong size on FRInteractionData");
-static_assert(offsetof(FRInteractionData, HeaderText) == 0x000000, "Member 'FRInteractionData::HeaderText' has a wrong offset!");
-static_assert(offsetof(FRInteractionData, DescriptionText) == 0x000010, "Member 'FRInteractionData::DescriptionText' has a wrong offset!");
-static_assert(offsetof(FRInteractionData, InteractionCost) == 0x000020, "Member 'FRInteractionData::InteractionCost' has a wrong offset!");
-static_assert(offsetof(FRInteractionData, CurrencyType) == 0x000028, "Member 'FRInteractionData::CurrencyType' has a wrong offset!");
-static_assert(offsetof(FRInteractionData, SubHeader) == 0x000038, "Member 'FRInteractionData::SubHeader' has a wrong offset!");
-static_assert(offsetof(FRInteractionData, AlternativeDescription) == 0x000048, "Member 'FRInteractionData::AlternativeDescription' has a wrong offset!");
-static_assert(offsetof(FRInteractionData, InteractableActor) == 0x000058, "Member 'FRInteractionData::InteractableActor' has a wrong offset!");
+DUMPER7_ASSERTS_FRInteractionData;
 
-// ScriptStruct RGame.RMutatorLogData
-// 0x0010 (0x0010 - 0x0000)
-struct FRMutatorLogData final
+// ScriptStruct RGame.RFloatingTextTypeWidgetMap
+// 0x0050 (0x0050 - 0x0000)
+struct alignas(0x08) FRFloatingTextTypeWidgetMap final
 {
 public:
-	class URMutatorPrimaryAsset*                  MutatorPrimaryAsset;                               // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Rank;                                              // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRMutatorLogData) == 0x000008, "Wrong alignment on FRMutatorLogData");
-static_assert(sizeof(FRMutatorLogData) == 0x000010, "Wrong size on FRMutatorLogData");
-static_assert(offsetof(FRMutatorLogData, MutatorPrimaryAsset) == 0x000000, "Member 'FRMutatorLogData::MutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(FRMutatorLogData, Rank) == 0x000008, "Member 'FRMutatorLogData::Rank' has a wrong offset!");
-
-// ScriptStruct RGame.REnemyKillCount
-// 0x0018 (0x0018 - 0x0000)
-struct FREnemyKillCount final
-{
-public:
-	class FString                                 EnemyId;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         KillCount;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FREnemyKillCount) == 0x000008, "Wrong alignment on FREnemyKillCount");
-static_assert(sizeof(FREnemyKillCount) == 0x000018, "Wrong size on FREnemyKillCount");
-static_assert(offsetof(FREnemyKillCount, EnemyId) == 0x000000, "Member 'FREnemyKillCount::EnemyId' has a wrong offset!");
-static_assert(offsetof(FREnemyKillCount, KillCount) == 0x000010, "Member 'FREnemyKillCount::KillCount' has a wrong offset!");
-
-// ScriptStruct RGame.RRunStats
-// 0x000C (0x000C - 0x0000)
-struct FRRunStats final
-{
-public:
-	float                                         RunTime;                                           // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LevelReached;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RoomReached;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRRunStats) == 0x000004, "Wrong alignment on FRRunStats");
-static_assert(sizeof(FRRunStats) == 0x00000C, "Wrong size on FRRunStats");
-static_assert(offsetof(FRRunStats, RunTime) == 0x000000, "Member 'FRRunStats::RunTime' has a wrong offset!");
-static_assert(offsetof(FRRunStats, LevelReached) == 0x000004, "Member 'FRRunStats::LevelReached' has a wrong offset!");
-static_assert(offsetof(FRRunStats, RoomReached) == 0x000008, "Member 'FRRunStats::RoomReached' has a wrong offset!");
-
-// ScriptStruct RGame.RNodeLogData
-// 0x0008 (0x0008 - 0x0000)
-struct FRNodeLogData final
-{
-public:
-	class FName                                   NodeName;                                          // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRNodeLogData) == 0x000004, "Wrong alignment on FRNodeLogData");
-static_assert(sizeof(FRNodeLogData) == 0x000008, "Wrong size on FRNodeLogData");
-static_assert(offsetof(FRNodeLogData, NodeName) == 0x000000, "Member 'FRNodeLogData::NodeName' has a wrong offset!");
-
-// ScriptStruct RGame.RPlayerStats
-// 0x00C0 (0x00C0 - 0x0000)
-struct FRPlayerStats final
-{
-public:
-	TSubclassOf<class ARNPCPawnBase>              EnemyKilledBy;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DamageTaken;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DamageDealt;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         EnemiesKilled;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Deaths;                                            // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GoldCollected;                                     // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumKeys;                                           // 0x001C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FRMutatorLogData>               MutatorsPickedUp;                                  // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NativeAccessSpecifierPublic)
-	TArray<class URChallengeGridItem*>            ChallengesCompleted;                               // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, RepSkip, NativeAccessSpecifierPublic)
-	class URWeaponPrimaryAsset*                   WeaponUsed;                                        // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URWeaponModPrimaryAsset*                PrimaryWeaponModAtStartOfRun;                      // 0x0048(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URWeaponModPrimaryAsset*                SecondaryWeaponModAtStartOfRun;                    // 0x0050(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URCharacterMutatorPrimaryAsset*         AbilityPrimaryAssetAtStartOfRun;                   // 0x0058(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Difficulty;                                        // 0x0060(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         bulletsHit;                                        // 0x0070(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         weakspotsHit;                                      // 0x0074(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         bulletsMissed;                                     // 0x0078(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxHPReached;                                      // 0x007C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TimesDowned;                                       // 0x0080(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TimesRevivedOtherPlayers;                          // 0x0084(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FREnemyKillCount>               EnemiesKilledOfType;                               // 0x0088(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NativeAccessSpecifierPublic)
-	bool                                          RunSuccesful;                                      // 0x0098(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRRunStats                             RunStats;                                          // 0x009C(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         NumNodesVisited;                                   // 0x00A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRNodeLogData>                  NodesVisited;                                      // 0x00B0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRPlayerStats) == 0x000008, "Wrong alignment on FRPlayerStats");
-static_assert(sizeof(FRPlayerStats) == 0x0000C0, "Wrong size on FRPlayerStats");
-static_assert(offsetof(FRPlayerStats, EnemyKilledBy) == 0x000000, "Member 'FRPlayerStats::EnemyKilledBy' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, DamageTaken) == 0x000008, "Member 'FRPlayerStats::DamageTaken' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, DamageDealt) == 0x00000C, "Member 'FRPlayerStats::DamageDealt' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, EnemiesKilled) == 0x000010, "Member 'FRPlayerStats::EnemiesKilled' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, Deaths) == 0x000014, "Member 'FRPlayerStats::Deaths' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, GoldCollected) == 0x000018, "Member 'FRPlayerStats::GoldCollected' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, NumKeys) == 0x00001C, "Member 'FRPlayerStats::NumKeys' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, MutatorsPickedUp) == 0x000020, "Member 'FRPlayerStats::MutatorsPickedUp' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, ChallengesCompleted) == 0x000030, "Member 'FRPlayerStats::ChallengesCompleted' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, WeaponUsed) == 0x000040, "Member 'FRPlayerStats::WeaponUsed' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, PrimaryWeaponModAtStartOfRun) == 0x000048, "Member 'FRPlayerStats::PrimaryWeaponModAtStartOfRun' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, SecondaryWeaponModAtStartOfRun) == 0x000050, "Member 'FRPlayerStats::SecondaryWeaponModAtStartOfRun' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, AbilityPrimaryAssetAtStartOfRun) == 0x000058, "Member 'FRPlayerStats::AbilityPrimaryAssetAtStartOfRun' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, Difficulty) == 0x000060, "Member 'FRPlayerStats::Difficulty' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, bulletsHit) == 0x000070, "Member 'FRPlayerStats::bulletsHit' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, weakspotsHit) == 0x000074, "Member 'FRPlayerStats::weakspotsHit' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, bulletsMissed) == 0x000078, "Member 'FRPlayerStats::bulletsMissed' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, MaxHPReached) == 0x00007C, "Member 'FRPlayerStats::MaxHPReached' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, TimesDowned) == 0x000080, "Member 'FRPlayerStats::TimesDowned' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, TimesRevivedOtherPlayers) == 0x000084, "Member 'FRPlayerStats::TimesRevivedOtherPlayers' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, EnemiesKilledOfType) == 0x000088, "Member 'FRPlayerStats::EnemiesKilledOfType' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, RunSuccesful) == 0x000098, "Member 'FRPlayerStats::RunSuccesful' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, RunStats) == 0x00009C, "Member 'FRPlayerStats::RunStats' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, NumNodesVisited) == 0x0000A8, "Member 'FRPlayerStats::NumNodesVisited' has a wrong offset!");
-static_assert(offsetof(FRPlayerStats, NodesVisited) == 0x0000B0, "Member 'FRPlayerStats::NodesVisited' has a wrong offset!");
-
-// ScriptStruct RGame.CharacterMutator
-// 0x0018 (0x0018 - 0x0000)
-struct FCharacterMutator final
-{
-public:
-	TWeakObjectPtr<class URGCharacterMutatorScript> CharacterMutatorScriptReference;                 // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class URCharacterMutatorPrimaryAsset> CharacterMutatorPrimaryAsset;               // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Index;                                             // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MutatorRank;                                       // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FCharacterMutator) == 0x000004, "Wrong alignment on FCharacterMutator");
-static_assert(sizeof(FCharacterMutator) == 0x000018, "Wrong size on FCharacterMutator");
-static_assert(offsetof(FCharacterMutator, CharacterMutatorScriptReference) == 0x000000, "Member 'FCharacterMutator::CharacterMutatorScriptReference' has a wrong offset!");
-static_assert(offsetof(FCharacterMutator, CharacterMutatorPrimaryAsset) == 0x000008, "Member 'FCharacterMutator::CharacterMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(FCharacterMutator, Index) == 0x000010, "Member 'FCharacterMutator::Index' has a wrong offset!");
-static_assert(offsetof(FCharacterMutator, MutatorRank) == 0x000014, "Member 'FCharacterMutator::MutatorRank' has a wrong offset!");
-
-// ScriptStruct RGame.ProjectileMutator
-// 0x000C (0x000C - 0x0000)
-struct FProjectileMutator final
-{
-public:
-	TWeakObjectPtr<class URProjectileMutatorPrimaryAsset> ProjectileMutatorPrimaryAsset;             // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MutatorRank;                                       // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FProjectileMutator) == 0x000004, "Wrong alignment on FProjectileMutator");
-static_assert(sizeof(FProjectileMutator) == 0x00000C, "Wrong size on FProjectileMutator");
-static_assert(offsetof(FProjectileMutator, ProjectileMutatorPrimaryAsset) == 0x000000, "Member 'FProjectileMutator::ProjectileMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(FProjectileMutator, MutatorRank) == 0x000008, "Member 'FProjectileMutator::MutatorRank' has a wrong offset!");
-
-// ScriptStruct RGame.WeaponMutator
-// 0x0014 (0x0014 - 0x0000)
-struct FWeaponMutator final
-{
-public:
-	TWeakObjectPtr<class URGWeaponMutatorScript>  WeaponMutatorScriptReference;                      // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class URWeaponMutatorPrimaryAsset> WeaponMutatorPrimaryAsset;                     // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MutatorRank;                                       // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FWeaponMutator) == 0x000004, "Wrong alignment on FWeaponMutator");
-static_assert(sizeof(FWeaponMutator) == 0x000014, "Wrong size on FWeaponMutator");
-static_assert(offsetof(FWeaponMutator, WeaponMutatorScriptReference) == 0x000000, "Member 'FWeaponMutator::WeaponMutatorScriptReference' has a wrong offset!");
-static_assert(offsetof(FWeaponMutator, WeaponMutatorPrimaryAsset) == 0x000008, "Member 'FWeaponMutator::WeaponMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(FWeaponMutator, MutatorRank) == 0x000010, "Member 'FWeaponMutator::MutatorRank' has a wrong offset!");
-
-// ScriptStruct RGame.RLoadout
-// 0x0040 (0x0040 - 0x0000)
-struct FRLoadout final
-{
-public:
-	class URWeaponPrimaryAsset*                   Weapon;                                            // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URWeaponModPrimaryAsset*                PrimaryFireMod;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URWeaponModPrimaryAsset*                SecondaryFireMod;                                  // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URMutatorPrimaryAsset*                  CharacterAbility;                                  // 0x0018(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URWeaponModPrimaryAsset*                Attachment0Mod;                                    // 0x0020(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URWeaponModPrimaryAsset*                Attachment1Mod;                                    // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URCharacterMutatorPrimaryAsset*         SuitMutator;                                       // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URWeaponCosmeticPrimaryAsset*           WeaponCosmeticPA;                                  // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRLoadout) == 0x000008, "Wrong alignment on FRLoadout");
-static_assert(sizeof(FRLoadout) == 0x000040, "Wrong size on FRLoadout");
-static_assert(offsetof(FRLoadout, Weapon) == 0x000000, "Member 'FRLoadout::Weapon' has a wrong offset!");
-static_assert(offsetof(FRLoadout, PrimaryFireMod) == 0x000008, "Member 'FRLoadout::PrimaryFireMod' has a wrong offset!");
-static_assert(offsetof(FRLoadout, SecondaryFireMod) == 0x000010, "Member 'FRLoadout::SecondaryFireMod' has a wrong offset!");
-static_assert(offsetof(FRLoadout, CharacterAbility) == 0x000018, "Member 'FRLoadout::CharacterAbility' has a wrong offset!");
-static_assert(offsetof(FRLoadout, Attachment0Mod) == 0x000020, "Member 'FRLoadout::Attachment0Mod' has a wrong offset!");
-static_assert(offsetof(FRLoadout, Attachment1Mod) == 0x000028, "Member 'FRLoadout::Attachment1Mod' has a wrong offset!");
-static_assert(offsetof(FRLoadout, SuitMutator) == 0x000030, "Member 'FRLoadout::SuitMutator' has a wrong offset!");
-static_assert(offsetof(FRLoadout, WeaponCosmeticPA) == 0x000038, "Member 'FRLoadout::WeaponCosmeticPA' has a wrong offset!");
-
-// ScriptStruct RGame.RDisconnectedPlayerData
-// 0x0170 (0x0170 - 0x0000)
-struct FRDisconnectedPlayerData final
-{
-public:
-	struct FRPlayerStats                          PlayerStats;                                       // 0x0000(0x00C0)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TArray<struct FCharacterMutator>              CharacterMutators;                                 // 0x00C0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FProjectileMutator>             ProjectileMutators;                                // 0x00D0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FWeaponMutator>                 WeaponMutators;                                    // 0x00E0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FRLoadout                              Loadout;                                           // 0x00F0(0x0040)(NoDestructor, NativeAccessSpecifierPublic)
-	float                                         currentHealth;                                     // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         HealthBonusRank;                                   // 0x0134(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BloodPassive7Value;                                // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         HealthyCommitmentStacks;                           // 0x013C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ViolentCommitmentStacks;                           // 0x0140(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         HealingFlaskCharges;                               // 0x0144(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasUsedSecondWind;                                // 0x0148(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_149[0x3];                                      // 0x0149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NumMutatorCategoryRerolls;                         // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  ChosenMutatorRewardCategories;                     // 0x0150(0x0020)(NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRDisconnectedPlayerData) == 0x000008, "Wrong alignment on FRDisconnectedPlayerData");
-static_assert(sizeof(FRDisconnectedPlayerData) == 0x000170, "Wrong size on FRDisconnectedPlayerData");
-static_assert(offsetof(FRDisconnectedPlayerData, PlayerStats) == 0x000000, "Member 'FRDisconnectedPlayerData::PlayerStats' has a wrong offset!");
-static_assert(offsetof(FRDisconnectedPlayerData, CharacterMutators) == 0x0000C0, "Member 'FRDisconnectedPlayerData::CharacterMutators' has a wrong offset!");
-static_assert(offsetof(FRDisconnectedPlayerData, ProjectileMutators) == 0x0000D0, "Member 'FRDisconnectedPlayerData::ProjectileMutators' has a wrong offset!");
-static_assert(offsetof(FRDisconnectedPlayerData, WeaponMutators) == 0x0000E0, "Member 'FRDisconnectedPlayerData::WeaponMutators' has a wrong offset!");
-static_assert(offsetof(FRDisconnectedPlayerData, Loadout) == 0x0000F0, "Member 'FRDisconnectedPlayerData::Loadout' has a wrong offset!");
-static_assert(offsetof(FRDisconnectedPlayerData, currentHealth) == 0x000130, "Member 'FRDisconnectedPlayerData::currentHealth' has a wrong offset!");
-static_assert(offsetof(FRDisconnectedPlayerData, HealthBonusRank) == 0x000134, "Member 'FRDisconnectedPlayerData::HealthBonusRank' has a wrong offset!");
-static_assert(offsetof(FRDisconnectedPlayerData, BloodPassive7Value) == 0x000138, "Member 'FRDisconnectedPlayerData::BloodPassive7Value' has a wrong offset!");
-static_assert(offsetof(FRDisconnectedPlayerData, HealthyCommitmentStacks) == 0x00013C, "Member 'FRDisconnectedPlayerData::HealthyCommitmentStacks' has a wrong offset!");
-static_assert(offsetof(FRDisconnectedPlayerData, ViolentCommitmentStacks) == 0x000140, "Member 'FRDisconnectedPlayerData::ViolentCommitmentStacks' has a wrong offset!");
-static_assert(offsetof(FRDisconnectedPlayerData, HealingFlaskCharges) == 0x000144, "Member 'FRDisconnectedPlayerData::HealingFlaskCharges' has a wrong offset!");
-static_assert(offsetof(FRDisconnectedPlayerData, bHasUsedSecondWind) == 0x000148, "Member 'FRDisconnectedPlayerData::bHasUsedSecondWind' has a wrong offset!");
-static_assert(offsetof(FRDisconnectedPlayerData, NumMutatorCategoryRerolls) == 0x00014C, "Member 'FRDisconnectedPlayerData::NumMutatorCategoryRerolls' has a wrong offset!");
-static_assert(offsetof(FRDisconnectedPlayerData, ChosenMutatorRewardCategories) == 0x000150, "Member 'FRDisconnectedPlayerData::ChosenMutatorRewardCategories' has a wrong offset!");
-
-// ScriptStruct RGame.RMutatorSelectionScreenOption
-// 0x0010 (0x0010 - 0x0000)
-struct FRMutatorSelectionScreenOption final
-{
-public:
-	class URMutatorPrimaryAsset*                  MutatorPA;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MutatorRank;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRMutatorSelectionScreenOption) == 0x000008, "Wrong alignment on FRMutatorSelectionScreenOption");
-static_assert(sizeof(FRMutatorSelectionScreenOption) == 0x000010, "Wrong size on FRMutatorSelectionScreenOption");
-static_assert(offsetof(FRMutatorSelectionScreenOption, MutatorPA) == 0x000000, "Member 'FRMutatorSelectionScreenOption::MutatorPA' has a wrong offset!");
-static_assert(offsetof(FRMutatorSelectionScreenOption, MutatorRank) == 0x000008, "Member 'FRMutatorSelectionScreenOption::MutatorRank' has a wrong offset!");
+DUMPER7_ASSERTS_FRFloatingTextTypeWidgetMap;
 
 // ScriptStruct RGame.RChallenge
-// 0x0170 (0x0178 - 0x0008)
+// 0x0180 (0x0188 - 0x0008)
 struct FRChallenge final : public FTableRowBase
 {
 public:
@@ -1270,44 +1064,59 @@ public:
 	TSoftObjectPtr<class URPrimaryDataAsset>      SoftReward;                                        // 0x0148(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SoulFragmentsReward;                               // 0x0170(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERChallengeRewardCategory                     RewardCategory;                                    // 0x0174(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_175[0x3];                                      // 0x0175(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_175[0x3];                                      // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 DLCAppID;                                          // 0x0178(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRChallenge) == 0x000008, "Wrong alignment on FRChallenge");
-static_assert(sizeof(FRChallenge) == 0x000178, "Wrong size on FRChallenge");
-static_assert(offsetof(FRChallenge, ChallengeTag) == 0x000008, "Member 'FRChallenge::ChallengeTag' has a wrong offset!");
-static_assert(offsetof(FRChallenge, bEnabled) == 0x000010, "Member 'FRChallenge::bEnabled' has a wrong offset!");
-static_assert(offsetof(FRChallenge, bCanCompleteInLobby) == 0x000011, "Member 'FRChallenge::bCanCompleteInLobby' has a wrong offset!");
-static_assert(offsetof(FRChallenge, bSkipUINotification) == 0x000012, "Member 'FRChallenge::bSkipUINotification' has a wrong offset!");
-static_assert(offsetof(FRChallenge, RequiredWeaponScript) == 0x000018, "Member 'FRChallenge::RequiredWeaponScript' has a wrong offset!");
-static_assert(offsetof(FRChallenge, RequiredWeaponModScript) == 0x000040, "Member 'FRChallenge::RequiredWeaponModScript' has a wrong offset!");
-static_assert(offsetof(FRChallenge, bRequiredWeaponModScriptIsPrimary) == 0x000068, "Member 'FRChallenge::bRequiredWeaponModScriptIsPrimary' has a wrong offset!");
-static_assert(offsetof(FRChallenge, RequiredAbilityScript) == 0x000070, "Member 'FRChallenge::RequiredAbilityScript' has a wrong offset!");
-static_assert(offsetof(FRChallenge, ChallengeId) == 0x000098, "Member 'FRChallenge::ChallengeId' has a wrong offset!");
-static_assert(offsetof(FRChallenge, DisplayName) == 0x0000A0, "Member 'FRChallenge::DisplayName' has a wrong offset!");
-static_assert(offsetof(FRChallenge, Description) == 0x0000B0, "Member 'FRChallenge::Description' has a wrong offset!");
-static_assert(offsetof(FRChallenge, Icon) == 0x0000C0, "Member 'FRChallenge::Icon' has a wrong offset!");
-static_assert(offsetof(FRChallenge, CompletionCountRequired) == 0x0000C8, "Member 'FRChallenge::CompletionCountRequired' has a wrong offset!");
-static_assert(offsetof(FRChallenge, DescriptionVariables) == 0x0000D0, "Member 'FRChallenge::DescriptionVariables' has a wrong offset!");
-static_assert(offsetof(FRChallenge, SoftChallengeScript) == 0x000120, "Member 'FRChallenge::SoftChallengeScript' has a wrong offset!");
-static_assert(offsetof(FRChallenge, SoftReward) == 0x000148, "Member 'FRChallenge::SoftReward' has a wrong offset!");
-static_assert(offsetof(FRChallenge, SoulFragmentsReward) == 0x000170, "Member 'FRChallenge::SoulFragmentsReward' has a wrong offset!");
-static_assert(offsetof(FRChallenge, RewardCategory) == 0x000174, "Member 'FRChallenge::RewardCategory' has a wrong offset!");
+DUMPER7_ASSERTS_FRChallenge;
 
-// ScriptStruct RGame.BaseCombatEvent
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FBaseCombatEvent
+// ScriptStruct RGame.RMutatorLogData
+// 0x0010 (0x0010 - 0x0000)
+struct FRMutatorLogData final
 {
 public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Timestamp;                                         // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	ECombatEventType                              EventType;                                         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class URMutatorPrimaryAsset*                  MutatorPrimaryAsset;                               // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Rank;                                              // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FBaseCombatEvent) == 0x000008, "Wrong alignment on FBaseCombatEvent");
-static_assert(sizeof(FBaseCombatEvent) == 0x000018, "Wrong size on FBaseCombatEvent");
-static_assert(offsetof(FBaseCombatEvent, Timestamp) == 0x000008, "Member 'FBaseCombatEvent::Timestamp' has a wrong offset!");
-static_assert(offsetof(FBaseCombatEvent, EventType) == 0x000010, "Member 'FBaseCombatEvent::EventType' has a wrong offset!");
+DUMPER7_ASSERTS_FRMutatorLogData;
+
+// ScriptStruct RGame.RNavigationDebugParams
+// 0x000C (0x000C - 0x0000)
+struct FRNavigationDebugParams
+{
+public:
+	bool                                          DrawDebugVolumes;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          VisualizeRawPath;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          VisualizeOptimizedPath;                            // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          VisualizeInRealTime;                               // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LineThickness;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LineDuration;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRNavigationDebugParams;
+
+// ScriptStruct RGame.BT_MoveToTarget_DebugParams
+// 0x0004 (0x0010 - 0x000C)
+struct FBT_MoveToTarget_DebugParams final : public FRNavigationDebugParams
+{
+public:
+	bool                                          bVisualizePawnAsVoxels;                            // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBT_MoveToTarget_DebugParams;
+
+// ScriptStruct RGame.DangerousActor
+// 0x0030 (0x0030 - 0x0000)
+struct FDangerousActor final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                DangerousLocation;                                 // 0x0008(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DangerRadius;                                      // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CloseDangerRadius;                                 // 0x0024(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCriticalDanger;                                   // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDangerousActor;
 
 // ScriptStruct RGame.MutatorLootSettings
 // 0x0058 (0x0058 - 0x0000)
@@ -1327,698 +1136,7 @@ public:
 	bool                                          bIsTriggerMutator;                                 // 0x0051(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FMutatorLootSettings) == 0x000008, "Wrong alignment on FMutatorLootSettings");
-static_assert(sizeof(FMutatorLootSettings) == 0x000058, "Wrong size on FMutatorLootSettings");
-static_assert(offsetof(FMutatorLootSettings, bIsEnabled) == 0x000000, "Member 'FMutatorLootSettings::bIsEnabled' has a wrong offset!");
-static_assert(offsetof(FMutatorLootSettings, Rarity) == 0x000001, "Member 'FMutatorLootSettings::Rarity' has a wrong offset!");
-static_assert(offsetof(FMutatorLootSettings, SoftRequiredEquippedMutators) == 0x000008, "Member 'FMutatorLootSettings::SoftRequiredEquippedMutators' has a wrong offset!");
-static_assert(offsetof(FMutatorLootSettings, bRequireAllRequiredEquippedMutators) == 0x000018, "Member 'FMutatorLootSettings::bRequireAllRequiredEquippedMutators' has a wrong offset!");
-static_assert(offsetof(FMutatorLootSettings, MutatorAttributesAND) == 0x000020, "Member 'FMutatorLootSettings::MutatorAttributesAND' has a wrong offset!");
-static_assert(offsetof(FMutatorLootSettings, MutatorAttributesOR) == 0x000030, "Member 'FMutatorLootSettings::MutatorAttributesOR' has a wrong offset!");
-static_assert(offsetof(FMutatorLootSettings, RequiredCompletedChallenges) == 0x000040, "Member 'FMutatorLootSettings::RequiredCompletedChallenges' has a wrong offset!");
-static_assert(offsetof(FMutatorLootSettings, MutatorLootCategory) == 0x000050, "Member 'FMutatorLootSettings::MutatorLootCategory' has a wrong offset!");
-static_assert(offsetof(FMutatorLootSettings, bIsTriggerMutator) == 0x000051, "Member 'FMutatorLootSettings::bIsTriggerMutator' has a wrong offset!");
-
-// ScriptStruct RGame.RLightningDamageCombatEventData
-// 0x0018 (0x0018 - 0x0000)
-struct FRLightningDamageCombatEventData final
-{
-public:
-	class AActor*                                 InitialTarget;                                     // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanFork;                                          // 0x0008(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CritBonusBounceChance;                             // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanTargetSame;                                    // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         RemainingLightningBounces;                         // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRLightningDamageCombatEventData) == 0x000008, "Wrong alignment on FRLightningDamageCombatEventData");
-static_assert(sizeof(FRLightningDamageCombatEventData) == 0x000018, "Wrong size on FRLightningDamageCombatEventData");
-static_assert(offsetof(FRLightningDamageCombatEventData, InitialTarget) == 0x000000, "Member 'FRLightningDamageCombatEventData::InitialTarget' has a wrong offset!");
-static_assert(offsetof(FRLightningDamageCombatEventData, bCanFork) == 0x000008, "Member 'FRLightningDamageCombatEventData::bCanFork' has a wrong offset!");
-static_assert(offsetof(FRLightningDamageCombatEventData, CritBonusBounceChance) == 0x00000C, "Member 'FRLightningDamageCombatEventData::CritBonusBounceChance' has a wrong offset!");
-static_assert(offsetof(FRLightningDamageCombatEventData, bCanTargetSame) == 0x000010, "Member 'FRLightningDamageCombatEventData::bCanTargetSame' has a wrong offset!");
-static_assert(offsetof(FRLightningDamageCombatEventData, RemainingLightningBounces) == 0x000014, "Member 'FRLightningDamageCombatEventData::RemainingLightningBounces' has a wrong offset!");
-
-// ScriptStruct RGame.DamageCombatEvent
-// 0x00A8 (0x00C0 - 0x0018)
-struct FDamageCombatEvent final : public FBaseCombatEvent
-{
-public:
-	class AActor*                                 Instigator;                                        // 0x0018(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 AvatarActor;                                       // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRLightningDamageCombatEventData       LightningDamageCombatEventData;                    // 0x0028(0x0018)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	class AActor*                                 Target;                                            // 0x0040(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HealthDamage;                                      // 0x0048(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ArmorDamage;                                       // 0x004C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BarrierDamage;                                     // 0x0050(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OverkillDamage;                                    // 0x0054(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PlatingsLost;                                      // 0x0058(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCritical;                                         // 0x005C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bKillingBlow;                                      // 0x005D(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5E[0x2];                                       // 0x005E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector_NetQuantize                    HitLocation;                                       // 0x0060(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector_NetQuantize                    ShotFromDirection;                                 // 0x0078(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         DamageSourceMask;                                  // 0x0090(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetCurrentHealth;                               // 0x0094(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetPreviousHealth;                              // 0x0098(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetCurrentArmor;                                // 0x009C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetPreviousArmor;                               // 0x00A0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetCurrentBarrier;                              // 0x00A4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetPreviousBarrier;                             // 0x00A8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TargetCurrentPlatings;                             // 0x00AC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPredictedForLocalClientInstigator;                // 0x00B0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bWasForceKilled;                                   // 0x00B1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 DamageCausedBy;                                    // 0x00B8(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FDamageCombatEvent) == 0x000008, "Wrong alignment on FDamageCombatEvent");
-static_assert(sizeof(FDamageCombatEvent) == 0x0000C0, "Wrong size on FDamageCombatEvent");
-static_assert(offsetof(FDamageCombatEvent, Instigator) == 0x000018, "Member 'FDamageCombatEvent::Instigator' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, AvatarActor) == 0x000020, "Member 'FDamageCombatEvent::AvatarActor' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, LightningDamageCombatEventData) == 0x000028, "Member 'FDamageCombatEvent::LightningDamageCombatEventData' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, Target) == 0x000040, "Member 'FDamageCombatEvent::Target' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, HealthDamage) == 0x000048, "Member 'FDamageCombatEvent::HealthDamage' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, ArmorDamage) == 0x00004C, "Member 'FDamageCombatEvent::ArmorDamage' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, BarrierDamage) == 0x000050, "Member 'FDamageCombatEvent::BarrierDamage' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, OverkillDamage) == 0x000054, "Member 'FDamageCombatEvent::OverkillDamage' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, PlatingsLost) == 0x000058, "Member 'FDamageCombatEvent::PlatingsLost' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, bCritical) == 0x00005C, "Member 'FDamageCombatEvent::bCritical' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, bKillingBlow) == 0x00005D, "Member 'FDamageCombatEvent::bKillingBlow' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, HitLocation) == 0x000060, "Member 'FDamageCombatEvent::HitLocation' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, ShotFromDirection) == 0x000078, "Member 'FDamageCombatEvent::ShotFromDirection' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, DamageSourceMask) == 0x000090, "Member 'FDamageCombatEvent::DamageSourceMask' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, TargetCurrentHealth) == 0x000094, "Member 'FDamageCombatEvent::TargetCurrentHealth' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, TargetPreviousHealth) == 0x000098, "Member 'FDamageCombatEvent::TargetPreviousHealth' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, TargetCurrentArmor) == 0x00009C, "Member 'FDamageCombatEvent::TargetCurrentArmor' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, TargetPreviousArmor) == 0x0000A0, "Member 'FDamageCombatEvent::TargetPreviousArmor' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, TargetCurrentBarrier) == 0x0000A4, "Member 'FDamageCombatEvent::TargetCurrentBarrier' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, TargetPreviousBarrier) == 0x0000A8, "Member 'FDamageCombatEvent::TargetPreviousBarrier' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, TargetCurrentPlatings) == 0x0000AC, "Member 'FDamageCombatEvent::TargetCurrentPlatings' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, bPredictedForLocalClientInstigator) == 0x0000B0, "Member 'FDamageCombatEvent::bPredictedForLocalClientInstigator' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, bWasForceKilled) == 0x0000B1, "Member 'FDamageCombatEvent::bWasForceKilled' has a wrong offset!");
-static_assert(offsetof(FDamageCombatEvent, DamageCausedBy) == 0x0000B8, "Member 'FDamageCombatEvent::DamageCausedBy' has a wrong offset!");
-
-// ScriptStruct RGame.CombatEventReplication
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FCombatEventReplication final
-{
-public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FCombatEventReplication) == 0x000008, "Wrong alignment on FCombatEventReplication");
-static_assert(sizeof(FCombatEventReplication) == 0x000018, "Wrong size on FCombatEventReplication");
-
-// ScriptStruct RGame.MutatorContainer
-// 0x0010 (0x0010 - 0x0000)
-struct FMutatorContainer final
-{
-public:
-	TArray<class URMutatorPrimaryAsset*>          Mutators;                                          // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FMutatorContainer) == 0x000008, "Wrong alignment on FMutatorContainer");
-static_assert(sizeof(FMutatorContainer) == 0x000010, "Wrong size on FMutatorContainer");
-static_assert(offsetof(FMutatorContainer, Mutators) == 0x000000, "Member 'FMutatorContainer::Mutators' has a wrong offset!");
-
-// ScriptStruct RGame.HealCombatEvent
-// 0x0020 (0x0038 - 0x0018)
-struct FHealCombatEvent final : public FBaseCombatEvent
-{
-public:
-	class AActor*                                 Instigator;                                        // 0x0018(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URHealthComponent*                      Target;                                            // 0x0020(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EHealType                                     HealType;                                          // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Value;                                             // 0x002C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReceivedHealing;                                   // 0x0030(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetCurrentValue;                                // 0x0034(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FHealCombatEvent) == 0x000008, "Wrong alignment on FHealCombatEvent");
-static_assert(sizeof(FHealCombatEvent) == 0x000038, "Wrong size on FHealCombatEvent");
-static_assert(offsetof(FHealCombatEvent, Instigator) == 0x000018, "Member 'FHealCombatEvent::Instigator' has a wrong offset!");
-static_assert(offsetof(FHealCombatEvent, Target) == 0x000020, "Member 'FHealCombatEvent::Target' has a wrong offset!");
-static_assert(offsetof(FHealCombatEvent, HealType) == 0x000028, "Member 'FHealCombatEvent::HealType' has a wrong offset!");
-static_assert(offsetof(FHealCombatEvent, Value) == 0x00002C, "Member 'FHealCombatEvent::Value' has a wrong offset!");
-static_assert(offsetof(FHealCombatEvent, ReceivedHealing) == 0x000030, "Member 'FHealCombatEvent::ReceivedHealing' has a wrong offset!");
-static_assert(offsetof(FHealCombatEvent, TargetCurrentValue) == 0x000034, "Member 'FHealCombatEvent::TargetCurrentValue' has a wrong offset!");
-
-// ScriptStruct RGame.RChatLogMessage
-// 0x0020 (0x0020 - 0x0000)
-struct FRChatLogMessage final
-{
-public:
-	class FName                                   DisplayName;                                       // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   Message;                                           // 0x0008(0x0010)(BlueprintVisible, NativeAccessSpecifierPublic)
-	ERChatLogType                                 ChatLogType;                                       // 0x0018(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRChatLogMessage) == 0x000008, "Wrong alignment on FRChatLogMessage");
-static_assert(sizeof(FRChatLogMessage) == 0x000020, "Wrong size on FRChatLogMessage");
-static_assert(offsetof(FRChatLogMessage, DisplayName) == 0x000000, "Member 'FRChatLogMessage::DisplayName' has a wrong offset!");
-static_assert(offsetof(FRChatLogMessage, Message) == 0x000008, "Member 'FRChatLogMessage::Message' has a wrong offset!");
-static_assert(offsetof(FRChatLogMessage, ChatLogType) == 0x000018, "Member 'FRChatLogMessage::ChatLogType' has a wrong offset!");
-
-// ScriptStruct RGame.DangerousActor
-// 0x0030 (0x0030 - 0x0000)
-struct FDangerousActor final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                DangerousLocation;                                 // 0x0008(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DangerRadius;                                      // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CloseDangerRadius;                                 // 0x0024(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCriticalDanger;                                   // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FDangerousActor) == 0x000008, "Wrong alignment on FDangerousActor");
-static_assert(sizeof(FDangerousActor) == 0x000030, "Wrong size on FDangerousActor");
-static_assert(offsetof(FDangerousActor, Actor) == 0x000000, "Member 'FDangerousActor::Actor' has a wrong offset!");
-static_assert(offsetof(FDangerousActor, DangerousLocation) == 0x000008, "Member 'FDangerousActor::DangerousLocation' has a wrong offset!");
-static_assert(offsetof(FDangerousActor, DangerRadius) == 0x000020, "Member 'FDangerousActor::DangerRadius' has a wrong offset!");
-static_assert(offsetof(FDangerousActor, CloseDangerRadius) == 0x000024, "Member 'FDangerousActor::CloseDangerRadius' has a wrong offset!");
-static_assert(offsetof(FDangerousActor, bCriticalDanger) == 0x000028, "Member 'FDangerousActor::bCriticalDanger' has a wrong offset!");
-
-// ScriptStruct RGame.PylonActor
-// 0x0010 (0x0010 - 0x0000)
-struct FPylonActor final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PylonRadius;                                       // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPylonActor) == 0x000008, "Wrong alignment on FPylonActor");
-static_assert(sizeof(FPylonActor) == 0x000010, "Wrong size on FPylonActor");
-static_assert(offsetof(FPylonActor, Actor) == 0x000000, "Member 'FPylonActor::Actor' has a wrong offset!");
-static_assert(offsetof(FPylonActor, PylonRadius) == 0x000008, "Member 'FPylonActor::PylonRadius' has a wrong offset!");
-
-// ScriptStruct RGame.MutableIntegerWeaponSetting
-// 0x0108 (0x0108 - 0x0000)
-struct alignas(0x08) FMutableIntegerWeaponSetting final
-{
-public:
-	uint8                                         Pad_0[0x108];                                      // 0x0000(0x0108)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FMutableIntegerWeaponSetting) == 0x000008, "Wrong alignment on FMutableIntegerWeaponSetting");
-static_assert(sizeof(FMutableIntegerWeaponSetting) == 0x000108, "Wrong size on FMutableIntegerWeaponSetting");
-
-// ScriptStruct RGame.PlayerMeshCosmetic
-// 0x0018 (0x0018 - 0x0000)
-struct FPlayerMeshCosmetic final
-{
-public:
-	class UStaticMesh*                            Mesh;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USkeletalMesh*                          SkeletalMesh;                                      // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USkeletalMesh*                          ArmsSkeletalMesh;                                  // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPlayerMeshCosmetic) == 0x000008, "Wrong alignment on FPlayerMeshCosmetic");
-static_assert(sizeof(FPlayerMeshCosmetic) == 0x000018, "Wrong size on FPlayerMeshCosmetic");
-static_assert(offsetof(FPlayerMeshCosmetic, Mesh) == 0x000000, "Member 'FPlayerMeshCosmetic::Mesh' has a wrong offset!");
-static_assert(offsetof(FPlayerMeshCosmetic, SkeletalMesh) == 0x000008, "Member 'FPlayerMeshCosmetic::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(FPlayerMeshCosmetic, ArmsSkeletalMesh) == 0x000010, "Member 'FPlayerMeshCosmetic::ArmsSkeletalMesh' has a wrong offset!");
-
-// ScriptStruct RGame.RNavigationDebugParams
-// 0x000C (0x000C - 0x0000)
-struct FRNavigationDebugParams
-{
-public:
-	bool                                          DrawDebugVolumes;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          VisualizeRawPath;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          VisualizeOptimizedPath;                            // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          VisualizeInRealTime;                               // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LineThickness;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LineDuration;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRNavigationDebugParams) == 0x000004, "Wrong alignment on FRNavigationDebugParams");
-static_assert(sizeof(FRNavigationDebugParams) == 0x00000C, "Wrong size on FRNavigationDebugParams");
-static_assert(offsetof(FRNavigationDebugParams, DrawDebugVolumes) == 0x000000, "Member 'FRNavigationDebugParams::DrawDebugVolumes' has a wrong offset!");
-static_assert(offsetof(FRNavigationDebugParams, VisualizeRawPath) == 0x000001, "Member 'FRNavigationDebugParams::VisualizeRawPath' has a wrong offset!");
-static_assert(offsetof(FRNavigationDebugParams, VisualizeOptimizedPath) == 0x000002, "Member 'FRNavigationDebugParams::VisualizeOptimizedPath' has a wrong offset!");
-static_assert(offsetof(FRNavigationDebugParams, VisualizeInRealTime) == 0x000003, "Member 'FRNavigationDebugParams::VisualizeInRealTime' has a wrong offset!");
-static_assert(offsetof(FRNavigationDebugParams, LineThickness) == 0x000004, "Member 'FRNavigationDebugParams::LineThickness' has a wrong offset!");
-static_assert(offsetof(FRNavigationDebugParams, LineDuration) == 0x000008, "Member 'FRNavigationDebugParams::LineDuration' has a wrong offset!");
-
-// ScriptStruct RGame.SurfaceTypeFX
-// 0x0050 (0x0058 - 0x0008)
-struct FSurfaceTypeFX final : public FTableRowBase
-{
-public:
-	EPhysicalSurface                              SurfaceType;                                       // 0x0008(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraSystem*                         HitEffect;                                         // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseNiagaraDecal;                                  // 0x0018(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstance*                      HitDecal;                                          // 0x0020(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              DecalLifetime;                                     // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DecalFadeout;                                      // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              DecalSize;                                         // 0x0040(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DecalHeight;                                       // 0x0050(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FSurfaceTypeFX) == 0x000008, "Wrong alignment on FSurfaceTypeFX");
-static_assert(sizeof(FSurfaceTypeFX) == 0x000058, "Wrong size on FSurfaceTypeFX");
-static_assert(offsetof(FSurfaceTypeFX, SurfaceType) == 0x000008, "Member 'FSurfaceTypeFX::SurfaceType' has a wrong offset!");
-static_assert(offsetof(FSurfaceTypeFX, HitEffect) == 0x000010, "Member 'FSurfaceTypeFX::HitEffect' has a wrong offset!");
-static_assert(offsetof(FSurfaceTypeFX, bUseNiagaraDecal) == 0x000018, "Member 'FSurfaceTypeFX::bUseNiagaraDecal' has a wrong offset!");
-static_assert(offsetof(FSurfaceTypeFX, HitDecal) == 0x000020, "Member 'FSurfaceTypeFX::HitDecal' has a wrong offset!");
-static_assert(offsetof(FSurfaceTypeFX, DecalLifetime) == 0x000028, "Member 'FSurfaceTypeFX::DecalLifetime' has a wrong offset!");
-static_assert(offsetof(FSurfaceTypeFX, DecalFadeout) == 0x000038, "Member 'FSurfaceTypeFX::DecalFadeout' has a wrong offset!");
-static_assert(offsetof(FSurfaceTypeFX, DecalSize) == 0x000040, "Member 'FSurfaceTypeFX::DecalSize' has a wrong offset!");
-static_assert(offsetof(FSurfaceTypeFX, DecalHeight) == 0x000050, "Member 'FSurfaceTypeFX::DecalHeight' has a wrong offset!");
-
-// ScriptStruct RGame.Sound2DSpawnRequest
-// 0x0030 (0x0030 - 0x0000)
-struct FSound2DSpawnRequest final
-{
-public:
-	class USoundBase*                             Sound;                                             // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         VolumeMultiplier;                                  // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PitchMultiplier;                                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartTime;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundConcurrency*                      ConcurrencySettings;                               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FAudioParameter>                AudioParams;                                       // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSound2DSpawnRequest) == 0x000008, "Wrong alignment on FSound2DSpawnRequest");
-static_assert(sizeof(FSound2DSpawnRequest) == 0x000030, "Wrong size on FSound2DSpawnRequest");
-static_assert(offsetof(FSound2DSpawnRequest, Sound) == 0x000000, "Member 'FSound2DSpawnRequest::Sound' has a wrong offset!");
-static_assert(offsetof(FSound2DSpawnRequest, VolumeMultiplier) == 0x000008, "Member 'FSound2DSpawnRequest::VolumeMultiplier' has a wrong offset!");
-static_assert(offsetof(FSound2DSpawnRequest, PitchMultiplier) == 0x00000C, "Member 'FSound2DSpawnRequest::PitchMultiplier' has a wrong offset!");
-static_assert(offsetof(FSound2DSpawnRequest, StartTime) == 0x000010, "Member 'FSound2DSpawnRequest::StartTime' has a wrong offset!");
-static_assert(offsetof(FSound2DSpawnRequest, ConcurrencySettings) == 0x000018, "Member 'FSound2DSpawnRequest::ConcurrencySettings' has a wrong offset!");
-static_assert(offsetof(FSound2DSpawnRequest, AudioParams) == 0x000020, "Member 'FSound2DSpawnRequest::AudioParams' has a wrong offset!");
-
-// ScriptStruct RGame.VelocityBlend
-// 0x0010 (0x0010 - 0x0000)
-struct FVelocityBlend final
-{
-public:
-	float                                         F;                                                 // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         B;                                                 // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         L;                                                 // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         R;                                                 // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FVelocityBlend) == 0x000004, "Wrong alignment on FVelocityBlend");
-static_assert(sizeof(FVelocityBlend) == 0x000010, "Wrong size on FVelocityBlend");
-static_assert(offsetof(FVelocityBlend, F) == 0x000000, "Member 'FVelocityBlend::F' has a wrong offset!");
-static_assert(offsetof(FVelocityBlend, B) == 0x000004, "Member 'FVelocityBlend::B' has a wrong offset!");
-static_assert(offsetof(FVelocityBlend, L) == 0x000008, "Member 'FVelocityBlend::L' has a wrong offset!");
-static_assert(offsetof(FVelocityBlend, R) == 0x00000C, "Member 'FVelocityBlend::R' has a wrong offset!");
-
-// ScriptStruct RGame.VoiceData
-// 0x0078 (0x0078 - 0x0000)
-struct FVoiceData final
-{
-public:
-	TSoftObjectPtr<class USoundWave>              MaleWaveAsset;                                     // 0x0000(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class USoundWave>              FemaleWaveAsset;                                   // 0x0028(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SpokenLine;                                        // 0x0050(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   Subtitle;                                          // 0x0060(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	float                                         Cooldown;                                          // 0x0070(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FVoiceData) == 0x000008, "Wrong alignment on FVoiceData");
-static_assert(sizeof(FVoiceData) == 0x000078, "Wrong size on FVoiceData");
-static_assert(offsetof(FVoiceData, MaleWaveAsset) == 0x000000, "Member 'FVoiceData::MaleWaveAsset' has a wrong offset!");
-static_assert(offsetof(FVoiceData, FemaleWaveAsset) == 0x000028, "Member 'FVoiceData::FemaleWaveAsset' has a wrong offset!");
-static_assert(offsetof(FVoiceData, SpokenLine) == 0x000050, "Member 'FVoiceData::SpokenLine' has a wrong offset!");
-static_assert(offsetof(FVoiceData, Subtitle) == 0x000060, "Member 'FVoiceData::Subtitle' has a wrong offset!");
-static_assert(offsetof(FVoiceData, Cooldown) == 0x000070, "Member 'FVoiceData::Cooldown' has a wrong offset!");
-
-// ScriptStruct RGame.PlayerPaintJobCosmetic
-// 0x0030 (0x0030 - 0x0000)
-struct FPlayerPaintJobCosmetic final
-{
-public:
-	class UMaterialInstance*                      MaterialInstance;                                  // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstance*                      DefaultMaterialInstance;                           // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           PrimaryColorOption;                                // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SecondaryColorOption;                              // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPlayerPaintJobCosmetic) == 0x000008, "Wrong alignment on FPlayerPaintJobCosmetic");
-static_assert(sizeof(FPlayerPaintJobCosmetic) == 0x000030, "Wrong size on FPlayerPaintJobCosmetic");
-static_assert(offsetof(FPlayerPaintJobCosmetic, MaterialInstance) == 0x000000, "Member 'FPlayerPaintJobCosmetic::MaterialInstance' has a wrong offset!");
-static_assert(offsetof(FPlayerPaintJobCosmetic, DefaultMaterialInstance) == 0x000008, "Member 'FPlayerPaintJobCosmetic::DefaultMaterialInstance' has a wrong offset!");
-static_assert(offsetof(FPlayerPaintJobCosmetic, PrimaryColorOption) == 0x000010, "Member 'FPlayerPaintJobCosmetic::PrimaryColorOption' has a wrong offset!");
-static_assert(offsetof(FPlayerPaintJobCosmetic, SecondaryColorOption) == 0x000020, "Member 'FPlayerPaintJobCosmetic::SecondaryColorOption' has a wrong offset!");
-
-// ScriptStruct RGame.PlayerVoiceSettings
-// 0x0010 (0x0010 - 0x0000)
-struct FPlayerVoiceSettings final
-{
-public:
-	class UDataTable*                             VoiceDataTable;                                    // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsFemale;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EVoicePitch                                   Pitch;                                             // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPlayerVoiceSettings) == 0x000008, "Wrong alignment on FPlayerVoiceSettings");
-static_assert(sizeof(FPlayerVoiceSettings) == 0x000010, "Wrong size on FPlayerVoiceSettings");
-static_assert(offsetof(FPlayerVoiceSettings, VoiceDataTable) == 0x000000, "Member 'FPlayerVoiceSettings::VoiceDataTable' has a wrong offset!");
-static_assert(offsetof(FPlayerVoiceSettings, bIsFemale) == 0x000008, "Member 'FPlayerVoiceSettings::bIsFemale' has a wrong offset!");
-static_assert(offsetof(FPlayerVoiceSettings, Pitch) == 0x000009, "Member 'FPlayerVoiceSettings::Pitch' has a wrong offset!");
-
-// ScriptStruct RGame.PlayerWeaponPaintCosmetic
-// 0x0010 (0x0010 - 0x0000)
-struct FPlayerWeaponPaintCosmetic final
-{
-public:
-	class UMaterialInstance*                      MaterialInstance;                                  // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URWeaponPrimaryAsset*                   AssociatedWeaponPA;                                // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPlayerWeaponPaintCosmetic) == 0x000008, "Wrong alignment on FPlayerWeaponPaintCosmetic");
-static_assert(sizeof(FPlayerWeaponPaintCosmetic) == 0x000010, "Wrong size on FPlayerWeaponPaintCosmetic");
-static_assert(offsetof(FPlayerWeaponPaintCosmetic, MaterialInstance) == 0x000000, "Member 'FPlayerWeaponPaintCosmetic::MaterialInstance' has a wrong offset!");
-static_assert(offsetof(FPlayerWeaponPaintCosmetic, AssociatedWeaponPA) == 0x000008, "Member 'FPlayerWeaponPaintCosmetic::AssociatedWeaponPA' has a wrong offset!");
-
-// ScriptStruct RGame.PlayerCosmeticOption
-// 0x00D0 (0x00D0 - 0x0000)
-struct FPlayerCosmeticOption final
-{
-public:
-	class FText                                   DisplayName;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   Description;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class UTexture2D*                             Icon;                                              // 0x0020(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPlayerMeshCosmetic                    MeshCosmetic;                                      // 0x0028(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPlayerPaintJobCosmetic                PaintJobCosmetic;                                  // 0x0040(0x0030)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPlayerVoiceSettings                   VoiceCosmetic;                                     // 0x0070(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPlayerWeaponPaintCosmetic             PlayerWeaponPaintCosmetic;                         // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	TSubclassOf<class URPlayerFrameUserWidget>    PlayerframeWidgetClass;                            // 0x0090(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           EmoteCosmeticTag;                                  // 0x0098(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 RequiredChallengeId;                               // 0x00A0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           CosmeticSlotTag;                                   // 0x00B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           DLCTag;                                            // 0x00B8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DLCAppID;                                          // 0x00C0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPlayerCosmeticOption) == 0x000008, "Wrong alignment on FPlayerCosmeticOption");
-static_assert(sizeof(FPlayerCosmeticOption) == 0x0000D0, "Wrong size on FPlayerCosmeticOption");
-static_assert(offsetof(FPlayerCosmeticOption, DisplayName) == 0x000000, "Member 'FPlayerCosmeticOption::DisplayName' has a wrong offset!");
-static_assert(offsetof(FPlayerCosmeticOption, Description) == 0x000010, "Member 'FPlayerCosmeticOption::Description' has a wrong offset!");
-static_assert(offsetof(FPlayerCosmeticOption, Icon) == 0x000020, "Member 'FPlayerCosmeticOption::Icon' has a wrong offset!");
-static_assert(offsetof(FPlayerCosmeticOption, MeshCosmetic) == 0x000028, "Member 'FPlayerCosmeticOption::MeshCosmetic' has a wrong offset!");
-static_assert(offsetof(FPlayerCosmeticOption, PaintJobCosmetic) == 0x000040, "Member 'FPlayerCosmeticOption::PaintJobCosmetic' has a wrong offset!");
-static_assert(offsetof(FPlayerCosmeticOption, VoiceCosmetic) == 0x000070, "Member 'FPlayerCosmeticOption::VoiceCosmetic' has a wrong offset!");
-static_assert(offsetof(FPlayerCosmeticOption, PlayerWeaponPaintCosmetic) == 0x000080, "Member 'FPlayerCosmeticOption::PlayerWeaponPaintCosmetic' has a wrong offset!");
-static_assert(offsetof(FPlayerCosmeticOption, PlayerframeWidgetClass) == 0x000090, "Member 'FPlayerCosmeticOption::PlayerframeWidgetClass' has a wrong offset!");
-static_assert(offsetof(FPlayerCosmeticOption, EmoteCosmeticTag) == 0x000098, "Member 'FPlayerCosmeticOption::EmoteCosmeticTag' has a wrong offset!");
-static_assert(offsetof(FPlayerCosmeticOption, RequiredChallengeId) == 0x0000A0, "Member 'FPlayerCosmeticOption::RequiredChallengeId' has a wrong offset!");
-static_assert(offsetof(FPlayerCosmeticOption, CosmeticSlotTag) == 0x0000B0, "Member 'FPlayerCosmeticOption::CosmeticSlotTag' has a wrong offset!");
-static_assert(offsetof(FPlayerCosmeticOption, DLCTag) == 0x0000B8, "Member 'FPlayerCosmeticOption::DLCTag' has a wrong offset!");
-static_assert(offsetof(FPlayerCosmeticOption, DLCAppID) == 0x0000C0, "Member 'FPlayerCosmeticOption::DLCAppID' has a wrong offset!");
-
-// ScriptStruct RGame.RLootSelectionOption
-// 0x0010 (0x0010 - 0x0000)
-struct FRLootSelectionOption final
-{
-public:
-	class URPrimaryDataAsset*                     LootAsset;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LootRank;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRLootSelectionOption) == 0x000008, "Wrong alignment on FRLootSelectionOption");
-static_assert(sizeof(FRLootSelectionOption) == 0x000010, "Wrong size on FRLootSelectionOption");
-static_assert(offsetof(FRLootSelectionOption, LootAsset) == 0x000000, "Member 'FRLootSelectionOption::LootAsset' has a wrong offset!");
-static_assert(offsetof(FRLootSelectionOption, LootRank) == 0x000008, "Member 'FRLootSelectionOption::LootRank' has a wrong offset!");
-
-// ScriptStruct RGame.RBossAbilitySettings
-// 0x0010 (0x0010 - 0x0000)
-struct FRBossAbilitySettings final
-{
-public:
-	TSubclassOf<class URGBossAbilityScript>       Script;                                            // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BossAbilityWeight;                                 // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRBossAbilitySettings) == 0x000008, "Wrong alignment on FRBossAbilitySettings");
-static_assert(sizeof(FRBossAbilitySettings) == 0x000010, "Wrong size on FRBossAbilitySettings");
-static_assert(offsetof(FRBossAbilitySettings, Script) == 0x000000, "Member 'FRBossAbilitySettings::Script' has a wrong offset!");
-static_assert(offsetof(FRBossAbilitySettings, BossAbilityWeight) == 0x000008, "Member 'FRBossAbilitySettings::BossAbilityWeight' has a wrong offset!");
-
-// ScriptStruct RGame.VoiceQueryCriteria
-// 0x0014 (0x0014 - 0x0000)
-struct FVoiceQueryCriteria final
-{
-public:
-	bool                                          bCompareName;                                      // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MoreThanOrEqual;                                   // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LessThanOrEqual;                                   // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Keyword;                                           // 0x000C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FVoiceQueryCriteria) == 0x000004, "Wrong alignment on FVoiceQueryCriteria");
-static_assert(sizeof(FVoiceQueryCriteria) == 0x000014, "Wrong size on FVoiceQueryCriteria");
-static_assert(offsetof(FVoiceQueryCriteria, bCompareName) == 0x000000, "Member 'FVoiceQueryCriteria::bCompareName' has a wrong offset!");
-static_assert(offsetof(FVoiceQueryCriteria, MoreThanOrEqual) == 0x000004, "Member 'FVoiceQueryCriteria::MoreThanOrEqual' has a wrong offset!");
-static_assert(offsetof(FVoiceQueryCriteria, LessThanOrEqual) == 0x000008, "Member 'FVoiceQueryCriteria::LessThanOrEqual' has a wrong offset!");
-static_assert(offsetof(FVoiceQueryCriteria, Keyword) == 0x00000C, "Member 'FVoiceQueryCriteria::Keyword' has a wrong offset!");
-
-// ScriptStruct RGame.VoiceDataCriteria
-// 0x00E0 (0x00E0 - 0x0000)
-struct FVoiceDataCriteria final
-{
-public:
-	TMap<class FName, struct FVoiceQueryCriteria> QueryCriterias;                                    // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FVoiceData                             VoiceData;                                         // 0x0050(0x0078)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          bRememberLine;                                     // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   RememberLineDatabaseName;                          // 0x00CC(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RememberLineTime;                                  // 0x00D4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FVoiceDataCriteria) == 0x000008, "Wrong alignment on FVoiceDataCriteria");
-static_assert(sizeof(FVoiceDataCriteria) == 0x0000E0, "Wrong size on FVoiceDataCriteria");
-static_assert(offsetof(FVoiceDataCriteria, QueryCriterias) == 0x000000, "Member 'FVoiceDataCriteria::QueryCriterias' has a wrong offset!");
-static_assert(offsetof(FVoiceDataCriteria, VoiceData) == 0x000050, "Member 'FVoiceDataCriteria::VoiceData' has a wrong offset!");
-static_assert(offsetof(FVoiceDataCriteria, bRememberLine) == 0x0000C8, "Member 'FVoiceDataCriteria::bRememberLine' has a wrong offset!");
-static_assert(offsetof(FVoiceDataCriteria, RememberLineDatabaseName) == 0x0000CC, "Member 'FVoiceDataCriteria::RememberLineDatabaseName' has a wrong offset!");
-static_assert(offsetof(FVoiceDataCriteria, RememberLineTime) == 0x0000D4, "Member 'FVoiceDataCriteria::RememberLineTime' has a wrong offset!");
-
-// ScriptStruct RGame.VoiceOverTableRow
-// 0x0020 (0x0028 - 0x0008)
-struct FVoiceOverTableRow final : public FTableRowBase
-{
-public:
-	struct FGameplayTag                           EmoteTag;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ChanceToPlay;                                      // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EventPriority;                                     // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FVoiceDataCriteria>             Variations;                                        // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FVoiceOverTableRow) == 0x000008, "Wrong alignment on FVoiceOverTableRow");
-static_assert(sizeof(FVoiceOverTableRow) == 0x000028, "Wrong size on FVoiceOverTableRow");
-static_assert(offsetof(FVoiceOverTableRow, EmoteTag) == 0x000008, "Member 'FVoiceOverTableRow::EmoteTag' has a wrong offset!");
-static_assert(offsetof(FVoiceOverTableRow, ChanceToPlay) == 0x000010, "Member 'FVoiceOverTableRow::ChanceToPlay' has a wrong offset!");
-static_assert(offsetof(FVoiceOverTableRow, EventPriority) == 0x000014, "Member 'FVoiceOverTableRow::EventPriority' has a wrong offset!");
-static_assert(offsetof(FVoiceOverTableRow, Variations) == 0x000018, "Member 'FVoiceOverTableRow::Variations' has a wrong offset!");
-
-// ScriptStruct RGame.ReviveStartedCombatEvent
-// 0x0010 (0x0028 - 0x0018)
-struct FReviveStartedCombatEvent final : public FBaseCombatEvent
-{
-public:
-	class ARPlayerPawn*                           RevivedPlayer;                                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ARPlayerPawn*                           RevivingPlayer;                                    // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FReviveStartedCombatEvent) == 0x000008, "Wrong alignment on FReviveStartedCombatEvent");
-static_assert(sizeof(FReviveStartedCombatEvent) == 0x000028, "Wrong size on FReviveStartedCombatEvent");
-static_assert(offsetof(FReviveStartedCombatEvent, RevivedPlayer) == 0x000018, "Member 'FReviveStartedCombatEvent::RevivedPlayer' has a wrong offset!");
-static_assert(offsetof(FReviveStartedCombatEvent, RevivingPlayer) == 0x000020, "Member 'FReviveStartedCombatEvent::RevivingPlayer' has a wrong offset!");
-
-// ScriptStruct RGame.WeaponModCosmeticData
-// 0x00C0 (0x00C0 - 0x0000)
-struct FWeaponModCosmeticData final
-{
-public:
-	TSoftObjectPtr<class UStaticMesh>             SoftModMesh;                                       // 0x0000(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SocketName;                                        // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             OffsetTransform;                                   // 0x0030(0x0060)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class USoundBase>              SoftSound;                                         // 0x0090(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FWeaponModCosmeticData) == 0x000010, "Wrong alignment on FWeaponModCosmeticData");
-static_assert(sizeof(FWeaponModCosmeticData) == 0x0000C0, "Wrong size on FWeaponModCosmeticData");
-static_assert(offsetof(FWeaponModCosmeticData, SoftModMesh) == 0x000000, "Member 'FWeaponModCosmeticData::SoftModMesh' has a wrong offset!");
-static_assert(offsetof(FWeaponModCosmeticData, SocketName) == 0x000028, "Member 'FWeaponModCosmeticData::SocketName' has a wrong offset!");
-static_assert(offsetof(FWeaponModCosmeticData, OffsetTransform) == 0x000030, "Member 'FWeaponModCosmeticData::OffsetTransform' has a wrong offset!");
-static_assert(offsetof(FWeaponModCosmeticData, SoftSound) == 0x000090, "Member 'FWeaponModCosmeticData::SoftSound' has a wrong offset!");
-
-// ScriptStruct RGame.ClientPredictionTestSmoothingData
-// 0x0010 (0x0010 - 0x0000)
-struct FClientPredictionTestSmoothingData final
-{
-public:
-	bool                                          bUseAvgError;                                      // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LocationSmoothingExp;                              // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinLocationError;                                  // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxLocationError;                                  // 0x000C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FClientPredictionTestSmoothingData) == 0x000004, "Wrong alignment on FClientPredictionTestSmoothingData");
-static_assert(sizeof(FClientPredictionTestSmoothingData) == 0x000010, "Wrong size on FClientPredictionTestSmoothingData");
-static_assert(offsetof(FClientPredictionTestSmoothingData, bUseAvgError) == 0x000000, "Member 'FClientPredictionTestSmoothingData::bUseAvgError' has a wrong offset!");
-static_assert(offsetof(FClientPredictionTestSmoothingData, LocationSmoothingExp) == 0x000004, "Member 'FClientPredictionTestSmoothingData::LocationSmoothingExp' has a wrong offset!");
-static_assert(offsetof(FClientPredictionTestSmoothingData, MinLocationError) == 0x000008, "Member 'FClientPredictionTestSmoothingData::MinLocationError' has a wrong offset!");
-static_assert(offsetof(FClientPredictionTestSmoothingData, MaxLocationError) == 0x00000C, "Member 'FClientPredictionTestSmoothingData::MaxLocationError' has a wrong offset!");
-
-// ScriptStruct RGame.SetArmorCombatEvent
-// 0x0010 (0x0028 - 0x0018)
-struct FSetArmorCombatEvent final : public FBaseCombatEvent
-{
-public:
-	class URHealthComponent*                      Target;                                            // 0x0018(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CurrentArmor;                                      // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NewArmor;                                          // 0x0024(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSetArmorCombatEvent) == 0x000008, "Wrong alignment on FSetArmorCombatEvent");
-static_assert(sizeof(FSetArmorCombatEvent) == 0x000028, "Wrong size on FSetArmorCombatEvent");
-static_assert(offsetof(FSetArmorCombatEvent, Target) == 0x000018, "Member 'FSetArmorCombatEvent::Target' has a wrong offset!");
-static_assert(offsetof(FSetArmorCombatEvent, CurrentArmor) == 0x000020, "Member 'FSetArmorCombatEvent::CurrentArmor' has a wrong offset!");
-static_assert(offsetof(FSetArmorCombatEvent, NewArmor) == 0x000024, "Member 'FSetArmorCombatEvent::NewArmor' has a wrong offset!");
-
-// ScriptStruct RGame.RUniqueCharmSpawn
-// 0x0020 (0x0020 - 0x0000)
-struct FRUniqueCharmSpawn final
-{
-public:
-	class FString                                 PlayerNetID;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URMutatorPrimaryAsset*                  CharmPrimaryAsset;                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCharmPickedUp;                                    // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRUniqueCharmSpawn) == 0x000008, "Wrong alignment on FRUniqueCharmSpawn");
-static_assert(sizeof(FRUniqueCharmSpawn) == 0x000020, "Wrong size on FRUniqueCharmSpawn");
-static_assert(offsetof(FRUniqueCharmSpawn, PlayerNetID) == 0x000000, "Member 'FRUniqueCharmSpawn::PlayerNetID' has a wrong offset!");
-static_assert(offsetof(FRUniqueCharmSpawn, CharmPrimaryAsset) == 0x000010, "Member 'FRUniqueCharmSpawn::CharmPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(FRUniqueCharmSpawn, bCharmPickedUp) == 0x000018, "Member 'FRUniqueCharmSpawn::bCharmPickedUp' has a wrong offset!");
-
-// ScriptStruct RGame.RAIAttackSettings
-// 0x0020 (0x0020 - 0x0000)
-struct FRAIAttackSettings final
-{
-public:
-	TSubclassOf<class URGEnemyAttackScript>       AttackScript;                                      // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Cooldown;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AttackRange;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinRangeToAttack;                                  // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Damage;                                            // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRequireLOSForAttack;                              // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRequiresSpecialCondition;                         // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBlocked;                                          // 0x001A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B[0x1];                                       // 0x001B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Priority;                                          // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRAIAttackSettings) == 0x000008, "Wrong alignment on FRAIAttackSettings");
-static_assert(sizeof(FRAIAttackSettings) == 0x000020, "Wrong size on FRAIAttackSettings");
-static_assert(offsetof(FRAIAttackSettings, AttackScript) == 0x000000, "Member 'FRAIAttackSettings::AttackScript' has a wrong offset!");
-static_assert(offsetof(FRAIAttackSettings, Cooldown) == 0x000008, "Member 'FRAIAttackSettings::Cooldown' has a wrong offset!");
-static_assert(offsetof(FRAIAttackSettings, AttackRange) == 0x00000C, "Member 'FRAIAttackSettings::AttackRange' has a wrong offset!");
-static_assert(offsetof(FRAIAttackSettings, MinRangeToAttack) == 0x000010, "Member 'FRAIAttackSettings::MinRangeToAttack' has a wrong offset!");
-static_assert(offsetof(FRAIAttackSettings, Damage) == 0x000014, "Member 'FRAIAttackSettings::Damage' has a wrong offset!");
-static_assert(offsetof(FRAIAttackSettings, bRequireLOSForAttack) == 0x000018, "Member 'FRAIAttackSettings::bRequireLOSForAttack' has a wrong offset!");
-static_assert(offsetof(FRAIAttackSettings, bRequiresSpecialCondition) == 0x000019, "Member 'FRAIAttackSettings::bRequiresSpecialCondition' has a wrong offset!");
-static_assert(offsetof(FRAIAttackSettings, bBlocked) == 0x00001A, "Member 'FRAIAttackSettings::bBlocked' has a wrong offset!");
-static_assert(offsetof(FRAIAttackSettings, Priority) == 0x00001C, "Member 'FRAIAttackSettings::Priority' has a wrong offset!");
-
-// ScriptStruct RGame.SetBarrierCombatEvent
-// 0x0010 (0x0028 - 0x0018)
-struct FSetBarrierCombatEvent final : public FBaseCombatEvent
-{
-public:
-	class URHealthComponent*                      Target;                                            // 0x0018(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CurrentBarrier;                                    // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NewBarrier;                                        // 0x0024(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSetBarrierCombatEvent) == 0x000008, "Wrong alignment on FSetBarrierCombatEvent");
-static_assert(sizeof(FSetBarrierCombatEvent) == 0x000028, "Wrong size on FSetBarrierCombatEvent");
-static_assert(offsetof(FSetBarrierCombatEvent, Target) == 0x000018, "Member 'FSetBarrierCombatEvent::Target' has a wrong offset!");
-static_assert(offsetof(FSetBarrierCombatEvent, CurrentBarrier) == 0x000020, "Member 'FSetBarrierCombatEvent::CurrentBarrier' has a wrong offset!");
-static_assert(offsetof(FSetBarrierCombatEvent, NewBarrier) == 0x000024, "Member 'FSetBarrierCombatEvent::NewBarrier' has a wrong offset!");
-
-// ScriptStruct RGame.RBadWordRow
-// 0x0010 (0x0018 - 0x0008)
-struct FRBadWordRow final : public FTableRowBase
-{
-public:
-	class FText                                   BadWord;                                           // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRBadWordRow) == 0x000008, "Wrong alignment on FRBadWordRow");
-static_assert(sizeof(FRBadWordRow) == 0x000018, "Wrong size on FRBadWordRow");
-static_assert(offsetof(FRBadWordRow, BadWord) == 0x000008, "Member 'FRBadWordRow::BadWord' has a wrong offset!");
-
-// ScriptStruct RGame.FieldSystemActorInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FFieldSystemActorInfo final
-{
-public:
-	class ARFieldSystemActor*                     FieldSystemActor;                                  // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ARPawnBase*                             AssociatedPawn;                                    // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInUse;                                            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FFieldSystemActorInfo) == 0x000008, "Wrong alignment on FFieldSystemActorInfo");
-static_assert(sizeof(FFieldSystemActorInfo) == 0x000018, "Wrong size on FFieldSystemActorInfo");
-static_assert(offsetof(FFieldSystemActorInfo, FieldSystemActor) == 0x000000, "Member 'FFieldSystemActorInfo::FieldSystemActor' has a wrong offset!");
-static_assert(offsetof(FFieldSystemActorInfo, AssociatedPawn) == 0x000008, "Member 'FFieldSystemActorInfo::AssociatedPawn' has a wrong offset!");
-static_assert(offsetof(FFieldSystemActorInfo, bInUse) == 0x000010, "Member 'FFieldSystemActorInfo::bInUse' has a wrong offset!");
-
-// ScriptStruct RGame.SetHealthCombatEvent
-// 0x0010 (0x0028 - 0x0018)
-struct FSetHealthCombatEvent final : public FBaseCombatEvent
-{
-public:
-	class URHealthComponent*                      Target;                                            // 0x0018(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         currentHealth;                                     // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NewHealth;                                         // 0x0024(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSetHealthCombatEvent) == 0x000008, "Wrong alignment on FSetHealthCombatEvent");
-static_assert(sizeof(FSetHealthCombatEvent) == 0x000028, "Wrong size on FSetHealthCombatEvent");
-static_assert(offsetof(FSetHealthCombatEvent, Target) == 0x000018, "Member 'FSetHealthCombatEvent::Target' has a wrong offset!");
-static_assert(offsetof(FSetHealthCombatEvent, currentHealth) == 0x000020, "Member 'FSetHealthCombatEvent::currentHealth' has a wrong offset!");
-static_assert(offsetof(FSetHealthCombatEvent, NewHealth) == 0x000024, "Member 'FSetHealthCombatEvent::NewHealth' has a wrong offset!");
-
-// ScriptStruct RGame.RFloatingText
-// 0x0038 (0x0038 - 0x0000)
-struct FRFloatingText final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Location;                                          // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   Text;                                              // 0x0020(0x0010)(NativeAccessSpecifierPublic)
-	ERFloatingTextType                            Type;                                              // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRFloatingText) == 0x000008, "Wrong alignment on FRFloatingText");
-static_assert(sizeof(FRFloatingText) == 0x000038, "Wrong size on FRFloatingText");
-static_assert(offsetof(FRFloatingText, WorldContextObject) == 0x000000, "Member 'FRFloatingText::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(FRFloatingText, Location) == 0x000008, "Member 'FRFloatingText::Location' has a wrong offset!");
-static_assert(offsetof(FRFloatingText, Text) == 0x000020, "Member 'FRFloatingText::Text' has a wrong offset!");
-static_assert(offsetof(FRFloatingText, Type) == 0x000030, "Member 'FRFloatingText::Type' has a wrong offset!");
-
-// ScriptStruct RGame.RFloatingTextQueue
-// 0x0018 (0x0018 - 0x0000)
-struct FRFloatingTextQueue final
-{
-public:
-	float                                         DequeueTimer;                                      // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSkipTimer;                                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRFloatingText>                 FloatingTextQueue;                                 // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRFloatingTextQueue) == 0x000008, "Wrong alignment on FRFloatingTextQueue");
-static_assert(sizeof(FRFloatingTextQueue) == 0x000018, "Wrong size on FRFloatingTextQueue");
-static_assert(offsetof(FRFloatingTextQueue, DequeueTimer) == 0x000000, "Member 'FRFloatingTextQueue::DequeueTimer' has a wrong offset!");
-static_assert(offsetof(FRFloatingTextQueue, bSkipTimer) == 0x000004, "Member 'FRFloatingTextQueue::bSkipTimer' has a wrong offset!");
-static_assert(offsetof(FRFloatingTextQueue, FloatingTextQueue) == 0x000008, "Member 'FRFloatingTextQueue::FloatingTextQueue' has a wrong offset!");
-
-// ScriptStruct RGame.RNavigationDynamicCollisionPayload
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FRNavigationDynamicCollisionPayload final
-{
-public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRNavigationDynamicCollisionPayload) == 0x000008, "Wrong alignment on FRNavigationDynamicCollisionPayload");
-static_assert(sizeof(FRNavigationDynamicCollisionPayload) == 0x000018, "Wrong size on FRNavigationDynamicCollisionPayload");
+DUMPER7_ASSERTS_FMutatorLootSettings;
 
 // ScriptStruct RGame.RNavigationQueryParams
 // 0x0020 (0x0020 - 0x0000)
@@ -2037,19 +1155,10 @@ public:
 	bool                                          bForceRescheduleQuery;                             // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0xB];                                       // 0x0015(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRNavigationQueryParams) == 0x000008, "Wrong alignment on FRNavigationQueryParams");
-static_assert(sizeof(FRNavigationQueryParams) == 0x000020, "Wrong size on FRNavigationQueryParams");
-static_assert(offsetof(FRNavigationQueryParams, QueryTimeout) == 0x000000, "Member 'FRNavigationQueryParams::QueryTimeout' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryParams, bFlexibleOriginGoal) == 0x000004, "Member 'FRNavigationQueryParams::bFlexibleOriginGoal' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryParams, bSkipOptimizationPass) == 0x000005, "Member 'FRNavigationQueryParams::bSkipOptimizationPass' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryParams, MaxOptimizerSweepAttemptsPerNode) == 0x000008, "Member 'FRNavigationQueryParams::MaxOptimizerSweepAttemptsPerNode' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryParams, bPreciseDynamicCollisionRepathing) == 0x00000C, "Member 'FRNavigationQueryParams::bPreciseDynamicCollisionRepathing' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryParams, bIgnoreDynamicCollisionRepathingForDirectGoals) == 0x00000D, "Member 'FRNavigationQueryParams::bIgnoreDynamicCollisionRepathingForDirectGoals' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryParams, CollisionShapeInflation) == 0x000010, "Member 'FRNavigationQueryParams::CollisionShapeInflation' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryParams, bForceRescheduleQuery) == 0x000014, "Member 'FRNavigationQueryParams::bForceRescheduleQuery' has a wrong offset!");
+DUMPER7_ASSERTS_FRNavigationQueryParams;
 
 // ScriptStruct RGame.RNavigationQueryData
-// 0x0188 (0x0188 - 0x0000)
+// 0x0258 (0x0258 - 0x0000)
 struct FRNavigationQueryData final
 {
 public:
@@ -2065,28 +1174,143 @@ public:
 	float                                         MinFlightHeight;                                   // 0x0050(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxFlightHeight;                                   // 0x0054(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRNavigationQueryParams                QueryParams;                                       // 0x0058(0x0020)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_78[0x48];                                      // 0x0078(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TWeakObjectPtr<class AActor>>          AttachedActors;                                    // 0x00C0(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D0[0xA0];                                      // 0x00D0(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVector>                        PathSolutionOptimized;                             // 0x0170(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	ERNavigationQueryStatus                       QueryStatus;                                       // 0x0180(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_78[0xC8];                                      // 0x0078(0x00C8)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<TWeakObjectPtr<class AActor>>          AttachedActors;                                    // 0x0140(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_150[0xF0];                                     // 0x0150(0x00F0)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVector>                        PathSolutionOptimized;                             // 0x0240(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	ERNavigationQueryStatus                       QueryStatus;                                       // 0x0250(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRNavigationQueryData) == 0x000008, "Wrong alignment on FRNavigationQueryData");
-static_assert(sizeof(FRNavigationQueryData) == 0x000188, "Wrong size on FRNavigationQueryData");
-static_assert(offsetof(FRNavigationQueryData, Actor) == 0x000008, "Member 'FRNavigationQueryData::Actor' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryData, CollisionComponent) == 0x000010, "Member 'FRNavigationQueryData::CollisionComponent' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryData, Origin) == 0x000018, "Member 'FRNavigationQueryData::Origin' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryData, Destination) == 0x000030, "Member 'FRNavigationQueryData::Destination' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryData, NavigationType) == 0x000048, "Member 'FRNavigationQueryData::NavigationType' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryData, bAllowJump) == 0x000049, "Member 'FRNavigationQueryData::bAllowJump' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryData, MaxJumpDistance) == 0x00004C, "Member 'FRNavigationQueryData::MaxJumpDistance' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryData, MinFlightHeight) == 0x000050, "Member 'FRNavigationQueryData::MinFlightHeight' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryData, MaxFlightHeight) == 0x000054, "Member 'FRNavigationQueryData::MaxFlightHeight' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryData, QueryParams) == 0x000058, "Member 'FRNavigationQueryData::QueryParams' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryData, AttachedActors) == 0x0000C0, "Member 'FRNavigationQueryData::AttachedActors' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryData, PathSolutionOptimized) == 0x000170, "Member 'FRNavigationQueryData::PathSolutionOptimized' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryData, QueryStatus) == 0x000180, "Member 'FRNavigationQueryData::QueryStatus' has a wrong offset!");
+DUMPER7_ASSERTS_FRNavigationQueryData;
+
+// ScriptStruct RGame.RDamageEventInfo
+// 0x0028 (0x0028 - 0x0000)
+struct FRDamageEventInfo final
+{
+public:
+	float                                         Damage;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWasCritical;                                      // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                HitLocation;                                       // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DamageSourceMask;                                  // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRDamageEventInfo;
+
+// ScriptStruct RGame.RLoadout
+// 0x0040 (0x0040 - 0x0000)
+struct FRLoadout final
+{
+public:
+	class URWeaponPrimaryAsset*                   Weapon;                                            // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URWeaponModPrimaryAsset*                PrimaryFireMod;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URWeaponModPrimaryAsset*                SecondaryFireMod;                                  // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URMutatorPrimaryAsset*                  CharacterAbility;                                  // 0x0018(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URWeaponModPrimaryAsset*                Attachment0Mod;                                    // 0x0020(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URWeaponModPrimaryAsset*                Attachment1Mod;                                    // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URCharacterMutatorPrimaryAsset*         SuitMutator;                                       // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URWeaponCosmeticPrimaryAsset*           WeaponCosmeticPA;                                  // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRLoadout;
+
+// ScriptStruct RGame.SoundSpawnRequest
+// 0x0068 (0x0068 - 0x0000)
+struct FSoundSpawnRequest final
+{
+public:
+	class USoundBase*                             Sound;                                             // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector_NetQuantize                    Location;                                          // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         VolumeMultiplier;                                  // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PitchMultiplier;                                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartTime;                                         // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundAttenuation*                      AttenuationSettings;                               // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundConcurrency*                      ConcurrencySettings;                               // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FAudioParameter>                AudioParams;                                       // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	class AActor*                                 ActorLocation;                                     // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 LocalDeterminingActor;                             // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPlayerSound;                                    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSoundSpawnRequest;
+
+// ScriptStruct RGame.AnnouncementFilter
+// 0x0018 (0x0018 - 0x0000)
+struct FAnnouncementFilter final
+{
+public:
+	EAnnouncementFilterType                       Type;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         Values;                                            // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAnnouncementFilter;
+
+// ScriptStruct RGame.AnnouncementText
+// 0x0030 (0x0030 - 0x0000)
+struct FAnnouncementText final
+{
+public:
+	class FString                                 Culture;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Title;                                             // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Body;                                              // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAnnouncementText;
+
+// ScriptStruct RGame.Announcement
+// 0x0028 (0x0028 - 0x0000)
+struct FAnnouncement final
+{
+public:
+	EAnnouncementType                             Type;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAnnouncementFilter>            Filters;                                           // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FAnnouncementText>              Texts;                                             // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAnnouncement;
+
+// ScriptStruct RGame.AnnouncementList
+// 0x0010 (0x0010 - 0x0000)
+struct FAnnouncementList final
+{
+public:
+	TArray<struct FAnnouncement>                  Announcements;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAnnouncementList;
+
+// ScriptStruct RGame.ClientPredictionTestSmoothingData
+// 0x0010 (0x0010 - 0x0000)
+struct FClientPredictionTestSmoothingData final
+{
+public:
+	bool                                          bUseAvgError;                                      // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LocationSmoothingExp;                              // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinLocationError;                                  // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxLocationError;                                  // 0x000C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FClientPredictionTestSmoothingData;
+
+// ScriptStruct RGame.SetArmorCombatEvent
+// 0x0010 (0x0028 - 0x0018)
+struct FSetArmorCombatEvent final : public FBaseCombatEvent
+{
+public:
+	class URHealthComponent*                      Target;                                            // 0x0018(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CurrentArmor;                                      // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewArmor;                                          // 0x0024(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSetArmorCombatEvent;
+
+// ScriptStruct RGame.RUniqueWishingWell
+// 0x0018 (0x0018 - 0x0000)
+struct FRUniqueWishingWell final
+{
+public:
+	class FString                                 PlayerNetId;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CurrentInteractionCost;                            // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UsesLeft;                                          // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRUniqueWishingWell;
 
 // ScriptStruct RGame.ROverridableEnemyTags
 // 0x0028 (0x0028 - 0x0000)
@@ -2097,23 +1321,453 @@ public:
 	float                                         SpawnWeight;                                       // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FROverridableEnemyTags) == 0x000008, "Wrong alignment on FROverridableEnemyTags");
-static_assert(sizeof(FROverridableEnemyTags) == 0x000028, "Wrong size on FROverridableEnemyTags");
-static_assert(offsetof(FROverridableEnemyTags, OverridableEnemyTags) == 0x000000, "Member 'FROverridableEnemyTags::OverridableEnemyTags' has a wrong offset!");
-static_assert(offsetof(FROverridableEnemyTags, SpawnWeight) == 0x000020, "Member 'FROverridableEnemyTags::SpawnWeight' has a wrong offset!");
+DUMPER7_ASSERTS_FROverridableEnemyTags;
+
+// ScriptStruct RGame.MutableIntegerWeaponSetting
+// 0x0108 (0x0108 - 0x0000)
+struct alignas(0x08) FMutableIntegerWeaponSetting final
+{
+public:
+	uint8                                         Pad_0[0x108];                                      // 0x0000(0x0108)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMutableIntegerWeaponSetting;
+
+// ScriptStruct RGame.HealCombatEvent
+// 0x0020 (0x0038 - 0x0018)
+struct FHealCombatEvent final : public FBaseCombatEvent
+{
+public:
+	class AActor*                                 Instigator;                                        // 0x0018(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URHealthComponent*                      Target;                                            // 0x0020(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EHealType                                     HealType;                                          // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Value;                                             // 0x002C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReceivedHealing;                                   // 0x0030(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetCurrentValue;                                // 0x0034(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FHealCombatEvent;
+
+// ScriptStruct RGame.RMutatorSelectionScreenOption
+// 0x0010 (0x0010 - 0x0000)
+struct FRMutatorSelectionScreenOption final
+{
+public:
+	class URMutatorPrimaryAsset*                  MutatorPA;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MutatorRank;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRMutatorSelectionScreenOption;
+
+// ScriptStruct RGame.CombatEventReplication
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FCombatEventReplication final
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FCombatEventReplication;
+
+// ScriptStruct RGame.RDamageDealtBreakdownEntry
+// 0x000C (0x000C - 0x0000)
+struct FRDamageDealtBreakdownEntry final
+{
+public:
+	struct FGameplayTag                           DamageSourceTag;                                   // 0x0000(0x0008)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DamageAmount;                                      // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRDamageDealtBreakdownEntry;
+
+// ScriptStruct RGame.REnemyKillCount
+// 0x0018 (0x0018 - 0x0000)
+struct FREnemyKillCount final
+{
+public:
+	class FString                                 EnemyId;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         KillCount;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FREnemyKillCount;
+
+// ScriptStruct RGame.RRunStats
+// 0x000C (0x000C - 0x0000)
+struct FRRunStats final
+{
+public:
+	float                                         RunTime;                                           // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LevelReached;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RoomReached;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRRunStats;
+
+// ScriptStruct RGame.RNodeLogData
+// 0x0008 (0x0008 - 0x0000)
+struct FRNodeLogData final
+{
+public:
+	class FName                                   NodeName;                                          // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRNodeLogData;
+
+// ScriptStruct RGame.RPlayerStats
+// 0x0128 (0x0128 - 0x0000)
+struct FRPlayerStats final
+{
+public:
+	TSubclassOf<class ARNPCPawnBase>              EnemyKilledBy;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DamageTaken;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DamageDealt;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FRDamageDealtBreakdownEntry>    DamageDealtBreakdown;                              // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NativeAccessSpecifierPublic)
+	int32                                         EnemiesKilled;                                     // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Deaths;                                            // 0x0024(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GoldCollected;                                     // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumKeys;                                           // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FRMutatorLogData>               MutatorsPickedUp;                                  // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NativeAccessSpecifierPublic)
+	TArray<class URChallengeGridItem*>            ChallengesCompleted;                               // 0x0040(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, RepSkip, NativeAccessSpecifierPublic)
+	class URWeaponPrimaryAsset*                   WeaponUsed;                                        // 0x0050(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URWeaponModPrimaryAsset*                PrimaryWeaponModAtStartOfRun;                      // 0x0058(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URWeaponModPrimaryAsset*                SecondaryWeaponModAtStartOfRun;                    // 0x0060(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URCharacterMutatorPrimaryAsset*         AbilityPrimaryAssetAtStartOfRun;                   // 0x0068(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Difficulty;                                        // 0x0070(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         bulletsHit;                                        // 0x0080(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         weakspotsHit;                                      // 0x0084(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         bulletsMissed;                                     // 0x0088(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxHPReached;                                      // 0x008C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TimesDowned;                                       // 0x0090(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TimesRevivedOtherPlayers;                          // 0x0094(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FREnemyKillCount>               EnemiesKilledOfType;                               // 0x0098(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NativeAccessSpecifierPublic)
+	bool                                          RunSuccesful;                                      // 0x00A8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRRunStats                             RunStats;                                          // 0x00AC(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         NumNodesVisited;                                   // 0x00B8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRNodeLogData>                  NodesVisited;                                      // 0x00C0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NativeAccessSpecifierPublic)
+	class FString                                 PlayerName;                                        // 0x00D0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       PlayerNetId;                                       // 0x00E0(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UWidget>                    PlayerFrameWidgetClass;                            // 0x0110(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class URMutatorPrimaryAsset*>          EquippedCharms;                                    // 0x0118(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRPlayerStats;
+
+// ScriptStruct RGame.CharacterMutator
+// 0x0018 (0x0018 - 0x0000)
+struct FCharacterMutator final
+{
+public:
+	TWeakObjectPtr<class URGCharacterMutatorScript> CharacterMutatorScriptReference;                 // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class URCharacterMutatorPrimaryAsset> CharacterMutatorPrimaryAsset;               // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index;                                             // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MutatorRank;                                       // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCharacterMutator;
+
+// ScriptStruct RGame.ProjectileMutator
+// 0x000C (0x000C - 0x0000)
+struct FProjectileMutator final
+{
+public:
+	TWeakObjectPtr<class URProjectileMutatorPrimaryAsset> ProjectileMutatorPrimaryAsset;             // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MutatorRank;                                       // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FProjectileMutator;
+
+// ScriptStruct RGame.WeaponMutator
+// 0x0014 (0x0014 - 0x0000)
+struct FWeaponMutator final
+{
+public:
+	TWeakObjectPtr<class URGWeaponMutatorScript>  WeaponMutatorScriptReference;                      // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class URWeaponMutatorPrimaryAsset> WeaponMutatorPrimaryAsset;                     // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MutatorRank;                                       // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FWeaponMutator;
+
+// ScriptStruct RGame.RDisconnectedPlayerData
+// 0x01E0 (0x01E0 - 0x0000)
+struct FRDisconnectedPlayerData final
+{
+public:
+	struct FRPlayerStats                          PlayerStats;                                       // 0x0000(0x0128)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TArray<struct FCharacterMutator>              CharacterMutators;                                 // 0x0128(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FProjectileMutator>             ProjectileMutators;                                // 0x0138(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FWeaponMutator>                 WeaponMutators;                                    // 0x0148(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FRLoadout                              Loadout;                                           // 0x0158(0x0040)(NoDestructor, NativeAccessSpecifierPublic)
+	float                                         currentHealth;                                     // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HealthBonusRank;                                   // 0x019C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BloodPassive7Value;                                // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Difficulty9Value;                                  // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HealthyCommitmentStacks;                           // 0x01A8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ViolentCommitmentStacks;                           // 0x01AC(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HealingFlaskCharges;                               // 0x01B0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasUsedSecondWind;                                // 0x01B4(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B5[0x3];                                      // 0x01B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NumMutatorCategoryRerolls;                         // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  ChosenMutatorRewardCategories;                     // 0x01C0(0x0020)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRDisconnectedPlayerData;
+
+// ScriptStruct RGame.RKeywordDataRow
+// 0x0020 (0x0028 - 0x0008)
+struct FRKeywordDataRow final : public FTableRowBase
+{
+public:
+	TArray<class FText>                           Keywords;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	class FText                                   KeywordInfo;                                       // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRKeywordDataRow;
+
+// ScriptStruct RGame.VelocityBlend
+// 0x0010 (0x0010 - 0x0000)
+struct FVelocityBlend final
+{
+public:
+	float                                         F;                                                 // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         B;                                                 // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         L;                                                 // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         R;                                                 // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FVelocityBlend;
+
+// ScriptStruct RGame.RMutableInteger
+// 0x0120 (0x0120 - 0x0000)
+struct alignas(0x08) FRMutableInteger final
+{
+public:
+	int32                                         CurrentValue;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AbsoluteValue;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIntPoint                              MinMaxRange;                                       // 0x000C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x10C];                                     // 0x0014(0x010C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRMutableInteger;
 
 // ScriptStruct RGame.AreaPreloadTableRow
-// 0x0050 (0x0058 - 0x0008)
+// 0x0048 (0x0050 - 0x0008)
 struct FAreaPreloadTableRow final : public FTableRowBase
 {
 public:
-	TSoftObjectPtr<class UObject>                 SoftAsset;                                         // 0x0008(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   SoftClass;                                         // 0x0030(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        SoftAssetPath;                                     // 0x0008(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   SoftClass;                                         // 0x0028(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAreaPreloadTableRow) == 0x000008, "Wrong alignment on FAreaPreloadTableRow");
-static_assert(sizeof(FAreaPreloadTableRow) == 0x000058, "Wrong size on FAreaPreloadTableRow");
-static_assert(offsetof(FAreaPreloadTableRow, SoftAsset) == 0x000008, "Member 'FAreaPreloadTableRow::SoftAsset' has a wrong offset!");
-static_assert(offsetof(FAreaPreloadTableRow, SoftClass) == 0x000030, "Member 'FAreaPreloadTableRow::SoftClass' has a wrong offset!");
+DUMPER7_ASSERTS_FAreaPreloadTableRow;
+
+// ScriptStruct RGame.RSpawnableEnemyEntry
+// 0x0048 (0x0048 - 0x0000)
+struct FRSpawnableEnemyEntry final
+{
+public:
+	TSoftClassPtr<class UClass>                   SoftEnemyClass;                                    // 0x0000(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpawnWeight;                                       // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              DifficultyRequirement;                             // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxTotalLimit;                                     // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxAliveLimit;                                     // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRSpawnableEnemyEntry;
+
+// ScriptStruct RGame.RSegmentSettings
+// 0x0058 (0x0058 - 0x0000)
+struct FRSegmentSettings final
+{
+public:
+	TArray<class AREnemySpawnArea*>               AreasItCanSpawnIn;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  SpawnableEnemyTags;                                // 0x0010(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	float                                         Ratio;                                             // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpawnDelay;                                        // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SpawnPriority;                                     // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SpawnAtStart;                                      // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsElite;                                          // 0x003D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3E[0x1A];                                      // 0x003E(0x001A)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRSegmentSettings;
+
+// ScriptStruct RGame.REnemyScalingDTEntry
+// 0x0010 (0x0018 - 0x0008)
+struct FREnemyScalingDTEntry final : public FTableRowBase
+{
+public:
+	TSubclassOf<class ARNPCPawnBase>              EnemyType;                                         // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LevelHealthIncreasePercentage;                     // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FREnemyScalingDTEntry;
+
+// ScriptStruct RGame.MutatorDescriptionVariables
+// 0x0048 (0x0048 - 0x0000)
+struct FMutatorDescriptionVariables final
+{
+public:
+	class FText                                   VariableDisplayName;                               // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	bool                                          bHideInUpgradeScreen;                              // 0x0010(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPercentValue;                                   // 0x0011(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 VariableName;                                      // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 RankValues;                                        // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<float>                                 VariableRankValues;                                // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMutatorDescriptionVariables;
+
+// ScriptStruct RGame.OceanPassiveProjectile
+// 0x0030 (0x0030 - 0x0000)
+struct FOceanPassiveProjectile final
+{
+public:
+	class URMutatorPrimaryAsset*                  PassiveMutatorPA;                                  // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   GrantedSpawnableProjectileClass;                   // 0x0008(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOceanPassiveProjectile;
+
+// ScriptStruct RGame.LeanAmount
+// 0x0008 (0x0008 - 0x0000)
+struct FLeanAmount final
+{
+public:
+	float                                         LR;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FB;                                                // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FLeanAmount;
+
+// ScriptStruct RGame.RSpawnDataModifierEntry
+// 0x0060 (0x0060 - 0x0000)
+struct FRSpawnDataModifierEntry final
+{
+public:
+	TArray<struct FRSpawnableEnemyEntry>          SpawnableEnemyEntries;                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<class FName, float>                      BonusEnemyMultipliers;                             // 0x0010(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRSpawnDataModifierEntry;
+
+// ScriptStruct RGame.SurfaceTypeFX
+// 0x0050 (0x0058 - 0x0008)
+struct FSurfaceTypeFX final : public FTableRowBase
+{
+public:
+	EPhysicalSurface                              SurfaceType;                                       // 0x0008(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraSystem*                         HitEffect;                                         // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseDecal;                                         // 0x0018(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseNiagaraDecal;                                  // 0x0019(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstance*                      HitDecal;                                          // 0x0020(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              DecalLifetime;                                     // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DecalFadeout;                                      // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              DecalSize;                                         // 0x0040(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DecalHeight;                                       // 0x0050(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSurfaceTypeFX;
+
+// ScriptStruct RGame.BlockingStatusEffect
+// 0x0010 (0x0010 - 0x0000)
+struct FBlockingStatusEffect final
+{
+public:
+	TSubclassOf<class URStatusEffectGScript>      StatusEffect;                                      // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnlyBlockIfMatchingInstigator;                    // 0x0008(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBlockingStatusEffect;
+
+// ScriptStruct RGame.RLootSelectionOption
+// 0x0010 (0x0010 - 0x0000)
+struct FRLootSelectionOption final
+{
+public:
+	class URPrimaryDataAsset*                     LootAsset;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LootRank;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRLootSelectionOption;
+
+// ScriptStruct RGame.RBossAbilitySettings
+// 0x0010 (0x0010 - 0x0000)
+struct FRBossAbilitySettings final
+{
+public:
+	TSubclassOf<class URGBossAbilityScript>       Script;                                            // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BossAbilityWeight;                                 // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRBossAbilitySettings;
+
+// ScriptStruct RGame.ReviveStartedCombatEvent
+// 0x0010 (0x0028 - 0x0018)
+struct FReviveStartedCombatEvent final : public FBaseCombatEvent
+{
+public:
+	class ARPlayerPawn*                           RevivedPlayer;                                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ARPlayerPawn*                           RevivingPlayer;                                    // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FReviveStartedCombatEvent;
+
+// ScriptStruct RGame.SetBarrierCombatEvent
+// 0x0010 (0x0028 - 0x0018)
+struct FSetBarrierCombatEvent final : public FBaseCombatEvent
+{
+public:
+	class URHealthComponent*                      Target;                                            // 0x0018(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CurrentBarrier;                                    // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewBarrier;                                        // 0x0024(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSetBarrierCombatEvent;
+
+// ScriptStruct RGame.FieldSystemActorInfo
+// 0x0018 (0x0018 - 0x0000)
+struct FFieldSystemActorInfo final
+{
+public:
+	class ARFieldSystemActor*                     FieldSystemActor;                                  // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ARPawnBase*                             AssociatedPawn;                                    // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInUse;                                            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FFieldSystemActorInfo;
+
+// ScriptStruct RGame.RRelevancyRegisterParams
+// 0x0028 (0x0028 - 0x0000)
+struct FRRelevancyRegisterParams final
+{
+public:
+	float                                         Radius;                                            // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                LocationOffset;                                    // 0x0008(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCheckDistance;                                    // 0x0020(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCheckInView;                                      // 0x0021(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCheckRoom;                                        // 0x0022(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRRelevancyRegisterParams;
+
+// ScriptStruct RGame.SetHealthCombatEvent
+// 0x0010 (0x0028 - 0x0018)
+struct FSetHealthCombatEvent final : public FBaseCombatEvent
+{
+public:
+	class URHealthComponent*                      Target;                                            // 0x0018(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         currentHealth;                                     // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewHealth;                                         // 0x0024(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSetHealthCombatEvent;
+
+// ScriptStruct RGame.RNavigationDynamicCollisionPayload
+// 0x0058 (0x0058 - 0x0000)
+struct alignas(0x08) FRNavigationDynamicCollisionPayload final
+{
+public:
+	uint8                                         Pad_0[0x58];                                       // 0x0000(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRNavigationDynamicCollisionPayload;
+
+// ScriptStruct RGame.RLevelData
+// 0x0010 (0x0010 - 0x0000)
+struct FRLevelData final
+{
+public:
+	class UDataTable*                             LevelTable;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataTable*                             LevelTableOverride;                                // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRLevelData;
 
 // ScriptStruct RGame.ClientPredictionFrameData
 // 0x0040 (0x0040 - 0x0000)
@@ -2125,10 +1779,7 @@ public:
 	uint32                                        LastExecutedEvent;                                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_20[0x20];                                      // 0x0020(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FClientPredictionFrameData) == 0x000008, "Wrong alignment on FClientPredictionFrameData");
-static_assert(sizeof(FClientPredictionFrameData) == 0x000040, "Wrong size on FClientPredictionFrameData");
-static_assert(offsetof(FClientPredictionFrameData, NetDirtyTrigger) == 0x000018, "Member 'FClientPredictionFrameData::NetDirtyTrigger' has a wrong offset!");
-static_assert(offsetof(FClientPredictionFrameData, LastExecutedEvent) == 0x00001C, "Member 'FClientPredictionFrameData::LastExecutedEvent' has a wrong offset!");
+DUMPER7_ASSERTS_FClientPredictionFrameData;
 
 // ScriptStruct RGame.RAISettings
 // 0x0068 (0x0068 - 0x0000)
@@ -2161,31 +1812,25 @@ public:
 	int32                                         PlayerResourceWhenKilled;                          // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FName>                           SpawnTags;                                         // 0x0058(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRAISettings) == 0x000008, "Wrong alignment on FRAISettings");
-static_assert(sizeof(FRAISettings) == 0x000068, "Wrong size on FRAISettings");
-static_assert(offsetof(FRAISettings, BehaviourTree) == 0x000000, "Member 'FRAISettings::BehaviourTree' has a wrong offset!");
-static_assert(offsetof(FRAISettings, PathingTag) == 0x000008, "Member 'FRAISettings::PathingTag' has a wrong offset!");
-static_assert(offsetof(FRAISettings, PathingType) == 0x000010, "Member 'FRAISettings::PathingType' has a wrong offset!");
-static_assert(offsetof(FRAISettings, CombatPathingType) == 0x000011, "Member 'FRAISettings::CombatPathingType' has a wrong offset!");
-static_assert(offsetof(FRAISettings, CombatSpeed) == 0x000014, "Member 'FRAISettings::CombatSpeed' has a wrong offset!");
-static_assert(offsetof(FRAISettings, Health) == 0x000018, "Member 'FRAISettings::Health' has a wrong offset!");
-static_assert(offsetof(FRAISettings, Armor) == 0x00001C, "Member 'FRAISettings::Armor' has a wrong offset!");
-static_assert(offsetof(FRAISettings, Damage) == 0x000020, "Member 'FRAISettings::Damage' has a wrong offset!");
-static_assert(offsetof(FRAISettings, SpecialDamage) == 0x000024, "Member 'FRAISettings::SpecialDamage' has a wrong offset!");
-static_assert(offsetof(FRAISettings, AttackRange) == 0x000028, "Member 'FRAISettings::AttackRange' has a wrong offset!");
-static_assert(offsetof(FRAISettings, SpecialAttackRange) == 0x00002C, "Member 'FRAISettings::SpecialAttackRange' has a wrong offset!");
-static_assert(offsetof(FRAISettings, bRequireLOSForAttacks) == 0x000030, "Member 'FRAISettings::bRequireLOSForAttacks' has a wrong offset!");
-static_assert(offsetof(FRAISettings, bRequireLOSForSpecials) == 0x000031, "Member 'FRAISettings::bRequireLOSForSpecials' has a wrong offset!");
-static_assert(offsetof(FRAISettings, MinimumFlightHeight) == 0x000034, "Member 'FRAISettings::MinimumFlightHeight' has a wrong offset!");
-static_assert(offsetof(FRAISettings, MaximumFlightHeight) == 0x000038, "Member 'FRAISettings::MaximumFlightHeight' has a wrong offset!");
-static_assert(offsetof(FRAISettings, CombatMinDistance) == 0x00003C, "Member 'FRAISettings::CombatMinDistance' has a wrong offset!");
-static_assert(offsetof(FRAISettings, ReloadTime) == 0x000040, "Member 'FRAISettings::ReloadTime' has a wrong offset!");
-static_assert(offsetof(FRAISettings, SpecialAbilityRechargeTime) == 0x000044, "Member 'FRAISettings::SpecialAbilityRechargeTime' has a wrong offset!");
-static_assert(offsetof(FRAISettings, AreaAggroRange) == 0x000048, "Member 'FRAISettings::AreaAggroRange' has a wrong offset!");
-static_assert(offsetof(FRAISettings, FrontalAggroRange) == 0x00004C, "Member 'FRAISettings::FrontalAggroRange' has a wrong offset!");
-static_assert(offsetof(FRAISettings, GracePeriod) == 0x000050, "Member 'FRAISettings::GracePeriod' has a wrong offset!");
-static_assert(offsetof(FRAISettings, PlayerResourceWhenKilled) == 0x000054, "Member 'FRAISettings::PlayerResourceWhenKilled' has a wrong offset!");
-static_assert(offsetof(FRAISettings, SpawnTags) == 0x000058, "Member 'FRAISettings::SpawnTags' has a wrong offset!");
+DUMPER7_ASSERTS_FRAISettings;
+
+// ScriptStruct RGame.RAIAttackSettings
+// 0x0020 (0x0020 - 0x0000)
+struct FRAIAttackSettings final
+{
+public:
+	TSubclassOf<class URGEnemyAttackScript>       AttackScript;                                      // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Cooldown;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AttackRange;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinRangeToAttack;                                  // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Damage;                                            // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRequireLOSForAttack;                              // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRequiresSpecialCondition;                         // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBlocked;                                          // 0x001A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B[0x1];                                       // 0x001B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Priority;                                          // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRAIAttackSettings;
 
 // ScriptStruct RGame.RAIThreatInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -2196,23 +1841,35 @@ public:
 	float                                         CurrentThreat;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRAIThreatInfo) == 0x000008, "Wrong alignment on FRAIThreatInfo");
-static_assert(sizeof(FRAIThreatInfo) == 0x000010, "Wrong size on FRAIThreatInfo");
-static_assert(offsetof(FRAIThreatInfo, Player) == 0x000000, "Member 'FRAIThreatInfo::Player' has a wrong offset!");
-static_assert(offsetof(FRAIThreatInfo, CurrentThreat) == 0x000008, "Member 'FRAIThreatInfo::CurrentThreat' has a wrong offset!");
+DUMPER7_ASSERTS_FRAIThreatInfo;
 
-// ScriptStruct RGame.RSpawnDataModifierEntry
-// 0x0060 (0x0060 - 0x0000)
-struct FRSpawnDataModifierEntry final
+// ScriptStruct RGame.REnemyMutatorSet
+// 0x0050 (0x0058 - 0x0008)
+struct FREnemyMutatorSet final : public FTableRowBase
 {
 public:
-	TArray<struct FRSpawnableEnemyEntry>          SpawnableEnemyEntries;                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<class FName, float>                      BonusEnemyMultipliers;                             // 0x0010(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   MutatorName;                                       // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TSubclassOf<class URGEnemyMutatorScript>      EnemyMutator;                                      // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<TSubclassOf<class URGEnemyMutatorScript>> MutatorBlacklist;                               // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<TSoftClassPtr<class UClass>>           EnemyClassWhitelist;                               // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<TSoftClassPtr<class UClass>>           EnemyClassBlacklist;                               // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	int32                                         SpawnableAmountPerSegment;                         // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnabled;                                          // 0x0054(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRSpawnDataModifierEntry) == 0x000008, "Wrong alignment on FRSpawnDataModifierEntry");
-static_assert(sizeof(FRSpawnDataModifierEntry) == 0x000060, "Wrong size on FRSpawnDataModifierEntry");
-static_assert(offsetof(FRSpawnDataModifierEntry, SpawnableEnemyEntries) == 0x000000, "Member 'FRSpawnDataModifierEntry::SpawnableEnemyEntries' has a wrong offset!");
-static_assert(offsetof(FRSpawnDataModifierEntry, BonusEnemyMultipliers) == 0x000010, "Member 'FRSpawnDataModifierEntry::BonusEnemyMultipliers' has a wrong offset!");
+DUMPER7_ASSERTS_FREnemyMutatorSet;
+
+// ScriptStruct RGame.RBossAbilityPoolDTEntry
+// 0x0020 (0x0028 - 0x0008)
+struct FRBossAbilityPoolDTEntry final : public FTableRowBase
+{
+public:
+	class FName                                   Phase;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         QueueLengthOverride;                               // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRBossAbilitySettings>          AbilityPool;                                       // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRBossAbilityPoolDTEntry;
 
 // ScriptStruct RGame.RewardTableRowBase
 // 0x0068 (0x0070 - 0x0008)
@@ -2231,15 +1888,7 @@ public:
 	struct FGameplayTag                           RewardCategoryTag;                                 // 0x0064(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRewardTableRowBase) == 0x000008, "Wrong alignment on FRewardTableRowBase");
-static_assert(sizeof(FRewardTableRowBase) == 0x000070, "Wrong size on FRewardTableRowBase");
-static_assert(offsetof(FRewardTableRowBase, RewardRowId) == 0x000008, "Member 'FRewardTableRowBase::RewardRowId' has a wrong offset!");
-static_assert(offsetof(FRewardTableRowBase, IsEnabled) == 0x000018, "Member 'FRewardTableRowBase::IsEnabled' has a wrong offset!");
-static_assert(offsetof(FRewardTableRowBase, SoftReward) == 0x000020, "Member 'FRewardTableRowBase::SoftReward' has a wrong offset!");
-static_assert(offsetof(FRewardTableRowBase, SpawnWeight) == 0x000048, "Member 'FRewardTableRowBase::SpawnWeight' has a wrong offset!");
-static_assert(offsetof(FRewardTableRowBase, Quantities) == 0x000050, "Member 'FRewardTableRowBase::Quantities' has a wrong offset!");
-static_assert(offsetof(FRewardTableRowBase, IsHealingReward) == 0x000060, "Member 'FRewardTableRowBase::IsHealingReward' has a wrong offset!");
-static_assert(offsetof(FRewardTableRowBase, RewardCategoryTag) == 0x000064, "Member 'FRewardTableRowBase::RewardCategoryTag' has a wrong offset!");
+DUMPER7_ASSERTS_FRewardTableRowBase;
 
 // ScriptStruct RGame.RewardTableRow
 // 0x0008 (0x0078 - 0x0070)
@@ -2250,64 +1899,22 @@ public:
 	bool                                          UniqueReward;                                      // 0x0071(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRewardTableRow) == 0x000008, "Wrong alignment on FRewardTableRow");
-static_assert(sizeof(FRewardTableRow) == 0x000078, "Wrong size on FRewardTableRow");
-static_assert(offsetof(FRewardTableRow, bBypassSpawningDisabling) == 0x000070, "Member 'FRewardTableRow::bBypassSpawningDisabling' has a wrong offset!");
-static_assert(offsetof(FRewardTableRow, UniqueReward) == 0x000071, "Member 'FRewardTableRow::UniqueReward' has a wrong offset!");
+DUMPER7_ASSERTS_FRewardTableRow;
 
-// ScriptStruct RGame.REnemyMutatorSet
-// 0x0050 (0x0058 - 0x0008)
-struct FREnemyMutatorSet final : public FTableRowBase
+// ScriptStruct RGame.REnemySpawnDataDTEntry
+// 0x01B8 (0x01C0 - 0x0008)
+struct FREnemySpawnDataDTEntry final : public FTableRowBase
 {
 public:
-	class FText                                   MutatorName;                                       // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TSubclassOf<class URGEnemyMutatorScript>      EnemyMutator;                                      // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<TSubclassOf<class URGEnemyMutatorScript>> MutatorBlacklist;                               // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<TSoftClassPtr<class UClass>>           EnemyClassWhitelist;                               // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<TSoftClassPtr<class UClass>>           EnemyClassBlacklist;                               // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	int32                                         SpawnableAmountPerSegment;                         // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnabled;                                          // 0x0054(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  EnemyTags;                                         // 0x0008(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<struct FRSpawnableEnemyEntry>          SpawnableEnemies;                                  // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FVector2D                              ExtraResourcesRequirement;                         // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpawnAmountMultiplier;                             // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRMutableFloat                         OddsOfBonusEnemy;                                  // 0x0050(0x0128)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FRSpawnableEnemyEntry                  BonusEnemy;                                        // 0x0178(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FREnemyMutatorSet) == 0x000008, "Wrong alignment on FREnemyMutatorSet");
-static_assert(sizeof(FREnemyMutatorSet) == 0x000058, "Wrong size on FREnemyMutatorSet");
-static_assert(offsetof(FREnemyMutatorSet, MutatorName) == 0x000008, "Member 'FREnemyMutatorSet::MutatorName' has a wrong offset!");
-static_assert(offsetof(FREnemyMutatorSet, EnemyMutator) == 0x000018, "Member 'FREnemyMutatorSet::EnemyMutator' has a wrong offset!");
-static_assert(offsetof(FREnemyMutatorSet, MutatorBlacklist) == 0x000020, "Member 'FREnemyMutatorSet::MutatorBlacklist' has a wrong offset!");
-static_assert(offsetof(FREnemyMutatorSet, EnemyClassWhitelist) == 0x000030, "Member 'FREnemyMutatorSet::EnemyClassWhitelist' has a wrong offset!");
-static_assert(offsetof(FREnemyMutatorSet, EnemyClassBlacklist) == 0x000040, "Member 'FREnemyMutatorSet::EnemyClassBlacklist' has a wrong offset!");
-static_assert(offsetof(FREnemyMutatorSet, SpawnableAmountPerSegment) == 0x000050, "Member 'FREnemyMutatorSet::SpawnableAmountPerSegment' has a wrong offset!");
-static_assert(offsetof(FREnemyMutatorSet, bEnabled) == 0x000054, "Member 'FREnemyMutatorSet::bEnabled' has a wrong offset!");
-
-// ScriptStruct RGame.RBossAbilityPoolDTEntry
-// 0x0020 (0x0028 - 0x0008)
-struct FRBossAbilityPoolDTEntry final : public FTableRowBase
-{
-public:
-	class FName                                   Phase;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         QueueLengthOverride;                               // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRBossAbilitySettings>          AbilityPool;                                       // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRBossAbilityPoolDTEntry) == 0x000008, "Wrong alignment on FRBossAbilityPoolDTEntry");
-static_assert(sizeof(FRBossAbilityPoolDTEntry) == 0x000028, "Wrong size on FRBossAbilityPoolDTEntry");
-static_assert(offsetof(FRBossAbilityPoolDTEntry, Phase) == 0x000008, "Member 'FRBossAbilityPoolDTEntry::Phase' has a wrong offset!");
-static_assert(offsetof(FRBossAbilityPoolDTEntry, QueueLengthOverride) == 0x000010, "Member 'FRBossAbilityPoolDTEntry::QueueLengthOverride' has a wrong offset!");
-static_assert(offsetof(FRBossAbilityPoolDTEntry, AbilityPool) == 0x000018, "Member 'FRBossAbilityPoolDTEntry::AbilityPool' has a wrong offset!");
-
-// ScriptStruct RGame.REnemyScalingDTEntry
-// 0x0010 (0x0018 - 0x0008)
-struct FREnemyScalingDTEntry final : public FTableRowBase
-{
-public:
-	TSubclassOf<class ARNPCPawnBase>              EnemyType;                                         // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LevelHealthIncreasePercentage;                     // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FREnemyScalingDTEntry) == 0x000008, "Wrong alignment on FREnemyScalingDTEntry");
-static_assert(sizeof(FREnemyScalingDTEntry) == 0x000018, "Wrong size on FREnemyScalingDTEntry");
-static_assert(offsetof(FREnemyScalingDTEntry, EnemyType) == 0x000008, "Member 'FREnemyScalingDTEntry::EnemyType' has a wrong offset!");
-static_assert(offsetof(FREnemyScalingDTEntry, LevelHealthIncreasePercentage) == 0x000010, "Member 'FREnemyScalingDTEntry::LevelHealthIncreasePercentage' has a wrong offset!");
+DUMPER7_ASSERTS_FREnemySpawnDataDTEntry;
 
 // ScriptStruct RGame.REnemyAttackResourceDataDTEntry
 // 0x0018 (0x0020 - 0x0008)
@@ -2319,49 +1926,68 @@ public:
 	float                                         AttackGroupRegenPerSecond;                         // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FREnemyAttackResourceDataDTEntry) == 0x000008, "Wrong alignment on FREnemyAttackResourceDataDTEntry");
-static_assert(sizeof(FREnemyAttackResourceDataDTEntry) == 0x000020, "Wrong size on FREnemyAttackResourceDataDTEntry");
-static_assert(offsetof(FREnemyAttackResourceDataDTEntry, AttackGroupTag) == 0x000008, "Member 'FREnemyAttackResourceDataDTEntry::AttackGroupTag' has a wrong offset!");
-static_assert(offsetof(FREnemyAttackResourceDataDTEntry, MaxAttackGroupResources) == 0x000010, "Member 'FREnemyAttackResourceDataDTEntry::MaxAttackGroupResources' has a wrong offset!");
-static_assert(offsetof(FREnemyAttackResourceDataDTEntry, AttackGroupRegenPerSecond) == 0x000014, "Member 'FREnemyAttackResourceDataDTEntry::AttackGroupRegenPerSecond' has a wrong offset!");
+DUMPER7_ASSERTS_FREnemyAttackResourceDataDTEntry;
 
-// ScriptStruct RGame.LeanAmount
-// 0x0008 (0x0008 - 0x0000)
-struct FLeanAmount final
+// ScriptStruct RGame.SpearModifiers
+// 0x05D0 (0x05D0 - 0x0000)
+struct FSpearModifiers final
 {
 public:
-	float                                         LR;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FB;                                                // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRMutableFloat                         AllDamageMultiplier;                               // 0x0000(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FRMutableFloat                         PulseDamageMultiplier;                             // 0x0128(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FRMutableFloat                         AoERadiusMultiplier;                               // 0x0250(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FRMutableFloat                         AoETickIntervalModifier;                           // 0x0378(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FRMutableFloat                         DurationMultiplier;                                // 0x04A0(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	bool                                          bAttachedToWeakspot;                               // 0x05C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C9[0x7];                                      // 0x05C9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FLeanAmount) == 0x000004, "Wrong alignment on FLeanAmount");
-static_assert(sizeof(FLeanAmount) == 0x000008, "Wrong size on FLeanAmount");
-static_assert(offsetof(FLeanAmount, LR) == 0x000000, "Member 'FLeanAmount::LR' has a wrong offset!");
-static_assert(offsetof(FLeanAmount, FB) == 0x000004, "Member 'FLeanAmount::FB' has a wrong offset!");
+DUMPER7_ASSERTS_FSpearModifiers;
 
-// ScriptStruct RGame.OceanPassiveProjectile
-// 0x0030 (0x0030 - 0x0000)
-struct FOceanPassiveProjectile final
+// ScriptStruct RGame.RUniqueHealAltar
+// 0x0018 (0x0018 - 0x0000)
+struct FRUniqueHealAltar final
 {
 public:
-	class URMutatorPrimaryAsset*                  PassiveMutatorPA;                                  // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   GrantedSpawnableProjectileClass;                   // 0x0008(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PlayerNetId;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bConsumed;                                         // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOceanPassiveProjectile) == 0x000008, "Wrong alignment on FOceanPassiveProjectile");
-static_assert(sizeof(FOceanPassiveProjectile) == 0x000030, "Wrong size on FOceanPassiveProjectile");
-static_assert(offsetof(FOceanPassiveProjectile, PassiveMutatorPA) == 0x000000, "Member 'FOceanPassiveProjectile::PassiveMutatorPA' has a wrong offset!");
-static_assert(offsetof(FOceanPassiveProjectile, GrantedSpawnableProjectileClass) == 0x000008, "Member 'FOceanPassiveProjectile::GrantedSpawnableProjectileClass' has a wrong offset!");
+DUMPER7_ASSERTS_FRUniqueHealAltar;
 
-// ScriptStruct RGame.BT_MoveToTarget_DebugParams
-// 0x0004 (0x0010 - 0x000C)
-struct FBT_MoveToTarget_DebugParams final : public FRNavigationDebugParams
+// ScriptStruct RGame.REnemyTableRow
+// 0x0040 (0x0048 - 0x0008)
+struct FREnemyTableRow final : public FTableRowBase
 {
 public:
-	bool                                          bVisualizePawnAsVoxels;                            // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   SoftEnemyClass;                                    // 0x0008(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   EnemyName;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	class FName                                   EnemyId;                                           // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FBT_MoveToTarget_DebugParams) == 0x000004, "Wrong alignment on FBT_MoveToTarget_DebugParams");
-static_assert(sizeof(FBT_MoveToTarget_DebugParams) == 0x000010, "Wrong size on FBT_MoveToTarget_DebugParams");
-static_assert(offsetof(FBT_MoveToTarget_DebugParams, bVisualizePawnAsVoxels) == 0x00000C, "Member 'FBT_MoveToTarget_DebugParams::bVisualizePawnAsVoxels' has a wrong offset!");
+DUMPER7_ASSERTS_FREnemyTableRow;
+
+// ScriptStruct RGame.RChatLogMessage
+// 0x0020 (0x0020 - 0x0000)
+struct FRChatLogMessage final
+{
+public:
+	class FName                                   DisplayName;                                       // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Message;                                           // 0x0008(0x0010)(BlueprintVisible, NativeAccessSpecifierPublic)
+	ERChatLogType                                 ChatLogType;                                       // 0x0018(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRChatLogMessage;
+
+// ScriptStruct RGame.RUniqueCharmSpawn
+// 0x0020 (0x0020 - 0x0000)
+struct FRUniqueCharmSpawn final
+{
+public:
+	class FString                                 PlayerNetId;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URMutatorPrimaryAsset*                  CharmPrimaryAsset;                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCharmPickedUp;                                    // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRUniqueCharmSpawn;
 
 // ScriptStruct RGame.RTestPawnMovementState
 // 0x0030 (0x0070 - 0x0040)
@@ -2371,30 +1997,7 @@ public:
 	struct FVector                                Location;                                          // 0x0040(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Velocity;                                          // 0x0058(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRTestPawnMovementState) == 0x000008, "Wrong alignment on FRTestPawnMovementState");
-static_assert(sizeof(FRTestPawnMovementState) == 0x000070, "Wrong size on FRTestPawnMovementState");
-static_assert(offsetof(FRTestPawnMovementState, Location) == 0x000040, "Member 'FRTestPawnMovementState::Location' has a wrong offset!");
-static_assert(offsetof(FRTestPawnMovementState, Velocity) == 0x000058, "Member 'FRTestPawnMovementState::Velocity' has a wrong offset!");
-
-// ScriptStruct RGame.EmoteData
-// 0x0100 (0x0100 - 0x0000)
-struct FEmoteData final
-{
-public:
-	class FName                                   EmoteMontageName;                                  // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class USoundBase>              SoftEmoteSong;                                     // 0x0008(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            EmoteIcon;                                         // 0x0030(0x00B0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   EmoteChatMessage;                                  // 0x00E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	bool                                          bUseCameraZoomOut;                                 // 0x00F0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F1[0xF];                                       // 0x00F1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FEmoteData) == 0x000010, "Wrong alignment on FEmoteData");
-static_assert(sizeof(FEmoteData) == 0x000100, "Wrong size on FEmoteData");
-static_assert(offsetof(FEmoteData, EmoteMontageName) == 0x000000, "Member 'FEmoteData::EmoteMontageName' has a wrong offset!");
-static_assert(offsetof(FEmoteData, SoftEmoteSong) == 0x000008, "Member 'FEmoteData::SoftEmoteSong' has a wrong offset!");
-static_assert(offsetof(FEmoteData, EmoteIcon) == 0x000030, "Member 'FEmoteData::EmoteIcon' has a wrong offset!");
-static_assert(offsetof(FEmoteData, EmoteChatMessage) == 0x0000E0, "Member 'FEmoteData::EmoteChatMessage' has a wrong offset!");
-static_assert(offsetof(FEmoteData, bUseCameraZoomOut) == 0x0000F0, "Member 'FEmoteData::bUseCameraZoomOut' has a wrong offset!");
+DUMPER7_ASSERTS_FRTestPawnMovementState;
 
 // ScriptStruct RGame.RTestPawnMovementInput
 // 0x0028 (0x0068 - 0x0040)
@@ -2404,10 +2007,7 @@ public:
 	struct FVector2D                              MovementInput;                                     // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               ControlRotation;                                   // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRTestPawnMovementInput) == 0x000008, "Wrong alignment on FRTestPawnMovementInput");
-static_assert(sizeof(FRTestPawnMovementInput) == 0x000068, "Wrong size on FRTestPawnMovementInput");
-static_assert(offsetof(FRTestPawnMovementInput, MovementInput) == 0x000040, "Member 'FRTestPawnMovementInput::MovementInput' has a wrong offset!");
-static_assert(offsetof(FRTestPawnMovementInput, ControlRotation) == 0x000050, "Member 'FRTestPawnMovementInput::ControlRotation' has a wrong offset!");
+DUMPER7_ASSERTS_FRTestPawnMovementInput;
 
 // ScriptStruct RGame.RDifficultyTierVariables
 // 0x0020 (0x0020 - 0x0000)
@@ -2417,23 +2017,16 @@ public:
 	class FString                                 VariableName;                                      // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<int32>                                 TierValues;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRDifficultyTierVariables) == 0x000008, "Wrong alignment on FRDifficultyTierVariables");
-static_assert(sizeof(FRDifficultyTierVariables) == 0x000020, "Wrong size on FRDifficultyTierVariables");
-static_assert(offsetof(FRDifficultyTierVariables, VariableName) == 0x000000, "Member 'FRDifficultyTierVariables::VariableName' has a wrong offset!");
-static_assert(offsetof(FRDifficultyTierVariables, TierValues) == 0x000010, "Member 'FRDifficultyTierVariables::TierValues' has a wrong offset!");
+DUMPER7_ASSERTS_FRDifficultyTierVariables;
 
-// ScriptStruct RGame.IntegerWeaponSetting
-// 0x000C (0x000C - 0x0000)
-struct FIntegerWeaponSetting final
+// ScriptStruct RGame.RBadWordRow
+// 0x0010 (0x0018 - 0x0008)
+struct FRBadWordRow final : public FTableRowBase
 {
 public:
-	int32                                         BaseValue;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FIntPoint                              MinMaxRange;                                       // 0x0004(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   BadWord;                                           // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FIntegerWeaponSetting) == 0x000004, "Wrong alignment on FIntegerWeaponSetting");
-static_assert(sizeof(FIntegerWeaponSetting) == 0x00000C, "Wrong size on FIntegerWeaponSetting");
-static_assert(offsetof(FIntegerWeaponSetting, BaseValue) == 0x000000, "Member 'FIntegerWeaponSetting::BaseValue' has a wrong offset!");
-static_assert(offsetof(FIntegerWeaponSetting, MinMaxRange) == 0x000004, "Member 'FIntegerWeaponSetting::MinMaxRange' has a wrong offset!");
+DUMPER7_ASSERTS_FRBadWordRow;
 
 // ScriptStruct RGame.RDoorBlueprintVariables
 // 0x0010 (0x0010 - 0x0000)
@@ -2444,10 +2037,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AREnemySpawnAreaSegment*                AssociatedSpawnAreaSegment;                        // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRDoorBlueprintVariables) == 0x000008, "Wrong alignment on FRDoorBlueprintVariables");
-static_assert(sizeof(FRDoorBlueprintVariables) == 0x000010, "Wrong size on FRDoorBlueprintVariables");
-static_assert(offsetof(FRDoorBlueprintVariables, bIsEntryDoor) == 0x000000, "Member 'FRDoorBlueprintVariables::bIsEntryDoor' has a wrong offset!");
-static_assert(offsetof(FRDoorBlueprintVariables, AssociatedSpawnAreaSegment) == 0x000008, "Member 'FRDoorBlueprintVariables::AssociatedSpawnAreaSegment' has a wrong offset!");
+DUMPER7_ASSERTS_FRDoorBlueprintVariables;
 
 // ScriptStruct RGame.SurfaceTypeSFX
 // 0x0010 (0x0018 - 0x0008)
@@ -2458,10 +2048,7 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundBase*                             HitSound;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSurfaceTypeSFX) == 0x000008, "Wrong alignment on FSurfaceTypeSFX");
-static_assert(sizeof(FSurfaceTypeSFX) == 0x000018, "Wrong size on FSurfaceTypeSFX");
-static_assert(offsetof(FSurfaceTypeSFX, SurfaceType) == 0x000008, "Member 'FSurfaceTypeSFX::SurfaceType' has a wrong offset!");
-static_assert(offsetof(FSurfaceTypeSFX, HitSound) == 0x000010, "Member 'FSurfaceTypeSFX::HitSound' has a wrong offset!");
+DUMPER7_ASSERTS_FSurfaceTypeSFX;
 
 // ScriptStruct RGame.NiagaraFloatParam
 // 0x000C (0x000C - 0x0000)
@@ -2471,10 +2058,17 @@ public:
 	class FName                                   ParamName;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ParamValue;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FNiagaraFloatParam) == 0x000004, "Wrong alignment on FNiagaraFloatParam");
-static_assert(sizeof(FNiagaraFloatParam) == 0x00000C, "Wrong size on FNiagaraFloatParam");
-static_assert(offsetof(FNiagaraFloatParam, ParamName) == 0x000000, "Member 'FNiagaraFloatParam::ParamName' has a wrong offset!");
-static_assert(offsetof(FNiagaraFloatParam, ParamValue) == 0x000008, "Member 'FNiagaraFloatParam::ParamValue' has a wrong offset!");
+DUMPER7_ASSERTS_FNiagaraFloatParam;
+
+// ScriptStruct RGame.RPickupableData
+// 0x0030 (0x0038 - 0x0008)
+struct FRPickupableData final : public FTableRowBase
+{
+public:
+	TSoftClassPtr<class UClass>                   PickupableClass;                                   // 0x0008(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URPickupablePrimaryDataAsset*           PickupableDataAsset;                               // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRPickupableData;
 
 // ScriptStruct RGame.NiagaraSpawnRequest
 // 0x0070 (0x0070 - 0x0000)
@@ -2490,43 +2084,44 @@ public:
 	TArray<struct FNiagaraFloatParam>             FloatParams;                                       // 0x0058(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	class AActor*                                 ActorLocation;                                     // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FNiagaraSpawnRequest) == 0x000008, "Wrong alignment on FNiagaraSpawnRequest");
-static_assert(sizeof(FNiagaraSpawnRequest) == 0x000070, "Wrong size on FNiagaraSpawnRequest");
-static_assert(offsetof(FNiagaraSpawnRequest, SystemTemplate) == 0x000000, "Member 'FNiagaraSpawnRequest::SystemTemplate' has a wrong offset!");
-static_assert(offsetof(FNiagaraSpawnRequest, Location) == 0x000008, "Member 'FNiagaraSpawnRequest::Location' has a wrong offset!");
-static_assert(offsetof(FNiagaraSpawnRequest, Rotation) == 0x000020, "Member 'FNiagaraSpawnRequest::Rotation' has a wrong offset!");
-static_assert(offsetof(FNiagaraSpawnRequest, Scale) == 0x000038, "Member 'FNiagaraSpawnRequest::Scale' has a wrong offset!");
-static_assert(offsetof(FNiagaraSpawnRequest, bPreCullCheck) == 0x000050, "Member 'FNiagaraSpawnRequest::bPreCullCheck' has a wrong offset!");
-static_assert(offsetof(FNiagaraSpawnRequest, FloatParams) == 0x000058, "Member 'FNiagaraSpawnRequest::FloatParams' has a wrong offset!");
-static_assert(offsetof(FNiagaraSpawnRequest, ActorLocation) == 0x000068, "Member 'FNiagaraSpawnRequest::ActorLocation' has a wrong offset!");
+DUMPER7_ASSERTS_FNiagaraSpawnRequest;
 
-// ScriptStruct RGame.SoundSpawnRequest
-// 0x0058 (0x0058 - 0x0000)
-struct FSoundSpawnRequest final
+// ScriptStruct RGame.RUniqueDamageEventResult
+// 0x0018 (0x0018 - 0x0000)
+struct FRUniqueDamageEventResult final
+{
+public:
+	class FString                                 PlayerNetId;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSuccesful;                                        // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRUniqueDamageEventResult;
+
+// ScriptStruct RGame.Sound2DSpawnRequest
+// 0x0030 (0x0030 - 0x0000)
+struct FSound2DSpawnRequest final
 {
 public:
 	class USoundBase*                             Sound;                                             // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector_NetQuantize                    Location;                                          // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         VolumeMultiplier;                                  // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PitchMultiplier;                                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartTime;                                         // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundAttenuation*                      AttenuationSettings;                               // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USoundConcurrency*                      ConcurrencySettings;                               // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FAudioParameter>                AudioParams;                                       // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	class AActor*                                 ActorLocation;                                     // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         VolumeMultiplier;                                  // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PitchMultiplier;                                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartTime;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundConcurrency*                      ConcurrencySettings;                               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FAudioParameter>                AudioParams;                                       // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSoundSpawnRequest) == 0x000008, "Wrong alignment on FSoundSpawnRequest");
-static_assert(sizeof(FSoundSpawnRequest) == 0x000058, "Wrong size on FSoundSpawnRequest");
-static_assert(offsetof(FSoundSpawnRequest, Sound) == 0x000000, "Member 'FSoundSpawnRequest::Sound' has a wrong offset!");
-static_assert(offsetof(FSoundSpawnRequest, Location) == 0x000008, "Member 'FSoundSpawnRequest::Location' has a wrong offset!");
-static_assert(offsetof(FSoundSpawnRequest, VolumeMultiplier) == 0x000020, "Member 'FSoundSpawnRequest::VolumeMultiplier' has a wrong offset!");
-static_assert(offsetof(FSoundSpawnRequest, PitchMultiplier) == 0x000024, "Member 'FSoundSpawnRequest::PitchMultiplier' has a wrong offset!");
-static_assert(offsetof(FSoundSpawnRequest, StartTime) == 0x000028, "Member 'FSoundSpawnRequest::StartTime' has a wrong offset!");
-static_assert(offsetof(FSoundSpawnRequest, AttenuationSettings) == 0x000030, "Member 'FSoundSpawnRequest::AttenuationSettings' has a wrong offset!");
-static_assert(offsetof(FSoundSpawnRequest, ConcurrencySettings) == 0x000038, "Member 'FSoundSpawnRequest::ConcurrencySettings' has a wrong offset!");
-static_assert(offsetof(FSoundSpawnRequest, AudioParams) == 0x000040, "Member 'FSoundSpawnRequest::AudioParams' has a wrong offset!");
-static_assert(offsetof(FSoundSpawnRequest, ActorLocation) == 0x000050, "Member 'FSoundSpawnRequest::ActorLocation' has a wrong offset!");
+DUMPER7_ASSERTS_FSound2DSpawnRequest;
+
+// ScriptStruct RGame.PylonActor
+// 0x0010 (0x0010 - 0x0000)
+struct FPylonActor final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PylonRadius;                                       // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPylonActor;
 
 // ScriptStruct RGame.RSegmentObjectiveSettings
 // 0x0038 (0x0038 - 0x0000)
@@ -2537,45 +2132,32 @@ public:
 	class AActor*                                 RoomObjectiveChargeZoneSpline;                     // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGameplayTagContainer                  FixedRoomObjectiveTypes;                           // 0x0018(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRSegmentObjectiveSettings) == 0x000008, "Wrong alignment on FRSegmentObjectiveSettings");
-static_assert(sizeof(FRSegmentObjectiveSettings) == 0x000038, "Wrong size on FRSegmentObjectiveSettings");
-static_assert(offsetof(FRSegmentObjectiveSettings, RoomObjectiveSpawnPoints) == 0x000000, "Member 'FRSegmentObjectiveSettings::RoomObjectiveSpawnPoints' has a wrong offset!");
-static_assert(offsetof(FRSegmentObjectiveSettings, RoomObjectiveChargeZoneSpline) == 0x000010, "Member 'FRSegmentObjectiveSettings::RoomObjectiveChargeZoneSpline' has a wrong offset!");
-static_assert(offsetof(FRSegmentObjectiveSettings, FixedRoomObjectiveTypes) == 0x000018, "Member 'FRSegmentObjectiveSettings::FixedRoomObjectiveTypes' has a wrong offset!");
+DUMPER7_ASSERTS_FRSegmentObjectiveSettings;
 
-// ScriptStruct RGame.RSegmentSettings
-// 0x0058 (0x0058 - 0x0000)
-struct FRSegmentSettings final
+// ScriptStruct RGame.RFloatingText
+// 0x0038 (0x0038 - 0x0000)
+struct FRFloatingText final
 {
 public:
-	TArray<class AREnemySpawnArea*>               AreasItCanSpawnIn;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  SpawnableEnemyTags;                                // 0x0010(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	float                                         Ratio;                                             // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpawnDelay;                                        // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SpawnPriority;                                     // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          SpawnAtStart;                                      // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsElite;                                          // 0x003D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3E[0x1A];                                      // 0x003E(0x001A)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Location;                                          // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Text;                                              // 0x0020(0x0010)(NativeAccessSpecifierPublic)
+	ERFloatingTextType                            Type;                                              // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRSegmentSettings) == 0x000008, "Wrong alignment on FRSegmentSettings");
-static_assert(sizeof(FRSegmentSettings) == 0x000058, "Wrong size on FRSegmentSettings");
-static_assert(offsetof(FRSegmentSettings, AreasItCanSpawnIn) == 0x000000, "Member 'FRSegmentSettings::AreasItCanSpawnIn' has a wrong offset!");
-static_assert(offsetof(FRSegmentSettings, SpawnableEnemyTags) == 0x000010, "Member 'FRSegmentSettings::SpawnableEnemyTags' has a wrong offset!");
-static_assert(offsetof(FRSegmentSettings, Ratio) == 0x000030, "Member 'FRSegmentSettings::Ratio' has a wrong offset!");
-static_assert(offsetof(FRSegmentSettings, SpawnDelay) == 0x000034, "Member 'FRSegmentSettings::SpawnDelay' has a wrong offset!");
-static_assert(offsetof(FRSegmentSettings, SpawnPriority) == 0x000038, "Member 'FRSegmentSettings::SpawnPriority' has a wrong offset!");
-static_assert(offsetof(FRSegmentSettings, SpawnAtStart) == 0x00003C, "Member 'FRSegmentSettings::SpawnAtStart' has a wrong offset!");
-static_assert(offsetof(FRSegmentSettings, bIsElite) == 0x00003D, "Member 'FRSegmentSettings::bIsElite' has a wrong offset!");
+DUMPER7_ASSERTS_FRFloatingText;
 
-// ScriptStruct RGame.RFloatingTextTypeWidgetMap
-// 0x0050 (0x0050 - 0x0000)
-struct alignas(0x08) FRFloatingTextTypeWidgetMap final
+// ScriptStruct RGame.RFloatingTextQueue
+// 0x0018 (0x0018 - 0x0000)
+struct FRFloatingTextQueue final
 {
 public:
-	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         DequeueTimer;                                      // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSkipTimer;                                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRFloatingText>                 FloatingTextQueue;                                 // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRFloatingTextTypeWidgetMap) == 0x000008, "Wrong alignment on FRFloatingTextTypeWidgetMap");
-static_assert(sizeof(FRFloatingTextTypeWidgetMap) == 0x000050, "Wrong size on FRFloatingTextTypeWidgetMap");
+DUMPER7_ASSERTS_FRFloatingTextQueue;
 
 // ScriptStruct RGame.RFloatingTextWidgetListEntry
 // 0x0010 (0x0010 - 0x0000)
@@ -2584,11 +2166,10 @@ struct alignas(0x08) FRFloatingTextWidgetListEntry final
 public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRFloatingTextWidgetListEntry) == 0x000008, "Wrong alignment on FRFloatingTextWidgetListEntry");
-static_assert(sizeof(FRFloatingTextWidgetListEntry) == 0x000010, "Wrong size on FRFloatingTextWidgetListEntry");
+DUMPER7_ASSERTS_FRFloatingTextWidgetListEntry;
 
 // ScriptStruct RGame.RFloatingTextSetting
-// 0x0038 (0x0038 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct FRFloatingTextSetting final
 {
 public:
@@ -2601,31 +2182,11 @@ public:
 	float                                         NiagaraSize;                                       // 0x001C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NiagaraSortPriority;                               // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           Tint;                                              // 0x0024(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           LowTint;                                           // 0x0034(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           OutlineTint;                                       // 0x0044(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         IconIndex;                                         // 0x0054(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRFloatingTextSetting) == 0x000008, "Wrong alignment on FRFloatingTextSetting");
-static_assert(sizeof(FRFloatingTextSetting) == 0x000038, "Wrong size on FRFloatingTextSetting");
-static_assert(offsetof(FRFloatingTextSetting, Type) == 0x000000, "Member 'FRFloatingTextSetting::Type' has a wrong offset!");
-static_assert(offsetof(FRFloatingTextSetting, WidgetClass) == 0x000008, "Member 'FRFloatingTextSetting::WidgetClass' has a wrong offset!");
-static_assert(offsetof(FRFloatingTextSetting, WidgetSize) == 0x000010, "Member 'FRFloatingTextSetting::WidgetSize' has a wrong offset!");
-static_assert(offsetof(FRFloatingTextSetting, DestroyTime) == 0x000014, "Member 'FRFloatingTextSetting::DestroyTime' has a wrong offset!");
-static_assert(offsetof(FRFloatingTextSetting, NiagaraLifetime) == 0x000018, "Member 'FRFloatingTextSetting::NiagaraLifetime' has a wrong offset!");
-static_assert(offsetof(FRFloatingTextSetting, NiagaraSize) == 0x00001C, "Member 'FRFloatingTextSetting::NiagaraSize' has a wrong offset!");
-static_assert(offsetof(FRFloatingTextSetting, NiagaraSortPriority) == 0x000020, "Member 'FRFloatingTextSetting::NiagaraSortPriority' has a wrong offset!");
-static_assert(offsetof(FRFloatingTextSetting, Tint) == 0x000024, "Member 'FRFloatingTextSetting::Tint' has a wrong offset!");
-
-// ScriptStruct RGame.RPlayerStateSync
-// 0x00C8 (0x00C8 - 0x0000)
-struct FRPlayerStateSync final
-{
-public:
-	class ARPlayerState*                          PlayerState;                                       // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRPlayerStats                          PlayerStats;                                       // 0x0008(0x00C0)(NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRPlayerStateSync) == 0x000008, "Wrong alignment on FRPlayerStateSync");
-static_assert(sizeof(FRPlayerStateSync) == 0x0000C8, "Wrong size on FRPlayerStateSync");
-static_assert(offsetof(FRPlayerStateSync, PlayerState) == 0x000000, "Member 'FRPlayerStateSync::PlayerState' has a wrong offset!");
-static_assert(offsetof(FRPlayerStateSync, PlayerStats) == 0x000008, "Member 'FRPlayerStateSync::PlayerStats' has a wrong offset!");
+DUMPER7_ASSERTS_FRFloatingTextSetting;
 
 // ScriptStruct RGame.RAbilityTagRelationship
 // 0x0028 (0x0028 - 0x0000)
@@ -2635,10 +2196,7 @@ public:
 	struct FGameplayTag                           AbilityTag;                                        // 0x0000(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGameplayTagContainer                  BlockedByTags;                                     // 0x0008(0x0020)(Edit, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRAbilityTagRelationship) == 0x000008, "Wrong alignment on FRAbilityTagRelationship");
-static_assert(sizeof(FRAbilityTagRelationship) == 0x000028, "Wrong size on FRAbilityTagRelationship");
-static_assert(offsetof(FRAbilityTagRelationship, AbilityTag) == 0x000000, "Member 'FRAbilityTagRelationship::AbilityTag' has a wrong offset!");
-static_assert(offsetof(FRAbilityTagRelationship, BlockedByTags) == 0x000008, "Member 'FRAbilityTagRelationship::BlockedByTags' has a wrong offset!");
+DUMPER7_ASSERTS_FRAbilityTagRelationship;
 
 // ScriptStruct RGame.RDifficultyAssignedPointsData
 // 0x000C (0x000C - 0x0000)
@@ -2648,48 +2206,21 @@ public:
 	class FName                                   Key;                                               // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PointsAssigned;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRDifficultyAssignedPointsData) == 0x000004, "Wrong alignment on FRDifficultyAssignedPointsData");
-static_assert(sizeof(FRDifficultyAssignedPointsData) == 0x00000C, "Wrong size on FRDifficultyAssignedPointsData");
-static_assert(offsetof(FRDifficultyAssignedPointsData, Key) == 0x000000, "Member 'FRDifficultyAssignedPointsData::Key' has a wrong offset!");
-static_assert(offsetof(FRDifficultyAssignedPointsData, PointsAssigned) == 0x000008, "Member 'FRDifficultyAssignedPointsData::PointsAssigned' has a wrong offset!");
+DUMPER7_ASSERTS_FRDifficultyAssignedPointsData;
 
 // ScriptStruct RGame.RCharacterSlot
-// 0x0040 (0x0040 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct FRCharacterSlot final
 {
 public:
 	class APlayerState*                           PlayerState;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector4                               HueShift;                                          // 0x0010(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMesh*                            HelmetMesh;                                        // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRCharacterSlot) == 0x000010, "Wrong alignment on FRCharacterSlot");
-static_assert(sizeof(FRCharacterSlot) == 0x000040, "Wrong size on FRCharacterSlot");
-static_assert(offsetof(FRCharacterSlot, PlayerState) == 0x000000, "Member 'FRCharacterSlot::PlayerState' has a wrong offset!");
-static_assert(offsetof(FRCharacterSlot, HueShift) == 0x000010, "Member 'FRCharacterSlot::HueShift' has a wrong offset!");
-static_assert(offsetof(FRCharacterSlot, HelmetMesh) == 0x000030, "Member 'FRCharacterSlot::HelmetMesh' has a wrong offset!");
-
-// ScriptStruct RGame.RMutableInteger
-// 0x0120 (0x0120 - 0x0000)
-struct alignas(0x08) FRMutableInteger final
-{
-public:
-	int32                                         CurrentValue;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AbsoluteValue;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FIntPoint                              MinMaxRange;                                       // 0x000C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x10C];                                     // 0x0014(0x010C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRMutableInteger) == 0x000008, "Wrong alignment on FRMutableInteger");
-static_assert(sizeof(FRMutableInteger) == 0x000120, "Wrong size on FRMutableInteger");
-static_assert(offsetof(FRMutableInteger, CurrentValue) == 0x000000, "Member 'FRMutableInteger::CurrentValue' has a wrong offset!");
-static_assert(offsetof(FRMutableInteger, Value) == 0x000004, "Member 'FRMutableInteger::Value' has a wrong offset!");
-static_assert(offsetof(FRMutableInteger, AbsoluteValue) == 0x000008, "Member 'FRMutableInteger::AbsoluteValue' has a wrong offset!");
-static_assert(offsetof(FRMutableInteger, MinMaxRange) == 0x00000C, "Member 'FRMutableInteger::MinMaxRange' has a wrong offset!");
+DUMPER7_ASSERTS_FRCharacterSlot;
 
 // ScriptStruct RGame.RDifficultyValues
-// 0x0828 (0x0828 - 0x0000)
+// 0x0818 (0x0818 - 0x0000)
 struct FRDifficultyValues final
 {
 public:
@@ -2700,31 +2231,25 @@ public:
 	struct FRMutableFloat                         ShopPriceModifier;                                 // 0x04A0(0x0128)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FRMutableFloat                         PortalChoiceChanceModifier;                        // 0x05C8(0x0128)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FRMutableInteger                       PortalChoicesPerAreaModifier;                      // 0x06F0(0x0120)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<int32>                                 PortalChoiceNodeIds;                               // 0x0810(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bBossModifiedMoveKit;                              // 0x0820(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBossHealAltarModified;                            // 0x0821(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHealAltarSyringesModified;                        // 0x0822(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLastEnemyModified;                                // 0x0823(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnemyMeleeKillOnly;                               // 0x0824(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bKillAllElites;                                    // 0x0825(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_826[0x2];                                      // 0x0826(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bBossModifiedMoveKit;                              // 0x0810(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBossHealAltarModified;                            // 0x0811(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHealAltarSyringesModified;                        // 0x0812(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLastEnemyModified;                                // 0x0813(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnemyMeleeKillOnly;                               // 0x0814(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bKillAllElites;                                    // 0x0815(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLockBossMerchantDoors;                            // 0x0816(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_817[0x1];                                      // 0x0817(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRDifficultyValues) == 0x000008, "Wrong alignment on FRDifficultyValues");
-static_assert(sizeof(FRDifficultyValues) == 0x000828, "Wrong size on FRDifficultyValues");
-static_assert(offsetof(FRDifficultyValues, EnemyDamageModifier) == 0x000000, "Member 'FRDifficultyValues::EnemyDamageModifier' has a wrong offset!");
-static_assert(offsetof(FRDifficultyValues, EnemyMaxHealthModifier) == 0x000128, "Member 'FRDifficultyValues::EnemyMaxHealthModifier' has a wrong offset!");
-static_assert(offsetof(FRDifficultyValues, BossDamageModifier) == 0x000250, "Member 'FRDifficultyValues::BossDamageModifier' has a wrong offset!");
-static_assert(offsetof(FRDifficultyValues, BossMaxHealthModifier) == 0x000378, "Member 'FRDifficultyValues::BossMaxHealthModifier' has a wrong offset!");
-static_assert(offsetof(FRDifficultyValues, ShopPriceModifier) == 0x0004A0, "Member 'FRDifficultyValues::ShopPriceModifier' has a wrong offset!");
-static_assert(offsetof(FRDifficultyValues, PortalChoiceChanceModifier) == 0x0005C8, "Member 'FRDifficultyValues::PortalChoiceChanceModifier' has a wrong offset!");
-static_assert(offsetof(FRDifficultyValues, PortalChoicesPerAreaModifier) == 0x0006F0, "Member 'FRDifficultyValues::PortalChoicesPerAreaModifier' has a wrong offset!");
-static_assert(offsetof(FRDifficultyValues, PortalChoiceNodeIds) == 0x000810, "Member 'FRDifficultyValues::PortalChoiceNodeIds' has a wrong offset!");
-static_assert(offsetof(FRDifficultyValues, bBossModifiedMoveKit) == 0x000820, "Member 'FRDifficultyValues::bBossModifiedMoveKit' has a wrong offset!");
-static_assert(offsetof(FRDifficultyValues, bBossHealAltarModified) == 0x000821, "Member 'FRDifficultyValues::bBossHealAltarModified' has a wrong offset!");
-static_assert(offsetof(FRDifficultyValues, bHealAltarSyringesModified) == 0x000822, "Member 'FRDifficultyValues::bHealAltarSyringesModified' has a wrong offset!");
-static_assert(offsetof(FRDifficultyValues, bLastEnemyModified) == 0x000823, "Member 'FRDifficultyValues::bLastEnemyModified' has a wrong offset!");
-static_assert(offsetof(FRDifficultyValues, bEnemyMeleeKillOnly) == 0x000824, "Member 'FRDifficultyValues::bEnemyMeleeKillOnly' has a wrong offset!");
-static_assert(offsetof(FRDifficultyValues, bKillAllElites) == 0x000825, "Member 'FRDifficultyValues::bKillAllElites' has a wrong offset!");
+DUMPER7_ASSERTS_FRDifficultyValues;
+
+// ScriptStruct RGame.ROtherPlayerStats
+// 0x0010 (0x0010 - 0x0000)
+struct FROtherPlayerStats final
+{
+public:
+	TArray<struct FRPlayerStats>                  RunStats;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FROtherPlayerStats;
 
 // ScriptStruct RGame.BossPhase
 // 0x0014 (0x0014 - 0x0000)
@@ -2739,14 +2264,7 @@ public:
 	float                                         PhaseStartThreshold;                               // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         QueueLengthOverride;                               // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FBossPhase) == 0x000004, "Wrong alignment on FBossPhase");
-static_assert(sizeof(FBossPhase) == 0x000014, "Wrong size on FBossPhase");
-static_assert(offsetof(FBossPhase, PhaseName) == 0x000000, "Member 'FBossPhase::PhaseName' has a wrong offset!");
-static_assert(offsetof(FBossPhase, bPhaseStartOnHealthThreshold) == 0x000008, "Member 'FBossPhase::bPhaseStartOnHealthThreshold' has a wrong offset!");
-static_assert(offsetof(FBossPhase, bCancelCurrentAbilityOnPhaseStart) == 0x000009, "Member 'FBossPhase::bCancelCurrentAbilityOnPhaseStart' has a wrong offset!");
-static_assert(offsetof(FBossPhase, bInvulnerablePhase) == 0x00000A, "Member 'FBossPhase::bInvulnerablePhase' has a wrong offset!");
-static_assert(offsetof(FBossPhase, PhaseStartThreshold) == 0x00000C, "Member 'FBossPhase::PhaseStartThreshold' has a wrong offset!");
-static_assert(offsetof(FBossPhase, QueueLengthOverride) == 0x000010, "Member 'FBossPhase::QueueLengthOverride' has a wrong offset!");
+DUMPER7_ASSERTS_FBossPhase;
 
 // ScriptStruct RGame.GScriptHandle
 // 0x0010 (0x0010 - 0x0000)
@@ -2756,9 +2274,7 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class URGScript*                              Script;                                            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGScriptHandle) == 0x000008, "Wrong alignment on FGScriptHandle");
-static_assert(sizeof(FGScriptHandle) == 0x000010, "Wrong size on FGScriptHandle");
-static_assert(offsetof(FGScriptHandle, Script) == 0x000008, "Member 'FGScriptHandle::Script' has a wrong offset!");
+DUMPER7_ASSERTS_FGScriptHandle;
 
 // ScriptStruct RGame.GScriptContainer
 // 0x0018 (0x0018 - 0x0000)
@@ -2768,10 +2284,7 @@ public:
 	class FName                                   Category;                                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FGScriptHandle>                 GScripts;                                          // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGScriptContainer) == 0x000008, "Wrong alignment on FGScriptContainer");
-static_assert(sizeof(FGScriptContainer) == 0x000018, "Wrong size on FGScriptContainer");
-static_assert(offsetof(FGScriptContainer, Category) == 0x000000, "Member 'FGScriptContainer::Category' has a wrong offset!");
-static_assert(offsetof(FGScriptContainer, GScripts) == 0x000008, "Member 'FGScriptContainer::GScripts' has a wrong offset!");
+DUMPER7_ASSERTS_FGScriptContainer;
 
 // ScriptStruct RGame.GScriptActorInfo
 // 0x0030 (0x0030 - 0x0000)
@@ -2785,13 +2298,7 @@ public:
 	TWeakObjectPtr<class AController>             Controller;                                        // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TWeakObjectPtr<class URGScriptComponent>      InstigatorScriptComponent;                         // 0x0028(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGScriptActorInfo) == 0x000008, "Wrong alignment on FGScriptActorInfo");
-static_assert(sizeof(FGScriptActorInfo) == 0x000030, "Wrong size on FGScriptActorInfo");
-static_assert(offsetof(FGScriptActorInfo, OwnerActor) == 0x000008, "Member 'FGScriptActorInfo::OwnerActor' has a wrong offset!");
-static_assert(offsetof(FGScriptActorInfo, AvatarActor) == 0x000010, "Member 'FGScriptActorInfo::AvatarActor' has a wrong offset!");
-static_assert(offsetof(FGScriptActorInfo, RGScriptComponent) == 0x000018, "Member 'FGScriptActorInfo::RGScriptComponent' has a wrong offset!");
-static_assert(offsetof(FGScriptActorInfo, Controller) == 0x000020, "Member 'FGScriptActorInfo::Controller' has a wrong offset!");
-static_assert(offsetof(FGScriptActorInfo, InstigatorScriptComponent) == 0x000028, "Member 'FGScriptActorInfo::InstigatorScriptComponent' has a wrong offset!");
+DUMPER7_ASSERTS_FGScriptActorInfo;
 
 // ScriptStruct RGame.GScriptActorContext
 // 0x0038 (0x0038 - 0x0000)
@@ -2801,10 +2308,7 @@ public:
 	class FName                                   Category;                                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGScriptActorInfo                      ActorInfo;                                         // 0x0008(0x0030)(ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGScriptActorContext) == 0x000008, "Wrong alignment on FGScriptActorContext");
-static_assert(sizeof(FGScriptActorContext) == 0x000038, "Wrong size on FGScriptActorContext");
-static_assert(offsetof(FGScriptActorContext, Category) == 0x000000, "Member 'FGScriptActorContext::Category' has a wrong offset!");
-static_assert(offsetof(FGScriptActorContext, ActorInfo) == 0x000008, "Member 'FGScriptActorContext::ActorInfo' has a wrong offset!");
+DUMPER7_ASSERTS_FGScriptActorContext;
 
 // ScriptStruct RGame.RGscriptFunctionParams
 // 0x0018 (0x0018 - 0x0000)
@@ -2813,8 +2317,7 @@ struct alignas(0x08) FRGscriptFunctionParams final
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRGscriptFunctionParams) == 0x000008, "Wrong alignment on FRGscriptFunctionParams");
-static_assert(sizeof(FRGscriptFunctionParams) == 0x000018, "Wrong size on FRGscriptFunctionParams");
+DUMPER7_ASSERTS_FRGscriptFunctionParams;
 
 // ScriptStruct RGame.MutatorEntry
 // 0x000C (0x000C - 0x0000)
@@ -2826,11 +2329,7 @@ public:
 	float                                         FloatValue;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         IntegerValue;                                      // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMutatorEntry) == 0x000004, "Wrong alignment on FMutatorEntry");
-static_assert(sizeof(FMutatorEntry) == 0x00000C, "Wrong size on FMutatorEntry");
-static_assert(offsetof(FMutatorEntry, IsFloatMutator) == 0x000000, "Member 'FMutatorEntry::IsFloatMutator' has a wrong offset!");
-static_assert(offsetof(FMutatorEntry, FloatValue) == 0x000004, "Member 'FMutatorEntry::FloatValue' has a wrong offset!");
-static_assert(offsetof(FMutatorEntry, IntegerValue) == 0x000008, "Member 'FMutatorEntry::IntegerValue' has a wrong offset!");
+DUMPER7_ASSERTS_FMutatorEntry;
 
 // ScriptStruct RGame.WeaponModEntry
 // 0x0024 (0x0030 - 0x000C)
@@ -2843,31 +2342,7 @@ public:
 	TWeakObjectPtr<class URWeaponModPrimaryAsset> WeaponModPrimaryAsset;                             // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class URBaseWeaponSettings*                   WeaponModStats;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FWeaponModEntry) == 0x000008, "Wrong alignment on FWeaponModEntry");
-static_assert(sizeof(FWeaponModEntry) == 0x000030, "Wrong size on FWeaponModEntry");
-static_assert(offsetof(FWeaponModEntry, WeaponModScriptClass) == 0x000010, "Member 'FWeaponModEntry::WeaponModScriptClass' has a wrong offset!");
-static_assert(offsetof(FWeaponModEntry, WeaponModScriptReference) == 0x000018, "Member 'FWeaponModEntry::WeaponModScriptReference' has a wrong offset!");
-static_assert(offsetof(FWeaponModEntry, WeaponModPrimaryAsset) == 0x000020, "Member 'FWeaponModEntry::WeaponModPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(FWeaponModEntry, WeaponModStats) == 0x000028, "Member 'FWeaponModEntry::WeaponModStats' has a wrong offset!");
-
-// ScriptStruct RGame.RDamageEventInfo
-// 0x0028 (0x0028 - 0x0000)
-struct FRDamageEventInfo final
-{
-public:
-	float                                         Damage;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bWasCritical;                                      // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                HitLocation;                                       // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         DamageSourceMask;                                  // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRDamageEventInfo) == 0x000008, "Wrong alignment on FRDamageEventInfo");
-static_assert(sizeof(FRDamageEventInfo) == 0x000028, "Wrong size on FRDamageEventInfo");
-static_assert(offsetof(FRDamageEventInfo, Damage) == 0x000000, "Member 'FRDamageEventInfo::Damage' has a wrong offset!");
-static_assert(offsetof(FRDamageEventInfo, bWasCritical) == 0x000004, "Member 'FRDamageEventInfo::bWasCritical' has a wrong offset!");
-static_assert(offsetof(FRDamageEventInfo, HitLocation) == 0x000008, "Member 'FRDamageEventInfo::HitLocation' has a wrong offset!");
-static_assert(offsetof(FRDamageEventInfo, DamageSourceMask) == 0x000020, "Member 'FRDamageEventInfo::DamageSourceMask' has a wrong offset!");
+DUMPER7_ASSERTS_FWeaponModEntry;
 
 // ScriptStruct RGame.LastDamageEventData
 // 0x0088 (0x0088 - 0x0000)
@@ -2885,7 +2360,7 @@ public:
 	float                                         BarrierDamage;                                     // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TotalDamage;                                       // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OverkillDamage;                                    // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PlatingsLost;                                      // 0x002C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ShotFromDirection;                                 // 0x0030(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                HitLocation;                                       // 0x0048(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPrimitiveComponent*                    HitComponent;                                      // 0x0060(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2897,31 +2372,10 @@ public:
 	bool                                          bWasForceKilled;                                   // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FLastDamageEventData) == 0x000008, "Wrong alignment on FLastDamageEventData");
-static_assert(sizeof(FLastDamageEventData) == 0x000088, "Wrong size on FLastDamageEventData");
-static_assert(offsetof(FLastDamageEventData, BeforeHitHealth) == 0x000000, "Member 'FLastDamageEventData::BeforeHitHealth' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, PostHitHealth) == 0x000004, "Member 'FLastDamageEventData::PostHitHealth' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, HealthDamage) == 0x000008, "Member 'FLastDamageEventData::HealthDamage' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, BeforeHitArmor) == 0x00000C, "Member 'FLastDamageEventData::BeforeHitArmor' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, PostHitArmor) == 0x000010, "Member 'FLastDamageEventData::PostHitArmor' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, ArmorDamage) == 0x000014, "Member 'FLastDamageEventData::ArmorDamage' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, BeforeHitBarrier) == 0x000018, "Member 'FLastDamageEventData::BeforeHitBarrier' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, PostHitBarrier) == 0x00001C, "Member 'FLastDamageEventData::PostHitBarrier' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, BarrierDamage) == 0x000020, "Member 'FLastDamageEventData::BarrierDamage' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, TotalDamage) == 0x000024, "Member 'FLastDamageEventData::TotalDamage' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, OverkillDamage) == 0x000028, "Member 'FLastDamageEventData::OverkillDamage' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, PlatingsLost) == 0x00002C, "Member 'FLastDamageEventData::PlatingsLost' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, ShotFromDirection) == 0x000030, "Member 'FLastDamageEventData::ShotFromDirection' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, HitLocation) == 0x000048, "Member 'FLastDamageEventData::HitLocation' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, HitComponent) == 0x000060, "Member 'FLastDamageEventData::HitComponent' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, Instigator) == 0x000068, "Member 'FLastDamageEventData::Instigator' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, DamageSourceMask) == 0x000070, "Member 'FLastDamageEventData::DamageSourceMask' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, bWasCritical) == 0x000074, "Member 'FLastDamageEventData::bWasCritical' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, DamageCausedBy) == 0x000078, "Member 'FLastDamageEventData::DamageCausedBy' has a wrong offset!");
-static_assert(offsetof(FLastDamageEventData, bWasForceKilled) == 0x000080, "Member 'FLastDamageEventData::bWasForceKilled' has a wrong offset!");
+DUMPER7_ASSERTS_FLastDamageEventData;
 
 // ScriptStruct RGame.LevelGenerationSettings
-// 0x01A8 (0x01B0 - 0x0008)
+// 0x01B8 (0x01C0 - 0x0008)
 struct FLevelGenerationSettings final : public FTableRowBase
 {
 public:
@@ -2930,27 +2384,29 @@ public:
 	struct FGameplayTag                           LevelTypeIdTag;                                    // 0x0038(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGameplayTagContainer                  LevelTags;                                         // 0x0040(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FGameplayTagContainer                  LevelAttributeTags;                                // 0x0060(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FTransform                             EntryTransform;                                    // 0x0080(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             ExitTransform;                                     // 0x00E0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ELevelExitDirection                           LevelExitDirection;                                // 0x0140(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBox                                   LevelBounds;                                       // 0x0148(0x0038)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                SpawnLocationOffset;                               // 0x0180(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               SpawnRotationOffset;                               // 0x0198(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   RequiredChallengeId;                               // 0x0080(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Variant;                                           // 0x0088(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             EntryTransform;                                    // 0x0090(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             ExitTransform;                                     // 0x00F0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELevelExitDirection                           LevelExitDirection;                                // 0x0150(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBox                                   LevelBounds;                                       // 0x0158(0x0038)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SpawnLocationOffset;                               // 0x0190(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               SpawnRotationOffset;                               // 0x01A8(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FLevelGenerationSettings) == 0x000010, "Wrong alignment on FLevelGenerationSettings");
-static_assert(sizeof(FLevelGenerationSettings) == 0x0001B0, "Wrong size on FLevelGenerationSettings");
-static_assert(offsetof(FLevelGenerationSettings, EncounterLevelLayoutId) == 0x000008, "Member 'FLevelGenerationSettings::EncounterLevelLayoutId' has a wrong offset!");
-static_assert(offsetof(FLevelGenerationSettings, LevelAsset) == 0x000010, "Member 'FLevelGenerationSettings::LevelAsset' has a wrong offset!");
-static_assert(offsetof(FLevelGenerationSettings, LevelTypeIdTag) == 0x000038, "Member 'FLevelGenerationSettings::LevelTypeIdTag' has a wrong offset!");
-static_assert(offsetof(FLevelGenerationSettings, LevelTags) == 0x000040, "Member 'FLevelGenerationSettings::LevelTags' has a wrong offset!");
-static_assert(offsetof(FLevelGenerationSettings, LevelAttributeTags) == 0x000060, "Member 'FLevelGenerationSettings::LevelAttributeTags' has a wrong offset!");
-static_assert(offsetof(FLevelGenerationSettings, EntryTransform) == 0x000080, "Member 'FLevelGenerationSettings::EntryTransform' has a wrong offset!");
-static_assert(offsetof(FLevelGenerationSettings, ExitTransform) == 0x0000E0, "Member 'FLevelGenerationSettings::ExitTransform' has a wrong offset!");
-static_assert(offsetof(FLevelGenerationSettings, LevelExitDirection) == 0x000140, "Member 'FLevelGenerationSettings::LevelExitDirection' has a wrong offset!");
-static_assert(offsetof(FLevelGenerationSettings, LevelBounds) == 0x000148, "Member 'FLevelGenerationSettings::LevelBounds' has a wrong offset!");
-static_assert(offsetof(FLevelGenerationSettings, SpawnLocationOffset) == 0x000180, "Member 'FLevelGenerationSettings::SpawnLocationOffset' has a wrong offset!");
-static_assert(offsetof(FLevelGenerationSettings, SpawnRotationOffset) == 0x000198, "Member 'FLevelGenerationSettings::SpawnRotationOffset' has a wrong offset!");
+DUMPER7_ASSERTS_FLevelGenerationSettings;
+
+// ScriptStruct RGame.RSubstiteRewardCondition
+// 0x0058 (0x0060 - 0x0008)
+struct FRSubstiteRewardCondition final : public FTableRowBase
+{
+public:
+	TSoftClassPtr<class UClass>                   SoftRewardClass;                                   // 0x0008(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   SoftSubstituteRewardClass;                         // 0x0030(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           SubstituteRewardConditionTag;                      // 0x0058(0x0008)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRSubstiteRewardCondition;
 
 // ScriptStruct RGame.MutatorLootTableRow
 // 0x0080 (0x0088 - 0x0008)
@@ -2960,10 +2416,7 @@ public:
 	TSoftObjectPtr<class URMutatorPrimaryAsset>   SoftMutatorPrimaryAsset;                           // 0x0008(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMutatorLootSettings                   MutatorLootSettings;                               // 0x0030(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMutatorLootTableRow) == 0x000008, "Wrong alignment on FMutatorLootTableRow");
-static_assert(sizeof(FMutatorLootTableRow) == 0x000088, "Wrong size on FMutatorLootTableRow");
-static_assert(offsetof(FMutatorLootTableRow, SoftMutatorPrimaryAsset) == 0x000008, "Member 'FMutatorLootTableRow::SoftMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(FMutatorLootTableRow, MutatorLootSettings) == 0x000030, "Member 'FMutatorLootTableRow::MutatorLootSettings' has a wrong offset!");
+DUMPER7_ASSERTS_FMutatorLootTableRow;
 
 // ScriptStruct RGame.RMutatorCategoryTable
 // 0x0010 (0x0010 - 0x0000)
@@ -2973,10 +2426,18 @@ public:
 	struct FGameplayTag                           Tag;                                               // 0x0000(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDataTable*                             DataTable;                                         // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRMutatorCategoryTable) == 0x000008, "Wrong alignment on FRMutatorCategoryTable");
-static_assert(sizeof(FRMutatorCategoryTable) == 0x000010, "Wrong size on FRMutatorCategoryTable");
-static_assert(offsetof(FRMutatorCategoryTable, Tag) == 0x000000, "Member 'FRMutatorCategoryTable::Tag' has a wrong offset!");
-static_assert(offsetof(FRMutatorCategoryTable, DataTable) == 0x000008, "Member 'FRMutatorCategoryTable::DataTable' has a wrong offset!");
+DUMPER7_ASSERTS_FRMutatorCategoryTable;
+
+// ScriptStruct RGame.RSubstituteItemSet
+// 0x0058 (0x0058 - 0x0000)
+struct FRSubstituteItemSet final
+{
+public:
+	TSoftClassPtr<class UClass>                   DefaultItemType;                                   // 0x0000(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   SubstitutingItemType;                              // 0x0028(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           SubstituteConditionTag;                            // 0x0050(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRSubstituteItemSet;
 
 // ScriptStruct RGame.RLevelMusicData
 // 0x0040 (0x0040 - 0x0000)
@@ -2992,28 +2453,18 @@ public:
 	bool                                          bIsDynamic;                                        // 0x0038(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRLevelMusicData) == 0x000008, "Wrong alignment on FRLevelMusicData");
-static_assert(sizeof(FRLevelMusicData) == 0x000040, "Wrong size on FRLevelMusicData");
-static_assert(offsetof(FRLevelMusicData, NodeTag) == 0x000000, "Member 'FRLevelMusicData::NodeTag' has a wrong offset!");
-static_assert(offsetof(FRLevelMusicData, AreaTag) == 0x000008, "Member 'FRLevelMusicData::AreaTag' has a wrong offset!");
-static_assert(offsetof(FRLevelMusicData, AreaID) == 0x000010, "Member 'FRLevelMusicData::AreaID' has a wrong offset!");
-static_assert(offsetof(FRLevelMusicData, SongName) == 0x000018, "Member 'FRLevelMusicData::SongName' has a wrong offset!");
-static_assert(offsetof(FRLevelMusicData, BaseSong) == 0x000028, "Member 'FRLevelMusicData::BaseSong' has a wrong offset!");
-static_assert(offsetof(FRLevelMusicData, CombatSong) == 0x000030, "Member 'FRLevelMusicData::CombatSong' has a wrong offset!");
-static_assert(offsetof(FRLevelMusicData, bIsDynamic) == 0x000038, "Member 'FRLevelMusicData::bIsDynamic' has a wrong offset!");
+DUMPER7_ASSERTS_FRLevelMusicData;
 
 // ScriptStruct RGame.RNavigationDynamicCollisionNotifyee
-// 0x0030 (0x0030 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct alignas(0x08) FRNavigationDynamicCollisionNotifyee final
 {
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(const struct FRNavigationDynamicCollisionPayload& Data)> Listener;                // 0x0008(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x18];                                      // 0x0018(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18[0x58];                                      // 0x0018(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRNavigationDynamicCollisionNotifyee) == 0x000008, "Wrong alignment on FRNavigationDynamicCollisionNotifyee");
-static_assert(sizeof(FRNavigationDynamicCollisionNotifyee) == 0x000030, "Wrong size on FRNavigationDynamicCollisionNotifyee");
-static_assert(offsetof(FRNavigationDynamicCollisionNotifyee, Listener) == 0x000008, "Member 'FRNavigationDynamicCollisionNotifyee::Listener' has a wrong offset!");
+DUMPER7_ASSERTS_FRNavigationDynamicCollisionNotifyee;
 
 // ScriptStruct RGame.RNavigationTask
 // 0x0008 (0x0008 - 0x0000)
@@ -3022,33 +2473,40 @@ struct alignas(0x08) FRNavigationTask
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRNavigationTask) == 0x000008, "Wrong alignment on FRNavigationTask");
-static_assert(sizeof(FRNavigationTask) == 0x000008, "Wrong size on FRNavigationTask");
+DUMPER7_ASSERTS_FRNavigationTask;
+
+// ScriptStruct RGame.OnHitDamageData
+// 0x000C (0x000C - 0x0000)
+struct FOnHitDamageData final
+{
+public:
+	float                                         DamageToDeal;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CriticalMultiplierToApply;                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsCriticalDamage;                                 // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOnHitDamageData;
 
 // ScriptStruct RGame.RNavigationQueryTask
-// 0x01B8 (0x01C0 - 0x0008)
+// 0x0288 (0x0290 - 0x0008)
 struct FRNavigationQueryTask final : public FRNavigationTask
 {
 public:
-	uint8                                         Pad_8[0x194];                                      // 0x0008(0x0194)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const struct FRNavigationQueryData& Data)> ResultHandler;                         // 0x019C(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(const struct FRNavigationDynamicCollisionPayload& Data)> DynamicCollisionListener; // 0x01AC(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x264];                                      // 0x0008(0x0264)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FRNavigationQueryData& Data)> ResultHandler;                         // 0x026C(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FRNavigationDynamicCollisionPayload& Data)> DynamicCollisionListener; // 0x027C(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRNavigationQueryTask) == 0x000008, "Wrong alignment on FRNavigationQueryTask");
-static_assert(sizeof(FRNavigationQueryTask) == 0x0001C0, "Wrong size on FRNavigationQueryTask");
-static_assert(offsetof(FRNavigationQueryTask, ResultHandler) == 0x00019C, "Member 'FRNavigationQueryTask::ResultHandler' has a wrong offset!");
-static_assert(offsetof(FRNavigationQueryTask, DynamicCollisionListener) == 0x0001AC, "Member 'FRNavigationQueryTask::DynamicCollisionListener' has a wrong offset!");
+DUMPER7_ASSERTS_FRNavigationQueryTask;
 
 // ScriptStruct RGame.RNavigationDynamicCollisionTask
-// 0x0130 (0x0138 - 0x0008)
+// 0x0170 (0x0178 - 0x0008)
 struct FRNavigationDynamicCollisionTask final : public FRNavigationTask
 {
 public:
-	uint8                                         Pad_8[0x130];                                      // 0x0008(0x0130)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x170];                                      // 0x0008(0x0170)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRNavigationDynamicCollisionTask) == 0x000008, "Wrong alignment on FRNavigationDynamicCollisionTask");
-static_assert(sizeof(FRNavigationDynamicCollisionTask) == 0x000138, "Wrong size on FRNavigationDynamicCollisionTask");
+DUMPER7_ASSERTS_FRNavigationDynamicCollisionTask;
 
 // ScriptStruct RGame.RGeneratedVoxelData
 // 0x0001 (0x0001 - 0x0000)
@@ -3057,9 +2515,7 @@ struct FRGeneratedVoxelData final
 public:
 	ERGeneratedNavigationType                     T;                                                 // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRGeneratedVoxelData) == 0x000001, "Wrong alignment on FRGeneratedVoxelData");
-static_assert(sizeof(FRGeneratedVoxelData) == 0x000001, "Wrong size on FRGeneratedVoxelData");
-static_assert(offsetof(FRGeneratedVoxelData, T) == 0x000000, "Member 'FRGeneratedVoxelData::T' has a wrong offset!");
+DUMPER7_ASSERTS_FRGeneratedVoxelData;
 
 // ScriptStruct RGame.RGeneratedNavVolumeSet
 // 0x0010 (0x0018 - 0x0008)
@@ -3068,24 +2524,30 @@ struct FRGeneratedNavVolumeSet final : public FTableRowBase
 public:
 	TArray<struct FRGeneratedVoxelData>           D;                                                 // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRGeneratedNavVolumeSet) == 0x000008, "Wrong alignment on FRGeneratedNavVolumeSet");
-static_assert(sizeof(FRGeneratedNavVolumeSet) == 0x000018, "Wrong size on FRGeneratedNavVolumeSet");
-static_assert(offsetof(FRGeneratedNavVolumeSet, D) == 0x000008, "Member 'FRGeneratedNavVolumeSet::D' has a wrong offset!");
+DUMPER7_ASSERTS_FRGeneratedNavVolumeSet;
 
-// ScriptStruct RGame.RUniqueWishingWell
-// 0x0018 (0x0018 - 0x0000)
-struct FRUniqueWishingWell final
+// ScriptStruct RGame.SecondaryMutatorStatTableRow
+// 0x0040 (0x0048 - 0x0008)
+struct FSecondaryMutatorStatTableRow final : public FTableRowBase
 {
 public:
-	class FString                                 PlayerNetID;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CurrentInteractionCost;                            // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UsesLeft;                                          // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SecondaryMutatorStat;                              // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Tier2ChancePercent;                                // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Tier3ChancePercent;                                // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Tier1MinMaxPercentIncrease;                        // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Tier2MinMaxPercentIncrease;                        // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Tier3MinMaxPercentIncrease;                        // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRUniqueWishingWell) == 0x000008, "Wrong alignment on FRUniqueWishingWell");
-static_assert(sizeof(FRUniqueWishingWell) == 0x000018, "Wrong size on FRUniqueWishingWell");
-static_assert(offsetof(FRUniqueWishingWell, PlayerNetID) == 0x000000, "Member 'FRUniqueWishingWell::PlayerNetID' has a wrong offset!");
-static_assert(offsetof(FRUniqueWishingWell, CurrentInteractionCost) == 0x000010, "Member 'FRUniqueWishingWell::CurrentInteractionCost' has a wrong offset!");
-static_assert(offsetof(FRUniqueWishingWell, UsesLeft) == 0x000014, "Member 'FRUniqueWishingWell::UsesLeft' has a wrong offset!");
+DUMPER7_ASSERTS_FSecondaryMutatorStatTableRow;
+
+// ScriptStruct RGame.NavigationOwnerSet
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FNavigationOwnerSet final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FNavigationOwnerSet;
 
 // ScriptStruct RGame.RObjectiveData
 // 0x0040 (0x0040 - 0x0000)
@@ -3098,185 +2560,16 @@ public:
 	TArray<class URPrimaryDataAsset*>             OptionalAssociatedDataAssets;                      // 0x0020(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class URGScript*>                      OptionalAssociatedScripts;                         // 0x0030(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRObjectiveData) == 0x000008, "Wrong alignment on FRObjectiveData");
-static_assert(sizeof(FRObjectiveData) == 0x000040, "Wrong size on FRObjectiveData");
-static_assert(offsetof(FRObjectiveData, ObjectivePA) == 0x000000, "Member 'FRObjectiveData::ObjectivePA' has a wrong offset!");
-static_assert(offsetof(FRObjectiveData, OptionalActorsToKill) == 0x000008, "Member 'FRObjectiveData::OptionalActorsToKill' has a wrong offset!");
-static_assert(offsetof(FRObjectiveData, OptionalAssociatedSegment) == 0x000018, "Member 'FRObjectiveData::OptionalAssociatedSegment' has a wrong offset!");
-static_assert(offsetof(FRObjectiveData, OptionalAssociatedDataAssets) == 0x000020, "Member 'FRObjectiveData::OptionalAssociatedDataAssets' has a wrong offset!");
-static_assert(offsetof(FRObjectiveData, OptionalAssociatedScripts) == 0x000030, "Member 'FRObjectiveData::OptionalAssociatedScripts' has a wrong offset!");
+DUMPER7_ASSERTS_FRObjectiveData;
 
-// ScriptStruct RGame.RNodeChoicePair
-// 0x0078 (0x0078 - 0x0000)
-struct FRNodeChoicePair final
+// ScriptStruct RGame.IntegerModifier
+// 0x0100 (0x0100 - 0x0000)
+struct alignas(0x08) FIntegerModifier final
 {
 public:
-	TSoftObjectPtr<class URNodeChoicePrimaryAsset> SoftNodeChoiceAPrimaryAsset;                      // 0x0000(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class URNodeChoicePrimaryAsset> SoftNodeChoiceBPrimaryAsset;                      // 0x0028(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Weight;                                            // 0x0050(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FREnemyMutatorSet>              PredeterminedEnemyMutatorSetsA;                    // 0x0058(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FREnemyMutatorSet>              PredeterminedEnemyMutatorSetsB;                    // 0x0068(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x100];                                      // 0x0000(0x0100)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRNodeChoicePair) == 0x000008, "Wrong alignment on FRNodeChoicePair");
-static_assert(sizeof(FRNodeChoicePair) == 0x000078, "Wrong size on FRNodeChoicePair");
-static_assert(offsetof(FRNodeChoicePair, SoftNodeChoiceAPrimaryAsset) == 0x000000, "Member 'FRNodeChoicePair::SoftNodeChoiceAPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(FRNodeChoicePair, SoftNodeChoiceBPrimaryAsset) == 0x000028, "Member 'FRNodeChoicePair::SoftNodeChoiceBPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(FRNodeChoicePair, Weight) == 0x000050, "Member 'FRNodeChoicePair::Weight' has a wrong offset!");
-static_assert(offsetof(FRNodeChoicePair, PredeterminedEnemyMutatorSetsA) == 0x000058, "Member 'FRNodeChoicePair::PredeterminedEnemyMutatorSetsA' has a wrong offset!");
-static_assert(offsetof(FRNodeChoicePair, PredeterminedEnemyMutatorSetsB) == 0x000068, "Member 'FRNodeChoicePair::PredeterminedEnemyMutatorSetsB' has a wrong offset!");
-
-// ScriptStruct RGame.RRandomizedCorruptedDepthAssets
-// 0x0020 (0x0020 - 0x0000)
-struct FRRandomizedCorruptedDepthAssets final
-{
-public:
-	TArray<class URNodeChoicePrimaryAsset*>       RandomizedPrimaryAssets;                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class URGScript*>                      RandomizedScripts;                                 // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRRandomizedCorruptedDepthAssets) == 0x000008, "Wrong alignment on FRRandomizedCorruptedDepthAssets");
-static_assert(sizeof(FRRandomizedCorruptedDepthAssets) == 0x000020, "Wrong size on FRRandomizedCorruptedDepthAssets");
-static_assert(offsetof(FRRandomizedCorruptedDepthAssets, RandomizedPrimaryAssets) == 0x000000, "Member 'FRRandomizedCorruptedDepthAssets::RandomizedPrimaryAssets' has a wrong offset!");
-static_assert(offsetof(FRRandomizedCorruptedDepthAssets, RandomizedScripts) == 0x000010, "Member 'FRRandomizedCorruptedDepthAssets::RandomizedScripts' has a wrong offset!");
-
-// ScriptStruct RGame.RUniqueDamageEventResult
-// 0x0018 (0x0018 - 0x0000)
-struct FRUniqueDamageEventResult final
-{
-public:
-	class FString                                 PlayerNetID;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSuccesful;                                        // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRUniqueDamageEventResult) == 0x000008, "Wrong alignment on FRUniqueDamageEventResult");
-static_assert(sizeof(FRUniqueDamageEventResult) == 0x000018, "Wrong size on FRUniqueDamageEventResult");
-static_assert(offsetof(FRUniqueDamageEventResult, PlayerNetID) == 0x000000, "Member 'FRUniqueDamageEventResult::PlayerNetID' has a wrong offset!");
-static_assert(offsetof(FRUniqueDamageEventResult, bSuccesful) == 0x000010, "Member 'FRUniqueDamageEventResult::bSuccesful' has a wrong offset!");
-
-// ScriptStruct RGame.RExtraRewardData
-// 0x0010 (0x0010 - 0x0000)
-struct FRExtraRewardData final
-{
-public:
-	TSubclassOf<class AActor>                     RewardClass;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URAreaData*                             AreaData;                                          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRExtraRewardData) == 0x000008, "Wrong alignment on FRExtraRewardData");
-static_assert(sizeof(FRExtraRewardData) == 0x000010, "Wrong size on FRExtraRewardData");
-static_assert(offsetof(FRExtraRewardData, RewardClass) == 0x000000, "Member 'FRExtraRewardData::RewardClass' has a wrong offset!");
-static_assert(offsetof(FRExtraRewardData, AreaData) == 0x000008, "Member 'FRExtraRewardData::AreaData' has a wrong offset!");
-
-// ScriptStruct RGame.REncounterExtraRewardData
-// 0x0018 (0x0018 - 0x0000)
-struct FREncounterExtraRewardData final
-{
-public:
-	int32                                         EncounterRoomId;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRExtraRewardData                      ExtraRewardData;                                   // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FREncounterExtraRewardData) == 0x000008, "Wrong alignment on FREncounterExtraRewardData");
-static_assert(sizeof(FREncounterExtraRewardData) == 0x000018, "Wrong size on FREncounterExtraRewardData");
-static_assert(offsetof(FREncounterExtraRewardData, EncounterRoomId) == 0x000000, "Member 'FREncounterExtraRewardData::EncounterRoomId' has a wrong offset!");
-static_assert(offsetof(FREncounterExtraRewardData, ExtraRewardData) == 0x000008, "Member 'FREncounterExtraRewardData::ExtraRewardData' has a wrong offset!");
-
-// ScriptStruct RGame.RUniqueHealAltar
-// 0x0018 (0x0018 - 0x0000)
-struct FRUniqueHealAltar final
-{
-public:
-	class FString                                 PlayerNetID;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bConsumed;                                         // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRUniqueHealAltar) == 0x000008, "Wrong alignment on FRUniqueHealAltar");
-static_assert(sizeof(FRUniqueHealAltar) == 0x000018, "Wrong size on FRUniqueHealAltar");
-static_assert(offsetof(FRUniqueHealAltar, PlayerNetID) == 0x000000, "Member 'FRUniqueHealAltar::PlayerNetID' has a wrong offset!");
-static_assert(offsetof(FRUniqueHealAltar, bConsumed) == 0x000010, "Member 'FRUniqueHealAltar::bConsumed' has a wrong offset!");
-
-// ScriptStruct RGame.RNodeLightingLevelOverride
-// 0x0038 (0x0038 - 0x0000)
-struct FRNodeLightingLevelOverride final
-{
-public:
-	struct FDataTableRowHandle                    LightingLevel;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class URAreaData>              AreaData;                                          // 0x0010(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRNodeLightingLevelOverride) == 0x000008, "Wrong alignment on FRNodeLightingLevelOverride");
-static_assert(sizeof(FRNodeLightingLevelOverride) == 0x000038, "Wrong size on FRNodeLightingLevelOverride");
-static_assert(offsetof(FRNodeLightingLevelOverride, LightingLevel) == 0x000000, "Member 'FRNodeLightingLevelOverride::LightingLevel' has a wrong offset!");
-static_assert(offsetof(FRNodeLightingLevelOverride, AreaData) == 0x000010, "Member 'FRNodeLightingLevelOverride::AreaData' has a wrong offset!");
-
-// ScriptStruct RGame.RExtraLevelEntry
-// 0x000C (0x000C - 0x0000)
-struct FRExtraLevelEntry final
-{
-public:
-	struct FGameplayTag                           ExtraLevelTag;                                     // 0x0000(0x0008)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NodeIdToGenerateAt;                                // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRExtraLevelEntry) == 0x000004, "Wrong alignment on FRExtraLevelEntry");
-static_assert(sizeof(FRExtraLevelEntry) == 0x00000C, "Wrong size on FRExtraLevelEntry");
-static_assert(offsetof(FRExtraLevelEntry, ExtraLevelTag) == 0x000000, "Member 'FRExtraLevelEntry::ExtraLevelTag' has a wrong offset!");
-static_assert(offsetof(FRExtraLevelEntry, NodeIdToGenerateAt) == 0x000008, "Member 'FRExtraLevelEntry::NodeIdToGenerateAt' has a wrong offset!");
-
-// ScriptStruct RGame.RNodeLevelEntry
-// 0x0018 (0x0018 - 0x0000)
-struct FRNodeLevelEntry final
-{
-public:
-	struct FGameplayTag                           LevelType;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Weight;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URNodeData*                             AssociatedNodeType;                                // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRNodeLevelEntry) == 0x000008, "Wrong alignment on FRNodeLevelEntry");
-static_assert(sizeof(FRNodeLevelEntry) == 0x000018, "Wrong size on FRNodeLevelEntry");
-static_assert(offsetof(FRNodeLevelEntry, LevelType) == 0x000000, "Member 'FRNodeLevelEntry::LevelType' has a wrong offset!");
-static_assert(offsetof(FRNodeLevelEntry, Weight) == 0x000008, "Member 'FRNodeLevelEntry::Weight' has a wrong offset!");
-static_assert(offsetof(FRNodeLevelEntry, AssociatedNodeType) == 0x000010, "Member 'FRNodeLevelEntry::AssociatedNodeType' has a wrong offset!");
-
-// ScriptStruct RGame.RLevelData
-// 0x0010 (0x0010 - 0x0000)
-struct FRLevelData final
-{
-public:
-	class UDataTable*                             LevelTable;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             LevelTableOverride;                                // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRLevelData) == 0x000008, "Wrong alignment on FRLevelData");
-static_assert(sizeof(FRLevelData) == 0x000010, "Wrong size on FRLevelData");
-static_assert(offsetof(FRLevelData, LevelTable) == 0x000000, "Member 'FRLevelData::LevelTable' has a wrong offset!");
-static_assert(offsetof(FRLevelData, LevelTableOverride) == 0x000008, "Member 'FRLevelData::LevelTableOverride' has a wrong offset!");
-
-// ScriptStruct RGame.ROverworldNode
-// 0x0010 (0x0010 - 0x0000)
-struct FROverworldNode final
-{
-public:
-	int32                                         NodeID;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URNodeData*                             NodeData;                                          // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FROverworldNode) == 0x000008, "Wrong alignment on FROverworldNode");
-static_assert(sizeof(FROverworldNode) == 0x000010, "Wrong size on FROverworldNode");
-static_assert(offsetof(FROverworldNode, NodeID) == 0x000000, "Member 'FROverworldNode::NodeID' has a wrong offset!");
-static_assert(offsetof(FROverworldNode, NodeData) == 0x000008, "Member 'FROverworldNode::NodeData' has a wrong offset!");
-
-// ScriptStruct RGame.ROverworldArea
-// 0x0028 (0x0028 - 0x0000)
-struct FROverworldArea final
-{
-public:
-	class URAreaData*                             AreaData;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FROverworldNode>                OverworldNodes;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FRExtraLevelEntry>              ExtraLevelEntries;                                 // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FROverworldArea) == 0x000008, "Wrong alignment on FROverworldArea");
-static_assert(sizeof(FROverworldArea) == 0x000028, "Wrong size on FROverworldArea");
-static_assert(offsetof(FROverworldArea, AreaData) == 0x000000, "Member 'FROverworldArea::AreaData' has a wrong offset!");
-static_assert(offsetof(FROverworldArea, OverworldNodes) == 0x000008, "Member 'FROverworldArea::OverworldNodes' has a wrong offset!");
-static_assert(offsetof(FROverworldArea, ExtraLevelEntries) == 0x000018, "Member 'FROverworldArea::ExtraLevelEntries' has a wrong offset!");
+DUMPER7_ASSERTS_FIntegerModifier;
 
 // ScriptStruct RGame.RMutatorModifiers
 // 0x2178 (0x2178 - 0x0000)
@@ -3313,37 +2606,7 @@ public:
 	struct FRMutableFloat                         CharmRareChanceModifier;                           // 0x1F28(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FRMutableFloat                         CharmLegendaryChanceModifier;                      // 0x2050(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRMutatorModifiers) == 0x000008, "Wrong alignment on FRMutatorModifiers");
-static_assert(sizeof(FRMutatorModifiers) == 0x002178, "Wrong size on FRMutatorModifiers");
-static_assert(offsetof(FRMutatorModifiers, AllDamageMultiplier) == 0x000000, "Member 'FRMutatorModifiers::AllDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, NonDoTDamageMultiplier) == 0x000128, "Member 'FRMutatorModifiers::NonDoTDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, MeleeDamageMultiplier) == 0x000250, "Member 'FRMutatorModifiers::MeleeDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, DoTDamageMultiplier) == 0x000378, "Member 'FRMutatorModifiers::DoTDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, AoEDamageMultiplier) == 0x0004A0, "Member 'FRMutatorModifiers::AoEDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, FireDamageMultiplier) == 0x0005C8, "Member 'FRMutatorModifiers::FireDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, IceDamageMultiplier) == 0x0006F0, "Member 'FRMutatorModifiers::IceDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, BleedDamageMultiplier) == 0x000818, "Member 'FRMutatorModifiers::BleedDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, LightningDamageMultiplier) == 0x000940, "Member 'FRMutatorModifiers::LightningDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, ExplosionDamageMultiplier) == 0x000A68, "Member 'FRMutatorModifiers::ExplosionDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, AbilityDamageMultiplier) == 0x000B90, "Member 'FRMutatorModifiers::AbilityDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, PrimaryFireMultiplier) == 0x000CB8, "Member 'FRMutatorModifiers::PrimaryFireMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, SecondaryFireMultiplier) == 0x000DE0, "Member 'FRMutatorModifiers::SecondaryFireMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, DrainDamageMultiplier) == 0x000F08, "Member 'FRMutatorModifiers::DrainDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, SpiritOrbDamageMultiplier) == 0x001030, "Member 'FRMutatorModifiers::SpiritOrbDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, GoldburstDamageMultiplier) == 0x001158, "Member 'FRMutatorModifiers::GoldburstDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, AoERangeMultiplier) == 0x001280, "Member 'FRMutatorModifiers::AoERangeMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, ExplosionAoERangeMultiplier) == 0x0013A8, "Member 'FRMutatorModifiers::ExplosionAoERangeMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, CriticalChance) == 0x0014D0, "Member 'FRMutatorModifiers::CriticalChance' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, CriticalChanceDamageMultiplier) == 0x0015F8, "Member 'FRMutatorModifiers::CriticalChanceDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, DamageAgainstBossesAndElites) == 0x001720, "Member 'FRMutatorModifiers::DamageAgainstBossesAndElites' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, RoomObjectivePawnDamageMultiplier) == 0x001848, "Member 'FRMutatorModifiers::RoomObjectivePawnDamageMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, RoomObjectiveChargeSpeedMultiplier) == 0x001970, "Member 'FRMutatorModifiers::RoomObjectiveChargeSpeedMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, StatusEffectEffectivenessMultiplier) == 0x001A98, "Member 'FRMutatorModifiers::StatusEffectEffectivenessMultiplier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, AddedExplosions) == 0x001BC0, "Member 'FRMutatorModifiers::AddedExplosions' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, ExtraChestRewardModifier) == 0x001CE0, "Member 'FRMutatorModifiers::ExtraChestRewardModifier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, CharmSlotModifier) == 0x001E08, "Member 'FRMutatorModifiers::CharmSlotModifier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, CharmRareChanceModifier) == 0x001F28, "Member 'FRMutatorModifiers::CharmRareChanceModifier' has a wrong offset!");
-static_assert(offsetof(FRMutatorModifiers, CharmLegendaryChanceModifier) == 0x002050, "Member 'FRMutatorModifiers::CharmLegendaryChanceModifier' has a wrong offset!");
+DUMPER7_ASSERTS_FRMutatorModifiers;
 
 // ScriptStruct RGame.FindSurfaceResult
 // 0x0110 (0x0110 - 0x0000)
@@ -3352,8 +2615,7 @@ struct alignas(0x08) FFindSurfaceResult final
 public:
 	uint8                                         Pad_0[0x110];                                      // 0x0000(0x0110)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FFindSurfaceResult) == 0x000008, "Wrong alignment on FFindSurfaceResult");
-static_assert(sizeof(FFindSurfaceResult) == 0x000110, "Wrong size on FFindSurfaceResult");
+DUMPER7_ASSERTS_FFindSurfaceResult;
 
 // ScriptStruct RGame.ClientPredictionSmoothingData
 // 0x0014 (0x0014 - 0x0000)
@@ -3369,14 +2631,7 @@ public:
 	int8                                          AverageVelocityNoOfFrames;                         // 0x0011(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FClientPredictionSmoothingData) == 0x000004, "Wrong alignment on FClientPredictionSmoothingData");
-static_assert(sizeof(FClientPredictionSmoothingData) == 0x000014, "Wrong size on FClientPredictionSmoothingData");
-static_assert(offsetof(FClientPredictionSmoothingData, bUseAvgError) == 0x000000, "Member 'FClientPredictionSmoothingData::bUseAvgError' has a wrong offset!");
-static_assert(offsetof(FClientPredictionSmoothingData, LocationSmoothingExp) == 0x000004, "Member 'FClientPredictionSmoothingData::LocationSmoothingExp' has a wrong offset!");
-static_assert(offsetof(FClientPredictionSmoothingData, MinLocationError) == 0x000008, "Member 'FClientPredictionSmoothingData::MinLocationError' has a wrong offset!");
-static_assert(offsetof(FClientPredictionSmoothingData, MaxLocationError) == 0x00000C, "Member 'FClientPredictionSmoothingData::MaxLocationError' has a wrong offset!");
-static_assert(offsetof(FClientPredictionSmoothingData, bScaleMaxErrorByRecentAverageVelocity) == 0x000010, "Member 'FClientPredictionSmoothingData::bScaleMaxErrorByRecentAverageVelocity' has a wrong offset!");
-static_assert(offsetof(FClientPredictionSmoothingData, AverageVelocityNoOfFrames) == 0x000011, "Member 'FClientPredictionSmoothingData::AverageVelocityNoOfFrames' has a wrong offset!");
+DUMPER7_ASSERTS_FClientPredictionSmoothingData;
 
 // ScriptStruct RGame.RPawnMovementState
 // 0x0040 (0x0080 - 0x0040)
@@ -3391,13 +2646,7 @@ public:
 	float                                         FixedCurveRemainingTime;                           // 0x0078(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRPawnMovementState) == 0x000008, "Wrong alignment on FRPawnMovementState");
-static_assert(sizeof(FRPawnMovementState) == 0x000080, "Wrong size on FRPawnMovementState");
-static_assert(offsetof(FRPawnMovementState, Location) == 0x000040, "Member 'FRPawnMovementState::Location' has a wrong offset!");
-static_assert(offsetof(FRPawnMovementState, Velocity) == 0x000058, "Member 'FRPawnMovementState::Velocity' has a wrong offset!");
-static_assert(offsetof(FRPawnMovementState, CurrentMovementMode) == 0x000070, "Member 'FRPawnMovementState::CurrentMovementMode' has a wrong offset!");
-static_assert(offsetof(FRPawnMovementState, DashTimeRemaining) == 0x000074, "Member 'FRPawnMovementState::DashTimeRemaining' has a wrong offset!");
-static_assert(offsetof(FRPawnMovementState, FixedCurveRemainingTime) == 0x000078, "Member 'FRPawnMovementState::FixedCurveRemainingTime' has a wrong offset!");
+DUMPER7_ASSERTS_FRPawnMovementState;
 
 // ScriptStruct RGame.RPawnMovementInput
 // 0x0058 (0x0098 - 0x0040)
@@ -3409,29 +2658,7 @@ public:
 	struct FRotator                               CharacterRotation;                                 // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FRotator                               TargetRecoil;                                      // 0x0080(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRPawnMovementInput) == 0x000008, "Wrong alignment on FRPawnMovementInput");
-static_assert(sizeof(FRPawnMovementInput) == 0x000098, "Wrong size on FRPawnMovementInput");
-static_assert(offsetof(FRPawnMovementInput, MovementInput) == 0x000040, "Member 'FRPawnMovementInput::MovementInput' has a wrong offset!");
-static_assert(offsetof(FRPawnMovementInput, ControlRotation) == 0x000050, "Member 'FRPawnMovementInput::ControlRotation' has a wrong offset!");
-static_assert(offsetof(FRPawnMovementInput, CharacterRotation) == 0x000068, "Member 'FRPawnMovementInput::CharacterRotation' has a wrong offset!");
-static_assert(offsetof(FRPawnMovementInput, TargetRecoil) == 0x000080, "Member 'FRPawnMovementInput::TargetRecoil' has a wrong offset!");
-
-// ScriptStruct RGame.PlayerMeshAttachment
-// 0x0060 (0x0060 - 0x0000)
-struct FPlayerMeshAttachment final
-{
-public:
-	TSoftObjectPtr<class USkeletalMesh>           SoftSkeletalMesh;                                  // 0x0000(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UStaticMesh>             SoftStaticMesh;                                    // 0x0028(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   AttachmentSocketName;                              // 0x0050(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UAnimInstance>              AnimInstanceClass;                                 // 0x0058(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPlayerMeshAttachment) == 0x000008, "Wrong alignment on FPlayerMeshAttachment");
-static_assert(sizeof(FPlayerMeshAttachment) == 0x000060, "Wrong size on FPlayerMeshAttachment");
-static_assert(offsetof(FPlayerMeshAttachment, SoftSkeletalMesh) == 0x000000, "Member 'FPlayerMeshAttachment::SoftSkeletalMesh' has a wrong offset!");
-static_assert(offsetof(FPlayerMeshAttachment, SoftStaticMesh) == 0x000028, "Member 'FPlayerMeshAttachment::SoftStaticMesh' has a wrong offset!");
-static_assert(offsetof(FPlayerMeshAttachment, AttachmentSocketName) == 0x000050, "Member 'FPlayerMeshAttachment::AttachmentSocketName' has a wrong offset!");
-static_assert(offsetof(FPlayerMeshAttachment, AnimInstanceClass) == 0x000058, "Member 'FPlayerMeshAttachment::AnimInstanceClass' has a wrong offset!");
+DUMPER7_ASSERTS_FRPawnMovementInput;
 
 // ScriptStruct RGame.ActorArray
 // 0x0010 (0x0010 - 0x0000)
@@ -3440,9 +2667,7 @@ struct FActorArray final
 public:
 	TArray<class AActor*>                         Actors;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FActorArray) == 0x000008, "Wrong alignment on FActorArray");
-static_assert(sizeof(FActorArray) == 0x000010, "Wrong size on FActorArray");
-static_assert(offsetof(FActorArray, Actors) == 0x000000, "Member 'FActorArray::Actors' has a wrong offset!");
+DUMPER7_ASSERTS_FActorArray;
 
 // ScriptStruct RGame.BreakableVariants
 // 0x0010 (0x0010 - 0x0000)
@@ -3451,9 +2676,7 @@ struct FBreakableVariants final
 public:
 	TArray<TSubclassOf<class ARPotGeometryCollectionActor>> Variants;                                // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FBreakableVariants) == 0x000008, "Wrong alignment on FBreakableVariants");
-static_assert(sizeof(FBreakableVariants) == 0x000010, "Wrong size on FBreakableVariants");
-static_assert(offsetof(FBreakableVariants, Variants) == 0x000000, "Member 'FBreakableVariants::Variants' has a wrong offset!");
+DUMPER7_ASSERTS_FBreakableVariants;
 
 // ScriptStruct RGame.ProjectileSimulationResult
 // 0x0038 (0x0038 - 0x0000)
@@ -3463,14 +2686,9 @@ public:
 	float                                         StartTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EndTime;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                StartLocation;                                     // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                endlocation;                                       // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                EndLocation;                                       // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FProjectileSimulationResult) == 0x000008, "Wrong alignment on FProjectileSimulationResult");
-static_assert(sizeof(FProjectileSimulationResult) == 0x000038, "Wrong size on FProjectileSimulationResult");
-static_assert(offsetof(FProjectileSimulationResult, StartTime) == 0x000000, "Member 'FProjectileSimulationResult::StartTime' has a wrong offset!");
-static_assert(offsetof(FProjectileSimulationResult, EndTime) == 0x000004, "Member 'FProjectileSimulationResult::EndTime' has a wrong offset!");
-static_assert(offsetof(FProjectileSimulationResult, StartLocation) == 0x000008, "Member 'FProjectileSimulationResult::StartLocation' has a wrong offset!");
-static_assert(offsetof(FProjectileSimulationResult, endlocation) == 0x000020, "Member 'FProjectileSimulationResult::endlocation' has a wrong offset!");
+DUMPER7_ASSERTS_FProjectileSimulationResult;
 
 // ScriptStruct RGame.RRelevancySettings
 // 0x0010 (0x0010 - 0x0000)
@@ -3482,33 +2700,7 @@ public:
 	float                                         RadiusDecreasePerPlayer;                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PlayerViewAngle;                                   // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRRelevancySettings) == 0x000004, "Wrong alignment on FRRelevancySettings");
-static_assert(sizeof(FRRelevancySettings) == 0x000010, "Wrong size on FRRelevancySettings");
-static_assert(offsetof(FRRelevancySettings, Level1Radius) == 0x000000, "Member 'FRRelevancySettings::Level1Radius' has a wrong offset!");
-static_assert(offsetof(FRRelevancySettings, Level2Radius) == 0x000004, "Member 'FRRelevancySettings::Level2Radius' has a wrong offset!");
-static_assert(offsetof(FRRelevancySettings, RadiusDecreasePerPlayer) == 0x000008, "Member 'FRRelevancySettings::RadiusDecreasePerPlayer' has a wrong offset!");
-static_assert(offsetof(FRRelevancySettings, PlayerViewAngle) == 0x00000C, "Member 'FRRelevancySettings::PlayerViewAngle' has a wrong offset!");
-
-// ScriptStruct RGame.RRelevancyRegisterParams
-// 0x0028 (0x0028 - 0x0000)
-struct FRRelevancyRegisterParams final
-{
-public:
-	float                                         Radius;                                            // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                LocationOffset;                                    // 0x0008(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCheckDistance;                                    // 0x0020(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCheckInView;                                      // 0x0021(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCheckRoom;                                        // 0x0022(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRRelevancyRegisterParams) == 0x000008, "Wrong alignment on FRRelevancyRegisterParams");
-static_assert(sizeof(FRRelevancyRegisterParams) == 0x000028, "Wrong size on FRRelevancyRegisterParams");
-static_assert(offsetof(FRRelevancyRegisterParams, Radius) == 0x000000, "Member 'FRRelevancyRegisterParams::Radius' has a wrong offset!");
-static_assert(offsetof(FRRelevancyRegisterParams, LocationOffset) == 0x000008, "Member 'FRRelevancyRegisterParams::LocationOffset' has a wrong offset!");
-static_assert(offsetof(FRRelevancyRegisterParams, bCheckDistance) == 0x000020, "Member 'FRRelevancyRegisterParams::bCheckDistance' has a wrong offset!");
-static_assert(offsetof(FRRelevancyRegisterParams, bCheckInView) == 0x000021, "Member 'FRRelevancyRegisterParams::bCheckInView' has a wrong offset!");
-static_assert(offsetof(FRRelevancyRegisterParams, bCheckRoom) == 0x000022, "Member 'FRRelevancyRegisterParams::bCheckRoom' has a wrong offset!");
+DUMPER7_ASSERTS_FRRelevancySettings;
 
 // ScriptStruct RGame.RRelevancyParams
 // 0x0006 (0x0006 - 0x0000)
@@ -3522,14 +2714,7 @@ public:
 	bool                                          bIsInRoomLocal;                                    // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsInRoomRemote;                                   // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRRelevancyParams) == 0x000001, "Wrong alignment on FRRelevancyParams");
-static_assert(sizeof(FRRelevancyParams) == 0x000006, "Wrong size on FRRelevancyParams");
-static_assert(offsetof(FRRelevancyParams, DistanceLevelLocal) == 0x000000, "Member 'FRRelevancyParams::DistanceLevelLocal' has a wrong offset!");
-static_assert(offsetof(FRRelevancyParams, DistanceLevelRemote) == 0x000001, "Member 'FRRelevancyParams::DistanceLevelRemote' has a wrong offset!");
-static_assert(offsetof(FRRelevancyParams, bIsInViewLocal) == 0x000002, "Member 'FRRelevancyParams::bIsInViewLocal' has a wrong offset!");
-static_assert(offsetof(FRRelevancyParams, bIsInViewRemote) == 0x000003, "Member 'FRRelevancyParams::bIsInViewRemote' has a wrong offset!");
-static_assert(offsetof(FRRelevancyParams, bIsInRoomLocal) == 0x000004, "Member 'FRRelevancyParams::bIsInRoomLocal' has a wrong offset!");
-static_assert(offsetof(FRRelevancyParams, bIsInRoomRemote) == 0x000005, "Member 'FRRelevancyParams::bIsInRoomRemote' has a wrong offset!");
+DUMPER7_ASSERTS_FRRelevancyParams;
 
 // ScriptStruct RGame.RelevancyActor
 // 0x0040 (0x0040 - 0x0000)
@@ -3540,9 +2725,7 @@ public:
 	class AActor*                                 Actor;                                             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_10[0x30];                                      // 0x0010(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRelevancyActor) == 0x000008, "Wrong alignment on FRelevancyActor");
-static_assert(sizeof(FRelevancyActor) == 0x000040, "Wrong size on FRelevancyActor");
-static_assert(offsetof(FRelevancyActor, Actor) == 0x000008, "Member 'FRelevancyActor::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_FRelevancyActor;
 
 // ScriptStruct RGame.RelevancyPlayerData
 // 0x0038 (0x0038 - 0x0000)
@@ -3551,8 +2734,7 @@ struct alignas(0x08) FRelevancyPlayerData final
 public:
 	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRelevancyPlayerData) == 0x000008, "Wrong alignment on FRelevancyPlayerData");
-static_assert(sizeof(FRelevancyPlayerData) == 0x000038, "Wrong size on FRelevancyPlayerData");
+DUMPER7_ASSERTS_FRelevancyPlayerData;
 
 // ScriptStruct RGame.ReplicatedStreamingLevelInstanceInfo
 // 0x0068 (0x0068 - 0x0000)
@@ -3569,16 +2751,7 @@ public:
 	bool                                          bShouldBlockOnUnload;                              // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FReplicatedStreamingLevelInstanceInfo) == 0x000008, "Wrong alignment on FReplicatedStreamingLevelInstanceInfo");
-static_assert(sizeof(FReplicatedStreamingLevelInstanceInfo) == 0x000068, "Wrong size on FReplicatedStreamingLevelInstanceInfo");
-static_assert(offsetof(FReplicatedStreamingLevelInstanceInfo, WorldAsset) == 0x000000, "Member 'FReplicatedStreamingLevelInstanceInfo::WorldAsset' has a wrong offset!");
-static_assert(offsetof(FReplicatedStreamingLevelInstanceInfo, LevelTypeIdTag) == 0x000028, "Member 'FReplicatedStreamingLevelInstanceInfo::LevelTypeIdTag' has a wrong offset!");
-static_assert(offsetof(FReplicatedStreamingLevelInstanceInfo, Location) == 0x000030, "Member 'FReplicatedStreamingLevelInstanceInfo::Location' has a wrong offset!");
-static_assert(offsetof(FReplicatedStreamingLevelInstanceInfo, Rotation) == 0x000048, "Member 'FReplicatedStreamingLevelInstanceInfo::Rotation' has a wrong offset!");
-static_assert(offsetof(FReplicatedStreamingLevelInstanceInfo, bShouldBeLoaded) == 0x000060, "Member 'FReplicatedStreamingLevelInstanceInfo::bShouldBeLoaded' has a wrong offset!");
-static_assert(offsetof(FReplicatedStreamingLevelInstanceInfo, bShouldBeVisible) == 0x000061, "Member 'FReplicatedStreamingLevelInstanceInfo::bShouldBeVisible' has a wrong offset!");
-static_assert(offsetof(FReplicatedStreamingLevelInstanceInfo, bShouldBlockOnLoad) == 0x000062, "Member 'FReplicatedStreamingLevelInstanceInfo::bShouldBlockOnLoad' has a wrong offset!");
-static_assert(offsetof(FReplicatedStreamingLevelInstanceInfo, bShouldBlockOnUnload) == 0x000063, "Member 'FReplicatedStreamingLevelInstanceInfo::bShouldBlockOnUnload' has a wrong offset!");
+DUMPER7_ASSERTS_FReplicatedStreamingLevelInstanceInfo;
 
 // ScriptStruct RGame.RRoomObjectiveObjectProperties
 // 0x0008 (0x0008 - 0x0000)
@@ -3587,9 +2760,7 @@ struct FRRoomObjectiveObjectProperties final
 public:
 	class AREnemySpawnAreaSegment*                AssociatedAreaSegment;                             // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRRoomObjectiveObjectProperties) == 0x000008, "Wrong alignment on FRRoomObjectiveObjectProperties");
-static_assert(sizeof(FRRoomObjectiveObjectProperties) == 0x000008, "Wrong size on FRRoomObjectiveObjectProperties");
-static_assert(offsetof(FRRoomObjectiveObjectProperties, AssociatedAreaSegment) == 0x000000, "Member 'FRRoomObjectiveObjectProperties::AssociatedAreaSegment' has a wrong offset!");
+DUMPER7_ASSERTS_FRRoomObjectiveObjectProperties;
 
 // ScriptStruct RGame.RoutedObjectData
 // 0x0008 (0x0008 - 0x0000)
@@ -3598,29 +2769,10 @@ struct FRoutedObjectData final
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRoutedObjectData) == 0x000008, "Wrong alignment on FRoutedObjectData");
-static_assert(sizeof(FRoutedObjectData) == 0x000008, "Wrong size on FRoutedObjectData");
-static_assert(offsetof(FRoutedObjectData, PlayerController) == 0x000000, "Member 'FRoutedObjectData::PlayerController' has a wrong offset!");
-
-// ScriptStruct RGame.RCosmeticLoadout
-// 0x0340 (0x0340 - 0x0000)
-struct FRCosmeticLoadout final
-{
-public:
-	struct FPlayerCosmeticOption                  HelmetCosmeticOption;                              // 0x0000(0x00D0)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FPlayerCosmeticOption                  SuitCosmeticOption;                                // 0x00D0(0x00D0)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FPlayerCosmeticOption                  PaintCosmeticOption;                               // 0x01A0(0x00D0)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FPlayerCosmeticOption                  PlayerFrameCosmeticOption;                         // 0x0270(0x00D0)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRCosmeticLoadout) == 0x000008, "Wrong alignment on FRCosmeticLoadout");
-static_assert(sizeof(FRCosmeticLoadout) == 0x000340, "Wrong size on FRCosmeticLoadout");
-static_assert(offsetof(FRCosmeticLoadout, HelmetCosmeticOption) == 0x000000, "Member 'FRCosmeticLoadout::HelmetCosmeticOption' has a wrong offset!");
-static_assert(offsetof(FRCosmeticLoadout, SuitCosmeticOption) == 0x0000D0, "Member 'FRCosmeticLoadout::SuitCosmeticOption' has a wrong offset!");
-static_assert(offsetof(FRCosmeticLoadout, PaintCosmeticOption) == 0x0001A0, "Member 'FRCosmeticLoadout::PaintCosmeticOption' has a wrong offset!");
-static_assert(offsetof(FRCosmeticLoadout, PlayerFrameCosmeticOption) == 0x000270, "Member 'FRCosmeticLoadout::PlayerFrameCosmeticOption' has a wrong offset!");
+DUMPER7_ASSERTS_FRoutedObjectData;
 
 // ScriptStruct RGame.RSaveGameData
-// 0x05C8 (0x05C8 - 0x0000)
+// 0x0350 (0x0350 - 0x0000)
 struct FRSaveGameData final
 {
 public:
@@ -3629,54 +2781,35 @@ public:
 	TArray<class URPrimaryDataAsset*>             UnlockedLoadoutOptions;                            // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	TMap<class URWeaponPrimaryAsset*, struct FRLoadout> Loadouts;                                    // 0x0018(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
 	struct FRLoadout                              EquippedLoadout;                                   // 0x0068(0x0040)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRCosmeticLoadout                      EquippedCosmeticLoadout;                           // 0x00A8(0x0340)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
-	TMap<class FName, int32>                      ChallengeCompletionCounts;                         // 0x03E8(0x0050)(NativeAccessSpecifierPublic)
-	TMap<class FName, int32>                      SkillTreeAssignedPoints;                           // 0x0438(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TMap<class FName, int32>                      DifficultyTreeAssignedPoints;                      // 0x0488(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TMap<class FString, bool>                     HiddenCoinsFoundMap;                               // 0x04D8(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TArray<struct FRPlayerStats>                  RunStats;                                          // 0x0528(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bHasSeenInitialTutorial;                           // 0x0538(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasSeenFirstDeathTutorial;                        // 0x0539(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasSeenWorkbenchFirstTime;                        // 0x053A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_53B[0x1];                                      // 0x053B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NumTimesOpenedLogbook;                             // 0x053C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         CompletedAreas;                                    // 0x0540(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class URMutatorPrimaryAsset*>          MutatorsFound;                                     // 0x0550(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<int32, struct FGameplayTag>              PlayerEmotes;                                      // 0x0560(0x0050)(NativeAccessSpecifierPublic)
-	bool                                          bTutorialDone;                                     // 0x05B0(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsPrereleaseSaveData;                             // 0x05B1(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsDemoSaveData;                                   // 0x05B2(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDemoDifficultyPointsCapped;                       // 0x05B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasEverSpentDifficultyPoints;                     // 0x05B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5B5[0x3];                                      // 0x05B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 LatestSessionId;                                   // 0x05B8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class URCosmeticPrimaryAsset*>         CosmeticPAs;                                       // 0x00A8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TMap<class FName, int32>                      ChallengeCompletionCounts;                         // 0x00B8(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, int32>                      SkillTreeAssignedPoints;                           // 0x0108(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TMap<class FName, int32>                      DifficultyTreeAssignedPoints;                      // 0x0158(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TMap<class FString, bool>                     HiddenCoinsFoundMap;                               // 0x01A8(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TArray<struct FRPlayerStats>                  RunStats;                                          // 0x01F8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bHasSeenInitialTutorial;                           // 0x0208(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasSeenFirstDeathTutorial;                        // 0x0209(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasSeenWorkbenchFirstTime;                        // 0x020A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_20B[0x1];                                      // 0x020B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NumTimesOpenedLogbook;                             // 0x020C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         CompletedAreas;                                    // 0x0210(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class URMutatorPrimaryAsset*>          MutatorsFound;                                     // 0x0220(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<int32, class URCosmeticPrimaryAsset*>    PlayerEmotes;                                      // 0x0230(0x0050)(NativeAccessSpecifierPublic)
+	bool                                          bTutorialDone;                                     // 0x0280(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPrereleaseSaveData;                             // 0x0281(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsDemoSaveData;                                   // 0x0282(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDemoDifficultyPointsCapped;                       // 0x0283(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasEverSpentDifficultyPoints;                     // 0x0284(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_285[0x3];                                      // 0x0285(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 LatestSessionId;                                   // 0x0288(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRandomOrderMode;                                  // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInfiniteMode;                                     // 0x0299(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29A[0x6];                                      // 0x029A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<struct FGameplayTag, int32>              LastEncounteredBossVariantInArea;                  // 0x02A0(0x0050)(NativeAccessSpecifierPublic)
+	TMap<int32, struct FROtherPlayerStats>        OtherPlayerStats;                                  // 0x02F0(0x0050)(NativeAccessSpecifierPublic)
+	TArray<class FString>                         BossVariantsKilled;                                // 0x0340(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRSaveGameData) == 0x000008, "Wrong alignment on FRSaveGameData");
-static_assert(sizeof(FRSaveGameData) == 0x0005C8, "Wrong size on FRSaveGameData");
-static_assert(offsetof(FRSaveGameData, SoulFragments) == 0x000000, "Member 'FRSaveGameData::SoulFragments' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, NumDifficultyPoints) == 0x000004, "Member 'FRSaveGameData::NumDifficultyPoints' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, UnlockedLoadoutOptions) == 0x000008, "Member 'FRSaveGameData::UnlockedLoadoutOptions' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, Loadouts) == 0x000018, "Member 'FRSaveGameData::Loadouts' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, EquippedLoadout) == 0x000068, "Member 'FRSaveGameData::EquippedLoadout' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, EquippedCosmeticLoadout) == 0x0000A8, "Member 'FRSaveGameData::EquippedCosmeticLoadout' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, ChallengeCompletionCounts) == 0x0003E8, "Member 'FRSaveGameData::ChallengeCompletionCounts' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, SkillTreeAssignedPoints) == 0x000438, "Member 'FRSaveGameData::SkillTreeAssignedPoints' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, DifficultyTreeAssignedPoints) == 0x000488, "Member 'FRSaveGameData::DifficultyTreeAssignedPoints' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, HiddenCoinsFoundMap) == 0x0004D8, "Member 'FRSaveGameData::HiddenCoinsFoundMap' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, RunStats) == 0x000528, "Member 'FRSaveGameData::RunStats' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, bHasSeenInitialTutorial) == 0x000538, "Member 'FRSaveGameData::bHasSeenInitialTutorial' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, bHasSeenFirstDeathTutorial) == 0x000539, "Member 'FRSaveGameData::bHasSeenFirstDeathTutorial' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, bHasSeenWorkbenchFirstTime) == 0x00053A, "Member 'FRSaveGameData::bHasSeenWorkbenchFirstTime' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, NumTimesOpenedLogbook) == 0x00053C, "Member 'FRSaveGameData::NumTimesOpenedLogbook' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, CompletedAreas) == 0x000540, "Member 'FRSaveGameData::CompletedAreas' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, MutatorsFound) == 0x000550, "Member 'FRSaveGameData::MutatorsFound' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, PlayerEmotes) == 0x000560, "Member 'FRSaveGameData::PlayerEmotes' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, bTutorialDone) == 0x0005B0, "Member 'FRSaveGameData::bTutorialDone' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, bIsPrereleaseSaveData) == 0x0005B1, "Member 'FRSaveGameData::bIsPrereleaseSaveData' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, bIsDemoSaveData) == 0x0005B2, "Member 'FRSaveGameData::bIsDemoSaveData' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, bDemoDifficultyPointsCapped) == 0x0005B3, "Member 'FRSaveGameData::bDemoDifficultyPointsCapped' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, bHasEverSpentDifficultyPoints) == 0x0005B4, "Member 'FRSaveGameData::bHasEverSpentDifficultyPoints' has a wrong offset!");
-static_assert(offsetof(FRSaveGameData, LatestSessionId) == 0x0005B8, "Member 'FRSaveGameData::LatestSessionId' has a wrong offset!");
+DUMPER7_ASSERTS_FRSaveGameData;
 
 // ScriptStruct RGame.SkillTreeNodes
 // 0x0030 (0x0030 - 0x0000)
@@ -3687,10 +2820,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class URMutatorPrimaryAsset>   SkillTreeMutatorPA;                                // 0x0008(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSkillTreeNodes) == 0x000008, "Wrong alignment on FSkillTreeNodes");
-static_assert(sizeof(FSkillTreeNodes) == 0x000030, "Wrong size on FSkillTreeNodes");
-static_assert(offsetof(FSkillTreeNodes, NumPointsRequiredInPreviousTierNode) == 0x000000, "Member 'FSkillTreeNodes::NumPointsRequiredInPreviousTierNode' has a wrong offset!");
-static_assert(offsetof(FSkillTreeNodes, SkillTreeMutatorPA) == 0x000008, "Member 'FSkillTreeNodes::SkillTreeMutatorPA' has a wrong offset!");
+DUMPER7_ASSERTS_FSkillTreeNodes;
 
 // ScriptStruct RGame.RStatusEffectTickRecord
 // 0x0010 (0x0010 - 0x0000)
@@ -3699,22 +2829,7 @@ struct alignas(0x08) FRStatusEffectTickRecord final
 public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRStatusEffectTickRecord) == 0x000008, "Wrong alignment on FRStatusEffectTickRecord");
-static_assert(sizeof(FRStatusEffectTickRecord) == 0x000010, "Wrong size on FRStatusEffectTickRecord");
-
-// ScriptStruct RGame.BlockingStatusEffect
-// 0x0010 (0x0010 - 0x0000)
-struct FBlockingStatusEffect final
-{
-public:
-	TSubclassOf<class URStatusEffectGScript>      StatusEffect;                                      // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOnlyBlockIfMatchingInstigator;                    // 0x0008(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FBlockingStatusEffect) == 0x000008, "Wrong alignment on FBlockingStatusEffect");
-static_assert(sizeof(FBlockingStatusEffect) == 0x000010, "Wrong size on FBlockingStatusEffect");
-static_assert(offsetof(FBlockingStatusEffect, StatusEffect) == 0x000000, "Member 'FBlockingStatusEffect::StatusEffect' has a wrong offset!");
-static_assert(offsetof(FBlockingStatusEffect, bOnlyBlockIfMatchingInstigator) == 0x000008, "Member 'FBlockingStatusEffect::bOnlyBlockIfMatchingInstigator' has a wrong offset!");
+DUMPER7_ASSERTS_FRStatusEffectTickRecord;
 
 // ScriptStruct RGame.DescriptionVariable
 // 0x0020 (0x0020 - 0x0000)
@@ -3726,11 +2841,286 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   ValueAsText;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FDescriptionVariable) == 0x000008, "Wrong alignment on FDescriptionVariable");
-static_assert(sizeof(FDescriptionVariable) == 0x000020, "Wrong size on FDescriptionVariable");
-static_assert(offsetof(FDescriptionVariable, VariableTag) == 0x000000, "Member 'FDescriptionVariable::VariableTag' has a wrong offset!");
-static_assert(offsetof(FDescriptionVariable, Value) == 0x000008, "Member 'FDescriptionVariable::Value' has a wrong offset!");
-static_assert(offsetof(FDescriptionVariable, ValueAsText) == 0x000010, "Member 'FDescriptionVariable::ValueAsText' has a wrong offset!");
+DUMPER7_ASSERTS_FDescriptionVariable;
+
+// ScriptStruct RGame.WeaponModCosmeticData
+// 0x00C0 (0x00C0 - 0x0000)
+struct FWeaponModCosmeticData final
+{
+public:
+	TSoftObjectPtr<class UStaticMesh>             SoftModMesh;                                       // 0x0000(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SocketName;                                        // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             OffsetTransform;                                   // 0x0030(0x0060)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class USoundBase>              SoftSound;                                         // 0x0090(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FWeaponModCosmeticData;
+
+// ScriptStruct RGame.FloatWeaponSetting
+// 0x0018 (0x0018 - 0x0000)
+struct FFloatWeaponSetting final
+{
+public:
+	float                                         BaseValue;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              MinMaxRange;                                       // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFloatWeaponSetting;
+
+// ScriptStruct RGame.IntegerWeaponSetting
+// 0x000C (0x000C - 0x0000)
+struct FIntegerWeaponSetting final
+{
+public:
+	int32                                         BaseValue;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIntPoint                              MinMaxRange;                                       // 0x0004(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FIntegerWeaponSetting;
+
+// ScriptStruct RGame.MutableFloatWeaponSetting
+// 0x0108 (0x0108 - 0x0000)
+struct alignas(0x08) FMutableFloatWeaponSetting final
+{
+public:
+	uint8                                         Pad_0[0x108];                                      // 0x0000(0x0108)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMutableFloatWeaponSetting;
+
+// ScriptStruct RGame.VoiceQueryDataPair
+// 0x0018 (0x0018 - 0x0000)
+struct FVoiceQueryDataPair final
+{
+public:
+	class FName                                   Key;                                               // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Value;                                             // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FVoiceQueryDataPair;
+
+// ScriptStruct RGame.VoiceQueryCriteria
+// 0x0014 (0x0014 - 0x0000)
+struct FVoiceQueryCriteria final
+{
+public:
+	bool                                          bCompareName;                                      // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MoreThanOrEqual;                                   // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LessThanOrEqual;                                   // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Keyword;                                           // 0x000C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FVoiceQueryCriteria;
+
+// ScriptStruct RGame.VoiceData
+// 0x0078 (0x0078 - 0x0000)
+struct FVoiceData final
+{
+public:
+	TSoftObjectPtr<class USoundWave>              MaleWaveAsset;                                     // 0x0000(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class USoundWave>              FemaleWaveAsset;                                   // 0x0028(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SpokenLine;                                        // 0x0050(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Subtitle;                                          // 0x0060(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	float                                         Cooldown;                                          // 0x0070(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FVoiceData;
+
+// ScriptStruct RGame.VoiceDataCriteria
+// 0x00E0 (0x00E0 - 0x0000)
+struct FVoiceDataCriteria final
+{
+public:
+	TMap<class FName, struct FVoiceQueryCriteria> QueryCriterias;                                    // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FVoiceData                             VoiceData;                                         // 0x0050(0x0078)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          bRememberLine;                                     // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   RememberLineDatabaseName;                          // 0x00CC(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RememberLineTime;                                  // 0x00D4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FVoiceDataCriteria;
+
+// ScriptStruct RGame.VoiceOverTableRow
+// 0x0020 (0x0028 - 0x0008)
+struct FVoiceOverTableRow final : public FTableRowBase
+{
+public:
+	struct FGameplayTag                           EmoteTag;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ChanceToPlay;                                      // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EventPriority;                                     // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVoiceDataCriteria>             Variations;                                        // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FVoiceOverTableRow;
+
+// ScriptStruct RGame.PlayerVoiceSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FPlayerVoiceSettings final
+{
+public:
+	class UDataTable*                             VoiceDataTable;                                    // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	bool                                          bIsFemale;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EVoicePitch                                   Pitch;                                             // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPlayerVoiceSettings;
+
+// ScriptStruct RGame.RPlayerStateSync
+// 0x0130 (0x0130 - 0x0000)
+struct FRPlayerStateSync final
+{
+public:
+	class ARPlayerState*                          PlayerState;                                       // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRPlayerStats                          PlayerStats;                                       // 0x0008(0x0128)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRPlayerStateSync;
+
+// ScriptStruct RGame.RNodeChoicePair
+// 0x0078 (0x0078 - 0x0000)
+struct FRNodeChoicePair final
+{
+public:
+	TSoftObjectPtr<class URNodeChoicePrimaryAsset> SoftNodeChoiceAPrimaryAsset;                      // 0x0000(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class URNodeChoicePrimaryAsset> SoftNodeChoiceBPrimaryAsset;                      // 0x0028(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Weight;                                            // 0x0050(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FREnemyMutatorSet>              PredeterminedEnemyMutatorSetsA;                    // 0x0058(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FREnemyMutatorSet>              PredeterminedEnemyMutatorSetsB;                    // 0x0068(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRNodeChoicePair;
+
+// ScriptStruct RGame.RNodeChoiceVoteData
+// 0x0018 (0x0018 - 0x0000)
+struct FRNodeChoiceVoteData final
+{
+public:
+	int32                                         PlayerId;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URNodeChoicePrimaryAsset*               VotedNodeChoicePA;                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URNodeChoicePrimaryAsset*               VotedNodeChoiceRewardPA;                           // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRNodeChoiceVoteData;
+
+// ScriptStruct RGame.RInfiniteModeVoteData
+// 0x0008 (0x0008 - 0x0000)
+struct FRInfiniteModeVoteData final
+{
+public:
+	int32                                         PlayerId;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWantsToContinue;                                  // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRInfiniteModeVoteData;
+
+// ScriptStruct RGame.RExtraRewardData
+// 0x0010 (0x0010 - 0x0000)
+struct FRExtraRewardData final
+{
+public:
+	TSubclassOf<class AActor>                     RewardClass;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URAreaData*                             AreaData;                                          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRExtraRewardData;
+
+// ScriptStruct RGame.REncounterExtraRewardData
+// 0x0018 (0x0018 - 0x0000)
+struct FREncounterExtraRewardData final
+{
+public:
+	int32                                         EncounterRoomId;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRExtraRewardData                      ExtraRewardData;                                   // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FREncounterExtraRewardData;
+
+// ScriptStruct RGame.RNodeLightingLevelOverride
+// 0x0038 (0x0038 - 0x0000)
+struct FRNodeLightingLevelOverride final
+{
+public:
+	struct FDataTableRowHandle                    LightingLevel;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class URAreaData>              AreaData;                                          // 0x0010(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRNodeLightingLevelOverride;
+
+// ScriptStruct RGame.RExtraLevelEntry
+// 0x000C (0x000C - 0x0000)
+struct FRExtraLevelEntry final
+{
+public:
+	struct FGameplayTag                           ExtraLevelTag;                                     // 0x0000(0x0008)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NodeIdToGenerateAt;                                // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRExtraLevelEntry;
+
+// ScriptStruct RGame.RNodeLevelEntry
+// 0x0018 (0x0018 - 0x0000)
+struct FRNodeLevelEntry final
+{
+public:
+	struct FGameplayTag                           LevelType;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Weight;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URNodeData*                             AssociatedNodeType;                                // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRNodeLevelEntry;
+
+// ScriptStruct RGame.ROverworldNode
+// 0x0138 (0x0138 - 0x0000)
+struct FROverworldNode final
+{
+public:
+	int32                                         NodeID;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URNodeData*                             NodeData;                                          // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsCorrupted;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRNodeChoiceVoteData>           NodeChoiceVoteData;                                // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FRNodeChoicePair                       RandomizedNodeChoicePair;                          // 0x0028(0x0078)(BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FRNodeChoicePair                       RandomizedNodeChoiceRewardPair;                    // 0x00A0(0x0078)(BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<class URNodeChoicePrimaryAsset*>       RandomizedCorruptedDepthPAs;                       // 0x0118(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class URGScript*>                      RandomizedCorruptedDepthScripts;                   // 0x0128(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FROverworldNode;
+
+// ScriptStruct RGame.RLoadingscreenImages
+// 0x0010 (0x0010 - 0x0000)
+struct FRLoadingscreenImages final
+{
+public:
+	TArray<TSoftObjectPtr<class UTexture2D>>      Textures;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRLoadingscreenImages;
+
+// ScriptStruct RGame.RAreaLoadingscreenImageData
+// 0x0060 (0x0060 - 0x0000)
+struct FRAreaLoadingscreenImageData final
+{
+public:
+	TArray<TSoftObjectPtr<class UTexture2D>>      AreaDefaultImages;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
+	TMap<struct FGameplayTag, struct FRLoadingscreenImages> NodeSpecificImages;                      // 0x0010(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRAreaLoadingscreenImageData;
+
+// ScriptStruct RGame.ROverworldArea
+// 0x0028 (0x0028 - 0x0000)
+struct FROverworldArea final
+{
+public:
+	class URAreaData*                             AreaData;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FROverworldNode>                OverworldNodes;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FRExtraLevelEntry>              ExtraLevelEntries;                                 // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FROverworldArea;
+
+// ScriptStruct RGame.PlayerMeshAttachment
+// 0x0060 (0x0060 - 0x0000)
+struct FPlayerMeshAttachment final
+{
+public:
+	TSoftObjectPtr<class USkeletalMesh>           SoftSkeletalMesh;                                  // 0x0000(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UStaticMesh>             SoftStaticMesh;                                    // 0x0028(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AttachmentSocketName;                              // 0x0050(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UAnimInstance>              AnimInstanceClass;                                 // 0x0058(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPlayerMeshAttachment;
 
 // ScriptStruct RGame.ProjectileImpact
 // 0x0048 (0x0050 - 0x0008)
@@ -3747,15 +3137,7 @@ public:
 	float                                         DecalHeight;                                       // 0x0048(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FProjectileImpact) == 0x000008, "Wrong alignment on FProjectileImpact");
-static_assert(sizeof(FProjectileImpact) == 0x000050, "Wrong size on FProjectileImpact");
-static_assert(offsetof(FProjectileImpact, NiagaraSystem) == 0x000008, "Member 'FProjectileImpact::NiagaraSystem' has a wrong offset!");
-static_assert(offsetof(FProjectileImpact, CriticalNiagaraSystem) == 0x000010, "Member 'FProjectileImpact::CriticalNiagaraSystem' has a wrong offset!");
-static_assert(offsetof(FProjectileImpact, DecalMaterial) == 0x000018, "Member 'FProjectileImpact::DecalMaterial' has a wrong offset!");
-static_assert(offsetof(FProjectileImpact, DecalLifetime) == 0x000020, "Member 'FProjectileImpact::DecalLifetime' has a wrong offset!");
-static_assert(offsetof(FProjectileImpact, DecalFadeout) == 0x000030, "Member 'FProjectileImpact::DecalFadeout' has a wrong offset!");
-static_assert(offsetof(FProjectileImpact, DecalSize) == 0x000038, "Member 'FProjectileImpact::DecalSize' has a wrong offset!");
-static_assert(offsetof(FProjectileImpact, DecalHeight) == 0x000048, "Member 'FProjectileImpact::DecalHeight' has a wrong offset!");
+DUMPER7_ASSERTS_FProjectileImpact;
 
 // ScriptStruct RGame.FloatModifier
 // 0x0100 (0x0100 - 0x0000)
@@ -3764,18 +3146,7 @@ struct alignas(0x08) FFloatModifier final
 public:
 	uint8                                         Pad_0[0x100];                                      // 0x0000(0x0100)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FFloatModifier) == 0x000008, "Wrong alignment on FFloatModifier");
-static_assert(sizeof(FFloatModifier) == 0x000100, "Wrong size on FFloatModifier");
-
-// ScriptStruct RGame.IntegerModifier
-// 0x0100 (0x0100 - 0x0000)
-struct alignas(0x08) FIntegerModifier final
-{
-public:
-	uint8                                         Pad_0[0x100];                                      // 0x0000(0x0100)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FIntegerModifier) == 0x000008, "Wrong alignment on FIntegerModifier");
-static_assert(sizeof(FIntegerModifier) == 0x000100, "Wrong size on FIntegerModifier");
+DUMPER7_ASSERTS_FFloatModifier;
 
 // ScriptStruct RGame.PreHitDamageData
 // 0x0258 (0x0258 - 0x0000)
@@ -3787,27 +3158,7 @@ public:
 	bool                                          bHitWeakPoint;                                     // 0x0250(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPreHitDamageData) == 0x000008, "Wrong alignment on FPreHitDamageData");
-static_assert(sizeof(FPreHitDamageData) == 0x000258, "Wrong size on FPreHitDamageData");
-static_assert(offsetof(FPreHitDamageData, Damage) == 0x000000, "Member 'FPreHitDamageData::Damage' has a wrong offset!");
-static_assert(offsetof(FPreHitDamageData, CriticalMultiplier) == 0x000128, "Member 'FPreHitDamageData::CriticalMultiplier' has a wrong offset!");
-static_assert(offsetof(FPreHitDamageData, bHitWeakPoint) == 0x000250, "Member 'FPreHitDamageData::bHitWeakPoint' has a wrong offset!");
-
-// ScriptStruct RGame.OnHitDamageData
-// 0x000C (0x000C - 0x0000)
-struct FOnHitDamageData final
-{
-public:
-	float                                         DamageToDeal;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CriticalMultiplierToApply;                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsCriticalDamage;                                 // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FOnHitDamageData) == 0x000004, "Wrong alignment on FOnHitDamageData");
-static_assert(sizeof(FOnHitDamageData) == 0x00000C, "Wrong size on FOnHitDamageData");
-static_assert(offsetof(FOnHitDamageData, DamageToDeal) == 0x000000, "Member 'FOnHitDamageData::DamageToDeal' has a wrong offset!");
-static_assert(offsetof(FOnHitDamageData, CriticalMultiplierToApply) == 0x000004, "Member 'FOnHitDamageData::CriticalMultiplierToApply' has a wrong offset!");
-static_assert(offsetof(FOnHitDamageData, bIsCriticalDamage) == 0x000008, "Member 'FOnHitDamageData::bIsCriticalDamage' has a wrong offset!");
+DUMPER7_ASSERTS_FPreHitDamageData;
 
 // ScriptStruct RGame.PostHitDamageData
 // 0x0014 (0x0014 - 0x0000)
@@ -3821,13 +3172,7 @@ public:
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DamageSourceMask;                                  // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPostHitDamageData) == 0x000004, "Wrong alignment on FPostHitDamageData");
-static_assert(sizeof(FPostHitDamageData) == 0x000014, "Wrong size on FPostHitDamageData");
-static_assert(offsetof(FPostHitDamageData, MaxDealtDamage) == 0x000000, "Member 'FPostHitDamageData::MaxDealtDamage' has a wrong offset!");
-static_assert(offsetof(FPostHitDamageData, ActualDealtDamage) == 0x000004, "Member 'FPostHitDamageData::ActualDealtDamage' has a wrong offset!");
-static_assert(offsetof(FPostHitDamageData, AppliedCriticalMultiplier) == 0x000008, "Member 'FPostHitDamageData::AppliedCriticalMultiplier' has a wrong offset!");
-static_assert(offsetof(FPostHitDamageData, bWasCriticalDamage) == 0x00000C, "Member 'FPostHitDamageData::bWasCriticalDamage' has a wrong offset!");
-static_assert(offsetof(FPostHitDamageData, DamageSourceMask) == 0x000010, "Member 'FPostHitDamageData::DamageSourceMask' has a wrong offset!");
+DUMPER7_ASSERTS_FPostHitDamageData;
 
 // ScriptStruct RGame.Matrices
 // 0x0290 (0x0290 - 0x0000)
@@ -3836,8 +3181,7 @@ struct alignas(0x10) FMatrices final
 public:
 	uint8                                         Pad_0[0x290];                                      // 0x0000(0x0290)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FMatrices) == 0x000010, "Wrong alignment on FMatrices");
-static_assert(sizeof(FMatrices) == 0x000290, "Wrong size on FMatrices");
+DUMPER7_ASSERTS_FMatrices;
 
 // ScriptStruct RGame.StatCharmStat
 // 0x000C (0x000C - 0x0000)
@@ -3847,31 +3191,7 @@ public:
 	class FName                                   SecondaryMutatorStat;                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StatIncrease;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FStatCharmStat) == 0x000004, "Wrong alignment on FStatCharmStat");
-static_assert(sizeof(FStatCharmStat) == 0x00000C, "Wrong size on FStatCharmStat");
-static_assert(offsetof(FStatCharmStat, SecondaryMutatorStat) == 0x000000, "Member 'FStatCharmStat::SecondaryMutatorStat' has a wrong offset!");
-static_assert(offsetof(FStatCharmStat, StatIncrease) == 0x000008, "Member 'FStatCharmStat::StatIncrease' has a wrong offset!");
-
-// ScriptStruct RGame.SecondaryMutatorStatTableRow
-// 0x0040 (0x0048 - 0x0008)
-struct FSecondaryMutatorStatTableRow final : public FTableRowBase
-{
-public:
-	class FName                                   SecondaryMutatorStat;                              // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Tier2ChancePercent;                                // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Tier3ChancePercent;                                // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              Tier1MinMaxPercentIncrease;                        // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              Tier2MinMaxPercentIncrease;                        // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              Tier3MinMaxPercentIncrease;                        // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSecondaryMutatorStatTableRow) == 0x000008, "Wrong alignment on FSecondaryMutatorStatTableRow");
-static_assert(sizeof(FSecondaryMutatorStatTableRow) == 0x000048, "Wrong size on FSecondaryMutatorStatTableRow");
-static_assert(offsetof(FSecondaryMutatorStatTableRow, SecondaryMutatorStat) == 0x000008, "Member 'FSecondaryMutatorStatTableRow::SecondaryMutatorStat' has a wrong offset!");
-static_assert(offsetof(FSecondaryMutatorStatTableRow, Tier2ChancePercent) == 0x000010, "Member 'FSecondaryMutatorStatTableRow::Tier2ChancePercent' has a wrong offset!");
-static_assert(offsetof(FSecondaryMutatorStatTableRow, Tier3ChancePercent) == 0x000014, "Member 'FSecondaryMutatorStatTableRow::Tier3ChancePercent' has a wrong offset!");
-static_assert(offsetof(FSecondaryMutatorStatTableRow, Tier1MinMaxPercentIncrease) == 0x000018, "Member 'FSecondaryMutatorStatTableRow::Tier1MinMaxPercentIncrease' has a wrong offset!");
-static_assert(offsetof(FSecondaryMutatorStatTableRow, Tier2MinMaxPercentIncrease) == 0x000028, "Member 'FSecondaryMutatorStatTableRow::Tier2MinMaxPercentIncrease' has a wrong offset!");
-static_assert(offsetof(FSecondaryMutatorStatTableRow, Tier3MinMaxPercentIncrease) == 0x000038, "Member 'FSecondaryMutatorStatTableRow::Tier3MinMaxPercentIncrease' has a wrong offset!");
+DUMPER7_ASSERTS_FStatCharmStat;
 
 // ScriptStruct RGame.TotemTableRow
 // 0x0030 (0x0038 - 0x0008)
@@ -3890,38 +3210,7 @@ public:
 	bool                                          bRegisterAsPylon;                                  // 0x0030(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTotemTableRow) == 0x000008, "Wrong alignment on FTotemTableRow");
-static_assert(sizeof(FTotemTableRow) == 0x000038, "Wrong size on FTotemTableRow");
-static_assert(offsetof(FTotemTableRow, bEnabled) == 0x000008, "Member 'FTotemTableRow::bEnabled' has a wrong offset!");
-static_assert(offsetof(FTotemTableRow, TotemAsset) == 0x000010, "Member 'FTotemTableRow::TotemAsset' has a wrong offset!");
-static_assert(offsetof(FTotemTableRow, AreaEffect) == 0x000018, "Member 'FTotemTableRow::AreaEffect' has a wrong offset!");
-static_assert(offsetof(FTotemTableRow, TotemType) == 0x000020, "Member 'FTotemTableRow::TotemType' has a wrong offset!");
-static_assert(offsetof(FTotemTableRow, Health) == 0x000024, "Member 'FTotemTableRow::Health' has a wrong offset!");
-static_assert(offsetof(FTotemTableRow, Radius) == 0x000028, "Member 'FTotemTableRow::Radius' has a wrong offset!");
-static_assert(offsetof(FTotemTableRow, Duration) == 0x00002C, "Member 'FTotemTableRow::Duration' has a wrong offset!");
-static_assert(offsetof(FTotemTableRow, bRegisterAsPylon) == 0x000030, "Member 'FTotemTableRow::bRegisterAsPylon' has a wrong offset!");
-
-// ScriptStruct RGame.MutatorDescriptionVariables
-// 0x0048 (0x0048 - 0x0000)
-struct FMutatorDescriptionVariables final
-{
-public:
-	class FText                                   VariableDisplayName;                               // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	bool                                          bHideInUpgradeScreen;                              // 0x0010(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsPercentValue;                                   // 0x0011(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 VariableName;                                      // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<int32>                                 RankValues;                                        // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<float>                                 VariableRankValues;                                // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FMutatorDescriptionVariables) == 0x000008, "Wrong alignment on FMutatorDescriptionVariables");
-static_assert(sizeof(FMutatorDescriptionVariables) == 0x000048, "Wrong size on FMutatorDescriptionVariables");
-static_assert(offsetof(FMutatorDescriptionVariables, VariableDisplayName) == 0x000000, "Member 'FMutatorDescriptionVariables::VariableDisplayName' has a wrong offset!");
-static_assert(offsetof(FMutatorDescriptionVariables, bHideInUpgradeScreen) == 0x000010, "Member 'FMutatorDescriptionVariables::bHideInUpgradeScreen' has a wrong offset!");
-static_assert(offsetof(FMutatorDescriptionVariables, bIsPercentValue) == 0x000011, "Member 'FMutatorDescriptionVariables::bIsPercentValue' has a wrong offset!");
-static_assert(offsetof(FMutatorDescriptionVariables, VariableName) == 0x000018, "Member 'FMutatorDescriptionVariables::VariableName' has a wrong offset!");
-static_assert(offsetof(FMutatorDescriptionVariables, RankValues) == 0x000028, "Member 'FMutatorDescriptionVariables::RankValues' has a wrong offset!");
-static_assert(offsetof(FMutatorDescriptionVariables, VariableRankValues) == 0x000038, "Member 'FMutatorDescriptionVariables::VariableRankValues' has a wrong offset!");
+DUMPER7_ASSERTS_FTotemTableRow;
 
 // ScriptStruct RGame.REnemyLootTableRow
 // 0x0040 (0x0048 - 0x0008)
@@ -3933,25 +3222,16 @@ public:
 	float                                         SpawnWeight;                                       // 0x0040(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InternalLootEffectAmount;                          // 0x0044(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FREnemyLootTableRow) == 0x000008, "Wrong alignment on FREnemyLootTableRow");
-static_assert(sizeof(FREnemyLootTableRow) == 0x000048, "Wrong size on FREnemyLootTableRow");
-static_assert(offsetof(FREnemyLootTableRow, SoftLoot) == 0x000008, "Member 'FREnemyLootTableRow::SoftLoot' has a wrong offset!");
-static_assert(offsetof(FREnemyLootTableRow, SpawnAmount) == 0x000030, "Member 'FREnemyLootTableRow::SpawnAmount' has a wrong offset!");
-static_assert(offsetof(FREnemyLootTableRow, SpawnWeight) == 0x000040, "Member 'FREnemyLootTableRow::SpawnWeight' has a wrong offset!");
-static_assert(offsetof(FREnemyLootTableRow, InternalLootEffectAmount) == 0x000044, "Member 'FREnemyLootTableRow::InternalLootEffectAmount' has a wrong offset!");
+DUMPER7_ASSERTS_FREnemyLootTableRow;
 
-// ScriptStruct RGame.RKeywordDataRow
-// 0x0020 (0x0028 - 0x0008)
-struct FRKeywordDataRow final : public FTableRowBase
+// ScriptStruct RGame.MutatorContainer
+// 0x0010 (0x0010 - 0x0000)
+struct FMutatorContainer final
 {
 public:
-	TArray<class FText>                           Keywords;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	class FText                                   KeywordInfo;                                       // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<class URMutatorPrimaryAsset*>          Mutators;                                          // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRKeywordDataRow) == 0x000008, "Wrong alignment on FRKeywordDataRow");
-static_assert(sizeof(FRKeywordDataRow) == 0x000028, "Wrong size on FRKeywordDataRow");
-static_assert(offsetof(FRKeywordDataRow, Keywords) == 0x000008, "Member 'FRKeywordDataRow::Keywords' has a wrong offset!");
-static_assert(offsetof(FRKeywordDataRow, KeywordInfo) == 0x000018, "Member 'FRKeywordDataRow::KeywordInfo' has a wrong offset!");
+DUMPER7_ASSERTS_FMutatorContainer;
 
 // ScriptStruct RGame.RGodBonusMutatorRequirement
 // 0x0010 (0x0010 - 0x0000)
@@ -3963,11 +3243,7 @@ public:
 	bool                                          bGrantedAutomatically;                             // 0x000C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRGodBonusMutatorRequirement) == 0x000008, "Wrong alignment on FRGodBonusMutatorRequirement");
-static_assert(sizeof(FRGodBonusMutatorRequirement) == 0x000010, "Wrong size on FRGodBonusMutatorRequirement");
-static_assert(offsetof(FRGodBonusMutatorRequirement, GodBonusMutatorPA) == 0x000000, "Member 'FRGodBonusMutatorRequirement::GodBonusMutatorPA' has a wrong offset!");
-static_assert(offsetof(FRGodBonusMutatorRequirement, NumRequiredMutatorsInCategory) == 0x000008, "Member 'FRGodBonusMutatorRequirement::NumRequiredMutatorsInCategory' has a wrong offset!");
-static_assert(offsetof(FRGodBonusMutatorRequirement, bGrantedAutomatically) == 0x00000C, "Member 'FRGodBonusMutatorRequirement::bGrantedAutomatically' has a wrong offset!");
+DUMPER7_ASSERTS_FRGodBonusMutatorRequirement;
 
 // ScriptStruct RGame.RUniqueAltarLootOptions
 // 0x0028 (0x0028 - 0x0000)
@@ -3975,50 +3251,41 @@ struct FRUniqueAltarLootOptions final
 {
 public:
 	TArray<struct FRLootSelectionOption>          LootSelectionOptions;                              // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	class FString                                 PlayerNetID;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PlayerNetId;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasChosenLoot;                                    // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SoulfragmentRerollsUsed;                           // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRUniqueAltarLootOptions) == 0x000008, "Wrong alignment on FRUniqueAltarLootOptions");
-static_assert(sizeof(FRUniqueAltarLootOptions) == 0x000028, "Wrong size on FRUniqueAltarLootOptions");
-static_assert(offsetof(FRUniqueAltarLootOptions, LootSelectionOptions) == 0x000000, "Member 'FRUniqueAltarLootOptions::LootSelectionOptions' has a wrong offset!");
-static_assert(offsetof(FRUniqueAltarLootOptions, PlayerNetID) == 0x000010, "Member 'FRUniqueAltarLootOptions::PlayerNetID' has a wrong offset!");
-static_assert(offsetof(FRUniqueAltarLootOptions, bHasChosenLoot) == 0x000020, "Member 'FRUniqueAltarLootOptions::bHasChosenLoot' has a wrong offset!");
+DUMPER7_ASSERTS_FRUniqueAltarLootOptions;
 
 // ScriptStruct RGame.RUniqueSacrificeAltar
 // 0x0018 (0x0018 - 0x0000)
 struct FRUniqueSacrificeAltar final
 {
 public:
-	class FString                                 PlayerNetID;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PlayerNetId;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         CurrentInteractionCost;                            // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRUniqueSacrificeAltar) == 0x000008, "Wrong alignment on FRUniqueSacrificeAltar");
-static_assert(sizeof(FRUniqueSacrificeAltar) == 0x000018, "Wrong size on FRUniqueSacrificeAltar");
-static_assert(offsetof(FRUniqueSacrificeAltar, PlayerNetID) == 0x000000, "Member 'FRUniqueSacrificeAltar::PlayerNetID' has a wrong offset!");
-static_assert(offsetof(FRUniqueSacrificeAltar, CurrentInteractionCost) == 0x000010, "Member 'FRUniqueSacrificeAltar::CurrentInteractionCost' has a wrong offset!");
+DUMPER7_ASSERTS_FRUniqueSacrificeAltar;
 
 // ScriptStruct RGame.RUniqueChestState
 // 0x0018 (0x0018 - 0x0000)
 struct FRUniqueChestState final
 {
 public:
-	class FString                                 PlayerNetID;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PlayerNetId;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EChestState                                   ChestState;                                        // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRUniqueChestState) == 0x000008, "Wrong alignment on FRUniqueChestState");
-static_assert(sizeof(FRUniqueChestState) == 0x000018, "Wrong size on FRUniqueChestState");
-static_assert(offsetof(FRUniqueChestState, PlayerNetID) == 0x000000, "Member 'FRUniqueChestState::PlayerNetID' has a wrong offset!");
-static_assert(offsetof(FRUniqueChestState, ChestState) == 0x000010, "Member 'FRUniqueChestState::ChestState' has a wrong offset!");
+DUMPER7_ASSERTS_FRUniqueChestState;
 
 // ScriptStruct RGame.RUniquePlinthLoot
 // 0x0040 (0x0040 - 0x0000)
 struct FRUniquePlinthLoot final
 {
 public:
-	class FString                                 PlayerNetID;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PlayerNetId;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FRLootSelectionOption>          MutatorLootSelection;                              // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	EPlinthRewardType                             PlinthRewardType;                                  // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -4027,14 +3294,7 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class URMutatorRewardCategoryDataAsset*       GodCategory;                                       // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRUniquePlinthLoot) == 0x000008, "Wrong alignment on FRUniquePlinthLoot");
-static_assert(sizeof(FRUniquePlinthLoot) == 0x000040, "Wrong size on FRUniquePlinthLoot");
-static_assert(offsetof(FRUniquePlinthLoot, PlayerNetID) == 0x000000, "Member 'FRUniquePlinthLoot::PlayerNetID' has a wrong offset!");
-static_assert(offsetof(FRUniquePlinthLoot, MutatorLootSelection) == 0x000010, "Member 'FRUniquePlinthLoot::MutatorLootSelection' has a wrong offset!");
-static_assert(offsetof(FRUniquePlinthLoot, PlinthRewardType) == 0x000020, "Member 'FRUniquePlinthLoot::PlinthRewardType' has a wrong offset!");
-static_assert(offsetof(FRUniquePlinthLoot, PrimaryAsset) == 0x000028, "Member 'FRUniquePlinthLoot::PrimaryAsset' has a wrong offset!");
-static_assert(offsetof(FRUniquePlinthLoot, bLooted) == 0x000030, "Member 'FRUniquePlinthLoot::bLooted' has a wrong offset!");
-static_assert(offsetof(FRUniquePlinthLoot, GodCategory) == 0x000038, "Member 'FRUniquePlinthLoot::GodCategory' has a wrong offset!");
+DUMPER7_ASSERTS_FRUniquePlinthLoot;
 
 // ScriptStruct RGame.RMutatorPrimaryAssetMeshPair
 // 0x0038 (0x0038 - 0x0000)
@@ -4045,24 +3305,7 @@ public:
 	class USkeletalMesh*                          SkeletalMesh;                                      // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UStaticMesh*                            StaticMesh;                                        // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRMutatorPrimaryAssetMeshPair) == 0x000008, "Wrong alignment on FRMutatorPrimaryAssetMeshPair");
-static_assert(sizeof(FRMutatorPrimaryAssetMeshPair) == 0x000038, "Wrong size on FRMutatorPrimaryAssetMeshPair");
-static_assert(offsetof(FRMutatorPrimaryAssetMeshPair, SoftMutatorPA) == 0x000000, "Member 'FRMutatorPrimaryAssetMeshPair::SoftMutatorPA' has a wrong offset!");
-static_assert(offsetof(FRMutatorPrimaryAssetMeshPair, SkeletalMesh) == 0x000028, "Member 'FRMutatorPrimaryAssetMeshPair::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(FRMutatorPrimaryAssetMeshPair, StaticMesh) == 0x000030, "Member 'FRMutatorPrimaryAssetMeshPair::StaticMesh' has a wrong offset!");
-
-// ScriptStruct RGame.EmoteDataTableRow
-// 0x0108 (0x0110 - 0x0008)
-struct FEmoteDataTableRow final : public FTableRowBase
-{
-public:
-	struct FGameplayTag                           EmoteTag;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FEmoteData                             EmoteData;                                         // 0x0010(0x0100)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FEmoteDataTableRow) == 0x000010, "Wrong alignment on FEmoteDataTableRow");
-static_assert(sizeof(FEmoteDataTableRow) == 0x000110, "Wrong size on FEmoteDataTableRow");
-static_assert(offsetof(FEmoteDataTableRow, EmoteTag) == 0x000008, "Member 'FEmoteDataTableRow::EmoteTag' has a wrong offset!");
-static_assert(offsetof(FEmoteDataTableRow, EmoteData) == 0x000010, "Member 'FEmoteDataTableRow::EmoteData' has a wrong offset!");
+DUMPER7_ASSERTS_FRMutatorPrimaryAssetMeshPair;
 
 // ScriptStruct RGame.LightSettingsRow
 // 0x0018 (0x0020 - 0x0008)
@@ -4076,12 +3319,7 @@ public:
 	float                                         MaxDrawDistance;                                   // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FLightSettingsRow) == 0x000008, "Wrong alignment on FLightSettingsRow");
-static_assert(sizeof(FLightSettingsRow) == 0x000020, "Wrong size on FLightSettingsRow");
-static_assert(offsetof(FLightSettingsRow, Tag) == 0x000008, "Member 'FLightSettingsRow::Tag' has a wrong offset!");
-static_assert(offsetof(FLightSettingsRow, DetailMode) == 0x000010, "Member 'FLightSettingsRow::DetailMode' has a wrong offset!");
-static_assert(offsetof(FLightSettingsRow, MaxDistanceFadeRange) == 0x000014, "Member 'FLightSettingsRow::MaxDistanceFadeRange' has a wrong offset!");
-static_assert(offsetof(FLightSettingsRow, MaxDrawDistance) == 0x000018, "Member 'FLightSettingsRow::MaxDrawDistance' has a wrong offset!");
+DUMPER7_ASSERTS_FLightSettingsRow;
 
 // ScriptStruct RGame.RKeyboardLayoutRow
 // 0x00C8 (0x00D0 - 0x0008)
@@ -4094,50 +3332,20 @@ public:
 	TSoftObjectPtr<class UInputMappingContext>    UI_IMC;                                            // 0x0080(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UInputMappingContext>    UIGeneric_IMC;                                     // 0x00A8(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRKeyboardLayoutRow) == 0x000008, "Wrong alignment on FRKeyboardLayoutRow");
-static_assert(sizeof(FRKeyboardLayoutRow) == 0x0000D0, "Wrong size on FRKeyboardLayoutRow");
-static_assert(offsetof(FRKeyboardLayoutRow, Gameplay_IMC) == 0x000008, "Member 'FRKeyboardLayoutRow::Gameplay_IMC' has a wrong offset!");
-static_assert(offsetof(FRKeyboardLayoutRow, GamePlayerController_IMC) == 0x000030, "Member 'FRKeyboardLayoutRow::GamePlayerController_IMC' has a wrong offset!");
-static_assert(offsetof(FRKeyboardLayoutRow, Spectator_IMC) == 0x000058, "Member 'FRKeyboardLayoutRow::Spectator_IMC' has a wrong offset!");
-static_assert(offsetof(FRKeyboardLayoutRow, UI_IMC) == 0x000080, "Member 'FRKeyboardLayoutRow::UI_IMC' has a wrong offset!");
-static_assert(offsetof(FRKeyboardLayoutRow, UIGeneric_IMC) == 0x0000A8, "Member 'FRKeyboardLayoutRow::UIGeneric_IMC' has a wrong offset!");
+DUMPER7_ASSERTS_FRKeyboardLayoutRow;
 
-// ScriptStruct RGame.FloatWeaponSetting
-// 0x0018 (0x0018 - 0x0000)
-struct FFloatWeaponSetting final
+// ScriptStruct RGame.RDamageSourceRow
+// 0x0028 (0x0030 - 0x0008)
+struct FRDamageSourceRow final : public FTableRowBase
 {
 public:
-	float                                         BaseValue;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              MinMaxRange;                                       // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DamageSource;                                      // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           DamageSourceTag;                                   // 0x000C(0x0008)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   LocalizedDamageSourceName;                         // 0x0018(0x0010)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	class UTexture2D*                             DamageSourceIcon;                                  // 0x0028(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FFloatWeaponSetting) == 0x000008, "Wrong alignment on FFloatWeaponSetting");
-static_assert(sizeof(FFloatWeaponSetting) == 0x000018, "Wrong size on FFloatWeaponSetting");
-static_assert(offsetof(FFloatWeaponSetting, BaseValue) == 0x000000, "Member 'FFloatWeaponSetting::BaseValue' has a wrong offset!");
-static_assert(offsetof(FFloatWeaponSetting, MinMaxRange) == 0x000008, "Member 'FFloatWeaponSetting::MinMaxRange' has a wrong offset!");
-
-// ScriptStruct RGame.MutableFloatWeaponSetting
-// 0x0108 (0x0108 - 0x0000)
-struct alignas(0x08) FMutableFloatWeaponSetting final
-{
-public:
-	uint8                                         Pad_0[0x108];                                      // 0x0000(0x0108)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FMutableFloatWeaponSetting) == 0x000008, "Wrong alignment on FMutableFloatWeaponSetting");
-static_assert(sizeof(FMutableFloatWeaponSetting) == 0x000108, "Wrong size on FMutableFloatWeaponSetting");
-
-// ScriptStruct RGame.VoiceQueryDataPair
-// 0x0018 (0x0018 - 0x0000)
-struct FVoiceQueryDataPair final
-{
-public:
-	class FName                                   Key;                                               // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Value;                                             // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FVoiceQueryDataPair) == 0x000008, "Wrong alignment on FVoiceQueryDataPair");
-static_assert(sizeof(FVoiceQueryDataPair) == 0x000018, "Wrong size on FVoiceQueryDataPair");
-static_assert(offsetof(FVoiceQueryDataPair, Key) == 0x000000, "Member 'FVoiceQueryDataPair::Key' has a wrong offset!");
-static_assert(offsetof(FVoiceQueryDataPair, Value) == 0x000008, "Member 'FVoiceQueryDataPair::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FRDamageSourceRow;
 
 }
 

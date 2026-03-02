@@ -18,79 +18,59 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_StatsLog.Widget_StatsLog_C
-// 0x00C0 (0x0390 - 0x02D0)
+// 0x00C8 (0x0408 - 0x0340)
 class UWidget_StatsLog_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       DetailsUpdateAnimation;                            // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_73;                                  // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             ScrollBox;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             ScrollBox_137;                                     // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBox_EnemyStatsContainer;                   // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBox_PlayerStatsContainer;                  // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_AverageAccuracy;              // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_AverageRunTime;               // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_HighestDamageDoneInRun;       // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_MaxHPReached;                 // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_NemesisEnemy;                 // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_PlayerDeaths;                 // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_RunStreak;                    // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_ShortestRunTime;              // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_SuccesfulRuns;                // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_SuccessRate;                  // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_TimesDowned;                  // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_TimesRevivedOtherPlayers;     // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_TotalRuns;                    // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_TotalMutatorsPickedUp_1;      // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_TotalMutatorsPickedUp;        // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_TotalEnemyKills;              // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_TotalDamageDone;              // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_TotalEnemyKills;              // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_TotalMutatorsPickedUp;        // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_TotalMutatorsPickedUp_1;      // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_TotalRuns;                    // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_TimesRevivedOtherPlayers;     // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_TimesDowned;                  // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_SuccessRate;                  // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_SuccesfulRuns;                // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_ShortestRunTime;              // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_RunStreak;                    // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_PlayerDeaths;                 // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_NemesisEnemy;                 // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_MaxHPReached;                 // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_HighestDamageDoneInRun;       // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_DeepestRun;                   // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_AverageRunTime;               // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_StatsLogEntry_C*                Widget_StatsLogEntry_AverageAccuracy;              // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBox_PlayerStatsContainer;                  // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBox_EnemyStatsContainer;                   // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollBox*                             ScrollBox_137;                                     // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollBox*                             ScrollBox;                                         // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_73;                                  // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       DetailsUpdateAnimation;                            // 0x0400(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void GetTimesKilledByEnemyTypeNames(TArray<class FString>* Result);
-	void GetEnemiesKilledOfTypeNames(TArray<class FString>* Result);
-	void ExecuteUbergraph_Widget_StatsLog(int32 EntryPoint);
-	void CreateTimesKilledByEnemyTypesEntries(TArray<class FString>& UniqueEnemyNames);
-	void CreateEnemiesKilledOfTypeEntries(TArray<class FString>& UniqueEnemyNames);
 	void Construct();
+	void CreateEnemiesKilledOfTypeEntries(TArray<class FString>& UniqueEnemyNames);
+	void CreateTimesKilledByEnemyTypesEntries(TArray<class FString>& UniqueEnemyNames);
+	void ExecuteUbergraph_Widget_StatsLog(int32 EntryPoint);
+	void GetEnemiesKilledOfTypeNames(TArray<class FString>* Result);
+	void GetTimesKilledByEnemyTypeNames(TArray<class FString>* Result);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_StatsLog_C">();
+		BP_STATIC_CLASS_IMPL("Widget_StatsLog_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_StatsLog_C")
 	}
 	static class UWidget_StatsLog_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_StatsLog_C>();
 	}
 };
-static_assert(alignof(UWidget_StatsLog_C) == 0x000008, "Wrong alignment on UWidget_StatsLog_C");
-static_assert(sizeof(UWidget_StatsLog_C) == 0x000390, "Wrong size on UWidget_StatsLog_C");
-static_assert(offsetof(UWidget_StatsLog_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_StatsLog_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, DetailsUpdateAnimation) == 0x0002D8, "Member 'UWidget_StatsLog_C::DetailsUpdateAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, HorizontalBox_73) == 0x0002E0, "Member 'UWidget_StatsLog_C::HorizontalBox_73' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, ScrollBox) == 0x0002E8, "Member 'UWidget_StatsLog_C::ScrollBox' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, ScrollBox_137) == 0x0002F0, "Member 'UWidget_StatsLog_C::ScrollBox_137' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, VerticalBox_EnemyStatsContainer) == 0x0002F8, "Member 'UWidget_StatsLog_C::VerticalBox_EnemyStatsContainer' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, VerticalBox_PlayerStatsContainer) == 0x000300, "Member 'UWidget_StatsLog_C::VerticalBox_PlayerStatsContainer' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_AverageAccuracy) == 0x000308, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_AverageAccuracy' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_AverageRunTime) == 0x000310, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_AverageRunTime' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_HighestDamageDoneInRun) == 0x000318, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_HighestDamageDoneInRun' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_MaxHPReached) == 0x000320, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_MaxHPReached' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_NemesisEnemy) == 0x000328, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_NemesisEnemy' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_PlayerDeaths) == 0x000330, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_PlayerDeaths' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_RunStreak) == 0x000338, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_RunStreak' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_ShortestRunTime) == 0x000340, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_ShortestRunTime' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_SuccesfulRuns) == 0x000348, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_SuccesfulRuns' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_SuccessRate) == 0x000350, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_SuccessRate' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_TimesDowned) == 0x000358, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_TimesDowned' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_TimesRevivedOtherPlayers) == 0x000360, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_TimesRevivedOtherPlayers' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_TotalDamageDone) == 0x000368, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_TotalDamageDone' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_TotalEnemyKills) == 0x000370, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_TotalEnemyKills' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_TotalMutatorsPickedUp) == 0x000378, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_TotalMutatorsPickedUp' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_TotalMutatorsPickedUp_1) == 0x000380, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_TotalMutatorsPickedUp_1' has a wrong offset!");
-static_assert(offsetof(UWidget_StatsLog_C, Widget_StatsLogEntry_TotalRuns) == 0x000388, "Member 'UWidget_StatsLog_C::Widget_StatsLogEntry_TotalRuns' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_StatsLog_C;
 
 }
 

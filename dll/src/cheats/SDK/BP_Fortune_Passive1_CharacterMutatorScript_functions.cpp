@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BP_Fortune_Passive1_CharacterMutatorScript.BP_Fortune_Passive1_CharacterMutatorScript_C.ApplyStun_Server
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ARPawnBase*                       RPawnBase                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBP_Fortune_Passive1_CharacterMutatorScript_C::ApplyStun_Server(class ARPawnBase* RPawnBase)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Fortune_Passive1_CharacterMutatorScript_C", "ApplyStun_Server");
-
-	Params::BP_Fortune_Passive1_CharacterMutatorScript_C_ApplyStun_Server Parms{};
-
-	Parms.RPawnBase = RPawnBase;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_Fortune_Passive1_CharacterMutatorScript.BP_Fortune_Passive1_CharacterMutatorScript_C.ExecuteUbergraph_BP_Fortune_Passive1_CharacterMutatorScript
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:

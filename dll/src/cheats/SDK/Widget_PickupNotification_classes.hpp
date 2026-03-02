@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_PickupNotification.Widget_PickupNotification_C
-// 0x0000 (0x0300 - 0x0300)
+// 0x0000 (0x0378 - 0x0378)
 class UWidget_PickupNotification_C final : public URPickupNotificationWidget
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_PickupNotification_C">();
+		BP_STATIC_CLASS_IMPL("Widget_PickupNotification_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_PickupNotification_C")
 	}
 	static class UWidget_PickupNotification_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_PickupNotification_C>();
 	}
 };
-static_assert(alignof(UWidget_PickupNotification_C) == 0x000008, "Wrong alignment on UWidget_PickupNotification_C");
-static_assert(sizeof(UWidget_PickupNotification_C) == 0x000300, "Wrong size on UWidget_PickupNotification_C");
+DUMPER7_ASSERTS_UWidget_PickupNotification_C;
 
 }
 

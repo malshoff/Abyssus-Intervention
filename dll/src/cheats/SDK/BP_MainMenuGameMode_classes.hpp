@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -32,17 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_MainMenuGameMode_C">();
+		BP_STATIC_CLASS_IMPL("BP_MainMenuGameMode_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_MainMenuGameMode_C")
 	}
 	static class ABP_MainMenuGameMode_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_MainMenuGameMode_C>();
 	}
 };
-static_assert(alignof(ABP_MainMenuGameMode_C) == 0x000008, "Wrong alignment on ABP_MainMenuGameMode_C");
-static_assert(sizeof(ABP_MainMenuGameMode_C) == 0x000350, "Wrong size on ABP_MainMenuGameMode_C");
-static_assert(offsetof(ABP_MainMenuGameMode_C, UberGraphFrame) == 0x000340, "Member 'ABP_MainMenuGameMode_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_MainMenuGameMode_C, DefaultSceneRoot) == 0x000348, "Member 'ABP_MainMenuGameMode_C::DefaultSceneRoot' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_MainMenuGameMode_C;
 
 }
 

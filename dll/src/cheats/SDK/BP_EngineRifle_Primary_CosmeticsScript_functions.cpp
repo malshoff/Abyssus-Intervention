@@ -17,29 +17,49 @@
 namespace SDK
 {
 
-// Function BP_EngineRifle_Primary_CosmeticsScript.BP_EngineRifle_Primary_CosmeticsScript_C.OnFinish_8D5DBD75420659DD4001E4804CF6133F
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_EngineRifle_Primary_CosmeticsScript.BP_EngineRifle_Primary_CosmeticsScript_C.ExecuteUbergraph_BP_EngineRifle_Primary_CosmeticsScript
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_EngineRifle_Primary_CosmeticsScript_C::OnFinish_8D5DBD75420659DD4001E4804CF6133F()
+void UBP_EngineRifle_Primary_CosmeticsScript_C::ExecuteUbergraph_BP_EngineRifle_Primary_CosmeticsScript(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EngineRifle_Primary_CosmeticsScript_C", "OnFinish_8D5DBD75420659DD4001E4804CF6133F");
+		Func = Class->GetFunction("BP_EngineRifle_Primary_CosmeticsScript_C", "ExecuteUbergraph_BP_EngineRifle_Primary_CosmeticsScript");
+
+	Params::BP_EngineRifle_Primary_CosmeticsScript_C_ExecuteUbergraph_BP_EngineRifle_Primary_CosmeticsScript Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EngineRifle_Primary_CosmeticsScript.BP_EngineRifle_Primary_CosmeticsScript_C.K2_ActivateScript
+// (Event, Public, BlueprintEvent)
+
+void UBP_EngineRifle_Primary_CosmeticsScript_C::K2_ActivateScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EngineRifle_Primary_CosmeticsScript_C", "K2_ActivateScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_EngineRifle_Primary_CosmeticsScript.BP_EngineRifle_Primary_CosmeticsScript_C.OnCancelled_8D5DBD75420659DD4001E4804CF6133F
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_EngineRifle_Primary_CosmeticsScript.BP_EngineRifle_Primary_CosmeticsScript_C.K2_OnWeaponCosmeticEvent
+// (Event, Public, BlueprintEvent)
 
-void UBP_EngineRifle_Primary_CosmeticsScript_C::OnCancelled_8D5DBD75420659DD4001E4804CF6133F()
+void UBP_EngineRifle_Primary_CosmeticsScript_C::K2_OnWeaponCosmeticEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EngineRifle_Primary_CosmeticsScript_C", "OnCancelled_8D5DBD75420659DD4001E4804CF6133F");
+		Func = Class->GetFunction("BP_EngineRifle_Primary_CosmeticsScript_C", "K2_OnWeaponCosmeticEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,51 +85,31 @@ void UBP_EngineRifle_Primary_CosmeticsScript_C::K2_TickScript(float DeltaTime)
 }
 
 
-// Function BP_EngineRifle_Primary_CosmeticsScript.BP_EngineRifle_Primary_CosmeticsScript_C.K2_OnWeaponCosmeticEvent
-// (Event, Public, BlueprintEvent)
+// Function BP_EngineRifle_Primary_CosmeticsScript.BP_EngineRifle_Primary_CosmeticsScript_C.OnCancelled_8D5DBD75420659DD4001E4804CF6133F
+// (BlueprintCallable, BlueprintEvent)
 
-void UBP_EngineRifle_Primary_CosmeticsScript_C::K2_OnWeaponCosmeticEvent()
+void UBP_EngineRifle_Primary_CosmeticsScript_C::OnCancelled_8D5DBD75420659DD4001E4804CF6133F()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EngineRifle_Primary_CosmeticsScript_C", "K2_OnWeaponCosmeticEvent");
+		Func = Class->GetFunction("BP_EngineRifle_Primary_CosmeticsScript_C", "OnCancelled_8D5DBD75420659DD4001E4804CF6133F");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_EngineRifle_Primary_CosmeticsScript.BP_EngineRifle_Primary_CosmeticsScript_C.K2_ActivateScript
-// (Event, Public, BlueprintEvent)
+// Function BP_EngineRifle_Primary_CosmeticsScript.BP_EngineRifle_Primary_CosmeticsScript_C.OnFinish_8D5DBD75420659DD4001E4804CF6133F
+// (BlueprintCallable, BlueprintEvent)
 
-void UBP_EngineRifle_Primary_CosmeticsScript_C::K2_ActivateScript()
+void UBP_EngineRifle_Primary_CosmeticsScript_C::OnFinish_8D5DBD75420659DD4001E4804CF6133F()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EngineRifle_Primary_CosmeticsScript_C", "K2_ActivateScript");
+		Func = Class->GetFunction("BP_EngineRifle_Primary_CosmeticsScript_C", "OnFinish_8D5DBD75420659DD4001E4804CF6133F");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EngineRifle_Primary_CosmeticsScript.BP_EngineRifle_Primary_CosmeticsScript_C.ExecuteUbergraph_BP_EngineRifle_Primary_CosmeticsScript
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_EngineRifle_Primary_CosmeticsScript_C::ExecuteUbergraph_BP_EngineRifle_Primary_CosmeticsScript(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EngineRifle_Primary_CosmeticsScript_C", "ExecuteUbergraph_BP_EngineRifle_Primary_CosmeticsScript");
-
-	Params::BP_EngineRifle_Primary_CosmeticsScript_C_ExecuteUbergraph_BP_EngineRifle_Primary_CosmeticsScript Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

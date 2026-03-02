@@ -25,12 +25,10 @@ struct BP_Abyss_Behavior_PrimaryFire_Mutator_C_AttachBreach final
 public:
 	class ARPawnBase*                             Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_AttachBreach) == 0x000008, "Wrong alignment on BP_Abyss_Behavior_PrimaryFire_Mutator_C_AttachBreach");
-static_assert(sizeof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_AttachBreach) == 0x000008, "Wrong size on BP_Abyss_Behavior_PrimaryFire_Mutator_C_AttachBreach");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_AttachBreach, Pawn) == 0x000000, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_AttachBreach::Pawn' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Abyss_Behavior_PrimaryFire_Mutator_C_AttachBreach;
 
 // Function BP_Abyss_Behavior_PrimaryFire_Mutator.BP_Abyss_Behavior_PrimaryFire_Mutator_C.ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator
-// 0x0150 (0x0150 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator final
 {
 public:
@@ -40,72 +38,33 @@ public:
 	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_HealthDamage;                         // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetMutatorRank_ReturnValue_1;             // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RollProcChance_OutProcChance;             // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RollProcChance_ReturnValue;               // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_NewRank;                        // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URMutatorPrimaryAsset*                  K2Node_CustomEvent_MutatorPrimaryAsset;            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0078(0x0030)(ContainsInstancedReference)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URPlayerGScriptComponent*               K2Node_DynamicCast_AsRPlayer_GScript_Component;    // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_1;                 // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetMutatorRank_ReturnValue_2;             // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue_1; // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_TriggeringActor;                      // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_CustomEvent_NewRank;                        // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URMutatorPrimaryAsset*                  K2Node_CustomEvent_MutatorPrimaryAsset;            // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0068(0x0030)(ContainsInstancedReference)
+	class URPlayerGScriptComponent*               K2Node_DynamicCast_AsRPlayer_GScript_Component;    // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_1;                 // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x00B4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetMutatorRank_ReturnValue_1;             // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 NewRank, class URMutatorPrimaryAsset* MutatorPrimaryAsset)> K2Node_CreateDelegate_OutputDelegate; // 0x00D0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 NewRank, class URMutatorPrimaryAsset* MutatorPrimaryAsset)> K2Node_CreateDelegate_OutputDelegate; // 0x00E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPawnBase*                             K2Node_CustomEvent_Pawn;                           // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_2;     // 0x0100(0x0030)(ContainsInstancedReference)
-	class URStatusEffectGScript*                  CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ARPawnBase*                             K2Node_CustomEvent_Pawn;                           // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_2;     // 0x00F0(0x0030)(ContainsInstancedReference)
+	class URStatusEffectGScript*                  CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator) == 0x000008, "Wrong alignment on BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator");
-static_assert(sizeof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator) == 0x000150, "Wrong size on BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, EntryPoint) == 0x000000, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_GetMutatorRank_ReturnValue) == 0x000004, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_GetScriptFName_ReturnValue) == 0x000038, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, K2Node_Event_HealthDamage) == 0x000040, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::K2Node_Event_HealthDamage' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000048, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_GetMutatorRank_ReturnValue_1) == 0x000054, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_GetMutatorRank_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x000058, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_FTrunc_ReturnValue) == 0x00005C, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_RollProcChance_OutProcChance) == 0x000060, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_RollProcChance_OutProcChance' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_RollProcChance_ReturnValue) == 0x000064, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_RollProcChance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, K2Node_CustomEvent_NewRank) == 0x000068, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::K2Node_CustomEvent_NewRank' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, K2Node_CustomEvent_MutatorPrimaryAsset) == 0x000070, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::K2Node_CustomEvent_MutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000078, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_GetScriptFName_ReturnValue_1) == 0x0000A8, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x0000B0, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, K2Node_DynamicCast_bSuccess_1) == 0x0000B8, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x0000C0, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, K2Node_DynamicCast_bSuccess_2) == 0x0000C8, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_GetMutatorRank_ReturnValue_2) == 0x0000CC, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_GetMutatorRank_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_GetMutatorValueByArrayIndex_ReturnValue_1) == 0x0000D0, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_GetMutatorValueByArrayIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000D8, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000E0, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, K2Node_CreateDelegate_OutputDelegate) == 0x0000E8, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, K2Node_CustomEvent_Pawn) == 0x0000F8, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::K2Node_CustomEvent_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x000100, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x000130, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_FTrunc_A_ImplicitCast) == 0x000138, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_FTrunc_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000140, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x000148, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Abyss_Behavior_PrimaryFire_Mutator_C_ExecuteUbergraph_BP_Abyss_Behavior_PrimaryFire_Mutator;
 
 // Function BP_Abyss_Behavior_PrimaryFire_Mutator.BP_Abyss_Behavior_PrimaryFire_Mutator_C.MutatorRankChanged
 // 0x0010 (0x0010 - 0x0000)
@@ -116,10 +75,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class URMutatorPrimaryAsset*                  MutatorPrimaryAsset;                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged) == 0x000008, "Wrong alignment on BP_Abyss_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged");
-static_assert(sizeof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged) == 0x000010, "Wrong size on BP_Abyss_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged, NewRank) == 0x000000, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged::NewRank' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged, MutatorPrimaryAsset) == 0x000008, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged::MutatorPrimaryAsset' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Abyss_Behavior_PrimaryFire_Mutator_C_MutatorRankChanged;
 
 // Function BP_Abyss_Behavior_PrimaryFire_Mutator.BP_Abyss_Behavior_PrimaryFire_Mutator_C.RunBehaviour
 // 0x0208 (0x0208 - 0x0000)
@@ -156,44 +112,18 @@ public:
 	class ARNPCPawnBase*                          K2Node_DynamicCast_AsRNPCPawn_Base;                // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour) == 0x000008, "Wrong alignment on BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour");
-static_assert(sizeof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour) == 0x000208, "Wrong size on BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, TriggeringActor) == 0x000000, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::TriggeringActor' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_K2_GetRGScriptComponent_ReturnValue) == 0x000008, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_K2_GetRGScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_GetCachedHitResult_ReturnValue) == 0x000018, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_GetCachedHitResult_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_bBlockingHit) == 0x000118, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_bInitialOverlap) == 0x000119, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_Time) == 0x00011C, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_Distance) == 0x000120, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_Location) == 0x000128, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_ImpactPoint) == 0x000140, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_Normal) == 0x000158, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_ImpactNormal) == 0x000170, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_PhysMat) == 0x000188, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_HitActor) == 0x000190, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_HitComponent) == 0x000198, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_HitBoneName) == 0x0001A0, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_BoneName) == 0x0001A8, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_HitItem) == 0x0001B0, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_ElementIndex) == 0x0001B4, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_FaceIndex) == 0x0001B8, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_TraceStart) == 0x0001C0, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_BreakHitResult_TraceEnd) == 0x0001D8, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, CallFunc_SelectObject_ReturnValue) == 0x0001F0, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::CallFunc_SelectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, K2Node_DynamicCast_AsRNPCPawn_Base) == 0x0001F8, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::K2Node_DynamicCast_AsRNPCPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour, K2Node_DynamicCast_bSuccess) == 0x000200, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunBehaviour;
 
 // Function BP_Abyss_Behavior_PrimaryFire_Mutator.BP_Abyss_Behavior_PrimaryFire_Mutator_C.RunPrimaryFireBehavior
-// 0x0004 (0x0004 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior final
 {
 public:
 	float                                         HealthDamage;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 TriggeringActor;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior) == 0x000004, "Wrong alignment on BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior");
-static_assert(sizeof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior) == 0x000004, "Wrong size on BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior");
-static_assert(offsetof(BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior, HealthDamage) == 0x000000, "Member 'BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior::HealthDamage' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Abyss_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior;
 
 }
 

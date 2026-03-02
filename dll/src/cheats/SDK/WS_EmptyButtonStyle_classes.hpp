@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass WS_EmptyButtonStyle.WS_EmptyButtonStyle_C
-// 0x0000 (0x06B0 - 0x06B0)
+// 0x0000 (0x0710 - 0x0710)
 class UWS_EmptyButtonStyle_C final : public UCommonButtonStyle
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"WS_EmptyButtonStyle_C">();
+		BP_STATIC_CLASS_IMPL("WS_EmptyButtonStyle_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WS_EmptyButtonStyle_C")
 	}
 	static class UWS_EmptyButtonStyle_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWS_EmptyButtonStyle_C>();
 	}
 };
-static_assert(alignof(UWS_EmptyButtonStyle_C) == 0x000010, "Wrong alignment on UWS_EmptyButtonStyle_C");
-static_assert(sizeof(UWS_EmptyButtonStyle_C) == 0x0006B0, "Wrong size on UWS_EmptyButtonStyle_C");
+DUMPER7_ASSERTS_UWS_EmptyButtonStyle_C;
 
 }
 

@@ -17,49 +17,535 @@
 namespace SDK::Params
 {
 
-// Function GameplayCameras.BlueprintCameraDirectorEvaluator.ActivateCameraDirector
+// Function GameplayCameras.BlueprintCameraEvaluationDataFunctionLibrary.BlendCameraEvaluationData
+// 0x0038 (0x0038 - 0x0000)
+struct BlueprintCameraEvaluationDataFunctionLibrary_BlendCameraEvaluationData final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      FromCameraData;                                    // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraEvaluationDataRef      ToCameraData;                                      // 0x0018(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	float                                         Factor;                                            // 0x0030(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraEvaluationDataFunctionLibrary_BlendCameraEvaluationData;
+
+// Function GameplayCameras.BlueprintCameraEvaluationDataFunctionLibrary.GetCameraPose
+// 0x00A0 (0x00A0 - 0x0000)
+struct BlueprintCameraEvaluationDataFunctionLibrary_GetCameraPose final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0018(0x0088)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraEvaluationDataFunctionLibrary_GetCameraPose;
+
+// Function GameplayCameras.BlueprintCameraEvaluationDataFunctionLibrary.MakeCameraEvaluationData
+// 0x0018 (0x0018 - 0x0000)
+struct BlueprintCameraEvaluationDataFunctionLibrary_MakeCameraEvaluationData final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraEvaluationDataFunctionLibrary_MakeCameraEvaluationData;
+
+// Function GameplayCameras.BlueprintCameraEvaluationDataFunctionLibrary.SetCameraPose
+// 0x00A0 (0x00A0 - 0x0000)
+struct BlueprintCameraEvaluationDataFunctionLibrary_SetCameraPose final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0018(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraEvaluationDataFunctionLibrary_SetCameraPose;
+
+// Function GameplayCameras.BlueprintCameraEvaluationDataFunctionLibrary.SetDefaultCameraRigParameters
+// 0x0020 (0x0020 - 0x0000)
+struct BlueprintCameraEvaluationDataFunctionLibrary_SetDefaultCameraRigParameters final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	const class UCameraRigAsset*                  CameraRig;                                         // 0x0018(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraEvaluationDataFunctionLibrary_SetDefaultCameraRigParameters;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetBooleanCameraVariable
+// 0x0028 (0x0028 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_GetBooleanCameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UBooleanCameraVariable*                 Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_GetBooleanCameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetDoubleCameraVariable
+// 0x0028 (0x0028 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_GetDoubleCameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UDoubleCameraVariable*                  Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_GetDoubleCameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetFloatCameraVariable
+// 0x0028 (0x0028 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_GetFloatCameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UFloatCameraVariable*                   Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_GetFloatCameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetInteger32CameraVariable
+// 0x0028 (0x0028 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_GetInteger32CameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UInteger32CameraVariable*               Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_GetInteger32CameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetRotatorCameraVariable
+// 0x0038 (0x0038 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_GetRotatorCameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class URotator3dCameraVariable*               Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_GetRotatorCameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetTransformCameraVariable
+// 0x0080 (0x0080 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_GetTransformCameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UTransform3dCameraVariable*             Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             ReturnValue;                                       // 0x0020(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_GetTransformCameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetVector2CameraVariable
+// 0x0030 (0x0030 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_GetVector2CameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UVector2dCameraVariable*                Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_GetVector2CameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetVector3CameraVariable
+// 0x0038 (0x0038 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_GetVector3CameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UVector3dCameraVariable*                Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_GetVector3CameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetVector4CameraVariable
+// 0x0040 (0x0040 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_GetVector4CameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UVector4dCameraVariable*                Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector4                               ReturnValue;                                       // 0x0020(0x0020)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_GetVector4CameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetBooleanCameraVariable
+// 0x0028 (0x0028 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_SetBooleanCameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UBooleanCameraVariable*                 Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Value;                                             // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_SetBooleanCameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetDoubleCameraVariable
+// 0x0028 (0x0028 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_SetDoubleCameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UDoubleCameraVariable*                  Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Value;                                             // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_SetDoubleCameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetFloatCameraVariable
+// 0x0028 (0x0028 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_SetFloatCameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UFloatCameraVariable*                   Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_SetFloatCameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetInteger32CameraVariable
+// 0x0028 (0x0028 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_SetInteger32CameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UInteger32CameraVariable*               Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_SetInteger32CameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetRotatorCameraVariable
+// 0x0038 (0x0038 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_SetRotatorCameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class URotator3dCameraVariable*               Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               Value;                                             // 0x0020(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_SetRotatorCameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetTransformCameraVariable
+// 0x0080 (0x0080 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_SetTransformCameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UTransform3dCameraVariable*             Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Value;                                             // 0x0020(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_SetTransformCameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetVector2CameraVariable
+// 0x0030 (0x0030 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_SetVector2CameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UVector2dCameraVariable*                Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Value;                                             // 0x0020(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_SetVector2CameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetVector3CameraVariable
+// 0x0038 (0x0038 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_SetVector3CameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UVector3dCameraVariable*                Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Value;                                             // 0x0020(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_SetVector3CameraVariable;
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetVector4CameraVariable
+// 0x0040 (0x0040 - 0x0000)
+struct BlueprintCameraVariableTableFunctionLibrary_SetVector4CameraVariable final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UVector4dCameraVariable*                Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector4                               Value;                                             // 0x0020(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraVariableTableFunctionLibrary_SetVector4CameraVariable;
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.GetClassData
+// 0x0028 (0x0028 - 0x0000)
+struct BlueprintCameraContextDataTableFunctionLibrary_GetClassData final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   DataID;                                            // 0x0018(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraContextDataTableFunctionLibrary_GetClassData;
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.GetEnumData
+// 0x0030 (0x0030 - 0x0000)
+struct BlueprintCameraContextDataTableFunctionLibrary_GetEnumData final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   DataID;                                            // 0x0018(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UEnum*                            EnumType;                                          // 0x0020(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraContextDataTableFunctionLibrary_GetEnumData;
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.GetNameData
+// 0x0028 (0x0028 - 0x0000)
+struct BlueprintCameraContextDataTableFunctionLibrary_GetNameData final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   DataID;                                            // 0x0018(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x001C(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraContextDataTableFunctionLibrary_GetNameData;
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.GetObjectData
+// 0x0028 (0x0028 - 0x0000)
+struct BlueprintCameraContextDataTableFunctionLibrary_GetObjectData final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   DataID;                                            // 0x0018(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraContextDataTableFunctionLibrary_GetObjectData;
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.GetStringData
+// 0x0030 (0x0030 - 0x0000)
+struct BlueprintCameraContextDataTableFunctionLibrary_GetStringData final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   DataID;                                            // 0x0018(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraContextDataTableFunctionLibrary_GetStringData;
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.GetStructData
+// 0x0038 (0x0038 - 0x0000)
+struct BlueprintCameraContextDataTableFunctionLibrary_GetStructData final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   DataID;                                            // 0x0018(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UScriptStruct*                    DataStructType;                                    // 0x0020(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraContextDataTableFunctionLibrary_GetStructData;
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.SetClassData
+// 0x0030 (0x0030 - 0x0000)
+struct BlueprintCameraContextDataTableFunctionLibrary_SetClassData final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   DataID;                                            // 0x0018(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 Data;                                              // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraContextDataTableFunctionLibrary_SetClassData;
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.SetEnumData
+// 0x0030 (0x0030 - 0x0000)
+struct BlueprintCameraContextDataTableFunctionLibrary_SetEnumData final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   DataID;                                            // 0x0018(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	const class UEnum*                            EnumType;                                          // 0x0020(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Data;                                              // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0029(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraContextDataTableFunctionLibrary_SetEnumData;
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.SetNameData
+// 0x0028 (0x0028 - 0x0000)
+struct BlueprintCameraContextDataTableFunctionLibrary_SetNameData final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   DataID;                                            // 0x0018(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Data;                                              // 0x001C(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraContextDataTableFunctionLibrary_SetNameData;
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.SetObjectData
+// 0x0030 (0x0030 - 0x0000)
+struct BlueprintCameraContextDataTableFunctionLibrary_SetObjectData final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   DataID;                                            // 0x0018(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                Data;                                              // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraContextDataTableFunctionLibrary_SetObjectData;
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.SetStringData
+// 0x0038 (0x0038 - 0x0000)
+struct BlueprintCameraContextDataTableFunctionLibrary_SetStringData final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   DataID;                                            // 0x0018(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Data;                                              // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraContextDataTableFunctionLibrary_SetStringData;
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.SetStructData
+// 0x0038 (0x0038 - 0x0000)
+struct BlueprintCameraContextDataTableFunctionLibrary_SetStructData final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   DataID;                                            // 0x0018(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInstancedStruct                       Data;                                              // 0x0020(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraContextDataTableFunctionLibrary_SetStructData;
+
+// Function GameplayCameras.CameraRigInstanceFunctions.IsValid
+// 0x000C (0x000C - 0x0000)
+struct CameraRigInstanceFunctions_IsValid final
+{
+public:
+	struct FCameraRigInstanceID                   InstanceId;                                        // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_CameraRigInstanceFunctions_IsValid;
+
+// Function GameplayCameras.GameplayCameraParameterSetterComponent.OnActorBeginOverlap
+// 0x0010 (0x0010 - 0x0000)
+struct GameplayCameraParameterSetterComponent_OnActorBeginOverlap final
+{
+public:
+	class AActor*                                 OverlappedActor;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayCameraParameterSetterComponent_OnActorBeginOverlap;
+
+// Function GameplayCameras.GameplayCameraParameterSetterComponent.OnActorEndOverlap
+// 0x0010 (0x0010 - 0x0000)
+struct GameplayCameraParameterSetterComponent_OnActorEndOverlap final
+{
+public:
+	class AActor*                                 OverlappedActor;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayCameraParameterSetterComponent_OnActorEndOverlap;
+
+// Function GameplayCameras.GameplayCameraParameterSetterComponent.StopParameterSetters
+// 0x0001 (0x0001 - 0x0000)
+struct GameplayCameraParameterSetterComponent_StopParameterSetters final
+{
+public:
+	bool                                          bImmediately;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayCameraParameterSetterComponent_StopParameterSetters;
+
+// Function GameplayCameras.GameplayCamerasPlayerCameraManager.StartGlobalCameraModifierRig
+// 0x0018 (0x0018 - 0x0000)
+struct GameplayCamerasPlayerCameraManager_StartGlobalCameraModifierRig final
+{
+public:
+	const class UCameraRigAsset*                  CameraRig;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OrderKey;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCameraRigInstanceID                   ReturnValue;                                       // 0x000C(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GameplayCamerasPlayerCameraManager_StartGlobalCameraModifierRig;
+
+// Function GameplayCameras.GameplayCamerasPlayerCameraManager.StartVisualCameraModifierRig
+// 0x0018 (0x0018 - 0x0000)
+struct GameplayCamerasPlayerCameraManager_StartVisualCameraModifierRig final
+{
+public:
+	const class UCameraRigAsset*                  CameraRig;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OrderKey;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCameraRigInstanceID                   ReturnValue;                                       // 0x000C(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GameplayCamerasPlayerCameraManager_StartVisualCameraModifierRig;
+
+// Function GameplayCameras.GameplayCamerasPlayerCameraManager.StealPlayerController
 // 0x0008 (0x0008 - 0x0000)
+struct GameplayCamerasPlayerCameraManager_StealPlayerController final
+{
+public:
+	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayCamerasPlayerCameraManager_StealPlayerController;
+
+// Function GameplayCameras.GameplayCamerasPlayerCameraManager.StopCameraModifierRig
+// 0x000C (0x000C - 0x0000)
+struct GameplayCamerasPlayerCameraManager_StopCameraModifierRig final
+{
+public:
+	struct FCameraRigInstanceID                   InstanceId;                                        // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImmediately;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GameplayCamerasPlayerCameraManager_StopCameraModifierRig;
+
+// Function GameplayCameras.BlueprintCameraDirectorEvaluator.ActivateCameraDirector
+// 0x0010 (0x0010 - 0x0000)
 struct BlueprintCameraDirectorEvaluator_ActivateCameraDirector final
 {
 public:
-	struct FBlueprintCameraDirectorActivateParams Params_0;                                          // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class UObject*                                EvaluationContextOwner;                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraDirectorActivateParams Params_0;                                          // 0x0008(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraDirectorEvaluator_ActivateCameraDirector) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_ActivateCameraDirector");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_ActivateCameraDirector) == 0x000008, "Wrong size on BlueprintCameraDirectorEvaluator_ActivateCameraDirector");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_ActivateCameraDirector, Params_0) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_ActivateCameraDirector::Params_0' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_ActivateCameraDirector;
 
 // Function GameplayCameras.BlueprintCameraDirectorEvaluator.ActivateCameraRig
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct BlueprintCameraDirectorEvaluator_ActivateCameraRig final
 {
 public:
 	class UCameraRigAsset*                        CameraRig;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceNewInstance;                                 // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BlueprintCameraDirectorEvaluator_ActivateCameraRig) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_ActivateCameraRig");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_ActivateCameraRig) == 0x000008, "Wrong size on BlueprintCameraDirectorEvaluator_ActivateCameraRig");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_ActivateCameraRig, CameraRig) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_ActivateCameraRig::CameraRig' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraDirectorEvaluator.ActivateCameraRigPrefab
-// 0x0008 (0x0008 - 0x0000)
-struct BlueprintCameraDirectorEvaluator_ActivateCameraRigPrefab final
-{
-public:
-	class UCameraRigAsset*                        CameraRig;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(BlueprintCameraDirectorEvaluator_ActivateCameraRigPrefab) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_ActivateCameraRigPrefab");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_ActivateCameraRigPrefab) == 0x000008, "Wrong size on BlueprintCameraDirectorEvaluator_ActivateCameraRigPrefab");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_ActivateCameraRigPrefab, CameraRig) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_ActivateCameraRigPrefab::CameraRig' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_ActivateCameraRig;
 
 // Function GameplayCameras.BlueprintCameraDirectorEvaluator.ActivateCameraRigViaProxy
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct BlueprintCameraDirectorEvaluator_ActivateCameraRigViaProxy final
 {
 public:
 	class UCameraRigProxyAsset*                   CameraRigProxy;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceNewInstance;                                 // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BlueprintCameraDirectorEvaluator_ActivateCameraRigViaProxy) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_ActivateCameraRigViaProxy");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_ActivateCameraRigViaProxy) == 0x000008, "Wrong size on BlueprintCameraDirectorEvaluator_ActivateCameraRigViaProxy");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_ActivateCameraRigViaProxy, CameraRigProxy) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_ActivateCameraRigViaProxy::CameraRigProxy' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_ActivateCameraRigViaProxy;
 
 // Function GameplayCameras.BlueprintCameraDirectorEvaluator.ActivatePersistentBaseCameraRig
 // 0x0008 (0x0008 - 0x0000)
@@ -68,9 +554,7 @@ struct BlueprintCameraDirectorEvaluator_ActivatePersistentBaseCameraRig final
 public:
 	class UCameraRigAsset*                        CameraRigPrefab;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraDirectorEvaluator_ActivatePersistentBaseCameraRig) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_ActivatePersistentBaseCameraRig");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_ActivatePersistentBaseCameraRig) == 0x000008, "Wrong size on BlueprintCameraDirectorEvaluator_ActivatePersistentBaseCameraRig");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_ActivatePersistentBaseCameraRig, CameraRigPrefab) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_ActivatePersistentBaseCameraRig::CameraRigPrefab' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_ActivatePersistentBaseCameraRig;
 
 // Function GameplayCameras.BlueprintCameraDirectorEvaluator.ActivatePersistentGlobalCameraRig
 // 0x0008 (0x0008 - 0x0000)
@@ -79,9 +563,7 @@ struct BlueprintCameraDirectorEvaluator_ActivatePersistentGlobalCameraRig final
 public:
 	class UCameraRigAsset*                        CameraRigPrefab;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraDirectorEvaluator_ActivatePersistentGlobalCameraRig) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_ActivatePersistentGlobalCameraRig");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_ActivatePersistentGlobalCameraRig) == 0x000008, "Wrong size on BlueprintCameraDirectorEvaluator_ActivatePersistentGlobalCameraRig");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_ActivatePersistentGlobalCameraRig, CameraRigPrefab) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_ActivatePersistentGlobalCameraRig::CameraRigPrefab' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_ActivatePersistentGlobalCameraRig;
 
 // Function GameplayCameras.BlueprintCameraDirectorEvaluator.ActivatePersistentVisualCameraRig
 // 0x0008 (0x0008 - 0x0000)
@@ -90,20 +572,27 @@ struct BlueprintCameraDirectorEvaluator_ActivatePersistentVisualCameraRig final
 public:
 	class UCameraRigAsset*                        CameraRigPrefab;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraDirectorEvaluator_ActivatePersistentVisualCameraRig) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_ActivatePersistentVisualCameraRig");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_ActivatePersistentVisualCameraRig) == 0x000008, "Wrong size on BlueprintCameraDirectorEvaluator_ActivatePersistentVisualCameraRig");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_ActivatePersistentVisualCameraRig, CameraRigPrefab) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_ActivatePersistentVisualCameraRig::CameraRigPrefab' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_ActivatePersistentVisualCameraRig;
+
+// Function GameplayCameras.BlueprintCameraDirectorEvaluator.AddChildEvaluationContext
+// 0x0010 (0x0010 - 0x0000)
+struct BlueprintCameraDirectorEvaluator_AddChildEvaluationContext final
+{
+public:
+	class UObject*                                ChildEvaluationContextOwner;                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_AddChildEvaluationContext;
 
 // Function GameplayCameras.BlueprintCameraDirectorEvaluator.DeactivateCameraDirector
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct BlueprintCameraDirectorEvaluator_DeactivateCameraDirector final
 {
 public:
-	struct FBlueprintCameraDirectorDeactivateParams Params_0;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class UObject*                                EvaluationContextOwner;                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraDirectorDeactivateParams Params_0;                                        // 0x0008(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraDirectorEvaluator_DeactivateCameraDirector) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_DeactivateCameraDirector");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_DeactivateCameraDirector) == 0x000008, "Wrong size on BlueprintCameraDirectorEvaluator_DeactivateCameraDirector");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_DeactivateCameraDirector, Params_0) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_DeactivateCameraDirector::Params_0' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_DeactivateCameraDirector;
 
 // Function GameplayCameras.BlueprintCameraDirectorEvaluator.DeactivatePersistentBaseCameraRig
 // 0x0008 (0x0008 - 0x0000)
@@ -112,9 +601,7 @@ struct BlueprintCameraDirectorEvaluator_DeactivatePersistentBaseCameraRig final
 public:
 	class UCameraRigAsset*                        CameraRigPrefab;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraDirectorEvaluator_DeactivatePersistentBaseCameraRig) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_DeactivatePersistentBaseCameraRig");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_DeactivatePersistentBaseCameraRig) == 0x000008, "Wrong size on BlueprintCameraDirectorEvaluator_DeactivatePersistentBaseCameraRig");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_DeactivatePersistentBaseCameraRig, CameraRigPrefab) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_DeactivatePersistentBaseCameraRig::CameraRigPrefab' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_DeactivatePersistentBaseCameraRig;
 
 // Function GameplayCameras.BlueprintCameraDirectorEvaluator.DeactivatePersistentGlobalCameraRig
 // 0x0008 (0x0008 - 0x0000)
@@ -123,9 +610,7 @@ struct BlueprintCameraDirectorEvaluator_DeactivatePersistentGlobalCameraRig fina
 public:
 	class UCameraRigAsset*                        CameraRigPrefab;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraDirectorEvaluator_DeactivatePersistentGlobalCameraRig) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_DeactivatePersistentGlobalCameraRig");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_DeactivatePersistentGlobalCameraRig) == 0x000008, "Wrong size on BlueprintCameraDirectorEvaluator_DeactivatePersistentGlobalCameraRig");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_DeactivatePersistentGlobalCameraRig, CameraRigPrefab) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_DeactivatePersistentGlobalCameraRig::CameraRigPrefab' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_DeactivatePersistentGlobalCameraRig;
 
 // Function GameplayCameras.BlueprintCameraDirectorEvaluator.DeactivatePersistentVisualCameraRig
 // 0x0008 (0x0008 - 0x0000)
@@ -134,31 +619,43 @@ struct BlueprintCameraDirectorEvaluator_DeactivatePersistentVisualCameraRig fina
 public:
 	class UCameraRigAsset*                        CameraRigPrefab;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraDirectorEvaluator_DeactivatePersistentVisualCameraRig) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_DeactivatePersistentVisualCameraRig");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_DeactivatePersistentVisualCameraRig) == 0x000008, "Wrong size on BlueprintCameraDirectorEvaluator_DeactivatePersistentVisualCameraRig");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_DeactivatePersistentVisualCameraRig, CameraRigPrefab) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_DeactivatePersistentVisualCameraRig::CameraRigPrefab' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_DeactivatePersistentVisualCameraRig;
+
+// Function GameplayCameras.BlueprintCameraDirectorEvaluator.RemoveChildEvaluationContext
+// 0x0018 (0x0018 - 0x0000)
+struct BlueprintCameraDirectorEvaluator_RemoveChildEvaluationContext final
+{
+public:
+	class UObject*                                ChildEvaluationContextOwner;                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ChildSlotName;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_RemoveChildEvaluationContext;
 
 // Function GameplayCameras.BlueprintCameraDirectorEvaluator.RunCameraDirector
-// 0x0010 (0x0010 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct BlueprintCameraDirectorEvaluator_RunCameraDirector final
 {
 public:
-	struct FBlueprintCameraDirectorEvaluationParams Params_0;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                EvaluationContextOwner;                            // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraDirectorEvaluationParams Params_0;                                        // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraDirectorEvaluator_RunCameraDirector) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_RunCameraDirector");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_RunCameraDirector) == 0x000010, "Wrong size on BlueprintCameraDirectorEvaluator_RunCameraDirector");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_RunCameraDirector, Params_0) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_RunCameraDirector::Params_0' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_RunCameraDirector;
 
-// Function GameplayCameras.BlueprintCameraDirectorEvaluator.SetInitialContextCameraPose
-// 0x0070 (0x0070 - 0x0000)
-struct BlueprintCameraDirectorEvaluator_SetInitialContextCameraPose final
+// Function GameplayCameras.BlueprintCameraDirectorEvaluator.RunChildCameraDirector
+// 0x0010 (0x0010 - 0x0000)
+struct BlueprintCameraDirectorEvaluator_RunChildCameraDirector final
 {
 public:
-	struct FBlueprintCameraPose                   InCameraPose;                                      // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ChildSlotName;                                     // 0x0004(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BlueprintCameraDirectorEvaluator_SetInitialContextCameraPose) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_SetInitialContextCameraPose");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_SetInitialContextCameraPose) == 0x000070, "Wrong size on BlueprintCameraDirectorEvaluator_SetInitialContextCameraPose");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_SetInitialContextCameraPose, InCameraPose) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_SetInitialContextCameraPose::InCameraPose' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_RunChildCameraDirector;
 
 // Function GameplayCameras.BlueprintCameraDirectorEvaluator.FindEvaluationContextOwnerActor
 // 0x0010 (0x0010 - 0x0000)
@@ -168,45 +665,27 @@ public:
 	TSubclassOf<class AActor>                     ActorClass;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraDirectorEvaluator_FindEvaluationContextOwnerActor) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_FindEvaluationContextOwnerActor");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_FindEvaluationContextOwnerActor) == 0x000010, "Wrong size on BlueprintCameraDirectorEvaluator_FindEvaluationContextOwnerActor");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_FindEvaluationContextOwnerActor, ActorClass) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_FindEvaluationContextOwnerActor::ActorClass' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_FindEvaluationContextOwnerActor, ReturnValue) == 0x000008, "Member 'BlueprintCameraDirectorEvaluator_FindEvaluationContextOwnerActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_FindEvaluationContextOwnerActor;
 
-// Function GameplayCameras.BlueprintCameraDirectorEvaluator.GetCameraRig
-// 0x0010 (0x0010 - 0x0000)
-struct BlueprintCameraDirectorEvaluator_GetCameraRig final
+// Function GameplayCameras.BlueprintCameraDirectorEvaluator.GetConditionalContextResult
+// 0x0020 (0x0020 - 0x0000)
+struct BlueprintCameraDirectorEvaluator_GetConditionalContextResult final
 {
 public:
-	class UCameraRigAsset*                        CameraRig;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCameraRigAsset*                        ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECameraEvaluationDataCondition                Condition;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBlueprintCameraEvaluationDataRef      ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraDirectorEvaluator_GetCameraRig) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_GetCameraRig");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_GetCameraRig) == 0x000010, "Wrong size on BlueprintCameraDirectorEvaluator_GetCameraRig");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_GetCameraRig, CameraRig) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_GetCameraRig::CameraRig' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_GetCameraRig, ReturnValue) == 0x000008, "Member 'BlueprintCameraDirectorEvaluator_GetCameraRig::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_GetConditionalContextResult;
 
-// Function GameplayCameras.BlueprintCameraDirectorEvaluator.GetInitialContextCameraPose
-// 0x0070 (0x0070 - 0x0000)
-struct BlueprintCameraDirectorEvaluator_GetInitialContextCameraPose final
-{
-public:
-	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0000(0x0070)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(BlueprintCameraDirectorEvaluator_GetInitialContextCameraPose) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_GetInitialContextCameraPose");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_GetInitialContextCameraPose) == 0x000070, "Wrong size on BlueprintCameraDirectorEvaluator_GetInitialContextCameraPose");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_GetInitialContextCameraPose, ReturnValue) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_GetInitialContextCameraPose::ReturnValue' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraDirectorEvaluator.GetInitialContextVariableTable
+// Function GameplayCameras.BlueprintCameraDirectorEvaluator.GetInitialContextResult
 // 0x0018 (0x0018 - 0x0000)
-struct BlueprintCameraDirectorEvaluator_GetInitialContextVariableTable final
+struct BlueprintCameraDirectorEvaluator_GetInitialContextResult final
 {
 public:
-	struct FBlueprintCameraVariableTable          ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraEvaluationDataRef      ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraDirectorEvaluator_GetInitialContextVariableTable) == 0x000008, "Wrong alignment on BlueprintCameraDirectorEvaluator_GetInitialContextVariableTable");
-static_assert(sizeof(BlueprintCameraDirectorEvaluator_GetInitialContextVariableTable) == 0x000018, "Wrong size on BlueprintCameraDirectorEvaluator_GetInitialContextVariableTable");
-static_assert(offsetof(BlueprintCameraDirectorEvaluator_GetInitialContextVariableTable, ReturnValue) == 0x000000, "Member 'BlueprintCameraDirectorEvaluator_GetInitialContextVariableTable::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraDirectorEvaluator_GetInitialContextResult;
 
 // Function GameplayCameras.ActivateCameraRigFunctions.ActivatePersistentBaseCameraRig
 // 0x0018 (0x0018 - 0x0000)
@@ -217,11 +696,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCameraRigAsset*                        CameraRig;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ActivateCameraRigFunctions_ActivatePersistentBaseCameraRig) == 0x000008, "Wrong alignment on ActivateCameraRigFunctions_ActivatePersistentBaseCameraRig");
-static_assert(sizeof(ActivateCameraRigFunctions_ActivatePersistentBaseCameraRig) == 0x000018, "Wrong size on ActivateCameraRigFunctions_ActivatePersistentBaseCameraRig");
-static_assert(offsetof(ActivateCameraRigFunctions_ActivatePersistentBaseCameraRig, WorldContextObject) == 0x000000, "Member 'ActivateCameraRigFunctions_ActivatePersistentBaseCameraRig::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(ActivateCameraRigFunctions_ActivatePersistentBaseCameraRig, PlayerController) == 0x000008, "Member 'ActivateCameraRigFunctions_ActivatePersistentBaseCameraRig::PlayerController' has a wrong offset!");
-static_assert(offsetof(ActivateCameraRigFunctions_ActivatePersistentBaseCameraRig, CameraRig) == 0x000010, "Member 'ActivateCameraRigFunctions_ActivatePersistentBaseCameraRig::CameraRig' has a wrong offset!");
+DUMPER7_ASSERTS_ActivateCameraRigFunctions_ActivatePersistentBaseCameraRig;
 
 // Function GameplayCameras.ActivateCameraRigFunctions.ActivatePersistentGlobalCameraRig
 // 0x0018 (0x0018 - 0x0000)
@@ -232,11 +707,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCameraRigAsset*                        CameraRig;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ActivateCameraRigFunctions_ActivatePersistentGlobalCameraRig) == 0x000008, "Wrong alignment on ActivateCameraRigFunctions_ActivatePersistentGlobalCameraRig");
-static_assert(sizeof(ActivateCameraRigFunctions_ActivatePersistentGlobalCameraRig) == 0x000018, "Wrong size on ActivateCameraRigFunctions_ActivatePersistentGlobalCameraRig");
-static_assert(offsetof(ActivateCameraRigFunctions_ActivatePersistentGlobalCameraRig, WorldContextObject) == 0x000000, "Member 'ActivateCameraRigFunctions_ActivatePersistentGlobalCameraRig::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(ActivateCameraRigFunctions_ActivatePersistentGlobalCameraRig, PlayerController) == 0x000008, "Member 'ActivateCameraRigFunctions_ActivatePersistentGlobalCameraRig::PlayerController' has a wrong offset!");
-static_assert(offsetof(ActivateCameraRigFunctions_ActivatePersistentGlobalCameraRig, CameraRig) == 0x000010, "Member 'ActivateCameraRigFunctions_ActivatePersistentGlobalCameraRig::CameraRig' has a wrong offset!");
+DUMPER7_ASSERTS_ActivateCameraRigFunctions_ActivatePersistentGlobalCameraRig;
 
 // Function GameplayCameras.ActivateCameraRigFunctions.ActivatePersistentVisualCameraRig
 // 0x0018 (0x0018 - 0x0000)
@@ -247,718 +718,295 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCameraRigAsset*                        CameraRig;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ActivateCameraRigFunctions_ActivatePersistentVisualCameraRig) == 0x000008, "Wrong alignment on ActivateCameraRigFunctions_ActivatePersistentVisualCameraRig");
-static_assert(sizeof(ActivateCameraRigFunctions_ActivatePersistentVisualCameraRig) == 0x000018, "Wrong size on ActivateCameraRigFunctions_ActivatePersistentVisualCameraRig");
-static_assert(offsetof(ActivateCameraRigFunctions_ActivatePersistentVisualCameraRig, WorldContextObject) == 0x000000, "Member 'ActivateCameraRigFunctions_ActivatePersistentVisualCameraRig::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(ActivateCameraRigFunctions_ActivatePersistentVisualCameraRig, PlayerController) == 0x000008, "Member 'ActivateCameraRigFunctions_ActivatePersistentVisualCameraRig::PlayerController' has a wrong offset!");
-static_assert(offsetof(ActivateCameraRigFunctions_ActivatePersistentVisualCameraRig, CameraRig) == 0x000010, "Member 'ActivateCameraRigFunctions_ActivatePersistentVisualCameraRig::CameraRig' has a wrong offset!");
+DUMPER7_ASSERTS_ActivateCameraRigFunctions_ActivatePersistentVisualCameraRig;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.GetAimDir
-// 0x0088 (0x0088 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_GetAimDir final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0070(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0088(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_GetAimDir) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_GetAimDir");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_GetAimDir) == 0x000088, "Wrong size on BlueprintCameraPoseFunctionLibrary_GetAimDir");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetAimDir, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_GetAimDir::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetAimDir, ReturnValue) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_GetAimDir::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_GetAimDir;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.GetAimRay
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_GetAimRay final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRay                                   ReturnValue;                                       // 0x0070(0x0030)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRay                                   ReturnValue;                                       // 0x0088(0x0030)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_GetAimRay) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_GetAimRay");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_GetAimRay) == 0x0000A0, "Wrong size on BlueprintCameraPoseFunctionLibrary_GetAimRay");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetAimRay, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_GetAimRay::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetAimRay, ReturnValue) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_GetAimRay::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_GetAimRay;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.GetEffectiveFieldOfView
-// 0x0078 (0x0078 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_GetEffectiveFieldOfView final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	double                                        ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_GetEffectiveFieldOfView) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_GetEffectiveFieldOfView");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_GetEffectiveFieldOfView) == 0x000078, "Wrong size on BlueprintCameraPoseFunctionLibrary_GetEffectiveFieldOfView");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetEffectiveFieldOfView, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_GetEffectiveFieldOfView::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetEffectiveFieldOfView, ReturnValue) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_GetEffectiveFieldOfView::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_GetEffectiveFieldOfView;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.GetFieldOfView
-// 0x0078 (0x0078 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_GetFieldOfView final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	double                                        ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_GetFieldOfView) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_GetFieldOfView");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_GetFieldOfView) == 0x000078, "Wrong size on BlueprintCameraPoseFunctionLibrary_GetFieldOfView");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetFieldOfView, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_GetFieldOfView::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetFieldOfView, ReturnValue) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_GetFieldOfView::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_GetFieldOfView;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.GetFocalLength
-// 0x0078 (0x0078 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_GetFocalLength final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	double                                        ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_GetFocalLength) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_GetFocalLength");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_GetFocalLength) == 0x000078, "Wrong size on BlueprintCameraPoseFunctionLibrary_GetFocalLength");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetFocalLength, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_GetFocalLength::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetFocalLength, ReturnValue) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_GetFocalLength::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_GetFocalLength;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.GetLocation
-// 0x0088 (0x0088 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_GetLocation final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0070(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0088(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_GetLocation) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_GetLocation");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_GetLocation) == 0x000088, "Wrong size on BlueprintCameraPoseFunctionLibrary_GetLocation");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetLocation, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_GetLocation::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetLocation, ReturnValue) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_GetLocation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_GetLocation;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.GetRotation
-// 0x0088 (0x0088 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_GetRotation final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRotator                               ReturnValue;                                       // 0x0070(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRotator                               ReturnValue;                                       // 0x0088(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_GetRotation) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_GetRotation");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_GetRotation) == 0x000088, "Wrong size on BlueprintCameraPoseFunctionLibrary_GetRotation");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetRotation, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_GetRotation::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetRotation, ReturnValue) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_GetRotation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_GetRotation;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.GetSensorAspectRatio
-// 0x0078 (0x0078 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_GetSensorAspectRatio final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	double                                        ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_GetSensorAspectRatio) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_GetSensorAspectRatio");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_GetSensorAspectRatio) == 0x000078, "Wrong size on BlueprintCameraPoseFunctionLibrary_GetSensorAspectRatio");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetSensorAspectRatio, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_GetSensorAspectRatio::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetSensorAspectRatio, ReturnValue) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_GetSensorAspectRatio::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_GetSensorAspectRatio;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.GetTarget
-// 0x0088 (0x0088 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_GetTarget final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0070(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0088(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_GetTarget) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_GetTarget");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_GetTarget) == 0x000088, "Wrong size on BlueprintCameraPoseFunctionLibrary_GetTarget");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetTarget, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_GetTarget::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetTarget, ReturnValue) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_GetTarget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_GetTarget;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.GetTargetAtDistance
-// 0x0090 (0x0090 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_GetTargetAtDistance final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	double                                        TargetDistance;                                    // 0x0070(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0078(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        TargetDistance;                                    // 0x0088(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0090(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_GetTargetAtDistance) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_GetTargetAtDistance");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_GetTargetAtDistance) == 0x000090, "Wrong size on BlueprintCameraPoseFunctionLibrary_GetTargetAtDistance");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetTargetAtDistance, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_GetTargetAtDistance::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetTargetAtDistance, TargetDistance) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_GetTargetAtDistance::TargetDistance' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetTargetAtDistance, ReturnValue) == 0x000078, "Member 'BlueprintCameraPoseFunctionLibrary_GetTargetAtDistance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_GetTargetAtDistance;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.GetTargetDistance
-// 0x0078 (0x0078 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_GetTargetDistance final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	double                                        ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_GetTargetDistance) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_GetTargetDistance");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_GetTargetDistance) == 0x000078, "Wrong size on BlueprintCameraPoseFunctionLibrary_GetTargetDistance");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetTargetDistance, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_GetTargetDistance::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetTargetDistance, ReturnValue) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_GetTargetDistance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_GetTargetDistance;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.GetTransform
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_GetTransform final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTransform                             ReturnValue;                                       // 0x0070(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0090(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_GetTransform) == 0x000010, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_GetTransform");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_GetTransform) == 0x0000D0, "Wrong size on BlueprintCameraPoseFunctionLibrary_GetTransform");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetTransform, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_GetTransform::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_GetTransform, ReturnValue) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_GetTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_GetTransform;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.MakeCameraPoseFromCameraComponent
-// 0x0078 (0x0078 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCameraComponent final
 {
 public:
 	const class UCameraComponent*                 CameraComponent;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0008(0x0070)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0008(0x0088)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCameraComponent) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCameraComponent");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCameraComponent) == 0x000078, "Wrong size on BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCameraComponent");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCameraComponent, CameraComponent) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCameraComponent::CameraComponent' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCameraComponent, ReturnValue) == 0x000008, "Member 'BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCameraComponent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCameraComponent;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.MakeCameraPoseFromCineCameraComponent
-// 0x0078 (0x0078 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCineCameraComponent final
 {
 public:
 	const class UCineCameraComponent*             CameraComponent;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0008(0x0070)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0008(0x0088)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCineCameraComponent) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCineCameraComponent");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCineCameraComponent) == 0x000078, "Wrong size on BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCineCameraComponent");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCineCameraComponent, CameraComponent) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCineCameraComponent::CameraComponent' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCineCameraComponent, ReturnValue) == 0x000008, "Member 'BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCineCameraComponent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_MakeCameraPoseFromCineCameraComponent;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.SetFieldOfView
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_SetFieldOfView final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         FieldOfView;                                       // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0078(0x0070)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         FieldOfView;                                       // 0x0088(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0090(0x0088)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_SetFieldOfView) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_SetFieldOfView");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_SetFieldOfView) == 0x0000E8, "Wrong size on BlueprintCameraPoseFunctionLibrary_SetFieldOfView");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetFieldOfView, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_SetFieldOfView::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetFieldOfView, FieldOfView) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_SetFieldOfView::FieldOfView' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetFieldOfView, ReturnValue) == 0x000078, "Member 'BlueprintCameraPoseFunctionLibrary_SetFieldOfView::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_SetFieldOfView;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.SetFocalLength
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_SetFocalLength final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         FocalLength;                                       // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0078(0x0070)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         FocalLength;                                       // 0x0088(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0090(0x0088)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_SetFocalLength) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_SetFocalLength");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_SetFocalLength) == 0x0000E8, "Wrong size on BlueprintCameraPoseFunctionLibrary_SetFocalLength");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetFocalLength, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_SetFocalLength::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetFocalLength, FocalLength) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_SetFocalLength::FocalLength' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetFocalLength, ReturnValue) == 0x000078, "Member 'BlueprintCameraPoseFunctionLibrary_SetFocalLength::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_SetFocalLength;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.SetLocation
-// 0x00F8 (0x00F8 - 0x0000)
+// 0x0128 (0x0128 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_SetLocation final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                Location;                                          // 0x0070(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0088(0x0070)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Location;                                          // 0x0088(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x00A0(0x0088)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_SetLocation) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_SetLocation");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_SetLocation) == 0x0000F8, "Wrong size on BlueprintCameraPoseFunctionLibrary_SetLocation");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetLocation, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_SetLocation::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetLocation, Location) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_SetLocation::Location' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetLocation, ReturnValue) == 0x000088, "Member 'BlueprintCameraPoseFunctionLibrary_SetLocation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_SetLocation;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.SetRotation
-// 0x00F8 (0x00F8 - 0x0000)
+// 0x0128 (0x0128 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_SetRotation final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRotator                               Rotation;                                          // 0x0070(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0088(0x0070)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRotator                               Rotation;                                          // 0x0088(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x00A0(0x0088)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_SetRotation) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_SetRotation");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_SetRotation) == 0x0000F8, "Wrong size on BlueprintCameraPoseFunctionLibrary_SetRotation");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetRotation, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_SetRotation::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetRotation, Rotation) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_SetRotation::Rotation' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetRotation, ReturnValue) == 0x000088, "Member 'BlueprintCameraPoseFunctionLibrary_SetRotation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_SetRotation;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.SetTargetDistance
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_SetTargetDistance final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	double                                        TargetDistance;                                    // 0x0070(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0078(0x0070)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        TargetDistance;                                    // 0x0088(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0090(0x0088)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_SetTargetDistance) == 0x000008, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_SetTargetDistance");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_SetTargetDistance) == 0x0000E8, "Wrong size on BlueprintCameraPoseFunctionLibrary_SetTargetDistance");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetTargetDistance, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_SetTargetDistance::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetTargetDistance, TargetDistance) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_SetTargetDistance::TargetDistance' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetTargetDistance, ReturnValue) == 0x000078, "Member 'BlueprintCameraPoseFunctionLibrary_SetTargetDistance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_SetTargetDistance;
 
 // Function GameplayCameras.BlueprintCameraPoseFunctionLibrary.SetTransform
-// 0x0140 (0x0140 - 0x0000)
+// 0x0180 (0x0180 - 0x0000)
 struct BlueprintCameraPoseFunctionLibrary_SetTransform final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTransform                             Transform;                                         // 0x0070(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x00D0(0x0070)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0090(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x00F0(0x0088)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_178[0x8];                                      // 0x0178(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BlueprintCameraPoseFunctionLibrary_SetTransform) == 0x000010, "Wrong alignment on BlueprintCameraPoseFunctionLibrary_SetTransform");
-static_assert(sizeof(BlueprintCameraPoseFunctionLibrary_SetTransform) == 0x000140, "Wrong size on BlueprintCameraPoseFunctionLibrary_SetTransform");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetTransform, CameraPose) == 0x000000, "Member 'BlueprintCameraPoseFunctionLibrary_SetTransform::CameraPose' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetTransform, Transform) == 0x000070, "Member 'BlueprintCameraPoseFunctionLibrary_SetTransform::Transform' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraPoseFunctionLibrary_SetTransform, ReturnValue) == 0x0000D0, "Member 'BlueprintCameraPoseFunctionLibrary_SetTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraPoseFunctionLibrary_SetTransform;
 
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetBooleanCameraVariable
-// 0x0028 (0x0028 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_GetBooleanCameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UBooleanCameraVariable*                 Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_GetBooleanCameraVariable) == 0x000008, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_GetBooleanCameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_GetBooleanCameraVariable) == 0x000028, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_GetBooleanCameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetBooleanCameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetBooleanCameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetBooleanCameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetBooleanCameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetBooleanCameraVariable, ReturnValue) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetBooleanCameraVariable::ReturnValue' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetDoubleCameraVariable
-// 0x0028 (0x0028 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_GetDoubleCameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UDoubleCameraVariable*                  Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_GetDoubleCameraVariable) == 0x000008, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_GetDoubleCameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_GetDoubleCameraVariable) == 0x000028, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_GetDoubleCameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetDoubleCameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetDoubleCameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetDoubleCameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetDoubleCameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetDoubleCameraVariable, ReturnValue) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetDoubleCameraVariable::ReturnValue' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetFloatCameraVariable
-// 0x0028 (0x0028 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_GetFloatCameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UFloatCameraVariable*                   Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_GetFloatCameraVariable) == 0x000008, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_GetFloatCameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_GetFloatCameraVariable) == 0x000028, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_GetFloatCameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetFloatCameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetFloatCameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetFloatCameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetFloatCameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetFloatCameraVariable, ReturnValue) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetFloatCameraVariable::ReturnValue' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetInteger32CameraVariable
-// 0x0028 (0x0028 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_GetInteger32CameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UInteger32CameraVariable*               Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_GetInteger32CameraVariable) == 0x000008, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_GetInteger32CameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_GetInteger32CameraVariable) == 0x000028, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_GetInteger32CameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetInteger32CameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetInteger32CameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetInteger32CameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetInteger32CameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetInteger32CameraVariable, ReturnValue) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetInteger32CameraVariable::ReturnValue' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetRotatorCameraVariable
-// 0x0038 (0x0038 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_GetRotatorCameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class URotator3dCameraVariable*               Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_GetRotatorCameraVariable) == 0x000008, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_GetRotatorCameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_GetRotatorCameraVariable) == 0x000038, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_GetRotatorCameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetRotatorCameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetRotatorCameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetRotatorCameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetRotatorCameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetRotatorCameraVariable, ReturnValue) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetRotatorCameraVariable::ReturnValue' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetTransformCameraVariable
-// 0x0080 (0x0080 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_GetTransformCameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UTransform3dCameraVariable*             Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             ReturnValue;                                       // 0x0020(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_GetTransformCameraVariable) == 0x000010, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_GetTransformCameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_GetTransformCameraVariable) == 0x000080, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_GetTransformCameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetTransformCameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetTransformCameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetTransformCameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetTransformCameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetTransformCameraVariable, ReturnValue) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetTransformCameraVariable::ReturnValue' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetVector2CameraVariable
+// Function GameplayCameras.CameraRigParameterInterop.GetCameraParameter
 // 0x0030 (0x0030 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_GetVector2CameraVariable final
+struct CameraRigParameterInterop_GetCameraParameter final
 {
 public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UVector2dCameraVariable*                Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UCameraRigAsset*                        CameraRig;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ParameterName;                                     // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_GetVector2CameraVariable) == 0x000008, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_GetVector2CameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_GetVector2CameraVariable) == 0x000030, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_GetVector2CameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetVector2CameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetVector2CameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetVector2CameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetVector2CameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetVector2CameraVariable, ReturnValue) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetVector2CameraVariable::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraRigParameterInterop_GetCameraParameter;
 
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetVector3CameraVariable
-// 0x0038 (0x0038 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_GetVector3CameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UVector3dCameraVariable*                Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_GetVector3CameraVariable) == 0x000008, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_GetVector3CameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_GetVector3CameraVariable) == 0x000038, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_GetVector3CameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetVector3CameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetVector3CameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetVector3CameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetVector3CameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetVector3CameraVariable, ReturnValue) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetVector3CameraVariable::ReturnValue' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetVector4CameraVariable
-// 0x0040 (0x0040 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_GetVector4CameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UVector4dCameraVariable*                Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector4                               ReturnValue;                                       // 0x0020(0x0020)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_GetVector4CameraVariable) == 0x000010, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_GetVector4CameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_GetVector4CameraVariable) == 0x000040, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_GetVector4CameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetVector4CameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetVector4CameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetVector4CameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetVector4CameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_GetVector4CameraVariable, ReturnValue) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_GetVector4CameraVariable::ReturnValue' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetBooleanCameraVariable
-// 0x0028 (0x0028 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_SetBooleanCameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UBooleanCameraVariable*                 Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Value;                                             // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_SetBooleanCameraVariable) == 0x000008, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_SetBooleanCameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_SetBooleanCameraVariable) == 0x000028, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_SetBooleanCameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetBooleanCameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetBooleanCameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetBooleanCameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetBooleanCameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetBooleanCameraVariable, Value) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetBooleanCameraVariable::Value' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetDoubleCameraVariable
-// 0x0028 (0x0028 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_SetDoubleCameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UDoubleCameraVariable*                  Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Value;                                             // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_SetDoubleCameraVariable) == 0x000008, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_SetDoubleCameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_SetDoubleCameraVariable) == 0x000028, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_SetDoubleCameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetDoubleCameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetDoubleCameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetDoubleCameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetDoubleCameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetDoubleCameraVariable, Value) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetDoubleCameraVariable::Value' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetFloatCameraVariable
-// 0x0028 (0x0028 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_SetFloatCameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UFloatCameraVariable*                   Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_SetFloatCameraVariable) == 0x000008, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_SetFloatCameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_SetFloatCameraVariable) == 0x000028, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_SetFloatCameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetFloatCameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetFloatCameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetFloatCameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetFloatCameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetFloatCameraVariable, Value) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetFloatCameraVariable::Value' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetInteger32CameraVariable
-// 0x0028 (0x0028 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_SetInteger32CameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UInteger32CameraVariable*               Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_SetInteger32CameraVariable) == 0x000008, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_SetInteger32CameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_SetInteger32CameraVariable) == 0x000028, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_SetInteger32CameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetInteger32CameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetInteger32CameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetInteger32CameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetInteger32CameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetInteger32CameraVariable, Value) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetInteger32CameraVariable::Value' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetRotatorCameraVariable
-// 0x0038 (0x0038 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_SetRotatorCameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class URotator3dCameraVariable*               Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               Value;                                             // 0x0020(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_SetRotatorCameraVariable) == 0x000008, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_SetRotatorCameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_SetRotatorCameraVariable) == 0x000038, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_SetRotatorCameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetRotatorCameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetRotatorCameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetRotatorCameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetRotatorCameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetRotatorCameraVariable, Value) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetRotatorCameraVariable::Value' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetTransformCameraVariable
-// 0x0080 (0x0080 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_SetTransformCameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UTransform3dCameraVariable*             Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Value;                                             // 0x0020(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_SetTransformCameraVariable) == 0x000010, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_SetTransformCameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_SetTransformCameraVariable) == 0x000080, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_SetTransformCameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetTransformCameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetTransformCameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetTransformCameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetTransformCameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetTransformCameraVariable, Value) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetTransformCameraVariable::Value' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetVector2CameraVariable
+// Function GameplayCameras.CameraRigParameterInterop.SetCameraParameter
 // 0x0030 (0x0030 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_SetVector2CameraVariable final
+struct CameraRigParameterInterop_SetCameraParameter final
 {
 public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UVector2dCameraVariable*                Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              Value;                                             // 0x0020(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_SetVector2CameraVariable) == 0x000008, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_SetVector2CameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_SetVector2CameraVariable) == 0x000030, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_SetVector2CameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetVector2CameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetVector2CameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetVector2CameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetVector2CameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetVector2CameraVariable, Value) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetVector2CameraVariable::Value' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetVector3CameraVariable
-// 0x0038 (0x0038 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_SetVector3CameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UVector3dCameraVariable*                Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Value;                                             // 0x0020(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_SetVector3CameraVariable) == 0x000008, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_SetVector3CameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_SetVector3CameraVariable) == 0x000038, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_SetVector3CameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetVector3CameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetVector3CameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetVector3CameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetVector3CameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetVector3CameraVariable, Value) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetVector3CameraVariable::Value' has a wrong offset!");
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetVector4CameraVariable
-// 0x0040 (0x0040 - 0x0000)
-struct BlueprintCameraVariableTableFunctionLibrary_SetVector4CameraVariable final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UVector4dCameraVariable*                Variable;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector4                               Value;                                             // 0x0020(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(BlueprintCameraVariableTableFunctionLibrary_SetVector4CameraVariable) == 0x000010, "Wrong alignment on BlueprintCameraVariableTableFunctionLibrary_SetVector4CameraVariable");
-static_assert(sizeof(BlueprintCameraVariableTableFunctionLibrary_SetVector4CameraVariable) == 0x000040, "Wrong size on BlueprintCameraVariableTableFunctionLibrary_SetVector4CameraVariable");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetVector4CameraVariable, VariableTable) == 0x000000, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetVector4CameraVariable::VariableTable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetVector4CameraVariable, Variable) == 0x000018, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetVector4CameraVariable::Variable' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraVariableTableFunctionLibrary_SetVector4CameraVariable, Value) == 0x000020, "Member 'BlueprintCameraVariableTableFunctionLibrary_SetVector4CameraVariable::Value' has a wrong offset!");
-
-// Function GameplayCameras.CameraRigParameterInterop.SetBooleanParameter
-// 0x0038 (0x0038 - 0x0000)
-struct CameraRigParameterInterop_SetBooleanParameter final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class UCameraRigAsset*                        CameraRig;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ParameterName;                                     // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bParameterValue;                                   // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   ParameterName;                                     // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NewValue;                                          // 0x0028(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(CameraRigParameterInterop_SetBooleanParameter) == 0x000008, "Wrong alignment on CameraRigParameterInterop_SetBooleanParameter");
-static_assert(sizeof(CameraRigParameterInterop_SetBooleanParameter) == 0x000038, "Wrong size on CameraRigParameterInterop_SetBooleanParameter");
-static_assert(offsetof(CameraRigParameterInterop_SetBooleanParameter, VariableTable) == 0x000000, "Member 'CameraRigParameterInterop_SetBooleanParameter::VariableTable' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetBooleanParameter, CameraRig) == 0x000018, "Member 'CameraRigParameterInterop_SetBooleanParameter::CameraRig' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetBooleanParameter, ParameterName) == 0x000020, "Member 'CameraRigParameterInterop_SetBooleanParameter::ParameterName' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetBooleanParameter, bParameterValue) == 0x000030, "Member 'CameraRigParameterInterop_SetBooleanParameter::bParameterValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraRigParameterInterop_SetCameraParameter;
 
-// Function GameplayCameras.CameraRigParameterInterop.SetDoubleParameter
-// 0x0038 (0x0038 - 0x0000)
-struct CameraRigParameterInterop_SetDoubleParameter final
+// Function GameplayCameras.CameraRigParameterInteropLibrary.MakeLiteralLinearColor
+// 0x0020 (0x0020 - 0x0000)
+struct CameraRigParameterInteropLibrary_MakeLiteralLinearColor final
 {
 public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UCameraRigAsset*                        CameraRig;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ParameterName;                                     // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ParameterValue;                                    // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(CameraRigParameterInterop_SetDoubleParameter) == 0x000008, "Wrong alignment on CameraRigParameterInterop_SetDoubleParameter");
-static_assert(sizeof(CameraRigParameterInterop_SetDoubleParameter) == 0x000038, "Wrong size on CameraRigParameterInterop_SetDoubleParameter");
-static_assert(offsetof(CameraRigParameterInterop_SetDoubleParameter, VariableTable) == 0x000000, "Member 'CameraRigParameterInterop_SetDoubleParameter::VariableTable' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetDoubleParameter, CameraRig) == 0x000018, "Member 'CameraRigParameterInterop_SetDoubleParameter::CameraRig' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetDoubleParameter, ParameterName) == 0x000020, "Member 'CameraRigParameterInterop_SetDoubleParameter::ParameterName' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetDoubleParameter, ParameterValue) == 0x000030, "Member 'CameraRigParameterInterop_SetDoubleParameter::ParameterValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraRigParameterInteropLibrary_MakeLiteralLinearColor;
 
-// Function GameplayCameras.CameraRigParameterInterop.SetFloatParameter
-// 0x0038 (0x0038 - 0x0000)
-struct CameraRigParameterInterop_SetFloatParameter final
+// Function GameplayCameras.CameraRigParameterInteropLibrary.MakeLiteralRotator
+// 0x0030 (0x0030 - 0x0000)
+struct CameraRigParameterInteropLibrary_MakeLiteralRotator final
 {
 public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UCameraRigAsset*                        CameraRig;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ParameterName;                                     // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ParameterValue;                                    // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               Value;                                             // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRotator                               ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(CameraRigParameterInterop_SetFloatParameter) == 0x000008, "Wrong alignment on CameraRigParameterInterop_SetFloatParameter");
-static_assert(sizeof(CameraRigParameterInterop_SetFloatParameter) == 0x000038, "Wrong size on CameraRigParameterInterop_SetFloatParameter");
-static_assert(offsetof(CameraRigParameterInterop_SetFloatParameter, VariableTable) == 0x000000, "Member 'CameraRigParameterInterop_SetFloatParameter::VariableTable' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetFloatParameter, CameraRig) == 0x000018, "Member 'CameraRigParameterInterop_SetFloatParameter::CameraRig' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetFloatParameter, ParameterName) == 0x000020, "Member 'CameraRigParameterInterop_SetFloatParameter::ParameterName' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetFloatParameter, ParameterValue) == 0x000030, "Member 'CameraRigParameterInterop_SetFloatParameter::ParameterValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraRigParameterInteropLibrary_MakeLiteralRotator;
 
-// Function GameplayCameras.CameraRigParameterInterop.SetIntegerParameter
-// 0x0038 (0x0038 - 0x0000)
-struct CameraRigParameterInterop_SetIntegerParameter final
+// Function GameplayCameras.CameraRigParameterInteropLibrary.MakeLiteralVector
+// 0x0030 (0x0030 - 0x0000)
+struct CameraRigParameterInteropLibrary_MakeLiteralVector final
 {
 public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UCameraRigAsset*                        CameraRig;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ParameterName;                                     // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ParameterValue;                                    // 0x0030(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                Value;                                             // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(CameraRigParameterInterop_SetIntegerParameter) == 0x000008, "Wrong alignment on CameraRigParameterInterop_SetIntegerParameter");
-static_assert(sizeof(CameraRigParameterInterop_SetIntegerParameter) == 0x000038, "Wrong size on CameraRigParameterInterop_SetIntegerParameter");
-static_assert(offsetof(CameraRigParameterInterop_SetIntegerParameter, VariableTable) == 0x000000, "Member 'CameraRigParameterInterop_SetIntegerParameter::VariableTable' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetIntegerParameter, CameraRig) == 0x000018, "Member 'CameraRigParameterInterop_SetIntegerParameter::CameraRig' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetIntegerParameter, ParameterName) == 0x000020, "Member 'CameraRigParameterInterop_SetIntegerParameter::ParameterName' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetIntegerParameter, ParameterValue) == 0x000030, "Member 'CameraRigParameterInterop_SetIntegerParameter::ParameterValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraRigParameterInteropLibrary_MakeLiteralVector;
 
-// Function GameplayCameras.CameraRigParameterInterop.SetRotatorParameter
-// 0x0048 (0x0048 - 0x0000)
-struct CameraRigParameterInterop_SetRotatorParameter final
+// Function GameplayCameras.CameraRigParameterInteropLibrary.MakeLiteralVector2D
+// 0x0020 (0x0020 - 0x0000)
+struct CameraRigParameterInteropLibrary_MakeLiteralVector2D final
 {
 public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UCameraRigAsset*                        CameraRig;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ParameterName;                                     // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               ParameterValue;                                    // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector2D                              Value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(CameraRigParameterInterop_SetRotatorParameter) == 0x000008, "Wrong alignment on CameraRigParameterInterop_SetRotatorParameter");
-static_assert(sizeof(CameraRigParameterInterop_SetRotatorParameter) == 0x000048, "Wrong size on CameraRigParameterInterop_SetRotatorParameter");
-static_assert(offsetof(CameraRigParameterInterop_SetRotatorParameter, VariableTable) == 0x000000, "Member 'CameraRigParameterInterop_SetRotatorParameter::VariableTable' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetRotatorParameter, CameraRig) == 0x000018, "Member 'CameraRigParameterInterop_SetRotatorParameter::CameraRig' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetRotatorParameter, ParameterName) == 0x000020, "Member 'CameraRigParameterInterop_SetRotatorParameter::ParameterName' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetRotatorParameter, ParameterValue) == 0x000030, "Member 'CameraRigParameterInterop_SetRotatorParameter::ParameterValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraRigParameterInteropLibrary_MakeLiteralVector2D;
 
-// Function GameplayCameras.CameraRigParameterInterop.SetTransformParameter
-// 0x0090 (0x0090 - 0x0000)
-struct CameraRigParameterInterop_SetTransformParameter final
+// Function GameplayCameras.CameraRigParameterInteropLibrary.MakeLiteralVector3f
+// 0x0018 (0x0018 - 0x0000)
+struct CameraRigParameterInteropLibrary_MakeLiteralVector3f final
 {
 public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UCameraRigAsset*                        CameraRig;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ParameterName;                                     // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             ParameterValue;                                    // 0x0030(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector3f                              Value;                                             // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector3f                              ReturnValue;                                       // 0x000C(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(CameraRigParameterInterop_SetTransformParameter) == 0x000010, "Wrong alignment on CameraRigParameterInterop_SetTransformParameter");
-static_assert(sizeof(CameraRigParameterInterop_SetTransformParameter) == 0x000090, "Wrong size on CameraRigParameterInterop_SetTransformParameter");
-static_assert(offsetof(CameraRigParameterInterop_SetTransformParameter, VariableTable) == 0x000000, "Member 'CameraRigParameterInterop_SetTransformParameter::VariableTable' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetTransformParameter, CameraRig) == 0x000018, "Member 'CameraRigParameterInterop_SetTransformParameter::CameraRig' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetTransformParameter, ParameterName) == 0x000020, "Member 'CameraRigParameterInterop_SetTransformParameter::ParameterName' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetTransformParameter, ParameterValue) == 0x000030, "Member 'CameraRigParameterInterop_SetTransformParameter::ParameterValue' has a wrong offset!");
-
-// Function GameplayCameras.CameraRigParameterInterop.SetVector2Parameter
-// 0x0040 (0x0040 - 0x0000)
-struct CameraRigParameterInterop_SetVector2Parameter final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UCameraRigAsset*                        CameraRig;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ParameterName;                                     // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ParameterValue;                                    // 0x0030(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(CameraRigParameterInterop_SetVector2Parameter) == 0x000008, "Wrong alignment on CameraRigParameterInterop_SetVector2Parameter");
-static_assert(sizeof(CameraRigParameterInterop_SetVector2Parameter) == 0x000040, "Wrong size on CameraRigParameterInterop_SetVector2Parameter");
-static_assert(offsetof(CameraRigParameterInterop_SetVector2Parameter, VariableTable) == 0x000000, "Member 'CameraRigParameterInterop_SetVector2Parameter::VariableTable' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetVector2Parameter, CameraRig) == 0x000018, "Member 'CameraRigParameterInterop_SetVector2Parameter::CameraRig' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetVector2Parameter, ParameterName) == 0x000020, "Member 'CameraRigParameterInterop_SetVector2Parameter::ParameterName' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetVector2Parameter, ParameterValue) == 0x000030, "Member 'CameraRigParameterInterop_SetVector2Parameter::ParameterValue' has a wrong offset!");
-
-// Function GameplayCameras.CameraRigParameterInterop.SetVector3Parameter
-// 0x0048 (0x0048 - 0x0000)
-struct CameraRigParameterInterop_SetVector3Parameter final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UCameraRigAsset*                        CameraRig;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ParameterName;                                     // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ParameterValue;                                    // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(CameraRigParameterInterop_SetVector3Parameter) == 0x000008, "Wrong alignment on CameraRigParameterInterop_SetVector3Parameter");
-static_assert(sizeof(CameraRigParameterInterop_SetVector3Parameter) == 0x000048, "Wrong size on CameraRigParameterInterop_SetVector3Parameter");
-static_assert(offsetof(CameraRigParameterInterop_SetVector3Parameter, VariableTable) == 0x000000, "Member 'CameraRigParameterInterop_SetVector3Parameter::VariableTable' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetVector3Parameter, CameraRig) == 0x000018, "Member 'CameraRigParameterInterop_SetVector3Parameter::CameraRig' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetVector3Parameter, ParameterName) == 0x000020, "Member 'CameraRigParameterInterop_SetVector3Parameter::ParameterName' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetVector3Parameter, ParameterValue) == 0x000030, "Member 'CameraRigParameterInterop_SetVector3Parameter::ParameterValue' has a wrong offset!");
-
-// Function GameplayCameras.CameraRigParameterInterop.SetVector4Parameter
-// 0x0050 (0x0050 - 0x0000)
-struct CameraRigParameterInterop_SetVector4Parameter final
-{
-public:
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UCameraRigAsset*                        CameraRig;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ParameterName;                                     // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector4                               ParameterValue;                                    // 0x0030(0x0020)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(CameraRigParameterInterop_SetVector4Parameter) == 0x000010, "Wrong alignment on CameraRigParameterInterop_SetVector4Parameter");
-static_assert(sizeof(CameraRigParameterInterop_SetVector4Parameter) == 0x000050, "Wrong size on CameraRigParameterInterop_SetVector4Parameter");
-static_assert(offsetof(CameraRigParameterInterop_SetVector4Parameter, VariableTable) == 0x000000, "Member 'CameraRigParameterInterop_SetVector4Parameter::VariableTable' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetVector4Parameter, CameraRig) == 0x000018, "Member 'CameraRigParameterInterop_SetVector4Parameter::CameraRig' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetVector4Parameter, ParameterName) == 0x000020, "Member 'CameraRigParameterInterop_SetVector4Parameter::ParameterName' has a wrong offset!");
-static_assert(offsetof(CameraRigParameterInterop_SetVector4Parameter, ParameterValue) == 0x000030, "Member 'CameraRigParameterInterop_SetVector4Parameter::ParameterValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraRigParameterInteropLibrary_MakeLiteralVector3f;
 
 // Function GameplayCameras.GameplayCameraActor.GetCameraComponent
 // 0x0008 (0x0008 - 0x0000)
@@ -967,91 +1015,78 @@ struct GameplayCameraActor_GetCameraComponent final
 public:
 	class UGameplayCameraComponent*               ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayCameraActor_GetCameraComponent) == 0x000008, "Wrong alignment on GameplayCameraActor_GetCameraComponent");
-static_assert(sizeof(GameplayCameraActor_GetCameraComponent) == 0x000008, "Wrong size on GameplayCameraActor_GetCameraComponent");
-static_assert(offsetof(GameplayCameraActor_GetCameraComponent, ReturnValue) == 0x000000, "Member 'GameplayCameraActor_GetCameraComponent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayCameraActor_GetCameraComponent;
 
-// Function GameplayCameras.GameplayCameraComponent.ActivateCameraForPlayerController
-// 0x0008 (0x0008 - 0x0000)
-struct GameplayCameraComponent_ActivateCameraForPlayerController final
+// Function GameplayCameras.GameplayCameraComponentBase.ActivateCameraForPlayerController
+// 0x0010 (0x0010 - 0x0000)
+struct GameplayCameraComponentBase_ActivateCameraForPlayerController final
 {
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetAsViewTarget;                                  // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGameplayCameraComponentActivationMode        ActivationMode;                                    // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(GameplayCameraComponent_ActivateCameraForPlayerController) == 0x000008, "Wrong alignment on GameplayCameraComponent_ActivateCameraForPlayerController");
-static_assert(sizeof(GameplayCameraComponent_ActivateCameraForPlayerController) == 0x000008, "Wrong size on GameplayCameraComponent_ActivateCameraForPlayerController");
-static_assert(offsetof(GameplayCameraComponent_ActivateCameraForPlayerController, PlayerController) == 0x000000, "Member 'GameplayCameraComponent_ActivateCameraForPlayerController::PlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayCameraComponentBase_ActivateCameraForPlayerController;
 
-// Function GameplayCameras.GameplayCameraComponent.ActivateCameraForPlayerIndex
-// 0x0004 (0x0004 - 0x0000)
-struct GameplayCameraComponent_ActivateCameraForPlayerIndex final
+// Function GameplayCameras.GameplayCameraComponentBase.ActivateCameraForPlayerIndex
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayCameraComponentBase_ActivateCameraForPlayerIndex final
 {
 public:
 	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetAsViewTarget;                                  // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGameplayCameraComponentActivationMode        ActivationMode;                                    // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(GameplayCameraComponent_ActivateCameraForPlayerIndex) == 0x000004, "Wrong alignment on GameplayCameraComponent_ActivateCameraForPlayerIndex");
-static_assert(sizeof(GameplayCameraComponent_ActivateCameraForPlayerIndex) == 0x000004, "Wrong size on GameplayCameraComponent_ActivateCameraForPlayerIndex");
-static_assert(offsetof(GameplayCameraComponent_ActivateCameraForPlayerIndex, PlayerIndex) == 0x000000, "Member 'GameplayCameraComponent_ActivateCameraForPlayerIndex::PlayerIndex' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayCameraComponentBase_ActivateCameraForPlayerIndex;
 
-// Function GameplayCameras.GameplayCameraComponent.SetInitialPose
-// 0x0070 (0x0070 - 0x0000)
-struct GameplayCameraComponent_SetInitialPose final
+// Function GameplayCameras.GameplayCameraComponentBase.DeactivateCamera
+// 0x0001 (0x0001 - 0x0000)
+struct GameplayCameraComponentBase_DeactivateCamera final
 {
 public:
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bImmediately;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayCameraComponent_SetInitialPose) == 0x000008, "Wrong alignment on GameplayCameraComponent_SetInitialPose");
-static_assert(sizeof(GameplayCameraComponent_SetInitialPose) == 0x000070, "Wrong size on GameplayCameraComponent_SetInitialPose");
-static_assert(offsetof(GameplayCameraComponent_SetInitialPose, CameraPose) == 0x000000, "Member 'GameplayCameraComponent_SetInitialPose::CameraPose' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayCameraComponentBase_DeactivateCamera;
 
-// Function GameplayCameras.GameplayCameraComponent.GetInitialPose
-// 0x0070 (0x0070 - 0x0000)
-struct GameplayCameraComponent_GetInitialPose final
+// Function GameplayCameras.GameplayCameraComponentBase.GetConditionalResult
+// 0x0020 (0x0020 - 0x0000)
+struct GameplayCameraComponentBase_GetConditionalResult final
 {
 public:
-	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0000(0x0070)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	ECameraEvaluationDataCondition                Condition;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBlueprintCameraEvaluationDataRef      ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayCameraComponent_GetInitialPose) == 0x000008, "Wrong alignment on GameplayCameraComponent_GetInitialPose");
-static_assert(sizeof(GameplayCameraComponent_GetInitialPose) == 0x000070, "Wrong size on GameplayCameraComponent_GetInitialPose");
-static_assert(offsetof(GameplayCameraComponent_GetInitialPose, ReturnValue) == 0x000000, "Member 'GameplayCameraComponent_GetInitialPose::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayCameraComponentBase_GetConditionalResult;
 
-// Function GameplayCameras.GameplayCameraComponent.GetInitialVariableTable
+// Function GameplayCameras.GameplayCameraComponentBase.GetInitialResult
 // 0x0018 (0x0018 - 0x0000)
-struct GameplayCameraComponent_GetInitialVariableTable final
+struct GameplayCameraComponentBase_GetInitialResult final
 {
 public:
-	struct FBlueprintCameraVariableTable          ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FBlueprintCameraEvaluationDataRef      ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayCameraComponent_GetInitialVariableTable) == 0x000008, "Wrong alignment on GameplayCameraComponent_GetInitialVariableTable");
-static_assert(sizeof(GameplayCameraComponent_GetInitialVariableTable) == 0x000018, "Wrong size on GameplayCameraComponent_GetInitialVariableTable");
-static_assert(offsetof(GameplayCameraComponent_GetInitialVariableTable, ReturnValue) == 0x000000, "Member 'GameplayCameraComponent_GetInitialVariableTable::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayCameraComponentBase_GetInitialResult;
 
-// Function GameplayCameras.GameplayCameraSystemActor.AutoManageActiveViewTarget
+// Function GameplayCameras.GameplayCameraComponentBase.GetOutputCameraComponent
 // 0x0008 (0x0008 - 0x0000)
-struct GameplayCameraSystemActor_AutoManageActiveViewTarget final
+struct GameplayCameraComponentBase_GetOutputCameraComponent final
 {
 public:
-	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCineCameraComponent*                   ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayCameraSystemActor_AutoManageActiveViewTarget) == 0x000008, "Wrong alignment on GameplayCameraSystemActor_AutoManageActiveViewTarget");
-static_assert(sizeof(GameplayCameraSystemActor_AutoManageActiveViewTarget) == 0x000008, "Wrong size on GameplayCameraSystemActor_AutoManageActiveViewTarget");
-static_assert(offsetof(GameplayCameraSystemActor_AutoManageActiveViewTarget, PlayerController) == 0x000000, "Member 'GameplayCameraSystemActor_AutoManageActiveViewTarget::PlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayCameraComponentBase_GetOutputCameraComponent;
 
-// Function GameplayCameras.GameplayCameraSystemActor.GetAutoSpawnedCameraSystemActor
-// 0x0018 (0x0018 - 0x0000)
-struct GameplayCameraSystemActor_GetAutoSpawnedCameraSystemActor final
+// Function GameplayCameras.GameplayCameraRigActor.GetCameraRigComponent
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayCameraRigActor_GetCameraRigComponent final
 {
 public:
-	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceSpawn;                                       // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameplayCameraSystemActor*             ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGameplayCameraRigComponent*            ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayCameraSystemActor_GetAutoSpawnedCameraSystemActor) == 0x000008, "Wrong alignment on GameplayCameraSystemActor_GetAutoSpawnedCameraSystemActor");
-static_assert(sizeof(GameplayCameraSystemActor_GetAutoSpawnedCameraSystemActor) == 0x000018, "Wrong size on GameplayCameraSystemActor_GetAutoSpawnedCameraSystemActor");
-static_assert(offsetof(GameplayCameraSystemActor_GetAutoSpawnedCameraSystemActor, PlayerController) == 0x000000, "Member 'GameplayCameraSystemActor_GetAutoSpawnedCameraSystemActor::PlayerController' has a wrong offset!");
-static_assert(offsetof(GameplayCameraSystemActor_GetAutoSpawnedCameraSystemActor, bForceSpawn) == 0x000008, "Member 'GameplayCameraSystemActor_GetAutoSpawnedCameraSystemActor::bForceSpawn' has a wrong offset!");
-static_assert(offsetof(GameplayCameraSystemActor_GetAutoSpawnedCameraSystemActor, ReturnValue) == 0x000010, "Member 'GameplayCameraSystemActor_GetAutoSpawnedCameraSystemActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayCameraRigActor_GetCameraRigComponent;
 
 // Function GameplayCameras.GameplayCameraSystemActor.GetCameraSystemComponent
 // 0x0008 (0x0008 - 0x0000)
@@ -1060,9 +1095,7 @@ struct GameplayCameraSystemActor_GetCameraSystemComponent final
 public:
 	class UGameplayCameraSystemComponent*         ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayCameraSystemActor_GetCameraSystemComponent) == 0x000008, "Wrong alignment on GameplayCameraSystemActor_GetCameraSystemComponent");
-static_assert(sizeof(GameplayCameraSystemActor_GetCameraSystemComponent) == 0x000008, "Wrong size on GameplayCameraSystemActor_GetCameraSystemComponent");
-static_assert(offsetof(GameplayCameraSystemActor_GetCameraSystemComponent, ReturnValue) == 0x000000, "Member 'GameplayCameraSystemActor_GetCameraSystemComponent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayCameraSystemActor_GetCameraSystemComponent;
 
 // Function GameplayCameras.GameplayCameraSystemComponent.ActivateCameraSystemForPlayerController
 // 0x0008 (0x0008 - 0x0000)
@@ -1071,9 +1104,7 @@ struct GameplayCameraSystemComponent_ActivateCameraSystemForPlayerController fin
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayCameraSystemComponent_ActivateCameraSystemForPlayerController) == 0x000008, "Wrong alignment on GameplayCameraSystemComponent_ActivateCameraSystemForPlayerController");
-static_assert(sizeof(GameplayCameraSystemComponent_ActivateCameraSystemForPlayerController) == 0x000008, "Wrong size on GameplayCameraSystemComponent_ActivateCameraSystemForPlayerController");
-static_assert(offsetof(GameplayCameraSystemComponent_ActivateCameraSystemForPlayerController, PlayerController) == 0x000000, "Member 'GameplayCameraSystemComponent_ActivateCameraSystemForPlayerController::PlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayCameraSystemComponent_ActivateCameraSystemForPlayerController;
 
 // Function GameplayCameras.GameplayCameraSystemComponent.ActivateCameraSystemForPlayerIndex
 // 0x0004 (0x0004 - 0x0000)
@@ -1082,9 +1113,7 @@ struct GameplayCameraSystemComponent_ActivateCameraSystemForPlayerIndex final
 public:
 	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayCameraSystemComponent_ActivateCameraSystemForPlayerIndex) == 0x000004, "Wrong alignment on GameplayCameraSystemComponent_ActivateCameraSystemForPlayerIndex");
-static_assert(sizeof(GameplayCameraSystemComponent_ActivateCameraSystemForPlayerIndex) == 0x000004, "Wrong size on GameplayCameraSystemComponent_ActivateCameraSystemForPlayerIndex");
-static_assert(offsetof(GameplayCameraSystemComponent_ActivateCameraSystemForPlayerIndex, PlayerIndex) == 0x000000, "Member 'GameplayCameraSystemComponent_ActivateCameraSystemForPlayerIndex::PlayerIndex' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayCameraSystemComponent_ActivateCameraSystemForPlayerIndex;
 
 // Function GameplayCameras.GameplayCameraSystemComponent.DeactivateCameraSystem
 // 0x0008 (0x0008 - 0x0000)
@@ -1093,9 +1122,42 @@ struct GameplayCameraSystemComponent_DeactivateCameraSystem final
 public:
 	class AActor*                                 NextViewTarget;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayCameraSystemComponent_DeactivateCameraSystem) == 0x000008, "Wrong alignment on GameplayCameraSystemComponent_DeactivateCameraSystem");
-static_assert(sizeof(GameplayCameraSystemComponent_DeactivateCameraSystem) == 0x000008, "Wrong size on GameplayCameraSystemComponent_DeactivateCameraSystem");
-static_assert(offsetof(GameplayCameraSystemComponent_DeactivateCameraSystem, NextViewTarget) == 0x000000, "Member 'GameplayCameraSystemComponent_DeactivateCameraSystem::NextViewTarget' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayCameraSystemComponent_DeactivateCameraSystem;
+
+// Function GameplayCameras.GameplayCameraSystemComponent.StartGlobalCameraModifierRig
+// 0x0018 (0x0018 - 0x0000)
+struct GameplayCameraSystemComponent_StartGlobalCameraModifierRig final
+{
+public:
+	const class UCameraRigAsset*                  CameraRig;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OrderKey;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCameraRigInstanceID                   ReturnValue;                                       // 0x000C(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GameplayCameraSystemComponent_StartGlobalCameraModifierRig;
+
+// Function GameplayCameras.GameplayCameraSystemComponent.StartVisualCameraModifierRig
+// 0x0018 (0x0018 - 0x0000)
+struct GameplayCameraSystemComponent_StartVisualCameraModifierRig final
+{
+public:
+	const class UCameraRigAsset*                  CameraRig;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OrderKey;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCameraRigInstanceID                   ReturnValue;                                       // 0x000C(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GameplayCameraSystemComponent_StartVisualCameraModifierRig;
+
+// Function GameplayCameras.GameplayCameraSystemComponent.StopCameraModifierRig
+// 0x000C (0x000C - 0x0000)
+struct GameplayCameraSystemComponent_StopCameraModifierRig final
+{
+public:
+	struct FCameraRigInstanceID                   InstanceId;                                        // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImmediately;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GameplayCameraSystemComponent_StopCameraModifierRig;
 
 // Function GameplayCameras.GameplayCameraSystemComponent.IsCameraSystemActiveForPlayController
 // 0x0010 (0x0010 - 0x0000)
@@ -1106,10 +1168,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(GameplayCameraSystemComponent_IsCameraSystemActiveForPlayController) == 0x000008, "Wrong alignment on GameplayCameraSystemComponent_IsCameraSystemActiveForPlayController");
-static_assert(sizeof(GameplayCameraSystemComponent_IsCameraSystemActiveForPlayController) == 0x000010, "Wrong size on GameplayCameraSystemComponent_IsCameraSystemActiveForPlayController");
-static_assert(offsetof(GameplayCameraSystemComponent_IsCameraSystemActiveForPlayController, PlayerController) == 0x000000, "Member 'GameplayCameraSystemComponent_IsCameraSystemActiveForPlayController::PlayerController' has a wrong offset!");
-static_assert(offsetof(GameplayCameraSystemComponent_IsCameraSystemActiveForPlayController, ReturnValue) == 0x000008, "Member 'GameplayCameraSystemComponent_IsCameraSystemActiveForPlayController::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayCameraSystemComponent_IsCameraSystemActiveForPlayController;
 
 // Function GameplayCameras.GameplayControlRotationComponent.ActivateControlRotationManagementForPlayerController
 // 0x0008 (0x0008 - 0x0000)
@@ -1118,9 +1177,7 @@ struct GameplayControlRotationComponent_ActivateControlRotationManagementForPlay
 public:
 	class APlayerController*                      PlayerController_0;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayControlRotationComponent_ActivateControlRotationManagementForPlayerController) == 0x000008, "Wrong alignment on GameplayControlRotationComponent_ActivateControlRotationManagementForPlayerController");
-static_assert(sizeof(GameplayControlRotationComponent_ActivateControlRotationManagementForPlayerController) == 0x000008, "Wrong size on GameplayControlRotationComponent_ActivateControlRotationManagementForPlayerController");
-static_assert(offsetof(GameplayControlRotationComponent_ActivateControlRotationManagementForPlayerController, PlayerController_0) == 0x000000, "Member 'GameplayControlRotationComponent_ActivateControlRotationManagementForPlayerController::PlayerController_0' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayControlRotationComponent_ActivateControlRotationManagementForPlayerController;
 
 // Function GameplayCameras.GameplayControlRotationComponent.ActivateControlRotationManagementForPlayerIndex
 // 0x0004 (0x0004 - 0x0000)
@@ -1129,9 +1186,25 @@ struct GameplayControlRotationComponent_ActivateControlRotationManagementForPlay
 public:
 	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayControlRotationComponent_ActivateControlRotationManagementForPlayerIndex) == 0x000004, "Wrong alignment on GameplayControlRotationComponent_ActivateControlRotationManagementForPlayerIndex");
-static_assert(sizeof(GameplayControlRotationComponent_ActivateControlRotationManagementForPlayerIndex) == 0x000004, "Wrong size on GameplayControlRotationComponent_ActivateControlRotationManagementForPlayerIndex");
-static_assert(offsetof(GameplayControlRotationComponent_ActivateControlRotationManagementForPlayerIndex, PlayerIndex) == 0x000000, "Member 'GameplayControlRotationComponent_ActivateControlRotationManagementForPlayerIndex::PlayerIndex' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayControlRotationComponent_ActivateControlRotationManagementForPlayerIndex;
+
+// Function GameplayCameras.BlueprintCameraNodeEvaluator.SetCameraPose
+// 0x0088 (0x0088 - 0x0000)
+struct BlueprintCameraNodeEvaluator_SetCameraPose final
+{
+public:
+	struct FBlueprintCameraPose                   InCameraPose;                                      // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraNodeEvaluator_SetCameraPose;
+
+// Function GameplayCameras.BlueprintCameraNodeEvaluator.SetCurrentCameraPose
+// 0x0088 (0x0088 - 0x0000)
+struct BlueprintCameraNodeEvaluator_SetCurrentCameraPose final
+{
+public:
+	struct FBlueprintCameraPose                   CameraPose_0;                                      // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraNodeEvaluator_SetCurrentCameraPose;
 
 // Function GameplayCameras.BlueprintCameraNodeEvaluator.TickCameraNode
 // 0x0004 (0x0004 - 0x0000)
@@ -1140,9 +1213,7 @@ struct BlueprintCameraNodeEvaluator_TickCameraNode final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraNodeEvaluator_TickCameraNode) == 0x000004, "Wrong alignment on BlueprintCameraNodeEvaluator_TickCameraNode");
-static_assert(sizeof(BlueprintCameraNodeEvaluator_TickCameraNode) == 0x000004, "Wrong size on BlueprintCameraNodeEvaluator_TickCameraNode");
-static_assert(offsetof(BlueprintCameraNodeEvaluator_TickCameraNode, DeltaTime) == 0x000000, "Member 'BlueprintCameraNodeEvaluator_TickCameraNode::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraNodeEvaluator_TickCameraNode;
 
 // Function GameplayCameras.BlueprintCameraNodeEvaluator.FindEvaluationContextOwnerActor
 // 0x0010 (0x0010 - 0x0000)
@@ -1152,10 +1223,43 @@ public:
 	TSubclassOf<class AActor>                     ActorClass;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BlueprintCameraNodeEvaluator_FindEvaluationContextOwnerActor) == 0x000008, "Wrong alignment on BlueprintCameraNodeEvaluator_FindEvaluationContextOwnerActor");
-static_assert(sizeof(BlueprintCameraNodeEvaluator_FindEvaluationContextOwnerActor) == 0x000010, "Wrong size on BlueprintCameraNodeEvaluator_FindEvaluationContextOwnerActor");
-static_assert(offsetof(BlueprintCameraNodeEvaluator_FindEvaluationContextOwnerActor, ActorClass) == 0x000000, "Member 'BlueprintCameraNodeEvaluator_FindEvaluationContextOwnerActor::ActorClass' has a wrong offset!");
-static_assert(offsetof(BlueprintCameraNodeEvaluator_FindEvaluationContextOwnerActor, ReturnValue) == 0x000008, "Member 'BlueprintCameraNodeEvaluator_FindEvaluationContextOwnerActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BlueprintCameraNodeEvaluator_FindEvaluationContextOwnerActor;
+
+// Function GameplayCameras.BlueprintCameraNodeEvaluator.GetCameraPose
+// 0x0088 (0x0088 - 0x0000)
+struct BlueprintCameraNodeEvaluator_GetCameraPose final
+{
+public:
+	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0000(0x0088)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraNodeEvaluator_GetCameraPose;
+
+// Function GameplayCameras.BlueprintCameraNodeEvaluator.GetCurrentCameraPose
+// 0x0088 (0x0088 - 0x0000)
+struct BlueprintCameraNodeEvaluator_GetCurrentCameraPose final
+{
+public:
+	struct FBlueprintCameraPose                   ReturnValue;                                       // 0x0000(0x0088)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraNodeEvaluator_GetCurrentCameraPose;
+
+// Function GameplayCameras.BlueprintCameraNodeEvaluator.GetPlayerController
+// 0x0008 (0x0008 - 0x0000)
+struct BlueprintCameraNodeEvaluator_GetPlayerController final
+{
+public:
+	class APlayerController*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraNodeEvaluator_GetPlayerController;
+
+// Function GameplayCameras.BlueprintCameraNodeEvaluator.SetDefaultOwningCameraRigParameters
+// 0x0018 (0x0018 - 0x0000)
+struct BlueprintCameraNodeEvaluator_SetDefaultOwningCameraRigParameters final
+{
+public:
+	struct FBlueprintCameraEvaluationDataRef      TargetCameraData;                                  // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlueprintCameraNodeEvaluator_SetDefaultOwningCameraRigParameters;
 
 }
 

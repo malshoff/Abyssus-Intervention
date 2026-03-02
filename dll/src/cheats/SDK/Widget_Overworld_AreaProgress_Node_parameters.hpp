@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function Widget_Overworld_AreaProgress_Node.Widget_Overworld_AreaProgress_Node_C.ExecuteUbergraph_Widget_Overworld_AreaProgress_Node
-// 0x0030 (0x0030 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node final
 {
 public:
@@ -27,21 +27,12 @@ public:
 	class UTexture2D*                             K2Node_CustomEvent_Icon;                           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_CustomEvent_Visibility;                     // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationTimeRange_ReturnValue;       // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue_1;       // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationTimeRange_ReturnValue;       // 0x0014(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue;         // 0x0024(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue_1;       // 0x0034(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node) == 0x000008, "Wrong alignment on Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node");
-static_assert(sizeof(Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node) == 0x000030, "Wrong size on Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node");
-static_assert(offsetof(Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node, EntryPoint) == 0x000000, "Member 'Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node, K2Node_CustomEvent_Corrupted) == 0x000004, "Member 'Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node::K2Node_CustomEvent_Corrupted' has a wrong offset!");
-static_assert(offsetof(Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node, K2Node_CustomEvent_Icon) == 0x000008, "Member 'Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node::K2Node_CustomEvent_Icon' has a wrong offset!");
-static_assert(offsetof(Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node, K2Node_CustomEvent_Visibility) == 0x000010, "Member 'Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node::K2Node_CustomEvent_Visibility' has a wrong offset!");
-static_assert(offsetof(Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000011, "Member 'Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node, CallFunc_PlayAnimationTimeRange_ReturnValue) == 0x000018, "Member 'Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node::CallFunc_PlayAnimationTimeRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node, CallFunc_PlayAnimationForward_ReturnValue) == 0x000020, "Member 'Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node, CallFunc_PlayAnimationForward_ReturnValue_1) == 0x000028, "Member 'Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node::CallFunc_PlayAnimationForward_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Overworld_AreaProgress_Node_C_ExecuteUbergraph_Widget_Overworld_AreaProgress_Node;
 
 // Function Widget_Overworld_AreaProgress_Node.Widget_Overworld_AreaProgress_Node_C.SetContentIcon
 // 0x0008 (0x0008 - 0x0000)
@@ -50,9 +41,7 @@ struct Widget_Overworld_AreaProgress_Node_C_SetContentIcon final
 public:
 	class UTexture2D*                             Icon_0;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Overworld_AreaProgress_Node_C_SetContentIcon) == 0x000008, "Wrong alignment on Widget_Overworld_AreaProgress_Node_C_SetContentIcon");
-static_assert(sizeof(Widget_Overworld_AreaProgress_Node_C_SetContentIcon) == 0x000008, "Wrong size on Widget_Overworld_AreaProgress_Node_C_SetContentIcon");
-static_assert(offsetof(Widget_Overworld_AreaProgress_Node_C_SetContentIcon, Icon_0) == 0x000000, "Member 'Widget_Overworld_AreaProgress_Node_C_SetContentIcon::Icon_0' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Overworld_AreaProgress_Node_C_SetContentIcon;
 
 // Function Widget_Overworld_AreaProgress_Node.Widget_Overworld_AreaProgress_Node_C.SetPlayerIconVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -61,9 +50,7 @@ struct Widget_Overworld_AreaProgress_Node_C_SetPlayerIconVisibility final
 public:
 	ESlateVisibility                              Visibility_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Overworld_AreaProgress_Node_C_SetPlayerIconVisibility) == 0x000001, "Wrong alignment on Widget_Overworld_AreaProgress_Node_C_SetPlayerIconVisibility");
-static_assert(sizeof(Widget_Overworld_AreaProgress_Node_C_SetPlayerIconVisibility) == 0x000001, "Wrong size on Widget_Overworld_AreaProgress_Node_C_SetPlayerIconVisibility");
-static_assert(offsetof(Widget_Overworld_AreaProgress_Node_C_SetPlayerIconVisibility, Visibility_0) == 0x000000, "Member 'Widget_Overworld_AreaProgress_Node_C_SetPlayerIconVisibility::Visibility_0' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Overworld_AreaProgress_Node_C_SetPlayerIconVisibility;
 
 // Function Widget_Overworld_AreaProgress_Node.Widget_Overworld_AreaProgress_Node_C.ShowCorruptedIcon
 // 0x0001 (0x0001 - 0x0000)
@@ -72,9 +59,7 @@ struct Widget_Overworld_AreaProgress_Node_C_ShowCorruptedIcon final
 public:
 	bool                                          Corrupted;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Overworld_AreaProgress_Node_C_ShowCorruptedIcon) == 0x000001, "Wrong alignment on Widget_Overworld_AreaProgress_Node_C_ShowCorruptedIcon");
-static_assert(sizeof(Widget_Overworld_AreaProgress_Node_C_ShowCorruptedIcon) == 0x000001, "Wrong size on Widget_Overworld_AreaProgress_Node_C_ShowCorruptedIcon");
-static_assert(offsetof(Widget_Overworld_AreaProgress_Node_C_ShowCorruptedIcon, Corrupted) == 0x000000, "Member 'Widget_Overworld_AreaProgress_Node_C_ShowCorruptedIcon::Corrupted' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Overworld_AreaProgress_Node_C_ShowCorruptedIcon;
 
 }
 

@@ -104,19 +104,19 @@ void UBP_FrozenSlippery_StatusEffect_C::ExecuteUbergraph_BP_FrozenSlippery_Statu
 }
 
 
-// Function BP_FrozenSlippery_StatusEffect.BP_FrozenSlippery_StatusEffect_C.HasLocalInstigator
+// Function BP_FrozenSlippery_StatusEffect.BP_FrozenSlippery_StatusEffect_C.GetLocalInstigator
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 
-bool UBP_FrozenSlippery_StatusEffect_C::HasLocalInstigator()
+class APawn* UBP_FrozenSlippery_StatusEffect_C::GetLocalInstigator()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FrozenSlippery_StatusEffect_C", "HasLocalInstigator");
+		Func = Class->GetFunction("BP_FrozenSlippery_StatusEffect_C", "GetLocalInstigator");
 
-	Params::BP_FrozenSlippery_StatusEffect_C_HasLocalInstigator Parms{};
+	Params::BP_FrozenSlippery_StatusEffect_C_GetLocalInstigator Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -212,29 +212,29 @@ void UBP_FrozenSlippery_StatusEffect_C::OnActorHit(class AActor* SelfActor, clas
 }
 
 
-// Function BP_FrozenSlippery_StatusEffect.BP_FrozenSlippery_StatusEffect_C.OnCancelled_660D05504B5C177D59D832BC6E9331A9
+// Function BP_FrozenSlippery_StatusEffect.BP_FrozenSlippery_StatusEffect_C.OnCancelled_5F280F9548C7109D9FB612AB6D2C26A2
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_FrozenSlippery_StatusEffect_C::OnCancelled_660D05504B5C177D59D832BC6E9331A9()
+void UBP_FrozenSlippery_StatusEffect_C::OnCancelled_5F280F9548C7109D9FB612AB6D2C26A2()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FrozenSlippery_StatusEffect_C", "OnCancelled_660D05504B5C177D59D832BC6E9331A9");
+		Func = Class->GetFunction("BP_FrozenSlippery_StatusEffect_C", "OnCancelled_5F280F9548C7109D9FB612AB6D2C26A2");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_FrozenSlippery_StatusEffect.BP_FrozenSlippery_StatusEffect_C.OnCancelled_AF428CCB46FC306EAC4F4FB6465C830B
+// Function BP_FrozenSlippery_StatusEffect.BP_FrozenSlippery_StatusEffect_C.OnCancelled_B2CC0F264F25A80A934789A5D874CCE3
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_FrozenSlippery_StatusEffect_C::OnCancelled_AF428CCB46FC306EAC4F4FB6465C830B()
+void UBP_FrozenSlippery_StatusEffect_C::OnCancelled_B2CC0F264F25A80A934789A5D874CCE3()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FrozenSlippery_StatusEffect_C", "OnCancelled_AF428CCB46FC306EAC4F4FB6465C830B");
+		Func = Class->GetFunction("BP_FrozenSlippery_StatusEffect_C", "OnCancelled_B2CC0F264F25A80A934789A5D874CCE3");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -262,29 +262,29 @@ void UBP_FrozenSlippery_StatusEffect_C::OnDamageTaken(class URHealthComponent* C
 }
 
 
-// Function BP_FrozenSlippery_StatusEffect.BP_FrozenSlippery_StatusEffect_C.OnFinish_660D05504B5C177D59D832BC6E9331A9
+// Function BP_FrozenSlippery_StatusEffect.BP_FrozenSlippery_StatusEffect_C.OnFinish_5F280F9548C7109D9FB612AB6D2C26A2
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_FrozenSlippery_StatusEffect_C::OnFinish_660D05504B5C177D59D832BC6E9331A9()
+void UBP_FrozenSlippery_StatusEffect_C::OnFinish_5F280F9548C7109D9FB612AB6D2C26A2()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FrozenSlippery_StatusEffect_C", "OnFinish_660D05504B5C177D59D832BC6E9331A9");
+		Func = Class->GetFunction("BP_FrozenSlippery_StatusEffect_C", "OnFinish_5F280F9548C7109D9FB612AB6D2C26A2");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_FrozenSlippery_StatusEffect.BP_FrozenSlippery_StatusEffect_C.OnFinish_AF428CCB46FC306EAC4F4FB6465C830B
+// Function BP_FrozenSlippery_StatusEffect.BP_FrozenSlippery_StatusEffect_C.OnFinish_B2CC0F264F25A80A934789A5D874CCE3
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_FrozenSlippery_StatusEffect_C::OnFinish_AF428CCB46FC306EAC4F4FB6465C830B()
+void UBP_FrozenSlippery_StatusEffect_C::OnFinish_B2CC0F264F25A80A934789A5D874CCE3()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FrozenSlippery_StatusEffect_C", "OnFinish_AF428CCB46FC306EAC4F4FB6465C830B");
+		Func = Class->GetFunction("BP_FrozenSlippery_StatusEffect_C", "OnFinish_B2CC0F264F25A80A934789A5D874CCE3");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

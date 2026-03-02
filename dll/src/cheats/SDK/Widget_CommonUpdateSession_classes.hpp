@@ -18,60 +18,51 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_CommonUpdateSession.Widget_CommonUpdateSession_C
-// 0x0060 (0x0498 - 0x0438)
+// 0x0060 (0x0520 - 0x04C0)
 class UWidget_CommonUpdateSession_C final : public URCommonActivatableWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Construct_Animation;                               // 0x0440(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_109;                            // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_246;                            // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_BaseInputField_C*               GameNameInput;                                     // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_BaseInputField_C*               GamePasswordInput;                                 // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ComboBoxString_C*                  JoinabilityComboBox;                               // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_BaseInputField_C*               MaxPlayersInput;                                   // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           Options;                                           // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 W_Button_Back;                                     // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 W_Button_Create;                                   // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_CommonWaitDialog_C*             WidgetCommonWaitDialog;                            // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UW_Button_SimpleText_C*                 W_Button_Create;                                   // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_SimpleText_C*                 W_Button_Back;                                     // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           Options;                                           // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_BaseInputField_C*               MaxPlayersInput;                                   // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ComboBoxString_C*                  JoinabilityComboBox;                               // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_BaseInputField_C*               GamePasswordInput;                                 // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_BaseInputField_C*               GameNameInput;                                     // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_246;                            // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_109;                            // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Construct_Animation;                               // 0x0510(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidget_CommonWaitDialog_C*             WidgetCommonWaitDialog;                            // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ValidateSessionSettings(bool* IsValid);
-	void OnUpdateSettings(bool bWasSuccessful);
-	void FillVisibilityOptions();
-	void FillFromSession();
-	void ExecuteUbergraph_Widget_CommonUpdateSession(int32 EntryPoint);
-	void Construct();
-	void BuildCustomSessionSettings(TMap<class FName, struct FDMSessionSetting>* CustomSessionSettings);
-	void BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BuildCustomSessionSettings(TMap<class FName, struct FDMSessionSetting>* CustomSessionSettings);
+	void Construct();
+	void ExecuteUbergraph_Widget_CommonUpdateSession(int32 EntryPoint);
+	void FillFromSession();
+	void FillVisibilityOptions();
+	void OnUpdateSettings(bool bWasSuccessful);
+	void ValidateSessionSettings(bool* IsValid);
 
 	class UWidget* BP_GetDesiredFocusTarget() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_CommonUpdateSession_C">();
+		BP_STATIC_CLASS_IMPL("Widget_CommonUpdateSession_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_CommonUpdateSession_C")
 	}
 	static class UWidget_CommonUpdateSession_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_CommonUpdateSession_C>();
 	}
 };
-static_assert(alignof(UWidget_CommonUpdateSession_C) == 0x000008, "Wrong alignment on UWidget_CommonUpdateSession_C");
-static_assert(sizeof(UWidget_CommonUpdateSession_C) == 0x000498, "Wrong size on UWidget_CommonUpdateSession_C");
-static_assert(offsetof(UWidget_CommonUpdateSession_C, UberGraphFrame) == 0x000438, "Member 'UWidget_CommonUpdateSession_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonUpdateSession_C, Construct_Animation) == 0x000440, "Member 'UWidget_CommonUpdateSession_C::Construct_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonUpdateSession_C, CommonActionWidget_109) == 0x000448, "Member 'UWidget_CommonUpdateSession_C::CommonActionWidget_109' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonUpdateSession_C, CommonActionWidget_246) == 0x000450, "Member 'UWidget_CommonUpdateSession_C::CommonActionWidget_246' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonUpdateSession_C, GameNameInput) == 0x000458, "Member 'UWidget_CommonUpdateSession_C::GameNameInput' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonUpdateSession_C, GamePasswordInput) == 0x000460, "Member 'UWidget_CommonUpdateSession_C::GamePasswordInput' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonUpdateSession_C, JoinabilityComboBox) == 0x000468, "Member 'UWidget_CommonUpdateSession_C::JoinabilityComboBox' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonUpdateSession_C, MaxPlayersInput) == 0x000470, "Member 'UWidget_CommonUpdateSession_C::MaxPlayersInput' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonUpdateSession_C, Options) == 0x000478, "Member 'UWidget_CommonUpdateSession_C::Options' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonUpdateSession_C, W_Button_Back) == 0x000480, "Member 'UWidget_CommonUpdateSession_C::W_Button_Back' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonUpdateSession_C, W_Button_Create) == 0x000488, "Member 'UWidget_CommonUpdateSession_C::W_Button_Create' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonUpdateSession_C, WidgetCommonWaitDialog) == 0x000490, "Member 'UWidget_CommonUpdateSession_C::WidgetCommonWaitDialog' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_CommonUpdateSession_C;
 
 }
 

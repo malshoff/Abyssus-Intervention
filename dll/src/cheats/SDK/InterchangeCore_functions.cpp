@@ -17,6 +17,31 @@
 namespace SDK
 {
 
+// Function InterchangeCore.InterchangeFactoryBase.GetFactoryAssetType
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// EInterchangeFactoryAssetType            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EInterchangeFactoryAssetType UInterchangeFactoryBase::GetFactoryAssetType()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeFactoryBase", "GetFactoryAssetType");
+
+	Params::InterchangeFactoryBase_GetFactoryAssetType Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function InterchangeCore.InterchangeFactoryBase.GetFactoryClass
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -42,22 +67,23 @@ class UClass* UInterchangeFactoryBase::GetFactoryClass() const
 }
 
 
-// Function InterchangeCore.InterchangeSourceData.SetFilename
-// (Final, Native, Public, BlueprintCallable)
+// Function InterchangeCore.InterchangeFactoryBase.GetSourceFilenames
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// const class FString&                    InFilename                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UObject*                    Object                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FString>*                  OutSourceFilenames                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UInterchangeSourceData::SetFilename(const class FString& InFilename)
+bool UInterchangeFactoryBase::GetSourceFilenames(const class UObject* Object, TArray<class FString>* OutSourceFilenames) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeSourceData", "SetFilename");
+		Func = Class->GetFunction("InterchangeFactoryBase", "GetSourceFilenames");
 
-	Params::InterchangeSourceData_SetFilename Parms{};
+	Params::InterchangeFactoryBase_GetSourceFilenames Parms{};
 
-	Parms.InFilename = std::move(InFilename);
+	Parms.Object = Object;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -66,23 +92,33 @@ bool UInterchangeSourceData::SetFilename(const class FString& InFilename)
 
 	Func->FunctionFlags = Flgs;
 
+	if (OutSourceFilenames != nullptr)
+		*OutSourceFilenames = std::move(Parms.OutSourceFilenames);
+
 	return Parms.ReturnValue;
 }
 
 
-// Function InterchangeCore.InterchangeSourceData.GetFilename
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function InterchangeCore.InterchangeFactoryBase.SetSourceFilename
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UObject*                    Object                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    SourceFilename                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SourceIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FString UInterchangeSourceData::GetFilename() const
+bool UInterchangeFactoryBase::SetSourceFilename(const class UObject* Object, const class FString& SourceFilename, int32 SourceIndex) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeSourceData", "GetFilename");
+		Func = Class->GetFunction("InterchangeFactoryBase", "SetSourceFilename");
 
-	Params::InterchangeSourceData_GetFilename Parms{};
+	Params::InterchangeFactoryBase_SetSourceFilename Parms{};
+
+	Parms.Object = Object;
+	Parms.SourceFilename = std::move(SourceFilename);
+	Parms.SourceIndex = SourceIndex;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -111,6 +147,31 @@ struct FInterchangePipelinePropertyStates UInterchangePipelineBase::FindOrAddPro
 	Params::InterchangePipelineBase_FindOrAddPropertyStates Parms{};
 
 	Parms.PropertyPath = PropertyPath;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangePipelineBase.IsReimportContext
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangePipelineBase::IsReimportContext()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangePipelineBase", "IsReimportContext");
+
+	Params::InterchangePipelineBase_IsReimportContext Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -350,6 +411,183 @@ class FString UInterchangePipelineBase::ScriptedGetPipelineDisplayName() const
 }
 
 
+// Function InterchangeCore.InterchangePipelineBase.SupportReimport
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangePipelineBase::SupportReimport() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangePipelineBase", "SupportReimport");
+
+	Params::InterchangePipelineBase_SupportReimport Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeSourceData.SetFilename
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    InFilename                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeSourceData::SetFilename(const class FString& InFilename)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSourceData", "SetFilename");
+
+	Params::InterchangeSourceData_SetFilename Parms{};
+
+	Parms.InFilename = std::move(InFilename);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeSourceData.GetAllContextObjectTags
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class FString>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FString> UInterchangeSourceData::GetAllContextObjectTags() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSourceData", "GetAllContextObjectTags");
+
+	Params::InterchangeSourceData_GetAllContextObjectTags Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeSourceData.GetContextObjectByTag
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FString&                    Tag                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* UInterchangeSourceData::GetContextObjectByTag(const class FString& Tag) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSourceData", "GetContextObjectByTag");
+
+	Params::InterchangeSourceData_GetContextObjectByTag Parms{};
+
+	Parms.Tag = std::move(Tag);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeSourceData.GetFilename
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UInterchangeSourceData::GetFilename() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSourceData", "GetFilename");
+
+	Params::InterchangeSourceData_GetFilename Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeSourceData.RemoveAllContextObjects
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, Const)
+
+void UInterchangeSourceData::RemoveAllContextObjects() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSourceData", "RemoveAllContextObjects");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function InterchangeCore.InterchangeSourceData.SetContextObjectByTag
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// const class FString&                    Tag                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Object                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UInterchangeSourceData::SetContextObjectByTag(const class FString& Tag, class UObject* Object) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSourceData", "SetContextObjectByTag");
+
+	Params::InterchangeSourceData_SetContextObjectByTag Parms{};
+
+	Parms.Tag = std::move(Tag);
+	Parms.Object = Object;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function InterchangeCore.InterchangeTranslatorSettings.LoadSettings
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
@@ -385,6 +623,184 @@ void UInterchangeTranslatorSettings::SaveSettings()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function InterchangeCore.InterchangeTranslatorBase.SetSettings
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// const class UInterchangeTranslatorSettings*InterchangeTranslatorSettings                          (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UInterchangeTranslatorBase::SetSettings(const class UInterchangeTranslatorSettings* InterchangeTranslatorSettings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeTranslatorBase", "SetSettings");
+
+	Params::InterchangeTranslatorBase_SetSettings Parms{};
+
+	Parms.InterchangeTranslatorSettings = InterchangeTranslatorSettings;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function InterchangeCore.InterchangeTranslatorBase.CanImportSourceData
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class UInterchangeSourceData*     InSourceData                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeTranslatorBase::CanImportSourceData(const class UInterchangeSourceData* InSourceData) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeTranslatorBase", "CanImportSourceData");
+
+	Params::InterchangeTranslatorBase_CanImportSourceData Parms{};
+
+	Parms.InSourceData = InSourceData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeTranslatorBase.GetSettings
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UInterchangeTranslatorSettings*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UInterchangeTranslatorSettings* UInterchangeTranslatorBase::GetSettings() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeTranslatorBase", "GetSettings");
+
+	Params::InterchangeTranslatorBase_GetSettings Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeTranslatorBase.GetSourceData
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class UInterchangeSourceData*     ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+const class UInterchangeSourceData* UInterchangeTranslatorBase::GetSourceData() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeTranslatorBase", "GetSourceData");
+
+	Params::InterchangeTranslatorBase_GetSourceData Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeTranslatorBase.GetSupportedAssetTypes
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EInterchangeTranslatorAssetType         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EInterchangeTranslatorAssetType UInterchangeTranslatorBase::GetSupportedAssetTypes() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeTranslatorBase", "GetSupportedAssetTypes");
+
+	Params::InterchangeTranslatorBase_GetSupportedAssetTypes Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeTranslatorBase.GetSupportedFormats
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class FString>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FString> UInterchangeTranslatorBase::GetSupportedFormats() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeTranslatorBase", "GetSupportedFormats");
+
+	Params::InterchangeTranslatorBase_GetSupportedFormats Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeTranslatorBase.GetTranslatorType
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EInterchangeTranslatorType              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EInterchangeTranslatorType UInterchangeTranslatorBase::GetTranslatorType() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeTranslatorBase", "GetTranslatorType");
+
+	Params::InterchangeTranslatorBase_GetTranslatorType Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -769,34 +1185,6 @@ bool UInterchangeBaseNode::SetEnabled(const bool bIsEnabled)
 }
 
 
-// Function InterchangeCore.InterchangeBaseNode.SetParentUid
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    ParentUid                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeBaseNode::SetParentUid(const class FString& ParentUid)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeBaseNode", "SetParentUid");
-
-	Params::InterchangeBaseNode_SetParentUid Parms{};
-
-	Parms.ParentUid = std::move(ParentUid);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function InterchangeCore.InterchangeBaseNode.AddTargetNodeUid
 // (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -877,6 +1265,31 @@ bool UInterchangeBaseNode::GetBooleanAttribute(const class FString& NodeAttribut
 
 	if (OutValue != nullptr)
 		*OutValue = Parms.OutValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeBaseNode.GetDesiredChildIndex
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UInterchangeBaseNode::GetDesiredChildIndex() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeBaseNode", "GetDesiredChildIndex");
+
+	Params::InterchangeBaseNode_GetDesiredChildIndex Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
@@ -1003,6 +1416,31 @@ bool UInterchangeBaseNode::GetGuidAttribute(const class FString& NodeAttributeKe
 }
 
 
+// Function InterchangeCore.InterchangeBaseNode.GetIconName
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName UInterchangeBaseNode::GetIconName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeBaseNode", "GetIconName");
+
+	Params::InterchangeBaseNode_GetIconName Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function InterchangeCore.InterchangeBaseNode.GetInt32Attribute
 // (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -1062,6 +1500,35 @@ bool UInterchangeBaseNode::GetLinearColorAttribute(const class FString& NodeAttr
 
 	if (OutValue != nullptr)
 		*OutValue = std::move(Parms.OutValue);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeBaseNode.GetNamespace
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString*                          Namespace                                              (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeBaseNode::GetNamespace(class FString* Namespace) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeBaseNode", "GetNamespace");
+
+	Params::InterchangeBaseNode_GetNamespace Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Namespace != nullptr)
+		*Namespace = std::move(Parms.Namespace);
 
 	return Parms.ReturnValue;
 }
@@ -1197,6 +1664,31 @@ void UInterchangeBaseNode::GetTargetNodeUids(TArray<class FString>* OutTargetAss
 
 	if (OutTargetAssets != nullptr)
 		*OutTargetAssets = std::move(Parms.OutTargetAssets);
+}
+
+
+// Function InterchangeCore.InterchangeBaseNode.GetTypeName
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UInterchangeBaseNode::GetTypeName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeBaseNode", "GetTypeName");
+
+	Params::InterchangeBaseNode_GetTypeName Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -1338,6 +1830,34 @@ class FString UInterchangeBaseNodeContainer::AddNode(class UInterchangeBaseNode*
 }
 
 
+// Function InterchangeCore.InterchangeBaseNodeContainer.ClearNodeParentUid
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    NodeUniqueID                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeBaseNodeContainer::ClearNodeParentUid(const class FString& NodeUniqueID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeBaseNodeContainer", "ClearNodeParentUid");
+
+	Params::InterchangeBaseNodeContainer_ClearNodeParentUid Parms{};
+
+	Parms.NodeUniqueID = std::move(NodeUniqueID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function InterchangeCore.InterchangeBaseNodeContainer.ComputeChildrenCache
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
@@ -1412,6 +1932,31 @@ void UInterchangeBaseNodeContainer::LoadFromFile(const class FString& Filename)
 }
 
 
+// Function InterchangeCore.InterchangeBaseNodeContainer.RemoveNode
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    NodeUniqueID                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UInterchangeBaseNodeContainer::RemoveNode(const class FString& NodeUniqueID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeBaseNodeContainer", "RemoveNode");
+
+	Params::InterchangeBaseNodeContainer_RemoveNode Parms{};
+
+	Parms.NodeUniqueID = std::move(NodeUniqueID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function InterchangeCore.InterchangeBaseNodeContainer.ReplaceNode
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1440,7 +1985,7 @@ void UInterchangeBaseNodeContainer::ReplaceNode(const class FString& NodeUniqueI
 
 
 // Function InterchangeCore.InterchangeBaseNodeContainer.Reset
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 
 void UInterchangeBaseNodeContainer::Reset()
 {
@@ -1499,6 +2044,63 @@ void UInterchangeBaseNodeContainer::SaveToFile(const class FString& Filename)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.SetNamespace
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    Namespace                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UClass*                           TargetClass                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UInterchangeBaseNodeContainer::SetNamespace(const class FString& Namespace, class UClass* TargetClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeBaseNodeContainer", "SetNamespace");
+
+	Params::InterchangeBaseNodeContainer_SetNamespace Parms{};
+
+	Parms.Namespace = std::move(Namespace);
+	Parms.TargetClass = TargetClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.SetNodeDesiredChildIndex
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    NodeUniqueID                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32&                            NewNodeDesiredChildIndex                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeBaseNodeContainer::SetNodeDesiredChildIndex(const class FString& NodeUniqueID, const int32& NewNodeDesiredChildIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeBaseNodeContainer", "SetNodeDesiredChildIndex");
+
+	Params::InterchangeBaseNodeContainer_SetNodeDesiredChildIndex Parms{};
+
+	Parms.NodeUniqueID = std::move(NodeUniqueID);
+	Parms.NewNodeDesiredChildIndex = NewNodeDesiredChildIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -2192,6 +2794,31 @@ void UInterchangeFactoryBaseNode::GetFactoryDependency(const int32 Index_0, clas
 }
 
 
+// Function InterchangeCore.InterchangeFactoryBaseNode.GetObjectClass
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UClass* UInterchangeFactoryBaseNode::GetObjectClass() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeFactoryBaseNode", "GetObjectClass");
+
+	Params::InterchangeFactoryBaseNode_GetObjectClass Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function InterchangeCore.InterchangeFactoryBaseNode.GetReimportStrategyFlags
 // (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -2218,7 +2845,7 @@ EReimportStrategyFlags UInterchangeFactoryBaseNode::GetReimportStrategyFlags() c
 
 
 // Function InterchangeCore.InterchangeFactoryBaseNode.IsRuntimeImportAllowed
-// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2292,13 +2919,42 @@ bool UInterchangeFactoryBaseNode::ShouldSkipNodeImport() const
 }
 
 
+// Function InterchangeCore.InterchangeSourceNode.GetUniqueInstance
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class UInterchangeBaseNodeContainer*NodeContainer                                          (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UInterchangeSourceNode*     ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+const class UInterchangeSourceNode* UInterchangeSourceNode::GetUniqueInstance(const class UInterchangeBaseNodeContainer* NodeContainer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("InterchangeSourceNode", "GetUniqueInstance");
+
+	Params::InterchangeSourceNode_GetUniqueInstance Parms{};
+
+	Parms.NodeContainer = NodeContainer;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function InterchangeCore.InterchangeSourceNode.InitializeSourceNode
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    UniqueID                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    DisplayLabel                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UInterchangeBaseNodeContainer*    NodeContainer                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UInterchangeSourceNode::InitializeSourceNode(const class FString& UniqueID, const class FString& DisplayLabel)
+void UInterchangeSourceNode::InitializeSourceNode(const class FString& UniqueID, const class FString& DisplayLabel, class UInterchangeBaseNodeContainer* NodeContainer)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2309,6 +2965,7 @@ void UInterchangeSourceNode::InitializeSourceNode(const class FString& UniqueID,
 
 	Parms.UniqueID = std::move(UniqueID);
 	Parms.DisplayLabel = std::move(DisplayLabel);
+	Parms.NodeContainer = NodeContainer;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2459,6 +3116,34 @@ bool UInterchangeSourceNode::SetCustomImportUnusedMaterial(const bool& Attribute
 }
 
 
+// Function InterchangeCore.InterchangeSourceNode.SetCustomReimportStrategyFlags
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// uint8                                   StrategyFlag                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeSourceNode::SetCustomReimportStrategyFlags(uint8 StrategyFlag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSourceNode", "SetCustomReimportStrategyFlags");
+
+	Params::InterchangeSourceNode_SetCustomReimportStrategyFlags Parms{};
+
+	Parms.StrategyFlag = StrategyFlag;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function InterchangeCore.InterchangeSourceNode.SetCustomSourceFrameRateDenominator
 // (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -2557,6 +3242,90 @@ bool UInterchangeSourceNode::SetCustomSourceTimelineStart(const double& Attribut
 		Func = Class->GetFunction("InterchangeSourceNode", "SetCustomSourceTimelineStart");
 
 	Params::InterchangeSourceNode_SetCustomSourceTimelineStart Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeSourceNode.SetCustomSubPathPrefix
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    Prefix                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeSourceNode::SetCustomSubPathPrefix(const class FString& Prefix)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSourceNode", "SetCustomSubPathPrefix");
+
+	Params::InterchangeSourceNode_SetCustomSubPathPrefix Parms{};
+
+	Parms.Prefix = std::move(Prefix);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeSourceNode.SetCustomUseAssetTypeSubPathSuffix
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             Suffix                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeSourceNode::SetCustomUseAssetTypeSubPathSuffix(const bool& Suffix)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSourceNode", "SetCustomUseAssetTypeSubPathSuffix");
+
+	Params::InterchangeSourceNode_SetCustomUseAssetTypeSubPathSuffix Parms{};
+
+	Parms.Suffix = Suffix;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeSourceNode.SetCustomUseLegacySkeletalMeshBakeTransform
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeSourceNode::SetCustomUseLegacySkeletalMeshBakeTransform(const bool& AttributeValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSourceNode", "SetCustomUseLegacySkeletalMeshBakeTransform");
+
+	Params::InterchangeSourceNode_SetCustomUseLegacySkeletalMeshBakeTransform Parms{};
 
 	Parms.AttributeValue = AttributeValue;
 
@@ -2717,6 +3486,35 @@ bool UInterchangeSourceNode::GetCustomImportUnusedMaterial(bool* AttributeValue)
 }
 
 
+// Function InterchangeCore.InterchangeSourceNode.GetCustomReimportStrategyFlags
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// uint8*                                  StrategyFlag                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeSourceNode::GetCustomReimportStrategyFlags(uint8* StrategyFlag) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSourceNode", "GetCustomReimportStrategyFlags");
+
+	Params::InterchangeSourceNode_GetCustomReimportStrategyFlags Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (StrategyFlag != nullptr)
+		*StrategyFlag = Parms.StrategyFlag;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function InterchangeCore.InterchangeSourceNode.GetCustomSourceFrameRateDenominator
 // (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -2818,6 +3616,93 @@ bool UInterchangeSourceNode::GetCustomSourceTimelineStart(double* AttributeValue
 		Func = Class->GetFunction("InterchangeSourceNode", "GetCustomSourceTimelineStart");
 
 	Params::InterchangeSourceNode_GetCustomSourceTimelineStart Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeSourceNode.GetCustomSubPathPrefix
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString*                          Prefix                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeSourceNode::GetCustomSubPathPrefix(class FString* Prefix) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSourceNode", "GetCustomSubPathPrefix");
+
+	Params::InterchangeSourceNode_GetCustomSubPathPrefix Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Prefix != nullptr)
+		*Prefix = std::move(Parms.Prefix);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeSourceNode.GetCustomUseAssetTypeSubPathSuffix
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   Suffix                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeSourceNode::GetCustomUseAssetTypeSubPathSuffix(bool* Suffix) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSourceNode", "GetCustomUseAssetTypeSubPathSuffix");
+
+	Params::InterchangeSourceNode_GetCustomUseAssetTypeSubPathSuffix Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Suffix != nullptr)
+		*Suffix = Parms.Suffix;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangeSourceNode.GetCustomUseLegacySkeletalMeshBakeTransform
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeSourceNode::GetCustomUseLegacySkeletalMeshBakeTransform(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSourceNode", "GetCustomUseLegacySkeletalMeshBakeTransform");
+
+	Params::InterchangeSourceNode_GetCustomUseLegacySkeletalMeshBakeTransform Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

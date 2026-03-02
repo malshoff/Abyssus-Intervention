@@ -41,22 +41,7 @@ public:
 	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight) == 0x000008, "Wrong alignment on BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight");
-static_assert(sizeof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight) == 0x000080, "Wrong size on BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight");
-static_assert(offsetof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight, EntryPoint) == 0x000000, "Member 'BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight, CallFunc_GetOwner_ReturnValue) == 0x000008, "Member 'BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight, K2Node_CustomEvent_Actor_1) == 0x000010, "Member 'BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight::K2Node_CustomEvent_Actor_1' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight, CallFunc_AddComponentByClass_ReturnValue) == 0x000018, "Member 'BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight::CallFunc_AddComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000020, "Member 'BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight, CallFunc_IsLocallyControlled_ReturnValue) == 0x000029, "Member 'BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight, K2Node_CustomEvent_Actor) == 0x000030, "Member 'BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight::K2Node_CustomEvent_Actor' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight, K2Node_DynamicCast_AsRPlayer_Pawn_1) == 0x000038, "Member 'BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight::K2Node_DynamicCast_AsRPlayer_Pawn_1' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight, CallFunc_IsLocallyControlled_ReturnValue_1) == 0x000041, "Member 'BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight::CallFunc_IsLocallyControlled_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight, K2Node_CreateDelegate_OutputDelegate) == 0x000044, "Member 'BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight, K2Node_CreateDelegate_OutputDelegate_1) == 0x000054, "Member 'BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000068, "Member 'BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPC_Highlight_C_ExecuteUbergraph_BPC_Highlight;
 
 // Function BPC_Highlight.BPC_Highlight_C.OnActorEnterProximity
 // 0x0008 (0x0008 - 0x0000)
@@ -65,9 +50,7 @@ struct BPC_Highlight_C_OnActorEnterProximity final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPC_Highlight_C_OnActorEnterProximity) == 0x000008, "Wrong alignment on BPC_Highlight_C_OnActorEnterProximity");
-static_assert(sizeof(BPC_Highlight_C_OnActorEnterProximity) == 0x000008, "Wrong size on BPC_Highlight_C_OnActorEnterProximity");
-static_assert(offsetof(BPC_Highlight_C_OnActorEnterProximity, Actor) == 0x000000, "Member 'BPC_Highlight_C_OnActorEnterProximity::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_BPC_Highlight_C_OnActorEnterProximity;
 
 // Function BPC_Highlight.BPC_Highlight_C.OnActorExitProximity
 // 0x0008 (0x0008 - 0x0000)
@@ -76,9 +59,7 @@ struct BPC_Highlight_C_OnActorExitProximity final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPC_Highlight_C_OnActorExitProximity) == 0x000008, "Wrong alignment on BPC_Highlight_C_OnActorExitProximity");
-static_assert(sizeof(BPC_Highlight_C_OnActorExitProximity) == 0x000008, "Wrong size on BPC_Highlight_C_OnActorExitProximity");
-static_assert(offsetof(BPC_Highlight_C_OnActorExitProximity, Actor) == 0x000000, "Member 'BPC_Highlight_C_OnActorExitProximity::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_BPC_Highlight_C_OnActorExitProximity;
 
 // Function BPC_Highlight.BPC_Highlight_C.SetHighlightEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -87,9 +68,7 @@ struct BPC_Highlight_C_SetHighlightEnabled final
 public:
 	bool                                          Enabled;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPC_Highlight_C_SetHighlightEnabled) == 0x000001, "Wrong alignment on BPC_Highlight_C_SetHighlightEnabled");
-static_assert(sizeof(BPC_Highlight_C_SetHighlightEnabled) == 0x000001, "Wrong size on BPC_Highlight_C_SetHighlightEnabled");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightEnabled, Enabled) == 0x000000, "Member 'BPC_Highlight_C_SetHighlightEnabled::Enabled' has a wrong offset!");
+DUMPER7_ASSERTS_BPC_Highlight_C_SetHighlightEnabled;
 
 // Function BPC_Highlight.BPC_Highlight_C.SetHighlightVisibility
 // 0x0050 (0x0050 - 0x0000)
@@ -116,24 +95,7 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPC_Highlight_C_SetHighlightVisibility) == 0x000008, "Wrong alignment on BPC_Highlight_C_SetHighlightVisibility");
-static_assert(sizeof(BPC_Highlight_C_SetHighlightVisibility) == 0x000050, "Wrong size on BPC_Highlight_C_SetHighlightVisibility");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, Visible) == 0x000000, "Member 'BPC_Highlight_C_SetHighlightVisibility::Visible' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BPC_Highlight_C_SetHighlightVisibility::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'BPC_Highlight_C_SetHighlightVisibility::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BPC_Highlight_C_SetHighlightVisibility::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, Temp_byte_Variable) == 0x000010, "Member 'BPC_Highlight_C_SetHighlightVisibility::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, CallFunc_GetOwner_ReturnValue) == 0x000018, "Member 'BPC_Highlight_C_SetHighlightVisibility::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x000020, "Member 'BPC_Highlight_C_SetHighlightVisibility::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, CallFunc_Array_Get_Item) == 0x000030, "Member 'BPC_Highlight_C_SetHighlightVisibility::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, CallFunc_GetWidget_ReturnValue) == 0x000038, "Member 'BPC_Highlight_C_SetHighlightVisibility::CallFunc_GetWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, CallFunc_IsValid_ReturnValue) == 0x000040, "Member 'BPC_Highlight_C_SetHighlightVisibility::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, CallFunc_Array_Length_ReturnValue) == 0x000044, "Member 'BPC_Highlight_C_SetHighlightVisibility::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, CallFunc_Less_IntInt_ReturnValue) == 0x000048, "Member 'BPC_Highlight_C_SetHighlightVisibility::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, Temp_byte_Variable_1) == 0x000049, "Member 'BPC_Highlight_C_SetHighlightVisibility::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, CallFunc_Not_PreBool_ReturnValue) == 0x00004A, "Member 'BPC_Highlight_C_SetHighlightVisibility::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, Temp_bool_Variable) == 0x00004B, "Member 'BPC_Highlight_C_SetHighlightVisibility::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetHighlightVisibility, K2Node_Select_Default) == 0x00004C, "Member 'BPC_Highlight_C_SetHighlightVisibility::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_BPC_Highlight_C_SetHighlightVisibility;
 
 // Function BPC_Highlight.BPC_Highlight_C.SetWidgetText
 // 0x0018 (0x0018 - 0x0000)
@@ -144,11 +106,7 @@ public:
 	class UWidget_ObjectHighlighter_C*            K2Node_DynamicCast_AsWidget_Object_Highlighter;    // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPC_Highlight_C_SetWidgetText) == 0x000008, "Wrong alignment on BPC_Highlight_C_SetWidgetText");
-static_assert(sizeof(BPC_Highlight_C_SetWidgetText) == 0x000018, "Wrong size on BPC_Highlight_C_SetWidgetText");
-static_assert(offsetof(BPC_Highlight_C_SetWidgetText, CallFunc_GetWidget_ReturnValue) == 0x000000, "Member 'BPC_Highlight_C_SetWidgetText::CallFunc_GetWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetWidgetText, K2Node_DynamicCast_AsWidget_Object_Highlighter) == 0x000008, "Member 'BPC_Highlight_C_SetWidgetText::K2Node_DynamicCast_AsWidget_Object_Highlighter' has a wrong offset!");
-static_assert(offsetof(BPC_Highlight_C_SetWidgetText, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BPC_Highlight_C_SetWidgetText::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BPC_Highlight_C_SetWidgetText;
 
 }
 

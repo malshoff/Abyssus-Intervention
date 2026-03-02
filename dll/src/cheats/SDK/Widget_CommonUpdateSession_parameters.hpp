@@ -12,52 +12,70 @@
 
 #include "DMOnlinePlugin_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.ValidateSessionSettings
-// 0x0060 (0x0060 - 0x0000)
-struct Widget_CommonUpdateSession_C_ValidateSessionSettings final
+// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	bool                                          IsValid;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWidget_CommonInfoDialog_C*             CallFunc_PushWidget_OutWidget;                     // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0018(0x0010)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Trim_ReturnValue;                         // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_TrimTrailing_ReturnValue;                 // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonUpdateSession_C_ValidateSessionSettings) == 0x000008, "Wrong alignment on Widget_CommonUpdateSession_C_ValidateSessionSettings");
-static_assert(sizeof(Widget_CommonUpdateSession_C_ValidateSessionSettings) == 0x000060, "Wrong size on Widget_CommonUpdateSession_C_ValidateSessionSettings");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ValidateSessionSettings, IsValid) == 0x000000, "Member 'Widget_CommonUpdateSession_C_ValidateSessionSettings::IsValid' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ValidateSessionSettings, CallFunc_GetOwningPlayer_ReturnValue) == 0x000008, "Member 'Widget_CommonUpdateSession_C_ValidateSessionSettings::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ValidateSessionSettings, CallFunc_PushWidget_OutWidget) == 0x000010, "Member 'Widget_CommonUpdateSession_C_ValidateSessionSettings::CallFunc_PushWidget_OutWidget' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ValidateSessionSettings, CallFunc_GetText_ReturnValue) == 0x000018, "Member 'Widget_CommonUpdateSession_C_ValidateSessionSettings::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ValidateSessionSettings, CallFunc_Conv_TextToString_ReturnValue) == 0x000028, "Member 'Widget_CommonUpdateSession_C_ValidateSessionSettings::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ValidateSessionSettings, CallFunc_Trim_ReturnValue) == 0x000038, "Member 'Widget_CommonUpdateSession_C_ValidateSessionSettings::CallFunc_Trim_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ValidateSessionSettings, CallFunc_TrimTrailing_ReturnValue) == 0x000048, "Member 'Widget_CommonUpdateSession_C_ValidateSessionSettings::CallFunc_TrimTrailing_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ValidateSessionSettings, CallFunc_IsEmpty_ReturnValue) == 0x000058, "Member 'Widget_CommonUpdateSession_C_ValidateSessionSettings::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ValidateSessionSettings, CallFunc_Not_PreBool_ReturnValue) == 0x000059, "Member 'Widget_CommonUpdateSession_C_ValidateSessionSettings::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature;
 
-// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.OnUpdateSettings
-// 0x0001 (0x0001 - 0x0000)
-struct Widget_CommonUpdateSession_C_OnUpdateSettings final
+// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	bool                                          bWasSuccessful;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonUpdateSession_C_OnUpdateSettings) == 0x000001, "Wrong alignment on Widget_CommonUpdateSession_C_OnUpdateSettings");
-static_assert(sizeof(Widget_CommonUpdateSession_C_OnUpdateSettings) == 0x000001, "Wrong size on Widget_CommonUpdateSession_C_OnUpdateSettings");
-static_assert(offsetof(Widget_CommonUpdateSession_C_OnUpdateSettings, bWasSuccessful) == 0x000000, "Member 'Widget_CommonUpdateSession_C_OnUpdateSettings::bWasSuccessful' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature;
+
+// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.BuildCustomSessionSettings
+// 0x0218 (0x0218 - 0x0000)
+struct Widget_CommonUpdateSession_C_BuildCustomSessionSettings final
+{
+public:
+	TMap<class FName, struct FDMSessionSetting>   CustomSessionSettings;                             // 0x0000(0x0050)(Parm, OutParm)
+	TMap<class FName, struct FDMSessionSetting>   SessionSettingsMap;                                // 0x0050(0x0050)(Edit, BlueprintVisible)
+	class FName                                   Temp_name_Variable;                                // 0x00A0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_1;                              // 0x00A8(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_2;                              // 0x00B0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_3;                              // 0x00B8(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x00C0(0x0010)()
+	int32                                         CallFunc_GetSelectedIndex_ReturnValue;             // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting;                // 0x00F8(0x0018)()
+	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_1;              // 0x0110(0x0018)()
+	class FName                                   Temp_name_Variable_4;                              // 0x0128(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetText_ReturnValue_1;                    // 0x0130(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0140(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetText_ReturnValue_2;                    // 0x0150(0x0010)()
+	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_2;              // 0x0160(0x0018)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_2;          // 0x0178(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_3;              // 0x0188(0x0018)()
+	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetText_ReturnValue_3;                    // 0x01A8(0x0010)()
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B9[0x7];                                      // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_3;          // 0x01C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_BoolToString_ReturnValue;            // 0x01D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_4;              // 0x01E0(0x0018)()
+	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_5;              // 0x01F8(0x0018)()
+	class FName                                   Temp_name_Variable_5;                              // 0x0210(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_CommonUpdateSession_C_BuildCustomSessionSettings;
 
 // Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.ExecuteUbergraph_Widget_CommonUpdateSession
-// 0x02A8 (0x02A8 - 0x0000)
+// 0x02B0 (0x02B0 - 0x0000)
 struct Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession final
 {
 public:
@@ -106,136 +124,41 @@ public:
 	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x0218(0x0010)()
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, class FString>              CallFunc_GetActiveSessionCustomSettings_ReturnValue_1; // 0x0230(0x0050)()
-	class FString                                 CallFunc_Map_Find_Value_4;                         // 0x0280(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_4;                   // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_291[0x7];                                      // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_Select_Default;                             // 0x0298(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue;         // 0x0228(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	TMap<class FName, class FString>              CallFunc_GetActiveSessionCustomSettings_ReturnValue_1; // 0x0238(0x0050)()
+	class FString                                 CallFunc_Map_Find_Value_4;                         // 0x0288(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_4;                   // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_Select_Default;                             // 0x02A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession) == 0x000008, "Wrong alignment on Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession");
-static_assert(sizeof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession) == 0x0002A8, "Wrong size on Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, EntryPoint) == 0x000000, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_ValidateSessionSettings_IsValid) == 0x000004, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_ValidateSessionSettings_IsValid' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, K2Node_MakeArray_Array) == 0x000008, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Format_ReturnValue) == 0x000018, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, K2Node_MakeArray_Array_1) == 0x000028, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Conv_TextToString_ReturnValue) == 0x000038, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Format_ReturnValue_1) == 0x000048, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, Temp_name_Variable) == 0x000058, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::Temp_name_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000060, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, Temp_bool_Variable) == 0x000070, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_GetActiveSessionCustomSettings_ReturnValue) == 0x000078, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_GetActiveSessionCustomSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, K2Node_ComponentBoundEvent_Button_1) == 0x0000C8, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, K2Node_MakeArray_Array_2) == 0x0000D0, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Format_ReturnValue_2) == 0x0000E0, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Conv_TextToString_ReturnValue_2) == 0x0000F0, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Conv_TextToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, K2Node_CreateDelegate_OutputDelegate) == 0x000100, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, Temp_name_Variable_1) == 0x000110, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::Temp_name_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, K2Node_ComponentBoundEvent_Button) == 0x000118, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Map_Find_Value) == 0x000120, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Map_Find_ReturnValue) == 0x000130, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Conv_StringToText_ReturnValue) == 0x000138, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, Temp_name_Variable_2) == 0x000148, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::Temp_name_Variable_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Map_Find_Value_1) == 0x000150, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Map_Find_ReturnValue_1) == 0x000160, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Conv_StringToInt_ReturnValue) == 0x000164, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Conv_StringToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, Temp_name_Variable_3) == 0x000168, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::Temp_name_Variable_3' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Map_Find_Value_2) == 0x000170, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Map_Find_Value_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Map_Find_ReturnValue_2) == 0x000180, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_BuildCustomSessionSettings_CustomSessionSettings) == 0x000188, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_BuildCustomSessionSettings_CustomSessionSettings' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_UpdateCustomSessionSettings_ReturnValue) == 0x0001D8, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_UpdateCustomSessionSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Conv_StringToText_ReturnValue_1) == 0x0001E0, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, K2Node_CustomEvent_bWasSuccessful) == 0x0001F0, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::K2Node_CustomEvent_bWasSuccessful' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, Temp_name_Variable_4) == 0x0001F4, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::Temp_name_Variable_4' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Map_Find_Value_3) == 0x000200, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Map_Find_Value_3' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Map_Find_ReturnValue_3) == 0x000210, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Conv_StringToText_ReturnValue_2) == 0x000218, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_PlayAnimationForward_ReturnValue) == 0x000228, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_GetActiveSessionCustomSettings_ReturnValue_1) == 0x000230, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_GetActiveSessionCustomSettings_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Map_Find_Value_4) == 0x000280, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Map_Find_Value_4' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, CallFunc_Map_Find_ReturnValue_4) == 0x000290, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::CallFunc_Map_Find_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession, K2Node_Select_Default) == 0x000298, "Member 'Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonUpdateSession_C_ExecuteUbergraph_Widget_CommonUpdateSession;
 
-// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.BuildCustomSessionSettings
-// 0x01D8 (0x01D8 - 0x0000)
-struct Widget_CommonUpdateSession_C_BuildCustomSessionSettings final
+// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.OnUpdateSettings
+// 0x0001 (0x0001 - 0x0000)
+struct Widget_CommonUpdateSession_C_OnUpdateSettings final
 {
 public:
-	TMap<class FName, struct FDMSessionSetting>   CustomSessionSettings;                             // 0x0000(0x0050)(Parm, OutParm)
-	TMap<class FName, struct FDMSessionSetting>   SessionSettingsMap;                                // 0x0050(0x0050)(Edit, BlueprintVisible)
-	class FName                                   Temp_name_Variable;                                // 0x00A0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable_1;                              // 0x00A8(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable_2;                              // 0x00B0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSelectedIndex_ReturnValue;             // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable_3;                              // 0x00BC(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting;                // 0x00D8(0x0018)()
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x00F0(0x0010)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetText_ReturnValue_1;                    // 0x0110(0x0010)()
-	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_1;              // 0x0120(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0138(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_2;              // 0x0148(0x0018)()
-	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetText_ReturnValue_2;                    // 0x0168(0x0010)()
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_2;          // 0x0180(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_BoolToString_ReturnValue;            // 0x0190(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_3;              // 0x01A0(0x0018)()
-	struct FDMSessionSetting                      K2Node_MakeStruct_DMSessionSetting_4;              // 0x01B8(0x0018)()
-	class FName                                   Temp_name_Variable_4;                              // 0x01D0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings) == 0x000008, "Wrong alignment on Widget_CommonUpdateSession_C_BuildCustomSessionSettings");
-static_assert(sizeof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings) == 0x0001D8, "Wrong size on Widget_CommonUpdateSession_C_BuildCustomSessionSettings");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, CustomSessionSettings) == 0x000000, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::CustomSessionSettings' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, SessionSettingsMap) == 0x000050, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::SessionSettingsMap' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, Temp_name_Variable) == 0x0000A0, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::Temp_name_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, Temp_name_Variable_1) == 0x0000A8, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::Temp_name_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, Temp_name_Variable_2) == 0x0000B0, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::Temp_name_Variable_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, CallFunc_GetSelectedIndex_ReturnValue) == 0x0000B8, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::CallFunc_GetSelectedIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, Temp_name_Variable_3) == 0x0000BC, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::Temp_name_Variable_3' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, CallFunc_Conv_IntToString_ReturnValue) == 0x0000C8, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, K2Node_MakeStruct_DMSessionSetting) == 0x0000D8, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::K2Node_MakeStruct_DMSessionSetting' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, CallFunc_GetText_ReturnValue) == 0x0000F0, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, CallFunc_Conv_TextToString_ReturnValue) == 0x000100, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, CallFunc_GetText_ReturnValue_1) == 0x000110, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::CallFunc_GetText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, K2Node_MakeStruct_DMSessionSetting_1) == 0x000120, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::K2Node_MakeStruct_DMSessionSetting_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000138, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, K2Node_MakeStruct_DMSessionSetting_2) == 0x000148, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::K2Node_MakeStruct_DMSessionSetting_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, CallFunc_IsEmpty_ReturnValue) == 0x000160, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, CallFunc_GetText_ReturnValue_2) == 0x000168, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::CallFunc_GetText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, CallFunc_Not_PreBool_ReturnValue) == 0x000178, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, CallFunc_Conv_TextToString_ReturnValue_2) == 0x000180, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::CallFunc_Conv_TextToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, CallFunc_Conv_BoolToString_ReturnValue) == 0x000190, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::CallFunc_Conv_BoolToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, K2Node_MakeStruct_DMSessionSetting_3) == 0x0001A0, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::K2Node_MakeStruct_DMSessionSetting_3' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, K2Node_MakeStruct_DMSessionSetting_4) == 0x0001B8, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::K2Node_MakeStruct_DMSessionSetting_4' has a wrong offset!");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BuildCustomSessionSettings, Temp_name_Variable_4) == 0x0001D0, "Member 'Widget_CommonUpdateSession_C_BuildCustomSessionSettings::Temp_name_Variable_4' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonUpdateSession_C_OnUpdateSettings;
 
-// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature final
+// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.ValidateSessionSettings
+// 0x0060 (0x0060 - 0x0000)
+struct Widget_CommonUpdateSession_C_ValidateSessionSettings final
 {
 public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsValid;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWidget_CommonInfoDialog_C*             CallFunc_PushWidget_OutWidget;                     // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0018(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Trim_ReturnValue;                         // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_TrimTrailing_ReturnValue;                 // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Create_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonUpdateSession_C_BndEvt__Widget_CommonCreateSession_W_Button_Back_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonUpdateSession_C_ValidateSessionSettings;
 
 // Function Widget_CommonUpdateSession.Widget_CommonUpdateSession_C.BP_GetDesiredFocusTarget
 // 0x0008 (0x0008 - 0x0000)
@@ -244,9 +167,7 @@ struct Widget_CommonUpdateSession_C_BP_GetDesiredFocusTarget final
 public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonUpdateSession_C_BP_GetDesiredFocusTarget) == 0x000008, "Wrong alignment on Widget_CommonUpdateSession_C_BP_GetDesiredFocusTarget");
-static_assert(sizeof(Widget_CommonUpdateSession_C_BP_GetDesiredFocusTarget) == 0x000008, "Wrong size on Widget_CommonUpdateSession_C_BP_GetDesiredFocusTarget");
-static_assert(offsetof(Widget_CommonUpdateSession_C_BP_GetDesiredFocusTarget, ReturnValue) == 0x000000, "Member 'Widget_CommonUpdateSession_C_BP_GetDesiredFocusTarget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonUpdateSession_C_BP_GetDesiredFocusTarget;
 
 }
 

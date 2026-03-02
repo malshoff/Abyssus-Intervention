@@ -17,25 +17,27 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_GasGrenade_AreaEffect.BP_GasGrenade_AreaEffect_C
-// 0x0008 (0x0458 - 0x0450)
+// 0x0008 (0x0460 - 0x0458)
 class ABP_GasGrenade_AreaEffect_C final : public ARAreaEffect
 {
 public:
-	class UDMActorProximitySphereComponent*       DMActorProximitySphere;                            // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UDMActorProximitySphereComponent*       DMActorProximitySphere;                            // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_GasGrenade_AreaEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_GasGrenade_AreaEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_GasGrenade_AreaEffect_C")
 	}
 	static class ABP_GasGrenade_AreaEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_GasGrenade_AreaEffect_C>();
 	}
 };
-static_assert(alignof(ABP_GasGrenade_AreaEffect_C) == 0x000008, "Wrong alignment on ABP_GasGrenade_AreaEffect_C");
-static_assert(sizeof(ABP_GasGrenade_AreaEffect_C) == 0x000458, "Wrong size on ABP_GasGrenade_AreaEffect_C");
-static_assert(offsetof(ABP_GasGrenade_AreaEffect_C, DMActorProximitySphere) == 0x000450, "Member 'ABP_GasGrenade_AreaEffect_C::DMActorProximitySphere' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_GasGrenade_AreaEffect_C;
 
 }
 

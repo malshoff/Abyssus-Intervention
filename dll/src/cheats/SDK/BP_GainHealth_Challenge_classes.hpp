@@ -33,17 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_GainHealth_Challenge_C">();
+		BP_STATIC_CLASS_IMPL("BP_GainHealth_Challenge_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_GainHealth_Challenge_C")
 	}
 	static class UBP_GainHealth_Challenge_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_GainHealth_Challenge_C>();
 	}
 };
-static_assert(alignof(UBP_GainHealth_Challenge_C) == 0x000008, "Wrong alignment on UBP_GainHealth_Challenge_C");
-static_assert(sizeof(UBP_GainHealth_Challenge_C) == 0x000040, "Wrong size on UBP_GainHealth_Challenge_C");
-static_assert(offsetof(UBP_GainHealth_Challenge_C, UberGraphFrame) == 0x000030, "Member 'UBP_GainHealth_Challenge_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_GainHealth_Challenge_C, Max_Health_Required) == 0x000038, "Member 'UBP_GainHealth_Challenge_C::Max_Health_Required' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_GainHealth_Challenge_C;
 
 }
 

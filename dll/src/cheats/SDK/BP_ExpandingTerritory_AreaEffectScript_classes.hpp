@@ -33,18 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ExpandingTerritory_AreaEffectScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_ExpandingTerritory_AreaEffectScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ExpandingTerritory_AreaEffectScript_C")
 	}
 	static class UBP_ExpandingTerritory_AreaEffectScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ExpandingTerritory_AreaEffectScript_C>();
 	}
 };
-static_assert(alignof(UBP_ExpandingTerritory_AreaEffectScript_C) == 0x000008, "Wrong alignment on UBP_ExpandingTerritory_AreaEffectScript_C");
-static_assert(sizeof(UBP_ExpandingTerritory_AreaEffectScript_C) == 0x0000E0, "Wrong size on UBP_ExpandingTerritory_AreaEffectScript_C");
-static_assert(offsetof(UBP_ExpandingTerritory_AreaEffectScript_C, UberGraphFrame) == 0x0000C8, "Member 'UBP_ExpandingTerritory_AreaEffectScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_ExpandingTerritory_AreaEffectScript_C, ScaleIncreasePercentagePerTick) == 0x0000D0, "Member 'UBP_ExpandingTerritory_AreaEffectScript_C::ScaleIncreasePercentagePerTick' has a wrong offset!");
-static_assert(offsetof(UBP_ExpandingTerritory_AreaEffectScript_C, TotalMulti) == 0x0000D8, "Member 'UBP_ExpandingTerritory_AreaEffectScript_C::TotalMulti' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_ExpandingTerritory_AreaEffectScript_C;
 
 }
 

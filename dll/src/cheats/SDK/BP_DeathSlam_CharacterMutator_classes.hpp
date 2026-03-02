@@ -30,6 +30,7 @@ public:
 	void ExecuteUbergraph_BP_DeathSlam_CharacterMutator(int32 EntryPoint);
 	class FText GetMutatorDescription();
 	void K2_ActivateScript();
+	void K2_DeactivateScript();
 	void OnAnimationTriggerEvent(class FName EventName);
 	void OnDealtDamage(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData);
 	void OnPreDealtDamage(class ARPawnBase* Pawn, class AActor* DamagedActor, bool bWasCritical, int32 DamageSourceMask);
@@ -38,18 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_DeathSlam_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_DeathSlam_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_DeathSlam_CharacterMutator_C")
 	}
 	static class UBP_DeathSlam_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_DeathSlam_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_DeathSlam_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_DeathSlam_CharacterMutator_C");
-static_assert(sizeof(UBP_DeathSlam_CharacterMutator_C) == 0x000120, "Wrong size on UBP_DeathSlam_CharacterMutator_C");
-static_assert(offsetof(UBP_DeathSlam_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_DeathSlam_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_DeathSlam_CharacterMutator_C, As_RPlayer_Pawn) == 0x000110, "Member 'UBP_DeathSlam_CharacterMutator_C::As_RPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(UBP_DeathSlam_CharacterMutator_C, DamageIncreasePercent) == 0x000118, "Member 'UBP_DeathSlam_CharacterMutator_C::DamageIncreasePercent' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_DeathSlam_CharacterMutator_C;
 
 }
 

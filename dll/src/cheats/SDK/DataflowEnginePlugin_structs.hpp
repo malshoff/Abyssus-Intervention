@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "DataflowCore_structs.hpp"
+
 
 namespace SDK
 {
@@ -22,10 +24,16 @@ public:
 	class FString                                 Attribute;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Group;                                             // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FCollectionAttributeKey) == 0x000008, "Wrong alignment on FCollectionAttributeKey");
-static_assert(sizeof(FCollectionAttributeKey) == 0x000020, "Wrong size on FCollectionAttributeKey");
-static_assert(offsetof(FCollectionAttributeKey, Attribute) == 0x000000, "Member 'FCollectionAttributeKey::Attribute' has a wrong offset!");
-static_assert(offsetof(FCollectionAttributeKey, Group) == 0x000010, "Member 'FCollectionAttributeKey::Group' has a wrong offset!");
+DUMPER7_ASSERTS_FCollectionAttributeKey;
+
+// ScriptStruct DataflowEnginePlugin.DataflowDynamicMeshArray
+// 0x0010 (0x0010 - 0x0000)
+struct FDataflowDynamicMeshArray final : public FDataflowAnyType
+{
+public:
+	TArray<class UDynamicMesh*>                   Value;                                             // 0x0000(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+};
+DUMPER7_ASSERTS_FDataflowDynamicMeshArray;
 
 }
 

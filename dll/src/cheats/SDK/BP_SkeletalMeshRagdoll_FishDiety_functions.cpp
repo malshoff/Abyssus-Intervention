@@ -45,6 +45,26 @@ void ABP_SkeletalMeshRagdoll_FishDiety_C::BndEvt__BP_Elite_Golem_Sentry_Skeletal
 }
 
 
+// Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.CheckFishDeityReloadKillChallenge
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           HitActor                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_SkeletalMeshRagdoll_FishDiety_C::CheckFishDeityReloadKillChallenge(class AActor* HitActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SkeletalMeshRagdoll_FishDiety_C", "CheckFishDeityReloadKillChallenge");
+
+	Params::BP_SkeletalMeshRagdoll_FishDiety_C_CheckFishDeityReloadKillChallenge Parms{};
+
+	Parms.HitActor = HitActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.EventExplode
 // (BlueprintCallable, BlueprintEvent)
 
@@ -79,6 +99,98 @@ void ABP_SkeletalMeshRagdoll_FishDiety_C::ExecuteUbergraph_BP_SkeletalMeshRagdol
 }
 
 
+// Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.FishDeityReloadKillChallenge_Progress_Multicast
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_SkeletalMeshRagdoll_FishDiety_C::FishDeityReloadKillChallenge_Progress_Multicast()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SkeletalMeshRagdoll_FishDiety_C", "FishDeityReloadKillChallenge_Progress_Multicast");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.OnExplosion_3E67F20D4EB920412CBC41AE1A56ECAE
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// float                                   ActualExplosionRadius                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_SkeletalMeshRagdoll_FishDiety_C::OnExplosion_3E67F20D4EB920412CBC41AE1A56ECAE(const TArray<struct FHitResult>& HitResults, float ActualExplosionRadius)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SkeletalMeshRagdoll_FishDiety_C", "OnExplosion_3E67F20D4EB920412CBC41AE1A56ECAE");
+
+	Params::BP_SkeletalMeshRagdoll_FishDiety_C_OnExplosion_3E67F20D4EB920412CBC41AE1A56ECAE Parms{};
+
+	Parms.HitResults = std::move(HitResults);
+	Parms.ActualExplosionRadius = ActualExplosionRadius;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.OnFail_3E67F20D4EB920412CBC41AE1A56ECAE
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_SkeletalMeshRagdoll_FishDiety_C::OnFail_3E67F20D4EB920412CBC41AE1A56ECAE()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SkeletalMeshRagdoll_FishDiety_C", "OnFail_3E67F20D4EB920412CBC41AE1A56ECAE");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.OnFinished_3E67F20D4EB920412CBC41AE1A56ECAE
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_SkeletalMeshRagdoll_FishDiety_C::OnFinished_3E67F20D4EB920412CBC41AE1A56ECAE()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SkeletalMeshRagdoll_FishDiety_C", "OnFinished_3E67F20D4EB920412CBC41AE1A56ECAE");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_SkeletalMeshRagdoll_FishDiety_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SkeletalMeshRagdoll_FishDiety_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.SetupFishMeshes
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void ABP_SkeletalMeshRagdoll_FishDiety_C::SetupFishMeshes()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SkeletalMeshRagdoll_FishDiety_C", "SetupFishMeshes");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.Spawn FX
 // (BlueprintCallable, BlueprintEvent)
 
@@ -107,17 +219,23 @@ void ABP_SkeletalMeshRagdoll_FishDiety_C::UserConstructionScript()
 }
 
 
-// Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C.CopyMeshes
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class ABP_FishDiety_Body_C*             Weapon                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_SkeletalMeshRagdoll_FishDiety_C::ReceiveBeginPlay()
+void ABP_SkeletalMeshRagdoll_FishDiety_C::CopyMeshes(class ABP_FishDiety_Body_C* Weapon) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SkeletalMeshRagdoll_FishDiety_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_SkeletalMeshRagdoll_FishDiety_C", "CopyMeshes");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_SkeletalMeshRagdoll_FishDiety_C_CopyMeshes Parms{};
+
+	Parms.Weapon = Weapon;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -18,7 +18,7 @@ namespace SDK::Params
 {
 
 // Function BP_OceanGod_Tentacle_ProjectileBase.BP_OceanGod_Tentacle_ProjectileBase_C.ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x0110 (0x0110 - 0x0000)
 struct BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase final
 {
 public:
@@ -28,27 +28,25 @@ public:
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0030(0x0008)(NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(bool* RetValue)>               K2Node_CreateDelegate_OutputDelegate_1;            // 0x0038(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UFCInvokeBlueprintProxy*                CallFunc_CreateInvokeProxyObject_ReturnValue;      // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0060(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0048(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UFCInvokeBlueprintProxy*                CallFunc_CreateInvokeProxyObject_ReturnValue;      // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetComponentBounds_Origin;                // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetComponentBounds_BoxExtent;             // 0x00C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetComponentBounds_SphereRadius;          // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetClosestPointOnSkeletalMeshToWorldLocation_HitBone; // 0x00E4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetClosestPointOnSkeletalMeshToWorldLocation_ReturnValue; // 0x00F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase) == 0x000008, "Wrong alignment on BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase");
-static_assert(sizeof(BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase) == 0x0000A0, "Wrong size on BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase");
-static_assert(offsetof(BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase, EntryPoint) == 0x000000, "Member 'BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000008, "Member 'BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase, K2Node_CreateDelegate_OutputDelegate) == 0x000020, "Member 'BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000030, "Member 'BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase, K2Node_CreateDelegate_OutputDelegate_1) == 0x000038, "Member 'BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase, CallFunc_CreateInvokeProxyObject_ReturnValue) == 0x000048, "Member 'BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase::CallFunc_CreateInvokeProxyObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase, CallFunc_IsValid_ReturnValue) == 0x000050, "Member 'BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000058, "Member 'BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase, K2Node_CreateDelegate_OutputDelegate_2) == 0x000060, "Member 'BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000070, "Member 'BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000088, "Member 'BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_OceanGod_Tentacle_ProjectileBase_C_ExecuteUbergraph_BP_OceanGod_Tentacle_ProjectileBase;
 
 // Function BP_OceanGod_Tentacle_ProjectileBase.BP_OceanGod_Tentacle_ProjectileBase_C.InvokeWhen_DistanceReached
 // 0x0030 (0x0030 - 0x0000)
@@ -61,12 +59,7 @@ public:
 	double                                        CallFunc_Vector_Distance2D_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_OceanGod_Tentacle_ProjectileBase_C_InvokeWhen_DistanceReached) == 0x000008, "Wrong alignment on BP_OceanGod_Tentacle_ProjectileBase_C_InvokeWhen_DistanceReached");
-static_assert(sizeof(BP_OceanGod_Tentacle_ProjectileBase_C_InvokeWhen_DistanceReached) == 0x000030, "Wrong size on BP_OceanGod_Tentacle_ProjectileBase_C_InvokeWhen_DistanceReached");
-static_assert(offsetof(BP_OceanGod_Tentacle_ProjectileBase_C_InvokeWhen_DistanceReached, RetValue) == 0x000000, "Member 'BP_OceanGod_Tentacle_ProjectileBase_C_InvokeWhen_DistanceReached::RetValue' has a wrong offset!");
-static_assert(offsetof(BP_OceanGod_Tentacle_ProjectileBase_C_InvokeWhen_DistanceReached, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000008, "Member 'BP_OceanGod_Tentacle_ProjectileBase_C_InvokeWhen_DistanceReached::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_OceanGod_Tentacle_ProjectileBase_C_InvokeWhen_DistanceReached, CallFunc_Vector_Distance2D_ReturnValue) == 0x000020, "Member 'BP_OceanGod_Tentacle_ProjectileBase_C_InvokeWhen_DistanceReached::CallFunc_Vector_Distance2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_OceanGod_Tentacle_ProjectileBase_C_InvokeWhen_DistanceReached, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000028, "Member 'BP_OceanGod_Tentacle_ProjectileBase_C_InvokeWhen_DistanceReached::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_OceanGod_Tentacle_ProjectileBase_C_InvokeWhen_DistanceReached;
 
 }
 

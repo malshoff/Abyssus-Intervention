@@ -11,74 +11,106 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_classes.hpp"
+#include "UMG_structs.hpp"
+#include "RGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_RunsLog.Widget_RunsLog_C
-// 0x0088 (0x0358 - 0x02D0)
-class UWidget_RunsLog_C final : public UUserWidget
+// 0x0138 (0x0480 - 0x0348)
+class UWidget_RunsLog_C final : public URRunsLogWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       DetailsUpdateAnimation;                            // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_Next;                           // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_Prev;                           // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_PlayerGameOverSlot_C*           DisplaySlot_Ability;                               // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_PlayerGameOverSlot_C*           DisplaySlot_Primary;                               // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_PlayerGameOverSlot_C*           DisplaySlot_Secondary;                             // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         EquippedWeaponContainer;                           // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             RunHeader;                                         // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_Mutators;                                // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_Stats;                                   // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_Weapon;                                  // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_Icon_C*                       W_Button_Next;                                     // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_Icon_C*                       W_Button_Prev;                                     // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_RunStatsList_C*                 Widget_RunStatsList;                               // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_RunStatsMutators_C*             Widget_RunStatsMutators;                           // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         CurrentRunStatsIndex;                              // 0x0350(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_TabMenu_CharmSlot_C*            Widget_TabMenu_CharmSlot_2;                        // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TabMenu_CharmSlot_C*            Widget_TabMenu_CharmSlot_1;                        // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_RunStatsList_DamageBreakdown_C* Widget_RunStatsList_DamageBreakdown;               // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_RunStatsList_C*                 Widget_RunStatsList;                               // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_MutatorGridElement_01_Large_C*  Widget_MutatorGridElement_WeaponMut3;              // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_MutatorGridElement_01_Large_C*  Widget_MutatorGridElement_WeaponMut2;              // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_MutatorGridElement_01_Large_C*  Widget_MutatorGridElement_WeaponMut1;              // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_MutatorGridElement_01_Large_C*  Widget_MutatorGridElement_Weapon;                  // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_MutatorGridElement_01_Large_C*  Widget_MutatorGridElement_SecondaryTrig;           // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_MutatorGridElement_01_Large_C*  Widget_MutatorGridElement_PrimaryTrig;             // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_MutatorGridElement_01_Large_C*  Widget_MutatorGridElement_AbilMut3;                // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_MutatorGridElement_01_Large_C*  Widget_MutatorGridElement_AbilMut2;                // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_MutatorGridElement_01_Large_C*  Widget_MutatorGridElement_AbilMut1;                // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_MutatorGridElement_01_Large_C*  Widget_MutatorGridElement_AbilityTrig;             // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_MutatorGridElement_01_Large_C*  Widget_MutatorGridElement_Abil;                    // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_GridPlayerAvatarElements_C*     Widget_GridPlayerAvatarElements;                   // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_Icon_C*                       W_Button_Prev;                                     // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UW_Button_Icon_C*                       W_Button_Next;                                     // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_Stats_DmgBreakdown;                      // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_Stats;                                   // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             RunHeader;                                         // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               NoExpeditionsFound;                                // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_65;                                          // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Expeditions;                                       // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_SFire;                          // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_Prev;                           // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_PFire;                          // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_Next;                           // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_Abil;                           // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Arrow_Secondary;                                   // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Arrow_Primary;                                     // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Arrow_Ability;                                     // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_AlternatingGrid_01_C*           AlternatingMutatorGrid_Secondary;                  // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_AlternatingGrid_01_C*           AlternatingMutatorGrid_Primary;                    // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_AlternatingGrid_01_C*           AlternatingMutatorGrid_Ability;                    // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       DetailsUpdateAnimation;                            // 0x0468(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentRunStatsIndex;                              // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_474[0x4];                                      // 0x0474(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_BaseTooltip_C*                  CurrentTooltipWidget;                              // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SimulatePrevRun();
-	void SimulateNextRun();
-	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void ExecuteUbergraph_Widget_RunsLog(int32 EntryPoint);
-	void Construct();
-	void Change_Run_Stats_Page_to_Index(int32 Index_0);
-	void BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void ChangeRunStatsPageToIndex(int32 Index_0);
+	void Construct();
+	void ConstructActivatableAbility();
+	void ConstructCharms();
+	void ConstructForgeMutators(TArray<class UWidget_MutatorGridElement_01_Large_C*>& Widget_Mutators, const struct FGameplayTag& Tag);
+	void ConstructMutatorGrid();
+	void ConstructMutatorSubGrid(class UWidget_AlternatingGrid_01_C* Grid, const struct FGameplayTagContainer& Tags, class URMutatorPrimaryAsset* MutatorPA, int32 Rank);
+	void ConstructWeapon();
+	void Destruct();
+	void ExecuteUbergraph_Widget_RunsLog(int32 EntryPoint);
+	class UWidget* GetCharm1TooltipWidget();
+	class UWidget* GetCharm2TooltipWidget();
+	class UWidget* GetCharmTooltipWidget(int32 CharmIndex);
+	void GetCurrentTooltipWidget(class UWidget_BaseTooltip_C** Return_Value);
+	class URGridPlayerAvatarElementsWidget* GetGridAvatarElementsWidget();
+	void HandleSelectPlayerTile(class UWidget_PlayerGameOverPlayerTile_C* SelectedPlayerTile);
+	void OnInitialized();
+	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	void SetupAbilityMutatorsNavigation();
+	void SetupCharmsNavigation();
+	void SetupGridItemsNavigation();
+	void SetupTriggersNavigation();
+	void SetupWeaponAndAbilityNavigation();
+	void SetupWeaponMutatorsNavigation();
+	void SimulateNextRun();
+	void SimulatePrevRun();
+	void UpdateEquipmentInfos();
+	void UpdateRunStatsWidgets();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_RunsLog_C">();
+		BP_STATIC_CLASS_IMPL("Widget_RunsLog_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_RunsLog_C")
 	}
 	static class UWidget_RunsLog_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_RunsLog_C>();
 	}
 };
-static_assert(alignof(UWidget_RunsLog_C) == 0x000008, "Wrong alignment on UWidget_RunsLog_C");
-static_assert(sizeof(UWidget_RunsLog_C) == 0x000358, "Wrong size on UWidget_RunsLog_C");
-static_assert(offsetof(UWidget_RunsLog_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_RunsLog_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, DetailsUpdateAnimation) == 0x0002D8, "Member 'UWidget_RunsLog_C::DetailsUpdateAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, CommonActionWidget_Next) == 0x0002E0, "Member 'UWidget_RunsLog_C::CommonActionWidget_Next' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, CommonActionWidget_Prev) == 0x0002E8, "Member 'UWidget_RunsLog_C::CommonActionWidget_Prev' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, DisplaySlot_Ability) == 0x0002F0, "Member 'UWidget_RunsLog_C::DisplaySlot_Ability' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, DisplaySlot_Primary) == 0x0002F8, "Member 'UWidget_RunsLog_C::DisplaySlot_Primary' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, DisplaySlot_Secondary) == 0x000300, "Member 'UWidget_RunsLog_C::DisplaySlot_Secondary' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, EquippedWeaponContainer) == 0x000308, "Member 'UWidget_RunsLog_C::EquippedWeaponContainer' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, RunHeader) == 0x000310, "Member 'UWidget_RunsLog_C::RunHeader' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, TextBlock_Mutators) == 0x000318, "Member 'UWidget_RunsLog_C::TextBlock_Mutators' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, TextBlock_Stats) == 0x000320, "Member 'UWidget_RunsLog_C::TextBlock_Stats' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, TextBlock_Weapon) == 0x000328, "Member 'UWidget_RunsLog_C::TextBlock_Weapon' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, W_Button_Next) == 0x000330, "Member 'UWidget_RunsLog_C::W_Button_Next' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, W_Button_Prev) == 0x000338, "Member 'UWidget_RunsLog_C::W_Button_Prev' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, Widget_RunStatsList) == 0x000340, "Member 'UWidget_RunsLog_C::Widget_RunStatsList' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, Widget_RunStatsMutators) == 0x000348, "Member 'UWidget_RunsLog_C::Widget_RunStatsMutators' has a wrong offset!");
-static_assert(offsetof(UWidget_RunsLog_C, CurrentRunStatsIndex) == 0x000350, "Member 'UWidget_RunsLog_C::CurrentRunStatsIndex' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_RunsLog_C;
 
 }
 

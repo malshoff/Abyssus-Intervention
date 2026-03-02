@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_NormalNotification.Widget_NormalNotification_C
-// 0x0000 (0x02F8 - 0x02F8)
+// 0x0000 (0x0370 - 0x0370)
 class UWidget_NormalNotification_C final : public URNotificationWidget
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_NormalNotification_C">();
+		BP_STATIC_CLASS_IMPL("Widget_NormalNotification_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_NormalNotification_C")
 	}
 	static class UWidget_NormalNotification_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_NormalNotification_C>();
 	}
 };
-static_assert(alignof(UWidget_NormalNotification_C) == 0x000008, "Wrong alignment on UWidget_NormalNotification_C");
-static_assert(sizeof(UWidget_NormalNotification_C) == 0x0002F8, "Wrong size on UWidget_NormalNotification_C");
+DUMPER7_ASSERTS_UWidget_NormalNotification_C;
 
 }
 

@@ -24,9 +24,7 @@ struct ABP_PlayerTurret_C_AnimGraph final
 public:
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_PlayerTurret_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_PlayerTurret_C_AnimGraph");
-static_assert(sizeof(ABP_PlayerTurret_C_AnimGraph) == 0x000010, "Wrong size on ABP_PlayerTurret_C_AnimGraph");
-static_assert(offsetof(ABP_PlayerTurret_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'ABP_PlayerTurret_C_AnimGraph::AnimGraph_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_PlayerTurret_C_AnimGraph;
 
 // Function ABP_PlayerTurret.ABP_PlayerTurret_C.BlueprintUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -35,9 +33,7 @@ struct ABP_PlayerTurret_C_BlueprintUpdateAnimation final
 public:
 	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_PlayerTurret_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on ABP_PlayerTurret_C_BlueprintUpdateAnimation");
-static_assert(sizeof(ABP_PlayerTurret_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on ABP_PlayerTurret_C_BlueprintUpdateAnimation");
-static_assert(offsetof(ABP_PlayerTurret_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'ABP_PlayerTurret_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_PlayerTurret_C_BlueprintUpdateAnimation;
 
 // Function ABP_PlayerTurret.ABP_PlayerTurret_C.ExecuteUbergraph_ABP_PlayerTurret
 // 0x01B0 (0x01B0 - 0x0000)
@@ -100,56 +96,7 @@ public:
 	double                                        CallFunc_FInterpTo_Current_ImplicitCast;           // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_VariableSet_Turret_Horizontal_Rotation_ImplicitCast; // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret) == 0x000010, "Wrong alignment on ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret");
-static_assert(sizeof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret) == 0x0001B0, "Wrong size on ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, EntryPoint) == 0x000000, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, Temp_bool_Whether_the_gate_is_currently_open_or_close_Variable) == 0x000004, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::Temp_bool_Whether_the_gate_is_currently_open_or_close_Variable' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, Temp_bool_Has_Been_Initd_Variable) == 0x000005, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000006, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000007, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000008, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x000010, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000018, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_EqualEqual_IntInt_ReturnValue_3) == 0x000020, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_EqualEqual_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_EqualEqual_IntInt_ReturnValue_4) == 0x000021, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_EqualEqual_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, K2Node_CreateDelegate_OutputDelegate) == 0x000024, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, K2Node_Event_DeltaTimeX) == 0x000034, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::K2Node_Event_DeltaTimeX' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_GetOwningActor_ReturnValue) == 0x000038, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_GetOwningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, K2Node_DynamicCast_AsBP_Turret) == 0x000040, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::K2Node_DynamicCast_AsBP_Turret' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, Temp_bool_IsClosed_Variable) == 0x000049, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_IsValid_ReturnValue) == 0x00004A, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_FClamp_ReturnValue) == 0x000050, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_K2_GetComponentRotation_ReturnValue) == 0x000058, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_K2_GetComponentRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_K2_GetComponentToWorld_ReturnValue) == 0x000070, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_K2_GetComponentToWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_InverseTransformRotation_ReturnValue) == 0x0000D0, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_InverseTransformRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_MakeRotator_ReturnValue) == 0x0000E8, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_BreakRotator_Roll) == 0x000100, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_BreakRotator_Pitch) == 0x000104, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_BreakRotator_Yaw) == 0x000108, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_InverseTransformRotation_ReturnValue_1) == 0x000110, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_InverseTransformRotation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_BreakRotator_Roll_1) == 0x000128, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_BreakRotator_Pitch_1) == 0x00012C, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_BreakRotator_Yaw_1) == 0x000130, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, K2Node_CustomEvent_Projectile) == 0x000138, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::K2Node_CustomEvent_Projectile' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000140, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_FInterpTo_ReturnValue) == 0x000148, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_FInterpTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_FInterpTo_ReturnValue_1) == 0x000150, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_FInterpTo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_Add_IntInt_ReturnValue) == 0x000158, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_EqualEqual_IntInt_ReturnValue_5) == 0x00015C, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_EqualEqual_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_EqualEqual_IntInt_ReturnValue_6) == 0x00015D, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_EqualEqual_IntInt_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_EqualEqual_IntInt_ReturnValue_7) == 0x00015E, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_EqualEqual_IntInt_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_EqualEqual_IntInt_ReturnValue_8) == 0x00015F, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_EqualEqual_IntInt_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000160, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x000168, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, K2Node_VariableSet_InvertedTurretVerticalRotation_ImplicitCast) == 0x000170, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::K2Node_VariableSet_InvertedTurretVerticalRotation_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_FInterpTo_DeltaTime_ImplicitCast) == 0x000178, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_FInterpTo_DeltaTime_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_FInterpTo_DeltaTime_ImplicitCast_1) == 0x000180, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_FInterpTo_DeltaTime_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_FClamp_Value_ImplicitCast) == 0x000188, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_FClamp_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, K2Node_VariableSet_Turret_Vertical_Rotation_ImplicitCast) == 0x000190, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::K2Node_VariableSet_Turret_Vertical_Rotation_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_FInterpTo_Target_ImplicitCast) == 0x000198, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_FInterpTo_Target_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, CallFunc_FInterpTo_Current_ImplicitCast) == 0x0001A0, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::CallFunc_FInterpTo_Current_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret, K2Node_VariableSet_Turret_Horizontal_Rotation_ImplicitCast) == 0x0001A8, "Member 'ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret::K2Node_VariableSet_Turret_Horizontal_Rotation_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_PlayerTurret_C_ExecuteUbergraph_ABP_PlayerTurret;
 
 // Function ABP_PlayerTurret.ABP_PlayerTurret_C.OnProjectileFired_Event_0
 // 0x0008 (0x0008 - 0x0000)
@@ -158,9 +105,7 @@ struct ABP_PlayerTurret_C_OnProjectileFired_Event_0 final
 public:
 	class ARProjectile*                           Projectile;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_PlayerTurret_C_OnProjectileFired_Event_0) == 0x000008, "Wrong alignment on ABP_PlayerTurret_C_OnProjectileFired_Event_0");
-static_assert(sizeof(ABP_PlayerTurret_C_OnProjectileFired_Event_0) == 0x000008, "Wrong size on ABP_PlayerTurret_C_OnProjectileFired_Event_0");
-static_assert(offsetof(ABP_PlayerTurret_C_OnProjectileFired_Event_0, Projectile) == 0x000000, "Member 'ABP_PlayerTurret_C_OnProjectileFired_Event_0::Projectile' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_PlayerTurret_C_OnProjectileFired_Event_0;
 
 }
 

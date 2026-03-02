@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function ControlRig.ControlRigShapeLibraryLink.SetShapeLibrary
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // TSoftObjectPtr<class UControlRigShapeLibrary>InShapeLibrary                                         (Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -68,7 +68,7 @@ TSoftObjectPtr<class UControlRigShapeLibrary> UControlRigShapeLibraryLink::GetSh
 
 
 // Function ControlRig.ControlRig.FindControlRigs
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          Outer_0                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class UControlRig>          OptionalClass                                          (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -97,44 +97,13 @@ TArray<class UControlRig*> UControlRig::FindControlRigs(class UObject* Outer_0, 
 }
 
 
-// Function ControlRig.ControlRig.AddPhysicsSolver
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRigPhysicsSolverID              ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FRigPhysicsSolverID UControlRig::AddPhysicsSolver(class FName InName, bool bSetupUndo, bool bPrintPythonCommand)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "AddPhysicsSolver");
-
-	Params::ControlRig_AddPhysicsSolver Parms{};
-
-	Parms.InName = InName;
-	Parms.bSetupUndo = bSetupUndo;
-	Parms.bPrintPythonCommand = bPrintPythonCommand;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function ControlRig.ControlRig.ClearControlSelection
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UControlRig::ClearControlSelection()
+bool UControlRig::ClearControlSelection(bool bSetupUndo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -142,6 +111,8 @@ bool UControlRig::ClearControlSelection()
 		Func = Class->GetFunction("ControlRig", "ClearControlSelection");
 
 	Params::ControlRig_ClearControlSelection Parms{};
+
+	Parms.bSetupUndo = bSetupUndo;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -180,7 +151,7 @@ class URigHierarchy* UControlRig::GetHierarchy()
 
 
 // Function ControlRig.ControlRig.RequestConstruction
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UControlRig::RequestConstruction()
 {
@@ -199,12 +170,13 @@ void UControlRig::RequestConstruction()
 
 
 // Function ControlRig.ControlRig.SelectControl
-// (Native, Public, HasOutParams, BlueprintCallable)
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class FName&                      InControlName                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSelect                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UControlRig::SelectControl(const class FName& InControlName, bool bSelect)
+void UControlRig::SelectControl(const class FName& InControlName, bool bSelect, bool bSetupUndo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -215,6 +187,7 @@ void UControlRig::SelectControl(const class FName& InControlName, bool bSelect)
 
 	Parms.InControlName = InControlName;
 	Parms.bSelect = bSelect;
+	Parms.bSetupUndo = bSetupUndo;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -276,7 +249,7 @@ void UControlRig::SetInteractionRigClass(TSubclassOf<class UControlRig> InIntera
 
 
 // Function ControlRig.ControlRig.CreateTransformableControlHandle
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FName&                      ControlName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UTransformableControlHandle*      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -304,7 +277,7 @@ class UTransformableControlHandle* UControlRig::CreateTransformableControlHandle
 
 
 // Function ControlRig.ControlRig.CurrentControlSelection
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -329,7 +302,7 @@ TArray<class FName> UControlRig::CurrentControlSelection() const
 
 
 // Function ControlRig.ControlRig.GetHostingActor
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AActor*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -404,7 +377,7 @@ TSubclassOf<class UControlRig> UControlRig::GetInteractionRigClass() const
 
 
 // Function ControlRig.ControlRig.IsControlSelected
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FName&                      InControlName                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -432,7 +405,7 @@ bool UControlRig::IsControlSelected(const class FName& InControlName) const
 
 
 // Function ControlRig.ControlRig.SupportsBackwardsSolve
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -444,6 +417,337 @@ bool UControlRig::SupportsBackwardsSolve() const
 		Func = Class->GetFunction("ControlRig", "SupportsBackwardsSolve");
 
 	Params::ControlRig_SupportsBackwardsSolve Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRig.ExecuteEventOnAllModules
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InEvent                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> UModularRig::ExecuteEventOnAllModules(class FName InEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRig", "ExecuteEventOnAllModules");
+
+	Params::ModularRig_ExecuteEventOnAllModules Parms{};
+
+	Parms.InEvent = InEvent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRig.ExecuteEventOnModuleByNameForBP
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InEvent                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             InModuleName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UModularRig::ExecuteEventOnModuleByNameForBP(class FName InEvent, class FName InModuleName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRig", "ExecuteEventOnModuleByNameForBP");
+
+	Params::ModularRig_ExecuteEventOnModuleByNameForBP Parms{};
+
+	Parms.InEvent = InEvent;
+	Parms.InModuleName = InModuleName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRig.ExecuteEventOnModuleForBP
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InEvent                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InModulePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UModularRig::ExecuteEventOnModuleForBP(class FName InEvent, const class FString& InModulePath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRig", "ExecuteEventOnModuleForBP");
+
+	Params::ModularRig_ExecuteEventOnModuleForBP Parms{};
+
+	Parms.InEvent = InEvent;
+	Parms.InModulePath = std::move(InModulePath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRig.GetModuleRig
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    InModulePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UControlRig*                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UControlRig* UModularRig::GetModuleRig(const class FString& InModulePath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRig", "GetModuleRig");
+
+	Params::ModularRig_GetModuleRig Parms{};
+
+	Parms.InModulePath = std::move(InModulePath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRig.GetModuleRigByName
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InModuleName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UControlRig*                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UControlRig* UModularRig::GetModuleRigByName(class FName InModuleName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRig", "GetModuleRigByName");
+
+	Params::ModularRig_GetModuleRigByName Parms{};
+
+	Parms.InModuleName = InModuleName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRig.GetEventsForAllModules
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> UModularRig::GetEventsForAllModules() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRig", "GetEventsForAllModules");
+
+	Params::ModularRig_GetEventsForAllModules Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRig.GetEventsForModule
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FString&                    InModulePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> UModularRig::GetEventsForModule(const class FString& InModulePath) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRig", "GetEventsForModule");
+
+	Params::ModularRig_GetEventsForModule Parms{};
+
+	Parms.InModulePath = std::move(InModulePath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRig.GetEventsForModuleByName
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             InModuleName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> UModularRig::GetEventsForModuleByName(class FName InModuleName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRig", "GetEventsForModuleByName");
+
+	Params::ModularRig_GetEventsForModuleByName Parms{};
+
+	Parms.InModuleName = InModuleName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRig.GetModuleNames
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> UModularRig::GetModuleNames() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRig", "GetModuleNames");
+
+	Params::ModularRig_GetModuleNames Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRig.GetModulePaths
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class FString>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FString> UModularRig::GetModulePaths() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRig", "GetModulePaths");
+
+	Params::ModularRig_GetModulePaths Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRig.GetParentModuleNameForBP
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             InModuleName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName UModularRig::GetParentModuleNameForBP(class FName InModuleName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRig", "GetParentModuleNameForBP");
+
+	Params::ModularRig_GetParentModuleNameForBP Parms{};
+
+	Parms.InModuleName = InModuleName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRig.GetParentPathForBP
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FString&                    InModulePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UModularRig::GetParentPathForBP(const class FString& InModulePath) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRig", "GetParentPathForBP");
+
+	Params::ModularRig_GetParentPathForBP Parms{};
+
+	Parms.InModulePath = std::move(InModulePath);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -933,7 +1237,7 @@ struct FRigControlValue URigHierarchy::MakeControlValueFromVector2D(const struct
 
 
 // Function ControlRig.RigHierarchy.CopyHierarchy
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class URigHierarchy*                    InHierarchy                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -958,7 +1262,7 @@ void URigHierarchy::CopyHierarchy(class URigHierarchy* InHierarchy)
 
 
 // Function ControlRig.RigHierarchy.CopyPose
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class URigHierarchy*                    InHierarchy                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bCurrent                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -991,7 +1295,7 @@ void URigHierarchy::CopyPose(class URigHierarchy* InHierarchy, bool bCurrent, bo
 
 
 // Function ControlRig.RigHierarchy.GetController
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bCreateIfNeeded                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class URigHierarchyController*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1019,7 +1323,7 @@ class URigHierarchyController* URigHierarchy::GetController(bool bCreateIfNeeded
 
 
 // Function ControlRig.RigHierarchy.GetRuleManager
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bCreateIfNeeded                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UModularRigRuleManager*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1047,7 +1351,7 @@ class UModularRigRuleManager* URigHierarchy::GetRuleManager(bool bCreateIfNeeded
 
 
 // Function ControlRig.RigHierarchy.RemoveAllMetadata
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InItem                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1075,7 +1379,7 @@ bool URigHierarchy::RemoveAllMetadata(const struct FRigElementKey& InItem)
 
 
 // Function ControlRig.RigHierarchy.RemoveMetadata
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InItem                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             InMetadataName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1105,7 +1409,7 @@ bool URigHierarchy::RemoveMetadata(const struct FRigElementKey& InItem, class FN
 
 
 // Function ControlRig.RigHierarchy.Reset
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void URigHierarchy::Reset()
 {
@@ -1124,7 +1428,7 @@ void URigHierarchy::Reset()
 
 
 // Function ControlRig.RigHierarchy.ResetCurveValues
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void URigHierarchy::ResetCurveValues()
 {
@@ -1143,7 +1447,7 @@ void URigHierarchy::ResetCurveValues()
 
 
 // Function ControlRig.RigHierarchy.ResetPoseToInitial
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // ERigElementType                         InTypeFilter                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1168,7 +1472,7 @@ void URigHierarchy::ResetPoseToInitial(ERigElementType InTypeFilter)
 
 
 // Function ControlRig.RigHierarchy.ResetToDefault
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void URigHierarchy::ResetToDefault()
 {
@@ -1187,7 +1491,7 @@ void URigHierarchy::ResetToDefault()
 
 
 // Function ControlRig.RigHierarchy.RestoreConnectorsFromStates
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const TArray<struct FRigConnectorState>&InStates                                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndoRedo                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1217,7 +1521,7 @@ TArray<struct FRigElementKey> URigHierarchy::RestoreConnectorsFromStates(const T
 
 
 // Function ControlRig.RigHierarchy.RestoreSocketsFromStates
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const TArray<struct FRigSocketState>&   InStates                                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndoRedo                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1247,7 +1551,7 @@ TArray<struct FRigElementKey> URigHierarchy::RestoreSocketsFromStates(const TArr
 
 
 // Function ControlRig.RigHierarchy.SendAutoKeyEvent
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InElement                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   InOffsetInSeconds                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2360,7 +2664,7 @@ bool URigHierarchy::SetNameMetadata(const struct FRigElementKey& InItem, class F
 
 
 // Function ControlRig.RigHierarchy.SetParentWeight
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InChild                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigElementKey&            InParent                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2396,7 +2700,7 @@ bool URigHierarchy::SetParentWeight(const struct FRigElementKey& InChild, const 
 
 
 // Function ControlRig.RigHierarchy.SetParentWeightArray
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InChild                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FRigElementWeight>& InWeights                                              (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
@@ -2805,7 +3109,7 @@ bool URigHierarchy::SetVectorMetadata(const struct FRigElementKey& InItem, class
 
 
 // Function ControlRig.RigHierarchy.SwitchToDefaultParent
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InChild                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bInitial                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2871,7 +3175,7 @@ bool URigHierarchy::SwitchToParent(const struct FRigElementKey& InChild, const s
 
 
 // Function ControlRig.RigHierarchy.SwitchToWorldSpace
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InChild                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bInitial                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3068,6 +3372,31 @@ struct FRigNullElement URigHierarchy::FindNull_ForBlueprintOnly(const struct FRi
 }
 
 
+// Function ControlRig.RigHierarchy.GetAllComponentKeys
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FRigComponentKey>         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FRigComponentKey> URigHierarchy::GetAllComponentKeys() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetAllComponentKeys");
+
+	Params::RigHierarchy_GetAllComponentKeys Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ControlRig.RigHierarchy.GetAllKeys_ForBlueprint
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -3187,7 +3516,7 @@ bool URigHierarchy::GetBoolMetadata(const struct FRigElementKey& InItem, class F
 
 
 // Function ControlRig.RigHierarchy.GetChildren
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bRecursive                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3204,6 +3533,154 @@ TArray<struct FRigElementKey> URigHierarchy::GetChildren(const struct FRigElemen
 
 	Parms.InKey = std::move(InKey);
 	Parms.bRecursive = bRecursive;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetComponentContent
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FRigElementKey&            InElement                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InComponentIndex                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString URigHierarchy::GetComponentContent(const struct FRigElementKey& InElement, int32 InComponentIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetComponentContent");
+
+	Params::RigHierarchy_GetComponentContent Parms{};
+
+	Parms.InElement = std::move(InElement);
+	Parms.InComponentIndex = InComponentIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetComponentKey
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FRigElementKey&            InElement                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InComponentIndex                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRigComponentKey                 ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FRigComponentKey URigHierarchy::GetComponentKey(const struct FRigElementKey& InElement, int32 InComponentIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetComponentKey");
+
+	Params::RigHierarchy_GetComponentKey Parms{};
+
+	Parms.InElement = std::move(InElement);
+	Parms.InComponentIndex = InComponentIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetComponentKeys
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FRigElementKey&            InElement                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FRigComponentKey>         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FRigComponentKey> URigHierarchy::GetComponentKeys(const struct FRigElementKey& InElement) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetComponentKeys");
+
+	Params::RigHierarchy_GetComponentKeys Parms{};
+
+	Parms.InElement = std::move(InElement);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetComponentName
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FRigElementKey&            InElement                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InComponentIndex                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName URigHierarchy::GetComponentName(const struct FRigElementKey& InElement, int32 InComponentIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetComponentName");
+
+	Params::RigHierarchy_GetComponentName Parms{};
+
+	Parms.InElement = std::move(InElement);
+	Parms.InComponentIndex = InComponentIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetComponentType
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FRigElementKey&            InElement                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InComponentIndex                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UScriptStruct*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UScriptStruct* URigHierarchy::GetComponentType(const struct FRigElementKey& InElement, int32 InComponentIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetComponentType");
+
+	Params::RigHierarchy_GetComponentType Parms{};
+
+	Parms.InElement = std::move(InElement);
+	Parms.InComponentIndex = InComponentIndex;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3245,7 +3722,7 @@ TArray<struct FRigElementKey> URigHierarchy::GetConnectorKeys(bool bTraverse) co
 
 
 // Function ControlRig.RigHierarchy.GetConnectorStates
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FRigConnectorState>       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -3623,7 +4100,7 @@ float URigHierarchy::GetCurveValueByIndex(int32 InElementIndex) const
 
 
 // Function ControlRig.RigHierarchy.GetDefaultParent
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FRigElementKey                   ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3651,7 +4128,7 @@ struct FRigElementKey URigHierarchy::GetDefaultParent(const struct FRigElementKe
 
 
 // Function ControlRig.RigHierarchy.GetFirstParent
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FRigElementKey                   ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4277,7 +4754,7 @@ struct FTransform URigHierarchy::GetLocalTransformByIndex(int32 InElementIndex, 
 
 
 // Function ControlRig.RigHierarchy.GetMetadataNames
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InItem                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
@@ -4305,7 +4782,7 @@ TArray<class FName> URigHierarchy::GetMetadataNames(const struct FRigElementKey&
 
 
 // Function ControlRig.RigHierarchy.GetMetadataType
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InItem                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             InMetadataName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4334,8 +4811,64 @@ ERigMetadataType URigHierarchy::GetMetadataType(const struct FRigElementKey& InI
 }
 
 
+// Function ControlRig.RigHierarchy.GetModuleFName
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FRigElementKey&            InItem                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName URigHierarchy::GetModuleFName(const struct FRigElementKey& InItem) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetModuleFName");
+
+	Params::RigHierarchy_GetModuleFName Parms{};
+
+	Parms.InItem = std::move(InItem);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetModuleName
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FRigElementKey&            InItem                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString URigHierarchy::GetModuleName(const struct FRigElementKey& InItem) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetModuleName");
+
+	Params::RigHierarchy_GetModuleName Parms{};
+
+	Parms.InItem = std::move(InItem);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ControlRig.RigHierarchy.GetModulePath
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InItem                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4363,7 +4896,7 @@ class FString URigHierarchy::GetModulePath(const struct FRigElementKey& InItem) 
 
 
 // Function ControlRig.RigHierarchy.GetModulePathFName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InItem                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4376,6 +4909,34 @@ class FName URigHierarchy::GetModulePathFName(const struct FRigElementKey& InIte
 		Func = Class->GetFunction("RigHierarchy", "GetModulePathFName");
 
 	Params::RigHierarchy_GetModulePathFName Parms{};
+
+	Parms.InItem = std::move(InItem);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetModulePrefix
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FRigElementKey&            InItem                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString URigHierarchy::GetModulePrefix(const struct FRigElementKey& InItem) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetModulePrefix");
+
+	Params::RigHierarchy_GetModulePrefix Parms{};
 
 	Parms.InItem = std::move(InItem);
 
@@ -4452,20 +5013,20 @@ class FName URigHierarchy::GetNameMetadata(const struct FRigElementKey& InItem, 
 }
 
 
-// Function ControlRig.RigHierarchy.GetNameSpace
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function ControlRig.RigHierarchy.GetNamespace
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InItem                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FString URigHierarchy::GetNameSpace(const struct FRigElementKey& InItem) const
+class FString URigHierarchy::GetNamespace(const struct FRigElementKey& InItem) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("RigHierarchy", "GetNameSpace");
+		Func = Class->GetFunction("RigHierarchy", "GetNamespace");
 
-	Params::RigHierarchy_GetNameSpace Parms{};
+	Params::RigHierarchy_GetNamespace Parms{};
 
 	Parms.InItem = std::move(InItem);
 
@@ -4481,7 +5042,7 @@ class FString URigHierarchy::GetNameSpace(const struct FRigElementKey& InItem) c
 
 
 // Function ControlRig.RigHierarchy.GetNameSpaceFName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InItem                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4537,7 +5098,7 @@ TArray<struct FRigElementKey> URigHierarchy::GetNullKeys(bool bTraverse) const
 
 
 // Function ControlRig.RigHierarchy.GetNumberOfParents
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4565,7 +5126,7 @@ int32 URigHierarchy::GetNumberOfParents(const struct FRigElementKey& InKey) cons
 
 
 // Function ControlRig.RigHierarchy.GetParents
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bRecursive                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4655,7 +5216,7 @@ struct FTransform URigHierarchy::GetParentTransformByIndex(int32 InElementIndex,
 
 
 // Function ControlRig.RigHierarchy.GetParentWeight
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InChild                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigElementKey&            InParent                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4687,7 +5248,7 @@ struct FRigElementWeight URigHierarchy::GetParentWeight(const struct FRigElement
 
 
 // Function ControlRig.RigHierarchy.GetParentWeightArray
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InChild                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bInitial                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4704,34 +5265,6 @@ TArray<struct FRigElementWeight> URigHierarchy::GetParentWeightArray(const struc
 
 	Parms.InChild = std::move(InChild);
 	Parms.bInitial = bInitial;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.RigHierarchy.GetPhysicsKeys
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    bTraverse                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FRigElementKey>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FRigElementKey> URigHierarchy::GetPhysicsKeys(bool bTraverse) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RigHierarchy", "GetPhysicsKeys");
-
-	Params::RigHierarchy_GetPhysicsKeys Parms{};
-
-	Parms.bTraverse = bTraverse;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -4774,8 +5307,64 @@ struct FRigPose URigHierarchy::GetPose(bool bInitial, bool bIncludeTransientCont
 }
 
 
+// Function ControlRig.RigHierarchy.GetPreviousHierarchyName
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FRigHierarchyKey&          InKey                                                  (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName URigHierarchy::GetPreviousHierarchyName(const struct FRigHierarchyKey& InKey) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetPreviousHierarchyName");
+
+	Params::RigHierarchy_GetPreviousHierarchyName Parms{};
+
+	Parms.InKey = std::move(InKey);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetPreviousHierarchyParent
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FRigHierarchyKey&          InKey                                                  (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRigHierarchyKey                 ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FRigHierarchyKey URigHierarchy::GetPreviousHierarchyParent(const struct FRigHierarchyKey& InKey) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetPreviousHierarchyParent");
+
+	Params::RigHierarchy_GetPreviousHierarchyParent Parms{};
+
+	Parms.InKey = std::move(InKey);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ControlRig.RigHierarchy.GetPreviousName
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InKey                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4803,7 +5392,7 @@ class FName URigHierarchy::GetPreviousName(const struct FRigElementKey& InKey) c
 
 
 // Function ControlRig.RigHierarchy.GetPreviousParent
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InKey                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FRigElementKey                   ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5069,8 +5658,33 @@ struct FRotator URigHierarchy::GetRotatorMetadata(const struct FRigElementKey& I
 }
 
 
-// Function ControlRig.RigHierarchy.GetSelectedKeys
+// Function ControlRig.RigHierarchy.GetSelectedHierarchyKeys_ForBlueprint
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FRigHierarchyKey>         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FRigHierarchyKey> URigHierarchy::GetSelectedHierarchyKeys_ForBlueprint() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetSelectedHierarchyKeys_ForBlueprint");
+
+	Params::RigHierarchy_GetSelectedHierarchyKeys_ForBlueprint Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetSelectedKeys
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ERigElementType                         InTypeFilter                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FRigElementKey>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
@@ -5126,7 +5740,7 @@ TArray<struct FRigElementKey> URigHierarchy::GetSocketKeys(bool bTraverse) const
 
 
 // Function ControlRig.RigHierarchy.GetSocketStates
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FRigSocketState>          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -5166,6 +5780,143 @@ TArray<class FName> URigHierarchy::GetTags(const struct FRigElementKey& InItem) 
 	Params::RigHierarchy_GetTags Parms{};
 
 	Parms.InItem = std::move(InItem);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetTopLevelComponentContent
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   InTopLevelComponentIndex                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString URigHierarchy::GetTopLevelComponentContent(int32 InTopLevelComponentIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetTopLevelComponentContent");
+
+	Params::RigHierarchy_GetTopLevelComponentContent Parms{};
+
+	Parms.InTopLevelComponentIndex = InTopLevelComponentIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetTopLevelComponentKey
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   InTopLevelComponentIndex                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRigComponentKey                 ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FRigComponentKey URigHierarchy::GetTopLevelComponentKey(int32 InTopLevelComponentIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetTopLevelComponentKey");
+
+	Params::RigHierarchy_GetTopLevelComponentKey Parms{};
+
+	Parms.InTopLevelComponentIndex = InTopLevelComponentIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetTopLevelComponentKeys
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FRigComponentKey>         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FRigComponentKey> URigHierarchy::GetTopLevelComponentKeys() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetTopLevelComponentKeys");
+
+	Params::RigHierarchy_GetTopLevelComponentKeys Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetTopLevelComponentName
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   InTopLevelComponentIndex                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName URigHierarchy::GetTopLevelComponentName(int32 InTopLevelComponentIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetTopLevelComponentName");
+
+	Params::RigHierarchy_GetTopLevelComponentName Parms{};
+
+	Parms.InTopLevelComponentIndex = InTopLevelComponentIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetTopLevelComponentType
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   InTopLevelComponentIndex                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UScriptStruct*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UScriptStruct* URigHierarchy::GetTopLevelComponentType(int32 InTopLevelComponentIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetTopLevelComponentType");
+
+	Params::RigHierarchy_GetTopLevelComponentType Parms{};
+
+	Parms.InTopLevelComponentIndex = InTopLevelComponentIndex;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5332,8 +6083,36 @@ bool URigHierarchy::HasTag(const struct FRigElementKey& InItem, class FName InTa
 }
 
 
-// Function ControlRig.RigHierarchy.IsControllerAvailable
+// Function ControlRig.RigHierarchy.IsComponentSelected
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FRigComponentKey&          InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigHierarchy::IsComponentSelected(const struct FRigComponentKey& InKey) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "IsComponentSelected");
+
+	Params::RigHierarchy_IsComponentSelected Parms{};
+
+	Parms.InKey = std::move(InKey);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.IsControllerAvailable
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5444,7 +6223,7 @@ bool URigHierarchy::IsParentedTo(const struct FRigElementKey& InChild, const str
 
 
 // Function ControlRig.RigHierarchy.IsProcedural
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InKey                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5568,6 +6347,59 @@ int32 URigHierarchy::Num() const
 		Func = Class->GetFunction("RigHierarchy", "Num");
 
 	Params::RigHierarchy_Num Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.NumComponents
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FRigElementKey&            InElement                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 URigHierarchy::NumComponents(const struct FRigElementKey& InElement) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "NumComponents");
+
+	Params::RigHierarchy_NumComponents Parms{};
+
+	Parms.InElement = std::move(InElement);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.NumTopLevelComponents
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 URigHierarchy::NumTopLevelComponents() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "NumTopLevelComponents");
+
+	Params::RigHierarchy_NumTopLevelComponents Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5704,7 +6536,7 @@ struct FControlRigReference UAnimNodeControlRigLibrary::SetControlRigClass(const
 
 
 // Function ControlRig.ControlRigComponent.AddMappedCompleteSkeletalMesh
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class USkeletalMeshComponent*           SkeletalMeshComponent                                  (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const EControlRigComponentMapDirection  InDirection                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5731,7 +6563,7 @@ void UControlRigComponent::AddMappedCompleteSkeletalMesh(class USkeletalMeshComp
 
 
 // Function ControlRig.ControlRigComponent.AddMappedComponents
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const TArray<struct FControlRigComponentMappedComponent>&Components                                             (Parm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
@@ -5756,7 +6588,7 @@ void UControlRigComponent::AddMappedComponents(const TArray<struct FControlRigCo
 
 
 // Function ControlRig.ControlRigComponent.AddMappedElements
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const TArray<struct FControlRigComponentMappedElement>&NewMappedElements                                      (Parm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
@@ -5781,7 +6613,7 @@ void UControlRigComponent::AddMappedElements(const TArray<struct FControlRigComp
 
 
 // Function ControlRig.ControlRigComponent.AddMappedSkeletalMesh
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class USkeletalMeshComponent*           SkeletalMeshComponent                                  (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FControlRigComponentMappedBone>&Bones                                                  (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
@@ -5812,7 +6644,7 @@ void UControlRigComponent::AddMappedSkeletalMesh(class USkeletalMeshComponent* S
 
 
 // Function ControlRig.ControlRigComponent.CanExecute
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5837,7 +6669,7 @@ bool UControlRigComponent::CanExecute()
 
 
 // Function ControlRig.ControlRigComponent.ClearMappedElements
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UControlRigComponent::ClearMappedElements()
 {
@@ -5856,7 +6688,7 @@ void UControlRigComponent::ClearMappedElements()
 
 
 // Function ControlRig.ControlRigComponent.DoesElementExist
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ERigElementType                         ElementType                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5886,7 +6718,7 @@ bool UControlRigComponent::DoesElementExist(class FName Name_0, ERigElementType 
 
 
 // Function ControlRig.ControlRigComponent.GetBoneTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class FName                             BoneName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5916,7 +6748,7 @@ struct FTransform UControlRigComponent::GetBoneTransform(class FName BoneName, E
 
 
 // Function ControlRig.ControlRigComponent.GetControlBool
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5944,7 +6776,7 @@ bool UControlRigComponent::GetControlBool(class FName ControlName)
 
 
 // Function ControlRig.ControlRigComponent.GetControlFloat
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5972,7 +6804,7 @@ float UControlRigComponent::GetControlFloat(class FName ControlName)
 
 
 // Function ControlRig.ControlRigComponent.GetControlInt
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6000,7 +6832,7 @@ int32 UControlRigComponent::GetControlInt(class FName ControlName)
 
 
 // Function ControlRig.ControlRigComponent.GetControlOffset
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6030,7 +6862,7 @@ struct FTransform UControlRigComponent::GetControlOffset(class FName ControlName
 
 
 // Function ControlRig.ControlRigComponent.GetControlPosition
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6060,7 +6892,7 @@ struct FVector UControlRigComponent::GetControlPosition(class FName ControlName,
 
 
 // Function ControlRig.ControlRigComponent.GetControlRig
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UControlRig*                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6085,7 +6917,7 @@ class UControlRig* UControlRigComponent::GetControlRig()
 
 
 // Function ControlRig.ControlRigComponent.GetControlRotator
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6115,7 +6947,7 @@ struct FRotator UControlRigComponent::GetControlRotator(class FName ControlName,
 
 
 // Function ControlRig.ControlRigComponent.GetControlScale
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6145,7 +6977,7 @@ struct FVector UControlRigComponent::GetControlScale(class FName ControlName, EC
 
 
 // Function ControlRig.ControlRigComponent.GetControlTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6175,7 +7007,7 @@ struct FTransform UControlRigComponent::GetControlTransform(class FName ControlN
 
 
 // Function ControlRig.ControlRigComponent.GetControlVector2D
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6203,7 +7035,7 @@ struct FVector2D UControlRigComponent::GetControlVector2D(class FName ControlNam
 
 
 // Function ControlRig.ControlRigComponent.GetElementNames
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // ERigElementType                         ElementType                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
@@ -6231,7 +7063,7 @@ TArray<class FName> UControlRigComponent::GetElementNames(ERigElementType Elemen
 
 
 // Function ControlRig.ControlRigComponent.GetInitialBoneTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class FName                             BoneName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6261,7 +7093,7 @@ struct FTransform UControlRigComponent::GetInitialBoneTransform(class FName Bone
 
 
 // Function ControlRig.ControlRigComponent.GetInitialSpaceTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class FName                             SpaceName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6291,7 +7123,7 @@ struct FTransform UControlRigComponent::GetInitialSpaceTransform(class FName Spa
 
 
 // Function ControlRig.ControlRigComponent.GetSpaceTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class FName                             SpaceName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6321,7 +7153,7 @@ struct FTransform UControlRigComponent::GetSpaceTransform(class FName SpaceName,
 
 
 // Function ControlRig.ControlRigComponent.Initialize
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UControlRigComponent::Initialize()
 {
@@ -6340,7 +7172,7 @@ void UControlRigComponent::Initialize()
 
 
 // Function ControlRig.ControlRigComponent.OnPostConstruction
-// (Native, Event, Public, BlueprintEvent)
+// (RequiredAPI, Native, Event, Public, BlueprintEvent)
 // Parameters:
 // class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6365,7 +7197,7 @@ void UControlRigComponent::OnPostConstruction(class UControlRigComponent* Compon
 
 
 // Function ControlRig.ControlRigComponent.OnPostForwardsSolve
-// (Native, Event, Public, BlueprintEvent)
+// (RequiredAPI, Native, Event, Public, BlueprintEvent)
 // Parameters:
 // class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6390,7 +7222,7 @@ void UControlRigComponent::OnPostForwardsSolve(class UControlRigComponent* Compo
 
 
 // Function ControlRig.ControlRigComponent.OnPostInitialize
-// (Native, Event, Public, BlueprintEvent)
+// (RequiredAPI, Native, Event, Public, BlueprintEvent)
 // Parameters:
 // class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6415,7 +7247,7 @@ void UControlRigComponent::OnPostInitialize(class UControlRigComponent* Componen
 
 
 // Function ControlRig.ControlRigComponent.OnPreConstruction
-// (Native, Event, Public, BlueprintEvent)
+// (RequiredAPI, Native, Event, Public, BlueprintEvent)
 // Parameters:
 // class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6440,7 +7272,7 @@ void UControlRigComponent::OnPreConstruction(class UControlRigComponent* Compone
 
 
 // Function ControlRig.ControlRigComponent.OnPreForwardsSolve
-// (Native, Event, Public, BlueprintEvent)
+// (RequiredAPI, Native, Event, Public, BlueprintEvent)
 // Parameters:
 // class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6465,7 +7297,7 @@ void UControlRigComponent::OnPreForwardsSolve(class UControlRigComponent* Compon
 
 
 // Function ControlRig.ControlRigComponent.OnPreInitialize
-// (Native, Event, Public, BlueprintEvent)
+// (RequiredAPI, Native, Event, Public, BlueprintEvent)
 // Parameters:
 // class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6490,7 +7322,7 @@ void UControlRigComponent::OnPreInitialize(class UControlRigComponent* Component
 
 
 // Function ControlRig.ControlRigComponent.SetBoneInitialTransformsFromSkeletalMesh
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class USkeletalMesh*                    InSkeletalMesh                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6515,7 +7347,7 @@ void UControlRigComponent::SetBoneInitialTransformsFromSkeletalMesh(class USkele
 
 
 // Function ControlRig.ControlRigComponent.SetBoneTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             BoneName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FTransform&                Transform                                              (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6548,7 +7380,7 @@ void UControlRigComponent::SetBoneTransform(class FName BoneName, const struct F
 
 
 // Function ControlRig.ControlRigComponent.SetControlBool
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6575,7 +7407,7 @@ void UControlRigComponent::SetControlBool(class FName ControlName, bool Value)
 
 
 // Function ControlRig.ControlRigComponent.SetControlFloat
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6602,7 +7434,7 @@ void UControlRigComponent::SetControlFloat(class FName ControlName, float Value)
 
 
 // Function ControlRig.ControlRigComponent.SetControlInt
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6629,7 +7461,7 @@ void UControlRigComponent::SetControlInt(class FName ControlName, int32 Value)
 
 
 // Function ControlRig.ControlRigComponent.SetControlOffset
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FTransform&                OffsetTransform                                        (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6658,7 +7490,7 @@ void UControlRigComponent::SetControlOffset(class FName ControlName, const struc
 
 
 // Function ControlRig.ControlRigComponent.SetControlPosition
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector&                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6687,7 +7519,7 @@ void UControlRigComponent::SetControlPosition(class FName ControlName, const str
 
 
 // Function ControlRig.ControlRigComponent.SetControlRigClass
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // TSubclassOf<class UControlRig>          InControlRigClass                                      (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6712,7 +7544,7 @@ void UControlRigComponent::SetControlRigClass(TSubclassOf<class UControlRig> InC
 
 
 // Function ControlRig.ControlRigComponent.SetControlRotator
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRotator&                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
@@ -6741,7 +7573,7 @@ void UControlRigComponent::SetControlRotator(class FName ControlName, const stru
 
 
 // Function ControlRig.ControlRigComponent.SetControlScale
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector&                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6770,7 +7602,7 @@ void UControlRigComponent::SetControlScale(class FName ControlName, const struct
 
 
 // Function ControlRig.ControlRigComponent.SetControlTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FTransform&                Value                                                  (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6799,7 +7631,7 @@ void UControlRigComponent::SetControlTransform(class FName ControlName, const st
 
 
 // Function ControlRig.ControlRigComponent.SetControlVector2D
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6826,7 +7658,7 @@ void UControlRigComponent::SetControlVector2D(class FName ControlName, const str
 
 
 // Function ControlRig.ControlRigComponent.SetInitialBoneTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             BoneName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FTransform&                InitialTransform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6857,7 +7689,7 @@ void UControlRigComponent::SetInitialBoneTransform(class FName BoneName, const s
 
 
 // Function ControlRig.ControlRigComponent.SetInitialSpaceTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             SpaceName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FTransform&                InitialTransform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6886,7 +7718,7 @@ void UControlRigComponent::SetInitialSpaceTransform(class FName SpaceName, const
 
 
 // Function ControlRig.ControlRigComponent.SetMappedElements
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const TArray<struct FControlRigComponentMappedElement>&NewMappedElements                                      (Parm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
@@ -6911,7 +7743,7 @@ void UControlRigComponent::SetMappedElements(const TArray<struct FControlRigComp
 
 
 // Function ControlRig.ControlRigComponent.SetObjectBinding
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          InObjectToBind                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6936,7 +7768,7 @@ void UControlRigComponent::SetObjectBinding(class UObject* InObjectToBind)
 
 
 // Function ControlRig.ControlRigComponent.Update
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6961,7 +7793,7 @@ void UControlRigComponent::Update(float DeltaTime)
 
 
 // Function ControlRig.ControlRigComponent.GetAbsoluteTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -6986,7 +7818,7 @@ float UControlRigComponent::GetAbsoluteTime() const
 
 
 // Function ControlRig.ControlRigControlActor.Clear
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void AControlRigControlActor::Clear()
 {
@@ -7005,7 +7837,7 @@ void AControlRigControlActor::Clear()
 
 
 // Function ControlRig.ControlRigControlActor.Refresh
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void AControlRigControlActor::Refresh()
 {
@@ -7024,7 +7856,7 @@ void AControlRigControlActor::Refresh()
 
 
 // Function ControlRig.ControlRigControlActor.ResetControlActor
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void AControlRigControlActor::ResetControlActor()
 {
@@ -7043,7 +7875,7 @@ void AControlRigControlActor::ResetControlActor()
 
 
 // Function ControlRig.ControlRigShapeActor.OnEnabledChanged
-// (Event, Public, BlueprintEvent)
+// (RequiredAPI, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                                    bIsEnabled                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -7063,7 +7895,7 @@ void AControlRigShapeActor::OnEnabledChanged(bool bIsEnabled)
 
 
 // Function ControlRig.ControlRigShapeActor.OnHoveredChanged
-// (Event, Public, BlueprintEvent)
+// (RequiredAPI, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                                    bIsSelected                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -7083,7 +7915,7 @@ void AControlRigShapeActor::OnHoveredChanged(bool bIsSelected)
 
 
 // Function ControlRig.ControlRigShapeActor.OnManipulatingChanged
-// (Event, Public, BlueprintEvent)
+// (RequiredAPI, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                                    bIsManipulating                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -7103,7 +7935,7 @@ void AControlRigShapeActor::OnManipulatingChanged(bool bIsManipulating)
 
 
 // Function ControlRig.ControlRigShapeActor.OnSelectionChanged
-// (Event, Public, BlueprintEvent)
+// (RequiredAPI, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                                    bIsSelected                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -7123,7 +7955,7 @@ void AControlRigShapeActor::OnSelectionChanged(bool bIsSelected)
 
 
 // Function ControlRig.ControlRigShapeActor.OnTransformChanged
-// (Event, Public, HasOutParams, HasDefaults, BlueprintEvent)
+// (RequiredAPI, Event, Public, HasOutParams, HasDefaults, BlueprintEvent)
 // Parameters:
 // const struct FTransform&                NewTransform                                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -7168,7 +8000,7 @@ void AControlRigShapeActor::SetEnabled(bool bInEnabled)
 
 
 // Function ControlRig.ControlRigShapeActor.SetGlobalTransform
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -7193,7 +8025,7 @@ void AControlRigShapeActor::SetGlobalTransform(const struct FTransform& InTransf
 
 
 // Function ControlRig.ControlRigShapeActor.SetHovered
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bInHovered                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -7218,7 +8050,7 @@ void AControlRigShapeActor::SetHovered(bool bInHovered)
 
 
 // Function ControlRig.ControlRigShapeActor.SetSelectable
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bInSelectable                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -7243,7 +8075,7 @@ void AControlRigShapeActor::SetSelectable(bool bInSelectable)
 
 
 // Function ControlRig.ControlRigShapeActor.SetSelected
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bInSelected                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -7268,7 +8100,7 @@ void AControlRigShapeActor::SetSelected(bool bInSelected)
 
 
 // Function ControlRig.ControlRigShapeActor.GetGlobalTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -7318,7 +8150,7 @@ bool AControlRigShapeActor::IsEnabled() const
 
 
 // Function ControlRig.ControlRigShapeActor.IsHovered
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -7343,7 +8175,7 @@ bool AControlRigShapeActor::IsHovered() const
 
 
 // Function ControlRig.ControlRigShapeActor.IsSelectedInEditor
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -7367,24 +8199,26 @@ bool AControlRigShapeActor::IsSelectedInEditor() const
 }
 
 
-// Function ControlRig.ControlRigTestData.CreateNewAsset
-// (Final, Native, Static, Public, BlueprintCallable)
+// Function ControlRig.ControlRigReplay.CreateNewAsset
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    InDesiredPackagePath                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    InBlueprintPathName                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UControlRigTestData*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UClass*                           InAssetClass                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UControlRigReplay*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UControlRigTestData* UControlRigTestData::CreateNewAsset(const class FString& InDesiredPackagePath, const class FString& InBlueprintPathName)
+class UControlRigReplay* UControlRigReplay::CreateNewAsset(const class FString& InDesiredPackagePath, const class FString& InBlueprintPathName, class UClass* InAssetClass)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ControlRigTestData", "CreateNewAsset");
+		Func = StaticClass()->GetFunction("ControlRigReplay", "CreateNewAsset");
 
-	Params::ControlRigTestData_CreateNewAsset Parms{};
+	Params::ControlRigReplay_CreateNewAsset Parms{};
 
 	Parms.InDesiredPackagePath = std::move(InDesiredPackagePath);
 	Parms.InBlueprintPathName = std::move(InBlueprintPathName);
+	Parms.InAssetClass = InAssetClass;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -7397,24 +8231,19 @@ class UControlRigTestData* UControlRigTestData::CreateNewAsset(const class FStri
 }
 
 
-// Function ControlRig.ControlRigTestData.Record
-// (Final, Native, Public, BlueprintCallable)
+// Function ControlRig.ControlRigReplay.PauseReplay
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// class UControlRig*                      InControlRig                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  InRecordingDuration                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UControlRigTestData::Record(class UControlRig* InControlRig, double InRecordingDuration)
+bool UControlRigReplay::PauseReplay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigTestData", "Record");
+		Func = Class->GetFunction("ControlRigReplay", "PauseReplay");
 
-	Params::ControlRigTestData_Record Parms{};
-
-	Parms.InControlRig = InControlRig;
-	Parms.InRecordingDuration = InRecordingDuration;
+	Params::ControlRigReplay_PauseReplay Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -7427,43 +8256,252 @@ bool UControlRigTestData::Record(class UControlRig* InControlRig, double InRecor
 }
 
 
-// Function ControlRig.ControlRigTestData.ReleaseReplay
-// (Final, Native, Public, BlueprintCallable)
+// Function ControlRig.ControlRigReplay.SetPlaybackMode
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// EControlRigReplayPlaybackMode           InMode                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UControlRigTestData::ReleaseReplay()
+void UControlRigReplay::SetPlaybackMode(EControlRigReplayPlaybackMode InMode)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigTestData", "ReleaseReplay");
+		Func = Class->GetFunction("ControlRigReplay", "SetPlaybackMode");
+
+	Params::ControlRigReplay_SetPlaybackMode Parms{};
+
+	Parms.InMode = InMode;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
-// Function ControlRig.ControlRigTestData.SetupReplay
-// (Final, Native, Public, BlueprintCallable)
+// Function ControlRig.ControlRigReplay.StartRecording
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UControlRig*                      InControlRig                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bGroundTruth                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UControlRigTestData::SetupReplay(class UControlRig* InControlRig, bool bGroundTruth)
+bool UControlRigReplay::StartRecording(class UControlRig* InControlRig)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigTestData", "SetupReplay");
+		Func = Class->GetFunction("ControlRigReplay", "StartRecording");
 
-	Params::ControlRigTestData_SetupReplay Parms{};
+	Params::ControlRigReplay_StartRecording Parms{};
 
 	Parms.InControlRig = InControlRig;
-	Parms.bGroundTruth = bGroundTruth;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigReplay.StartReplay
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UControlRig*                      InControlRig                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigReplayPlaybackMode           InMode                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UControlRigReplay::StartReplay(class UControlRig* InControlRig, EControlRigReplayPlaybackMode InMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigReplay", "StartReplay");
+
+	Params::ControlRigReplay_StartReplay Parms{};
+
+	Parms.InControlRig = InControlRig;
+	Parms.InMode = InMode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigReplay.StopRecording
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UControlRigReplay::StopRecording()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigReplay", "StopRecording");
+
+	Params::ControlRigReplay_StopRecording Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigReplay.StopReplay
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UControlRigReplay::StopReplay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigReplay", "StopReplay");
+
+	Params::ControlRigReplay_StopReplay Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigReplay.GetPlaybackMode
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EControlRigReplayPlaybackMode           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EControlRigReplayPlaybackMode UControlRigReplay::GetPlaybackMode() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigReplay", "GetPlaybackMode");
+
+	Params::ControlRigReplay_GetPlaybackMode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigReplay.GetTimeRange
+// (RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector2D UControlRigReplay::GetTimeRange() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigReplay", "GetTimeRange");
+
+	Params::ControlRigReplay_GetTimeRange Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigReplay.IsPaused
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UControlRigReplay::IsPaused() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigReplay", "IsPaused");
+
+	Params::ControlRigReplay_IsPaused Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigReplay.IsRecording
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UControlRigReplay::IsRecording() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigReplay", "IsRecording");
+
+	Params::ControlRigReplay_IsRecording Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigReplay.IsReplaying
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UControlRigReplay::IsReplaying() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigReplay", "IsReplaying");
+
+	Params::ControlRigReplay_IsReplaying Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -7477,7 +8515,7 @@ bool UControlRigTestData::SetupReplay(class UControlRig* InControlRig, bool bGro
 
 
 // Function ControlRig.ControlRigTestData.GetFrameIndexForTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // double                                  InSeconds                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bInput                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -7506,119 +8544,16 @@ int32 UControlRigTestData::GetFrameIndexForTime(double InSeconds, bool bInput) c
 }
 
 
-// Function ControlRig.ControlRigTestData.GetPlaybackMode
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EControlRigTestDataPlaybackMode         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EControlRigTestDataPlaybackMode UControlRigTestData::GetPlaybackMode() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigTestData", "GetPlaybackMode");
-
-	Params::ControlRigTestData_GetPlaybackMode Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigTestData.GetTimeRange
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    bInput                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector2D UControlRigTestData::GetTimeRange(bool bInput) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigTestData", "GetTimeRange");
-
-	Params::ControlRigTestData_GetTimeRange Parms{};
-
-	Parms.bInput = bInput;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigTestData.IsRecording
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UControlRigTestData::IsRecording() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigTestData", "IsRecording");
-
-	Params::ControlRigTestData_IsRecording Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigTestData.IsReplaying
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UControlRigTestData::IsReplaying() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigTestData", "IsReplaying");
-
-	Params::ControlRigTestData_IsReplaying Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function ControlRig.ModularRigController.AddModule
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class FName&                      InModuleName                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class UControlRig>          InClass                                                (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    InParentModulePath                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InParentModuleName                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FString UModularRigController::AddModule(const class FName& InModuleName, TSubclassOf<class UControlRig> InClass, const class FString& InParentModulePath, bool bSetupUndo)
+class FName UModularRigController::AddModule(const class FName& InModuleName, TSubclassOf<class UControlRig> InClass, const class FName& InParentModuleName, bool bSetupUndo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -7629,7 +8564,7 @@ class FString UModularRigController::AddModule(const class FName& InModuleName, 
 
 	Parms.InModuleName = InModuleName;
 	Parms.InClass = InClass;
-	Parms.InParentModulePath = std::move(InParentModulePath);
+	Parms.InParentModuleName = InParentModuleName;
 	Parms.bSetupUndo = bSetupUndo;
 
 	auto Flgs = Func->FunctionFlags;
@@ -7643,15 +8578,51 @@ class FString UModularRigController::AddModule(const class FName& InModuleName, 
 }
 
 
-// Function ControlRig.ModularRigController.AutoConnectModules
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Function ControlRig.ModularRigController.AddTargetToArrayConnector
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const TArray<class FString>&            InModulePaths                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FRigElementKey&            InConnectorKey                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRigElementKey&            InTargetKey                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAutoResolveOtherConnectors                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bCheckValidConnection                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UModularRigController::AddTargetToArrayConnector(const struct FRigElementKey& InConnectorKey, const struct FRigElementKey& InTargetKey, bool bSetupUndo, bool bAutoResolveOtherConnectors, bool bCheckValidConnection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRigController", "AddTargetToArrayConnector");
+
+	Params::ModularRigController_AddTargetToArrayConnector Parms{};
+
+	Parms.InConnectorKey = std::move(InConnectorKey);
+	Parms.InTargetKey = std::move(InTargetKey);
+	Parms.bSetupUndo = bSetupUndo;
+	Parms.bAutoResolveOtherConnectors = bAutoResolveOtherConnectors;
+	Parms.bCheckValidConnection = bCheckValidConnection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRigController.AutoConnectModules
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<class FName>&              InModuleNames                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    bReplaceExistingConnections                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UModularRigController::AutoConnectModules(const TArray<class FString>& InModulePaths, bool bReplaceExistingConnections, bool bSetupUndo)
+bool UModularRigController::AutoConnectModules(const TArray<class FName>& InModuleNames, bool bReplaceExistingConnections, bool bSetupUndo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -7660,7 +8631,7 @@ bool UModularRigController::AutoConnectModules(const TArray<class FString>& InMo
 
 	Params::ModularRigController_AutoConnectModules Parms{};
 
-	Parms.InModulePaths = std::move(InModulePaths);
+	Parms.InModuleNames = std::move(InModuleNames);
 	Parms.bReplaceExistingConnections = bReplaceExistingConnections;
 	Parms.bSetupUndo = bSetupUndo;
 
@@ -7676,7 +8647,7 @@ bool UModularRigController::AutoConnectModules(const TArray<class FString>& InMo
 
 
 // Function ControlRig.ModularRigController.AutoConnectSecondaryConnectors
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<struct FRigElementKey>&    InConnectorKeys                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    bReplaceExistingConnections                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -7708,15 +8679,15 @@ bool UModularRigController::AutoConnectSecondaryConnectors(const TArray<struct F
 
 
 // Function ControlRig.ModularRigController.BindModuleVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class FString&                    InModulePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InModuleName                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FName&                      InVariableName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    InSourcePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UModularRigController::BindModuleVariable(const class FString& InModulePath, const class FName& InVariableName, const class FString& InSourcePath, bool bSetupUndo)
+bool UModularRigController::BindModuleVariable(const class FName& InModuleName, const class FName& InVariableName, const class FString& InSourcePath, bool bSetupUndo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -7725,7 +8696,7 @@ bool UModularRigController::BindModuleVariable(const class FString& InModulePath
 
 	Params::ModularRigController_BindModuleVariable Parms{};
 
-	Parms.InModulePath = std::move(InModulePath);
+	Parms.InModuleName = InModuleName;
 	Parms.InVariableName = InVariableName;
 	Parms.InSourcePath = std::move(InSourcePath);
 	Parms.bSetupUndo = bSetupUndo;
@@ -7742,7 +8713,7 @@ bool UModularRigController::BindModuleVariable(const class FString& InModulePath
 
 
 // Function ControlRig.ModularRigController.CanConnectConnectorToElement
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InConnectorKey                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigElementKey&            InTargetKey                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -7775,8 +8746,42 @@ bool UModularRigController::CanConnectConnectorToElement(const struct FRigElemen
 }
 
 
+// Function ControlRig.ModularRigController.CanConnectConnectorToElements
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FRigElementKey&            InConnectorKey                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FRigElementKey>&    InTargetKeys                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class FText*                            OutErrorMessage                                        (Parm, OutParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UModularRigController::CanConnectConnectorToElements(const struct FRigElementKey& InConnectorKey, const TArray<struct FRigElementKey>& InTargetKeys, class FText* OutErrorMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRigController", "CanConnectConnectorToElements");
+
+	Params::ModularRigController_CanConnectConnectorToElements Parms{};
+
+	Parms.InConnectorKey = std::move(InConnectorKey);
+	Parms.InTargetKeys = std::move(InTargetKeys);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutErrorMessage != nullptr)
+		*OutErrorMessage = std::move(Parms.OutErrorMessage);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ControlRig.ModularRigController.ConnectConnectorToElement
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InConnectorKey                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigElementKey&            InTargetKey                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -7811,14 +8816,50 @@ bool UModularRigController::ConnectConnectorToElement(const struct FRigElementKe
 }
 
 
-// Function ControlRig.ModularRigController.DeleteModule
-// (Final, Native, Public, BlueprintCallable)
+// Function ControlRig.ModularRigController.ConnectConnectorToElements
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class FString&                    InModulePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRigElementKey&            InConnectorKey                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FRigElementKey>&    InTargetKeys                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAutoResolveOtherConnectors                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bCheckValidConnection                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UModularRigController::ConnectConnectorToElements(const struct FRigElementKey& InConnectorKey, const TArray<struct FRigElementKey>& InTargetKeys, bool bSetupUndo, bool bAutoResolveOtherConnectors, bool bCheckValidConnection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRigController", "ConnectConnectorToElements");
+
+	Params::ModularRigController_ConnectConnectorToElements Parms{};
+
+	Parms.InConnectorKey = std::move(InConnectorKey);
+	Parms.InTargetKeys = std::move(InTargetKeys);
+	Parms.bSetupUndo = bSetupUndo;
+	Parms.bAutoResolveOtherConnectors = bAutoResolveOtherConnectors;
+	Parms.bCheckValidConnection = bCheckValidConnection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRigController.DeleteModule
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FName&                      InModuleName                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UModularRigController::DeleteModule(const class FString& InModulePath, bool bSetupUndo)
+bool UModularRigController::DeleteModule(const class FName& InModuleName, bool bSetupUndo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -7827,7 +8868,7 @@ bool UModularRigController::DeleteModule(const class FString& InModulePath, bool
 
 	Params::ModularRigController_DeleteModule Parms{};
 
-	Parms.InModulePath = std::move(InModulePath);
+	Parms.InModuleName = InModuleName;
 	Parms.bSetupUndo = bSetupUndo;
 
 	auto Flgs = Func->FunctionFlags;
@@ -7842,12 +8883,12 @@ bool UModularRigController::DeleteModule(const class FString& InModulePath, bool
 
 
 // Function ControlRig.ModularRigController.DeselectModule
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class FString&                    InModulePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InModuleName                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UModularRigController::DeselectModule(const class FString& InModulePath)
+bool UModularRigController::DeselectModule(const class FName& InModuleName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -7856,7 +8897,7 @@ bool UModularRigController::DeselectModule(const class FString& InModulePath)
 
 	Params::ModularRigController_DeselectModule Parms{};
 
-	Parms.InModulePath = std::move(InModulePath);
+	Parms.InModuleName = InModuleName;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -7870,7 +8911,7 @@ bool UModularRigController::DeselectModule(const class FString& InModulePath)
 
 
 // Function ControlRig.ModularRigController.DisconnectConnector
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InConnectorKey                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bDisconnectSubModules                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -7902,7 +8943,7 @@ bool UModularRigController::DisconnectConnector(const struct FRigElementKey& InC
 
 
 // Function ControlRig.ModularRigController.DisconnectCyclicConnectors
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FRigElementKey>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
@@ -7929,15 +8970,47 @@ TArray<struct FRigElementKey> UModularRigController::DisconnectCyclicConnectors(
 }
 
 
-// Function ControlRig.ModularRigController.MirrorModule
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Function ControlRig.ModularRigController.ImportModuleSettingsFromString
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// const class FString&                    InModulePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InContent                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              InOptionalModuleNames                                  (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UModularRigController::ImportModuleSettingsFromString(const class FString& InContent, const TArray<class FName>& InOptionalModuleNames, bool bSetupUndo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRigController", "ImportModuleSettingsFromString");
+
+	Params::ModularRigController_ImportModuleSettingsFromString Parms{};
+
+	Parms.InContent = std::move(InContent);
+	Parms.InOptionalModuleNames = std::move(InOptionalModuleNames);
+	Parms.bSetupUndo = bSetupUndo;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRigController.MirrorModule
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FName&                      InModuleName                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigVMMirrorSettings&      InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FString UModularRigController::MirrorModule(const class FString& InModulePath, const struct FRigVMMirrorSettings& InSettings, bool bSetupUndo)
+class FName UModularRigController::MirrorModule(const class FName& InModuleName, const struct FRigVMMirrorSettings& InSettings, bool bSetupUndo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -7946,7 +9019,7 @@ class FString UModularRigController::MirrorModule(const class FString& InModuleP
 
 	Params::ModularRigController_MirrorModule Parms{};
 
-	Parms.InModulePath = std::move(InModulePath);
+	Parms.InModuleName = InModuleName;
 	Parms.InSettings = std::move(InSettings);
 	Parms.bSetupUndo = bSetupUndo;
 
@@ -7962,14 +9035,14 @@ class FString UModularRigController::MirrorModule(const class FString& InModuleP
 
 
 // Function ControlRig.ModularRigController.RenameModule
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class FString&                    InModulePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InModuleName                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FName&                      InNewName                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FString UModularRigController::RenameModule(const class FString& InModulePath, const class FName& InNewName, bool bSetupUndo)
+class FName UModularRigController::RenameModule(const class FName& InModuleName, const class FName& InNewName, bool bSetupUndo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -7978,7 +9051,7 @@ class FString UModularRigController::RenameModule(const class FString& InModuleP
 
 	Params::ModularRigController_RenameModule Parms{};
 
-	Parms.InModulePath = std::move(InModulePath);
+	Parms.InModuleName = InModuleName;
 	Parms.InNewName = InNewName;
 	Parms.bSetupUndo = bSetupUndo;
 
@@ -7994,14 +9067,14 @@ class FString UModularRigController::RenameModule(const class FString& InModuleP
 
 
 // Function ControlRig.ModularRigController.ReparentModule
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class FString&                    InModulePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    InNewParentModulePath                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InModuleName                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InNewParentModuleName                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FString UModularRigController::ReparentModule(const class FString& InModulePath, const class FString& InNewParentModulePath, bool bSetupUndo)
+bool UModularRigController::ReparentModule(const class FName& InModuleName, const class FName& InNewParentModuleName, bool bSetupUndo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -8010,8 +9083,42 @@ class FString UModularRigController::ReparentModule(const class FString& InModul
 
 	Params::ModularRigController_ReparentModule Parms{};
 
-	Parms.InModulePath = std::move(InModulePath);
-	Parms.InNewParentModulePath = std::move(InNewParentModulePath);
+	Parms.InModuleName = InModuleName;
+	Parms.InNewParentModuleName = InNewParentModuleName;
+	Parms.bSetupUndo = bSetupUndo;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRigController.ResetConfigValueInModule
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FName&                      InModuleName                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InPath                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bClearOverride                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UModularRigController::ResetConfigValueInModule(const class FName& InModuleName, const class FString& InPath, bool bClearOverride, bool bSetupUndo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRigController", "ResetConfigValueInModule");
+
+	Params::ModularRigController_ResetConfigValueInModule Parms{};
+
+	Parms.InModuleName = InModuleName;
+	Parms.InPath = std::move(InPath);
+	Parms.bClearOverride = bClearOverride;
 	Parms.bSetupUndo = bSetupUndo;
 
 	auto Flgs = Func->FunctionFlags;
@@ -8026,13 +9133,13 @@ class FString UModularRigController::ReparentModule(const class FString& InModul
 
 
 // Function ControlRig.ModularRigController.SelectModule
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class FString&                    InModulePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InModuleName                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const bool                              InSelected                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UModularRigController::SelectModule(const class FString& InModulePath, const bool InSelected)
+bool UModularRigController::SelectModule(const class FName& InModuleName, const bool InSelected)
 {
 	static class UFunction* Func = nullptr;
 
@@ -8041,7 +9148,7 @@ bool UModularRigController::SelectModule(const class FString& InModulePath, cons
 
 	Params::ModularRigController_SelectModule Parms{};
 
-	Parms.InModulePath = std::move(InModulePath);
+	Parms.InModuleName = InModuleName;
 	Parms.InSelected = InSelected;
 
 	auto Flgs = Func->FunctionFlags;
@@ -8056,15 +9163,15 @@ bool UModularRigController::SelectModule(const class FString& InModulePath, cons
 
 
 // Function ControlRig.ModularRigController.SetConfigValueInModule
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class FString&                    InModulePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InModuleName                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FName&                      InVariableName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    InValue                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UModularRigController::SetConfigValueInModule(const class FString& InModulePath, const class FName& InVariableName, const class FString& InValue, bool bSetupUndo)
+bool UModularRigController::SetConfigValueInModule(const class FName& InModuleName, const class FName& InVariableName, const class FString& InValue, bool bSetupUndo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -8073,7 +9180,7 @@ bool UModularRigController::SetConfigValueInModule(const class FString& InModule
 
 	Params::ModularRigController_SetConfigValueInModule Parms{};
 
-	Parms.InModulePath = std::move(InModulePath);
+	Parms.InModuleName = InModuleName;
 	Parms.InVariableName = InVariableName;
 	Parms.InValue = std::move(InValue);
 	Parms.bSetupUndo = bSetupUndo;
@@ -8090,12 +9197,12 @@ bool UModularRigController::SetConfigValueInModule(const class FString& InModule
 
 
 // Function ControlRig.ModularRigController.SetModuleSelection
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const TArray<class FString>&            InModulePaths                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              InModuleNames                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UModularRigController::SetModuleSelection(const TArray<class FString>& InModulePaths)
+bool UModularRigController::SetModuleSelection(const TArray<class FName>& InModuleNames)
 {
 	static class UFunction* Func = nullptr;
 
@@ -8104,39 +9211,7 @@ bool UModularRigController::SetModuleSelection(const TArray<class FString>& InMo
 
 	Params::ModularRigController_SetModuleSelection Parms{};
 
-	Parms.InModulePaths = std::move(InModulePaths);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ModularRigController.SetModuleShortName
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    InModulePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    InNewShortName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UModularRigController::SetModuleShortName(const class FString& InModulePath, const class FString& InNewShortName, bool bSetupUndo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ModularRigController", "SetModuleShortName");
-
-	Params::ModularRigController_SetModuleShortName Parms{};
-
-	Parms.InModulePath = std::move(InModulePath);
-	Parms.InNewShortName = std::move(InNewShortName);
-	Parms.bSetupUndo = bSetupUndo;
+	Parms.InModuleNames = std::move(InModuleNames);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -8150,14 +9225,14 @@ bool UModularRigController::SetModuleShortName(const class FString& InModulePath
 
 
 // Function ControlRig.ModularRigController.SwapModuleClass
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class FString&                    InModulePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InModuleName                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class UControlRig>          InNewClass                                             (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UModularRigController::SwapModuleClass(const class FString& InModulePath, TSubclassOf<class UControlRig> InNewClass, bool bSetupUndo)
+bool UModularRigController::SwapModuleClass(const class FName& InModuleName, TSubclassOf<class UControlRig> InNewClass, bool bSetupUndo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -8166,7 +9241,7 @@ bool UModularRigController::SwapModuleClass(const class FString& InModulePath, T
 
 	Params::ModularRigController_SwapModuleClass Parms{};
 
-	Parms.InModulePath = std::move(InModulePath);
+	Parms.InModuleName = InModuleName;
 	Parms.InNewClass = InNewClass;
 	Parms.bSetupUndo = bSetupUndo;
 
@@ -8182,7 +9257,7 @@ bool UModularRigController::SwapModuleClass(const class FString& InModulePath, T
 
 
 // Function ControlRig.ModularRigController.SwapModulesOfClass
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // TSubclassOf<class UControlRig>          InOldClass                                             (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class UControlRig>          InNewClass                                             (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8214,14 +9289,14 @@ bool UModularRigController::SwapModulesOfClass(TSubclassOf<class UControlRig> In
 
 
 // Function ControlRig.ModularRigController.UnBindModuleVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class FString&                    InModulePath                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InModuleName                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FName&                      InVariableName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UModularRigController::UnBindModuleVariable(const class FString& InModulePath, const class FName& InVariableName, bool bSetupUndo)
+bool UModularRigController::UnBindModuleVariable(const class FName& InModuleName, const class FName& InVariableName, bool bSetupUndo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -8230,7 +9305,7 @@ bool UModularRigController::UnBindModuleVariable(const class FString& InModulePa
 
 	Params::ModularRigController_UnBindModuleVariable Parms{};
 
-	Parms.InModulePath = std::move(InModulePath);
+	Parms.InModuleName = InModuleName;
 	Parms.InVariableName = InVariableName;
 	Parms.bSetupUndo = bSetupUndo;
 
@@ -8245,12 +9320,121 @@ bool UModularRigController::UnBindModuleVariable(const class FString& InModulePa
 }
 
 
-// Function ControlRig.ModularRigController.GetSelectedModules
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function ControlRig.ModularRigController.ExportModuleSettingsToString
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<class FString>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              InModuleNames                                          (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-TArray<class FString> UModularRigController::GetSelectedModules() const
+class FString UModularRigController::ExportModuleSettingsToString(const TArray<class FName>& InModuleNames) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRigController", "ExportModuleSettingsToString");
+
+	Params::ModularRigController_ExportModuleSettingsToString Parms{};
+
+	Parms.InModuleNames = std::move(InModuleNames);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRigController.GetAllModules
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> UModularRigController::GetAllModules() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRigController", "GetAllModules");
+
+	Params::ModularRigController_GetAllModules Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRigController.GetConnectorsForModule
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             InModuleName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FRigElementKey>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FRigElementKey> UModularRigController::GetConnectorsForModule(class FName InModuleName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRigController", "GetConnectorsForModule");
+
+	Params::ModularRigController_GetConnectorsForModule Parms{};
+
+	Parms.InModuleName = InModuleName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRigController.GetModuleReference
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             InModuleName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRigModuleReference              ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FRigModuleReference UModularRigController::GetModuleReference(class FName InModuleName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModularRigController", "GetModuleReference");
+
+	Params::ModularRigController_GetModuleReference Parms{};
+
+	Parms.InModuleName = InModuleName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ModularRigController.GetSelectedModules
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> UModularRigController::GetSelectedModules() const
 {
 	static class UFunction* Func = nullptr;
 
@@ -8307,15 +9491,16 @@ struct FRigElementKey URigHierarchyController::AddAnimationChannel_ForBlueprint(
 
 
 // Function ControlRig.RigHierarchyController.AddAvailableSpace
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InControl                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigElementKey&            InSpace                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             InDisplayLabel                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool URigHierarchyController::AddAvailableSpace(const struct FRigElementKey& InControl, const struct FRigElementKey& InSpace, bool bSetupUndo, bool bPrintPythonCommand)
+bool URigHierarchyController::AddAvailableSpace(const struct FRigElementKey& InControl, const struct FRigElementKey& InSpace, class FName InDisplayLabel, bool bSetupUndo, bool bPrintPythonCommand)
 {
 	static class UFunction* Func = nullptr;
 
@@ -8326,6 +9511,7 @@ bool URigHierarchyController::AddAvailableSpace(const struct FRigElementKey& InC
 
 	Parms.InControl = std::move(InControl);
 	Parms.InSpace = std::move(InSpace);
+	Parms.InDisplayLabel = InDisplayLabel;
 	Parms.bSetupUndo = bSetupUndo;
 	Parms.bPrintPythonCommand = bPrintPythonCommand;
 
@@ -8341,7 +9527,7 @@ bool URigHierarchyController::AddAvailableSpace(const struct FRigElementKey& InC
 
 
 // Function ControlRig.RigHierarchyController.AddBone
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigElementKey&            InParent                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8381,7 +9567,7 @@ struct FRigElementKey URigHierarchyController::AddBone(class FName InName, const
 
 
 // Function ControlRig.RigHierarchyController.AddChannelHost
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InChannel                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigElementKey&            InHost                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8414,8 +9600,46 @@ bool URigHierarchyController::AddChannelHost(const struct FRigElementKey& InChan
 }
 
 
+// Function ControlRig.RigHierarchyController.AddComponent
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UScriptStruct*                    InComponentStruct                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRigElementKey&            InElement                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InContent                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRigComponentKey                 ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FRigComponentKey URigHierarchyController::AddComponent(class UScriptStruct* InComponentStruct, class FName InName, const struct FRigElementKey& InElement, const class FString& InContent, bool bSetupUndo, bool bPrintPythonCommand)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "AddComponent");
+
+	Params::RigHierarchyController_AddComponent Parms{};
+
+	Parms.InComponentStruct = InComponentStruct;
+	Parms.InName = InName;
+	Parms.InElement = std::move(InElement);
+	Parms.InContent = std::move(InContent);
+	Parms.bSetupUndo = bSetupUndo;
+	Parms.bPrintPythonCommand = bPrintPythonCommand;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ControlRig.RigHierarchyController.AddConnector
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigConnectorSettings&     InSettings                                             (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8487,7 +9711,7 @@ struct FRigElementKey URigHierarchyController::AddControl_ForBlueprint(class FNa
 
 
 // Function ControlRig.RigHierarchyController.AddCurve
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8521,7 +9745,7 @@ struct FRigElementKey URigHierarchyController::AddCurve(class FName InName, floa
 
 
 // Function ControlRig.RigHierarchyController.AddNull
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigElementKey&            InParent                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8559,16 +9783,17 @@ struct FRigElementKey URigHierarchyController::AddNull(class FName InName, const
 
 
 // Function ControlRig.RigHierarchyController.AddParent
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InChild                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigElementKey&            InParent                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   InWeight                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bMaintainGlobalTransform                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             InDisplayLabel                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool URigHierarchyController::AddParent(const struct FRigElementKey& InChild, const struct FRigElementKey& InParent, float InWeight, bool bMaintainGlobalTransform, bool bSetupUndo)
+bool URigHierarchyController::AddParent(const struct FRigElementKey& InChild, const struct FRigElementKey& InParent, float InWeight, bool bMaintainGlobalTransform, class FName InDisplayLabel, bool bSetupUndo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -8581,47 +9806,8 @@ bool URigHierarchyController::AddParent(const struct FRigElementKey& InChild, co
 	Parms.InParent = std::move(InParent);
 	Parms.InWeight = InWeight;
 	Parms.bMaintainGlobalTransform = bMaintainGlobalTransform;
+	Parms.InDisplayLabel = InDisplayLabel;
 	Parms.bSetupUndo = bSetupUndo;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.RigHierarchyController.AddPhysicsElement
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FRigElementKey&            InParent                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FRigPhysicsSolverID&       InSolver                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FRigPhysicsSettings&       InSettings                                             (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// const struct FTransform&                InLocalTransform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRigElementKey                   ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FRigElementKey URigHierarchyController::AddPhysicsElement(class FName InName, const struct FRigElementKey& InParent, const struct FRigPhysicsSolverID& InSolver, const struct FRigPhysicsSettings& InSettings, const struct FTransform& InLocalTransform, bool bSetupUndo, bool bPrintPythonCommand)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RigHierarchyController", "AddPhysicsElement");
-
-	Params::RigHierarchyController_AddPhysicsElement Parms{};
-
-	Parms.InName = InName;
-	Parms.InParent = std::move(InParent);
-	Parms.InSolver = std::move(InSolver);
-	Parms.InSettings = std::move(InSettings);
-	Parms.InLocalTransform = std::move(InLocalTransform);
-	Parms.bSetupUndo = bSetupUndo;
-	Parms.bPrintPythonCommand = bPrintPythonCommand;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -8635,7 +9821,7 @@ struct FRigElementKey URigHierarchyController::AddPhysicsElement(class FName InN
 
 
 // Function ControlRig.RigHierarchyController.AddSocket
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigElementKey&            InParent                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8676,12 +9862,49 @@ struct FRigElementKey URigHierarchyController::AddSocket(class FName InName, con
 }
 
 
+// Function ControlRig.RigHierarchyController.AddTopLevelComponent
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UScriptStruct*                    InComponentStruct                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InContent                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRigComponentKey                 ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FRigComponentKey URigHierarchyController::AddTopLevelComponent(class UScriptStruct* InComponentStruct, class FName InName, const class FString& InContent, bool bSetupUndo, bool bPrintPythonCommand)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "AddTopLevelComponent");
+
+	Params::RigHierarchyController_AddTopLevelComponent Parms{};
+
+	Parms.InComponentStruct = InComponentStruct;
+	Parms.InName = InName;
+	Parms.InContent = std::move(InContent);
+	Parms.bSetupUndo = bSetupUndo;
+	Parms.bPrintPythonCommand = bPrintPythonCommand;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ControlRig.RigHierarchyController.ClearSelection
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool URigHierarchyController::ClearSelection()
+bool URigHierarchyController::ClearSelection(bool bSetupUndo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -8689,6 +9912,36 @@ bool URigHierarchyController::ClearSelection()
 		Func = Class->GetFunction("RigHierarchyController", "ClearSelection");
 
 	Params::RigHierarchyController_ClearSelection Parms{};
+
+	Parms.bSetupUndo = bSetupUndo;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchyController.DeselectComponent
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FRigComponentKey&          InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigHierarchyController::DeselectComponent(const struct FRigComponentKey& InKey)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "DeselectComponent");
+
+	Params::RigHierarchyController_DeselectComponent Parms{};
+
+	Parms.InKey = std::move(InKey);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -8729,8 +9982,38 @@ bool URigHierarchyController::DeselectElement(const struct FRigElementKey& InKey
 }
 
 
-// Function ControlRig.RigHierarchyController.DuplicateElements
+// Function ControlRig.RigHierarchyController.DeselectHierarchyKey
 // (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FRigHierarchyKey&          InKey                                                  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigHierarchyController::DeselectHierarchyKey(const struct FRigHierarchyKey& InKey, bool bSetupUndo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "DeselectHierarchyKey");
+
+	Params::RigHierarchyController_DeselectHierarchyKey Parms{};
+
+	Parms.InKey = std::move(InKey);
+	Parms.bSetupUndo = bSetupUndo;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchyController.DuplicateElements
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const TArray<struct FRigElementKey>&    InKeys                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // bool                                    bSelectNewElements                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8764,7 +10047,7 @@ TArray<struct FRigElementKey> URigHierarchyController::DuplicateElements(const T
 
 
 // Function ControlRig.RigHierarchyController.ImportBones
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class USkeleton*                        InSkeleton                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             InNameSpace                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8803,8 +10086,48 @@ TArray<struct FRigElementKey> URigHierarchyController::ImportBones(class USkelet
 }
 
 
+// Function ControlRig.RigHierarchyController.ImportBonesFromSkeletalMesh
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class USkeletalMesh*                    InSkeletalMesh                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InNameSpace                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bReplaceExistingBones                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bRemoveObsoleteBones                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSelectBones                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FRigElementKey>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FRigElementKey> URigHierarchyController::ImportBonesFromSkeletalMesh(class USkeletalMesh* InSkeletalMesh, const class FName& InNameSpace, bool bReplaceExistingBones, bool bRemoveObsoleteBones, bool bSelectBones, bool bSetupUndo, bool bPrintPythonCommand)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "ImportBonesFromSkeletalMesh");
+
+	Params::RigHierarchyController_ImportBonesFromSkeletalMesh Parms{};
+
+	Parms.InSkeletalMesh = InSkeletalMesh;
+	Parms.InNameSpace = InNameSpace;
+	Parms.bReplaceExistingBones = bReplaceExistingBones;
+	Parms.bRemoveObsoleteBones = bRemoveObsoleteBones;
+	Parms.bSelectBones = bSelectBones;
+	Parms.bSetupUndo = bSetupUndo;
+	Parms.bPrintPythonCommand = bPrintPythonCommand;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ControlRig.RigHierarchyController.ImportCurves
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class USkeleton*                        InSkeleton                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             InNameSpace                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8840,7 +10163,7 @@ TArray<struct FRigElementKey> URigHierarchyController::ImportCurves(class USkele
 
 
 // Function ControlRig.RigHierarchyController.ImportCurvesFromSkeletalMesh
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class USkeletalMesh*                    InSkeletalMesh                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             InNameSpace                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8876,7 +10199,7 @@ TArray<struct FRigElementKey> URigHierarchyController::ImportCurvesFromSkeletalM
 
 
 // Function ControlRig.RigHierarchyController.ImportFromText
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    InContent                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bReplaceExistingElements                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8911,8 +10234,84 @@ TArray<struct FRigElementKey> URigHierarchyController::ImportFromText(const clas
 }
 
 
+// Function ControlRig.RigHierarchyController.ImportPreviewSkeletalMesh
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class USkeletalMesh*                    InSkeletalMesh                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bReplaceExistingBones                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bRemoveObsoleteBones                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSelectBones                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FRigElementKey>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FRigElementKey> URigHierarchyController::ImportPreviewSkeletalMesh(class USkeletalMesh* InSkeletalMesh, bool bReplaceExistingBones, bool bRemoveObsoleteBones, bool bSelectBones, bool bSetupUndo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "ImportPreviewSkeletalMesh");
+
+	Params::RigHierarchyController_ImportPreviewSkeletalMesh Parms{};
+
+	Parms.InSkeletalMesh = InSkeletalMesh;
+	Parms.bReplaceExistingBones = bReplaceExistingBones;
+	Parms.bRemoveObsoleteBones = bRemoveObsoleteBones;
+	Parms.bSelectBones = bSelectBones;
+	Parms.bSetupUndo = bSetupUndo;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchyController.ImportSocketsFromSkeletalMesh
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class USkeletalMesh*                    InSkeletalMesh                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      InNameSpace                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bReplaceExistingSockets                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bRemoveObsoleteSockets                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSelectSockets                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FRigElementKey>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FRigElementKey> URigHierarchyController::ImportSocketsFromSkeletalMesh(class USkeletalMesh* InSkeletalMesh, const class FName& InNameSpace, bool bReplaceExistingSockets, bool bRemoveObsoleteSockets, bool bSelectSockets, bool bSetupUndo, bool bPrintPythonCommand)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "ImportSocketsFromSkeletalMesh");
+
+	Params::RigHierarchyController_ImportSocketsFromSkeletalMesh Parms{};
+
+	Parms.InSkeletalMesh = InSkeletalMesh;
+	Parms.InNameSpace = InNameSpace;
+	Parms.bReplaceExistingSockets = bReplaceExistingSockets;
+	Parms.bRemoveObsoleteSockets = bRemoveObsoleteSockets;
+	Parms.bSelectSockets = bSelectSockets;
+	Parms.bSetupUndo = bSetupUndo;
+	Parms.bPrintPythonCommand = bPrintPythonCommand;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ControlRig.RigHierarchyController.MirrorElements
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const TArray<struct FRigElementKey>&    InKeys                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // const struct FRigVMMirrorSettings&      InSettings                                             (Parm, NativeAccessSpecifierPublic)
@@ -8948,7 +10347,7 @@ TArray<struct FRigElementKey> URigHierarchyController::MirrorElements(const TArr
 
 
 // Function ControlRig.RigHierarchyController.RemoveAllParents
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InChild                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bMaintainGlobalTransform                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -8982,7 +10381,7 @@ bool URigHierarchyController::RemoveAllParents(const struct FRigElementKey& InCh
 
 
 // Function ControlRig.RigHierarchyController.RemoveAvailableSpace
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InControl                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigElementKey&            InSpace                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9016,7 +10415,7 @@ bool URigHierarchyController::RemoveAvailableSpace(const struct FRigElementKey& 
 
 
 // Function ControlRig.RigHierarchyController.RemoveChannelHost
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InChannel                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigElementKey&            InHost                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9049,8 +10448,40 @@ bool URigHierarchyController::RemoveChannelHost(const struct FRigElementKey& InC
 }
 
 
+// Function ControlRig.RigHierarchyController.RemoveComponent
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FRigComponentKey&          InComponent                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigHierarchyController::RemoveComponent(const struct FRigComponentKey& InComponent, bool bSetupUndo, bool bPrintPythonCommand)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "RemoveComponent");
+
+	Params::RigHierarchyController_RemoveComponent Parms{};
+
+	Parms.InComponent = std::move(InComponent);
+	Parms.bSetupUndo = bSetupUndo;
+	Parms.bPrintPythonCommand = bPrintPythonCommand;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ControlRig.RigHierarchyController.RemoveElement
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InElement                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9082,7 +10513,7 @@ bool URigHierarchyController::RemoveElement(const struct FRigElementKey& InEleme
 
 
 // Function ControlRig.RigHierarchyController.RemoveParent
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InChild                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigElementKey&            InParent                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9117,8 +10548,44 @@ bool URigHierarchyController::RemoveParent(const struct FRigElementKey& InChild,
 }
 
 
+// Function ControlRig.RigHierarchyController.RenameComponent
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FRigComponentKey&          InComponent                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bClearSelection                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRigComponentKey                 ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FRigComponentKey URigHierarchyController::RenameComponent(const struct FRigComponentKey& InComponent, class FName InName, bool bSetupUndo, bool bPrintPythonCommand, bool bClearSelection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "RenameComponent");
+
+	Params::RigHierarchyController_RenameComponent Parms{};
+
+	Parms.InComponent = std::move(InComponent);
+	Parms.InName = InName;
+	Parms.bSetupUndo = bSetupUndo;
+	Parms.bPrintPythonCommand = bPrintPythonCommand;
+	Parms.bClearSelection = bClearSelection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ControlRig.RigHierarchyController.RenameElement
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InElement                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9154,7 +10621,7 @@ struct FRigElementKey URigHierarchyController::RenameElement(const struct FRigEl
 
 
 // Function ControlRig.RigHierarchyController.ReorderElement
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InElement                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   InIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9187,25 +10654,29 @@ bool URigHierarchyController::ReorderElement(const struct FRigElementKey& InElem
 }
 
 
-// Function ControlRig.RigHierarchyController.SelectElement
-// (Final, Native, Public, BlueprintCallable)
+// Function ControlRig.RigHierarchyController.ReparentComponent
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// const struct FRigElementKey&            InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bSelect                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRigComponentKey&          InComponentKey                                         (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRigElementKey&            InParentElementKey                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bClearSelection                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRigComponentKey                 ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool URigHierarchyController::SelectElement(const struct FRigElementKey& InKey, bool bSelect, bool bClearSelection)
+struct FRigComponentKey URigHierarchyController::ReparentComponent(const struct FRigComponentKey& InComponentKey, const struct FRigElementKey& InParentElementKey, bool bSetupUndo, bool bPrintPythonCommand, bool bClearSelection)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("RigHierarchyController", "SelectElement");
+		Func = Class->GetFunction("RigHierarchyController", "ReparentComponent");
 
-	Params::RigHierarchyController_SelectElement Parms{};
+	Params::RigHierarchyController_ReparentComponent Parms{};
 
-	Parms.InKey = std::move(InKey);
-	Parms.bSelect = bSelect;
+	Parms.InComponentKey = std::move(InComponentKey);
+	Parms.InParentElementKey = std::move(InParentElementKey);
+	Parms.bSetupUndo = bSetupUndo;
+	Parms.bPrintPythonCommand = bPrintPythonCommand;
 	Parms.bClearSelection = bClearSelection;
 
 	auto Flgs = Func->FunctionFlags;
@@ -9219,8 +10690,110 @@ bool URigHierarchyController::SelectElement(const struct FRigElementKey& InKey, 
 }
 
 
+// Function ControlRig.RigHierarchyController.SelectComponent
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FRigComponentKey&          InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSelect                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bClearSelection                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigHierarchyController::SelectComponent(const struct FRigComponentKey& InKey, bool bSelect, bool bClearSelection, bool bSetupUndo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "SelectComponent");
+
+	Params::RigHierarchyController_SelectComponent Parms{};
+
+	Parms.InKey = std::move(InKey);
+	Parms.bSelect = bSelect;
+	Parms.bClearSelection = bClearSelection;
+	Parms.bSetupUndo = bSetupUndo;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchyController.SelectElement
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FRigElementKey&            InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSelect                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bClearSelection                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigHierarchyController::SelectElement(const struct FRigElementKey& InKey, bool bSelect, bool bClearSelection, bool bSetupUndo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "SelectElement");
+
+	Params::RigHierarchyController_SelectElement Parms{};
+
+	Parms.InKey = std::move(InKey);
+	Parms.bSelect = bSelect;
+	Parms.bClearSelection = bClearSelection;
+	Parms.bSetupUndo = bSetupUndo;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchyController.SelectHierarchyKey
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FRigHierarchyKey&          InKey                                                  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSelect                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bClearSelection                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigHierarchyController::SelectHierarchyKey(const struct FRigHierarchyKey& InKey, bool bSelect, bool bClearSelection, bool bSetupUndo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "SelectHierarchyKey");
+
+	Params::RigHierarchyController_SelectHierarchyKey Parms{};
+
+	Parms.InKey = std::move(InKey);
+	Parms.bSelect = bSelect;
+	Parms.bClearSelection = bClearSelection;
+	Parms.bSetupUndo = bSetupUndo;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ControlRig.RigHierarchyController.SetAvailableSpaceIndex
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InControl                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigElementKey&            InSpace                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9255,8 +10828,108 @@ bool URigHierarchyController::SetAvailableSpaceIndex(const struct FRigElementKey
 }
 
 
+// Function ControlRig.RigHierarchyController.SetAvailableSpaceLabel
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FRigElementKey&            InControl                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRigElementKey&            InSpace                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             InDisplayLabel                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigHierarchyController::SetAvailableSpaceLabel(const struct FRigElementKey& InControl, const struct FRigElementKey& InSpace, class FName InDisplayLabel, bool bSetupUndo, bool bPrintPythonCommand)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "SetAvailableSpaceLabel");
+
+	Params::RigHierarchyController_SetAvailableSpaceLabel Parms{};
+
+	Parms.InControl = std::move(InControl);
+	Parms.InSpace = std::move(InSpace);
+	Parms.InDisplayLabel = InDisplayLabel;
+	Parms.bSetupUndo = bSetupUndo;
+	Parms.bPrintPythonCommand = bPrintPythonCommand;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchyController.SetComponentContent
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FRigComponentKey&          InComponent                                            (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InContent                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigHierarchyController::SetComponentContent(const struct FRigComponentKey& InComponent, const class FString& InContent, bool bSetupUndo, bool bPrintPythonCommand)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "SetComponentContent");
+
+	Params::RigHierarchyController_SetComponentContent Parms{};
+
+	Parms.InComponent = std::move(InComponent);
+	Parms.InContent = std::move(InContent);
+	Parms.bSetupUndo = bSetupUndo;
+	Parms.bPrintPythonCommand = bPrintPythonCommand;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchyController.SetComponentSelection
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FRigComponentKey>&  InKeys                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigHierarchyController::SetComponentSelection(const TArray<struct FRigComponentKey>& InKeys, bool bPrintPythonCommand)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "SetComponentSelection");
+
+	Params::RigHierarchyController_SetComponentSelection Parms{};
+
+	Parms.InKeys = std::move(InKeys);
+	Parms.bPrintPythonCommand = bPrintPythonCommand;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ControlRig.RigHierarchyController.SetDisplayName
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InControl                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             InDisplayName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9292,7 +10965,7 @@ class FName URigHierarchyController::SetDisplayName(const struct FRigElementKey&
 
 
 // Function ControlRig.RigHierarchyController.SetHierarchy
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class URigHierarchy*                    InHierarchy                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -9316,8 +10989,40 @@ void URigHierarchyController::SetHierarchy(class URigHierarchy* InHierarchy)
 }
 
 
+// Function ControlRig.RigHierarchyController.SetHierarchySelection
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FRigHierarchyKey>&  InKeys                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigHierarchyController::SetHierarchySelection(const TArray<struct FRigHierarchyKey>& InKeys, bool bPrintPythonCommand, bool bSetupUndo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "SetHierarchySelection");
+
+	Params::RigHierarchyController_SetHierarchySelection Parms{};
+
+	Parms.InKeys = std::move(InKeys);
+	Parms.bPrintPythonCommand = bPrintPythonCommand;
+	Parms.bSetupUndo = bSetupUndo;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ControlRig.RigHierarchyController.SetParent
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FRigElementKey&            InChild                                                (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigElementKey&            InParent                                               (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9353,13 +11058,14 @@ bool URigHierarchyController::SetParent(const struct FRigElementKey& InChild, co
 
 
 // Function ControlRig.RigHierarchyController.SetSelection
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<struct FRigElementKey>&    InKeys                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool URigHierarchyController::SetSelection(const TArray<struct FRigElementKey>& InKeys, bool bPrintPythonCommand)
+bool URigHierarchyController::SetSelection(const TArray<struct FRigElementKey>& InKeys, bool bPrintPythonCommand, bool bSetupUndo)
 {
 	static class UFunction* Func = nullptr;
 
@@ -9370,6 +11076,7 @@ bool URigHierarchyController::SetSelection(const TArray<struct FRigElementKey>& 
 
 	Parms.InKeys = std::move(InKeys);
 	Parms.bPrintPythonCommand = bPrintPythonCommand;
+	Parms.bSetupUndo = bSetupUndo;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -9383,7 +11090,7 @@ bool URigHierarchyController::SetSelection(const TArray<struct FRigElementKey>& 
 
 
 // Function ControlRig.RigHierarchyController.ExportSelectionToText
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -9408,7 +11115,7 @@ class FString URigHierarchyController::ExportSelectionToText() const
 
 
 // Function ControlRig.RigHierarchyController.ExportToText
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const TArray<struct FRigElementKey>&    InKeys                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9436,7 +11143,7 @@ class FString URigHierarchyController::ExportToText(const TArray<struct FRigElem
 
 
 // Function ControlRig.RigHierarchyController.GetControlSettings
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FRigControlSettings              ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9464,7 +11171,7 @@ struct FRigControlSettings URigHierarchyController::GetControlSettings(const str
 
 
 // Function ControlRig.RigHierarchyController.GetHierarchy
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class URigHierarchy*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -9489,7 +11196,7 @@ class URigHierarchy* URigHierarchyController::GetHierarchy() const
 
 
 // Function ControlRig.RigHierarchyController.SetControlSettings
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FRigElementKey&            InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRigControlSettings&       InSettings                                             (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9521,7 +11228,7 @@ bool URigHierarchyController::SetControlSettings(const struct FRigElementKey& In
 
 
 // Function ControlRig.ControlRigPoseAsset.GetCurrentPose
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UControlRig*                      InControlRig                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FControlRigControlPose*          OutPose                                                (Parm, OutParm, NativeAccessSpecifierPublic)
@@ -9550,13 +11257,14 @@ void UControlRigPoseAsset::GetCurrentPose(class UControlRig* InControlRig, struc
 
 
 // Function ControlRig.ControlRigPoseAsset.PastePose
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UControlRig*                      InControlRig                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bDoKey                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bDoMirror                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bDoAdditive                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UControlRigPoseAsset::PastePose(class UControlRig* InControlRig, bool bDoKey, bool bDoMirror)
+void UControlRigPoseAsset::PastePose(class UControlRig* InControlRig, bool bDoKey, bool bDoMirror, bool bDoAdditive)
 {
 	static class UFunction* Func = nullptr;
 
@@ -9568,6 +11276,7 @@ void UControlRigPoseAsset::PastePose(class UControlRig* InControlRig, bool bDoKe
 	Parms.InControlRig = InControlRig;
 	Parms.bDoKey = bDoKey;
 	Parms.bDoMirror = bDoMirror;
+	Parms.bDoAdditive = bDoAdditive;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -9579,7 +11288,7 @@ void UControlRigPoseAsset::PastePose(class UControlRig* InControlRig, bool bDoKe
 
 
 // Function ControlRig.ControlRigPoseAsset.ReplaceControlName
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class FName&                      CurrentName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FName&                      NewName                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9606,7 +11315,7 @@ void UControlRigPoseAsset::ReplaceControlName(const class FName& CurrentName, co
 
 
 // Function ControlRig.ControlRigPoseAsset.SavePose
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UControlRig*                      InControlRig                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bUseAll                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9633,12 +11342,13 @@ void UControlRigPoseAsset::SavePose(class UControlRig* InControlRig, bool bUseAl
 
 
 // Function ControlRig.ControlRigPoseAsset.SelectControls
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UControlRig*                      InControlRig                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bDoMirror                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bClearSelection                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UControlRigPoseAsset::SelectControls(class UControlRig* InControlRig, bool bDoMirror)
+void UControlRigPoseAsset::SelectControls(class UControlRig* InControlRig, bool bDoMirror, bool bClearSelection)
 {
 	static class UFunction* Func = nullptr;
 
@@ -9649,6 +11359,7 @@ void UControlRigPoseAsset::SelectControls(class UControlRig* InControlRig, bool 
 
 	Parms.InControlRig = InControlRig;
 	Parms.bDoMirror = bDoMirror;
+	Parms.bClearSelection = bClearSelection;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -9660,7 +11371,7 @@ void UControlRigPoseAsset::SelectControls(class UControlRig* InControlRig, bool 
 
 
 // Function ControlRig.ControlRigPoseAsset.DoesMirrorMatch
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UControlRig*                      ControlRig                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FName&                      ControlName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -9690,7 +11401,7 @@ bool UControlRigPoseAsset::DoesMirrorMatch(class UControlRig* ControlRig, const 
 
 
 // Function ControlRig.ControlRigPoseAsset.GetControlNames
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -9715,7 +11426,7 @@ TArray<class FName> UControlRigPoseAsset::GetControlNames() const
 
 
 // Function ControlRig.ControlRigWorkflowOptions.EnsureAtLeastOneRigElementSelected
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -9740,7 +11451,7 @@ bool UControlRigWorkflowOptions::EnsureAtLeastOneRigElementSelected() const
 
 
 // Function ControlRig.ControlRigTransformWorkflowOptions.ProvideWorkflows
-// (Final, Native, Public)
+// (Final, RequiredAPI, Native, Public)
 // Parameters:
 // const class UObject*                    InSubject                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FRigVMUserWorkflow>       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)

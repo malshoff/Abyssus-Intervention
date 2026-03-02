@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_EngineRev_StatusEffect.BP_EngineRev_StatusEffect_C
-// 0x0010 (0x0500 - 0x04F0)
+// 0x0010 (0x0508 - 0x04F8)
 class UBP_EngineRev_StatusEffect_C final : public UBP_EngineRev_Base_StatusEffect_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_EngineRev_StatusEffect_C;        // 0x04F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	double                                        FireRateMultiplier;                                // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_EngineRev_StatusEffect_C;        // 0x04F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	double                                        FireRateMultiplier;                                // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_EngineRev_StatusEffect(int32 EntryPoint);
@@ -33,17 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_EngineRev_StatusEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_EngineRev_StatusEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_EngineRev_StatusEffect_C")
 	}
 	static class UBP_EngineRev_StatusEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_EngineRev_StatusEffect_C>();
 	}
 };
-static_assert(alignof(UBP_EngineRev_StatusEffect_C) == 0x000008, "Wrong alignment on UBP_EngineRev_StatusEffect_C");
-static_assert(sizeof(UBP_EngineRev_StatusEffect_C) == 0x000500, "Wrong size on UBP_EngineRev_StatusEffect_C");
-static_assert(offsetof(UBP_EngineRev_StatusEffect_C, UberGraphFrame_BP_EngineRev_StatusEffect_C) == 0x0004F0, "Member 'UBP_EngineRev_StatusEffect_C::UberGraphFrame_BP_EngineRev_StatusEffect_C' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRev_StatusEffect_C, FireRateMultiplier) == 0x0004F8, "Member 'UBP_EngineRev_StatusEffect_C::FireRateMultiplier' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_EngineRev_StatusEffect_C;
 
 }
 

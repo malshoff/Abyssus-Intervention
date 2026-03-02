@@ -17,17 +17,137 @@
 namespace SDK
 {
 
-// Function Widget_EmoteWheel.Widget_EmoteWheel_C.SetupExplicitNav
-// (Private, BlueprintCallable, BlueprintEvent)
+// Function Widget_EmoteWheel.Widget_EmoteWheel_C.BndEvt__Widget_EmoteWheel_W_Button_SimpleText_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_EmoteWheel_C::SetupExplicitNav()
+void UWidget_EmoteWheel_C::BndEvt__Widget_EmoteWheel_W_Button_SimpleText_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheel_C", "SetupExplicitNav");
+		Func = Class->GetFunction("Widget_EmoteWheel_C", "BndEvt__Widget_EmoteWheel_W_Button_SimpleText_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_EmoteWheel_C_BndEvt__Widget_EmoteWheel_W_Button_SimpleText_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_EmoteWheel.Widget_EmoteWheel_C.BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN1_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URCosmeticPrimaryAsset*           RCosmeticPA                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_EmoteWheel_C::BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN1_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature(class URCosmeticPrimaryAsset* RCosmeticPA)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_EmoteWheel_C", "BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN1_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature");
+
+	Params::Widget_EmoteWheel_C_BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN1_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature Parms{};
+
+	Parms.RCosmeticPA = RCosmeticPA;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_EmoteWheel.Widget_EmoteWheel_C.BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN2_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URCosmeticPrimaryAsset*           RCosmeticPA                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_EmoteWheel_C::BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN2_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature(class URCosmeticPrimaryAsset* RCosmeticPA)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_EmoteWheel_C", "BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN2_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature");
+
+	Params::Widget_EmoteWheel_C_BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN2_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature Parms{};
+
+	Parms.RCosmeticPA = RCosmeticPA;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_EmoteWheel.Widget_EmoteWheel_C.BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN3_K2Node_ComponentBoundEvent_2_OnPressed__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URCosmeticPrimaryAsset*           RCosmeticPA                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_EmoteWheel_C::BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN3_K2Node_ComponentBoundEvent_2_OnPressed__DelegateSignature(class URCosmeticPrimaryAsset* RCosmeticPA)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_EmoteWheel_C", "BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN3_K2Node_ComponentBoundEvent_2_OnPressed__DelegateSignature");
+
+	Params::Widget_EmoteWheel_C_BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN3_K2Node_ComponentBoundEvent_2_OnPressed__DelegateSignature Parms{};
+
+	Parms.RCosmeticPA = RCosmeticPA;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_EmoteWheel.Widget_EmoteWheel_C.BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN4_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class URCosmeticPrimaryAsset*           RCosmeticPA                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_EmoteWheel_C::BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN4_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature(class URCosmeticPrimaryAsset* RCosmeticPA)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_EmoteWheel_C", "BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN4_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature");
+
+	Params::Widget_EmoteWheel_C_BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN4_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature Parms{};
+
+	Parms.RCosmeticPA = RCosmeticPA;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_EmoteWheel.Widget_EmoteWheel_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_EmoteWheel_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_EmoteWheel_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_EmoteWheel.Widget_EmoteWheel_C.ExecuteUbergraph_Widget_EmoteWheel
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_EmoteWheel_C::ExecuteUbergraph_Widget_EmoteWheel(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_EmoteWheel_C", "ExecuteUbergraph_Widget_EmoteWheel");
+
+	Params::Widget_EmoteWheel_C_ExecuteUbergraph_Widget_EmoteWheel Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -56,185 +176,17 @@ struct FEventReply UWidget_EmoteWheel_C::OnPreviewKeyDown(const struct FGeometry
 }
 
 
-// Function Widget_EmoteWheel.Widget_EmoteWheel_C.ExecuteUbergraph_Widget_EmoteWheel
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_EmoteWheel_C::ExecuteUbergraph_Widget_EmoteWheel(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheel_C", "ExecuteUbergraph_Widget_EmoteWheel");
-
-	Params::Widget_EmoteWheel_C_ExecuteUbergraph_Widget_EmoteWheel Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_EmoteWheel.Widget_EmoteWheel_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_EmoteWheel_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheel_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_EmoteWheel.Widget_EmoteWheel_C.BPUpdateHighlight
+// Function Widget_EmoteWheel.Widget_EmoteWheel_C.SetupExplicitNav
 // (Private, BlueprintCallable, BlueprintEvent)
 
-void UWidget_EmoteWheel_C::BPUpdateHighlight()
+void UWidget_EmoteWheel_C::SetupExplicitNav()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheel_C", "BPUpdateHighlight");
+		Func = Class->GetFunction("Widget_EmoteWheel_C", "SetupExplicitNav");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_EmoteWheel.Widget_EmoteWheel_C.BPRemoveHighlight
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UWidget_EmoteWheel_C::BPRemoveHighlight()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheel_C", "BPRemoveHighlight");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_EmoteWheel.Widget_EmoteWheel_C.BPProcessEmoteTag
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_EmoteWheel_C::BPProcessEmoteTag(const struct FGameplayTag& Tag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheel_C", "BPProcessEmoteTag");
-
-	Params::Widget_EmoteWheel_C_BPProcessEmoteTag Parms{};
-
-	Parms.Tag = std::move(Tag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_EmoteWheel.Widget_EmoteWheel_C.BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN4_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              EmoteTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_EmoteWheel_C::BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN4_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature(const struct FGameplayTag& EmoteTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheel_C", "BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN4_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature");
-
-	Params::Widget_EmoteWheel_C_BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN4_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature Parms{};
-
-	Parms.EmoteTag = std::move(EmoteTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_EmoteWheel.Widget_EmoteWheel_C.BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN3_K2Node_ComponentBoundEvent_2_OnPressed__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              EmoteTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_EmoteWheel_C::BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN3_K2Node_ComponentBoundEvent_2_OnPressed__DelegateSignature(const struct FGameplayTag& EmoteTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheel_C", "BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN3_K2Node_ComponentBoundEvent_2_OnPressed__DelegateSignature");
-
-	Params::Widget_EmoteWheel_C_BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN3_K2Node_ComponentBoundEvent_2_OnPressed__DelegateSignature Parms{};
-
-	Parms.EmoteTag = std::move(EmoteTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_EmoteWheel.Widget_EmoteWheel_C.BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN2_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              EmoteTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_EmoteWheel_C::BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN2_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature(const struct FGameplayTag& EmoteTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheel_C", "BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN2_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature");
-
-	Params::Widget_EmoteWheel_C_BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN2_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature Parms{};
-
-	Parms.EmoteTag = std::move(EmoteTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_EmoteWheel.Widget_EmoteWheel_C.BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN1_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              EmoteTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_EmoteWheel_C::BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN1_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature(const struct FGameplayTag& EmoteTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheel_C", "BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN1_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature");
-
-	Params::Widget_EmoteWheel_C_BndEvt__Widget_EmoteWheel_Widget_EmoteWheelBTN1_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature Parms{};
-
-	Parms.EmoteTag = std::move(EmoteTag);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_EmoteWheel.Widget_EmoteWheel_C.BndEvt__Widget_EmoteWheel_W_Button_SimpleText_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_EmoteWheel_C::BndEvt__Widget_EmoteWheel_W_Button_SimpleText_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_EmoteWheel_C", "BndEvt__Widget_EmoteWheel_W_Button_SimpleText_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_EmoteWheel_C_BndEvt__Widget_EmoteWheel_W_Button_SimpleText_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

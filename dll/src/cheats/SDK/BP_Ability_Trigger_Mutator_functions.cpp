@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function BP_Ability_Trigger_Mutator.BP_Ability_Trigger_Mutator_C.ExecuteUbergraph_BP_Ability_Trigger_Mutator
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_Ability_Trigger_Mutator_C::ExecuteUbergraph_BP_Ability_Trigger_Mutator(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Ability_Trigger_Mutator_C", "ExecuteUbergraph_BP_Ability_Trigger_Mutator");
+
+	Params::BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_Ability_Trigger_Mutator.BP_Ability_Trigger_Mutator_C.HandleDealtDamageEvent
 // (Event, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -34,26 +54,6 @@ void UBP_Ability_Trigger_Mutator_C::HandleDealtDamageEvent(class ARPawnBase* RPa
 
 	Parms.RPawnBase = RPawnBase;
 	Parms.DamageEventData = std::move(DamageEventData);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Ability_Trigger_Mutator.BP_Ability_Trigger_Mutator_C.ExecuteUbergraph_BP_Ability_Trigger_Mutator
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_Ability_Trigger_Mutator_C::ExecuteUbergraph_BP_Ability_Trigger_Mutator(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Ability_Trigger_Mutator_C", "ExecuteUbergraph_BP_Ability_Trigger_Mutator");
-
-	Params::BP_Ability_Trigger_Mutator_C_ExecuteUbergraph_BP_Ability_Trigger_Mutator Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -23,8 +23,7 @@ struct FEngineServicePing final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FEngineServicePing) == 0x000001, "Wrong alignment on FEngineServicePing");
-static_assert(sizeof(FEngineServicePing) == 0x000001, "Wrong size on FEngineServicePing");
+DUMPER7_ASSERTS_FEngineServicePing;
 
 // ScriptStruct EngineMessages.EngineServicePong
 // 0x0050 (0x0050 - 0x0000)
@@ -41,15 +40,7 @@ public:
 	float                                         WorldTimeSeconds;                                  // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FEngineServicePong) == 0x000008, "Wrong alignment on FEngineServicePong");
-static_assert(sizeof(FEngineServicePong) == 0x000050, "Wrong size on FEngineServicePong");
-static_assert(offsetof(FEngineServicePong, CurrentLevel) == 0x000000, "Member 'FEngineServicePong::CurrentLevel' has a wrong offset!");
-static_assert(offsetof(FEngineServicePong, EngineVersion) == 0x000010, "Member 'FEngineServicePong::EngineVersion' has a wrong offset!");
-static_assert(offsetof(FEngineServicePong, HasBegunPlay) == 0x000014, "Member 'FEngineServicePong::HasBegunPlay' has a wrong offset!");
-static_assert(offsetof(FEngineServicePong, InstanceId) == 0x000018, "Member 'FEngineServicePong::InstanceId' has a wrong offset!");
-static_assert(offsetof(FEngineServicePong, InstanceType) == 0x000028, "Member 'FEngineServicePong::InstanceType' has a wrong offset!");
-static_assert(offsetof(FEngineServicePong, SessionId) == 0x000038, "Member 'FEngineServicePong::SessionId' has a wrong offset!");
-static_assert(offsetof(FEngineServicePong, WorldTimeSeconds) == 0x000048, "Member 'FEngineServicePong::WorldTimeSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_FEngineServicePong;
 
 // ScriptStruct EngineMessages.EngineServiceAuthDeny
 // 0x0020 (0x0020 - 0x0000)
@@ -59,10 +50,7 @@ public:
 	class FString                                 Username;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 UserToDeny;                                        // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FEngineServiceAuthDeny) == 0x000008, "Wrong alignment on FEngineServiceAuthDeny");
-static_assert(sizeof(FEngineServiceAuthDeny) == 0x000020, "Wrong size on FEngineServiceAuthDeny");
-static_assert(offsetof(FEngineServiceAuthDeny, Username) == 0x000000, "Member 'FEngineServiceAuthDeny::Username' has a wrong offset!");
-static_assert(offsetof(FEngineServiceAuthDeny, UserToDeny) == 0x000010, "Member 'FEngineServiceAuthDeny::UserToDeny' has a wrong offset!");
+DUMPER7_ASSERTS_FEngineServiceAuthDeny;
 
 // ScriptStruct EngineMessages.EngineServiceAuthGrant
 // 0x0020 (0x0020 - 0x0000)
@@ -72,10 +60,7 @@ public:
 	class FString                                 Username;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 UserToGrant;                                       // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FEngineServiceAuthGrant) == 0x000008, "Wrong alignment on FEngineServiceAuthGrant");
-static_assert(sizeof(FEngineServiceAuthGrant) == 0x000020, "Wrong size on FEngineServiceAuthGrant");
-static_assert(offsetof(FEngineServiceAuthGrant, Username) == 0x000000, "Member 'FEngineServiceAuthGrant::Username' has a wrong offset!");
-static_assert(offsetof(FEngineServiceAuthGrant, UserToGrant) == 0x000010, "Member 'FEngineServiceAuthGrant::UserToGrant' has a wrong offset!");
+DUMPER7_ASSERTS_FEngineServiceAuthGrant;
 
 // ScriptStruct EngineMessages.EngineServiceExecuteCommand
 // 0x0020 (0x0020 - 0x0000)
@@ -85,10 +70,7 @@ public:
 	class FString                                 Command;                                           // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Username;                                          // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FEngineServiceExecuteCommand) == 0x000008, "Wrong alignment on FEngineServiceExecuteCommand");
-static_assert(sizeof(FEngineServiceExecuteCommand) == 0x000020, "Wrong size on FEngineServiceExecuteCommand");
-static_assert(offsetof(FEngineServiceExecuteCommand, Command) == 0x000000, "Member 'FEngineServiceExecuteCommand::Command' has a wrong offset!");
-static_assert(offsetof(FEngineServiceExecuteCommand, Username) == 0x000010, "Member 'FEngineServiceExecuteCommand::Username' has a wrong offset!");
+DUMPER7_ASSERTS_FEngineServiceExecuteCommand;
 
 // ScriptStruct EngineMessages.EngineServiceTerminate
 // 0x0010 (0x0010 - 0x0000)
@@ -97,9 +79,7 @@ struct FEngineServiceTerminate final
 public:
 	class FString                                 Username;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FEngineServiceTerminate) == 0x000008, "Wrong alignment on FEngineServiceTerminate");
-static_assert(sizeof(FEngineServiceTerminate) == 0x000010, "Wrong size on FEngineServiceTerminate");
-static_assert(offsetof(FEngineServiceTerminate, Username) == 0x000000, "Member 'FEngineServiceTerminate::Username' has a wrong offset!");
+DUMPER7_ASSERTS_FEngineServiceTerminate;
 
 // ScriptStruct EngineMessages.EngineServiceNotification
 // 0x0018 (0x0018 - 0x0000)
@@ -109,10 +89,7 @@ public:
 	class FString                                 Text;                                              // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        TimeSeconds;                                       // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FEngineServiceNotification) == 0x000008, "Wrong alignment on FEngineServiceNotification");
-static_assert(sizeof(FEngineServiceNotification) == 0x000018, "Wrong size on FEngineServiceNotification");
-static_assert(offsetof(FEngineServiceNotification, Text) == 0x000000, "Member 'FEngineServiceNotification::Text' has a wrong offset!");
-static_assert(offsetof(FEngineServiceNotification, TimeSeconds) == 0x000010, "Member 'FEngineServiceNotification::TimeSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_FEngineServiceNotification;
 
 // ScriptStruct EngineMessages.TraceControlStatusPing
 // 0x0001 (0x0001 - 0x0000)
@@ -121,8 +98,7 @@ struct FTraceControlStatusPing final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTraceControlStatusPing) == 0x000001, "Wrong alignment on FTraceControlStatusPing");
-static_assert(sizeof(FTraceControlStatusPing) == 0x000001, "Wrong size on FTraceControlStatusPing");
+DUMPER7_ASSERTS_FTraceControlStatusPing;
 
 // ScriptStruct EngineMessages.TraceControlStatus
 // 0x0068 (0x0068 - 0x0000)
@@ -146,22 +122,7 @@ public:
 	uint8                                         TraceSystemStatus;                                 // 0x0060(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTraceControlStatus) == 0x000008, "Wrong alignment on FTraceControlStatus");
-static_assert(sizeof(FTraceControlStatus) == 0x000068, "Wrong size on FTraceControlStatus");
-static_assert(offsetof(FTraceControlStatus, Endpoint) == 0x000000, "Member 'FTraceControlStatus::Endpoint' has a wrong offset!");
-static_assert(offsetof(FTraceControlStatus, SessionGuid) == 0x000010, "Member 'FTraceControlStatus::SessionGuid' has a wrong offset!");
-static_assert(offsetof(FTraceControlStatus, TraceGuid) == 0x000020, "Member 'FTraceControlStatus::TraceGuid' has a wrong offset!");
-static_assert(offsetof(FTraceControlStatus, BytesSent) == 0x000030, "Member 'FTraceControlStatus::BytesSent' has a wrong offset!");
-static_assert(offsetof(FTraceControlStatus, BytesTraced) == 0x000038, "Member 'FTraceControlStatus::BytesTraced' has a wrong offset!");
-static_assert(offsetof(FTraceControlStatus, MemoryUsed) == 0x000040, "Member 'FTraceControlStatus::MemoryUsed' has a wrong offset!");
-static_assert(offsetof(FTraceControlStatus, CacheAllocated) == 0x000048, "Member 'FTraceControlStatus::CacheAllocated' has a wrong offset!");
-static_assert(offsetof(FTraceControlStatus, CacheUsed) == 0x00004C, "Member 'FTraceControlStatus::CacheUsed' has a wrong offset!");
-static_assert(offsetof(FTraceControlStatus, CacheWaste) == 0x000050, "Member 'FTraceControlStatus::CacheWaste' has a wrong offset!");
-static_assert(offsetof(FTraceControlStatus, bAreStatNamedEventsEnabled) == 0x000054, "Member 'FTraceControlStatus::bAreStatNamedEventsEnabled' has a wrong offset!");
-static_assert(offsetof(FTraceControlStatus, bIsPaused) == 0x000055, "Member 'FTraceControlStatus::bIsPaused' has a wrong offset!");
-static_assert(offsetof(FTraceControlStatus, bIsTracing) == 0x000056, "Member 'FTraceControlStatus::bIsTracing' has a wrong offset!");
-static_assert(offsetof(FTraceControlStatus, StatusTimestamp) == 0x000058, "Member 'FTraceControlStatus::StatusTimestamp' has a wrong offset!");
-static_assert(offsetof(FTraceControlStatus, TraceSystemStatus) == 0x000060, "Member 'FTraceControlStatus::TraceSystemStatus' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlStatus;
 
 // ScriptStruct EngineMessages.TraceControlSettingsPing
 // 0x0001 (0x0001 - 0x0000)
@@ -170,8 +131,7 @@ struct FTraceControlSettingsPing final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTraceControlSettingsPing) == 0x000001, "Wrong alignment on FTraceControlSettingsPing");
-static_assert(sizeof(FTraceControlSettingsPing) == 0x000001, "Wrong size on FTraceControlSettingsPing");
+DUMPER7_ASSERTS_FTraceControlSettingsPing;
 
 // ScriptStruct EngineMessages.TraceChannelPreset
 // 0x0028 (0x0028 - 0x0000)
@@ -183,11 +143,7 @@ public:
 	bool                                          bIsReadOnly;                                       // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTraceChannelPreset) == 0x000008, "Wrong alignment on FTraceChannelPreset");
-static_assert(sizeof(FTraceChannelPreset) == 0x000028, "Wrong size on FTraceChannelPreset");
-static_assert(offsetof(FTraceChannelPreset, Name) == 0x000000, "Member 'FTraceChannelPreset::Name' has a wrong offset!");
-static_assert(offsetof(FTraceChannelPreset, ChannelList) == 0x000010, "Member 'FTraceChannelPreset::ChannelList' has a wrong offset!");
-static_assert(offsetof(FTraceChannelPreset, bIsReadOnly) == 0x000020, "Member 'FTraceChannelPreset::bIsReadOnly' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceChannelPreset;
 
 // ScriptStruct EngineMessages.TraceControlSettings
 // 0x0018 (0x0018 - 0x0000)
@@ -200,12 +156,7 @@ public:
 	uint32                                        TailSizeBytes;                                     // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FTraceChannelPreset>            ChannelPresets;                                    // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTraceControlSettings) == 0x000008, "Wrong alignment on FTraceControlSettings");
-static_assert(sizeof(FTraceControlSettings) == 0x000018, "Wrong size on FTraceControlSettings");
-static_assert(offsetof(FTraceControlSettings, bUseWorkerThread) == 0x000000, "Member 'FTraceControlSettings::bUseWorkerThread' has a wrong offset!");
-static_assert(offsetof(FTraceControlSettings, bUseImportantCache) == 0x000001, "Member 'FTraceControlSettings::bUseImportantCache' has a wrong offset!");
-static_assert(offsetof(FTraceControlSettings, TailSizeBytes) == 0x000004, "Member 'FTraceControlSettings::TailSizeBytes' has a wrong offset!");
-static_assert(offsetof(FTraceControlSettings, ChannelPresets) == 0x000008, "Member 'FTraceControlSettings::ChannelPresets' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlSettings;
 
 // ScriptStruct EngineMessages.TraceControlChannelsPing
 // 0x0004 (0x0004 - 0x0000)
@@ -214,9 +165,7 @@ struct FTraceControlChannelsPing final
 public:
 	uint32                                        KnownChannelCount;                                 // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTraceControlChannelsPing) == 0x000004, "Wrong alignment on FTraceControlChannelsPing");
-static_assert(sizeof(FTraceControlChannelsPing) == 0x000004, "Wrong size on FTraceControlChannelsPing");
-static_assert(offsetof(FTraceControlChannelsPing, KnownChannelCount) == 0x000000, "Member 'FTraceControlChannelsPing::KnownChannelCount' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlChannelsPing;
 
 // ScriptStruct EngineMessages.TraceControlChannelsDesc
 // 0x0040 (0x0040 - 0x0000)
@@ -228,12 +177,7 @@ public:
 	TArray<class FString>                         Descriptions;                                      // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<uint32>                                ReadOnlyIds;                                       // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTraceControlChannelsDesc) == 0x000008, "Wrong alignment on FTraceControlChannelsDesc");
-static_assert(sizeof(FTraceControlChannelsDesc) == 0x000040, "Wrong size on FTraceControlChannelsDesc");
-static_assert(offsetof(FTraceControlChannelsDesc, Channels) == 0x000000, "Member 'FTraceControlChannelsDesc::Channels' has a wrong offset!");
-static_assert(offsetof(FTraceControlChannelsDesc, Ids) == 0x000010, "Member 'FTraceControlChannelsDesc::Ids' has a wrong offset!");
-static_assert(offsetof(FTraceControlChannelsDesc, Descriptions) == 0x000020, "Member 'FTraceControlChannelsDesc::Descriptions' has a wrong offset!");
-static_assert(offsetof(FTraceControlChannelsDesc, ReadOnlyIds) == 0x000030, "Member 'FTraceControlChannelsDesc::ReadOnlyIds' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlChannelsDesc;
 
 // ScriptStruct EngineMessages.TraceControlChannelsStatus
 // 0x0010 (0x0010 - 0x0000)
@@ -242,9 +186,7 @@ struct FTraceControlChannelsStatus final
 public:
 	TArray<uint32>                                EnabledIds;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTraceControlChannelsStatus) == 0x000008, "Wrong alignment on FTraceControlChannelsStatus");
-static_assert(sizeof(FTraceControlChannelsStatus) == 0x000010, "Wrong size on FTraceControlChannelsStatus");
-static_assert(offsetof(FTraceControlChannelsStatus, EnabledIds) == 0x000000, "Member 'FTraceControlChannelsStatus::EnabledIds' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlChannelsStatus;
 
 // ScriptStruct EngineMessages.TraceControlChannelsSet
 // 0x0020 (0x0020 - 0x0000)
@@ -254,10 +196,7 @@ public:
 	TArray<uint32>                                ChannelIdsToEnable;                                // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<uint32>                                ChannelIdsToDisable;                               // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTraceControlChannelsSet) == 0x000008, "Wrong alignment on FTraceControlChannelsSet");
-static_assert(sizeof(FTraceControlChannelsSet) == 0x000020, "Wrong size on FTraceControlChannelsSet");
-static_assert(offsetof(FTraceControlChannelsSet, ChannelIdsToEnable) == 0x000000, "Member 'FTraceControlChannelsSet::ChannelIdsToEnable' has a wrong offset!");
-static_assert(offsetof(FTraceControlChannelsSet, ChannelIdsToDisable) == 0x000010, "Member 'FTraceControlChannelsSet::ChannelIdsToDisable' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlChannelsSet;
 
 // ScriptStruct EngineMessages.TraceControlDiscoveryPing
 // 0x0020 (0x0020 - 0x0000)
@@ -267,10 +206,7 @@ public:
 	struct FGuid                                  SessionId;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  InstanceId;                                        // 0x0010(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTraceControlDiscoveryPing) == 0x000004, "Wrong alignment on FTraceControlDiscoveryPing");
-static_assert(sizeof(FTraceControlDiscoveryPing) == 0x000020, "Wrong size on FTraceControlDiscoveryPing");
-static_assert(offsetof(FTraceControlDiscoveryPing, SessionId) == 0x000000, "Member 'FTraceControlDiscoveryPing::SessionId' has a wrong offset!");
-static_assert(offsetof(FTraceControlDiscoveryPing, InstanceId) == 0x000010, "Member 'FTraceControlDiscoveryPing::InstanceId' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlDiscoveryPing;
 
 // ScriptStruct EngineMessages.TraceControlDiscovery
 // 0x0020 (0x0088 - 0x0068)
@@ -280,10 +216,7 @@ public:
 	struct FGuid                                  SessionId;                                         // 0x0068(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  InstanceId;                                        // 0x0078(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTraceControlDiscovery) == 0x000008, "Wrong alignment on FTraceControlDiscovery");
-static_assert(sizeof(FTraceControlDiscovery) == 0x000088, "Wrong size on FTraceControlDiscovery");
-static_assert(offsetof(FTraceControlDiscovery, SessionId) == 0x000068, "Member 'FTraceControlDiscovery::SessionId' has a wrong offset!");
-static_assert(offsetof(FTraceControlDiscovery, InstanceId) == 0x000078, "Member 'FTraceControlDiscovery::InstanceId' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlDiscovery;
 
 // ScriptStruct EngineMessages.TraceControlStop
 // 0x0001 (0x0001 - 0x0000)
@@ -292,8 +225,7 @@ struct FTraceControlStop final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTraceControlStop) == 0x000001, "Wrong alignment on FTraceControlStop");
-static_assert(sizeof(FTraceControlStop) == 0x000001, "Wrong size on FTraceControlStop");
+DUMPER7_ASSERTS_FTraceControlStop;
 
 // ScriptStruct EngineMessages.TraceControlStartCommon
 // 0x0018 (0x0018 - 0x0000)
@@ -304,10 +236,7 @@ public:
 	bool                                          bExcludeTail;                                      // 0x0010(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTraceControlStartCommon) == 0x000008, "Wrong alignment on FTraceControlStartCommon");
-static_assert(sizeof(FTraceControlStartCommon) == 0x000018, "Wrong size on FTraceControlStartCommon");
-static_assert(offsetof(FTraceControlStartCommon, Channels) == 0x000000, "Member 'FTraceControlStartCommon::Channels' has a wrong offset!");
-static_assert(offsetof(FTraceControlStartCommon, bExcludeTail) == 0x000010, "Member 'FTraceControlStartCommon::bExcludeTail' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlStartCommon;
 
 // ScriptStruct EngineMessages.TraceControlSend
 // 0x0010 (0x0028 - 0x0018)
@@ -316,9 +245,7 @@ struct FTraceControlSend final : public FTraceControlStartCommon
 public:
 	class FString                                 Host;                                              // 0x0018(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTraceControlSend) == 0x000008, "Wrong alignment on FTraceControlSend");
-static_assert(sizeof(FTraceControlSend) == 0x000028, "Wrong size on FTraceControlSend");
-static_assert(offsetof(FTraceControlSend, Host) == 0x000018, "Member 'FTraceControlSend::Host' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlSend;
 
 // ScriptStruct EngineMessages.TraceControlFile
 // 0x0018 (0x0030 - 0x0018)
@@ -329,10 +256,7 @@ public:
 	bool                                          bTruncateFile;                                     // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTraceControlFile) == 0x000008, "Wrong alignment on FTraceControlFile");
-static_assert(sizeof(FTraceControlFile) == 0x000030, "Wrong size on FTraceControlFile");
-static_assert(offsetof(FTraceControlFile, File) == 0x000018, "Member 'FTraceControlFile::File' has a wrong offset!");
-static_assert(offsetof(FTraceControlFile, bTruncateFile) == 0x000028, "Member 'FTraceControlFile::bTruncateFile' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlFile;
 
 // ScriptStruct EngineMessages.TraceControlPause
 // 0x0001 (0x0001 - 0x0000)
@@ -341,8 +265,7 @@ struct FTraceControlPause final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTraceControlPause) == 0x000001, "Wrong alignment on FTraceControlPause");
-static_assert(sizeof(FTraceControlPause) == 0x000001, "Wrong size on FTraceControlPause");
+DUMPER7_ASSERTS_FTraceControlPause;
 
 // ScriptStruct EngineMessages.TraceControlResume
 // 0x0001 (0x0001 - 0x0000)
@@ -351,8 +274,7 @@ struct FTraceControlResume final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTraceControlResume) == 0x000001, "Wrong alignment on FTraceControlResume");
-static_assert(sizeof(FTraceControlResume) == 0x000001, "Wrong size on FTraceControlResume");
+DUMPER7_ASSERTS_FTraceControlResume;
 
 // ScriptStruct EngineMessages.TraceControlSnapshotSend
 // 0x0010 (0x0010 - 0x0000)
@@ -361,9 +283,7 @@ struct FTraceControlSnapshotSend final
 public:
 	class FString                                 Host;                                              // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTraceControlSnapshotSend) == 0x000008, "Wrong alignment on FTraceControlSnapshotSend");
-static_assert(sizeof(FTraceControlSnapshotSend) == 0x000010, "Wrong size on FTraceControlSnapshotSend");
-static_assert(offsetof(FTraceControlSnapshotSend, Host) == 0x000000, "Member 'FTraceControlSnapshotSend::Host' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlSnapshotSend;
 
 // ScriptStruct EngineMessages.TraceControlSnapshotFile
 // 0x0010 (0x0010 - 0x0000)
@@ -372,9 +292,7 @@ struct FTraceControlSnapshotFile final
 public:
 	class FString                                 File;                                              // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTraceControlSnapshotFile) == 0x000008, "Wrong alignment on FTraceControlSnapshotFile");
-static_assert(sizeof(FTraceControlSnapshotFile) == 0x000010, "Wrong size on FTraceControlSnapshotFile");
-static_assert(offsetof(FTraceControlSnapshotFile, File) == 0x000000, "Member 'FTraceControlSnapshotFile::File' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlSnapshotFile;
 
 // ScriptStruct EngineMessages.TraceControlBookmark
 // 0x0010 (0x0010 - 0x0000)
@@ -383,9 +301,7 @@ struct FTraceControlBookmark final
 public:
 	class FString                                 Label;                                             // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTraceControlBookmark) == 0x000008, "Wrong alignment on FTraceControlBookmark");
-static_assert(sizeof(FTraceControlBookmark) == 0x000010, "Wrong size on FTraceControlBookmark");
-static_assert(offsetof(FTraceControlBookmark, Label) == 0x000000, "Member 'FTraceControlBookmark::Label' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlBookmark;
 
 // ScriptStruct EngineMessages.TraceControlScreenshot
 // 0x0018 (0x0018 - 0x0000)
@@ -396,10 +312,7 @@ public:
 	bool                                          bShowUI;                                           // 0x0010(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTraceControlScreenshot) == 0x000008, "Wrong alignment on FTraceControlScreenshot");
-static_assert(sizeof(FTraceControlScreenshot) == 0x000018, "Wrong size on FTraceControlScreenshot");
-static_assert(offsetof(FTraceControlScreenshot, Name) == 0x000000, "Member 'FTraceControlScreenshot::Name' has a wrong offset!");
-static_assert(offsetof(FTraceControlScreenshot, bShowUI) == 0x000010, "Member 'FTraceControlScreenshot::bShowUI' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlScreenshot;
 
 // ScriptStruct EngineMessages.TraceControlSetStatNamedEvents
 // 0x0001 (0x0001 - 0x0000)
@@ -408,9 +321,7 @@ struct FTraceControlSetStatNamedEvents final
 public:
 	bool                                          bEnabled;                                          // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTraceControlSetStatNamedEvents) == 0x000001, "Wrong alignment on FTraceControlSetStatNamedEvents");
-static_assert(sizeof(FTraceControlSetStatNamedEvents) == 0x000001, "Wrong size on FTraceControlSetStatNamedEvents");
-static_assert(offsetof(FTraceControlSetStatNamedEvents, bEnabled) == 0x000000, "Member 'FTraceControlSetStatNamedEvents::bEnabled' has a wrong offset!");
+DUMPER7_ASSERTS_FTraceControlSetStatNamedEvents;
 
 }
 

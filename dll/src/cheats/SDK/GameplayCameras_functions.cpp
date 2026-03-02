@@ -17,41 +17,1096 @@
 namespace SDK
 {
 
-// Function GameplayCameras.BlueprintCameraDirectorEvaluator.ActivateCameraDirector
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function GameplayCameras.BlueprintCameraEvaluationDataFunctionLibrary.BlendCameraEvaluationData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const struct FBlueprintCameraDirectorActivateParams&Params_0                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FBlueprintCameraEvaluationDataRef&FromCameraData                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FBlueprintCameraEvaluationDataRef&ToCameraData                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// float                                   Factor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UBlueprintCameraDirectorEvaluator::ActivateCameraDirector(const struct FBlueprintCameraDirectorActivateParams& Params_0)
+void UBlueprintCameraEvaluationDataFunctionLibrary::BlendCameraEvaluationData(const struct FBlueprintCameraEvaluationDataRef& FromCameraData, const struct FBlueprintCameraEvaluationDataRef& ToCameraData, float Factor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BlueprintCameraDirectorEvaluator", "ActivateCameraDirector");
+		Func = StaticClass()->GetFunction("BlueprintCameraEvaluationDataFunctionLibrary", "BlendCameraEvaluationData");
 
-	Params::BlueprintCameraDirectorEvaluator_ActivateCameraDirector Parms{};
+	Params::BlueprintCameraEvaluationDataFunctionLibrary_BlendCameraEvaluationData Parms{};
 
-	Parms.Params_0 = std::move(Params_0);
+	Parms.FromCameraData = std::move(FromCameraData);
+	Parms.ToCameraData = std::move(ToCameraData);
+	Parms.Factor = Factor;
 
-	UObject::ProcessEvent(Func, &Parms);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
-// Function GameplayCameras.BlueprintCameraDirectorEvaluator.ActivateCameraRig
-// (Final, Native, Public, BlueprintCallable)
+// Function GameplayCameras.BlueprintCameraEvaluationDataFunctionLibrary.GetCameraPose
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UCameraRigAsset*                  CameraRig                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FBlueprintCameraPose             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void UBlueprintCameraDirectorEvaluator::ActivateCameraRig(class UCameraRigAsset* CameraRig)
+struct FBlueprintCameraPose UBlueprintCameraEvaluationDataFunctionLibrary::GetCameraPose(const struct FBlueprintCameraEvaluationDataRef& CameraData)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BlueprintCameraDirectorEvaluator", "ActivateCameraRig");
+		Func = StaticClass()->GetFunction("BlueprintCameraEvaluationDataFunctionLibrary", "GetCameraPose");
 
-	Params::BlueprintCameraDirectorEvaluator_ActivateCameraRig Parms{};
+	Params::BlueprintCameraEvaluationDataFunctionLibrary_GetCameraPose Parms{};
 
+	Parms.CameraData = std::move(CameraData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraEvaluationDataFunctionLibrary.MakeCameraEvaluationData
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FBlueprintCameraEvaluationDataRefReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FBlueprintCameraEvaluationDataRef UBlueprintCameraEvaluationDataFunctionLibrary::MakeCameraEvaluationData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraEvaluationDataFunctionLibrary", "MakeCameraEvaluationData");
+
+	Params::BlueprintCameraEvaluationDataFunctionLibrary_MakeCameraEvaluationData Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraEvaluationDataFunctionLibrary.SetCameraPose
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FBlueprintCameraPose&      CameraPose                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraEvaluationDataFunctionLibrary::SetCameraPose(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FBlueprintCameraPose& CameraPose)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraEvaluationDataFunctionLibrary", "SetCameraPose");
+
+	Params::BlueprintCameraEvaluationDataFunctionLibrary_SetCameraPose Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.CameraPose = std::move(CameraPose);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.BlueprintCameraEvaluationDataFunctionLibrary.SetDefaultCameraRigParameters
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class UCameraRigAsset*            CameraRig                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraEvaluationDataFunctionLibrary::SetDefaultCameraRigParameters(const struct FBlueprintCameraEvaluationDataRef& CameraData, const class UCameraRigAsset* CameraRig)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraEvaluationDataFunctionLibrary", "SetDefaultCameraRigParameters");
+
+	Params::BlueprintCameraEvaluationDataFunctionLibrary_SetDefaultCameraRigParameters Parms{};
+
+	Parms.CameraData = std::move(CameraData);
 	Parms.CameraRig = CameraRig;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetBooleanCameraVariable
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UBooleanCameraVariable*           Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBlueprintCameraVariableTableFunctionLibrary::GetBooleanCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UBooleanCameraVariable* Variable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetBooleanCameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_GetBooleanCameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetDoubleCameraVariable
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UDoubleCameraVariable*            Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+double UBlueprintCameraVariableTableFunctionLibrary::GetDoubleCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UDoubleCameraVariable* Variable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetDoubleCameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_GetDoubleCameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetFloatCameraVariable
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UFloatCameraVariable*             Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UBlueprintCameraVariableTableFunctionLibrary::GetFloatCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UFloatCameraVariable* Variable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetFloatCameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_GetFloatCameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetInteger32CameraVariable
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UInteger32CameraVariable*         Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UBlueprintCameraVariableTableFunctionLibrary::GetInteger32CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UInteger32CameraVariable* Variable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetInteger32CameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_GetInteger32CameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetRotatorCameraVariable
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class URotator3dCameraVariable*         Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRotator                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FRotator UBlueprintCameraVariableTableFunctionLibrary::GetRotatorCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class URotator3dCameraVariable* Variable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetRotatorCameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_GetRotatorCameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetTransformCameraVariable
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UTransform3dCameraVariable*       Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FTransform UBlueprintCameraVariableTableFunctionLibrary::GetTransformCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UTransform3dCameraVariable* Variable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetTransformCameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_GetTransformCameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetVector2CameraVariable
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UVector2dCameraVariable*          Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector2D UBlueprintCameraVariableTableFunctionLibrary::GetVector2CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UVector2dCameraVariable* Variable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetVector2CameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_GetVector2CameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetVector3CameraVariable
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UVector3dCameraVariable*          Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UBlueprintCameraVariableTableFunctionLibrary::GetVector3CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UVector3dCameraVariable* Variable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetVector3CameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_GetVector3CameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetVector4CameraVariable
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UVector4dCameraVariable*          Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector4                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector4 UBlueprintCameraVariableTableFunctionLibrary::GetVector4CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UVector4dCameraVariable* Variable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetVector4CameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_GetVector4CameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetBooleanCameraVariable
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UBooleanCameraVariable*           Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraVariableTableFunctionLibrary::SetBooleanCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UBooleanCameraVariable* Variable, bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetBooleanCameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_SetBooleanCameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetDoubleCameraVariable
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UDoubleCameraVariable*            Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraVariableTableFunctionLibrary::SetDoubleCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UDoubleCameraVariable* Variable, double Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetDoubleCameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_SetDoubleCameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetFloatCameraVariable
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UFloatCameraVariable*             Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraVariableTableFunctionLibrary::SetFloatCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UFloatCameraVariable* Variable, float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetFloatCameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_SetFloatCameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetInteger32CameraVariable
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UInteger32CameraVariable*         Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraVariableTableFunctionLibrary::SetInteger32CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UInteger32CameraVariable* Variable, int32 Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetInteger32CameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_SetInteger32CameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetRotatorCameraVariable
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class URotator3dCameraVariable*         Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraVariableTableFunctionLibrary::SetRotatorCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class URotator3dCameraVariable* Variable, const struct FRotator& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetRotatorCameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_SetRotatorCameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetTransformCameraVariable
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UTransform3dCameraVariable*       Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraVariableTableFunctionLibrary::SetTransformCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UTransform3dCameraVariable* Variable, const struct FTransform& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetTransformCameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_SetTransformCameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetVector2CameraVariable
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UVector2dCameraVariable*          Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraVariableTableFunctionLibrary::SetVector2CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UVector2dCameraVariable* Variable, const struct FVector2D& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetVector2CameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_SetVector2CameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetVector3CameraVariable
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UVector3dCameraVariable*          Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraVariableTableFunctionLibrary::SetVector3CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UVector3dCameraVariable* Variable, const struct FVector& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetVector3CameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_SetVector3CameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetVector4CameraVariable
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UVector4dCameraVariable*          Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector4&                  Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraVariableTableFunctionLibrary::SetVector4CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UVector4dCameraVariable* Variable, const struct FVector4& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetVector4CameraVariable");
+
+	Params::BlueprintCameraVariableTableFunctionLibrary_SetVector4CameraVariable Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.Variable = Variable;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.GetClassData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FCameraContextDataID&      DataID                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UClass* UBlueprintCameraContextDataTableFunctionLibrary::GetClassData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraContextDataTableFunctionLibrary", "GetClassData");
+
+	Params::BlueprintCameraContextDataTableFunctionLibrary_GetClassData Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.DataID = std::move(DataID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.GetEnumData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FCameraContextDataID&      DataID                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UEnum*                      EnumType                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+uint8 UBlueprintCameraContextDataTableFunctionLibrary::GetEnumData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, const class UEnum* EnumType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraContextDataTableFunctionLibrary", "GetEnumData");
+
+	Params::BlueprintCameraContextDataTableFunctionLibrary_GetEnumData Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.DataID = std::move(DataID);
+	Parms.EnumType = EnumType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.GetNameData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FCameraContextDataID&      DataID                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName UBlueprintCameraContextDataTableFunctionLibrary::GetNameData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraContextDataTableFunctionLibrary", "GetNameData");
+
+	Params::BlueprintCameraContextDataTableFunctionLibrary_GetNameData Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.DataID = std::move(DataID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.GetObjectData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FCameraContextDataID&      DataID                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* UBlueprintCameraContextDataTableFunctionLibrary::GetObjectData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraContextDataTableFunctionLibrary", "GetObjectData");
+
+	Params::BlueprintCameraContextDataTableFunctionLibrary_GetObjectData Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.DataID = std::move(DataID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.GetStringData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FCameraContextDataID&      DataID                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UBlueprintCameraContextDataTableFunctionLibrary::GetStringData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraContextDataTableFunctionLibrary", "GetStringData");
+
+	Params::BlueprintCameraContextDataTableFunctionLibrary_GetStringData Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.DataID = std::move(DataID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.GetStructData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FCameraContextDataID&      DataID                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UScriptStruct*              DataStructType                                         (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FInstancedStruct                 ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FInstancedStruct UBlueprintCameraContextDataTableFunctionLibrary::GetStructData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, const class UScriptStruct* DataStructType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraContextDataTableFunctionLibrary", "GetStructData");
+
+	Params::BlueprintCameraContextDataTableFunctionLibrary_GetStructData Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.DataID = std::move(DataID);
+	Parms.DataStructType = DataStructType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.SetClassData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FCameraContextDataID&      DataID                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UClass*                           Data                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBlueprintCameraContextDataTableFunctionLibrary::SetClassData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, class UClass* Data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraContextDataTableFunctionLibrary", "SetClassData");
+
+	Params::BlueprintCameraContextDataTableFunctionLibrary_SetClassData Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.DataID = std::move(DataID);
+	Parms.Data = Data;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.SetEnumData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FCameraContextDataID&      DataID                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UEnum*                      EnumType                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   Data                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBlueprintCameraContextDataTableFunctionLibrary::SetEnumData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, const class UEnum* EnumType, uint8 Data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraContextDataTableFunctionLibrary", "SetEnumData");
+
+	Params::BlueprintCameraContextDataTableFunctionLibrary_SetEnumData Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.DataID = std::move(DataID);
+	Parms.EnumType = EnumType;
+	Parms.Data = Data;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.SetNameData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FCameraContextDataID&      DataID                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      Data                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBlueprintCameraContextDataTableFunctionLibrary::SetNameData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, const class FName& Data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraContextDataTableFunctionLibrary", "SetNameData");
+
+	Params::BlueprintCameraContextDataTableFunctionLibrary_SetNameData Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.DataID = std::move(DataID);
+	Parms.Data = Data;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.SetObjectData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FCameraContextDataID&      DataID                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Data                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBlueprintCameraContextDataTableFunctionLibrary::SetObjectData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, class UObject* Data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraContextDataTableFunctionLibrary", "SetObjectData");
+
+	Params::BlueprintCameraContextDataTableFunctionLibrary_SetObjectData Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.DataID = std::move(DataID);
+	Parms.Data = Data;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.SetStringData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FCameraContextDataID&      DataID                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Data                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBlueprintCameraContextDataTableFunctionLibrary::SetStringData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, const class FString& Data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraContextDataTableFunctionLibrary", "SetStringData");
+
+	Params::BlueprintCameraContextDataTableFunctionLibrary_SetStringData Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.DataID = std::move(DataID);
+	Parms.Data = std::move(Data);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary.SetStructData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FCameraContextDataID&      DataID                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FInstancedStruct&          Data                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBlueprintCameraContextDataTableFunctionLibrary::SetStructData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, const struct FInstancedStruct& Data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlueprintCameraContextDataTableFunctionLibrary", "SetStructData");
+
+	Params::BlueprintCameraContextDataTableFunctionLibrary_SetStructData Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.DataID = std::move(DataID);
+	Parms.Data = std::move(Data);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.CameraRigInstanceFunctions.IsValid
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FCameraRigInstanceID&      InstanceId                                             (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCameraRigInstanceFunctions::IsValid(const struct FCameraRigInstanceID& InstanceId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CameraRigInstanceFunctions", "IsValid");
+
+	Params::CameraRigInstanceFunctions_IsValid Parms{};
+
+	Parms.InstanceId = std::move(InstanceId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.GameplayCameraParameterSetterComponent.OnActorBeginOverlap
+// (Final, Native, Private)
+// Parameters:
+// class AActor*                           OverlappedActor                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           OtherActor                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameplayCameraParameterSetterComponent::OnActorBeginOverlap(class AActor* OverlappedActor, class AActor* OtherActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCameraParameterSetterComponent", "OnActorBeginOverlap");
+
+	Params::GameplayCameraParameterSetterComponent_OnActorBeginOverlap Parms{};
+
+	Parms.OverlappedActor = OverlappedActor;
+	Parms.OtherActor = OtherActor;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -62,21 +1117,247 @@ void UBlueprintCameraDirectorEvaluator::ActivateCameraRig(class UCameraRigAsset*
 }
 
 
-// Function GameplayCameras.BlueprintCameraDirectorEvaluator.ActivateCameraRigPrefab
-// (Final, Native, Public, BlueprintCallable)
+// Function GameplayCameras.GameplayCameraParameterSetterComponent.OnActorEndOverlap
+// (Final, Native, Private)
 // Parameters:
-// class UCameraRigAsset*                  CameraRig                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           OverlappedActor                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           OtherActor                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UBlueprintCameraDirectorEvaluator::ActivateCameraRigPrefab(class UCameraRigAsset* CameraRig)
+void UGameplayCameraParameterSetterComponent::OnActorEndOverlap(class AActor* OverlappedActor, class AActor* OtherActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BlueprintCameraDirectorEvaluator", "ActivateCameraRigPrefab");
+		Func = Class->GetFunction("GameplayCameraParameterSetterComponent", "OnActorEndOverlap");
 
-	Params::BlueprintCameraDirectorEvaluator_ActivateCameraRigPrefab Parms{};
+	Params::GameplayCameraParameterSetterComponent_OnActorEndOverlap Parms{};
+
+	Parms.OverlappedActor = OverlappedActor;
+	Parms.OtherActor = OtherActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.GameplayCameraParameterSetterComponent.StartParameterSetters
+// (Final, Native, Public, BlueprintCallable)
+
+void UGameplayCameraParameterSetterComponent::StartParameterSetters()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCameraParameterSetterComponent", "StartParameterSetters");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.GameplayCameraParameterSetterComponent.StopParameterSetters
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bImmediately                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameplayCameraParameterSetterComponent::StopParameterSetters(bool bImmediately)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCameraParameterSetterComponent", "StopParameterSetters");
+
+	Params::GameplayCameraParameterSetterComponent_StopParameterSetters Parms{};
+
+	Parms.bImmediately = bImmediately;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.GameplayCamerasPlayerCameraManager.ReleasePlayerController
+// (Final, Native, Public, BlueprintCallable)
+
+void AGameplayCamerasPlayerCameraManager::ReleasePlayerController()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCamerasPlayerCameraManager", "ReleasePlayerController");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.GameplayCamerasPlayerCameraManager.StartGlobalCameraModifierRig
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UCameraRigAsset*            CameraRig                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   OrderKey                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FCameraRigInstanceID             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FCameraRigInstanceID AGameplayCamerasPlayerCameraManager::StartGlobalCameraModifierRig(const class UCameraRigAsset* CameraRig, int32 OrderKey)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCamerasPlayerCameraManager", "StartGlobalCameraModifierRig");
+
+	Params::GameplayCamerasPlayerCameraManager_StartGlobalCameraModifierRig Parms{};
 
 	Parms.CameraRig = CameraRig;
+	Parms.OrderKey = OrderKey;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.GameplayCamerasPlayerCameraManager.StartVisualCameraModifierRig
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UCameraRigAsset*            CameraRig                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   OrderKey                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FCameraRigInstanceID             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FCameraRigInstanceID AGameplayCamerasPlayerCameraManager::StartVisualCameraModifierRig(const class UCameraRigAsset* CameraRig, int32 OrderKey)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCamerasPlayerCameraManager", "StartVisualCameraModifierRig");
+
+	Params::GameplayCamerasPlayerCameraManager_StartVisualCameraModifierRig Parms{};
+
+	Parms.CameraRig = CameraRig;
+	Parms.OrderKey = OrderKey;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.GameplayCamerasPlayerCameraManager.StealPlayerController
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AGameplayCamerasPlayerCameraManager::StealPlayerController(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCamerasPlayerCameraManager", "StealPlayerController");
+
+	Params::GameplayCamerasPlayerCameraManager_StealPlayerController Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.GameplayCamerasPlayerCameraManager.StopCameraModifierRig
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FCameraRigInstanceID&      InstanceId                                             (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bImmediately                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AGameplayCamerasPlayerCameraManager::StopCameraModifierRig(const struct FCameraRigInstanceID& InstanceId, bool bImmediately)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCamerasPlayerCameraManager", "StopCameraModifierRig");
+
+	Params::GameplayCamerasPlayerCameraManager_StopCameraModifierRig Parms{};
+
+	Parms.InstanceId = std::move(InstanceId);
+	Parms.bImmediately = bImmediately;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.BlueprintCameraDirectorEvaluator.ActivateCameraDirector
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          EvaluationContextOwner                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FBlueprintCameraDirectorActivateParams&Params_0                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraDirectorEvaluator::ActivateCameraDirector(class UObject* EvaluationContextOwner, const struct FBlueprintCameraDirectorActivateParams& Params_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BlueprintCameraDirectorEvaluator", "ActivateCameraDirector");
+
+	Params::BlueprintCameraDirectorEvaluator_ActivateCameraDirector Parms{};
+
+	Parms.EvaluationContextOwner = EvaluationContextOwner;
+	Parms.Params_0 = std::move(Params_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GameplayCameras.BlueprintCameraDirectorEvaluator.ActivateCameraRig
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UCameraRigAsset*                  CameraRig                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bForceNewInstance                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraDirectorEvaluator::ActivateCameraRig(class UCameraRigAsset* CameraRig, bool bForceNewInstance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BlueprintCameraDirectorEvaluator", "ActivateCameraRig");
+
+	Params::BlueprintCameraDirectorEvaluator_ActivateCameraRig Parms{};
+
+	Parms.CameraRig = CameraRig;
+	Parms.bForceNewInstance = bForceNewInstance;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -91,8 +1372,9 @@ void UBlueprintCameraDirectorEvaluator::ActivateCameraRigPrefab(class UCameraRig
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class UCameraRigProxyAsset*             CameraRigProxy                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bForceNewInstance                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UBlueprintCameraDirectorEvaluator::ActivateCameraRigViaProxy(class UCameraRigProxyAsset* CameraRigProxy)
+void UBlueprintCameraDirectorEvaluator::ActivateCameraRigViaProxy(class UCameraRigProxyAsset* CameraRigProxy, bool bForceNewInstance)
 {
 	static class UFunction* Func = nullptr;
 
@@ -102,6 +1384,7 @@ void UBlueprintCameraDirectorEvaluator::ActivateCameraRigViaProxy(class UCameraR
 	Params::BlueprintCameraDirectorEvaluator_ActivateCameraRigViaProxy Parms{};
 
 	Parms.CameraRigProxy = CameraRigProxy;
+	Parms.bForceNewInstance = bForceNewInstance;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -187,12 +1470,36 @@ void UBlueprintCameraDirectorEvaluator::ActivatePersistentVisualCameraRig(class 
 }
 
 
+// Function GameplayCameras.BlueprintCameraDirectorEvaluator.AddChildEvaluationContext
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          ChildEvaluationContextOwner                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName UBlueprintCameraDirectorEvaluator::AddChildEvaluationContext(class UObject* ChildEvaluationContextOwner)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BlueprintCameraDirectorEvaluator", "AddChildEvaluationContext");
+
+	Params::BlueprintCameraDirectorEvaluator_AddChildEvaluationContext Parms{};
+
+	Parms.ChildEvaluationContextOwner = ChildEvaluationContextOwner;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function GameplayCameras.BlueprintCameraDirectorEvaluator.DeactivateCameraDirector
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// class UObject*                          EvaluationContextOwner                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FBlueprintCameraDirectorDeactivateParams&Params_0                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void UBlueprintCameraDirectorEvaluator::DeactivateCameraDirector(const struct FBlueprintCameraDirectorDeactivateParams& Params_0)
+void UBlueprintCameraDirectorEvaluator::DeactivateCameraDirector(class UObject* EvaluationContextOwner, const struct FBlueprintCameraDirectorDeactivateParams& Params_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -201,6 +1508,7 @@ void UBlueprintCameraDirectorEvaluator::DeactivateCameraDirector(const struct FB
 
 	Params::BlueprintCameraDirectorEvaluator_DeactivateCameraDirector Parms{};
 
+	Parms.EvaluationContextOwner = EvaluationContextOwner;
 	Parms.Params_0 = std::move(Params_0);
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -282,12 +1590,39 @@ void UBlueprintCameraDirectorEvaluator::DeactivatePersistentVisualCameraRig(clas
 }
 
 
+// Function GameplayCameras.BlueprintCameraDirectorEvaluator.RemoveChildEvaluationContext
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          ChildEvaluationContextOwner                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ChildSlotName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBlueprintCameraDirectorEvaluator::RemoveChildEvaluationContext(class UObject* ChildEvaluationContextOwner, class FName ChildSlotName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BlueprintCameraDirectorEvaluator", "RemoveChildEvaluationContext");
+
+	Params::BlueprintCameraDirectorEvaluator_RemoveChildEvaluationContext Parms{};
+
+	Parms.ChildEvaluationContextOwner = ChildEvaluationContextOwner;
+	Parms.ChildSlotName = ChildSlotName;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function GameplayCameras.BlueprintCameraDirectorEvaluator.RunCameraDirector
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          EvaluationContextOwner                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FBlueprintCameraDirectorEvaluationParams&Params_0                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void UBlueprintCameraDirectorEvaluator::RunCameraDirector(const struct FBlueprintCameraDirectorEvaluationParams& Params_0)
+void UBlueprintCameraDirectorEvaluator::RunCameraDirector(float DeltaTime, class UObject* EvaluationContextOwner, const struct FBlueprintCameraDirectorEvaluationParams& Params_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -296,27 +1631,32 @@ void UBlueprintCameraDirectorEvaluator::RunCameraDirector(const struct FBlueprin
 
 	Params::BlueprintCameraDirectorEvaluator_RunCameraDirector Parms{};
 
+	Parms.DeltaTime = DeltaTime;
+	Parms.EvaluationContextOwner = EvaluationContextOwner;
 	Parms.Params_0 = std::move(Params_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GameplayCameras.BlueprintCameraDirectorEvaluator.SetInitialContextCameraPose
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Function GameplayCameras.BlueprintCameraDirectorEvaluator.RunChildCameraDirector
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const struct FBlueprintCameraPose&      InCameraPose                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ChildSlotName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UBlueprintCameraDirectorEvaluator::SetInitialContextCameraPose(const struct FBlueprintCameraPose& InCameraPose)
+bool UBlueprintCameraDirectorEvaluator::RunChildCameraDirector(float DeltaTime, class FName ChildSlotName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BlueprintCameraDirectorEvaluator", "SetInitialContextCameraPose");
+		Func = Class->GetFunction("BlueprintCameraDirectorEvaluator", "RunChildCameraDirector");
 
-	Params::BlueprintCameraDirectorEvaluator_SetInitialContextCameraPose Parms{};
+	Params::BlueprintCameraDirectorEvaluator_RunChildCameraDirector Parms{};
 
-	Parms.InCameraPose = std::move(InCameraPose);
+	Parms.DeltaTime = DeltaTime;
+	Parms.ChildSlotName = ChildSlotName;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -324,6 +1664,8 @@ void UBlueprintCameraDirectorEvaluator::SetInitialContextCameraPose(const struct
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -355,22 +1697,22 @@ class AActor* UBlueprintCameraDirectorEvaluator::FindEvaluationContextOwnerActor
 }
 
 
-// Function GameplayCameras.BlueprintCameraDirectorEvaluator.GetCameraRig
+// Function GameplayCameras.BlueprintCameraDirectorEvaluator.GetConditionalContextResult
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UCameraRigAsset*                  CameraRig                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UCameraRigAsset*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ECameraEvaluationDataCondition          Condition                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FBlueprintCameraEvaluationDataRefReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
-class UCameraRigAsset* UBlueprintCameraDirectorEvaluator::GetCameraRig(class UCameraRigAsset* CameraRig) const
+struct FBlueprintCameraEvaluationDataRef UBlueprintCameraDirectorEvaluator::GetConditionalContextResult(ECameraEvaluationDataCondition Condition) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BlueprintCameraDirectorEvaluator", "GetCameraRig");
+		Func = Class->GetFunction("BlueprintCameraDirectorEvaluator", "GetConditionalContextResult");
 
-	Params::BlueprintCameraDirectorEvaluator_GetCameraRig Parms{};
+	Params::BlueprintCameraDirectorEvaluator_GetConditionalContextResult Parms{};
 
-	Parms.CameraRig = CameraRig;
+	Parms.Condition = Condition;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -383,44 +1725,19 @@ class UCameraRigAsset* UBlueprintCameraDirectorEvaluator::GetCameraRig(class UCa
 }
 
 
-// Function GameplayCameras.BlueprintCameraDirectorEvaluator.GetInitialContextCameraPose
+// Function GameplayCameras.BlueprintCameraDirectorEvaluator.GetInitialContextResult
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FBlueprintCameraPose             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FBlueprintCameraEvaluationDataRefReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
-struct FBlueprintCameraPose UBlueprintCameraDirectorEvaluator::GetInitialContextCameraPose() const
+struct FBlueprintCameraEvaluationDataRef UBlueprintCameraDirectorEvaluator::GetInitialContextResult() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BlueprintCameraDirectorEvaluator", "GetInitialContextCameraPose");
+		Func = Class->GetFunction("BlueprintCameraDirectorEvaluator", "GetInitialContextResult");
 
-	Params::BlueprintCameraDirectorEvaluator_GetInitialContextCameraPose Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GameplayCameras.BlueprintCameraDirectorEvaluator.GetInitialContextVariableTable
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FBlueprintCameraVariableTable    ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FBlueprintCameraVariableTable UBlueprintCameraDirectorEvaluator::GetInitialContextVariableTable() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BlueprintCameraDirectorEvaluator", "GetInitialContextVariableTable");
-
-	Params::BlueprintCameraDirectorEvaluator_GetInitialContextVariableTable Parms{};
+	Params::BlueprintCameraDirectorEvaluator_GetInitialContextResult Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1094,24 +2411,86 @@ struct FBlueprintCameraPose UBlueprintCameraPoseFunctionLibrary::SetTransform(co
 }
 
 
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetBooleanCameraVariable
+// Function GameplayCameras.CameraRigParameterInterop.GetCameraParameter
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UBooleanCameraVariable*           Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UCameraRigAsset*                  CameraRig                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ParameterName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UBlueprintCameraVariableTableFunctionLibrary::GetBooleanCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UBooleanCameraVariable* Variable)
+void UCameraRigParameterInterop::GetCameraParameter(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UCameraRigAsset* CameraRig, class FName ParameterName, int32* ReturnValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetBooleanCameraVariable");
+		Func = StaticClass()->GetFunction("CameraRigParameterInterop", "GetCameraParameter");
 
-	Params::BlueprintCameraVariableTableFunctionLibrary_GetBooleanCameraVariable Parms{};
+	Params::CameraRigParameterInterop_GetCameraParameter Parms{};
 
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
+	Parms.CameraData = std::move(CameraData);
+	Parms.CameraRig = CameraRig;
+	Parms.ParameterName = ParameterName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (ReturnValue != nullptr)
+		*ReturnValue = Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.CameraRigParameterInterop.SetCameraParameter
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&CameraData                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UCameraRigAsset*                  CameraRig                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ParameterName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32&                            NewValue                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCameraRigParameterInterop::SetCameraParameter(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UCameraRigAsset* CameraRig, class FName ParameterName, const int32& NewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CameraRigParameterInterop", "SetCameraParameter");
+
+	Params::CameraRigParameterInterop_SetCameraParameter Parms{};
+
+	Parms.CameraData = std::move(CameraData);
+	Parms.CameraRig = CameraRig;
+	Parms.ParameterName = ParameterName;
+	Parms.NewValue = NewValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.CameraRigParameterInteropLibrary.MakeLiteralLinearColor
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FLinearColor&              Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FLinearColor                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FLinearColor UCameraRigParameterInteropLibrary::MakeLiteralLinearColor(const struct FLinearColor& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CameraRigParameterInteropLibrary", "MakeLiteralLinearColor");
+
+	Params::CameraRigParameterInteropLibrary_MakeLiteralLinearColor Parms{};
+
+	Parms.Value = std::move(Value);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1124,114 +2503,22 @@ bool UBlueprintCameraVariableTableFunctionLibrary::GetBooleanCameraVariable(cons
 }
 
 
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetDoubleCameraVariable
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Function GameplayCameras.CameraRigParameterInteropLibrary.MakeLiteralRotator
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UDoubleCameraVariable*            Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-double UBlueprintCameraVariableTableFunctionLibrary::GetDoubleCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UDoubleCameraVariable* Variable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetDoubleCameraVariable");
-
-	Params::BlueprintCameraVariableTableFunctionLibrary_GetDoubleCameraVariable Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetFloatCameraVariable
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UFloatCameraVariable*             Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UBlueprintCameraVariableTableFunctionLibrary::GetFloatCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UFloatCameraVariable* Variable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetFloatCameraVariable");
-
-	Params::BlueprintCameraVariableTableFunctionLibrary_GetFloatCameraVariable Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetInteger32CameraVariable
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UInteger32CameraVariable*         Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UBlueprintCameraVariableTableFunctionLibrary::GetInteger32CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UInteger32CameraVariable* Variable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetInteger32CameraVariable");
-
-	Params::BlueprintCameraVariableTableFunctionLibrary_GetInteger32CameraVariable Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetRotatorCameraVariable
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class URotator3dCameraVariable*         Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 // struct FRotator                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
-struct FRotator UBlueprintCameraVariableTableFunctionLibrary::GetRotatorCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class URotator3dCameraVariable* Variable)
+struct FRotator UCameraRigParameterInteropLibrary::MakeLiteralRotator(const struct FRotator& Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetRotatorCameraVariable");
+		Func = StaticClass()->GetFunction("CameraRigParameterInteropLibrary", "MakeLiteralRotator");
 
-	Params::BlueprintCameraVariableTableFunctionLibrary_GetRotatorCameraVariable Parms{};
+	Params::CameraRigParameterInteropLibrary_MakeLiteralRotator Parms{};
 
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
+	Parms.Value = std::move(Value);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1244,84 +2531,22 @@ struct FRotator UBlueprintCameraVariableTableFunctionLibrary::GetRotatorCameraVa
 }
 
 
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetTransformCameraVariable
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Function GameplayCameras.CameraRigParameterInteropLibrary.MakeLiteralVector
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UTransform3dCameraVariable*       Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FTransform UBlueprintCameraVariableTableFunctionLibrary::GetTransformCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UTransform3dCameraVariable* Variable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetTransformCameraVariable");
-
-	Params::BlueprintCameraVariableTableFunctionLibrary_GetTransformCameraVariable Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetVector2CameraVariable
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UVector2dCameraVariable*          Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector2D UBlueprintCameraVariableTableFunctionLibrary::GetVector2CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UVector2dCameraVariable* Variable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetVector2CameraVariable");
-
-	Params::BlueprintCameraVariableTableFunctionLibrary_GetVector2CameraVariable Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetVector3CameraVariable
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UVector3dCameraVariable*          Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector UBlueprintCameraVariableTableFunctionLibrary::GetVector3CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UVector3dCameraVariable* Variable)
+struct FVector UCameraRigParameterInteropLibrary::MakeLiteralVector(const struct FVector& Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetVector3CameraVariable");
+		Func = StaticClass()->GetFunction("CameraRigParameterInteropLibrary", "MakeLiteralVector");
 
-	Params::BlueprintCameraVariableTableFunctionLibrary_GetVector3CameraVariable Parms{};
+	Params::CameraRigParameterInteropLibrary_MakeLiteralVector Parms{};
 
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
+	Parms.Value = std::move(Value);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1334,24 +2559,22 @@ struct FVector UBlueprintCameraVariableTableFunctionLibrary::GetVector3CameraVar
 }
 
 
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.GetVector4CameraVariable
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Function GameplayCameras.CameraRigParameterInteropLibrary.MakeLiteralVector2D
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UVector4dCameraVariable*          Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector4                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector4 UBlueprintCameraVariableTableFunctionLibrary::GetVector4CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UVector4dCameraVariable* Variable)
+struct FVector2D UCameraRigParameterInteropLibrary::MakeLiteralVector2D(const struct FVector2D& Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "GetVector4CameraVariable");
+		Func = StaticClass()->GetFunction("CameraRigParameterInteropLibrary", "MakeLiteralVector2D");
 
-	Params::BlueprintCameraVariableTableFunctionLibrary_GetVector4CameraVariable Parms{};
+	Params::CameraRigParameterInteropLibrary_MakeLiteralVector2D Parms{};
 
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
+	Parms.Value = std::move(Value);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1364,140 +2587,21 @@ struct FVector4 UBlueprintCameraVariableTableFunctionLibrary::GetVector4CameraVa
 }
 
 
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetBooleanCameraVariable
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Function GameplayCameras.CameraRigParameterInteropLibrary.MakeLiteralVector3f
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UBooleanCameraVariable*           Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector3f&                 Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector3f                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UBlueprintCameraVariableTableFunctionLibrary::SetBooleanCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UBooleanCameraVariable* Variable, bool Value)
+struct FVector3f UCameraRigParameterInteropLibrary::MakeLiteralVector3f(const struct FVector3f& Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetBooleanCameraVariable");
+		Func = StaticClass()->GetFunction("CameraRigParameterInteropLibrary", "MakeLiteralVector3f");
 
-	Params::BlueprintCameraVariableTableFunctionLibrary_SetBooleanCameraVariable Parms{};
+	Params::CameraRigParameterInteropLibrary_MakeLiteralVector3f Parms{};
 
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetDoubleCameraVariable
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UDoubleCameraVariable*            Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBlueprintCameraVariableTableFunctionLibrary::SetDoubleCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UDoubleCameraVariable* Variable, double Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetDoubleCameraVariable");
-
-	Params::BlueprintCameraVariableTableFunctionLibrary_SetDoubleCameraVariable Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetFloatCameraVariable
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UFloatCameraVariable*             Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBlueprintCameraVariableTableFunctionLibrary::SetFloatCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UFloatCameraVariable* Variable, float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetFloatCameraVariable");
-
-	Params::BlueprintCameraVariableTableFunctionLibrary_SetFloatCameraVariable Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetInteger32CameraVariable
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UInteger32CameraVariable*         Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBlueprintCameraVariableTableFunctionLibrary::SetInteger32CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UInteger32CameraVariable* Variable, int32 Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetInteger32CameraVariable");
-
-	Params::BlueprintCameraVariableTableFunctionLibrary_SetInteger32CameraVariable Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetRotatorCameraVariable
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class URotator3dCameraVariable*         Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FRotator&                  Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-void UBlueprintCameraVariableTableFunctionLibrary::SetRotatorCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class URotator3dCameraVariable* Variable, const struct FRotator& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetRotatorCameraVariable");
-
-	Params::BlueprintCameraVariableTableFunctionLibrary_SetRotatorCameraVariable Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
 	Parms.Value = std::move(Value);
 
 	auto Flgs = Func->FunctionFlags;
@@ -1506,419 +2610,8 @@ void UBlueprintCameraVariableTableFunctionLibrary::SetRotatorCameraVariable(cons
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
 
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetTransformCameraVariable
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UTransform3dCameraVariable*       Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FTransform&                Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBlueprintCameraVariableTableFunctionLibrary::SetTransformCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UTransform3dCameraVariable* Variable, const struct FTransform& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetTransformCameraVariable");
-
-	Params::BlueprintCameraVariableTableFunctionLibrary_SetTransformCameraVariable Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetVector2CameraVariable
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UVector2dCameraVariable*          Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector2D&                 Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBlueprintCameraVariableTableFunctionLibrary::SetVector2CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UVector2dCameraVariable* Variable, const struct FVector2D& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetVector2CameraVariable");
-
-	Params::BlueprintCameraVariableTableFunctionLibrary_SetVector2CameraVariable Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetVector3CameraVariable
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UVector3dCameraVariable*          Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBlueprintCameraVariableTableFunctionLibrary::SetVector3CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UVector3dCameraVariable* Variable, const struct FVector& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetVector3CameraVariable");
-
-	Params::BlueprintCameraVariableTableFunctionLibrary_SetVector3CameraVariable Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameplayCameras.BlueprintCameraVariableTableFunctionLibrary.SetVector4CameraVariable
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FBlueprintCameraVariableTable&VariableTable                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UVector4dCameraVariable*          Variable                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector4&                  Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBlueprintCameraVariableTableFunctionLibrary::SetVector4CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UVector4dCameraVariable* Variable, const struct FVector4& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlueprintCameraVariableTableFunctionLibrary", "SetVector4CameraVariable");
-
-	Params::BlueprintCameraVariableTableFunctionLibrary_SetVector4CameraVariable Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.Variable = Variable;
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameplayCameras.CameraRigParameterInterop.SetBooleanParameter
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FBlueprintCameraVariableTable&   VariableTable                                          (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UCameraRigAsset*                  CameraRig                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ParameterName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bParameterValue                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCameraRigParameterInterop::SetBooleanParameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, bool bParameterValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("CameraRigParameterInterop", "SetBooleanParameter");
-
-	Params::CameraRigParameterInterop_SetBooleanParameter Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.CameraRig = CameraRig;
-	Parms.ParameterName = std::move(ParameterName);
-	Parms.bParameterValue = bParameterValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	VariableTable = std::move(Parms.VariableTable);
-}
-
-
-// Function GameplayCameras.CameraRigParameterInterop.SetDoubleParameter
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FBlueprintCameraVariableTable&   VariableTable                                          (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UCameraRigAsset*                  CameraRig                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ParameterName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ParameterValue                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCameraRigParameterInterop::SetDoubleParameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, double ParameterValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("CameraRigParameterInterop", "SetDoubleParameter");
-
-	Params::CameraRigParameterInterop_SetDoubleParameter Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.CameraRig = CameraRig;
-	Parms.ParameterName = std::move(ParameterName);
-	Parms.ParameterValue = ParameterValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	VariableTable = std::move(Parms.VariableTable);
-}
-
-
-// Function GameplayCameras.CameraRigParameterInterop.SetFloatParameter
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FBlueprintCameraVariableTable&   VariableTable                                          (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UCameraRigAsset*                  CameraRig                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ParameterName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  ParameterValue                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCameraRigParameterInterop::SetFloatParameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, double ParameterValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("CameraRigParameterInterop", "SetFloatParameter");
-
-	Params::CameraRigParameterInterop_SetFloatParameter Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.CameraRig = CameraRig;
-	Parms.ParameterName = std::move(ParameterName);
-	Parms.ParameterValue = ParameterValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	VariableTable = std::move(Parms.VariableTable);
-}
-
-
-// Function GameplayCameras.CameraRigParameterInterop.SetIntegerParameter
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FBlueprintCameraVariableTable&   VariableTable                                          (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UCameraRigAsset*                  CameraRig                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ParameterName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ParameterValue                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCameraRigParameterInterop::SetIntegerParameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, int32 ParameterValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("CameraRigParameterInterop", "SetIntegerParameter");
-
-	Params::CameraRigParameterInterop_SetIntegerParameter Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.CameraRig = CameraRig;
-	Parms.ParameterName = std::move(ParameterName);
-	Parms.ParameterValue = ParameterValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	VariableTable = std::move(Parms.VariableTable);
-}
-
-
-// Function GameplayCameras.CameraRigParameterInterop.SetRotatorParameter
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FBlueprintCameraVariableTable&   VariableTable                                          (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UCameraRigAsset*                  CameraRig                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ParameterName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FRotator&                  ParameterValue                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-void UCameraRigParameterInterop::SetRotatorParameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, const struct FRotator& ParameterValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("CameraRigParameterInterop", "SetRotatorParameter");
-
-	Params::CameraRigParameterInterop_SetRotatorParameter Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.CameraRig = CameraRig;
-	Parms.ParameterName = std::move(ParameterName);
-	Parms.ParameterValue = std::move(ParameterValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	VariableTable = std::move(Parms.VariableTable);
-}
-
-
-// Function GameplayCameras.CameraRigParameterInterop.SetTransformParameter
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FBlueprintCameraVariableTable&   VariableTable                                          (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UCameraRigAsset*                  CameraRig                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ParameterName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FTransform&                ParameterValue                                         (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCameraRigParameterInterop::SetTransformParameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, const struct FTransform& ParameterValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("CameraRigParameterInterop", "SetTransformParameter");
-
-	Params::CameraRigParameterInterop_SetTransformParameter Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.CameraRig = CameraRig;
-	Parms.ParameterName = std::move(ParameterName);
-	Parms.ParameterValue = std::move(ParameterValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	VariableTable = std::move(Parms.VariableTable);
-}
-
-
-// Function GameplayCameras.CameraRigParameterInterop.SetVector2Parameter
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FBlueprintCameraVariableTable&   VariableTable                                          (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UCameraRigAsset*                  CameraRig                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ParameterName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector2D&                 ParameterValue                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCameraRigParameterInterop::SetVector2Parameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, const struct FVector2D& ParameterValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("CameraRigParameterInterop", "SetVector2Parameter");
-
-	Params::CameraRigParameterInterop_SetVector2Parameter Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.CameraRig = CameraRig;
-	Parms.ParameterName = std::move(ParameterName);
-	Parms.ParameterValue = std::move(ParameterValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	VariableTable = std::move(Parms.VariableTable);
-}
-
-
-// Function GameplayCameras.CameraRigParameterInterop.SetVector3Parameter
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FBlueprintCameraVariableTable&   VariableTable                                          (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UCameraRigAsset*                  CameraRig                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ParameterName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   ParameterValue                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCameraRigParameterInterop::SetVector3Parameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, const struct FVector& ParameterValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("CameraRigParameterInterop", "SetVector3Parameter");
-
-	Params::CameraRigParameterInterop_SetVector3Parameter Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.CameraRig = CameraRig;
-	Parms.ParameterName = std::move(ParameterName);
-	Parms.ParameterValue = std::move(ParameterValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	VariableTable = std::move(Parms.VariableTable);
-}
-
-
-// Function GameplayCameras.CameraRigParameterInterop.SetVector4Parameter
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FBlueprintCameraVariableTable&   VariableTable                                          (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UCameraRigAsset*                  CameraRig                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ParameterName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector4&                  ParameterValue                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCameraRigParameterInterop::SetVector4Parameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, const struct FVector4& ParameterValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("CameraRigParameterInterop", "SetVector4Parameter");
-
-	Params::CameraRigParameterInterop_SetVector4Parameter Parms{};
-
-	Parms.VariableTable = std::move(VariableTable);
-	Parms.CameraRig = CameraRig;
-	Parms.ParameterName = std::move(ParameterName);
-	Parms.ParameterValue = std::move(ParameterValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	VariableTable = std::move(Parms.VariableTable);
+	return Parms.ReturnValue;
 }
 
 
@@ -1947,21 +2640,25 @@ class UGameplayCameraComponent* AGameplayCameraActor::GetCameraComponent() const
 }
 
 
-// Function GameplayCameras.GameplayCameraComponent.ActivateCameraForPlayerController
+// Function GameplayCameras.GameplayCameraComponentBase.ActivateCameraForPlayerController
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetAsViewTarget                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EGameplayCameraComponentActivationMode  ActivationMode                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameplayCameraComponent::ActivateCameraForPlayerController(class APlayerController* PlayerController)
+void UGameplayCameraComponentBase::ActivateCameraForPlayerController(class APlayerController* PlayerController, bool bSetAsViewTarget, EGameplayCameraComponentActivationMode ActivationMode)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GameplayCameraComponent", "ActivateCameraForPlayerController");
+		Func = Class->GetFunction("GameplayCameraComponentBase", "ActivateCameraForPlayerController");
 
-	Params::GameplayCameraComponent_ActivateCameraForPlayerController Parms{};
+	Params::GameplayCameraComponentBase_ActivateCameraForPlayerController Parms{};
 
 	Parms.PlayerController = PlayerController;
+	Parms.bSetAsViewTarget = bSetAsViewTarget;
+	Parms.ActivationMode = ActivationMode;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1972,21 +2669,25 @@ void UGameplayCameraComponent::ActivateCameraForPlayerController(class APlayerCo
 }
 
 
-// Function GameplayCameras.GameplayCameraComponent.ActivateCameraForPlayerIndex
+// Function GameplayCameras.GameplayCameraComponentBase.ActivateCameraForPlayerIndex
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   PlayerIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetAsViewTarget                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EGameplayCameraComponentActivationMode  ActivationMode                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameplayCameraComponent::ActivateCameraForPlayerIndex(int32 PlayerIndex)
+void UGameplayCameraComponentBase::ActivateCameraForPlayerIndex(int32 PlayerIndex, bool bSetAsViewTarget, EGameplayCameraComponentActivationMode ActivationMode)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GameplayCameraComponent", "ActivateCameraForPlayerIndex");
+		Func = Class->GetFunction("GameplayCameraComponentBase", "ActivateCameraForPlayerIndex");
 
-	Params::GameplayCameraComponent_ActivateCameraForPlayerIndex Parms{};
+	Params::GameplayCameraComponentBase_ActivateCameraForPlayerIndex Parms{};
 
 	Parms.PlayerIndex = PlayerIndex;
+	Parms.bSetAsViewTarget = bSetAsViewTarget;
+	Parms.ActivationMode = ActivationMode;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1997,40 +2698,21 @@ void UGameplayCameraComponent::ActivateCameraForPlayerIndex(int32 PlayerIndex)
 }
 
 
-// Function GameplayCameras.GameplayCameraComponent.DeactivateCamera
+// Function GameplayCameras.GameplayCameraComponentBase.DeactivateCamera
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
-
-void UGameplayCameraComponent::DeactivateCamera()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameplayCameraComponent", "DeactivateCamera");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameplayCameras.GameplayCameraComponent.SetInitialPose
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const struct FBlueprintCameraPose&      CameraPose                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    bImmediately                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameplayCameraComponent::SetInitialPose(const struct FBlueprintCameraPose& CameraPose)
+void UGameplayCameraComponentBase::DeactivateCamera(bool bImmediately)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GameplayCameraComponent", "SetInitialPose");
+		Func = Class->GetFunction("GameplayCameraComponentBase", "DeactivateCamera");
 
-	Params::GameplayCameraComponent_SetInitialPose Parms{};
+	Params::GameplayCameraComponentBase_DeactivateCamera Parms{};
 
-	Parms.CameraPose = std::move(CameraPose);
+	Parms.bImmediately = bImmediately;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2041,19 +2723,22 @@ void UGameplayCameraComponent::SetInitialPose(const struct FBlueprintCameraPose&
 }
 
 
-// Function GameplayCameras.GameplayCameraComponent.GetInitialPose
+// Function GameplayCameras.GameplayCameraComponentBase.GetConditionalResult
 // (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FBlueprintCameraPose             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+// ECameraEvaluationDataCondition          Condition                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FBlueprintCameraEvaluationDataRefReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
-struct FBlueprintCameraPose UGameplayCameraComponent::GetInitialPose() const
+struct FBlueprintCameraEvaluationDataRef UGameplayCameraComponentBase::GetConditionalResult(ECameraEvaluationDataCondition Condition) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GameplayCameraComponent", "GetInitialPose");
+		Func = Class->GetFunction("GameplayCameraComponentBase", "GetConditionalResult");
 
-	Params::GameplayCameraComponent_GetInitialPose Parms{};
+	Params::GameplayCameraComponentBase_GetConditionalResult Parms{};
+
+	Parms.Condition = Condition;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2066,19 +2751,19 @@ struct FBlueprintCameraPose UGameplayCameraComponent::GetInitialPose() const
 }
 
 
-// Function GameplayCameras.GameplayCameraComponent.GetInitialVariableTable
+// Function GameplayCameras.GameplayCameraComponentBase.GetInitialResult
 // (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FBlueprintCameraVariableTable    ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+// struct FBlueprintCameraEvaluationDataRefReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
-struct FBlueprintCameraVariableTable UGameplayCameraComponent::GetInitialVariableTable() const
+struct FBlueprintCameraEvaluationDataRef UGameplayCameraComponentBase::GetInitialResult() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GameplayCameraComponent", "GetInitialVariableTable");
+		Func = Class->GetFunction("GameplayCameraComponentBase", "GetInitialResult");
 
-	Params::GameplayCameraComponent_GetInitialVariableTable Parms{};
+	Params::GameplayCameraComponentBase_GetInitialResult Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2091,54 +2776,49 @@ struct FBlueprintCameraVariableTable UGameplayCameraComponent::GetInitialVariabl
 }
 
 
-// Function GameplayCameras.GameplayCameraSystemActor.AutoManageActiveViewTarget
-// (Final, Native, Static, Public, BlueprintCallable)
+// Function GameplayCameras.GameplayCameraComponentBase.GetOutputCameraComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UCineCameraComponent*             ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void AGameplayCameraSystemActor::AutoManageActiveViewTarget(class APlayerController* PlayerController)
+class UCineCameraComponent* UGameplayCameraComponentBase::GetOutputCameraComponent() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameplayCameraSystemActor", "AutoManageActiveViewTarget");
+		Func = Class->GetFunction("GameplayCameraComponentBase", "GetOutputCameraComponent");
 
-	Params::GameplayCameraSystemActor_AutoManageActiveViewTarget Parms{};
-
-	Parms.PlayerController = PlayerController;
+	Params::GameplayCameraComponentBase_GetOutputCameraComponent Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
-// Function GameplayCameras.GameplayCameraSystemActor.GetAutoSpawnedCameraSystemActor
-// (Final, Native, Static, Public, BlueprintCallable)
+// Function GameplayCameras.GameplayCameraRigActor.GetCameraRigComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bForceSpawn                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AGameplayCameraSystemActor*       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGameplayCameraRigComponent*      ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class AGameplayCameraSystemActor* AGameplayCameraSystemActor::GetAutoSpawnedCameraSystemActor(class APlayerController* PlayerController, bool bForceSpawn)
+class UGameplayCameraRigComponent* AGameplayCameraRigActor::GetCameraRigComponent() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameplayCameraSystemActor", "GetAutoSpawnedCameraSystemActor");
+		Func = Class->GetFunction("GameplayCameraRigActor", "GetCameraRigComponent");
 
-	Params::GameplayCameraSystemActor_GetAutoSpawnedCameraSystemActor Parms{};
-
-	Parms.PlayerController = PlayerController;
-	Parms.bForceSpawn = bForceSpawn;
+	Params::GameplayCameraRigActor_GetCameraRigComponent Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -2172,7 +2852,7 @@ class UGameplayCameraSystemComponent* AGameplayCameraSystemActor::GetCameraSyste
 
 
 // Function GameplayCameras.GameplayCameraSystemComponent.ActivateCameraSystemForPlayerController
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2197,7 +2877,7 @@ void UGameplayCameraSystemComponent::ActivateCameraSystemForPlayerController(cla
 
 
 // Function GameplayCameras.GameplayCameraSystemComponent.ActivateCameraSystemForPlayerIndex
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   PlayerIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2222,7 +2902,7 @@ void UGameplayCameraSystemComponent::ActivateCameraSystemForPlayerIndex(int32 Pl
 
 
 // Function GameplayCameras.GameplayCameraSystemComponent.DeactivateCameraSystem
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                           NextViewTarget                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2246,8 +2926,95 @@ void UGameplayCameraSystemComponent::DeactivateCameraSystem(class AActor* NextVi
 }
 
 
+// Function GameplayCameras.GameplayCameraSystemComponent.StartGlobalCameraModifierRig
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UCameraRigAsset*            CameraRig                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   OrderKey                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FCameraRigInstanceID             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FCameraRigInstanceID UGameplayCameraSystemComponent::StartGlobalCameraModifierRig(const class UCameraRigAsset* CameraRig, int32 OrderKey)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCameraSystemComponent", "StartGlobalCameraModifierRig");
+
+	Params::GameplayCameraSystemComponent_StartGlobalCameraModifierRig Parms{};
+
+	Parms.CameraRig = CameraRig;
+	Parms.OrderKey = OrderKey;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.GameplayCameraSystemComponent.StartVisualCameraModifierRig
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UCameraRigAsset*            CameraRig                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   OrderKey                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FCameraRigInstanceID             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FCameraRigInstanceID UGameplayCameraSystemComponent::StartVisualCameraModifierRig(const class UCameraRigAsset* CameraRig, int32 OrderKey)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCameraSystemComponent", "StartVisualCameraModifierRig");
+
+	Params::GameplayCameraSystemComponent_StartVisualCameraModifierRig Parms{};
+
+	Parms.CameraRig = CameraRig;
+	Parms.OrderKey = OrderKey;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.GameplayCameraSystemComponent.StopCameraModifierRig
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FCameraRigInstanceID&      InstanceId                                             (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bImmediately                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameplayCameraSystemComponent::StopCameraModifierRig(const struct FCameraRigInstanceID& InstanceId, bool bImmediately)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCameraSystemComponent", "StopCameraModifierRig");
+
+	Params::GameplayCameraSystemComponent_StopCameraModifierRig Parms{};
+
+	Parms.InstanceId = std::move(InstanceId);
+	Parms.bImmediately = bImmediately;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function GameplayCameras.GameplayCameraSystemComponent.IsCameraSystemActiveForPlayController
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2343,6 +3110,70 @@ void UGameplayControlRotationComponent::DeactivateControlRotationManagement()
 }
 
 
+// Function GameplayCameras.BlueprintCameraNodeEvaluator.InitializeCameraNode
+// (Event, Public, BlueprintEvent)
+
+void UBlueprintCameraNodeEvaluator::InitializeCameraNode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BlueprintCameraNodeEvaluator", "InitializeCameraNode");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GameplayCameras.BlueprintCameraNodeEvaluator.SetCameraPose
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraPose&      InCameraPose                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraNodeEvaluator::SetCameraPose(const struct FBlueprintCameraPose& InCameraPose)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BlueprintCameraNodeEvaluator", "SetCameraPose");
+
+	Params::BlueprintCameraNodeEvaluator_SetCameraPose Parms{};
+
+	Parms.InCameraPose = std::move(InCameraPose);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.BlueprintCameraNodeEvaluator.SetCurrentCameraPose
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlueprintCameraPose&      CameraPose_0                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraNodeEvaluator::SetCurrentCameraPose(const struct FBlueprintCameraPose& CameraPose_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BlueprintCameraNodeEvaluator", "SetCurrentCameraPose");
+
+	Params::BlueprintCameraNodeEvaluator_SetCurrentCameraPose Parms{};
+
+	Parms.CameraPose_0 = std::move(CameraPose_0);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function GameplayCameras.BlueprintCameraNodeEvaluator.TickCameraNode
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -2388,6 +3219,106 @@ class AActor* UBlueprintCameraNodeEvaluator::FindEvaluationContextOwnerActor(TSu
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraNodeEvaluator.GetCameraPose
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FBlueprintCameraPose             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBlueprintCameraPose UBlueprintCameraNodeEvaluator::GetCameraPose() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BlueprintCameraNodeEvaluator", "GetCameraPose");
+
+	Params::BlueprintCameraNodeEvaluator_GetCameraPose Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraNodeEvaluator.GetCurrentCameraPose
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FBlueprintCameraPose             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBlueprintCameraPose UBlueprintCameraNodeEvaluator::GetCurrentCameraPose() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BlueprintCameraNodeEvaluator", "GetCurrentCameraPose");
+
+	Params::BlueprintCameraNodeEvaluator_GetCurrentCameraPose Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraNodeEvaluator.GetPlayerController
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class APlayerController*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class APlayerController* UBlueprintCameraNodeEvaluator::GetPlayerController() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BlueprintCameraNodeEvaluator", "GetPlayerController");
+
+	Params::BlueprintCameraNodeEvaluator_GetPlayerController Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.BlueprintCameraNodeEvaluator.SetDefaultOwningCameraRigParameters
+// (Final, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// const struct FBlueprintCameraEvaluationDataRef&TargetCameraData                                       (Parm, NativeAccessSpecifierPublic)
+
+void UBlueprintCameraNodeEvaluator::SetDefaultOwningCameraRigParameters(const struct FBlueprintCameraEvaluationDataRef& TargetCameraData) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BlueprintCameraNodeEvaluator", "SetDefaultOwningCameraRigParameters");
+
+	Params::BlueprintCameraNodeEvaluator_SetDefaultOwningCameraRigParameters Parms{};
+
+	Parms.TargetCameraData = std::move(TargetCameraData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 }

@@ -44,26 +44,7 @@ public:
 	bool                                          CallFunc_GetShowDashIndicator_ReturnValue;         // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar) == 0x000008, "Wrong alignment on Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar");
-static_assert(sizeof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar) == 0x000060, "Wrong size on Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, EntryPoint) == 0x000000, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, K2Node_CustomEvent_NewValue) == 0x000004, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::K2Node_CustomEvent_NewValue' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, Temp_bool_Variable) == 0x000005, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, Temp_byte_Variable) == 0x000018, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, Temp_byte_Variable_1) == 0x000019, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, K2Node_CreateDelegate_OutputDelegate_1) == 0x00001C, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, Temp_bool_Variable_1) == 0x00002C, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, Temp_byte_Variable_2) == 0x00002D, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, Temp_byte_Variable_3) == 0x00002E, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::Temp_byte_Variable_3' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, K2Node_Select_Default) == 0x00002F, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, K2Node_CreateDelegate_OutputDelegate_2) == 0x000030, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000040, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, K2Node_CustomEvent_InVisibility) == 0x000048, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::K2Node_CustomEvent_InVisibility' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, K2Node_SwitchEnum_CmpSuccess) == 0x000049, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000050, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, CallFunc_GetShowDashIndicator_ReturnValue) == 0x000058, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::CallFunc_GetShowDashIndicator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar, K2Node_Select_Default_1) == 0x000059, "Member 'Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar::K2Node_Select_Default_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_DashCooldownBar_C_ExecuteUbergraph_Widget_DashCooldownBar;
 
 // Function Widget_DashCooldownBar.Widget_DashCooldownBar_C.OnShowDashIndicatorUpdated_Event
 // 0x0001 (0x0001 - 0x0000)
@@ -72,9 +53,7 @@ struct Widget_DashCooldownBar_C_OnShowDashIndicatorUpdated_Event final
 public:
 	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_DashCooldownBar_C_OnShowDashIndicatorUpdated_Event) == 0x000001, "Wrong alignment on Widget_DashCooldownBar_C_OnShowDashIndicatorUpdated_Event");
-static_assert(sizeof(Widget_DashCooldownBar_C_OnShowDashIndicatorUpdated_Event) == 0x000001, "Wrong size on Widget_DashCooldownBar_C_OnShowDashIndicatorUpdated_Event");
-static_assert(offsetof(Widget_DashCooldownBar_C_OnShowDashIndicatorUpdated_Event, NewValue) == 0x000000, "Member 'Widget_DashCooldownBar_C_OnShowDashIndicatorUpdated_Event::NewValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_DashCooldownBar_C_OnShowDashIndicatorUpdated_Event;
 
 // Function Widget_DashCooldownBar.Widget_DashCooldownBar_C.OnVisibilityChanged_Event
 // 0x0001 (0x0001 - 0x0000)
@@ -83,9 +62,7 @@ struct Widget_DashCooldownBar_C_OnVisibilityChanged_Event final
 public:
 	ESlateVisibility                              InVisibility;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_DashCooldownBar_C_OnVisibilityChanged_Event) == 0x000001, "Wrong alignment on Widget_DashCooldownBar_C_OnVisibilityChanged_Event");
-static_assert(sizeof(Widget_DashCooldownBar_C_OnVisibilityChanged_Event) == 0x000001, "Wrong size on Widget_DashCooldownBar_C_OnVisibilityChanged_Event");
-static_assert(offsetof(Widget_DashCooldownBar_C_OnVisibilityChanged_Event, InVisibility) == 0x000000, "Member 'Widget_DashCooldownBar_C_OnVisibilityChanged_Event::InVisibility' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_DashCooldownBar_C_OnVisibilityChanged_Event;
 
 // Function Widget_DashCooldownBar.Widget_DashCooldownBar_C.UpdateProgressBar
 // 0x0068 (0x0068 - 0x0000)
@@ -113,24 +90,7 @@ public:
 	float                                         CallFunc_SetPercent_InPercent_ImplicitCast;        // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetPercent_InPercent_ImplicitCast_1;      // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_DashCooldownBar_C_UpdateProgressBar) == 0x000008, "Wrong alignment on Widget_DashCooldownBar_C_UpdateProgressBar");
-static_assert(sizeof(Widget_DashCooldownBar_C_UpdateProgressBar) == 0x000068, "Wrong size on Widget_DashCooldownBar_C_UpdateProgressBar");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, DashScript) == 0x000000, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::DashScript' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, CallFunc_GetMutableFloatCurrentValue_ReturnValue) == 0x00000C, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::CallFunc_GetMutableFloatCurrentValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000010, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue) == 0x000018, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000020, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, CallFunc_SafeDivide_ReturnValue) == 0x000030, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, CallFunc_GetCharacterMutator_ReturnValue) == 0x000038, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::CallFunc_GetCharacterMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, K2Node_DynamicCast_AsBP_Activatable_Character_Mutator) == 0x000040, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::K2Node_DynamicCast_AsBP_Activatable_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, K2Node_DynamicCast_bSuccess_1) == 0x000048, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, CallFunc_IsValid_ReturnValue_1) == 0x000049, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, CallFunc_SafeDivide_B_ImplicitCast) == 0x000050, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::CallFunc_SafeDivide_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, CallFunc_SafeDivide_A_ImplicitCast) == 0x000058, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::CallFunc_SafeDivide_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, CallFunc_SetPercent_InPercent_ImplicitCast) == 0x000060, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::CallFunc_SetPercent_InPercent_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_DashCooldownBar_C_UpdateProgressBar, CallFunc_SetPercent_InPercent_ImplicitCast_1) == 0x000064, "Member 'Widget_DashCooldownBar_C_UpdateProgressBar::CallFunc_SetPercent_InPercent_ImplicitCast_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_DashCooldownBar_C_UpdateProgressBar;
 
 }
 

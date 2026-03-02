@@ -39,20 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_EngineRifle_ConcentratedShot_ModScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_EngineRifle_ConcentratedShot_ModScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_EngineRifle_ConcentratedShot_ModScript_C")
 	}
 	static class UBP_EngineRifle_ConcentratedShot_ModScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_EngineRifle_ConcentratedShot_ModScript_C>();
 	}
 };
-static_assert(alignof(UBP_EngineRifle_ConcentratedShot_ModScript_C) == 0x000008, "Wrong alignment on UBP_EngineRifle_ConcentratedShot_ModScript_C");
-static_assert(sizeof(UBP_EngineRifle_ConcentratedShot_ModScript_C) == 0x000180, "Wrong size on UBP_EngineRifle_ConcentratedShot_ModScript_C");
-static_assert(offsetof(UBP_EngineRifle_ConcentratedShot_ModScript_C, UberGraphFrame_BP_EngineRifle_ConcentratedShot_ModScript_C) == 0x000158, "Member 'UBP_EngineRifle_ConcentratedShot_ModScript_C::UberGraphFrame_BP_EngineRifle_ConcentratedShot_ModScript_C' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_ConcentratedShot_ModScript_C, KnockbackForce) == 0x000160, "Member 'UBP_EngineRifle_ConcentratedShot_ModScript_C::KnockbackForce' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_ConcentratedShot_ModScript_C, ExtraOverheatPerShot) == 0x000168, "Member 'UBP_EngineRifle_ConcentratedShot_ModScript_C::ExtraOverheatPerShot' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_ConcentratedShot_ModScript_C, FireSoundComponent) == 0x000170, "Member 'UBP_EngineRifle_ConcentratedShot_ModScript_C::FireSoundComponent' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_ConcentratedShot_ModScript_C, MinimumZKnockbackForce) == 0x000178, "Member 'UBP_EngineRifle_ConcentratedShot_ModScript_C::MinimumZKnockbackForce' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_EngineRifle_ConcentratedShot_ModScript_C;
 
 }
 

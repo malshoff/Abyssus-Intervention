@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
 #include "Niagara_structs.hpp"
 
@@ -19,11 +20,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_FragGrenade_ClusterBomb_GrenadeScript.BP_FragGrenade_ClusterBomb_GrenadeScript_C
-// 0x0008 (0x00F0 - 0x00E8)
+// 0x0130 (0x0218 - 0x00E8)
 class UBP_FragGrenade_ClusterBomb_GrenadeScript_C final : public URGGrenadeScript
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FRMutableFloat                         AbilityTriggerProcChanceModifier;                  // 0x00F0(0x0128)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_BP_FragGrenade_ClusterBomb_GrenadeScript(int32 EntryPoint);
@@ -34,16 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FragGrenade_ClusterBomb_GrenadeScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_FragGrenade_ClusterBomb_GrenadeScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FragGrenade_ClusterBomb_GrenadeScript_C")
 	}
 	static class UBP_FragGrenade_ClusterBomb_GrenadeScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_FragGrenade_ClusterBomb_GrenadeScript_C>();
 	}
 };
-static_assert(alignof(UBP_FragGrenade_ClusterBomb_GrenadeScript_C) == 0x000008, "Wrong alignment on UBP_FragGrenade_ClusterBomb_GrenadeScript_C");
-static_assert(sizeof(UBP_FragGrenade_ClusterBomb_GrenadeScript_C) == 0x0000F0, "Wrong size on UBP_FragGrenade_ClusterBomb_GrenadeScript_C");
-static_assert(offsetof(UBP_FragGrenade_ClusterBomb_GrenadeScript_C, UberGraphFrame) == 0x0000E8, "Member 'UBP_FragGrenade_ClusterBomb_GrenadeScript_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_FragGrenade_ClusterBomb_GrenadeScript_C;
 
 }
 

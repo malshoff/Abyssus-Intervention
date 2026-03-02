@@ -32,15 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BinkFunctionLibrary">();
+		STATIC_CLASS_IMPL("BinkFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BinkFunctionLibrary")
 	}
 	static class UBinkFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBinkFunctionLibrary>();
 	}
 };
-static_assert(alignof(UBinkFunctionLibrary) == 0x000008, "Wrong alignment on UBinkFunctionLibrary");
-static_assert(sizeof(UBinkFunctionLibrary) == 0x000028, "Wrong size on UBinkFunctionLibrary");
+DUMPER7_ASSERTS_UBinkFunctionLibrary;
 
 // Class BinkMediaPlayer.BinkMediaPlayer
 // 0x00E8 (0x0110 - 0x0028)
@@ -87,6 +90,7 @@ public:
 	float GetRate() const;
 	struct FTimespan GetTime() const;
 	class FString GetUrl() const;
+	bool IsGotoing() const;
 	bool IsInitialized() const;
 	bool IsLooping() const;
 	bool IsPaused() const;
@@ -99,44 +103,35 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BinkMediaPlayer">();
+		STATIC_CLASS_IMPL("BinkMediaPlayer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BinkMediaPlayer")
 	}
 	static class UBinkMediaPlayer* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBinkMediaPlayer>();
 	}
 };
-static_assert(alignof(UBinkMediaPlayer) == 0x000008, "Wrong alignment on UBinkMediaPlayer");
-static_assert(sizeof(UBinkMediaPlayer) == 0x000110, "Wrong size on UBinkMediaPlayer");
-static_assert(offsetof(UBinkMediaPlayer, OnMediaClosed) == 0x000030, "Member 'UBinkMediaPlayer::OnMediaClosed' has a wrong offset!");
-static_assert(offsetof(UBinkMediaPlayer, OnMediaOpened) == 0x000040, "Member 'UBinkMediaPlayer::OnMediaOpened' has a wrong offset!");
-static_assert(offsetof(UBinkMediaPlayer, OnMediaReachedEnd) == 0x000050, "Member 'UBinkMediaPlayer::OnMediaReachedEnd' has a wrong offset!");
-static_assert(offsetof(UBinkMediaPlayer, OnPlaybackSuspended) == 0x000060, "Member 'UBinkMediaPlayer::OnPlaybackSuspended' has a wrong offset!");
-static_assert(offsetof(UBinkMediaPlayer, BinkDestinationUpperLeft) == 0x000078, "Member 'UBinkMediaPlayer::BinkDestinationUpperLeft' has a wrong offset!");
-static_assert(offsetof(UBinkMediaPlayer, BinkDestinationLowerRight) == 0x000088, "Member 'UBinkMediaPlayer::BinkDestinationLowerRight' has a wrong offset!");
-static_assert(offsetof(UBinkMediaPlayer, URL) == 0x000098, "Member 'UBinkMediaPlayer::URL' has a wrong offset!");
-static_assert(offsetof(UBinkMediaPlayer, BinkBufferMode) == 0x0000A8, "Member 'UBinkMediaPlayer::BinkBufferMode' has a wrong offset!");
-static_assert(offsetof(UBinkMediaPlayer, BinkSoundTrack) == 0x0000A9, "Member 'UBinkMediaPlayer::BinkSoundTrack' has a wrong offset!");
-static_assert(offsetof(UBinkMediaPlayer, BinkSoundTrackStart) == 0x0000AC, "Member 'UBinkMediaPlayer::BinkSoundTrackStart' has a wrong offset!");
-static_assert(offsetof(UBinkMediaPlayer, BinkDrawStyle) == 0x0000B0, "Member 'UBinkMediaPlayer::BinkDrawStyle' has a wrong offset!");
-static_assert(offsetof(UBinkMediaPlayer, BinkLayerDepth) == 0x0000B4, "Member 'UBinkMediaPlayer::BinkLayerDepth' has a wrong offset!");
+DUMPER7_ASSERTS_UBinkMediaPlayer;
 
 // Class BinkMediaPlayer.BinkMediaTexture
-// 0x0038 (0x0168 - 0x0130)
+// 0x0038 (0x0178 - 0x0140)
 class UBinkMediaTexture final : public UTexture
 {
 public:
-	ETextureAddress                               AddressX;                                          // 0x0130(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETextureAddress                               AddressY;                                          // 0x0131(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_132[0x6];                                      // 0x0132(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBinkMediaPlayer*                       MediaPlayer;                                       // 0x0138(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPixelFormat                                  PixelFormat;                                       // 0x0140(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          tonemap;                                           // 0x0141(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_142[0x2];                                      // 0x0142(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         OutputNits;                                        // 0x0144(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Alpha;                                             // 0x0148(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          DecodeSRGB;                                        // 0x014C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14D[0x1B];                                     // 0x014D(0x001B)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	ETextureAddress                               AddressX;                                          // 0x0140(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextureAddress                               AddressY;                                          // 0x0141(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_142[0x6];                                      // 0x0142(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBinkMediaPlayer*                       MediaPlayer;                                       // 0x0148(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	EPixelFormat                                  PixelFormat;                                       // 0x0150(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          tonemap;                                           // 0x0151(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_152[0x2];                                      // 0x0152(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         OutputNits;                                        // 0x0154(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Alpha;                                             // 0x0158(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          DecodeSRGB;                                        // 0x015C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15D[0x1B];                                     // 0x015D(0x001B)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Clear();
@@ -145,23 +140,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BinkMediaTexture">();
+		STATIC_CLASS_IMPL("BinkMediaTexture")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BinkMediaTexture")
 	}
 	static class UBinkMediaTexture* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBinkMediaTexture>();
 	}
 };
-static_assert(alignof(UBinkMediaTexture) == 0x000008, "Wrong alignment on UBinkMediaTexture");
-static_assert(sizeof(UBinkMediaTexture) == 0x000168, "Wrong size on UBinkMediaTexture");
-static_assert(offsetof(UBinkMediaTexture, AddressX) == 0x000130, "Member 'UBinkMediaTexture::AddressX' has a wrong offset!");
-static_assert(offsetof(UBinkMediaTexture, AddressY) == 0x000131, "Member 'UBinkMediaTexture::AddressY' has a wrong offset!");
-static_assert(offsetof(UBinkMediaTexture, MediaPlayer) == 0x000138, "Member 'UBinkMediaTexture::MediaPlayer' has a wrong offset!");
-static_assert(offsetof(UBinkMediaTexture, PixelFormat) == 0x000140, "Member 'UBinkMediaTexture::PixelFormat' has a wrong offset!");
-static_assert(offsetof(UBinkMediaTexture, tonemap) == 0x000141, "Member 'UBinkMediaTexture::tonemap' has a wrong offset!");
-static_assert(offsetof(UBinkMediaTexture, OutputNits) == 0x000144, "Member 'UBinkMediaTexture::OutputNits' has a wrong offset!");
-static_assert(offsetof(UBinkMediaTexture, Alpha) == 0x000148, "Member 'UBinkMediaTexture::Alpha' has a wrong offset!");
-static_assert(offsetof(UBinkMediaTexture, DecodeSRGB) == 0x00014C, "Member 'UBinkMediaTexture::DecodeSRGB' has a wrong offset!");
+DUMPER7_ASSERTS_UBinkMediaTexture;
 
 // Class BinkMediaPlayer.BinkMoviePlayerSettings
 // 0x0030 (0x0058 - 0x0028)
@@ -180,21 +170,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BinkMoviePlayerSettings">();
+		STATIC_CLASS_IMPL("BinkMoviePlayerSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BinkMoviePlayerSettings")
 	}
 	static class UBinkMoviePlayerSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBinkMoviePlayerSettings>();
 	}
 };
-static_assert(alignof(UBinkMoviePlayerSettings) == 0x000008, "Wrong alignment on UBinkMoviePlayerSettings");
-static_assert(sizeof(UBinkMoviePlayerSettings) == 0x000058, "Wrong size on UBinkMoviePlayerSettings");
-static_assert(offsetof(UBinkMoviePlayerSettings, BinkBufferMode) == 0x000028, "Member 'UBinkMoviePlayerSettings::BinkBufferMode' has a wrong offset!");
-static_assert(offsetof(UBinkMoviePlayerSettings, BinkSoundTrack) == 0x000029, "Member 'UBinkMoviePlayerSettings::BinkSoundTrack' has a wrong offset!");
-static_assert(offsetof(UBinkMoviePlayerSettings, BinkSoundTrackStart) == 0x00002C, "Member 'UBinkMoviePlayerSettings::BinkSoundTrackStart' has a wrong offset!");
-static_assert(offsetof(UBinkMoviePlayerSettings, BinkDestinationUpperLeft) == 0x000030, "Member 'UBinkMoviePlayerSettings::BinkDestinationUpperLeft' has a wrong offset!");
-static_assert(offsetof(UBinkMoviePlayerSettings, BinkDestinationLowerRight) == 0x000040, "Member 'UBinkMoviePlayerSettings::BinkDestinationLowerRight' has a wrong offset!");
-static_assert(offsetof(UBinkMoviePlayerSettings, BinkPixelFormat) == 0x000050, "Member 'UBinkMoviePlayerSettings::BinkPixelFormat' has a wrong offset!");
+DUMPER7_ASSERTS_UBinkMoviePlayerSettings;
 
 }
 

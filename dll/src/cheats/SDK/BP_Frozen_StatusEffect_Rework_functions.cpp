@@ -100,9 +100,11 @@ void UBP_Frozen_StatusEffect_Rework_C::CheckFrostPassive8(bool* HasPassive8)
 // Function BP_Frozen_StatusEffect_Rework.BP_Frozen_StatusEffect_Rework_C.CheckFrostPassive9
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool*                                   HasPassive9                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 AdditiveMultiplier                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 MinShredHealthPercentage                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_Frozen_StatusEffect_Rework_C::CheckFrostPassive9(bool* HasPassive9)
+void UBP_Frozen_StatusEffect_Rework_C::CheckFrostPassive9(bool* Result, double* AdditiveMultiplier, double* MinShredHealthPercentage)
 {
 	static class UFunction* Func = nullptr;
 
@@ -113,8 +115,14 @@ void UBP_Frozen_StatusEffect_Rework_C::CheckFrostPassive9(bool* HasPassive9)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (HasPassive9 != nullptr)
-		*HasPassive9 = Parms.HasPassive9;
+	if (Result != nullptr)
+		*Result = Parms.Result;
+
+	if (AdditiveMultiplier != nullptr)
+		*AdditiveMultiplier = Parms.AdditiveMultiplier;
+
+	if (MinShredHealthPercentage != nullptr)
+		*MinShredHealthPercentage = Parms.MinShredHealthPercentage;
 }
 
 

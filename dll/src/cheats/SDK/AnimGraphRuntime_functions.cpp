@@ -261,7 +261,7 @@ void UBlendSpaceLibrary::SnapToPosition(const struct FBlendSpaceReference& Blend
 
 
 // Function AnimGraphRuntime.SequencerAnimationOverride.AllowsCinematicOverride
-// (Native, Event, Public, BlueprintEvent, Const)
+// (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -286,7 +286,7 @@ bool ISequencerAnimationOverride::AllowsCinematicOverride() const
 
 
 // Function AnimGraphRuntime.SequencerAnimationOverride.GetSequencerAnimSlotNames
-// (Native, Event, Public, BlueprintEvent, Const)
+// (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
 // TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 

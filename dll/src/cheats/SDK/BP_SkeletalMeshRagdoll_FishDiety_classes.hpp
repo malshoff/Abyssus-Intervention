@@ -18,41 +18,51 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SkeletalMeshRagdoll_FishDiety.BP_SkeletalMeshRagdoll_FishDiety_C
-// 0x0028 (0x0310 - 0x02E8)
+// 0x0078 (0x0360 - 0x02E8)
 class ABP_SkeletalMeshRagdoll_FishDiety_C final : public ABP_SkeletalMeshRagdoll_C
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SkeletalMeshRagdoll_FishDiety_C; // 0x02E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UStaticMeshComponent*                   SecondaryModStaticMesh;                            // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 PrimaryModSkeletalMesh;                            // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           As_RPlayer_Pawn;                                   // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        stunDuration;                                      // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           As_RPlayer_Pawn;                                   // 0x0300(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        stunDuration;                                      // 0x0308(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URGCharacterMutatorScript*              CachedScriptRef;                                   // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 InstigatorActor;                                   // 0x0318(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPoseSnapshot                          Snapshot;                                          // 0x0320(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class ARNPCPawnBase*                          CachedKrisu;                                       // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__BP_Elite_Golem_Sentry_SkeletalMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+	void CheckFishDeityReloadKillChallenge(class AActor* HitActor);
 	void EventExplode();
 	void ExecuteUbergraph_BP_SkeletalMeshRagdoll_FishDiety(int32 EntryPoint);
+	void FishDeityReloadKillChallenge_Progress_Multicast();
+	void OnExplosion_3E67F20D4EB920412CBC41AE1A56ECAE(const TArray<struct FHitResult>& HitResults, float ActualExplosionRadius);
+	void OnFail_3E67F20D4EB920412CBC41AE1A56ECAE();
+	void OnFinished_3E67F20D4EB920412CBC41AE1A56ECAE();
+	void ReceiveBeginPlay();
+	void SetupFishMeshes();
 	void Spawn_FX();
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
+
+	void CopyMeshes(class ABP_FishDiety_Body_C* Weapon) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SkeletalMeshRagdoll_FishDiety_C">();
+		BP_STATIC_CLASS_IMPL("BP_SkeletalMeshRagdoll_FishDiety_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SkeletalMeshRagdoll_FishDiety_C")
 	}
 	static class ABP_SkeletalMeshRagdoll_FishDiety_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_SkeletalMeshRagdoll_FishDiety_C>();
 	}
 };
-static_assert(alignof(ABP_SkeletalMeshRagdoll_FishDiety_C) == 0x000008, "Wrong alignment on ABP_SkeletalMeshRagdoll_FishDiety_C");
-static_assert(sizeof(ABP_SkeletalMeshRagdoll_FishDiety_C) == 0x000310, "Wrong size on ABP_SkeletalMeshRagdoll_FishDiety_C");
-static_assert(offsetof(ABP_SkeletalMeshRagdoll_FishDiety_C, UberGraphFrame_BP_SkeletalMeshRagdoll_FishDiety_C) == 0x0002E8, "Member 'ABP_SkeletalMeshRagdoll_FishDiety_C::UberGraphFrame_BP_SkeletalMeshRagdoll_FishDiety_C' has a wrong offset!");
-static_assert(offsetof(ABP_SkeletalMeshRagdoll_FishDiety_C, SecondaryModStaticMesh) == 0x0002F0, "Member 'ABP_SkeletalMeshRagdoll_FishDiety_C::SecondaryModStaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_SkeletalMeshRagdoll_FishDiety_C, PrimaryModSkeletalMesh) == 0x0002F8, "Member 'ABP_SkeletalMeshRagdoll_FishDiety_C::PrimaryModSkeletalMesh' has a wrong offset!");
-static_assert(offsetof(ABP_SkeletalMeshRagdoll_FishDiety_C, As_RPlayer_Pawn) == 0x000300, "Member 'ABP_SkeletalMeshRagdoll_FishDiety_C::As_RPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(ABP_SkeletalMeshRagdoll_FishDiety_C, stunDuration) == 0x000308, "Member 'ABP_SkeletalMeshRagdoll_FishDiety_C::stunDuration' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_SkeletalMeshRagdoll_FishDiety_C;
 
 }
 

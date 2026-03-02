@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "RGame_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -18,32 +17,24 @@ namespace SDK::Params
 {
 
 // Function Widget_CosmeticEntryContentMesh.Widget_CosmeticEntryContentMesh_C.SetContentInfo
-// 0x01A0 (0x01A0 - 0x0000)
+// 0x00E0 (0x00E0 - 0x0000)
 struct Widget_CosmeticEntryContentMesh_C_SetContentInfo final
 {
 public:
-	struct FPlayerCosmeticOption                  CosmeticOptionData;                                // 0x0000(0x00D0)(BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue;       // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00D8(0x0048)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0128(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0170(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0180(0x0010)()
-	class FText                                   CallFunc_SelectText_ReturnValue;                   // 0x0190(0x0010)()
+	class URCosmeticPrimaryAsset*                 CosmeticPA;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0010(0x0048)(HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue;       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0068(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00B0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00C0(0x0010)()
+	class FText                                   CallFunc_SelectText_ReturnValue;                   // 0x00D0(0x0010)()
 };
-static_assert(alignof(Widget_CosmeticEntryContentMesh_C_SetContentInfo) == 0x000008, "Wrong alignment on Widget_CosmeticEntryContentMesh_C_SetContentInfo");
-static_assert(sizeof(Widget_CosmeticEntryContentMesh_C_SetContentInfo) == 0x0001A0, "Wrong size on Widget_CosmeticEntryContentMesh_C_SetContentInfo");
-static_assert(offsetof(Widget_CosmeticEntryContentMesh_C_SetContentInfo, CosmeticOptionData) == 0x000000, "Member 'Widget_CosmeticEntryContentMesh_C_SetContentInfo::CosmeticOptionData' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticEntryContentMesh_C_SetContentInfo, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x0000D0, "Member 'Widget_CosmeticEntryContentMesh_C_SetContentInfo::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticEntryContentMesh_C_SetContentInfo, CallFunc_SelectInt_ReturnValue) == 0x0000D4, "Member 'Widget_CosmeticEntryContentMesh_C_SetContentInfo::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticEntryContentMesh_C_SetContentInfo, K2Node_MakeStruct_FormatArgumentData) == 0x0000D8, "Member 'Widget_CosmeticEntryContentMesh_C_SetContentInfo::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticEntryContentMesh_C_SetContentInfo, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000120, "Member 'Widget_CosmeticEntryContentMesh_C_SetContentInfo::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticEntryContentMesh_C_SetContentInfo, K2Node_MakeStruct_FormatArgumentData_1) == 0x000128, "Member 'Widget_CosmeticEntryContentMesh_C_SetContentInfo::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticEntryContentMesh_C_SetContentInfo, K2Node_MakeArray_Array) == 0x000170, "Member 'Widget_CosmeticEntryContentMesh_C_SetContentInfo::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticEntryContentMesh_C_SetContentInfo, CallFunc_Format_ReturnValue) == 0x000180, "Member 'Widget_CosmeticEntryContentMesh_C_SetContentInfo::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CosmeticEntryContentMesh_C_SetContentInfo, CallFunc_SelectText_ReturnValue) == 0x000190, "Member 'Widget_CosmeticEntryContentMesh_C_SetContentInfo::CallFunc_SelectText_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CosmeticEntryContentMesh_C_SetContentInfo;
 
 }
 

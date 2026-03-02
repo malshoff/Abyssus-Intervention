@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "Renderer_structs.hpp"
 #include "Engine_classes.hpp"
 
@@ -17,68 +19,112 @@
 namespace SDK
 {
 
-// Class Renderer.SparseVolumeTextureViewerComponent
-// 0x0030 (0x0520 - 0x04F0)
-class USparseVolumeTextureViewerComponent final : public UPrimitiveComponent
+// Class Renderer.MaterialCacheStackProvider
+// 0x0000 (0x0028 - 0x0028)
+class UMaterialCacheStackProvider final : public UObject
 {
 public:
-	class USparseVolumeTexture*                   SparseVolumeTexturePreview;                        // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Frame;                                             // 0x04F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FrameRate;                                         // 0x04F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bPlaying : 1;                                      // 0x04F8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bLooping : 1;                                      // 0x04F8(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bReversePlayback : 1;                              // 0x04F8(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bBlockingStreamingRequests : 1;                    // 0x04F8(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bApplyPerFrameTransforms : 1;                      // 0x04F8(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bPivotAtCentroid : 1;                              // 0x04F8(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_4F9[0x3];                                      // 0x04F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         VoxelSize;                                         // 0x04FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESparseVolumeTexturePreviewAttribute          PreviewAttribute;                                  // 0x0500(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_501[0x3];                                      // 0x0501(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MipLevel;                                          // 0x0504(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Extinction;                                        // 0x0508(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_50C[0x14];                                     // 0x050C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MaterialCacheStackProvider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialCacheStackProvider")
+	}
+	static class UMaterialCacheStackProvider* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMaterialCacheStackProvider>();
+	}
+};
+DUMPER7_ASSERTS_UMaterialCacheStackProvider;
+
+// Class Renderer.MaterialCacheVirtualTexture
+// 0x0020 (0x0160 - 0x0140)
+class UMaterialCacheVirtualTexture final : public UTexture
+{
+public:
+	TWeakObjectPtr<class UPrimitiveComponent>     OwningComponent;                                   // 0x0140(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UMaterialCacheStackProvider> MaterialStackProvider;                         // 0x0148(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIntPoint                              TileCount;                                         // 0x0150(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_158[0x8];                                      // 0x0158(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SparseVolumeTextureViewerComponent">();
+		STATIC_CLASS_IMPL("MaterialCacheVirtualTexture")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialCacheVirtualTexture")
+	}
+	static class UMaterialCacheVirtualTexture* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMaterialCacheVirtualTexture>();
+	}
+};
+DUMPER7_ASSERTS_UMaterialCacheVirtualTexture;
+
+// Class Renderer.SparseVolumeTextureViewerComponent
+// 0x0040 (0x0560 - 0x0520)
+class USparseVolumeTextureViewerComponent final : public UPrimitiveComponent
+{
+public:
+	class USparseVolumeTexture*                   SparseVolumeTexturePreview;                        // 0x0520(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	float                                         Frame;                                             // 0x0528(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FrameRate;                                         // 0x052C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bPlaying : 1;                                      // 0x0530(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bLooping : 1;                                      // 0x0530(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bReversePlayback : 1;                              // 0x0530(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bBlockingStreamingRequests : 1;                    // 0x0530(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bApplyPerFrameTransforms : 1;                      // 0x0530(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bPivotAtCentroid : 1;                              // 0x0530(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_531[0x3];                                      // 0x0531(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         VoxelSize;                                         // 0x0534(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESparseVolumeTexturePreviewAttribute          PreviewAttribute;                                  // 0x0538(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_539[0x3];                                      // 0x0539(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MipLevel;                                          // 0x053C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Extinction;                                        // 0x0540(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_544[0x1C];                                     // 0x0544(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SparseVolumeTextureViewerComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SparseVolumeTextureViewerComponent")
 	}
 	static class USparseVolumeTextureViewerComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USparseVolumeTextureViewerComponent>();
 	}
 };
-static_assert(alignof(USparseVolumeTextureViewerComponent) == 0x000010, "Wrong alignment on USparseVolumeTextureViewerComponent");
-static_assert(sizeof(USparseVolumeTextureViewerComponent) == 0x000520, "Wrong size on USparseVolumeTextureViewerComponent");
-static_assert(offsetof(USparseVolumeTextureViewerComponent, SparseVolumeTexturePreview) == 0x0004E8, "Member 'USparseVolumeTextureViewerComponent::SparseVolumeTexturePreview' has a wrong offset!");
-static_assert(offsetof(USparseVolumeTextureViewerComponent, Frame) == 0x0004F0, "Member 'USparseVolumeTextureViewerComponent::Frame' has a wrong offset!");
-static_assert(offsetof(USparseVolumeTextureViewerComponent, FrameRate) == 0x0004F4, "Member 'USparseVolumeTextureViewerComponent::FrameRate' has a wrong offset!");
-static_assert(offsetof(USparseVolumeTextureViewerComponent, VoxelSize) == 0x0004FC, "Member 'USparseVolumeTextureViewerComponent::VoxelSize' has a wrong offset!");
-static_assert(offsetof(USparseVolumeTextureViewerComponent, PreviewAttribute) == 0x000500, "Member 'USparseVolumeTextureViewerComponent::PreviewAttribute' has a wrong offset!");
-static_assert(offsetof(USparseVolumeTextureViewerComponent, MipLevel) == 0x000504, "Member 'USparseVolumeTextureViewerComponent::MipLevel' has a wrong offset!");
-static_assert(offsetof(USparseVolumeTextureViewerComponent, Extinction) == 0x000508, "Member 'USparseVolumeTextureViewerComponent::Extinction' has a wrong offset!");
+DUMPER7_ASSERTS_USparseVolumeTextureViewerComponent;
 
 // Class Renderer.SparseVolumeTextureViewer
 // 0x0008 (0x02B0 - 0x02A8)
 class ASparseVolumeTextureViewer final : public AInfo
 {
 public:
-	class USparseVolumeTextureViewerComponent*    SparseVolumeTextureViewerComponent;                // 0x02A8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class USparseVolumeTextureViewerComponent*    SparseVolumeTextureViewerComponent;                // 0x02A8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SparseVolumeTextureViewer">();
+		STATIC_CLASS_IMPL("SparseVolumeTextureViewer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SparseVolumeTextureViewer")
 	}
 	static class ASparseVolumeTextureViewer* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ASparseVolumeTextureViewer>();
 	}
 };
-static_assert(alignof(ASparseVolumeTextureViewer) == 0x000008, "Wrong alignment on ASparseVolumeTextureViewer");
-static_assert(sizeof(ASparseVolumeTextureViewer) == 0x0002B0, "Wrong size on ASparseVolumeTextureViewer");
-static_assert(offsetof(ASparseVolumeTextureViewer, SparseVolumeTextureViewerComponent) == 0x0002A8, "Member 'ASparseVolumeTextureViewer::SparseVolumeTextureViewerComponent' has a wrong offset!");
+DUMPER7_ASSERTS_ASparseVolumeTextureViewer;
 
 }
 

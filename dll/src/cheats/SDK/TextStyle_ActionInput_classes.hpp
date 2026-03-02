@@ -23,15 +23,18 @@ class UTextStyle_ActionInput_C final : public UCommonTextStyle
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TextStyle_ActionInput_C">();
+		BP_STATIC_CLASS_IMPL("TextStyle_ActionInput_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TextStyle_ActionInput_C")
 	}
 	static class UTextStyle_ActionInput_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTextStyle_ActionInput_C>();
 	}
 };
-static_assert(alignof(UTextStyle_ActionInput_C) == 0x000010, "Wrong alignment on UTextStyle_ActionInput_C");
-static_assert(sizeof(UTextStyle_ActionInput_C) == 0x000190, "Wrong size on UTextStyle_ActionInput_C");
+DUMPER7_ASSERTS_UTextStyle_ActionInput_C;
 
 }
 

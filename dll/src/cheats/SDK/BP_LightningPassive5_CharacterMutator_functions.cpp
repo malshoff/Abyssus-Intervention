@@ -17,56 +17,8 @@
 namespace SDK
 {
 
-// Function BP_LightningPassive5_CharacterMutator.BP_LightningPassive5_CharacterMutator_C.ExecuteUbergraph_BP_LightningPassive5_CharacterMutator
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_LightningPassive5_CharacterMutator_C::ExecuteUbergraph_BP_LightningPassive5_CharacterMutator(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LightningPassive5_CharacterMutator_C", "ExecuteUbergraph_BP_LightningPassive5_CharacterMutator");
-
-	Params::BP_LightningPassive5_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive5_CharacterMutator Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_LightningPassive5_CharacterMutator.BP_LightningPassive5_CharacterMutator_C.K2_ActivateScript
-// (Event, Public, BlueprintEvent)
-
-void UBP_LightningPassive5_CharacterMutator_C::K2_ActivateScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LightningPassive5_CharacterMutator_C", "K2_ActivateScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_LightningPassive5_CharacterMutator.BP_LightningPassive5_CharacterMutator_C.K2_DeactivateScript
-// (Event, Public, BlueprintEvent)
-
-void UBP_LightningPassive5_CharacterMutator_C::K2_DeactivateScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LightningPassive5_CharacterMutator_C", "K2_DeactivateScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_LightningPassive5_CharacterMutator.BP_LightningPassive5_CharacterMutator_C.OnDealtDamage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ARPawnBase*                       Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // const struct FDamageCombatEvent&        DamageCombatEventData                                  (BlueprintVisible, BlueprintReadOnly, Parm)

@@ -42,22 +42,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_AnchorMastery_Challenge_C">();
+		BP_STATIC_CLASS_IMPL("BP_AnchorMastery_Challenge_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_AnchorMastery_Challenge_C")
 	}
 	static class UBP_AnchorMastery_Challenge_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_AnchorMastery_Challenge_C>();
 	}
 };
-static_assert(alignof(UBP_AnchorMastery_Challenge_C) == 0x000008, "Wrong alignment on UBP_AnchorMastery_Challenge_C");
-static_assert(sizeof(UBP_AnchorMastery_Challenge_C) == 0x000070, "Wrong size on UBP_AnchorMastery_Challenge_C");
-static_assert(offsetof(UBP_AnchorMastery_Challenge_C, UberGraphFrame) == 0x000030, "Member 'UBP_AnchorMastery_Challenge_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_AnchorMastery_Challenge_C, TimeWindow) == 0x000038, "Member 'UBP_AnchorMastery_Challenge_C::TimeWindow' has a wrong offset!");
-static_assert(offsetof(UBP_AnchorMastery_Challenge_C, Time_Stamp) == 0x000040, "Member 'UBP_AnchorMastery_Challenge_C::Time_Stamp' has a wrong offset!");
-static_assert(offsetof(UBP_AnchorMastery_Challenge_C, ActorsHitThisFrame) == 0x000048, "Member 'UBP_AnchorMastery_Challenge_C::ActorsHitThisFrame' has a wrong offset!");
-static_assert(offsetof(UBP_AnchorMastery_Challenge_C, EnemiesHitThreshold) == 0x000058, "Member 'UBP_AnchorMastery_Challenge_C::EnemiesHitThreshold' has a wrong offset!");
-static_assert(offsetof(UBP_AnchorMastery_Challenge_C, Current) == 0x000060, "Member 'UBP_AnchorMastery_Challenge_C::Current' has a wrong offset!");
-static_assert(offsetof(UBP_AnchorMastery_Challenge_C, Target) == 0x000068, "Member 'UBP_AnchorMastery_Challenge_C::Target' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_AnchorMastery_Challenge_C;
 
 }
 

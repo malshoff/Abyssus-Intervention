@@ -30,15 +30,7 @@ public:
 	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect) == 0x000008, "Wrong alignment on BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect");
-static_assert(sizeof(BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect) == 0x000088, "Wrong size on BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect");
-static_assert(offsetof(BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect, EntryPoint) == 0x000000, "Member 'BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000038, "Member 'BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect, CallFunc_GetHealthComponent_ReturnValue) == 0x000068, "Member 'BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect::CallFunc_GetHealthComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect, CallFunc_GetHealthComponent_ReturnValue_1) == 0x000070, "Member 'BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect::CallFunc_GetHealthComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect, CallFunc_GetScriptFName_ReturnValue) == 0x000078, "Member 'BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect, CallFunc_GetScriptFName_ReturnValue_1) == 0x000080, "Member 'BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Bulwark_StatusEffect_C_ExecuteUbergraph_BP_Bulwark_StatusEffect;
 
 }
 

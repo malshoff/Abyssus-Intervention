@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BP_LightningPassive3_CharacterMutator.BP_LightningPassive3_CharacterMutator_C.ApplyStun_Server
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ARPawnBase*                       RPawnBase                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBP_LightningPassive3_CharacterMutator_C::ApplyStun_Server(class ARPawnBase* RPawnBase)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LightningPassive3_CharacterMutator_C", "ApplyStun_Server");
-
-	Params::BP_LightningPassive3_CharacterMutator_C_ApplyStun_Server Parms{};
-
-	Parms.RPawnBase = RPawnBase;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_LightningPassive3_CharacterMutator.BP_LightningPassive3_CharacterMutator_C.ExecuteUbergraph_BP_LightningPassive3_CharacterMutator
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:

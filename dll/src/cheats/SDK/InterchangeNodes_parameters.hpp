@@ -26,10 +26,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackSetNode_AddCustomAnimationTrackUid) == 0x000008, "Wrong alignment on InterchangeAnimationTrackSetNode_AddCustomAnimationTrackUid");
-static_assert(sizeof(InterchangeAnimationTrackSetNode_AddCustomAnimationTrackUid) == 0x000018, "Wrong size on InterchangeAnimationTrackSetNode_AddCustomAnimationTrackUid");
-static_assert(offsetof(InterchangeAnimationTrackSetNode_AddCustomAnimationTrackUid, AnimationTrackUid) == 0x000000, "Member 'InterchangeAnimationTrackSetNode_AddCustomAnimationTrackUid::AnimationTrackUid' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackSetNode_AddCustomAnimationTrackUid, ReturnValue) == 0x000010, "Member 'InterchangeAnimationTrackSetNode_AddCustomAnimationTrackUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackSetNode_AddCustomAnimationTrackUid;
 
 // Function InterchangeNodes.InterchangeAnimationTrackSetNode.RemoveCustomAnimationTrackUid
 // 0x0018 (0x0018 - 0x0000)
@@ -40,10 +37,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackSetNode_RemoveCustomAnimationTrackUid) == 0x000008, "Wrong alignment on InterchangeAnimationTrackSetNode_RemoveCustomAnimationTrackUid");
-static_assert(sizeof(InterchangeAnimationTrackSetNode_RemoveCustomAnimationTrackUid) == 0x000018, "Wrong size on InterchangeAnimationTrackSetNode_RemoveCustomAnimationTrackUid");
-static_assert(offsetof(InterchangeAnimationTrackSetNode_RemoveCustomAnimationTrackUid, AnimationTrackUid) == 0x000000, "Member 'InterchangeAnimationTrackSetNode_RemoveCustomAnimationTrackUid::AnimationTrackUid' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackSetNode_RemoveCustomAnimationTrackUid, ReturnValue) == 0x000010, "Member 'InterchangeAnimationTrackSetNode_RemoveCustomAnimationTrackUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackSetNode_RemoveCustomAnimationTrackUid;
 
 // Function InterchangeNodes.InterchangeAnimationTrackSetNode.SetCustomFrameRate
 // 0x0008 (0x0008 - 0x0000)
@@ -54,10 +48,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackSetNode_SetCustomFrameRate) == 0x000004, "Wrong alignment on InterchangeAnimationTrackSetNode_SetCustomFrameRate");
-static_assert(sizeof(InterchangeAnimationTrackSetNode_SetCustomFrameRate) == 0x000008, "Wrong size on InterchangeAnimationTrackSetNode_SetCustomFrameRate");
-static_assert(offsetof(InterchangeAnimationTrackSetNode_SetCustomFrameRate, AttributeValue) == 0x000000, "Member 'InterchangeAnimationTrackSetNode_SetCustomFrameRate::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackSetNode_SetCustomFrameRate, ReturnValue) == 0x000004, "Member 'InterchangeAnimationTrackSetNode_SetCustomFrameRate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackSetNode_SetCustomFrameRate;
 
 // Function InterchangeNodes.InterchangeAnimationTrackSetNode.GetCustomAnimationTrackUid
 // 0x0018 (0x0018 - 0x0000)
@@ -68,10 +59,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OutAnimationTrackUid;                              // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUid) == 0x000008, "Wrong alignment on InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUid");
-static_assert(sizeof(InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUid) == 0x000018, "Wrong size on InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUid");
-static_assert(offsetof(InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUid, Index_0) == 0x000000, "Member 'InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUid::Index_0' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUid, OutAnimationTrackUid) == 0x000008, "Member 'InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUid::OutAnimationTrackUid' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUid;
 
 // Function InterchangeNodes.InterchangeAnimationTrackSetNode.GetCustomAnimationTrackUidCount
 // 0x0004 (0x0004 - 0x0000)
@@ -80,9 +68,7 @@ struct InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUidCount final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUidCount) == 0x000004, "Wrong alignment on InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUidCount");
-static_assert(sizeof(InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUidCount) == 0x000004, "Wrong size on InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUidCount");
-static_assert(offsetof(InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUidCount, ReturnValue) == 0x000000, "Member 'InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUidCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUidCount;
 
 // Function InterchangeNodes.InterchangeAnimationTrackSetNode.GetCustomAnimationTrackUids
 // 0x0010 (0x0010 - 0x0000)
@@ -91,9 +77,7 @@ struct InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUids final
 public:
 	TArray<class FString>                         OutAnimationTrackUids;                             // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUids) == 0x000008, "Wrong alignment on InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUids");
-static_assert(sizeof(InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUids) == 0x000010, "Wrong size on InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUids");
-static_assert(offsetof(InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUids, OutAnimationTrackUids) == 0x000000, "Member 'InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUids::OutAnimationTrackUids' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUids;
 
 // Function InterchangeNodes.InterchangeAnimationTrackSetNode.GetCustomFrameRate
 // 0x0008 (0x0008 - 0x0000)
@@ -104,10 +88,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackSetNode_GetCustomFrameRate) == 0x000004, "Wrong alignment on InterchangeAnimationTrackSetNode_GetCustomFrameRate");
-static_assert(sizeof(InterchangeAnimationTrackSetNode_GetCustomFrameRate) == 0x000008, "Wrong size on InterchangeAnimationTrackSetNode_GetCustomFrameRate");
-static_assert(offsetof(InterchangeAnimationTrackSetNode_GetCustomFrameRate, AttributeValue) == 0x000000, "Member 'InterchangeAnimationTrackSetNode_GetCustomFrameRate::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackSetNode_GetCustomFrameRate, ReturnValue) == 0x000004, "Member 'InterchangeAnimationTrackSetNode_GetCustomFrameRate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackSetNode_GetCustomFrameRate;
 
 // Function InterchangeNodes.InterchangeAnimationTrackBaseNode.SetCustomCompletionMode
 // 0x0008 (0x0008 - 0x0000)
@@ -118,10 +99,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackBaseNode_SetCustomCompletionMode) == 0x000004, "Wrong alignment on InterchangeAnimationTrackBaseNode_SetCustomCompletionMode");
-static_assert(sizeof(InterchangeAnimationTrackBaseNode_SetCustomCompletionMode) == 0x000008, "Wrong size on InterchangeAnimationTrackBaseNode_SetCustomCompletionMode");
-static_assert(offsetof(InterchangeAnimationTrackBaseNode_SetCustomCompletionMode, AttributeValue) == 0x000000, "Member 'InterchangeAnimationTrackBaseNode_SetCustomCompletionMode::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackBaseNode_SetCustomCompletionMode, ReturnValue) == 0x000004, "Member 'InterchangeAnimationTrackBaseNode_SetCustomCompletionMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackBaseNode_SetCustomCompletionMode;
 
 // Function InterchangeNodes.InterchangeAnimationTrackBaseNode.GetCustomCompletionMode
 // 0x0008 (0x0008 - 0x0000)
@@ -132,10 +110,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackBaseNode_GetCustomCompletionMode) == 0x000004, "Wrong alignment on InterchangeAnimationTrackBaseNode_GetCustomCompletionMode");
-static_assert(sizeof(InterchangeAnimationTrackBaseNode_GetCustomCompletionMode) == 0x000008, "Wrong size on InterchangeAnimationTrackBaseNode_GetCustomCompletionMode");
-static_assert(offsetof(InterchangeAnimationTrackBaseNode_GetCustomCompletionMode, AttributeValue) == 0x000000, "Member 'InterchangeAnimationTrackBaseNode_GetCustomCompletionMode::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackBaseNode_GetCustomCompletionMode, ReturnValue) == 0x000004, "Member 'InterchangeAnimationTrackBaseNode_GetCustomCompletionMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackBaseNode_GetCustomCompletionMode;
 
 // Function InterchangeNodes.InterchangeAnimationTrackSetInstanceNode.SetCustomDuration
 // 0x0008 (0x0008 - 0x0000)
@@ -146,10 +121,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackSetInstanceNode_SetCustomDuration) == 0x000004, "Wrong alignment on InterchangeAnimationTrackSetInstanceNode_SetCustomDuration");
-static_assert(sizeof(InterchangeAnimationTrackSetInstanceNode_SetCustomDuration) == 0x000008, "Wrong size on InterchangeAnimationTrackSetInstanceNode_SetCustomDuration");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_SetCustomDuration, AttributeValue) == 0x000000, "Member 'InterchangeAnimationTrackSetInstanceNode_SetCustomDuration::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_SetCustomDuration, ReturnValue) == 0x000004, "Member 'InterchangeAnimationTrackSetInstanceNode_SetCustomDuration::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackSetInstanceNode_SetCustomDuration;
 
 // Function InterchangeNodes.InterchangeAnimationTrackSetInstanceNode.SetCustomStartFrame
 // 0x0008 (0x0008 - 0x0000)
@@ -160,10 +132,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackSetInstanceNode_SetCustomStartFrame) == 0x000004, "Wrong alignment on InterchangeAnimationTrackSetInstanceNode_SetCustomStartFrame");
-static_assert(sizeof(InterchangeAnimationTrackSetInstanceNode_SetCustomStartFrame) == 0x000008, "Wrong size on InterchangeAnimationTrackSetInstanceNode_SetCustomStartFrame");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_SetCustomStartFrame, AttributeValue) == 0x000000, "Member 'InterchangeAnimationTrackSetInstanceNode_SetCustomStartFrame::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_SetCustomStartFrame, ReturnValue) == 0x000004, "Member 'InterchangeAnimationTrackSetInstanceNode_SetCustomStartFrame::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackSetInstanceNode_SetCustomStartFrame;
 
 // Function InterchangeNodes.InterchangeAnimationTrackSetInstanceNode.SetCustomTimeScale
 // 0x0008 (0x0008 - 0x0000)
@@ -174,10 +143,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackSetInstanceNode_SetCustomTimeScale) == 0x000004, "Wrong alignment on InterchangeAnimationTrackSetInstanceNode_SetCustomTimeScale");
-static_assert(sizeof(InterchangeAnimationTrackSetInstanceNode_SetCustomTimeScale) == 0x000008, "Wrong size on InterchangeAnimationTrackSetInstanceNode_SetCustomTimeScale");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_SetCustomTimeScale, AttributeValue) == 0x000000, "Member 'InterchangeAnimationTrackSetInstanceNode_SetCustomTimeScale::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_SetCustomTimeScale, ReturnValue) == 0x000004, "Member 'InterchangeAnimationTrackSetInstanceNode_SetCustomTimeScale::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackSetInstanceNode_SetCustomTimeScale;
 
 // Function InterchangeNodes.InterchangeAnimationTrackSetInstanceNode.SetCustomTrackSetDependencyUid
 // 0x0018 (0x0018 - 0x0000)
@@ -188,10 +154,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackSetInstanceNode_SetCustomTrackSetDependencyUid) == 0x000008, "Wrong alignment on InterchangeAnimationTrackSetInstanceNode_SetCustomTrackSetDependencyUid");
-static_assert(sizeof(InterchangeAnimationTrackSetInstanceNode_SetCustomTrackSetDependencyUid) == 0x000018, "Wrong size on InterchangeAnimationTrackSetInstanceNode_SetCustomTrackSetDependencyUid");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_SetCustomTrackSetDependencyUid, AttributeValue) == 0x000000, "Member 'InterchangeAnimationTrackSetInstanceNode_SetCustomTrackSetDependencyUid::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_SetCustomTrackSetDependencyUid, ReturnValue) == 0x000010, "Member 'InterchangeAnimationTrackSetInstanceNode_SetCustomTrackSetDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackSetInstanceNode_SetCustomTrackSetDependencyUid;
 
 // Function InterchangeNodes.InterchangeAnimationTrackSetInstanceNode.GetCustomDuration
 // 0x0008 (0x0008 - 0x0000)
@@ -202,10 +165,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackSetInstanceNode_GetCustomDuration) == 0x000004, "Wrong alignment on InterchangeAnimationTrackSetInstanceNode_GetCustomDuration");
-static_assert(sizeof(InterchangeAnimationTrackSetInstanceNode_GetCustomDuration) == 0x000008, "Wrong size on InterchangeAnimationTrackSetInstanceNode_GetCustomDuration");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_GetCustomDuration, AttributeValue) == 0x000000, "Member 'InterchangeAnimationTrackSetInstanceNode_GetCustomDuration::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_GetCustomDuration, ReturnValue) == 0x000004, "Member 'InterchangeAnimationTrackSetInstanceNode_GetCustomDuration::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackSetInstanceNode_GetCustomDuration;
 
 // Function InterchangeNodes.InterchangeAnimationTrackSetInstanceNode.GetCustomStartFrame
 // 0x0008 (0x0008 - 0x0000)
@@ -216,10 +176,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackSetInstanceNode_GetCustomStartFrame) == 0x000004, "Wrong alignment on InterchangeAnimationTrackSetInstanceNode_GetCustomStartFrame");
-static_assert(sizeof(InterchangeAnimationTrackSetInstanceNode_GetCustomStartFrame) == 0x000008, "Wrong size on InterchangeAnimationTrackSetInstanceNode_GetCustomStartFrame");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_GetCustomStartFrame, AttributeValue) == 0x000000, "Member 'InterchangeAnimationTrackSetInstanceNode_GetCustomStartFrame::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_GetCustomStartFrame, ReturnValue) == 0x000004, "Member 'InterchangeAnimationTrackSetInstanceNode_GetCustomStartFrame::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackSetInstanceNode_GetCustomStartFrame;
 
 // Function InterchangeNodes.InterchangeAnimationTrackSetInstanceNode.GetCustomTimeScale
 // 0x0008 (0x0008 - 0x0000)
@@ -230,10 +187,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackSetInstanceNode_GetCustomTimeScale) == 0x000004, "Wrong alignment on InterchangeAnimationTrackSetInstanceNode_GetCustomTimeScale");
-static_assert(sizeof(InterchangeAnimationTrackSetInstanceNode_GetCustomTimeScale) == 0x000008, "Wrong size on InterchangeAnimationTrackSetInstanceNode_GetCustomTimeScale");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_GetCustomTimeScale, AttributeValue) == 0x000000, "Member 'InterchangeAnimationTrackSetInstanceNode_GetCustomTimeScale::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_GetCustomTimeScale, ReturnValue) == 0x000004, "Member 'InterchangeAnimationTrackSetInstanceNode_GetCustomTimeScale::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackSetInstanceNode_GetCustomTimeScale;
 
 // Function InterchangeNodes.InterchangeAnimationTrackSetInstanceNode.GetCustomTrackSetDependencyUid
 // 0x0018 (0x0018 - 0x0000)
@@ -244,10 +198,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackSetInstanceNode_GetCustomTrackSetDependencyUid) == 0x000008, "Wrong alignment on InterchangeAnimationTrackSetInstanceNode_GetCustomTrackSetDependencyUid");
-static_assert(sizeof(InterchangeAnimationTrackSetInstanceNode_GetCustomTrackSetDependencyUid) == 0x000018, "Wrong size on InterchangeAnimationTrackSetInstanceNode_GetCustomTrackSetDependencyUid");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_GetCustomTrackSetDependencyUid, AttributeValue) == 0x000000, "Member 'InterchangeAnimationTrackSetInstanceNode_GetCustomTrackSetDependencyUid::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackSetInstanceNode_GetCustomTrackSetDependencyUid, ReturnValue) == 0x000010, "Member 'InterchangeAnimationTrackSetInstanceNode_GetCustomTrackSetDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackSetInstanceNode_GetCustomTrackSetDependencyUid;
 
 // Function InterchangeNodes.InterchangeAnimationTrackNode.SetCustomActorDependencyUid
 // 0x0018 (0x0018 - 0x0000)
@@ -258,10 +209,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackNode_SetCustomActorDependencyUid) == 0x000008, "Wrong alignment on InterchangeAnimationTrackNode_SetCustomActorDependencyUid");
-static_assert(sizeof(InterchangeAnimationTrackNode_SetCustomActorDependencyUid) == 0x000018, "Wrong size on InterchangeAnimationTrackNode_SetCustomActorDependencyUid");
-static_assert(offsetof(InterchangeAnimationTrackNode_SetCustomActorDependencyUid, DependencyUid) == 0x000000, "Member 'InterchangeAnimationTrackNode_SetCustomActorDependencyUid::DependencyUid' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackNode_SetCustomActorDependencyUid, ReturnValue) == 0x000010, "Member 'InterchangeAnimationTrackNode_SetCustomActorDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackNode_SetCustomActorDependencyUid;
 
 // Function InterchangeNodes.InterchangeAnimationTrackNode.SetCustomAnimationPayloadKey
 // 0x0018 (0x0018 - 0x0000)
@@ -273,11 +221,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackNode_SetCustomAnimationPayloadKey) == 0x000008, "Wrong alignment on InterchangeAnimationTrackNode_SetCustomAnimationPayloadKey");
-static_assert(sizeof(InterchangeAnimationTrackNode_SetCustomAnimationPayloadKey) == 0x000018, "Wrong size on InterchangeAnimationTrackNode_SetCustomAnimationPayloadKey");
-static_assert(offsetof(InterchangeAnimationTrackNode_SetCustomAnimationPayloadKey, InUniqueId) == 0x000000, "Member 'InterchangeAnimationTrackNode_SetCustomAnimationPayloadKey::InUniqueId' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackNode_SetCustomAnimationPayloadKey, InType) == 0x000010, "Member 'InterchangeAnimationTrackNode_SetCustomAnimationPayloadKey::InType' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackNode_SetCustomAnimationPayloadKey, ReturnValue) == 0x000011, "Member 'InterchangeAnimationTrackNode_SetCustomAnimationPayloadKey::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackNode_SetCustomAnimationPayloadKey;
 
 // Function InterchangeNodes.InterchangeAnimationTrackNode.SetCustomFrameCount
 // 0x0008 (0x0008 - 0x0000)
@@ -288,10 +232,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackNode_SetCustomFrameCount) == 0x000004, "Wrong alignment on InterchangeAnimationTrackNode_SetCustomFrameCount");
-static_assert(sizeof(InterchangeAnimationTrackNode_SetCustomFrameCount) == 0x000008, "Wrong size on InterchangeAnimationTrackNode_SetCustomFrameCount");
-static_assert(offsetof(InterchangeAnimationTrackNode_SetCustomFrameCount, AttributeValue) == 0x000000, "Member 'InterchangeAnimationTrackNode_SetCustomFrameCount::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackNode_SetCustomFrameCount, ReturnValue) == 0x000004, "Member 'InterchangeAnimationTrackNode_SetCustomFrameCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackNode_SetCustomFrameCount;
 
 // Function InterchangeNodes.InterchangeAnimationTrackNode.SetCustomPropertyTrack
 // 0x0008 (0x0008 - 0x0000)
@@ -302,10 +243,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackNode_SetCustomPropertyTrack) == 0x000004, "Wrong alignment on InterchangeAnimationTrackNode_SetCustomPropertyTrack");
-static_assert(sizeof(InterchangeAnimationTrackNode_SetCustomPropertyTrack) == 0x000008, "Wrong size on InterchangeAnimationTrackNode_SetCustomPropertyTrack");
-static_assert(offsetof(InterchangeAnimationTrackNode_SetCustomPropertyTrack, PropertyTrack) == 0x000000, "Member 'InterchangeAnimationTrackNode_SetCustomPropertyTrack::PropertyTrack' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackNode_SetCustomPropertyTrack, ReturnValue) == 0x000004, "Member 'InterchangeAnimationTrackNode_SetCustomPropertyTrack::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackNode_SetCustomPropertyTrack;
 
 // Function InterchangeNodes.InterchangeAnimationTrackNode.GetCustomActorDependencyUid
 // 0x0018 (0x0018 - 0x0000)
@@ -316,10 +254,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackNode_GetCustomActorDependencyUid) == 0x000008, "Wrong alignment on InterchangeAnimationTrackNode_GetCustomActorDependencyUid");
-static_assert(sizeof(InterchangeAnimationTrackNode_GetCustomActorDependencyUid) == 0x000018, "Wrong size on InterchangeAnimationTrackNode_GetCustomActorDependencyUid");
-static_assert(offsetof(InterchangeAnimationTrackNode_GetCustomActorDependencyUid, DependencyUid) == 0x000000, "Member 'InterchangeAnimationTrackNode_GetCustomActorDependencyUid::DependencyUid' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackNode_GetCustomActorDependencyUid, ReturnValue) == 0x000010, "Member 'InterchangeAnimationTrackNode_GetCustomActorDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackNode_GetCustomActorDependencyUid;
 
 // Function InterchangeNodes.InterchangeAnimationTrackNode.GetCustomAnimationPayloadKey
 // 0x0020 (0x0020 - 0x0000)
@@ -330,10 +265,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackNode_GetCustomAnimationPayloadKey) == 0x000008, "Wrong alignment on InterchangeAnimationTrackNode_GetCustomAnimationPayloadKey");
-static_assert(sizeof(InterchangeAnimationTrackNode_GetCustomAnimationPayloadKey) == 0x000020, "Wrong size on InterchangeAnimationTrackNode_GetCustomAnimationPayloadKey");
-static_assert(offsetof(InterchangeAnimationTrackNode_GetCustomAnimationPayloadKey, AnimationPayLoadKey) == 0x000000, "Member 'InterchangeAnimationTrackNode_GetCustomAnimationPayloadKey::AnimationPayLoadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackNode_GetCustomAnimationPayloadKey, ReturnValue) == 0x000018, "Member 'InterchangeAnimationTrackNode_GetCustomAnimationPayloadKey::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackNode_GetCustomAnimationPayloadKey;
 
 // Function InterchangeNodes.InterchangeAnimationTrackNode.GetCustomFrameCount
 // 0x0008 (0x0008 - 0x0000)
@@ -344,10 +276,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackNode_GetCustomFrameCount) == 0x000004, "Wrong alignment on InterchangeAnimationTrackNode_GetCustomFrameCount");
-static_assert(sizeof(InterchangeAnimationTrackNode_GetCustomFrameCount) == 0x000008, "Wrong size on InterchangeAnimationTrackNode_GetCustomFrameCount");
-static_assert(offsetof(InterchangeAnimationTrackNode_GetCustomFrameCount, AttributeValue) == 0x000000, "Member 'InterchangeAnimationTrackNode_GetCustomFrameCount::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackNode_GetCustomFrameCount, ReturnValue) == 0x000004, "Member 'InterchangeAnimationTrackNode_GetCustomFrameCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackNode_GetCustomFrameCount;
 
 // Function InterchangeNodes.InterchangeAnimationTrackNode.GetCustomPropertyTrack
 // 0x0008 (0x0008 - 0x0000)
@@ -358,10 +287,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeAnimationTrackNode_GetCustomPropertyTrack) == 0x000004, "Wrong alignment on InterchangeAnimationTrackNode_GetCustomPropertyTrack");
-static_assert(sizeof(InterchangeAnimationTrackNode_GetCustomPropertyTrack) == 0x000008, "Wrong size on InterchangeAnimationTrackNode_GetCustomPropertyTrack");
-static_assert(offsetof(InterchangeAnimationTrackNode_GetCustomPropertyTrack, PropertyTrack) == 0x000000, "Member 'InterchangeAnimationTrackNode_GetCustomPropertyTrack::PropertyTrack' has a wrong offset!");
-static_assert(offsetof(InterchangeAnimationTrackNode_GetCustomPropertyTrack, ReturnValue) == 0x000004, "Member 'InterchangeAnimationTrackNode_GetCustomPropertyTrack::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeAnimationTrackNode_GetCustomPropertyTrack;
 
 // Function InterchangeNodes.InterchangeTransformAnimationTrackNode.SetCustomUsedChannels
 // 0x0008 (0x0008 - 0x0000)
@@ -372,10 +298,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeTransformAnimationTrackNode_SetCustomUsedChannels) == 0x000004, "Wrong alignment on InterchangeTransformAnimationTrackNode_SetCustomUsedChannels");
-static_assert(sizeof(InterchangeTransformAnimationTrackNode_SetCustomUsedChannels) == 0x000008, "Wrong size on InterchangeTransformAnimationTrackNode_SetCustomUsedChannels");
-static_assert(offsetof(InterchangeTransformAnimationTrackNode_SetCustomUsedChannels, AttributeValue) == 0x000000, "Member 'InterchangeTransformAnimationTrackNode_SetCustomUsedChannels::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeTransformAnimationTrackNode_SetCustomUsedChannels, ReturnValue) == 0x000004, "Member 'InterchangeTransformAnimationTrackNode_SetCustomUsedChannels::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTransformAnimationTrackNode_SetCustomUsedChannels;
 
 // Function InterchangeNodes.InterchangeTransformAnimationTrackNode.GetCustomUsedChannels
 // 0x0008 (0x0008 - 0x0000)
@@ -386,10 +309,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeTransformAnimationTrackNode_GetCustomUsedChannels) == 0x000004, "Wrong alignment on InterchangeTransformAnimationTrackNode_GetCustomUsedChannels");
-static_assert(sizeof(InterchangeTransformAnimationTrackNode_GetCustomUsedChannels) == 0x000008, "Wrong size on InterchangeTransformAnimationTrackNode_GetCustomUsedChannels");
-static_assert(offsetof(InterchangeTransformAnimationTrackNode_GetCustomUsedChannels, AttributeValue) == 0x000000, "Member 'InterchangeTransformAnimationTrackNode_GetCustomUsedChannels::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeTransformAnimationTrackNode_GetCustomUsedChannels, ReturnValue) == 0x000004, "Member 'InterchangeTransformAnimationTrackNode_GetCustomUsedChannels::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTransformAnimationTrackNode_GetCustomUsedChannels;
 
 // Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.SetAnimationPayloadKeyForMorphTargetNodeUid
 // 0x0028 (0x0028 - 0x0000)
@@ -402,12 +322,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForMorphTargetNodeUid) == 0x000008, "Wrong alignment on InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForMorphTargetNodeUid");
-static_assert(sizeof(InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForMorphTargetNodeUid) == 0x000028, "Wrong size on InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForMorphTargetNodeUid");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForMorphTargetNodeUid, MorphTargetNodeUid) == 0x000000, "Member 'InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForMorphTargetNodeUid::MorphTargetNodeUid' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForMorphTargetNodeUid, InUniqueId) == 0x000010, "Member 'InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForMorphTargetNodeUid::InUniqueId' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForMorphTargetNodeUid, InType) == 0x000020, "Member 'InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForMorphTargetNodeUid::InType' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForMorphTargetNodeUid, ReturnValue) == 0x000021, "Member 'InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForMorphTargetNodeUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForMorphTargetNodeUid;
 
 // Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.SetAnimationPayloadKeyForSceneNodeUid
 // 0x0028 (0x0028 - 0x0000)
@@ -420,12 +335,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForSceneNodeUid) == 0x000008, "Wrong alignment on InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForSceneNodeUid");
-static_assert(sizeof(InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForSceneNodeUid) == 0x000028, "Wrong size on InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForSceneNodeUid");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForSceneNodeUid, SceneNodeUid) == 0x000000, "Member 'InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForSceneNodeUid::SceneNodeUid' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForSceneNodeUid, InUniqueId) == 0x000010, "Member 'InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForSceneNodeUid::InUniqueId' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForSceneNodeUid, InType) == 0x000020, "Member 'InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForSceneNodeUid::InType' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForSceneNodeUid, ReturnValue) == 0x000021, "Member 'InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForSceneNodeUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_SetAnimationPayloadKeyForSceneNodeUid;
 
 // Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.SetCustomAnimationSampleRate
 // 0x0010 (0x0010 - 0x0000)
@@ -436,10 +346,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSkeletalAnimationTrackNode_SetCustomAnimationSampleRate) == 0x000008, "Wrong alignment on InterchangeSkeletalAnimationTrackNode_SetCustomAnimationSampleRate");
-static_assert(sizeof(InterchangeSkeletalAnimationTrackNode_SetCustomAnimationSampleRate) == 0x000010, "Wrong size on InterchangeSkeletalAnimationTrackNode_SetCustomAnimationSampleRate");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetCustomAnimationSampleRate, SampleRate) == 0x000000, "Member 'InterchangeSkeletalAnimationTrackNode_SetCustomAnimationSampleRate::SampleRate' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetCustomAnimationSampleRate, ReturnValue) == 0x000008, "Member 'InterchangeSkeletalAnimationTrackNode_SetCustomAnimationSampleRate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_SetCustomAnimationSampleRate;
 
 // Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.SetCustomAnimationStartTime
 // 0x0010 (0x0010 - 0x0000)
@@ -450,10 +357,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStartTime) == 0x000008, "Wrong alignment on InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStartTime");
-static_assert(sizeof(InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStartTime) == 0x000010, "Wrong size on InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStartTime");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStartTime, StartTime) == 0x000000, "Member 'InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStartTime::StartTime' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStartTime, ReturnValue) == 0x000008, "Member 'InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStartTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStartTime;
 
 // Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.SetCustomAnimationStopTime
 // 0x0010 (0x0010 - 0x0000)
@@ -464,10 +368,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStopTime) == 0x000008, "Wrong alignment on InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStopTime");
-static_assert(sizeof(InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStopTime) == 0x000010, "Wrong size on InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStopTime");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStopTime, StopTime) == 0x000000, "Member 'InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStopTime::StopTime' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStopTime, ReturnValue) == 0x000008, "Member 'InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStopTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_SetCustomAnimationStopTime;
 
 // Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.SetCustomSkeletonNodeUid
 // 0x0018 (0x0018 - 0x0000)
@@ -478,10 +379,29 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSkeletalAnimationTrackNode_SetCustomSkeletonNodeUid) == 0x000008, "Wrong alignment on InterchangeSkeletalAnimationTrackNode_SetCustomSkeletonNodeUid");
-static_assert(sizeof(InterchangeSkeletalAnimationTrackNode_SetCustomSkeletonNodeUid) == 0x000018, "Wrong size on InterchangeSkeletalAnimationTrackNode_SetCustomSkeletonNodeUid");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetCustomSkeletonNodeUid, AttributeValue) == 0x000000, "Member 'InterchangeSkeletalAnimationTrackNode_SetCustomSkeletonNodeUid::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_SetCustomSkeletonNodeUid, ReturnValue) == 0x000010, "Member 'InterchangeSkeletalAnimationTrackNode_SetCustomSkeletonNodeUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_SetCustomSkeletonNodeUid;
+
+// Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.SetCustomSourceTimelineAnimationStartTime
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeSkeletalAnimationTrackNode_SetCustomSourceTimelineAnimationStartTime final
+{
+public:
+	double                                        StartTime;                                         // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_SetCustomSourceTimelineAnimationStartTime;
+
+// Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.SetCustomSourceTimelineAnimationStopTime
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeSkeletalAnimationTrackNode_SetCustomSourceTimelineAnimationStopTime final
+{
+public:
+	double                                        StopTime;                                          // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_SetCustomSourceTimelineAnimationStopTime;
 
 // Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.GetCustomAnimationSampleRate
 // 0x0010 (0x0010 - 0x0000)
@@ -492,10 +412,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSkeletalAnimationTrackNode_GetCustomAnimationSampleRate) == 0x000008, "Wrong alignment on InterchangeSkeletalAnimationTrackNode_GetCustomAnimationSampleRate");
-static_assert(sizeof(InterchangeSkeletalAnimationTrackNode_GetCustomAnimationSampleRate) == 0x000010, "Wrong size on InterchangeSkeletalAnimationTrackNode_GetCustomAnimationSampleRate");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_GetCustomAnimationSampleRate, SampleRate) == 0x000000, "Member 'InterchangeSkeletalAnimationTrackNode_GetCustomAnimationSampleRate::SampleRate' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_GetCustomAnimationSampleRate, ReturnValue) == 0x000008, "Member 'InterchangeSkeletalAnimationTrackNode_GetCustomAnimationSampleRate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_GetCustomAnimationSampleRate;
 
 // Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.GetCustomAnimationStartTime
 // 0x0010 (0x0010 - 0x0000)
@@ -506,10 +423,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStartTime) == 0x000008, "Wrong alignment on InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStartTime");
-static_assert(sizeof(InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStartTime) == 0x000010, "Wrong size on InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStartTime");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStartTime, StartTime) == 0x000000, "Member 'InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStartTime::StartTime' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStartTime, ReturnValue) == 0x000008, "Member 'InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStartTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStartTime;
 
 // Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.GetCustomAnimationStopTime
 // 0x0010 (0x0010 - 0x0000)
@@ -520,10 +434,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStopTime) == 0x000008, "Wrong alignment on InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStopTime");
-static_assert(sizeof(InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStopTime) == 0x000010, "Wrong size on InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStopTime");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStopTime, StopTime) == 0x000000, "Member 'InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStopTime::StopTime' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStopTime, ReturnValue) == 0x000008, "Member 'InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStopTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_GetCustomAnimationStopTime;
 
 // Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.GetCustomSkeletonNodeUid
 // 0x0018 (0x0018 - 0x0000)
@@ -534,10 +445,29 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSkeletalAnimationTrackNode_GetCustomSkeletonNodeUid) == 0x000008, "Wrong alignment on InterchangeSkeletalAnimationTrackNode_GetCustomSkeletonNodeUid");
-static_assert(sizeof(InterchangeSkeletalAnimationTrackNode_GetCustomSkeletonNodeUid) == 0x000018, "Wrong size on InterchangeSkeletalAnimationTrackNode_GetCustomSkeletonNodeUid");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_GetCustomSkeletonNodeUid, AttributeValue) == 0x000000, "Member 'InterchangeSkeletalAnimationTrackNode_GetCustomSkeletonNodeUid::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_GetCustomSkeletonNodeUid, ReturnValue) == 0x000010, "Member 'InterchangeSkeletalAnimationTrackNode_GetCustomSkeletonNodeUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_GetCustomSkeletonNodeUid;
+
+// Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.GetCustomSourceTimelineAnimationStartTime
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeSkeletalAnimationTrackNode_GetCustomSourceTimelineAnimationStartTime final
+{
+public:
+	double                                        StartTime;                                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_GetCustomSourceTimelineAnimationStartTime;
+
+// Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.GetCustomSourceTimelineAnimationStopTime
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeSkeletalAnimationTrackNode_GetCustomSourceTimelineAnimationStopTime final
+{
+public:
+	double                                        StopTime;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_GetCustomSourceTimelineAnimationStopTime;
 
 // Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.GetMorphTargetNodeAnimationPayloadKeys
 // 0x00A0 (0x00A0 - 0x0000)
@@ -547,10 +477,7 @@ public:
 	TMap<class FString, class FString>            OutMorphTargetNodeAnimationPayloadKeyUids;         // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 	TMap<class FString, uint8>                    OutMorphTargetNodeAnimationPayloadKeyTypes;        // 0x0050(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeSkeletalAnimationTrackNode_GetMorphTargetNodeAnimationPayloadKeys) == 0x000008, "Wrong alignment on InterchangeSkeletalAnimationTrackNode_GetMorphTargetNodeAnimationPayloadKeys");
-static_assert(sizeof(InterchangeSkeletalAnimationTrackNode_GetMorphTargetNodeAnimationPayloadKeys) == 0x0000A0, "Wrong size on InterchangeSkeletalAnimationTrackNode_GetMorphTargetNodeAnimationPayloadKeys");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_GetMorphTargetNodeAnimationPayloadKeys, OutMorphTargetNodeAnimationPayloadKeyUids) == 0x000000, "Member 'InterchangeSkeletalAnimationTrackNode_GetMorphTargetNodeAnimationPayloadKeys::OutMorphTargetNodeAnimationPayloadKeyUids' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_GetMorphTargetNodeAnimationPayloadKeys, OutMorphTargetNodeAnimationPayloadKeyTypes) == 0x000050, "Member 'InterchangeSkeletalAnimationTrackNode_GetMorphTargetNodeAnimationPayloadKeys::OutMorphTargetNodeAnimationPayloadKeyTypes' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_GetMorphTargetNodeAnimationPayloadKeys;
 
 // Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.GetSceneNodeAnimationPayloadKeys
 // 0x00A0 (0x00A0 - 0x0000)
@@ -560,10 +487,7 @@ public:
 	TMap<class FString, class FString>            OutSceneNodeAnimationPayloadKeyUids;               // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 	TMap<class FString, uint8>                    OutSceneNodeAnimationPayloadKeyTypes;              // 0x0050(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeSkeletalAnimationTrackNode_GetSceneNodeAnimationPayloadKeys) == 0x000008, "Wrong alignment on InterchangeSkeletalAnimationTrackNode_GetSceneNodeAnimationPayloadKeys");
-static_assert(sizeof(InterchangeSkeletalAnimationTrackNode_GetSceneNodeAnimationPayloadKeys) == 0x0000A0, "Wrong size on InterchangeSkeletalAnimationTrackNode_GetSceneNodeAnimationPayloadKeys");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_GetSceneNodeAnimationPayloadKeys, OutSceneNodeAnimationPayloadKeyUids) == 0x000000, "Member 'InterchangeSkeletalAnimationTrackNode_GetSceneNodeAnimationPayloadKeys::OutSceneNodeAnimationPayloadKeyUids' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_GetSceneNodeAnimationPayloadKeys, OutSceneNodeAnimationPayloadKeyTypes) == 0x000050, "Member 'InterchangeSkeletalAnimationTrackNode_GetSceneNodeAnimationPayloadKeys::OutSceneNodeAnimationPayloadKeyTypes' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_GetSceneNodeAnimationPayloadKeys;
 
 // Function InterchangeNodes.InterchangeSkeletalAnimationTrackNode.IsNodeAnimatedWithBakedCurve
 // 0x0018 (0x0018 - 0x0000)
@@ -574,10 +498,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSkeletalAnimationTrackNode_IsNodeAnimatedWithBakedCurve) == 0x000008, "Wrong alignment on InterchangeSkeletalAnimationTrackNode_IsNodeAnimatedWithBakedCurve");
-static_assert(sizeof(InterchangeSkeletalAnimationTrackNode_IsNodeAnimatedWithBakedCurve) == 0x000018, "Wrong size on InterchangeSkeletalAnimationTrackNode_IsNodeAnimatedWithBakedCurve");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_IsNodeAnimatedWithBakedCurve, SceneNodeUid) == 0x000000, "Member 'InterchangeSkeletalAnimationTrackNode_IsNodeAnimatedWithBakedCurve::SceneNodeUid' has a wrong offset!");
-static_assert(offsetof(InterchangeSkeletalAnimationTrackNode_IsNodeAnimatedWithBakedCurve, ReturnValue) == 0x000010, "Member 'InterchangeSkeletalAnimationTrackNode_IsNodeAnimatedWithBakedCurve::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSkeletalAnimationTrackNode_IsNodeAnimatedWithBakedCurve;
 
 // Function InterchangeNodes.InterchangePhysicalCameraNode.SetCustomEnableDepthOfField
 // 0x0002 (0x0002 - 0x0000)
@@ -587,10 +508,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangePhysicalCameraNode_SetCustomEnableDepthOfField) == 0x000001, "Wrong alignment on InterchangePhysicalCameraNode_SetCustomEnableDepthOfField");
-static_assert(sizeof(InterchangePhysicalCameraNode_SetCustomEnableDepthOfField) == 0x000002, "Wrong size on InterchangePhysicalCameraNode_SetCustomEnableDepthOfField");
-static_assert(offsetof(InterchangePhysicalCameraNode_SetCustomEnableDepthOfField, AttributeValue) == 0x000000, "Member 'InterchangePhysicalCameraNode_SetCustomEnableDepthOfField::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangePhysicalCameraNode_SetCustomEnableDepthOfField, ReturnValue) == 0x000001, "Member 'InterchangePhysicalCameraNode_SetCustomEnableDepthOfField::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangePhysicalCameraNode_SetCustomEnableDepthOfField;
 
 // Function InterchangeNodes.InterchangePhysicalCameraNode.SetCustomFocalLength
 // 0x0008 (0x0008 - 0x0000)
@@ -601,10 +519,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangePhysicalCameraNode_SetCustomFocalLength) == 0x000004, "Wrong alignment on InterchangePhysicalCameraNode_SetCustomFocalLength");
-static_assert(sizeof(InterchangePhysicalCameraNode_SetCustomFocalLength) == 0x000008, "Wrong size on InterchangePhysicalCameraNode_SetCustomFocalLength");
-static_assert(offsetof(InterchangePhysicalCameraNode_SetCustomFocalLength, AttributeValue) == 0x000000, "Member 'InterchangePhysicalCameraNode_SetCustomFocalLength::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangePhysicalCameraNode_SetCustomFocalLength, ReturnValue) == 0x000004, "Member 'InterchangePhysicalCameraNode_SetCustomFocalLength::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangePhysicalCameraNode_SetCustomFocalLength;
 
 // Function InterchangeNodes.InterchangePhysicalCameraNode.SetCustomSensorHeight
 // 0x0008 (0x0008 - 0x0000)
@@ -615,10 +530,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangePhysicalCameraNode_SetCustomSensorHeight) == 0x000004, "Wrong alignment on InterchangePhysicalCameraNode_SetCustomSensorHeight");
-static_assert(sizeof(InterchangePhysicalCameraNode_SetCustomSensorHeight) == 0x000008, "Wrong size on InterchangePhysicalCameraNode_SetCustomSensorHeight");
-static_assert(offsetof(InterchangePhysicalCameraNode_SetCustomSensorHeight, AttributeValue) == 0x000000, "Member 'InterchangePhysicalCameraNode_SetCustomSensorHeight::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangePhysicalCameraNode_SetCustomSensorHeight, ReturnValue) == 0x000004, "Member 'InterchangePhysicalCameraNode_SetCustomSensorHeight::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangePhysicalCameraNode_SetCustomSensorHeight;
 
 // Function InterchangeNodes.InterchangePhysicalCameraNode.SetCustomSensorWidth
 // 0x0008 (0x0008 - 0x0000)
@@ -629,10 +541,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangePhysicalCameraNode_SetCustomSensorWidth) == 0x000004, "Wrong alignment on InterchangePhysicalCameraNode_SetCustomSensorWidth");
-static_assert(sizeof(InterchangePhysicalCameraNode_SetCustomSensorWidth) == 0x000008, "Wrong size on InterchangePhysicalCameraNode_SetCustomSensorWidth");
-static_assert(offsetof(InterchangePhysicalCameraNode_SetCustomSensorWidth, AttributeValue) == 0x000000, "Member 'InterchangePhysicalCameraNode_SetCustomSensorWidth::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangePhysicalCameraNode_SetCustomSensorWidth, ReturnValue) == 0x000004, "Member 'InterchangePhysicalCameraNode_SetCustomSensorWidth::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangePhysicalCameraNode_SetCustomSensorWidth;
 
 // Function InterchangeNodes.InterchangePhysicalCameraNode.GetCustomEnableDepthOfField
 // 0x0002 (0x0002 - 0x0000)
@@ -642,10 +551,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangePhysicalCameraNode_GetCustomEnableDepthOfField) == 0x000001, "Wrong alignment on InterchangePhysicalCameraNode_GetCustomEnableDepthOfField");
-static_assert(sizeof(InterchangePhysicalCameraNode_GetCustomEnableDepthOfField) == 0x000002, "Wrong size on InterchangePhysicalCameraNode_GetCustomEnableDepthOfField");
-static_assert(offsetof(InterchangePhysicalCameraNode_GetCustomEnableDepthOfField, AttributeValue) == 0x000000, "Member 'InterchangePhysicalCameraNode_GetCustomEnableDepthOfField::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangePhysicalCameraNode_GetCustomEnableDepthOfField, ReturnValue) == 0x000001, "Member 'InterchangePhysicalCameraNode_GetCustomEnableDepthOfField::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangePhysicalCameraNode_GetCustomEnableDepthOfField;
 
 // Function InterchangeNodes.InterchangePhysicalCameraNode.GetCustomFocalLength
 // 0x0008 (0x0008 - 0x0000)
@@ -656,10 +562,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangePhysicalCameraNode_GetCustomFocalLength) == 0x000004, "Wrong alignment on InterchangePhysicalCameraNode_GetCustomFocalLength");
-static_assert(sizeof(InterchangePhysicalCameraNode_GetCustomFocalLength) == 0x000008, "Wrong size on InterchangePhysicalCameraNode_GetCustomFocalLength");
-static_assert(offsetof(InterchangePhysicalCameraNode_GetCustomFocalLength, AttributeValue) == 0x000000, "Member 'InterchangePhysicalCameraNode_GetCustomFocalLength::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangePhysicalCameraNode_GetCustomFocalLength, ReturnValue) == 0x000004, "Member 'InterchangePhysicalCameraNode_GetCustomFocalLength::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangePhysicalCameraNode_GetCustomFocalLength;
 
 // Function InterchangeNodes.InterchangePhysicalCameraNode.GetCustomSensorHeight
 // 0x0008 (0x0008 - 0x0000)
@@ -670,10 +573,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangePhysicalCameraNode_GetCustomSensorHeight) == 0x000004, "Wrong alignment on InterchangePhysicalCameraNode_GetCustomSensorHeight");
-static_assert(sizeof(InterchangePhysicalCameraNode_GetCustomSensorHeight) == 0x000008, "Wrong size on InterchangePhysicalCameraNode_GetCustomSensorHeight");
-static_assert(offsetof(InterchangePhysicalCameraNode_GetCustomSensorHeight, AttributeValue) == 0x000000, "Member 'InterchangePhysicalCameraNode_GetCustomSensorHeight::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangePhysicalCameraNode_GetCustomSensorHeight, ReturnValue) == 0x000004, "Member 'InterchangePhysicalCameraNode_GetCustomSensorHeight::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangePhysicalCameraNode_GetCustomSensorHeight;
 
 // Function InterchangeNodes.InterchangePhysicalCameraNode.GetCustomSensorWidth
 // 0x0008 (0x0008 - 0x0000)
@@ -684,10 +584,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangePhysicalCameraNode_GetCustomSensorWidth) == 0x000004, "Wrong alignment on InterchangePhysicalCameraNode_GetCustomSensorWidth");
-static_assert(sizeof(InterchangePhysicalCameraNode_GetCustomSensorWidth) == 0x000008, "Wrong size on InterchangePhysicalCameraNode_GetCustomSensorWidth");
-static_assert(offsetof(InterchangePhysicalCameraNode_GetCustomSensorWidth, AttributeValue) == 0x000000, "Member 'InterchangePhysicalCameraNode_GetCustomSensorWidth::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangePhysicalCameraNode_GetCustomSensorWidth, ReturnValue) == 0x000004, "Member 'InterchangePhysicalCameraNode_GetCustomSensorWidth::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangePhysicalCameraNode_GetCustomSensorWidth;
 
 // Function InterchangeNodes.InterchangeStandardCameraNode.SetCustomAspectRatio
 // 0x0008 (0x0008 - 0x0000)
@@ -698,10 +595,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeStandardCameraNode_SetCustomAspectRatio) == 0x000004, "Wrong alignment on InterchangeStandardCameraNode_SetCustomAspectRatio");
-static_assert(sizeof(InterchangeStandardCameraNode_SetCustomAspectRatio) == 0x000008, "Wrong size on InterchangeStandardCameraNode_SetCustomAspectRatio");
-static_assert(offsetof(InterchangeStandardCameraNode_SetCustomAspectRatio, AttributeValue) == 0x000000, "Member 'InterchangeStandardCameraNode_SetCustomAspectRatio::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeStandardCameraNode_SetCustomAspectRatio, ReturnValue) == 0x000004, "Member 'InterchangeStandardCameraNode_SetCustomAspectRatio::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeStandardCameraNode_SetCustomAspectRatio;
 
 // Function InterchangeNodes.InterchangeStandardCameraNode.SetCustomFarClipPlane
 // 0x0008 (0x0008 - 0x0000)
@@ -712,10 +606,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeStandardCameraNode_SetCustomFarClipPlane) == 0x000004, "Wrong alignment on InterchangeStandardCameraNode_SetCustomFarClipPlane");
-static_assert(sizeof(InterchangeStandardCameraNode_SetCustomFarClipPlane) == 0x000008, "Wrong size on InterchangeStandardCameraNode_SetCustomFarClipPlane");
-static_assert(offsetof(InterchangeStandardCameraNode_SetCustomFarClipPlane, AttributeValue) == 0x000000, "Member 'InterchangeStandardCameraNode_SetCustomFarClipPlane::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeStandardCameraNode_SetCustomFarClipPlane, ReturnValue) == 0x000004, "Member 'InterchangeStandardCameraNode_SetCustomFarClipPlane::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeStandardCameraNode_SetCustomFarClipPlane;
 
 // Function InterchangeNodes.InterchangeStandardCameraNode.SetCustomFieldOfView
 // 0x0008 (0x0008 - 0x0000)
@@ -726,10 +617,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeStandardCameraNode_SetCustomFieldOfView) == 0x000004, "Wrong alignment on InterchangeStandardCameraNode_SetCustomFieldOfView");
-static_assert(sizeof(InterchangeStandardCameraNode_SetCustomFieldOfView) == 0x000008, "Wrong size on InterchangeStandardCameraNode_SetCustomFieldOfView");
-static_assert(offsetof(InterchangeStandardCameraNode_SetCustomFieldOfView, AttributeValue) == 0x000000, "Member 'InterchangeStandardCameraNode_SetCustomFieldOfView::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeStandardCameraNode_SetCustomFieldOfView, ReturnValue) == 0x000004, "Member 'InterchangeStandardCameraNode_SetCustomFieldOfView::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeStandardCameraNode_SetCustomFieldOfView;
 
 // Function InterchangeNodes.InterchangeStandardCameraNode.SetCustomNearClipPlane
 // 0x0008 (0x0008 - 0x0000)
@@ -740,10 +628,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeStandardCameraNode_SetCustomNearClipPlane) == 0x000004, "Wrong alignment on InterchangeStandardCameraNode_SetCustomNearClipPlane");
-static_assert(sizeof(InterchangeStandardCameraNode_SetCustomNearClipPlane) == 0x000008, "Wrong size on InterchangeStandardCameraNode_SetCustomNearClipPlane");
-static_assert(offsetof(InterchangeStandardCameraNode_SetCustomNearClipPlane, AttributeValue) == 0x000000, "Member 'InterchangeStandardCameraNode_SetCustomNearClipPlane::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeStandardCameraNode_SetCustomNearClipPlane, ReturnValue) == 0x000004, "Member 'InterchangeStandardCameraNode_SetCustomNearClipPlane::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeStandardCameraNode_SetCustomNearClipPlane;
 
 // Function InterchangeNodes.InterchangeStandardCameraNode.SetCustomProjectionMode
 // 0x0002 (0x0002 - 0x0000)
@@ -753,10 +638,7 @@ public:
 	EInterchangeCameraProjectionType              AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeStandardCameraNode_SetCustomProjectionMode) == 0x000001, "Wrong alignment on InterchangeStandardCameraNode_SetCustomProjectionMode");
-static_assert(sizeof(InterchangeStandardCameraNode_SetCustomProjectionMode) == 0x000002, "Wrong size on InterchangeStandardCameraNode_SetCustomProjectionMode");
-static_assert(offsetof(InterchangeStandardCameraNode_SetCustomProjectionMode, AttributeValue) == 0x000000, "Member 'InterchangeStandardCameraNode_SetCustomProjectionMode::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeStandardCameraNode_SetCustomProjectionMode, ReturnValue) == 0x000001, "Member 'InterchangeStandardCameraNode_SetCustomProjectionMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeStandardCameraNode_SetCustomProjectionMode;
 
 // Function InterchangeNodes.InterchangeStandardCameraNode.SetCustomWidth
 // 0x0008 (0x0008 - 0x0000)
@@ -767,10 +649,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeStandardCameraNode_SetCustomWidth) == 0x000004, "Wrong alignment on InterchangeStandardCameraNode_SetCustomWidth");
-static_assert(sizeof(InterchangeStandardCameraNode_SetCustomWidth) == 0x000008, "Wrong size on InterchangeStandardCameraNode_SetCustomWidth");
-static_assert(offsetof(InterchangeStandardCameraNode_SetCustomWidth, AttributeValue) == 0x000000, "Member 'InterchangeStandardCameraNode_SetCustomWidth::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeStandardCameraNode_SetCustomWidth, ReturnValue) == 0x000004, "Member 'InterchangeStandardCameraNode_SetCustomWidth::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeStandardCameraNode_SetCustomWidth;
 
 // Function InterchangeNodes.InterchangeStandardCameraNode.GetCustomAspectRatio
 // 0x0008 (0x0008 - 0x0000)
@@ -781,10 +660,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeStandardCameraNode_GetCustomAspectRatio) == 0x000004, "Wrong alignment on InterchangeStandardCameraNode_GetCustomAspectRatio");
-static_assert(sizeof(InterchangeStandardCameraNode_GetCustomAspectRatio) == 0x000008, "Wrong size on InterchangeStandardCameraNode_GetCustomAspectRatio");
-static_assert(offsetof(InterchangeStandardCameraNode_GetCustomAspectRatio, AttributeValue) == 0x000000, "Member 'InterchangeStandardCameraNode_GetCustomAspectRatio::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeStandardCameraNode_GetCustomAspectRatio, ReturnValue) == 0x000004, "Member 'InterchangeStandardCameraNode_GetCustomAspectRatio::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeStandardCameraNode_GetCustomAspectRatio;
 
 // Function InterchangeNodes.InterchangeStandardCameraNode.GetCustomFarClipPlane
 // 0x0008 (0x0008 - 0x0000)
@@ -795,10 +671,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeStandardCameraNode_GetCustomFarClipPlane) == 0x000004, "Wrong alignment on InterchangeStandardCameraNode_GetCustomFarClipPlane");
-static_assert(sizeof(InterchangeStandardCameraNode_GetCustomFarClipPlane) == 0x000008, "Wrong size on InterchangeStandardCameraNode_GetCustomFarClipPlane");
-static_assert(offsetof(InterchangeStandardCameraNode_GetCustomFarClipPlane, AttributeValue) == 0x000000, "Member 'InterchangeStandardCameraNode_GetCustomFarClipPlane::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeStandardCameraNode_GetCustomFarClipPlane, ReturnValue) == 0x000004, "Member 'InterchangeStandardCameraNode_GetCustomFarClipPlane::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeStandardCameraNode_GetCustomFarClipPlane;
 
 // Function InterchangeNodes.InterchangeStandardCameraNode.GetCustomFieldOfView
 // 0x0008 (0x0008 - 0x0000)
@@ -809,10 +682,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeStandardCameraNode_GetCustomFieldOfView) == 0x000004, "Wrong alignment on InterchangeStandardCameraNode_GetCustomFieldOfView");
-static_assert(sizeof(InterchangeStandardCameraNode_GetCustomFieldOfView) == 0x000008, "Wrong size on InterchangeStandardCameraNode_GetCustomFieldOfView");
-static_assert(offsetof(InterchangeStandardCameraNode_GetCustomFieldOfView, AttributeValue) == 0x000000, "Member 'InterchangeStandardCameraNode_GetCustomFieldOfView::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeStandardCameraNode_GetCustomFieldOfView, ReturnValue) == 0x000004, "Member 'InterchangeStandardCameraNode_GetCustomFieldOfView::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeStandardCameraNode_GetCustomFieldOfView;
 
 // Function InterchangeNodes.InterchangeStandardCameraNode.GetCustomNearClipPlane
 // 0x0008 (0x0008 - 0x0000)
@@ -823,10 +693,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeStandardCameraNode_GetCustomNearClipPlane) == 0x000004, "Wrong alignment on InterchangeStandardCameraNode_GetCustomNearClipPlane");
-static_assert(sizeof(InterchangeStandardCameraNode_GetCustomNearClipPlane) == 0x000008, "Wrong size on InterchangeStandardCameraNode_GetCustomNearClipPlane");
-static_assert(offsetof(InterchangeStandardCameraNode_GetCustomNearClipPlane, AttributeValue) == 0x000000, "Member 'InterchangeStandardCameraNode_GetCustomNearClipPlane::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeStandardCameraNode_GetCustomNearClipPlane, ReturnValue) == 0x000004, "Member 'InterchangeStandardCameraNode_GetCustomNearClipPlane::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeStandardCameraNode_GetCustomNearClipPlane;
 
 // Function InterchangeNodes.InterchangeStandardCameraNode.GetCustomProjectionMode
 // 0x0002 (0x0002 - 0x0000)
@@ -836,10 +703,7 @@ public:
 	EInterchangeCameraProjectionType              AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeStandardCameraNode_GetCustomProjectionMode) == 0x000001, "Wrong alignment on InterchangeStandardCameraNode_GetCustomProjectionMode");
-static_assert(sizeof(InterchangeStandardCameraNode_GetCustomProjectionMode) == 0x000002, "Wrong size on InterchangeStandardCameraNode_GetCustomProjectionMode");
-static_assert(offsetof(InterchangeStandardCameraNode_GetCustomProjectionMode, AttributeValue) == 0x000000, "Member 'InterchangeStandardCameraNode_GetCustomProjectionMode::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeStandardCameraNode_GetCustomProjectionMode, ReturnValue) == 0x000001, "Member 'InterchangeStandardCameraNode_GetCustomProjectionMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeStandardCameraNode_GetCustomProjectionMode;
 
 // Function InterchangeNodes.InterchangeStandardCameraNode.GetCustomWidth
 // 0x0008 (0x0008 - 0x0000)
@@ -850,10 +714,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeStandardCameraNode_GetCustomWidth) == 0x000004, "Wrong alignment on InterchangeStandardCameraNode_GetCustomWidth");
-static_assert(sizeof(InterchangeStandardCameraNode_GetCustomWidth) == 0x000008, "Wrong size on InterchangeStandardCameraNode_GetCustomWidth");
-static_assert(offsetof(InterchangeStandardCameraNode_GetCustomWidth, AttributeValue) == 0x000000, "Member 'InterchangeStandardCameraNode_GetCustomWidth::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeStandardCameraNode_GetCustomWidth, ReturnValue) == 0x000004, "Member 'InterchangeStandardCameraNode_GetCustomWidth::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeStandardCameraNode_GetCustomWidth;
 
 // Function InterchangeNodes.InterchangeShaderNode.AddFloatInput
 // 0x0018 (0x0018 - 0x0000)
@@ -866,12 +727,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0015(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderNode_AddFloatInput) == 0x000008, "Wrong alignment on InterchangeShaderNode_AddFloatInput");
-static_assert(sizeof(InterchangeShaderNode_AddFloatInput) == 0x000018, "Wrong size on InterchangeShaderNode_AddFloatInput");
-static_assert(offsetof(InterchangeShaderNode_AddFloatInput, InputName) == 0x000000, "Member 'InterchangeShaderNode_AddFloatInput::InputName' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderNode_AddFloatInput, AttributeValue) == 0x000010, "Member 'InterchangeShaderNode_AddFloatInput::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderNode_AddFloatInput, bIsAParameter) == 0x000014, "Member 'InterchangeShaderNode_AddFloatInput::bIsAParameter' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderNode_AddFloatInput, ReturnValue) == 0x000015, "Member 'InterchangeShaderNode_AddFloatInput::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderNode_AddFloatInput;
 
 // Function InterchangeNodes.InterchangeShaderNode.AddLinearColorInput
 // 0x0028 (0x0028 - 0x0000)
@@ -884,12 +740,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderNode_AddLinearColorInput) == 0x000008, "Wrong alignment on InterchangeShaderNode_AddLinearColorInput");
-static_assert(sizeof(InterchangeShaderNode_AddLinearColorInput) == 0x000028, "Wrong size on InterchangeShaderNode_AddLinearColorInput");
-static_assert(offsetof(InterchangeShaderNode_AddLinearColorInput, InputName) == 0x000000, "Member 'InterchangeShaderNode_AddLinearColorInput::InputName' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderNode_AddLinearColorInput, AttributeValue) == 0x000010, "Member 'InterchangeShaderNode_AddLinearColorInput::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderNode_AddLinearColorInput, bIsAParameter) == 0x000020, "Member 'InterchangeShaderNode_AddLinearColorInput::bIsAParameter' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderNode_AddLinearColorInput, ReturnValue) == 0x000021, "Member 'InterchangeShaderNode_AddLinearColorInput::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderNode_AddLinearColorInput;
 
 // Function InterchangeNodes.InterchangeShaderNode.AddStringInput
 // 0x0028 (0x0028 - 0x0000)
@@ -902,12 +753,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderNode_AddStringInput) == 0x000008, "Wrong alignment on InterchangeShaderNode_AddStringInput");
-static_assert(sizeof(InterchangeShaderNode_AddStringInput) == 0x000028, "Wrong size on InterchangeShaderNode_AddStringInput");
-static_assert(offsetof(InterchangeShaderNode_AddStringInput, InputName) == 0x000000, "Member 'InterchangeShaderNode_AddStringInput::InputName' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderNode_AddStringInput, AttributeValue) == 0x000010, "Member 'InterchangeShaderNode_AddStringInput::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderNode_AddStringInput, bIsAParameter) == 0x000020, "Member 'InterchangeShaderNode_AddStringInput::bIsAParameter' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderNode_AddStringInput, ReturnValue) == 0x000021, "Member 'InterchangeShaderNode_AddStringInput::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderNode_AddStringInput;
 
 // Function InterchangeNodes.InterchangeShaderNode.SetCustomShaderType
 // 0x0018 (0x0018 - 0x0000)
@@ -918,10 +764,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderNode_SetCustomShaderType) == 0x000008, "Wrong alignment on InterchangeShaderNode_SetCustomShaderType");
-static_assert(sizeof(InterchangeShaderNode_SetCustomShaderType) == 0x000018, "Wrong size on InterchangeShaderNode_SetCustomShaderType");
-static_assert(offsetof(InterchangeShaderNode_SetCustomShaderType, AttributeValue) == 0x000000, "Member 'InterchangeShaderNode_SetCustomShaderType::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderNode_SetCustomShaderType, ReturnValue) == 0x000010, "Member 'InterchangeShaderNode_SetCustomShaderType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderNode_SetCustomShaderType;
 
 // Function InterchangeNodes.InterchangeShaderNode.GetCustomShaderType
 // 0x0018 (0x0018 - 0x0000)
@@ -932,10 +775,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderNode_GetCustomShaderType) == 0x000008, "Wrong alignment on InterchangeShaderNode_GetCustomShaderType");
-static_assert(sizeof(InterchangeShaderNode_GetCustomShaderType) == 0x000018, "Wrong size on InterchangeShaderNode_GetCustomShaderType");
-static_assert(offsetof(InterchangeShaderNode_GetCustomShaderType, AttributeValue) == 0x000000, "Member 'InterchangeShaderNode_GetCustomShaderType::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderNode_GetCustomShaderType, ReturnValue) == 0x000010, "Member 'InterchangeShaderNode_GetCustomShaderType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderNode_GetCustomShaderType;
 
 // Function InterchangeNodes.InterchangeDecalNode.SetCustomDecalMaterialPathName
 // 0x0018 (0x0018 - 0x0000)
@@ -946,10 +786,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeDecalNode_SetCustomDecalMaterialPathName) == 0x000008, "Wrong alignment on InterchangeDecalNode_SetCustomDecalMaterialPathName");
-static_assert(sizeof(InterchangeDecalNode_SetCustomDecalMaterialPathName) == 0x000018, "Wrong size on InterchangeDecalNode_SetCustomDecalMaterialPathName");
-static_assert(offsetof(InterchangeDecalNode_SetCustomDecalMaterialPathName, AttributeValue) == 0x000000, "Member 'InterchangeDecalNode_SetCustomDecalMaterialPathName::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeDecalNode_SetCustomDecalMaterialPathName, ReturnValue) == 0x000010, "Member 'InterchangeDecalNode_SetCustomDecalMaterialPathName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeDecalNode_SetCustomDecalMaterialPathName;
 
 // Function InterchangeNodes.InterchangeDecalNode.SetCustomDecalSize
 // 0x0020 (0x0020 - 0x0000)
@@ -960,10 +797,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeDecalNode_SetCustomDecalSize) == 0x000008, "Wrong alignment on InterchangeDecalNode_SetCustomDecalSize");
-static_assert(sizeof(InterchangeDecalNode_SetCustomDecalSize) == 0x000020, "Wrong size on InterchangeDecalNode_SetCustomDecalSize");
-static_assert(offsetof(InterchangeDecalNode_SetCustomDecalSize, AttributeValue) == 0x000000, "Member 'InterchangeDecalNode_SetCustomDecalSize::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeDecalNode_SetCustomDecalSize, ReturnValue) == 0x000018, "Member 'InterchangeDecalNode_SetCustomDecalSize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeDecalNode_SetCustomDecalSize;
 
 // Function InterchangeNodes.InterchangeDecalNode.SetCustomSortOrder
 // 0x0008 (0x0008 - 0x0000)
@@ -974,10 +808,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeDecalNode_SetCustomSortOrder) == 0x000004, "Wrong alignment on InterchangeDecalNode_SetCustomSortOrder");
-static_assert(sizeof(InterchangeDecalNode_SetCustomSortOrder) == 0x000008, "Wrong size on InterchangeDecalNode_SetCustomSortOrder");
-static_assert(offsetof(InterchangeDecalNode_SetCustomSortOrder, AttributeValue) == 0x000000, "Member 'InterchangeDecalNode_SetCustomSortOrder::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeDecalNode_SetCustomSortOrder, ReturnValue) == 0x000004, "Member 'InterchangeDecalNode_SetCustomSortOrder::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeDecalNode_SetCustomSortOrder;
 
 // Function InterchangeNodes.InterchangeDecalNode.GetCustomDecalMaterialPathName
 // 0x0018 (0x0018 - 0x0000)
@@ -988,10 +819,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeDecalNode_GetCustomDecalMaterialPathName) == 0x000008, "Wrong alignment on InterchangeDecalNode_GetCustomDecalMaterialPathName");
-static_assert(sizeof(InterchangeDecalNode_GetCustomDecalMaterialPathName) == 0x000018, "Wrong size on InterchangeDecalNode_GetCustomDecalMaterialPathName");
-static_assert(offsetof(InterchangeDecalNode_GetCustomDecalMaterialPathName, AttributeValue) == 0x000000, "Member 'InterchangeDecalNode_GetCustomDecalMaterialPathName::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeDecalNode_GetCustomDecalMaterialPathName, ReturnValue) == 0x000010, "Member 'InterchangeDecalNode_GetCustomDecalMaterialPathName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeDecalNode_GetCustomDecalMaterialPathName;
 
 // Function InterchangeNodes.InterchangeDecalNode.GetCustomDecalSize
 // 0x0020 (0x0020 - 0x0000)
@@ -1002,10 +830,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeDecalNode_GetCustomDecalSize) == 0x000008, "Wrong alignment on InterchangeDecalNode_GetCustomDecalSize");
-static_assert(sizeof(InterchangeDecalNode_GetCustomDecalSize) == 0x000020, "Wrong size on InterchangeDecalNode_GetCustomDecalSize");
-static_assert(offsetof(InterchangeDecalNode_GetCustomDecalSize, AttributeValue) == 0x000000, "Member 'InterchangeDecalNode_GetCustomDecalSize::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeDecalNode_GetCustomDecalSize, ReturnValue) == 0x000018, "Member 'InterchangeDecalNode_GetCustomDecalSize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeDecalNode_GetCustomDecalSize;
 
 // Function InterchangeNodes.InterchangeDecalNode.GetCustomSortOrder
 // 0x0008 (0x0008 - 0x0000)
@@ -1016,10 +841,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeDecalNode_GetCustomSortOrder) == 0x000004, "Wrong alignment on InterchangeDecalNode_GetCustomSortOrder");
-static_assert(sizeof(InterchangeDecalNode_GetCustomSortOrder) == 0x000008, "Wrong size on InterchangeDecalNode_GetCustomSortOrder");
-static_assert(offsetof(InterchangeDecalNode_GetCustomSortOrder, AttributeValue) == 0x000000, "Member 'InterchangeDecalNode_GetCustomSortOrder::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeDecalNode_GetCustomSortOrder, ReturnValue) == 0x000004, "Member 'InterchangeDecalNode_GetCustomSortOrder::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeDecalNode_GetCustomSortOrder;
 
 // Function InterchangeNodes.InterchangeBaseLightNode.SetCustomIntensity
 // 0x0008 (0x0008 - 0x0000)
@@ -1030,10 +852,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeBaseLightNode_SetCustomIntensity) == 0x000004, "Wrong alignment on InterchangeBaseLightNode_SetCustomIntensity");
-static_assert(sizeof(InterchangeBaseLightNode_SetCustomIntensity) == 0x000008, "Wrong size on InterchangeBaseLightNode_SetCustomIntensity");
-static_assert(offsetof(InterchangeBaseLightNode_SetCustomIntensity, AttributeValue) == 0x000000, "Member 'InterchangeBaseLightNode_SetCustomIntensity::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeBaseLightNode_SetCustomIntensity, ReturnValue) == 0x000004, "Member 'InterchangeBaseLightNode_SetCustomIntensity::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeBaseLightNode_SetCustomIntensity;
 
 // Function InterchangeNodes.InterchangeBaseLightNode.SetCustomLightColor
 // 0x0014 (0x0014 - 0x0000)
@@ -1044,10 +863,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeBaseLightNode_SetCustomLightColor) == 0x000004, "Wrong alignment on InterchangeBaseLightNode_SetCustomLightColor");
-static_assert(sizeof(InterchangeBaseLightNode_SetCustomLightColor) == 0x000014, "Wrong size on InterchangeBaseLightNode_SetCustomLightColor");
-static_assert(offsetof(InterchangeBaseLightNode_SetCustomLightColor, AttributeValue) == 0x000000, "Member 'InterchangeBaseLightNode_SetCustomLightColor::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeBaseLightNode_SetCustomLightColor, ReturnValue) == 0x000010, "Member 'InterchangeBaseLightNode_SetCustomLightColor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeBaseLightNode_SetCustomLightColor;
 
 // Function InterchangeNodes.InterchangeBaseLightNode.SetCustomTemperature
 // 0x0008 (0x0008 - 0x0000)
@@ -1058,10 +874,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeBaseLightNode_SetCustomTemperature) == 0x000004, "Wrong alignment on InterchangeBaseLightNode_SetCustomTemperature");
-static_assert(sizeof(InterchangeBaseLightNode_SetCustomTemperature) == 0x000008, "Wrong size on InterchangeBaseLightNode_SetCustomTemperature");
-static_assert(offsetof(InterchangeBaseLightNode_SetCustomTemperature, AttributeValue) == 0x000000, "Member 'InterchangeBaseLightNode_SetCustomTemperature::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeBaseLightNode_SetCustomTemperature, ReturnValue) == 0x000004, "Member 'InterchangeBaseLightNode_SetCustomTemperature::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeBaseLightNode_SetCustomTemperature;
 
 // Function InterchangeNodes.InterchangeBaseLightNode.SetCustomUseTemperature
 // 0x0002 (0x0002 - 0x0000)
@@ -1071,10 +884,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeBaseLightNode_SetCustomUseTemperature) == 0x000001, "Wrong alignment on InterchangeBaseLightNode_SetCustomUseTemperature");
-static_assert(sizeof(InterchangeBaseLightNode_SetCustomUseTemperature) == 0x000002, "Wrong size on InterchangeBaseLightNode_SetCustomUseTemperature");
-static_assert(offsetof(InterchangeBaseLightNode_SetCustomUseTemperature, AttributeValue) == 0x000000, "Member 'InterchangeBaseLightNode_SetCustomUseTemperature::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeBaseLightNode_SetCustomUseTemperature, ReturnValue) == 0x000001, "Member 'InterchangeBaseLightNode_SetCustomUseTemperature::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeBaseLightNode_SetCustomUseTemperature;
 
 // Function InterchangeNodes.InterchangeBaseLightNode.GetCustomIntensity
 // 0x0008 (0x0008 - 0x0000)
@@ -1085,10 +895,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeBaseLightNode_GetCustomIntensity) == 0x000004, "Wrong alignment on InterchangeBaseLightNode_GetCustomIntensity");
-static_assert(sizeof(InterchangeBaseLightNode_GetCustomIntensity) == 0x000008, "Wrong size on InterchangeBaseLightNode_GetCustomIntensity");
-static_assert(offsetof(InterchangeBaseLightNode_GetCustomIntensity, AttributeValue) == 0x000000, "Member 'InterchangeBaseLightNode_GetCustomIntensity::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeBaseLightNode_GetCustomIntensity, ReturnValue) == 0x000004, "Member 'InterchangeBaseLightNode_GetCustomIntensity::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeBaseLightNode_GetCustomIntensity;
 
 // Function InterchangeNodes.InterchangeBaseLightNode.GetCustomLightColor
 // 0x0014 (0x0014 - 0x0000)
@@ -1099,10 +906,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeBaseLightNode_GetCustomLightColor) == 0x000004, "Wrong alignment on InterchangeBaseLightNode_GetCustomLightColor");
-static_assert(sizeof(InterchangeBaseLightNode_GetCustomLightColor) == 0x000014, "Wrong size on InterchangeBaseLightNode_GetCustomLightColor");
-static_assert(offsetof(InterchangeBaseLightNode_GetCustomLightColor, AttributeValue) == 0x000000, "Member 'InterchangeBaseLightNode_GetCustomLightColor::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeBaseLightNode_GetCustomLightColor, ReturnValue) == 0x000010, "Member 'InterchangeBaseLightNode_GetCustomLightColor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeBaseLightNode_GetCustomLightColor;
 
 // Function InterchangeNodes.InterchangeBaseLightNode.GetCustomTemperature
 // 0x0008 (0x0008 - 0x0000)
@@ -1113,10 +917,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeBaseLightNode_GetCustomTemperature) == 0x000004, "Wrong alignment on InterchangeBaseLightNode_GetCustomTemperature");
-static_assert(sizeof(InterchangeBaseLightNode_GetCustomTemperature) == 0x000008, "Wrong size on InterchangeBaseLightNode_GetCustomTemperature");
-static_assert(offsetof(InterchangeBaseLightNode_GetCustomTemperature, AttributeValue) == 0x000000, "Member 'InterchangeBaseLightNode_GetCustomTemperature::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeBaseLightNode_GetCustomTemperature, ReturnValue) == 0x000004, "Member 'InterchangeBaseLightNode_GetCustomTemperature::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeBaseLightNode_GetCustomTemperature;
 
 // Function InterchangeNodes.InterchangeBaseLightNode.GetCustomUseTemperature
 // 0x0002 (0x0002 - 0x0000)
@@ -1126,10 +927,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeBaseLightNode_GetCustomUseTemperature) == 0x000001, "Wrong alignment on InterchangeBaseLightNode_GetCustomUseTemperature");
-static_assert(sizeof(InterchangeBaseLightNode_GetCustomUseTemperature) == 0x000002, "Wrong size on InterchangeBaseLightNode_GetCustomUseTemperature");
-static_assert(offsetof(InterchangeBaseLightNode_GetCustomUseTemperature, AttributeValue) == 0x000000, "Member 'InterchangeBaseLightNode_GetCustomUseTemperature::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeBaseLightNode_GetCustomUseTemperature, ReturnValue) == 0x000001, "Member 'InterchangeBaseLightNode_GetCustomUseTemperature::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeBaseLightNode_GetCustomUseTemperature;
 
 // Function InterchangeNodes.InterchangeLightNode.SetCustomAttenuationRadius
 // 0x0008 (0x0008 - 0x0000)
@@ -1140,10 +938,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeLightNode_SetCustomAttenuationRadius) == 0x000004, "Wrong alignment on InterchangeLightNode_SetCustomAttenuationRadius");
-static_assert(sizeof(InterchangeLightNode_SetCustomAttenuationRadius) == 0x000008, "Wrong size on InterchangeLightNode_SetCustomAttenuationRadius");
-static_assert(offsetof(InterchangeLightNode_SetCustomAttenuationRadius, AttributeValue) == 0x000000, "Member 'InterchangeLightNode_SetCustomAttenuationRadius::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeLightNode_SetCustomAttenuationRadius, ReturnValue) == 0x000004, "Member 'InterchangeLightNode_SetCustomAttenuationRadius::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeLightNode_SetCustomAttenuationRadius;
 
 // Function InterchangeNodes.InterchangeLightNode.SetCustomIESBrightnessScale
 // 0x0008 (0x0008 - 0x0000)
@@ -1155,11 +950,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeLightNode_SetCustomIESBrightnessScale) == 0x000004, "Wrong alignment on InterchangeLightNode_SetCustomIESBrightnessScale");
-static_assert(sizeof(InterchangeLightNode_SetCustomIESBrightnessScale) == 0x000008, "Wrong size on InterchangeLightNode_SetCustomIESBrightnessScale");
-static_assert(offsetof(InterchangeLightNode_SetCustomIESBrightnessScale, AttributeValue) == 0x000000, "Member 'InterchangeLightNode_SetCustomIESBrightnessScale::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeLightNode_SetCustomIESBrightnessScale, bAddApplyDelegate) == 0x000004, "Member 'InterchangeLightNode_SetCustomIESBrightnessScale::bAddApplyDelegate' has a wrong offset!");
-static_assert(offsetof(InterchangeLightNode_SetCustomIESBrightnessScale, ReturnValue) == 0x000005, "Member 'InterchangeLightNode_SetCustomIESBrightnessScale::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeLightNode_SetCustomIESBrightnessScale;
 
 // Function InterchangeNodes.InterchangeLightNode.SetCustomIESTexture
 // 0x0018 (0x0018 - 0x0000)
@@ -1170,10 +961,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeLightNode_SetCustomIESTexture) == 0x000008, "Wrong alignment on InterchangeLightNode_SetCustomIESTexture");
-static_assert(sizeof(InterchangeLightNode_SetCustomIESTexture) == 0x000018, "Wrong size on InterchangeLightNode_SetCustomIESTexture");
-static_assert(offsetof(InterchangeLightNode_SetCustomIESTexture, AttributeValue) == 0x000000, "Member 'InterchangeLightNode_SetCustomIESTexture::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeLightNode_SetCustomIESTexture, ReturnValue) == 0x000010, "Member 'InterchangeLightNode_SetCustomIESTexture::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeLightNode_SetCustomIESTexture;
 
 // Function InterchangeNodes.InterchangeLightNode.SetCustomIntensityUnits
 // 0x0002 (0x0002 - 0x0000)
@@ -1183,10 +971,7 @@ public:
 	EInterchangeLightUnits                        AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeLightNode_SetCustomIntensityUnits) == 0x000001, "Wrong alignment on InterchangeLightNode_SetCustomIntensityUnits");
-static_assert(sizeof(InterchangeLightNode_SetCustomIntensityUnits) == 0x000002, "Wrong size on InterchangeLightNode_SetCustomIntensityUnits");
-static_assert(offsetof(InterchangeLightNode_SetCustomIntensityUnits, AttributeValue) == 0x000000, "Member 'InterchangeLightNode_SetCustomIntensityUnits::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeLightNode_SetCustomIntensityUnits, ReturnValue) == 0x000001, "Member 'InterchangeLightNode_SetCustomIntensityUnits::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeLightNode_SetCustomIntensityUnits;
 
 // Function InterchangeNodes.InterchangeLightNode.SetCustomRotation
 // 0x0020 (0x0020 - 0x0000)
@@ -1198,11 +983,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeLightNode_SetCustomRotation) == 0x000008, "Wrong alignment on InterchangeLightNode_SetCustomRotation");
-static_assert(sizeof(InterchangeLightNode_SetCustomRotation) == 0x000020, "Wrong size on InterchangeLightNode_SetCustomRotation");
-static_assert(offsetof(InterchangeLightNode_SetCustomRotation, AttributeValue) == 0x000000, "Member 'InterchangeLightNode_SetCustomRotation::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeLightNode_SetCustomRotation, bAddApplyDelegate) == 0x000018, "Member 'InterchangeLightNode_SetCustomRotation::bAddApplyDelegate' has a wrong offset!");
-static_assert(offsetof(InterchangeLightNode_SetCustomRotation, ReturnValue) == 0x000019, "Member 'InterchangeLightNode_SetCustomRotation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeLightNode_SetCustomRotation;
 
 // Function InterchangeNodes.InterchangeLightNode.SetCustomUseIESBrightness
 // 0x0003 (0x0003 - 0x0000)
@@ -1213,11 +994,7 @@ public:
 	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeLightNode_SetCustomUseIESBrightness) == 0x000001, "Wrong alignment on InterchangeLightNode_SetCustomUseIESBrightness");
-static_assert(sizeof(InterchangeLightNode_SetCustomUseIESBrightness) == 0x000003, "Wrong size on InterchangeLightNode_SetCustomUseIESBrightness");
-static_assert(offsetof(InterchangeLightNode_SetCustomUseIESBrightness, AttributeValue) == 0x000000, "Member 'InterchangeLightNode_SetCustomUseIESBrightness::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeLightNode_SetCustomUseIESBrightness, bAddApplyDelegate) == 0x000001, "Member 'InterchangeLightNode_SetCustomUseIESBrightness::bAddApplyDelegate' has a wrong offset!");
-static_assert(offsetof(InterchangeLightNode_SetCustomUseIESBrightness, ReturnValue) == 0x000002, "Member 'InterchangeLightNode_SetCustomUseIESBrightness::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeLightNode_SetCustomUseIESBrightness;
 
 // Function InterchangeNodes.InterchangeLightNode.GetCustomAttenuationRadius
 // 0x0008 (0x0008 - 0x0000)
@@ -1228,10 +1005,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeLightNode_GetCustomAttenuationRadius) == 0x000004, "Wrong alignment on InterchangeLightNode_GetCustomAttenuationRadius");
-static_assert(sizeof(InterchangeLightNode_GetCustomAttenuationRadius) == 0x000008, "Wrong size on InterchangeLightNode_GetCustomAttenuationRadius");
-static_assert(offsetof(InterchangeLightNode_GetCustomAttenuationRadius, AttributeValue) == 0x000000, "Member 'InterchangeLightNode_GetCustomAttenuationRadius::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeLightNode_GetCustomAttenuationRadius, ReturnValue) == 0x000004, "Member 'InterchangeLightNode_GetCustomAttenuationRadius::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeLightNode_GetCustomAttenuationRadius;
 
 // Function InterchangeNodes.InterchangeLightNode.GetCustomIESBrightnessScale
 // 0x0008 (0x0008 - 0x0000)
@@ -1242,10 +1016,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeLightNode_GetCustomIESBrightnessScale) == 0x000004, "Wrong alignment on InterchangeLightNode_GetCustomIESBrightnessScale");
-static_assert(sizeof(InterchangeLightNode_GetCustomIESBrightnessScale) == 0x000008, "Wrong size on InterchangeLightNode_GetCustomIESBrightnessScale");
-static_assert(offsetof(InterchangeLightNode_GetCustomIESBrightnessScale, AttributeValue) == 0x000000, "Member 'InterchangeLightNode_GetCustomIESBrightnessScale::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeLightNode_GetCustomIESBrightnessScale, ReturnValue) == 0x000004, "Member 'InterchangeLightNode_GetCustomIESBrightnessScale::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeLightNode_GetCustomIESBrightnessScale;
 
 // Function InterchangeNodes.InterchangeLightNode.GetCustomIESTexture
 // 0x0018 (0x0018 - 0x0000)
@@ -1256,10 +1027,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeLightNode_GetCustomIESTexture) == 0x000008, "Wrong alignment on InterchangeLightNode_GetCustomIESTexture");
-static_assert(sizeof(InterchangeLightNode_GetCustomIESTexture) == 0x000018, "Wrong size on InterchangeLightNode_GetCustomIESTexture");
-static_assert(offsetof(InterchangeLightNode_GetCustomIESTexture, AttributeValue) == 0x000000, "Member 'InterchangeLightNode_GetCustomIESTexture::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeLightNode_GetCustomIESTexture, ReturnValue) == 0x000010, "Member 'InterchangeLightNode_GetCustomIESTexture::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeLightNode_GetCustomIESTexture;
 
 // Function InterchangeNodes.InterchangeLightNode.GetCustomIntensityUnits
 // 0x0002 (0x0002 - 0x0000)
@@ -1269,10 +1037,7 @@ public:
 	EInterchangeLightUnits                        AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeLightNode_GetCustomIntensityUnits) == 0x000001, "Wrong alignment on InterchangeLightNode_GetCustomIntensityUnits");
-static_assert(sizeof(InterchangeLightNode_GetCustomIntensityUnits) == 0x000002, "Wrong size on InterchangeLightNode_GetCustomIntensityUnits");
-static_assert(offsetof(InterchangeLightNode_GetCustomIntensityUnits, AttributeValue) == 0x000000, "Member 'InterchangeLightNode_GetCustomIntensityUnits::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeLightNode_GetCustomIntensityUnits, ReturnValue) == 0x000001, "Member 'InterchangeLightNode_GetCustomIntensityUnits::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeLightNode_GetCustomIntensityUnits;
 
 // Function InterchangeNodes.InterchangeLightNode.GetCustomRotation
 // 0x0020 (0x0020 - 0x0000)
@@ -1283,10 +1048,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeLightNode_GetCustomRotation) == 0x000008, "Wrong alignment on InterchangeLightNode_GetCustomRotation");
-static_assert(sizeof(InterchangeLightNode_GetCustomRotation) == 0x000020, "Wrong size on InterchangeLightNode_GetCustomRotation");
-static_assert(offsetof(InterchangeLightNode_GetCustomRotation, AttributeValue) == 0x000000, "Member 'InterchangeLightNode_GetCustomRotation::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeLightNode_GetCustomRotation, ReturnValue) == 0x000018, "Member 'InterchangeLightNode_GetCustomRotation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeLightNode_GetCustomRotation;
 
 // Function InterchangeNodes.InterchangeLightNode.GetCustomUseIESBrightness
 // 0x0002 (0x0002 - 0x0000)
@@ -1296,10 +1058,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeLightNode_GetCustomUseIESBrightness) == 0x000001, "Wrong alignment on InterchangeLightNode_GetCustomUseIESBrightness");
-static_assert(sizeof(InterchangeLightNode_GetCustomUseIESBrightness) == 0x000002, "Wrong size on InterchangeLightNode_GetCustomUseIESBrightness");
-static_assert(offsetof(InterchangeLightNode_GetCustomUseIESBrightness, AttributeValue) == 0x000000, "Member 'InterchangeLightNode_GetCustomUseIESBrightness::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeLightNode_GetCustomUseIESBrightness, ReturnValue) == 0x000001, "Member 'InterchangeLightNode_GetCustomUseIESBrightness::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeLightNode_GetCustomUseIESBrightness;
 
 // Function InterchangeNodes.InterchangePointLightNode.SetCustomLightFalloffExponent
 // 0x0008 (0x0008 - 0x0000)
@@ -1310,10 +1069,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangePointLightNode_SetCustomLightFalloffExponent) == 0x000004, "Wrong alignment on InterchangePointLightNode_SetCustomLightFalloffExponent");
-static_assert(sizeof(InterchangePointLightNode_SetCustomLightFalloffExponent) == 0x000008, "Wrong size on InterchangePointLightNode_SetCustomLightFalloffExponent");
-static_assert(offsetof(InterchangePointLightNode_SetCustomLightFalloffExponent, AttributeValue) == 0x000000, "Member 'InterchangePointLightNode_SetCustomLightFalloffExponent::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangePointLightNode_SetCustomLightFalloffExponent, ReturnValue) == 0x000004, "Member 'InterchangePointLightNode_SetCustomLightFalloffExponent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangePointLightNode_SetCustomLightFalloffExponent;
 
 // Function InterchangeNodes.InterchangePointLightNode.SetCustomUseInverseSquaredFalloff
 // 0x0002 (0x0002 - 0x0000)
@@ -1323,10 +1079,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangePointLightNode_SetCustomUseInverseSquaredFalloff) == 0x000001, "Wrong alignment on InterchangePointLightNode_SetCustomUseInverseSquaredFalloff");
-static_assert(sizeof(InterchangePointLightNode_SetCustomUseInverseSquaredFalloff) == 0x000002, "Wrong size on InterchangePointLightNode_SetCustomUseInverseSquaredFalloff");
-static_assert(offsetof(InterchangePointLightNode_SetCustomUseInverseSquaredFalloff, AttributeValue) == 0x000000, "Member 'InterchangePointLightNode_SetCustomUseInverseSquaredFalloff::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangePointLightNode_SetCustomUseInverseSquaredFalloff, ReturnValue) == 0x000001, "Member 'InterchangePointLightNode_SetCustomUseInverseSquaredFalloff::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangePointLightNode_SetCustomUseInverseSquaredFalloff;
 
 // Function InterchangeNodes.InterchangePointLightNode.GetCustomLightFalloffExponent
 // 0x0008 (0x0008 - 0x0000)
@@ -1337,10 +1090,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangePointLightNode_GetCustomLightFalloffExponent) == 0x000004, "Wrong alignment on InterchangePointLightNode_GetCustomLightFalloffExponent");
-static_assert(sizeof(InterchangePointLightNode_GetCustomLightFalloffExponent) == 0x000008, "Wrong size on InterchangePointLightNode_GetCustomLightFalloffExponent");
-static_assert(offsetof(InterchangePointLightNode_GetCustomLightFalloffExponent, AttributeValue) == 0x000000, "Member 'InterchangePointLightNode_GetCustomLightFalloffExponent::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangePointLightNode_GetCustomLightFalloffExponent, ReturnValue) == 0x000004, "Member 'InterchangePointLightNode_GetCustomLightFalloffExponent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangePointLightNode_GetCustomLightFalloffExponent;
 
 // Function InterchangeNodes.InterchangePointLightNode.GetCustomUseInverseSquaredFalloff
 // 0x0002 (0x0002 - 0x0000)
@@ -1350,10 +1100,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangePointLightNode_GetCustomUseInverseSquaredFalloff) == 0x000001, "Wrong alignment on InterchangePointLightNode_GetCustomUseInverseSquaredFalloff");
-static_assert(sizeof(InterchangePointLightNode_GetCustomUseInverseSquaredFalloff) == 0x000002, "Wrong size on InterchangePointLightNode_GetCustomUseInverseSquaredFalloff");
-static_assert(offsetof(InterchangePointLightNode_GetCustomUseInverseSquaredFalloff, AttributeValue) == 0x000000, "Member 'InterchangePointLightNode_GetCustomUseInverseSquaredFalloff::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangePointLightNode_GetCustomUseInverseSquaredFalloff, ReturnValue) == 0x000001, "Member 'InterchangePointLightNode_GetCustomUseInverseSquaredFalloff::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangePointLightNode_GetCustomUseInverseSquaredFalloff;
 
 // Function InterchangeNodes.InterchangeSpotLightNode.SetCustomInnerConeAngle
 // 0x0008 (0x0008 - 0x0000)
@@ -1364,10 +1111,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSpotLightNode_SetCustomInnerConeAngle) == 0x000004, "Wrong alignment on InterchangeSpotLightNode_SetCustomInnerConeAngle");
-static_assert(sizeof(InterchangeSpotLightNode_SetCustomInnerConeAngle) == 0x000008, "Wrong size on InterchangeSpotLightNode_SetCustomInnerConeAngle");
-static_assert(offsetof(InterchangeSpotLightNode_SetCustomInnerConeAngle, AttributeValue) == 0x000000, "Member 'InterchangeSpotLightNode_SetCustomInnerConeAngle::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSpotLightNode_SetCustomInnerConeAngle, ReturnValue) == 0x000004, "Member 'InterchangeSpotLightNode_SetCustomInnerConeAngle::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSpotLightNode_SetCustomInnerConeAngle;
 
 // Function InterchangeNodes.InterchangeSpotLightNode.SetCustomOuterConeAngle
 // 0x0008 (0x0008 - 0x0000)
@@ -1378,10 +1122,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSpotLightNode_SetCustomOuterConeAngle) == 0x000004, "Wrong alignment on InterchangeSpotLightNode_SetCustomOuterConeAngle");
-static_assert(sizeof(InterchangeSpotLightNode_SetCustomOuterConeAngle) == 0x000008, "Wrong size on InterchangeSpotLightNode_SetCustomOuterConeAngle");
-static_assert(offsetof(InterchangeSpotLightNode_SetCustomOuterConeAngle, AttributeValue) == 0x000000, "Member 'InterchangeSpotLightNode_SetCustomOuterConeAngle::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSpotLightNode_SetCustomOuterConeAngle, ReturnValue) == 0x000004, "Member 'InterchangeSpotLightNode_SetCustomOuterConeAngle::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSpotLightNode_SetCustomOuterConeAngle;
 
 // Function InterchangeNodes.InterchangeSpotLightNode.GetCustomInnerConeAngle
 // 0x0008 (0x0008 - 0x0000)
@@ -1392,10 +1133,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSpotLightNode_GetCustomInnerConeAngle) == 0x000004, "Wrong alignment on InterchangeSpotLightNode_GetCustomInnerConeAngle");
-static_assert(sizeof(InterchangeSpotLightNode_GetCustomInnerConeAngle) == 0x000008, "Wrong size on InterchangeSpotLightNode_GetCustomInnerConeAngle");
-static_assert(offsetof(InterchangeSpotLightNode_GetCustomInnerConeAngle, AttributeValue) == 0x000000, "Member 'InterchangeSpotLightNode_GetCustomInnerConeAngle::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSpotLightNode_GetCustomInnerConeAngle, ReturnValue) == 0x000004, "Member 'InterchangeSpotLightNode_GetCustomInnerConeAngle::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSpotLightNode_GetCustomInnerConeAngle;
 
 // Function InterchangeNodes.InterchangeSpotLightNode.GetCustomOuterConeAngle
 // 0x0008 (0x0008 - 0x0000)
@@ -1406,10 +1144,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSpotLightNode_GetCustomOuterConeAngle) == 0x000004, "Wrong alignment on InterchangeSpotLightNode_GetCustomOuterConeAngle");
-static_assert(sizeof(InterchangeSpotLightNode_GetCustomOuterConeAngle) == 0x000008, "Wrong size on InterchangeSpotLightNode_GetCustomOuterConeAngle");
-static_assert(offsetof(InterchangeSpotLightNode_GetCustomOuterConeAngle, AttributeValue) == 0x000000, "Member 'InterchangeSpotLightNode_GetCustomOuterConeAngle::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSpotLightNode_GetCustomOuterConeAngle, ReturnValue) == 0x000004, "Member 'InterchangeSpotLightNode_GetCustomOuterConeAngle::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSpotLightNode_GetCustomOuterConeAngle;
 
 // Function InterchangeNodes.InterchangeRectLightNode.SetCustomSourceHeight
 // 0x0008 (0x0008 - 0x0000)
@@ -1420,10 +1155,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeRectLightNode_SetCustomSourceHeight) == 0x000004, "Wrong alignment on InterchangeRectLightNode_SetCustomSourceHeight");
-static_assert(sizeof(InterchangeRectLightNode_SetCustomSourceHeight) == 0x000008, "Wrong size on InterchangeRectLightNode_SetCustomSourceHeight");
-static_assert(offsetof(InterchangeRectLightNode_SetCustomSourceHeight, AttributeValue) == 0x000000, "Member 'InterchangeRectLightNode_SetCustomSourceHeight::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeRectLightNode_SetCustomSourceHeight, ReturnValue) == 0x000004, "Member 'InterchangeRectLightNode_SetCustomSourceHeight::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeRectLightNode_SetCustomSourceHeight;
 
 // Function InterchangeNodes.InterchangeRectLightNode.SetCustomSourceWidth
 // 0x0008 (0x0008 - 0x0000)
@@ -1434,10 +1166,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeRectLightNode_SetCustomSourceWidth) == 0x000004, "Wrong alignment on InterchangeRectLightNode_SetCustomSourceWidth");
-static_assert(sizeof(InterchangeRectLightNode_SetCustomSourceWidth) == 0x000008, "Wrong size on InterchangeRectLightNode_SetCustomSourceWidth");
-static_assert(offsetof(InterchangeRectLightNode_SetCustomSourceWidth, AttributeValue) == 0x000000, "Member 'InterchangeRectLightNode_SetCustomSourceWidth::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeRectLightNode_SetCustomSourceWidth, ReturnValue) == 0x000004, "Member 'InterchangeRectLightNode_SetCustomSourceWidth::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeRectLightNode_SetCustomSourceWidth;
 
 // Function InterchangeNodes.InterchangeRectLightNode.GetCustomSourceHeight
 // 0x0008 (0x0008 - 0x0000)
@@ -1448,10 +1177,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeRectLightNode_GetCustomSourceHeight) == 0x000004, "Wrong alignment on InterchangeRectLightNode_GetCustomSourceHeight");
-static_assert(sizeof(InterchangeRectLightNode_GetCustomSourceHeight) == 0x000008, "Wrong size on InterchangeRectLightNode_GetCustomSourceHeight");
-static_assert(offsetof(InterchangeRectLightNode_GetCustomSourceHeight, AttributeValue) == 0x000000, "Member 'InterchangeRectLightNode_GetCustomSourceHeight::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeRectLightNode_GetCustomSourceHeight, ReturnValue) == 0x000004, "Member 'InterchangeRectLightNode_GetCustomSourceHeight::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeRectLightNode_GetCustomSourceHeight;
 
 // Function InterchangeNodes.InterchangeRectLightNode.GetCustomSourceWidth
 // 0x0008 (0x0008 - 0x0000)
@@ -1462,10 +1188,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeRectLightNode_GetCustomSourceWidth) == 0x000004, "Wrong alignment on InterchangeRectLightNode_GetCustomSourceWidth");
-static_assert(sizeof(InterchangeRectLightNode_GetCustomSourceWidth) == 0x000008, "Wrong size on InterchangeRectLightNode_GetCustomSourceWidth");
-static_assert(offsetof(InterchangeRectLightNode_GetCustomSourceWidth, AttributeValue) == 0x000000, "Member 'InterchangeRectLightNode_GetCustomSourceWidth::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeRectLightNode_GetCustomSourceWidth, ReturnValue) == 0x000004, "Member 'InterchangeRectLightNode_GetCustomSourceWidth::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeRectLightNode_GetCustomSourceWidth;
 
 // Function InterchangeNodes.InterchangeTextureNode.SetCustombFlipGreenChannel
 // 0x0002 (0x0002 - 0x0000)
@@ -1475,10 +1198,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeTextureNode_SetCustombFlipGreenChannel) == 0x000001, "Wrong alignment on InterchangeTextureNode_SetCustombFlipGreenChannel");
-static_assert(sizeof(InterchangeTextureNode_SetCustombFlipGreenChannel) == 0x000002, "Wrong size on InterchangeTextureNode_SetCustombFlipGreenChannel");
-static_assert(offsetof(InterchangeTextureNode_SetCustombFlipGreenChannel, AttributeValue) == 0x000000, "Member 'InterchangeTextureNode_SetCustombFlipGreenChannel::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeTextureNode_SetCustombFlipGreenChannel, ReturnValue) == 0x000001, "Member 'InterchangeTextureNode_SetCustombFlipGreenChannel::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTextureNode_SetCustombFlipGreenChannel;
 
 // Function InterchangeNodes.InterchangeTextureNode.SetCustomColorSpace
 // 0x0002 (0x0002 - 0x0000)
@@ -1488,10 +1208,7 @@ public:
 	EInterchangeTextureColorSpace                 AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeTextureNode_SetCustomColorSpace) == 0x000001, "Wrong alignment on InterchangeTextureNode_SetCustomColorSpace");
-static_assert(sizeof(InterchangeTextureNode_SetCustomColorSpace) == 0x000002, "Wrong size on InterchangeTextureNode_SetCustomColorSpace");
-static_assert(offsetof(InterchangeTextureNode_SetCustomColorSpace, AttributeValue) == 0x000000, "Member 'InterchangeTextureNode_SetCustomColorSpace::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeTextureNode_SetCustomColorSpace, ReturnValue) == 0x000001, "Member 'InterchangeTextureNode_SetCustomColorSpace::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTextureNode_SetCustomColorSpace;
 
 // Function InterchangeNodes.InterchangeTextureNode.SetCustomFilter
 // 0x0002 (0x0002 - 0x0000)
@@ -1501,10 +1218,7 @@ public:
 	EInterchangeTextureFilterMode                 AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeTextureNode_SetCustomFilter) == 0x000001, "Wrong alignment on InterchangeTextureNode_SetCustomFilter");
-static_assert(sizeof(InterchangeTextureNode_SetCustomFilter) == 0x000002, "Wrong size on InterchangeTextureNode_SetCustomFilter");
-static_assert(offsetof(InterchangeTextureNode_SetCustomFilter, AttributeValue) == 0x000000, "Member 'InterchangeTextureNode_SetCustomFilter::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeTextureNode_SetCustomFilter, ReturnValue) == 0x000001, "Member 'InterchangeTextureNode_SetCustomFilter::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTextureNode_SetCustomFilter;
 
 // Function InterchangeNodes.InterchangeTextureNode.SetCustomSRGB
 // 0x0002 (0x0002 - 0x0000)
@@ -1514,10 +1228,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeTextureNode_SetCustomSRGB) == 0x000001, "Wrong alignment on InterchangeTextureNode_SetCustomSRGB");
-static_assert(sizeof(InterchangeTextureNode_SetCustomSRGB) == 0x000002, "Wrong size on InterchangeTextureNode_SetCustomSRGB");
-static_assert(offsetof(InterchangeTextureNode_SetCustomSRGB, AttributeValue) == 0x000000, "Member 'InterchangeTextureNode_SetCustomSRGB::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeTextureNode_SetCustomSRGB, ReturnValue) == 0x000001, "Member 'InterchangeTextureNode_SetCustomSRGB::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTextureNode_SetCustomSRGB;
 
 // Function InterchangeNodes.InterchangeTextureNode.SetPayLoadKey
 // 0x0010 (0x0010 - 0x0000)
@@ -1526,9 +1237,7 @@ struct InterchangeTextureNode_SetPayLoadKey final
 public:
 	class FString                                 PayloadKey;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeTextureNode_SetPayLoadKey) == 0x000008, "Wrong alignment on InterchangeTextureNode_SetPayLoadKey");
-static_assert(sizeof(InterchangeTextureNode_SetPayLoadKey) == 0x000010, "Wrong size on InterchangeTextureNode_SetPayLoadKey");
-static_assert(offsetof(InterchangeTextureNode_SetPayLoadKey, PayloadKey) == 0x000000, "Member 'InterchangeTextureNode_SetPayLoadKey::PayloadKey' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTextureNode_SetPayLoadKey;
 
 // Function InterchangeNodes.InterchangeTextureNode.GetCustombFlipGreenChannel
 // 0x0002 (0x0002 - 0x0000)
@@ -1538,10 +1247,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeTextureNode_GetCustombFlipGreenChannel) == 0x000001, "Wrong alignment on InterchangeTextureNode_GetCustombFlipGreenChannel");
-static_assert(sizeof(InterchangeTextureNode_GetCustombFlipGreenChannel) == 0x000002, "Wrong size on InterchangeTextureNode_GetCustombFlipGreenChannel");
-static_assert(offsetof(InterchangeTextureNode_GetCustombFlipGreenChannel, AttributeValue) == 0x000000, "Member 'InterchangeTextureNode_GetCustombFlipGreenChannel::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeTextureNode_GetCustombFlipGreenChannel, ReturnValue) == 0x000001, "Member 'InterchangeTextureNode_GetCustombFlipGreenChannel::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTextureNode_GetCustombFlipGreenChannel;
 
 // Function InterchangeNodes.InterchangeTextureNode.GetCustomColorSpace
 // 0x0002 (0x0002 - 0x0000)
@@ -1551,10 +1257,7 @@ public:
 	EInterchangeTextureColorSpace                 AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeTextureNode_GetCustomColorSpace) == 0x000001, "Wrong alignment on InterchangeTextureNode_GetCustomColorSpace");
-static_assert(sizeof(InterchangeTextureNode_GetCustomColorSpace) == 0x000002, "Wrong size on InterchangeTextureNode_GetCustomColorSpace");
-static_assert(offsetof(InterchangeTextureNode_GetCustomColorSpace, AttributeValue) == 0x000000, "Member 'InterchangeTextureNode_GetCustomColorSpace::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeTextureNode_GetCustomColorSpace, ReturnValue) == 0x000001, "Member 'InterchangeTextureNode_GetCustomColorSpace::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTextureNode_GetCustomColorSpace;
 
 // Function InterchangeNodes.InterchangeTextureNode.GetCustomFilter
 // 0x0002 (0x0002 - 0x0000)
@@ -1564,10 +1267,7 @@ public:
 	EInterchangeTextureFilterMode                 AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeTextureNode_GetCustomFilter) == 0x000001, "Wrong alignment on InterchangeTextureNode_GetCustomFilter");
-static_assert(sizeof(InterchangeTextureNode_GetCustomFilter) == 0x000002, "Wrong size on InterchangeTextureNode_GetCustomFilter");
-static_assert(offsetof(InterchangeTextureNode_GetCustomFilter, AttributeValue) == 0x000000, "Member 'InterchangeTextureNode_GetCustomFilter::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeTextureNode_GetCustomFilter, ReturnValue) == 0x000001, "Member 'InterchangeTextureNode_GetCustomFilter::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTextureNode_GetCustomFilter;
 
 // Function InterchangeNodes.InterchangeTextureNode.GetCustomSRGB
 // 0x0002 (0x0002 - 0x0000)
@@ -1577,10 +1277,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeTextureNode_GetCustomSRGB) == 0x000001, "Wrong alignment on InterchangeTextureNode_GetCustomSRGB");
-static_assert(sizeof(InterchangeTextureNode_GetCustomSRGB) == 0x000002, "Wrong size on InterchangeTextureNode_GetCustomSRGB");
-static_assert(offsetof(InterchangeTextureNode_GetCustomSRGB, AttributeValue) == 0x000000, "Member 'InterchangeTextureNode_GetCustomSRGB::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeTextureNode_GetCustomSRGB, ReturnValue) == 0x000001, "Member 'InterchangeTextureNode_GetCustomSRGB::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTextureNode_GetCustomSRGB;
 
 // Function InterchangeNodes.InterchangeVariantSetNode.AddCustomDependencyUid
 // 0x0018 (0x0018 - 0x0000)
@@ -1591,10 +1288,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeVariantSetNode_AddCustomDependencyUid) == 0x000008, "Wrong alignment on InterchangeVariantSetNode_AddCustomDependencyUid");
-static_assert(sizeof(InterchangeVariantSetNode_AddCustomDependencyUid) == 0x000018, "Wrong size on InterchangeVariantSetNode_AddCustomDependencyUid");
-static_assert(offsetof(InterchangeVariantSetNode_AddCustomDependencyUid, DependencyUid) == 0x000000, "Member 'InterchangeVariantSetNode_AddCustomDependencyUid::DependencyUid' has a wrong offset!");
-static_assert(offsetof(InterchangeVariantSetNode_AddCustomDependencyUid, ReturnValue) == 0x000010, "Member 'InterchangeVariantSetNode_AddCustomDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeVariantSetNode_AddCustomDependencyUid;
 
 // Function InterchangeNodes.InterchangeVariantSetNode.RemoveCustomDependencyUid
 // 0x0018 (0x0018 - 0x0000)
@@ -1605,10 +1299,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeVariantSetNode_RemoveCustomDependencyUid) == 0x000008, "Wrong alignment on InterchangeVariantSetNode_RemoveCustomDependencyUid");
-static_assert(sizeof(InterchangeVariantSetNode_RemoveCustomDependencyUid) == 0x000018, "Wrong size on InterchangeVariantSetNode_RemoveCustomDependencyUid");
-static_assert(offsetof(InterchangeVariantSetNode_RemoveCustomDependencyUid, DependencyUid) == 0x000000, "Member 'InterchangeVariantSetNode_RemoveCustomDependencyUid::DependencyUid' has a wrong offset!");
-static_assert(offsetof(InterchangeVariantSetNode_RemoveCustomDependencyUid, ReturnValue) == 0x000010, "Member 'InterchangeVariantSetNode_RemoveCustomDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeVariantSetNode_RemoveCustomDependencyUid;
 
 // Function InterchangeNodes.InterchangeVariantSetNode.SetCustomDisplayText
 // 0x0018 (0x0018 - 0x0000)
@@ -1619,10 +1310,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeVariantSetNode_SetCustomDisplayText) == 0x000008, "Wrong alignment on InterchangeVariantSetNode_SetCustomDisplayText");
-static_assert(sizeof(InterchangeVariantSetNode_SetCustomDisplayText) == 0x000018, "Wrong size on InterchangeVariantSetNode_SetCustomDisplayText");
-static_assert(offsetof(InterchangeVariantSetNode_SetCustomDisplayText, AttributeValue) == 0x000000, "Member 'InterchangeVariantSetNode_SetCustomDisplayText::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeVariantSetNode_SetCustomDisplayText, ReturnValue) == 0x000010, "Member 'InterchangeVariantSetNode_SetCustomDisplayText::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeVariantSetNode_SetCustomDisplayText;
 
 // Function InterchangeNodes.InterchangeVariantSetNode.SetCustomVariantsPayloadKey
 // 0x0018 (0x0018 - 0x0000)
@@ -1633,10 +1321,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeVariantSetNode_SetCustomVariantsPayloadKey) == 0x000008, "Wrong alignment on InterchangeVariantSetNode_SetCustomVariantsPayloadKey");
-static_assert(sizeof(InterchangeVariantSetNode_SetCustomVariantsPayloadKey) == 0x000018, "Wrong size on InterchangeVariantSetNode_SetCustomVariantsPayloadKey");
-static_assert(offsetof(InterchangeVariantSetNode_SetCustomVariantsPayloadKey, PayloadKey) == 0x000000, "Member 'InterchangeVariantSetNode_SetCustomVariantsPayloadKey::PayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeVariantSetNode_SetCustomVariantsPayloadKey, ReturnValue) == 0x000010, "Member 'InterchangeVariantSetNode_SetCustomVariantsPayloadKey::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeVariantSetNode_SetCustomVariantsPayloadKey;
 
 // Function InterchangeNodes.InterchangeVariantSetNode.GetCustomDependencyUid
 // 0x0018 (0x0018 - 0x0000)
@@ -1647,10 +1332,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OutDependencyUid;                                  // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeVariantSetNode_GetCustomDependencyUid) == 0x000008, "Wrong alignment on InterchangeVariantSetNode_GetCustomDependencyUid");
-static_assert(sizeof(InterchangeVariantSetNode_GetCustomDependencyUid) == 0x000018, "Wrong size on InterchangeVariantSetNode_GetCustomDependencyUid");
-static_assert(offsetof(InterchangeVariantSetNode_GetCustomDependencyUid, Index_0) == 0x000000, "Member 'InterchangeVariantSetNode_GetCustomDependencyUid::Index_0' has a wrong offset!");
-static_assert(offsetof(InterchangeVariantSetNode_GetCustomDependencyUid, OutDependencyUid) == 0x000008, "Member 'InterchangeVariantSetNode_GetCustomDependencyUid::OutDependencyUid' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeVariantSetNode_GetCustomDependencyUid;
 
 // Function InterchangeNodes.InterchangeVariantSetNode.GetCustomDependencyUidCount
 // 0x0004 (0x0004 - 0x0000)
@@ -1659,9 +1341,7 @@ struct InterchangeVariantSetNode_GetCustomDependencyUidCount final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeVariantSetNode_GetCustomDependencyUidCount) == 0x000004, "Wrong alignment on InterchangeVariantSetNode_GetCustomDependencyUidCount");
-static_assert(sizeof(InterchangeVariantSetNode_GetCustomDependencyUidCount) == 0x000004, "Wrong size on InterchangeVariantSetNode_GetCustomDependencyUidCount");
-static_assert(offsetof(InterchangeVariantSetNode_GetCustomDependencyUidCount, ReturnValue) == 0x000000, "Member 'InterchangeVariantSetNode_GetCustomDependencyUidCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeVariantSetNode_GetCustomDependencyUidCount;
 
 // Function InterchangeNodes.InterchangeVariantSetNode.GetCustomDependencyUids
 // 0x0010 (0x0010 - 0x0000)
@@ -1670,9 +1350,7 @@ struct InterchangeVariantSetNode_GetCustomDependencyUids final
 public:
 	TArray<class FString>                         OutDependencyUids;                                 // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeVariantSetNode_GetCustomDependencyUids) == 0x000008, "Wrong alignment on InterchangeVariantSetNode_GetCustomDependencyUids");
-static_assert(sizeof(InterchangeVariantSetNode_GetCustomDependencyUids) == 0x000010, "Wrong size on InterchangeVariantSetNode_GetCustomDependencyUids");
-static_assert(offsetof(InterchangeVariantSetNode_GetCustomDependencyUids, OutDependencyUids) == 0x000000, "Member 'InterchangeVariantSetNode_GetCustomDependencyUids::OutDependencyUids' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeVariantSetNode_GetCustomDependencyUids;
 
 // Function InterchangeNodes.InterchangeVariantSetNode.GetCustomDisplayText
 // 0x0018 (0x0018 - 0x0000)
@@ -1683,10 +1361,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeVariantSetNode_GetCustomDisplayText) == 0x000008, "Wrong alignment on InterchangeVariantSetNode_GetCustomDisplayText");
-static_assert(sizeof(InterchangeVariantSetNode_GetCustomDisplayText) == 0x000018, "Wrong size on InterchangeVariantSetNode_GetCustomDisplayText");
-static_assert(offsetof(InterchangeVariantSetNode_GetCustomDisplayText, AttributeValue) == 0x000000, "Member 'InterchangeVariantSetNode_GetCustomDisplayText::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeVariantSetNode_GetCustomDisplayText, ReturnValue) == 0x000010, "Member 'InterchangeVariantSetNode_GetCustomDisplayText::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeVariantSetNode_GetCustomDisplayText;
 
 // Function InterchangeNodes.InterchangeVariantSetNode.GetCustomVariantsPayloadKey
 // 0x0018 (0x0018 - 0x0000)
@@ -1697,10 +1372,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeVariantSetNode_GetCustomVariantsPayloadKey) == 0x000008, "Wrong alignment on InterchangeVariantSetNode_GetCustomVariantsPayloadKey");
-static_assert(sizeof(InterchangeVariantSetNode_GetCustomVariantsPayloadKey) == 0x000018, "Wrong size on InterchangeVariantSetNode_GetCustomVariantsPayloadKey");
-static_assert(offsetof(InterchangeVariantSetNode_GetCustomVariantsPayloadKey, PayloadKey) == 0x000000, "Member 'InterchangeVariantSetNode_GetCustomVariantsPayloadKey::PayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeVariantSetNode_GetCustomVariantsPayloadKey, ReturnValue) == 0x000010, "Member 'InterchangeVariantSetNode_GetCustomVariantsPayloadKey::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeVariantSetNode_GetCustomVariantsPayloadKey;
 
 // Function InterchangeNodes.InterchangeSceneVariantSetsNode.AddCustomVariantSetUid
 // 0x0018 (0x0018 - 0x0000)
@@ -1711,10 +1383,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneVariantSetsNode_AddCustomVariantSetUid) == 0x000008, "Wrong alignment on InterchangeSceneVariantSetsNode_AddCustomVariantSetUid");
-static_assert(sizeof(InterchangeSceneVariantSetsNode_AddCustomVariantSetUid) == 0x000018, "Wrong size on InterchangeSceneVariantSetsNode_AddCustomVariantSetUid");
-static_assert(offsetof(InterchangeSceneVariantSetsNode_AddCustomVariantSetUid, VariantUid) == 0x000000, "Member 'InterchangeSceneVariantSetsNode_AddCustomVariantSetUid::VariantUid' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneVariantSetsNode_AddCustomVariantSetUid, ReturnValue) == 0x000010, "Member 'InterchangeSceneVariantSetsNode_AddCustomVariantSetUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneVariantSetsNode_AddCustomVariantSetUid;
 
 // Function InterchangeNodes.InterchangeSceneVariantSetsNode.RemoveCustomVariantSetUid
 // 0x0018 (0x0018 - 0x0000)
@@ -1725,10 +1394,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneVariantSetsNode_RemoveCustomVariantSetUid) == 0x000008, "Wrong alignment on InterchangeSceneVariantSetsNode_RemoveCustomVariantSetUid");
-static_assert(sizeof(InterchangeSceneVariantSetsNode_RemoveCustomVariantSetUid) == 0x000018, "Wrong size on InterchangeSceneVariantSetsNode_RemoveCustomVariantSetUid");
-static_assert(offsetof(InterchangeSceneVariantSetsNode_RemoveCustomVariantSetUid, VariantUid) == 0x000000, "Member 'InterchangeSceneVariantSetsNode_RemoveCustomVariantSetUid::VariantUid' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneVariantSetsNode_RemoveCustomVariantSetUid, ReturnValue) == 0x000010, "Member 'InterchangeSceneVariantSetsNode_RemoveCustomVariantSetUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneVariantSetsNode_RemoveCustomVariantSetUid;
 
 // Function InterchangeNodes.InterchangeSceneVariantSetsNode.GetCustomVariantSetUid
 // 0x0018 (0x0018 - 0x0000)
@@ -1739,10 +1405,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OutVariantUid;                                     // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeSceneVariantSetsNode_GetCustomVariantSetUid) == 0x000008, "Wrong alignment on InterchangeSceneVariantSetsNode_GetCustomVariantSetUid");
-static_assert(sizeof(InterchangeSceneVariantSetsNode_GetCustomVariantSetUid) == 0x000018, "Wrong size on InterchangeSceneVariantSetsNode_GetCustomVariantSetUid");
-static_assert(offsetof(InterchangeSceneVariantSetsNode_GetCustomVariantSetUid, Index_0) == 0x000000, "Member 'InterchangeSceneVariantSetsNode_GetCustomVariantSetUid::Index_0' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneVariantSetsNode_GetCustomVariantSetUid, OutVariantUid) == 0x000008, "Member 'InterchangeSceneVariantSetsNode_GetCustomVariantSetUid::OutVariantUid' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneVariantSetsNode_GetCustomVariantSetUid;
 
 // Function InterchangeNodes.InterchangeSceneVariantSetsNode.GetCustomVariantSetUidCount
 // 0x0004 (0x0004 - 0x0000)
@@ -1751,9 +1414,7 @@ struct InterchangeSceneVariantSetsNode_GetCustomVariantSetUidCount final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeSceneVariantSetsNode_GetCustomVariantSetUidCount) == 0x000004, "Wrong alignment on InterchangeSceneVariantSetsNode_GetCustomVariantSetUidCount");
-static_assert(sizeof(InterchangeSceneVariantSetsNode_GetCustomVariantSetUidCount) == 0x000004, "Wrong size on InterchangeSceneVariantSetsNode_GetCustomVariantSetUidCount");
-static_assert(offsetof(InterchangeSceneVariantSetsNode_GetCustomVariantSetUidCount, ReturnValue) == 0x000000, "Member 'InterchangeSceneVariantSetsNode_GetCustomVariantSetUidCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneVariantSetsNode_GetCustomVariantSetUidCount;
 
 // Function InterchangeNodes.InterchangeSceneVariantSetsNode.GetCustomVariantSetUids
 // 0x0010 (0x0010 - 0x0000)
@@ -1762,9 +1423,273 @@ struct InterchangeSceneVariantSetsNode_GetCustomVariantSetUids final
 public:
 	TArray<class FString>                         OutVariantUids;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeSceneVariantSetsNode_GetCustomVariantSetUids) == 0x000008, "Wrong alignment on InterchangeSceneVariantSetsNode_GetCustomVariantSetUids");
-static_assert(sizeof(InterchangeSceneVariantSetsNode_GetCustomVariantSetUids) == 0x000010, "Wrong size on InterchangeSceneVariantSetsNode_GetCustomVariantSetUids");
-static_assert(offsetof(InterchangeSceneVariantSetsNode_GetCustomVariantSetUids, OutVariantUids) == 0x000000, "Member 'InterchangeSceneVariantSetsNode_GetCustomVariantSetUids::OutVariantUids' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneVariantSetsNode_GetCustomVariantSetUids;
+
+// Function InterchangeNodes.InterchangeVolumeNode.AddCustomFrameIndexInAnimation
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeVolumeNode_AddCustomFrameIndexInAnimation final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeNode_AddCustomFrameIndexInAnimation;
+
+// Function InterchangeNodes.InterchangeVolumeNode.AddCustomGridDependency
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeVolumeNode_AddCustomGridDependency final
+{
+public:
+	class FString                                 DependencyUid;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeNode_AddCustomGridDependency;
+
+// Function InterchangeNodes.InterchangeVolumeNode.RemoveCustomFrameIndexInAnimation
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeVolumeNode_RemoveCustomFrameIndexInAnimation final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeNode_RemoveCustomFrameIndexInAnimation;
+
+// Function InterchangeNodes.InterchangeVolumeNode.RemoveCustomGridDependency
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeVolumeNode_RemoveCustomGridDependency final
+{
+public:
+	class FString                                 DependencyUid;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeNode_RemoveCustomGridDependency;
+
+// Function InterchangeNodes.InterchangeVolumeNode.SetCustomAnimationID
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeVolumeNode_SetCustomAnimationID final
+{
+public:
+	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeNode_SetCustomAnimationID;
+
+// Function InterchangeNodes.InterchangeVolumeNode.SetCustomFileName
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeVolumeNode_SetCustomFileName final
+{
+public:
+	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeNode_SetCustomFileName;
+
+// Function InterchangeNodes.InterchangeVolumeNode.GetCustomAnimationID
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeVolumeNode_GetCustomAnimationID final
+{
+public:
+	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeNode_GetCustomAnimationID;
+
+// Function InterchangeNodes.InterchangeVolumeNode.GetCustomFileName
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeVolumeNode_GetCustomFileName final
+{
+public:
+	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeNode_GetCustomFileName;
+
+// Function InterchangeNodes.InterchangeVolumeNode.GetCustomFrameIndexInAnimation
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeVolumeNode_GetCustomFrameIndexInAnimation final
+{
+public:
+	int32                                         IndexIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutIndex;                                          // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeVolumeNode_GetCustomFrameIndexInAnimation;
+
+// Function InterchangeNodes.InterchangeVolumeNode.GetCustomFrameIndicesInAnimation
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeVolumeNode_GetCustomFrameIndicesInAnimation final
+{
+public:
+	TArray<int32>                                 OutAnimationIndices;                               // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeVolumeNode_GetCustomFrameIndicesInAnimation;
+
+// Function InterchangeNodes.InterchangeVolumeNode.GetCustomGridDependecies
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeVolumeNode_GetCustomGridDependecies final
+{
+public:
+	TArray<class FString>                         OutDependencies;                                   // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeVolumeNode_GetCustomGridDependecies;
+
+// Function InterchangeNodes.InterchangeVolumeNode.GetCustomGridDependeciesCount
+// 0x0004 (0x0004 - 0x0000)
+struct InterchangeVolumeNode_GetCustomGridDependeciesCount final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeVolumeNode_GetCustomGridDependeciesCount;
+
+// Function InterchangeNodes.InterchangeVolumeNode.GetCustomGridDependency
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeVolumeNode_GetCustomGridDependency final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 OutDependency;                                     // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeVolumeNode_GetCustomGridDependency;
+
+// Function InterchangeNodes.InterchangeVolumeGridNode.SetCustomElementType
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeVolumeGridNode_SetCustomElementType final
+{
+public:
+	EVolumeGridElementType                        AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeVolumeGridNode_SetCustomElementType;
+
+// Function InterchangeNodes.InterchangeVolumeGridNode.SetCustomGridActiveAABBMax
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeVolumeGridNode_SetCustomGridActiveAABBMax final
+{
+public:
+	struct FIntVector                             AttributeValue;                                    // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeGridNode_SetCustomGridActiveAABBMax;
+
+// Function InterchangeNodes.InterchangeVolumeGridNode.SetCustomGridActiveAABBMin
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeVolumeGridNode_SetCustomGridActiveAABBMin final
+{
+public:
+	struct FIntVector                             AttributeValue;                                    // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeGridNode_SetCustomGridActiveAABBMin;
+
+// Function InterchangeNodes.InterchangeVolumeGridNode.SetCustomGridActiveDimensions
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeVolumeGridNode_SetCustomGridActiveDimensions final
+{
+public:
+	struct FIntVector                             AttributeValue;                                    // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeGridNode_SetCustomGridActiveDimensions;
+
+// Function InterchangeNodes.InterchangeVolumeGridNode.SetCustomGridTransform
+// 0x0070 (0x0070 - 0x0000)
+struct InterchangeVolumeGridNode_SetCustomGridTransform final
+{
+public:
+	struct FTransform                             AttributeValue;                                    // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0xF];                                       // 0x0061(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeGridNode_SetCustomGridTransform;
+
+// Function InterchangeNodes.InterchangeVolumeGridNode.SetCustomNumComponents
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeVolumeGridNode_SetCustomNumComponents final
+{
+public:
+	int32                                         NumComponents;                                     // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeGridNode_SetCustomNumComponents;
+
+// Function InterchangeNodes.InterchangeVolumeGridNode.GetCustomElementType
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeVolumeGridNode_GetCustomElementType final
+{
+public:
+	EVolumeGridElementType                        AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeVolumeGridNode_GetCustomElementType;
+
+// Function InterchangeNodes.InterchangeVolumeGridNode.GetCustomGridActiveAABBMax
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeVolumeGridNode_GetCustomGridActiveAABBMax final
+{
+public:
+	struct FIntVector                             AttributeValue;                                    // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeGridNode_GetCustomGridActiveAABBMax;
+
+// Function InterchangeNodes.InterchangeVolumeGridNode.GetCustomGridActiveAABBMin
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeVolumeGridNode_GetCustomGridActiveAABBMin final
+{
+public:
+	struct FIntVector                             AttributeValue;                                    // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeGridNode_GetCustomGridActiveAABBMin;
+
+// Function InterchangeNodes.InterchangeVolumeGridNode.GetCustomGridActiveDimensions
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeVolumeGridNode_GetCustomGridActiveDimensions final
+{
+public:
+	struct FIntVector                             AttributeValue;                                    // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeGridNode_GetCustomGridActiveDimensions;
+
+// Function InterchangeNodes.InterchangeVolumeGridNode.GetCustomGridTransform
+// 0x0070 (0x0070 - 0x0000)
+struct InterchangeVolumeGridNode_GetCustomGridTransform final
+{
+public:
+	struct FTransform                             AttributeValue;                                    // 0x0000(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0xF];                                       // 0x0061(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeGridNode_GetCustomGridTransform;
+
+// Function InterchangeNodes.InterchangeVolumeGridNode.GetCustomNumComponents
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeVolumeGridNode_GetCustomNumComponents final
+{
+public:
+	int32                                         NumComponents;                                     // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeVolumeGridNode_GetCustomNumComponents;
 
 // Function InterchangeNodes.InterchangeMaterialInstanceNode.AddScalarParameterValue
 // 0x0018 (0x0018 - 0x0000)
@@ -1776,11 +1701,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMaterialInstanceNode_AddScalarParameterValue) == 0x000008, "Wrong alignment on InterchangeMaterialInstanceNode_AddScalarParameterValue");
-static_assert(sizeof(InterchangeMaterialInstanceNode_AddScalarParameterValue) == 0x000018, "Wrong size on InterchangeMaterialInstanceNode_AddScalarParameterValue");
-static_assert(offsetof(InterchangeMaterialInstanceNode_AddScalarParameterValue, ParameterName) == 0x000000, "Member 'InterchangeMaterialInstanceNode_AddScalarParameterValue::ParameterName' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_AddScalarParameterValue, AttributeValue) == 0x000010, "Member 'InterchangeMaterialInstanceNode_AddScalarParameterValue::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_AddScalarParameterValue, ReturnValue) == 0x000014, "Member 'InterchangeMaterialInstanceNode_AddScalarParameterValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMaterialInstanceNode_AddScalarParameterValue;
 
 // Function InterchangeNodes.InterchangeMaterialInstanceNode.AddStaticSwitchParameterValue
 // 0x0018 (0x0018 - 0x0000)
@@ -1792,11 +1713,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMaterialInstanceNode_AddStaticSwitchParameterValue) == 0x000008, "Wrong alignment on InterchangeMaterialInstanceNode_AddStaticSwitchParameterValue");
-static_assert(sizeof(InterchangeMaterialInstanceNode_AddStaticSwitchParameterValue) == 0x000018, "Wrong size on InterchangeMaterialInstanceNode_AddStaticSwitchParameterValue");
-static_assert(offsetof(InterchangeMaterialInstanceNode_AddStaticSwitchParameterValue, ParameterName) == 0x000000, "Member 'InterchangeMaterialInstanceNode_AddStaticSwitchParameterValue::ParameterName' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_AddStaticSwitchParameterValue, AttributeValue) == 0x000010, "Member 'InterchangeMaterialInstanceNode_AddStaticSwitchParameterValue::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_AddStaticSwitchParameterValue, ReturnValue) == 0x000011, "Member 'InterchangeMaterialInstanceNode_AddStaticSwitchParameterValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMaterialInstanceNode_AddStaticSwitchParameterValue;
 
 // Function InterchangeNodes.InterchangeMaterialInstanceNode.AddTextureParameterValue
 // 0x0028 (0x0028 - 0x0000)
@@ -1808,11 +1725,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMaterialInstanceNode_AddTextureParameterValue) == 0x000008, "Wrong alignment on InterchangeMaterialInstanceNode_AddTextureParameterValue");
-static_assert(sizeof(InterchangeMaterialInstanceNode_AddTextureParameterValue) == 0x000028, "Wrong size on InterchangeMaterialInstanceNode_AddTextureParameterValue");
-static_assert(offsetof(InterchangeMaterialInstanceNode_AddTextureParameterValue, ParameterName) == 0x000000, "Member 'InterchangeMaterialInstanceNode_AddTextureParameterValue::ParameterName' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_AddTextureParameterValue, AttributeValue) == 0x000010, "Member 'InterchangeMaterialInstanceNode_AddTextureParameterValue::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_AddTextureParameterValue, ReturnValue) == 0x000020, "Member 'InterchangeMaterialInstanceNode_AddTextureParameterValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMaterialInstanceNode_AddTextureParameterValue;
 
 // Function InterchangeNodes.InterchangeMaterialInstanceNode.AddVectorParameterValue
 // 0x0028 (0x0028 - 0x0000)
@@ -1824,11 +1737,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMaterialInstanceNode_AddVectorParameterValue) == 0x000008, "Wrong alignment on InterchangeMaterialInstanceNode_AddVectorParameterValue");
-static_assert(sizeof(InterchangeMaterialInstanceNode_AddVectorParameterValue) == 0x000028, "Wrong size on InterchangeMaterialInstanceNode_AddVectorParameterValue");
-static_assert(offsetof(InterchangeMaterialInstanceNode_AddVectorParameterValue, ParameterName) == 0x000000, "Member 'InterchangeMaterialInstanceNode_AddVectorParameterValue::ParameterName' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_AddVectorParameterValue, AttributeValue) == 0x000010, "Member 'InterchangeMaterialInstanceNode_AddVectorParameterValue::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_AddVectorParameterValue, ReturnValue) == 0x000020, "Member 'InterchangeMaterialInstanceNode_AddVectorParameterValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMaterialInstanceNode_AddVectorParameterValue;
 
 // Function InterchangeNodes.InterchangeMaterialInstanceNode.GetCustomParent
 // 0x0018 (0x0018 - 0x0000)
@@ -1839,10 +1748,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMaterialInstanceNode_GetCustomParent) == 0x000008, "Wrong alignment on InterchangeMaterialInstanceNode_GetCustomParent");
-static_assert(sizeof(InterchangeMaterialInstanceNode_GetCustomParent) == 0x000018, "Wrong size on InterchangeMaterialInstanceNode_GetCustomParent");
-static_assert(offsetof(InterchangeMaterialInstanceNode_GetCustomParent, AttributeValue) == 0x000000, "Member 'InterchangeMaterialInstanceNode_GetCustomParent::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_GetCustomParent, ReturnValue) == 0x000010, "Member 'InterchangeMaterialInstanceNode_GetCustomParent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMaterialInstanceNode_GetCustomParent;
 
 // Function InterchangeNodes.InterchangeMaterialInstanceNode.GetScalarParameterValue
 // 0x0018 (0x0018 - 0x0000)
@@ -1854,11 +1760,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMaterialInstanceNode_GetScalarParameterValue) == 0x000008, "Wrong alignment on InterchangeMaterialInstanceNode_GetScalarParameterValue");
-static_assert(sizeof(InterchangeMaterialInstanceNode_GetScalarParameterValue) == 0x000018, "Wrong size on InterchangeMaterialInstanceNode_GetScalarParameterValue");
-static_assert(offsetof(InterchangeMaterialInstanceNode_GetScalarParameterValue, ParameterName) == 0x000000, "Member 'InterchangeMaterialInstanceNode_GetScalarParameterValue::ParameterName' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_GetScalarParameterValue, AttributeValue) == 0x000010, "Member 'InterchangeMaterialInstanceNode_GetScalarParameterValue::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_GetScalarParameterValue, ReturnValue) == 0x000014, "Member 'InterchangeMaterialInstanceNode_GetScalarParameterValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMaterialInstanceNode_GetScalarParameterValue;
 
 // Function InterchangeNodes.InterchangeMaterialInstanceNode.GetStaticSwitchParameterValue
 // 0x0018 (0x0018 - 0x0000)
@@ -1870,11 +1772,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMaterialInstanceNode_GetStaticSwitchParameterValue) == 0x000008, "Wrong alignment on InterchangeMaterialInstanceNode_GetStaticSwitchParameterValue");
-static_assert(sizeof(InterchangeMaterialInstanceNode_GetStaticSwitchParameterValue) == 0x000018, "Wrong size on InterchangeMaterialInstanceNode_GetStaticSwitchParameterValue");
-static_assert(offsetof(InterchangeMaterialInstanceNode_GetStaticSwitchParameterValue, ParameterName) == 0x000000, "Member 'InterchangeMaterialInstanceNode_GetStaticSwitchParameterValue::ParameterName' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_GetStaticSwitchParameterValue, AttributeValue) == 0x000010, "Member 'InterchangeMaterialInstanceNode_GetStaticSwitchParameterValue::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_GetStaticSwitchParameterValue, ReturnValue) == 0x000011, "Member 'InterchangeMaterialInstanceNode_GetStaticSwitchParameterValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMaterialInstanceNode_GetStaticSwitchParameterValue;
 
 // Function InterchangeNodes.InterchangeMaterialInstanceNode.GetTextureParameterValue
 // 0x0028 (0x0028 - 0x0000)
@@ -1886,11 +1784,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMaterialInstanceNode_GetTextureParameterValue) == 0x000008, "Wrong alignment on InterchangeMaterialInstanceNode_GetTextureParameterValue");
-static_assert(sizeof(InterchangeMaterialInstanceNode_GetTextureParameterValue) == 0x000028, "Wrong size on InterchangeMaterialInstanceNode_GetTextureParameterValue");
-static_assert(offsetof(InterchangeMaterialInstanceNode_GetTextureParameterValue, ParameterName) == 0x000000, "Member 'InterchangeMaterialInstanceNode_GetTextureParameterValue::ParameterName' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_GetTextureParameterValue, AttributeValue) == 0x000010, "Member 'InterchangeMaterialInstanceNode_GetTextureParameterValue::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_GetTextureParameterValue, ReturnValue) == 0x000020, "Member 'InterchangeMaterialInstanceNode_GetTextureParameterValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMaterialInstanceNode_GetTextureParameterValue;
 
 // Function InterchangeNodes.InterchangeMaterialInstanceNode.GetVectorParameterValue
 // 0x0028 (0x0028 - 0x0000)
@@ -1902,11 +1796,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMaterialInstanceNode_GetVectorParameterValue) == 0x000008, "Wrong alignment on InterchangeMaterialInstanceNode_GetVectorParameterValue");
-static_assert(sizeof(InterchangeMaterialInstanceNode_GetVectorParameterValue) == 0x000028, "Wrong size on InterchangeMaterialInstanceNode_GetVectorParameterValue");
-static_assert(offsetof(InterchangeMaterialInstanceNode_GetVectorParameterValue, ParameterName) == 0x000000, "Member 'InterchangeMaterialInstanceNode_GetVectorParameterValue::ParameterName' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_GetVectorParameterValue, AttributeValue) == 0x000010, "Member 'InterchangeMaterialInstanceNode_GetVectorParameterValue::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_GetVectorParameterValue, ReturnValue) == 0x000020, "Member 'InterchangeMaterialInstanceNode_GetVectorParameterValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMaterialInstanceNode_GetVectorParameterValue;
 
 // Function InterchangeNodes.InterchangeMaterialInstanceNode.SetCustomParent
 // 0x0018 (0x0018 - 0x0000)
@@ -1917,10 +1807,29 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMaterialInstanceNode_SetCustomParent) == 0x000008, "Wrong alignment on InterchangeMaterialInstanceNode_SetCustomParent");
-static_assert(sizeof(InterchangeMaterialInstanceNode_SetCustomParent) == 0x000018, "Wrong size on InterchangeMaterialInstanceNode_SetCustomParent");
-static_assert(offsetof(InterchangeMaterialInstanceNode_SetCustomParent, AttributeValue) == 0x000000, "Member 'InterchangeMaterialInstanceNode_SetCustomParent::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMaterialInstanceNode_SetCustomParent, ReturnValue) == 0x000010, "Member 'InterchangeMaterialInstanceNode_SetCustomParent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMaterialInstanceNode_SetCustomParent;
+
+// Function InterchangeNodes.InterchangeMaterialReferenceNode.GetCustomContentPath
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeMaterialReferenceNode_GetCustomContentPath final
+{
+public:
+	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMaterialReferenceNode_GetCustomContentPath;
+
+// Function InterchangeNodes.InterchangeMaterialReferenceNode.SetCustomContentPath
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeMaterialReferenceNode_SetCustomContentPath final
+{
+public:
+	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMaterialReferenceNode_SetCustomContentPath;
 
 // Function InterchangeNodes.InterchangeMeshNode.RemoveMorphTargetDependencyUid
 // 0x0018 (0x0018 - 0x0000)
@@ -1931,10 +1840,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_RemoveMorphTargetDependencyUid) == 0x000008, "Wrong alignment on InterchangeMeshNode_RemoveMorphTargetDependencyUid");
-static_assert(sizeof(InterchangeMeshNode_RemoveMorphTargetDependencyUid) == 0x000018, "Wrong size on InterchangeMeshNode_RemoveMorphTargetDependencyUid");
-static_assert(offsetof(InterchangeMeshNode_RemoveMorphTargetDependencyUid, DependencyUid) == 0x000000, "Member 'InterchangeMeshNode_RemoveMorphTargetDependencyUid::DependencyUid' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_RemoveMorphTargetDependencyUid, ReturnValue) == 0x000010, "Member 'InterchangeMeshNode_RemoveMorphTargetDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_RemoveMorphTargetDependencyUid;
 
 // Function InterchangeNodes.InterchangeMeshNode.RemoveSceneInstanceUid
 // 0x0018 (0x0018 - 0x0000)
@@ -1945,10 +1851,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_RemoveSceneInstanceUid) == 0x000008, "Wrong alignment on InterchangeMeshNode_RemoveSceneInstanceUid");
-static_assert(sizeof(InterchangeMeshNode_RemoveSceneInstanceUid) == 0x000018, "Wrong size on InterchangeMeshNode_RemoveSceneInstanceUid");
-static_assert(offsetof(InterchangeMeshNode_RemoveSceneInstanceUid, DependencyUid) == 0x000000, "Member 'InterchangeMeshNode_RemoveSceneInstanceUid::DependencyUid' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_RemoveSceneInstanceUid, ReturnValue) == 0x000010, "Member 'InterchangeMeshNode_RemoveSceneInstanceUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_RemoveSceneInstanceUid;
 
 // Function InterchangeNodes.InterchangeMeshNode.RemoveSkeletonDependencyUid
 // 0x0018 (0x0018 - 0x0000)
@@ -1959,10 +1862,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_RemoveSkeletonDependencyUid) == 0x000008, "Wrong alignment on InterchangeMeshNode_RemoveSkeletonDependencyUid");
-static_assert(sizeof(InterchangeMeshNode_RemoveSkeletonDependencyUid) == 0x000018, "Wrong size on InterchangeMeshNode_RemoveSkeletonDependencyUid");
-static_assert(offsetof(InterchangeMeshNode_RemoveSkeletonDependencyUid, DependencyUid) == 0x000000, "Member 'InterchangeMeshNode_RemoveSkeletonDependencyUid::DependencyUid' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_RemoveSkeletonDependencyUid, ReturnValue) == 0x000010, "Member 'InterchangeMeshNode_RemoveSkeletonDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_RemoveSkeletonDependencyUid;
 
 // Function InterchangeNodes.InterchangeMeshNode.RemoveSlotMaterialDependencyUid
 // 0x0018 (0x0018 - 0x0000)
@@ -1973,24 +1873,28 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_RemoveSlotMaterialDependencyUid) == 0x000008, "Wrong alignment on InterchangeMeshNode_RemoveSlotMaterialDependencyUid");
-static_assert(sizeof(InterchangeMeshNode_RemoveSlotMaterialDependencyUid) == 0x000018, "Wrong size on InterchangeMeshNode_RemoveSlotMaterialDependencyUid");
-static_assert(offsetof(InterchangeMeshNode_RemoveSlotMaterialDependencyUid, SlotName) == 0x000000, "Member 'InterchangeMeshNode_RemoveSlotMaterialDependencyUid::SlotName' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_RemoveSlotMaterialDependencyUid, ReturnValue) == 0x000010, "Member 'InterchangeMeshNode_RemoveSlotMaterialDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_RemoveSlotMaterialDependencyUid;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetCustomBoundingBox
 // 0x0040 (0x0040 - 0x0000)
 struct InterchangeMeshNode_SetCustomBoundingBox final
 {
 public:
-	struct FBox                                   AttributeValue;                                    // 0x0000(0x0038)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBox                                   AttributeValue;                                    // 0x0000(0x0038)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_SetCustomBoundingBox) == 0x000008, "Wrong alignment on InterchangeMeshNode_SetCustomBoundingBox");
-static_assert(sizeof(InterchangeMeshNode_SetCustomBoundingBox) == 0x000040, "Wrong size on InterchangeMeshNode_SetCustomBoundingBox");
-static_assert(offsetof(InterchangeMeshNode_SetCustomBoundingBox, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_SetCustomBoundingBox::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetCustomBoundingBox, ReturnValue) == 0x000038, "Member 'InterchangeMeshNode_SetCustomBoundingBox::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetCustomBoundingBox;
+
+// Function InterchangeNodes.InterchangeMeshNode.SetCustomCollisionType
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshNode_SetCustomCollisionType final
+{
+public:
+	EInterchangeMeshCollision                     AttributeValue;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshNode_SetCustomCollisionType;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetCustomHasSmoothGroup
 // 0x0002 (0x0002 - 0x0000)
@@ -2000,10 +1904,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_SetCustomHasSmoothGroup) == 0x000001, "Wrong alignment on InterchangeMeshNode_SetCustomHasSmoothGroup");
-static_assert(sizeof(InterchangeMeshNode_SetCustomHasSmoothGroup) == 0x000002, "Wrong size on InterchangeMeshNode_SetCustomHasSmoothGroup");
-static_assert(offsetof(InterchangeMeshNode_SetCustomHasSmoothGroup, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_SetCustomHasSmoothGroup::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetCustomHasSmoothGroup, ReturnValue) == 0x000001, "Member 'InterchangeMeshNode_SetCustomHasSmoothGroup::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetCustomHasSmoothGroup;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetCustomHasVertexBinormal
 // 0x0002 (0x0002 - 0x0000)
@@ -2013,10 +1914,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_SetCustomHasVertexBinormal) == 0x000001, "Wrong alignment on InterchangeMeshNode_SetCustomHasVertexBinormal");
-static_assert(sizeof(InterchangeMeshNode_SetCustomHasVertexBinormal) == 0x000002, "Wrong size on InterchangeMeshNode_SetCustomHasVertexBinormal");
-static_assert(offsetof(InterchangeMeshNode_SetCustomHasVertexBinormal, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_SetCustomHasVertexBinormal::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetCustomHasVertexBinormal, ReturnValue) == 0x000001, "Member 'InterchangeMeshNode_SetCustomHasVertexBinormal::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetCustomHasVertexBinormal;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetCustomHasVertexColor
 // 0x0002 (0x0002 - 0x0000)
@@ -2026,10 +1924,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_SetCustomHasVertexColor) == 0x000001, "Wrong alignment on InterchangeMeshNode_SetCustomHasVertexColor");
-static_assert(sizeof(InterchangeMeshNode_SetCustomHasVertexColor) == 0x000002, "Wrong size on InterchangeMeshNode_SetCustomHasVertexColor");
-static_assert(offsetof(InterchangeMeshNode_SetCustomHasVertexColor, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_SetCustomHasVertexColor::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetCustomHasVertexColor, ReturnValue) == 0x000001, "Member 'InterchangeMeshNode_SetCustomHasVertexColor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetCustomHasVertexColor;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetCustomHasVertexNormal
 // 0x0002 (0x0002 - 0x0000)
@@ -2039,10 +1934,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_SetCustomHasVertexNormal) == 0x000001, "Wrong alignment on InterchangeMeshNode_SetCustomHasVertexNormal");
-static_assert(sizeof(InterchangeMeshNode_SetCustomHasVertexNormal) == 0x000002, "Wrong size on InterchangeMeshNode_SetCustomHasVertexNormal");
-static_assert(offsetof(InterchangeMeshNode_SetCustomHasVertexNormal, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_SetCustomHasVertexNormal::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetCustomHasVertexNormal, ReturnValue) == 0x000001, "Member 'InterchangeMeshNode_SetCustomHasVertexNormal::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetCustomHasVertexNormal;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetCustomHasVertexTangent
 // 0x0002 (0x0002 - 0x0000)
@@ -2052,10 +1944,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_SetCustomHasVertexTangent) == 0x000001, "Wrong alignment on InterchangeMeshNode_SetCustomHasVertexTangent");
-static_assert(sizeof(InterchangeMeshNode_SetCustomHasVertexTangent) == 0x000002, "Wrong size on InterchangeMeshNode_SetCustomHasVertexTangent");
-static_assert(offsetof(InterchangeMeshNode_SetCustomHasVertexTangent, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_SetCustomHasVertexTangent::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetCustomHasVertexTangent, ReturnValue) == 0x000001, "Member 'InterchangeMeshNode_SetCustomHasVertexTangent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetCustomHasVertexTangent;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetCustomPolygonCount
 // 0x0008 (0x0008 - 0x0000)
@@ -2066,10 +1955,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_SetCustomPolygonCount) == 0x000004, "Wrong alignment on InterchangeMeshNode_SetCustomPolygonCount");
-static_assert(sizeof(InterchangeMeshNode_SetCustomPolygonCount) == 0x000008, "Wrong size on InterchangeMeshNode_SetCustomPolygonCount");
-static_assert(offsetof(InterchangeMeshNode_SetCustomPolygonCount, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_SetCustomPolygonCount::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetCustomPolygonCount, ReturnValue) == 0x000004, "Member 'InterchangeMeshNode_SetCustomPolygonCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetCustomPolygonCount;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetCustomUVCount
 // 0x0008 (0x0008 - 0x0000)
@@ -2080,10 +1966,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_SetCustomUVCount) == 0x000004, "Wrong alignment on InterchangeMeshNode_SetCustomUVCount");
-static_assert(sizeof(InterchangeMeshNode_SetCustomUVCount) == 0x000008, "Wrong size on InterchangeMeshNode_SetCustomUVCount");
-static_assert(offsetof(InterchangeMeshNode_SetCustomUVCount, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_SetCustomUVCount::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetCustomUVCount, ReturnValue) == 0x000004, "Member 'InterchangeMeshNode_SetCustomUVCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetCustomUVCount;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetCustomVertexCount
 // 0x0008 (0x0008 - 0x0000)
@@ -2094,10 +1977,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_SetCustomVertexCount) == 0x000004, "Wrong alignment on InterchangeMeshNode_SetCustomVertexCount");
-static_assert(sizeof(InterchangeMeshNode_SetCustomVertexCount) == 0x000008, "Wrong size on InterchangeMeshNode_SetCustomVertexCount");
-static_assert(offsetof(InterchangeMeshNode_SetCustomVertexCount, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_SetCustomVertexCount::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetCustomVertexCount, ReturnValue) == 0x000004, "Member 'InterchangeMeshNode_SetCustomVertexCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetCustomVertexCount;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetMorphTarget
 // 0x0002 (0x0002 - 0x0000)
@@ -2107,10 +1987,7 @@ public:
 	bool                                          bIsMorphTarget;                                    // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_SetMorphTarget) == 0x000001, "Wrong alignment on InterchangeMeshNode_SetMorphTarget");
-static_assert(sizeof(InterchangeMeshNode_SetMorphTarget) == 0x000002, "Wrong size on InterchangeMeshNode_SetMorphTarget");
-static_assert(offsetof(InterchangeMeshNode_SetMorphTarget, bIsMorphTarget) == 0x000000, "Member 'InterchangeMeshNode_SetMorphTarget::bIsMorphTarget' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetMorphTarget, ReturnValue) == 0x000001, "Member 'InterchangeMeshNode_SetMorphTarget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetMorphTarget;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetMorphTargetDependencyUid
 // 0x0018 (0x0018 - 0x0000)
@@ -2121,10 +1998,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_SetMorphTargetDependencyUid) == 0x000008, "Wrong alignment on InterchangeMeshNode_SetMorphTargetDependencyUid");
-static_assert(sizeof(InterchangeMeshNode_SetMorphTargetDependencyUid) == 0x000018, "Wrong size on InterchangeMeshNode_SetMorphTargetDependencyUid");
-static_assert(offsetof(InterchangeMeshNode_SetMorphTargetDependencyUid, DependencyUid) == 0x000000, "Member 'InterchangeMeshNode_SetMorphTargetDependencyUid::DependencyUid' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetMorphTargetDependencyUid, ReturnValue) == 0x000010, "Member 'InterchangeMeshNode_SetMorphTargetDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetMorphTargetDependencyUid;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetMorphTargetName
 // 0x0018 (0x0018 - 0x0000)
@@ -2135,10 +2009,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_SetMorphTargetName) == 0x000008, "Wrong alignment on InterchangeMeshNode_SetMorphTargetName");
-static_assert(sizeof(InterchangeMeshNode_SetMorphTargetName) == 0x000018, "Wrong size on InterchangeMeshNode_SetMorphTargetName");
-static_assert(offsetof(InterchangeMeshNode_SetMorphTargetName, MorphTargetName) == 0x000000, "Member 'InterchangeMeshNode_SetMorphTargetName::MorphTargetName' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetMorphTargetName, ReturnValue) == 0x000010, "Member 'InterchangeMeshNode_SetMorphTargetName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetMorphTargetName;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetPayLoadKey
 // 0x0018 (0x0018 - 0x0000)
@@ -2146,13 +2017,10 @@ struct InterchangeMeshNode_SetPayLoadKey final
 {
 public:
 	class FString                                 PayloadKey;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInterchangeMeshPayLoadType                   PayLoadType;                                       // 0x0010(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangeMeshPayLoadType                   PayloadType;                                       // 0x0010(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_SetPayLoadKey) == 0x000008, "Wrong alignment on InterchangeMeshNode_SetPayLoadKey");
-static_assert(sizeof(InterchangeMeshNode_SetPayLoadKey) == 0x000018, "Wrong size on InterchangeMeshNode_SetPayLoadKey");
-static_assert(offsetof(InterchangeMeshNode_SetPayLoadKey, PayloadKey) == 0x000000, "Member 'InterchangeMeshNode_SetPayLoadKey::PayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetPayLoadKey, PayLoadType) == 0x000010, "Member 'InterchangeMeshNode_SetPayLoadKey::PayLoadType' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetPayLoadKey;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetSceneInstanceUid
 // 0x0018 (0x0018 - 0x0000)
@@ -2163,10 +2031,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_SetSceneInstanceUid) == 0x000008, "Wrong alignment on InterchangeMeshNode_SetSceneInstanceUid");
-static_assert(sizeof(InterchangeMeshNode_SetSceneInstanceUid) == 0x000018, "Wrong size on InterchangeMeshNode_SetSceneInstanceUid");
-static_assert(offsetof(InterchangeMeshNode_SetSceneInstanceUid, DependencyUid) == 0x000000, "Member 'InterchangeMeshNode_SetSceneInstanceUid::DependencyUid' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetSceneInstanceUid, ReturnValue) == 0x000010, "Member 'InterchangeMeshNode_SetSceneInstanceUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetSceneInstanceUid;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetSkeletonDependencyUid
 // 0x0018 (0x0018 - 0x0000)
@@ -2177,10 +2042,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_SetSkeletonDependencyUid) == 0x000008, "Wrong alignment on InterchangeMeshNode_SetSkeletonDependencyUid");
-static_assert(sizeof(InterchangeMeshNode_SetSkeletonDependencyUid) == 0x000018, "Wrong size on InterchangeMeshNode_SetSkeletonDependencyUid");
-static_assert(offsetof(InterchangeMeshNode_SetSkeletonDependencyUid, DependencyUid) == 0x000000, "Member 'InterchangeMeshNode_SetSkeletonDependencyUid::DependencyUid' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetSkeletonDependencyUid, ReturnValue) == 0x000010, "Member 'InterchangeMeshNode_SetSkeletonDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetSkeletonDependencyUid;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetSkinnedMesh
 // 0x0002 (0x0002 - 0x0000)
@@ -2190,10 +2052,7 @@ public:
 	bool                                          bIsSkinnedMesh;                                    // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_SetSkinnedMesh) == 0x000001, "Wrong alignment on InterchangeMeshNode_SetSkinnedMesh");
-static_assert(sizeof(InterchangeMeshNode_SetSkinnedMesh) == 0x000002, "Wrong size on InterchangeMeshNode_SetSkinnedMesh");
-static_assert(offsetof(InterchangeMeshNode_SetSkinnedMesh, bIsSkinnedMesh) == 0x000000, "Member 'InterchangeMeshNode_SetSkinnedMesh::bIsSkinnedMesh' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetSkinnedMesh, ReturnValue) == 0x000001, "Member 'InterchangeMeshNode_SetSkinnedMesh::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetSkinnedMesh;
 
 // Function InterchangeNodes.InterchangeMeshNode.SetSlotMaterialDependencyUid
 // 0x0028 (0x0028 - 0x0000)
@@ -2205,25 +2064,28 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_SetSlotMaterialDependencyUid) == 0x000008, "Wrong alignment on InterchangeMeshNode_SetSlotMaterialDependencyUid");
-static_assert(sizeof(InterchangeMeshNode_SetSlotMaterialDependencyUid) == 0x000028, "Wrong size on InterchangeMeshNode_SetSlotMaterialDependencyUid");
-static_assert(offsetof(InterchangeMeshNode_SetSlotMaterialDependencyUid, SlotName) == 0x000000, "Member 'InterchangeMeshNode_SetSlotMaterialDependencyUid::SlotName' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetSlotMaterialDependencyUid, MaterialDependencyUid) == 0x000010, "Member 'InterchangeMeshNode_SetSlotMaterialDependencyUid::MaterialDependencyUid' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_SetSlotMaterialDependencyUid, ReturnValue) == 0x000020, "Member 'InterchangeMeshNode_SetSlotMaterialDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_SetSlotMaterialDependencyUid;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetCustomBoundingBox
 // 0x0040 (0x0040 - 0x0000)
 struct InterchangeMeshNode_GetCustomBoundingBox final
 {
 public:
-	struct FBox                                   AttributeValue;                                    // 0x0000(0x0038)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBox                                   AttributeValue;                                    // 0x0000(0x0038)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_GetCustomBoundingBox) == 0x000008, "Wrong alignment on InterchangeMeshNode_GetCustomBoundingBox");
-static_assert(sizeof(InterchangeMeshNode_GetCustomBoundingBox) == 0x000040, "Wrong size on InterchangeMeshNode_GetCustomBoundingBox");
-static_assert(offsetof(InterchangeMeshNode_GetCustomBoundingBox, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_GetCustomBoundingBox::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_GetCustomBoundingBox, ReturnValue) == 0x000038, "Member 'InterchangeMeshNode_GetCustomBoundingBox::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetCustomBoundingBox;
+
+// Function InterchangeNodes.InterchangeMeshNode.GetCustomCollisionType
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshNode_GetCustomCollisionType final
+{
+public:
+	EInterchangeMeshCollision                     AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshNode_GetCustomCollisionType;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetCustomHasSmoothGroup
 // 0x0002 (0x0002 - 0x0000)
@@ -2233,10 +2095,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_GetCustomHasSmoothGroup) == 0x000001, "Wrong alignment on InterchangeMeshNode_GetCustomHasSmoothGroup");
-static_assert(sizeof(InterchangeMeshNode_GetCustomHasSmoothGroup) == 0x000002, "Wrong size on InterchangeMeshNode_GetCustomHasSmoothGroup");
-static_assert(offsetof(InterchangeMeshNode_GetCustomHasSmoothGroup, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_GetCustomHasSmoothGroup::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_GetCustomHasSmoothGroup, ReturnValue) == 0x000001, "Member 'InterchangeMeshNode_GetCustomHasSmoothGroup::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetCustomHasSmoothGroup;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetCustomHasVertexBinormal
 // 0x0002 (0x0002 - 0x0000)
@@ -2246,10 +2105,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_GetCustomHasVertexBinormal) == 0x000001, "Wrong alignment on InterchangeMeshNode_GetCustomHasVertexBinormal");
-static_assert(sizeof(InterchangeMeshNode_GetCustomHasVertexBinormal) == 0x000002, "Wrong size on InterchangeMeshNode_GetCustomHasVertexBinormal");
-static_assert(offsetof(InterchangeMeshNode_GetCustomHasVertexBinormal, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_GetCustomHasVertexBinormal::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_GetCustomHasVertexBinormal, ReturnValue) == 0x000001, "Member 'InterchangeMeshNode_GetCustomHasVertexBinormal::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetCustomHasVertexBinormal;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetCustomHasVertexColor
 // 0x0002 (0x0002 - 0x0000)
@@ -2259,10 +2115,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_GetCustomHasVertexColor) == 0x000001, "Wrong alignment on InterchangeMeshNode_GetCustomHasVertexColor");
-static_assert(sizeof(InterchangeMeshNode_GetCustomHasVertexColor) == 0x000002, "Wrong size on InterchangeMeshNode_GetCustomHasVertexColor");
-static_assert(offsetof(InterchangeMeshNode_GetCustomHasVertexColor, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_GetCustomHasVertexColor::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_GetCustomHasVertexColor, ReturnValue) == 0x000001, "Member 'InterchangeMeshNode_GetCustomHasVertexColor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetCustomHasVertexColor;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetCustomHasVertexNormal
 // 0x0002 (0x0002 - 0x0000)
@@ -2272,10 +2125,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_GetCustomHasVertexNormal) == 0x000001, "Wrong alignment on InterchangeMeshNode_GetCustomHasVertexNormal");
-static_assert(sizeof(InterchangeMeshNode_GetCustomHasVertexNormal) == 0x000002, "Wrong size on InterchangeMeshNode_GetCustomHasVertexNormal");
-static_assert(offsetof(InterchangeMeshNode_GetCustomHasVertexNormal, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_GetCustomHasVertexNormal::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_GetCustomHasVertexNormal, ReturnValue) == 0x000001, "Member 'InterchangeMeshNode_GetCustomHasVertexNormal::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetCustomHasVertexNormal;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetCustomHasVertexTangent
 // 0x0002 (0x0002 - 0x0000)
@@ -2285,10 +2135,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_GetCustomHasVertexTangent) == 0x000001, "Wrong alignment on InterchangeMeshNode_GetCustomHasVertexTangent");
-static_assert(sizeof(InterchangeMeshNode_GetCustomHasVertexTangent) == 0x000002, "Wrong size on InterchangeMeshNode_GetCustomHasVertexTangent");
-static_assert(offsetof(InterchangeMeshNode_GetCustomHasVertexTangent, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_GetCustomHasVertexTangent::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_GetCustomHasVertexTangent, ReturnValue) == 0x000001, "Member 'InterchangeMeshNode_GetCustomHasVertexTangent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetCustomHasVertexTangent;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetCustomPolygonCount
 // 0x0008 (0x0008 - 0x0000)
@@ -2299,10 +2146,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_GetCustomPolygonCount) == 0x000004, "Wrong alignment on InterchangeMeshNode_GetCustomPolygonCount");
-static_assert(sizeof(InterchangeMeshNode_GetCustomPolygonCount) == 0x000008, "Wrong size on InterchangeMeshNode_GetCustomPolygonCount");
-static_assert(offsetof(InterchangeMeshNode_GetCustomPolygonCount, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_GetCustomPolygonCount::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_GetCustomPolygonCount, ReturnValue) == 0x000004, "Member 'InterchangeMeshNode_GetCustomPolygonCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetCustomPolygonCount;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetCustomUVCount
 // 0x0008 (0x0008 - 0x0000)
@@ -2313,10 +2157,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_GetCustomUVCount) == 0x000004, "Wrong alignment on InterchangeMeshNode_GetCustomUVCount");
-static_assert(sizeof(InterchangeMeshNode_GetCustomUVCount) == 0x000008, "Wrong size on InterchangeMeshNode_GetCustomUVCount");
-static_assert(offsetof(InterchangeMeshNode_GetCustomUVCount, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_GetCustomUVCount::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_GetCustomUVCount, ReturnValue) == 0x000004, "Member 'InterchangeMeshNode_GetCustomUVCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetCustomUVCount;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetCustomVertexCount
 // 0x0008 (0x0008 - 0x0000)
@@ -2327,10 +2168,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_GetCustomVertexCount) == 0x000004, "Wrong alignment on InterchangeMeshNode_GetCustomVertexCount");
-static_assert(sizeof(InterchangeMeshNode_GetCustomVertexCount) == 0x000008, "Wrong size on InterchangeMeshNode_GetCustomVertexCount");
-static_assert(offsetof(InterchangeMeshNode_GetCustomVertexCount, AttributeValue) == 0x000000, "Member 'InterchangeMeshNode_GetCustomVertexCount::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_GetCustomVertexCount, ReturnValue) == 0x000004, "Member 'InterchangeMeshNode_GetCustomVertexCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetCustomVertexCount;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetMorphTargetDependeciesCount
 // 0x0004 (0x0004 - 0x0000)
@@ -2339,9 +2177,7 @@ struct InterchangeMeshNode_GetMorphTargetDependeciesCount final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_GetMorphTargetDependeciesCount) == 0x000004, "Wrong alignment on InterchangeMeshNode_GetMorphTargetDependeciesCount");
-static_assert(sizeof(InterchangeMeshNode_GetMorphTargetDependeciesCount) == 0x000004, "Wrong size on InterchangeMeshNode_GetMorphTargetDependeciesCount");
-static_assert(offsetof(InterchangeMeshNode_GetMorphTargetDependeciesCount, ReturnValue) == 0x000000, "Member 'InterchangeMeshNode_GetMorphTargetDependeciesCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetMorphTargetDependeciesCount;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetMorphTargetDependencies
 // 0x0010 (0x0010 - 0x0000)
@@ -2350,9 +2186,7 @@ struct InterchangeMeshNode_GetMorphTargetDependencies final
 public:
 	TArray<class FString>                         OutDependencies;                                   // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_GetMorphTargetDependencies) == 0x000008, "Wrong alignment on InterchangeMeshNode_GetMorphTargetDependencies");
-static_assert(sizeof(InterchangeMeshNode_GetMorphTargetDependencies) == 0x000010, "Wrong size on InterchangeMeshNode_GetMorphTargetDependencies");
-static_assert(offsetof(InterchangeMeshNode_GetMorphTargetDependencies, OutDependencies) == 0x000000, "Member 'InterchangeMeshNode_GetMorphTargetDependencies::OutDependencies' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetMorphTargetDependencies;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetMorphTargetDependency
 // 0x0018 (0x0018 - 0x0000)
@@ -2363,10 +2197,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OutDependency;                                     // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_GetMorphTargetDependency) == 0x000008, "Wrong alignment on InterchangeMeshNode_GetMorphTargetDependency");
-static_assert(sizeof(InterchangeMeshNode_GetMorphTargetDependency) == 0x000018, "Wrong size on InterchangeMeshNode_GetMorphTargetDependency");
-static_assert(offsetof(InterchangeMeshNode_GetMorphTargetDependency, Index_0) == 0x000000, "Member 'InterchangeMeshNode_GetMorphTargetDependency::Index_0' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_GetMorphTargetDependency, OutDependency) == 0x000008, "Member 'InterchangeMeshNode_GetMorphTargetDependency::OutDependency' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetMorphTargetDependency;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetMorphTargetName
 // 0x0018 (0x0018 - 0x0000)
@@ -2377,10 +2208,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_GetMorphTargetName) == 0x000008, "Wrong alignment on InterchangeMeshNode_GetMorphTargetName");
-static_assert(sizeof(InterchangeMeshNode_GetMorphTargetName) == 0x000018, "Wrong size on InterchangeMeshNode_GetMorphTargetName");
-static_assert(offsetof(InterchangeMeshNode_GetMorphTargetName, OutMorphTargetName) == 0x000000, "Member 'InterchangeMeshNode_GetMorphTargetName::OutMorphTargetName' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_GetMorphTargetName, ReturnValue) == 0x000010, "Member 'InterchangeMeshNode_GetMorphTargetName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetMorphTargetName;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetSceneInstanceUid
 // 0x0018 (0x0018 - 0x0000)
@@ -2391,10 +2219,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OutDependency;                                     // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_GetSceneInstanceUid) == 0x000008, "Wrong alignment on InterchangeMeshNode_GetSceneInstanceUid");
-static_assert(sizeof(InterchangeMeshNode_GetSceneInstanceUid) == 0x000018, "Wrong size on InterchangeMeshNode_GetSceneInstanceUid");
-static_assert(offsetof(InterchangeMeshNode_GetSceneInstanceUid, Index_0) == 0x000000, "Member 'InterchangeMeshNode_GetSceneInstanceUid::Index_0' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_GetSceneInstanceUid, OutDependency) == 0x000008, "Member 'InterchangeMeshNode_GetSceneInstanceUid::OutDependency' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetSceneInstanceUid;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetSceneInstanceUids
 // 0x0010 (0x0010 - 0x0000)
@@ -2403,9 +2228,7 @@ struct InterchangeMeshNode_GetSceneInstanceUids final
 public:
 	TArray<class FString>                         OutDependencies;                                   // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_GetSceneInstanceUids) == 0x000008, "Wrong alignment on InterchangeMeshNode_GetSceneInstanceUids");
-static_assert(sizeof(InterchangeMeshNode_GetSceneInstanceUids) == 0x000010, "Wrong size on InterchangeMeshNode_GetSceneInstanceUids");
-static_assert(offsetof(InterchangeMeshNode_GetSceneInstanceUids, OutDependencies) == 0x000000, "Member 'InterchangeMeshNode_GetSceneInstanceUids::OutDependencies' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetSceneInstanceUids;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetSceneInstanceUidsCount
 // 0x0004 (0x0004 - 0x0000)
@@ -2414,9 +2237,7 @@ struct InterchangeMeshNode_GetSceneInstanceUidsCount final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_GetSceneInstanceUidsCount) == 0x000004, "Wrong alignment on InterchangeMeshNode_GetSceneInstanceUidsCount");
-static_assert(sizeof(InterchangeMeshNode_GetSceneInstanceUidsCount) == 0x000004, "Wrong size on InterchangeMeshNode_GetSceneInstanceUidsCount");
-static_assert(offsetof(InterchangeMeshNode_GetSceneInstanceUidsCount, ReturnValue) == 0x000000, "Member 'InterchangeMeshNode_GetSceneInstanceUidsCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetSceneInstanceUidsCount;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetSkeletonDependeciesCount
 // 0x0004 (0x0004 - 0x0000)
@@ -2425,9 +2246,7 @@ struct InterchangeMeshNode_GetSkeletonDependeciesCount final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_GetSkeletonDependeciesCount) == 0x000004, "Wrong alignment on InterchangeMeshNode_GetSkeletonDependeciesCount");
-static_assert(sizeof(InterchangeMeshNode_GetSkeletonDependeciesCount) == 0x000004, "Wrong size on InterchangeMeshNode_GetSkeletonDependeciesCount");
-static_assert(offsetof(InterchangeMeshNode_GetSkeletonDependeciesCount, ReturnValue) == 0x000000, "Member 'InterchangeMeshNode_GetSkeletonDependeciesCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetSkeletonDependeciesCount;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetSkeletonDependencies
 // 0x0010 (0x0010 - 0x0000)
@@ -2436,9 +2255,7 @@ struct InterchangeMeshNode_GetSkeletonDependencies final
 public:
 	TArray<class FString>                         OutDependencies;                                   // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_GetSkeletonDependencies) == 0x000008, "Wrong alignment on InterchangeMeshNode_GetSkeletonDependencies");
-static_assert(sizeof(InterchangeMeshNode_GetSkeletonDependencies) == 0x000010, "Wrong size on InterchangeMeshNode_GetSkeletonDependencies");
-static_assert(offsetof(InterchangeMeshNode_GetSkeletonDependencies, OutDependencies) == 0x000000, "Member 'InterchangeMeshNode_GetSkeletonDependencies::OutDependencies' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetSkeletonDependencies;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetSkeletonDependency
 // 0x0018 (0x0018 - 0x0000)
@@ -2449,10 +2266,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OutDependency;                                     // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_GetSkeletonDependency) == 0x000008, "Wrong alignment on InterchangeMeshNode_GetSkeletonDependency");
-static_assert(sizeof(InterchangeMeshNode_GetSkeletonDependency) == 0x000018, "Wrong size on InterchangeMeshNode_GetSkeletonDependency");
-static_assert(offsetof(InterchangeMeshNode_GetSkeletonDependency, Index_0) == 0x000000, "Member 'InterchangeMeshNode_GetSkeletonDependency::Index_0' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_GetSkeletonDependency, OutDependency) == 0x000008, "Member 'InterchangeMeshNode_GetSkeletonDependency::OutDependency' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetSkeletonDependency;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetSlotMaterialDependencies
 // 0x0050 (0x0050 - 0x0000)
@@ -2461,9 +2275,7 @@ struct InterchangeMeshNode_GetSlotMaterialDependencies final
 public:
 	TMap<class FString, class FString>            OutMaterialDependencies;                           // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_GetSlotMaterialDependencies) == 0x000008, "Wrong alignment on InterchangeMeshNode_GetSlotMaterialDependencies");
-static_assert(sizeof(InterchangeMeshNode_GetSlotMaterialDependencies) == 0x000050, "Wrong size on InterchangeMeshNode_GetSlotMaterialDependencies");
-static_assert(offsetof(InterchangeMeshNode_GetSlotMaterialDependencies, OutMaterialDependencies) == 0x000000, "Member 'InterchangeMeshNode_GetSlotMaterialDependencies::OutMaterialDependencies' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetSlotMaterialDependencies;
 
 // Function InterchangeNodes.InterchangeMeshNode.GetSlotMaterialDependencyUid
 // 0x0028 (0x0028 - 0x0000)
@@ -2475,11 +2287,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeMeshNode_GetSlotMaterialDependencyUid) == 0x000008, "Wrong alignment on InterchangeMeshNode_GetSlotMaterialDependencyUid");
-static_assert(sizeof(InterchangeMeshNode_GetSlotMaterialDependencyUid) == 0x000028, "Wrong size on InterchangeMeshNode_GetSlotMaterialDependencyUid");
-static_assert(offsetof(InterchangeMeshNode_GetSlotMaterialDependencyUid, SlotName) == 0x000000, "Member 'InterchangeMeshNode_GetSlotMaterialDependencyUid::SlotName' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_GetSlotMaterialDependencyUid, OutMaterialDependency) == 0x000010, "Member 'InterchangeMeshNode_GetSlotMaterialDependencyUid::OutMaterialDependency' has a wrong offset!");
-static_assert(offsetof(InterchangeMeshNode_GetSlotMaterialDependencyUid, ReturnValue) == 0x000020, "Member 'InterchangeMeshNode_GetSlotMaterialDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_GetSlotMaterialDependencyUid;
 
 // Function InterchangeNodes.InterchangeMeshNode.IsMorphTarget
 // 0x0001 (0x0001 - 0x0000)
@@ -2488,9 +2296,7 @@ struct InterchangeMeshNode_IsMorphTarget final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_IsMorphTarget) == 0x000001, "Wrong alignment on InterchangeMeshNode_IsMorphTarget");
-static_assert(sizeof(InterchangeMeshNode_IsMorphTarget) == 0x000001, "Wrong size on InterchangeMeshNode_IsMorphTarget");
-static_assert(offsetof(InterchangeMeshNode_IsMorphTarget, ReturnValue) == 0x000000, "Member 'InterchangeMeshNode_IsMorphTarget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_IsMorphTarget;
 
 // Function InterchangeNodes.InterchangeMeshNode.IsSkinnedMesh
 // 0x0001 (0x0001 - 0x0000)
@@ -2499,9 +2305,93 @@ struct InterchangeMeshNode_IsSkinnedMesh final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeMeshNode_IsSkinnedMesh) == 0x000001, "Wrong alignment on InterchangeMeshNode_IsSkinnedMesh");
-static_assert(sizeof(InterchangeMeshNode_IsSkinnedMesh) == 0x000001, "Wrong size on InterchangeMeshNode_IsSkinnedMesh");
-static_assert(offsetof(InterchangeMeshNode_IsSkinnedMesh, ReturnValue) == 0x000000, "Member 'InterchangeMeshNode_IsSkinnedMesh::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeMeshNode_IsSkinnedMesh;
+
+// Function InterchangeNodes.InterchangeGeometryCacheNode.SetCustomEndFrame
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeGeometryCacheNode_SetCustomEndFrame final
+{
+public:
+	int32                                         AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeGeometryCacheNode_SetCustomEndFrame;
+
+// Function InterchangeNodes.InterchangeGeometryCacheNode.SetCustomFrameRate
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeGeometryCacheNode_SetCustomFrameRate final
+{
+public:
+	double                                        AttributeValue;                                    // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeGeometryCacheNode_SetCustomFrameRate;
+
+// Function InterchangeNodes.InterchangeGeometryCacheNode.SetCustomHasConstantTopology
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeGeometryCacheNode_SetCustomHasConstantTopology final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeGeometryCacheNode_SetCustomHasConstantTopology;
+
+// Function InterchangeNodes.InterchangeGeometryCacheNode.SetCustomStartFrame
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeGeometryCacheNode_SetCustomStartFrame final
+{
+public:
+	int32                                         AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeGeometryCacheNode_SetCustomStartFrame;
+
+// Function InterchangeNodes.InterchangeGeometryCacheNode.GetCustomEndFrame
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeGeometryCacheNode_GetCustomEndFrame final
+{
+public:
+	int32                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeGeometryCacheNode_GetCustomEndFrame;
+
+// Function InterchangeNodes.InterchangeGeometryCacheNode.GetCustomFrameRate
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeGeometryCacheNode_GetCustomFrameRate final
+{
+public:
+	double                                        AttributeValue;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeGeometryCacheNode_GetCustomFrameRate;
+
+// Function InterchangeNodes.InterchangeGeometryCacheNode.GetCustomHasConstantTopology
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeGeometryCacheNode_GetCustomHasConstantTopology final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeGeometryCacheNode_GetCustomHasConstantTopology;
+
+// Function InterchangeNodes.InterchangeGeometryCacheNode.GetCustomStartFrame
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeGeometryCacheNode_GetCustomStartFrame final
+{
+public:
+	int32                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeGeometryCacheNode_GetCustomStartFrame;
 
 // Function InterchangeNodes.InterchangeSceneNode.AddSpecializedType
 // 0x0018 (0x0018 - 0x0000)
@@ -2512,10 +2402,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_AddSpecializedType) == 0x000008, "Wrong alignment on InterchangeSceneNode_AddSpecializedType");
-static_assert(sizeof(InterchangeSceneNode_AddSpecializedType) == 0x000018, "Wrong size on InterchangeSceneNode_AddSpecializedType");
-static_assert(offsetof(InterchangeSceneNode_AddSpecializedType, SpecializedType) == 0x000000, "Member 'InterchangeSceneNode_AddSpecializedType::SpecializedType' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_AddSpecializedType, ReturnValue) == 0x000010, "Member 'InterchangeSceneNode_AddSpecializedType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_AddSpecializedType;
 
 // Function InterchangeNodes.InterchangeSceneNode.RemoveSlotMaterialDependencyUid
 // 0x0018 (0x0018 - 0x0000)
@@ -2526,10 +2413,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_RemoveSlotMaterialDependencyUid) == 0x000008, "Wrong alignment on InterchangeSceneNode_RemoveSlotMaterialDependencyUid");
-static_assert(sizeof(InterchangeSceneNode_RemoveSlotMaterialDependencyUid) == 0x000018, "Wrong size on InterchangeSceneNode_RemoveSlotMaterialDependencyUid");
-static_assert(offsetof(InterchangeSceneNode_RemoveSlotMaterialDependencyUid, SlotName) == 0x000000, "Member 'InterchangeSceneNode_RemoveSlotMaterialDependencyUid::SlotName' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_RemoveSlotMaterialDependencyUid, ReturnValue) == 0x000010, "Member 'InterchangeSceneNode_RemoveSlotMaterialDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_RemoveSlotMaterialDependencyUid;
 
 // Function InterchangeNodes.InterchangeSceneNode.RemoveSpecializedType
 // 0x0018 (0x0018 - 0x0000)
@@ -2540,10 +2424,29 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_RemoveSpecializedType) == 0x000008, "Wrong alignment on InterchangeSceneNode_RemoveSpecializedType");
-static_assert(sizeof(InterchangeSceneNode_RemoveSpecializedType) == 0x000018, "Wrong size on InterchangeSceneNode_RemoveSpecializedType");
-static_assert(offsetof(InterchangeSceneNode_RemoveSpecializedType, SpecializedType) == 0x000000, "Member 'InterchangeSceneNode_RemoveSpecializedType::SpecializedType' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_RemoveSpecializedType, ReturnValue) == 0x000010, "Member 'InterchangeSceneNode_RemoveSpecializedType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_RemoveSpecializedType;
+
+// Function InterchangeNodes.InterchangeSceneNode.SetAnimationCurveTypeForCurveName
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeSceneNode_SetAnimationCurveTypeForCurveName final
+{
+public:
+	class FString                                 CurveName;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangeAnimationPayLoadType              AnimationCurveType;                                // 0x0010(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeSceneNode_SetAnimationCurveTypeForCurveName;
+
+// Function InterchangeNodes.InterchangeSceneNode.SetCustomActorVisibility
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeSceneNode_SetCustomActorVisibility final
+{
+public:
+	bool                                          bInIsVisible;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeSceneNode_SetCustomActorVisibility;
 
 // Function InterchangeNodes.InterchangeSceneNode.SetCustomAnimationAssetUidToPlay
 // 0x0018 (0x0018 - 0x0000)
@@ -2554,10 +2457,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_SetCustomAnimationAssetUidToPlay) == 0x000008, "Wrong alignment on InterchangeSceneNode_SetCustomAnimationAssetUidToPlay");
-static_assert(sizeof(InterchangeSceneNode_SetCustomAnimationAssetUidToPlay) == 0x000018, "Wrong size on InterchangeSceneNode_SetCustomAnimationAssetUidToPlay");
-static_assert(offsetof(InterchangeSceneNode_SetCustomAnimationAssetUidToPlay, AttributeValue) == 0x000000, "Member 'InterchangeSceneNode_SetCustomAnimationAssetUidToPlay::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetCustomAnimationAssetUidToPlay, ReturnValue) == 0x000010, "Member 'InterchangeSceneNode_SetCustomAnimationAssetUidToPlay::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_SetCustomAnimationAssetUidToPlay;
 
 // Function InterchangeNodes.InterchangeSceneNode.SetCustomAssetInstanceUid
 // 0x0018 (0x0018 - 0x0000)
@@ -2568,10 +2468,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_SetCustomAssetInstanceUid) == 0x000008, "Wrong alignment on InterchangeSceneNode_SetCustomAssetInstanceUid");
-static_assert(sizeof(InterchangeSceneNode_SetCustomAssetInstanceUid) == 0x000018, "Wrong size on InterchangeSceneNode_SetCustomAssetInstanceUid");
-static_assert(offsetof(InterchangeSceneNode_SetCustomAssetInstanceUid, AttributeValue) == 0x000000, "Member 'InterchangeSceneNode_SetCustomAssetInstanceUid::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetCustomAssetInstanceUid, ReturnValue) == 0x000010, "Member 'InterchangeSceneNode_SetCustomAssetInstanceUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_SetCustomAssetInstanceUid;
 
 // Function InterchangeNodes.InterchangeSceneNode.SetCustomBindPoseLocalTransform
 // 0x0080 (0x0080 - 0x0000)
@@ -2585,12 +2482,17 @@ public:
 	bool                                          ReturnValue;                                       // 0x0071(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_72[0xE];                                       // 0x0072(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_SetCustomBindPoseLocalTransform) == 0x000010, "Wrong alignment on InterchangeSceneNode_SetCustomBindPoseLocalTransform");
-static_assert(sizeof(InterchangeSceneNode_SetCustomBindPoseLocalTransform) == 0x000080, "Wrong size on InterchangeSceneNode_SetCustomBindPoseLocalTransform");
-static_assert(offsetof(InterchangeSceneNode_SetCustomBindPoseLocalTransform, BaseNodeContainer) == 0x000000, "Member 'InterchangeSceneNode_SetCustomBindPoseLocalTransform::BaseNodeContainer' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetCustomBindPoseLocalTransform, AttributeValue) == 0x000010, "Member 'InterchangeSceneNode_SetCustomBindPoseLocalTransform::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetCustomBindPoseLocalTransform, bResetCache) == 0x000070, "Member 'InterchangeSceneNode_SetCustomBindPoseLocalTransform::bResetCache' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetCustomBindPoseLocalTransform, ReturnValue) == 0x000071, "Member 'InterchangeSceneNode_SetCustomBindPoseLocalTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_SetCustomBindPoseLocalTransform;
+
+// Function InterchangeNodes.InterchangeSceneNode.SetCustomComponentVisibility
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeSceneNode_SetCustomComponentVisibility final
+{
+public:
+	bool                                          bInIsVisible;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeSceneNode_SetCustomComponentVisibility;
 
 // Function InterchangeNodes.InterchangeSceneNode.SetCustomGeometricTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -2601,10 +2503,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_61[0xF];                                       // 0x0061(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_SetCustomGeometricTransform) == 0x000010, "Wrong alignment on InterchangeSceneNode_SetCustomGeometricTransform");
-static_assert(sizeof(InterchangeSceneNode_SetCustomGeometricTransform) == 0x000070, "Wrong size on InterchangeSceneNode_SetCustomGeometricTransform");
-static_assert(offsetof(InterchangeSceneNode_SetCustomGeometricTransform, AttributeValue) == 0x000000, "Member 'InterchangeSceneNode_SetCustomGeometricTransform::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetCustomGeometricTransform, ReturnValue) == 0x000060, "Member 'InterchangeSceneNode_SetCustomGeometricTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_SetCustomGeometricTransform;
 
 // Function InterchangeNodes.InterchangeSceneNode.SetCustomHasBindPose
 // 0x0002 (0x0002 - 0x0000)
@@ -2614,10 +2513,7 @@ public:
 	bool                                          bHasBindPose;                                      // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeSceneNode_SetCustomHasBindPose) == 0x000001, "Wrong alignment on InterchangeSceneNode_SetCustomHasBindPose");
-static_assert(sizeof(InterchangeSceneNode_SetCustomHasBindPose) == 0x000002, "Wrong size on InterchangeSceneNode_SetCustomHasBindPose");
-static_assert(offsetof(InterchangeSceneNode_SetCustomHasBindPose, bHasBindPose) == 0x000000, "Member 'InterchangeSceneNode_SetCustomHasBindPose::bHasBindPose' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetCustomHasBindPose, ReturnValue) == 0x000001, "Member 'InterchangeSceneNode_SetCustomHasBindPose::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_SetCustomHasBindPose;
 
 // Function InterchangeNodes.InterchangeSceneNode.SetCustomLocalTransform
 // 0x0080 (0x0080 - 0x0000)
@@ -2631,12 +2527,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0071(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_72[0xE];                                       // 0x0072(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_SetCustomLocalTransform) == 0x000010, "Wrong alignment on InterchangeSceneNode_SetCustomLocalTransform");
-static_assert(sizeof(InterchangeSceneNode_SetCustomLocalTransform) == 0x000080, "Wrong size on InterchangeSceneNode_SetCustomLocalTransform");
-static_assert(offsetof(InterchangeSceneNode_SetCustomLocalTransform, BaseNodeContainer) == 0x000000, "Member 'InterchangeSceneNode_SetCustomLocalTransform::BaseNodeContainer' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetCustomLocalTransform, AttributeValue) == 0x000010, "Member 'InterchangeSceneNode_SetCustomLocalTransform::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetCustomLocalTransform, bResetCache) == 0x000070, "Member 'InterchangeSceneNode_SetCustomLocalTransform::bResetCache' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetCustomLocalTransform, ReturnValue) == 0x000071, "Member 'InterchangeSceneNode_SetCustomLocalTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_SetCustomLocalTransform;
 
 // Function InterchangeNodes.InterchangeSceneNode.SetCustomPivotNodeTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -2647,10 +2538,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_61[0xF];                                       // 0x0061(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_SetCustomPivotNodeTransform) == 0x000010, "Wrong alignment on InterchangeSceneNode_SetCustomPivotNodeTransform");
-static_assert(sizeof(InterchangeSceneNode_SetCustomPivotNodeTransform) == 0x000070, "Wrong size on InterchangeSceneNode_SetCustomPivotNodeTransform");
-static_assert(offsetof(InterchangeSceneNode_SetCustomPivotNodeTransform, AttributeValue) == 0x000000, "Member 'InterchangeSceneNode_SetCustomPivotNodeTransform::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetCustomPivotNodeTransform, ReturnValue) == 0x000060, "Member 'InterchangeSceneNode_SetCustomPivotNodeTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_SetCustomPivotNodeTransform;
 
 // Function InterchangeNodes.InterchangeSceneNode.SetCustomTimeZeroLocalTransform
 // 0x0080 (0x0080 - 0x0000)
@@ -2664,12 +2552,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0071(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_72[0xE];                                       // 0x0072(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_SetCustomTimeZeroLocalTransform) == 0x000010, "Wrong alignment on InterchangeSceneNode_SetCustomTimeZeroLocalTransform");
-static_assert(sizeof(InterchangeSceneNode_SetCustomTimeZeroLocalTransform) == 0x000080, "Wrong size on InterchangeSceneNode_SetCustomTimeZeroLocalTransform");
-static_assert(offsetof(InterchangeSceneNode_SetCustomTimeZeroLocalTransform, BaseNodeContainer) == 0x000000, "Member 'InterchangeSceneNode_SetCustomTimeZeroLocalTransform::BaseNodeContainer' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetCustomTimeZeroLocalTransform, AttributeValue) == 0x000010, "Member 'InterchangeSceneNode_SetCustomTimeZeroLocalTransform::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetCustomTimeZeroLocalTransform, bResetCache) == 0x000070, "Member 'InterchangeSceneNode_SetCustomTimeZeroLocalTransform::bResetCache' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetCustomTimeZeroLocalTransform, ReturnValue) == 0x000071, "Member 'InterchangeSceneNode_SetCustomTimeZeroLocalTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_SetCustomTimeZeroLocalTransform;
 
 // Function InterchangeNodes.InterchangeSceneNode.SetGlobalBindPoseReferenceForMeshUIDs
 // 0x0050 (0x0050 - 0x0000)
@@ -2678,9 +2561,7 @@ struct InterchangeSceneNode_SetGlobalBindPoseReferenceForMeshUIDs final
 public:
 	TMap<class FString, struct FMatrix>           GlobalBindPoseReferenceForMeshUIDs;                // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeSceneNode_SetGlobalBindPoseReferenceForMeshUIDs) == 0x000008, "Wrong alignment on InterchangeSceneNode_SetGlobalBindPoseReferenceForMeshUIDs");
-static_assert(sizeof(InterchangeSceneNode_SetGlobalBindPoseReferenceForMeshUIDs) == 0x000050, "Wrong size on InterchangeSceneNode_SetGlobalBindPoseReferenceForMeshUIDs");
-static_assert(offsetof(InterchangeSceneNode_SetGlobalBindPoseReferenceForMeshUIDs, GlobalBindPoseReferenceForMeshUIDs) == 0x000000, "Member 'InterchangeSceneNode_SetGlobalBindPoseReferenceForMeshUIDs::GlobalBindPoseReferenceForMeshUIDs' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_SetGlobalBindPoseReferenceForMeshUIDs;
 
 // Function InterchangeNodes.InterchangeSceneNode.SetMorphTargetCurveWeight
 // 0x0018 (0x0018 - 0x0000)
@@ -2692,11 +2573,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_SetMorphTargetCurveWeight) == 0x000008, "Wrong alignment on InterchangeSceneNode_SetMorphTargetCurveWeight");
-static_assert(sizeof(InterchangeSceneNode_SetMorphTargetCurveWeight) == 0x000018, "Wrong size on InterchangeSceneNode_SetMorphTargetCurveWeight");
-static_assert(offsetof(InterchangeSceneNode_SetMorphTargetCurveWeight, MorphTargetName) == 0x000000, "Member 'InterchangeSceneNode_SetMorphTargetCurveWeight::MorphTargetName' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetMorphTargetCurveWeight, Weight) == 0x000010, "Member 'InterchangeSceneNode_SetMorphTargetCurveWeight::Weight' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetMorphTargetCurveWeight, ReturnValue) == 0x000014, "Member 'InterchangeSceneNode_SetMorphTargetCurveWeight::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_SetMorphTargetCurveWeight;
 
 // Function InterchangeNodes.InterchangeSceneNode.SetSlotMaterialDependencyUid
 // 0x0028 (0x0028 - 0x0000)
@@ -2708,11 +2585,29 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_SetSlotMaterialDependencyUid) == 0x000008, "Wrong alignment on InterchangeSceneNode_SetSlotMaterialDependencyUid");
-static_assert(sizeof(InterchangeSceneNode_SetSlotMaterialDependencyUid) == 0x000028, "Wrong size on InterchangeSceneNode_SetSlotMaterialDependencyUid");
-static_assert(offsetof(InterchangeSceneNode_SetSlotMaterialDependencyUid, SlotName) == 0x000000, "Member 'InterchangeSceneNode_SetSlotMaterialDependencyUid::SlotName' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetSlotMaterialDependencyUid, MaterialDependencyUid) == 0x000010, "Member 'InterchangeSceneNode_SetSlotMaterialDependencyUid::MaterialDependencyUid' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_SetSlotMaterialDependencyUid, ReturnValue) == 0x000020, "Member 'InterchangeSceneNode_SetSlotMaterialDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_SetSlotMaterialDependencyUid;
+
+// Function InterchangeNodes.InterchangeSceneNode.GetAnimationCurveTypeForCurveName
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeSceneNode_GetAnimationCurveTypeForCurveName final
+{
+public:
+	class FString                                 CurveName;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangeAnimationPayLoadType              OutCurveAnimationType;                             // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeSceneNode_GetAnimationCurveTypeForCurveName;
+
+// Function InterchangeNodes.InterchangeSceneNode.GetCustomActorVisibility
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeSceneNode_GetCustomActorVisibility final
+{
+public:
+	bool                                          bOutIsVisible;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeSceneNode_GetCustomActorVisibility;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetCustomAnimationAssetUidToPlay
 // 0x0018 (0x0018 - 0x0000)
@@ -2723,10 +2618,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_GetCustomAnimationAssetUidToPlay) == 0x000008, "Wrong alignment on InterchangeSceneNode_GetCustomAnimationAssetUidToPlay");
-static_assert(sizeof(InterchangeSceneNode_GetCustomAnimationAssetUidToPlay) == 0x000018, "Wrong size on InterchangeSceneNode_GetCustomAnimationAssetUidToPlay");
-static_assert(offsetof(InterchangeSceneNode_GetCustomAnimationAssetUidToPlay, AttributeValue) == 0x000000, "Member 'InterchangeSceneNode_GetCustomAnimationAssetUidToPlay::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomAnimationAssetUidToPlay, ReturnValue) == 0x000010, "Member 'InterchangeSceneNode_GetCustomAnimationAssetUidToPlay::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetCustomAnimationAssetUidToPlay;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetCustomAssetInstanceUid
 // 0x0018 (0x0018 - 0x0000)
@@ -2737,10 +2629,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_GetCustomAssetInstanceUid) == 0x000008, "Wrong alignment on InterchangeSceneNode_GetCustomAssetInstanceUid");
-static_assert(sizeof(InterchangeSceneNode_GetCustomAssetInstanceUid) == 0x000018, "Wrong size on InterchangeSceneNode_GetCustomAssetInstanceUid");
-static_assert(offsetof(InterchangeSceneNode_GetCustomAssetInstanceUid, AttributeValue) == 0x000000, "Member 'InterchangeSceneNode_GetCustomAssetInstanceUid::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomAssetInstanceUid, ReturnValue) == 0x000010, "Member 'InterchangeSceneNode_GetCustomAssetInstanceUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetCustomAssetInstanceUid;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetCustomBindPoseGlobalTransform
 // 0x00E0 (0x00E0 - 0x0000)
@@ -2755,13 +2644,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x00D1(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D2[0xE];                                       // 0x00D2(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_GetCustomBindPoseGlobalTransform) == 0x000010, "Wrong alignment on InterchangeSceneNode_GetCustomBindPoseGlobalTransform");
-static_assert(sizeof(InterchangeSceneNode_GetCustomBindPoseGlobalTransform) == 0x0000E0, "Wrong size on InterchangeSceneNode_GetCustomBindPoseGlobalTransform");
-static_assert(offsetof(InterchangeSceneNode_GetCustomBindPoseGlobalTransform, BaseNodeContainer) == 0x000000, "Member 'InterchangeSceneNode_GetCustomBindPoseGlobalTransform::BaseNodeContainer' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomBindPoseGlobalTransform, GlobalOffsetTransform) == 0x000010, "Member 'InterchangeSceneNode_GetCustomBindPoseGlobalTransform::GlobalOffsetTransform' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomBindPoseGlobalTransform, AttributeValue) == 0x000070, "Member 'InterchangeSceneNode_GetCustomBindPoseGlobalTransform::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomBindPoseGlobalTransform, bForceRecache) == 0x0000D0, "Member 'InterchangeSceneNode_GetCustomBindPoseGlobalTransform::bForceRecache' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomBindPoseGlobalTransform, ReturnValue) == 0x0000D1, "Member 'InterchangeSceneNode_GetCustomBindPoseGlobalTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetCustomBindPoseGlobalTransform;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetCustomBindPoseLocalTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -2772,10 +2655,17 @@ public:
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_61[0xF];                                       // 0x0061(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_GetCustomBindPoseLocalTransform) == 0x000010, "Wrong alignment on InterchangeSceneNode_GetCustomBindPoseLocalTransform");
-static_assert(sizeof(InterchangeSceneNode_GetCustomBindPoseLocalTransform) == 0x000070, "Wrong size on InterchangeSceneNode_GetCustomBindPoseLocalTransform");
-static_assert(offsetof(InterchangeSceneNode_GetCustomBindPoseLocalTransform, AttributeValue) == 0x000000, "Member 'InterchangeSceneNode_GetCustomBindPoseLocalTransform::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomBindPoseLocalTransform, ReturnValue) == 0x000060, "Member 'InterchangeSceneNode_GetCustomBindPoseLocalTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetCustomBindPoseLocalTransform;
+
+// Function InterchangeNodes.InterchangeSceneNode.GetCustomComponentVisibility
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeSceneNode_GetCustomComponentVisibility final
+{
+public:
+	bool                                          bOutIsVisible;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeSceneNode_GetCustomComponentVisibility;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetCustomGeometricTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -2786,10 +2676,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_61[0xF];                                       // 0x0061(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_GetCustomGeometricTransform) == 0x000010, "Wrong alignment on InterchangeSceneNode_GetCustomGeometricTransform");
-static_assert(sizeof(InterchangeSceneNode_GetCustomGeometricTransform) == 0x000070, "Wrong size on InterchangeSceneNode_GetCustomGeometricTransform");
-static_assert(offsetof(InterchangeSceneNode_GetCustomGeometricTransform, AttributeValue) == 0x000000, "Member 'InterchangeSceneNode_GetCustomGeometricTransform::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomGeometricTransform, ReturnValue) == 0x000060, "Member 'InterchangeSceneNode_GetCustomGeometricTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetCustomGeometricTransform;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetCustomGlobalTransform
 // 0x00E0 (0x00E0 - 0x0000)
@@ -2804,13 +2691,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x00D1(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D2[0xE];                                       // 0x00D2(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_GetCustomGlobalTransform) == 0x000010, "Wrong alignment on InterchangeSceneNode_GetCustomGlobalTransform");
-static_assert(sizeof(InterchangeSceneNode_GetCustomGlobalTransform) == 0x0000E0, "Wrong size on InterchangeSceneNode_GetCustomGlobalTransform");
-static_assert(offsetof(InterchangeSceneNode_GetCustomGlobalTransform, BaseNodeContainer) == 0x000000, "Member 'InterchangeSceneNode_GetCustomGlobalTransform::BaseNodeContainer' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomGlobalTransform, GlobalOffsetTransform) == 0x000010, "Member 'InterchangeSceneNode_GetCustomGlobalTransform::GlobalOffsetTransform' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomGlobalTransform, AttributeValue) == 0x000070, "Member 'InterchangeSceneNode_GetCustomGlobalTransform::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomGlobalTransform, bForceRecache) == 0x0000D0, "Member 'InterchangeSceneNode_GetCustomGlobalTransform::bForceRecache' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomGlobalTransform, ReturnValue) == 0x0000D1, "Member 'InterchangeSceneNode_GetCustomGlobalTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetCustomGlobalTransform;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetCustomHasBindPose
 // 0x0002 (0x0002 - 0x0000)
@@ -2820,10 +2701,7 @@ public:
 	bool                                          bHasBindPose;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeSceneNode_GetCustomHasBindPose) == 0x000001, "Wrong alignment on InterchangeSceneNode_GetCustomHasBindPose");
-static_assert(sizeof(InterchangeSceneNode_GetCustomHasBindPose) == 0x000002, "Wrong size on InterchangeSceneNode_GetCustomHasBindPose");
-static_assert(offsetof(InterchangeSceneNode_GetCustomHasBindPose, bHasBindPose) == 0x000000, "Member 'InterchangeSceneNode_GetCustomHasBindPose::bHasBindPose' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomHasBindPose, ReturnValue) == 0x000001, "Member 'InterchangeSceneNode_GetCustomHasBindPose::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetCustomHasBindPose;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetCustomLocalTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -2834,10 +2712,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_61[0xF];                                       // 0x0061(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_GetCustomLocalTransform) == 0x000010, "Wrong alignment on InterchangeSceneNode_GetCustomLocalTransform");
-static_assert(sizeof(InterchangeSceneNode_GetCustomLocalTransform) == 0x000070, "Wrong size on InterchangeSceneNode_GetCustomLocalTransform");
-static_assert(offsetof(InterchangeSceneNode_GetCustomLocalTransform, AttributeValue) == 0x000000, "Member 'InterchangeSceneNode_GetCustomLocalTransform::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomLocalTransform, ReturnValue) == 0x000060, "Member 'InterchangeSceneNode_GetCustomLocalTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetCustomLocalTransform;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetCustomPivotNodeTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -2848,10 +2723,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_61[0xF];                                       // 0x0061(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_GetCustomPivotNodeTransform) == 0x000010, "Wrong alignment on InterchangeSceneNode_GetCustomPivotNodeTransform");
-static_assert(sizeof(InterchangeSceneNode_GetCustomPivotNodeTransform) == 0x000070, "Wrong size on InterchangeSceneNode_GetCustomPivotNodeTransform");
-static_assert(offsetof(InterchangeSceneNode_GetCustomPivotNodeTransform, AttributeValue) == 0x000000, "Member 'InterchangeSceneNode_GetCustomPivotNodeTransform::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomPivotNodeTransform, ReturnValue) == 0x000060, "Member 'InterchangeSceneNode_GetCustomPivotNodeTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetCustomPivotNodeTransform;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetCustomTimeZeroGlobalTransform
 // 0x00E0 (0x00E0 - 0x0000)
@@ -2866,13 +2738,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x00D1(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D2[0xE];                                       // 0x00D2(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_GetCustomTimeZeroGlobalTransform) == 0x000010, "Wrong alignment on InterchangeSceneNode_GetCustomTimeZeroGlobalTransform");
-static_assert(sizeof(InterchangeSceneNode_GetCustomTimeZeroGlobalTransform) == 0x0000E0, "Wrong size on InterchangeSceneNode_GetCustomTimeZeroGlobalTransform");
-static_assert(offsetof(InterchangeSceneNode_GetCustomTimeZeroGlobalTransform, BaseNodeContainer) == 0x000000, "Member 'InterchangeSceneNode_GetCustomTimeZeroGlobalTransform::BaseNodeContainer' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomTimeZeroGlobalTransform, GlobalOffsetTransform) == 0x000010, "Member 'InterchangeSceneNode_GetCustomTimeZeroGlobalTransform::GlobalOffsetTransform' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomTimeZeroGlobalTransform, AttributeValue) == 0x000070, "Member 'InterchangeSceneNode_GetCustomTimeZeroGlobalTransform::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomTimeZeroGlobalTransform, bForceRecache) == 0x0000D0, "Member 'InterchangeSceneNode_GetCustomTimeZeroGlobalTransform::bForceRecache' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomTimeZeroGlobalTransform, ReturnValue) == 0x0000D1, "Member 'InterchangeSceneNode_GetCustomTimeZeroGlobalTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetCustomTimeZeroGlobalTransform;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetCustomTimeZeroLocalTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -2883,10 +2749,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_61[0xF];                                       // 0x0061(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_GetCustomTimeZeroLocalTransform) == 0x000010, "Wrong alignment on InterchangeSceneNode_GetCustomTimeZeroLocalTransform");
-static_assert(sizeof(InterchangeSceneNode_GetCustomTimeZeroLocalTransform) == 0x000070, "Wrong size on InterchangeSceneNode_GetCustomTimeZeroLocalTransform");
-static_assert(offsetof(InterchangeSceneNode_GetCustomTimeZeroLocalTransform, AttributeValue) == 0x000000, "Member 'InterchangeSceneNode_GetCustomTimeZeroLocalTransform::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetCustomTimeZeroLocalTransform, ReturnValue) == 0x000060, "Member 'InterchangeSceneNode_GetCustomTimeZeroLocalTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetCustomTimeZeroLocalTransform;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetGlobalBindPoseReferenceForMeshUID
 // 0x00A0 (0x00A0 - 0x0000)
@@ -2898,11 +2761,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0090(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_91[0xF];                                       // 0x0091(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_GetGlobalBindPoseReferenceForMeshUID) == 0x000010, "Wrong alignment on InterchangeSceneNode_GetGlobalBindPoseReferenceForMeshUID");
-static_assert(sizeof(InterchangeSceneNode_GetGlobalBindPoseReferenceForMeshUID) == 0x0000A0, "Wrong size on InterchangeSceneNode_GetGlobalBindPoseReferenceForMeshUID");
-static_assert(offsetof(InterchangeSceneNode_GetGlobalBindPoseReferenceForMeshUID, MeshUid) == 0x000000, "Member 'InterchangeSceneNode_GetGlobalBindPoseReferenceForMeshUID::MeshUid' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetGlobalBindPoseReferenceForMeshUID, GlobalBindPoseReference) == 0x000010, "Member 'InterchangeSceneNode_GetGlobalBindPoseReferenceForMeshUID::GlobalBindPoseReference' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetGlobalBindPoseReferenceForMeshUID, ReturnValue) == 0x000090, "Member 'InterchangeSceneNode_GetGlobalBindPoseReferenceForMeshUID::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetGlobalBindPoseReferenceForMeshUID;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetMorphTargetCurveWeights
 // 0x0050 (0x0050 - 0x0000)
@@ -2911,9 +2770,7 @@ struct InterchangeSceneNode_GetMorphTargetCurveWeights final
 public:
 	TMap<class FString, float>                    OutMorphTargetCurveWeights;                        // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeSceneNode_GetMorphTargetCurveWeights) == 0x000008, "Wrong alignment on InterchangeSceneNode_GetMorphTargetCurveWeights");
-static_assert(sizeof(InterchangeSceneNode_GetMorphTargetCurveWeights) == 0x000050, "Wrong size on InterchangeSceneNode_GetMorphTargetCurveWeights");
-static_assert(offsetof(InterchangeSceneNode_GetMorphTargetCurveWeights, OutMorphTargetCurveWeights) == 0x000000, "Member 'InterchangeSceneNode_GetMorphTargetCurveWeights::OutMorphTargetCurveWeights' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetMorphTargetCurveWeights;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetSlotMaterialDependencies
 // 0x0050 (0x0050 - 0x0000)
@@ -2922,9 +2779,7 @@ struct InterchangeSceneNode_GetSlotMaterialDependencies final
 public:
 	TMap<class FString, class FString>            OutMaterialDependencies;                           // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeSceneNode_GetSlotMaterialDependencies) == 0x000008, "Wrong alignment on InterchangeSceneNode_GetSlotMaterialDependencies");
-static_assert(sizeof(InterchangeSceneNode_GetSlotMaterialDependencies) == 0x000050, "Wrong size on InterchangeSceneNode_GetSlotMaterialDependencies");
-static_assert(offsetof(InterchangeSceneNode_GetSlotMaterialDependencies, OutMaterialDependencies) == 0x000000, "Member 'InterchangeSceneNode_GetSlotMaterialDependencies::OutMaterialDependencies' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetSlotMaterialDependencies;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetSlotMaterialDependencyUid
 // 0x0028 (0x0028 - 0x0000)
@@ -2936,11 +2791,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_GetSlotMaterialDependencyUid) == 0x000008, "Wrong alignment on InterchangeSceneNode_GetSlotMaterialDependencyUid");
-static_assert(sizeof(InterchangeSceneNode_GetSlotMaterialDependencyUid) == 0x000028, "Wrong size on InterchangeSceneNode_GetSlotMaterialDependencyUid");
-static_assert(offsetof(InterchangeSceneNode_GetSlotMaterialDependencyUid, SlotName) == 0x000000, "Member 'InterchangeSceneNode_GetSlotMaterialDependencyUid::SlotName' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetSlotMaterialDependencyUid, OutMaterialDependency) == 0x000010, "Member 'InterchangeSceneNode_GetSlotMaterialDependencyUid::OutMaterialDependency' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetSlotMaterialDependencyUid, ReturnValue) == 0x000020, "Member 'InterchangeSceneNode_GetSlotMaterialDependencyUid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetSlotMaterialDependencyUid;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetSpecializedType
 // 0x0018 (0x0018 - 0x0000)
@@ -2951,10 +2802,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OutSpecializedType;                                // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeSceneNode_GetSpecializedType) == 0x000008, "Wrong alignment on InterchangeSceneNode_GetSpecializedType");
-static_assert(sizeof(InterchangeSceneNode_GetSpecializedType) == 0x000018, "Wrong size on InterchangeSceneNode_GetSpecializedType");
-static_assert(offsetof(InterchangeSceneNode_GetSpecializedType, Index_0) == 0x000000, "Member 'InterchangeSceneNode_GetSpecializedType::Index_0' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_GetSpecializedType, OutSpecializedType) == 0x000008, "Member 'InterchangeSceneNode_GetSpecializedType::OutSpecializedType' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetSpecializedType;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetSpecializedTypeCount
 // 0x0004 (0x0004 - 0x0000)
@@ -2963,9 +2811,7 @@ struct InterchangeSceneNode_GetSpecializedTypeCount final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeSceneNode_GetSpecializedTypeCount) == 0x000004, "Wrong alignment on InterchangeSceneNode_GetSpecializedTypeCount");
-static_assert(sizeof(InterchangeSceneNode_GetSpecializedTypeCount) == 0x000004, "Wrong size on InterchangeSceneNode_GetSpecializedTypeCount");
-static_assert(offsetof(InterchangeSceneNode_GetSpecializedTypeCount, ReturnValue) == 0x000000, "Member 'InterchangeSceneNode_GetSpecializedTypeCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetSpecializedTypeCount;
 
 // Function InterchangeNodes.InterchangeSceneNode.GetSpecializedTypes
 // 0x0010 (0x0010 - 0x0000)
@@ -2974,9 +2820,7 @@ struct InterchangeSceneNode_GetSpecializedTypes final
 public:
 	TArray<class FString>                         OutSpecializedTypes;                               // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeSceneNode_GetSpecializedTypes) == 0x000008, "Wrong alignment on InterchangeSceneNode_GetSpecializedTypes");
-static_assert(sizeof(InterchangeSceneNode_GetSpecializedTypes) == 0x000010, "Wrong size on InterchangeSceneNode_GetSpecializedTypes");
-static_assert(offsetof(InterchangeSceneNode_GetSpecializedTypes, OutSpecializedTypes) == 0x000000, "Member 'InterchangeSceneNode_GetSpecializedTypes::OutSpecializedTypes' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_GetSpecializedTypes;
 
 // Function InterchangeNodes.InterchangeSceneNode.IsSpecializedTypeContains
 // 0x0018 (0x0018 - 0x0000)
@@ -2987,10 +2831,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeSceneNode_IsSpecializedTypeContains) == 0x000008, "Wrong alignment on InterchangeSceneNode_IsSpecializedTypeContains");
-static_assert(sizeof(InterchangeSceneNode_IsSpecializedTypeContains) == 0x000018, "Wrong size on InterchangeSceneNode_IsSpecializedTypeContains");
-static_assert(offsetof(InterchangeSceneNode_IsSpecializedTypeContains, SpecializedType) == 0x000000, "Member 'InterchangeSceneNode_IsSpecializedTypeContains::SpecializedType' has a wrong offset!");
-static_assert(offsetof(InterchangeSceneNode_IsSpecializedTypeContains, ReturnValue) == 0x000010, "Member 'InterchangeSceneNode_IsSpecializedTypeContains::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeSceneNode_IsSpecializedTypeContains;
 
 // Function InterchangeNodes.InterchangeShaderPortsAPI.ConnectDefaultOuputToInput
 // 0x0030 (0x0030 - 0x0000)
@@ -3003,12 +2844,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderPortsAPI_ConnectDefaultOuputToInput) == 0x000008, "Wrong alignment on InterchangeShaderPortsAPI_ConnectDefaultOuputToInput");
-static_assert(sizeof(InterchangeShaderPortsAPI_ConnectDefaultOuputToInput) == 0x000030, "Wrong size on InterchangeShaderPortsAPI_ConnectDefaultOuputToInput");
-static_assert(offsetof(InterchangeShaderPortsAPI_ConnectDefaultOuputToInput, InterchangeNode) == 0x000000, "Member 'InterchangeShaderPortsAPI_ConnectDefaultOuputToInput::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_ConnectDefaultOuputToInput, InputName) == 0x000008, "Member 'InterchangeShaderPortsAPI_ConnectDefaultOuputToInput::InputName' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_ConnectDefaultOuputToInput, ExpressionUid) == 0x000018, "Member 'InterchangeShaderPortsAPI_ConnectDefaultOuputToInput::ExpressionUid' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_ConnectDefaultOuputToInput, ReturnValue) == 0x000028, "Member 'InterchangeShaderPortsAPI_ConnectDefaultOuputToInput::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderPortsAPI_ConnectDefaultOuputToInput;
 
 // Function InterchangeNodes.InterchangeShaderPortsAPI.ConnectOuputToInputByIndex
 // 0x0030 (0x0030 - 0x0000)
@@ -3022,13 +2858,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x002C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderPortsAPI_ConnectOuputToInputByIndex) == 0x000008, "Wrong alignment on InterchangeShaderPortsAPI_ConnectOuputToInputByIndex");
-static_assert(sizeof(InterchangeShaderPortsAPI_ConnectOuputToInputByIndex) == 0x000030, "Wrong size on InterchangeShaderPortsAPI_ConnectOuputToInputByIndex");
-static_assert(offsetof(InterchangeShaderPortsAPI_ConnectOuputToInputByIndex, InterchangeNode) == 0x000000, "Member 'InterchangeShaderPortsAPI_ConnectOuputToInputByIndex::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_ConnectOuputToInputByIndex, InputName) == 0x000008, "Member 'InterchangeShaderPortsAPI_ConnectOuputToInputByIndex::InputName' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_ConnectOuputToInputByIndex, ExpressionUid) == 0x000018, "Member 'InterchangeShaderPortsAPI_ConnectOuputToInputByIndex::ExpressionUid' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_ConnectOuputToInputByIndex, OutputIndex) == 0x000028, "Member 'InterchangeShaderPortsAPI_ConnectOuputToInputByIndex::OutputIndex' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_ConnectOuputToInputByIndex, ReturnValue) == 0x00002C, "Member 'InterchangeShaderPortsAPI_ConnectOuputToInputByIndex::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderPortsAPI_ConnectOuputToInputByIndex;
 
 // Function InterchangeNodes.InterchangeShaderPortsAPI.ConnectOuputToInputByName
 // 0x0040 (0x0040 - 0x0000)
@@ -3042,13 +2872,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderPortsAPI_ConnectOuputToInputByName) == 0x000008, "Wrong alignment on InterchangeShaderPortsAPI_ConnectOuputToInputByName");
-static_assert(sizeof(InterchangeShaderPortsAPI_ConnectOuputToInputByName) == 0x000040, "Wrong size on InterchangeShaderPortsAPI_ConnectOuputToInputByName");
-static_assert(offsetof(InterchangeShaderPortsAPI_ConnectOuputToInputByName, InterchangeNode) == 0x000000, "Member 'InterchangeShaderPortsAPI_ConnectOuputToInputByName::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_ConnectOuputToInputByName, InputName) == 0x000008, "Member 'InterchangeShaderPortsAPI_ConnectOuputToInputByName::InputName' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_ConnectOuputToInputByName, ExpressionUid) == 0x000018, "Member 'InterchangeShaderPortsAPI_ConnectOuputToInputByName::ExpressionUid' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_ConnectOuputToInputByName, OutputName) == 0x000028, "Member 'InterchangeShaderPortsAPI_ConnectOuputToInputByName::OutputName' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_ConnectOuputToInputByName, ReturnValue) == 0x000038, "Member 'InterchangeShaderPortsAPI_ConnectOuputToInputByName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderPortsAPI_ConnectOuputToInputByName;
 
 // Function InterchangeNodes.InterchangeShaderPortsAPI.GatherInputs
 // 0x0018 (0x0018 - 0x0000)
@@ -3058,10 +2882,7 @@ public:
 	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         OutInputNames;                                     // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeShaderPortsAPI_GatherInputs) == 0x000008, "Wrong alignment on InterchangeShaderPortsAPI_GatherInputs");
-static_assert(sizeof(InterchangeShaderPortsAPI_GatherInputs) == 0x000018, "Wrong size on InterchangeShaderPortsAPI_GatherInputs");
-static_assert(offsetof(InterchangeShaderPortsAPI_GatherInputs, InterchangeNode) == 0x000000, "Member 'InterchangeShaderPortsAPI_GatherInputs::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_GatherInputs, OutInputNames) == 0x000008, "Member 'InterchangeShaderPortsAPI_GatherInputs::OutInputNames' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderPortsAPI_GatherInputs;
 
 // Function InterchangeNodes.InterchangeShaderPortsAPI.GetInputConnection
 // 0x0040 (0x0040 - 0x0000)
@@ -3075,13 +2896,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderPortsAPI_GetInputConnection) == 0x000008, "Wrong alignment on InterchangeShaderPortsAPI_GetInputConnection");
-static_assert(sizeof(InterchangeShaderPortsAPI_GetInputConnection) == 0x000040, "Wrong size on InterchangeShaderPortsAPI_GetInputConnection");
-static_assert(offsetof(InterchangeShaderPortsAPI_GetInputConnection, InterchangeNode) == 0x000000, "Member 'InterchangeShaderPortsAPI_GetInputConnection::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_GetInputConnection, InputName) == 0x000008, "Member 'InterchangeShaderPortsAPI_GetInputConnection::InputName' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_GetInputConnection, OutExpressionUid) == 0x000018, "Member 'InterchangeShaderPortsAPI_GetInputConnection::OutExpressionUid' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_GetInputConnection, OutputName) == 0x000028, "Member 'InterchangeShaderPortsAPI_GetInputConnection::OutputName' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_GetInputConnection, ReturnValue) == 0x000038, "Member 'InterchangeShaderPortsAPI_GetInputConnection::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderPortsAPI_GetInputConnection;
 
 // Function InterchangeNodes.InterchangeShaderPortsAPI.HasInput
 // 0x0018 (0x0018 - 0x0000)
@@ -3093,11 +2908,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderPortsAPI_HasInput) == 0x000008, "Wrong alignment on InterchangeShaderPortsAPI_HasInput");
-static_assert(sizeof(InterchangeShaderPortsAPI_HasInput) == 0x000018, "Wrong size on InterchangeShaderPortsAPI_HasInput");
-static_assert(offsetof(InterchangeShaderPortsAPI_HasInput, InterchangeNode) == 0x000000, "Member 'InterchangeShaderPortsAPI_HasInput::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_HasInput, InInputName) == 0x000008, "Member 'InterchangeShaderPortsAPI_HasInput::InInputName' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_HasInput, ReturnValue) == 0x000010, "Member 'InterchangeShaderPortsAPI_HasInput::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderPortsAPI_HasInput;
 
 // Function InterchangeNodes.InterchangeShaderPortsAPI.HasParameter
 // 0x0018 (0x0018 - 0x0000)
@@ -3109,11 +2920,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderPortsAPI_HasParameter) == 0x000008, "Wrong alignment on InterchangeShaderPortsAPI_HasParameter");
-static_assert(sizeof(InterchangeShaderPortsAPI_HasParameter) == 0x000018, "Wrong size on InterchangeShaderPortsAPI_HasParameter");
-static_assert(offsetof(InterchangeShaderPortsAPI_HasParameter, InterchangeNode) == 0x000000, "Member 'InterchangeShaderPortsAPI_HasParameter::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_HasParameter, InInputName) == 0x000008, "Member 'InterchangeShaderPortsAPI_HasParameter::InInputName' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_HasParameter, ReturnValue) == 0x000010, "Member 'InterchangeShaderPortsAPI_HasParameter::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderPortsAPI_HasParameter;
 
 // Function InterchangeNodes.InterchangeShaderPortsAPI.IsAnInput
 // 0x0018 (0x0018 - 0x0000)
@@ -3124,10 +2931,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderPortsAPI_IsAnInput) == 0x000008, "Wrong alignment on InterchangeShaderPortsAPI_IsAnInput");
-static_assert(sizeof(InterchangeShaderPortsAPI_IsAnInput) == 0x000018, "Wrong size on InterchangeShaderPortsAPI_IsAnInput");
-static_assert(offsetof(InterchangeShaderPortsAPI_IsAnInput, AttributeKey) == 0x000000, "Member 'InterchangeShaderPortsAPI_IsAnInput::AttributeKey' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_IsAnInput, ReturnValue) == 0x000010, "Member 'InterchangeShaderPortsAPI_IsAnInput::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderPortsAPI_IsAnInput;
 
 // Function InterchangeNodes.InterchangeShaderPortsAPI.IsAParameter
 // 0x0018 (0x0018 - 0x0000)
@@ -3138,10 +2942,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderPortsAPI_IsAParameter) == 0x000008, "Wrong alignment on InterchangeShaderPortsAPI_IsAParameter");
-static_assert(sizeof(InterchangeShaderPortsAPI_IsAParameter) == 0x000018, "Wrong size on InterchangeShaderPortsAPI_IsAParameter");
-static_assert(offsetof(InterchangeShaderPortsAPI_IsAParameter, AttributeKey) == 0x000000, "Member 'InterchangeShaderPortsAPI_IsAParameter::AttributeKey' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_IsAParameter, ReturnValue) == 0x000010, "Member 'InterchangeShaderPortsAPI_IsAParameter::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderPortsAPI_IsAParameter;
 
 // Function InterchangeNodes.InterchangeShaderPortsAPI.MakeInputConnectionKey
 // 0x0020 (0x0020 - 0x0000)
@@ -3151,10 +2952,7 @@ public:
 	class FString                                 InputName;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeShaderPortsAPI_MakeInputConnectionKey) == 0x000008, "Wrong alignment on InterchangeShaderPortsAPI_MakeInputConnectionKey");
-static_assert(sizeof(InterchangeShaderPortsAPI_MakeInputConnectionKey) == 0x000020, "Wrong size on InterchangeShaderPortsAPI_MakeInputConnectionKey");
-static_assert(offsetof(InterchangeShaderPortsAPI_MakeInputConnectionKey, InputName) == 0x000000, "Member 'InterchangeShaderPortsAPI_MakeInputConnectionKey::InputName' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_MakeInputConnectionKey, ReturnValue) == 0x000010, "Member 'InterchangeShaderPortsAPI_MakeInputConnectionKey::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderPortsAPI_MakeInputConnectionKey;
 
 // Function InterchangeNodes.InterchangeShaderPortsAPI.MakeInputName
 // 0x0020 (0x0020 - 0x0000)
@@ -3164,10 +2962,7 @@ public:
 	class FString                                 InputKey;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeShaderPortsAPI_MakeInputName) == 0x000008, "Wrong alignment on InterchangeShaderPortsAPI_MakeInputName");
-static_assert(sizeof(InterchangeShaderPortsAPI_MakeInputName) == 0x000020, "Wrong size on InterchangeShaderPortsAPI_MakeInputName");
-static_assert(offsetof(InterchangeShaderPortsAPI_MakeInputName, InputKey) == 0x000000, "Member 'InterchangeShaderPortsAPI_MakeInputName::InputKey' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_MakeInputName, ReturnValue) == 0x000010, "Member 'InterchangeShaderPortsAPI_MakeInputName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderPortsAPI_MakeInputName;
 
 // Function InterchangeNodes.InterchangeShaderPortsAPI.MakeInputParameterKey
 // 0x0020 (0x0020 - 0x0000)
@@ -3177,10 +2972,7 @@ public:
 	class FString                                 InputName;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeShaderPortsAPI_MakeInputParameterKey) == 0x000008, "Wrong alignment on InterchangeShaderPortsAPI_MakeInputParameterKey");
-static_assert(sizeof(InterchangeShaderPortsAPI_MakeInputParameterKey) == 0x000020, "Wrong size on InterchangeShaderPortsAPI_MakeInputParameterKey");
-static_assert(offsetof(InterchangeShaderPortsAPI_MakeInputParameterKey, InputName) == 0x000000, "Member 'InterchangeShaderPortsAPI_MakeInputParameterKey::InputName' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_MakeInputParameterKey, ReturnValue) == 0x000010, "Member 'InterchangeShaderPortsAPI_MakeInputParameterKey::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderPortsAPI_MakeInputParameterKey;
 
 // Function InterchangeNodes.InterchangeShaderPortsAPI.MakeInputValueKey
 // 0x0020 (0x0020 - 0x0000)
@@ -3190,10 +2982,7 @@ public:
 	class FString                                 InputName;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeShaderPortsAPI_MakeInputValueKey) == 0x000008, "Wrong alignment on InterchangeShaderPortsAPI_MakeInputValueKey");
-static_assert(sizeof(InterchangeShaderPortsAPI_MakeInputValueKey) == 0x000020, "Wrong size on InterchangeShaderPortsAPI_MakeInputValueKey");
-static_assert(offsetof(InterchangeShaderPortsAPI_MakeInputValueKey, InputName) == 0x000000, "Member 'InterchangeShaderPortsAPI_MakeInputValueKey::InputName' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderPortsAPI_MakeInputValueKey, ReturnValue) == 0x000010, "Member 'InterchangeShaderPortsAPI_MakeInputValueKey::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderPortsAPI_MakeInputValueKey;
 
 // Function InterchangeNodes.InterchangeFunctionCallShaderNode.SetCustomMaterialFunction
 // 0x0018 (0x0018 - 0x0000)
@@ -3204,10 +2993,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeFunctionCallShaderNode_SetCustomMaterialFunction) == 0x000008, "Wrong alignment on InterchangeFunctionCallShaderNode_SetCustomMaterialFunction");
-static_assert(sizeof(InterchangeFunctionCallShaderNode_SetCustomMaterialFunction) == 0x000018, "Wrong size on InterchangeFunctionCallShaderNode_SetCustomMaterialFunction");
-static_assert(offsetof(InterchangeFunctionCallShaderNode_SetCustomMaterialFunction, AttributeValue) == 0x000000, "Member 'InterchangeFunctionCallShaderNode_SetCustomMaterialFunction::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeFunctionCallShaderNode_SetCustomMaterialFunction, ReturnValue) == 0x000010, "Member 'InterchangeFunctionCallShaderNode_SetCustomMaterialFunction::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeFunctionCallShaderNode_SetCustomMaterialFunction;
 
 // Function InterchangeNodes.InterchangeFunctionCallShaderNode.GetCustomMaterialFunction
 // 0x0018 (0x0018 - 0x0000)
@@ -3218,10 +3004,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeFunctionCallShaderNode_GetCustomMaterialFunction) == 0x000008, "Wrong alignment on InterchangeFunctionCallShaderNode_GetCustomMaterialFunction");
-static_assert(sizeof(InterchangeFunctionCallShaderNode_GetCustomMaterialFunction) == 0x000018, "Wrong size on InterchangeFunctionCallShaderNode_GetCustomMaterialFunction");
-static_assert(offsetof(InterchangeFunctionCallShaderNode_GetCustomMaterialFunction, AttributeValue) == 0x000000, "Member 'InterchangeFunctionCallShaderNode_GetCustomMaterialFunction::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeFunctionCallShaderNode_GetCustomMaterialFunction, ReturnValue) == 0x000010, "Member 'InterchangeFunctionCallShaderNode_GetCustomMaterialFunction::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeFunctionCallShaderNode_GetCustomMaterialFunction;
 
 // Function InterchangeNodes.InterchangeShaderGraphNode.SetCustomBlendMode
 // 0x0008 (0x0008 - 0x0000)
@@ -3232,10 +3015,18 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderGraphNode_SetCustomBlendMode) == 0x000004, "Wrong alignment on InterchangeShaderGraphNode_SetCustomBlendMode");
-static_assert(sizeof(InterchangeShaderGraphNode_SetCustomBlendMode) == 0x000008, "Wrong size on InterchangeShaderGraphNode_SetCustomBlendMode");
-static_assert(offsetof(InterchangeShaderGraphNode_SetCustomBlendMode, AttributeValue) == 0x000000, "Member 'InterchangeShaderGraphNode_SetCustomBlendMode::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderGraphNode_SetCustomBlendMode, ReturnValue) == 0x000004, "Member 'InterchangeShaderGraphNode_SetCustomBlendMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderGraphNode_SetCustomBlendMode;
+
+// Function InterchangeNodes.InterchangeShaderGraphNode.SetCustomDisplacementCenterMode
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeShaderGraphNode_SetCustomDisplacementCenterMode final
+{
+public:
+	float                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeShaderGraphNode_SetCustomDisplacementCenterMode;
 
 // Function InterchangeNodes.InterchangeShaderGraphNode.SetCustomIsAShaderFunction
 // 0x0002 (0x0002 - 0x0000)
@@ -3245,10 +3036,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeShaderGraphNode_SetCustomIsAShaderFunction) == 0x000001, "Wrong alignment on InterchangeShaderGraphNode_SetCustomIsAShaderFunction");
-static_assert(sizeof(InterchangeShaderGraphNode_SetCustomIsAShaderFunction) == 0x000002, "Wrong size on InterchangeShaderGraphNode_SetCustomIsAShaderFunction");
-static_assert(offsetof(InterchangeShaderGraphNode_SetCustomIsAShaderFunction, AttributeValue) == 0x000000, "Member 'InterchangeShaderGraphNode_SetCustomIsAShaderFunction::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderGraphNode_SetCustomIsAShaderFunction, ReturnValue) == 0x000001, "Member 'InterchangeShaderGraphNode_SetCustomIsAShaderFunction::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderGraphNode_SetCustomIsAShaderFunction;
 
 // Function InterchangeNodes.InterchangeShaderGraphNode.SetCustomOpacityMaskClipValue
 // 0x0008 (0x0008 - 0x0000)
@@ -3260,11 +3048,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderGraphNode_SetCustomOpacityMaskClipValue) == 0x000004, "Wrong alignment on InterchangeShaderGraphNode_SetCustomOpacityMaskClipValue");
-static_assert(sizeof(InterchangeShaderGraphNode_SetCustomOpacityMaskClipValue) == 0x000008, "Wrong size on InterchangeShaderGraphNode_SetCustomOpacityMaskClipValue");
-static_assert(offsetof(InterchangeShaderGraphNode_SetCustomOpacityMaskClipValue, AttributeValue) == 0x000000, "Member 'InterchangeShaderGraphNode_SetCustomOpacityMaskClipValue::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderGraphNode_SetCustomOpacityMaskClipValue, bAddApplyDelegate) == 0x000004, "Member 'InterchangeShaderGraphNode_SetCustomOpacityMaskClipValue::bAddApplyDelegate' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderGraphNode_SetCustomOpacityMaskClipValue, ReturnValue) == 0x000005, "Member 'InterchangeShaderGraphNode_SetCustomOpacityMaskClipValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderGraphNode_SetCustomOpacityMaskClipValue;
 
 // Function InterchangeNodes.InterchangeShaderGraphNode.SetCustomScreenSpaceReflections
 // 0x0002 (0x0002 - 0x0000)
@@ -3274,10 +3058,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeShaderGraphNode_SetCustomScreenSpaceReflections) == 0x000001, "Wrong alignment on InterchangeShaderGraphNode_SetCustomScreenSpaceReflections");
-static_assert(sizeof(InterchangeShaderGraphNode_SetCustomScreenSpaceReflections) == 0x000002, "Wrong size on InterchangeShaderGraphNode_SetCustomScreenSpaceReflections");
-static_assert(offsetof(InterchangeShaderGraphNode_SetCustomScreenSpaceReflections, AttributeValue) == 0x000000, "Member 'InterchangeShaderGraphNode_SetCustomScreenSpaceReflections::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderGraphNode_SetCustomScreenSpaceReflections, ReturnValue) == 0x000001, "Member 'InterchangeShaderGraphNode_SetCustomScreenSpaceReflections::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderGraphNode_SetCustomScreenSpaceReflections;
 
 // Function InterchangeNodes.InterchangeShaderGraphNode.SetCustomTwoSided
 // 0x0002 (0x0002 - 0x0000)
@@ -3287,10 +3068,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeShaderGraphNode_SetCustomTwoSided) == 0x000001, "Wrong alignment on InterchangeShaderGraphNode_SetCustomTwoSided");
-static_assert(sizeof(InterchangeShaderGraphNode_SetCustomTwoSided) == 0x000002, "Wrong size on InterchangeShaderGraphNode_SetCustomTwoSided");
-static_assert(offsetof(InterchangeShaderGraphNode_SetCustomTwoSided, AttributeValue) == 0x000000, "Member 'InterchangeShaderGraphNode_SetCustomTwoSided::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderGraphNode_SetCustomTwoSided, ReturnValue) == 0x000001, "Member 'InterchangeShaderGraphNode_SetCustomTwoSided::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderGraphNode_SetCustomTwoSided;
 
 // Function InterchangeNodes.InterchangeShaderGraphNode.SetCustomTwoSidedTransmission
 // 0x0002 (0x0002 - 0x0000)
@@ -3300,10 +3078,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeShaderGraphNode_SetCustomTwoSidedTransmission) == 0x000001, "Wrong alignment on InterchangeShaderGraphNode_SetCustomTwoSidedTransmission");
-static_assert(sizeof(InterchangeShaderGraphNode_SetCustomTwoSidedTransmission) == 0x000002, "Wrong size on InterchangeShaderGraphNode_SetCustomTwoSidedTransmission");
-static_assert(offsetof(InterchangeShaderGraphNode_SetCustomTwoSidedTransmission, AttributeValue) == 0x000000, "Member 'InterchangeShaderGraphNode_SetCustomTwoSidedTransmission::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderGraphNode_SetCustomTwoSidedTransmission, ReturnValue) == 0x000001, "Member 'InterchangeShaderGraphNode_SetCustomTwoSidedTransmission::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderGraphNode_SetCustomTwoSidedTransmission;
 
 // Function InterchangeNodes.InterchangeShaderGraphNode.GetCustomBlendMode
 // 0x0008 (0x0008 - 0x0000)
@@ -3314,10 +3089,18 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderGraphNode_GetCustomBlendMode) == 0x000004, "Wrong alignment on InterchangeShaderGraphNode_GetCustomBlendMode");
-static_assert(sizeof(InterchangeShaderGraphNode_GetCustomBlendMode) == 0x000008, "Wrong size on InterchangeShaderGraphNode_GetCustomBlendMode");
-static_assert(offsetof(InterchangeShaderGraphNode_GetCustomBlendMode, AttributeValue) == 0x000000, "Member 'InterchangeShaderGraphNode_GetCustomBlendMode::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderGraphNode_GetCustomBlendMode, ReturnValue) == 0x000004, "Member 'InterchangeShaderGraphNode_GetCustomBlendMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderGraphNode_GetCustomBlendMode;
+
+// Function InterchangeNodes.InterchangeShaderGraphNode.GetCustomDisplacementCenterMode
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeShaderGraphNode_GetCustomDisplacementCenterMode final
+{
+public:
+	float                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeShaderGraphNode_GetCustomDisplacementCenterMode;
 
 // Function InterchangeNodes.InterchangeShaderGraphNode.GetCustomIsAShaderFunction
 // 0x0002 (0x0002 - 0x0000)
@@ -3327,10 +3110,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeShaderGraphNode_GetCustomIsAShaderFunction) == 0x000001, "Wrong alignment on InterchangeShaderGraphNode_GetCustomIsAShaderFunction");
-static_assert(sizeof(InterchangeShaderGraphNode_GetCustomIsAShaderFunction) == 0x000002, "Wrong size on InterchangeShaderGraphNode_GetCustomIsAShaderFunction");
-static_assert(offsetof(InterchangeShaderGraphNode_GetCustomIsAShaderFunction, AttributeValue) == 0x000000, "Member 'InterchangeShaderGraphNode_GetCustomIsAShaderFunction::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderGraphNode_GetCustomIsAShaderFunction, ReturnValue) == 0x000001, "Member 'InterchangeShaderGraphNode_GetCustomIsAShaderFunction::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderGraphNode_GetCustomIsAShaderFunction;
 
 // Function InterchangeNodes.InterchangeShaderGraphNode.GetCustomOpacityMaskClipValue
 // 0x0008 (0x0008 - 0x0000)
@@ -3341,10 +3121,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InterchangeShaderGraphNode_GetCustomOpacityMaskClipValue) == 0x000004, "Wrong alignment on InterchangeShaderGraphNode_GetCustomOpacityMaskClipValue");
-static_assert(sizeof(InterchangeShaderGraphNode_GetCustomOpacityMaskClipValue) == 0x000008, "Wrong size on InterchangeShaderGraphNode_GetCustomOpacityMaskClipValue");
-static_assert(offsetof(InterchangeShaderGraphNode_GetCustomOpacityMaskClipValue, AttributeValue) == 0x000000, "Member 'InterchangeShaderGraphNode_GetCustomOpacityMaskClipValue::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderGraphNode_GetCustomOpacityMaskClipValue, ReturnValue) == 0x000004, "Member 'InterchangeShaderGraphNode_GetCustomOpacityMaskClipValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderGraphNode_GetCustomOpacityMaskClipValue;
 
 // Function InterchangeNodes.InterchangeShaderGraphNode.GetCustomScreenSpaceReflections
 // 0x0002 (0x0002 - 0x0000)
@@ -3354,10 +3131,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeShaderGraphNode_GetCustomScreenSpaceReflections) == 0x000001, "Wrong alignment on InterchangeShaderGraphNode_GetCustomScreenSpaceReflections");
-static_assert(sizeof(InterchangeShaderGraphNode_GetCustomScreenSpaceReflections) == 0x000002, "Wrong size on InterchangeShaderGraphNode_GetCustomScreenSpaceReflections");
-static_assert(offsetof(InterchangeShaderGraphNode_GetCustomScreenSpaceReflections, AttributeValue) == 0x000000, "Member 'InterchangeShaderGraphNode_GetCustomScreenSpaceReflections::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderGraphNode_GetCustomScreenSpaceReflections, ReturnValue) == 0x000001, "Member 'InterchangeShaderGraphNode_GetCustomScreenSpaceReflections::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderGraphNode_GetCustomScreenSpaceReflections;
 
 // Function InterchangeNodes.InterchangeShaderGraphNode.GetCustomTwoSided
 // 0x0002 (0x0002 - 0x0000)
@@ -3367,10 +3141,7 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeShaderGraphNode_GetCustomTwoSided) == 0x000001, "Wrong alignment on InterchangeShaderGraphNode_GetCustomTwoSided");
-static_assert(sizeof(InterchangeShaderGraphNode_GetCustomTwoSided) == 0x000002, "Wrong size on InterchangeShaderGraphNode_GetCustomTwoSided");
-static_assert(offsetof(InterchangeShaderGraphNode_GetCustomTwoSided, AttributeValue) == 0x000000, "Member 'InterchangeShaderGraphNode_GetCustomTwoSided::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderGraphNode_GetCustomTwoSided, ReturnValue) == 0x000001, "Member 'InterchangeShaderGraphNode_GetCustomTwoSided::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderGraphNode_GetCustomTwoSided;
 
 // Function InterchangeNodes.InterchangeShaderGraphNode.GetCustomTwoSidedTransmission
 // 0x0002 (0x0002 - 0x0000)
@@ -3380,10 +3151,49 @@ public:
 	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeShaderGraphNode_GetCustomTwoSidedTransmission) == 0x000001, "Wrong alignment on InterchangeShaderGraphNode_GetCustomTwoSidedTransmission");
-static_assert(sizeof(InterchangeShaderGraphNode_GetCustomTwoSidedTransmission) == 0x000002, "Wrong size on InterchangeShaderGraphNode_GetCustomTwoSidedTransmission");
-static_assert(offsetof(InterchangeShaderGraphNode_GetCustomTwoSidedTransmission, AttributeValue) == 0x000000, "Member 'InterchangeShaderGraphNode_GetCustomTwoSidedTransmission::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeShaderGraphNode_GetCustomTwoSidedTransmission, ReturnValue) == 0x000001, "Member 'InterchangeShaderGraphNode_GetCustomTwoSidedTransmission::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeShaderGraphNode_GetCustomTwoSidedTransmission;
+
+// Function InterchangeNodes.InterchangeSpecularProfileNode.SetCustomFormat
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeSpecularProfileNode_SetCustomFormat final
+{
+public:
+	uint8                                         Format;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeSpecularProfileNode_SetCustomFormat;
+
+// Function InterchangeNodes.InterchangeSpecularProfileNode.SetCustomTexture
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeSpecularProfileNode_SetCustomTexture final
+{
+public:
+	class FString                                 TextureUid;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeSpecularProfileNode_SetCustomTexture;
+
+// Function InterchangeNodes.InterchangeSpecularProfileNode.GetCustomFormat
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeSpecularProfileNode_GetCustomFormat final
+{
+public:
+	uint8                                         Format;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeSpecularProfileNode_GetCustomFormat;
+
+// Function InterchangeNodes.InterchangeSpecularProfileNode.GetCustomTexture
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeSpecularProfileNode_GetCustomTexture final
+{
+public:
+	class FString                                 TextureUid;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeSpecularProfileNode_GetCustomTexture;
 
 // Function InterchangeNodes.InterchangeTexture2DNode.SetCustomWrapU
 // 0x0002 (0x0002 - 0x0000)
@@ -3393,10 +3203,7 @@ public:
 	EInterchangeTextureWrapMode                   AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeTexture2DNode_SetCustomWrapU) == 0x000001, "Wrong alignment on InterchangeTexture2DNode_SetCustomWrapU");
-static_assert(sizeof(InterchangeTexture2DNode_SetCustomWrapU) == 0x000002, "Wrong size on InterchangeTexture2DNode_SetCustomWrapU");
-static_assert(offsetof(InterchangeTexture2DNode_SetCustomWrapU, AttributeValue) == 0x000000, "Member 'InterchangeTexture2DNode_SetCustomWrapU::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeTexture2DNode_SetCustomWrapU, ReturnValue) == 0x000001, "Member 'InterchangeTexture2DNode_SetCustomWrapU::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTexture2DNode_SetCustomWrapU;
 
 // Function InterchangeNodes.InterchangeTexture2DNode.SetCustomWrapV
 // 0x0002 (0x0002 - 0x0000)
@@ -3406,10 +3213,7 @@ public:
 	EInterchangeTextureWrapMode                   AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeTexture2DNode_SetCustomWrapV) == 0x000001, "Wrong alignment on InterchangeTexture2DNode_SetCustomWrapV");
-static_assert(sizeof(InterchangeTexture2DNode_SetCustomWrapV) == 0x000002, "Wrong size on InterchangeTexture2DNode_SetCustomWrapV");
-static_assert(offsetof(InterchangeTexture2DNode_SetCustomWrapV, AttributeValue) == 0x000000, "Member 'InterchangeTexture2DNode_SetCustomWrapV::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeTexture2DNode_SetCustomWrapV, ReturnValue) == 0x000001, "Member 'InterchangeTexture2DNode_SetCustomWrapV::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTexture2DNode_SetCustomWrapV;
 
 // Function InterchangeNodes.InterchangeTexture2DNode.GetCustomWrapU
 // 0x0002 (0x0002 - 0x0000)
@@ -3419,10 +3223,7 @@ public:
 	EInterchangeTextureWrapMode                   AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeTexture2DNode_GetCustomWrapU) == 0x000001, "Wrong alignment on InterchangeTexture2DNode_GetCustomWrapU");
-static_assert(sizeof(InterchangeTexture2DNode_GetCustomWrapU) == 0x000002, "Wrong size on InterchangeTexture2DNode_GetCustomWrapU");
-static_assert(offsetof(InterchangeTexture2DNode_GetCustomWrapU, AttributeValue) == 0x000000, "Member 'InterchangeTexture2DNode_GetCustomWrapU::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeTexture2DNode_GetCustomWrapU, ReturnValue) == 0x000001, "Member 'InterchangeTexture2DNode_GetCustomWrapU::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTexture2DNode_GetCustomWrapU;
 
 // Function InterchangeNodes.InterchangeTexture2DNode.GetCustomWrapV
 // 0x0002 (0x0002 - 0x0000)
@@ -3432,10 +3233,7 @@ public:
 	EInterchangeTextureWrapMode                   AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeTexture2DNode_GetCustomWrapV) == 0x000001, "Wrong alignment on InterchangeTexture2DNode_GetCustomWrapV");
-static_assert(sizeof(InterchangeTexture2DNode_GetCustomWrapV) == 0x000002, "Wrong size on InterchangeTexture2DNode_GetCustomWrapV");
-static_assert(offsetof(InterchangeTexture2DNode_GetCustomWrapV, AttributeValue) == 0x000000, "Member 'InterchangeTexture2DNode_GetCustomWrapV::AttributeValue' has a wrong offset!");
-static_assert(offsetof(InterchangeTexture2DNode_GetCustomWrapV, ReturnValue) == 0x000001, "Member 'InterchangeTexture2DNode_GetCustomWrapV::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTexture2DNode_GetCustomWrapV;
 
 // Function InterchangeNodes.InterchangeTexture2DNode.GetSourceBlocks
 // 0x0050 (0x0050 - 0x0000)
@@ -3444,9 +3242,7 @@ struct InterchangeTexture2DNode_GetSourceBlocks final
 public:
 	TMap<int32, class FString>                    ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InterchangeTexture2DNode_GetSourceBlocks) == 0x000008, "Wrong alignment on InterchangeTexture2DNode_GetSourceBlocks");
-static_assert(sizeof(InterchangeTexture2DNode_GetSourceBlocks) == 0x000050, "Wrong size on InterchangeTexture2DNode_GetSourceBlocks");
-static_assert(offsetof(InterchangeTexture2DNode_GetSourceBlocks, ReturnValue) == 0x000000, "Member 'InterchangeTexture2DNode_GetSourceBlocks::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InterchangeTexture2DNode_GetSourceBlocks;
 
 }
 

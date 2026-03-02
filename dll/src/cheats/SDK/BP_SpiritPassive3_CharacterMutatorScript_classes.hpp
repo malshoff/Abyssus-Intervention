@@ -39,17 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SpiritPassive3_CharacterMutatorScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_SpiritPassive3_CharacterMutatorScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SpiritPassive3_CharacterMutatorScript_C")
 	}
 	static class UBP_SpiritPassive3_CharacterMutatorScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SpiritPassive3_CharacterMutatorScript_C>();
 	}
 };
-static_assert(alignof(UBP_SpiritPassive3_CharacterMutatorScript_C) == 0x000008, "Wrong alignment on UBP_SpiritPassive3_CharacterMutatorScript_C");
-static_assert(sizeof(UBP_SpiritPassive3_CharacterMutatorScript_C) == 0x000118, "Wrong size on UBP_SpiritPassive3_CharacterMutatorScript_C");
-static_assert(offsetof(UBP_SpiritPassive3_CharacterMutatorScript_C, UberGraphFrame) == 0x000108, "Member 'UBP_SpiritPassive3_CharacterMutatorScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_SpiritPassive3_CharacterMutatorScript_C, ExplosionRadius) == 0x000110, "Member 'UBP_SpiritPassive3_CharacterMutatorScript_C::ExplosionRadius' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SpiritPassive3_CharacterMutatorScript_C;
 
 }
 

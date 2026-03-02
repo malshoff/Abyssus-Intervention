@@ -95,7 +95,7 @@ void IMovieSceneBindingEventReceiverInterface::OnObjectUnboundBySequencer(class 
 
 
 // Function MovieScene.MovieSceneCondition.BP_EvaluateCondition
-// (Event, Protected, HasOutParams, BlueprintEvent, Const)
+// (RequiredAPI, Event, Protected, HasOutParams, BlueprintEvent, Const)
 // Parameters:
 // const struct FMovieSceneConditionContext&ConditionContext                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -118,7 +118,7 @@ bool UMovieSceneCondition::BP_EvaluateCondition(const struct FMovieSceneConditio
 
 
 // Function MovieScene.MovieSceneCondition.BP_GetCheckFrequency
-// (Native, Event, Protected, BlueprintEvent, Const)
+// (RequiredAPI, Native, Event, Protected, BlueprintEvent, Const)
 // Parameters:
 // EMovieSceneConditionCheckFrequency      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -143,7 +143,7 @@ EMovieSceneConditionCheckFrequency UMovieSceneCondition::BP_GetCheckFrequency() 
 
 
 // Function MovieScene.MovieSceneCondition.BP_GetScope
-// (Native, Event, Protected, BlueprintEvent, Const)
+// (RequiredAPI, Native, Event, Protected, BlueprintEvent, Const)
 // Parameters:
 // EMovieSceneConditionScope               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

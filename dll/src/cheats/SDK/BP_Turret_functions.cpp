@@ -218,6 +218,29 @@ void ABP_Turret_C::FindAndAttackTarget()
 }
 
 
+// Function BP_Turret.BP_Turret_C.FindTargettingLocation
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class AActor*                           Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+struct FVector ABP_Turret_C::FindTargettingLocation(class AActor* Target)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Turret_C", "FindTargettingLocation");
+
+	Params::BP_Turret_C_FindTargettingLocation Parms{};
+
+	Parms.Target = Target;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_Turret.BP_Turret_C.FireProjectileSpawnFX
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -369,6 +392,20 @@ void ABP_Turret_C::OnPlayerExitProximity(class AActor* Actor)
 }
 
 
+// Function BP_Turret.BP_Turret_C.OnRep_RateOfFire
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Turret_C::OnRep_RateOfFire()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Turret_C", "OnRep_RateOfFire");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_Turret.BP_Turret_C.PlayCutoutTimeline
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -484,9 +521,9 @@ void ABP_Turret_C::ToggleUnstableCoresVFXMulticast(bool Visible)
 // Function BP_Turret.BP_Turret_C.UpdateLifeTime
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  LifetimeMultiplier                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  LifeTimeMultiplier                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Turret_C::UpdateLifeTime(double LifetimeMultiplier)
+void ABP_Turret_C::UpdateLifeTime(double LifeTimeMultiplier)
 {
 	static class UFunction* Func = nullptr;
 
@@ -495,7 +532,7 @@ void ABP_Turret_C::UpdateLifeTime(double LifetimeMultiplier)
 
 	Params::BP_Turret_C_UpdateLifeTime Parms{};
 
-	Parms.LifetimeMultiplier = LifetimeMultiplier;
+	Parms.LifeTimeMultiplier = LifeTimeMultiplier;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

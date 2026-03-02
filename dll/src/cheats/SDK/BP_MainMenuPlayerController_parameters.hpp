@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "RGame_structs.hpp"
 #include "EnhancedInput_structs.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK::Params
@@ -49,27 +49,7 @@ public:
 	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_AddMappingContext_self_CastInput; // 0x0148(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_AddMappingContext_self_CastInput_1; // 0x0158(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController) == 0x000008, "Wrong alignment on BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController");
-static_assert(sizeof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController) == 0x000168, "Wrong size on BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, EntryPoint) == 0x000000, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, CallFunc_GetKeyboardLayoutInfo_ReturnValue) == 0x000008, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::CallFunc_GetKeyboardLayoutInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, Temp_struct_Variable) == 0x0000D8, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, CallFunc_LoadSoftObjectSynchronous_ReturnValue) == 0x0000E0, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::CallFunc_LoadSoftObjectSynchronous_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, CallFunc_LoadSoftObjectSynchronous_ReturnValue_1) == 0x0000E8, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::CallFunc_LoadSoftObjectSynchronous_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, K2Node_DynamicCast_AsInput_Mapping_Context) == 0x0000F0, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::K2Node_DynamicCast_AsInput_Mapping_Context' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, K2Node_DynamicCast_bSuccess) == 0x0000F8, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, K2Node_DynamicCast_AsInput_Mapping_Context_1) == 0x000100, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::K2Node_DynamicCast_AsInput_Mapping_Context_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, K2Node_DynamicCast_bSuccess_1) == 0x000108, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, CallFunc_GetHUDWidget_ReturnValue) == 0x000110, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::CallFunc_GetHUDWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, CallFunc_IsValid_ReturnValue) == 0x000118, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, CallFunc_GetHUD_ReturnValue) == 0x000120, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::CallFunc_GetHUD_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, K2Node_DynamicCast_AsRUIManager) == 0x000128, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::K2Node_DynamicCast_AsRUIManager' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, K2Node_DynamicCast_bSuccess_2) == 0x000130, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, Temp_struct_Variable_1) == 0x000131, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue) == 0x000138, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, CallFunc_IsValid_ReturnValue_1) == 0x000140, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, CallFunc_AddMappingContext_self_CastInput) == 0x000148, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::CallFunc_AddMappingContext_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController, CallFunc_AddMappingContext_self_CastInput_1) == 0x000158, "Member 'BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController::CallFunc_AddMappingContext_self_CastInput_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainMenuPlayerController_C_ExecuteUbergraph_BP_MainMenuPlayerController;
 
 }
 

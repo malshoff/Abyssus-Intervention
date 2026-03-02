@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BP_Lifeline_CharacterMutator.BP_Lifeline_CharacterMutator_C.ExecuteUbergraph_BP_Lifeline_CharacterMutator
-// 0x02D8 (0x02D8 - 0x0000)
+// 0x0408 (0x0408 - 0x0000)
 struct BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator final
 {
 public:
@@ -32,117 +32,63 @@ public:
 	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class URHealthComponent*                      K2Node_Event_Component;                            // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_Event_DamageData;                           // 0x0048(0x00C0)()
-	float                                         CallFunc_GetMutableFloatCurrentValue_ReturnValue;  // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0110(0x0030)(ContainsInstancedReference)
-	TDelegate<void(class URHealthComponent* Component, float currentHealth, float healthDelta, const struct FHealCombatEvent& HealEvent)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0140(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class URHealthComponent* Component, float currentHealth, float healthDelta, const struct FHealCombatEvent& HealEvent)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0150(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_169[0x3];                                      // 0x0169(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class URHealthComponent* Component, float MaximumHealth)> K2Node_CreateDelegate_OutputDelegate_3; // 0x016C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x017C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17D[0x3];                                      // 0x017D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class URHealthComponent*                      K2Node_CustomEvent_Component;                      // 0x0180(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_CustomEvent_currentHealth;                  // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_CustomEvent_healthDelta;                    // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHealCombatEvent                       K2Node_CustomEvent_HealEvent;                      // 0x0190(0x0038)(ContainsInstancedReference)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x01C8(0x0030)(ContainsInstancedReference)
-	float                                         CallFunc_GetMutableFloatCurrentValue_ReturnValue_1; // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1FC[0x4];                                      // 0x01FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_1;                 // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_1;     // 0x0211(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_212[0x2];                                      // 0x0212(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetMaxHealth_ReturnValue;                 // 0x0214(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue_2;             // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue_3;             // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue_1; // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_Event_DamageData;                           // 0x0048(0x01F0)()
+	float                                         CallFunc_GetMutableFloatCurrentValue_ReturnValue;  // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_23C[0x4];                                      // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue_2; // 0x0248(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue_3; // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25C[0x4];                                      // 0x025C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_5;      // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_6;      // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_2;     // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_271[0x7];                                      // 0x0271(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast;    // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_1;  // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_B_ImplicitCast;    // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3;   // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4;   // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2BC[0x4];                                      // 0x02BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5;   // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast_1; // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6;   // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0240(0x0030)(ContainsInstancedReference)
+	TDelegate<void(class URHealthComponent* Component, float currentHealth, float healthDelta, const struct FHealCombatEvent& HealEvent)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0270(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class URHealthComponent* Component, float currentHealth, float healthDelta, const struct FHealCombatEvent& HealEvent)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0280(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_299[0x3];                                      // 0x0299(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class URHealthComponent* Component, float MaximumHealth)> K2Node_CreateDelegate_OutputDelegate_3; // 0x029C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x02AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2AD[0x3];                                      // 0x02AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class URHealthComponent*                      K2Node_CustomEvent_Component;                      // 0x02B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_CustomEvent_currentHealth;                  // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_CustomEvent_healthDelta;                    // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHealCombatEvent                       K2Node_CustomEvent_HealEvent;                      // 0x02C0(0x0038)(ContainsInstancedReference)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x02F8(0x0030)(ContainsInstancedReference)
+	float                                         CallFunc_GetMutableFloatCurrentValue_ReturnValue_1; // 0x0328(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32C[0x4];                                      // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0330(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_1;                 // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_1;     // 0x0341(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_342[0x2];                                      // 0x0342(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetMaxHealth_ReturnValue;                 // 0x0344(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x0348(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetScriptFName_ReturnValue_2;             // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetScriptFName_ReturnValue_3;             // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue_1; // 0x0368(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_36C[0x4];                                      // 0x036C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue_2; // 0x0378(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_37C[0x4];                                      // 0x037C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x0380(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByVariableName_ReturnValue_3; // 0x0388(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_38C[0x4];                                      // 0x038C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_5;      // 0x0390(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_6;      // 0x0398(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_2;     // 0x03A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A1[0x7];                                      // 0x03A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast;    // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_1;  // 0x03C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x03C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_LessEqual_DoubleDouble_B_ImplicitCast;    // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3;   // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4;   // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x03E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3EC[0x4];                                      // 0x03EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5;   // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast_1; // 0x03F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6;   // 0x0400(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator) == 0x000008, "Wrong alignment on BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator");
-static_assert(sizeof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator) == 0x0002D8, "Wrong size on BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x000004, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_CustomEvent_Component_1) == 0x000008, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_CustomEvent_Component_1' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_CustomEvent_MaximumHealth) == 0x000010, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_CustomEvent_MaximumHealth' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000020, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000028, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000038, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_Event_Component) == 0x000040, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_Event_Component' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_Event_DamageData) == 0x000048, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_Event_DamageData' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_GetMutableFloatCurrentValue_ReturnValue) == 0x000108, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_GetMutableFloatCurrentValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000110, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x000140, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_2) == 0x000150, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000160, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000168, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_3) == 0x00016C, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_IsServer_ReturnValue) == 0x00017C, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_IsServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_CustomEvent_Component) == 0x000180, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_CustomEvent_Component' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_CustomEvent_currentHealth) == 0x000188, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_CustomEvent_currentHealth' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_CustomEvent_healthDelta) == 0x00018C, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_CustomEvent_healthDelta' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_CustomEvent_HealEvent) == 0x000190, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_CustomEvent_HealEvent' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x0001C8, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_GetMutableFloatCurrentValue_ReturnValue_1) == 0x0001F8, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_GetMutableFloatCurrentValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000200, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x000208, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000210, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_LessEqual_DoubleDouble_ReturnValue_1) == 0x000211, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_LessEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_GetMaxHealth_ReturnValue) == 0x000214, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_GetMaxHealth_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_GetScriptFName_ReturnValue) == 0x000218, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_GetScriptFName_ReturnValue_1) == 0x000220, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_GetScriptFName_ReturnValue_2) == 0x000228, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_GetScriptFName_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_GetScriptFName_ReturnValue_3) == 0x000230, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_GetScriptFName_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue_1) == 0x000238, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000240, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue_2) == 0x000248, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue_4) == 0x000250, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue_3) == 0x000258, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue_5) == 0x000260, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue_6) == 0x000268, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_LessEqual_DoubleDouble_ReturnValue_2) == 0x000270, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_LessEqual_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000278, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x000280, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast) == 0x000288, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_1) == 0x000290, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x000298, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_LessEqual_DoubleDouble_B_ImplicitCast) == 0x0002A0, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_LessEqual_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3) == 0x0002A8, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4) == 0x0002B0, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x0002B8, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5) == 0x0002C0, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast_1) == 0x0002C8, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6) == 0x0002D0, "Member 'BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_6' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Lifeline_CharacterMutator_C_ExecuteUbergraph_BP_Lifeline_CharacterMutator;
 
 // Function BP_Lifeline_CharacterMutator.BP_Lifeline_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -154,24 +100,17 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_Lifeline_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_Lifeline_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_Lifeline_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_Lifeline_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_Lifeline_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_Lifeline_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_Lifeline_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Lifeline_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_Lifeline_CharacterMutator.BP_Lifeline_CharacterMutator_C.K2_OnDamageTaken
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_Lifeline_CharacterMutator_C_K2_OnDamageTaken final
 {
 public:
 	class URHealthComponent*                      Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageData;                                        // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageData;                                        // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_Lifeline_CharacterMutator_C_K2_OnDamageTaken) == 0x000008, "Wrong alignment on BP_Lifeline_CharacterMutator_C_K2_OnDamageTaken");
-static_assert(sizeof(BP_Lifeline_CharacterMutator_C_K2_OnDamageTaken) == 0x0000C8, "Wrong size on BP_Lifeline_CharacterMutator_C_K2_OnDamageTaken");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_K2_OnDamageTaken, Component) == 0x000000, "Member 'BP_Lifeline_CharacterMutator_C_K2_OnDamageTaken::Component' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_K2_OnDamageTaken, DamageData) == 0x000008, "Member 'BP_Lifeline_CharacterMutator_C_K2_OnDamageTaken::DamageData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Lifeline_CharacterMutator_C_K2_OnDamageTaken;
 
 // Function BP_Lifeline_CharacterMutator.BP_Lifeline_CharacterMutator_C.OnCurrentHealthChanged
 // 0x0048 (0x0048 - 0x0000)
@@ -183,12 +122,7 @@ public:
 	float                                         healthDelta;                                       // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FHealCombatEvent                       HealEvent;                                         // 0x0010(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 };
-static_assert(alignof(BP_Lifeline_CharacterMutator_C_OnCurrentHealthChanged) == 0x000008, "Wrong alignment on BP_Lifeline_CharacterMutator_C_OnCurrentHealthChanged");
-static_assert(sizeof(BP_Lifeline_CharacterMutator_C_OnCurrentHealthChanged) == 0x000048, "Wrong size on BP_Lifeline_CharacterMutator_C_OnCurrentHealthChanged");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_OnCurrentHealthChanged, Component) == 0x000000, "Member 'BP_Lifeline_CharacterMutator_C_OnCurrentHealthChanged::Component' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_OnCurrentHealthChanged, currentHealth) == 0x000008, "Member 'BP_Lifeline_CharacterMutator_C_OnCurrentHealthChanged::currentHealth' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_OnCurrentHealthChanged, healthDelta) == 0x00000C, "Member 'BP_Lifeline_CharacterMutator_C_OnCurrentHealthChanged::healthDelta' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_OnCurrentHealthChanged, HealEvent) == 0x000010, "Member 'BP_Lifeline_CharacterMutator_C_OnCurrentHealthChanged::HealEvent' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Lifeline_CharacterMutator_C_OnCurrentHealthChanged;
 
 // Function BP_Lifeline_CharacterMutator.BP_Lifeline_CharacterMutator_C.OnMaximumHealthChanged_Event
 // 0x0010 (0x0010 - 0x0000)
@@ -198,10 +132,7 @@ public:
 	class URHealthComponent*                      Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	float                                         MaximumHealth;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Lifeline_CharacterMutator_C_OnMaximumHealthChanged_Event) == 0x000008, "Wrong alignment on BP_Lifeline_CharacterMutator_C_OnMaximumHealthChanged_Event");
-static_assert(sizeof(BP_Lifeline_CharacterMutator_C_OnMaximumHealthChanged_Event) == 0x000010, "Wrong size on BP_Lifeline_CharacterMutator_C_OnMaximumHealthChanged_Event");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_OnMaximumHealthChanged_Event, Component) == 0x000000, "Member 'BP_Lifeline_CharacterMutator_C_OnMaximumHealthChanged_Event::Component' has a wrong offset!");
-static_assert(offsetof(BP_Lifeline_CharacterMutator_C_OnMaximumHealthChanged_Event, MaximumHealth) == 0x000008, "Member 'BP_Lifeline_CharacterMutator_C_OnMaximumHealthChanged_Event::MaximumHealth' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Lifeline_CharacterMutator_C_OnMaximumHealthChanged_Event;
 
 }
 

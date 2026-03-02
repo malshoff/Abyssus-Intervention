@@ -17,25 +17,27 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_PlayerFrame_Default.Widget_PlayerFrame_Default_C
-// 0x0008 (0x02F8 - 0x02F0)
+// 0x0008 (0x0368 - 0x0360)
 class UWidget_PlayerFrame_Default_C final : public UWidget_PlayerFrame_Base_C
 {
 public:
-	class UImage*                                 Image_87;                                          // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_87;                                          // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_PlayerFrame_Default_C">();
+		BP_STATIC_CLASS_IMPL("Widget_PlayerFrame_Default_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_PlayerFrame_Default_C")
 	}
 	static class UWidget_PlayerFrame_Default_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_PlayerFrame_Default_C>();
 	}
 };
-static_assert(alignof(UWidget_PlayerFrame_Default_C) == 0x000008, "Wrong alignment on UWidget_PlayerFrame_Default_C");
-static_assert(sizeof(UWidget_PlayerFrame_Default_C) == 0x0002F8, "Wrong size on UWidget_PlayerFrame_Default_C");
-static_assert(offsetof(UWidget_PlayerFrame_Default_C, Image_87) == 0x0002F0, "Member 'UWidget_PlayerFrame_Default_C::Image_87' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_PlayerFrame_Default_C;
 
 }
 

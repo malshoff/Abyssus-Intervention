@@ -29,26 +29,23 @@ public:
 	struct FVector                                Spawn_Transform_Scale;                             // 0x0050(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void CopyMeshes(class ABP_SkeletalMeshRagdoll_FishDiety_C* Ragdoll, class ABP_FishDiety_Body_C* Weapon) const;
 	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPNotify_SpawnFishDietyRagdoll_C">();
+		BP_STATIC_CLASS_IMPL("BPNotify_SpawnFishDietyRagdoll_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPNotify_SpawnFishDietyRagdoll_C")
 	}
 	static class UBPNotify_SpawnFishDietyRagdoll_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPNotify_SpawnFishDietyRagdoll_C>();
 	}
 };
-static_assert(alignof(UBPNotify_SpawnFishDietyRagdoll_C) == 0x000008, "Wrong alignment on UBPNotify_SpawnFishDietyRagdoll_C");
-static_assert(sizeof(UBPNotify_SpawnFishDietyRagdoll_C) == 0x000068, "Wrong size on UBPNotify_SpawnFishDietyRagdoll_C");
-static_assert(offsetof(UBPNotify_SpawnFishDietyRagdoll_C, Socket_Name) == 0x000038, "Member 'UBPNotify_SpawnFishDietyRagdoll_C::Socket_Name' has a wrong offset!");
-static_assert(offsetof(UBPNotify_SpawnFishDietyRagdoll_C, New_Mesh) == 0x000040, "Member 'UBPNotify_SpawnFishDietyRagdoll_C::New_Mesh' has a wrong offset!");
-static_assert(offsetof(UBPNotify_SpawnFishDietyRagdoll_C, ForwardVelocity) == 0x000048, "Member 'UBPNotify_SpawnFishDietyRagdoll_C::ForwardVelocity' has a wrong offset!");
-static_assert(offsetof(UBPNotify_SpawnFishDietyRagdoll_C, InheritedVelocity) == 0x00004C, "Member 'UBPNotify_SpawnFishDietyRagdoll_C::InheritedVelocity' has a wrong offset!");
-static_assert(offsetof(UBPNotify_SpawnFishDietyRagdoll_C, Spawn_Transform_Scale) == 0x000050, "Member 'UBPNotify_SpawnFishDietyRagdoll_C::Spawn_Transform_Scale' has a wrong offset!");
+DUMPER7_ASSERTS_UBPNotify_SpawnFishDietyRagdoll_C;
 
 }
 

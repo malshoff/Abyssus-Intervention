@@ -24,9 +24,7 @@ struct ABP_EngineRifle_C_AnimGraph final
 public:
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_EngineRifle_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_EngineRifle_C_AnimGraph");
-static_assert(sizeof(ABP_EngineRifle_C_AnimGraph) == 0x000010, "Wrong size on ABP_EngineRifle_C_AnimGraph");
-static_assert(offsetof(ABP_EngineRifle_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'ABP_EngineRifle_C_AnimGraph::AnimGraph_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_EngineRifle_C_AnimGraph;
 
 // Function ABP_Enginerifle.ABP_EngineRifle_C.BlueprintThreadSafeUpdateAnimation
 // 0x0010 (0x0010 - 0x0000)
@@ -37,10 +35,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_UpdateBarrelRotation_Delta_Time_ImplicitCast; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_EngineRifle_C_BlueprintThreadSafeUpdateAnimation) == 0x000008, "Wrong alignment on ABP_EngineRifle_C_BlueprintThreadSafeUpdateAnimation");
-static_assert(sizeof(ABP_EngineRifle_C_BlueprintThreadSafeUpdateAnimation) == 0x000010, "Wrong size on ABP_EngineRifle_C_BlueprintThreadSafeUpdateAnimation");
-static_assert(offsetof(ABP_EngineRifle_C_BlueprintThreadSafeUpdateAnimation, DeltaTime) == 0x000000, "Member 'ABP_EngineRifle_C_BlueprintThreadSafeUpdateAnimation::DeltaTime' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_C_BlueprintThreadSafeUpdateAnimation, CallFunc_UpdateBarrelRotation_Delta_Time_ImplicitCast) == 0x000008, "Member 'ABP_EngineRifle_C_BlueprintThreadSafeUpdateAnimation::CallFunc_UpdateBarrelRotation_Delta_Time_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_EngineRifle_C_BlueprintThreadSafeUpdateAnimation;
 
 // Function ABP_Enginerifle.ABP_EngineRifle_C.BlueprintUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -49,9 +44,7 @@ struct ABP_EngineRifle_C_BlueprintUpdateAnimation final
 public:
 	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_EngineRifle_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on ABP_EngineRifle_C_BlueprintUpdateAnimation");
-static_assert(sizeof(ABP_EngineRifle_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on ABP_EngineRifle_C_BlueprintUpdateAnimation");
-static_assert(offsetof(ABP_EngineRifle_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'ABP_EngineRifle_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_EngineRifle_C_BlueprintUpdateAnimation;
 
 // Function ABP_Enginerifle.ABP_EngineRifle_C.ExecuteUbergraph_ABP_EngineRifle
 // 0x00A8 (0x00A8 - 0x0000)
@@ -70,17 +63,7 @@ public:
 	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsPrimaryMod;                         // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle) == 0x000008, "Wrong alignment on ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle");
-static_assert(sizeof(ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle) == 0x0000A8, "Wrong size on ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle");
-static_assert(offsetof(ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle, EntryPoint) == 0x000000, "Member 'ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle, CallFunc_BreakTransform_Location) == 0x000008, "Member 'ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle, CallFunc_BreakTransform_Rotation) == 0x000020, "Member 'ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle, CallFunc_BreakTransform_Scale) == 0x000038, "Member 'ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle, K2Node_Event_DeltaTimeX) == 0x000050, "Member 'ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle::K2Node_Event_DeltaTimeX' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle, CallFunc_BreakTransform_Location_1) == 0x000058, "Member 'ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle::CallFunc_BreakTransform_Location_1' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle, CallFunc_BreakTransform_Rotation_1) == 0x000070, "Member 'ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle, CallFunc_BreakTransform_Scale_1) == 0x000088, "Member 'ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle, K2Node_Event_IsPrimaryMod) == 0x0000A0, "Member 'ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle::K2Node_Event_IsPrimaryMod' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_EngineRifle_C_ExecuteUbergraph_ABP_EngineRifle;
 
 // Function ABP_Enginerifle.ABP_EngineRifle_C.OnWeaponFired
 // 0x0001 (0x0001 - 0x0000)
@@ -89,9 +72,7 @@ struct ABP_EngineRifle_C_OnWeaponFired final
 public:
 	bool                                          IsPrimaryMod;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_EngineRifle_C_OnWeaponFired) == 0x000001, "Wrong alignment on ABP_EngineRifle_C_OnWeaponFired");
-static_assert(sizeof(ABP_EngineRifle_C_OnWeaponFired) == 0x000001, "Wrong size on ABP_EngineRifle_C_OnWeaponFired");
-static_assert(offsetof(ABP_EngineRifle_C_OnWeaponFired, IsPrimaryMod) == 0x000000, "Member 'ABP_EngineRifle_C_OnWeaponFired::IsPrimaryMod' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_EngineRifle_C_OnWeaponFired;
 
 // Function ABP_Enginerifle.ABP_EngineRifle_C.UpdateBarrelRotation
 // 0x0038 (0x0038 - 0x0000)
@@ -107,15 +88,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_EngineRifle_C_UpdateBarrelRotation) == 0x000008, "Wrong alignment on ABP_EngineRifle_C_UpdateBarrelRotation");
-static_assert(sizeof(ABP_EngineRifle_C_UpdateBarrelRotation) == 0x000038, "Wrong size on ABP_EngineRifle_C_UpdateBarrelRotation");
-static_assert(offsetof(ABP_EngineRifle_C_UpdateBarrelRotation, Delta_Time) == 0x000000, "Member 'ABP_EngineRifle_C_UpdateBarrelRotation::Delta_Time' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_C_UpdateBarrelRotation, CallFunc_FInterpTo_ReturnValue) == 0x000008, "Member 'ABP_EngineRifle_C_UpdateBarrelRotation::CallFunc_FInterpTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_C_UpdateBarrelRotation, CallFunc_FInterpTo_ReturnValue_1) == 0x000010, "Member 'ABP_EngineRifle_C_UpdateBarrelRotation::CallFunc_FInterpTo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_C_UpdateBarrelRotation, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000018, "Member 'ABP_EngineRifle_C_UpdateBarrelRotation::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_C_UpdateBarrelRotation, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000020, "Member 'ABP_EngineRifle_C_UpdateBarrelRotation::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_C_UpdateBarrelRotation, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000028, "Member 'ABP_EngineRifle_C_UpdateBarrelRotation::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_C_UpdateBarrelRotation, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000030, "Member 'ABP_EngineRifle_C_UpdateBarrelRotation::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_EngineRifle_C_UpdateBarrelRotation;
 
 }
 

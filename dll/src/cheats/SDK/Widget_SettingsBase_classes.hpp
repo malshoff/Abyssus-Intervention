@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_SettingsBase.Widget_SettingsBase_C
-// 0x0008 (0x02D8 - 0x02D0)
+// 0x0008 (0x0348 - 0x0340)
 class UWidget_SettingsBase_C : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void BP_DecreaseSettingValue();
@@ -35,16 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_SettingsBase_C">();
+		BP_STATIC_CLASS_IMPL("Widget_SettingsBase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_SettingsBase_C")
 	}
 	static class UWidget_SettingsBase_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_SettingsBase_C>();
 	}
 };
-static_assert(alignof(UWidget_SettingsBase_C) == 0x000008, "Wrong alignment on UWidget_SettingsBase_C");
-static_assert(sizeof(UWidget_SettingsBase_C) == 0x0002D8, "Wrong size on UWidget_SettingsBase_C");
-static_assert(offsetof(UWidget_SettingsBase_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_SettingsBase_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_SettingsBase_C;
 
 }
 

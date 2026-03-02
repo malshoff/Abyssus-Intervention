@@ -74,11 +74,7 @@ public:
 	EOnlineComparisonOpBlueprint                  ComparisonOp;                                      // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FDMSearchSetting) == 0x000008, "Wrong alignment on FDMSearchSetting");
-static_assert(sizeof(FDMSearchSetting) == 0x000018, "Wrong size on FDMSearchSetting");
-static_assert(offsetof(FDMSearchSetting, AttributeValue) == 0x000000, "Member 'FDMSearchSetting::AttributeValue' has a wrong offset!");
-static_assert(offsetof(FDMSearchSetting, AttributeType) == 0x000010, "Member 'FDMSearchSetting::AttributeType' has a wrong offset!");
-static_assert(offsetof(FDMSearchSetting, ComparisonOp) == 0x000011, "Member 'FDMSearchSetting::ComparisonOp' has a wrong offset!");
+DUMPER7_ASSERTS_FDMSearchSetting;
 
 // ScriptStruct DMOnlinePlugin.DMSessionSetting
 // 0x0018 (0x0018 - 0x0000)
@@ -89,10 +85,7 @@ public:
 	EDMSearchQueryAttributeType                   AttributeType;                                     // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FDMSessionSetting) == 0x000008, "Wrong alignment on FDMSessionSetting");
-static_assert(sizeof(FDMSessionSetting) == 0x000018, "Wrong size on FDMSessionSetting");
-static_assert(offsetof(FDMSessionSetting, AttributeValue) == 0x000000, "Member 'FDMSessionSetting::AttributeValue' has a wrong offset!");
-static_assert(offsetof(FDMSessionSetting, AttributeType) == 0x000010, "Member 'FDMSessionSetting::AttributeType' has a wrong offset!");
+DUMPER7_ASSERTS_FDMSessionSetting;
 
 }
 

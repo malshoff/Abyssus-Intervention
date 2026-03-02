@@ -19,27 +19,26 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_Healthbar.Widget_Healthbar_C
-// 0x0088 (0x0358 - 0x02D0)
+// 0x0078 (0x03B8 - 0x0340)
 class UWidget_Healthbar_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnDamageShakeAnimation;                            // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnDamageAnimation;                                 // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Invulnerable_Transition;                           // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 FillImage_Barrier;                                 // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 FillImage_HealthLiquid;                            // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 HealthbarFrameImage;                               // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             HP_Text;                                           // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             HP_Text_Divider;                                   // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             InvulnText;                                        // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             MaxHP_Text;                                        // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UWidget_Plating_C*>              Plating_Icons;                                     // 0x0330(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class URHealthComponent*                      HealthCompnent;                                    // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         CurrentInternalHealth;                             // 0x0348(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34C[0x4];                                      // 0x034C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           HealthUpdateTimer;                                 // 0x0350(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             MaxHP_Text;                                        // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             InvulnText;                                        // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             HP_Text_Divider;                                   // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             HP_Text;                                           // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HealthbarFrameImage;                               // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 FillImage_HealthLiquid;                            // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 FillImage_Barrier;                                 // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Invulnerable_Transition;                           // 0x0388(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnDamageAnimation;                                 // 0x0390(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnDamageShakeAnimation;                            // 0x0398(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class URHealthComponent*                      HealthCompnent;                                    // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         CurrentInternalHealth;                             // 0x03A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3AC[0x4];                                      // 0x03AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           HealthUpdateTimer;                                 // 0x03B0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -53,12 +52,8 @@ public:
 	void OnInitialized();
 	void OnInvulnurableChange(class URHealthComponent* Component, bool NewInvulnerability);
 	void OnMaximumBarrierChanged(class URHealthComponent* Component, float MaximumBarrier);
-	void OnMaximumPlatingsUpdated(class URHealthComponent* Component, int32 MaximumPlating);
-	void OnPlatingRegained(class URHealthComponent* Component, int32 currentPlatings);
-	void OnPlatingsUpdated(class URHealthComponent* Component, int32 currentPlatings);
 	void StartHealthAnimation();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void Update_Platings(int32 Plating_Stacks);
 	void UpdateBarrierPercent();
 	void UpdateCurrentHealthText();
 	void UpdateHealthPercent();
@@ -66,31 +61,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_Healthbar_C">();
+		BP_STATIC_CLASS_IMPL("Widget_Healthbar_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_Healthbar_C")
 	}
 	static class UWidget_Healthbar_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_Healthbar_C>();
 	}
 };
-static_assert(alignof(UWidget_Healthbar_C) == 0x000008, "Wrong alignment on UWidget_Healthbar_C");
-static_assert(sizeof(UWidget_Healthbar_C) == 0x000358, "Wrong size on UWidget_Healthbar_C");
-static_assert(offsetof(UWidget_Healthbar_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_Healthbar_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_Healthbar_C, OnDamageShakeAnimation) == 0x0002D8, "Member 'UWidget_Healthbar_C::OnDamageShakeAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_Healthbar_C, OnDamageAnimation) == 0x0002E0, "Member 'UWidget_Healthbar_C::OnDamageAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_Healthbar_C, Invulnerable_Transition) == 0x0002E8, "Member 'UWidget_Healthbar_C::Invulnerable_Transition' has a wrong offset!");
-static_assert(offsetof(UWidget_Healthbar_C, FillImage_Barrier) == 0x0002F0, "Member 'UWidget_Healthbar_C::FillImage_Barrier' has a wrong offset!");
-static_assert(offsetof(UWidget_Healthbar_C, FillImage_HealthLiquid) == 0x0002F8, "Member 'UWidget_Healthbar_C::FillImage_HealthLiquid' has a wrong offset!");
-static_assert(offsetof(UWidget_Healthbar_C, HealthbarFrameImage) == 0x000300, "Member 'UWidget_Healthbar_C::HealthbarFrameImage' has a wrong offset!");
-static_assert(offsetof(UWidget_Healthbar_C, HP_Text) == 0x000308, "Member 'UWidget_Healthbar_C::HP_Text' has a wrong offset!");
-static_assert(offsetof(UWidget_Healthbar_C, HP_Text_Divider) == 0x000310, "Member 'UWidget_Healthbar_C::HP_Text_Divider' has a wrong offset!");
-static_assert(offsetof(UWidget_Healthbar_C, InvalidationBox_0) == 0x000318, "Member 'UWidget_Healthbar_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_Healthbar_C, InvulnText) == 0x000320, "Member 'UWidget_Healthbar_C::InvulnText' has a wrong offset!");
-static_assert(offsetof(UWidget_Healthbar_C, MaxHP_Text) == 0x000328, "Member 'UWidget_Healthbar_C::MaxHP_Text' has a wrong offset!");
-static_assert(offsetof(UWidget_Healthbar_C, Plating_Icons) == 0x000330, "Member 'UWidget_Healthbar_C::Plating_Icons' has a wrong offset!");
-static_assert(offsetof(UWidget_Healthbar_C, HealthCompnent) == 0x000340, "Member 'UWidget_Healthbar_C::HealthCompnent' has a wrong offset!");
-static_assert(offsetof(UWidget_Healthbar_C, CurrentInternalHealth) == 0x000348, "Member 'UWidget_Healthbar_C::CurrentInternalHealth' has a wrong offset!");
-static_assert(offsetof(UWidget_Healthbar_C, HealthUpdateTimer) == 0x000350, "Member 'UWidget_Healthbar_C::HealthUpdateTimer' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_Healthbar_C;
 
 }
 

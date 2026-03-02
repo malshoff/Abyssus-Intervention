@@ -17,32 +17,31 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_UnlockAtlanteanCube_Challenge.BP_UnlockAtlanteanCube_Challenge_C
-// 0x0020 (0x03D0 - 0x03B0)
+// 0x0020 (0x03D8 - 0x03B8)
 class ABP_UnlockAtlanteanCube_Challenge_C final : public ABP_UnlockWeapon_Base_C
 {
 public:
-	class UPointLightComponent*                   PointLight;                                        // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasInteracted;                                     // 0x03C0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C1[0x7];                                      // 0x03C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     DefaultMaterial;                                   // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight;                                        // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasInteracted;                                     // 0x03C8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C9[0x7];                                      // 0x03C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     DefaultMaterial;                                   // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_UnlockAtlanteanCube_Challenge_C">();
+		BP_STATIC_CLASS_IMPL("BP_UnlockAtlanteanCube_Challenge_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_UnlockAtlanteanCube_Challenge_C")
 	}
 	static class ABP_UnlockAtlanteanCube_Challenge_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_UnlockAtlanteanCube_Challenge_C>();
 	}
 };
-static_assert(alignof(ABP_UnlockAtlanteanCube_Challenge_C) == 0x000008, "Wrong alignment on ABP_UnlockAtlanteanCube_Challenge_C");
-static_assert(sizeof(ABP_UnlockAtlanteanCube_Challenge_C) == 0x0003D0, "Wrong size on ABP_UnlockAtlanteanCube_Challenge_C");
-static_assert(offsetof(ABP_UnlockAtlanteanCube_Challenge_C, PointLight) == 0x0003B0, "Member 'ABP_UnlockAtlanteanCube_Challenge_C::PointLight' has a wrong offset!");
-static_assert(offsetof(ABP_UnlockAtlanteanCube_Challenge_C, SkeletalMesh) == 0x0003B8, "Member 'ABP_UnlockAtlanteanCube_Challenge_C::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(ABP_UnlockAtlanteanCube_Challenge_C, HasInteracted) == 0x0003C0, "Member 'ABP_UnlockAtlanteanCube_Challenge_C::HasInteracted' has a wrong offset!");
-static_assert(offsetof(ABP_UnlockAtlanteanCube_Challenge_C, DefaultMaterial) == 0x0003C8, "Member 'ABP_UnlockAtlanteanCube_Challenge_C::DefaultMaterial' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_UnlockAtlanteanCube_Challenge_C;
 
 }
 

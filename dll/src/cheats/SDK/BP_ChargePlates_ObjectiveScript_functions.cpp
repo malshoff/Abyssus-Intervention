@@ -114,6 +114,56 @@ void UBP_ChargePlates_ObjectiveScript_C::K2_ActivateScript()
 }
 
 
+// Function BP_ChargePlates_ObjectiveScript.BP_ChargePlates_ObjectiveScript_C.OnChargeEnded
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void UBP_ChargePlates_ObjectiveScript_C::OnChargeEnded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ChargePlates_ObjectiveScript_C", "OnChargeEnded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ChargePlates_ObjectiveScript.BP_ChargePlates_ObjectiveScript_C.OnChargeStarted
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void UBP_ChargePlates_ObjectiveScript_C::OnChargeStarted()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ChargePlates_ObjectiveScript_C", "OnChargeStarted");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ChargePlates_ObjectiveScript.BP_ChargePlates_ObjectiveScript_C.OnObjectiveEnded_Event
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayTag&              ObjectiveTag_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// bool                                    bCompleted                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_ChargePlates_ObjectiveScript_C::OnObjectiveEnded_Event(const struct FGameplayTag& ObjectiveTag_0, bool bCompleted)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ChargePlates_ObjectiveScript_C", "OnObjectiveEnded_Event");
+
+	Params::BP_ChargePlates_ObjectiveScript_C_OnObjectiveEnded_Event Parms{};
+
+	Parms.ObjectiveTag_0 = std::move(ObjectiveTag_0);
+	Parms.bCompleted = bCompleted;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_ChargePlates_ObjectiveScript.BP_ChargePlates_ObjectiveScript_C.TickBehavior
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 

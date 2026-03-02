@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "MetasoundFrontend_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "MetasoundFrontend_structs.hpp"
 
 
 namespace SDK
@@ -24,7 +24,11 @@ class IMetaSoundDocumentInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MetaSoundDocumentInterface">();
+		STATIC_CLASS_IMPL("MetaSoundDocumentInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MetaSoundDocumentInterface")
 	}
 	static class IMetaSoundDocumentInterface* GetDefaultObj()
 	{
@@ -40,8 +44,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IMetaSoundDocumentInterface) == 0x000001, "Wrong alignment on IMetaSoundDocumentInterface");
-static_assert(sizeof(IMetaSoundDocumentInterface) == 0x000001, "Wrong size on IMetaSoundDocumentInterface");
+DUMPER7_ASSERTS_IMetaSoundDocumentInterface;
 
 // Class MetasoundFrontend.MetasoundParameterPack
 // 0x0018 (0x0040 - 0x0028)
@@ -73,15 +76,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MetasoundParameterPack">();
+		STATIC_CLASS_IMPL("MetasoundParameterPack")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MetasoundParameterPack")
 	}
 	static class UMetasoundParameterPack* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMetasoundParameterPack>();
 	}
 };
-static_assert(alignof(UMetasoundParameterPack) == 0x000008, "Wrong alignment on UMetasoundParameterPack");
-static_assert(sizeof(UMetasoundParameterPack) == 0x000040, "Wrong size on UMetasoundParameterPack");
+DUMPER7_ASSERTS_UMetasoundParameterPack;
 
 // Class MetasoundFrontend.MetaSoundFrontendMemberMetadata
 // 0x0000 (0x0028 - 0x0028)
@@ -90,15 +96,18 @@ class UMetaSoundFrontendMemberMetadata final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MetaSoundFrontendMemberMetadata">();
+		STATIC_CLASS_IMPL("MetaSoundFrontendMemberMetadata")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MetaSoundFrontendMemberMetadata")
 	}
 	static class UMetaSoundFrontendMemberMetadata* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMetaSoundFrontendMemberMetadata>();
 	}
 };
-static_assert(alignof(UMetaSoundFrontendMemberMetadata) == 0x000008, "Wrong alignment on UMetaSoundFrontendMemberMetadata");
-static_assert(sizeof(UMetaSoundFrontendMemberMetadata) == 0x000028, "Wrong size on UMetaSoundFrontendMemberMetadata");
+DUMPER7_ASSERTS_UMetaSoundFrontendMemberMetadata;
 
 // Class MetasoundFrontend.MetaSoundBuilderDocument
 // 0x01A8 (0x01D0 - 0x0028)
@@ -107,24 +116,24 @@ class UMetaSoundBuilderDocument final : public UObject
 public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendDocument             Document;                                          // 0x0030(0x0190)(Transient, NativeAccessSpecifierPrivate)
-	TSubclassOf<class UObject>                    MetaSoundUClass;                                   // 0x01C0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSubclassOf<class UObject>                    BuilderUClass;                                     // 0x01C8(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSubclassOf<class UObject>                    MetaSoundUClass;                                   // 0x01C0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	TSubclassOf<class UObject>                    BuilderUClass;                                     // 0x01C8(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MetaSoundBuilderDocument">();
+		STATIC_CLASS_IMPL("MetaSoundBuilderDocument")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MetaSoundBuilderDocument")
 	}
 	static class UMetaSoundBuilderDocument* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMetaSoundBuilderDocument>();
 	}
 };
-static_assert(alignof(UMetaSoundBuilderDocument) == 0x000008, "Wrong alignment on UMetaSoundBuilderDocument");
-static_assert(sizeof(UMetaSoundBuilderDocument) == 0x0001D0, "Wrong size on UMetaSoundBuilderDocument");
-static_assert(offsetof(UMetaSoundBuilderDocument, Document) == 0x000030, "Member 'UMetaSoundBuilderDocument::Document' has a wrong offset!");
-static_assert(offsetof(UMetaSoundBuilderDocument, MetaSoundUClass) == 0x0001C0, "Member 'UMetaSoundBuilderDocument::MetaSoundUClass' has a wrong offset!");
-static_assert(offsetof(UMetaSoundBuilderDocument, BuilderUClass) == 0x0001C8, "Member 'UMetaSoundBuilderDocument::BuilderUClass' has a wrong offset!");
+DUMPER7_ASSERTS_UMetaSoundBuilderDocument;
 
 }
 

@@ -43,24 +43,7 @@ public:
 	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetMaxHealth_ReturnValue;                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator) == 0x000008, "Wrong alignment on BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator");
-static_assert(sizeof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator) == 0x000080, "Wrong size on BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, K2Node_Event_abilityScript) == 0x000008, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::K2Node_Event_abilityScript' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, CallFunc_IsObjectASoftClass_ReturnValue) == 0x000010, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::CallFunc_IsObjectASoftClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, CallFunc_IsObjectChildOfSoftClass_ReturnValue) == 0x000011, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::CallFunc_IsObjectChildOfSoftClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, CallFunc_BooleanOR_ReturnValue) == 0x000012, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000018, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, Temp_int_Loop_Counter_Variable) == 0x000048, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, CallFunc_GetFirstScriptOfType_ReturnValue) == 0x000050, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::CallFunc_GetFirstScriptOfType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, K2Node_DynamicCast_AsBP_Turret_Character_Mutator) == 0x000058, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::K2Node_DynamicCast_AsBP_Turret_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, CallFunc_Add_IntInt_ReturnValue) == 0x000064, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, CallFunc_Array_Get_Item) == 0x000068, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, CallFunc_Array_Length_ReturnValue) == 0x000070, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, CallFunc_Less_IntInt_ReturnValue) == 0x000074, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator, CallFunc_GetMaxHealth_ReturnValue) == 0x000078, "Member 'BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator::CallFunc_GetMaxHealth_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SharingIsCaring_CharacterMutator_C_ExecuteUbergraph_BP_SharingIsCaring_CharacterMutator;
 
 // Function BP_SharingIsCaring_CharacterMutator.BP_SharingIsCaring_CharacterMutator_C.K2_OnAbilityFired
 // 0x0008 (0x0008 - 0x0000)
@@ -69,9 +52,7 @@ struct BP_SharingIsCaring_CharacterMutator_C_K2_OnAbilityFired final
 public:
 	class URGScript*                              AbilityScript;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SharingIsCaring_CharacterMutator_C_K2_OnAbilityFired) == 0x000008, "Wrong alignment on BP_SharingIsCaring_CharacterMutator_C_K2_OnAbilityFired");
-static_assert(sizeof(BP_SharingIsCaring_CharacterMutator_C_K2_OnAbilityFired) == 0x000008, "Wrong size on BP_SharingIsCaring_CharacterMutator_C_K2_OnAbilityFired");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_K2_OnAbilityFired, AbilityScript) == 0x000000, "Member 'BP_SharingIsCaring_CharacterMutator_C_K2_OnAbilityFired::AbilityScript' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SharingIsCaring_CharacterMutator_C_K2_OnAbilityFired;
 
 // Function BP_SharingIsCaring_CharacterMutator.BP_SharingIsCaring_CharacterMutator_C.GetDescription
 // 0x00C0 (0x00C0 - 0x0000)
@@ -84,13 +65,7 @@ public:
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00A0(0x0010)(ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00B0(0x0010)()
 };
-static_assert(alignof(BP_SharingIsCaring_CharacterMutator_C_GetDescription) == 0x000008, "Wrong alignment on BP_SharingIsCaring_CharacterMutator_C_GetDescription");
-static_assert(sizeof(BP_SharingIsCaring_CharacterMutator_C_GetDescription) == 0x0000C0, "Wrong size on BP_SharingIsCaring_CharacterMutator_C_GetDescription");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_GetDescription, ReturnValue) == 0x000000, "Member 'BP_SharingIsCaring_CharacterMutator_C_GetDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_GetDescription, K2Node_MakeStruct_FormatArgumentData) == 0x000010, "Member 'BP_SharingIsCaring_CharacterMutator_C_GetDescription::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_GetDescription, K2Node_MakeStruct_FormatArgumentData_1) == 0x000058, "Member 'BP_SharingIsCaring_CharacterMutator_C_GetDescription::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_GetDescription, K2Node_MakeArray_Array) == 0x0000A0, "Member 'BP_SharingIsCaring_CharacterMutator_C_GetDescription::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_SharingIsCaring_CharacterMutator_C_GetDescription, CallFunc_Format_ReturnValue) == 0x0000B0, "Member 'BP_SharingIsCaring_CharacterMutator_C_GetDescription::CallFunc_Format_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SharingIsCaring_CharacterMutator_C_GetDescription;
 
 }
 

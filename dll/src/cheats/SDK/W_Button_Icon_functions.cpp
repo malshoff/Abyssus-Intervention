@@ -100,7 +100,7 @@ void UW_Button_Icon_C::PreConstruct(bool IsDesignTime)
 
 
 // Function W_Button_Icon.W_Button_Icon_C.Trans_Disabled
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UW_Button_Icon_C::Trans_Disabled()
 {
@@ -114,7 +114,7 @@ void UW_Button_Icon_C::Trans_Disabled()
 
 
 // Function W_Button_Icon.W_Button_Icon_C.Trans_Enabled
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UW_Button_Icon_C::Trans_Enabled()
 {
@@ -128,7 +128,7 @@ void UW_Button_Icon_C::Trans_Enabled()
 
 
 // Function W_Button_Icon.W_Button_Icon_C.Trans_Hovered
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UW_Button_Icon_C::Trans_Hovered()
 {
@@ -142,7 +142,7 @@ void UW_Button_Icon_C::Trans_Hovered()
 
 
 // Function W_Button_Icon.W_Button_Icon_C.Trans_UnHovered
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UW_Button_Icon_C::Trans_UnHovered()
 {

@@ -56,33 +56,7 @@ public:
 	TDelegate<void(class URGScript* AbilityScript)> K2Node_CreateDelegate_OutputDelegate_5;          // 0x00DC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_IsEmpty_ReturnValue_1;              // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability) == 0x000008, "Wrong alignment on Widget_Ability_C_ExecuteUbergraph_Widget_Ability");
-static_assert(sizeof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability) == 0x0000F0, "Wrong size on Widget_Ability_C_ExecuteUbergraph_Widget_Ability");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, EntryPoint) == 0x000000, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000018, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000020, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000028, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, CallFunc_GetOwningPlayerPawn_ReturnValue_1) == 0x000038, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::CallFunc_GetOwningPlayerPawn_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, K2Node_DynamicCast_AsRPlayer_Pawn_1) == 0x000040, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::K2Node_DynamicCast_AsRPlayer_Pawn_1' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, K2Node_DynamicCast_bSuccess_1) == 0x000048, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, K2Node_CreateDelegate_OutputDelegate_1) == 0x00004C, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, K2Node_CreateDelegate_OutputDelegate_2) == 0x00005C, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, CallFunc_GetEquippedActivatableAbility_ReturnValue) == 0x000070, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::CallFunc_GetEquippedActivatableAbility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, CallFunc_IsHealAbility_IsHealAbility) == 0x000078, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::CallFunc_IsHealAbility_IsHealAbility' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, CallFunc_IsHealAbility_RGAbilityCharacterMutatorScript) == 0x000080, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::CallFunc_IsHealAbility_RGAbilityCharacterMutatorScript' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, CallFunc_IsHealAbility_OutSelecterMutatorPrimaryAsset) == 0x000088, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::CallFunc_IsHealAbility_OutSelecterMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, K2Node_CreateDelegate_OutputDelegate_3) == 0x000090, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, CallFunc_Not_PreBool_ReturnValue) == 0x0000A0, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, CallFunc_Get_Current_Equipped_Ability_RGAbilityCharacterMutatorScript) == 0x0000A8, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::CallFunc_Get_Current_Equipped_Ability_RGAbilityCharacterMutatorScript' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, CallFunc_Get_Current_Equipped_Ability_RCharacterMutatorPrimaryAsset) == 0x0000B0, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::CallFunc_Get_Current_Equipped_Ability_RCharacterMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, K2Node_CreateDelegate_OutputDelegate_4) == 0x0000B8, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, CallFunc_IsValid_ReturnValue) == 0x0000C8, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, K2Node_CustomEvent_Owner) == 0x0000D0, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::K2Node_CustomEvent_Owner' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, CallFunc_Array_IsEmpty_ReturnValue) == 0x0000D8, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, K2Node_CreateDelegate_OutputDelegate_5) == 0x0000DC, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_ExecuteUbergraph_Widget_Ability, CallFunc_Array_IsEmpty_ReturnValue_1) == 0x0000EC, "Member 'Widget_Ability_C_ExecuteUbergraph_Widget_Ability::CallFunc_Array_IsEmpty_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Ability_C_ExecuteUbergraph_Widget_Ability;
 
 // Function Widget_Ability.Widget_Ability_C.Get Current Equipped Ability
 // 0x0038 (0x0038 - 0x0000)
@@ -98,15 +72,7 @@ public:
 	class URGAbilityCharacterMutatorScript*       CallFunc_GetEquippedActivatableAbility_ReturnValue; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class URCharacterMutatorPrimaryAsset*         CallFunc_GetCharacterMutatorPrimaryAsset_ReturnValue; // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Ability_C_Get_Current_Equipped_Ability) == 0x000008, "Wrong alignment on Widget_Ability_C_Get_Current_Equipped_Ability");
-static_assert(sizeof(Widget_Ability_C_Get_Current_Equipped_Ability) == 0x000038, "Wrong size on Widget_Ability_C_Get_Current_Equipped_Ability");
-static_assert(offsetof(Widget_Ability_C_Get_Current_Equipped_Ability, RGAbilityCharacterMutatorScript) == 0x000000, "Member 'Widget_Ability_C_Get_Current_Equipped_Ability::RGAbilityCharacterMutatorScript' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_Get_Current_Equipped_Ability, RCharacterMutatorPrimaryAsset) == 0x000008, "Member 'Widget_Ability_C_Get_Current_Equipped_Ability::RCharacterMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_Get_Current_Equipped_Ability, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000010, "Member 'Widget_Ability_C_Get_Current_Equipped_Ability::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_Get_Current_Equipped_Ability, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000018, "Member 'Widget_Ability_C_Get_Current_Equipped_Ability::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_Get_Current_Equipped_Ability, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'Widget_Ability_C_Get_Current_Equipped_Ability::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_Get_Current_Equipped_Ability, CallFunc_GetEquippedActivatableAbility_ReturnValue) == 0x000028, "Member 'Widget_Ability_C_Get_Current_Equipped_Ability::CallFunc_GetEquippedActivatableAbility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_Get_Current_Equipped_Ability, CallFunc_GetCharacterMutatorPrimaryAsset_ReturnValue) == 0x000030, "Member 'Widget_Ability_C_Get_Current_Equipped_Ability::CallFunc_GetCharacterMutatorPrimaryAsset_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Ability_C_Get_Current_Equipped_Ability;
 
 // Function Widget_Ability.Widget_Ability_C.IsHealAbility
 // 0x0088 (0x0088 - 0x0000)
@@ -139,28 +105,7 @@ public:
 	class UClass*                                 CallFunc_LoadClassFromSoftClassPtr_ReturnValue;    // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Ability_C_IsHealAbility) == 0x000008, "Wrong alignment on Widget_Ability_C_IsHealAbility");
-static_assert(sizeof(Widget_Ability_C_IsHealAbility) == 0x000088, "Wrong size on Widget_Ability_C_IsHealAbility");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, IsHealAbility_0) == 0x000000, "Member 'Widget_Ability_C_IsHealAbility::IsHealAbility_0' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, RGAbilityCharacterMutatorScript) == 0x000008, "Member 'Widget_Ability_C_IsHealAbility::RGAbilityCharacterMutatorScript' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, OutSelecterMutatorPrimaryAsset) == 0x000010, "Member 'Widget_Ability_C_IsHealAbility::OutSelecterMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, SelecterMutatorPrimaryAsset) == 0x000018, "Member 'Widget_Ability_C_IsHealAbility::SelecterMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, SelectedAbilityMutator) == 0x000020, "Member 'Widget_Ability_C_IsHealAbility::SelectedAbilityMutator' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, Temp_int_Array_Index_Variable) == 0x000028, "Member 'Widget_Ability_C_IsHealAbility::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, Temp_int_Loop_Counter_Variable) == 0x00002C, "Member 'Widget_Ability_C_IsHealAbility::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, CallFunc_Add_IntInt_ReturnValue) == 0x000030, "Member 'Widget_Ability_C_IsHealAbility::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000038, "Member 'Widget_Ability_C_IsHealAbility::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, CallFunc_IsValid_ReturnValue) == 0x000040, "Member 'Widget_Ability_C_IsHealAbility::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000048, "Member 'Widget_Ability_C_IsHealAbility::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'Widget_Ability_C_IsHealAbility::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, CallFunc_GetActivatableAbilityByName_ReturnValue) == 0x000058, "Member 'Widget_Ability_C_IsHealAbility::CallFunc_GetActivatableAbilityByName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, CallFunc_Array_Get_Item) == 0x000060, "Member 'Widget_Ability_C_IsHealAbility::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, CallFunc_Array_Length_ReturnValue) == 0x000068, "Member 'Widget_Ability_C_IsHealAbility::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, CallFunc_IsValid_ReturnValue_1) == 0x00006C, "Member 'Widget_Ability_C_IsHealAbility::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, CallFunc_Less_IntInt_ReturnValue) == 0x00006D, "Member 'Widget_Ability_C_IsHealAbility::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, CallFunc_GetObjectClass_ReturnValue) == 0x000070, "Member 'Widget_Ability_C_IsHealAbility::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, CallFunc_LoadClassFromSoftClassPtr_ReturnValue) == 0x000078, "Member 'Widget_Ability_C_IsHealAbility::CallFunc_LoadClassFromSoftClassPtr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_IsHealAbility, CallFunc_EqualEqual_ClassClass_ReturnValue) == 0x000080, "Member 'Widget_Ability_C_IsHealAbility::CallFunc_EqualEqual_ClassClass_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Ability_C_IsHealAbility;
 
 // Function Widget_Ability.Widget_Ability_C.OnAbilityFired
 // 0x0028 (0x0028 - 0x0000)
@@ -174,14 +119,7 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Ability_C_OnAbilityFired) == 0x000008, "Wrong alignment on Widget_Ability_C_OnAbilityFired");
-static_assert(sizeof(Widget_Ability_C_OnAbilityFired) == 0x000028, "Wrong size on Widget_Ability_C_OnAbilityFired");
-static_assert(offsetof(Widget_Ability_C_OnAbilityFired, AbilityScript) == 0x000000, "Member 'Widget_Ability_C_OnAbilityFired::AbilityScript' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_OnAbilityFired, CallFunc_Get_Current_Equipped_Ability_RGAbilityCharacterMutatorScript) == 0x000008, "Member 'Widget_Ability_C_OnAbilityFired::CallFunc_Get_Current_Equipped_Ability_RGAbilityCharacterMutatorScript' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_OnAbilityFired, CallFunc_Get_Current_Equipped_Ability_RCharacterMutatorPrimaryAsset) == 0x000010, "Member 'Widget_Ability_C_OnAbilityFired::CallFunc_Get_Current_Equipped_Ability_RCharacterMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_OnAbilityFired, K2Node_DynamicCast_AsRGAbility_Character_Mutator_Script) == 0x000018, "Member 'Widget_Ability_C_OnAbilityFired::K2Node_DynamicCast_AsRGAbility_Character_Mutator_Script' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_OnAbilityFired, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'Widget_Ability_C_OnAbilityFired::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_OnAbilityFired, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000021, "Member 'Widget_Ability_C_OnAbilityFired::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Ability_C_OnAbilityFired;
 
 // Function Widget_Ability.Widget_Ability_C.OnCharacterMutatorsChanged
 // 0x0008 (0x0008 - 0x0000)
@@ -190,9 +128,7 @@ struct Widget_Ability_C_OnCharacterMutatorsChanged final
 public:
 	class URPlayerGScriptComponent*               Owner;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Ability_C_OnCharacterMutatorsChanged) == 0x000008, "Wrong alignment on Widget_Ability_C_OnCharacterMutatorsChanged");
-static_assert(sizeof(Widget_Ability_C_OnCharacterMutatorsChanged) == 0x000008, "Wrong size on Widget_Ability_C_OnCharacterMutatorsChanged");
-static_assert(offsetof(Widget_Ability_C_OnCharacterMutatorsChanged, Owner) == 0x000000, "Member 'Widget_Ability_C_OnCharacterMutatorsChanged::Owner' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Ability_C_OnCharacterMutatorsChanged;
 
 // Function Widget_Ability.Widget_Ability_C.OnStacksUpdated
 // 0x0040 (0x0040 - 0x0000)
@@ -208,15 +144,7 @@ public:
 	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_Select_Default;                             // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Ability_C_OnStacksUpdated) == 0x000008, "Wrong alignment on Widget_Ability_C_OnStacksUpdated");
-static_assert(sizeof(Widget_Ability_C_OnStacksUpdated) == 0x000040, "Wrong size on Widget_Ability_C_OnStacksUpdated");
-static_assert(offsetof(Widget_Ability_C_OnStacksUpdated, RGAbilityCharacterMutatorScript) == 0x000000, "Member 'Widget_Ability_C_OnStacksUpdated::RGAbilityCharacterMutatorScript' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_OnStacksUpdated, NumStacksRemaining) == 0x000008, "Member 'Widget_Ability_C_OnStacksUpdated::NumStacksRemaining' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_OnStacksUpdated, Temp_bool_Variable) == 0x00000C, "Member 'Widget_Ability_C_OnStacksUpdated::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_OnStacksUpdated, CallFunc_LessEqual_IntInt_ReturnValue) == 0x00000D, "Member 'Widget_Ability_C_OnStacksUpdated::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_OnStacksUpdated, Temp_struct_Variable) == 0x000010, "Member 'Widget_Ability_C_OnStacksUpdated::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_OnStacksUpdated, Temp_struct_Variable_1) == 0x000020, "Member 'Widget_Ability_C_OnStacksUpdated::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_OnStacksUpdated, K2Node_Select_Default) == 0x000030, "Member 'Widget_Ability_C_OnStacksUpdated::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Ability_C_OnStacksUpdated;
 
 // Function Widget_Ability.Widget_Ability_C.SetCooldownProgress
 // 0x0010 (0x0010 - 0x0000)
@@ -227,10 +155,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Ability_C_SetCooldownProgress) == 0x000008, "Wrong alignment on Widget_Ability_C_SetCooldownProgress");
-static_assert(sizeof(Widget_Ability_C_SetCooldownProgress) == 0x000010, "Wrong size on Widget_Ability_C_SetCooldownProgress");
-static_assert(offsetof(Widget_Ability_C_SetCooldownProgress, Progress) == 0x000000, "Member 'Widget_Ability_C_SetCooldownProgress::Progress' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_SetCooldownProgress, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000008, "Member 'Widget_Ability_C_SetCooldownProgress::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Ability_C_SetCooldownProgress;
 
 // Function Widget_Ability.Widget_Ability_C.UpdateAbilityIcon
 // 0x0078 (0x0078 - 0x0000)
@@ -262,27 +187,7 @@ public:
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0075(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Ability_C_UpdateAbilityIcon) == 0x000008, "Wrong alignment on Widget_Ability_C_UpdateAbilityIcon");
-static_assert(sizeof(Widget_Ability_C_UpdateAbilityIcon) == 0x000078, "Wrong size on Widget_Ability_C_UpdateAbilityIcon");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, Mutator) == 0x000000, "Member 'Widget_Ability_C_UpdateAbilityIcon::Mutator' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, Texture2D) == 0x000008, "Member 'Widget_Ability_C_UpdateAbilityIcon::Texture2D' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'Widget_Ability_C_UpdateAbilityIcon::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, CallFunc_IsValid_ReturnValue) == 0x000014, "Member 'Widget_Ability_C_UpdateAbilityIcon::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'Widget_Ability_C_UpdateAbilityIcon::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, K2Node_DynamicCast_AsRCharacter_Mutator_Primary_Asset) == 0x000020, "Member 'Widget_Ability_C_UpdateAbilityIcon::K2Node_DynamicCast_AsRCharacter_Mutator_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'Widget_Ability_C_UpdateAbilityIcon::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, Temp_int_Array_Index_Variable) == 0x00002C, "Member 'Widget_Ability_C_UpdateAbilityIcon::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000030, "Member 'Widget_Ability_C_UpdateAbilityIcon::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000038, "Member 'Widget_Ability_C_UpdateAbilityIcon::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'Widget_Ability_C_UpdateAbilityIcon::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, CallFunc_Array_Get_Item) == 0x000048, "Member 'Widget_Ability_C_UpdateAbilityIcon::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, CallFunc_IsValid_ReturnValue_1) == 0x000050, "Member 'Widget_Ability_C_UpdateAbilityIcon::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, CallFunc_GetActivatableAbilityByName_ReturnValue) == 0x000058, "Member 'Widget_Ability_C_UpdateAbilityIcon::CallFunc_GetActivatableAbilityByName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, CallFunc_GetObjectClass_ReturnValue) == 0x000060, "Member 'Widget_Ability_C_UpdateAbilityIcon::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, CallFunc_LoadClassFromSoftClassPtr_ReturnValue) == 0x000068, "Member 'Widget_Ability_C_UpdateAbilityIcon::CallFunc_LoadClassFromSoftClassPtr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, CallFunc_Array_Length_ReturnValue) == 0x000070, "Member 'Widget_Ability_C_UpdateAbilityIcon::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, CallFunc_EqualEqual_ClassClass_ReturnValue) == 0x000074, "Member 'Widget_Ability_C_UpdateAbilityIcon::CallFunc_EqualEqual_ClassClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateAbilityIcon, CallFunc_Less_IntInt_ReturnValue) == 0x000075, "Member 'Widget_Ability_C_UpdateAbilityIcon::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Ability_C_UpdateAbilityIcon;
 
 // Function Widget_Ability.Widget_Ability_C.UpdateCooldownVisuals
 // 0x0038 (0x0038 - 0x0000)
@@ -300,17 +205,7 @@ public:
 	double                                        CallFunc_SafeDivide_B_ImplicitCast;                // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetCooldownProgress_Progress_ImplicitCast; // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Ability_C_UpdateCooldownVisuals) == 0x000008, "Wrong alignment on Widget_Ability_C_UpdateCooldownVisuals");
-static_assert(sizeof(Widget_Ability_C_UpdateCooldownVisuals) == 0x000038, "Wrong size on Widget_Ability_C_UpdateCooldownVisuals");
-static_assert(offsetof(Widget_Ability_C_UpdateCooldownVisuals, Mutator) == 0x000000, "Member 'Widget_Ability_C_UpdateCooldownVisuals::Mutator' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateCooldownVisuals, K2Node_DynamicCast_AsBP_Activatable_Character_Mutator) == 0x000008, "Member 'Widget_Ability_C_UpdateCooldownVisuals::K2Node_DynamicCast_AsBP_Activatable_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateCooldownVisuals, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'Widget_Ability_C_UpdateCooldownVisuals::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateCooldownVisuals, CallFunc_IsValid_ReturnValue) == 0x000011, "Member 'Widget_Ability_C_UpdateCooldownVisuals::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateCooldownVisuals, CallFunc_GetMutableFloatCurrentValue_ReturnValue) == 0x000014, "Member 'Widget_Ability_C_UpdateCooldownVisuals::CallFunc_GetMutableFloatCurrentValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateCooldownVisuals, CallFunc_Get_Remaining_Recharge_Cooldown_BP_RemainingRechargeCooldown) == 0x000018, "Member 'Widget_Ability_C_UpdateCooldownVisuals::CallFunc_Get_Remaining_Recharge_Cooldown_BP_RemainingRechargeCooldown' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateCooldownVisuals, CallFunc_SafeDivide_ReturnValue) == 0x000020, "Member 'Widget_Ability_C_UpdateCooldownVisuals::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateCooldownVisuals, CallFunc_SafeDivide_B_ImplicitCast) == 0x000028, "Member 'Widget_Ability_C_UpdateCooldownVisuals::CallFunc_SafeDivide_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateCooldownVisuals, CallFunc_SetCooldownProgress_Progress_ImplicitCast) == 0x000030, "Member 'Widget_Ability_C_UpdateCooldownVisuals::CallFunc_SetCooldownProgress_Progress_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Ability_C_UpdateCooldownVisuals;
 
 // Function Widget_Ability.Widget_Ability_C.UpdateStacksText
 // 0x0018 (0x0018 - 0x0000)
@@ -321,10 +216,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
 };
-static_assert(alignof(Widget_Ability_C_UpdateStacksText) == 0x000008, "Wrong alignment on Widget_Ability_C_UpdateStacksText");
-static_assert(sizeof(Widget_Ability_C_UpdateStacksText) == 0x000018, "Wrong size on Widget_Ability_C_UpdateStacksText");
-static_assert(offsetof(Widget_Ability_C_UpdateStacksText, NumStacks) == 0x000000, "Member 'Widget_Ability_C_UpdateStacksText::NumStacks' has a wrong offset!");
-static_assert(offsetof(Widget_Ability_C_UpdateStacksText, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'Widget_Ability_C_UpdateStacksText::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Ability_C_UpdateStacksText;
 
 }
 

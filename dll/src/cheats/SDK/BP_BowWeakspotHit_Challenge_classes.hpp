@@ -34,17 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BowWeakspotHit_Challenge_C">();
+		BP_STATIC_CLASS_IMPL("BP_BowWeakspotHit_Challenge_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BowWeakspotHit_Challenge_C")
 	}
 	static class UBP_BowWeakspotHit_Challenge_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_BowWeakspotHit_Challenge_C>();
 	}
 };
-static_assert(alignof(UBP_BowWeakspotHit_Challenge_C) == 0x000008, "Wrong alignment on UBP_BowWeakspotHit_Challenge_C");
-static_assert(sizeof(UBP_BowWeakspotHit_Challenge_C) == 0x000040, "Wrong size on UBP_BowWeakspotHit_Challenge_C");
-static_assert(offsetof(UBP_BowWeakspotHit_Challenge_C, UberGraphFrame) == 0x000030, "Member 'UBP_BowWeakspotHit_Challenge_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_BowWeakspotHit_Challenge_C, WeakPointHitsInARow) == 0x000038, "Member 'UBP_BowWeakspotHit_Challenge_C::WeakPointHitsInARow' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_BowWeakspotHit_Challenge_C;
 
 }
 

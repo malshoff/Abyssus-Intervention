@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_PlayerStatusEffectEntry.Widget_PlayerStatusEffectEntry_C
-// 0x0060 (0x0330 - 0x02D0)
+// 0x0060 (0x03A0 - 0x0340)
 class UWidget_PlayerStatusEffectEntry_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       StatusEffectEnded;                                 // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       StatusEffectRefreshed;                             // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 CooldownImage;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Icon;                                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_202;                                         // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_275;                                         // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_348;                                         // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URetainerBox*                           RetainerBox_2;                                     // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             StackCount;                                        // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URStatusEffectGScript*                  StatusEffectScript;                                // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             StackCount;                                        // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URetainerBox*                           RetainerBox_2;                                     // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_348;                                         // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_275;                                         // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_202;                                         // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Icon;                                              // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 CooldownImage;                                     // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       StatusEffectRefreshed;                             // 0x0388(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       StatusEffectEnded;                                 // 0x0390(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class URStatusEffectGScript*                  StatusEffectScript;                                // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void EndAnimationFinished();
@@ -45,27 +45,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_PlayerStatusEffectEntry_C">();
+		BP_STATIC_CLASS_IMPL("Widget_PlayerStatusEffectEntry_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_PlayerStatusEffectEntry_C")
 	}
 	static class UWidget_PlayerStatusEffectEntry_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_PlayerStatusEffectEntry_C>();
 	}
 };
-static_assert(alignof(UWidget_PlayerStatusEffectEntry_C) == 0x000008, "Wrong alignment on UWidget_PlayerStatusEffectEntry_C");
-static_assert(sizeof(UWidget_PlayerStatusEffectEntry_C) == 0x000330, "Wrong size on UWidget_PlayerStatusEffectEntry_C");
-static_assert(offsetof(UWidget_PlayerStatusEffectEntry_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_PlayerStatusEffectEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerStatusEffectEntry_C, StatusEffectEnded) == 0x0002D8, "Member 'UWidget_PlayerStatusEffectEntry_C::StatusEffectEnded' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerStatusEffectEntry_C, StatusEffectRefreshed) == 0x0002E0, "Member 'UWidget_PlayerStatusEffectEntry_C::StatusEffectRefreshed' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerStatusEffectEntry_C, CooldownImage) == 0x0002E8, "Member 'UWidget_PlayerStatusEffectEntry_C::CooldownImage' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerStatusEffectEntry_C, Icon) == 0x0002F0, "Member 'UWidget_PlayerStatusEffectEntry_C::Icon' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerStatusEffectEntry_C, Image_202) == 0x0002F8, "Member 'UWidget_PlayerStatusEffectEntry_C::Image_202' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerStatusEffectEntry_C, Image_275) == 0x000300, "Member 'UWidget_PlayerStatusEffectEntry_C::Image_275' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerStatusEffectEntry_C, Image_348) == 0x000308, "Member 'UWidget_PlayerStatusEffectEntry_C::Image_348' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerStatusEffectEntry_C, InvalidationBox_0) == 0x000310, "Member 'UWidget_PlayerStatusEffectEntry_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerStatusEffectEntry_C, RetainerBox_2) == 0x000318, "Member 'UWidget_PlayerStatusEffectEntry_C::RetainerBox_2' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerStatusEffectEntry_C, StackCount) == 0x000320, "Member 'UWidget_PlayerStatusEffectEntry_C::StackCount' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerStatusEffectEntry_C, StatusEffectScript) == 0x000328, "Member 'UWidget_PlayerStatusEffectEntry_C::StatusEffectScript' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_PlayerStatusEffectEntry_C;
 
 }
 

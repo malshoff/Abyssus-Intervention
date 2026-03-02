@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_TriggerHappy_StatusEffect.BP_TriggerHappy_StatusEffect_C
-// 0x0008 (0x04E0 - 0x04D8)
+// 0x0008 (0x04E8 - 0x04E0)
 class UBP_TriggerHappy_StatusEffect_C final : public URStatusEffectGScript
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_TriggerHappy_StatusEffect(int32 EntryPoint);
@@ -32,16 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_TriggerHappy_StatusEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_TriggerHappy_StatusEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_TriggerHappy_StatusEffect_C")
 	}
 	static class UBP_TriggerHappy_StatusEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_TriggerHappy_StatusEffect_C>();
 	}
 };
-static_assert(alignof(UBP_TriggerHappy_StatusEffect_C) == 0x000008, "Wrong alignment on UBP_TriggerHappy_StatusEffect_C");
-static_assert(sizeof(UBP_TriggerHappy_StatusEffect_C) == 0x0004E0, "Wrong size on UBP_TriggerHappy_StatusEffect_C");
-static_assert(offsetof(UBP_TriggerHappy_StatusEffect_C, UberGraphFrame) == 0x0004D8, "Member 'UBP_TriggerHappy_StatusEffect_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_TriggerHappy_StatusEffect_C;
 
 }
 

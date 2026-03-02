@@ -20,7 +20,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_Door.BP_Door_C
 // 0x0198 (0x0470 - 0x02D8)
-class ABP_Door_C final : public ARDoor
+class ABP_Door_C : public ARDoor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
@@ -52,7 +52,7 @@ public:
 	uint8                                         Pad_3E2[0x6];                                      // 0x03E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        TeleportDistance;                                  // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AREnemySpawnAreaSegment*                AssociatedSpawnAreaSegmentBP;                      // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	struct FBox                                   CachedLevelBounds;                                 // 0x03F8(0x0038)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FBox                                   CachedLevelBounds;                                 // 0x03F8(0x0038)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bCacheLevelBounds;                                 // 0x0430(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_431[0x7];                                      // 0x0431(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                AudioBoundsExtentOffset;                           // 0x0438(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -60,6 +60,7 @@ public:
 	uint8                                         Pad_451[0x7];                                      // 0x0451(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class AActor>                     LockFXClass;                                       // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class AActor*                                 OSIOverrideActor;                                  // 0x0460(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	int32                                         KeysRequired;                                      // 0x0468(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__BP_Door_EnablePortalTriggerProximity_K2Node_ComponentBoundEvent_2_OnOverlapProximityBoxComponentEnter__DelegateSignature(class AActor* Actor);
@@ -73,7 +74,10 @@ public:
 	void FindLevelBounds();
 	void FinishedTransition();
 	void GetOSIOverrideActor(class AActor** OverrideActor);
-	void On_Teleported(class ARPlayerPawn* TeleportedPlayer);
+	class UDMActorProximityBoxComponent* GetPortalEntranceProximity();
+	class USceneComponent* GetPortalExitLocation();
+	void GetRequireKeyState(bool* Require_Key);
+	bool IsShareable(class APlayerController* PlayerController);
 	void OnFocus(class APlayerController* Controller);
 	void OnFocusGone(class APlayerController* Controller);
 	void OnInteract(class APlayerController* Controller);
@@ -83,6 +87,7 @@ public:
 	void OnRequiredKeyUpdated();
 	void OnSegmentCompleted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment);
 	void OnSegmentStarted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment);
+	void OnTeleported(class ARPlayerPawn* RPlayerPawn);
 	void OpenDoorMulticast();
 	void ReceiveBeginPlay();
 	void RunRoutedObjectBehaviour();
@@ -91,11 +96,11 @@ public:
 	void SetIndicatorToOSIOverride();
 	void SetupEntryDoor();
 	void SetupHighlight();
+	void ShareInteractableActor(const class APlayerController* PlayerController);
 	void SpawnPortalSFX();
 	void SpawnPortalVFX();
 	void StartClosing();
 	void StartOpening();
-	void Teleport_Player(class ARPlayerPawn* PlayerToTeleport);
 	void ToggleInteractionIndicatorVisibility(class AActor* InteractingActor, const bool NewVisible);
 	void UserConstructionScript();
 
@@ -116,47 +121,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Door_C">();
+		BP_STATIC_CLASS_IMPL("BP_Door_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Door_C")
 	}
 	static class ABP_Door_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Door_C>();
 	}
 };
-static_assert(alignof(ABP_Door_C) == 0x000010, "Wrong alignment on ABP_Door_C");
-static_assert(sizeof(ABP_Door_C) == 0x000470, "Wrong size on ABP_Door_C");
-static_assert(offsetof(ABP_Door_C, UberGraphFrame) == 0x0002D8, "Member 'ABP_Door_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, Lock_FX_Actor) == 0x0002E0, "Member 'ABP_Door_C::Lock_FX_Actor' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, BlockingCollision) == 0x0002E8, "Member 'ABP_Door_C::BlockingCollision' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, FilterVolume) == 0x0002F0, "Member 'ABP_Door_C::FilterVolume' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, AudioVolumeProxy) == 0x0002F8, "Member 'ABP_Door_C::AudioVolumeProxy' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, IndicatorWidget) == 0x000300, "Member 'ABP_Door_C::IndicatorWidget' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, EntranceArrow) == 0x000308, "Member 'ABP_Door_C::EntranceArrow' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, ExitArrow) == 0x000310, "Member 'ABP_Door_C::ExitArrow' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, BlockOverlapCheckerProximity) == 0x000318, "Member 'ABP_Door_C::BlockOverlapCheckerProximity' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, PortalExitArrow) == 0x000320, "Member 'ABP_Door_C::PortalExitArrow' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, PortalExitLocation) == 0x000328, "Member 'ABP_Door_C::PortalExitLocation' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, EnablePortalTriggerProximity) == 0x000330, "Member 'ABP_Door_C::EnablePortalTriggerProximity' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, PortalEntranceArrow) == 0x000338, "Member 'ABP_Door_C::PortalEntranceArrow' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, NS_SegmentDoor_Portal_01) == 0x000340, "Member 'ABP_Door_C::NS_SegmentDoor_Portal_01' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, PortalEntranceProximity) == 0x000348, "Member 'ABP_Door_C::PortalEntranceProximity' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, MSS_Door_Portal_Loop) == 0x000350, "Member 'ABP_Door_C::MSS_Door_Portal_Loop' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, DefaultSceneRoot) == 0x000358, "Member 'ABP_Door_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, AllowPortal) == 0x000360, "Member 'ABP_Door_C::AllowPortal' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, TransitionDuration) == 0x000368, "Member 'ABP_Door_C::TransitionDuration' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, ClosedTransform) == 0x000370, "Member 'ABP_Door_C::ClosedTransform' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, StartClosed) == 0x0003D0, "Member 'ABP_Door_C::StartClosed' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, SegmentToStart) == 0x0003D8, "Member 'ABP_Door_C::SegmentToStart' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, TransformOnSegmentEvents) == 0x0003E0, "Member 'ABP_Door_C::TransformOnSegmentEvents' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, PortalEnabled) == 0x0003E1, "Member 'ABP_Door_C::PortalEnabled' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, TeleportDistance) == 0x0003E8, "Member 'ABP_Door_C::TeleportDistance' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, AssociatedSpawnAreaSegmentBP) == 0x0003F0, "Member 'ABP_Door_C::AssociatedSpawnAreaSegmentBP' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, CachedLevelBounds) == 0x0003F8, "Member 'ABP_Door_C::CachedLevelBounds' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, bCacheLevelBounds) == 0x000430, "Member 'ABP_Door_C::bCacheLevelBounds' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, AudioBoundsExtentOffset) == 0x000438, "Member 'ABP_Door_C::AudioBoundsExtentOffset' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, bIsEntryDoor) == 0x000450, "Member 'ABP_Door_C::bIsEntryDoor' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, LockFXClass) == 0x000458, "Member 'ABP_Door_C::LockFXClass' has a wrong offset!");
-static_assert(offsetof(ABP_Door_C, OSIOverrideActor) == 0x000460, "Member 'ABP_Door_C::OSIOverrideActor' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Door_C;
 
 }
 

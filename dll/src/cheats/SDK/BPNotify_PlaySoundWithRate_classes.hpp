@@ -41,24 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPNotify_PlaySoundWithRate_C">();
+		BP_STATIC_CLASS_IMPL("BPNotify_PlaySoundWithRate_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPNotify_PlaySoundWithRate_C")
 	}
 	static class UBPNotify_PlaySoundWithRate_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPNotify_PlaySoundWithRate_C>();
 	}
 };
-static_assert(alignof(UBPNotify_PlaySoundWithRate_C) == 0x000008, "Wrong alignment on UBPNotify_PlaySoundWithRate_C");
-static_assert(sizeof(UBPNotify_PlaySoundWithRate_C) == 0x000068, "Wrong size on UBPNotify_PlaySoundWithRate_C");
-static_assert(offsetof(UBPNotify_PlaySoundWithRate_C, Sound) == 0x000038, "Member 'UBPNotify_PlaySoundWithRate_C::Sound' has a wrong offset!");
-static_assert(offsetof(UBPNotify_PlaySoundWithRate_C, IgnoreAnimPlayRate) == 0x000040, "Member 'UBPNotify_PlaySoundWithRate_C::IgnoreAnimPlayRate' has a wrong offset!");
-static_assert(offsetof(UBPNotify_PlaySoundWithRate_C, VolumeMultiplier) == 0x000048, "Member 'UBPNotify_PlaySoundWithRate_C::VolumeMultiplier' has a wrong offset!");
-static_assert(offsetof(UBPNotify_PlaySoundWithRate_C, RateToPitchMultiplier) == 0x000050, "Member 'UBPNotify_PlaySoundWithRate_C::RateToPitchMultiplier' has a wrong offset!");
-static_assert(offsetof(UBPNotify_PlaySoundWithRate_C, Follow) == 0x000058, "Member 'UBPNotify_PlaySoundWithRate_C::Follow' has a wrong offset!");
-static_assert(offsetof(UBPNotify_PlaySoundWithRate_C, AttachName) == 0x00005C, "Member 'UBPNotify_PlaySoundWithRate_C::AttachName' has a wrong offset!");
-static_assert(offsetof(UBPNotify_PlaySoundWithRate_C, bIsFirstPersonSound) == 0x000064, "Member 'UBPNotify_PlaySoundWithRate_C::bIsFirstPersonSound' has a wrong offset!");
-static_assert(offsetof(UBPNotify_PlaySoundWithRate_C, bAddMultiplayerSettings) == 0x000065, "Member 'UBPNotify_PlaySoundWithRate_C::bAddMultiplayerSettings' has a wrong offset!");
-static_assert(offsetof(UBPNotify_PlaySoundWithRate_C, bIsPlayerSound) == 0x000066, "Member 'UBPNotify_PlaySoundWithRate_C::bIsPlayerSound' has a wrong offset!");
+DUMPER7_ASSERTS_UBPNotify_PlaySoundWithRate_C;
 
 }
 

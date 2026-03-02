@@ -46,9 +46,7 @@ public:
 	class UObject*                                Target;                                            // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x28];                                       // 0x0008(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTickableTarget) == 0x000008, "Wrong alignment on FTickableTarget");
-static_assert(sizeof(FTickableTarget) == 0x000030, "Wrong size on FTickableTarget");
-static_assert(offsetof(FTickableTarget, Target) == 0x000000, "Member 'FTickableTarget::Target' has a wrong offset!");
+DUMPER7_ASSERTS_FTickableTarget;
 
 // ScriptStruct DMUtilities.DMSpringArmSettings
 // 0x0070 (0x0070 - 0x0000)
@@ -67,18 +65,7 @@ public:
 	float                                         CameraLagInterpSpeed;                              // 0x0068(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CameraResetInterpSpeed;                            // 0x006C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FDMSpringArmSettings) == 0x000008, "Wrong alignment on FDMSpringArmSettings");
-static_assert(sizeof(FDMSpringArmSettings) == 0x000070, "Wrong size on FDMSpringArmSettings");
-static_assert(offsetof(FDMSpringArmSettings, SpringArmRelativeOrientation) == 0x000000, "Member 'FDMSpringArmSettings::SpringArmRelativeOrientation' has a wrong offset!");
-static_assert(offsetof(FDMSpringArmSettings, PitchCameraClamp) == 0x000018, "Member 'FDMSpringArmSettings::PitchCameraClamp' has a wrong offset!");
-static_assert(offsetof(FDMSpringArmSettings, CameraVelocityMultiplier) == 0x000028, "Member 'FDMSpringArmSettings::CameraVelocityMultiplier' has a wrong offset!");
-static_assert(offsetof(FDMSpringArmSettings, LookAroundInterpSpeed) == 0x000038, "Member 'FDMSpringArmSettings::LookAroundInterpSpeed' has a wrong offset!");
-static_assert(offsetof(FDMSpringArmSettings, FollowVelocityInterpSpeed) == 0x00003C, "Member 'FDMSpringArmSettings::FollowVelocityInterpSpeed' has a wrong offset!");
-static_assert(offsetof(FDMSpringArmSettings, SpringArmLength) == 0x000040, "Member 'FDMSpringArmSettings::SpringArmLength' has a wrong offset!");
-static_assert(offsetof(FDMSpringArmSettings, CameraLagMaxVelocity) == 0x000050, "Member 'FDMSpringArmSettings::CameraLagMaxVelocity' has a wrong offset!");
-static_assert(offsetof(FDMSpringArmSettings, CameraFOVMinMaxValue) == 0x000058, "Member 'FDMSpringArmSettings::CameraFOVMinMaxValue' has a wrong offset!");
-static_assert(offsetof(FDMSpringArmSettings, CameraLagInterpSpeed) == 0x000068, "Member 'FDMSpringArmSettings::CameraLagInterpSpeed' has a wrong offset!");
-static_assert(offsetof(FDMSpringArmSettings, CameraResetInterpSpeed) == 0x00006C, "Member 'FDMSpringArmSettings::CameraResetInterpSpeed' has a wrong offset!");
+DUMPER7_ASSERTS_FDMSpringArmSettings;
 
 // ScriptStruct DMUtilities.DMWheelContact
 // 0x0138 (0x0138 - 0x0000)
@@ -91,12 +78,7 @@ public:
 	float                                         Timestamp;                                         // 0x0130(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FDMWheelContact) == 0x000008, "Wrong alignment on FDMWheelContact");
-static_assert(sizeof(FDMWheelContact) == 0x000138, "Wrong size on FDMWheelContact");
-static_assert(offsetof(FDMWheelContact, Hit) == 0x000000, "Member 'FDMWheelContact::Hit' has a wrong offset!");
-static_assert(offsetof(FDMWheelContact, OtherVelocity) == 0x000100, "Member 'FDMWheelContact::OtherVelocity' has a wrong offset!");
-static_assert(offsetof(FDMWheelContact, FrictionForce) == 0x000118, "Member 'FDMWheelContact::FrictionForce' has a wrong offset!");
-static_assert(offsetof(FDMWheelContact, Timestamp) == 0x000130, "Member 'FDMWheelContact::Timestamp' has a wrong offset!");
+DUMPER7_ASSERTS_FDMWheelContact;
 
 }
 

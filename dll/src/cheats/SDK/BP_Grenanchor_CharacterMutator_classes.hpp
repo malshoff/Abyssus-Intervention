@@ -34,6 +34,7 @@ public:
 	void ExecuteUbergraph_BP_Grenanchor_CharacterMutator(int32 EntryPoint);
 	class FText GetMutatorDescription();
 	void K2_ActivateScript();
+	void K2_DeactivateScript();
 	void OnAnimationTriggerEvent(class FName EventName);
 	void OnBlendOut_F0B19ACC486A47F73E60159BB2271FFC(class FName NotifyName);
 	void OnCompleted_F0B19ACC486A47F73E60159BB2271FFC(class FName NotifyName);
@@ -48,20 +49,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Grenanchor_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Grenanchor_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Grenanchor_CharacterMutator_C")
 	}
 	static class UBP_Grenanchor_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Grenanchor_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_Grenanchor_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_Grenanchor_CharacterMutator_C");
-static_assert(sizeof(UBP_Grenanchor_CharacterMutator_C) == 0x000130, "Wrong size on UBP_Grenanchor_CharacterMutator_C");
-static_assert(offsetof(UBP_Grenanchor_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_Grenanchor_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Grenanchor_CharacterMutator_C, As_RPlayer_Pawn) == 0x000110, "Member 'UBP_Grenanchor_CharacterMutator_C::As_RPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(UBP_Grenanchor_CharacterMutator_C, SlamRadiusReductionPercentage) == 0x000118, "Member 'UBP_Grenanchor_CharacterMutator_C::SlamRadiusReductionPercentage' has a wrong offset!");
-static_assert(offsetof(UBP_Grenanchor_CharacterMutator_C, ThrowingVelocity) == 0x000120, "Member 'UBP_Grenanchor_CharacterMutator_C::ThrowingVelocity' has a wrong offset!");
-static_assert(offsetof(UBP_Grenanchor_CharacterMutator_C, PlayerMovementInfluence) == 0x000128, "Member 'UBP_Grenanchor_CharacterMutator_C::PlayerMovementInfluence' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Grenanchor_CharacterMutator_C;
 
 }
 

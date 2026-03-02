@@ -26,11 +26,7 @@ public:
 	class ARGameState*                            CallFunc_GetRGameState_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WinWithoutMutator_Challenge_C_ExecuteUbergraph_BP_WinWithoutMutator_Challenge) == 0x000008, "Wrong alignment on BP_WinWithoutMutator_Challenge_C_ExecuteUbergraph_BP_WinWithoutMutator_Challenge");
-static_assert(sizeof(BP_WinWithoutMutator_Challenge_C_ExecuteUbergraph_BP_WinWithoutMutator_Challenge) == 0x000020, "Wrong size on BP_WinWithoutMutator_Challenge_C_ExecuteUbergraph_BP_WinWithoutMutator_Challenge");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_ExecuteUbergraph_BP_WinWithoutMutator_Challenge, EntryPoint) == 0x000000, "Member 'BP_WinWithoutMutator_Challenge_C_ExecuteUbergraph_BP_WinWithoutMutator_Challenge::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_ExecuteUbergraph_BP_WinWithoutMutator_Challenge, CallFunc_GetRGameState_ReturnValue) == 0x000008, "Member 'BP_WinWithoutMutator_Challenge_C_ExecuteUbergraph_BP_WinWithoutMutator_Challenge::CallFunc_GetRGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_ExecuteUbergraph_BP_WinWithoutMutator_Challenge, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'BP_WinWithoutMutator_Challenge_C_ExecuteUbergraph_BP_WinWithoutMutator_Challenge::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WinWithoutMutator_Challenge_C_ExecuteUbergraph_BP_WinWithoutMutator_Challenge;
 
 // Function BP_WinWithoutMutator_Challenge.BP_WinWithoutMutator_Challenge_C.FinalBossKilled
 // 0x0050 (0x0050 - 0x0000)
@@ -53,21 +49,7 @@ public:
 	bool                                          CallFunc_MatchesTag_ReturnValue_1;                 // 0x004E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x004F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WinWithoutMutator_Challenge_C_FinalBossKilled) == 0x000008, "Wrong alignment on BP_WinWithoutMutator_Challenge_C_FinalBossKilled");
-static_assert(sizeof(BP_WinWithoutMutator_Challenge_C_FinalBossKilled) == 0x000050, "Wrong size on BP_WinWithoutMutator_Challenge_C_FinalBossKilled");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_FinalBossKilled, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BP_WinWithoutMutator_Challenge_C_FinalBossKilled::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_FinalBossKilled, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_WinWithoutMutator_Challenge_C_FinalBossKilled::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_FinalBossKilled, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_WinWithoutMutator_Challenge_C_FinalBossKilled::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_FinalBossKilled, CallFunc_GetRGScriptComponent_ReturnValue) == 0x000010, "Member 'BP_WinWithoutMutator_Challenge_C_FinalBossKilled::CallFunc_GetRGScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_FinalBossKilled, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x000018, "Member 'BP_WinWithoutMutator_Challenge_C_FinalBossKilled::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_FinalBossKilled, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_WinWithoutMutator_Challenge_C_FinalBossKilled::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_FinalBossKilled, CallFunc_GetChallengeManager_ReturnValue) == 0x000028, "Member 'BP_WinWithoutMutator_Challenge_C_FinalBossKilled::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_FinalBossKilled, CallFunc_Array_Get_Item) == 0x000030, "Member 'BP_WinWithoutMutator_Challenge_C_FinalBossKilled::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_FinalBossKilled, CallFunc_Array_Length_ReturnValue) == 0x000048, "Member 'BP_WinWithoutMutator_Challenge_C_FinalBossKilled::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_FinalBossKilled, CallFunc_Less_IntInt_ReturnValue) == 0x00004C, "Member 'BP_WinWithoutMutator_Challenge_C_FinalBossKilled::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_FinalBossKilled, CallFunc_MatchesTag_ReturnValue) == 0x00004D, "Member 'BP_WinWithoutMutator_Challenge_C_FinalBossKilled::CallFunc_MatchesTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_FinalBossKilled, CallFunc_MatchesTag_ReturnValue_1) == 0x00004E, "Member 'BP_WinWithoutMutator_Challenge_C_FinalBossKilled::CallFunc_MatchesTag_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WinWithoutMutator_Challenge_C_FinalBossKilled, CallFunc_BooleanOR_ReturnValue) == 0x00004F, "Member 'BP_WinWithoutMutator_Challenge_C_FinalBossKilled::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WinWithoutMutator_Challenge_C_FinalBossKilled;
 
 }
 

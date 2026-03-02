@@ -11,12 +11,22 @@
 #include "Basic.hpp"
 
 #include "MetasoundFrontend_structs.hpp"
-#include "AudioExtensions_structs.hpp"
 #include "MetasoundEngine_structs.hpp"
+#include "AudioExtensions_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.Conv_MetaSoundLiteralToString
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_Conv_MetaSoundLiteralToString final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0058(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_Conv_MetaSoundLiteralToString;
 
 // Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateBoolArrayMetaSoundLiteral
 // 0x0068 (0x0068 - 0x0000)
@@ -26,10 +36,7 @@ public:
 	TArray<bool>                                  Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundFrontendLiteralBlueprintAccess_CreateBoolArrayMetaSoundLiteral) == 0x000008, "Wrong alignment on MetasoundFrontendLiteralBlueprintAccess_CreateBoolArrayMetaSoundLiteral");
-static_assert(sizeof(MetasoundFrontendLiteralBlueprintAccess_CreateBoolArrayMetaSoundLiteral) == 0x000068, "Wrong size on MetasoundFrontendLiteralBlueprintAccess_CreateBoolArrayMetaSoundLiteral");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateBoolArrayMetaSoundLiteral, Value) == 0x000000, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateBoolArrayMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateBoolArrayMetaSoundLiteral, ReturnValue) == 0x000010, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateBoolArrayMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateBoolArrayMetaSoundLiteral;
 
 // Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateBoolMetaSoundLiteral
 // 0x0060 (0x0060 - 0x0000)
@@ -40,10 +47,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundFrontendLiteralBlueprintAccess_CreateBoolMetaSoundLiteral) == 0x000008, "Wrong alignment on MetasoundFrontendLiteralBlueprintAccess_CreateBoolMetaSoundLiteral");
-static_assert(sizeof(MetasoundFrontendLiteralBlueprintAccess_CreateBoolMetaSoundLiteral) == 0x000060, "Wrong size on MetasoundFrontendLiteralBlueprintAccess_CreateBoolMetaSoundLiteral");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateBoolMetaSoundLiteral, Value) == 0x000000, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateBoolMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateBoolMetaSoundLiteral, ReturnValue) == 0x000008, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateBoolMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateBoolMetaSoundLiteral;
 
 // Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateFloatArrayMetaSoundLiteral
 // 0x0068 (0x0068 - 0x0000)
@@ -53,10 +57,7 @@ public:
 	TArray<float>                                 Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundFrontendLiteralBlueprintAccess_CreateFloatArrayMetaSoundLiteral) == 0x000008, "Wrong alignment on MetasoundFrontendLiteralBlueprintAccess_CreateFloatArrayMetaSoundLiteral");
-static_assert(sizeof(MetasoundFrontendLiteralBlueprintAccess_CreateFloatArrayMetaSoundLiteral) == 0x000068, "Wrong size on MetasoundFrontendLiteralBlueprintAccess_CreateFloatArrayMetaSoundLiteral");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateFloatArrayMetaSoundLiteral, Value) == 0x000000, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateFloatArrayMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateFloatArrayMetaSoundLiteral, ReturnValue) == 0x000010, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateFloatArrayMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateFloatArrayMetaSoundLiteral;
 
 // Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateFloatMetaSoundLiteral
 // 0x0060 (0x0060 - 0x0000)
@@ -67,10 +68,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundFrontendLiteralBlueprintAccess_CreateFloatMetaSoundLiteral) == 0x000008, "Wrong alignment on MetasoundFrontendLiteralBlueprintAccess_CreateFloatMetaSoundLiteral");
-static_assert(sizeof(MetasoundFrontendLiteralBlueprintAccess_CreateFloatMetaSoundLiteral) == 0x000060, "Wrong size on MetasoundFrontendLiteralBlueprintAccess_CreateFloatMetaSoundLiteral");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateFloatMetaSoundLiteral, Value) == 0x000000, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateFloatMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateFloatMetaSoundLiteral, ReturnValue) == 0x000008, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateFloatMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateFloatMetaSoundLiteral;
 
 // Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateIntArrayMetaSoundLiteral
 // 0x0068 (0x0068 - 0x0000)
@@ -80,10 +78,7 @@ public:
 	TArray<int32>                                 Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundFrontendLiteralBlueprintAccess_CreateIntArrayMetaSoundLiteral) == 0x000008, "Wrong alignment on MetasoundFrontendLiteralBlueprintAccess_CreateIntArrayMetaSoundLiteral");
-static_assert(sizeof(MetasoundFrontendLiteralBlueprintAccess_CreateIntArrayMetaSoundLiteral) == 0x000068, "Wrong size on MetasoundFrontendLiteralBlueprintAccess_CreateIntArrayMetaSoundLiteral");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateIntArrayMetaSoundLiteral, Value) == 0x000000, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateIntArrayMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateIntArrayMetaSoundLiteral, ReturnValue) == 0x000010, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateIntArrayMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateIntArrayMetaSoundLiteral;
 
 // Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateIntMetaSoundLiteral
 // 0x0060 (0x0060 - 0x0000)
@@ -94,10 +89,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundFrontendLiteralBlueprintAccess_CreateIntMetaSoundLiteral) == 0x000008, "Wrong alignment on MetasoundFrontendLiteralBlueprintAccess_CreateIntMetaSoundLiteral");
-static_assert(sizeof(MetasoundFrontendLiteralBlueprintAccess_CreateIntMetaSoundLiteral) == 0x000060, "Wrong size on MetasoundFrontendLiteralBlueprintAccess_CreateIntMetaSoundLiteral");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateIntMetaSoundLiteral, Value) == 0x000000, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateIntMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateIntMetaSoundLiteral, ReturnValue) == 0x000008, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateIntMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateIntMetaSoundLiteral;
 
 // Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromParam
 // 0x00F8 (0x00F8 - 0x0000)
@@ -107,10 +99,7 @@ public:
 	struct FAudioParameter                        Param;                                             // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x00A0(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromParam) == 0x000008, "Wrong alignment on MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromParam");
-static_assert(sizeof(MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromParam) == 0x0000F8, "Wrong size on MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromParam");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromParam, Param) == 0x000000, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromParam::Param' has a wrong offset!");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromParam, ReturnValue) == 0x0000A0, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromParam::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromParam;
 
 // Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateObjectArrayMetaSoundLiteral
 // 0x0068 (0x0068 - 0x0000)
@@ -120,10 +109,7 @@ public:
 	TArray<class UObject*>                        Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundFrontendLiteralBlueprintAccess_CreateObjectArrayMetaSoundLiteral) == 0x000008, "Wrong alignment on MetasoundFrontendLiteralBlueprintAccess_CreateObjectArrayMetaSoundLiteral");
-static_assert(sizeof(MetasoundFrontendLiteralBlueprintAccess_CreateObjectArrayMetaSoundLiteral) == 0x000068, "Wrong size on MetasoundFrontendLiteralBlueprintAccess_CreateObjectArrayMetaSoundLiteral");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateObjectArrayMetaSoundLiteral, Value) == 0x000000, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateObjectArrayMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateObjectArrayMetaSoundLiteral, ReturnValue) == 0x000010, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateObjectArrayMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateObjectArrayMetaSoundLiteral;
 
 // Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateObjectMetaSoundLiteral
 // 0x0060 (0x0060 - 0x0000)
@@ -133,10 +119,7 @@ public:
 	class UObject*                                Value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundFrontendLiteralBlueprintAccess_CreateObjectMetaSoundLiteral) == 0x000008, "Wrong alignment on MetasoundFrontendLiteralBlueprintAccess_CreateObjectMetaSoundLiteral");
-static_assert(sizeof(MetasoundFrontendLiteralBlueprintAccess_CreateObjectMetaSoundLiteral) == 0x000060, "Wrong size on MetasoundFrontendLiteralBlueprintAccess_CreateObjectMetaSoundLiteral");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateObjectMetaSoundLiteral, Value) == 0x000000, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateObjectMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateObjectMetaSoundLiteral, ReturnValue) == 0x000008, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateObjectMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateObjectMetaSoundLiteral;
 
 // Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateStringArrayMetaSoundLiteral
 // 0x0068 (0x0068 - 0x0000)
@@ -146,10 +129,7 @@ public:
 	TArray<class FString>                         Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundFrontendLiteralBlueprintAccess_CreateStringArrayMetaSoundLiteral) == 0x000008, "Wrong alignment on MetasoundFrontendLiteralBlueprintAccess_CreateStringArrayMetaSoundLiteral");
-static_assert(sizeof(MetasoundFrontendLiteralBlueprintAccess_CreateStringArrayMetaSoundLiteral) == 0x000068, "Wrong size on MetasoundFrontendLiteralBlueprintAccess_CreateStringArrayMetaSoundLiteral");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateStringArrayMetaSoundLiteral, Value) == 0x000000, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateStringArrayMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateStringArrayMetaSoundLiteral, ReturnValue) == 0x000010, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateStringArrayMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateStringArrayMetaSoundLiteral;
 
 // Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateStringMetaSoundLiteral
 // 0x0068 (0x0068 - 0x0000)
@@ -159,10 +139,138 @@ public:
 	class FString                                 Value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundFrontendLiteralBlueprintAccess_CreateStringMetaSoundLiteral) == 0x000008, "Wrong alignment on MetasoundFrontendLiteralBlueprintAccess_CreateStringMetaSoundLiteral");
-static_assert(sizeof(MetasoundFrontendLiteralBlueprintAccess_CreateStringMetaSoundLiteral) == 0x000068, "Wrong size on MetasoundFrontendLiteralBlueprintAccess_CreateStringMetaSoundLiteral");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateStringMetaSoundLiteral, Value) == 0x000000, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateStringMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetasoundFrontendLiteralBlueprintAccess_CreateStringMetaSoundLiteral, ReturnValue) == 0x000010, "Member 'MetasoundFrontendLiteralBlueprintAccess_CreateStringMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateStringMetaSoundLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetBoolArrayValueFromLiteral
+// 0x0070 (0x0070 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetBoolArrayValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<bool>                                  ReturnValue;                                       // 0x0060(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetBoolArrayValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetBoolValueFromLiteral
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetBoolValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0059(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetBoolValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetFloatArrayValueFromLiteral
+// 0x0070 (0x0070 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetFloatArrayValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 ReturnValue;                                       // 0x0060(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetFloatArrayValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetFloatValueFromLiteral
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetFloatValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x005C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetFloatValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetIntArrayValueFromLiteral
+// 0x0070 (0x0070 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetIntArrayValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 ReturnValue;                                       // 0x0060(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetIntArrayValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetIntValueFromLiteral
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetIntValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x005C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetIntValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetObjectArrayValueFromLiteral
+// 0x0070 (0x0070 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetObjectArrayValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UObject*>                        ReturnValue;                                       // 0x0060(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetObjectArrayValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetObjectValueFromLiteral
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetObjectValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetObjectValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetStringArrayValueFromLiteral
+// 0x0070 (0x0070 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetStringArrayValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         ReturnValue;                                       // 0x0060(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetStringArrayValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetStringValueFromLiteral
+// 0x0070 (0x0070 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetStringValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0060(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetStringValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetType
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetType final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetasoundFrontendLiteralType                 ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetType;
 
 // Function MetasoundEngine.MetasoundGeneratorHandle.CreateMetaSoundGeneratorHandle
 // 0x0010 (0x0010 - 0x0000)
@@ -172,10 +280,7 @@ public:
 	class UAudioComponent*                        OnComponent;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMetasoundGeneratorHandle*              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundGeneratorHandle_CreateMetaSoundGeneratorHandle) == 0x000008, "Wrong alignment on MetasoundGeneratorHandle_CreateMetaSoundGeneratorHandle");
-static_assert(sizeof(MetasoundGeneratorHandle_CreateMetaSoundGeneratorHandle) == 0x000010, "Wrong size on MetasoundGeneratorHandle_CreateMetaSoundGeneratorHandle");
-static_assert(offsetof(MetasoundGeneratorHandle_CreateMetaSoundGeneratorHandle, OnComponent) == 0x000000, "Member 'MetasoundGeneratorHandle_CreateMetaSoundGeneratorHandle::OnComponent' has a wrong offset!");
-static_assert(offsetof(MetasoundGeneratorHandle_CreateMetaSoundGeneratorHandle, ReturnValue) == 0x000008, "Member 'MetasoundGeneratorHandle_CreateMetaSoundGeneratorHandle::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundGeneratorHandle_CreateMetaSoundGeneratorHandle;
 
 // Function MetasoundEngine.MetasoundGeneratorHandle.ApplyParameterPack
 // 0x0010 (0x0010 - 0x0000)
@@ -186,10 +291,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetasoundGeneratorHandle_ApplyParameterPack) == 0x000008, "Wrong alignment on MetasoundGeneratorHandle_ApplyParameterPack");
-static_assert(sizeof(MetasoundGeneratorHandle_ApplyParameterPack) == 0x000010, "Wrong size on MetasoundGeneratorHandle_ApplyParameterPack");
-static_assert(offsetof(MetasoundGeneratorHandle_ApplyParameterPack, Pack) == 0x000000, "Member 'MetasoundGeneratorHandle_ApplyParameterPack::Pack' has a wrong offset!");
-static_assert(offsetof(MetasoundGeneratorHandle_ApplyParameterPack, ReturnValue) == 0x000008, "Member 'MetasoundGeneratorHandle_ApplyParameterPack::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundGeneratorHandle_ApplyParameterPack;
 
 // Function MetasoundEngine.MetasoundGeneratorHandle.WatchOutput
 // 0x002C (0x002C - 0x0000)
@@ -203,13 +305,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetasoundGeneratorHandle_WatchOutput) == 0x000004, "Wrong alignment on MetasoundGeneratorHandle_WatchOutput");
-static_assert(sizeof(MetasoundGeneratorHandle_WatchOutput) == 0x00002C, "Wrong size on MetasoundGeneratorHandle_WatchOutput");
-static_assert(offsetof(MetasoundGeneratorHandle_WatchOutput, OutputName) == 0x000000, "Member 'MetasoundGeneratorHandle_WatchOutput::OutputName' has a wrong offset!");
-static_assert(offsetof(MetasoundGeneratorHandle_WatchOutput, OnOutputValueChanged) == 0x000008, "Member 'MetasoundGeneratorHandle_WatchOutput::OnOutputValueChanged' has a wrong offset!");
-static_assert(offsetof(MetasoundGeneratorHandle_WatchOutput, AnalyzerName) == 0x000018, "Member 'MetasoundGeneratorHandle_WatchOutput::AnalyzerName' has a wrong offset!");
-static_assert(offsetof(MetasoundGeneratorHandle_WatchOutput, AnalyzerOutputName) == 0x000020, "Member 'MetasoundGeneratorHandle_WatchOutput::AnalyzerOutputName' has a wrong offset!");
-static_assert(offsetof(MetasoundGeneratorHandle_WatchOutput, ReturnValue) == 0x000028, "Member 'MetasoundGeneratorHandle_WatchOutput::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundGeneratorHandle_WatchOutput;
 
 // Function MetasoundEngine.MetasoundGeneratorHandle.EnableRuntimeRenderTiming
 // 0x0001 (0x0001 - 0x0000)
@@ -218,9 +314,7 @@ struct MetasoundGeneratorHandle_EnableRuntimeRenderTiming final
 public:
 	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundGeneratorHandle_EnableRuntimeRenderTiming) == 0x000001, "Wrong alignment on MetasoundGeneratorHandle_EnableRuntimeRenderTiming");
-static_assert(sizeof(MetasoundGeneratorHandle_EnableRuntimeRenderTiming) == 0x000001, "Wrong size on MetasoundGeneratorHandle_EnableRuntimeRenderTiming");
-static_assert(offsetof(MetasoundGeneratorHandle_EnableRuntimeRenderTiming, Enable) == 0x000000, "Member 'MetasoundGeneratorHandle_EnableRuntimeRenderTiming::Enable' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundGeneratorHandle_EnableRuntimeRenderTiming;
 
 // Function MetasoundEngine.MetasoundGeneratorHandle.GetCPUCoreUtilization
 // 0x0008 (0x0008 - 0x0000)
@@ -229,9 +323,7 @@ struct MetasoundGeneratorHandle_GetCPUCoreUtilization final
 public:
 	double                                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundGeneratorHandle_GetCPUCoreUtilization) == 0x000008, "Wrong alignment on MetasoundGeneratorHandle_GetCPUCoreUtilization");
-static_assert(sizeof(MetasoundGeneratorHandle_GetCPUCoreUtilization) == 0x000008, "Wrong size on MetasoundGeneratorHandle_GetCPUCoreUtilization");
-static_assert(offsetof(MetasoundGeneratorHandle_GetCPUCoreUtilization, ReturnValue) == 0x000000, "Member 'MetasoundGeneratorHandle_GetCPUCoreUtilization::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundGeneratorHandle_GetCPUCoreUtilization;
 
 // Function MetasoundEngine.MetaSoundCacheSubsystem.PrecacheMetaSound
 // 0x0010 (0x0010 - 0x0000)
@@ -242,10 +334,7 @@ public:
 	int32                                         InNumInstances;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundCacheSubsystem_PrecacheMetaSound) == 0x000008, "Wrong alignment on MetaSoundCacheSubsystem_PrecacheMetaSound");
-static_assert(sizeof(MetaSoundCacheSubsystem_PrecacheMetaSound) == 0x000010, "Wrong size on MetaSoundCacheSubsystem_PrecacheMetaSound");
-static_assert(offsetof(MetaSoundCacheSubsystem_PrecacheMetaSound, InMetaSound) == 0x000000, "Member 'MetaSoundCacheSubsystem_PrecacheMetaSound::InMetaSound' has a wrong offset!");
-static_assert(offsetof(MetaSoundCacheSubsystem_PrecacheMetaSound, InNumInstances) == 0x000008, "Member 'MetaSoundCacheSubsystem_PrecacheMetaSound::InNumInstances' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundCacheSubsystem_PrecacheMetaSound;
 
 // Function MetasoundEngine.MetaSoundCacheSubsystem.RemoveCachedOperatorsForMetaSound
 // 0x0008 (0x0008 - 0x0000)
@@ -254,9 +343,7 @@ struct MetaSoundCacheSubsystem_RemoveCachedOperatorsForMetaSound final
 public:
 	class UMetaSoundSource*                       InMetaSound;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundCacheSubsystem_RemoveCachedOperatorsForMetaSound) == 0x000008, "Wrong alignment on MetaSoundCacheSubsystem_RemoveCachedOperatorsForMetaSound");
-static_assert(sizeof(MetaSoundCacheSubsystem_RemoveCachedOperatorsForMetaSound) == 0x000008, "Wrong size on MetaSoundCacheSubsystem_RemoveCachedOperatorsForMetaSound");
-static_assert(offsetof(MetaSoundCacheSubsystem_RemoveCachedOperatorsForMetaSound, InMetaSound) == 0x000000, "Member 'MetaSoundCacheSubsystem_RemoveCachedOperatorsForMetaSound::InMetaSound' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundCacheSubsystem_RemoveCachedOperatorsForMetaSound;
 
 // Function MetasoundEngine.MetaSoundCacheSubsystem.TouchOrPrecacheMetaSound
 // 0x0010 (0x0010 - 0x0000)
@@ -267,10 +354,7 @@ public:
 	int32                                         InNumInstances;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundCacheSubsystem_TouchOrPrecacheMetaSound) == 0x000008, "Wrong alignment on MetaSoundCacheSubsystem_TouchOrPrecacheMetaSound");
-static_assert(sizeof(MetaSoundCacheSubsystem_TouchOrPrecacheMetaSound) == 0x000010, "Wrong size on MetaSoundCacheSubsystem_TouchOrPrecacheMetaSound");
-static_assert(offsetof(MetaSoundCacheSubsystem_TouchOrPrecacheMetaSound, InMetaSound) == 0x000000, "Member 'MetaSoundCacheSubsystem_TouchOrPrecacheMetaSound::InMetaSound' has a wrong offset!");
-static_assert(offsetof(MetaSoundCacheSubsystem_TouchOrPrecacheMetaSound, InNumInstances) == 0x000008, "Member 'MetaSoundCacheSubsystem_TouchOrPrecacheMetaSound::InNumInstances' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundCacheSubsystem_TouchOrPrecacheMetaSound;
 
 // Function MetasoundEngine.MetasoundOutputBlueprintAccess.GetBool
 // 0x0018 (0x0018 - 0x0000)
@@ -282,11 +366,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetasoundOutputBlueprintAccess_GetBool) == 0x000008, "Wrong alignment on MetasoundOutputBlueprintAccess_GetBool");
-static_assert(sizeof(MetasoundOutputBlueprintAccess_GetBool) == 0x000018, "Wrong size on MetasoundOutputBlueprintAccess_GetBool");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_GetBool, Output) == 0x000000, "Member 'MetasoundOutputBlueprintAccess_GetBool::Output' has a wrong offset!");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_GetBool, Success) == 0x000010, "Member 'MetasoundOutputBlueprintAccess_GetBool::Success' has a wrong offset!");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_GetBool, ReturnValue) == 0x000011, "Member 'MetasoundOutputBlueprintAccess_GetBool::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_GetBool;
 
 // Function MetasoundEngine.MetasoundOutputBlueprintAccess.GetFloat
 // 0x0018 (0x0018 - 0x0000)
@@ -298,11 +378,7 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundOutputBlueprintAccess_GetFloat) == 0x000008, "Wrong alignment on MetasoundOutputBlueprintAccess_GetFloat");
-static_assert(sizeof(MetasoundOutputBlueprintAccess_GetFloat) == 0x000018, "Wrong size on MetasoundOutputBlueprintAccess_GetFloat");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_GetFloat, Output) == 0x000000, "Member 'MetasoundOutputBlueprintAccess_GetFloat::Output' has a wrong offset!");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_GetFloat, Success) == 0x000010, "Member 'MetasoundOutputBlueprintAccess_GetFloat::Success' has a wrong offset!");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_GetFloat, ReturnValue) == 0x000014, "Member 'MetasoundOutputBlueprintAccess_GetFloat::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_GetFloat;
 
 // Function MetasoundEngine.MetasoundOutputBlueprintAccess.GetInt32
 // 0x0018 (0x0018 - 0x0000)
@@ -314,11 +390,7 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundOutputBlueprintAccess_GetInt32) == 0x000008, "Wrong alignment on MetasoundOutputBlueprintAccess_GetInt32");
-static_assert(sizeof(MetasoundOutputBlueprintAccess_GetInt32) == 0x000018, "Wrong size on MetasoundOutputBlueprintAccess_GetInt32");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_GetInt32, Output) == 0x000000, "Member 'MetasoundOutputBlueprintAccess_GetInt32::Output' has a wrong offset!");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_GetInt32, Success) == 0x000010, "Member 'MetasoundOutputBlueprintAccess_GetInt32::Success' has a wrong offset!");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_GetInt32, ReturnValue) == 0x000014, "Member 'MetasoundOutputBlueprintAccess_GetInt32::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_GetInt32;
 
 // Function MetasoundEngine.MetasoundOutputBlueprintAccess.GetString
 // 0x0028 (0x0028 - 0x0000)
@@ -330,11 +402,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundOutputBlueprintAccess_GetString) == 0x000008, "Wrong alignment on MetasoundOutputBlueprintAccess_GetString");
-static_assert(sizeof(MetasoundOutputBlueprintAccess_GetString) == 0x000028, "Wrong size on MetasoundOutputBlueprintAccess_GetString");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_GetString, Output) == 0x000000, "Member 'MetasoundOutputBlueprintAccess_GetString::Output' has a wrong offset!");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_GetString, Success) == 0x000010, "Member 'MetasoundOutputBlueprintAccess_GetString::Success' has a wrong offset!");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_GetString, ReturnValue) == 0x000018, "Member 'MetasoundOutputBlueprintAccess_GetString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_GetString;
 
 // Function MetasoundEngine.MetasoundOutputBlueprintAccess.GetTimeSeconds
 // 0x0020 (0x0020 - 0x0000)
@@ -346,11 +414,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetasoundOutputBlueprintAccess_GetTimeSeconds) == 0x000008, "Wrong alignment on MetasoundOutputBlueprintAccess_GetTimeSeconds");
-static_assert(sizeof(MetasoundOutputBlueprintAccess_GetTimeSeconds) == 0x000020, "Wrong size on MetasoundOutputBlueprintAccess_GetTimeSeconds");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_GetTimeSeconds, Output) == 0x000000, "Member 'MetasoundOutputBlueprintAccess_GetTimeSeconds::Output' has a wrong offset!");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_GetTimeSeconds, Success) == 0x000010, "Member 'MetasoundOutputBlueprintAccess_GetTimeSeconds::Success' has a wrong offset!");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_GetTimeSeconds, ReturnValue) == 0x000018, "Member 'MetasoundOutputBlueprintAccess_GetTimeSeconds::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_GetTimeSeconds;
 
 // Function MetasoundEngine.MetasoundOutputBlueprintAccess.IsBool
 // 0x0018 (0x0018 - 0x0000)
@@ -361,10 +425,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetasoundOutputBlueprintAccess_IsBool) == 0x000008, "Wrong alignment on MetasoundOutputBlueprintAccess_IsBool");
-static_assert(sizeof(MetasoundOutputBlueprintAccess_IsBool) == 0x000018, "Wrong size on MetasoundOutputBlueprintAccess_IsBool");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_IsBool, Output) == 0x000000, "Member 'MetasoundOutputBlueprintAccess_IsBool::Output' has a wrong offset!");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_IsBool, ReturnValue) == 0x000010, "Member 'MetasoundOutputBlueprintAccess_IsBool::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_IsBool;
 
 // Function MetasoundEngine.MetasoundOutputBlueprintAccess.IsFloat
 // 0x0018 (0x0018 - 0x0000)
@@ -375,10 +436,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetasoundOutputBlueprintAccess_IsFloat) == 0x000008, "Wrong alignment on MetasoundOutputBlueprintAccess_IsFloat");
-static_assert(sizeof(MetasoundOutputBlueprintAccess_IsFloat) == 0x000018, "Wrong size on MetasoundOutputBlueprintAccess_IsFloat");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_IsFloat, Output) == 0x000000, "Member 'MetasoundOutputBlueprintAccess_IsFloat::Output' has a wrong offset!");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_IsFloat, ReturnValue) == 0x000010, "Member 'MetasoundOutputBlueprintAccess_IsFloat::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_IsFloat;
 
 // Function MetasoundEngine.MetasoundOutputBlueprintAccess.IsInt32
 // 0x0018 (0x0018 - 0x0000)
@@ -389,10 +447,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetasoundOutputBlueprintAccess_IsInt32) == 0x000008, "Wrong alignment on MetasoundOutputBlueprintAccess_IsInt32");
-static_assert(sizeof(MetasoundOutputBlueprintAccess_IsInt32) == 0x000018, "Wrong size on MetasoundOutputBlueprintAccess_IsInt32");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_IsInt32, Output) == 0x000000, "Member 'MetasoundOutputBlueprintAccess_IsInt32::Output' has a wrong offset!");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_IsInt32, ReturnValue) == 0x000010, "Member 'MetasoundOutputBlueprintAccess_IsInt32::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_IsInt32;
 
 // Function MetasoundEngine.MetasoundOutputBlueprintAccess.IsString
 // 0x0018 (0x0018 - 0x0000)
@@ -403,10 +458,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetasoundOutputBlueprintAccess_IsString) == 0x000008, "Wrong alignment on MetasoundOutputBlueprintAccess_IsString");
-static_assert(sizeof(MetasoundOutputBlueprintAccess_IsString) == 0x000018, "Wrong size on MetasoundOutputBlueprintAccess_IsString");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_IsString, Output) == 0x000000, "Member 'MetasoundOutputBlueprintAccess_IsString::Output' has a wrong offset!");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_IsString, ReturnValue) == 0x000010, "Member 'MetasoundOutputBlueprintAccess_IsString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_IsString;
 
 // Function MetasoundEngine.MetasoundOutputBlueprintAccess.IsTime
 // 0x0018 (0x0018 - 0x0000)
@@ -417,10 +469,22 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetasoundOutputBlueprintAccess_IsTime) == 0x000008, "Wrong alignment on MetasoundOutputBlueprintAccess_IsTime");
-static_assert(sizeof(MetasoundOutputBlueprintAccess_IsTime) == 0x000018, "Wrong size on MetasoundOutputBlueprintAccess_IsTime");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_IsTime, Output) == 0x000000, "Member 'MetasoundOutputBlueprintAccess_IsTime::Output' has a wrong offset!");
-static_assert(offsetof(MetasoundOutputBlueprintAccess_IsTime, ReturnValue) == 0x000010, "Member 'MetasoundOutputBlueprintAccess_IsTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_IsTime;
+
+// Function MetasoundEngine.MetaSoundOutputSubsystem.UnwatchOutput
+// 0x0038 (0x0038 - 0x0000)
+struct MetaSoundOutputSubsystem_UnwatchOutput final
+{
+public:
+	class UAudioComponent*                        AudioComponent;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   OutputName;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class FName OutputName, const struct FMetaSoundOutput& Output)> OnOutputValueChanged; // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AnalyzerName;                                      // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AnalyzerOutputName;                                // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetaSoundOutputSubsystem_UnwatchOutput;
 
 // Function MetasoundEngine.MetaSoundOutputSubsystem.WatchOutput
 // 0x0038 (0x0038 - 0x0000)
@@ -435,14 +499,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundOutputSubsystem_WatchOutput) == 0x000008, "Wrong alignment on MetaSoundOutputSubsystem_WatchOutput");
-static_assert(sizeof(MetaSoundOutputSubsystem_WatchOutput) == 0x000038, "Wrong size on MetaSoundOutputSubsystem_WatchOutput");
-static_assert(offsetof(MetaSoundOutputSubsystem_WatchOutput, AudioComponent) == 0x000000, "Member 'MetaSoundOutputSubsystem_WatchOutput::AudioComponent' has a wrong offset!");
-static_assert(offsetof(MetaSoundOutputSubsystem_WatchOutput, OutputName) == 0x000008, "Member 'MetaSoundOutputSubsystem_WatchOutput::OutputName' has a wrong offset!");
-static_assert(offsetof(MetaSoundOutputSubsystem_WatchOutput, OnOutputValueChanged) == 0x000010, "Member 'MetaSoundOutputSubsystem_WatchOutput::OnOutputValueChanged' has a wrong offset!");
-static_assert(offsetof(MetaSoundOutputSubsystem_WatchOutput, AnalyzerName) == 0x000020, "Member 'MetaSoundOutputSubsystem_WatchOutput::AnalyzerName' has a wrong offset!");
-static_assert(offsetof(MetaSoundOutputSubsystem_WatchOutput, AnalyzerOutputName) == 0x000028, "Member 'MetaSoundOutputSubsystem_WatchOutput::AnalyzerOutputName' has a wrong offset!");
-static_assert(offsetof(MetaSoundOutputSubsystem_WatchOutput, ReturnValue) == 0x000030, "Member 'MetaSoundOutputSubsystem_WatchOutput::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundOutputSubsystem_WatchOutput;
 
 // Function MetasoundEngine.MetaSoundQualityHelper.GetQualityNames
 // 0x0010 (0x0010 - 0x0000)
@@ -451,9 +508,7 @@ struct MetaSoundQualityHelper_GetQualityNames final
 public:
 	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundQualityHelper_GetQualityNames) == 0x000008, "Wrong alignment on MetaSoundQualityHelper_GetQualityNames");
-static_assert(sizeof(MetaSoundQualityHelper_GetQualityNames) == 0x000010, "Wrong size on MetaSoundQualityHelper_GetQualityNames");
-static_assert(offsetof(MetaSoundQualityHelper_GetQualityNames, ReturnValue) == 0x000000, "Member 'MetaSoundQualityHelper_GetQualityNames::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundQualityHelper_GetQualityNames;
 
 // Function MetasoundEngine.MetaSoundAssetSubsystem.RegisterAssetClassesInDirectories
 // 0x0010 (0x0010 - 0x0000)
@@ -462,9 +517,7 @@ struct MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories final
 public:
 	TArray<struct FMetaSoundAssetDirectory>       Directories;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories) == 0x000008, "Wrong alignment on MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories");
-static_assert(sizeof(MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories) == 0x000010, "Wrong size on MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories");
-static_assert(offsetof(MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories, Directories) == 0x000000, "Member 'MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories::Directories' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories;
 
 // Function MetasoundEngine.MetaSoundAssetSubsystem.UnregisterAssetClassesInDirectories
 // 0x0010 (0x0010 - 0x0000)
@@ -473,9 +526,7 @@ struct MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories final
 public:
 	TArray<struct FMetaSoundAssetDirectory>       Directories;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories) == 0x000008, "Wrong alignment on MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories");
-static_assert(sizeof(MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories) == 0x000010, "Wrong size on MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories");
-static_assert(offsetof(MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories, Directories) == 0x000000, "Member 'MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories::Directories' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.AddGraphInputNode
 // 0x0090 (0x0090 - 0x0000)
@@ -491,14 +542,7 @@ public:
 	struct FMetaSoundBuilderNodeOutputHandle      ReturnValue;                                       // 0x006C(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_AddGraphInputNode) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_AddGraphInputNode");
-static_assert(sizeof(MetaSoundBuilderBase_AddGraphInputNode) == 0x000090, "Wrong size on MetaSoundBuilderBase_AddGraphInputNode");
-static_assert(offsetof(MetaSoundBuilderBase_AddGraphInputNode, Name_0) == 0x000000, "Member 'MetaSoundBuilderBase_AddGraphInputNode::Name_0' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddGraphInputNode, DataType) == 0x000008, "Member 'MetaSoundBuilderBase_AddGraphInputNode::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddGraphInputNode, DefaultValue) == 0x000010, "Member 'MetaSoundBuilderBase_AddGraphInputNode::DefaultValue' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddGraphInputNode, OutResult) == 0x000068, "Member 'MetaSoundBuilderBase_AddGraphInputNode::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddGraphInputNode, bIsConstructorInput) == 0x000069, "Member 'MetaSoundBuilderBase_AddGraphInputNode::bIsConstructorInput' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddGraphInputNode, ReturnValue) == 0x00006C, "Member 'MetaSoundBuilderBase_AddGraphInputNode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddGraphInputNode;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.AddGraphOutputNode
 // 0x0090 (0x0090 - 0x0000)
@@ -514,14 +558,56 @@ public:
 	struct FMetaSoundBuilderNodeInputHandle       ReturnValue;                                       // 0x006C(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_AddGraphOutputNode) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_AddGraphOutputNode");
-static_assert(sizeof(MetaSoundBuilderBase_AddGraphOutputNode) == 0x000090, "Wrong size on MetaSoundBuilderBase_AddGraphOutputNode");
-static_assert(offsetof(MetaSoundBuilderBase_AddGraphOutputNode, Name_0) == 0x000000, "Member 'MetaSoundBuilderBase_AddGraphOutputNode::Name_0' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddGraphOutputNode, DataType) == 0x000008, "Member 'MetaSoundBuilderBase_AddGraphOutputNode::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddGraphOutputNode, DefaultValue) == 0x000010, "Member 'MetaSoundBuilderBase_AddGraphOutputNode::DefaultValue' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddGraphOutputNode, OutResult) == 0x000068, "Member 'MetaSoundBuilderBase_AddGraphOutputNode::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddGraphOutputNode, bIsConstructorOutput) == 0x000069, "Member 'MetaSoundBuilderBase_AddGraphOutputNode::bIsConstructorOutput' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddGraphOutputNode, ReturnValue) == 0x00006C, "Member 'MetaSoundBuilderBase_AddGraphOutputNode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddGraphOutputNode;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphVariable
+// 0x0070 (0x0070 - 0x0000)
+struct MetaSoundBuilderBase_AddGraphVariable final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   DataType;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              DefaultValue;                                      // 0x0010(0x0058)(Parm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddGraphVariable;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphVariableGetDelayedNode
+// 0x001C (0x001C - 0x0000)
+struct MetaSoundBuilderBase_AddGraphVariableGetDelayedNode final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddGraphVariableGetDelayedNode;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphVariableGetNode
+// 0x001C (0x001C - 0x0000)
+struct MetaSoundBuilderBase_AddGraphVariableGetNode final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddGraphVariableGetNode;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphVariableSetNode
+// 0x001C (0x001C - 0x0000)
+struct MetaSoundBuilderBase_AddGraphVariableSetNode final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddGraphVariableSetNode;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.AddInterface
 // 0x000C (0x000C - 0x0000)
@@ -532,10 +618,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_AddInterface) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_AddInterface");
-static_assert(sizeof(MetaSoundBuilderBase_AddInterface) == 0x00000C, "Wrong size on MetaSoundBuilderBase_AddInterface");
-static_assert(offsetof(MetaSoundBuilderBase_AddInterface, InterfaceName) == 0x000000, "Member 'MetaSoundBuilderBase_AddInterface::InterfaceName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddInterface, OutResult) == 0x000008, "Member 'MetaSoundBuilderBase_AddInterface::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddInterface;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.AddNode
 // 0x0028 (0x0028 - 0x0000)
@@ -548,11 +631,7 @@ public:
 	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x0014(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_AddNode) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_AddNode");
-static_assert(sizeof(MetaSoundBuilderBase_AddNode) == 0x000028, "Wrong size on MetaSoundBuilderBase_AddNode");
-static_assert(offsetof(MetaSoundBuilderBase_AddNode, NodeClass) == 0x000000, "Member 'MetaSoundBuilderBase_AddNode::NodeClass' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddNode, OutResult) == 0x000010, "Member 'MetaSoundBuilderBase_AddNode::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddNode, ReturnValue) == 0x000014, "Member 'MetaSoundBuilderBase_AddNode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddNode;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.AddNodeByClassName
 // 0x0030 (0x0030 - 0x0000)
@@ -565,12 +644,7 @@ public:
 	int32                                         MajorVersion;                                      // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_AddNodeByClassName) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_AddNodeByClassName");
-static_assert(sizeof(MetaSoundBuilderBase_AddNodeByClassName) == 0x000030, "Wrong size on MetaSoundBuilderBase_AddNodeByClassName");
-static_assert(offsetof(MetaSoundBuilderBase_AddNodeByClassName, ClassName) == 0x000000, "Member 'MetaSoundBuilderBase_AddNodeByClassName::ClassName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddNodeByClassName, OutResult) == 0x000018, "Member 'MetaSoundBuilderBase_AddNodeByClassName::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddNodeByClassName, MajorVersion) == 0x00001C, "Member 'MetaSoundBuilderBase_AddNodeByClassName::MajorVersion' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_AddNodeByClassName, ReturnValue) == 0x000020, "Member 'MetaSoundBuilderBase_AddNodeByClassName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddNodeByClassName;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.BuildAndOverwriteMetaSound
 // 0x0018 (0x0018 - 0x0000)
@@ -581,10 +655,7 @@ public:
 	bool                                          bForceUniqueClassName;                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_BuildAndOverwriteMetaSound) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_BuildAndOverwriteMetaSound");
-static_assert(sizeof(MetaSoundBuilderBase_BuildAndOverwriteMetaSound) == 0x000018, "Wrong size on MetaSoundBuilderBase_BuildAndOverwriteMetaSound");
-static_assert(offsetof(MetaSoundBuilderBase_BuildAndOverwriteMetaSound, ExistingMetaSound) == 0x000000, "Member 'MetaSoundBuilderBase_BuildAndOverwriteMetaSound::ExistingMetaSound' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_BuildAndOverwriteMetaSound, bForceUniqueClassName) == 0x000010, "Member 'MetaSoundBuilderBase_BuildAndOverwriteMetaSound::bForceUniqueClassName' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_BuildAndOverwriteMetaSound;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeInputsToMatchingGraphInterfaceInputs
 // 0x0028 (0x0028 - 0x0000)
@@ -596,11 +667,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundBuilderNodeOutputHandle> ReturnValue;                                    // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_ConnectNodeInputsToMatchingGraphInterfaceInputs) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_ConnectNodeInputsToMatchingGraphInterfaceInputs");
-static_assert(sizeof(MetaSoundBuilderBase_ConnectNodeInputsToMatchingGraphInterfaceInputs) == 0x000028, "Wrong size on MetaSoundBuilderBase_ConnectNodeInputsToMatchingGraphInterfaceInputs");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodeInputsToMatchingGraphInterfaceInputs, NodeHandle) == 0x000000, "Member 'MetaSoundBuilderBase_ConnectNodeInputsToMatchingGraphInterfaceInputs::NodeHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodeInputsToMatchingGraphInterfaceInputs, OutResult) == 0x000010, "Member 'MetaSoundBuilderBase_ConnectNodeInputsToMatchingGraphInterfaceInputs::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodeInputsToMatchingGraphInterfaceInputs, ReturnValue) == 0x000018, "Member 'MetaSoundBuilderBase_ConnectNodeInputsToMatchingGraphInterfaceInputs::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConnectNodeInputsToMatchingGraphInterfaceInputs;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeInputToGraphInput
 // 0x002C (0x002C - 0x0000)
@@ -612,11 +679,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_ConnectNodeInputToGraphInput) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_ConnectNodeInputToGraphInput");
-static_assert(sizeof(MetaSoundBuilderBase_ConnectNodeInputToGraphInput) == 0x00002C, "Wrong size on MetaSoundBuilderBase_ConnectNodeInputToGraphInput");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodeInputToGraphInput, GraphInputName) == 0x000000, "Member 'MetaSoundBuilderBase_ConnectNodeInputToGraphInput::GraphInputName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodeInputToGraphInput, NodeInputHandle) == 0x000008, "Member 'MetaSoundBuilderBase_ConnectNodeInputToGraphInput::NodeInputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodeInputToGraphInput, OutResult) == 0x000028, "Member 'MetaSoundBuilderBase_ConnectNodeInputToGraphInput::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConnectNodeInputToGraphInput;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeOutputsToMatchingGraphInterfaceOutputs
 // 0x0028 (0x0028 - 0x0000)
@@ -628,11 +691,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundBuilderNodeInputHandle> ReturnValue;                                     // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_ConnectNodeOutputsToMatchingGraphInterfaceOutputs) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_ConnectNodeOutputsToMatchingGraphInterfaceOutputs");
-static_assert(sizeof(MetaSoundBuilderBase_ConnectNodeOutputsToMatchingGraphInterfaceOutputs) == 0x000028, "Wrong size on MetaSoundBuilderBase_ConnectNodeOutputsToMatchingGraphInterfaceOutputs");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodeOutputsToMatchingGraphInterfaceOutputs, NodeHandle) == 0x000000, "Member 'MetaSoundBuilderBase_ConnectNodeOutputsToMatchingGraphInterfaceOutputs::NodeHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodeOutputsToMatchingGraphInterfaceOutputs, OutResult) == 0x000010, "Member 'MetaSoundBuilderBase_ConnectNodeOutputsToMatchingGraphInterfaceOutputs::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodeOutputsToMatchingGraphInterfaceOutputs, ReturnValue) == 0x000018, "Member 'MetaSoundBuilderBase_ConnectNodeOutputsToMatchingGraphInterfaceOutputs::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConnectNodeOutputsToMatchingGraphInterfaceOutputs;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeOutputToGraphOutput
 // 0x002C (0x002C - 0x0000)
@@ -644,11 +703,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_ConnectNodeOutputToGraphOutput) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_ConnectNodeOutputToGraphOutput");
-static_assert(sizeof(MetaSoundBuilderBase_ConnectNodeOutputToGraphOutput) == 0x00002C, "Wrong size on MetaSoundBuilderBase_ConnectNodeOutputToGraphOutput");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodeOutputToGraphOutput, GraphOutputName) == 0x000000, "Member 'MetaSoundBuilderBase_ConnectNodeOutputToGraphOutput::GraphOutputName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodeOutputToGraphOutput, NodeOutputHandle) == 0x000008, "Member 'MetaSoundBuilderBase_ConnectNodeOutputToGraphOutput::NodeOutputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodeOutputToGraphOutput, OutResult) == 0x000028, "Member 'MetaSoundBuilderBase_ConnectNodeOutputToGraphOutput::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConnectNodeOutputToGraphOutput;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodes
 // 0x0044 (0x0044 - 0x0000)
@@ -660,11 +715,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_ConnectNodes) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_ConnectNodes");
-static_assert(sizeof(MetaSoundBuilderBase_ConnectNodes) == 0x000044, "Wrong size on MetaSoundBuilderBase_ConnectNodes");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodes, NodeOutputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_ConnectNodes::NodeOutputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodes, NodeInputHandle) == 0x000020, "Member 'MetaSoundBuilderBase_ConnectNodes::NodeInputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodes, OutResult) == 0x000040, "Member 'MetaSoundBuilderBase_ConnectNodes::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConnectNodes;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodesByInterfaceBindings
 // 0x0024 (0x0024 - 0x0000)
@@ -676,11 +727,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_ConnectNodesByInterfaceBindings) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_ConnectNodesByInterfaceBindings");
-static_assert(sizeof(MetaSoundBuilderBase_ConnectNodesByInterfaceBindings) == 0x000024, "Wrong size on MetaSoundBuilderBase_ConnectNodesByInterfaceBindings");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodesByInterfaceBindings, FromNodeHandle) == 0x000000, "Member 'MetaSoundBuilderBase_ConnectNodesByInterfaceBindings::FromNodeHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodesByInterfaceBindings, ToNodeHandle) == 0x000010, "Member 'MetaSoundBuilderBase_ConnectNodesByInterfaceBindings::ToNodeHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ConnectNodesByInterfaceBindings, OutResult) == 0x000020, "Member 'MetaSoundBuilderBase_ConnectNodesByInterfaceBindings::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConnectNodesByInterfaceBindings;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConvertFromPreset
 // 0x0001 (0x0001 - 0x0000)
@@ -689,9 +736,7 @@ struct MetaSoundBuilderBase_ConvertFromPreset final
 public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_ConvertFromPreset) == 0x000001, "Wrong alignment on MetaSoundBuilderBase_ConvertFromPreset");
-static_assert(sizeof(MetaSoundBuilderBase_ConvertFromPreset) == 0x000001, "Wrong size on MetaSoundBuilderBase_ConvertFromPreset");
-static_assert(offsetof(MetaSoundBuilderBase_ConvertFromPreset, OutResult) == 0x000000, "Member 'MetaSoundBuilderBase_ConvertFromPreset::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConvertFromPreset;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConvertToPreset
 // 0x0018 (0x0018 - 0x0000)
@@ -702,10 +747,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_ConvertToPreset) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_ConvertToPreset");
-static_assert(sizeof(MetaSoundBuilderBase_ConvertToPreset) == 0x000018, "Wrong size on MetaSoundBuilderBase_ConvertToPreset");
-static_assert(offsetof(MetaSoundBuilderBase_ConvertToPreset, ReferencedNodeClass) == 0x000000, "Member 'MetaSoundBuilderBase_ConvertToPreset::ReferencedNodeClass' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ConvertToPreset, OutResult) == 0x000010, "Member 'MetaSoundBuilderBase_ConvertToPreset::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConvertToPreset;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodeInput
 // 0x0024 (0x0024 - 0x0000)
@@ -716,10 +758,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_DisconnectNodeInput) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_DisconnectNodeInput");
-static_assert(sizeof(MetaSoundBuilderBase_DisconnectNodeInput) == 0x000024, "Wrong size on MetaSoundBuilderBase_DisconnectNodeInput");
-static_assert(offsetof(MetaSoundBuilderBase_DisconnectNodeInput, NodeInputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_DisconnectNodeInput::NodeInputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_DisconnectNodeInput, OutResult) == 0x000020, "Member 'MetaSoundBuilderBase_DisconnectNodeInput::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_DisconnectNodeInput;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodeOutput
 // 0x0024 (0x0024 - 0x0000)
@@ -730,10 +769,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_DisconnectNodeOutput) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_DisconnectNodeOutput");
-static_assert(sizeof(MetaSoundBuilderBase_DisconnectNodeOutput) == 0x000024, "Wrong size on MetaSoundBuilderBase_DisconnectNodeOutput");
-static_assert(offsetof(MetaSoundBuilderBase_DisconnectNodeOutput, NodeOutputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_DisconnectNodeOutput::NodeOutputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_DisconnectNodeOutput, OutResult) == 0x000020, "Member 'MetaSoundBuilderBase_DisconnectNodeOutput::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_DisconnectNodeOutput;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodes
 // 0x0044 (0x0044 - 0x0000)
@@ -745,11 +781,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_DisconnectNodes) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_DisconnectNodes");
-static_assert(sizeof(MetaSoundBuilderBase_DisconnectNodes) == 0x000044, "Wrong size on MetaSoundBuilderBase_DisconnectNodes");
-static_assert(offsetof(MetaSoundBuilderBase_DisconnectNodes, NodeOutputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_DisconnectNodes::NodeOutputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_DisconnectNodes, NodeInputHandle) == 0x000020, "Member 'MetaSoundBuilderBase_DisconnectNodes::NodeInputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_DisconnectNodes, OutResult) == 0x000040, "Member 'MetaSoundBuilderBase_DisconnectNodes::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_DisconnectNodes;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodesByInterfaceBindings
 // 0x0024 (0x0024 - 0x0000)
@@ -761,43 +793,35 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_DisconnectNodesByInterfaceBindings) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_DisconnectNodesByInterfaceBindings");
-static_assert(sizeof(MetaSoundBuilderBase_DisconnectNodesByInterfaceBindings) == 0x000024, "Wrong size on MetaSoundBuilderBase_DisconnectNodesByInterfaceBindings");
-static_assert(offsetof(MetaSoundBuilderBase_DisconnectNodesByInterfaceBindings, FromNodeHandle) == 0x000000, "Member 'MetaSoundBuilderBase_DisconnectNodesByInterfaceBindings::FromNodeHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_DisconnectNodesByInterfaceBindings, ToNodeHandle) == 0x000010, "Member 'MetaSoundBuilderBase_DisconnectNodesByInterfaceBindings::ToNodeHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_DisconnectNodesByInterfaceBindings, OutResult) == 0x000020, "Member 'MetaSoundBuilderBase_DisconnectNodesByInterfaceBindings::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_DisconnectNodesByInterfaceBindings;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindGraphInputNode
-// 0x001C (0x001C - 0x0000)
+// 0x0044 (0x0044 - 0x0000)
 struct MetaSoundBuilderBase_FindGraphInputNode final
 {
 public:
 	class FName                                   InputName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   OutDataType;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMetaSoundBuilderNodeOutputHandle      NodeOutputHandle;                                  // 0x0010(0x0020)(Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x0034(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_FindGraphInputNode) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_FindGraphInputNode");
-static_assert(sizeof(MetaSoundBuilderBase_FindGraphInputNode) == 0x00001C, "Wrong size on MetaSoundBuilderBase_FindGraphInputNode");
-static_assert(offsetof(MetaSoundBuilderBase_FindGraphInputNode, InputName) == 0x000000, "Member 'MetaSoundBuilderBase_FindGraphInputNode::InputName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindGraphInputNode, OutResult) == 0x000008, "Member 'MetaSoundBuilderBase_FindGraphInputNode::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindGraphInputNode, ReturnValue) == 0x00000C, "Member 'MetaSoundBuilderBase_FindGraphInputNode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindGraphInputNode;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindGraphOutputNode
-// 0x001C (0x001C - 0x0000)
+// 0x0044 (0x0044 - 0x0000)
 struct MetaSoundBuilderBase_FindGraphOutputNode final
 {
 public:
 	class FName                                   OutputName;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   OutDataType;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMetaSoundBuilderNodeInputHandle       NodeInputHandle;                                   // 0x0010(0x0020)(Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x0034(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_FindGraphOutputNode) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_FindGraphOutputNode");
-static_assert(sizeof(MetaSoundBuilderBase_FindGraphOutputNode) == 0x00001C, "Wrong size on MetaSoundBuilderBase_FindGraphOutputNode");
-static_assert(offsetof(MetaSoundBuilderBase_FindGraphOutputNode, OutputName) == 0x000000, "Member 'MetaSoundBuilderBase_FindGraphOutputNode::OutputName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindGraphOutputNode, OutResult) == 0x000008, "Member 'MetaSoundBuilderBase_FindGraphOutputNode::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindGraphOutputNode, ReturnValue) == 0x00000C, "Member 'MetaSoundBuilderBase_FindGraphOutputNode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindGraphOutputNode;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindInterfaceInputNodes
 // 0x0020 (0x0020 - 0x0000)
@@ -809,11 +833,7 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundNodeHandle>           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_FindInterfaceInputNodes) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_FindInterfaceInputNodes");
-static_assert(sizeof(MetaSoundBuilderBase_FindInterfaceInputNodes) == 0x000020, "Wrong size on MetaSoundBuilderBase_FindInterfaceInputNodes");
-static_assert(offsetof(MetaSoundBuilderBase_FindInterfaceInputNodes, InterfaceName) == 0x000000, "Member 'MetaSoundBuilderBase_FindInterfaceInputNodes::InterfaceName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindInterfaceInputNodes, OutResult) == 0x000008, "Member 'MetaSoundBuilderBase_FindInterfaceInputNodes::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindInterfaceInputNodes, ReturnValue) == 0x000010, "Member 'MetaSoundBuilderBase_FindInterfaceInputNodes::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindInterfaceInputNodes;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindInterfaceOutputNodes
 // 0x0020 (0x0020 - 0x0000)
@@ -825,11 +845,7 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundNodeHandle>           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_FindInterfaceOutputNodes) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_FindInterfaceOutputNodes");
-static_assert(sizeof(MetaSoundBuilderBase_FindInterfaceOutputNodes) == 0x000020, "Wrong size on MetaSoundBuilderBase_FindInterfaceOutputNodes");
-static_assert(offsetof(MetaSoundBuilderBase_FindInterfaceOutputNodes, InterfaceName) == 0x000000, "Member 'MetaSoundBuilderBase_FindInterfaceOutputNodes::InterfaceName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindInterfaceOutputNodes, OutResult) == 0x000008, "Member 'MetaSoundBuilderBase_FindInterfaceOutputNodes::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindInterfaceOutputNodes, ReturnValue) == 0x000010, "Member 'MetaSoundBuilderBase_FindInterfaceOutputNodes::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindInterfaceOutputNodes;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeClassVersion
 // 0x0024 (0x0024 - 0x0000)
@@ -841,11 +857,7 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendVersion              ReturnValue;                                       // 0x0014(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_FindNodeClassVersion) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_FindNodeClassVersion");
-static_assert(sizeof(MetaSoundBuilderBase_FindNodeClassVersion) == 0x000024, "Wrong size on MetaSoundBuilderBase_FindNodeClassVersion");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeClassVersion, NodeHandle) == 0x000000, "Member 'MetaSoundBuilderBase_FindNodeClassVersion::NodeHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeClassVersion, OutResult) == 0x000010, "Member 'MetaSoundBuilderBase_FindNodeClassVersion::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeClassVersion, ReturnValue) == 0x000014, "Member 'MetaSoundBuilderBase_FindNodeClassVersion::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeClassVersion;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputByName
 // 0x003C (0x003C - 0x0000)
@@ -858,12 +870,7 @@ public:
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetaSoundBuilderNodeInputHandle       ReturnValue;                                       // 0x001C(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_FindNodeInputByName) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_FindNodeInputByName");
-static_assert(sizeof(MetaSoundBuilderBase_FindNodeInputByName) == 0x00003C, "Wrong size on MetaSoundBuilderBase_FindNodeInputByName");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeInputByName, NodeHandle) == 0x000000, "Member 'MetaSoundBuilderBase_FindNodeInputByName::NodeHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeInputByName, InputName) == 0x000010, "Member 'MetaSoundBuilderBase_FindNodeInputByName::InputName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeInputByName, OutResult) == 0x000018, "Member 'MetaSoundBuilderBase_FindNodeInputByName::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeInputByName, ReturnValue) == 0x00001C, "Member 'MetaSoundBuilderBase_FindNodeInputByName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeInputByName;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputParent
 // 0x0034 (0x0034 - 0x0000)
@@ -875,11 +882,7 @@ public:
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x0024(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_FindNodeInputParent) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_FindNodeInputParent");
-static_assert(sizeof(MetaSoundBuilderBase_FindNodeInputParent) == 0x000034, "Wrong size on MetaSoundBuilderBase_FindNodeInputParent");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeInputParent, InputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_FindNodeInputParent::InputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeInputParent, OutResult) == 0x000020, "Member 'MetaSoundBuilderBase_FindNodeInputParent::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeInputParent, ReturnValue) == 0x000024, "Member 'MetaSoundBuilderBase_FindNodeInputParent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeInputParent;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputs
 // 0x0028 (0x0028 - 0x0000)
@@ -891,11 +894,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundBuilderNodeInputHandle> ReturnValue;                                     // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_FindNodeInputs) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_FindNodeInputs");
-static_assert(sizeof(MetaSoundBuilderBase_FindNodeInputs) == 0x000028, "Wrong size on MetaSoundBuilderBase_FindNodeInputs");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeInputs, NodeHandle) == 0x000000, "Member 'MetaSoundBuilderBase_FindNodeInputs::NodeHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeInputs, OutResult) == 0x000010, "Member 'MetaSoundBuilderBase_FindNodeInputs::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeInputs, ReturnValue) == 0x000018, "Member 'MetaSoundBuilderBase_FindNodeInputs::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeInputs;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputsByDataType
 // 0x0030 (0x0030 - 0x0000)
@@ -909,12 +908,7 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundBuilderNodeInputHandle> ReturnValue;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_FindNodeInputsByDataType) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_FindNodeInputsByDataType");
-static_assert(sizeof(MetaSoundBuilderBase_FindNodeInputsByDataType) == 0x000030, "Wrong size on MetaSoundBuilderBase_FindNodeInputsByDataType");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeInputsByDataType, NodeHandle) == 0x000000, "Member 'MetaSoundBuilderBase_FindNodeInputsByDataType::NodeHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeInputsByDataType, OutResult) == 0x000010, "Member 'MetaSoundBuilderBase_FindNodeInputsByDataType::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeInputsByDataType, DataType) == 0x000014, "Member 'MetaSoundBuilderBase_FindNodeInputsByDataType::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeInputsByDataType, ReturnValue) == 0x000020, "Member 'MetaSoundBuilderBase_FindNodeInputsByDataType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeInputsByDataType;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputByName
 // 0x003C (0x003C - 0x0000)
@@ -927,12 +921,7 @@ public:
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetaSoundBuilderNodeOutputHandle      ReturnValue;                                       // 0x001C(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_FindNodeOutputByName) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_FindNodeOutputByName");
-static_assert(sizeof(MetaSoundBuilderBase_FindNodeOutputByName) == 0x00003C, "Wrong size on MetaSoundBuilderBase_FindNodeOutputByName");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeOutputByName, NodeHandle) == 0x000000, "Member 'MetaSoundBuilderBase_FindNodeOutputByName::NodeHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeOutputByName, OutputName) == 0x000010, "Member 'MetaSoundBuilderBase_FindNodeOutputByName::OutputName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeOutputByName, OutResult) == 0x000018, "Member 'MetaSoundBuilderBase_FindNodeOutputByName::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeOutputByName, ReturnValue) == 0x00001C, "Member 'MetaSoundBuilderBase_FindNodeOutputByName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeOutputByName;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputParent
 // 0x0034 (0x0034 - 0x0000)
@@ -944,11 +933,7 @@ public:
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x0024(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_FindNodeOutputParent) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_FindNodeOutputParent");
-static_assert(sizeof(MetaSoundBuilderBase_FindNodeOutputParent) == 0x000034, "Wrong size on MetaSoundBuilderBase_FindNodeOutputParent");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeOutputParent, OutputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_FindNodeOutputParent::OutputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeOutputParent, OutResult) == 0x000020, "Member 'MetaSoundBuilderBase_FindNodeOutputParent::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeOutputParent, ReturnValue) == 0x000024, "Member 'MetaSoundBuilderBase_FindNodeOutputParent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeOutputParent;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputs
 // 0x0028 (0x0028 - 0x0000)
@@ -960,11 +945,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundBuilderNodeOutputHandle> ReturnValue;                                    // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_FindNodeOutputs) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_FindNodeOutputs");
-static_assert(sizeof(MetaSoundBuilderBase_FindNodeOutputs) == 0x000028, "Wrong size on MetaSoundBuilderBase_FindNodeOutputs");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeOutputs, NodeHandle) == 0x000000, "Member 'MetaSoundBuilderBase_FindNodeOutputs::NodeHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeOutputs, OutResult) == 0x000010, "Member 'MetaSoundBuilderBase_FindNodeOutputs::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeOutputs, ReturnValue) == 0x000018, "Member 'MetaSoundBuilderBase_FindNodeOutputs::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeOutputs;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputsByDataType
 // 0x0030 (0x0030 - 0x0000)
@@ -978,12 +959,7 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundBuilderNodeOutputHandle> ReturnValue;                                    // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_FindNodeOutputsByDataType) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_FindNodeOutputsByDataType");
-static_assert(sizeof(MetaSoundBuilderBase_FindNodeOutputsByDataType) == 0x000030, "Wrong size on MetaSoundBuilderBase_FindNodeOutputsByDataType");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeOutputsByDataType, NodeHandle) == 0x000000, "Member 'MetaSoundBuilderBase_FindNodeOutputsByDataType::NodeHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeOutputsByDataType, OutResult) == 0x000010, "Member 'MetaSoundBuilderBase_FindNodeOutputsByDataType::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeOutputsByDataType, DataType) == 0x000014, "Member 'MetaSoundBuilderBase_FindNodeOutputsByDataType::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_FindNodeOutputsByDataType, ReturnValue) == 0x000020, "Member 'MetaSoundBuilderBase_FindNodeOutputsByDataType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeOutputsByDataType;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputClassDefault
 // 0x0080 (0x0080 - 0x0000)
@@ -995,11 +971,7 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0028(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_GetNodeInputClassDefault) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_GetNodeInputClassDefault");
-static_assert(sizeof(MetaSoundBuilderBase_GetNodeInputClassDefault) == 0x000080, "Wrong size on MetaSoundBuilderBase_GetNodeInputClassDefault");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeInputClassDefault, InputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_GetNodeInputClassDefault::InputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeInputClassDefault, OutResult) == 0x000020, "Member 'MetaSoundBuilderBase_GetNodeInputClassDefault::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeInputClassDefault, ReturnValue) == 0x000028, "Member 'MetaSoundBuilderBase_GetNodeInputClassDefault::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetNodeInputClassDefault;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputData
 // 0x0034 (0x0034 - 0x0000)
@@ -1012,12 +984,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_GetNodeInputData) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_GetNodeInputData");
-static_assert(sizeof(MetaSoundBuilderBase_GetNodeInputData) == 0x000034, "Wrong size on MetaSoundBuilderBase_GetNodeInputData");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeInputData, InputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_GetNodeInputData::InputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeInputData, Name_0) == 0x000020, "Member 'MetaSoundBuilderBase_GetNodeInputData::Name_0' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeInputData, DataType) == 0x000028, "Member 'MetaSoundBuilderBase_GetNodeInputData::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeInputData, OutResult) == 0x000030, "Member 'MetaSoundBuilderBase_GetNodeInputData::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetNodeInputData;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputDefault
 // 0x0080 (0x0080 - 0x0000)
@@ -1029,11 +996,7 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0028(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_GetNodeInputDefault) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_GetNodeInputDefault");
-static_assert(sizeof(MetaSoundBuilderBase_GetNodeInputDefault) == 0x000080, "Wrong size on MetaSoundBuilderBase_GetNodeInputDefault");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeInputDefault, InputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_GetNodeInputDefault::InputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeInputDefault, OutResult) == 0x000020, "Member 'MetaSoundBuilderBase_GetNodeInputDefault::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeInputDefault, ReturnValue) == 0x000028, "Member 'MetaSoundBuilderBase_GetNodeInputDefault::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetNodeInputDefault;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetNodeOutputData
 // 0x0034 (0x0034 - 0x0000)
@@ -1046,12 +1009,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_GetNodeOutputData) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_GetNodeOutputData");
-static_assert(sizeof(MetaSoundBuilderBase_GetNodeOutputData) == 0x000034, "Wrong size on MetaSoundBuilderBase_GetNodeOutputData");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeOutputData, OutputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_GetNodeOutputData::OutputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeOutputData, Name_0) == 0x000020, "Member 'MetaSoundBuilderBase_GetNodeOutputData::Name_0' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeOutputData, DataType) == 0x000028, "Member 'MetaSoundBuilderBase_GetNodeOutputData::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeOutputData, OutResult) == 0x000030, "Member 'MetaSoundBuilderBase_GetNodeOutputData::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetNodeOutputData;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.RemoveGraphInput
 // 0x000C (0x000C - 0x0000)
@@ -1062,10 +1020,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_RemoveGraphInput) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_RemoveGraphInput");
-static_assert(sizeof(MetaSoundBuilderBase_RemoveGraphInput) == 0x00000C, "Wrong size on MetaSoundBuilderBase_RemoveGraphInput");
-static_assert(offsetof(MetaSoundBuilderBase_RemoveGraphInput, Name_0) == 0x000000, "Member 'MetaSoundBuilderBase_RemoveGraphInput::Name_0' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_RemoveGraphInput, OutResult) == 0x000008, "Member 'MetaSoundBuilderBase_RemoveGraphInput::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_RemoveGraphInput;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.RemoveGraphOutput
 // 0x000C (0x000C - 0x0000)
@@ -1076,10 +1031,18 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_RemoveGraphOutput) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_RemoveGraphOutput");
-static_assert(sizeof(MetaSoundBuilderBase_RemoveGraphOutput) == 0x00000C, "Wrong size on MetaSoundBuilderBase_RemoveGraphOutput");
-static_assert(offsetof(MetaSoundBuilderBase_RemoveGraphOutput, Name_0) == 0x000000, "Member 'MetaSoundBuilderBase_RemoveGraphOutput::Name_0' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_RemoveGraphOutput, OutResult) == 0x000008, "Member 'MetaSoundBuilderBase_RemoveGraphOutput::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_RemoveGraphOutput;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.RemoveGraphVariable
+// 0x000C (0x000C - 0x0000)
+struct MetaSoundBuilderBase_RemoveGraphVariable final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_RemoveGraphVariable;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.RemoveInterface
 // 0x000C (0x000C - 0x0000)
@@ -1090,10 +1053,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_RemoveInterface) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_RemoveInterface");
-static_assert(sizeof(MetaSoundBuilderBase_RemoveInterface) == 0x00000C, "Wrong size on MetaSoundBuilderBase_RemoveInterface");
-static_assert(offsetof(MetaSoundBuilderBase_RemoveInterface, InterfaceName) == 0x000000, "Member 'MetaSoundBuilderBase_RemoveInterface::InterfaceName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_RemoveInterface, OutResult) == 0x000008, "Member 'MetaSoundBuilderBase_RemoveInterface::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_RemoveInterface;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.RemoveNode
 // 0x0014 (0x0014 - 0x0000)
@@ -1105,11 +1065,7 @@ public:
 	bool                                          bRemoveUnusedDependencies;                         // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_RemoveNode) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_RemoveNode");
-static_assert(sizeof(MetaSoundBuilderBase_RemoveNode) == 0x000014, "Wrong size on MetaSoundBuilderBase_RemoveNode");
-static_assert(offsetof(MetaSoundBuilderBase_RemoveNode, NodeHandle) == 0x000000, "Member 'MetaSoundBuilderBase_RemoveNode::NodeHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_RemoveNode, OutResult) == 0x000010, "Member 'MetaSoundBuilderBase_RemoveNode::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_RemoveNode, bRemoveUnusedDependencies) == 0x000011, "Member 'MetaSoundBuilderBase_RemoveNode::bRemoveUnusedDependencies' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_RemoveNode;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.RemoveNodeInputDefault
 // 0x0024 (0x0024 - 0x0000)
@@ -1120,10 +1076,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_RemoveNodeInputDefault) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_RemoveNodeInputDefault");
-static_assert(sizeof(MetaSoundBuilderBase_RemoveNodeInputDefault) == 0x000024, "Wrong size on MetaSoundBuilderBase_RemoveNodeInputDefault");
-static_assert(offsetof(MetaSoundBuilderBase_RemoveNodeInputDefault, InputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_RemoveNodeInputDefault::InputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_RemoveNodeInputDefault, OutResult) == 0x000020, "Member 'MetaSoundBuilderBase_RemoveNodeInputDefault::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_RemoveNodeInputDefault;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputAccessType
 // 0x0010 (0x0010 - 0x0000)
@@ -1135,11 +1088,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_SetGraphInputAccessType) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_SetGraphInputAccessType");
-static_assert(sizeof(MetaSoundBuilderBase_SetGraphInputAccessType) == 0x000010, "Wrong size on MetaSoundBuilderBase_SetGraphInputAccessType");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphInputAccessType, InputName) == 0x000000, "Member 'MetaSoundBuilderBase_SetGraphInputAccessType::InputName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphInputAccessType, AccessType) == 0x000008, "Member 'MetaSoundBuilderBase_SetGraphInputAccessType::AccessType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphInputAccessType, OutResult) == 0x00000C, "Member 'MetaSoundBuilderBase_SetGraphInputAccessType::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetGraphInputAccessType;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputDataType
 // 0x0014 (0x0014 - 0x0000)
@@ -1151,11 +1100,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_SetGraphInputDataType) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_SetGraphInputDataType");
-static_assert(sizeof(MetaSoundBuilderBase_SetGraphInputDataType) == 0x000014, "Wrong size on MetaSoundBuilderBase_SetGraphInputDataType");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphInputDataType, InputName) == 0x000000, "Member 'MetaSoundBuilderBase_SetGraphInputDataType::InputName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphInputDataType, DataType) == 0x000008, "Member 'MetaSoundBuilderBase_SetGraphInputDataType::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphInputDataType, OutResult) == 0x000010, "Member 'MetaSoundBuilderBase_SetGraphInputDataType::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetGraphInputDataType;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputDefault
 // 0x0068 (0x0068 - 0x0000)
@@ -1167,11 +1112,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_SetGraphInputDefault) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_SetGraphInputDefault");
-static_assert(sizeof(MetaSoundBuilderBase_SetGraphInputDefault) == 0x000068, "Wrong size on MetaSoundBuilderBase_SetGraphInputDefault");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphInputDefault, InputName) == 0x000000, "Member 'MetaSoundBuilderBase_SetGraphInputDefault::InputName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphInputDefault, Literal) == 0x000008, "Member 'MetaSoundBuilderBase_SetGraphInputDefault::Literal' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphInputDefault, OutResult) == 0x000060, "Member 'MetaSoundBuilderBase_SetGraphInputDefault::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetGraphInputDefault;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputName
 // 0x0014 (0x0014 - 0x0000)
@@ -1183,11 +1124,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_SetGraphInputName) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_SetGraphInputName");
-static_assert(sizeof(MetaSoundBuilderBase_SetGraphInputName) == 0x000014, "Wrong size on MetaSoundBuilderBase_SetGraphInputName");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphInputName, InputName) == 0x000000, "Member 'MetaSoundBuilderBase_SetGraphInputName::InputName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphInputName, NewName) == 0x000008, "Member 'MetaSoundBuilderBase_SetGraphInputName::NewName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphInputName, OutResult) == 0x000010, "Member 'MetaSoundBuilderBase_SetGraphInputName::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetGraphInputName;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetGraphOutputAccessType
 // 0x0010 (0x0010 - 0x0000)
@@ -1199,11 +1136,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_SetGraphOutputAccessType) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_SetGraphOutputAccessType");
-static_assert(sizeof(MetaSoundBuilderBase_SetGraphOutputAccessType) == 0x000010, "Wrong size on MetaSoundBuilderBase_SetGraphOutputAccessType");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphOutputAccessType, OutputName) == 0x000000, "Member 'MetaSoundBuilderBase_SetGraphOutputAccessType::OutputName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphOutputAccessType, AccessType) == 0x000008, "Member 'MetaSoundBuilderBase_SetGraphOutputAccessType::AccessType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphOutputAccessType, OutResult) == 0x00000C, "Member 'MetaSoundBuilderBase_SetGraphOutputAccessType::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetGraphOutputAccessType;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetGraphOutputDataType
 // 0x0014 (0x0014 - 0x0000)
@@ -1215,11 +1148,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_SetGraphOutputDataType) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_SetGraphOutputDataType");
-static_assert(sizeof(MetaSoundBuilderBase_SetGraphOutputDataType) == 0x000014, "Wrong size on MetaSoundBuilderBase_SetGraphOutputDataType");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphOutputDataType, OutputName) == 0x000000, "Member 'MetaSoundBuilderBase_SetGraphOutputDataType::OutputName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphOutputDataType, DataType) == 0x000008, "Member 'MetaSoundBuilderBase_SetGraphOutputDataType::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphOutputDataType, OutResult) == 0x000010, "Member 'MetaSoundBuilderBase_SetGraphOutputDataType::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetGraphOutputDataType;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetGraphOutputName
 // 0x0014 (0x0014 - 0x0000)
@@ -1231,11 +1160,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_SetGraphOutputName) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_SetGraphOutputName");
-static_assert(sizeof(MetaSoundBuilderBase_SetGraphOutputName) == 0x000014, "Wrong size on MetaSoundBuilderBase_SetGraphOutputName");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphOutputName, OutputName) == 0x000000, "Member 'MetaSoundBuilderBase_SetGraphOutputName::OutputName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphOutputName, NewName) == 0x000008, "Member 'MetaSoundBuilderBase_SetGraphOutputName::NewName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetGraphOutputName, OutResult) == 0x000010, "Member 'MetaSoundBuilderBase_SetGraphOutputName::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetGraphOutputName;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetNodeInputDefault
 // 0x0080 (0x0080 - 0x0000)
@@ -1247,11 +1172,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0078(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_SetNodeInputDefault) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_SetNodeInputDefault");
-static_assert(sizeof(MetaSoundBuilderBase_SetNodeInputDefault) == 0x000080, "Wrong size on MetaSoundBuilderBase_SetNodeInputDefault");
-static_assert(offsetof(MetaSoundBuilderBase_SetNodeInputDefault, NodeInputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_SetNodeInputDefault::NodeInputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetNodeInputDefault, Literal) == 0x000020, "Member 'MetaSoundBuilderBase_SetNodeInputDefault::Literal' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_SetNodeInputDefault, OutResult) == 0x000078, "Member 'MetaSoundBuilderBase_SetNodeInputDefault::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetNodeInputDefault;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.Build
 // 0x0038 (0x0038 - 0x0000)
@@ -1262,11 +1183,7 @@ public:
 	struct FMetaSoundBuilderOptions               Options;                                           // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	TScriptInterface<class IMetaSoundDocumentInterface> ReturnValue;                                 // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_Build) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_Build");
-static_assert(sizeof(MetaSoundBuilderBase_Build) == 0x000038, "Wrong size on MetaSoundBuilderBase_Build");
-static_assert(offsetof(MetaSoundBuilderBase_Build, Parent) == 0x000000, "Member 'MetaSoundBuilderBase_Build::Parent' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_Build, Options) == 0x000008, "Member 'MetaSoundBuilderBase_Build::Options' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_Build, ReturnValue) == 0x000028, "Member 'MetaSoundBuilderBase_Build::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_Build;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.BuildNewMetaSound
 // 0x0018 (0x0018 - 0x0000)
@@ -1276,10 +1193,7 @@ public:
 	class FName                                   NameBase;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TScriptInterface<class IMetaSoundDocumentInterface> ReturnValue;                                 // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_BuildNewMetaSound) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_BuildNewMetaSound");
-static_assert(sizeof(MetaSoundBuilderBase_BuildNewMetaSound) == 0x000018, "Wrong size on MetaSoundBuilderBase_BuildNewMetaSound");
-static_assert(offsetof(MetaSoundBuilderBase_BuildNewMetaSound, NameBase) == 0x000000, "Member 'MetaSoundBuilderBase_BuildNewMetaSound::NameBase' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_BuildNewMetaSound, ReturnValue) == 0x000008, "Member 'MetaSoundBuilderBase_BuildNewMetaSound::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_BuildNewMetaSound;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ContainsNode
 // 0x0014 (0x0014 - 0x0000)
@@ -1290,10 +1204,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_ContainsNode) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_ContainsNode");
-static_assert(sizeof(MetaSoundBuilderBase_ContainsNode) == 0x000014, "Wrong size on MetaSoundBuilderBase_ContainsNode");
-static_assert(offsetof(MetaSoundBuilderBase_ContainsNode, Node) == 0x000000, "Member 'MetaSoundBuilderBase_ContainsNode::Node' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ContainsNode, ReturnValue) == 0x000010, "Member 'MetaSoundBuilderBase_ContainsNode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ContainsNode;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ContainsNodeInput
 // 0x0024 (0x0024 - 0x0000)
@@ -1304,10 +1215,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_ContainsNodeInput) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_ContainsNodeInput");
-static_assert(sizeof(MetaSoundBuilderBase_ContainsNodeInput) == 0x000024, "Wrong size on MetaSoundBuilderBase_ContainsNodeInput");
-static_assert(offsetof(MetaSoundBuilderBase_ContainsNodeInput, Input) == 0x000000, "Member 'MetaSoundBuilderBase_ContainsNodeInput::Input' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ContainsNodeInput, ReturnValue) == 0x000020, "Member 'MetaSoundBuilderBase_ContainsNodeInput::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ContainsNodeInput;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ContainsNodeOutput
 // 0x0024 (0x0024 - 0x0000)
@@ -1318,10 +1226,53 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_ContainsNodeOutput) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_ContainsNodeOutput");
-static_assert(sizeof(MetaSoundBuilderBase_ContainsNodeOutput) == 0x000024, "Wrong size on MetaSoundBuilderBase_ContainsNodeOutput");
-static_assert(offsetof(MetaSoundBuilderBase_ContainsNodeOutput, Output) == 0x000000, "Member 'MetaSoundBuilderBase_ContainsNodeOutput::Output' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_ContainsNodeOutput, ReturnValue) == 0x000020, "Member 'MetaSoundBuilderBase_ContainsNodeOutput::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ContainsNodeOutput;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetGraphInputDefault
+// 0x0068 (0x0068 - 0x0000)
+struct MetaSoundBuilderBase_GetGraphInputDefault final
+{
+public:
+	class FName                                   InputName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetGraphInputDefault;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetGraphInputNames
+// 0x0018 (0x0018 - 0x0000)
+struct MetaSoundBuilderBase_GetGraphInputNames final
+{
+public:
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetGraphInputNames;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetGraphOutputNames
+// 0x0018 (0x0018 - 0x0000)
+struct MetaSoundBuilderBase_GetGraphOutputNames final
+{
+public:
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetGraphOutputNames;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetGraphVariableDefault
+// 0x0068 (0x0068 - 0x0000)
+struct MetaSoundBuilderBase_GetGraphVariableDefault final
+{
+public:
+	class FName                                   VariableName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetGraphVariableDefault;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputIsConstructorPin
 // 0x0024 (0x0024 - 0x0000)
@@ -1332,10 +1283,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_GetNodeInputIsConstructorPin) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_GetNodeInputIsConstructorPin");
-static_assert(sizeof(MetaSoundBuilderBase_GetNodeInputIsConstructorPin) == 0x000024, "Wrong size on MetaSoundBuilderBase_GetNodeInputIsConstructorPin");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeInputIsConstructorPin, InputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_GetNodeInputIsConstructorPin::InputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeInputIsConstructorPin, ReturnValue) == 0x000020, "Member 'MetaSoundBuilderBase_GetNodeInputIsConstructorPin::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetNodeInputIsConstructorPin;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetNodeOutputIsConstructorPin
 // 0x0024 (0x0024 - 0x0000)
@@ -1346,10 +1294,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_GetNodeOutputIsConstructorPin) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_GetNodeOutputIsConstructorPin");
-static_assert(sizeof(MetaSoundBuilderBase_GetNodeOutputIsConstructorPin) == 0x000024, "Wrong size on MetaSoundBuilderBase_GetNodeOutputIsConstructorPin");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeOutputIsConstructorPin, OutputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_GetNodeOutputIsConstructorPin::OutputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_GetNodeOutputIsConstructorPin, ReturnValue) == 0x000020, "Member 'MetaSoundBuilderBase_GetNodeOutputIsConstructorPin::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetNodeOutputIsConstructorPin;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetReferencedPresetAsset
 // 0x0008 (0x0008 - 0x0000)
@@ -1358,9 +1303,7 @@ struct MetaSoundBuilderBase_GetReferencedPresetAsset final
 public:
 	class UObject*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_GetReferencedPresetAsset) == 0x000008, "Wrong alignment on MetaSoundBuilderBase_GetReferencedPresetAsset");
-static_assert(sizeof(MetaSoundBuilderBase_GetReferencedPresetAsset) == 0x000008, "Wrong size on MetaSoundBuilderBase_GetReferencedPresetAsset");
-static_assert(offsetof(MetaSoundBuilderBase_GetReferencedPresetAsset, ReturnValue) == 0x000000, "Member 'MetaSoundBuilderBase_GetReferencedPresetAsset::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetReferencedPresetAsset;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetRootGraphClassName
 // 0x0018 (0x0018 - 0x0000)
@@ -1369,9 +1312,7 @@ struct MetaSoundBuilderBase_GetRootGraphClassName final
 public:
 	struct FMetasoundFrontendClassName            ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_GetRootGraphClassName) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_GetRootGraphClassName");
-static_assert(sizeof(MetaSoundBuilderBase_GetRootGraphClassName) == 0x000018, "Wrong size on MetaSoundBuilderBase_GetRootGraphClassName");
-static_assert(offsetof(MetaSoundBuilderBase_GetRootGraphClassName, ReturnValue) == 0x000000, "Member 'MetaSoundBuilderBase_GetRootGraphClassName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetRootGraphClassName;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.InterfaceIsDeclared
 // 0x000C (0x000C - 0x0000)
@@ -1382,10 +1323,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_InterfaceIsDeclared) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_InterfaceIsDeclared");
-static_assert(sizeof(MetaSoundBuilderBase_InterfaceIsDeclared) == 0x00000C, "Wrong size on MetaSoundBuilderBase_InterfaceIsDeclared");
-static_assert(offsetof(MetaSoundBuilderBase_InterfaceIsDeclared, InterfaceName) == 0x000000, "Member 'MetaSoundBuilderBase_InterfaceIsDeclared::InterfaceName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_InterfaceIsDeclared, ReturnValue) == 0x000008, "Member 'MetaSoundBuilderBase_InterfaceIsDeclared::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_InterfaceIsDeclared;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.IsPreset
 // 0x0001 (0x0001 - 0x0000)
@@ -1394,9 +1332,7 @@ struct MetaSoundBuilderBase_IsPreset final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderBase_IsPreset) == 0x000001, "Wrong alignment on MetaSoundBuilderBase_IsPreset");
-static_assert(sizeof(MetaSoundBuilderBase_IsPreset) == 0x000001, "Wrong size on MetaSoundBuilderBase_IsPreset");
-static_assert(offsetof(MetaSoundBuilderBase_IsPreset, ReturnValue) == 0x000000, "Member 'MetaSoundBuilderBase_IsPreset::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_IsPreset;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.NodeInputIsConnected
 // 0x0024 (0x0024 - 0x0000)
@@ -1407,10 +1343,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_NodeInputIsConnected) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_NodeInputIsConnected");
-static_assert(sizeof(MetaSoundBuilderBase_NodeInputIsConnected) == 0x000024, "Wrong size on MetaSoundBuilderBase_NodeInputIsConnected");
-static_assert(offsetof(MetaSoundBuilderBase_NodeInputIsConnected, InputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_NodeInputIsConnected::InputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_NodeInputIsConnected, ReturnValue) == 0x000020, "Member 'MetaSoundBuilderBase_NodeInputIsConnected::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_NodeInputIsConnected;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.NodeOutputIsConnected
 // 0x0024 (0x0024 - 0x0000)
@@ -1421,10 +1354,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_NodeOutputIsConnected) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_NodeOutputIsConnected");
-static_assert(sizeof(MetaSoundBuilderBase_NodeOutputIsConnected) == 0x000024, "Wrong size on MetaSoundBuilderBase_NodeOutputIsConnected");
-static_assert(offsetof(MetaSoundBuilderBase_NodeOutputIsConnected, OutputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_NodeOutputIsConnected::OutputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_NodeOutputIsConnected, ReturnValue) == 0x000020, "Member 'MetaSoundBuilderBase_NodeOutputIsConnected::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_NodeOutputIsConnected;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.NodesAreConnected
 // 0x0044 (0x0044 - 0x0000)
@@ -1436,11 +1366,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderBase_NodesAreConnected) == 0x000004, "Wrong alignment on MetaSoundBuilderBase_NodesAreConnected");
-static_assert(sizeof(MetaSoundBuilderBase_NodesAreConnected) == 0x000044, "Wrong size on MetaSoundBuilderBase_NodesAreConnected");
-static_assert(offsetof(MetaSoundBuilderBase_NodesAreConnected, OutputHandle) == 0x000000, "Member 'MetaSoundBuilderBase_NodesAreConnected::OutputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_NodesAreConnected, InputHandle) == 0x000020, "Member 'MetaSoundBuilderBase_NodesAreConnected::InputHandle' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderBase_NodesAreConnected, ReturnValue) == 0x000040, "Member 'MetaSoundBuilderBase_NodesAreConnected::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderBase_NodesAreConnected;
 
 // Function MetasoundEngine.MetaSoundSourceBuilder.Audition
 // 0x0028 (0x0028 - 0x0000)
@@ -1453,12 +1379,7 @@ public:
 	bool                                          bLiveUpdatesEnabled;                               // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundSourceBuilder_Audition) == 0x000008, "Wrong alignment on MetaSoundSourceBuilder_Audition");
-static_assert(sizeof(MetaSoundSourceBuilder_Audition) == 0x000028, "Wrong size on MetaSoundSourceBuilder_Audition");
-static_assert(offsetof(MetaSoundSourceBuilder_Audition, Parent) == 0x000000, "Member 'MetaSoundSourceBuilder_Audition::Parent' has a wrong offset!");
-static_assert(offsetof(MetaSoundSourceBuilder_Audition, AudioComponent) == 0x000008, "Member 'MetaSoundSourceBuilder_Audition::AudioComponent' has a wrong offset!");
-static_assert(offsetof(MetaSoundSourceBuilder_Audition, OnCreateGenerator) == 0x000010, "Member 'MetaSoundSourceBuilder_Audition::OnCreateGenerator' has a wrong offset!");
-static_assert(offsetof(MetaSoundSourceBuilder_Audition, bLiveUpdatesEnabled) == 0x000020, "Member 'MetaSoundSourceBuilder_Audition::bLiveUpdatesEnabled' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundSourceBuilder_Audition;
 
 // Function MetasoundEngine.MetaSoundSourceBuilder.SetBlockRateOverride
 // 0x0004 (0x0004 - 0x0000)
@@ -1467,9 +1388,7 @@ struct MetaSoundSourceBuilder_SetBlockRateOverride final
 public:
 	float                                         BlockRate;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundSourceBuilder_SetBlockRateOverride) == 0x000004, "Wrong alignment on MetaSoundSourceBuilder_SetBlockRateOverride");
-static_assert(sizeof(MetaSoundSourceBuilder_SetBlockRateOverride) == 0x000004, "Wrong size on MetaSoundSourceBuilder_SetBlockRateOverride");
-static_assert(offsetof(MetaSoundSourceBuilder_SetBlockRateOverride, BlockRate) == 0x000000, "Member 'MetaSoundSourceBuilder_SetBlockRateOverride::BlockRate' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundSourceBuilder_SetBlockRateOverride;
 
 // Function MetasoundEngine.MetaSoundSourceBuilder.SetFormat
 // 0x0002 (0x0002 - 0x0000)
@@ -1479,10 +1398,7 @@ public:
 	EMetaSoundOutputAudioFormat                   OutputFormat;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundSourceBuilder_SetFormat) == 0x000001, "Wrong alignment on MetaSoundSourceBuilder_SetFormat");
-static_assert(sizeof(MetaSoundSourceBuilder_SetFormat) == 0x000002, "Wrong size on MetaSoundSourceBuilder_SetFormat");
-static_assert(offsetof(MetaSoundSourceBuilder_SetFormat, OutputFormat) == 0x000000, "Member 'MetaSoundSourceBuilder_SetFormat::OutputFormat' has a wrong offset!");
-static_assert(offsetof(MetaSoundSourceBuilder_SetFormat, OutResult) == 0x000001, "Member 'MetaSoundSourceBuilder_SetFormat::OutResult' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundSourceBuilder_SetFormat;
 
 // Function MetasoundEngine.MetaSoundSourceBuilder.SetQuality
 // 0x0008 (0x0008 - 0x0000)
@@ -1491,9 +1407,7 @@ struct MetaSoundSourceBuilder_SetQuality final
 public:
 	class FName                                   Quality;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundSourceBuilder_SetQuality) == 0x000004, "Wrong alignment on MetaSoundSourceBuilder_SetQuality");
-static_assert(sizeof(MetaSoundSourceBuilder_SetQuality) == 0x000008, "Wrong size on MetaSoundSourceBuilder_SetQuality");
-static_assert(offsetof(MetaSoundSourceBuilder_SetQuality, Quality) == 0x000000, "Member 'MetaSoundSourceBuilder_SetQuality::Quality' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundSourceBuilder_SetQuality;
 
 // Function MetasoundEngine.MetaSoundSourceBuilder.SetSampleRateOverride
 // 0x0004 (0x0004 - 0x0000)
@@ -1502,9 +1416,7 @@ struct MetaSoundSourceBuilder_SetSampleRateOverride final
 public:
 	int32                                         SampleRate;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundSourceBuilder_SetSampleRateOverride) == 0x000004, "Wrong alignment on MetaSoundSourceBuilder_SetSampleRateOverride");
-static_assert(sizeof(MetaSoundSourceBuilder_SetSampleRateOverride) == 0x000004, "Wrong size on MetaSoundSourceBuilder_SetSampleRateOverride");
-static_assert(offsetof(MetaSoundSourceBuilder_SetSampleRateOverride, SampleRate) == 0x000000, "Member 'MetaSoundSourceBuilder_SetSampleRateOverride::SampleRate' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundSourceBuilder_SetSampleRateOverride;
 
 // Function MetasoundEngine.MetaSoundSourceBuilder.GetLiveUpdatesEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -1513,9 +1425,7 @@ struct MetaSoundSourceBuilder_GetLiveUpdatesEnabled final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundSourceBuilder_GetLiveUpdatesEnabled) == 0x000001, "Wrong alignment on MetaSoundSourceBuilder_GetLiveUpdatesEnabled");
-static_assert(sizeof(MetaSoundSourceBuilder_GetLiveUpdatesEnabled) == 0x000001, "Wrong size on MetaSoundSourceBuilder_GetLiveUpdatesEnabled");
-static_assert(offsetof(MetaSoundSourceBuilder_GetLiveUpdatesEnabled, ReturnValue) == 0x000000, "Member 'MetaSoundSourceBuilder_GetLiveUpdatesEnabled::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundSourceBuilder_GetLiveUpdatesEnabled;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateBoolArrayMetaSoundLiteral
 // 0x0070 (0x0070 - 0x0000)
@@ -1526,11 +1436,7 @@ public:
 	class FName                                   DataType;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0018(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_CreateBoolArrayMetaSoundLiteral) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_CreateBoolArrayMetaSoundLiteral");
-static_assert(sizeof(MetaSoundBuilderSubsystem_CreateBoolArrayMetaSoundLiteral) == 0x000070, "Wrong size on MetaSoundBuilderSubsystem_CreateBoolArrayMetaSoundLiteral");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateBoolArrayMetaSoundLiteral, Value) == 0x000000, "Member 'MetaSoundBuilderSubsystem_CreateBoolArrayMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateBoolArrayMetaSoundLiteral, DataType) == 0x000010, "Member 'MetaSoundBuilderSubsystem_CreateBoolArrayMetaSoundLiteral::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateBoolArrayMetaSoundLiteral, ReturnValue) == 0x000018, "Member 'MetaSoundBuilderSubsystem_CreateBoolArrayMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateBoolArrayMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateBoolMetaSoundLiteral
 // 0x0068 (0x0068 - 0x0000)
@@ -1543,11 +1449,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_CreateBoolMetaSoundLiteral) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_CreateBoolMetaSoundLiteral");
-static_assert(sizeof(MetaSoundBuilderSubsystem_CreateBoolMetaSoundLiteral) == 0x000068, "Wrong size on MetaSoundBuilderSubsystem_CreateBoolMetaSoundLiteral");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateBoolMetaSoundLiteral, Value) == 0x000000, "Member 'MetaSoundBuilderSubsystem_CreateBoolMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateBoolMetaSoundLiteral, DataType) == 0x000004, "Member 'MetaSoundBuilderSubsystem_CreateBoolMetaSoundLiteral::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateBoolMetaSoundLiteral, ReturnValue) == 0x000010, "Member 'MetaSoundBuilderSubsystem_CreateBoolMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateBoolMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateFloatArrayMetaSoundLiteral
 // 0x0070 (0x0070 - 0x0000)
@@ -1558,11 +1460,7 @@ public:
 	class FName                                   DataType;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0018(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_CreateFloatArrayMetaSoundLiteral) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_CreateFloatArrayMetaSoundLiteral");
-static_assert(sizeof(MetaSoundBuilderSubsystem_CreateFloatArrayMetaSoundLiteral) == 0x000070, "Wrong size on MetaSoundBuilderSubsystem_CreateFloatArrayMetaSoundLiteral");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateFloatArrayMetaSoundLiteral, Value) == 0x000000, "Member 'MetaSoundBuilderSubsystem_CreateFloatArrayMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateFloatArrayMetaSoundLiteral, DataType) == 0x000010, "Member 'MetaSoundBuilderSubsystem_CreateFloatArrayMetaSoundLiteral::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateFloatArrayMetaSoundLiteral, ReturnValue) == 0x000018, "Member 'MetaSoundBuilderSubsystem_CreateFloatArrayMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateFloatArrayMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateFloatMetaSoundLiteral
 // 0x0068 (0x0068 - 0x0000)
@@ -1574,11 +1472,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_CreateFloatMetaSoundLiteral) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_CreateFloatMetaSoundLiteral");
-static_assert(sizeof(MetaSoundBuilderSubsystem_CreateFloatMetaSoundLiteral) == 0x000068, "Wrong size on MetaSoundBuilderSubsystem_CreateFloatMetaSoundLiteral");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateFloatMetaSoundLiteral, Value) == 0x000000, "Member 'MetaSoundBuilderSubsystem_CreateFloatMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateFloatMetaSoundLiteral, DataType) == 0x000004, "Member 'MetaSoundBuilderSubsystem_CreateFloatMetaSoundLiteral::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateFloatMetaSoundLiteral, ReturnValue) == 0x000010, "Member 'MetaSoundBuilderSubsystem_CreateFloatMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateFloatMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateIntArrayMetaSoundLiteral
 // 0x0070 (0x0070 - 0x0000)
@@ -1589,11 +1483,7 @@ public:
 	class FName                                   DataType;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0018(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_CreateIntArrayMetaSoundLiteral) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_CreateIntArrayMetaSoundLiteral");
-static_assert(sizeof(MetaSoundBuilderSubsystem_CreateIntArrayMetaSoundLiteral) == 0x000070, "Wrong size on MetaSoundBuilderSubsystem_CreateIntArrayMetaSoundLiteral");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateIntArrayMetaSoundLiteral, Value) == 0x000000, "Member 'MetaSoundBuilderSubsystem_CreateIntArrayMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateIntArrayMetaSoundLiteral, DataType) == 0x000010, "Member 'MetaSoundBuilderSubsystem_CreateIntArrayMetaSoundLiteral::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateIntArrayMetaSoundLiteral, ReturnValue) == 0x000018, "Member 'MetaSoundBuilderSubsystem_CreateIntArrayMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateIntArrayMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateIntMetaSoundLiteral
 // 0x0068 (0x0068 - 0x0000)
@@ -1605,11 +1495,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_CreateIntMetaSoundLiteral) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_CreateIntMetaSoundLiteral");
-static_assert(sizeof(MetaSoundBuilderSubsystem_CreateIntMetaSoundLiteral) == 0x000068, "Wrong size on MetaSoundBuilderSubsystem_CreateIntMetaSoundLiteral");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateIntMetaSoundLiteral, Value) == 0x000000, "Member 'MetaSoundBuilderSubsystem_CreateIntMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateIntMetaSoundLiteral, DataType) == 0x000004, "Member 'MetaSoundBuilderSubsystem_CreateIntMetaSoundLiteral::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateIntMetaSoundLiteral, ReturnValue) == 0x000010, "Member 'MetaSoundBuilderSubsystem_CreateIntMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateIntMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateMetaSoundLiteralFromParam
 // 0x00F8 (0x00F8 - 0x0000)
@@ -1619,10 +1505,7 @@ public:
 	struct FAudioParameter                        Param;                                             // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x00A0(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_CreateMetaSoundLiteralFromParam) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_CreateMetaSoundLiteralFromParam");
-static_assert(sizeof(MetaSoundBuilderSubsystem_CreateMetaSoundLiteralFromParam) == 0x0000F8, "Wrong size on MetaSoundBuilderSubsystem_CreateMetaSoundLiteralFromParam");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateMetaSoundLiteralFromParam, Param) == 0x000000, "Member 'MetaSoundBuilderSubsystem_CreateMetaSoundLiteralFromParam::Param' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateMetaSoundLiteralFromParam, ReturnValue) == 0x0000A0, "Member 'MetaSoundBuilderSubsystem_CreateMetaSoundLiteralFromParam::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateMetaSoundLiteralFromParam;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateObjectArrayMetaSoundLiteral
 // 0x0068 (0x0068 - 0x0000)
@@ -1632,10 +1515,7 @@ public:
 	TArray<class UObject*>                        Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_CreateObjectArrayMetaSoundLiteral) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_CreateObjectArrayMetaSoundLiteral");
-static_assert(sizeof(MetaSoundBuilderSubsystem_CreateObjectArrayMetaSoundLiteral) == 0x000068, "Wrong size on MetaSoundBuilderSubsystem_CreateObjectArrayMetaSoundLiteral");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateObjectArrayMetaSoundLiteral, Value) == 0x000000, "Member 'MetaSoundBuilderSubsystem_CreateObjectArrayMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateObjectArrayMetaSoundLiteral, ReturnValue) == 0x000010, "Member 'MetaSoundBuilderSubsystem_CreateObjectArrayMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateObjectArrayMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateObjectMetaSoundLiteral
 // 0x0060 (0x0060 - 0x0000)
@@ -1645,10 +1525,7 @@ public:
 	class UObject*                                Value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_CreateObjectMetaSoundLiteral) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_CreateObjectMetaSoundLiteral");
-static_assert(sizeof(MetaSoundBuilderSubsystem_CreateObjectMetaSoundLiteral) == 0x000060, "Wrong size on MetaSoundBuilderSubsystem_CreateObjectMetaSoundLiteral");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateObjectMetaSoundLiteral, Value) == 0x000000, "Member 'MetaSoundBuilderSubsystem_CreateObjectMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateObjectMetaSoundLiteral, ReturnValue) == 0x000008, "Member 'MetaSoundBuilderSubsystem_CreateObjectMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateObjectMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreatePatchBuilder
 // 0x0018 (0x0018 - 0x0000)
@@ -1660,11 +1537,7 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMetaSoundPatchBuilder*                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_CreatePatchBuilder) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_CreatePatchBuilder");
-static_assert(sizeof(MetaSoundBuilderSubsystem_CreatePatchBuilder) == 0x000018, "Wrong size on MetaSoundBuilderSubsystem_CreatePatchBuilder");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreatePatchBuilder, BuilderName) == 0x000000, "Member 'MetaSoundBuilderSubsystem_CreatePatchBuilder::BuilderName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreatePatchBuilder, OutResult) == 0x000008, "Member 'MetaSoundBuilderSubsystem_CreatePatchBuilder::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreatePatchBuilder, ReturnValue) == 0x000010, "Member 'MetaSoundBuilderSubsystem_CreatePatchBuilder::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreatePatchBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreatePatchPresetBuilder
 // 0x0028 (0x0028 - 0x0000)
@@ -1677,12 +1550,7 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMetaSoundPatchBuilder*                 ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_CreatePatchPresetBuilder) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_CreatePatchPresetBuilder");
-static_assert(sizeof(MetaSoundBuilderSubsystem_CreatePatchPresetBuilder) == 0x000028, "Wrong size on MetaSoundBuilderSubsystem_CreatePatchPresetBuilder");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreatePatchPresetBuilder, BuilderName) == 0x000000, "Member 'MetaSoundBuilderSubsystem_CreatePatchPresetBuilder::BuilderName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreatePatchPresetBuilder, ReferencedPatchClass) == 0x000008, "Member 'MetaSoundBuilderSubsystem_CreatePatchPresetBuilder::ReferencedPatchClass' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreatePatchPresetBuilder, OutResult) == 0x000018, "Member 'MetaSoundBuilderSubsystem_CreatePatchPresetBuilder::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreatePatchPresetBuilder, ReturnValue) == 0x000020, "Member 'MetaSoundBuilderSubsystem_CreatePatchPresetBuilder::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreatePatchPresetBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateSourceBuilder
 // 0x0068 (0x0068 - 0x0000)
@@ -1699,16 +1567,7 @@ public:
 	uint8                                         Pad_5B[0x5];                                       // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMetaSoundSourceBuilder*                ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_CreateSourceBuilder) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_CreateSourceBuilder");
-static_assert(sizeof(MetaSoundBuilderSubsystem_CreateSourceBuilder) == 0x000068, "Wrong size on MetaSoundBuilderSubsystem_CreateSourceBuilder");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateSourceBuilder, BuilderName) == 0x000000, "Member 'MetaSoundBuilderSubsystem_CreateSourceBuilder::BuilderName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateSourceBuilder, OnPlayNodeOutput) == 0x000008, "Member 'MetaSoundBuilderSubsystem_CreateSourceBuilder::OnPlayNodeOutput' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateSourceBuilder, OnFinishedNodeInput) == 0x000028, "Member 'MetaSoundBuilderSubsystem_CreateSourceBuilder::OnFinishedNodeInput' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateSourceBuilder, AudioOutNodeInputs) == 0x000048, "Member 'MetaSoundBuilderSubsystem_CreateSourceBuilder::AudioOutNodeInputs' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateSourceBuilder, OutResult) == 0x000058, "Member 'MetaSoundBuilderSubsystem_CreateSourceBuilder::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateSourceBuilder, OutputFormat) == 0x000059, "Member 'MetaSoundBuilderSubsystem_CreateSourceBuilder::OutputFormat' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateSourceBuilder, bIsOneShot) == 0x00005A, "Member 'MetaSoundBuilderSubsystem_CreateSourceBuilder::bIsOneShot' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateSourceBuilder, ReturnValue) == 0x000060, "Member 'MetaSoundBuilderSubsystem_CreateSourceBuilder::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateSourceBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateSourcePresetBuilder
 // 0x0028 (0x0028 - 0x0000)
@@ -1721,12 +1580,7 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMetaSoundSourceBuilder*                ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_CreateSourcePresetBuilder) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_CreateSourcePresetBuilder");
-static_assert(sizeof(MetaSoundBuilderSubsystem_CreateSourcePresetBuilder) == 0x000028, "Wrong size on MetaSoundBuilderSubsystem_CreateSourcePresetBuilder");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateSourcePresetBuilder, BuilderName) == 0x000000, "Member 'MetaSoundBuilderSubsystem_CreateSourcePresetBuilder::BuilderName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateSourcePresetBuilder, ReferencedSourceClass) == 0x000008, "Member 'MetaSoundBuilderSubsystem_CreateSourcePresetBuilder::ReferencedSourceClass' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateSourcePresetBuilder, OutResult) == 0x000018, "Member 'MetaSoundBuilderSubsystem_CreateSourcePresetBuilder::OutResult' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateSourcePresetBuilder, ReturnValue) == 0x000020, "Member 'MetaSoundBuilderSubsystem_CreateSourcePresetBuilder::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateSourcePresetBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateStringArrayMetaSoundLiteral
 // 0x0070 (0x0070 - 0x0000)
@@ -1737,11 +1591,7 @@ public:
 	class FName                                   DataType;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0018(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_CreateStringArrayMetaSoundLiteral) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_CreateStringArrayMetaSoundLiteral");
-static_assert(sizeof(MetaSoundBuilderSubsystem_CreateStringArrayMetaSoundLiteral) == 0x000070, "Wrong size on MetaSoundBuilderSubsystem_CreateStringArrayMetaSoundLiteral");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateStringArrayMetaSoundLiteral, Value) == 0x000000, "Member 'MetaSoundBuilderSubsystem_CreateStringArrayMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateStringArrayMetaSoundLiteral, DataType) == 0x000010, "Member 'MetaSoundBuilderSubsystem_CreateStringArrayMetaSoundLiteral::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateStringArrayMetaSoundLiteral, ReturnValue) == 0x000018, "Member 'MetaSoundBuilderSubsystem_CreateStringArrayMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateStringArrayMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateStringMetaSoundLiteral
 // 0x0070 (0x0070 - 0x0000)
@@ -1752,11 +1602,7 @@ public:
 	class FName                                   DataType;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0018(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_CreateStringMetaSoundLiteral) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_CreateStringMetaSoundLiteral");
-static_assert(sizeof(MetaSoundBuilderSubsystem_CreateStringMetaSoundLiteral) == 0x000070, "Wrong size on MetaSoundBuilderSubsystem_CreateStringMetaSoundLiteral");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateStringMetaSoundLiteral, Value) == 0x000000, "Member 'MetaSoundBuilderSubsystem_CreateStringMetaSoundLiteral::Value' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateStringMetaSoundLiteral, DataType) == 0x000010, "Member 'MetaSoundBuilderSubsystem_CreateStringMetaSoundLiteral::DataType' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_CreateStringMetaSoundLiteral, ReturnValue) == 0x000018, "Member 'MetaSoundBuilderSubsystem_CreateStringMetaSoundLiteral::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateStringMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.FindBuilder
 // 0x0010 (0x0010 - 0x0000)
@@ -1766,10 +1612,7 @@ public:
 	class FName                                   BuilderName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMetaSoundBuilderBase*                  ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_FindBuilder) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_FindBuilder");
-static_assert(sizeof(MetaSoundBuilderSubsystem_FindBuilder) == 0x000010, "Wrong size on MetaSoundBuilderSubsystem_FindBuilder");
-static_assert(offsetof(MetaSoundBuilderSubsystem_FindBuilder, BuilderName) == 0x000000, "Member 'MetaSoundBuilderSubsystem_FindBuilder::BuilderName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_FindBuilder, ReturnValue) == 0x000008, "Member 'MetaSoundBuilderSubsystem_FindBuilder::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_FindBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.FindPatchBuilder
 // 0x0010 (0x0010 - 0x0000)
@@ -1779,10 +1622,7 @@ public:
 	class FName                                   BuilderName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMetaSoundPatchBuilder*                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_FindPatchBuilder) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_FindPatchBuilder");
-static_assert(sizeof(MetaSoundBuilderSubsystem_FindPatchBuilder) == 0x000010, "Wrong size on MetaSoundBuilderSubsystem_FindPatchBuilder");
-static_assert(offsetof(MetaSoundBuilderSubsystem_FindPatchBuilder, BuilderName) == 0x000000, "Member 'MetaSoundBuilderSubsystem_FindPatchBuilder::BuilderName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_FindPatchBuilder, ReturnValue) == 0x000008, "Member 'MetaSoundBuilderSubsystem_FindPatchBuilder::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_FindPatchBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.FindSourceBuilder
 // 0x0010 (0x0010 - 0x0000)
@@ -1792,10 +1632,7 @@ public:
 	class FName                                   BuilderName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMetaSoundSourceBuilder*                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_FindSourceBuilder) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_FindSourceBuilder");
-static_assert(sizeof(MetaSoundBuilderSubsystem_FindSourceBuilder) == 0x000010, "Wrong size on MetaSoundBuilderSubsystem_FindSourceBuilder");
-static_assert(offsetof(MetaSoundBuilderSubsystem_FindSourceBuilder, BuilderName) == 0x000000, "Member 'MetaSoundBuilderSubsystem_FindSourceBuilder::BuilderName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_FindSourceBuilder, ReturnValue) == 0x000008, "Member 'MetaSoundBuilderSubsystem_FindSourceBuilder::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_FindSourceBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.RegisterBuilder
 // 0x0010 (0x0010 - 0x0000)
@@ -1805,10 +1642,7 @@ public:
 	class FName                                   BuilderName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMetaSoundBuilderBase*                  Builder;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_RegisterBuilder) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_RegisterBuilder");
-static_assert(sizeof(MetaSoundBuilderSubsystem_RegisterBuilder) == 0x000010, "Wrong size on MetaSoundBuilderSubsystem_RegisterBuilder");
-static_assert(offsetof(MetaSoundBuilderSubsystem_RegisterBuilder, BuilderName) == 0x000000, "Member 'MetaSoundBuilderSubsystem_RegisterBuilder::BuilderName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_RegisterBuilder, Builder) == 0x000008, "Member 'MetaSoundBuilderSubsystem_RegisterBuilder::Builder' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_RegisterBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.RegisterPatchBuilder
 // 0x0010 (0x0010 - 0x0000)
@@ -1818,10 +1652,7 @@ public:
 	class FName                                   BuilderName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMetaSoundPatchBuilder*                 Builder;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_RegisterPatchBuilder) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_RegisterPatchBuilder");
-static_assert(sizeof(MetaSoundBuilderSubsystem_RegisterPatchBuilder) == 0x000010, "Wrong size on MetaSoundBuilderSubsystem_RegisterPatchBuilder");
-static_assert(offsetof(MetaSoundBuilderSubsystem_RegisterPatchBuilder, BuilderName) == 0x000000, "Member 'MetaSoundBuilderSubsystem_RegisterPatchBuilder::BuilderName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_RegisterPatchBuilder, Builder) == 0x000008, "Member 'MetaSoundBuilderSubsystem_RegisterPatchBuilder::Builder' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_RegisterPatchBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.RegisterSourceBuilder
 // 0x0010 (0x0010 - 0x0000)
@@ -1831,10 +1662,7 @@ public:
 	class FName                                   BuilderName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMetaSoundSourceBuilder*                Builder;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_RegisterSourceBuilder) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_RegisterSourceBuilder");
-static_assert(sizeof(MetaSoundBuilderSubsystem_RegisterSourceBuilder) == 0x000010, "Wrong size on MetaSoundBuilderSubsystem_RegisterSourceBuilder");
-static_assert(offsetof(MetaSoundBuilderSubsystem_RegisterSourceBuilder, BuilderName) == 0x000000, "Member 'MetaSoundBuilderSubsystem_RegisterSourceBuilder::BuilderName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_RegisterSourceBuilder, Builder) == 0x000008, "Member 'MetaSoundBuilderSubsystem_RegisterSourceBuilder::Builder' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_RegisterSourceBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.SetTargetPage
 // 0x000C (0x000C - 0x0000)
@@ -1845,10 +1673,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_SetTargetPage) == 0x000004, "Wrong alignment on MetaSoundBuilderSubsystem_SetTargetPage");
-static_assert(sizeof(MetaSoundBuilderSubsystem_SetTargetPage) == 0x00000C, "Wrong size on MetaSoundBuilderSubsystem_SetTargetPage");
-static_assert(offsetof(MetaSoundBuilderSubsystem_SetTargetPage, PageName) == 0x000000, "Member 'MetaSoundBuilderSubsystem_SetTargetPage::PageName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_SetTargetPage, ReturnValue) == 0x000008, "Member 'MetaSoundBuilderSubsystem_SetTargetPage::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_SetTargetPage;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.UnregisterBuilder
 // 0x000C (0x000C - 0x0000)
@@ -1859,10 +1684,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_UnregisterBuilder) == 0x000004, "Wrong alignment on MetaSoundBuilderSubsystem_UnregisterBuilder");
-static_assert(sizeof(MetaSoundBuilderSubsystem_UnregisterBuilder) == 0x00000C, "Wrong size on MetaSoundBuilderSubsystem_UnregisterBuilder");
-static_assert(offsetof(MetaSoundBuilderSubsystem_UnregisterBuilder, BuilderName) == 0x000000, "Member 'MetaSoundBuilderSubsystem_UnregisterBuilder::BuilderName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_UnregisterBuilder, ReturnValue) == 0x000008, "Member 'MetaSoundBuilderSubsystem_UnregisterBuilder::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_UnregisterBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.UnregisterPatchBuilder
 // 0x000C (0x000C - 0x0000)
@@ -1873,10 +1695,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_UnregisterPatchBuilder) == 0x000004, "Wrong alignment on MetaSoundBuilderSubsystem_UnregisterPatchBuilder");
-static_assert(sizeof(MetaSoundBuilderSubsystem_UnregisterPatchBuilder) == 0x00000C, "Wrong size on MetaSoundBuilderSubsystem_UnregisterPatchBuilder");
-static_assert(offsetof(MetaSoundBuilderSubsystem_UnregisterPatchBuilder, BuilderName) == 0x000000, "Member 'MetaSoundBuilderSubsystem_UnregisterPatchBuilder::BuilderName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_UnregisterPatchBuilder, ReturnValue) == 0x000008, "Member 'MetaSoundBuilderSubsystem_UnregisterPatchBuilder::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_UnregisterPatchBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.UnregisterSourceBuilder
 // 0x000C (0x000C - 0x0000)
@@ -1887,10 +1706,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_UnregisterSourceBuilder) == 0x000004, "Wrong alignment on MetaSoundBuilderSubsystem_UnregisterSourceBuilder");
-static_assert(sizeof(MetaSoundBuilderSubsystem_UnregisterSourceBuilder) == 0x00000C, "Wrong size on MetaSoundBuilderSubsystem_UnregisterSourceBuilder");
-static_assert(offsetof(MetaSoundBuilderSubsystem_UnregisterSourceBuilder, BuilderName) == 0x000000, "Member 'MetaSoundBuilderSubsystem_UnregisterSourceBuilder::BuilderName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_UnregisterSourceBuilder, ReturnValue) == 0x000008, "Member 'MetaSoundBuilderSubsystem_UnregisterSourceBuilder::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_UnregisterSourceBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.FindBuilderOfDocument
 // 0x0018 (0x0018 - 0x0000)
@@ -1900,10 +1716,7 @@ public:
 	TScriptInterface<class IMetaSoundDocumentInterface> InMetaSound;                                 // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMetaSoundBuilderBase*                  ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_FindBuilderOfDocument) == 0x000008, "Wrong alignment on MetaSoundBuilderSubsystem_FindBuilderOfDocument");
-static_assert(sizeof(MetaSoundBuilderSubsystem_FindBuilderOfDocument) == 0x000018, "Wrong size on MetaSoundBuilderSubsystem_FindBuilderOfDocument");
-static_assert(offsetof(MetaSoundBuilderSubsystem_FindBuilderOfDocument, InMetaSound) == 0x000000, "Member 'MetaSoundBuilderSubsystem_FindBuilderOfDocument::InMetaSound' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_FindBuilderOfDocument, ReturnValue) == 0x000010, "Member 'MetaSoundBuilderSubsystem_FindBuilderOfDocument::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_FindBuilderOfDocument;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.IsInterfaceRegistered
 // 0x000C (0x000C - 0x0000)
@@ -1914,10 +1727,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MetaSoundBuilderSubsystem_IsInterfaceRegistered) == 0x000004, "Wrong alignment on MetaSoundBuilderSubsystem_IsInterfaceRegistered");
-static_assert(sizeof(MetaSoundBuilderSubsystem_IsInterfaceRegistered) == 0x00000C, "Wrong size on MetaSoundBuilderSubsystem_IsInterfaceRegistered");
-static_assert(offsetof(MetaSoundBuilderSubsystem_IsInterfaceRegistered, InInterfaceName) == 0x000000, "Member 'MetaSoundBuilderSubsystem_IsInterfaceRegistered::InInterfaceName' has a wrong offset!");
-static_assert(offsetof(MetaSoundBuilderSubsystem_IsInterfaceRegistered, ReturnValue) == 0x000008, "Member 'MetaSoundBuilderSubsystem_IsInterfaceRegistered::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_IsInterfaceRegistered;
 
 }
 

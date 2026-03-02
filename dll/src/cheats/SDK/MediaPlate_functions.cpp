@@ -17,8 +17,58 @@
 namespace SDK
 {
 
+// Function MediaPlate.MediaPlate.SetHoldoutCompositeEnabled
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInEnabled                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AMediaPlate::SetHoldoutCompositeEnabled(bool bInEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaPlate", "SetHoldoutCompositeEnabled");
+
+	Params::MediaPlate_SetHoldoutCompositeEnabled Parms{};
+
+	Parms.bInEnabled = bInEnabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaPlate.MediaPlate.IsHoldoutCompositeEnabled
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AMediaPlate::IsHoldoutCompositeEnabled() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaPlate", "IsHoldoutCompositeEnabled");
+
+	Params::MediaPlate_IsHoldoutCompositeEnabled Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MediaPlate.MediaPlateComponent.Close
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UMediaPlateComponent::Close()
 {
@@ -62,7 +112,7 @@ float UMediaPlateComponent::GetLetterboxAspectRatio()
 
 
 // Function MediaPlate.MediaPlateComponent.GetLoop
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -87,7 +137,7 @@ bool UMediaPlateComponent::GetLoop()
 
 
 // Function MediaPlate.MediaPlateComponent.GetMediaPlayer
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMediaPlayer*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -112,7 +162,7 @@ class UMediaPlayer* UMediaPlateComponent::GetMediaPlayer()
 
 
 // Function MediaPlate.MediaPlateComponent.GetMediaTexture
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UMediaTexture*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -139,8 +189,33 @@ class UMediaTexture* UMediaPlateComponent::GetMediaTexture(int32 Index_0)
 }
 
 
+// Function MediaPlate.MediaPlateComponent.Next
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMediaPlateComponent::Next()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaPlateComponent", "Next");
+
+	Params::MediaPlateComponent_Next Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MediaPlate.MediaPlateComponent.OnMediaEnd
-// (Final, Native, Private)
+// (Final, RequiredAPI, Native, Private)
 
 void UMediaPlateComponent::OnMediaEnd()
 {
@@ -159,7 +234,7 @@ void UMediaPlateComponent::OnMediaEnd()
 
 
 // Function MediaPlate.MediaPlateComponent.OnMediaOpened
-// (Final, Native, Private)
+// (Final, RequiredAPI, Native, Private)
 // Parameters:
 // const class FString&                    DeviceUrl                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -184,7 +259,7 @@ void UMediaPlateComponent::OnMediaOpened(const class FString& DeviceUrl)
 
 
 // Function MediaPlate.MediaPlateComponent.OnMediaResumed
-// (Final, Native, Private)
+// (Final, RequiredAPI, Native, Private)
 
 void UMediaPlateComponent::OnMediaResumed()
 {
@@ -203,7 +278,7 @@ void UMediaPlateComponent::OnMediaResumed()
 
 
 // Function MediaPlate.MediaPlateComponent.OnMediaSuspended
-// (Final, Native, Private)
+// (Final, RequiredAPI, Native, Private)
 
 void UMediaPlateComponent::OnMediaSuspended()
 {
@@ -222,7 +297,7 @@ void UMediaPlateComponent::OnMediaSuspended()
 
 
 // Function MediaPlate.MediaPlateComponent.Open
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UMediaPlateComponent::Open()
 {
@@ -240,8 +315,43 @@ void UMediaPlateComponent::Open()
 }
 
 
+// Function MediaPlate.MediaPlateComponent.OpenLatent
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class UObject*                    InWorldContextObject                                   (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FLatentActionInfo&         InLatentInfo                                           (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   InTimeout                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInWaitForTexture                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bOutSuccess                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaPlateComponent::OpenLatent(const class UObject* InWorldContextObject, const struct FLatentActionInfo& InLatentInfo, float InTimeout, bool bInWaitForTexture, bool* bOutSuccess)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaPlateComponent", "OpenLatent");
+
+	Params::MediaPlateComponent_OpenLatent Parms{};
+
+	Parms.InWorldContextObject = InWorldContextObject;
+	Parms.InLatentInfo = std::move(InLatentInfo);
+	Parms.InTimeout = InTimeout;
+	Parms.bInWaitForTexture = bInWaitForTexture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bOutSuccess != nullptr)
+		*bOutSuccess = Parms.bOutSuccess;
+}
+
+
 // Function MediaPlate.MediaPlateComponent.Pause
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UMediaPlateComponent::Pause()
 {
@@ -260,7 +370,7 @@ void UMediaPlateComponent::Pause()
 
 
 // Function MediaPlate.MediaPlateComponent.Play
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UMediaPlateComponent::Play()
 {
@@ -278,8 +388,33 @@ void UMediaPlateComponent::Play()
 }
 
 
+// Function MediaPlate.MediaPlateComponent.Previous
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMediaPlateComponent::Previous()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaPlateComponent", "Previous");
+
+	Params::MediaPlateComponent_Previous Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MediaPlate.MediaPlateComponent.Rewind
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -304,7 +439,7 @@ bool UMediaPlateComponent::Rewind()
 
 
 // Function MediaPlate.MediaPlateComponent.Seek
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // const struct FTimespan&                 Time                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -331,8 +466,108 @@ bool UMediaPlateComponent::Seek(const struct FTimespan& Time)
 }
 
 
+// Function MediaPlate.MediaPlateComponent.SelectExternalMedia
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    InFilePath                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaPlateComponent::SelectExternalMedia(const class FString& InFilePath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaPlateComponent", "SelectExternalMedia");
+
+	Params::MediaPlateComponent_SelectExternalMedia Parms{};
+
+	Parms.InFilePath = std::move(InFilePath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaPlate.MediaPlateComponent.SelectMediaPlaylistAsset
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UMediaPlaylist*             InMediaPlaylist                                        (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaPlateComponent::SelectMediaPlaylistAsset(const class UMediaPlaylist* InMediaPlaylist)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaPlateComponent", "SelectMediaPlaylistAsset");
+
+	Params::MediaPlateComponent_SelectMediaPlaylistAsset Parms{};
+
+	Parms.InMediaPlaylist = InMediaPlaylist;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaPlate.MediaPlateComponent.SelectMediaSourceAsset
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UMediaSource*               InMediaSource                                          (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaPlateComponent::SelectMediaSourceAsset(const class UMediaSource* InMediaSource)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaPlateComponent", "SelectMediaSourceAsset");
+
+	Params::MediaPlateComponent_SelectMediaSourceAsset Parms{};
+
+	Parms.InMediaSource = InMediaSource;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaPlate.MediaPlateComponent.SetEnableAudio
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInEnableAudio                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaPlateComponent::SetEnableAudio(bool bInEnableAudio)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaPlateComponent", "SetEnableAudio");
+
+	Params::MediaPlateComponent_SetEnableAudio Parms{};
+
+	Parms.bInEnableAudio = bInEnableAudio;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function MediaPlate.MediaPlateComponent.SetIsAspectRatioAuto
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bInIsAspectRatioAuto                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -357,7 +592,7 @@ void UMediaPlateComponent::SetIsAspectRatioAuto(bool bInIsAspectRatioAuto)
 
 
 // Function MediaPlate.MediaPlateComponent.SetLetterboxAspectRatio
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   AspectRatio                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -382,7 +617,7 @@ void UMediaPlateComponent::SetLetterboxAspectRatio(float AspectRatio)
 
 
 // Function MediaPlate.MediaPlateComponent.SetLoop
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bInLoop                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -407,7 +642,7 @@ void UMediaPlateComponent::SetLoop(bool bInLoop)
 
 
 // Function MediaPlate.MediaPlateComponent.SetMeshRange
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // const struct FVector2D&                 InMeshRange                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -432,7 +667,7 @@ void UMediaPlateComponent::SetMeshRange(const struct FVector2D& InMeshRange)
 
 
 // Function MediaPlate.MediaPlateComponent.SetPlayOnlyWhenVisible
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bInPlayOnlyWhenVisible                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -494,6 +729,34 @@ struct FVector2D UMediaPlateComponent::GetMeshRange() const
 		Func = Class->GetFunction("MediaPlateComponent", "GetMeshRange");
 
 	Params::MediaPlateComponent_GetMeshRange Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MediaPlate.MediaPlateComponent.IsEventStateChangeAllowed
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EMediaPlateEventState                   InRequestEventState                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMediaPlateComponent::IsEventStateChangeAllowed(EMediaPlateEventState InRequestEventState) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaPlateComponent", "IsEventStateChangeAllowed");
+
+	Params::MediaPlateComponent_IsEventStateChangeAllowed Parms{};
+
+	Parms.InRequestEventState = InRequestEventState;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

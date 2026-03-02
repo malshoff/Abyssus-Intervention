@@ -38,7 +38,7 @@ void UWidget_SpiritGauge_C::ExecuteUbergraph_Widget_SpiritGauge(int32 EntryPoint
 
 
 // Function Widget_SpiritGauge.Widget_SpiritGauge_C.GaugeReset
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpiritGauge_C::GaugeReset()
 {
@@ -72,7 +72,7 @@ void UWidget_SpiritGauge_C::SetGaugePercent(float Percent)
 
 
 // Function Widget_SpiritGauge.Widget_SpiritGauge_C.SetGaugeVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ESlateVisibility                        Visibility_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -92,7 +92,7 @@ void UWidget_SpiritGauge_C::SetGaugeVisibility(ESlateVisibility Visibility_0)
 
 
 // Function Widget_SpiritGauge.Widget_SpiritGauge_C.ThresholdReached
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SpiritGauge_C::ThresholdReached()
 {

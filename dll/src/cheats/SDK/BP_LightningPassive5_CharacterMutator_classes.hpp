@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -18,31 +17,27 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LightningPassive5_CharacterMutator.BP_LightningPassive5_CharacterMutator_C
-// 0x0008 (0x0110 - 0x0108)
+// 0x0000 (0x0108 - 0x0108)
 class UBP_LightningPassive5_CharacterMutator_C final : public URGCharacterMutatorScript
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0108(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-
-public:
-	void ExecuteUbergraph_BP_LightningPassive5_CharacterMutator(int32 EntryPoint);
-	void K2_ActivateScript();
-	void K2_DeactivateScript();
 	void OnDealtDamage(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageCombatEventData);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_LightningPassive5_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_LightningPassive5_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_LightningPassive5_CharacterMutator_C")
 	}
 	static class UBP_LightningPassive5_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_LightningPassive5_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_LightningPassive5_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_LightningPassive5_CharacterMutator_C");
-static_assert(sizeof(UBP_LightningPassive5_CharacterMutator_C) == 0x000110, "Wrong size on UBP_LightningPassive5_CharacterMutator_C");
-static_assert(offsetof(UBP_LightningPassive5_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_LightningPassive5_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_LightningPassive5_CharacterMutator_C;
 
 }
 

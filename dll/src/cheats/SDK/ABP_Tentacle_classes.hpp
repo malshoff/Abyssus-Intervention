@@ -19,18 +19,18 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Tentacle.ABP_Tentacle_C
-// 0x01D0 (0x0590 - 0x03C0)
+// 0x01D0 (0x05B0 - 0x03E0)
 class UABP_Tentacle_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_3B8[0x8];                                      // 0x03B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x03C0(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03C8(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03D0(0x0020)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x03F0(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0438(0x0048)()
-	struct FAnimNode_ApplyMeshSpaceAdditive       AnimGraphNode_ApplyMeshSpaceAdditive;              // 0x0480(0x00D0)()
-	struct FAnimNode_SequenceEvaluator            AnimGraphNode_SequenceEvaluator;                   // 0x0550(0x0040)()
+	uint8                                         Pad_3D8[0x8];                                      // 0x03D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x03E0(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03E8(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03F0(0x0020)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0410(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0458(0x0048)()
+	struct FAnimNode_ApplyMeshSpaceAdditive       AnimGraphNode_ApplyMeshSpaceAdditive;              // 0x04A0(0x00D0)()
+	struct FAnimNode_SequenceEvaluator            AnimGraphNode_SequenceEvaluator;                   // 0x0570(0x0040)()
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -38,22 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_Tentacle_C">();
+		BP_STATIC_CLASS_IMPL("ABP_Tentacle_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_Tentacle_C")
 	}
 	static class UABP_Tentacle_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_Tentacle_C>();
 	}
 };
-static_assert(alignof(UABP_Tentacle_C) == 0x000010, "Wrong alignment on UABP_Tentacle_C");
-static_assert(sizeof(UABP_Tentacle_C) == 0x000590, "Wrong size on UABP_Tentacle_C");
-static_assert(offsetof(UABP_Tentacle_C, AnimBlueprintExtension_PropertyAccess) == 0x0003C0, "Member 'UABP_Tentacle_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UABP_Tentacle_C, AnimBlueprintExtension_Base) == 0x0003C8, "Member 'UABP_Tentacle_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UABP_Tentacle_C, AnimGraphNode_Root) == 0x0003D0, "Member 'UABP_Tentacle_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_Tentacle_C, AnimGraphNode_Slot) == 0x0003F0, "Member 'UABP_Tentacle_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UABP_Tentacle_C, AnimGraphNode_SequencePlayer) == 0x000438, "Member 'UABP_Tentacle_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UABP_Tentacle_C, AnimGraphNode_ApplyMeshSpaceAdditive) == 0x000480, "Member 'UABP_Tentacle_C::AnimGraphNode_ApplyMeshSpaceAdditive' has a wrong offset!");
-static_assert(offsetof(UABP_Tentacle_C, AnimGraphNode_SequenceEvaluator) == 0x000550, "Member 'UABP_Tentacle_C::AnimGraphNode_SequenceEvaluator' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_Tentacle_C;
 
 }
 

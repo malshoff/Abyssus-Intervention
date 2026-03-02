@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -36,33 +37,15 @@ public:
 	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0070(0x0010)()
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0084(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_SafeDivide_A_ImplicitCast;                // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_SafeDivide_B_ImplicitCast;                // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetCooldownProgress_Progress_ImplicitCast; // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry) == 0x000008, "Wrong alignment on Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry");
-static_assert(sizeof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry) == 0x0000B0, "Wrong size on Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, EntryPoint) == 0x000000, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, Temp_bool_Has_Been_Initd_Variable) == 0x000004, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, K2Node_Event_MyGeometry) == 0x000018, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, K2Node_Event_InDeltaTime) == 0x000050, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, CallFunc_IsValid_ReturnValue) == 0x000054, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, CallFunc_GetRemainingDuration_ReturnValue) == 0x000058, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::CallFunc_GetRemainingDuration_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, CallFunc_GetMutableFloatCurrentValue_ReturnValue) == 0x00005C, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::CallFunc_GetMutableFloatCurrentValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, CallFunc_GetCurrentStackCount_ReturnValue) == 0x000060, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::CallFunc_GetCurrentStackCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, CallFunc_SafeDivide_ReturnValue) == 0x000068, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, CallFunc_Conv_IntToText_ReturnValue) == 0x000070, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, CallFunc_Greater_IntInt_ReturnValue) == 0x000080, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, CallFunc_PlayAnimation_ReturnValue) == 0x000088, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, Temp_bool_IsClosed_Variable) == 0x000090, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, CallFunc_SafeDivide_A_ImplicitCast) == 0x000098, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::CallFunc_SafeDivide_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, CallFunc_SafeDivide_B_ImplicitCast) == 0x0000A0, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::CallFunc_SafeDivide_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry, CallFunc_SetCooldownProgress_Progress_ImplicitCast) == 0x0000A8, "Member 'Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry::CallFunc_SetCooldownProgress_Progress_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PlayerStatusEffectEntry_C_ExecuteUbergraph_Widget_PlayerStatusEffectEntry;
 
 // Function Widget_PlayerStatusEffectEntry.Widget_PlayerStatusEffectEntry_C.SetCooldownProgress
 // 0x0010 (0x0010 - 0x0000)
@@ -73,23 +56,17 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PlayerStatusEffectEntry_C_SetCooldownProgress) == 0x000008, "Wrong alignment on Widget_PlayerStatusEffectEntry_C_SetCooldownProgress");
-static_assert(sizeof(Widget_PlayerStatusEffectEntry_C_SetCooldownProgress) == 0x000010, "Wrong size on Widget_PlayerStatusEffectEntry_C_SetCooldownProgress");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_SetCooldownProgress, Progress) == 0x000000, "Member 'Widget_PlayerStatusEffectEntry_C_SetCooldownProgress::Progress' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_SetCooldownProgress, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000008, "Member 'Widget_PlayerStatusEffectEntry_C_SetCooldownProgress::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PlayerStatusEffectEntry_C_SetCooldownProgress;
 
 // Function Widget_PlayerStatusEffectEntry.Widget_PlayerStatusEffectEntry_C.Setup
-// 0x0010 (0x0010 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct Widget_PlayerStatusEffectEntry_C_Setup final
 {
 public:
 	class URStatusEffectGScript*                  InStatusEffectScript;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PlayerStatusEffectEntry_C_Setup) == 0x000008, "Wrong alignment on Widget_PlayerStatusEffectEntry_C_Setup");
-static_assert(sizeof(Widget_PlayerStatusEffectEntry_C_Setup) == 0x000010, "Wrong size on Widget_PlayerStatusEffectEntry_C_Setup");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_Setup, InStatusEffectScript) == 0x000000, "Member 'Widget_PlayerStatusEffectEntry_C_Setup::InStatusEffectScript' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_Setup, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'Widget_PlayerStatusEffectEntry_C_Setup::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PlayerStatusEffectEntry_C_Setup;
 
 // Function Widget_PlayerStatusEffectEntry.Widget_PlayerStatusEffectEntry_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -99,10 +76,7 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PlayerStatusEffectEntry_C_Tick) == 0x000004, "Wrong alignment on Widget_PlayerStatusEffectEntry_C_Tick");
-static_assert(sizeof(Widget_PlayerStatusEffectEntry_C_Tick) == 0x00003C, "Wrong size on Widget_PlayerStatusEffectEntry_C_Tick");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_Tick, MyGeometry) == 0x000000, "Member 'Widget_PlayerStatusEffectEntry_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_PlayerStatusEffectEntry_C_Tick, InDeltaTime) == 0x000038, "Member 'Widget_PlayerStatusEffectEntry_C_Tick::InDeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PlayerStatusEffectEntry_C_Tick;
 
 }
 

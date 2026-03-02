@@ -11,27 +11,27 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "Widget_LootSelectScreenBase_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_ArtifactUpgradeSelectScreen.Widget_ArtifactUpgradeSelectScreen_C
-// 0x0048 (0x0508 - 0x04C0)
+// 0x0048 (0x0590 - 0x0548)
 class UWidget_ArtifactUpgradeSelectScreen_C final : public UWidget_LootSelectScreenBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_ArtifactUpgradeSelectScreen_C; // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       TextFadeInAnimation;                               // 0x04C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ConstructAnimation;                                // 0x04D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_81;                             // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Header;                                            // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           OptionContainer;                                   // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             SubheaderText;                                     // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Vignette;                                          // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_Button_SimpleText_C*                 W_Button_SimpleText;                               // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Widget_ArtifactUpgradeSelectScreen_C; // 0x0548(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UW_Button_SimpleText_C*                 W_Button_SimpleText;                               // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Vignette;                                          // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             SubheaderText;                                     // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           OptionContainer;                                   // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Header;                                            // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_81;                             // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ConstructAnimation;                                // 0x0580(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       TextFadeInAnimation;                               // 0x0588(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Widget_AbilitySelectScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
@@ -47,24 +47,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_ArtifactUpgradeSelectScreen_C">();
+		BP_STATIC_CLASS_IMPL("Widget_ArtifactUpgradeSelectScreen_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_ArtifactUpgradeSelectScreen_C")
 	}
 	static class UWidget_ArtifactUpgradeSelectScreen_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_ArtifactUpgradeSelectScreen_C>();
 	}
 };
-static_assert(alignof(UWidget_ArtifactUpgradeSelectScreen_C) == 0x000008, "Wrong alignment on UWidget_ArtifactUpgradeSelectScreen_C");
-static_assert(sizeof(UWidget_ArtifactUpgradeSelectScreen_C) == 0x000508, "Wrong size on UWidget_ArtifactUpgradeSelectScreen_C");
-static_assert(offsetof(UWidget_ArtifactUpgradeSelectScreen_C, UberGraphFrame_Widget_ArtifactUpgradeSelectScreen_C) == 0x0004C0, "Member 'UWidget_ArtifactUpgradeSelectScreen_C::UberGraphFrame_Widget_ArtifactUpgradeSelectScreen_C' has a wrong offset!");
-static_assert(offsetof(UWidget_ArtifactUpgradeSelectScreen_C, TextFadeInAnimation) == 0x0004C8, "Member 'UWidget_ArtifactUpgradeSelectScreen_C::TextFadeInAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_ArtifactUpgradeSelectScreen_C, ConstructAnimation) == 0x0004D0, "Member 'UWidget_ArtifactUpgradeSelectScreen_C::ConstructAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_ArtifactUpgradeSelectScreen_C, CommonActionWidget_81) == 0x0004D8, "Member 'UWidget_ArtifactUpgradeSelectScreen_C::CommonActionWidget_81' has a wrong offset!");
-static_assert(offsetof(UWidget_ArtifactUpgradeSelectScreen_C, Header) == 0x0004E0, "Member 'UWidget_ArtifactUpgradeSelectScreen_C::Header' has a wrong offset!");
-static_assert(offsetof(UWidget_ArtifactUpgradeSelectScreen_C, OptionContainer) == 0x0004E8, "Member 'UWidget_ArtifactUpgradeSelectScreen_C::OptionContainer' has a wrong offset!");
-static_assert(offsetof(UWidget_ArtifactUpgradeSelectScreen_C, SubheaderText) == 0x0004F0, "Member 'UWidget_ArtifactUpgradeSelectScreen_C::SubheaderText' has a wrong offset!");
-static_assert(offsetof(UWidget_ArtifactUpgradeSelectScreen_C, Vignette) == 0x0004F8, "Member 'UWidget_ArtifactUpgradeSelectScreen_C::Vignette' has a wrong offset!");
-static_assert(offsetof(UWidget_ArtifactUpgradeSelectScreen_C, W_Button_SimpleText) == 0x000500, "Member 'UWidget_ArtifactUpgradeSelectScreen_C::W_Button_SimpleText' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_ArtifactUpgradeSelectScreen_C;
 
 }
 

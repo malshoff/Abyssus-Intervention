@@ -47,28 +47,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator) == 0x000008, "Wrong alignment on BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator");
-static_assert(sizeof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator) == 0x0000B8, "Wrong size on BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, CallFunc_GetMutatorRank_ReturnValue) == 0x000004, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x000008, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000010, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000020, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, CallFunc_GetScriptFName_ReturnValue) == 0x000050, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, CallFunc_K2_GetRGScriptComponent_ReturnValue) == 0x000058, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::CallFunc_K2_GetRGScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000060, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000068, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x000070, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000078, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, K2Node_DynamicCast_AsRPlayer_GScript_Component_1) == 0x000080, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::K2Node_DynamicCast_AsRPlayer_GScript_Component_1' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, K2Node_DynamicCast_bSuccess_2) == 0x000088, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x000090, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, K2Node_DynamicCast_bSuccess_3) == 0x000098, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, CallFunc_GetScriptFName_ReturnValue_1) == 0x00009C, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, CallFunc_GetMutatorRank_ReturnValue_1) == 0x0000A4, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::CallFunc_GetMutatorRank_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0000A8, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x0000B0, "Member 'BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MsBoom_CharacterMutator_C_ExecuteUbergraph_BP_MsBoom_CharacterMutator;
 
 // Function BP_MsBoom_CharacterMutator.BP_MsBoom_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -80,11 +59,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_MsBoom_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_MsBoom_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_MsBoom_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_MsBoom_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_MsBoom_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_MsBoom_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_MsBoom_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MsBoom_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_MsBoom_CharacterMutator.BP_MsBoom_CharacterMutator_C.GetDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -93,9 +68,7 @@ struct BP_MsBoom_CharacterMutator_C_GetDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_MsBoom_CharacterMutator_C_GetDescription) == 0x000008, "Wrong alignment on BP_MsBoom_CharacterMutator_C_GetDescription");
-static_assert(sizeof(BP_MsBoom_CharacterMutator_C_GetDescription) == 0x000010, "Wrong size on BP_MsBoom_CharacterMutator_C_GetDescription");
-static_assert(offsetof(BP_MsBoom_CharacterMutator_C_GetDescription, ReturnValue) == 0x000000, "Member 'BP_MsBoom_CharacterMutator_C_GetDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MsBoom_CharacterMutator_C_GetDescription;
 
 }
 

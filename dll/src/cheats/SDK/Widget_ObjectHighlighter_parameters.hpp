@@ -52,31 +52,7 @@ public:
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x00C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x00D8(0x0014)()
 };
-static_assert(alignof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter) == 0x000008, "Wrong alignment on Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter");
-static_assert(sizeof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter) == 0x0000F0, "Wrong size on Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, EntryPoint) == 0x000000, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, K2Node_Event_ObjectName) == 0x000008, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::K2Node_Event_ObjectName' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, K2Node_Event_Info) == 0x000018, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::K2Node_Event_Info' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, K2Node_CreateDelegate_OutputDelegate) == 0x000028, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, K2Node_DynamicCast_AsRDoor) == 0x000038, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::K2Node_DynamicCast_AsRDoor' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000048, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, CallFunc_GetOwningPlayer_ReturnValue) == 0x000050, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, CallFunc_IsValid_ReturnValue) == 0x000058, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, CallFunc_K2_GetPawn_ReturnValue) == 0x000060, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000068, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000080, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, K2Node_DynamicCast_AsRDoor_1) == 0x000098, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::K2Node_DynamicCast_AsRDoor_1' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, K2Node_DynamicCast_bSuccess_1) == 0x0000A0, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, CallFunc_Vector_Distance_ReturnValue) == 0x0000A8, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, CallFunc_ShouldShowOnRadar_self_CastInput) == 0x0000B0, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::CallFunc_ShouldShowOnRadar_self_CastInput' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, CallFunc_ShouldShowOnRadar_ReturnValue) == 0x0000C0, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::CallFunc_ShouldShowOnRadar_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0000C1, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, CallFunc_IsVisible_ReturnValue) == 0x0000C2, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, CallFunc_Not_PreBool_ReturnValue) == 0x0000C3, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, K2Node_Event_IsDesignTime) == 0x0000C4, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, K2Node_MakeStruct_LinearColor) == 0x0000C8, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter, K2Node_MakeStruct_SlateColor) == 0x0000D8, "Member 'Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter::K2Node_MakeStruct_SlateColor' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ObjectHighlighter_C_ExecuteUbergraph_Widget_ObjectHighlighter;
 
 // Function Widget_ObjectHighlighter.Widget_ObjectHighlighter_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -85,9 +61,7 @@ struct Widget_ObjectHighlighter_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ObjectHighlighter_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_ObjectHighlighter_C_PreConstruct");
-static_assert(sizeof(Widget_ObjectHighlighter_C_PreConstruct) == 0x000001, "Wrong size on Widget_ObjectHighlighter_C_PreConstruct");
-static_assert(offsetof(Widget_ObjectHighlighter_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_ObjectHighlighter_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ObjectHighlighter_C_PreConstruct;
 
 // Function Widget_ObjectHighlighter.Widget_ObjectHighlighter_C.SetInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -97,10 +71,7 @@ public:
 	class FText                                   ObjectName;                                        // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class FText                                   Info;                                              // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(Widget_ObjectHighlighter_C_SetInfo) == 0x000008, "Wrong alignment on Widget_ObjectHighlighter_C_SetInfo");
-static_assert(sizeof(Widget_ObjectHighlighter_C_SetInfo) == 0x000020, "Wrong size on Widget_ObjectHighlighter_C_SetInfo");
-static_assert(offsetof(Widget_ObjectHighlighter_C_SetInfo, ObjectName) == 0x000000, "Member 'Widget_ObjectHighlighter_C_SetInfo::ObjectName' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_SetInfo, Info) == 0x000010, "Member 'Widget_ObjectHighlighter_C_SetInfo::Info' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ObjectHighlighter_C_SetInfo;
 
 // Function Widget_ObjectHighlighter.Widget_ObjectHighlighter_C.SetTexts
 // 0x0028 (0x0028 - 0x0000)
@@ -112,12 +83,7 @@ public:
 	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_TextIsEmpty_ReturnValue_1;                // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ObjectHighlighter_C_SetTexts) == 0x000008, "Wrong alignment on Widget_ObjectHighlighter_C_SetTexts");
-static_assert(sizeof(Widget_ObjectHighlighter_C_SetTexts) == 0x000028, "Wrong size on Widget_ObjectHighlighter_C_SetTexts");
-static_assert(offsetof(Widget_ObjectHighlighter_C_SetTexts, ObjectName) == 0x000000, "Member 'Widget_ObjectHighlighter_C_SetTexts::ObjectName' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_SetTexts, Info) == 0x000010, "Member 'Widget_ObjectHighlighter_C_SetTexts::Info' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_SetTexts, CallFunc_TextIsEmpty_ReturnValue) == 0x000020, "Member 'Widget_ObjectHighlighter_C_SetTexts::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ObjectHighlighter_C_SetTexts, CallFunc_TextIsEmpty_ReturnValue_1) == 0x000021, "Member 'Widget_ObjectHighlighter_C_SetTexts::CallFunc_TextIsEmpty_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ObjectHighlighter_C_SetTexts;
 
 }
 

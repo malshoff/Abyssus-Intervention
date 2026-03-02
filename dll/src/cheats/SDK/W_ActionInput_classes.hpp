@@ -11,29 +11,29 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "CommonInput_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "CommonUI_classes.hpp"
 #include "UMG_structs.hpp"
-#include "CommonInput_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass W_ActionInput.W_ActionInput_C
-// 0x00F8 (0x03F0 - 0x02F8)
+// 0x00F8 (0x0460 - 0x0368)
 class UW_ActionInput_C final : public UCommonUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Construct_Animation;                               // 0x0300(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 BG_Image;                                          // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Binding_Text;                                      // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	uint8                                         Pad_318[0x8];                                      // 0x0318(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            Brush;                                             // 0x0320(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   Text;                                              // 0x03D0(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class UInputAction*                           EnhancedInputAction;                               // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCommonActionWidget*                    NeighborCommonActionWidget;                        // 0x03E8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       Binding_Text;                                      // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BG_Image;                                          // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Construct_Animation;                               // 0x0380(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_388[0x8];                                      // 0x0388(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            Brush;                                             // 0x0390(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   Text;                                              // 0x0440(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class UInputAction*                           EnhancedInputAction;                               // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCommonActionWidget*                    NeighborCommonActionWidget;                        // 0x0458(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -49,23 +49,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"W_ActionInput_C">();
+		BP_STATIC_CLASS_IMPL("W_ActionInput_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"W_ActionInput_C")
 	}
 	static class UW_ActionInput_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UW_ActionInput_C>();
 	}
 };
-static_assert(alignof(UW_ActionInput_C) == 0x000010, "Wrong alignment on UW_ActionInput_C");
-static_assert(sizeof(UW_ActionInput_C) == 0x0003F0, "Wrong size on UW_ActionInput_C");
-static_assert(offsetof(UW_ActionInput_C, UberGraphFrame) == 0x0002F8, "Member 'UW_ActionInput_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UW_ActionInput_C, Construct_Animation) == 0x000300, "Member 'UW_ActionInput_C::Construct_Animation' has a wrong offset!");
-static_assert(offsetof(UW_ActionInput_C, BG_Image) == 0x000308, "Member 'UW_ActionInput_C::BG_Image' has a wrong offset!");
-static_assert(offsetof(UW_ActionInput_C, Binding_Text) == 0x000310, "Member 'UW_ActionInput_C::Binding_Text' has a wrong offset!");
-static_assert(offsetof(UW_ActionInput_C, Brush) == 0x000320, "Member 'UW_ActionInput_C::Brush' has a wrong offset!");
-static_assert(offsetof(UW_ActionInput_C, Text) == 0x0003D0, "Member 'UW_ActionInput_C::Text' has a wrong offset!");
-static_assert(offsetof(UW_ActionInput_C, EnhancedInputAction) == 0x0003E0, "Member 'UW_ActionInput_C::EnhancedInputAction' has a wrong offset!");
-static_assert(offsetof(UW_ActionInput_C, NeighborCommonActionWidget) == 0x0003E8, "Member 'UW_ActionInput_C::NeighborCommonActionWidget' has a wrong offset!");
+DUMPER7_ASSERTS_UW_ActionInput_C;
 
 }
 

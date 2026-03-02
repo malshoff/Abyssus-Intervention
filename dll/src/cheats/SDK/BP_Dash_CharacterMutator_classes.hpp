@@ -12,20 +12,20 @@
 
 #include "Engine_structs.hpp"
 #include "BP_Activatable_CharacterMutator_classes.hpp"
-#include "Niagara_structs.hpp"
 #include "RGame_structs.hpp"
+#include "Niagara_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Dash_CharacterMutator.BP_Dash_CharacterMutator_C
-// 0x0010 (0x0EB0 - 0x0EA0)
+// 0x0010 (0x0EB8 - 0x0EA8)
 class UBP_Dash_CharacterMutator_C final : public UBP_Activatable_CharacterMutator_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Dash_CharacterMutator_C;         // 0x0EA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         Distance_Multiplier;                               // 0x0EA8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Dash_CharacterMutator_C;         // 0x0EA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         Distance_Multiplier;                               // 0x0EB0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Dash_CharacterMutator(int32 EntryPoint);
@@ -36,17 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Dash_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Dash_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Dash_CharacterMutator_C")
 	}
 	static class UBP_Dash_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Dash_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_Dash_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_Dash_CharacterMutator_C");
-static_assert(sizeof(UBP_Dash_CharacterMutator_C) == 0x000EB0, "Wrong size on UBP_Dash_CharacterMutator_C");
-static_assert(offsetof(UBP_Dash_CharacterMutator_C, UberGraphFrame_BP_Dash_CharacterMutator_C) == 0x000EA0, "Member 'UBP_Dash_CharacterMutator_C::UberGraphFrame_BP_Dash_CharacterMutator_C' has a wrong offset!");
-static_assert(offsetof(UBP_Dash_CharacterMutator_C, Distance_Multiplier) == 0x000EA8, "Member 'UBP_Dash_CharacterMutator_C::Distance_Multiplier' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Dash_CharacterMutator_C;
 
 }
 

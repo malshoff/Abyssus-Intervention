@@ -25,22 +25,24 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0150(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void HandleDealtDamageEvent(class ARPawnBase* RPawnBase, const struct FDamageCombatEvent& DamageEventData);
 	void ExecuteUbergraph_BP_Ability_Trigger_Mutator(int32 EntryPoint);
+	void HandleDealtDamageEvent(class ARPawnBase* RPawnBase, const struct FDamageCombatEvent& DamageEventData);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Ability_Trigger_Mutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Ability_Trigger_Mutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Ability_Trigger_Mutator_C")
 	}
 	static class UBP_Ability_Trigger_Mutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Ability_Trigger_Mutator_C>();
 	}
 };
-static_assert(alignof(UBP_Ability_Trigger_Mutator_C) == 0x000008, "Wrong alignment on UBP_Ability_Trigger_Mutator_C");
-static_assert(sizeof(UBP_Ability_Trigger_Mutator_C) == 0x000158, "Wrong size on UBP_Ability_Trigger_Mutator_C");
-static_assert(offsetof(UBP_Ability_Trigger_Mutator_C, UberGraphFrame) == 0x000150, "Member 'UBP_Ability_Trigger_Mutator_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Ability_Trigger_Mutator_C;
 
 }
 

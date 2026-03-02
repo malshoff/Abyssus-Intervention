@@ -364,20 +364,6 @@ void UBP_Melee_CharacterMutator_C::RemoveExecuteTag()
 }
 
 
-// Function BP_Melee_CharacterMutator.BP_Melee_CharacterMutator_C.ResetCharmBreak
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Melee_CharacterMutator_C::ResetCharmBreak()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Melee_CharacterMutator_C", "ResetCharmBreak");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_Melee_CharacterMutator.BP_Melee_CharacterMutator_C.ResetMeleeExecutionThresholdModifier
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -417,6 +403,28 @@ void UBP_Melee_CharacterMutator_C::ResetNumPlatingStacksRequired()
 		Func = Class->GetFunction("BP_Melee_CharacterMutator_C", "ResetNumPlatingStacksRequired");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Melee_CharacterMutator.BP_Melee_CharacterMutator_C.RunPickupablesBehavior
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FHitResult>&              HitResults                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+
+void UBP_Melee_CharacterMutator_C::RunPickupablesBehavior(TArray<struct FHitResult>& HitResults)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Melee_CharacterMutator_C", "RunPickupablesBehavior");
+
+	Params::BP_Melee_CharacterMutator_C_RunPickupablesBehavior Parms{};
+
+	Parms.HitResults = std::move(HitResults);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	HitResults = std::move(Parms.HitResults);
 }
 
 

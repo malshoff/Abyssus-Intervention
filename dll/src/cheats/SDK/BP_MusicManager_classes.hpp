@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MusicManager.BP_MusicManager_C
-// 0x0168 (0x0498 - 0x0330)
+// 0x0128 (0x0458 - 0x0330)
 class ABP_MusicManager_C final : public ARMusicManager
 {
 public:
@@ -27,26 +27,28 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UAudioComponent*                        Current_Song;                                      // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        Fade_Out_Duration;                                 // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, int32>                      BossPhases;                                        // 0x0350(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UAudioComponent*                        AmbiencePlayer;                                    // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsInSegment;                                      // 0x03A8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URMusicData*                            MusicList;                                         // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsInBossFight;                                    // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B9[0x7];                                      // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Intensity;                                         // 0x03C0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	int32                                         AreaIndex;                                         // 0x03C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAudioComponent*                        CurrentEmoteSong;                                  // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class ARPawnBase*>                     PlayersEmoting;                                    // 0x03D8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	struct FTimerHandle                           EmoteTimer;                                        // 0x03E8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<class URAreaData*, TSoftClassPtr<class UClass>> AreaAmbienceMap;                            // 0x03F0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class USoundControlBusMix*                    MultiplayerMix;                                    // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class USoundWave>              SoftGameOverTrack;                                 // 0x0448(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TSoftObjectPtr<class USoundWave>              SoftVictoryTrack;                                  // 0x0470(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class FName>                           BossPhases;                                        // 0x0350(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UAudioComponent*                        AmbiencePlayer;                                    // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsInSegment;                                      // 0x0368(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_369[0x7];                                      // 0x0369(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URMusicData*                            MusicList;                                         // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsInBossFight;                                    // 0x0378(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsInEliteFight;                                   // 0x0379(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_37A[0x6];                                      // 0x037A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Intensity;                                         // 0x0380(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	int32                                         AreaIndex;                                         // 0x0388(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_38C[0x4];                                      // 0x038C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        CurrentEmoteSong;                                  // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class ARPawnBase*>                     PlayersEmoting;                                    // 0x0398(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FTimerHandle                           EmoteTimer;                                        // 0x03A8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<class URAreaData*, TSoftClassPtr<class UClass>> AreaAmbienceMap;                            // 0x03B0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class USoundControlBusMix*                    MultiplayerMix;                                    // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class USoundWave>              SoftGameOverTrack;                                 // 0x0408(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class USoundWave>              SoftVictoryTrack;                                  // 0x0430(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void CalculateMultiplayerMix();
+	void Debug_ToggleCombatMusic();
 	void ExecuteUbergraph_BP_MusicManager(int32 EntryPoint);
 	void FadeOutAndPlayNewAmbience(class USoundBase* Cue, double StartTime);
 	void FadeOutAndPlayNewMusicCue(const class FText& SongName, int32 PartSelect, class USoundBase* Cue, double StartTime);
@@ -69,39 +71,25 @@ public:
 	void PrintAllLevelIds();
 	void ReceiveBeginPlay();
 	void Set_MusicData_Fallback();
+	void SetIsInEliteFight();
 	void Spawn_Ambience(const class URAreaData* Key);
 	void UpdateIntensity();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_MusicManager_C">();
+		BP_STATIC_CLASS_IMPL("BP_MusicManager_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_MusicManager_C")
 	}
 	static class ABP_MusicManager_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_MusicManager_C>();
 	}
 };
-static_assert(alignof(ABP_MusicManager_C) == 0x000008, "Wrong alignment on ABP_MusicManager_C");
-static_assert(sizeof(ABP_MusicManager_C) == 0x000498, "Wrong size on ABP_MusicManager_C");
-static_assert(offsetof(ABP_MusicManager_C, UberGraphFrame) == 0x000330, "Member 'ABP_MusicManager_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, DefaultSceneRoot) == 0x000338, "Member 'ABP_MusicManager_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, Current_Song) == 0x000340, "Member 'ABP_MusicManager_C::Current_Song' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, Fade_Out_Duration) == 0x000348, "Member 'ABP_MusicManager_C::Fade_Out_Duration' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, BossPhases) == 0x000350, "Member 'ABP_MusicManager_C::BossPhases' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, AmbiencePlayer) == 0x0003A0, "Member 'ABP_MusicManager_C::AmbiencePlayer' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, bIsInSegment) == 0x0003A8, "Member 'ABP_MusicManager_C::bIsInSegment' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, MusicList) == 0x0003B0, "Member 'ABP_MusicManager_C::MusicList' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, bIsInBossFight) == 0x0003B8, "Member 'ABP_MusicManager_C::bIsInBossFight' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, Intensity) == 0x0003C0, "Member 'ABP_MusicManager_C::Intensity' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, AreaIndex) == 0x0003C8, "Member 'ABP_MusicManager_C::AreaIndex' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, CurrentEmoteSong) == 0x0003D0, "Member 'ABP_MusicManager_C::CurrentEmoteSong' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, PlayersEmoting) == 0x0003D8, "Member 'ABP_MusicManager_C::PlayersEmoting' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, EmoteTimer) == 0x0003E8, "Member 'ABP_MusicManager_C::EmoteTimer' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, AreaAmbienceMap) == 0x0003F0, "Member 'ABP_MusicManager_C::AreaAmbienceMap' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, MultiplayerMix) == 0x000440, "Member 'ABP_MusicManager_C::MultiplayerMix' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, SoftGameOverTrack) == 0x000448, "Member 'ABP_MusicManager_C::SoftGameOverTrack' has a wrong offset!");
-static_assert(offsetof(ABP_MusicManager_C, SoftVictoryTrack) == 0x000470, "Member 'ABP_MusicManager_C::SoftVictoryTrack' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_MusicManager_C;
 
 }
 

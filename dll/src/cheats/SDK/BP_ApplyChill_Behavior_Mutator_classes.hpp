@@ -31,24 +31,26 @@ public:
 	void K2_DeactivateScript();
 	void OnMutatorRankChanged(int32 NewRank, class URMutatorPrimaryAsset* MutatorPrimaryAsset);
 	void RemoveDamageModifiers();
-	void RunAbilityBehavior(class AActor* TriggeringActor, int32 DamageSourceMask, float HealthDamage, class AActor* OptionalAvatarActor);
-	void RunPrimaryFireBehavior(float HealthDamage);
+	void RunAbilityBehavior(class AActor* TriggeringActor, int32 DamageSourceMask, float HealthDamage, class AActor* OptionalAvatarActor, const struct FRMutableFloat& SpecificCombatEventModifier);
+	void RunPrimaryFireBehavior(float HealthDamage, class AActor* TriggeringActor);
 	void RunSecondaryFireBehavior(class AActor* TriggeringActor, float HealthDamage);
 	void UpdateDamageModifiers();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ApplyChill_Behavior_Mutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_ApplyChill_Behavior_Mutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ApplyChill_Behavior_Mutator_C")
 	}
 	static class UBP_ApplyChill_Behavior_Mutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ApplyChill_Behavior_Mutator_C>();
 	}
 };
-static_assert(alignof(UBP_ApplyChill_Behavior_Mutator_C) == 0x000008, "Wrong alignment on UBP_ApplyChill_Behavior_Mutator_C");
-static_assert(sizeof(UBP_ApplyChill_Behavior_Mutator_C) == 0x000128, "Wrong size on UBP_ApplyChill_Behavior_Mutator_C");
-static_assert(offsetof(UBP_ApplyChill_Behavior_Mutator_C, UberGraphFrame) == 0x000120, "Member 'UBP_ApplyChill_Behavior_Mutator_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_ApplyChill_Behavior_Mutator_C;
 
 }
 

@@ -112,9 +112,9 @@ void UBP_WindPassive2_CharacterMutator_C::OnMutatorAdded(class URPlayerGScriptCo
 // Parameters:
 // const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Radius                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<struct FHitResult>&              Hits                                                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const TArray<class AActor*>&            Hits                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UBP_WindPassive2_CharacterMutator_C::OnWindburst(const struct FVector& Location, double Radius, TArray<struct FHitResult>& Hits)
+void UBP_WindPassive2_CharacterMutator_C::OnWindburst(const struct FVector& Location, double Radius, const TArray<class AActor*>& Hits)
 {
 	static class UFunction* Func = nullptr;
 
@@ -128,8 +128,6 @@ void UBP_WindPassive2_CharacterMutator_C::OnWindburst(const struct FVector& Loca
 	Parms.Hits = std::move(Hits);
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	Hits = std::move(Parms.Hits);
 }
 
 

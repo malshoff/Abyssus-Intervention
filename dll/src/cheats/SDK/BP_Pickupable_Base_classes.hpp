@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Pickupable_Base.BP_Pickupable_Base_C
-// 0x0018 (0x03A0 - 0x0388)
+// 0x0018 (0x03A8 - 0x0390)
 class ABP_Pickupable_Base_C : public ARPickupableItem
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0388(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      LootBeamVFX;                                       // 0x0390(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      LootBeamVFX;                                       // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Pickupable_Base(int32 EntryPoint);
@@ -33,18 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Pickupable_Base_C">();
+		BP_STATIC_CLASS_IMPL("BP_Pickupable_Base_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Pickupable_Base_C")
 	}
 	static class ABP_Pickupable_Base_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Pickupable_Base_C>();
 	}
 };
-static_assert(alignof(ABP_Pickupable_Base_C) == 0x000008, "Wrong alignment on ABP_Pickupable_Base_C");
-static_assert(sizeof(ABP_Pickupable_Base_C) == 0x0003A0, "Wrong size on ABP_Pickupable_Base_C");
-static_assert(offsetof(ABP_Pickupable_Base_C, UberGraphFrame) == 0x000388, "Member 'ABP_Pickupable_Base_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_Base_C, LootBeamVFX) == 0x000390, "Member 'ABP_Pickupable_Base_C::LootBeamVFX' has a wrong offset!");
-static_assert(offsetof(ABP_Pickupable_Base_C, DefaultSceneRoot) == 0x000398, "Member 'ABP_Pickupable_Base_C::DefaultSceneRoot' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Pickupable_Base_C;
 
 }
 

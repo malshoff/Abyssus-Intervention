@@ -46,26 +46,7 @@ public:
 	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator) == 0x000008, "Wrong alignment on BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator");
-static_assert(sizeof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator) == 0x0000E8, "Wrong size on BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, CallFunc_K2_GetPlayerController_ReturnValue) == 0x000008, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::CallFunc_K2_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000010, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000040, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000050, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000058, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000068, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn_1) == 0x000098, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn_1' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x0000A0, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000A4, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, CallFunc_GetMutatorRank_ReturnValue) == 0x0000B4, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x0000B8, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0000C0, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, CallFunc_FTrunc_ReturnValue) == 0x0000C8, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0000D0, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, CallFunc_FTrunc_ReturnValue_1) == 0x0000D8, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x0000E0, "Member 'BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Spiritual_CharacterMutator_C_ExecuteUbergraph_BP_Spiritual_CharacterMutator;
 
 // Function BP_Spiritual_CharacterMutator.BP_Spiritual_CharacterMutator_C.GetDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -74,9 +55,7 @@ struct BP_Spiritual_CharacterMutator_C_GetDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_Spiritual_CharacterMutator_C_GetDescription) == 0x000008, "Wrong alignment on BP_Spiritual_CharacterMutator_C_GetDescription");
-static_assert(sizeof(BP_Spiritual_CharacterMutator_C_GetDescription) == 0x000010, "Wrong size on BP_Spiritual_CharacterMutator_C_GetDescription");
-static_assert(offsetof(BP_Spiritual_CharacterMutator_C_GetDescription, ReturnValue) == 0x000000, "Member 'BP_Spiritual_CharacterMutator_C_GetDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Spiritual_CharacterMutator_C_GetDescription;
 
 }
 

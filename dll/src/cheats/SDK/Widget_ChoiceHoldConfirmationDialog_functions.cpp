@@ -17,43 +17,49 @@
 namespace SDK
 {
 
-// Function Widget_ChoiceHoldConfirmationDialog.Widget_ChoiceHoldConfirmationDialog_C.BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_No_K2Node_ComponentBoundEvent_5_OnPressed__DelegateSignature
+// Function Widget_ChoiceHoldConfirmationDialog.Widget_ChoiceHoldConfirmationDialog_C.BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_No_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature
 // (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_ChoiceHoldConfirmationDialog_C::BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_No_K2Node_ComponentBoundEvent_5_OnPressed__DelegateSignature()
+void UWidget_ChoiceHoldConfirmationDialog_C::BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_No_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChoiceHoldConfirmationDialog_C", "BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_No_K2Node_ComponentBoundEvent_5_OnPressed__DelegateSignature");
+		Func = Class->GetFunction("Widget_ChoiceHoldConfirmationDialog_C", "BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_No_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_ChoiceHoldConfirmationDialog_C_BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_No_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_ChoiceHoldConfirmationDialog.Widget_ChoiceHoldConfirmationDialog_C.BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_SimpleText_K2Node_ComponentBoundEvent_3_OnReleased__DelegateSignature
+// (BlueprintEvent)
+
+void UWidget_ChoiceHoldConfirmationDialog_C::BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_SimpleText_K2Node_ComponentBoundEvent_3_OnReleased__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_ChoiceHoldConfirmationDialog_C", "BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_SimpleText_K2Node_ComponentBoundEvent_3_OnReleased__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_ChoiceHoldConfirmationDialog.Widget_ChoiceHoldConfirmationDialog_C.BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature
+// Function Widget_ChoiceHoldConfirmationDialog.Widget_ChoiceHoldConfirmationDialog_C.BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_6_OnPressed__DelegateSignature
 // (BlueprintEvent)
 
-void UWidget_ChoiceHoldConfirmationDialog_C::BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature()
+void UWidget_ChoiceHoldConfirmationDialog_C::BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_6_OnPressed__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChoiceHoldConfirmationDialog_C", "BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_ChoiceHoldConfirmationDialog.Widget_ChoiceHoldConfirmationDialog_C.BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_4_OnReleased__DelegateSignature
-// (BlueprintEvent)
-
-void UWidget_ChoiceHoldConfirmationDialog_C::BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_4_OnReleased__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChoiceHoldConfirmationDialog_C", "BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_4_OnReleased__DelegateSignature");
+		Func = Class->GetFunction("Widget_ChoiceHoldConfirmationDialog_C", "BndEvt__Widget_ChoiceHoldConfirmationDialog_W_Button_Yes_K2Node_ComponentBoundEvent_6_OnPressed__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

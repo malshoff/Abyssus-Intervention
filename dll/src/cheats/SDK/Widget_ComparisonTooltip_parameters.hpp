@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "RGame_structs.hpp"
+#include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -27,11 +27,7 @@ public:
 	bool                                          CallFunc_HasInteractableTarget_ReturnValue;        // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ComparisonTooltip_C_CheckFocus) == 0x000001, "Wrong alignment on Widget_ComparisonTooltip_C_CheckFocus");
-static_assert(sizeof(Widget_ComparisonTooltip_C_CheckFocus) == 0x000003, "Wrong size on Widget_ComparisonTooltip_C_CheckFocus");
-static_assert(offsetof(Widget_ComparisonTooltip_C_CheckFocus, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'Widget_ComparisonTooltip_C_CheckFocus::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_CheckFocus, CallFunc_HasInteractableTarget_ReturnValue) == 0x000001, "Member 'Widget_ComparisonTooltip_C_CheckFocus::CallFunc_HasInteractableTarget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_CheckFocus, CallFunc_Not_PreBool_ReturnValue) == 0x000002, "Member 'Widget_ComparisonTooltip_C_CheckFocus::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ComparisonTooltip_C_CheckFocus;
 
 // Function Widget_ComparisonTooltip.Widget_ComparisonTooltip_C.ExecuteUbergraph_Widget_ComparisonTooltip
 // 0x0118 (0x0118 - 0x0000)
@@ -68,31 +64,7 @@ public:
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0100(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0110(0x0008)(NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip) == 0x000008, "Wrong alignment on Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip");
-static_assert(sizeof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip) == 0x000118, "Wrong size on Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, EntryPoint) == 0x000000, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, Temp_bool_Variable) == 0x000014, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, Temp_byte_Variable) == 0x000015, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, Temp_byte_Variable_1) == 0x000016, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, CallFunc_GetOwningPlayer_ReturnValue) == 0x000018, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, K2Node_DynamicCast_AsRGame_Player_Controller) == 0x000020, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::K2Node_DynamicCast_AsRGame_Player_Controller' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, CallFunc_GetLevelManager_ReturnValue) == 0x000030, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::CallFunc_GetLevelManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, CallFunc_IsValid_ReturnValue_1) == 0x000039, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, K2Node_CreateDelegate_OutputDelegate_1) == 0x00003C, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, K2Node_CreateDelegate_OutputDelegate_2) == 0x00004C, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, K2Node_CustomEvent_RInteractionData) == 0x000060, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::K2Node_CustomEvent_RInteractionData' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, CallFunc_ObjectIsA_ReturnValue) == 0x0000C0, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::CallFunc_ObjectIsA_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, K2Node_Select_Default) == 0x0000C1, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x0000C8, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, K2Node_CreateDelegate_OutputDelegate_3) == 0x0000D0, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x0000E0, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, K2Node_DynamicCast_bSuccess_1) == 0x0000E8, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, CallFunc_GetEquippedMutatorsByMutatorTypeTags_ReturnValue) == 0x0000F0, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::CallFunc_GetEquippedMutatorsByMutatorTypeTags_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, K2Node_CreateDelegate_OutputDelegate_4) == 0x000100, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000110, "Member 'Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ComparisonTooltip_C_ExecuteUbergraph_Widget_ComparisonTooltip;
 
 // Function Widget_ComparisonTooltip.Widget_ComparisonTooltip_C.OnCanInteractWithTooltip
 // 0x0060 (0x0060 - 0x0000)
@@ -101,9 +73,7 @@ struct Widget_ComparisonTooltip_C_OnCanInteractWithTooltip final
 public:
 	struct FRInteractionData                      RInteractionData;                                  // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_ComparisonTooltip_C_OnCanInteractWithTooltip) == 0x000008, "Wrong alignment on Widget_ComparisonTooltip_C_OnCanInteractWithTooltip");
-static_assert(sizeof(Widget_ComparisonTooltip_C_OnCanInteractWithTooltip) == 0x000060, "Wrong size on Widget_ComparisonTooltip_C_OnCanInteractWithTooltip");
-static_assert(offsetof(Widget_ComparisonTooltip_C_OnCanInteractWithTooltip, RInteractionData) == 0x000000, "Member 'Widget_ComparisonTooltip_C_OnCanInteractWithTooltip::RInteractionData' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ComparisonTooltip_C_OnCanInteractWithTooltip;
 
 // Function Widget_ComparisonTooltip.Widget_ComparisonTooltip_C.UpdateEquippedTooltipInfo
 // 0x0058 (0x0058 - 0x0000)
@@ -125,20 +95,7 @@ public:
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo) == 0x000008, "Wrong alignment on Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo");
-static_assert(sizeof(Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo) == 0x000058, "Wrong size on Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo");
-static_assert(offsetof(Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo, Charms_0) == 0x000000, "Member 'Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo::Charms_0' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo, HorizontalBox) == 0x000010, "Member 'Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo::HorizontalBox' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo, Header) == 0x000018, "Member 'Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo::Header' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo, RichText) == 0x000020, "Member 'Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo::RichText' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo, Index_0) == 0x000028, "Member 'Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo::Index_0' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo, Temp_bool_Variable) == 0x00002C, "Member 'Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo, CallFunc_Array_Get_Item) == 0x000030, "Member 'Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000038, "Member 'Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000040, "Member 'Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo, Temp_byte_Variable) == 0x000050, "Member 'Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo, Temp_byte_Variable_1) == 0x000051, "Member 'Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo, K2Node_Select_Default) == 0x000052, "Member 'Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ComparisonTooltip_C_UpdateEquippedTooltipInfo;
 
 }
 

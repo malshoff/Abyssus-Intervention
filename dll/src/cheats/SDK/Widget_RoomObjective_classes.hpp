@@ -11,33 +11,33 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_RoomObjective.Widget_RoomObjective_C
-// 0x0068 (0x0380 - 0x0318)
+// 0x0068 (0x03F0 - 0x0388)
 class UWidget_RoomObjective_C final : public URCommonRoomObjectiveWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Enter_Animation;                                   // 0x0320(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Exit_Animation;                                    // 0x0328(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 BackgroundShadow;                                  // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 FillBackground;                                    // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Frame;                                             // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HBox_MiniProgressBars;                             // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ObjectiveTitleTextBlock;                           // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ProgressFillImage;                                 // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_ProgressBar;                               // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Thresholds;                                        // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	float                                         TargetProgress;                                    // 0x0370(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CurrentProgress;                                   // 0x0374(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           ProgressUpdateTimer;                               // 0x0378(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0388(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UOverlay*                               Thresholds;                                        // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_ProgressBar;                               // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ProgressFillImage;                                 // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ObjectiveTitleTextBlock;                           // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HBox_MiniProgressBars;                             // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Frame;                                             // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 FillBackground;                                    // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BackgroundShadow;                                  // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Exit_Animation;                                    // 0x03D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Enter_Animation;                                   // 0x03D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	float                                         TargetProgress;                                    // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CurrentProgress;                                   // 0x03E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           ProgressUpdateTimer;                               // 0x03E8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BindToChargeZoneUpdate(class ABP_RoomObjectiveObject_ChargeZone_C* ChargeZoneActor);
@@ -66,29 +66,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_RoomObjective_C">();
+		BP_STATIC_CLASS_IMPL("Widget_RoomObjective_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_RoomObjective_C")
 	}
 	static class UWidget_RoomObjective_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_RoomObjective_C>();
 	}
 };
-static_assert(alignof(UWidget_RoomObjective_C) == 0x000008, "Wrong alignment on UWidget_RoomObjective_C");
-static_assert(sizeof(UWidget_RoomObjective_C) == 0x000380, "Wrong size on UWidget_RoomObjective_C");
-static_assert(offsetof(UWidget_RoomObjective_C, UberGraphFrame) == 0x000318, "Member 'UWidget_RoomObjective_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_RoomObjective_C, Enter_Animation) == 0x000320, "Member 'UWidget_RoomObjective_C::Enter_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_RoomObjective_C, Exit_Animation) == 0x000328, "Member 'UWidget_RoomObjective_C::Exit_Animation' has a wrong offset!");
-static_assert(offsetof(UWidget_RoomObjective_C, BackgroundShadow) == 0x000330, "Member 'UWidget_RoomObjective_C::BackgroundShadow' has a wrong offset!");
-static_assert(offsetof(UWidget_RoomObjective_C, FillBackground) == 0x000338, "Member 'UWidget_RoomObjective_C::FillBackground' has a wrong offset!");
-static_assert(offsetof(UWidget_RoomObjective_C, Frame) == 0x000340, "Member 'UWidget_RoomObjective_C::Frame' has a wrong offset!");
-static_assert(offsetof(UWidget_RoomObjective_C, HBox_MiniProgressBars) == 0x000348, "Member 'UWidget_RoomObjective_C::HBox_MiniProgressBars' has a wrong offset!");
-static_assert(offsetof(UWidget_RoomObjective_C, ObjectiveTitleTextBlock) == 0x000350, "Member 'UWidget_RoomObjective_C::ObjectiveTitleTextBlock' has a wrong offset!");
-static_assert(offsetof(UWidget_RoomObjective_C, ProgressFillImage) == 0x000358, "Member 'UWidget_RoomObjective_C::ProgressFillImage' has a wrong offset!");
-static_assert(offsetof(UWidget_RoomObjective_C, SizeBox_ProgressBar) == 0x000360, "Member 'UWidget_RoomObjective_C::SizeBox_ProgressBar' has a wrong offset!");
-static_assert(offsetof(UWidget_RoomObjective_C, Thresholds) == 0x000368, "Member 'UWidget_RoomObjective_C::Thresholds' has a wrong offset!");
-static_assert(offsetof(UWidget_RoomObjective_C, TargetProgress) == 0x000370, "Member 'UWidget_RoomObjective_C::TargetProgress' has a wrong offset!");
-static_assert(offsetof(UWidget_RoomObjective_C, CurrentProgress) == 0x000374, "Member 'UWidget_RoomObjective_C::CurrentProgress' has a wrong offset!");
-static_assert(offsetof(UWidget_RoomObjective_C, ProgressUpdateTimer) == 0x000378, "Member 'UWidget_RoomObjective_C::ProgressUpdateTimer' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_RoomObjective_C;
 
 }
 

@@ -32,17 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_EngineRifle_SplitShot_ModScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_EngineRifle_SplitShot_ModScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_EngineRifle_SplitShot_ModScript_C")
 	}
 	static class UBP_EngineRifle_SplitShot_ModScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_EngineRifle_SplitShot_ModScript_C>();
 	}
 };
-static_assert(alignof(UBP_EngineRifle_SplitShot_ModScript_C) == 0x000008, "Wrong alignment on UBP_EngineRifle_SplitShot_ModScript_C");
-static_assert(sizeof(UBP_EngineRifle_SplitShot_ModScript_C) == 0x0001B8, "Wrong size on UBP_EngineRifle_SplitShot_ModScript_C");
-static_assert(offsetof(UBP_EngineRifle_SplitShot_ModScript_C, UberGraphFrame_BP_EngineRifle_SplitShot_ModScript_C) == 0x0001A8, "Member 'UBP_EngineRifle_SplitShot_ModScript_C::UberGraphFrame_BP_EngineRifle_SplitShot_ModScript_C' has a wrong offset!");
-static_assert(offsetof(UBP_EngineRifle_SplitShot_ModScript_C, ProjectileCount) == 0x0001B0, "Member 'UBP_EngineRifle_SplitShot_ModScript_C::ProjectileCount' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_EngineRifle_SplitShot_ModScript_C;
 
 }
 

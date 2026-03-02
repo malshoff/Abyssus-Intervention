@@ -79,6 +79,20 @@ void UBP_TurretSpawner_ProjectileScript_C::K2_OnHit()
 }
 
 
+// Function BP_TurretSpawner_ProjectileScript.BP_TurretSpawner_ProjectileScript_C.OnPlayerFailsafeTeleported
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_TurretSpawner_ProjectileScript_C::OnPlayerFailsafeTeleported()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TurretSpawner_ProjectileScript_C", "OnPlayerFailsafeTeleported");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_TurretSpawner_ProjectileScript.BP_TurretSpawner_ProjectileScript_C.TrySpawnTurret
 // (BlueprintCallable, BlueprintEvent)
 

@@ -17,203 +17,55 @@
 namespace SDK
 {
 
-// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnPlayerDowned
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.BPCanFireAbility
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class ARPlayerPawn*                     Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_HealingFlask_CharacterMutator_C::OnPlayerDowned(class ARPlayerPawn* Player)
+bool UBP_HealingFlask_CharacterMutator_C::BPCanFireAbility()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnPlayerDowned");
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "BPCanFireAbility");
 
-	Params::BP_HealingFlask_CharacterMutator_C_OnPlayerDowned Parms{};
+	Params::BP_HealingFlask_CharacterMutator_C_BPCanFireAbility Parms{};
 
-	Parms.Player = Player;
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.ExecuteUbergraph_BP_HealingFlask_CharacterMutator
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_HealingFlask_CharacterMutator_C::ExecuteUbergraph_BP_HealingFlask_CharacterMutator(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "ExecuteUbergraph_BP_HealingFlask_CharacterMutator");
+
+	Params::BP_HealingFlask_CharacterMutator_C_ExecuteUbergraph_BP_HealingFlask_CharacterMutator Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnNotifyEnd_3ECAEAC84DF83AE9B06581AF447B6167
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.FireAbility
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_HealingFlask_CharacterMutator_C::OnNotifyEnd_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName)
+void UBP_HealingFlask_CharacterMutator_C::FireAbility()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnNotifyEnd_3ECAEAC84DF83AE9B06581AF447B6167");
-
-	Params::BP_HealingFlask_CharacterMutator_C_OnNotifyEnd_3ECAEAC84DF83AE9B06581AF447B6167 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnNotifyBegin_3ECAEAC84DF83AE9B06581AF447B6167
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_HealingFlask_CharacterMutator_C::OnNotifyBegin_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnNotifyBegin_3ECAEAC84DF83AE9B06581AF447B6167");
-
-	Params::BP_HealingFlask_CharacterMutator_C_OnNotifyBegin_3ECAEAC84DF83AE9B06581AF447B6167 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnLocalPlayerReconnectSync
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FRDisconnectedPlayerData&  PlayerData                                             (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UBP_HealingFlask_CharacterMutator_C::OnLocalPlayerReconnectSync(const struct FRDisconnectedPlayerData& PlayerData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnLocalPlayerReconnectSync");
-
-	Params::BP_HealingFlask_CharacterMutator_C_OnLocalPlayerReconnectSync Parms{};
-
-	Parms.PlayerData = std::move(PlayerData);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnInvoke_74952549483B23663A462690B2A8EC60
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_HealingFlask_CharacterMutator_C::OnInvoke_74952549483B23663A462690B2A8EC60()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnInvoke_74952549483B23663A462690B2A8EC60");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnInterrupted_3ECAEAC84DF83AE9B06581AF447B6167
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_HealingFlask_CharacterMutator_C::OnInterrupted_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnInterrupted_3ECAEAC84DF83AE9B06581AF447B6167");
-
-	Params::BP_HealingFlask_CharacterMutator_C_OnInterrupted_3ECAEAC84DF83AE9B06581AF447B6167 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnCompleted_3ECAEAC84DF83AE9B06581AF447B6167
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_HealingFlask_CharacterMutator_C::OnCompleted_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnCompleted_3ECAEAC84DF83AE9B06581AF447B6167");
-
-	Params::BP_HealingFlask_CharacterMutator_C_OnCompleted_3ECAEAC84DF83AE9B06581AF447B6167 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnBlendOut_3ECAEAC84DF83AE9B06581AF447B6167
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_HealingFlask_CharacterMutator_C::OnBlendOut_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnBlendOut_3ECAEAC84DF83AE9B06581AF447B6167");
-
-	Params::BP_HealingFlask_CharacterMutator_C_OnBlendOut_3ECAEAC84DF83AE9B06581AF447B6167 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.K2_OnDeath
-// (Event, Public, BlueprintEvent)
-
-void UBP_HealingFlask_CharacterMutator_C::K2_OnDeath()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "K2_OnDeath");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.K2_OnAbilityActivate
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// int32                                   AbilityIndex_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_HealingFlask_CharacterMutator_C::K2_OnAbilityActivate(int32 AbilityIndex_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "K2_OnAbilityActivate");
-
-	Params::BP_HealingFlask_CharacterMutator_C_K2_OnAbilityActivate Parms{};
-
-	Parms.AbilityIndex_0 = AbilityIndex_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.K2_ActivateScript
-// (Event, Public, BlueprintEvent)
-
-void UBP_HealingFlask_CharacterMutator_C::K2_ActivateScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "K2_ActivateScript");
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "FireAbility");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -240,57 +92,233 @@ void UBP_HealingFlask_CharacterMutator_C::IsPlayerStateValid(bool* RetValue)
 }
 
 
-// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.FireAbility
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.K2_ActivateScript
+// (Event, Public, BlueprintEvent)
 
-void UBP_HealingFlask_CharacterMutator_C::FireAbility()
+void UBP_HealingFlask_CharacterMutator_C::K2_ActivateScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "FireAbility");
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "K2_ActivateScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.ExecuteUbergraph_BP_HealingFlask_CharacterMutator
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.K2_OnAbilityActivate
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   AbilityIndex_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_HealingFlask_CharacterMutator_C::ExecuteUbergraph_BP_HealingFlask_CharacterMutator(int32 EntryPoint)
+void UBP_HealingFlask_CharacterMutator_C::K2_OnAbilityActivate(int32 AbilityIndex_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "ExecuteUbergraph_BP_HealingFlask_CharacterMutator");
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "K2_OnAbilityActivate");
 
-	Params::BP_HealingFlask_CharacterMutator_C_ExecuteUbergraph_BP_HealingFlask_CharacterMutator Parms{};
+	Params::BP_HealingFlask_CharacterMutator_C_K2_OnAbilityActivate Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.AbilityIndex_0 = AbilityIndex_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.BPCanFireAbility
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.K2_OnDeath
+// (Event, Public, BlueprintEvent)
 
-bool UBP_HealingFlask_CharacterMutator_C::BPCanFireAbility()
+void UBP_HealingFlask_CharacterMutator_C::K2_OnDeath()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "BPCanFireAbility");
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "K2_OnDeath");
 
-	Params::BP_HealingFlask_CharacterMutator_C_BPCanFireAbility Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnBlendOut_3ECAEAC84DF83AE9B06581AF447B6167
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_HealingFlask_CharacterMutator_C::OnBlendOut_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnBlendOut_3ECAEAC84DF83AE9B06581AF447B6167");
+
+	Params::BP_HealingFlask_CharacterMutator_C_OnBlendOut_3ECAEAC84DF83AE9B06581AF447B6167 Parms{};
+
+	Parms.NotifyName = NotifyName;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	return Parms.ReturnValue;
+
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnCancelled_81A747B7402F6980A17AD6903862EE13
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_HealingFlask_CharacterMutator_C::OnCancelled_81A747B7402F6980A17AD6903862EE13()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnCancelled_81A747B7402F6980A17AD6903862EE13");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnCompleted_3ECAEAC84DF83AE9B06581AF447B6167
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_HealingFlask_CharacterMutator_C::OnCompleted_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnCompleted_3ECAEAC84DF83AE9B06581AF447B6167");
+
+	Params::BP_HealingFlask_CharacterMutator_C_OnCompleted_3ECAEAC84DF83AE9B06581AF447B6167 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnFinish_81A747B7402F6980A17AD6903862EE13
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_HealingFlask_CharacterMutator_C::OnFinish_81A747B7402F6980A17AD6903862EE13()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnFinish_81A747B7402F6980A17AD6903862EE13");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnInterrupted_3ECAEAC84DF83AE9B06581AF447B6167
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_HealingFlask_CharacterMutator_C::OnInterrupted_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnInterrupted_3ECAEAC84DF83AE9B06581AF447B6167");
+
+	Params::BP_HealingFlask_CharacterMutator_C_OnInterrupted_3ECAEAC84DF83AE9B06581AF447B6167 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnInvoke_74952549483B23663A462690B2A8EC60
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_HealingFlask_CharacterMutator_C::OnInvoke_74952549483B23663A462690B2A8EC60()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnInvoke_74952549483B23663A462690B2A8EC60");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnLocalPlayerReconnectSync
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FRDisconnectedPlayerData&  PlayerData                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UBP_HealingFlask_CharacterMutator_C::OnLocalPlayerReconnectSync(const struct FRDisconnectedPlayerData& PlayerData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnLocalPlayerReconnectSync");
+
+	Params::BP_HealingFlask_CharacterMutator_C_OnLocalPlayerReconnectSync Parms{};
+
+	Parms.PlayerData = std::move(PlayerData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnNotifyBegin_3ECAEAC84DF83AE9B06581AF447B6167
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_HealingFlask_CharacterMutator_C::OnNotifyBegin_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnNotifyBegin_3ECAEAC84DF83AE9B06581AF447B6167");
+
+	Params::BP_HealingFlask_CharacterMutator_C_OnNotifyBegin_3ECAEAC84DF83AE9B06581AF447B6167 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnNotifyEnd_3ECAEAC84DF83AE9B06581AF447B6167
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_HealingFlask_CharacterMutator_C::OnNotifyEnd_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnNotifyEnd_3ECAEAC84DF83AE9B06581AF447B6167");
+
+	Params::BP_HealingFlask_CharacterMutator_C_OnNotifyEnd_3ECAEAC84DF83AE9B06581AF447B6167 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C.OnPlayerDowned
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ARPlayerPawn*                     Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_HealingFlask_CharacterMutator_C::OnPlayerDowned(class ARPlayerPawn* Player)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HealingFlask_CharacterMutator_C", "OnPlayerDowned");
+
+	Params::BP_HealingFlask_CharacterMutator_C_OnPlayerDowned Parms{};
+
+	Parms.Player = Player;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

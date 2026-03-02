@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_AutomaticBase_ModScript.BP_AutomaticBase_ModScript_C
-// 0x0020 (0x0170 - 0x0150)
+// 0x0028 (0x0178 - 0x0150)
 class UBP_AutomaticBase_ModScript_C : public UBP_Base_ModScript_C
 {
 public:
@@ -27,32 +27,36 @@ public:
 	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        TempLastTimeFired;                                 // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UQuartzClockHandle*                     Clock;                                             // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        FireSoundComponent;                                // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnBeat(class FName ClockName, EQuartzCommandQuantization QuantizationType, int32 NumBars, int32 Beat, float BeatFraction);
-	void K2_DeactivateScript();
-	void K2_ActivateScript();
-	void Fire();
 	void ExecuteUbergraph_BP_AutomaticBase_ModScript(int32 EntryPoint);
+	void FinishFire();
+	void Fire();
+	void GetPostWeaponModFireRate(double* FireRate);
+	void K2_ActivateScript();
+	void K2_DeactivateScript();
+	void K2_TickScript(float DeltaTime);
+	void OnBeat(class FName ClockName, EQuartzCommandQuantization QuantizationType, int32 NumBars, int32 Beat, float BeatFraction);
+	void SpawnWeaponFireSFX(class USoundBase* SoundTemplate);
 
 	class FText GetDescription() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_AutomaticBase_ModScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_AutomaticBase_ModScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_AutomaticBase_ModScript_C")
 	}
 	static class UBP_AutomaticBase_ModScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_AutomaticBase_ModScript_C>();
 	}
 };
-static_assert(alignof(UBP_AutomaticBase_ModScript_C) == 0x000008, "Wrong alignment on UBP_AutomaticBase_ModScript_C");
-static_assert(sizeof(UBP_AutomaticBase_ModScript_C) == 0x000170, "Wrong size on UBP_AutomaticBase_ModScript_C");
-static_assert(offsetof(UBP_AutomaticBase_ModScript_C, UberGraphFrame_BP_AutomaticBase_ModScript_C) == 0x000150, "Member 'UBP_AutomaticBase_ModScript_C::UberGraphFrame_BP_AutomaticBase_ModScript_C' has a wrong offset!");
-static_assert(offsetof(UBP_AutomaticBase_ModScript_C, Skip_Fire_Sequence_Check) == 0x000158, "Member 'UBP_AutomaticBase_ModScript_C::Skip_Fire_Sequence_Check' has a wrong offset!");
-static_assert(offsetof(UBP_AutomaticBase_ModScript_C, TempLastTimeFired) == 0x000160, "Member 'UBP_AutomaticBase_ModScript_C::TempLastTimeFired' has a wrong offset!");
-static_assert(offsetof(UBP_AutomaticBase_ModScript_C, Clock) == 0x000168, "Member 'UBP_AutomaticBase_ModScript_C::Clock' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_AutomaticBase_ModScript_C;
 
 }
 

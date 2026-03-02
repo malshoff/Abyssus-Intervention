@@ -33,16 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SemiAutoBase_ModScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_SemiAutoBase_ModScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SemiAutoBase_ModScript_C")
 	}
 	static class UBP_SemiAutoBase_ModScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SemiAutoBase_ModScript_C>();
 	}
 };
-static_assert(alignof(UBP_SemiAutoBase_ModScript_C) == 0x000008, "Wrong alignment on UBP_SemiAutoBase_ModScript_C");
-static_assert(sizeof(UBP_SemiAutoBase_ModScript_C) == 0x000158, "Wrong size on UBP_SemiAutoBase_ModScript_C");
-static_assert(offsetof(UBP_SemiAutoBase_ModScript_C, UberGraphFrame_BP_SemiAutoBase_ModScript_C) == 0x000150, "Member 'UBP_SemiAutoBase_ModScript_C::UberGraphFrame_BP_SemiAutoBase_ModScript_C' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SemiAutoBase_ModScript_C;
 
 }
 

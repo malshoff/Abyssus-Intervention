@@ -23,15 +23,18 @@ class UEditorDataStorageFactory : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditorDataStorageFactory">();
+		STATIC_CLASS_IMPL("EditorDataStorageFactory")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditorDataStorageFactory")
 	}
 	static class UEditorDataStorageFactory* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditorDataStorageFactory>();
 	}
 };
-static_assert(alignof(UEditorDataStorageFactory) == 0x000008, "Wrong alignment on UEditorDataStorageFactory");
-static_assert(sizeof(UEditorDataStorageFactory) == 0x000028, "Wrong size on UEditorDataStorageFactory");
+DUMPER7_ASSERTS_UEditorDataStorageFactory;
 
 // Class TypedElementFramework.Test_PingPongBetweenPhaseFactory
 // 0x0000 (0x0028 - 0x0028)
@@ -40,15 +43,18 @@ class UTest_PingPongBetweenPhaseFactory final : public UEditorDataStorageFactory
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"Test_PingPongBetweenPhaseFactory">();
+		STATIC_CLASS_IMPL("Test_PingPongBetweenPhaseFactory")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Test_PingPongBetweenPhaseFactory")
 	}
 	static class UTest_PingPongBetweenPhaseFactory* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTest_PingPongBetweenPhaseFactory>();
 	}
 };
-static_assert(alignof(UTest_PingPongBetweenPhaseFactory) == 0x000008, "Wrong alignment on UTest_PingPongBetweenPhaseFactory");
-static_assert(sizeof(UTest_PingPongBetweenPhaseFactory) == 0x000028, "Wrong size on UTest_PingPongBetweenPhaseFactory");
+DUMPER7_ASSERTS_UTest_PingPongBetweenPhaseFactory;
 
 // Class TypedElementFramework.TypedElementHandleLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -63,15 +69,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TypedElementHandleLibrary">();
+		STATIC_CLASS_IMPL("TypedElementHandleLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TypedElementHandleLibrary")
 	}
 	static class UTypedElementHandleLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTypedElementHandleLibrary>();
 	}
 };
-static_assert(alignof(UTypedElementHandleLibrary) == 0x000008, "Wrong alignment on UTypedElementHandleLibrary");
-static_assert(sizeof(UTypedElementHandleLibrary) == 0x000028, "Wrong size on UTypedElementHandleLibrary");
+DUMPER7_ASSERTS_UTypedElementHandleLibrary;
 
 // Class TypedElementFramework.TypedElementListLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -102,15 +111,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TypedElementListLibrary">();
+		STATIC_CLASS_IMPL("TypedElementListLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TypedElementListLibrary")
 	}
 	static class UTypedElementListLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTypedElementListLibrary>();
 	}
 };
-static_assert(alignof(UTypedElementListLibrary) == 0x000008, "Wrong alignment on UTypedElementListLibrary");
-static_assert(sizeof(UTypedElementListLibrary) == 0x000028, "Wrong size on UTypedElementListLibrary");
+DUMPER7_ASSERTS_UTypedElementListLibrary;
 
 // Class TypedElementFramework.TypedElementCounterInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -119,7 +131,11 @@ class ITypedElementCounterInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TypedElementCounterInterface">();
+		STATIC_CLASS_IMPL("TypedElementCounterInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TypedElementCounterInterface")
 	}
 	static class ITypedElementCounterInterface* GetDefaultObj()
 	{
@@ -135,8 +151,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(ITypedElementCounterInterface) == 0x000001, "Wrong alignment on ITypedElementCounterInterface");
-static_assert(sizeof(ITypedElementCounterInterface) == 0x000001, "Wrong size on ITypedElementCounterInterface");
+DUMPER7_ASSERTS_ITypedElementCounterInterface;
 
 // Class TypedElementFramework.TypedElementRegistry
 // 0x0920 (0x0948 - 0x0028)
@@ -153,15 +168,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TypedElementRegistry">();
+		STATIC_CLASS_IMPL("TypedElementRegistry")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TypedElementRegistry")
 	}
 	static class UTypedElementRegistry* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTypedElementRegistry>();
 	}
 };
-static_assert(alignof(UTypedElementRegistry) == 0x000008, "Wrong alignment on UTypedElementRegistry");
-static_assert(sizeof(UTypedElementRegistry) == 0x000948, "Wrong size on UTypedElementRegistry");
+DUMPER7_ASSERTS_UTypedElementRegistry;
 
 // Class TypedElementFramework.TestTypedElementInterfaceA
 // 0x0000 (0x0000 - 0x0000)
@@ -174,7 +192,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TestTypedElementInterfaceA">();
+		STATIC_CLASS_IMPL("TestTypedElementInterfaceA")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TestTypedElementInterfaceA")
 	}
 	static class ITestTypedElementInterfaceA* GetDefaultObj()
 	{
@@ -190,8 +212,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(ITestTypedElementInterfaceA) == 0x000001, "Wrong alignment on ITestTypedElementInterfaceA");
-static_assert(sizeof(ITestTypedElementInterfaceA) == 0x000001, "Wrong size on ITestTypedElementInterfaceA");
+DUMPER7_ASSERTS_ITestTypedElementInterfaceA;
 
 // Class TypedElementFramework.TestTypedElementInterfaceB
 // 0x0000 (0x0000 - 0x0000)
@@ -203,7 +224,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TestTypedElementInterfaceB">();
+		STATIC_CLASS_IMPL("TestTypedElementInterfaceB")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TestTypedElementInterfaceB")
 	}
 	static class ITestTypedElementInterfaceB* GetDefaultObj()
 	{
@@ -219,8 +244,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(ITestTypedElementInterfaceB) == 0x000001, "Wrong alignment on ITestTypedElementInterfaceB");
-static_assert(sizeof(ITestTypedElementInterfaceB) == 0x000001, "Wrong size on ITestTypedElementInterfaceB");
+DUMPER7_ASSERTS_ITestTypedElementInterfaceB;
 
 // Class TypedElementFramework.TestTypedElementInterfaceC
 // 0x0000 (0x0000 - 0x0000)
@@ -232,7 +256,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TestTypedElementInterfaceC">();
+		STATIC_CLASS_IMPL("TestTypedElementInterfaceC")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TestTypedElementInterfaceC")
 	}
 	static class ITestTypedElementInterfaceC* GetDefaultObj()
 	{
@@ -248,8 +276,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(ITestTypedElementInterfaceC) == 0x000001, "Wrong alignment on ITestTypedElementInterfaceC");
-static_assert(sizeof(ITestTypedElementInterfaceC) == 0x000001, "Wrong size on ITestTypedElementInterfaceC");
+DUMPER7_ASSERTS_ITestTypedElementInterfaceC;
 
 // Class TypedElementFramework.TestTypedElementInterfaceA_ImplTyped
 // 0x0008 (0x0030 - 0x0028)
@@ -261,15 +288,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TestTypedElementInterfaceA_ImplTyped">();
+		STATIC_CLASS_IMPL("TestTypedElementInterfaceA_ImplTyped")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TestTypedElementInterfaceA_ImplTyped")
 	}
 	static class UTestTypedElementInterfaceA_ImplTyped* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTestTypedElementInterfaceA_ImplTyped>();
 	}
 };
-static_assert(alignof(UTestTypedElementInterfaceA_ImplTyped) == 0x000008, "Wrong alignment on UTestTypedElementInterfaceA_ImplTyped");
-static_assert(sizeof(UTestTypedElementInterfaceA_ImplTyped) == 0x000030, "Wrong size on UTestTypedElementInterfaceA_ImplTyped");
+DUMPER7_ASSERTS_UTestTypedElementInterfaceA_ImplTyped;
 
 // Class TypedElementFramework.TestTypedElementInterfaceA_ImplUntyped
 // 0x0008 (0x0030 - 0x0028)
@@ -281,15 +311,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TestTypedElementInterfaceA_ImplUntyped">();
+		STATIC_CLASS_IMPL("TestTypedElementInterfaceA_ImplUntyped")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TestTypedElementInterfaceA_ImplUntyped")
 	}
 	static class UTestTypedElementInterfaceA_ImplUntyped* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTestTypedElementInterfaceA_ImplUntyped>();
 	}
 };
-static_assert(alignof(UTestTypedElementInterfaceA_ImplUntyped) == 0x000008, "Wrong alignment on UTestTypedElementInterfaceA_ImplUntyped");
-static_assert(sizeof(UTestTypedElementInterfaceA_ImplUntyped) == 0x000030, "Wrong size on UTestTypedElementInterfaceA_ImplUntyped");
+DUMPER7_ASSERTS_UTestTypedElementInterfaceA_ImplUntyped;
 
 // Class TypedElementFramework.TestTypedElementInterfaceBAndC_Typed
 // 0x0010 (0x0038 - 0x0028)
@@ -301,15 +334,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TestTypedElementInterfaceBAndC_Typed">();
+		STATIC_CLASS_IMPL("TestTypedElementInterfaceBAndC_Typed")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TestTypedElementInterfaceBAndC_Typed")
 	}
 	static class UTestTypedElementInterfaceBAndC_Typed* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTestTypedElementInterfaceBAndC_Typed>();
 	}
 };
-static_assert(alignof(UTestTypedElementInterfaceBAndC_Typed) == 0x000008, "Wrong alignment on UTestTypedElementInterfaceBAndC_Typed");
-static_assert(sizeof(UTestTypedElementInterfaceBAndC_Typed) == 0x000038, "Wrong size on UTestTypedElementInterfaceBAndC_Typed");
+DUMPER7_ASSERTS_UTestTypedElementInterfaceBAndC_Typed;
 
 }
 

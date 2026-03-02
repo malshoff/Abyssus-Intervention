@@ -23,7 +23,7 @@ class UWorldMetricsSubsystem final : public UWorldSubsystem
 {
 public:
 	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWorldMetricInterface*>          Metrics;                                           // 0x0040(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UWorldMetricInterface*>          Metrics;                                           // 0x0040(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_50[0x29E0];                                    // 0x0050(0x29E0)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         UpdateRateInSeconds;                               // 0x2A30(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         WarmUpFrames;                                      // 0x2A34(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -32,18 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WorldMetricsSubsystem">();
+		STATIC_CLASS_IMPL("WorldMetricsSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WorldMetricsSubsystem")
 	}
 	static class UWorldMetricsSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWorldMetricsSubsystem>();
 	}
 };
-static_assert(alignof(UWorldMetricsSubsystem) == 0x000008, "Wrong alignment on UWorldMetricsSubsystem");
-static_assert(sizeof(UWorldMetricsSubsystem) == 0x002A40, "Wrong size on UWorldMetricsSubsystem");
-static_assert(offsetof(UWorldMetricsSubsystem, Metrics) == 0x000040, "Member 'UWorldMetricsSubsystem::Metrics' has a wrong offset!");
-static_assert(offsetof(UWorldMetricsSubsystem, UpdateRateInSeconds) == 0x002A30, "Member 'UWorldMetricsSubsystem::UpdateRateInSeconds' has a wrong offset!");
-static_assert(offsetof(UWorldMetricsSubsystem, WarmUpFrames) == 0x002A34, "Member 'UWorldMetricsSubsystem::WarmUpFrames' has a wrong offset!");
+DUMPER7_ASSERTS_UWorldMetricsSubsystem;
 
 // Class WorldMetricsCore.WorldMetricInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -52,15 +52,18 @@ class UWorldMetricInterface : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WorldMetricInterface">();
+		STATIC_CLASS_IMPL("WorldMetricInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WorldMetricInterface")
 	}
 	static class UWorldMetricInterface* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWorldMetricInterface>();
 	}
 };
-static_assert(alignof(UWorldMetricInterface) == 0x000008, "Wrong alignment on UWorldMetricInterface");
-static_assert(sizeof(UWorldMetricInterface) == 0x000028, "Wrong size on UWorldMetricInterface");
+DUMPER7_ASSERTS_UWorldMetricInterface;
 
 // Class WorldMetricsCore.WorldMetricsActorTrackerSubscriber
 // 0x0000 (0x0000 - 0x0000)
@@ -69,7 +72,11 @@ class IWorldMetricsActorTrackerSubscriber final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WorldMetricsActorTrackerSubscriber">();
+		STATIC_CLASS_IMPL("WorldMetricsActorTrackerSubscriber")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WorldMetricsActorTrackerSubscriber")
 	}
 	static class IWorldMetricsActorTrackerSubscriber* GetDefaultObj()
 	{
@@ -85,8 +92,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IWorldMetricsActorTrackerSubscriber) == 0x000001, "Wrong alignment on IWorldMetricsActorTrackerSubscriber");
-static_assert(sizeof(IWorldMetricsActorTrackerSubscriber) == 0x000001, "Wrong size on IWorldMetricsActorTrackerSubscriber");
+DUMPER7_ASSERTS_IWorldMetricsActorTrackerSubscriber;
 
 // Class WorldMetricsCore.WorldMetricsExtension
 // 0x0000 (0x0028 - 0x0028)
@@ -95,15 +101,18 @@ class UWorldMetricsExtension : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WorldMetricsExtension">();
+		STATIC_CLASS_IMPL("WorldMetricsExtension")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WorldMetricsExtension")
 	}
 	static class UWorldMetricsExtension* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWorldMetricsExtension>();
 	}
 };
-static_assert(alignof(UWorldMetricsExtension) == 0x000008, "Wrong alignment on UWorldMetricsExtension");
-static_assert(sizeof(UWorldMetricsExtension) == 0x000028, "Wrong size on UWorldMetricsExtension");
+DUMPER7_ASSERTS_UWorldMetricsExtension;
 
 // Class WorldMetricsCore.WorldMetricsActorTracker
 // 0x00A8 (0x00D0 - 0x0028)
@@ -115,15 +124,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WorldMetricsActorTracker">();
+		STATIC_CLASS_IMPL("WorldMetricsActorTracker")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WorldMetricsActorTracker")
 	}
 	static class UWorldMetricsActorTracker* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWorldMetricsActorTracker>();
 	}
 };
-static_assert(alignof(UWorldMetricsActorTracker) == 0x000008, "Wrong alignment on UWorldMetricsActorTracker");
-static_assert(sizeof(UWorldMetricsActorTracker) == 0x0000D0, "Wrong size on UWorldMetricsActorTracker");
+DUMPER7_ASSERTS_UWorldMetricsActorTracker;
 
 }
 

@@ -31,15 +31,7 @@ public:
 	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_1;                 // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator) == 0x000008, "Wrong alignment on BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator");
-static_assert(sizeof(BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator) == 0x000088, "Wrong size on BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator");
-static_assert(offsetof(BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000038, "Member 'BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000048, "Member 'BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x000078, "Member 'BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000080, "Member 'BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DefenderPassive8_CharacterMutator_C_ExecuteUbergraph_BP_DefenderPassive8_CharacterMutator;
 
 }
 

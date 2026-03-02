@@ -29,17 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NNERuntimeORTSettings">();
+		STATIC_CLASS_IMPL("NNERuntimeORTSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeORTSettings")
 	}
 	static class UNNERuntimeORTSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNNERuntimeORTSettings>();
 	}
 };
-static_assert(alignof(UNNERuntimeORTSettings) == 0x000008, "Wrong alignment on UNNERuntimeORTSettings");
-static_assert(sizeof(UNNERuntimeORTSettings) == 0x000058, "Wrong size on UNNERuntimeORTSettings");
-static_assert(offsetof(UNNERuntimeORTSettings, EditorThreadingOptions) == 0x000038, "Member 'UNNERuntimeORTSettings::EditorThreadingOptions' has a wrong offset!");
-static_assert(offsetof(UNNERuntimeORTSettings, GameThreadingOptions) == 0x000048, "Member 'UNNERuntimeORTSettings::GameThreadingOptions' has a wrong offset!");
+DUMPER7_ASSERTS_UNNERuntimeORTSettings;
 
 // Class NNERuntimeORT.NNERuntimeORTCpu
 // 0x0020 (0x0048 - 0x0028)
@@ -51,35 +52,202 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NNERuntimeORTCpu">();
+		STATIC_CLASS_IMPL("NNERuntimeORTCpu")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeORTCpu")
 	}
 	static class UNNERuntimeORTCpu* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNNERuntimeORTCpu>();
 	}
 };
-static_assert(alignof(UNNERuntimeORTCpu) == 0x000008, "Wrong alignment on UNNERuntimeORTCpu");
-static_assert(sizeof(UNNERuntimeORTCpu) == 0x000048, "Wrong size on UNNERuntimeORTCpu");
+DUMPER7_ASSERTS_UNNERuntimeORTCpu;
 
-// Class NNERuntimeORT.NNERuntimeORTDml
-// 0x0038 (0x0060 - 0x0028)
-class UNNERuntimeORTDml final : public UObject
+// Class NNERuntimeORT.NNERuntimeORTDmlProxy
+// 0x0010 (0x0038 - 0x0028)
+class UNNERuntimeORTDmlProxy : public UObject
 {
 public:
-	uint8                                         Pad_28[0x38];                                      // 0x0028(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NNERuntimeORTDml">();
+		STATIC_CLASS_IMPL("NNERuntimeORTDmlProxy")
 	}
-	static class UNNERuntimeORTDml* GetDefaultObj()
+	static const class FName& StaticName()
 	{
-		return GetDefaultObjImpl<UNNERuntimeORTDml>();
+		STATIC_NAME_IMPL(L"NNERuntimeORTDmlProxy")
+	}
+	static class UNNERuntimeORTDmlProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNNERuntimeORTDmlProxy>();
 	}
 };
-static_assert(alignof(UNNERuntimeORTDml) == 0x000008, "Wrong alignment on UNNERuntimeORTDml");
-static_assert(sizeof(UNNERuntimeORTDml) == 0x000060, "Wrong size on UNNERuntimeORTDml");
+DUMPER7_ASSERTS_UNNERuntimeORTDmlProxy;
+
+// Class NNERuntimeORT.NNERuntimeORTDml_GPU_RDG_NPU
+// 0x0018 (0x0050 - 0x0038)
+class UNNERuntimeORTDml_GPU_RDG_NPU final : public UNNERuntimeORTDmlProxy
+{
+public:
+	uint8                                         Pad_38[0x18];                                      // 0x0038(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NNERuntimeORTDml_GPU_RDG_NPU")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeORTDml_GPU_RDG_NPU")
+	}
+	static class UNNERuntimeORTDml_GPU_RDG_NPU* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNNERuntimeORTDml_GPU_RDG_NPU>();
+	}
+};
+DUMPER7_ASSERTS_UNNERuntimeORTDml_GPU_RDG_NPU;
+
+// Class NNERuntimeORT.NNERuntimeORTDml_GPU_RDG
+// 0x0010 (0x0048 - 0x0038)
+class UNNERuntimeORTDml_GPU_RDG final : public UNNERuntimeORTDmlProxy
+{
+public:
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NNERuntimeORTDml_GPU_RDG")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeORTDml_GPU_RDG")
+	}
+	static class UNNERuntimeORTDml_GPU_RDG* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNNERuntimeORTDml_GPU_RDG>();
+	}
+};
+DUMPER7_ASSERTS_UNNERuntimeORTDml_GPU_RDG;
+
+// Class NNERuntimeORT.NNERuntimeORTDml_GPU_NPU
+// 0x0010 (0x0048 - 0x0038)
+class UNNERuntimeORTDml_GPU_NPU final : public UNNERuntimeORTDmlProxy
+{
+public:
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NNERuntimeORTDml_GPU_NPU")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeORTDml_GPU_NPU")
+	}
+	static class UNNERuntimeORTDml_GPU_NPU* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNNERuntimeORTDml_GPU_NPU>();
+	}
+};
+DUMPER7_ASSERTS_UNNERuntimeORTDml_GPU_NPU;
+
+// Class NNERuntimeORT.NNERuntimeORTDml_RDG_NPU
+// 0x0010 (0x0048 - 0x0038)
+class UNNERuntimeORTDml_RDG_NPU final : public UNNERuntimeORTDmlProxy
+{
+public:
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NNERuntimeORTDml_RDG_NPU")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeORTDml_RDG_NPU")
+	}
+	static class UNNERuntimeORTDml_RDG_NPU* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNNERuntimeORTDml_RDG_NPU>();
+	}
+};
+DUMPER7_ASSERTS_UNNERuntimeORTDml_RDG_NPU;
+
+// Class NNERuntimeORT.NNERuntimeORTDml_GPU
+// 0x0008 (0x0040 - 0x0038)
+class UNNERuntimeORTDml_GPU final : public UNNERuntimeORTDmlProxy
+{
+public:
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NNERuntimeORTDml_GPU")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeORTDml_GPU")
+	}
+	static class UNNERuntimeORTDml_GPU* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNNERuntimeORTDml_GPU>();
+	}
+};
+DUMPER7_ASSERTS_UNNERuntimeORTDml_GPU;
+
+// Class NNERuntimeORT.NNERuntimeORTDml_RDG
+// 0x0008 (0x0040 - 0x0038)
+class UNNERuntimeORTDml_RDG final : public UNNERuntimeORTDmlProxy
+{
+public:
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NNERuntimeORTDml_RDG")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeORTDml_RDG")
+	}
+	static class UNNERuntimeORTDml_RDG* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNNERuntimeORTDml_RDG>();
+	}
+};
+DUMPER7_ASSERTS_UNNERuntimeORTDml_RDG;
+
+// Class NNERuntimeORT.NNERuntimeORTDml_NPU
+// 0x0008 (0x0040 - 0x0038)
+class UNNERuntimeORTDml_NPU final : public UNNERuntimeORTDmlProxy
+{
+public:
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NNERuntimeORTDml_NPU")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeORTDml_NPU")
+	}
+	static class UNNERuntimeORTDml_NPU* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNNERuntimeORTDml_NPU>();
+	}
+};
+DUMPER7_ASSERTS_UNNERuntimeORTDml_NPU;
 
 }
 

@@ -19,57 +19,56 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_Crosshair_DamageIndicator.Widget_Crosshair_DamageIndicator_C
-// 0x0098 (0x0368 - 0x02D0)
+// 0x00D0 (0x0410 - 0x0340)
 class UWidget_Crosshair_DamageIndicator_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       CriticalDamage;                                    // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       DealtDamage;                                       // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 IndicatorImage;                                    // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FWidgetTransform                       StartTransform;                                    // 0x02F0(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	class UWidgetAnimation*                       CurrentAnim;                                       // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             CriticalSound;                                     // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             DamageSound;                                       // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             DirectDamageSound;                                 // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 DamageSoundKey;                                    // 0x0348(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class UCanvasPanelSlot*                       AsCanvasPanelSlot;                                 // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanelSlot*                       WeaponAsCanvasPanelSlot;                           // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UOverlay*                               Overlay_3;                                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IndicatorImage;                                    // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_193;                                         // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_166;                                         // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_107;                                         // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image;                                             // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       DealtDamage;                                       // 0x0378(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       CriticalDamage;                                    // 0x0380(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       KillAnimation;                                     // 0x0388(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetTransform                       StartTransform;                                    // 0x0390(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	class UWidgetAnimation*                       CurrentAnim;                                       // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             CriticalSound;                                     // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             DamageSound;                                       // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             DirectDamageSound;                                 // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 KillSoundKey;                                      // 0x03E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class UCanvasPanelSlot*                       AsCanvasPanelSlot;                                 // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanelSlot*                       WeaponAsCanvasPanelSlot;                           // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             KillSound;                                         // 0x0408(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Construct();
 	void ExecuteUbergraph_Widget_Crosshair_DamageIndicator(int32 EntryPoint);
-	void GetDamageSoundKey(class FString* DamageSoundKey_0);
+	void GetKillSoundKey(class FString* DamageSoundKey);
 	void OnDealtDamage(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData);
 	void OnInitialized();
 	void OnWeaponEquipped_Event(class ARWeapon* Weapon);
-	void SetDamageSounds(const class FString& DamageSoundKey_0, class USoundBase* DirectDamageSound_0, class USoundBase* CriticalSound_0);
+	void PlayKillSequence();
+	void SetDamageSounds(const class FString& DamageSoundKey, class USoundBase* DirectDamageSound_0, class USoundBase* CriticalSound_0);
+	void SetKillSounds(const class FString& DamageSoundKey, class USoundBase* KillSound_0);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_Crosshair_DamageIndicator_C">();
+		BP_STATIC_CLASS_IMPL("Widget_Crosshair_DamageIndicator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_Crosshair_DamageIndicator_C")
 	}
 	static class UWidget_Crosshair_DamageIndicator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_Crosshair_DamageIndicator_C>();
 	}
 };
-static_assert(alignof(UWidget_Crosshair_DamageIndicator_C) == 0x000008, "Wrong alignment on UWidget_Crosshair_DamageIndicator_C");
-static_assert(sizeof(UWidget_Crosshair_DamageIndicator_C) == 0x000368, "Wrong size on UWidget_Crosshair_DamageIndicator_C");
-static_assert(offsetof(UWidget_Crosshair_DamageIndicator_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_Crosshair_DamageIndicator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_Crosshair_DamageIndicator_C, CriticalDamage) == 0x0002D8, "Member 'UWidget_Crosshair_DamageIndicator_C::CriticalDamage' has a wrong offset!");
-static_assert(offsetof(UWidget_Crosshair_DamageIndicator_C, DealtDamage) == 0x0002E0, "Member 'UWidget_Crosshair_DamageIndicator_C::DealtDamage' has a wrong offset!");
-static_assert(offsetof(UWidget_Crosshair_DamageIndicator_C, IndicatorImage) == 0x0002E8, "Member 'UWidget_Crosshair_DamageIndicator_C::IndicatorImage' has a wrong offset!");
-static_assert(offsetof(UWidget_Crosshair_DamageIndicator_C, StartTransform) == 0x0002F0, "Member 'UWidget_Crosshair_DamageIndicator_C::StartTransform' has a wrong offset!");
-static_assert(offsetof(UWidget_Crosshair_DamageIndicator_C, CurrentAnim) == 0x000328, "Member 'UWidget_Crosshair_DamageIndicator_C::CurrentAnim' has a wrong offset!");
-static_assert(offsetof(UWidget_Crosshair_DamageIndicator_C, CriticalSound) == 0x000330, "Member 'UWidget_Crosshair_DamageIndicator_C::CriticalSound' has a wrong offset!");
-static_assert(offsetof(UWidget_Crosshair_DamageIndicator_C, DamageSound) == 0x000338, "Member 'UWidget_Crosshair_DamageIndicator_C::DamageSound' has a wrong offset!");
-static_assert(offsetof(UWidget_Crosshair_DamageIndicator_C, DirectDamageSound) == 0x000340, "Member 'UWidget_Crosshair_DamageIndicator_C::DirectDamageSound' has a wrong offset!");
-static_assert(offsetof(UWidget_Crosshair_DamageIndicator_C, DamageSoundKey) == 0x000348, "Member 'UWidget_Crosshair_DamageIndicator_C::DamageSoundKey' has a wrong offset!");
-static_assert(offsetof(UWidget_Crosshair_DamageIndicator_C, AsCanvasPanelSlot) == 0x000358, "Member 'UWidget_Crosshair_DamageIndicator_C::AsCanvasPanelSlot' has a wrong offset!");
-static_assert(offsetof(UWidget_Crosshair_DamageIndicator_C, WeaponAsCanvasPanelSlot) == 0x000360, "Member 'UWidget_Crosshair_DamageIndicator_C::WeaponAsCanvasPanelSlot' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_Crosshair_DamageIndicator_C;
 
 }
 

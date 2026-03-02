@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
 
@@ -20,16 +20,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Burning_StatusEffect.BP_Burning_StatusEffect_C
-// 0x0040 (0x0528 - 0x04E8)
+// 0x0040 (0x0530 - 0x04F0)
 class UBP_Burning_StatusEffect_C final : public URGBurningAilment
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	double                                        TotalTickTime;                                     // 0x04F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                SpawnLocation;                                     // 0x04F8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        BurningAC;                                         // 0x0510(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        DamageIncreasePerStack;                            // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FireTriggerDamage;                                 // 0x0520(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	double                                        TotalTickTime;                                     // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                SpawnLocation;                                     // 0x0500(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        BurningAC;                                         // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageIncreasePerStack;                            // 0x0520(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FireTriggerDamage;                                 // 0x0528(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ApplyStackVisuals();
@@ -54,21 +54,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Burning_StatusEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_Burning_StatusEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Burning_StatusEffect_C")
 	}
 	static class UBP_Burning_StatusEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Burning_StatusEffect_C>();
 	}
 };
-static_assert(alignof(UBP_Burning_StatusEffect_C) == 0x000008, "Wrong alignment on UBP_Burning_StatusEffect_C");
-static_assert(sizeof(UBP_Burning_StatusEffect_C) == 0x000528, "Wrong size on UBP_Burning_StatusEffect_C");
-static_assert(offsetof(UBP_Burning_StatusEffect_C, UberGraphFrame) == 0x0004E8, "Member 'UBP_Burning_StatusEffect_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Burning_StatusEffect_C, TotalTickTime) == 0x0004F0, "Member 'UBP_Burning_StatusEffect_C::TotalTickTime' has a wrong offset!");
-static_assert(offsetof(UBP_Burning_StatusEffect_C, SpawnLocation) == 0x0004F8, "Member 'UBP_Burning_StatusEffect_C::SpawnLocation' has a wrong offset!");
-static_assert(offsetof(UBP_Burning_StatusEffect_C, BurningAC) == 0x000510, "Member 'UBP_Burning_StatusEffect_C::BurningAC' has a wrong offset!");
-static_assert(offsetof(UBP_Burning_StatusEffect_C, DamageIncreasePerStack) == 0x000518, "Member 'UBP_Burning_StatusEffect_C::DamageIncreasePerStack' has a wrong offset!");
-static_assert(offsetof(UBP_Burning_StatusEffect_C, FireTriggerDamage) == 0x000520, "Member 'UBP_Burning_StatusEffect_C::FireTriggerDamage' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Burning_StatusEffect_C;
 
 }
 

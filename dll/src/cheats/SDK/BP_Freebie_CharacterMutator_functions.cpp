@@ -57,34 +57,6 @@ class FText UBP_Freebie_CharacterMutator_C::GetMutatorDescription()
 }
 
 
-// Function BP_Freebie_CharacterMutator.BP_Freebie_CharacterMutator_C.K2_ActivateScript
-// (Event, Public, BlueprintEvent)
-
-void UBP_Freebie_CharacterMutator_C::K2_ActivateScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Freebie_CharacterMutator_C", "K2_ActivateScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Freebie_CharacterMutator.BP_Freebie_CharacterMutator_C.K2_DeactivateScript
-// (Event, Public, BlueprintEvent)
-
-void UBP_Freebie_CharacterMutator_C::K2_DeactivateScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Freebie_CharacterMutator_C", "K2_DeactivateScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_Freebie_CharacterMutator.BP_Freebie_CharacterMutator_C.K2_OnAbilityFired
 // (Event, Public, BlueprintEvent)
 // Parameters:

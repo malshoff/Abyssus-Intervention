@@ -10,39 +10,44 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LobbyFishStatue.BP_LobbyFishStatue_C
-// 0x00E8 (0x0390 - 0x02A8)
+// 0x0108 (0x03B0 - 0x02A8)
 class ABP_LobbyFishStatue_C final : public AActor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      NS_FishDiety_Statue_Activated_01;                  // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      NS_FishDiety_Statue_Smoke_01;                      // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    SpotLight;                                         // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Waterfall;                                         // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Scene;                                             // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         RiseTimeline_Water_8BED946B4CBB6F4447D50BB89155689A; // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RiseTimeline_Light_8BED946B4CBB6F4447D50BB89155689A; // 0x02E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RiseTimeline_Alpha_8BED946B4CBB6F4447D50BB89155689A; // 0x02E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            RiseTimeline__Direction_8BED946B4CBB6F4447D50BB89155689A; // 0x02EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2ED[0x3];                                      // 0x02ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     RiseTimeline;                                      // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   RequiredChallengeId;                               // 0x02F8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMesh*                            StatueMesh;                                        // 0x0300(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFinishedActivating;                               // 0x0308(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_309[0x7];                                      // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnFinishActivating;                                // 0x0310(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FTransform                             InitialTransform;                                  // 0x0320(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ActivationDelay;                                   // 0x0380(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        SW_SecretFountain_StatueStream_Loop;               // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      NS_FishDiety_Statue_Activated_01;                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      NS_FishDiety_Statue_Smoke_01;                      // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    SpotLight;                                         // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Waterfall;                                         // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         RiseTimeline_Water_8BED946B4CBB6F4447D50BB89155689A; // 0x02E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RiseTimeline_Light_8BED946B4CBB6F4447D50BB89155689A; // 0x02EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RiseTimeline_Alpha_8BED946B4CBB6F4447D50BB89155689A; // 0x02F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            RiseTimeline__Direction_8BED946B4CBB6F4447D50BB89155689A; // 0x02F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F5[0x3];                                      // 0x02F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     RiseTimeline;                                      // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   RequiredChallengeId;                               // 0x0300(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMesh*                            StatueMesh;                                        // 0x0308(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFinishedActivating;                               // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_311[0x7];                                      // 0x0311(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnFinishActivating;                                // 0x0318(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	uint8                                         Pad_328[0x8];                                      // 0x0328(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InitialTransform;                                  // 0x0330(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ActivationDelay;                                   // 0x0390(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_394[0x4];                                      // 0x0394(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             ActivationFinishedSFX;                             // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             MovementSFX;                                       // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_LobbyFishStatue(int32 EntryPoint);
@@ -55,33 +60,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_LobbyFishStatue_C">();
+		BP_STATIC_CLASS_IMPL("BP_LobbyFishStatue_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_LobbyFishStatue_C")
 	}
 	static class ABP_LobbyFishStatue_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_LobbyFishStatue_C>();
 	}
 };
-static_assert(alignof(ABP_LobbyFishStatue_C) == 0x000010, "Wrong alignment on ABP_LobbyFishStatue_C");
-static_assert(sizeof(ABP_LobbyFishStatue_C) == 0x000390, "Wrong size on ABP_LobbyFishStatue_C");
-static_assert(offsetof(ABP_LobbyFishStatue_C, UberGraphFrame) == 0x0002A8, "Member 'ABP_LobbyFishStatue_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, NS_FishDiety_Statue_Activated_01) == 0x0002B0, "Member 'ABP_LobbyFishStatue_C::NS_FishDiety_Statue_Activated_01' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, NS_FishDiety_Statue_Smoke_01) == 0x0002B8, "Member 'ABP_LobbyFishStatue_C::NS_FishDiety_Statue_Smoke_01' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, SpotLight) == 0x0002C0, "Member 'ABP_LobbyFishStatue_C::SpotLight' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, Waterfall) == 0x0002C8, "Member 'ABP_LobbyFishStatue_C::Waterfall' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, StaticMesh) == 0x0002D0, "Member 'ABP_LobbyFishStatue_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, Scene) == 0x0002D8, "Member 'ABP_LobbyFishStatue_C::Scene' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, RiseTimeline_Water_8BED946B4CBB6F4447D50BB89155689A) == 0x0002E0, "Member 'ABP_LobbyFishStatue_C::RiseTimeline_Water_8BED946B4CBB6F4447D50BB89155689A' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, RiseTimeline_Light_8BED946B4CBB6F4447D50BB89155689A) == 0x0002E4, "Member 'ABP_LobbyFishStatue_C::RiseTimeline_Light_8BED946B4CBB6F4447D50BB89155689A' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, RiseTimeline_Alpha_8BED946B4CBB6F4447D50BB89155689A) == 0x0002E8, "Member 'ABP_LobbyFishStatue_C::RiseTimeline_Alpha_8BED946B4CBB6F4447D50BB89155689A' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, RiseTimeline__Direction_8BED946B4CBB6F4447D50BB89155689A) == 0x0002EC, "Member 'ABP_LobbyFishStatue_C::RiseTimeline__Direction_8BED946B4CBB6F4447D50BB89155689A' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, RiseTimeline) == 0x0002F0, "Member 'ABP_LobbyFishStatue_C::RiseTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, RequiredChallengeId) == 0x0002F8, "Member 'ABP_LobbyFishStatue_C::RequiredChallengeId' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, StatueMesh) == 0x000300, "Member 'ABP_LobbyFishStatue_C::StatueMesh' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, bFinishedActivating) == 0x000308, "Member 'ABP_LobbyFishStatue_C::bFinishedActivating' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, OnFinishActivating) == 0x000310, "Member 'ABP_LobbyFishStatue_C::OnFinishActivating' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, InitialTransform) == 0x000320, "Member 'ABP_LobbyFishStatue_C::InitialTransform' has a wrong offset!");
-static_assert(offsetof(ABP_LobbyFishStatue_C, ActivationDelay) == 0x000380, "Member 'ABP_LobbyFishStatue_C::ActivationDelay' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_LobbyFishStatue_C;
 
 }
 

@@ -23,9 +23,7 @@ struct Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_L_K
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_L_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_L_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_L_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_L_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_L_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_L_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_L_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_SettingsOptions.Widget_SettingsOptions_C.BndEvt__Widget_SettingsOptions_W_Button_Icon_R_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -34,9 +32,7 @@ struct Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_R_K
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_R_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_R_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_R_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_R_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_R_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_R_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsOptions_C_BndEvt__Widget_SettingsOptions_W_Button_Icon_R_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_SettingsOptions.Widget_SettingsOptions_C.ExecuteUbergraph_Widget_SettingsOptions
 // 0x0058 (0x0058 - 0x0000)
@@ -52,14 +48,7 @@ public:
 	float                                         K2Node_Event_InDeltaTime;                          // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions) == 0x000008, "Wrong alignment on Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions");
-static_assert(sizeof(Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions) == 0x000058, "Wrong size on Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions");
-static_assert(offsetof(Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions, EntryPoint) == 0x000000, "Member 'Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions, K2Node_ComponentBoundEvent_Button) == 0x000008, "Member 'Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions, K2Node_Event_IsDesignTime) == 0x000010, "Member 'Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions, K2Node_Event_MyGeometry) == 0x000014, "Member 'Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions, K2Node_Event_InDeltaTime) == 0x00004C, "Member 'Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions, K2Node_ComponentBoundEvent_Button_1) == 0x000050, "Member 'Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsOptions_C_ExecuteUbergraph_Widget_SettingsOptions;
 
 // Function Widget_SettingsOptions.Widget_SettingsOptions_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -68,9 +57,7 @@ struct Widget_SettingsOptions_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsOptions_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_SettingsOptions_C_PreConstruct");
-static_assert(sizeof(Widget_SettingsOptions_C_PreConstruct) == 0x000001, "Wrong size on Widget_SettingsOptions_C_PreConstruct");
-static_assert(offsetof(Widget_SettingsOptions_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_SettingsOptions_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsOptions_C_PreConstruct;
 
 // Function Widget_SettingsOptions.Widget_SettingsOptions_C.Set Current Value Text
 // 0x0010 (0x0010 - 0x0000)
@@ -79,9 +66,7 @@ struct Widget_SettingsOptions_C_Set_Current_Value_Text final
 public:
 	class FText                                   CallFunc_Array_Get_Item;                           // 0x0000(0x0010)()
 };
-static_assert(alignof(Widget_SettingsOptions_C_Set_Current_Value_Text) == 0x000008, "Wrong alignment on Widget_SettingsOptions_C_Set_Current_Value_Text");
-static_assert(sizeof(Widget_SettingsOptions_C_Set_Current_Value_Text) == 0x000010, "Wrong size on Widget_SettingsOptions_C_Set_Current_Value_Text");
-static_assert(offsetof(Widget_SettingsOptions_C_Set_Current_Value_Text, CallFunc_Array_Get_Item) == 0x000000, "Member 'Widget_SettingsOptions_C_Set_Current_Value_Text::CallFunc_Array_Get_Item' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsOptions_C_Set_Current_Value_Text;
 
 // Function Widget_SettingsOptions.Widget_SettingsOptions_C.Set Value
 // 0x0028 (0x0028 - 0x0000)
@@ -97,15 +82,7 @@ public:
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Array_Get_Item;                           // 0x0018(0x0010)()
 };
-static_assert(alignof(Widget_SettingsOptions_C_Set_Value) == 0x000008, "Wrong alignment on Widget_SettingsOptions_C_Set_Value");
-static_assert(sizeof(Widget_SettingsOptions_C_Set_Value) == 0x000028, "Wrong size on Widget_SettingsOptions_C_Set_Value");
-static_assert(offsetof(Widget_SettingsOptions_C_Set_Value, Index_0) == 0x000000, "Member 'Widget_SettingsOptions_C_Set_Value::Index_0' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_Set_Value, CallFunc_Array_Length_ReturnValue) == 0x000004, "Member 'Widget_SettingsOptions_C_Set_Value::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_Set_Value, CallFunc_Array_Length_ReturnValue_1) == 0x000008, "Member 'Widget_SettingsOptions_C_Set_Value::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_Set_Value, CallFunc_Subtract_IntInt_ReturnValue) == 0x00000C, "Member 'Widget_SettingsOptions_C_Set_Value::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_Set_Value, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000010, "Member 'Widget_SettingsOptions_C_Set_Value::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_Set_Value, CallFunc_Less_IntInt_ReturnValue) == 0x000011, "Member 'Widget_SettingsOptions_C_Set_Value::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_Set_Value, CallFunc_Array_Get_Item) == 0x000018, "Member 'Widget_SettingsOptions_C_Set_Value::CallFunc_Array_Get_Item' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsOptions_C_Set_Value;
 
 // Function Widget_SettingsOptions.Widget_SettingsOptions_C.SetNextOption
 // 0x0014 (0x0014 - 0x0000)
@@ -120,14 +97,7 @@ public:
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsOptions_C_SetNextOption) == 0x000004, "Wrong alignment on Widget_SettingsOptions_C_SetNextOption");
-static_assert(sizeof(Widget_SettingsOptions_C_SetNextOption) == 0x000014, "Wrong size on Widget_SettingsOptions_C_SetNextOption");
-static_assert(offsetof(Widget_SettingsOptions_C_SetNextOption, CallFunc_Array_Length_ReturnValue) == 0x000000, "Member 'Widget_SettingsOptions_C_SetNextOption::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_SetNextOption, Temp_int_Variable) == 0x000004, "Member 'Widget_SettingsOptions_C_SetNextOption::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_SetNextOption, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000008, "Member 'Widget_SettingsOptions_C_SetNextOption::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_SetNextOption, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'Widget_SettingsOptions_C_SetNextOption::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_SetNextOption, CallFunc_GreaterEqual_IntInt_ReturnValue_1) == 0x000010, "Member 'Widget_SettingsOptions_C_SetNextOption::CallFunc_GreaterEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_SetNextOption, CallFunc_BooleanOR_ReturnValue) == 0x000011, "Member 'Widget_SettingsOptions_C_SetNextOption::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsOptions_C_SetNextOption;
 
 // Function Widget_SettingsOptions.Widget_SettingsOptions_C.SetPreviousOption
 // 0x0018 (0x0018 - 0x0000)
@@ -141,14 +111,7 @@ public:
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsOptions_C_SetPreviousOption) == 0x000004, "Wrong alignment on Widget_SettingsOptions_C_SetPreviousOption");
-static_assert(sizeof(Widget_SettingsOptions_C_SetPreviousOption) == 0x000018, "Wrong size on Widget_SettingsOptions_C_SetPreviousOption");
-static_assert(offsetof(Widget_SettingsOptions_C_SetPreviousOption, Temp_int_Variable) == 0x000000, "Member 'Widget_SettingsOptions_C_SetPreviousOption::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_SetPreviousOption, CallFunc_Array_Length_ReturnValue) == 0x000004, "Member 'Widget_SettingsOptions_C_SetPreviousOption::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_SetPreviousOption, CallFunc_Min_ReturnValue) == 0x000008, "Member 'Widget_SettingsOptions_C_SetPreviousOption::CallFunc_Min_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_SetPreviousOption, CallFunc_Subtract_IntInt_ReturnValue) == 0x00000C, "Member 'Widget_SettingsOptions_C_SetPreviousOption::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_SetPreviousOption, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x000010, "Member 'Widget_SettingsOptions_C_SetPreviousOption::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_SetPreviousOption, CallFunc_Less_IntInt_ReturnValue) == 0x000014, "Member 'Widget_SettingsOptions_C_SetPreviousOption::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsOptions_C_SetPreviousOption;
 
 // Function Widget_SettingsOptions.Widget_SettingsOptions_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -158,10 +121,7 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsOptions_C_Tick) == 0x000004, "Wrong alignment on Widget_SettingsOptions_C_Tick");
-static_assert(sizeof(Widget_SettingsOptions_C_Tick) == 0x00003C, "Wrong size on Widget_SettingsOptions_C_Tick");
-static_assert(offsetof(Widget_SettingsOptions_C_Tick, MyGeometry) == 0x000000, "Member 'Widget_SettingsOptions_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_Tick, InDeltaTime) == 0x000038, "Member 'Widget_SettingsOptions_C_Tick::InDeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsOptions_C_Tick;
 
 // Function Widget_SettingsOptions.Widget_SettingsOptions_C.ToggleHighlight
 // 0x0005 (0x0005 - 0x0000)
@@ -174,13 +134,7 @@ public:
 	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasKeyboardFocus_ReturnValue;             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsOptions_C_ToggleHighlight) == 0x000001, "Wrong alignment on Widget_SettingsOptions_C_ToggleHighlight");
-static_assert(sizeof(Widget_SettingsOptions_C_ToggleHighlight) == 0x000005, "Wrong size on Widget_SettingsOptions_C_ToggleHighlight");
-static_assert(offsetof(Widget_SettingsOptions_C_ToggleHighlight, Temp_bool_IsClosed_Variable) == 0x000000, "Member 'Widget_SettingsOptions_C_ToggleHighlight::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_ToggleHighlight, Temp_bool_Has_Been_Initd_Variable) == 0x000001, "Member 'Widget_SettingsOptions_C_ToggleHighlight::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_ToggleHighlight, Temp_bool_Has_Been_Initd_Variable_1) == 0x000002, "Member 'Widget_SettingsOptions_C_ToggleHighlight::Temp_bool_Has_Been_Initd_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_ToggleHighlight, Temp_bool_IsClosed_Variable_1) == 0x000003, "Member 'Widget_SettingsOptions_C_ToggleHighlight::Temp_bool_IsClosed_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsOptions_C_ToggleHighlight, CallFunc_HasKeyboardFocus_ReturnValue) == 0x000004, "Member 'Widget_SettingsOptions_C_ToggleHighlight::CallFunc_HasKeyboardFocus_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsOptions_C_ToggleHighlight;
 
 }
 

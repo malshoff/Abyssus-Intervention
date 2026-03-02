@@ -43,27 +43,23 @@ public:
 	void OnPlayerPawnRevived_Event(class ARPlayerPawn* Player);
 	void OnRespawn(class ARPlayerPawn* Player);
 	void OnRevivedCastStarted_Event(class ARPlayerPawn* RevivingPlayer, float CastTime, float CurrentCastTime);
-	void SpawnDamageTakenSFX(int32 PlatingLost, int32 Mask, const struct FVector_NetQuantize& HitLocation, double DamageNormalized, double CurrentHealthNormalized, double BarrierDamage);
+	void SpawnDamageTakenSFX(int32 Mask, const struct FVector_NetQuantize& HitLocation, double DamageNormalized, double CurrentHealthNormalized, double BarrierDamage);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BaseCharacterScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_BaseCharacterScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BaseCharacterScript_C")
 	}
 	static class UBP_BaseCharacterScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_BaseCharacterScript_C>();
 	}
 };
-static_assert(alignof(UBP_BaseCharacterScript_C) == 0x000008, "Wrong alignment on UBP_BaseCharacterScript_C");
-static_assert(sizeof(UBP_BaseCharacterScript_C) == 0x000128, "Wrong size on UBP_BaseCharacterScript_C");
-static_assert(offsetof(UBP_BaseCharacterScript_C, UberGraphFrame) == 0x0000E8, "Member 'UBP_BaseCharacterScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_BaseCharacterScript_C, Respawn_HP_Percentage) == 0x0000F0, "Member 'UBP_BaseCharacterScript_C::Respawn_HP_Percentage' has a wrong offset!");
-static_assert(offsetof(UBP_BaseCharacterScript_C, DamageTakenSFX) == 0x0000F8, "Member 'UBP_BaseCharacterScript_C::DamageTakenSFX' has a wrong offset!");
-static_assert(offsetof(UBP_BaseCharacterScript_C, LowHealthThreshold) == 0x000100, "Member 'UBP_BaseCharacterScript_C::LowHealthThreshold' has a wrong offset!");
-static_assert(offsetof(UBP_BaseCharacterScript_C, As_RPlayer_Pawn) == 0x000108, "Member 'UBP_BaseCharacterScript_C::As_RPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(UBP_BaseCharacterScript_C, RecentEnemiesKilled) == 0x000110, "Member 'UBP_BaseCharacterScript_C::RecentEnemiesKilled' has a wrong offset!");
-static_assert(offsetof(UBP_BaseCharacterScript_C, RecentEnemiesKilledTimer) == 0x000120, "Member 'UBP_BaseCharacterScript_C::RecentEnemiesKilledTimer' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_BaseCharacterScript_C;
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EnhancedInput_structs.hpp"
 #include "UMG_structs.hpp"
+#include "EnhancedInput_structs.hpp"
 #include "CommonInput_structs.hpp"
 
 
@@ -34,17 +34,7 @@ public:
 	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue_1; // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ECommonInputType                              CallFunc_GetCurrentInputType_ReturnValue;          // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_ActionInput_C_ExecuteUbergraph_W_ActionInput) == 0x000008, "Wrong alignment on W_ActionInput_C_ExecuteUbergraph_W_ActionInput");
-static_assert(sizeof(W_ActionInput_C_ExecuteUbergraph_W_ActionInput) == 0x000050, "Wrong size on W_ActionInput_C_ExecuteUbergraph_W_ActionInput");
-static_assert(offsetof(W_ActionInput_C_ExecuteUbergraph_W_ActionInput, EntryPoint) == 0x000000, "Member 'W_ActionInput_C_ExecuteUbergraph_W_ActionInput::EntryPoint' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_ExecuteUbergraph_W_ActionInput, CallFunc_GetVisibility_ReturnValue) == 0x000004, "Member 'W_ActionInput_C_ExecuteUbergraph_W_ActionInput::CallFunc_GetVisibility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_ExecuteUbergraph_W_ActionInput, CallFunc_GetOwningPlayer_ReturnValue) == 0x000008, "Member 'W_ActionInput_C_ExecuteUbergraph_W_ActionInput::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_ExecuteUbergraph_W_ActionInput, CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue) == 0x000010, "Member 'W_ActionInput_C_ExecuteUbergraph_W_ActionInput::CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_ExecuteUbergraph_W_ActionInput, K2Node_CreateDelegate_OutputDelegate) == 0x000018, "Member 'W_ActionInput_C_ExecuteUbergraph_W_ActionInput::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_ExecuteUbergraph_W_ActionInput, K2Node_CreateDelegate_OutputDelegate_1) == 0x000028, "Member 'W_ActionInput_C_ExecuteUbergraph_W_ActionInput::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_ExecuteUbergraph_W_ActionInput, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x000038, "Member 'W_ActionInput_C_ExecuteUbergraph_W_ActionInput::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_ExecuteUbergraph_W_ActionInput, CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue_1) == 0x000040, "Member 'W_ActionInput_C_ExecuteUbergraph_W_ActionInput::CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_ExecuteUbergraph_W_ActionInput, CallFunc_GetCurrentInputType_ReturnValue) == 0x000048, "Member 'W_ActionInput_C_ExecuteUbergraph_W_ActionInput::CallFunc_GetCurrentInputType_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_W_ActionInput_C_ExecuteUbergraph_W_ActionInput;
 
 // Function W_ActionInput.W_ActionInput_C.HandleInputMethodChanged
 // 0x0002 (0x0002 - 0x0000)
@@ -54,10 +44,7 @@ public:
 	ECommonInputType                              bNewInputType;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_ActionInput_C_HandleInputMethodChanged) == 0x000001, "Wrong alignment on W_ActionInput_C_HandleInputMethodChanged");
-static_assert(sizeof(W_ActionInput_C_HandleInputMethodChanged) == 0x000002, "Wrong size on W_ActionInput_C_HandleInputMethodChanged");
-static_assert(offsetof(W_ActionInput_C_HandleInputMethodChanged, bNewInputType) == 0x000000, "Member 'W_ActionInput_C_HandleInputMethodChanged::bNewInputType' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_HandleInputMethodChanged, K2Node_SwitchEnum_CmpSuccess) == 0x000001, "Member 'W_ActionInput_C_HandleInputMethodChanged::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_W_ActionInput_C_HandleInputMethodChanged;
 
 // Function W_ActionInput.W_ActionInput_C.HandleVisibilityChanged
 // 0x0004 (0x0004 - 0x0000)
@@ -69,12 +56,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_ActionInput_C_HandleVisibilityChanged) == 0x000001, "Wrong alignment on W_ActionInput_C_HandleVisibilityChanged");
-static_assert(sizeof(W_ActionInput_C_HandleVisibilityChanged) == 0x000004, "Wrong size on W_ActionInput_C_HandleVisibilityChanged");
-static_assert(offsetof(W_ActionInput_C_HandleVisibilityChanged, InVisibility) == 0x000000, "Member 'W_ActionInput_C_HandleVisibilityChanged::InVisibility' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_HandleVisibilityChanged, K2Node_SwitchEnum_CmpSuccess) == 0x000001, "Member 'W_ActionInput_C_HandleVisibilityChanged::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_HandleVisibilityChanged, CallFunc_IsValid_ReturnValue) == 0x000002, "Member 'W_ActionInput_C_HandleVisibilityChanged::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_HandleVisibilityChanged, CallFunc_IsValid_ReturnValue_1) == 0x000003, "Member 'W_ActionInput_C_HandleVisibilityChanged::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_W_ActionInput_C_HandleVisibilityChanged;
 
 // Function W_ActionInput.W_ActionInput_C.HideNeighborIfVisible
 // 0x0002 (0x0002 - 0x0000)
@@ -84,10 +66,7 @@ public:
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_ActionInput_C_HideNeighborIfVisible) == 0x000001, "Wrong alignment on W_ActionInput_C_HideNeighborIfVisible");
-static_assert(sizeof(W_ActionInput_C_HideNeighborIfVisible) == 0x000002, "Wrong size on W_ActionInput_C_HideNeighborIfVisible");
-static_assert(offsetof(W_ActionInput_C_HideNeighborIfVisible, CallFunc_IsVisible_ReturnValue) == 0x000000, "Member 'W_ActionInput_C_HideNeighborIfVisible::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_HideNeighborIfVisible, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'W_ActionInput_C_HideNeighborIfVisible::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_W_ActionInput_C_HideNeighborIfVisible;
 
 // Function W_ActionInput.W_ActionInput_C.SetEnhancedInputAction
 // 0x0020 (0x0020 - 0x0000)
@@ -100,13 +79,7 @@ public:
 	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECommonInputType                              CallFunc_GetCurrentInputType_ReturnValue;          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_ActionInput_C_SetEnhancedInputAction) == 0x000008, "Wrong alignment on W_ActionInput_C_SetEnhancedInputAction");
-static_assert(sizeof(W_ActionInput_C_SetEnhancedInputAction) == 0x000020, "Wrong size on W_ActionInput_C_SetEnhancedInputAction");
-static_assert(offsetof(W_ActionInput_C_SetEnhancedInputAction, EnhancedInputAction_0) == 0x000000, "Member 'W_ActionInput_C_SetEnhancedInputAction::EnhancedInputAction_0' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_SetEnhancedInputAction, CallFunc_GetOwningPlayer_ReturnValue) == 0x000008, "Member 'W_ActionInput_C_SetEnhancedInputAction::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_SetEnhancedInputAction, CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue) == 0x000010, "Member 'W_ActionInput_C_SetEnhancedInputAction::CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_SetEnhancedInputAction, CallFunc_GetVisibility_ReturnValue) == 0x000018, "Member 'W_ActionInput_C_SetEnhancedInputAction::CallFunc_GetVisibility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_SetEnhancedInputAction, CallFunc_GetCurrentInputType_ReturnValue) == 0x000019, "Member 'W_ActionInput_C_SetEnhancedInputAction::CallFunc_GetCurrentInputType_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_W_ActionInput_C_SetEnhancedInputAction;
 
 // Function W_ActionInput.W_ActionInput_C.SetText
 // 0x0010 (0x0010 - 0x0000)
@@ -115,9 +88,7 @@ struct W_ActionInput_C_SetText final
 public:
 	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(W_ActionInput_C_SetText) == 0x000008, "Wrong alignment on W_ActionInput_C_SetText");
-static_assert(sizeof(W_ActionInput_C_SetText) == 0x000010, "Wrong size on W_ActionInput_C_SetText");
-static_assert(offsetof(W_ActionInput_C_SetText, InText) == 0x000000, "Member 'W_ActionInput_C_SetText::InText' has a wrong offset!");
+DUMPER7_ASSERTS_W_ActionInput_C_SetText;
 
 // Function W_ActionInput.W_ActionInput_C.UpdateLocalizedText
 // 0x00B0 (0x00B0 - 0x0000)
@@ -141,22 +112,7 @@ public:
 	class FText                                   CallFunc_Key_GetDisplayName_ReturnValue;           // 0x0098(0x0010)()
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_ActionInput_C_UpdateLocalizedText) == 0x000008, "Wrong alignment on W_ActionInput_C_UpdateLocalizedText");
-static_assert(sizeof(W_ActionInput_C_UpdateLocalizedText) == 0x0000B0, "Wrong size on W_ActionInput_C_UpdateLocalizedText");
-static_assert(offsetof(W_ActionInput_C_UpdateLocalizedText, bFound) == 0x000000, "Member 'W_ActionInput_C_UpdateLocalizedText::bFound' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_UpdateLocalizedText, Temp_int_Array_Index_Variable) == 0x000004, "Member 'W_ActionInput_C_UpdateLocalizedText::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_UpdateLocalizedText, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'W_ActionInput_C_UpdateLocalizedText::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_UpdateLocalizedText, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'W_ActionInput_C_UpdateLocalizedText::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_UpdateLocalizedText, CallFunc_GetOwningPlayer_ReturnValue) == 0x000010, "Member 'W_ActionInput_C_UpdateLocalizedText::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_UpdateLocalizedText, CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue) == 0x000018, "Member 'W_ActionInput_C_UpdateLocalizedText::CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_UpdateLocalizedText, CallFunc_GetAllPlayerMappableActionKeyMappings_self_CastInput) == 0x000020, "Member 'W_ActionInput_C_UpdateLocalizedText::CallFunc_GetAllPlayerMappableActionKeyMappings_self_CastInput' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_UpdateLocalizedText, CallFunc_GetAllPlayerMappableActionKeyMappings_ReturnValue) == 0x000030, "Member 'W_ActionInput_C_UpdateLocalizedText::CallFunc_GetAllPlayerMappableActionKeyMappings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_UpdateLocalizedText, CallFunc_Array_Get_Item) == 0x000040, "Member 'W_ActionInput_C_UpdateLocalizedText::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_UpdateLocalizedText, CallFunc_Array_Length_ReturnValue) == 0x000090, "Member 'W_ActionInput_C_UpdateLocalizedText::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_UpdateLocalizedText, CallFunc_Less_IntInt_ReturnValue) == 0x000094, "Member 'W_ActionInput_C_UpdateLocalizedText::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_UpdateLocalizedText, CallFunc_Key_IsGamepadKey_ReturnValue) == 0x000095, "Member 'W_ActionInput_C_UpdateLocalizedText::CallFunc_Key_IsGamepadKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_UpdateLocalizedText, CallFunc_Key_GetDisplayName_ReturnValue) == 0x000098, "Member 'W_ActionInput_C_UpdateLocalizedText::CallFunc_Key_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_ActionInput_C_UpdateLocalizedText, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x0000A8, "Member 'W_ActionInput_C_UpdateLocalizedText::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_W_ActionInput_C_UpdateLocalizedText;
 
 }
 

@@ -17,31 +17,105 @@
 namespace SDK
 {
 
-// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.SetupTexts
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_ChoiceDialog_C::SetupTexts()
+void UWidget_ChoiceDialog_C::BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChoiceDialog_C", "SetupTexts");
+		Func = Class->GetFunction("Widget_ChoiceDialog_C", "BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_ChoiceDialog_C::BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_ChoiceDialog_C", "BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.ClosePanel
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_ChoiceDialog_C::ClosePanel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_ChoiceDialog_C", "ClosePanel");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.OnInitialized
+// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_ChoiceDialog_C::OnInitialized()
+void UWidget_ChoiceDialog_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChoiceDialog_C", "OnInitialized");
+		Func = Class->GetFunction("Widget_ChoiceDialog_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.DestructAnimationFinished
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_ChoiceDialog_C::DestructAnimationFinished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_ChoiceDialog_C", "DestructAnimationFinished");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.ExecuteUbergraph_Widget_ChoiceDialog
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_ChoiceDialog_C::ExecuteUbergraph_Widget_ChoiceDialog(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_ChoiceDialog_C", "ExecuteUbergraph_Widget_ChoiceDialog");
+
+	Params::Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -71,105 +145,31 @@ void UWidget_ChoiceDialog_C::Initialize(const class FText& HeaderText_0, const c
 }
 
 
-// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.ExecuteUbergraph_Widget_ChoiceDialog
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_ChoiceDialog_C::ExecuteUbergraph_Widget_ChoiceDialog(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChoiceDialog_C", "ExecuteUbergraph_Widget_ChoiceDialog");
-
-	Params::Widget_ChoiceDialog_C_ExecuteUbergraph_Widget_ChoiceDialog Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.DestructAnimationFinished
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_ChoiceDialog_C::DestructAnimationFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChoiceDialog_C", "DestructAnimationFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.Construct
+// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.OnInitialized
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_ChoiceDialog_C::Construct()
+void UWidget_ChoiceDialog_C::OnInitialized()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChoiceDialog_C", "Construct");
+		Func = Class->GetFunction("Widget_ChoiceDialog_C", "OnInitialized");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.ClosePanel
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.SetupTexts
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWidget_ChoiceDialog_C::ClosePanel()
+void UWidget_ChoiceDialog_C::SetupTexts()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChoiceDialog_C", "ClosePanel");
+		Func = Class->GetFunction("Widget_ChoiceDialog_C", "SetupTexts");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_ChoiceDialog_C::BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChoiceDialog_C", "BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_YesButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_ChoiceDialog.Widget_ChoiceDialog_C.BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_ChoiceDialog_C::BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChoiceDialog_C", "BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_ChoiceDialog_C_BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

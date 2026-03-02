@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -19,18 +19,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_DamageIndicator.Widget_DamageIndicator_C
-// 0x0058 (0x0328 - 0x02D0)
+// 0x0058 (0x0398 - 0x0340)
 class UWidget_DamageIndicator_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       DamageAnimation;                                   // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 BackgroundShadow;                                  // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Indicator_Image;                                   // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FVector                                TargetLocation;                                    // 0x02F0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        CameraTransformComponent;                          // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class UWidget_DamageIndicator_C* Widget)> OnBecomeAvailable;       // 0x0310(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FTimerHandle                           UpdateTransformTimer;                              // 0x0320(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Indicator_Image;                                   // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BackgroundShadow;                                  // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       DamageAnimation;                                   // 0x0358(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                TargetLocation;                                    // 0x0360(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        CameraTransformComponent;                          // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class UWidget_DamageIndicator_C* Widget)> OnBecomeAvailable;       // 0x0380(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FTimerHandle                           UpdateTransformTimer;                              // 0x0390(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void DamageEvent(const struct FVector& TargetLocation_0);
@@ -42,23 +42,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_DamageIndicator_C">();
+		BP_STATIC_CLASS_IMPL("Widget_DamageIndicator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_DamageIndicator_C")
 	}
 	static class UWidget_DamageIndicator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_DamageIndicator_C>();
 	}
 };
-static_assert(alignof(UWidget_DamageIndicator_C) == 0x000008, "Wrong alignment on UWidget_DamageIndicator_C");
-static_assert(sizeof(UWidget_DamageIndicator_C) == 0x000328, "Wrong size on UWidget_DamageIndicator_C");
-static_assert(offsetof(UWidget_DamageIndicator_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_DamageIndicator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_DamageIndicator_C, DamageAnimation) == 0x0002D8, "Member 'UWidget_DamageIndicator_C::DamageAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_DamageIndicator_C, BackgroundShadow) == 0x0002E0, "Member 'UWidget_DamageIndicator_C::BackgroundShadow' has a wrong offset!");
-static_assert(offsetof(UWidget_DamageIndicator_C, Indicator_Image) == 0x0002E8, "Member 'UWidget_DamageIndicator_C::Indicator_Image' has a wrong offset!");
-static_assert(offsetof(UWidget_DamageIndicator_C, TargetLocation) == 0x0002F0, "Member 'UWidget_DamageIndicator_C::TargetLocation' has a wrong offset!");
-static_assert(offsetof(UWidget_DamageIndicator_C, CameraTransformComponent) == 0x000308, "Member 'UWidget_DamageIndicator_C::CameraTransformComponent' has a wrong offset!");
-static_assert(offsetof(UWidget_DamageIndicator_C, OnBecomeAvailable) == 0x000310, "Member 'UWidget_DamageIndicator_C::OnBecomeAvailable' has a wrong offset!");
-static_assert(offsetof(UWidget_DamageIndicator_C, UpdateTransformTimer) == 0x000320, "Member 'UWidget_DamageIndicator_C::UpdateTransformTimer' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_DamageIndicator_C;
 
 }
 

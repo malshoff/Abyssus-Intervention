@@ -17,6 +17,27 @@
 namespace SDK
 {
 
+// Function ABP_BasePlayer_Arms.ABP_BasePlayer_Arms_C.AbilityOverrides
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FPoseLink*                       AbilityOverrides_0                                     (Parm, OutParm, NoDestructor)
+
+void UABP_BasePlayer_Arms_C::AbilityOverrides(struct FPoseLink* AbilityOverrides_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_BasePlayer_Arms_C", "AbilityOverrides");
+
+	Params::ABP_BasePlayer_Arms_C_AbilityOverrides Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (AbilityOverrides_0 != nullptr)
+		*AbilityOverrides_0 = std::move(Parms.AbilityOverrides_0);
+}
+
+
 // Function ABP_BasePlayer_Arms.ABP_BasePlayer_Arms_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -333,6 +354,20 @@ void UABP_BasePlayer_Arms_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Bas
 }
 
 
+// Function ABP_BasePlayer_Arms.ABP_BasePlayer_Arms_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BasePlayer_Arms_AnimGraphNode_SequencePlayer_91CB236942D679D328D12B88A950348C
+// (BlueprintEvent)
+
+void UABP_BasePlayer_Arms_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BasePlayer_Arms_AnimGraphNode_SequencePlayer_91CB236942D679D328D12B88A950348C()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_BasePlayer_Arms_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BasePlayer_Arms_AnimGraphNode_SequencePlayer_91CB236942D679D328D12B88A950348C");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ABP_BasePlayer_Arms.ABP_BasePlayer_Arms_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BasePlayer_Arms_AnimGraphNode_TransitionResult_10919BD246AF95E15A5396BE524C5B50
 // (BlueprintEvent)
 
@@ -459,6 +494,20 @@ void UABP_BasePlayer_Arms_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Bas
 }
 
 
+// Function ABP_BasePlayer_Arms.ABP_BasePlayer_Arms_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BasePlayer_Arms_AnimGraphNode_TransitionResult_AF1698724C9207868A7413A84BDF42C6
+// (BlueprintEvent)
+
+void UABP_BasePlayer_Arms_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BasePlayer_Arms_AnimGraphNode_TransitionResult_AF1698724C9207868A7413A84BDF42C6()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_BasePlayer_Arms_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BasePlayer_Arms_AnimGraphNode_TransitionResult_AF1698724C9207868A7413A84BDF42C6");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ABP_BasePlayer_Arms.ABP_BasePlayer_Arms_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BasePlayer_Arms_AnimGraphNode_TransitionResult_C03C95DE4C676A1683632CBFBDD9BE54
 // (BlueprintEvent)
 
@@ -538,6 +587,20 @@ void UABP_BasePlayer_Arms_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Bas
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ABP_BasePlayer_Arms_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BasePlayer_Arms_AnimGraphNode_TransitionResult_E48EE9034FFC77BE35E205922E1DFDF7");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABP_BasePlayer_Arms.ABP_BasePlayer_Arms_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BasePlayer_Arms_AnimGraphNode_TransitionResult_F06E7F504D4D7BE08573C29D3F261633
+// (BlueprintEvent)
+
+void UABP_BasePlayer_Arms_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BasePlayer_Arms_AnimGraphNode_TransitionResult_F06E7F504D4D7BE08573C29D3F261633()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_BasePlayer_Arms_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BasePlayer_Arms_AnimGraphNode_TransitionResult_F06E7F504D4D7BE08573C29D3F261633");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -728,6 +791,68 @@ void UABP_BasePlayer_Arms_C::MontageInjection(const struct FPoseLink& Input, str
 
 	if (MontageInjection_0 != nullptr)
 		*MontageInjection_0 = std::move(Parms.MontageInjection_0);
+}
+
+
+// Function ABP_BasePlayer_Arms.ABP_BasePlayer_Arms_C.OnAbilityScriptChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URPlayerGScriptComponent*         Owner                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class URGCharacterMutatorScript*        AbilityScript                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UABP_BasePlayer_Arms_C::OnAbilityScriptChanged(class URPlayerGScriptComponent* Owner, class URGCharacterMutatorScript* AbilityScript)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_BasePlayer_Arms_C", "OnAbilityScriptChanged");
+
+	Params::ABP_BasePlayer_Arms_C_OnAbilityScriptChanged Parms{};
+
+	Parms.Owner = Owner;
+	Parms.AbilityScript = AbilityScript;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ABP_BasePlayer_Arms.ABP_BasePlayer_Arms_C.OnChargeUpEnded
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UBP_AncientSpear_CharacterMutatorScript_C*Script                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UABP_BasePlayer_Arms_C::OnChargeUpEnded(class UBP_AncientSpear_CharacterMutatorScript_C* Script)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_BasePlayer_Arms_C", "OnChargeUpEnded");
+
+	Params::ABP_BasePlayer_Arms_C_OnChargeUpEnded Parms{};
+
+	Parms.Script = Script;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ABP_BasePlayer_Arms.ABP_BasePlayer_Arms_C.OnChargeUpStarted
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UBP_AncientSpear_CharacterMutatorScript_C*Script                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UABP_BasePlayer_Arms_C::OnChargeUpStarted(class UBP_AncientSpear_CharacterMutatorScript_C* Script)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_BasePlayer_Arms_C", "OnChargeUpStarted");
+
+	Params::ABP_BasePlayer_Arms_C_OnChargeUpStarted Parms{};
+
+	Parms.Script = Script;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

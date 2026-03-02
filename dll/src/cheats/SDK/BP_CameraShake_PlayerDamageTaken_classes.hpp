@@ -23,15 +23,18 @@ class UBP_CameraShake_PlayerDamageTaken_C final : public ULegacyCameraShake
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_CameraShake_PlayerDamageTaken_C">();
+		BP_STATIC_CLASS_IMPL("BP_CameraShake_PlayerDamageTaken_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_CameraShake_PlayerDamageTaken_C")
 	}
 	static class UBP_CameraShake_PlayerDamageTaken_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_CameraShake_PlayerDamageTaken_C>();
 	}
 };
-static_assert(alignof(UBP_CameraShake_PlayerDamageTaken_C) == 0x000010, "Wrong alignment on UBP_CameraShake_PlayerDamageTaken_C");
-static_assert(sizeof(UBP_CameraShake_PlayerDamageTaken_C) == 0x0001F0, "Wrong size on UBP_CameraShake_PlayerDamageTaken_C");
+DUMPER7_ASSERTS_UBP_CameraShake_PlayerDamageTaken_C;
 
 }
 

@@ -34,16 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ImplosiveForce_ProjectileEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_ImplosiveForce_ProjectileEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ImplosiveForce_ProjectileEffect_C")
 	}
 	static class UBP_ImplosiveForce_ProjectileEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ImplosiveForce_ProjectileEffect_C>();
 	}
 };
-static_assert(alignof(UBP_ImplosiveForce_ProjectileEffect_C) == 0x000008, "Wrong alignment on UBP_ImplosiveForce_ProjectileEffect_C");
-static_assert(sizeof(UBP_ImplosiveForce_ProjectileEffect_C) == 0x0000F8, "Wrong size on UBP_ImplosiveForce_ProjectileEffect_C");
-static_assert(offsetof(UBP_ImplosiveForce_ProjectileEffect_C, UberGraphFrame) == 0x0000F0, "Member 'UBP_ImplosiveForce_ProjectileEffect_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_ImplosiveForce_ProjectileEffect_C;
 
 }
 

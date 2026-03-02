@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "RGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK::Params
@@ -62,40 +62,7 @@ public:
 	uint8                                         Pad_241[0x3];                                      // 0x0241(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x0244(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator) == 0x000010, "Wrong alignment on BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator");
-static_assert(sizeof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator) == 0x000250, "Wrong size on BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_IsServer_ReturnValue) == 0x000004, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_IsServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000018, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, K2Node_CustomEvent_SpawnedTurret) == 0x000048, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::K2Node_CustomEvent_SpawnedTurret' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_GetFirstScriptOfType_ReturnValue) == 0x000050, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_GetFirstScriptOfType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000058, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, K2Node_DynamicCast_AsBP_Turret_Character_Mutator) == 0x000068, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::K2Node_DynamicCast_AsBP_Turret_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000070, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_GetCapsuleComponent_ReturnValue) == 0x000078, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_GetCapsuleComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_GetTransform_ReturnValue) == 0x000080, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_BreakTransform_Location) == 0x0000E0, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_BreakTransform_Rotation) == 0x0000F8, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_BreakTransform_Scale) == 0x000110, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_RandomFloatInRange_ReturnValue) == 0x000128, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_MakeVector_ReturnValue) == 0x000130, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_MakeRotator_ReturnValue) == 0x000148, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_Add_VectorVector_ReturnValue) == 0x000160, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_ComposeRotators_ReturnValue) == 0x000178, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_ComposeRotators_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, K2Node_CustomEvent_Target) == 0x000190, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::K2Node_CustomEvent_Target' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_MakeTransform_ReturnValue) == 0x0001A0, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000200, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_IsValid_ReturnValue) == 0x000208, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_FinishSpawningActor_ReturnValue) == 0x000210, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000218, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_K2_AttachToComponent_ReturnValue_1) == 0x000219, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_K2_AttachToComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_SetBoolParameter_self_CastInput) == 0x000220, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_SetBoolParameter_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_GetAnimInstance_ReturnValue) == 0x000230, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, K2Node_DynamicCast_AsABP_Player_Turret) == 0x000238, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::K2Node_DynamicCast_AsABP_Player_Turret' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, K2Node_DynamicCast_bSuccess_2) == 0x000240, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x000244, "Member 'BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DronesMod_CharacterMutator_C_ExecuteUbergraph_BP_DronesMod_CharacterMutator;
 
 // Function BP_DronesMod_CharacterMutator.BP_DronesMod_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -107,11 +74,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_DronesMod_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_DronesMod_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_DronesMod_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_DronesMod_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_DronesMod_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_DronesMod_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_DronesMod_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DronesMod_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_DronesMod_CharacterMutator.BP_DronesMod_CharacterMutator_C.OnTurretSpawned
 // 0x0008 (0x0008 - 0x0000)
@@ -120,9 +83,7 @@ struct BP_DronesMod_CharacterMutator_C_OnTurretSpawned final
 public:
 	class ABP_Turret_C*                           SpawnedTurret;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DronesMod_CharacterMutator_C_OnTurretSpawned) == 0x000008, "Wrong alignment on BP_DronesMod_CharacterMutator_C_OnTurretSpawned");
-static_assert(sizeof(BP_DronesMod_CharacterMutator_C_OnTurretSpawned) == 0x000008, "Wrong size on BP_DronesMod_CharacterMutator_C_OnTurretSpawned");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_OnTurretSpawned, SpawnedTurret) == 0x000000, "Member 'BP_DronesMod_CharacterMutator_C_OnTurretSpawned::SpawnedTurret' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DronesMod_CharacterMutator_C_OnTurretSpawned;
 
 // Function BP_DronesMod_CharacterMutator.BP_DronesMod_CharacterMutator_C.SetTurretFlying_Multicast
 // 0x0008 (0x0008 - 0x0000)
@@ -131,9 +92,7 @@ struct BP_DronesMod_CharacterMutator_C_SetTurretFlying_Multicast final
 public:
 	class ABP_Turret_C*                           Target;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DronesMod_CharacterMutator_C_SetTurretFlying_Multicast) == 0x000008, "Wrong alignment on BP_DronesMod_CharacterMutator_C_SetTurretFlying_Multicast");
-static_assert(sizeof(BP_DronesMod_CharacterMutator_C_SetTurretFlying_Multicast) == 0x000008, "Wrong size on BP_DronesMod_CharacterMutator_C_SetTurretFlying_Multicast");
-static_assert(offsetof(BP_DronesMod_CharacterMutator_C_SetTurretFlying_Multicast, Target) == 0x000000, "Member 'BP_DronesMod_CharacterMutator_C_SetTurretFlying_Multicast::Target' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DronesMod_CharacterMutator_C_SetTurretFlying_Multicast;
 
 }
 

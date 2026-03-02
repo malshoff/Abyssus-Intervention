@@ -34,20 +34,7 @@ public:
 	class AActor*                                 K2Node_DynamicCast_AsActor;                        // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EQC_CombatTarget_C_ProvideSingleActor) == 0x000008, "Wrong alignment on EQC_CombatTarget_C_ProvideSingleActor");
-static_assert(sizeof(EQC_CombatTarget_C_ProvideSingleActor) == 0x000060, "Wrong size on EQC_CombatTarget_C_ProvideSingleActor");
-static_assert(offsetof(EQC_CombatTarget_C_ProvideSingleActor, QuerierObject) == 0x000000, "Member 'EQC_CombatTarget_C_ProvideSingleActor::QuerierObject' has a wrong offset!");
-static_assert(offsetof(EQC_CombatTarget_C_ProvideSingleActor, QuerierActor) == 0x000008, "Member 'EQC_CombatTarget_C_ProvideSingleActor::QuerierActor' has a wrong offset!");
-static_assert(offsetof(EQC_CombatTarget_C_ProvideSingleActor, ResultingActor) == 0x000010, "Member 'EQC_CombatTarget_C_ProvideSingleActor::ResultingActor' has a wrong offset!");
-static_assert(offsetof(EQC_CombatTarget_C_ProvideSingleActor, CallFunc_MakeLiteralName_ReturnValue) == 0x000018, "Member 'EQC_CombatTarget_C_ProvideSingleActor::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(EQC_CombatTarget_C_ProvideSingleActor, K2Node_DynamicCast_AsREnemy_Pawn_Base) == 0x000020, "Member 'EQC_CombatTarget_C_ProvideSingleActor::K2Node_DynamicCast_AsREnemy_Pawn_Base' has a wrong offset!");
-static_assert(offsetof(EQC_CombatTarget_C_ProvideSingleActor, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'EQC_CombatTarget_C_ProvideSingleActor::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(EQC_CombatTarget_C_ProvideSingleActor, CallFunc_GetBlackboard_ReturnValue) == 0x000030, "Member 'EQC_CombatTarget_C_ProvideSingleActor::CallFunc_GetBlackboard_ReturnValue' has a wrong offset!");
-static_assert(offsetof(EQC_CombatTarget_C_ProvideSingleActor, CallFunc_GetCurrentCombatTarget_ReturnValue) == 0x000038, "Member 'EQC_CombatTarget_C_ProvideSingleActor::CallFunc_GetCurrentCombatTarget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(EQC_CombatTarget_C_ProvideSingleActor, CallFunc_GetValueAsObject_ReturnValue) == 0x000040, "Member 'EQC_CombatTarget_C_ProvideSingleActor::CallFunc_GetValueAsObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(EQC_CombatTarget_C_ProvideSingleActor, CallFunc_IsValid_ReturnValue) == 0x000048, "Member 'EQC_CombatTarget_C_ProvideSingleActor::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(EQC_CombatTarget_C_ProvideSingleActor, K2Node_DynamicCast_AsActor) == 0x000050, "Member 'EQC_CombatTarget_C_ProvideSingleActor::K2Node_DynamicCast_AsActor' has a wrong offset!");
-static_assert(offsetof(EQC_CombatTarget_C_ProvideSingleActor, K2Node_DynamicCast_bSuccess_1) == 0x000058, "Member 'EQC_CombatTarget_C_ProvideSingleActor::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+DUMPER7_ASSERTS_EQC_CombatTarget_C_ProvideSingleActor;
 
 }
 

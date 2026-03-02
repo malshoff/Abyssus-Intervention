@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
-#include "CommonInput_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "RGame_structs.hpp"
+#include "UMG_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CommonInput_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -28,9 +28,7 @@ struct Widget_ChatLog_C_AddChatLogEntry final
 public:
 	struct FRChatLogMessage                       IncomingMessage;                                   // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_ChatLog_C_AddChatLogEntry) == 0x000008, "Wrong alignment on Widget_ChatLog_C_AddChatLogEntry");
-static_assert(sizeof(Widget_ChatLog_C_AddChatLogEntry) == 0x000020, "Wrong size on Widget_ChatLog_C_AddChatLogEntry");
-static_assert(offsetof(Widget_ChatLog_C_AddChatLogEntry, IncomingMessage) == 0x000000, "Member 'Widget_ChatLog_C_AddChatLogEntry::IncomingMessage' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChatLog_C_AddChatLogEntry;
 
 // Function Widget_ChatLog.Widget_ChatLog_C.BndEvt__Widget_ChatLog_EditableTextBox_136_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature
 // 0x0018 (0x0018 - 0x0000)
@@ -40,10 +38,7 @@ public:
 	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ChatLog_C_BndEvt__Widget_ChatLog_EditableTextBox_136_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000008, "Wrong alignment on Widget_ChatLog_C_BndEvt__Widget_ChatLog_EditableTextBox_136_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature");
-static_assert(sizeof(Widget_ChatLog_C_BndEvt__Widget_ChatLog_EditableTextBox_136_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000018, "Wrong size on Widget_ChatLog_C_BndEvt__Widget_ChatLog_EditableTextBox_136_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature");
-static_assert(offsetof(Widget_ChatLog_C_BndEvt__Widget_ChatLog_EditableTextBox_136_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature, Text) == 0x000000, "Member 'Widget_ChatLog_C_BndEvt__Widget_ChatLog_EditableTextBox_136_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature::Text' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_BndEvt__Widget_ChatLog_EditableTextBox_136_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000010, "Member 'Widget_ChatLog_C_BndEvt__Widget_ChatLog_EditableTextBox_136_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChatLog_C_BndEvt__Widget_ChatLog_EditableTextBox_136_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature;
 
 // Function Widget_ChatLog.Widget_ChatLog_C.BndEvt__Widget_ChatLog_InputMessageField_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -52,9 +47,7 @@ struct Widget_ChatLog_C_BndEvt__Widget_ChatLog_InputMessageField_K2Node_Componen
 public:
 	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(Widget_ChatLog_C_BndEvt__Widget_ChatLog_InputMessageField_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature) == 0x000008, "Wrong alignment on Widget_ChatLog_C_BndEvt__Widget_ChatLog_InputMessageField_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature");
-static_assert(sizeof(Widget_ChatLog_C_BndEvt__Widget_ChatLog_InputMessageField_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature) == 0x000010, "Wrong size on Widget_ChatLog_C_BndEvt__Widget_ChatLog_InputMessageField_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature");
-static_assert(offsetof(Widget_ChatLog_C_BndEvt__Widget_ChatLog_InputMessageField_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature, Text) == 0x000000, "Member 'Widget_ChatLog_C_BndEvt__Widget_ChatLog_InputMessageField_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature::Text' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChatLog_C_BndEvt__Widget_ChatLog_InputMessageField_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature;
 
 // Function Widget_ChatLog.Widget_ChatLog_C.ExecuteUbergraph_Widget_ChatLog
 // 0x0228 (0x0228 - 0x0000)
@@ -135,67 +128,7 @@ public:
 	float                                         CallFunc_MakeColor_A_ImplicitCast_1;               // 0x021C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_RetriggerableDelay_Duration_ImplicitCast; // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog) == 0x000008, "Wrong alignment on Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog");
-static_assert(sizeof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog) == 0x000228, "Wrong size on Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, EntryPoint) == 0x000000, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, Temp_class_Variable) == 0x000008, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::Temp_class_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_GetText_ReturnValue) == 0x000010, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_TextIsEmpty_ReturnValue) == 0x000020, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_GetChildAt_ReturnValue) == 0x000028, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_Not_PreBool_ReturnValue) == 0x000030, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_GetChildrenCount_ReturnValue) == 0x000034, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_Less_IntInt_ReturnValue) == 0x000038, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, K2Node_Event_IncomingMessage) == 0x000040, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::K2Node_Event_IncomingMessage' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_GetOwningPlayer_ReturnValue) == 0x000060, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, K2Node_DynamicCast_AsRGame_Player_Controller) == 0x000068, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::K2Node_DynamicCast_AsRGame_Player_Controller' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000071, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_GetPlayerName_ReturnValue) == 0x000078, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_Conv_StringToName_ReturnValue) == 0x000088, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_Conv_NameToText_ReturnValue) == 0x000090, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, K2Node_CustomEvent_IsFocused) == 0x0000A0, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::K2Node_CustomEvent_IsFocused' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x0000A1, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_Conv_NameToText_ReturnValue_1) == 0x0000A8, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_Conv_NameToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x0000B8, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_FindRecentNotificationFromPlayer_AsWidget_Chat_Log_Notification) == 0x0000C0, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_FindRecentNotificationFromPlayer_AsWidget_Chat_Log_Notification' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_IsValid_ReturnValue) == 0x0000C8, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, K2Node_Event_InFocusEvent) == 0x0000CC, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::K2Node_Event_InFocusEvent' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_MakeColor_ReturnValue) == 0x0000D4, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_MakeColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_MakeColor_ReturnValue_1) == 0x0000E4, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_MakeColor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_Not_PreBool_ReturnValue_1) == 0x0000F4, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_GetOwningPlayer_ReturnValue_2) == 0x0000F8, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_GetOwningPlayer_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_IsTearingDownWorld_ReturnValue) == 0x000100, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_IsTearingDownWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, K2Node_ComponentBoundEvent_Text) == 0x000108, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::K2Node_ComponentBoundEvent_Text' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_Conv_TextToString_ReturnValue) == 0x000118, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_GetSubstring_ReturnValue) == 0x000128, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_GetSubstring_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, K2Node_ComponentBoundEvent_Text_1) == 0x000138, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::K2Node_ComponentBoundEvent_Text_1' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, K2Node_ComponentBoundEvent_CommitMethod) == 0x000148, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::K2Node_ComponentBoundEvent_CommitMethod' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_Conv_StringToText_ReturnValue) == 0x000150, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x000160, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, K2Node_MakeStruct_RChatLogMessage) == 0x000168, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::K2Node_MakeStruct_RChatLogMessage' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_IsStandalone_ReturnValue) == 0x000188, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_IsStandalone_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_Not_PreBool_ReturnValue_2) == 0x000189, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_IsServer_ReturnValue) == 0x00018A, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_IsServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, Temp_byte_Variable) == 0x00018B, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_Not_PreBool_ReturnValue_3) == 0x00018C, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_BooleanAND_ReturnValue) == 0x00018D, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, K2Node_MakeArray_Array) == 0x000190, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_Format_ReturnValue) == 0x0001A0, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_GetOwningPlayer_ReturnValue_3) == 0x0001B0, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_GetOwningPlayer_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, K2Node_MakeStruct_RChatLogMessage_1) == 0x0001B8, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::K2Node_MakeStruct_RChatLogMessage_1' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x0001D8, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_GetCurrentInputType_ReturnValue) == 0x0001E0, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_GetCurrentInputType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x0001E1, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, Temp_class_Variable_1) == 0x0001E8, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::Temp_class_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, K2Node_Select_Default) == 0x0001F0, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_Create_ReturnValue) == 0x0001F8, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, K2Node_DynamicCast_AsRChat_Log_Entry_Widget) == 0x000200, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::K2Node_DynamicCast_AsRChat_Log_Entry_Widget' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, K2Node_DynamicCast_bSuccess_1) == 0x000208, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_IsValid_ReturnValue_1) == 0x000209, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_AddChild_ReturnValue) == 0x000210, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_AddChild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_MakeColor_A_ImplicitCast) == 0x000218, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_MakeColor_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_MakeColor_A_ImplicitCast_1) == 0x00021C, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_MakeColor_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog, CallFunc_RetriggerableDelay_Duration_ImplicitCast) == 0x000220, "Member 'Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog::CallFunc_RetriggerableDelay_Duration_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChatLog_C_ExecuteUbergraph_Widget_ChatLog;
 
 // Function Widget_ChatLog.Widget_ChatLog_C.FindRecentNotificationFromPlayer
 // 0x0060 (0x0060 - 0x0000)
@@ -223,26 +156,7 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x005B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ChatLog_C_FindRecentNotificationFromPlayer) == 0x000008, "Wrong alignment on Widget_ChatLog_C_FindRecentNotificationFromPlayer");
-static_assert(sizeof(Widget_ChatLog_C_FindRecentNotificationFromPlayer) == 0x000060, "Wrong size on Widget_ChatLog_C_FindRecentNotificationFromPlayer");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, PlayerDisplayName) == 0x000000, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::PlayerDisplayName' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, AsWidget_Chat_Log_Notification) == 0x000010, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::AsWidget_Chat_Log_Notification' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, Temp_int_Variable) == 0x000018, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, CallFunc_Add_IntInt_ReturnValue) == 0x00001C, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, CallFunc_GetChildAt_ReturnValue) == 0x000020, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, K2Node_DynamicCast_AsWidget_Chat_Log_Notification) == 0x000028, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::K2Node_DynamicCast_AsWidget_Chat_Log_Notification' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, CallFunc_GetChildrenCount_ReturnValue) == 0x000034, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, CallFunc_Subtract_IntInt_ReturnValue) == 0x000038, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x00003C, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, CallFunc_Less_IntInt_ReturnValue) == 0x000040, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000041, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, CallFunc_SelectInt_ReturnValue) == 0x000044, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, CallFunc_GetText_ReturnValue) == 0x000048, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, CallFunc_EqualEqual_TextText_ReturnValue) == 0x000058, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::CallFunc_EqualEqual_TextText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, CallFunc_TextIsEmpty_ReturnValue) == 0x000059, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, CallFunc_Not_PreBool_ReturnValue) == 0x00005A, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_FindRecentNotificationFromPlayer, CallFunc_BooleanAND_ReturnValue) == 0x00005B, "Member 'Widget_ChatLog_C_FindRecentNotificationFromPlayer::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChatLog_C_FindRecentNotificationFromPlayer;
 
 // Function Widget_ChatLog.Widget_ChatLog_C.HandleGamepadFocus
 // 0x0018 (0x0018 - 0x0000)
@@ -255,12 +169,7 @@ public:
 	struct FLinearColor                           CallFunc_MakeColor_ReturnValue;                    // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_MakeColor_A_ImplicitCast;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ChatLog_C_HandleGamepadFocus) == 0x000004, "Wrong alignment on Widget_ChatLog_C_HandleGamepadFocus");
-static_assert(sizeof(Widget_ChatLog_C_HandleGamepadFocus) == 0x000018, "Wrong size on Widget_ChatLog_C_HandleGamepadFocus");
-static_assert(offsetof(Widget_ChatLog_C_HandleGamepadFocus, CallFunc_GetVisibility_ReturnValue) == 0x000000, "Member 'Widget_ChatLog_C_HandleGamepadFocus::CallFunc_GetVisibility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_HandleGamepadFocus, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000001, "Member 'Widget_ChatLog_C_HandleGamepadFocus::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_HandleGamepadFocus, CallFunc_MakeColor_ReturnValue) == 0x000004, "Member 'Widget_ChatLog_C_HandleGamepadFocus::CallFunc_MakeColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_HandleGamepadFocus, CallFunc_MakeColor_A_ImplicitCast) == 0x000014, "Member 'Widget_ChatLog_C_HandleGamepadFocus::CallFunc_MakeColor_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChatLog_C_HandleGamepadFocus;
 
 // Function Widget_ChatLog.Widget_ChatLog_C.MoveNotificationToLastIndex
 // 0x0030 (0x0030 - 0x0000)
@@ -277,16 +186,7 @@ public:
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ChatLog_C_MoveNotificationToLastIndex) == 0x000008, "Wrong alignment on Widget_ChatLog_C_MoveNotificationToLastIndex");
-static_assert(sizeof(Widget_ChatLog_C_MoveNotificationToLastIndex) == 0x000030, "Wrong size on Widget_ChatLog_C_MoveNotificationToLastIndex");
-static_assert(offsetof(Widget_ChatLog_C_MoveNotificationToLastIndex, NotificationToMove) == 0x000000, "Member 'Widget_ChatLog_C_MoveNotificationToLastIndex::NotificationToMove' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_MoveNotificationToLastIndex, CallFunc_AddChild_ReturnValue) == 0x000008, "Member 'Widget_ChatLog_C_MoveNotificationToLastIndex::CallFunc_AddChild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_MoveNotificationToLastIndex, CallFunc_GetChildIndex_ReturnValue) == 0x000010, "Member 'Widget_ChatLog_C_MoveNotificationToLastIndex::CallFunc_GetChildIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_MoveNotificationToLastIndex, CallFunc_GetChildrenCount_ReturnValue) == 0x000014, "Member 'Widget_ChatLog_C_MoveNotificationToLastIndex::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_MoveNotificationToLastIndex, CallFunc_RemoveChildAt_ReturnValue) == 0x000018, "Member 'Widget_ChatLog_C_MoveNotificationToLastIndex::CallFunc_RemoveChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_MoveNotificationToLastIndex, CallFunc_Subtract_IntInt_ReturnValue) == 0x00001C, "Member 'Widget_ChatLog_C_MoveNotificationToLastIndex::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_MoveNotificationToLastIndex, CallFunc_GetChildAt_ReturnValue) == 0x000020, "Member 'Widget_ChatLog_C_MoveNotificationToLastIndex::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_C_MoveNotificationToLastIndex, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000028, "Member 'Widget_ChatLog_C_MoveNotificationToLastIndex::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChatLog_C_MoveNotificationToLastIndex;
 
 // Function Widget_ChatLog.Widget_ChatLog_C.OnRemovedFromFocusPath
 // 0x0008 (0x0008 - 0x0000)
@@ -295,9 +195,7 @@ struct Widget_ChatLog_C_OnRemovedFromFocusPath final
 public:
 	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-static_assert(alignof(Widget_ChatLog_C_OnRemovedFromFocusPath) == 0x000004, "Wrong alignment on Widget_ChatLog_C_OnRemovedFromFocusPath");
-static_assert(sizeof(Widget_ChatLog_C_OnRemovedFromFocusPath) == 0x000008, "Wrong size on Widget_ChatLog_C_OnRemovedFromFocusPath");
-static_assert(offsetof(Widget_ChatLog_C_OnRemovedFromFocusPath, InFocusEvent) == 0x000000, "Member 'Widget_ChatLog_C_OnRemovedFromFocusPath::InFocusEvent' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChatLog_C_OnRemovedFromFocusPath;
 
 // Function Widget_ChatLog.Widget_ChatLog_C.SetIsFocused
 // 0x0001 (0x0001 - 0x0000)
@@ -306,9 +204,7 @@ struct Widget_ChatLog_C_SetIsFocused final
 public:
 	bool                                          IsFocused;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_ChatLog_C_SetIsFocused) == 0x000001, "Wrong alignment on Widget_ChatLog_C_SetIsFocused");
-static_assert(sizeof(Widget_ChatLog_C_SetIsFocused) == 0x000001, "Wrong size on Widget_ChatLog_C_SetIsFocused");
-static_assert(offsetof(Widget_ChatLog_C_SetIsFocused, IsFocused) == 0x000000, "Member 'Widget_ChatLog_C_SetIsFocused::IsFocused' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChatLog_C_SetIsFocused;
 
 }
 

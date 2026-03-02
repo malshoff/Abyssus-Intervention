@@ -17,29 +17,29 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_FireMajorBlessing_Meteor_Projectile.BP_FireMajorBlessing_Meteor_Projectile_C
-// 0x0018 (0x0700 - 0x06E8)
+// 0x0018 (0x0710 - 0x06F8)
 class ABP_FireMajorBlessing_Meteor_Projectile_C final : public ARRocket
 {
 public:
-	class UStaticMeshComponent*                   LargeTrail;                                        // 0x06E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight;                                        // 0x06F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Rock;                                              // 0x06F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   LargeTrail;                                        // 0x06F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight;                                        // 0x0700(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Rock;                                              // 0x0708(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FireMajorBlessing_Meteor_Projectile_C">();
+		BP_STATIC_CLASS_IMPL("BP_FireMajorBlessing_Meteor_Projectile_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FireMajorBlessing_Meteor_Projectile_C")
 	}
 	static class ABP_FireMajorBlessing_Meteor_Projectile_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_FireMajorBlessing_Meteor_Projectile_C>();
 	}
 };
-static_assert(alignof(ABP_FireMajorBlessing_Meteor_Projectile_C) == 0x000008, "Wrong alignment on ABP_FireMajorBlessing_Meteor_Projectile_C");
-static_assert(sizeof(ABP_FireMajorBlessing_Meteor_Projectile_C) == 0x000700, "Wrong size on ABP_FireMajorBlessing_Meteor_Projectile_C");
-static_assert(offsetof(ABP_FireMajorBlessing_Meteor_Projectile_C, LargeTrail) == 0x0006E8, "Member 'ABP_FireMajorBlessing_Meteor_Projectile_C::LargeTrail' has a wrong offset!");
-static_assert(offsetof(ABP_FireMajorBlessing_Meteor_Projectile_C, PointLight) == 0x0006F0, "Member 'ABP_FireMajorBlessing_Meteor_Projectile_C::PointLight' has a wrong offset!");
-static_assert(offsetof(ABP_FireMajorBlessing_Meteor_Projectile_C, Rock) == 0x0006F8, "Member 'ABP_FireMajorBlessing_Meteor_Projectile_C::Rock' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_FireMajorBlessing_Meteor_Projectile_C;
 
 }
 

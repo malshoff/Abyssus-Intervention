@@ -81,23 +81,25 @@ void UBP_Breach_StatusEffect_C::AbyssPassive4Effect()
 }
 
 
-// Function BP_Breach_StatusEffect.BP_Breach_StatusEffect_C.AbyssPassive5Effect
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_Breach_StatusEffect.BP_Breach_StatusEffect_C.AbyssPassive5EffectPre
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class URHealthComponent*                Component                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// const struct FDamageCombatEvent&        DamageEvent                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   DamageSourceMask                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_Breach_StatusEffect_C::AbyssPassive5Effect(class URHealthComponent* Component, const struct FDamageCombatEvent& DamageEvent)
+void UBP_Breach_StatusEffect_C::AbyssPassive5EffectPre(class URHealthComponent* Component, float Damage, int32 DamageSourceMask)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Breach_StatusEffect_C", "AbyssPassive5Effect");
+		Func = Class->GetFunction("BP_Breach_StatusEffect_C", "AbyssPassive5EffectPre");
 
-	Params::BP_Breach_StatusEffect_C_AbyssPassive5Effect Parms{};
+	Params::BP_Breach_StatusEffect_C_AbyssPassive5EffectPre Parms{};
 
 	Parms.Component = Component;
-	Parms.DamageEvent = std::move(DamageEvent);
+	Parms.Damage = Damage;
+	Parms.DamageSourceMask = DamageSourceMask;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -17,61 +17,35 @@
 namespace SDK
 {
 
-// Function Widget_PlayerGameOverStatEntry.Widget_PlayerGameOverStatEntry_C.OnListItemObjectSet
+// Function Widget_PlayerGameOverStatEntry.Widget_PlayerGameOverStatEntry_C.BP_OnEntryReleased
+// (Event, Protected, BlueprintEvent)
+
+void UWidget_PlayerGameOverStatEntry_C::BP_OnEntryReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerGameOverStatEntry_C", "BP_OnEntryReleased");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_PlayerGameOverStatEntry.Widget_PlayerGameOverStatEntry_C.BP_OnItemExpansionChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_PlayerGameOverStatEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
+void UWidget_PlayerGameOverStatEntry_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverStatEntry_C", "OnListItemObjectSet");
+		Func = Class->GetFunction("Widget_PlayerGameOverStatEntry_C", "BP_OnItemExpansionChanged");
 
-	Params::Widget_PlayerGameOverStatEntry_C_OnListItemObjectSet Parms{};
+	Params::Widget_PlayerGameOverStatEntry_C_BP_OnItemExpansionChanged Parms{};
 
-	Parms.ListItemObject = ListItemObject;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_PlayerGameOverStatEntry.Widget_PlayerGameOverStatEntry_C.GetToolTipWidget
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UWidget_PlayerGameOverStatEntry_C::GetToolTipWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverStatEntry_C", "GetToolTipWidget");
-
-	Params::Widget_PlayerGameOverStatEntry_C_GetToolTipWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Widget_PlayerGameOverStatEntry.Widget_PlayerGameOverStatEntry_C.ExecuteUbergraph_Widget_PlayerGameOverStatEntry
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_PlayerGameOverStatEntry_C::ExecuteUbergraph_Widget_PlayerGameOverStatEntry(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverStatEntry_C", "ExecuteUbergraph_Widget_PlayerGameOverStatEntry");
-
-	Params::Widget_PlayerGameOverStatEntry_C_ExecuteUbergraph_Widget_PlayerGameOverStatEntry Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.bIsExpanded = bIsExpanded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -97,37 +71,63 @@ void UWidget_PlayerGameOverStatEntry_C::BP_OnItemSelectionChanged(bool bIsSelect
 }
 
 
-// Function Widget_PlayerGameOverStatEntry.Widget_PlayerGameOverStatEntry_C.BP_OnItemExpansionChanged
-// (Event, Protected, BlueprintEvent)
+// Function Widget_PlayerGameOverStatEntry.Widget_PlayerGameOverStatEntry_C.ExecuteUbergraph_Widget_PlayerGameOverStatEntry
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_PlayerGameOverStatEntry_C::BP_OnItemExpansionChanged(bool bIsExpanded)
+void UWidget_PlayerGameOverStatEntry_C::ExecuteUbergraph_Widget_PlayerGameOverStatEntry(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverStatEntry_C", "BP_OnItemExpansionChanged");
+		Func = Class->GetFunction("Widget_PlayerGameOverStatEntry_C", "ExecuteUbergraph_Widget_PlayerGameOverStatEntry");
 
-	Params::Widget_PlayerGameOverStatEntry_C_BP_OnItemExpansionChanged Parms{};
+	Params::Widget_PlayerGameOverStatEntry_C_ExecuteUbergraph_Widget_PlayerGameOverStatEntry Parms{};
 
-	Parms.bIsExpanded = bIsExpanded;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_PlayerGameOverStatEntry.Widget_PlayerGameOverStatEntry_C.BP_OnEntryReleased
-// (Event, Protected, BlueprintEvent)
+// Function Widget_PlayerGameOverStatEntry.Widget_PlayerGameOverStatEntry_C.GetToolTipWidget
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_PlayerGameOverStatEntry_C::BP_OnEntryReleased()
+class UWidget* UWidget_PlayerGameOverStatEntry_C::GetToolTipWidget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerGameOverStatEntry_C", "BP_OnEntryReleased");
+		Func = Class->GetFunction("Widget_PlayerGameOverStatEntry_C", "GetToolTipWidget");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Widget_PlayerGameOverStatEntry_C_GetToolTipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_PlayerGameOverStatEntry.Widget_PlayerGameOverStatEntry_C.OnListItemObjectSet
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_PlayerGameOverStatEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerGameOverStatEntry_C", "OnListItemObjectSet");
+
+	Params::Widget_PlayerGameOverStatEntry_C_OnListItemObjectSet Parms{};
+
+	Parms.ListItemObject = ListItemObject;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

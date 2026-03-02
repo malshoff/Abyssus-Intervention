@@ -52,33 +52,7 @@ public:
 	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator) == 0x000008, "Wrong alignment on BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator");
-static_assert(sizeof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator) == 0x0000E8, "Wrong size on BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, EntryPoint) == 0x000000, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, K2Node_CustomEvent_BP_PingIndicatorRef) == 0x000008, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::K2Node_CustomEvent_BP_PingIndicatorRef' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, K2Node_CustomEvent_LinearColor) == 0x000010, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::K2Node_CustomEvent_LinearColor' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, CallFunc_BreakColor_R) == 0x000020, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::CallFunc_BreakColor_R' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, CallFunc_BreakColor_G) == 0x000024, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::CallFunc_BreakColor_G' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, CallFunc_BreakColor_B) == 0x000028, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::CallFunc_BreakColor_B' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, CallFunc_BreakColor_A) == 0x00002C, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::CallFunc_BreakColor_A' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, K2Node_CustomEvent_Location_1) == 0x000030, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::K2Node_CustomEvent_Location_1' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, CallFunc_MakeColor_ReturnValue) == 0x000048, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::CallFunc_MakeColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, CallFunc_SpawnSystemAtLocation_ReturnValue) == 0x000058, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::CallFunc_SpawnSystemAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, K2Node_CustomEvent_Location) == 0x000060, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::K2Node_CustomEvent_Location' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, CallFunc_IsValid_ReturnValue) == 0x000078, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000080, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, K2Node_CustomEvent_IconTexture_1) == 0x000098, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::K2Node_CustomEvent_IconTexture_1' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, K2Node_CustomEvent_IconTexture) == 0x0000A0, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::K2Node_CustomEvent_IconTexture' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, K2Node_Event_IconTexture) == 0x0000A8, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::K2Node_Event_IconTexture' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, CallFunc_IsValid_ReturnValue_1) == 0x0000B0, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, CallFunc_IsValid_ReturnValue_2) == 0x0000B1, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, CallFunc_GetWidget_ReturnValue) == 0x0000B8, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::CallFunc_GetWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, K2Node_DynamicCast_AsWidget_Ping_Indicator_Widget) == 0x0000C0, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::K2Node_DynamicCast_AsWidget_Ping_Indicator_Widget' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, K2Node_DynamicCast_bSuccess) == 0x0000C8, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, CallFunc_GetRadarManager_ReturnValue) == 0x0000D0, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::CallFunc_GetRadarManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, CallFunc_GetRadarManager_ReturnValue_1) == 0x0000D8, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::CallFunc_GetRadarManager_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, K2Node_Event_EndPlayReason) == 0x0000E0, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::K2Node_Event_EndPlayReason' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator, CallFunc_IsValid_ReturnValue_3) == 0x0000E1, "Member 'BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PingIndicator_C_ExecuteUbergraph_BP_PingIndicator;
 
 // Function BP_PingIndicator.BP_PingIndicator_C.PlayVFX
 // 0x0018 (0x0018 - 0x0000)
@@ -87,9 +61,7 @@ struct BP_PingIndicator_C_PlayVFX final
 public:
 	struct FVector                                Location;                                          // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PingIndicator_C_PlayVFX) == 0x000008, "Wrong alignment on BP_PingIndicator_C_PlayVFX");
-static_assert(sizeof(BP_PingIndicator_C_PlayVFX) == 0x000018, "Wrong size on BP_PingIndicator_C_PlayVFX");
-static_assert(offsetof(BP_PingIndicator_C_PlayVFX, Location) == 0x000000, "Member 'BP_PingIndicator_C_PlayVFX::Location' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PingIndicator_C_PlayVFX;
 
 // Function BP_PingIndicator.BP_PingIndicator_C.PlayVFXMulticast
 // 0x0018 (0x0018 - 0x0000)
@@ -98,9 +70,7 @@ struct BP_PingIndicator_C_PlayVFXMulticast final
 public:
 	struct FVector                                Location;                                          // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PingIndicator_C_PlayVFXMulticast) == 0x000008, "Wrong alignment on BP_PingIndicator_C_PlayVFXMulticast");
-static_assert(sizeof(BP_PingIndicator_C_PlayVFXMulticast) == 0x000018, "Wrong size on BP_PingIndicator_C_PlayVFXMulticast");
-static_assert(offsetof(BP_PingIndicator_C_PlayVFXMulticast, Location) == 0x000000, "Member 'BP_PingIndicator_C_PlayVFXMulticast::Location' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PingIndicator_C_PlayVFXMulticast;
 
 // Function BP_PingIndicator.BP_PingIndicator_C.ReceiveEndPlay
 // 0x0001 (0x0001 - 0x0000)
@@ -109,9 +79,7 @@ struct BP_PingIndicator_C_ReceiveEndPlay final
 public:
 	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PingIndicator_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_PingIndicator_C_ReceiveEndPlay");
-static_assert(sizeof(BP_PingIndicator_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_PingIndicator_C_ReceiveEndPlay");
-static_assert(offsetof(BP_PingIndicator_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_PingIndicator_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PingIndicator_C_ReceiveEndPlay;
 
 // Function BP_PingIndicator.BP_PingIndicator_C.SetIndicatorIcon
 // 0x0008 (0x0008 - 0x0000)
@@ -120,9 +88,7 @@ struct BP_PingIndicator_C_SetIndicatorIcon final
 public:
 	const class UTexture2D*                       IconTexture;                                       // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PingIndicator_C_SetIndicatorIcon) == 0x000008, "Wrong alignment on BP_PingIndicator_C_SetIndicatorIcon");
-static_assert(sizeof(BP_PingIndicator_C_SetIndicatorIcon) == 0x000008, "Wrong size on BP_PingIndicator_C_SetIndicatorIcon");
-static_assert(offsetof(BP_PingIndicator_C_SetIndicatorIcon, IconTexture) == 0x000000, "Member 'BP_PingIndicator_C_SetIndicatorIcon::IconTexture' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PingIndicator_C_SetIndicatorIcon;
 
 // Function BP_PingIndicator.BP_PingIndicator_C.SetIndicatorIconMulticast
 // 0x0008 (0x0008 - 0x0000)
@@ -131,9 +97,7 @@ struct BP_PingIndicator_C_SetIndicatorIconMulticast final
 public:
 	class UTexture2D*                             IconTexture;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PingIndicator_C_SetIndicatorIconMulticast) == 0x000008, "Wrong alignment on BP_PingIndicator_C_SetIndicatorIconMulticast");
-static_assert(sizeof(BP_PingIndicator_C_SetIndicatorIconMulticast) == 0x000008, "Wrong size on BP_PingIndicator_C_SetIndicatorIconMulticast");
-static_assert(offsetof(BP_PingIndicator_C_SetIndicatorIconMulticast, IconTexture) == 0x000000, "Member 'BP_PingIndicator_C_SetIndicatorIconMulticast::IconTexture' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PingIndicator_C_SetIndicatorIconMulticast;
 
 // Function BP_PingIndicator.BP_PingIndicator_C.SetIndicatorIconServer
 // 0x0008 (0x0008 - 0x0000)
@@ -142,9 +106,7 @@ struct BP_PingIndicator_C_SetIndicatorIconServer final
 public:
 	class UTexture2D*                             IconTexture;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PingIndicator_C_SetIndicatorIconServer) == 0x000008, "Wrong alignment on BP_PingIndicator_C_SetIndicatorIconServer");
-static_assert(sizeof(BP_PingIndicator_C_SetIndicatorIconServer) == 0x000008, "Wrong size on BP_PingIndicator_C_SetIndicatorIconServer");
-static_assert(offsetof(BP_PingIndicator_C_SetIndicatorIconServer, IconTexture) == 0x000000, "Member 'BP_PingIndicator_C_SetIndicatorIconServer::IconTexture' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PingIndicator_C_SetIndicatorIconServer;
 
 // Function BP_PingIndicator.BP_PingIndicator_C.UpdateColorMulticast
 // 0x0018 (0x0018 - 0x0000)
@@ -154,10 +116,7 @@ public:
 	class ABP_PingIndicator_C*                    BP_PingIndicatorRef;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           LinearColor;                                       // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PingIndicator_C_UpdateColorMulticast) == 0x000008, "Wrong alignment on BP_PingIndicator_C_UpdateColorMulticast");
-static_assert(sizeof(BP_PingIndicator_C_UpdateColorMulticast) == 0x000018, "Wrong size on BP_PingIndicator_C_UpdateColorMulticast");
-static_assert(offsetof(BP_PingIndicator_C_UpdateColorMulticast, BP_PingIndicatorRef) == 0x000000, "Member 'BP_PingIndicator_C_UpdateColorMulticast::BP_PingIndicatorRef' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_UpdateColorMulticast, LinearColor) == 0x000008, "Member 'BP_PingIndicator_C_UpdateColorMulticast::LinearColor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PingIndicator_C_UpdateColorMulticast;
 
 // Function BP_PingIndicator.BP_PingIndicator_C.GetRadarIconColor
 // 0x0030 (0x0030 - 0x0000)
@@ -171,14 +130,7 @@ public:
 	float                                         CallFunc_BreakColor_A;                             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_MakeColor_ReturnValue;                    // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PingIndicator_C_GetRadarIconColor) == 0x000004, "Wrong alignment on BP_PingIndicator_C_GetRadarIconColor");
-static_assert(sizeof(BP_PingIndicator_C_GetRadarIconColor) == 0x000030, "Wrong size on BP_PingIndicator_C_GetRadarIconColor");
-static_assert(offsetof(BP_PingIndicator_C_GetRadarIconColor, ReturnValue) == 0x000000, "Member 'BP_PingIndicator_C_GetRadarIconColor::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_GetRadarIconColor, CallFunc_BreakColor_R) == 0x000010, "Member 'BP_PingIndicator_C_GetRadarIconColor::CallFunc_BreakColor_R' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_GetRadarIconColor, CallFunc_BreakColor_G) == 0x000014, "Member 'BP_PingIndicator_C_GetRadarIconColor::CallFunc_BreakColor_G' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_GetRadarIconColor, CallFunc_BreakColor_B) == 0x000018, "Member 'BP_PingIndicator_C_GetRadarIconColor::CallFunc_BreakColor_B' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_GetRadarIconColor, CallFunc_BreakColor_A) == 0x00001C, "Member 'BP_PingIndicator_C_GetRadarIconColor::CallFunc_BreakColor_A' has a wrong offset!");
-static_assert(offsetof(BP_PingIndicator_C_GetRadarIconColor, CallFunc_MakeColor_ReturnValue) == 0x000020, "Member 'BP_PingIndicator_C_GetRadarIconColor::CallFunc_MakeColor_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PingIndicator_C_GetRadarIconColor;
 
 // Function BP_PingIndicator.BP_PingIndicator_C.GetRadarIconSize
 // 0x0010 (0x0010 - 0x0000)
@@ -187,9 +139,7 @@ struct BP_PingIndicator_C_GetRadarIconSize final
 public:
 	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PingIndicator_C_GetRadarIconSize) == 0x000008, "Wrong alignment on BP_PingIndicator_C_GetRadarIconSize");
-static_assert(sizeof(BP_PingIndicator_C_GetRadarIconSize) == 0x000010, "Wrong size on BP_PingIndicator_C_GetRadarIconSize");
-static_assert(offsetof(BP_PingIndicator_C_GetRadarIconSize, ReturnValue) == 0x000000, "Member 'BP_PingIndicator_C_GetRadarIconSize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PingIndicator_C_GetRadarIconSize;
 
 // Function BP_PingIndicator.BP_PingIndicator_C.GetRadarObjectIcon
 // 0x0008 (0x0008 - 0x0000)
@@ -198,9 +148,7 @@ struct BP_PingIndicator_C_GetRadarObjectIcon final
 public:
 	class USlateBrushAsset*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PingIndicator_C_GetRadarObjectIcon) == 0x000008, "Wrong alignment on BP_PingIndicator_C_GetRadarObjectIcon");
-static_assert(sizeof(BP_PingIndicator_C_GetRadarObjectIcon) == 0x000008, "Wrong size on BP_PingIndicator_C_GetRadarObjectIcon");
-static_assert(offsetof(BP_PingIndicator_C_GetRadarObjectIcon, ReturnValue) == 0x000000, "Member 'BP_PingIndicator_C_GetRadarObjectIcon::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PingIndicator_C_GetRadarObjectIcon;
 
 // Function BP_PingIndicator.BP_PingIndicator_C.ShouldShowOnRadar
 // 0x0001 (0x0001 - 0x0000)
@@ -209,9 +157,7 @@ struct BP_PingIndicator_C_ShouldShowOnRadar final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PingIndicator_C_ShouldShowOnRadar) == 0x000001, "Wrong alignment on BP_PingIndicator_C_ShouldShowOnRadar");
-static_assert(sizeof(BP_PingIndicator_C_ShouldShowOnRadar) == 0x000001, "Wrong size on BP_PingIndicator_C_ShouldShowOnRadar");
-static_assert(offsetof(BP_PingIndicator_C_ShouldShowOnRadar, ReturnValue) == 0x000000, "Member 'BP_PingIndicator_C_ShouldShowOnRadar::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PingIndicator_C_ShouldShowOnRadar;
 
 }
 

@@ -499,6 +499,26 @@ void UWidget_HUD_C::SetChargeUpBarVisibility(ESlateVisibility ChargeUpBarVilibil
 }
 
 
+// Function Widget_HUD.Widget_HUD_C.SetHarpoonGunComboPointsVisibility
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ESlateVisibility                        OverheatBarVilibility                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_HUD_C::SetHarpoonGunComboPointsVisibility(ESlateVisibility OverheatBarVilibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_HUD_C", "SetHarpoonGunComboPointsVisibility");
+
+	Params::Widget_HUD_C_SetHarpoonGunComboPointsVisibility Parms{};
+
+	Parms.OverheatBarVilibility = OverheatBarVilibility;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Widget_HUD.Widget_HUD_C.SetInteractTooltipVisibility
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -658,6 +678,26 @@ void UWidget_HUD_C::SetupAspectRatioOffsets()
 		Func = Class->GetFunction("Widget_HUD_C", "SetupAspectRatioOffsets");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_HUD.Widget_HUD_C.ShowTeleportToActiveEncounterWidget
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const bool                              bNewShow                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_HUD_C::ShowTeleportToActiveEncounterWidget(const bool bNewShow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_HUD_C", "ShowTeleportToActiveEncounterWidget");
+
+	Params::Widget_HUD_C_ShowTeleportToActiveEncounterWidget Parms{};
+
+	Parms.bNewShow = bNewShow;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

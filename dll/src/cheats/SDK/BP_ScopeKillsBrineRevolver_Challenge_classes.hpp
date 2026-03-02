@@ -18,12 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ScopeKillsBrineRevolver_Challenge.BP_ScopeKillsBrineRevolver_Challenge_C
-// 0x0010 (0x0040 - 0x0030)
+// 0x0008 (0x0038 - 0x0030)
 class UBP_ScopeKillsBrineRevolver_Challenge_C final : public URChallengeScript
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0030(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	int32                                         NewVar;                                            // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BP_ScopeKillsBrineRevolver_Challenge_AutoGenFunc(bool* RetValue);
@@ -37,17 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ScopeKillsBrineRevolver_Challenge_C">();
+		BP_STATIC_CLASS_IMPL("BP_ScopeKillsBrineRevolver_Challenge_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ScopeKillsBrineRevolver_Challenge_C")
 	}
 	static class UBP_ScopeKillsBrineRevolver_Challenge_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ScopeKillsBrineRevolver_Challenge_C>();
 	}
 };
-static_assert(alignof(UBP_ScopeKillsBrineRevolver_Challenge_C) == 0x000008, "Wrong alignment on UBP_ScopeKillsBrineRevolver_Challenge_C");
-static_assert(sizeof(UBP_ScopeKillsBrineRevolver_Challenge_C) == 0x000040, "Wrong size on UBP_ScopeKillsBrineRevolver_Challenge_C");
-static_assert(offsetof(UBP_ScopeKillsBrineRevolver_Challenge_C, UberGraphFrame) == 0x000030, "Member 'UBP_ScopeKillsBrineRevolver_Challenge_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_ScopeKillsBrineRevolver_Challenge_C, NewVar) == 0x000038, "Member 'UBP_ScopeKillsBrineRevolver_Challenge_C::NewVar' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_ScopeKillsBrineRevolver_Challenge_C;
 
 }
 

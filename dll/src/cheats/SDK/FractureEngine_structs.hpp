@@ -45,6 +45,16 @@ enum class EMeshCutterCutDistribution : uint8
 	EMeshCutterCutDistribution_MAX           = 3,
 };
 
+// Enum FractureEngine.EMeshCutterPerCutMeshSelection
+// NumValues: 0x0004
+enum class EMeshCutterPerCutMeshSelection : uint8
+{
+	All                                      = 0,
+	Random                                   = 1,
+	Sequential                               = 2,
+	EMeshCutterPerCutMeshSelection_MAX       = 3,
+};
+
 // Enum FractureEngine.ENonUniformSamplingDistributionMode
 // NumValues: 0x0004
 enum class ENonUniformSamplingDistributionMode : uint8

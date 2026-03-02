@@ -81,6 +81,29 @@ void ABP_SkillTree_C::GetPercentPointsAssigned(double* Percent)
 }
 
 
+// Function BP_SkillTree.BP_SkillTree_C.IsShareable
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_SkillTree_C::IsShareable(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SkillTree_C", "IsShareable");
+
+	Params::BP_SkillTree_C_IsShareable Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_SkillTree.BP_SkillTree_C.OnFocus
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -183,6 +206,34 @@ void ABP_SkillTree_C::OnSkillTreeUpdated(int32 NumPointsAssigned, int32 NumMaxPo
 }
 
 
+// Function BP_SkillTree.BP_SkillTree_C.ProgressTimeline__FinishedFunc
+// (BlueprintEvent)
+
+void ABP_SkillTree_C::ProgressTimeline__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SkillTree_C", "ProgressTimeline__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SkillTree.BP_SkillTree_C.ProgressTimeline__UpdateFunc
+// (BlueprintEvent)
+
+void ABP_SkillTree_C::ProgressTimeline__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SkillTree_C", "ProgressTimeline__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_SkillTree.BP_SkillTree_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -194,6 +245,26 @@ void ABP_SkillTree_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_SkillTree_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SkillTree.BP_SkillTree_C.ShareInteractableActor
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class APlayerController*          PlayerController                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_SkillTree_C::ShareInteractableActor(const class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SkillTree_C", "ShareInteractableActor");
+
+	Params::BP_SkillTree_C_ShareInteractableActor Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

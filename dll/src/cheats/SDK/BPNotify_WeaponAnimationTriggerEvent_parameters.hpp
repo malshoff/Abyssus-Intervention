@@ -38,21 +38,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DoesImplementInterface_ReturnValue;       // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify) == 0x000008, "Wrong alignment on BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify");
-static_assert(sizeof(BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify) == 0x000088, "Wrong size on BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify");
-static_assert(offsetof(BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify, MeshComp) == 0x000000, "Member 'BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify::MeshComp' has a wrong offset!");
-static_assert(offsetof(BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify, Animation) == 0x000008, "Member 'BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify::Animation' has a wrong offset!");
-static_assert(offsetof(BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify, EventReference) == 0x000010, "Member 'BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify::EventReference' has a wrong offset!");
-static_assert(offsetof(BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify, ReturnValue) == 0x000040, "Member 'BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify, CallFunc_IsValid_ReturnValue) == 0x000050, "Member 'BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000058, "Member 'BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify, CallFunc_GetEquippedWeapon_ReturnValue) == 0x000068, "Member 'BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify::CallFunc_GetEquippedWeapon_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify, K2Node_DynamicCast_AsRAnimation_Notify_Listener) == 0x000070, "Member 'BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify::K2Node_DynamicCast_AsRAnimation_Notify_Listener' has a wrong offset!");
-static_assert(offsetof(BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify, K2Node_DynamicCast_bSuccess_1) == 0x000080, "Member 'BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify, CallFunc_IsValid_ReturnValue_1) == 0x000081, "Member 'BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify, CallFunc_DoesImplementInterface_ReturnValue) == 0x000082, "Member 'BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify::CallFunc_DoesImplementInterface_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPNotify_WeaponAnimationTriggerEvent_C_Received_Notify;
 
 }
 

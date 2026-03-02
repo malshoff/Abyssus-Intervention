@@ -22,9 +22,10 @@ namespace SDK
 // Parameters:
 // const TArray<struct FRLootSelectionOption>&LootOption                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   SoulfragmentRerollsUsed_0                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bHasChosenLoot                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LootTable_AbilityWeaponSelector_C::AddGeneratedLootOptionForController(const TArray<struct FRLootSelectionOption>& LootOption, class APlayerController* PlayerController, bool bHasChosenLoot)
+void ABP_LootTable_AbilityWeaponSelector_C::AddGeneratedLootOptionForController(const TArray<struct FRLootSelectionOption>& LootOption, class APlayerController* PlayerController, int32 SoulfragmentRerollsUsed_0, bool bHasChosenLoot)
 {
 	static class UFunction* Func = nullptr;
 
@@ -35,6 +36,7 @@ void ABP_LootTable_AbilityWeaponSelector_C::AddGeneratedLootOptionForController(
 
 	Parms.LootOption = std::move(LootOption);
 	Parms.PlayerController = PlayerController;
+	Parms.SoulfragmentRerollsUsed_0 = SoulfragmentRerollsUsed_0;
 	Parms.bHasChosenLoot = bHasChosenLoot;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -121,13 +123,33 @@ void ABP_LootTable_AbilityWeaponSelector_C::BndEvt__BP_LootTable_AbilityWeaponSe
 }
 
 
+// Function BP_LootTable_AbilityWeaponSelector.BP_LootTable_AbilityWeaponSelector_C.BPCheckAndUpdateLootOptions
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_LootTable_AbilityWeaponSelector_C::BPCheckAndUpdateLootOptions(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LootTable_AbilityWeaponSelector_C", "BPCheckAndUpdateLootOptions");
+
+	Params::BP_LootTable_AbilityWeaponSelector_C_BPCheckAndUpdateLootOptions Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_LootTable_AbilityWeaponSelector.BP_LootTable_AbilityWeaponSelector_C.CanInteract
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class APlayerController*                Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APlayerController*                Controller                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool ABP_LootTable_AbilityWeaponSelector_C::CanInteract(class APlayerController* Controller_0)
+bool ABP_LootTable_AbilityWeaponSelector_C::CanInteract(class APlayerController* Controller)
 {
 	static class UFunction* Func = nullptr;
 
@@ -136,31 +158,11 @@ bool ABP_LootTable_AbilityWeaponSelector_C::CanInteract(class APlayerController*
 
 	Params::BP_LootTable_AbilityWeaponSelector_C_CanInteract Parms{};
 
-	Parms.Controller_0 = Controller_0;
+	Parms.Controller = Controller;
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function BP_LootTable_AbilityWeaponSelector.BP_LootTable_AbilityWeaponSelector_C.CheckAndUpdateLootOptions
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AController*                      Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_LootTable_AbilityWeaponSelector_C::CheckAndUpdateLootOptions(class AController* Controller_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LootTable_AbilityWeaponSelector_C", "CheckAndUpdateLootOptions");
-
-	Params::BP_LootTable_AbilityWeaponSelector_C_CheckAndUpdateLootOptions Parms{};
-
-	Parms.Controller_0 = Controller_0;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -225,38 +227,14 @@ void ABP_LootTable_AbilityWeaponSelector_C::Get_Reward_Spawn_Pos(struct FVector*
 }
 
 
-// Function BP_LootTable_AbilityWeaponSelector.BP_LootTable_AbilityWeaponSelector_C.GetGeneratedLootOptionsForController
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const class FString&                    NetIDString                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// TArray<struct FRLootSelectionOption>*   Loot_Selection_Options                                 (Parm, OutParm)
-
-void ABP_LootTable_AbilityWeaponSelector_C::GetGeneratedLootOptionsForController(const class FString& NetIDString, TArray<struct FRLootSelectionOption>* Loot_Selection_Options)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LootTable_AbilityWeaponSelector_C", "GetGeneratedLootOptionsForController");
-
-	Params::BP_LootTable_AbilityWeaponSelector_C_GetGeneratedLootOptionsForController Parms{};
-
-	Parms.NetIDString = std::move(NetIDString);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Loot_Selection_Options != nullptr)
-		*Loot_Selection_Options = std::move(Parms.Loot_Selection_Options);
-}
-
-
 // Function BP_LootTable_AbilityWeaponSelector.BP_LootTable_AbilityWeaponSelector_C.GetNumEquippedMutatorsOfCategory
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class URMutatorRewardCategoryDataAsset* CategoryDA                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APlayerController*                Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APlayerController*                Controller                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // int32*                                  Num                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LootTable_AbilityWeaponSelector_C::GetNumEquippedMutatorsOfCategory(class URMutatorRewardCategoryDataAsset* CategoryDA, class APlayerController* Controller_0, int32* Num)
+void ABP_LootTable_AbilityWeaponSelector_C::GetNumEquippedMutatorsOfCategory(class URMutatorRewardCategoryDataAsset* CategoryDA, class APlayerController* Controller, int32* Num)
 {
 	static class UFunction* Func = nullptr;
 
@@ -266,7 +244,7 @@ void ABP_LootTable_AbilityWeaponSelector_C::GetNumEquippedMutatorsOfCategory(cla
 	Params::BP_LootTable_AbilityWeaponSelector_C_GetNumEquippedMutatorsOfCategory Parms{};
 
 	Parms.CategoryDA = CategoryDA;
-	Parms.Controller_0 = Controller_0;
+	Parms.Controller = Controller;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -292,9 +270,9 @@ void ABP_LootTable_AbilityWeaponSelector_C::HideHighlight()
 // Function BP_LootTable_AbilityWeaponSelector.BP_LootTable_AbilityWeaponSelector_C.OnInteract
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class APlayerController*                Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APlayerController*                Controller                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LootTable_AbilityWeaponSelector_C::OnInteract(class APlayerController* Controller_0)
+void ABP_LootTable_AbilityWeaponSelector_C::OnInteract(class APlayerController* Controller)
 {
 	static class UFunction* Func = nullptr;
 
@@ -303,7 +281,7 @@ void ABP_LootTable_AbilityWeaponSelector_C::OnInteract(class APlayerController* 
 
 	Params::BP_LootTable_AbilityWeaponSelector_C_OnInteract Parms{};
 
-	Parms.Controller_0 = Controller_0;
+	Parms.Controller = Controller;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -327,8 +305,9 @@ void ABP_LootTable_AbilityWeaponSelector_C::OnInvoke_A4237351430B9226D441F19F02F
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const TArray<struct FRLootSelectionOption>&NewLootOptions                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   SoulfragmentRerollsUsed_0                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LootTable_AbilityWeaponSelector_C::OnLootOptionsChanged(const TArray<struct FRLootSelectionOption>& NewLootOptions)
+void ABP_LootTable_AbilityWeaponSelector_C::OnLootOptionsChanged(const TArray<struct FRLootSelectionOption>& NewLootOptions, int32 SoulfragmentRerollsUsed_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -338,6 +317,7 @@ void ABP_LootTable_AbilityWeaponSelector_C::OnLootOptionsChanged(const TArray<st
 	Params::BP_LootTable_AbilityWeaponSelector_C_OnLootOptionsChanged Parms{};
 
 	Parms.NewLootOptions = std::move(NewLootOptions);
+	Parms.SoulfragmentRerollsUsed_0 = SoulfragmentRerollsUsed_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -449,9 +429,9 @@ void ABP_LootTable_AbilityWeaponSelector_C::ReceiveBeginPlay()
 // Function BP_LootTable_AbilityWeaponSelector.BP_LootTable_AbilityWeaponSelector_C.RemoveCappedCategories
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class APlayerController*                Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APlayerController*                Controller                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LootTable_AbilityWeaponSelector_C::RemoveCappedCategories(class APlayerController* Controller_0)
+void ABP_LootTable_AbilityWeaponSelector_C::RemoveCappedCategories(class APlayerController* Controller)
 {
 	static class UFunction* Func = nullptr;
 
@@ -460,7 +440,7 @@ void ABP_LootTable_AbilityWeaponSelector_C::RemoveCappedCategories(class APlayer
 
 	Params::BP_LootTable_AbilityWeaponSelector_C_RemoveCappedCategories Parms{};
 
-	Parms.Controller_0 = Controller_0;
+	Parms.Controller = Controller;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -559,6 +539,29 @@ void ABP_LootTable_AbilityWeaponSelector_C::ShowHighlightServer()
 		Func = Class->GetFunction("BP_LootTable_AbilityWeaponSelector_C", "ShowHighlightServer");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_LootTable_AbilityWeaponSelector.BP_LootTable_AbilityWeaponSelector_C.SubstituteRewardConditionMet
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TSubclassOf<class AActor>               DefaultRewardClass                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_LootTable_AbilityWeaponSelector_C::SubstituteRewardConditionMet(TSubclassOf<class AActor> DefaultRewardClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LootTable_AbilityWeaponSelector_C", "SubstituteRewardConditionMet");
+
+	Params::BP_LootTable_AbilityWeaponSelector_C_SubstituteRewardConditionMet Parms{};
+
+	Parms.DefaultRewardClass = DefaultRewardClass;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

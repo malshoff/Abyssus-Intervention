@@ -30,17 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPNotify_AnimationTriggerEvent_C">();
+		BP_STATIC_CLASS_IMPL("BPNotify_AnimationTriggerEvent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPNotify_AnimationTriggerEvent_C")
 	}
 	static class UBPNotify_AnimationTriggerEvent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPNotify_AnimationTriggerEvent_C>();
 	}
 };
-static_assert(alignof(UBPNotify_AnimationTriggerEvent_C) == 0x000008, "Wrong alignment on UBPNotify_AnimationTriggerEvent_C");
-static_assert(sizeof(UBPNotify_AnimationTriggerEvent_C) == 0x000048, "Wrong size on UBPNotify_AnimationTriggerEvent_C");
-static_assert(offsetof(UBPNotify_AnimationTriggerEvent_C, EventName) == 0x000038, "Member 'UBPNotify_AnimationTriggerEvent_C::EventName' has a wrong offset!");
-static_assert(offsetof(UBPNotify_AnimationTriggerEvent_C, RunOnGScript) == 0x000040, "Member 'UBPNotify_AnimationTriggerEvent_C::RunOnGScript' has a wrong offset!");
+DUMPER7_ASSERTS_UBPNotify_AnimationTriggerEvent_C;
 
 }
 

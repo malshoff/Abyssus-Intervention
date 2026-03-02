@@ -30,17 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPNotify_DropMagazine_C">();
+		BP_STATIC_CLASS_IMPL("BPNotify_DropMagazine_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPNotify_DropMagazine_C")
 	}
 	static class UBPNotify_DropMagazine_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPNotify_DropMagazine_C>();
 	}
 };
-static_assert(alignof(UBPNotify_DropMagazine_C) == 0x000008, "Wrong alignment on UBPNotify_DropMagazine_C");
-static_assert(sizeof(UBPNotify_DropMagazine_C) == 0x000048, "Wrong size on UBPNotify_DropMagazine_C");
-static_assert(offsetof(UBPNotify_DropMagazine_C, SocketName) == 0x000038, "Member 'UBPNotify_DropMagazine_C::SocketName' has a wrong offset!");
-static_assert(offsetof(UBPNotify_DropMagazine_C, ParticleSystem) == 0x000040, "Member 'UBPNotify_DropMagazine_C::ParticleSystem' has a wrong offset!");
+DUMPER7_ASSERTS_UBPNotify_DropMagazine_C;
 
 }
 

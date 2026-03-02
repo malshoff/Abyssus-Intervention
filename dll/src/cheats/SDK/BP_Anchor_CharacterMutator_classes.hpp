@@ -10,42 +10,42 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "RGame_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "Niagara_structs.hpp"
 #include "BP_Activatable_CharacterMutator_classes.hpp"
+#include "Niagara_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Anchor_CharacterMutator.BP_Anchor_CharacterMutator_C
-// 0x01D0 (0x1070 - 0x0EA0)
+// 0x01D8 (0x1080 - 0x0EA8)
 class UBP_Anchor_CharacterMutator_C final : public UBP_Activatable_CharacterMutator_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Anchor_CharacterMutator_C;       // 0x0EA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FRMutableFloat                         ConeRadius;                                        // 0x0EA8(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance)
-	double                                        ConeHalfAngle;                                     // 0x0FD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FHitResult>                     CachedHitEnemies;                                  // 0x0FD8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	double                                        stunDuration;                                      // 0x0FE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class UBP_Anchor_CharacterMutator_C* Script)> OnChargeUpStarted;   // 0x0FF0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(class UBP_Anchor_CharacterMutator_C* Script)> OnChargeUpEnded;     // 0x1000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          ThrowOverride;                                     // 0x1010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1011[0x7];                                     // 0x1011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class UBP_Anchor_CharacterMutator_C* Script)> OnFireAbility;       // 0x1018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FVector                                OverridenSlamLocation;                             // 0x1028(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class UBP_Anchor_CharacterMutator_C* Script)> OnFireAbilityFinished; // 0x1040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FRotator                               CachedThrowRotation;                               // 0x1050(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	class ARPlayerPawn*                           AsRPlayerPawn;                                     // 0x1068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Anchor_CharacterMutator_C;       // 0x0EA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FRMutableFloat                         ConeRadius;                                        // 0x0EB0(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance)
+	double                                        ConeHalfAngle;                                     // 0x0FD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FHitResult>                     CachedHitEnemies;                                  // 0x0FE0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	double                                        stunDuration;                                      // 0x0FF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class UBP_Anchor_CharacterMutator_C* Script)> OnChargeUpStarted;   // 0x0FF8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class UBP_Anchor_CharacterMutator_C* Script)> OnChargeUpEnded;     // 0x1008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          ThrowOverride;                                     // 0x1018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1019[0x7];                                     // 0x1019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class UBP_Anchor_CharacterMutator_C* Script)> OnFireAbility;       // 0x1020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FVector                                OverridenSlamLocation;                             // 0x1030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class UBP_Anchor_CharacterMutator_C* Script)> OnFireAbilityFinished; // 0x1048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FRotator                               CachedThrowRotation;                               // 0x1058(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	class ARPlayerPawn*                           AsRPlayerPawn;                                     // 0x1070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          HideAnchorCurrentMontageActive;                    // 0x1078(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Anchor_CharacterMutator(int32 EntryPoint);
 	void FireAbility();
 	void FireOverrideAbility();
 	void HasInputBlocker(bool* Value);
-	void InterruptCurrentArmsAnim();
 	void K2_ActivateScript();
 	void OnAnimationTriggerEvent(class FName EventName);
 	void OnBlendOut_2879B20B44540F01F42E769572AD1C34(class FName NotifyName);
@@ -63,34 +63,25 @@ public:
 	void SetCachedThrowRotation();
 	void SlamSFXVFX();
 	void StunHitEnemies();
+	void TryAndQueueAnchorHide();
 
 	class FText GetDescription() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Anchor_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Anchor_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Anchor_CharacterMutator_C")
 	}
 	static class UBP_Anchor_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Anchor_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_Anchor_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_Anchor_CharacterMutator_C");
-static_assert(sizeof(UBP_Anchor_CharacterMutator_C) == 0x001070, "Wrong size on UBP_Anchor_CharacterMutator_C");
-static_assert(offsetof(UBP_Anchor_CharacterMutator_C, UberGraphFrame_BP_Anchor_CharacterMutator_C) == 0x000EA0, "Member 'UBP_Anchor_CharacterMutator_C::UberGraphFrame_BP_Anchor_CharacterMutator_C' has a wrong offset!");
-static_assert(offsetof(UBP_Anchor_CharacterMutator_C, ConeRadius) == 0x000EA8, "Member 'UBP_Anchor_CharacterMutator_C::ConeRadius' has a wrong offset!");
-static_assert(offsetof(UBP_Anchor_CharacterMutator_C, ConeHalfAngle) == 0x000FD0, "Member 'UBP_Anchor_CharacterMutator_C::ConeHalfAngle' has a wrong offset!");
-static_assert(offsetof(UBP_Anchor_CharacterMutator_C, CachedHitEnemies) == 0x000FD8, "Member 'UBP_Anchor_CharacterMutator_C::CachedHitEnemies' has a wrong offset!");
-static_assert(offsetof(UBP_Anchor_CharacterMutator_C, stunDuration) == 0x000FE8, "Member 'UBP_Anchor_CharacterMutator_C::stunDuration' has a wrong offset!");
-static_assert(offsetof(UBP_Anchor_CharacterMutator_C, OnChargeUpStarted) == 0x000FF0, "Member 'UBP_Anchor_CharacterMutator_C::OnChargeUpStarted' has a wrong offset!");
-static_assert(offsetof(UBP_Anchor_CharacterMutator_C, OnChargeUpEnded) == 0x001000, "Member 'UBP_Anchor_CharacterMutator_C::OnChargeUpEnded' has a wrong offset!");
-static_assert(offsetof(UBP_Anchor_CharacterMutator_C, ThrowOverride) == 0x001010, "Member 'UBP_Anchor_CharacterMutator_C::ThrowOverride' has a wrong offset!");
-static_assert(offsetof(UBP_Anchor_CharacterMutator_C, OnFireAbility) == 0x001018, "Member 'UBP_Anchor_CharacterMutator_C::OnFireAbility' has a wrong offset!");
-static_assert(offsetof(UBP_Anchor_CharacterMutator_C, OverridenSlamLocation) == 0x001028, "Member 'UBP_Anchor_CharacterMutator_C::OverridenSlamLocation' has a wrong offset!");
-static_assert(offsetof(UBP_Anchor_CharacterMutator_C, OnFireAbilityFinished) == 0x001040, "Member 'UBP_Anchor_CharacterMutator_C::OnFireAbilityFinished' has a wrong offset!");
-static_assert(offsetof(UBP_Anchor_CharacterMutator_C, CachedThrowRotation) == 0x001050, "Member 'UBP_Anchor_CharacterMutator_C::CachedThrowRotation' has a wrong offset!");
-static_assert(offsetof(UBP_Anchor_CharacterMutator_C, AsRPlayerPawn) == 0x001068, "Member 'UBP_Anchor_CharacterMutator_C::AsRPlayerPawn' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Anchor_CharacterMutator_C;
 
 }
 

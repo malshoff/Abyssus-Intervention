@@ -19,16 +19,16 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_CopyPose.ABP_CopyPose_C
-// 0x0100 (0x04C0 - 0x03C0)
+// 0x0100 (0x04E0 - 0x03E0)
 class UABP_CopyPose_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_3B8[0x8];                                      // 0x03B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x03C0(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03C8(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03D0(0x0020)()
-	struct FAnimNode_PoseSnapshot                 AnimGraphNode_PoseSnapshot;                        // 0x03F0(0x0090)()
-	struct FPoseSnapshot                          Snapshot;                                          // 0x0480(0x0038)(Edit, BlueprintVisible)
+	uint8                                         Pad_3D8[0x8];                                      // 0x03D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x03E0(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03E8(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03F0(0x0020)()
+	struct FAnimNode_PoseSnapshot                 AnimGraphNode_PoseSnapshot;                        // 0x0410(0x0090)()
+	struct FPoseSnapshot                          Snapshot;                                          // 0x04A0(0x0038)(Edit, BlueprintVisible)
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -36,20 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_CopyPose_C">();
+		BP_STATIC_CLASS_IMPL("ABP_CopyPose_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_CopyPose_C")
 	}
 	static class UABP_CopyPose_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_CopyPose_C>();
 	}
 };
-static_assert(alignof(UABP_CopyPose_C) == 0x000010, "Wrong alignment on UABP_CopyPose_C");
-static_assert(sizeof(UABP_CopyPose_C) == 0x0004C0, "Wrong size on UABP_CopyPose_C");
-static_assert(offsetof(UABP_CopyPose_C, AnimBlueprintExtension_PropertyAccess) == 0x0003C0, "Member 'UABP_CopyPose_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UABP_CopyPose_C, AnimBlueprintExtension_Base) == 0x0003C8, "Member 'UABP_CopyPose_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UABP_CopyPose_C, AnimGraphNode_Root) == 0x0003D0, "Member 'UABP_CopyPose_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_CopyPose_C, AnimGraphNode_PoseSnapshot) == 0x0003F0, "Member 'UABP_CopyPose_C::AnimGraphNode_PoseSnapshot' has a wrong offset!");
-static_assert(offsetof(UABP_CopyPose_C, Snapshot) == 0x000480, "Member 'UABP_CopyPose_C::Snapshot' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_CopyPose_C;
 
 }
 

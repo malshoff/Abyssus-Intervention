@@ -17,99 +17,23 @@
 namespace SDK
 {
 
-// Function Widget_PlayerKickConfirmationDialog.Widget_PlayerKickConfirmationDialog_C.SetupTexts
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_PlayerKickConfirmationDialog_C::SetupTexts()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerKickConfirmationDialog_C", "SetupTexts");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_PlayerKickConfirmationDialog.Widget_PlayerKickConfirmationDialog_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Widget_PlayerKickConfirmationDialog.Widget_PlayerKickConfirmationDialog_C.BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// class APlayerController*                PlayerController_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UWidget_TextButton_C*             Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_PlayerKickConfirmationDialog_C::Initialize(class APlayerController* PlayerController_0)
+void UWidget_PlayerKickConfirmationDialog_C::BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerKickConfirmationDialog_C", "Initialize");
+		Func = Class->GetFunction("Widget_PlayerKickConfirmationDialog_C", "BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature");
 
-	Params::Widget_PlayerKickConfirmationDialog_C_Initialize Parms{};
+	Params::Widget_PlayerKickConfirmationDialog_C_BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature Parms{};
 
-	Parms.PlayerController_0 = PlayerController_0;
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_PlayerKickConfirmationDialog.Widget_PlayerKickConfirmationDialog_C.ExecuteUbergraph_Widget_PlayerKickConfirmationDialog
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_PlayerKickConfirmationDialog_C::ExecuteUbergraph_Widget_PlayerKickConfirmationDialog(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerKickConfirmationDialog_C", "ExecuteUbergraph_Widget_PlayerKickConfirmationDialog");
-
-	Params::Widget_PlayerKickConfirmationDialog_C_ExecuteUbergraph_Widget_PlayerKickConfirmationDialog Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_PlayerKickConfirmationDialog.Widget_PlayerKickConfirmationDialog_C.DestructAnimationFinished
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_PlayerKickConfirmationDialog_C::DestructAnimationFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerKickConfirmationDialog_C", "DestructAnimationFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_PlayerKickConfirmationDialog.Widget_PlayerKickConfirmationDialog_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_PlayerKickConfirmationDialog_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerKickConfirmationDialog_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_PlayerKickConfirmationDialog.Widget_PlayerKickConfirmationDialog_C.ClosePanel
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_PlayerKickConfirmationDialog_C::ClosePanel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerKickConfirmationDialog_C", "ClosePanel");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -133,23 +57,99 @@ void UWidget_PlayerKickConfirmationDialog_C::BndEvt__Widget_ChoiceDialog_YesButt
 }
 
 
-// Function Widget_PlayerKickConfirmationDialog.Widget_PlayerKickConfirmationDialog_C.BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UWidget_TextButton_C*             Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function Widget_PlayerKickConfirmationDialog.Widget_PlayerKickConfirmationDialog_C.ClosePanel
+// (BlueprintCallable, BlueprintEvent)
 
-void UWidget_PlayerKickConfirmationDialog_C::BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button)
+void UWidget_PlayerKickConfirmationDialog_C::ClosePanel()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerKickConfirmationDialog_C", "BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature");
+		Func = Class->GetFunction("Widget_PlayerKickConfirmationDialog_C", "ClosePanel");
 
-	Params::Widget_PlayerKickConfirmationDialog_C_BndEvt__Widget_ChoiceDialog_NoButton_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Button = Button;
+
+// Function Widget_PlayerKickConfirmationDialog.Widget_PlayerKickConfirmationDialog_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_PlayerKickConfirmationDialog_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerKickConfirmationDialog_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_PlayerKickConfirmationDialog.Widget_PlayerKickConfirmationDialog_C.DestructAnimationFinished
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_PlayerKickConfirmationDialog_C::DestructAnimationFinished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerKickConfirmationDialog_C", "DestructAnimationFinished");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_PlayerKickConfirmationDialog.Widget_PlayerKickConfirmationDialog_C.ExecuteUbergraph_Widget_PlayerKickConfirmationDialog
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_PlayerKickConfirmationDialog_C::ExecuteUbergraph_Widget_PlayerKickConfirmationDialog(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerKickConfirmationDialog_C", "ExecuteUbergraph_Widget_PlayerKickConfirmationDialog");
+
+	Params::Widget_PlayerKickConfirmationDialog_C_ExecuteUbergraph_Widget_PlayerKickConfirmationDialog Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerKickConfirmationDialog.Widget_PlayerKickConfirmationDialog_C.Initialize
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_PlayerKickConfirmationDialog_C::Initialize(class APlayerController* PlayerController_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerKickConfirmationDialog_C", "Initialize");
+
+	Params::Widget_PlayerKickConfirmationDialog_C_Initialize Parms{};
+
+	Parms.PlayerController_0 = PlayerController_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerKickConfirmationDialog.Widget_PlayerKickConfirmationDialog_C.SetupTexts
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_PlayerKickConfirmationDialog_C::SetupTexts()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerKickConfirmationDialog_C", "SetupTexts");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -19,15 +19,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Anchored_StatusEffect.BP_Anchored_StatusEffect_C
-// 0x0020 (0x04F8 - 0x04D8)
+// 0x0020 (0x0500 - 0x04E0)
 class UBP_Anchored_StatusEffect_C final : public URStatusEffectGScript
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         GravityMultiplier;                                 // 0x04E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         GravityDuration;                                   // 0x04E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AREnemyPawnBase*                        EnemyPawnOwner;                                    // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	EAICombatPathingType                          PreGravityPathingType;                             // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         GravityMultiplier;                                 // 0x04E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         GravityDuration;                                   // 0x04EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AREnemyPawnBase*                        EnemyPawnOwner;                                    // 0x04F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	EAICombatPathingType                          PreGravityPathingType;                             // 0x04F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Anchored_StatusEffect(int32 EntryPoint);
@@ -39,20 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Anchored_StatusEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_Anchored_StatusEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Anchored_StatusEffect_C")
 	}
 	static class UBP_Anchored_StatusEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Anchored_StatusEffect_C>();
 	}
 };
-static_assert(alignof(UBP_Anchored_StatusEffect_C) == 0x000008, "Wrong alignment on UBP_Anchored_StatusEffect_C");
-static_assert(sizeof(UBP_Anchored_StatusEffect_C) == 0x0004F8, "Wrong size on UBP_Anchored_StatusEffect_C");
-static_assert(offsetof(UBP_Anchored_StatusEffect_C, UberGraphFrame) == 0x0004D8, "Member 'UBP_Anchored_StatusEffect_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Anchored_StatusEffect_C, GravityMultiplier) == 0x0004E0, "Member 'UBP_Anchored_StatusEffect_C::GravityMultiplier' has a wrong offset!");
-static_assert(offsetof(UBP_Anchored_StatusEffect_C, GravityDuration) == 0x0004E4, "Member 'UBP_Anchored_StatusEffect_C::GravityDuration' has a wrong offset!");
-static_assert(offsetof(UBP_Anchored_StatusEffect_C, EnemyPawnOwner) == 0x0004E8, "Member 'UBP_Anchored_StatusEffect_C::EnemyPawnOwner' has a wrong offset!");
-static_assert(offsetof(UBP_Anchored_StatusEffect_C, PreGravityPathingType) == 0x0004F0, "Member 'UBP_Anchored_StatusEffect_C::PreGravityPathingType' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Anchored_StatusEffect_C;
 
 }
 

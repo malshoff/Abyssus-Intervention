@@ -19,16 +19,16 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Syringe.ABP_Syringe_C
-// 0x0090 (0x0450 - 0x03C0)
+// 0x0090 (0x0470 - 0x03E0)
 class UABP_Syringe_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_3B8[0x8];                                      // 0x03B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x03C0(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03C8(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03D0(0x0020)()
-	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x03F0(0x0010)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0400(0x0048)()
+	uint8                                         Pad_3D8[0x8];                                      // 0x03D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x03E0(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03E8(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03F0(0x0020)()
+	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x0410(0x0010)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0420(0x0048)()
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -36,20 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_Syringe_C">();
+		BP_STATIC_CLASS_IMPL("ABP_Syringe_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_Syringe_C")
 	}
 	static class UABP_Syringe_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_Syringe_C>();
 	}
 };
-static_assert(alignof(UABP_Syringe_C) == 0x000010, "Wrong alignment on UABP_Syringe_C");
-static_assert(sizeof(UABP_Syringe_C) == 0x000450, "Wrong size on UABP_Syringe_C");
-static_assert(offsetof(UABP_Syringe_C, AnimBlueprintExtension_PropertyAccess) == 0x0003C0, "Member 'UABP_Syringe_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UABP_Syringe_C, AnimBlueprintExtension_Base) == 0x0003C8, "Member 'UABP_Syringe_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UABP_Syringe_C, AnimGraphNode_Root) == 0x0003D0, "Member 'UABP_Syringe_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_Syringe_C, AnimGraphNode_LocalRefPose) == 0x0003F0, "Member 'UABP_Syringe_C::AnimGraphNode_LocalRefPose' has a wrong offset!");
-static_assert(offsetof(UABP_Syringe_C, AnimGraphNode_Slot) == 0x000400, "Member 'UABP_Syringe_C::AnimGraphNode_Slot' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_Syringe_C;
 
 }
 

@@ -11,15 +11,15 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_classes.hpp"
 #include "UMG_structs.hpp"
+#include "RGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SkillTree.BP_SkillTree_C
-// 0x0068 (0x0318 - 0x02B0)
+// 0x0080 (0x0330 - 0x02B0)
 class ABP_SkillTree_C final : public ARPingableActor
 {
 public:
@@ -34,20 +34,29 @@ public:
 	class UTextRenderComponent*                   TextRender;                                        // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UWidgetComponent*                       ObjectHighlightWidgetComponent;                    // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        Scene;                                             // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	int32                                         CachedTotalPoints;                                 // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_30C[0x4];                                      // 0x030C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget_SkillTree2_C*                   WidgetRef;                                         // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         ProgressTimeline_Alpha_8E0D632947A9343A0A9AAA9D47429525; // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            ProgressTimeline__Direction_8E0D632947A9343A0A9AAA9D47429525; // 0x030C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_30D[0x3];                                      // 0x030D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     ProgressTimeline;                                  // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CachedTotalPoints;                                 // 0x0318(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31C[0x4];                                      // 0x031C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_SkillTree2_C*                   WidgetRef;                                         // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         PreviousProgress;                                  // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	bool CanInteract(class APlayerController* Controller);
 	void ExecuteUbergraph_BP_SkillTree(int32 EntryPoint);
 	void GetPercentPointsAssigned(double* Percent);
+	bool IsShareable(class APlayerController* PlayerController);
 	void OnFocus(class APlayerController* Controller);
 	void OnFocusGone(class APlayerController* Controller);
 	void OnInteract(class APlayerController* Controller);
 	void OnPlayerJoined_Event(class APlayerState* PlayerState);
 	void OnSkillTreeUpdated(int32 NumPointsAssigned, int32 NumMaxPoints);
+	void ProgressTimeline__FinishedFunc();
+	void ProgressTimeline__UpdateFunc();
 	void ReceiveBeginPlay();
+	void ShareInteractableActor(const class APlayerController* PlayerController);
 	void ToggleInteractionIndicatorVisibility(class AActor* InteractingActor, const bool NewVisible);
 	void UpdateVisuals(double Percentage);
 
@@ -66,28 +75,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SkillTree_C">();
+		BP_STATIC_CLASS_IMPL("BP_SkillTree_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SkillTree_C")
 	}
 	static class ABP_SkillTree_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_SkillTree_C>();
 	}
 };
-static_assert(alignof(ABP_SkillTree_C) == 0x000008, "Wrong alignment on ABP_SkillTree_C");
-static_assert(sizeof(ABP_SkillTree_C) == 0x000318, "Wrong size on ABP_SkillTree_C");
-static_assert(offsetof(ABP_SkillTree_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_SkillTree_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_SkillTree_C, BPC_Highlight) == 0x0002B8, "Member 'ABP_SkillTree_C::BPC_Highlight' has a wrong offset!");
-static_assert(offsetof(ABP_SkillTree_C, BPC_InteractableIndicator) == 0x0002C0, "Member 'ABP_SkillTree_C::BPC_InteractableIndicator' has a wrong offset!");
-static_assert(offsetof(ABP_SkillTree_C, PointLight) == 0x0002C8, "Member 'ABP_SkillTree_C::PointLight' has a wrong offset!");
-static_assert(offsetof(ABP_SkillTree_C, OutlineDecal) == 0x0002D0, "Member 'ABP_SkillTree_C::OutlineDecal' has a wrong offset!");
-static_assert(offsetof(ABP_SkillTree_C, NS_SkillTree_Constellation_01) == 0x0002D8, "Member 'ABP_SkillTree_C::NS_SkillTree_Constellation_01' has a wrong offset!");
-static_assert(offsetof(ABP_SkillTree_C, BackgroundDecal) == 0x0002E0, "Member 'ABP_SkillTree_C::BackgroundDecal' has a wrong offset!");
-static_assert(offsetof(ABP_SkillTree_C, SM_Lobby_TalentTree_01) == 0x0002E8, "Member 'ABP_SkillTree_C::SM_Lobby_TalentTree_01' has a wrong offset!");
-static_assert(offsetof(ABP_SkillTree_C, TextRender) == 0x0002F0, "Member 'ABP_SkillTree_C::TextRender' has a wrong offset!");
-static_assert(offsetof(ABP_SkillTree_C, ObjectHighlightWidgetComponent) == 0x0002F8, "Member 'ABP_SkillTree_C::ObjectHighlightWidgetComponent' has a wrong offset!");
-static_assert(offsetof(ABP_SkillTree_C, Scene) == 0x000300, "Member 'ABP_SkillTree_C::Scene' has a wrong offset!");
-static_assert(offsetof(ABP_SkillTree_C, CachedTotalPoints) == 0x000308, "Member 'ABP_SkillTree_C::CachedTotalPoints' has a wrong offset!");
-static_assert(offsetof(ABP_SkillTree_C, WidgetRef) == 0x000310, "Member 'ABP_SkillTree_C::WidgetRef' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_SkillTree_C;
 
 }
 

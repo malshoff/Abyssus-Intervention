@@ -86,20 +86,6 @@ void UBP_Anchor_CharacterMutator_C::HasInputBlocker(bool* Value)
 }
 
 
-// Function BP_Anchor_CharacterMutator.BP_Anchor_CharacterMutator_C.InterruptCurrentArmsAnim
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UBP_Anchor_CharacterMutator_C::InterruptCurrentArmsAnim()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Anchor_CharacterMutator_C", "InterruptCurrentArmsAnim");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_Anchor_CharacterMutator.BP_Anchor_CharacterMutator_C.K2_ActivateScript
 // (Event, Public, BlueprintEvent)
 
@@ -385,6 +371,20 @@ void UBP_Anchor_CharacterMutator_C::StunHitEnemies()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_Anchor_CharacterMutator_C", "StunHitEnemies");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Anchor_CharacterMutator.BP_Anchor_CharacterMutator_C.TryAndQueueAnchorHide
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Anchor_CharacterMutator_C::TryAndQueueAnchorHide()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Anchor_CharacterMutator_C", "TryAndQueueAnchorHide");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

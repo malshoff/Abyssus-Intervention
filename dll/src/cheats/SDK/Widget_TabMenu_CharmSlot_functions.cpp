@@ -17,61 +17,127 @@
 namespace SDK
 {
 
-// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.UpdateGamepadFocus
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    HasFocus                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.BndEvt__Widget_TabMenu_CharmSlot_Button_0_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_TabMenu_CharmSlot_C::UpdateGamepadFocus(bool HasFocus)
+void UWidget_TabMenu_CharmSlot_C::BndEvt__Widget_TabMenu_CharmSlot_Button_0_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "UpdateGamepadFocus");
+		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "BndEvt__Widget_TabMenu_CharmSlot_Button_0_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
 
-	Params::Widget_TabMenu_CharmSlot_C_UpdateGamepadFocus Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.HasFocus = HasFocus;
+
+// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.Clear
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenu_CharmSlot_C::Clear()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "Clear");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.DestroyTooltip
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_TabMenu_CharmSlot_C::DestroyTooltip()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "DestroyTooltip");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.ExecuteUbergraph_Widget_TabMenu_CharmSlot
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_TabMenu_CharmSlot_C::ExecuteUbergraph_Widget_TabMenu_CharmSlot(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "ExecuteUbergraph_Widget_TabMenu_CharmSlot");
+
+	Params::Widget_TabMenu_CharmSlot_C_ExecuteUbergraph_Widget_TabMenu_CharmSlot Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.OnRemovedFromFocusPath
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.GetTooltipSize
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// class UWidget_BaseTooltip_C*            ToolTipWidget_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// struct FVector2D*                       Values                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_TabMenu_CharmSlot_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
+void UWidget_TabMenu_CharmSlot_C::GetTooltipSize(class UWidget_BaseTooltip_C* ToolTipWidget_0, struct FVector2D* Values)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "OnRemovedFromFocusPath");
+		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "GetTooltipSize");
 
-	Params::Widget_TabMenu_CharmSlot_C_OnRemovedFromFocusPath Parms{};
+	Params::Widget_TabMenu_CharmSlot_C_GetTooltipSize Parms{};
 
-	Parms.InFocusEvent = std::move(InFocusEvent);
+	Parms.ToolTipWidget_0 = ToolTipWidget_0;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Values != nullptr)
+		*Values = std::move(Parms.Values);
 }
 
 
-// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.OnAddedToFocusPath
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.GetToolTipWidget
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_TabMenu_CharmSlot_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
+class UWidget* UWidget_TabMenu_CharmSlot_C::GetToolTipWidget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "OnAddedToFocusPath");
+		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "GetToolTipWidget");
 
-	Params::Widget_TabMenu_CharmSlot_C_OnAddedToFocusPath Parms{};
+	Params::Widget_TabMenu_CharmSlot_C_GetToolTipWidget Parms{};
 
-	Parms.InFocusEvent = std::move(InFocusEvent);
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.Initialize
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URMutatorPrimaryAsset*            InPrimaryAsset                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_TabMenu_CharmSlot_C::Initialize(class URMutatorPrimaryAsset* InPrimaryAsset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "Initialize");
+
+	Params::Widget_TabMenu_CharmSlot_C_Initialize Parms{};
+
+	Parms.InPrimaryAsset = InPrimaryAsset;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -102,115 +168,63 @@ struct FEventReply UWidget_TabMenu_CharmSlot_C::On_StatCharmIcon_MouseButtonDown
 }
 
 
-// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.OnAddedToFocusPath
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// class URMutatorPrimaryAsset*            InPrimaryAsset                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
-void UWidget_TabMenu_CharmSlot_C::Initialize(class URMutatorPrimaryAsset* InPrimaryAsset)
+void UWidget_TabMenu_CharmSlot_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "Initialize");
+		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "OnAddedToFocusPath");
 
-	Params::Widget_TabMenu_CharmSlot_C_Initialize Parms{};
+	Params::Widget_TabMenu_CharmSlot_C_OnAddedToFocusPath Parms{};
 
-	Parms.InPrimaryAsset = InPrimaryAsset;
+	Parms.InFocusEvent = std::move(InFocusEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.GetToolTipWidget
-// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.OnRemovedFromFocusPath
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
-class UWidget* UWidget_TabMenu_CharmSlot_C::GetToolTipWidget()
+void UWidget_TabMenu_CharmSlot_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "GetToolTipWidget");
+		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "OnRemovedFromFocusPath");
 
-	Params::Widget_TabMenu_CharmSlot_C_GetToolTipWidget Parms{};
+	Params::Widget_TabMenu_CharmSlot_C_OnRemovedFromFocusPath Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.GetTooltipSize
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWidget_BaseTooltip_C*            ToolTipWidget_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D*                       Values                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_TabMenu_CharmSlot_C::GetTooltipSize(class UWidget_BaseTooltip_C* ToolTipWidget_0, struct FVector2D* Values)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "GetTooltipSize");
-
-	Params::Widget_TabMenu_CharmSlot_C_GetTooltipSize Parms{};
-
-	Parms.ToolTipWidget_0 = ToolTipWidget_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Values != nullptr)
-		*Values = std::move(Parms.Values);
-}
-
-
-// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.ExecuteUbergraph_Widget_TabMenu_CharmSlot
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_TabMenu_CharmSlot_C::ExecuteUbergraph_Widget_TabMenu_CharmSlot(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "ExecuteUbergraph_Widget_TabMenu_CharmSlot");
-
-	Params::Widget_TabMenu_CharmSlot_C_ExecuteUbergraph_Widget_TabMenu_CharmSlot Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.InFocusEvent = std::move(InFocusEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.DestroyTooltip
-// (Private, BlueprintCallable, BlueprintEvent)
+// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.UpdateGamepadFocus
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    HasFocus                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_TabMenu_CharmSlot_C::DestroyTooltip()
+void UWidget_TabMenu_CharmSlot_C::UpdateGamepadFocus(bool HasFocus)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "DestroyTooltip");
+		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "UpdateGamepadFocus");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::Widget_TabMenu_CharmSlot_C_UpdateGamepadFocus Parms{};
 
+	Parms.HasFocus = HasFocus;
 
-// Function Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C.BndEvt__Widget_TabMenu_CharmSlot_Button_0_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWidget_TabMenu_CharmSlot_C::BndEvt__Widget_TabMenu_CharmSlot_Button_0_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_TabMenu_CharmSlot_C", "BndEvt__Widget_TabMenu_CharmSlot_Button_0_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

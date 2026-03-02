@@ -30,14 +30,7 @@ public:
 	class FText                                   CallFunc_FilterBadWords_ReturnValue;               // 0x0040(0x0010)()
 	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0050(0x0010)()
 };
-static_assert(alignof(Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message) == 0x000008, "Wrong alignment on Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message");
-static_assert(sizeof(Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message) == 0x000060, "Wrong size on Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message");
-static_assert(offsetof(Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message, EntryPoint) == 0x000000, "Member 'Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message, K2Node_Event_IncomingMessage) == 0x000008, "Member 'Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message::K2Node_Event_IncomingMessage' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message, CallFunc_GetCurrentCulture_ReturnValue) == 0x000028, "Member 'Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message::CallFunc_GetCurrentCulture_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000038, "Member 'Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message, CallFunc_FilterBadWords_ReturnValue) == 0x000040, "Member 'Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message::CallFunc_FilterBadWords_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message, CallFunc_Conv_NameToText_ReturnValue) == 0x000050, "Member 'Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChatLog_Message_C_ExecuteUbergraph_Widget_ChatLog_Message;
 
 // Function Widget_ChatLog_Message.Widget_ChatLog_Message_C.SetMessage
 // 0x0020 (0x0020 - 0x0000)
@@ -46,9 +39,7 @@ struct Widget_ChatLog_Message_C_SetMessage final
 public:
 	struct FRChatLogMessage                       IncomingMessage;                                   // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_ChatLog_Message_C_SetMessage) == 0x000008, "Wrong alignment on Widget_ChatLog_Message_C_SetMessage");
-static_assert(sizeof(Widget_ChatLog_Message_C_SetMessage) == 0x000020, "Wrong size on Widget_ChatLog_Message_C_SetMessage");
-static_assert(offsetof(Widget_ChatLog_Message_C_SetMessage, IncomingMessage) == 0x000000, "Member 'Widget_ChatLog_Message_C_SetMessage::IncomingMessage' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChatLog_Message_C_SetMessage;
 
 }
 

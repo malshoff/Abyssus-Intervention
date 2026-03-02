@@ -23,12 +23,12 @@ class ABP_ShootingRange_Console_C final : public ARPingableActor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   SM_Shootingrange_Lever_Base_BrineCylinders_02;     // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Shootingrange_Lever_Base_BrineCylinders_01;     // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UText3DComponent*                       Text_TimeTrial;                                    // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UText3DComponent*                       Text_Flying;                                       // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UText3DComponent*                       Text_Moving;                                       // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UText3DComponent*                       Text_Static;                                       // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_WorldTextComponent_C*               Text_TimeTrial;                                    // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_WorldTextComponent_C*               Text_Flying;                                       // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_WorldTextComponent_C*               Text_Static;                                       // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_WorldTextComponent_C*               Text_Moving;                                       // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Shootingrange_Lever_Base_BrineCylinders_02;     // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Shootingrange_Lever_Base_BrineCylinders_01;     // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   SM_Shootingrange_Lever_Base_01_StaticMeshComponent0; // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
@@ -44,23 +44,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ShootingRange_Console_C">();
+		BP_STATIC_CLASS_IMPL("BP_ShootingRange_Console_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ShootingRange_Console_C")
 	}
 	static class ABP_ShootingRange_Console_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_ShootingRange_Console_C>();
 	}
 };
-static_assert(alignof(ABP_ShootingRange_Console_C) == 0x000008, "Wrong alignment on ABP_ShootingRange_Console_C");
-static_assert(sizeof(ABP_ShootingRange_Console_C) == 0x0002F0, "Wrong size on ABP_ShootingRange_Console_C");
-static_assert(offsetof(ABP_ShootingRange_Console_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_ShootingRange_Console_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_ShootingRange_Console_C, SM_Shootingrange_Lever_Base_BrineCylinders_02) == 0x0002B8, "Member 'ABP_ShootingRange_Console_C::SM_Shootingrange_Lever_Base_BrineCylinders_02' has a wrong offset!");
-static_assert(offsetof(ABP_ShootingRange_Console_C, SM_Shootingrange_Lever_Base_BrineCylinders_01) == 0x0002C0, "Member 'ABP_ShootingRange_Console_C::SM_Shootingrange_Lever_Base_BrineCylinders_01' has a wrong offset!");
-static_assert(offsetof(ABP_ShootingRange_Console_C, Text_TimeTrial) == 0x0002C8, "Member 'ABP_ShootingRange_Console_C::Text_TimeTrial' has a wrong offset!");
-static_assert(offsetof(ABP_ShootingRange_Console_C, Text_Flying) == 0x0002D0, "Member 'ABP_ShootingRange_Console_C::Text_Flying' has a wrong offset!");
-static_assert(offsetof(ABP_ShootingRange_Console_C, Text_Moving) == 0x0002D8, "Member 'ABP_ShootingRange_Console_C::Text_Moving' has a wrong offset!");
-static_assert(offsetof(ABP_ShootingRange_Console_C, Text_Static) == 0x0002E0, "Member 'ABP_ShootingRange_Console_C::Text_Static' has a wrong offset!");
-static_assert(offsetof(ABP_ShootingRange_Console_C, SM_Shootingrange_Lever_Base_01_StaticMeshComponent0) == 0x0002E8, "Member 'ABP_ShootingRange_Console_C::SM_Shootingrange_Lever_Base_01_StaticMeshComponent0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_ShootingRange_Console_C;
 
 }
 

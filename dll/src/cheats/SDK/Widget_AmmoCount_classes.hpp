@@ -18,19 +18,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_AmmoCount.Widget_AmmoCount_C
-// 0x0040 (0x0338 - 0x02F8)
+// 0x0040 (0x03A8 - 0x0368)
 class UWidget_AmmoCount_C final : public UCommonUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Reloaded;                                          // 0x0300(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Shooting;                                          // 0x0308(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             CurrentAmmo;                                       // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_0;                                   // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_39;                                          // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_HUD_Background_C*               Widget_HUD_Background;                             // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         Ammo;                                              // 0x0330(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaximumAmmo;                                       // 0x0334(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_HUD_Background_C*               Widget_HUD_Background;                             // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_39;                                          // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_0;                                   // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             CurrentAmmo;                                       // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Shooting;                                          // 0x0390(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Reloaded;                                          // 0x0398(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	int32                                         Ammo;                                              // 0x03A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaximumAmmo;                                       // 0x03A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -42,24 +42,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_AmmoCount_C">();
+		BP_STATIC_CLASS_IMPL("Widget_AmmoCount_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_AmmoCount_C")
 	}
 	static class UWidget_AmmoCount_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_AmmoCount_C>();
 	}
 };
-static_assert(alignof(UWidget_AmmoCount_C) == 0x000008, "Wrong alignment on UWidget_AmmoCount_C");
-static_assert(sizeof(UWidget_AmmoCount_C) == 0x000338, "Wrong size on UWidget_AmmoCount_C");
-static_assert(offsetof(UWidget_AmmoCount_C, UberGraphFrame) == 0x0002F8, "Member 'UWidget_AmmoCount_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_AmmoCount_C, Reloaded) == 0x000300, "Member 'UWidget_AmmoCount_C::Reloaded' has a wrong offset!");
-static_assert(offsetof(UWidget_AmmoCount_C, Shooting) == 0x000308, "Member 'UWidget_AmmoCount_C::Shooting' has a wrong offset!");
-static_assert(offsetof(UWidget_AmmoCount_C, CurrentAmmo) == 0x000310, "Member 'UWidget_AmmoCount_C::CurrentAmmo' has a wrong offset!");
-static_assert(offsetof(UWidget_AmmoCount_C, HorizontalBox_0) == 0x000318, "Member 'UWidget_AmmoCount_C::HorizontalBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_AmmoCount_C, Image_39) == 0x000320, "Member 'UWidget_AmmoCount_C::Image_39' has a wrong offset!");
-static_assert(offsetof(UWidget_AmmoCount_C, Widget_HUD_Background) == 0x000328, "Member 'UWidget_AmmoCount_C::Widget_HUD_Background' has a wrong offset!");
-static_assert(offsetof(UWidget_AmmoCount_C, Ammo) == 0x000330, "Member 'UWidget_AmmoCount_C::Ammo' has a wrong offset!");
-static_assert(offsetof(UWidget_AmmoCount_C, MaximumAmmo) == 0x000334, "Member 'UWidget_AmmoCount_C::MaximumAmmo' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_AmmoCount_C;
 
 }
 

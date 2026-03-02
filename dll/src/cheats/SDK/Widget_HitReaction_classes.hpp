@@ -19,21 +19,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_HitReaction.Widget_HitReaction_C
-// 0x0058 (0x0328 - 0x02D0)
+// 0x0058 (0x0398 - 0x0340)
 class UWidget_HitReaction_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       GenericDamageTakenAnimation;                       // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       LowHealthLoopAnimation;                            // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       DamageTakenAnimation;                              // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 DamageHitDirection;                                // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 GenericDamageIndicator;                            // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_219;                                         // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LowHealthRadial;                                   // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Radial;                                            // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_DamageIndicator_Container_C*    Widget_DamageIndicator_Container;                  // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_DamageIndicator_Container_C*    Widget_DamageIndicator_Container;                  // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Radial;                                            // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 LowHealthRadial;                                   // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_219;                                         // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 GenericDamageIndicator;                            // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 DamageHitDirection;                                // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       DamageTakenAnimation;                              // 0x0380(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       LowHealthLoopAnimation;                            // 0x0388(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       GenericDamageTakenAnimation;                       // 0x0390(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CheckLowHealth(double MissingHealthPercentage, bool bGainedHealth);
@@ -54,26 +54,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_HitReaction_C">();
+		BP_STATIC_CLASS_IMPL("Widget_HitReaction_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_HitReaction_C")
 	}
 	static class UWidget_HitReaction_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_HitReaction_C>();
 	}
 };
-static_assert(alignof(UWidget_HitReaction_C) == 0x000008, "Wrong alignment on UWidget_HitReaction_C");
-static_assert(sizeof(UWidget_HitReaction_C) == 0x000328, "Wrong size on UWidget_HitReaction_C");
-static_assert(offsetof(UWidget_HitReaction_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_HitReaction_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_HitReaction_C, GenericDamageTakenAnimation) == 0x0002D8, "Member 'UWidget_HitReaction_C::GenericDamageTakenAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_HitReaction_C, LowHealthLoopAnimation) == 0x0002E0, "Member 'UWidget_HitReaction_C::LowHealthLoopAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_HitReaction_C, DamageTakenAnimation) == 0x0002E8, "Member 'UWidget_HitReaction_C::DamageTakenAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_HitReaction_C, DamageHitDirection) == 0x0002F0, "Member 'UWidget_HitReaction_C::DamageHitDirection' has a wrong offset!");
-static_assert(offsetof(UWidget_HitReaction_C, GenericDamageIndicator) == 0x0002F8, "Member 'UWidget_HitReaction_C::GenericDamageIndicator' has a wrong offset!");
-static_assert(offsetof(UWidget_HitReaction_C, Image_219) == 0x000300, "Member 'UWidget_HitReaction_C::Image_219' has a wrong offset!");
-static_assert(offsetof(UWidget_HitReaction_C, InvalidationBox_0) == 0x000308, "Member 'UWidget_HitReaction_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_HitReaction_C, LowHealthRadial) == 0x000310, "Member 'UWidget_HitReaction_C::LowHealthRadial' has a wrong offset!");
-static_assert(offsetof(UWidget_HitReaction_C, Radial) == 0x000318, "Member 'UWidget_HitReaction_C::Radial' has a wrong offset!");
-static_assert(offsetof(UWidget_HitReaction_C, Widget_DamageIndicator_Container) == 0x000320, "Member 'UWidget_HitReaction_C::Widget_DamageIndicator_Container' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_HitReaction_C;
 
 }
 

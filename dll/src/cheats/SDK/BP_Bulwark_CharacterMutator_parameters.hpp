@@ -17,58 +17,42 @@ namespace SDK::Params
 {
 
 // Function BP_Bulwark_CharacterMutator.BP_Bulwark_CharacterMutator_C.ExecuteUbergraph_BP_Bulwark_CharacterMutator
-// 0x0108 (0x0108 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGScriptNetRole                               CallFunc_BranchByNetRole_Branches;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   K2Node_Event_Socket;                               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_Bool;                                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0018(0x0030)(ContainsInstancedReference)
-	class URGScript*                              CallFunc_GetFirstScriptOfType_ReturnValue;         // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Event_EventName;                            // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBP_Anchor_CharacterMutator_C*          K2Node_DynamicCast_AsBP_Anchor_Character_Mutator;  // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0068(0x0030)(ContainsInstancedReference)
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class URGScript* AbilityScript)> K2Node_CreateDelegate_OutputDelegate;            // 0x00A4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_2;     // 0x00B8(0x0030)(ContainsInstancedReference)
-	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URStatusEffectGScript*                  CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class URGScript*                              K2Node_CustomEvent_AbilityScript;                  // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Event_Socket;                               // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_Bool;                                 // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0010(0x0030)(ContainsInstancedReference)
+	class URGScript*                              CallFunc_GetFirstScriptOfType_ReturnValue;         // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Event_EventName;                            // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_Anchor_CharacterMutator_C*          K2Node_DynamicCast_AsBP_Anchor_Character_Mutator;  // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0060(0x0030)(ContainsInstancedReference)
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class URGScript* AbilityScript)> K2Node_CreateDelegate_OutputDelegate;            // 0x009C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_2;     // 0x00B0(0x0030)(ContainsInstancedReference)
+	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URStatusEffectGScript*                  CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URGScript*                              K2Node_CustomEvent_AbilityScript;                  // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGScriptNetRole                               CallFunc_BranchByNetRole_Branches;                 // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x010A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10B[0x5];                                      // 0x010B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetEffectDuration_Duration_ImplicitCast;  // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator) == 0x000008, "Wrong alignment on BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator");
-static_assert(sizeof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator) == 0x000108, "Wrong size on BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, CallFunc_BranchByNetRole_Branches) == 0x000004, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::CallFunc_BranchByNetRole_Branches' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, K2Node_Event_Socket) == 0x000008, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::K2Node_Event_Socket' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, K2Node_Event_Bool) == 0x000010, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::K2Node_Event_Bool' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, K2Node_SwitchEnum_CmpSuccess) == 0x000011, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000018, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, CallFunc_GetFirstScriptOfType_ReturnValue) == 0x000048, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::CallFunc_GetFirstScriptOfType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, K2Node_Event_EventName) == 0x000050, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::K2Node_Event_EventName' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, K2Node_DynamicCast_AsBP_Anchor_Character_Mutator) == 0x000058, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::K2Node_DynamicCast_AsBP_Anchor_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000068, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000098, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x0000A0, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x0000A4, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x0000B8, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, CallFunc_GetMutatorRank_ReturnValue) == 0x0000E8, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x0000EC, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x0000F0, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, K2Node_CustomEvent_AbilityScript) == 0x0000F8, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::K2Node_CustomEvent_AbilityScript' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000100, "Member 'BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Bulwark_CharacterMutator_C_ExecuteUbergraph_BP_Bulwark_CharacterMutator;
 
 // Function BP_Bulwark_CharacterMutator.BP_Bulwark_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -80,11 +64,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_Bulwark_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_Bulwark_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_Bulwark_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_Bulwark_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_Bulwark_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_Bulwark_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_Bulwark_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Bulwark_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_Bulwark_CharacterMutator.BP_Bulwark_CharacterMutator_C.OnAnimationTriggerEvent
 // 0x0008 (0x0008 - 0x0000)
@@ -93,9 +73,7 @@ struct BP_Bulwark_CharacterMutator_C_OnAnimationTriggerEvent final
 public:
 	class FName                                   EventName;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Bulwark_CharacterMutator_C_OnAnimationTriggerEvent) == 0x000004, "Wrong alignment on BP_Bulwark_CharacterMutator_C_OnAnimationTriggerEvent");
-static_assert(sizeof(BP_Bulwark_CharacterMutator_C_OnAnimationTriggerEvent) == 0x000008, "Wrong size on BP_Bulwark_CharacterMutator_C_OnAnimationTriggerEvent");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_OnAnimationTriggerEvent, EventName) == 0x000000, "Member 'BP_Bulwark_CharacterMutator_C_OnAnimationTriggerEvent::EventName' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Bulwark_CharacterMutator_C_OnAnimationTriggerEvent;
 
 // Function BP_Bulwark_CharacterMutator.BP_Bulwark_CharacterMutator_C.OnFireAbility
 // 0x0008 (0x0008 - 0x0000)
@@ -104,9 +82,7 @@ struct BP_Bulwark_CharacterMutator_C_OnFireAbility final
 public:
 	class URGScript*                              AbilityScript;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Bulwark_CharacterMutator_C_OnFireAbility) == 0x000008, "Wrong alignment on BP_Bulwark_CharacterMutator_C_OnFireAbility");
-static_assert(sizeof(BP_Bulwark_CharacterMutator_C_OnFireAbility) == 0x000008, "Wrong size on BP_Bulwark_CharacterMutator_C_OnFireAbility");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_OnFireAbility, AbilityScript) == 0x000000, "Member 'BP_Bulwark_CharacterMutator_C_OnFireAbility::AbilityScript' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Bulwark_CharacterMutator_C_OnFireAbility;
 
 // Function BP_Bulwark_CharacterMutator.BP_Bulwark_CharacterMutator_C.OnToggleEvent
 // 0x000C (0x000C - 0x0000)
@@ -116,10 +92,7 @@ public:
 	class FName                                   Socket;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Bool;                                              // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Bulwark_CharacterMutator_C_OnToggleEvent) == 0x000004, "Wrong alignment on BP_Bulwark_CharacterMutator_C_OnToggleEvent");
-static_assert(sizeof(BP_Bulwark_CharacterMutator_C_OnToggleEvent) == 0x00000C, "Wrong size on BP_Bulwark_CharacterMutator_C_OnToggleEvent");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_OnToggleEvent, Socket) == 0x000000, "Member 'BP_Bulwark_CharacterMutator_C_OnToggleEvent::Socket' has a wrong offset!");
-static_assert(offsetof(BP_Bulwark_CharacterMutator_C_OnToggleEvent, Bool) == 0x000008, "Member 'BP_Bulwark_CharacterMutator_C_OnToggleEvent::Bool' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Bulwark_CharacterMutator_C_OnToggleEvent;
 
 }
 

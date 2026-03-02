@@ -10,25 +10,25 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_ObjectiveTracker_Announcer.Widget_ObjectiveTracker_Announcer_C
-// 0x0038 (0x0308 - 0x02D0)
+// 0x0038 (0x0378 - 0x0340)
 class UWidget_ObjectiveTracker_Announcer_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       MoveRight;                                         // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       FadeIn;                                            // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             Info;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Title;                                             // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<struct FGameplayTag>                   Room_Objectives;                                   // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Title;                                             // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Info;                                              // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FadeIn;                                            // 0x0358(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       MoveRight;                                         // 0x0360(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FGameplayTag>                   Room_Objectives;                                   // 0x0368(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_Widget_ObjectiveTracker_Announcer(int32 EntryPoint);
@@ -40,21 +40,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_ObjectiveTracker_Announcer_C">();
+		BP_STATIC_CLASS_IMPL("Widget_ObjectiveTracker_Announcer_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_ObjectiveTracker_Announcer_C")
 	}
 	static class UWidget_ObjectiveTracker_Announcer_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_ObjectiveTracker_Announcer_C>();
 	}
 };
-static_assert(alignof(UWidget_ObjectiveTracker_Announcer_C) == 0x000008, "Wrong alignment on UWidget_ObjectiveTracker_Announcer_C");
-static_assert(sizeof(UWidget_ObjectiveTracker_Announcer_C) == 0x000308, "Wrong size on UWidget_ObjectiveTracker_Announcer_C");
-static_assert(offsetof(UWidget_ObjectiveTracker_Announcer_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_ObjectiveTracker_Announcer_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_ObjectiveTracker_Announcer_C, MoveRight) == 0x0002D8, "Member 'UWidget_ObjectiveTracker_Announcer_C::MoveRight' has a wrong offset!");
-static_assert(offsetof(UWidget_ObjectiveTracker_Announcer_C, FadeIn) == 0x0002E0, "Member 'UWidget_ObjectiveTracker_Announcer_C::FadeIn' has a wrong offset!");
-static_assert(offsetof(UWidget_ObjectiveTracker_Announcer_C, Info) == 0x0002E8, "Member 'UWidget_ObjectiveTracker_Announcer_C::Info' has a wrong offset!");
-static_assert(offsetof(UWidget_ObjectiveTracker_Announcer_C, Title) == 0x0002F0, "Member 'UWidget_ObjectiveTracker_Announcer_C::Title' has a wrong offset!");
-static_assert(offsetof(UWidget_ObjectiveTracker_Announcer_C, Room_Objectives) == 0x0002F8, "Member 'UWidget_ObjectiveTracker_Announcer_C::Room_Objectives' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_ObjectiveTracker_Announcer_C;
 
 }
 

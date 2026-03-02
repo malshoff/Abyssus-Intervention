@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_UnlockFishDeity_Challenge.BP_UnlockFishDeity_Challenge_C
-// 0x0038 (0x03E8 - 0x03B0)
+// 0x0038 (0x03F0 - 0x03B8)
 class ABP_UnlockFishDeity_Challenge_C final : public ABP_UnlockWeapon_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_UnlockFishDeity_Challenge_C;     // 0x03B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UPointLightComponent*                   PointLight;                                        // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCapsuleComponent*                      Capsule;                                           // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x03C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class ATriggerBox*                            TriggerBoxRef;                                     // 0x03D0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	TArray<class ABP_LobbyFishStatue_C*>          Statues;                                           // 0x03D8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_UnlockFishDeity_Challenge_C;     // 0x03B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UPointLightComponent*                   PointLight;                                        // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                      Capsule;                                           // 0x03C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class ATriggerBox*                            TriggerBoxRef;                                     // 0x03D8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	TArray<class ABP_LobbyFishStatue_C*>          Statues;                                           // 0x03E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnTemplate)
 
 public:
 	void ActivationSequence();
@@ -39,21 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_UnlockFishDeity_Challenge_C">();
+		BP_STATIC_CLASS_IMPL("BP_UnlockFishDeity_Challenge_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_UnlockFishDeity_Challenge_C")
 	}
 	static class ABP_UnlockFishDeity_Challenge_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_UnlockFishDeity_Challenge_C>();
 	}
 };
-static_assert(alignof(ABP_UnlockFishDeity_Challenge_C) == 0x000008, "Wrong alignment on ABP_UnlockFishDeity_Challenge_C");
-static_assert(sizeof(ABP_UnlockFishDeity_Challenge_C) == 0x0003E8, "Wrong size on ABP_UnlockFishDeity_Challenge_C");
-static_assert(offsetof(ABP_UnlockFishDeity_Challenge_C, UberGraphFrame_BP_UnlockFishDeity_Challenge_C) == 0x0003B0, "Member 'ABP_UnlockFishDeity_Challenge_C::UberGraphFrame_BP_UnlockFishDeity_Challenge_C' has a wrong offset!");
-static_assert(offsetof(ABP_UnlockFishDeity_Challenge_C, PointLight) == 0x0003B8, "Member 'ABP_UnlockFishDeity_Challenge_C::PointLight' has a wrong offset!");
-static_assert(offsetof(ABP_UnlockFishDeity_Challenge_C, Capsule) == 0x0003C0, "Member 'ABP_UnlockFishDeity_Challenge_C::Capsule' has a wrong offset!");
-static_assert(offsetof(ABP_UnlockFishDeity_Challenge_C, SkeletalMesh) == 0x0003C8, "Member 'ABP_UnlockFishDeity_Challenge_C::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(ABP_UnlockFishDeity_Challenge_C, TriggerBoxRef) == 0x0003D0, "Member 'ABP_UnlockFishDeity_Challenge_C::TriggerBoxRef' has a wrong offset!");
-static_assert(offsetof(ABP_UnlockFishDeity_Challenge_C, Statues) == 0x0003D8, "Member 'ABP_UnlockFishDeity_Challenge_C::Statues' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_UnlockFishDeity_Challenge_C;
 
 }
 

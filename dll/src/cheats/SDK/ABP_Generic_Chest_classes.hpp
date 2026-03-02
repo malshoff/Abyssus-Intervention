@@ -20,31 +20,31 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Generic_Chest.ABP_Generic_Chest_C
-// 0x08A0 (0x0C60 - 0x03C0)
+// 0x08A0 (0x0C80 - 0x03E0)
 class UABP_Generic_Chest_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_3B8[0x8];                                      // 0x03B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x03C8(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03D0(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03D8(0x0020)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x03F8(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x0420(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x0448(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x0470(0x0028)()
-	struct FAnimNode_SequenceEvaluator            AnimGraphNode_SequenceEvaluator;                   // 0x0498(0x0040)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x04D8(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x04F8(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x0540(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x0560(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x05A8(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x05C8(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x0610(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x0630(0x00C8)()
-	uint8                                         Pad_6F8[0x8];                                      // 0x06F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_Inertialization              AnimGraphNode_Inertialization;                     // 0x0700(0x0550)()
-	E_Chest_Animation_State                       AnimationState;                                    // 0x0C50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D8[0x8];                                      // 0x03D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x03E8(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03F0(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03F8(0x0020)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x0418(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x0440(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x0468(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x0490(0x0028)()
+	struct FAnimNode_SequenceEvaluator            AnimGraphNode_SequenceEvaluator;                   // 0x04B8(0x0040)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x04F8(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x0518(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x0560(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x0580(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x05C8(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x05E8(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x0630(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x0650(0x00C8)()
+	uint8                                         Pad_718[0x8];                                      // 0x0718(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_Inertialization              AnimGraphNode_Inertialization;                     // 0x0720(0x0550)()
+	E_Chest_Animation_State                       AnimationState;                                    // 0x0C70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -58,34 +58,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_Generic_Chest_C">();
+		BP_STATIC_CLASS_IMPL("ABP_Generic_Chest_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_Generic_Chest_C")
 	}
 	static class UABP_Generic_Chest_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_Generic_Chest_C>();
 	}
 };
-static_assert(alignof(UABP_Generic_Chest_C) == 0x000010, "Wrong alignment on UABP_Generic_Chest_C");
-static_assert(sizeof(UABP_Generic_Chest_C) == 0x000C60, "Wrong size on UABP_Generic_Chest_C");
-static_assert(offsetof(UABP_Generic_Chest_C, UberGraphFrame) == 0x0003C0, "Member 'UABP_Generic_Chest_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimBlueprintExtension_PropertyAccess) == 0x0003C8, "Member 'UABP_Generic_Chest_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimBlueprintExtension_Base) == 0x0003D0, "Member 'UABP_Generic_Chest_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimGraphNode_Root) == 0x0003D8, "Member 'UABP_Generic_Chest_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimGraphNode_TransitionResult_3) == 0x0003F8, "Member 'UABP_Generic_Chest_C::AnimGraphNode_TransitionResult_3' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimGraphNode_TransitionResult_2) == 0x000420, "Member 'UABP_Generic_Chest_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimGraphNode_TransitionResult_1) == 0x000448, "Member 'UABP_Generic_Chest_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimGraphNode_TransitionResult) == 0x000470, "Member 'UABP_Generic_Chest_C::AnimGraphNode_TransitionResult' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimGraphNode_SequenceEvaluator) == 0x000498, "Member 'UABP_Generic_Chest_C::AnimGraphNode_SequenceEvaluator' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimGraphNode_StateResult_3) == 0x0004D8, "Member 'UABP_Generic_Chest_C::AnimGraphNode_StateResult_3' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimGraphNode_SequencePlayer_2) == 0x0004F8, "Member 'UABP_Generic_Chest_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimGraphNode_StateResult_2) == 0x000540, "Member 'UABP_Generic_Chest_C::AnimGraphNode_StateResult_2' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimGraphNode_SequencePlayer_1) == 0x000560, "Member 'UABP_Generic_Chest_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimGraphNode_StateResult_1) == 0x0005A8, "Member 'UABP_Generic_Chest_C::AnimGraphNode_StateResult_1' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimGraphNode_SequencePlayer) == 0x0005C8, "Member 'UABP_Generic_Chest_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimGraphNode_StateResult) == 0x000610, "Member 'UABP_Generic_Chest_C::AnimGraphNode_StateResult' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimGraphNode_StateMachine) == 0x000630, "Member 'UABP_Generic_Chest_C::AnimGraphNode_StateMachine' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimGraphNode_Inertialization) == 0x000700, "Member 'UABP_Generic_Chest_C::AnimGraphNode_Inertialization' has a wrong offset!");
-static_assert(offsetof(UABP_Generic_Chest_C, AnimationState) == 0x000C50, "Member 'UABP_Generic_Chest_C::AnimationState' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_Generic_Chest_C;
 
 }
 

@@ -43,24 +43,7 @@ public:
 	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_SetFloatParameter_InFloat_ImplicitCast;   // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript) == 0x000008, "Wrong alignment on BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript");
-static_assert(sizeof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript) == 0x000098, "Wrong size on BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, EntryPoint) == 0x000000, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, CallFunc_IsWeaponHoldingFire_ReturnValue) == 0x000004, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::CallFunc_IsWeaponHoldingFire_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, K2Node_Event_SoundTemplate) == 0x000008, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::K2Node_Event_SoundTemplate' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000010, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, CallFunc_IsValid_ReturnValue) == 0x000040, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000048, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, CallFunc_GetWeaponScript_ReturnValue) == 0x000058, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::CallFunc_GetWeaponScript_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, K2Node_DynamicCast_AsBP_Engine_Rifle_Script) == 0x000060, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::K2Node_DynamicCast_AsBP_Engine_Rifle_Script' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, K2Node_DynamicCast_bSuccess_1) == 0x000068, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, CallFunc_IsValid_ReturnValue_1) == 0x000069, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000070, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, CallFunc_SetFloatParameter_self_CastInput) == 0x000078, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::CallFunc_SetFloatParameter_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x000088, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, CallFunc_IsValid_ReturnValue_2) == 0x000090, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript, CallFunc_SetFloatParameter_InFloat_ImplicitCast) == 0x000094, "Member 'BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript::CallFunc_SetFloatParameter_InFloat_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_EngineRev_ModScript_C_ExecuteUbergraph_BP_EngineRifle_EngineRev_ModScript;
 
 // Function BP_EngineRifle_EngineRev_ModScript.BP_EngineRifle_EngineRev_ModScript_C.SpawnWeaponFireSFX
 // 0x0008 (0x0008 - 0x0000)
@@ -69,9 +52,7 @@ struct BP_EngineRifle_EngineRev_ModScript_C_SpawnWeaponFireSFX final
 public:
 	class USoundBase*                             SoundTemplate;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_EngineRifle_EngineRev_ModScript_C_SpawnWeaponFireSFX) == 0x000008, "Wrong alignment on BP_EngineRifle_EngineRev_ModScript_C_SpawnWeaponFireSFX");
-static_assert(sizeof(BP_EngineRifle_EngineRev_ModScript_C_SpawnWeaponFireSFX) == 0x000008, "Wrong size on BP_EngineRifle_EngineRev_ModScript_C_SpawnWeaponFireSFX");
-static_assert(offsetof(BP_EngineRifle_EngineRev_ModScript_C_SpawnWeaponFireSFX, SoundTemplate) == 0x000000, "Member 'BP_EngineRifle_EngineRev_ModScript_C_SpawnWeaponFireSFX::SoundTemplate' has a wrong offset!");
+DUMPER7_ASSERTS_BP_EngineRifle_EngineRev_ModScript_C_SpawnWeaponFireSFX;
 
 }
 

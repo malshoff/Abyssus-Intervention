@@ -37,6 +37,26 @@ void UWidget_CommonSaveMenu_C::AcceptEvent_Event(const class FText& Input)
 }
 
 
+// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.AddSaveGameWidgets
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<class URSaveGame*>&        SaveGames                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWidget_CommonSaveMenu_C::AddSaveGameWidgets(const TArray<class URSaveGame*>& SaveGames)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSaveMenu_C", "AddSaveGameWidgets");
+
+	Params::Widget_CommonSaveMenu_C_AddSaveGameWidgets Parms{};
+
+	Parms.SaveGames = std::move(SaveGames);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.BndEvt__Widget_CommonSaveMenu_W_AddBTN_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -114,7 +134,7 @@ void UWidget_CommonSaveMenu_C::Construct()
 
 
 // Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.ConstructSaveSlotWidgets
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
 void UWidget_CommonSaveMenu_C::ConstructSaveSlotWidgets()
 {
@@ -161,6 +181,26 @@ void UWidget_CommonSaveMenu_C::ExecuteUbergraph_Widget_CommonSaveMenu(int32 Entr
 }
 
 
+// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.OnAsyncSaveFinished
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonSaveMenu_C::OnAsyncSaveFinished(bool Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSaveMenu_C", "OnAsyncSaveFinished");
+
+	Params::Widget_CommonSaveMenu_C_OnAsyncSaveFinished Parms{};
+
+	Parms.Result = Result;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.OnInitialized
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -190,6 +230,46 @@ void UWidget_CommonSaveMenu_C::OnInputMethodChanged_Event(ECommonInputType bNewI
 	Params::Widget_CommonSaveMenu_C_OnInputMethodChanged_Event Parms{};
 
 	Parms.bNewInputType = bNewInputType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.OnLoadGamesFinished
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<class URSaveGame*>&        SaveGames                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWidget_CommonSaveMenu_C::OnLoadGamesFinished(const TArray<class URSaveGame*>& SaveGames)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSaveMenu_C", "OnLoadGamesFinished");
+
+	Params::Widget_CommonSaveMenu_C_OnLoadGamesFinished Parms{};
+
+	Parms.SaveGames = std::move(SaveGames);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_CommonSaveMenu.Widget_CommonSaveMenu_C.OnLoadSessionFinished
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class URSaveGameSession*                SaveGameSession                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_CommonSaveMenu_C::OnLoadSessionFinished(class URSaveGameSession* SaveGameSession)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_CommonSaveMenu_C", "OnLoadSessionFinished");
+
+	Params::Widget_CommonSaveMenu_C_OnLoadSessionFinished Parms{};
+
+	Parms.SaveGameSession = SaveGameSession;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

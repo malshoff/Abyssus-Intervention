@@ -19,15 +19,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_Highlight.BPC_Highlight_C
-// 0x0040 (0x06A0 - 0x0660)
+// 0x0040 (0x0710 - 0x06D0)
 class UBPC_Highlight_C final : public UWidgetComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0660(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UDMActorProximityBoxComponent*          ProximityBox;                                      // 0x0668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        Radius;                                            // 0x0670(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   Object_Name;                                       // 0x0678(0x0010)(Edit, BlueprintVisible)
-	class FText                                   Info;                                              // 0x0688(0x0010)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UDMActorProximityBoxComponent*          ProximityBox;                                      // 0x06D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        Radius;                                            // 0x06E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Object_Name;                                       // 0x06E8(0x0010)(Edit, BlueprintVisible)
+	class FText                                   Info;                                              // 0x06F8(0x0010)(Edit, BlueprintVisible)
 
 public:
 	void ExecuteUbergraph_BPC_Highlight(int32 EntryPoint);
@@ -41,20 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPC_Highlight_C">();
+		BP_STATIC_CLASS_IMPL("BPC_Highlight_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPC_Highlight_C")
 	}
 	static class UBPC_Highlight_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPC_Highlight_C>();
 	}
 };
-static_assert(alignof(UBPC_Highlight_C) == 0x000010, "Wrong alignment on UBPC_Highlight_C");
-static_assert(sizeof(UBPC_Highlight_C) == 0x0006A0, "Wrong size on UBPC_Highlight_C");
-static_assert(offsetof(UBPC_Highlight_C, UberGraphFrame) == 0x000660, "Member 'UBPC_Highlight_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBPC_Highlight_C, ProximityBox) == 0x000668, "Member 'UBPC_Highlight_C::ProximityBox' has a wrong offset!");
-static_assert(offsetof(UBPC_Highlight_C, Radius) == 0x000670, "Member 'UBPC_Highlight_C::Radius' has a wrong offset!");
-static_assert(offsetof(UBPC_Highlight_C, Object_Name) == 0x000678, "Member 'UBPC_Highlight_C::Object_Name' has a wrong offset!");
-static_assert(offsetof(UBPC_Highlight_C, Info) == 0x000688, "Member 'UBPC_Highlight_C::Info' has a wrong offset!");
+DUMPER7_ASSERTS_UBPC_Highlight_C;
 
 }
 

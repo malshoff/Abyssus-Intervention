@@ -32,7 +32,7 @@ void UWidget_FadeOutScreen_C::Construct()
 
 
 // Function Widget_FadeOutScreen.Widget_FadeOutScreen_C.ExecuteUbergraph_Widget_FadeOutScreen
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

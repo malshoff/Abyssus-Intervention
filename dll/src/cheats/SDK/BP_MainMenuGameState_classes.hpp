@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MainMenuGameState.BP_MainMenuGameState_C
-// 0x0020 (0x0F48 - 0x0F28)
+// 0x0020 (0x0F88 - 0x0F68)
 class ABP_MainMenuGameState_C final : public ARGameState
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F28(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0F30(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWidget_CommonWaitDialog_C*             WidgetWaitDialog;                                  // 0x0F38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget_CommonInputDialog_C*            PasswordWidget;                                    // 0x0F40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0F68(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0F70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWidget_CommonWaitDialog_C*             WidgetWaitDialog;                                  // 0x0F78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget_CommonInputDialog_C*            PasswordWidget;                                    // 0x0F80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AcceptEvent(const class FText& Input);
@@ -46,19 +46,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_MainMenuGameState_C">();
+		BP_STATIC_CLASS_IMPL("BP_MainMenuGameState_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_MainMenuGameState_C")
 	}
 	static class ABP_MainMenuGameState_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_MainMenuGameState_C>();
 	}
 };
-static_assert(alignof(ABP_MainMenuGameState_C) == 0x000008, "Wrong alignment on ABP_MainMenuGameState_C");
-static_assert(sizeof(ABP_MainMenuGameState_C) == 0x000F48, "Wrong size on ABP_MainMenuGameState_C");
-static_assert(offsetof(ABP_MainMenuGameState_C, UberGraphFrame) == 0x000F28, "Member 'ABP_MainMenuGameState_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_MainMenuGameState_C, DefaultSceneRoot) == 0x000F30, "Member 'ABP_MainMenuGameState_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_MainMenuGameState_C, WidgetWaitDialog) == 0x000F38, "Member 'ABP_MainMenuGameState_C::WidgetWaitDialog' has a wrong offset!");
-static_assert(offsetof(ABP_MainMenuGameState_C, PasswordWidget) == 0x000F40, "Member 'ABP_MainMenuGameState_C::PasswordWidget' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_MainMenuGameState_C;
 
 }
 

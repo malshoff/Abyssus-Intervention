@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function BP_BoatyardBoss_Challenge.BP_BoatyardBoss_Challenge_C.ExecuteUbergraph_BP_BoatyardBoss_Challenge
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

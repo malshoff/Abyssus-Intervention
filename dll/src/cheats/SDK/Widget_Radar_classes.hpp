@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_Radar.Widget_Radar_C
-// 0x0000 (0x03F0 - 0x03F0)
+// 0x0000 (0x0460 - 0x0460)
 class UWidget_Radar_C final : public URRadarWidget
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_Radar_C">();
+		BP_STATIC_CLASS_IMPL("Widget_Radar_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_Radar_C")
 	}
 	static class UWidget_Radar_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_Radar_C>();
 	}
 };
-static_assert(alignof(UWidget_Radar_C) == 0x000008, "Wrong alignment on UWidget_Radar_C");
-static_assert(sizeof(UWidget_Radar_C) == 0x0003F0, "Wrong size on UWidget_Radar_C");
+DUMPER7_ASSERTS_UWidget_Radar_C;
 
 }
 

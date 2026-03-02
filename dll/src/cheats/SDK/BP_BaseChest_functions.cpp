@@ -658,6 +658,50 @@ void ABP_BaseChest_C::SpawnChestOpenSFX()
 }
 
 
+// Function BP_BaseChest.BP_BaseChest_C.SubstituteConditionMutator
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_BaseChest_C::SubstituteConditionMutator(bool* Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseChest_C", "SubstituteConditionMutator");
+
+	Params::BP_BaseChest_C_SubstituteConditionMutator Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Value != nullptr)
+		*Value = Parms.Value;
+}
+
+
+// Function BP_BaseChest.BP_BaseChest_C.SubstituteRewardConditionMet
+// (Event, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TSubclassOf<class AActor>               DefaultRewardClass                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_BaseChest_C::SubstituteRewardConditionMet(TSubclassOf<class AActor> DefaultRewardClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseChest_C", "SubstituteRewardConditionMet");
+
+	Params::BP_BaseChest_C_SubstituteRewardConditionMet Parms{};
+
+	Parms.DefaultRewardClass = DefaultRewardClass;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_BaseChest.BP_BaseChest_C.Unlock
 // (BlueprintCallable, BlueprintEvent)
 

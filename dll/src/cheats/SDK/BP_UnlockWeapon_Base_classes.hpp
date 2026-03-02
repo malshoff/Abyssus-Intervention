@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_UnlockWeapon_Base.BP_UnlockWeapon_Base_C
-// 0x0028 (0x03B0 - 0x0388)
+// 0x0028 (0x03B8 - 0x0390)
 class ABP_UnlockWeapon_Base_C : public ARPickupableItem
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0388(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetComponent*                       Widget;                                            // 0x0390(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDMActorProximityBoxComponent*          DMActorProximityBox;                               // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Challenge_Id;                                      // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Challenge_Id_2;                                    // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetComponent*                       Widget;                                            // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UDMActorProximityBoxComponent*          DMActorProximityBox;                               // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Challenge_Id;                                      // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Challenge_Id_2;                                    // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__BP_Lorebook_DMActorProximityBox_K2Node_ComponentBoundEvent_0_OnOverlapProximityBoxComponentEnter__DelegateSignature(class AActor* Actor);
@@ -41,20 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_UnlockWeapon_Base_C">();
+		BP_STATIC_CLASS_IMPL("BP_UnlockWeapon_Base_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_UnlockWeapon_Base_C")
 	}
 	static class ABP_UnlockWeapon_Base_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_UnlockWeapon_Base_C>();
 	}
 };
-static_assert(alignof(ABP_UnlockWeapon_Base_C) == 0x000008, "Wrong alignment on ABP_UnlockWeapon_Base_C");
-static_assert(sizeof(ABP_UnlockWeapon_Base_C) == 0x0003B0, "Wrong size on ABP_UnlockWeapon_Base_C");
-static_assert(offsetof(ABP_UnlockWeapon_Base_C, UberGraphFrame) == 0x000388, "Member 'ABP_UnlockWeapon_Base_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_UnlockWeapon_Base_C, Widget) == 0x000390, "Member 'ABP_UnlockWeapon_Base_C::Widget' has a wrong offset!");
-static_assert(offsetof(ABP_UnlockWeapon_Base_C, DMActorProximityBox) == 0x000398, "Member 'ABP_UnlockWeapon_Base_C::DMActorProximityBox' has a wrong offset!");
-static_assert(offsetof(ABP_UnlockWeapon_Base_C, Challenge_Id) == 0x0003A0, "Member 'ABP_UnlockWeapon_Base_C::Challenge_Id' has a wrong offset!");
-static_assert(offsetof(ABP_UnlockWeapon_Base_C, Challenge_Id_2) == 0x0003A8, "Member 'ABP_UnlockWeapon_Base_C::Challenge_Id_2' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_UnlockWeapon_Base_C;
 
 }
 

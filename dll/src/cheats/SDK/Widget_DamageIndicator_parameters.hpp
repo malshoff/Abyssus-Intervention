@@ -24,9 +24,7 @@ struct Widget_DamageIndicator_C_DamageEvent final
 public:
 	struct FVector                                TargetLocation_0;                                  // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_DamageIndicator_C_DamageEvent) == 0x000008, "Wrong alignment on Widget_DamageIndicator_C_DamageEvent");
-static_assert(sizeof(Widget_DamageIndicator_C_DamageEvent) == 0x000018, "Wrong size on Widget_DamageIndicator_C_DamageEvent");
-static_assert(offsetof(Widget_DamageIndicator_C_DamageEvent, TargetLocation_0) == 0x000000, "Member 'Widget_DamageIndicator_C_DamageEvent::TargetLocation_0' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_DamageIndicator_C_DamageEvent;
 
 // Function Widget_DamageIndicator.Widget_DamageIndicator_C.ExecuteUbergraph_Widget_DamageIndicator
 // 0x0068 (0x0068 - 0x0000)
@@ -46,17 +44,7 @@ public:
 	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0060(0x0008)(NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator) == 0x000008, "Wrong alignment on Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator");
-static_assert(sizeof(Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator) == 0x000068, "Wrong size on Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator");
-static_assert(offsetof(Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator, EntryPoint) == 0x000000, "Member 'Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator, CallFunc_GetOwningPlayer_ReturnValue) == 0x000008, "Member 'Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator, K2Node_CustomEvent_TargetLocation) == 0x000020, "Member 'Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator::K2Node_CustomEvent_TargetLocation' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator, CallFunc_CreatePlayAnimationProxyObject_Result) == 0x000038, "Member 'Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator::CallFunc_CreatePlayAnimationProxyObject_Result' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator, CallFunc_CreatePlayAnimationProxyObject_ReturnValue) == 0x000040, "Member 'Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator::CallFunc_CreatePlayAnimationProxyObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator, CallFunc_IsValid_ReturnValue) == 0x000048, "Member 'Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator, K2Node_CreateDelegate_OutputDelegate_1) == 0x00004C, "Member 'Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000060, "Member 'Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_DamageIndicator_C_ExecuteUbergraph_Widget_DamageIndicator;
 
 // Function Widget_DamageIndicator.Widget_DamageIndicator_C.UpdateTransform
 // 0x0180 (0x0180 - 0x0000)
@@ -94,34 +82,7 @@ public:
 	struct FVector2D                              CallFunc_Multiply_Vector2DVector2D_ReturnValue;    // 0x0168(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetRenderTransformAngle_Angle_ImplicitCast; // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_DamageIndicator_C_UpdateTransform) == 0x000010, "Wrong alignment on Widget_DamageIndicator_C_UpdateTransform");
-static_assert(sizeof(Widget_DamageIndicator_C_UpdateTransform) == 0x000180, "Wrong size on Widget_DamageIndicator_C_UpdateTransform");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_GetOwningPlayer_ReturnValue) == 0x000000, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_IsValid_ReturnValue_1) == 0x000009, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000010, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_K2_GetComponentToWorld_ReturnValue) == 0x000030, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_K2_GetComponentToWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_IsValid_ReturnValue_2) == 0x000090, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000098, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_InverseTransformDirection_ReturnValue) == 0x0000B0, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_InverseTransformDirection_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_BreakVector_X) == 0x0000C8, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_BreakVector_Y) == 0x0000D0, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_BreakVector_Z) == 0x0000D8, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_IsValid_ReturnValue_3) == 0x0000E0, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000E8, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000F0, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_MakeVector2D_ReturnValue) == 0x0000F8, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_Conv_DoubleToVector2D_ReturnValue) == 0x000108, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_Conv_DoubleToVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_Normal2D_ReturnValue) == 0x000118, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_Normal2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_BreakVector2D_X) == 0x000128, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_BreakVector2D_Y) == 0x000130, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_DegAtan2_ReturnValue) == 0x000138, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_DegAtan2_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000140, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_DegSin_ReturnValue) == 0x000148, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_DegSin_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_DegCos_ReturnValue) == 0x000150, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_DegCos_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_MakeVector2D_ReturnValue_1) == 0x000158, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_MakeVector2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_Multiply_Vector2DVector2D_ReturnValue) == 0x000168, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_Multiply_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_DamageIndicator_C_UpdateTransform, CallFunc_SetRenderTransformAngle_Angle_ImplicitCast) == 0x000178, "Member 'Widget_DamageIndicator_C_UpdateTransform::CallFunc_SetRenderTransformAngle_Angle_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_DamageIndicator_C_UpdateTransform;
 
 }
 

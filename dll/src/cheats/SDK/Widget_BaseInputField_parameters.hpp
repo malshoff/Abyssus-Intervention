@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -24,9 +24,7 @@ struct Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_EditableTextBox_143
 public:
 	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_EditableTextBox_143_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature) == 0x000008, "Wrong alignment on Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_EditableTextBox_143_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature");
-static_assert(sizeof(Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_EditableTextBox_143_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature) == 0x000010, "Wrong size on Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_EditableTextBox_143_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature");
-static_assert(offsetof(Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_EditableTextBox_143_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature, Text) == 0x000000, "Member 'Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_EditableTextBox_143_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature::Text' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_EditableTextBox_143_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature;
 
 // Function Widget_BaseInputField.Widget_BaseInputField_C.BndEvt__Widget_BaseInputField_InputField_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature
 // 0x0018 (0x0018 - 0x0000)
@@ -36,10 +34,7 @@ public:
 	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_InputField_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000008, "Wrong alignment on Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_InputField_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature");
-static_assert(sizeof(Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_InputField_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000018, "Wrong size on Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_InputField_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature");
-static_assert(offsetof(Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_InputField_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature, Text) == 0x000000, "Member 'Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_InputField_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature::Text' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_InputField_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000010, "Member 'Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_InputField_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_BaseInputField_C_BndEvt__Widget_BaseInputField_InputField_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature;
 
 // Function Widget_BaseInputField.Widget_BaseInputField_C.ExecuteUbergraph_Widget_BaseInputField
 // 0x01D0 (0x01D0 - 0x0000)
@@ -105,69 +100,19 @@ public:
 	bool                                          CallFunc_TextIsEmpty_ReturnValue_1;                // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x01C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField) == 0x000008, "Wrong alignment on Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField");
-static_assert(sizeof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField) == 0x0001D0, "Wrong size on Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, EntryPoint) == 0x000000, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, Temp_bool_Variable) == 0x000004, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, Temp_bool_Variable_1) == 0x000005, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000006, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, K2Node_ComponentBoundEvent_Text_1) == 0x000008, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::K2Node_ComponentBoundEvent_Text_1' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, K2Node_Event_IsDesignTime) == 0x000018, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Conv_TextToString_ReturnValue) == 0x000020, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Len_ReturnValue) == 0x000030, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Len_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Subtract_IntInt_ReturnValue) == 0x000034, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_LeftChop_ReturnValue) == 0x000038, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_LeftChop_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Greater_IntInt_ReturnValue) == 0x000048, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Conv_StringToText_ReturnValue) == 0x000050, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, Temp_bool_Variable_2) == 0x000060, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, K2Node_ComponentBoundEvent_Text) == 0x000068, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::K2Node_ComponentBoundEvent_Text' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, K2Node_ComponentBoundEvent_CommitMethod) == 0x000078, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::K2Node_ComponentBoundEvent_CommitMethod' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, K2Node_Select_Default) == 0x000080, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000090, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Conv_TextToString_ReturnValue_2) == 0x0000A0, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Conv_TextToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Len_ReturnValue_1) == 0x0000B0, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Len_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_LeftChop_ReturnValue_1) == 0x0000B8, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_LeftChop_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x0000C8, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Conv_StringToText_ReturnValue_1) == 0x0000D0, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_LeftChop_ReturnValue_2) == 0x0000E0, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_LeftChop_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Greater_IntInt_ReturnValue_1) == 0x0000F0, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Conv_StringToText_ReturnValue_2) == 0x0000F8, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Conv_TextToString_ReturnValue_3) == 0x000108, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Conv_TextToString_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_IsNumeric_ReturnValue) == 0x000118, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_IsNumeric_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, K2Node_Select_Default_1) == 0x000120, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, Temp_bool_Variable_3) == 0x000130, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_GetText_ReturnValue) == 0x000138, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, Temp_bool_Variable_4) == 0x000148, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::Temp_bool_Variable_4' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, K2Node_Select_Default_2) == 0x000150, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Conv_TextToString_ReturnValue_4) == 0x000160, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Conv_TextToString_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Conv_StringToInt_ReturnValue) == 0x000170, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Conv_StringToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_TextIsEmpty_ReturnValue) == 0x000174, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000175, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Clamp_ReturnValue) == 0x000178, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Clamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_Conv_IntToText_ReturnValue) == 0x000180, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_BooleanAND_ReturnValue) == 0x000190, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, Temp_text_Variable) == 0x000198, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, K2Node_Select_Default_3) == 0x0001A8, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, K2Node_Select_Default_4) == 0x0001B8, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::K2Node_Select_Default_4' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_TextIsEmpty_ReturnValue_1) == 0x0001C8, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_TextIsEmpty_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField, CallFunc_BooleanAND_ReturnValue_1) == 0x0001C9, "Member 'Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_BaseInputField_C_ExecuteUbergraph_Widget_BaseInputField;
 
 // Function Widget_BaseInputField.Widget_BaseInputField_C.OnPreviewMouseButtonDown
-// 0x0220 (0x0220 - 0x0000)
+// 0x0228 (0x0228 - 0x0000)
 struct Widget_BaseInputField_C_OnPreviewMouseButtonDown final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x0168(0x00B8)()
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0080)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                            ReturnValue;                                       // 0x00B8(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x0170(0x00B8)()
 };
-static_assert(alignof(Widget_BaseInputField_C_OnPreviewMouseButtonDown) == 0x000008, "Wrong alignment on Widget_BaseInputField_C_OnPreviewMouseButtonDown");
-static_assert(sizeof(Widget_BaseInputField_C_OnPreviewMouseButtonDown) == 0x000220, "Wrong size on Widget_BaseInputField_C_OnPreviewMouseButtonDown");
-static_assert(offsetof(Widget_BaseInputField_C_OnPreviewMouseButtonDown, MyGeometry) == 0x000000, "Member 'Widget_BaseInputField_C_OnPreviewMouseButtonDown::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_OnPreviewMouseButtonDown, MouseEvent) == 0x000038, "Member 'Widget_BaseInputField_C_OnPreviewMouseButtonDown::MouseEvent' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_OnPreviewMouseButtonDown, ReturnValue) == 0x0000B0, "Member 'Widget_BaseInputField_C_OnPreviewMouseButtonDown::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_BaseInputField_C_OnPreviewMouseButtonDown, CallFunc_Unhandled_ReturnValue) == 0x000168, "Member 'Widget_BaseInputField_C_OnPreviewMouseButtonDown::CallFunc_Unhandled_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_BaseInputField_C_OnPreviewMouseButtonDown;
 
 // Function Widget_BaseInputField.Widget_BaseInputField_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -176,9 +121,7 @@ struct Widget_BaseInputField_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_BaseInputField_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_BaseInputField_C_PreConstruct");
-static_assert(sizeof(Widget_BaseInputField_C_PreConstruct) == 0x000001, "Wrong size on Widget_BaseInputField_C_PreConstruct");
-static_assert(offsetof(Widget_BaseInputField_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_BaseInputField_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_BaseInputField_C_PreConstruct;
 
 }
 

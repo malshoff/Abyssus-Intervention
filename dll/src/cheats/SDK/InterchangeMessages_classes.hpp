@@ -26,16 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeResultMeshWarning">();
+		STATIC_CLASS_IMPL("InterchangeResultMeshWarning")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeResultMeshWarning")
 	}
 	static class UInterchangeResultMeshWarning* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeResultMeshWarning>();
 	}
 };
-static_assert(alignof(UInterchangeResultMeshWarning) == 0x000008, "Wrong alignment on UInterchangeResultMeshWarning");
-static_assert(sizeof(UInterchangeResultMeshWarning) == 0x000080, "Wrong size on UInterchangeResultMeshWarning");
-static_assert(offsetof(UInterchangeResultMeshWarning, MeshName) == 0x000070, "Member 'UInterchangeResultMeshWarning::MeshName' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeResultMeshWarning;
 
 // Class InterchangeMessages.InterchangeResultTextureDisplay
 // 0x0010 (0x0090 - 0x0080)
@@ -47,16 +49,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeResultTextureDisplay">();
+		STATIC_CLASS_IMPL("InterchangeResultTextureDisplay")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeResultTextureDisplay")
 	}
 	static class UInterchangeResultTextureDisplay* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeResultTextureDisplay>();
 	}
 };
-static_assert(alignof(UInterchangeResultTextureDisplay) == 0x000008, "Wrong alignment on UInterchangeResultTextureDisplay");
-static_assert(sizeof(UInterchangeResultTextureDisplay) == 0x000090, "Wrong size on UInterchangeResultTextureDisplay");
-static_assert(offsetof(UInterchangeResultTextureDisplay, TextureName) == 0x000080, "Member 'UInterchangeResultTextureDisplay::TextureName' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeResultTextureDisplay;
 
 // Class InterchangeMessages.InterchangeResultTextureWarning
 // 0x0010 (0x0080 - 0x0070)
@@ -68,16 +72,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeResultTextureWarning">();
+		STATIC_CLASS_IMPL("InterchangeResultTextureWarning")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeResultTextureWarning")
 	}
 	static class UInterchangeResultTextureWarning* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeResultTextureWarning>();
 	}
 };
-static_assert(alignof(UInterchangeResultTextureWarning) == 0x000008, "Wrong alignment on UInterchangeResultTextureWarning");
-static_assert(sizeof(UInterchangeResultTextureWarning) == 0x000080, "Wrong size on UInterchangeResultTextureWarning");
-static_assert(offsetof(UInterchangeResultTextureWarning, TextureName) == 0x000070, "Member 'UInterchangeResultTextureWarning::TextureName' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeResultTextureWarning;
 
 // Class InterchangeMessages.InterchangeResultMeshError
 // 0x0010 (0x0080 - 0x0070)
@@ -89,16 +95,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeResultMeshError">();
+		STATIC_CLASS_IMPL("InterchangeResultMeshError")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeResultMeshError")
 	}
 	static class UInterchangeResultMeshError* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeResultMeshError>();
 	}
 };
-static_assert(alignof(UInterchangeResultMeshError) == 0x000008, "Wrong alignment on UInterchangeResultMeshError");
-static_assert(sizeof(UInterchangeResultMeshError) == 0x000080, "Wrong size on UInterchangeResultMeshError");
-static_assert(offsetof(UInterchangeResultMeshError, MeshName) == 0x000070, "Member 'UInterchangeResultMeshError::MeshName' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeResultMeshError;
 
 // Class InterchangeMessages.InterchangeResultMeshWarning_Generic
 // 0x0010 (0x0090 - 0x0080)
@@ -110,16 +118,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeResultMeshWarning_Generic">();
+		STATIC_CLASS_IMPL("InterchangeResultMeshWarning_Generic")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeResultMeshWarning_Generic")
 	}
 	static class UInterchangeResultMeshWarning_Generic* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeResultMeshWarning_Generic>();
 	}
 };
-static_assert(alignof(UInterchangeResultMeshWarning_Generic) == 0x000008, "Wrong alignment on UInterchangeResultMeshWarning_Generic");
-static_assert(sizeof(UInterchangeResultMeshWarning_Generic) == 0x000090, "Wrong size on UInterchangeResultMeshWarning_Generic");
-static_assert(offsetof(UInterchangeResultMeshWarning_Generic, Text) == 0x000080, "Member 'UInterchangeResultMeshWarning_Generic::Text' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeResultMeshWarning_Generic;
 
 // Class InterchangeMessages.InterchangeResultMeshError_Generic
 // 0x0010 (0x0090 - 0x0080)
@@ -131,16 +141,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeResultMeshError_Generic">();
+		STATIC_CLASS_IMPL("InterchangeResultMeshError_Generic")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeResultMeshError_Generic")
 	}
 	static class UInterchangeResultMeshError_Generic* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeResultMeshError_Generic>();
 	}
 };
-static_assert(alignof(UInterchangeResultMeshError_Generic) == 0x000008, "Wrong alignment on UInterchangeResultMeshError_Generic");
-static_assert(sizeof(UInterchangeResultMeshError_Generic) == 0x000090, "Wrong size on UInterchangeResultMeshError_Generic");
-static_assert(offsetof(UInterchangeResultMeshError_Generic, Text) == 0x000080, "Member 'UInterchangeResultMeshError_Generic::Text' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeResultMeshError_Generic;
 
 // Class InterchangeMessages.InterchangeResultMeshWarning_TooManyUVs
 // 0x0008 (0x0088 - 0x0080)
@@ -153,16 +165,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeResultMeshWarning_TooManyUVs">();
+		STATIC_CLASS_IMPL("InterchangeResultMeshWarning_TooManyUVs")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeResultMeshWarning_TooManyUVs")
 	}
 	static class UInterchangeResultMeshWarning_TooManyUVs* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeResultMeshWarning_TooManyUVs>();
 	}
 };
-static_assert(alignof(UInterchangeResultMeshWarning_TooManyUVs) == 0x000008, "Wrong alignment on UInterchangeResultMeshWarning_TooManyUVs");
-static_assert(sizeof(UInterchangeResultMeshWarning_TooManyUVs) == 0x000088, "Wrong size on UInterchangeResultMeshWarning_TooManyUVs");
-static_assert(offsetof(UInterchangeResultMeshWarning_TooManyUVs, ExcessUVs) == 0x000080, "Member 'UInterchangeResultMeshWarning_TooManyUVs::ExcessUVs' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeResultMeshWarning_TooManyUVs;
 
 // Class InterchangeMessages.InterchangeResultTextureDisplay_TextureFileDoNotExist
 // 0x0010 (0x00A0 - 0x0090)
@@ -174,16 +188,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeResultTextureDisplay_TextureFileDoNotExist">();
+		STATIC_CLASS_IMPL("InterchangeResultTextureDisplay_TextureFileDoNotExist")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeResultTextureDisplay_TextureFileDoNotExist")
 	}
 	static class UInterchangeResultTextureDisplay_TextureFileDoNotExist* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeResultTextureDisplay_TextureFileDoNotExist>();
 	}
 };
-static_assert(alignof(UInterchangeResultTextureDisplay_TextureFileDoNotExist) == 0x000008, "Wrong alignment on UInterchangeResultTextureDisplay_TextureFileDoNotExist");
-static_assert(sizeof(UInterchangeResultTextureDisplay_TextureFileDoNotExist) == 0x0000A0, "Wrong size on UInterchangeResultTextureDisplay_TextureFileDoNotExist");
-static_assert(offsetof(UInterchangeResultTextureDisplay_TextureFileDoNotExist, MaterialName) == 0x000090, "Member 'UInterchangeResultTextureDisplay_TextureFileDoNotExist::MaterialName' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeResultTextureDisplay_TextureFileDoNotExist;
 
 }
 

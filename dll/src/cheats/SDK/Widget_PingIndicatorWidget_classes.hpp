@@ -17,25 +17,27 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_PingIndicatorWidget.Widget_PingIndicatorWidget_C
-// 0x0008 (0x02D8 - 0x02D0)
+// 0x0008 (0x0348 - 0x0340)
 class UWidget_PingIndicatorWidget_C final : public UUserWidget
 {
 public:
-	class UImage*                                 Image_66;                                          // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_66;                                          // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_PingIndicatorWidget_C">();
+		BP_STATIC_CLASS_IMPL("Widget_PingIndicatorWidget_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_PingIndicatorWidget_C")
 	}
 	static class UWidget_PingIndicatorWidget_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_PingIndicatorWidget_C>();
 	}
 };
-static_assert(alignof(UWidget_PingIndicatorWidget_C) == 0x000008, "Wrong alignment on UWidget_PingIndicatorWidget_C");
-static_assert(sizeof(UWidget_PingIndicatorWidget_C) == 0x0002D8, "Wrong size on UWidget_PingIndicatorWidget_C");
-static_assert(offsetof(UWidget_PingIndicatorWidget_C, Image_66) == 0x0002D0, "Member 'UWidget_PingIndicatorWidget_C::Image_66' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_PingIndicatorWidget_C;
 
 }
 

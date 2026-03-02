@@ -280,7 +280,7 @@ void UWidget_ObjectiveTracker_C::SetupLevelChange()
 
 
 // Function Widget_ObjectiveTracker.Widget_ObjectiveTracker_C.UpdateVisibility
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_ObjectiveTracker_C::UpdateVisibility()
 {

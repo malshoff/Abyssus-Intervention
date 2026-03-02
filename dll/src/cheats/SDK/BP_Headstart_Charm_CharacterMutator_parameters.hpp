@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "RGame_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function BP_Headstart_Charm_CharacterMutator.BP_Headstart_Charm_CharacterMutator_C.ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator
-// 0x0160 (0x0160 - 0x0000)
+// 0x0168 (0x0168 - 0x0000)
 struct BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator final
 {
 public:
@@ -71,47 +71,10 @@ public:
 	uint8                                         Pad_14D[0x3];                                      // 0x014D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FromSeconds_Seconds_ImplicitCast;         // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator) == 0x000008, "Wrong alignment on BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator");
-static_assert(sizeof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator) == 0x000160, "Wrong size on BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_GetScriptFName_ReturnValue) == 0x000038, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000040, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x000050, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_GetActorStatusEffect_ReturnValue) == 0x000058, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_GetActorStatusEffect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_SetCurrentStackCount_ReturnValue) == 0x000060, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_SetCurrentStackCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_IsValid_ReturnValue) == 0x000064, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_GetGameState_ReturnValue) == 0x000068, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000070, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, K2Node_DynamicCast_AsRGame_State) == 0x000078, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::K2Node_DynamicCast_AsRGame_State' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000080, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000088, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_GetRunStats_ReturnValue) == 0x000090, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_GetRunStats_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_FromSeconds_ReturnValue) == 0x0000A0, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_FromSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x0000A8, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_BreakTimespan2_Days) == 0x0000D8, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_BreakTimespan2_Days' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_BreakTimespan2_Hours) == 0x0000DC, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_BreakTimespan2_Hours' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_BreakTimespan2_Minutes) == 0x0000E0, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_BreakTimespan2_Minutes' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_BreakTimespan2_Seconds) == 0x0000E4, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_BreakTimespan2_Seconds' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_BreakTimespan2_FractionNano) == 0x0000E8, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_BreakTimespan2_FractionNano' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0000F0, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x0000F8, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, K2Node_DynamicCast_bSuccess_2) == 0x000100, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_GetScriptFName_ReturnValue_1) == 0x000104, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_GetActorStatusEffect_ReturnValue_1) == 0x000110, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_GetActorStatusEffect_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_IsValid_ReturnValue_1) == 0x000118, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x00011C, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000130, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_GetMutatorValueByVariableName_ReturnValue) == 0x000138, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_GetMutatorValueByVariableName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000140, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_SetCurrentStackCount_ReturnValue_1) == 0x000148, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_SetCurrentStackCount_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x00014C, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_FTrunc_ReturnValue) == 0x000150, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x000154, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x000158, "Member 'BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Headstart_Charm_CharacterMutator_C_ExecuteUbergraph_BP_Headstart_Charm_CharacterMutator;
 
 // Function BP_Headstart_Charm_CharacterMutator.BP_Headstart_Charm_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -123,11 +86,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_Headstart_Charm_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_Headstart_Charm_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_Headstart_Charm_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_Headstart_Charm_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_Headstart_Charm_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_Headstart_Charm_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Headstart_Charm_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_Headstart_Charm_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Headstart_Charm_CharacterMutator_C_GetMutatorDescription;
 
 }
 

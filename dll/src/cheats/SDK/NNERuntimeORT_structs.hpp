@@ -35,12 +35,7 @@ public:
 	EExecutionMode                                ExecutionMode;                                     // 0x000C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FThreadingOptions) == 0x000004, "Wrong alignment on FThreadingOptions");
-static_assert(sizeof(FThreadingOptions) == 0x000010, "Wrong size on FThreadingOptions");
-static_assert(offsetof(FThreadingOptions, bUseGlobalThreadPool) == 0x000000, "Member 'FThreadingOptions::bUseGlobalThreadPool' has a wrong offset!");
-static_assert(offsetof(FThreadingOptions, IntraOpNumThreads) == 0x000004, "Member 'FThreadingOptions::IntraOpNumThreads' has a wrong offset!");
-static_assert(offsetof(FThreadingOptions, InterOpNumThreads) == 0x000008, "Member 'FThreadingOptions::InterOpNumThreads' has a wrong offset!");
-static_assert(offsetof(FThreadingOptions, ExecutionMode) == 0x00000C, "Member 'FThreadingOptions::ExecutionMode' has a wrong offset!");
+DUMPER7_ASSERTS_FThreadingOptions;
 
 }
 

@@ -231,7 +231,7 @@ void ABP_RoomObjectiveObject_ChargingPlate_C::ToggleActiveFX(bool bNewVisibility
 
 
 // Function BP_RoomObjectiveObject_ChargingPlate.BP_RoomObjectiveObject_ChargingPlate_C.ToggleChargeFX
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    Condition                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

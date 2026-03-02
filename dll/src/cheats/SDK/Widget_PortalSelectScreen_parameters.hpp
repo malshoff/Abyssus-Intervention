@@ -10,67 +10,24 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "RGame_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function Widget_PortalSelectScreen.Widget_PortalSelectScreen_C.OnNodeChoiceSelected_Event
+// Function Widget_PortalSelectScreen.Widget_PortalSelectScreen_C.BndEvt__Widget_PortalSelectScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
-struct Widget_PortalSelectScreen_C_OnNodeChoiceSelected_Event final
+struct Widget_PortalSelectScreen_C_BndEvt__Widget_PortalSelectScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature final
 {
 public:
-	class URNodeChoicePrimaryAsset*               SelectedNodeChoice;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PortalSelectScreen_C_OnNodeChoiceSelected_Event) == 0x000008, "Wrong alignment on Widget_PortalSelectScreen_C_OnNodeChoiceSelected_Event");
-static_assert(sizeof(Widget_PortalSelectScreen_C_OnNodeChoiceSelected_Event) == 0x000008, "Wrong size on Widget_PortalSelectScreen_C_OnNodeChoiceSelected_Event");
-static_assert(offsetof(Widget_PortalSelectScreen_C_OnNodeChoiceSelected_Event, SelectedNodeChoice) == 0x000000, "Member 'Widget_PortalSelectScreen_C_OnNodeChoiceSelected_Event::SelectedNodeChoice' has a wrong offset!");
-
-// Function Widget_PortalSelectScreen.Widget_PortalSelectScreen_C.Initialize
-// 0x00F8 (0x00F8 - 0x0000)
-struct Widget_PortalSelectScreen_C_Initialize final
-{
-public:
-	struct FRNodeChoicePair                       NodeChoicePair_0;                                  // 0x0000(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FRNodeChoicePair                       NodeChoiceRewardPair_0;                            // 0x0078(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class ABP_LevelExit_C*                        LevelExitRef_0;                                    // 0x00F0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_PortalSelectScreen_C_Initialize) == 0x000008, "Wrong alignment on Widget_PortalSelectScreen_C_Initialize");
-static_assert(sizeof(Widget_PortalSelectScreen_C_Initialize) == 0x0000F8, "Wrong size on Widget_PortalSelectScreen_C_Initialize");
-static_assert(offsetof(Widget_PortalSelectScreen_C_Initialize, NodeChoicePair_0) == 0x000000, "Member 'Widget_PortalSelectScreen_C_Initialize::NodeChoicePair_0' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_Initialize, NodeChoiceRewardPair_0) == 0x000078, "Member 'Widget_PortalSelectScreen_C_Initialize::NodeChoiceRewardPair_0' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_Initialize, LevelExitRef_0) == 0x0000F0, "Member 'Widget_PortalSelectScreen_C_Initialize::LevelExitRef_0' has a wrong offset!");
-
-// Function Widget_PortalSelectScreen.Widget_PortalSelectScreen_C.GetFocusedOption
-// 0x0030 (0x0030 - 0x0000)
-struct Widget_PortalSelectScreen_C_GetFocusedOption final
-{
-public:
-	class UWidget_PortalSelectScreen_Option_C*    AbilityOptionWidget;                               // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class UWidget_PortalSelectScreen_Option_C*> Temp_wildcard_Variable;                       // 0x0008(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasKeyboardFocus_ReturnValue;             // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_PortalSelectScreen_C_GetFocusedOption) == 0x000008, "Wrong alignment on Widget_PortalSelectScreen_C_GetFocusedOption");
-static_assert(sizeof(Widget_PortalSelectScreen_C_GetFocusedOption) == 0x000030, "Wrong size on Widget_PortalSelectScreen_C_GetFocusedOption");
-static_assert(offsetof(Widget_PortalSelectScreen_C_GetFocusedOption, AbilityOptionWidget) == 0x000000, "Member 'Widget_PortalSelectScreen_C_GetFocusedOption::AbilityOptionWidget' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_GetFocusedOption, Temp_wildcard_Variable) == 0x000008, "Member 'Widget_PortalSelectScreen_C_GetFocusedOption::Temp_wildcard_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_GetFocusedOption, Temp_int_Array_Index_Variable) == 0x000018, "Member 'Widget_PortalSelectScreen_C_GetFocusedOption::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_GetFocusedOption, CallFunc_Array_Length_ReturnValue) == 0x00001C, "Member 'Widget_PortalSelectScreen_C_GetFocusedOption::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_GetFocusedOption, CallFunc_HasKeyboardFocus_ReturnValue) == 0x000020, "Member 'Widget_PortalSelectScreen_C_GetFocusedOption::CallFunc_HasKeyboardFocus_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_GetFocusedOption, Temp_int_Loop_Counter_Variable) == 0x000024, "Member 'Widget_PortalSelectScreen_C_GetFocusedOption::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_GetFocusedOption, CallFunc_Less_IntInt_ReturnValue) == 0x000028, "Member 'Widget_PortalSelectScreen_C_GetFocusedOption::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_GetFocusedOption, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'Widget_PortalSelectScreen_C_GetFocusedOption::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PortalSelectScreen_C_BndEvt__Widget_PortalSelectScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_PortalSelectScreen.Widget_PortalSelectScreen_C.ExecuteUbergraph_Widget_PortalSelectScreen
-// 0x0210 (0x0210 - 0x0000)
+// 0x0218 (0x0218 - 0x0000)
 struct Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen final
 {
 public:
@@ -122,66 +79,52 @@ public:
 	class URNodeChoicePrimaryAsset*               K2Node_DynamicCast_AsRNode_Choice_Primary_Asset_1; // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1EA[0x6];                                      // 0x01EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_CreatePlayAnimationProxyObject_Result;    // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimationPlayCallbackProxy*      CallFunc_CreatePlayAnimationProxyObject_ReturnValue; // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1EA[0x2];                                      // 0x01EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue;         // 0x01EC(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	uint8                                         Pad_1FC[0x4];                                      // 0x01FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_CreatePlayAnimationProxyObject_Result;    // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimationPlayCallbackProxy*      CallFunc_CreatePlayAnimationProxyObject_ReturnValue; // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen) == 0x000008, "Wrong alignment on Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen");
-static_assert(sizeof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen) == 0x000210, "Wrong size on Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, EntryPoint) == 0x000000, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, Temp_bool_Variable) == 0x000004, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, K2Node_CreateDelegate_OutputDelegate_1) == 0x000018, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_Array_Get_Item) == 0x000028, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_GetOwningPlayer_ReturnValue) == 0x000038, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, Temp_int_Variable) == 0x000040, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_Create_ReturnValue) == 0x000048, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_AddChildToHorizontalBox_ReturnValue) == 0x000050, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_AddChildToHorizontalBox_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000058, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_Add_IntInt_ReturnValue) == 0x00005C, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_Array_Add_ReturnValue) == 0x000060, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue) == 0x000068, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_IsValid_ReturnValue_1) == 0x000070, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue_1) == 0x000078, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x000080, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, K2Node_CustomEvent_SelectedNodeChoice) == 0x000088, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::K2Node_CustomEvent_SelectedNodeChoice' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue_2) == 0x000090, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue_3) == 0x000098, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, K2Node_CustomEvent_NodeChoicePair) == 0x0000A0, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::K2Node_CustomEvent_NodeChoicePair' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, K2Node_CustomEvent_NodeChoiceRewardpair) == 0x000118, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::K2Node_CustomEvent_NodeChoiceRewardpair' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, K2Node_CustomEvent_LevelExitRef) == 0x000190, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::K2Node_CustomEvent_LevelExitRef' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, K2Node_ComponentBoundEvent_Button) == 0x000198, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, Temp_bool_Variable_1) == 0x0001A0, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, Temp_int_Variable_1) == 0x0001A4, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, Temp_int_Variable_2) == 0x0001A8, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::Temp_int_Variable_2' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, K2Node_Select_Default) == 0x0001AC, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, K2Node_Select_Default_1) == 0x0001B0, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, Temp_int_Variable_3) == 0x0001B8, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::Temp_int_Variable_3' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, K2Node_DynamicCast_AsRNode_Choice_Primary_Asset) == 0x0001C0, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::K2Node_DynamicCast_AsRNode_Choice_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, K2Node_DynamicCast_bSuccess) == 0x0001C8, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, K2Node_Select_Default_2) == 0x0001D0, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_IsValid_ReturnValue_2) == 0x0001D8, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, K2Node_DynamicCast_AsRNode_Choice_Primary_Asset_1) == 0x0001E0, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::K2Node_DynamicCast_AsRNode_Choice_Primary_Asset_1' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, K2Node_DynamicCast_bSuccess_1) == 0x0001E8, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_IsValid_ReturnValue_3) == 0x0001E9, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_PlayAnimationForward_ReturnValue) == 0x0001F0, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_CreatePlayAnimationProxyObject_Result) == 0x0001F8, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_CreatePlayAnimationProxyObject_Result' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_CreatePlayAnimationProxyObject_ReturnValue) == 0x000200, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_CreatePlayAnimationProxyObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen, CallFunc_IsValid_ReturnValue_4) == 0x000208, "Member 'Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PortalSelectScreen_C_ExecuteUbergraph_Widget_PortalSelectScreen;
 
-// Function Widget_PortalSelectScreen.Widget_PortalSelectScreen_C.BndEvt__Widget_PortalSelectScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_PortalSelectScreen_C_BndEvt__Widget_PortalSelectScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature final
+// Function Widget_PortalSelectScreen.Widget_PortalSelectScreen_C.GetFocusedOption
+// 0x0030 (0x0030 - 0x0000)
+struct Widget_PortalSelectScreen_C_GetFocusedOption final
 {
 public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget_PortalSelectScreen_Option_C*    AbilityOptionWidget;                               // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWidget_PortalSelectScreen_Option_C*> Temp_wildcard_Variable;                       // 0x0008(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasKeyboardFocus_ReturnValue;             // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PortalSelectScreen_C_BndEvt__Widget_PortalSelectScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_PortalSelectScreen_C_BndEvt__Widget_PortalSelectScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_PortalSelectScreen_C_BndEvt__Widget_PortalSelectScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_PortalSelectScreen_C_BndEvt__Widget_PortalSelectScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_PortalSelectScreen_C_BndEvt__Widget_PortalSelectScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_PortalSelectScreen_C_BndEvt__Widget_PortalSelectScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PortalSelectScreen_C_GetFocusedOption;
+
+// Function Widget_PortalSelectScreen.Widget_PortalSelectScreen_C.Initialize
+// 0x00F8 (0x00F8 - 0x0000)
+struct Widget_PortalSelectScreen_C_Initialize final
+{
+public:
+	struct FRNodeChoicePair                       NodeChoicePair_0;                                  // 0x0000(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FRNodeChoicePair                       NodeChoiceRewardPair_0;                            // 0x0078(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class ABP_LevelExit_C*                        LevelExitRef_0;                                    // 0x00F0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_PortalSelectScreen_C_Initialize;
+
+// Function Widget_PortalSelectScreen.Widget_PortalSelectScreen_C.OnNodeChoiceSelected_Event
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_PortalSelectScreen_C_OnNodeChoiceSelected_Event final
+{
+public:
+	class URNodeChoicePrimaryAsset*               SelectedNodeChoice;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_PortalSelectScreen_C_OnNodeChoiceSelected_Event;
 
 // Function Widget_PortalSelectScreen.Widget_PortalSelectScreen_C.BP_GetDesiredFocusTarget
 // 0x0008 (0x0008 - 0x0000)
@@ -190,9 +133,7 @@ struct Widget_PortalSelectScreen_C_BP_GetDesiredFocusTarget final
 public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_PortalSelectScreen_C_BP_GetDesiredFocusTarget) == 0x000008, "Wrong alignment on Widget_PortalSelectScreen_C_BP_GetDesiredFocusTarget");
-static_assert(sizeof(Widget_PortalSelectScreen_C_BP_GetDesiredFocusTarget) == 0x000008, "Wrong size on Widget_PortalSelectScreen_C_BP_GetDesiredFocusTarget");
-static_assert(offsetof(Widget_PortalSelectScreen_C_BP_GetDesiredFocusTarget, ReturnValue) == 0x000000, "Member 'Widget_PortalSelectScreen_C_BP_GetDesiredFocusTarget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_PortalSelectScreen_C_BP_GetDesiredFocusTarget;
 
 }
 

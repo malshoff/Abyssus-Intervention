@@ -10,24 +10,24 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "RGame_classes.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_MutatorSelectScreen_MutatorOption.Widget_MutatorSelectScreen_MutatorOption_C
-// 0x0030 (0x0320 - 0x02F0)
+// 0x0030 (0x0390 - 0x0360)
 class UWidget_MutatorSelectScreen_MutatorOption_C final : public URLootOptionWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UW_Button_Altar_Blessing_C*             W_Button_Altar_Blessing;                           // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<struct FGameplayTag>                   GameplayTags;                                      // 0x0300(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UWidget_KeywordTooltip_C*               TooltipW;                                          // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldShowTooltip;                                 // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UW_Button_Altar_Blessing_C*             W_Button_Altar_Blessing;                           // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<struct FGameplayTag>                   GameplayTags;                                      // 0x0370(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UWidget_KeywordTooltip_C*               TooltipW;                                          // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldShowTooltip;                                 // 0x0388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -43,20 +43,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_MutatorSelectScreen_MutatorOption_C">();
+		BP_STATIC_CLASS_IMPL("Widget_MutatorSelectScreen_MutatorOption_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_MutatorSelectScreen_MutatorOption_C")
 	}
 	static class UWidget_MutatorSelectScreen_MutatorOption_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_MutatorSelectScreen_MutatorOption_C>();
 	}
 };
-static_assert(alignof(UWidget_MutatorSelectScreen_MutatorOption_C) == 0x000008, "Wrong alignment on UWidget_MutatorSelectScreen_MutatorOption_C");
-static_assert(sizeof(UWidget_MutatorSelectScreen_MutatorOption_C) == 0x000320, "Wrong size on UWidget_MutatorSelectScreen_MutatorOption_C");
-static_assert(offsetof(UWidget_MutatorSelectScreen_MutatorOption_C, UberGraphFrame) == 0x0002F0, "Member 'UWidget_MutatorSelectScreen_MutatorOption_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorSelectScreen_MutatorOption_C, W_Button_Altar_Blessing) == 0x0002F8, "Member 'UWidget_MutatorSelectScreen_MutatorOption_C::W_Button_Altar_Blessing' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorSelectScreen_MutatorOption_C, GameplayTags) == 0x000300, "Member 'UWidget_MutatorSelectScreen_MutatorOption_C::GameplayTags' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorSelectScreen_MutatorOption_C, TooltipW) == 0x000310, "Member 'UWidget_MutatorSelectScreen_MutatorOption_C::TooltipW' has a wrong offset!");
-static_assert(offsetof(UWidget_MutatorSelectScreen_MutatorOption_C, ShouldShowTooltip) == 0x000318, "Member 'UWidget_MutatorSelectScreen_MutatorOption_C::ShouldShowTooltip' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_MutatorSelectScreen_MutatorOption_C;
 
 }
 

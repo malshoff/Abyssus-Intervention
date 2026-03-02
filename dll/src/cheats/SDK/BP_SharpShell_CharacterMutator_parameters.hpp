@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function BP_SharpShell_CharacterMutator.BP_SharpShell_CharacterMutator_C.ExecuteUbergraph_BP_SharpShell_CharacterMutator
-// 0x02C0 (0x02C0 - 0x0000)
+// 0x03F0 (0x03F0 - 0x0000)
 struct BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator final
 {
 public:
@@ -38,91 +38,46 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class ARPawnBase*                             K2Node_CustomEvent_Pawn;                           // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0090(0x00C0)()
-	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_159[0x3];                                      // 0x0159(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x015C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0164(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_165[0x3];                                      // 0x0165(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0168(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class ARPawnBase* Pawn, class AActor* DamagedActor, bool bWasCritical, int32 DamageSourceMask)> K2Node_CreateDelegate_OutputDelegate_3; // 0x0178(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_4; // 0x0188(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0198(0x0030)(ContainsInstancedReference)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue_2;             // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue; // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_2;     // 0x01E0(0x0030)(ContainsInstancedReference)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URGAbilityCharacterMutatorScript*       CallFunc_GetEquippedActivatableAbility_ReturnValue; // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_3;     // 0x0220(0x0030)(ContainsInstancedReference)
-	class UBP_Activatable_CharacterMutator_C*     K2Node_DynamicCast_AsBP_Activatable_Character_Mutator; // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_259[0x3];                                      // 0x0259(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue_1; // 0x025C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutableFloatCurrentValue_ReturnValue;  // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26C[0x4];                                      // 0x026C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_5;            // 0x0278(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URGTask_WaitDelay*                      CallFunc_WaitDelay_ReturnValue;                    // 0x0290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0299(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29A[0x6];                                      // 0x029A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x02A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2AC[0x4];                                      // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0090(0x01F0)()
+	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_289[0x3];                                      // 0x0289(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x028C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0294(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_295[0x3];                                      // 0x0295(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0298(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class ARPawnBase* Pawn, class AActor* DamagedActor, bool bWasCritical, int32 DamageSourceMask)> K2Node_CreateDelegate_OutputDelegate_3; // 0x02A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_4; // 0x02B8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x02C8(0x0030)(ContainsInstancedReference)
+	class FName                                   CallFunc_GetScriptFName_ReturnValue_2;             // 0x02F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue; // 0x0300(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_304[0x4];                                      // 0x0304(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_2;     // 0x0310(0x0030)(ContainsInstancedReference)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URGAbilityCharacterMutatorScript*       CallFunc_GetEquippedActivatableAbility_ReturnValue; // 0x0348(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_3;     // 0x0350(0x0030)(ContainsInstancedReference)
+	class UBP_Activatable_CharacterMutator_C*     K2Node_DynamicCast_AsBP_Activatable_Character_Mutator; // 0x0380(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0388(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_389[0x3];                                      // 0x0389(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue_1; // 0x038C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0390(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutableFloatCurrentValue_ReturnValue;  // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39C[0x4];                                      // 0x039C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_5;            // 0x03A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URGTask_WaitDelay*                      CallFunc_WaitDelay_ReturnValue;                    // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x03C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x03C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CA[0x6];                                      // 0x03CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x03D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3DC[0x4];                                      // 0x03DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2;   // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator) == 0x000008, "Wrong alignment on BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator");
-static_assert(sizeof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator) == 0x0002C0, "Wrong size on BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000018, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x000048, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000058, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_CustomEvent_Pawn_1) == 0x000068, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_CustomEvent_Pawn_1' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_CustomEvent_DamagedActor) == 0x000070, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_CustomEvent_DamagedActor' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_CustomEvent_bWasCritical) == 0x000078, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_CustomEvent_bWasCritical' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_CustomEvent_DamageSourceMask) == 0x00007C, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_CustomEvent_DamageSourceMask' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_DamageSourceMaskHasFlag_ReturnValue) == 0x000080, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_DamageSourceMaskHasFlag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_BooleanAND_ReturnValue) == 0x000081, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_CustomEvent_Pawn) == 0x000088, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_CustomEvent_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_CustomEvent_DamageEventData) == 0x000090, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_CustomEvent_DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_GetScriptFName_ReturnValue) == 0x000150, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, Temp_bool_IsClosed_Variable) == 0x000158, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_GetScriptFName_ReturnValue_1) == 0x00015C, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, Temp_bool_Has_Been_Initd_Variable) == 0x000164, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_2) == 0x000168, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_3) == 0x000178, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_4) == 0x000188, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000198, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_GetScriptFName_ReturnValue_2) == 0x0001C8, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_GetScriptFName_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue) == 0x0001D0, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0001D8, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x0001E0, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000210, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_GetEquippedActivatableAbility_ReturnValue) == 0x000218, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_GetEquippedActivatableAbility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_3) == 0x000220, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_DynamicCast_AsBP_Activatable_Character_Mutator) == 0x000250, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_DynamicCast_AsBP_Activatable_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000258, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue_1) == 0x00025C, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_GetMutatorValueFromActorInfoInstigatorScriptComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000260, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_GetMutableFloatCurrentValue_ReturnValue) == 0x000268, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_GetMutableFloatCurrentValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000270, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_5) == 0x000278, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000288, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_WaitDelay_ReturnValue) == 0x000290, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_WaitDelay_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_IsValid_ReturnValue) == 0x000298, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_IsValid_ReturnValue_1) == 0x000299, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0002A0, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x0002A8, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x0002B0, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2) == 0x0002B8, "Member 'BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SharpShell_CharacterMutator_C_ExecuteUbergraph_BP_SharpShell_CharacterMutator;
 
 // Function BP_SharpShell_CharacterMutator.BP_SharpShell_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -134,24 +89,17 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_SharpShell_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_SharpShell_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_SharpShell_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_SharpShell_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_SharpShell_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_SharpShell_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_SharpShell_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SharpShell_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_SharpShell_CharacterMutator.BP_SharpShell_CharacterMutator_C.OnDealtDamage
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_SharpShell_CharacterMutator_C_OnDealtDamage final
 {
 public:
 	class ARPawnBase*                             Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_SharpShell_CharacterMutator_C_OnDealtDamage) == 0x000008, "Wrong alignment on BP_SharpShell_CharacterMutator_C_OnDealtDamage");
-static_assert(sizeof(BP_SharpShell_CharacterMutator_C_OnDealtDamage) == 0x0000C8, "Wrong size on BP_SharpShell_CharacterMutator_C_OnDealtDamage");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_OnDealtDamage, Pawn) == 0x000000, "Member 'BP_SharpShell_CharacterMutator_C_OnDealtDamage::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_OnDealtDamage, DamageEventData) == 0x000008, "Member 'BP_SharpShell_CharacterMutator_C_OnDealtDamage::DamageEventData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SharpShell_CharacterMutator_C_OnDealtDamage;
 
 // Function BP_SharpShell_CharacterMutator.BP_SharpShell_CharacterMutator_C.OnPreDealtDamage
 // 0x0018 (0x0018 - 0x0000)
@@ -164,12 +112,7 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DamageSourceMask;                                  // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SharpShell_CharacterMutator_C_OnPreDealtDamage) == 0x000008, "Wrong alignment on BP_SharpShell_CharacterMutator_C_OnPreDealtDamage");
-static_assert(sizeof(BP_SharpShell_CharacterMutator_C_OnPreDealtDamage) == 0x000018, "Wrong size on BP_SharpShell_CharacterMutator_C_OnPreDealtDamage");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_OnPreDealtDamage, Pawn) == 0x000000, "Member 'BP_SharpShell_CharacterMutator_C_OnPreDealtDamage::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_OnPreDealtDamage, DamagedActor) == 0x000008, "Member 'BP_SharpShell_CharacterMutator_C_OnPreDealtDamage::DamagedActor' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_OnPreDealtDamage, bWasCritical) == 0x000010, "Member 'BP_SharpShell_CharacterMutator_C_OnPreDealtDamage::bWasCritical' has a wrong offset!");
-static_assert(offsetof(BP_SharpShell_CharacterMutator_C_OnPreDealtDamage, DamageSourceMask) == 0x000014, "Member 'BP_SharpShell_CharacterMutator_C_OnPreDealtDamage::DamageSourceMask' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SharpShell_CharacterMutator_C_OnPreDealtDamage;
 
 }
 

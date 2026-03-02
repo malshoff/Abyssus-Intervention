@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -104,6 +104,8 @@ public:
 	void SetChestStateForController(EChestState NewChestState, class APlayerController* PlayerController);
 	void SetupEventLogic();
 	void SpawnChestOpenSFX();
+	void SubstituteConditionMutator(bool* Value);
+	bool SubstituteRewardConditionMet(TSubclassOf<class AActor> DefaultRewardClass);
 	void Unlock();
 	void UpdateChainsVisibility();
 	void UserConstructionScript();
@@ -116,54 +118,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BaseChest_C">();
+		BP_STATIC_CLASS_IMPL("BP_BaseChest_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BaseChest_C")
 	}
 	static class ABP_BaseChest_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_BaseChest_C>();
 	}
 };
-static_assert(alignof(ABP_BaseChest_C) == 0x000008, "Wrong alignment on ABP_BaseChest_C");
-static_assert(sizeof(ABP_BaseChest_C) == 0x000518, "Wrong size on ABP_BaseChest_C");
-static_assert(offsetof(ABP_BaseChest_C, UberGraphFrame) == 0x0003F0, "Member 'ABP_BaseChest_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, Proximity_InteractableIndicator) == 0x0003F8, "Member 'ABP_BaseChest_C::Proximity_InteractableIndicator' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, Widget_InteractableIndicator) == 0x000400, "Member 'ABP_BaseChest_C::Widget_InteractableIndicator' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, GoldPile) == 0x000408, "Member 'ABP_BaseChest_C::GoldPile' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, Chains) == 0x000410, "Member 'ABP_BaseChest_C::Chains' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, PointLight1) == 0x000418, "Member 'ABP_BaseChest_C::PointLight1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, BuildupMesh) == 0x000420, "Member 'ABP_BaseChest_C::BuildupMesh' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, IdleAuraMesh2) == 0x000428, "Member 'ABP_BaseChest_C::IdleAuraMesh2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, IdleAuraMesh) == 0x000430, "Member 'ABP_BaseChest_C::IdleAuraMesh' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, RectLight) == 0x000438, "Member 'ABP_BaseChest_C::RectLight' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, OpenedAuraMesh) == 0x000440, "Member 'ABP_BaseChest_C::OpenedAuraMesh' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, NS_Chest_Attached_01) == 0x000448, "Member 'ABP_BaseChest_C::NS_Chest_Attached_01' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, RewardSpawnPoint) == 0x000450, "Member 'ABP_BaseChest_C::RewardSpawnPoint' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, PointLight) == 0x000458, "Member 'ABP_BaseChest_C::PointLight' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, ChestMesh) == 0x000460, "Member 'ABP_BaseChest_C::ChestMesh' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, Scene) == 0x000468, "Member 'ABP_BaseChest_C::Scene' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, PickedupTimeline_Opacity_9489DEEF47131AF754D2C5BF6E5A8AF8) == 0x000470, "Member 'ABP_BaseChest_C::PickedupTimeline_Opacity_9489DEEF47131AF754D2C5BF6E5A8AF8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, PickedupTimeline__Direction_9489DEEF47131AF754D2C5BF6E5A8AF8) == 0x000474, "Member 'ABP_BaseChest_C::PickedupTimeline__Direction_9489DEEF47131AF754D2C5BF6E5A8AF8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, PickedupTimeline) == 0x000478, "Member 'ABP_BaseChest_C::PickedupTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, IdleFadeoutTimeline_Opacity_D10C571545796F20039078A20108C104) == 0x000480, "Member 'ABP_BaseChest_C::IdleFadeoutTimeline_Opacity_D10C571545796F20039078A20108C104' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, IdleFadeoutTimeline__Direction_D10C571545796F20039078A20108C104) == 0x000484, "Member 'ABP_BaseChest_C::IdleFadeoutTimeline__Direction_D10C571545796F20039078A20108C104' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, IdleFadeoutTimeline) == 0x000488, "Member 'ABP_BaseChest_C::IdleFadeoutTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, BuildupTimeline_Opacity_084246CB4BE20383C9023AB8FFF92E3B) == 0x000490, "Member 'ABP_BaseChest_C::BuildupTimeline_Opacity_084246CB4BE20383C9023AB8FFF92E3B' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, BuildupTimeline__Direction_084246CB4BE20383C9023AB8FFF92E3B) == 0x000494, "Member 'ABP_BaseChest_C::BuildupTimeline__Direction_084246CB4BE20383C9023AB8FFF92E3B' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, BuildupTimeline) == 0x000498, "Member 'ABP_BaseChest_C::BuildupTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, ChestState) == 0x0004A0, "Member 'ABP_BaseChest_C::ChestState' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, LockTime) == 0x0004A8, "Member 'ABP_BaseChest_C::LockTime' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, SpawnChance) == 0x0004B0, "Member 'ABP_BaseChest_C::SpawnChance' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, BuildupMeshDynamicMaterial) == 0x0004B8, "Member 'ABP_BaseChest_C::BuildupMeshDynamicMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, IdleMeshDynamicMaterials) == 0x0004C0, "Member 'ABP_BaseChest_C::IdleMeshDynamicMaterials' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, OpenedMeshDynamicMaterial) == 0x0004D0, "Member 'ABP_BaseChest_C::OpenedMeshDynamicMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, RectLightInitialIntensity) == 0x0004D8, "Member 'ABP_BaseChest_C::RectLightInitialIntensity' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, PointLightInitialIntensity) == 0x0004DC, "Member 'ABP_BaseChest_C::PointLightInitialIntensity' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, AnimBP) == 0x0004E0, "Member 'ABP_BaseChest_C::AnimBP' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, RewardSpawedLoopSFX) == 0x0004E8, "Member 'ABP_BaseChest_C::RewardSpawedLoopSFX' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, SuperSelf) == 0x0004F0, "Member 'ABP_BaseChest_C::SuperSelf' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, PushSealedNotification) == 0x0004F8, "Member 'ABP_BaseChest_C::PushSealedNotification' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, UniqueChestState) == 0x000500, "Member 'ABP_BaseChest_C::UniqueChestState' has a wrong offset!");
-static_assert(offsetof(ABP_BaseChest_C, FoundPlayerInArray) == 0x000510, "Member 'ABP_BaseChest_C::FoundPlayerInArray' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseChest_C;
 
 }
 

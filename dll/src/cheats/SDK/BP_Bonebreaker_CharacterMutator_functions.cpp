@@ -71,6 +71,20 @@ void UBP_Bonebreaker_CharacterMutator_C::K2_ActivateScript()
 }
 
 
+// Function BP_Bonebreaker_CharacterMutator.BP_Bonebreaker_CharacterMutator_C.K2_DeactivateScript
+// (Event, Public, BlueprintEvent)
+
+void UBP_Bonebreaker_CharacterMutator_C::K2_DeactivateScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Bonebreaker_CharacterMutator_C", "K2_DeactivateScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_Bonebreaker_CharacterMutator.BP_Bonebreaker_CharacterMutator_C.OnAnimationTriggerEvent
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

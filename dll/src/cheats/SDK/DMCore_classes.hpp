@@ -26,15 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMComponentRefFunctions">();
+		STATIC_CLASS_IMPL("DMComponentRefFunctions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMComponentRefFunctions")
 	}
 	static class UDMComponentRefFunctions* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMComponentRefFunctions>();
 	}
 };
-static_assert(alignof(UDMComponentRefFunctions) == 0x000008, "Wrong alignment on UDMComponentRefFunctions");
-static_assert(sizeof(UDMComponentRefFunctions) == 0x000028, "Wrong size on UDMComponentRefFunctions");
+DUMPER7_ASSERTS_UDMComponentRefFunctions;
 
 }
 

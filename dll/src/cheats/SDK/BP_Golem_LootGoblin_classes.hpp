@@ -18,20 +18,20 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Golem_LootGoblin.BP_Golem_LootGoblin_C
-// 0x0038 (0x4E08 - 0x4DD0)
+// 0x0038 (0x4E18 - 0x4DE0)
 class ABP_Golem_LootGoblin_C final : public ARLootGoblin
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x4DD0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      AttachedFX;                                        // 0x4DD8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         DissapearTimeline_Alpha_D0A576504BDEA60D995019928C76BC7F; // 0x4DE0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            DissapearTimeline__Direction_D0A576504BDEA60D995019928C76BC7F; // 0x4DE4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4DE5[0x3];                                     // 0x4DE5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     DissapearTimeline;                                 // 0x4DE8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         Delta_Seconds;                                     // 0x4DF0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4DF4[0x4];                                     // 0x4DF4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAB_LootGolem_C*                        As_AB_Loot_Golem;                                  // 0x4DF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           LookAt_Timer_Handle;                               // 0x4E00(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x4DE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      AttachedFX;                                        // 0x4DE8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         DissapearTimeline_Alpha_D0A576504BDEA60D995019928C76BC7F; // 0x4DF0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            DissapearTimeline__Direction_D0A576504BDEA60D995019928C76BC7F; // 0x4DF4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4DF5[0x3];                                     // 0x4DF5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     DissapearTimeline;                                 // 0x4DF8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         Delta_Seconds;                                     // 0x4E00(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E04[0x4];                                     // 0x4E04(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAB_LootGolem_C*                        As_AB_Loot_Golem;                                  // 0x4E08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           LookAt_Timer_Handle;                               // 0x4E10(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void DissapearTimeline__FinishedFunc();
@@ -58,23 +58,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Golem_LootGoblin_C">();
+		BP_STATIC_CLASS_IMPL("BP_Golem_LootGoblin_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Golem_LootGoblin_C")
 	}
 	static class ABP_Golem_LootGoblin_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Golem_LootGoblin_C>();
 	}
 };
-static_assert(alignof(ABP_Golem_LootGoblin_C) == 0x000008, "Wrong alignment on ABP_Golem_LootGoblin_C");
-static_assert(sizeof(ABP_Golem_LootGoblin_C) == 0x004E08, "Wrong size on ABP_Golem_LootGoblin_C");
-static_assert(offsetof(ABP_Golem_LootGoblin_C, UberGraphFrame) == 0x004DD0, "Member 'ABP_Golem_LootGoblin_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_LootGoblin_C, AttachedFX) == 0x004DD8, "Member 'ABP_Golem_LootGoblin_C::AttachedFX' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_LootGoblin_C, DissapearTimeline_Alpha_D0A576504BDEA60D995019928C76BC7F) == 0x004DE0, "Member 'ABP_Golem_LootGoblin_C::DissapearTimeline_Alpha_D0A576504BDEA60D995019928C76BC7F' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_LootGoblin_C, DissapearTimeline__Direction_D0A576504BDEA60D995019928C76BC7F) == 0x004DE4, "Member 'ABP_Golem_LootGoblin_C::DissapearTimeline__Direction_D0A576504BDEA60D995019928C76BC7F' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_LootGoblin_C, DissapearTimeline) == 0x004DE8, "Member 'ABP_Golem_LootGoblin_C::DissapearTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_LootGoblin_C, Delta_Seconds) == 0x004DF0, "Member 'ABP_Golem_LootGoblin_C::Delta_Seconds' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_LootGoblin_C, As_AB_Loot_Golem) == 0x004DF8, "Member 'ABP_Golem_LootGoblin_C::As_AB_Loot_Golem' has a wrong offset!");
-static_assert(offsetof(ABP_Golem_LootGoblin_C, LookAt_Timer_Handle) == 0x004E00, "Member 'ABP_Golem_LootGoblin_C::LookAt_Timer_Handle' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Golem_LootGoblin_C;
 
 }
 

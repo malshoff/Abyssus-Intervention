@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_DashScreen.Widget_DashScreen_C
-// 0x0020 (0x02F0 - 0x02D0)
+// 0x0020 (0x0360 - 0x0340)
 class UWidget_DashScreen_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnDash;                                            // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 DashImage;                                         // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 DashImage;                                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnDash;                                            // 0x0358(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -39,19 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_DashScreen_C">();
+		BP_STATIC_CLASS_IMPL("Widget_DashScreen_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_DashScreen_C")
 	}
 	static class UWidget_DashScreen_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_DashScreen_C>();
 	}
 };
-static_assert(alignof(UWidget_DashScreen_C) == 0x000008, "Wrong alignment on UWidget_DashScreen_C");
-static_assert(sizeof(UWidget_DashScreen_C) == 0x0002F0, "Wrong size on UWidget_DashScreen_C");
-static_assert(offsetof(UWidget_DashScreen_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_DashScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_DashScreen_C, OnDash) == 0x0002D8, "Member 'UWidget_DashScreen_C::OnDash' has a wrong offset!");
-static_assert(offsetof(UWidget_DashScreen_C, DashImage) == 0x0002E0, "Member 'UWidget_DashScreen_C::DashImage' has a wrong offset!");
-static_assert(offsetof(UWidget_DashScreen_C, InvalidationBox_0) == 0x0002E8, "Member 'UWidget_DashScreen_C::InvalidationBox_0' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_DashScreen_C;
 
 }
 

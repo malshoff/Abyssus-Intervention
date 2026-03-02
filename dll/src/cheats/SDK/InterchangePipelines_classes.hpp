@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "InterchangePipelines_structs.hpp"
-#include "InterchangeCommon_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "InterchangePipelines_structs.hpp"
 #include "InterchangeCore_structs.hpp"
 #include "InterchangeCore_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
+#include "InterchangeCommon_structs.hpp"
 #include "InterchangeFactoryNodes_structs.hpp"
 #include "InterchangeNodes_structs.hpp"
 
@@ -25,88 +25,115 @@ namespace SDK
 {
 
 // Class InterchangePipelines.InterchangeGenericCommonMeshesProperties
-// 0x0018 (0x0160 - 0x0148)
+// 0x0018 (0x0140 - 0x0128)
 class UInterchangeGenericCommonMeshesProperties final : public UInterchangePipelineBase
 {
 public:
-	EInterchangeForceMeshType                     ForceAllMeshAsType;                                // 0x0148(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoDetectMeshType;                               // 0x0149(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bImportLods;                                       // 0x014A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBakeMeshes;                                       // 0x014B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBakePivotMeshes;                                  // 0x014C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bKeepSectionsSeparate;                             // 0x014D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInterchangeVertexColorImportOption           VertexColorImportOption;                           // 0x014E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14F[0x1];                                      // 0x014F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FColor                                 VertexOverrideColor;                               // 0x0150(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRecomputeNormals;                                 // 0x0154(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRecomputeTangents;                                // 0x0155(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseMikkTSpace;                                    // 0x0156(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bComputeWeightedNormals;                           // 0x0157(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseHighPrecisionTangentBasis;                     // 0x0158(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseFullPrecisionUVs;                              // 0x0159(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseBackwardsCompatibleF16TruncUVs;                // 0x015A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRemoveDegenerates;                                // 0x015B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15C[0x4];                                      // 0x015C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EInterchangeForceMeshType                     ForceAllMeshAsType;                                // 0x0128(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoDetectMeshType;                               // 0x0129(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportLods;                                       // 0x012A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBakeMeshes;                                       // 0x012B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBakePivotMeshes;                                  // 0x012C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bKeepSectionsSeparate;                             // 0x012D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangeVertexColorImportOption           VertexColorImportOption;                           // 0x012E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12F[0x1];                                      // 0x012F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FColor                                 VertexOverrideColor;                               // 0x0130(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportSockets;                                    // 0x0134(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRecomputeNormals;                                 // 0x0135(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRecomputeTangents;                                // 0x0136(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseMikkTSpace;                                    // 0x0137(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bComputeWeightedNormals;                           // 0x0138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseHighPrecisionTangentBasis;                     // 0x0139(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseFullPrecisionUVs;                              // 0x013A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseBackwardsCompatibleF16TruncUVs;                // 0x013B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRemoveDegenerates;                                // 0x013C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13D[0x3];                                      // 0x013D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeGenericCommonMeshesProperties">();
+		STATIC_CLASS_IMPL("InterchangeGenericCommonMeshesProperties")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeGenericCommonMeshesProperties")
 	}
 	static class UInterchangeGenericCommonMeshesProperties* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeGenericCommonMeshesProperties>();
 	}
 };
-static_assert(alignof(UInterchangeGenericCommonMeshesProperties) == 0x000008, "Wrong alignment on UInterchangeGenericCommonMeshesProperties");
-static_assert(sizeof(UInterchangeGenericCommonMeshesProperties) == 0x000160, "Wrong size on UInterchangeGenericCommonMeshesProperties");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, ForceAllMeshAsType) == 0x000148, "Member 'UInterchangeGenericCommonMeshesProperties::ForceAllMeshAsType' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, bAutoDetectMeshType) == 0x000149, "Member 'UInterchangeGenericCommonMeshesProperties::bAutoDetectMeshType' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, bImportLods) == 0x00014A, "Member 'UInterchangeGenericCommonMeshesProperties::bImportLods' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, bBakeMeshes) == 0x00014B, "Member 'UInterchangeGenericCommonMeshesProperties::bBakeMeshes' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, bBakePivotMeshes) == 0x00014C, "Member 'UInterchangeGenericCommonMeshesProperties::bBakePivotMeshes' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, bKeepSectionsSeparate) == 0x00014D, "Member 'UInterchangeGenericCommonMeshesProperties::bKeepSectionsSeparate' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, VertexColorImportOption) == 0x00014E, "Member 'UInterchangeGenericCommonMeshesProperties::VertexColorImportOption' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, VertexOverrideColor) == 0x000150, "Member 'UInterchangeGenericCommonMeshesProperties::VertexOverrideColor' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, bRecomputeNormals) == 0x000154, "Member 'UInterchangeGenericCommonMeshesProperties::bRecomputeNormals' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, bRecomputeTangents) == 0x000155, "Member 'UInterchangeGenericCommonMeshesProperties::bRecomputeTangents' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, bUseMikkTSpace) == 0x000156, "Member 'UInterchangeGenericCommonMeshesProperties::bUseMikkTSpace' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, bComputeWeightedNormals) == 0x000157, "Member 'UInterchangeGenericCommonMeshesProperties::bComputeWeightedNormals' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, bUseHighPrecisionTangentBasis) == 0x000158, "Member 'UInterchangeGenericCommonMeshesProperties::bUseHighPrecisionTangentBasis' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, bUseFullPrecisionUVs) == 0x000159, "Member 'UInterchangeGenericCommonMeshesProperties::bUseFullPrecisionUVs' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, bUseBackwardsCompatibleF16TruncUVs) == 0x00015A, "Member 'UInterchangeGenericCommonMeshesProperties::bUseBackwardsCompatibleF16TruncUVs' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonMeshesProperties, bRemoveDegenerates) == 0x00015B, "Member 'UInterchangeGenericCommonMeshesProperties::bRemoveDegenerates' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeGenericCommonMeshesProperties;
 
 // Class InterchangePipelines.InterchangeGenericCommonSkeletalMeshesAndAnimationsProperties
-// 0x0010 (0x0158 - 0x0148)
+// 0x0010 (0x0138 - 0x0128)
 class UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties final : public UInterchangePipelineBase
 {
 public:
-	bool                                          bImportOnlyAnimations;                             // 0x0148(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_149[0x3];                                      // 0x0149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TWeakObjectPtr<class USkeleton>               Skeleton;                                          // 0x014C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bImportMeshesInBoneHierarchy;                      // 0x0154(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseT0AsRefPose;                                   // 0x0155(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bConvertStaticsWithMorphTargetsToSkeletals;        // 0x0156(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_157[0x1];                                      // 0x0157(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bImportOnlyAnimations;                             // 0x0128(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_129[0x3];                                      // 0x0129(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class USkeleton>               Skeleton;                                          // 0x012C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportMeshesInBoneHierarchy;                      // 0x0134(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseT0AsRefPose;                                   // 0x0135(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddCurveMetadataToSkeleton;                       // 0x0136(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bConvertStaticsWithMorphTargetsToSkeletals;        // 0x0137(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeGenericCommonSkeletalMeshesAndAnimationsProperties">();
+		STATIC_CLASS_IMPL("InterchangeGenericCommonSkeletalMeshesAndAnimationsProperties")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeGenericCommonSkeletalMeshesAndAnimationsProperties")
 	}
 	static class UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties>();
 	}
 };
-static_assert(alignof(UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties) == 0x000008, "Wrong alignment on UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties");
-static_assert(sizeof(UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties) == 0x000158, "Wrong size on UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties");
-static_assert(offsetof(UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties, bImportOnlyAnimations) == 0x000148, "Member 'UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties::bImportOnlyAnimations' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties, Skeleton) == 0x00014C, "Member 'UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties::Skeleton' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties, bImportMeshesInBoneHierarchy) == 0x000154, "Member 'UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties::bImportMeshesInBoneHierarchy' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties, bUseT0AsRefPose) == 0x000155, "Member 'UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties::bUseT0AsRefPose' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties, bConvertStaticsWithMorphTargetsToSkeletals) == 0x000156, "Member 'UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties::bConvertStaticsWithMorphTargetsToSkeletals' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties;
+
+// Class InterchangePipelines.InterchangeGenericAssetsPipeline
+// 0x0188 (0x02B0 - 0x0128)
+class UInterchangeGenericAssetsPipeline final : public UInterchangePipelineBase
+{
+public:
+	class FString                                 PipelineDisplayName;                               // 0x0128(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EReimportStrategyFlags                        ReimportStrategy;                                  // 0x0138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseSourceNameForAsset;                            // 0x0139(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSceneNameSubFolder;                               // 0x013A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAssetTypeSubFolders;                              // 0x013B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AssetName;                                         // 0x0140(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ImportOffsetTranslation;                           // 0x0150(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               ImportOffsetRotation;                              // 0x0168(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ImportOffsetUniformScale;                          // 0x0180(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_184[0x4];                                      // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInterchangeGenericCommonMeshesProperties* CommonMeshesProperties;                         // 0x0188(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties* CommonSkeletalMeshesAndAnimationsProperties; // 0x0190(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UInterchangeGenericMeshPipeline*        MeshPipeline;                                      // 0x0198(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UInterchangeGenericAnimationPipeline*   AnimationPipeline;                                 // 0x01A0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UInterchangeGenericMaterialPipeline*    MaterialPipeline;                                  // 0x01A8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	struct FSoftObjectPath                        ContentPathExistingSkeleton;                       // 0x01B0(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportOnlyAnimationAdjusted;                      // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D1[0xDF];                                     // 0x01D1(0x00DF)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeGenericAssetsPipeline")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeGenericAssetsPipeline")
+	}
+	static class UInterchangeGenericAssetsPipeline* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeGenericAssetsPipeline>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeGenericAssetsPipeline;
 
 // Class InterchangePipelines.GLTFPipelineSettings
 // 0x0058 (0x0090 - 0x0038)
@@ -119,38 +146,88 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GLTFPipelineSettings">();
+		STATIC_CLASS_IMPL("GLTFPipelineSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFPipelineSettings")
 	}
 	static class UGLTFPipelineSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGLTFPipelineSettings>();
 	}
 };
-static_assert(alignof(UGLTFPipelineSettings) == 0x000008, "Wrong alignment on UGLTFPipelineSettings");
-static_assert(sizeof(UGLTFPipelineSettings) == 0x000090, "Wrong size on UGLTFPipelineSettings");
-static_assert(offsetof(UGLTFPipelineSettings, MaterialParents) == 0x000038, "Member 'UGLTFPipelineSettings::MaterialParents' has a wrong offset!");
+DUMPER7_ASSERTS_UGLTFPipelineSettings;
 
-// Class InterchangePipelines.InterchangeGLTFPipeline
-// 0x0018 (0x0160 - 0x0148)
-class UInterchangeGLTFPipeline final : public UInterchangePipelineBase
+// Class InterchangePipelines.InterchangeGenericAnimationPipeline
+// 0x0070 (0x0198 - 0x0128)
+class UInterchangeGenericAnimationPipeline final : public UInterchangePipelineBase
 {
 public:
-	class FString                                 PipelineDisplayName;                               // 0x0148(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_158[0x8];                                      // 0x0158(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties> CommonSkeletalMeshesAndAnimationsProperties; // 0x0128(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UInterchangeGenericCommonMeshesProperties> CommonMeshesProperties;          // 0x0130(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportAnimations;                                 // 0x0138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportBoneTracks;                                 // 0x0139(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangeAnimationRange                    AnimationRange;                                    // 0x013A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13B[0x1];                                      // 0x013B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInt32Interval                         FrameImportRange;                                  // 0x013C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUse30HzToBakeBoneAnimation;                       // 0x0144(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_145[0x3];                                      // 0x0145(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CustomBoneAnimationSampleRate;                     // 0x0148(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSnapToClosestFrameBoundary;                       // 0x014C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportCustomAttribute;                            // 0x014D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddCurveMetadataToSkeleton;                       // 0x014E(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetMaterialDriveParameterOnCustomAttribute;       // 0x014F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         MaterialCurveSuffixes;                             // 0x0150(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bRemoveCurveRedundantKeys;                         // 0x0160(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoNotImportCurveWithZero;                         // 0x0161(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDeleteExistingNonCurveCustomAttributes;           // 0x0162(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDeleteExistingCustomAttributeCurves;              // 0x0163(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDeleteExistingMorphTargetCurves;                  // 0x0164(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_165[0x3];                                      // 0x0165(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SourceAnimationName;                               // 0x0168(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSceneImport;                                      // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_179[0x1F];                                     // 0x0179(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeGLTFPipeline">();
+		STATIC_CLASS_IMPL("InterchangeGenericAnimationPipeline")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeGenericAnimationPipeline")
+	}
+	static class UInterchangeGenericAnimationPipeline* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeGenericAnimationPipeline>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeGenericAnimationPipeline;
+
+// Class InterchangePipelines.InterchangeGLTFPipeline
+// 0x0018 (0x0140 - 0x0128)
+class UInterchangeGLTFPipeline final : public UInterchangePipelineBase
+{
+public:
+	class FString                                 PipelineDisplayName;                               // 0x0128(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_138[0x8];                                      // 0x0138(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeGLTFPipeline")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeGLTFPipeline")
 	}
 	static class UInterchangeGLTFPipeline* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeGLTFPipeline>();
 	}
 };
-static_assert(alignof(UInterchangeGLTFPipeline) == 0x000008, "Wrong alignment on UInterchangeGLTFPipeline");
-static_assert(sizeof(UInterchangeGLTFPipeline) == 0x000160, "Wrong size on UInterchangeGLTFPipeline");
-static_assert(offsetof(UInterchangeGLTFPipeline, PipelineDisplayName) == 0x000148, "Member 'UInterchangeGLTFPipeline::PipelineDisplayName' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeGLTFPipeline;
 
 // Class InterchangePipelines.MaterialXPipelineSettings
 // 0x0140 (0x0178 - 0x0038)
@@ -165,246 +242,146 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialXPipelineSettings">();
+		STATIC_CLASS_IMPL("MaterialXPipelineSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialXPipelineSettings")
 	}
 	static class UMaterialXPipelineSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialXPipelineSettings>();
 	}
 };
-static_assert(alignof(UMaterialXPipelineSettings) == 0x000008, "Wrong alignment on UMaterialXPipelineSettings");
-static_assert(sizeof(UMaterialXPipelineSettings) == 0x000178, "Wrong size on UMaterialXPipelineSettings");
-static_assert(offsetof(UMaterialXPipelineSettings, PredefinedSurfaceShaders) == 0x000038, "Member 'UMaterialXPipelineSettings::PredefinedSurfaceShaders' has a wrong offset!");
-static_assert(offsetof(UMaterialXPipelineSettings, PredefinedBSDF) == 0x000088, "Member 'UMaterialXPipelineSettings::PredefinedBSDF' has a wrong offset!");
-static_assert(offsetof(UMaterialXPipelineSettings, PredefinedEDF) == 0x0000D8, "Member 'UMaterialXPipelineSettings::PredefinedEDF' has a wrong offset!");
-static_assert(offsetof(UMaterialXPipelineSettings, PredefinedVDF) == 0x000128, "Member 'UMaterialXPipelineSettings::PredefinedVDF' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialXPipelineSettings;
 
 // Class InterchangePipelines.InterchangeMaterialXPipeline
-// 0x0008 (0x0150 - 0x0148)
+// 0x0008 (0x0130 - 0x0128)
 class UInterchangeMaterialXPipeline final : public UInterchangePipelineBase
 {
 public:
-	uint8                                         Pad_148[0x8];                                      // 0x0148(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_128[0x8];                                      // 0x0128(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeMaterialXPipeline">();
+		STATIC_CLASS_IMPL("InterchangeMaterialXPipeline")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeMaterialXPipeline")
 	}
 	static class UInterchangeMaterialXPipeline* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeMaterialXPipeline>();
 	}
 };
-static_assert(alignof(UInterchangeMaterialXPipeline) == 0x000008, "Wrong alignment on UInterchangeMaterialXPipeline");
-static_assert(sizeof(UInterchangeMaterialXPipeline) == 0x000150, "Wrong size on UInterchangeMaterialXPipeline");
-
-// Class InterchangePipelines.InterchangeGenericAnimationPipeline
-// 0x0070 (0x01B8 - 0x0148)
-class UInterchangeGenericAnimationPipeline final : public UInterchangePipelineBase
-{
-public:
-	TWeakObjectPtr<class UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties> CommonSkeletalMeshesAndAnimationsProperties; // 0x0148(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UInterchangeGenericCommonMeshesProperties> CommonMeshesProperties;          // 0x0150(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bImportAnimations;                                 // 0x0158(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bImportBoneTracks;                                 // 0x0159(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInterchangeAnimationRange                    AnimationRange;                                    // 0x015A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15B[0x1];                                      // 0x015B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInt32Interval                         FrameImportRange;                                  // 0x015C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUse30HzToBakeBoneAnimation;                       // 0x0164(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_165[0x3];                                      // 0x0165(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CustomBoneAnimationSampleRate;                     // 0x0168(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSnapToClosestFrameBoundary;                       // 0x016C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bImportCustomAttribute;                            // 0x016D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddCurveMetadataToSkeleton;                       // 0x016E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetMaterialDriveParameterOnCustomAttribute;       // 0x016F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         MaterialCurveSuffixes;                             // 0x0170(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bRemoveCurveRedundantKeys;                         // 0x0180(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDoNotImportCurveWithZero;                         // 0x0181(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDeleteExistingNonCurveCustomAttributes;           // 0x0182(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDeleteExistingCustomAttributeCurves;              // 0x0183(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDeleteExistingMorphTargetCurves;                  // 0x0184(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_185[0x3];                                      // 0x0185(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SourceAnimationName;                               // 0x0188(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSceneImport;                                      // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_199[0x1F];                                     // 0x0199(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"InterchangeGenericAnimationPipeline">();
-	}
-	static class UInterchangeGenericAnimationPipeline* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeGenericAnimationPipeline>();
-	}
-};
-static_assert(alignof(UInterchangeGenericAnimationPipeline) == 0x000008, "Wrong alignment on UInterchangeGenericAnimationPipeline");
-static_assert(sizeof(UInterchangeGenericAnimationPipeline) == 0x0001B8, "Wrong size on UInterchangeGenericAnimationPipeline");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, CommonSkeletalMeshesAndAnimationsProperties) == 0x000148, "Member 'UInterchangeGenericAnimationPipeline::CommonSkeletalMeshesAndAnimationsProperties' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, CommonMeshesProperties) == 0x000150, "Member 'UInterchangeGenericAnimationPipeline::CommonMeshesProperties' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, bImportAnimations) == 0x000158, "Member 'UInterchangeGenericAnimationPipeline::bImportAnimations' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, bImportBoneTracks) == 0x000159, "Member 'UInterchangeGenericAnimationPipeline::bImportBoneTracks' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, AnimationRange) == 0x00015A, "Member 'UInterchangeGenericAnimationPipeline::AnimationRange' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, FrameImportRange) == 0x00015C, "Member 'UInterchangeGenericAnimationPipeline::FrameImportRange' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, bUse30HzToBakeBoneAnimation) == 0x000164, "Member 'UInterchangeGenericAnimationPipeline::bUse30HzToBakeBoneAnimation' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, CustomBoneAnimationSampleRate) == 0x000168, "Member 'UInterchangeGenericAnimationPipeline::CustomBoneAnimationSampleRate' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, bSnapToClosestFrameBoundary) == 0x00016C, "Member 'UInterchangeGenericAnimationPipeline::bSnapToClosestFrameBoundary' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, bImportCustomAttribute) == 0x00016D, "Member 'UInterchangeGenericAnimationPipeline::bImportCustomAttribute' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, bAddCurveMetadataToSkeleton) == 0x00016E, "Member 'UInterchangeGenericAnimationPipeline::bAddCurveMetadataToSkeleton' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, bSetMaterialDriveParameterOnCustomAttribute) == 0x00016F, "Member 'UInterchangeGenericAnimationPipeline::bSetMaterialDriveParameterOnCustomAttribute' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, MaterialCurveSuffixes) == 0x000170, "Member 'UInterchangeGenericAnimationPipeline::MaterialCurveSuffixes' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, bRemoveCurveRedundantKeys) == 0x000180, "Member 'UInterchangeGenericAnimationPipeline::bRemoveCurveRedundantKeys' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, bDoNotImportCurveWithZero) == 0x000181, "Member 'UInterchangeGenericAnimationPipeline::bDoNotImportCurveWithZero' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, bDeleteExistingNonCurveCustomAttributes) == 0x000182, "Member 'UInterchangeGenericAnimationPipeline::bDeleteExistingNonCurveCustomAttributes' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, bDeleteExistingCustomAttributeCurves) == 0x000183, "Member 'UInterchangeGenericAnimationPipeline::bDeleteExistingCustomAttributeCurves' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, bDeleteExistingMorphTargetCurves) == 0x000184, "Member 'UInterchangeGenericAnimationPipeline::bDeleteExistingMorphTargetCurves' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, SourceAnimationName) == 0x000188, "Member 'UInterchangeGenericAnimationPipeline::SourceAnimationName' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAnimationPipeline, bSceneImport) == 0x000198, "Member 'UInterchangeGenericAnimationPipeline::bSceneImport' has a wrong offset!");
-
-// Class InterchangePipelines.InterchangeGenericAssetsPipeline
-// 0x0188 (0x02D0 - 0x0148)
-class UInterchangeGenericAssetsPipeline final : public UInterchangePipelineBase
-{
-public:
-	class FString                                 PipelineDisplayName;                               // 0x0148(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EReimportStrategyFlags                        ReimportStrategy;                                  // 0x0158(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseSourceNameForAsset;                            // 0x0159(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15A[0x6];                                      // 0x015A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 AssetName;                                         // 0x0160(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ImportOffsetTranslation;                           // 0x0170(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               ImportOffsetRotation;                              // 0x0188(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         ImportOffsetUniformScale;                          // 0x01A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInterchangeGenericCommonMeshesProperties* CommonMeshesProperties;                         // 0x01A8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties* CommonSkeletalMeshesAndAnimationsProperties; // 0x01B0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeGenericMeshPipeline*        MeshPipeline;                                      // 0x01B8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeGenericAnimationPipeline*   AnimationPipeline;                                 // 0x01C0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeGenericMaterialPipeline*    MaterialPipeline;                                  // 0x01C8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ContentPathExistingSkeleton;                       // 0x01D0(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bImportOnlyAnimationAdjusted;                      // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F1[0xDF];                                     // 0x01F1(0x00DF)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"InterchangeGenericAssetsPipeline">();
-	}
-	static class UInterchangeGenericAssetsPipeline* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeGenericAssetsPipeline>();
-	}
-};
-static_assert(alignof(UInterchangeGenericAssetsPipeline) == 0x000008, "Wrong alignment on UInterchangeGenericAssetsPipeline");
-static_assert(sizeof(UInterchangeGenericAssetsPipeline) == 0x0002D0, "Wrong size on UInterchangeGenericAssetsPipeline");
-static_assert(offsetof(UInterchangeGenericAssetsPipeline, PipelineDisplayName) == 0x000148, "Member 'UInterchangeGenericAssetsPipeline::PipelineDisplayName' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAssetsPipeline, ReimportStrategy) == 0x000158, "Member 'UInterchangeGenericAssetsPipeline::ReimportStrategy' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAssetsPipeline, bUseSourceNameForAsset) == 0x000159, "Member 'UInterchangeGenericAssetsPipeline::bUseSourceNameForAsset' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAssetsPipeline, AssetName) == 0x000160, "Member 'UInterchangeGenericAssetsPipeline::AssetName' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAssetsPipeline, ImportOffsetTranslation) == 0x000170, "Member 'UInterchangeGenericAssetsPipeline::ImportOffsetTranslation' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAssetsPipeline, ImportOffsetRotation) == 0x000188, "Member 'UInterchangeGenericAssetsPipeline::ImportOffsetRotation' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAssetsPipeline, ImportOffsetUniformScale) == 0x0001A0, "Member 'UInterchangeGenericAssetsPipeline::ImportOffsetUniformScale' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAssetsPipeline, CommonMeshesProperties) == 0x0001A8, "Member 'UInterchangeGenericAssetsPipeline::CommonMeshesProperties' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAssetsPipeline, CommonSkeletalMeshesAndAnimationsProperties) == 0x0001B0, "Member 'UInterchangeGenericAssetsPipeline::CommonSkeletalMeshesAndAnimationsProperties' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAssetsPipeline, MeshPipeline) == 0x0001B8, "Member 'UInterchangeGenericAssetsPipeline::MeshPipeline' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAssetsPipeline, AnimationPipeline) == 0x0001C0, "Member 'UInterchangeGenericAssetsPipeline::AnimationPipeline' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAssetsPipeline, MaterialPipeline) == 0x0001C8, "Member 'UInterchangeGenericAssetsPipeline::MaterialPipeline' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAssetsPipeline, ContentPathExistingSkeleton) == 0x0001D0, "Member 'UInterchangeGenericAssetsPipeline::ContentPathExistingSkeleton' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericAssetsPipeline, bImportOnlyAnimationAdjusted) == 0x0001F0, "Member 'UInterchangeGenericAssetsPipeline::bImportOnlyAnimationAdjusted' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeMaterialXPipeline;
 
 // Class InterchangePipelines.InterchangeGenericMaterialPipeline
-// 0x00B0 (0x01F8 - 0x0148)
+// 0x00A0 (0x01C8 - 0x0128)
 class UInterchangeGenericMaterialPipeline final : public UInterchangePipelineBase
 {
 public:
-	class FString                                 PipelineDisplayName;                               // 0x0148(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bImportMaterials;                                  // 0x0158(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInterchangeMaterialSearchLocation            SearchLocation;                                    // 0x0159(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15A[0x6];                                      // 0x015A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 AssetName;                                         // 0x0160(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInterchangeMaterialImportOption              MaterialImport;                                    // 0x0170(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIdentifyDuplicateMaterials;                       // 0x0171(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCreateMaterialInstanceForParent;                  // 0x0172(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_173[0x5];                                      // 0x0173(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftObjectPath                        ParentMaterial;                                    // 0x0178(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeGenericTexturePipeline*     TexturePipeline;                                   // 0x0198(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1A8[0x50];                                     // 0x01A8(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 PipelineDisplayName;                               // 0x0128(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportMaterials;                                  // 0x0138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangeMaterialSearchLocation            SearchLocation;                                    // 0x0139(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13A[0x6];                                      // 0x013A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AssetName;                                         // 0x0140(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangeMaterialImportOption              MaterialImport;                                    // 0x0150(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIdentifyDuplicateMaterials;                       // 0x0151(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCreateMaterialInstanceForParent;                  // 0x0152(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_153[0x5];                                      // 0x0153(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoftObjectPath                        ParentMaterial;                                    // 0x0158(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeGenericTexturePipeline*     TexturePipeline;                                   // 0x0178(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UInterchangeSparseVolumeTexturePipeline* SparseVolumeTexturePipeline;                      // 0x0180(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	bool                                          bOverrideDisplacement;                             // 0x0188(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_189[0x3];                                      // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         OverrideDisplacementCenter;                        // 0x018C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0190(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_198[0x30];                                     // 0x0198(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeGenericMaterialPipeline">();
+		STATIC_CLASS_IMPL("InterchangeGenericMaterialPipeline")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeGenericMaterialPipeline")
 	}
 	static class UInterchangeGenericMaterialPipeline* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeGenericMaterialPipeline>();
 	}
 };
-static_assert(alignof(UInterchangeGenericMaterialPipeline) == 0x000008, "Wrong alignment on UInterchangeGenericMaterialPipeline");
-static_assert(sizeof(UInterchangeGenericMaterialPipeline) == 0x0001F8, "Wrong size on UInterchangeGenericMaterialPipeline");
-static_assert(offsetof(UInterchangeGenericMaterialPipeline, PipelineDisplayName) == 0x000148, "Member 'UInterchangeGenericMaterialPipeline::PipelineDisplayName' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMaterialPipeline, bImportMaterials) == 0x000158, "Member 'UInterchangeGenericMaterialPipeline::bImportMaterials' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMaterialPipeline, SearchLocation) == 0x000159, "Member 'UInterchangeGenericMaterialPipeline::SearchLocation' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMaterialPipeline, AssetName) == 0x000160, "Member 'UInterchangeGenericMaterialPipeline::AssetName' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMaterialPipeline, MaterialImport) == 0x000170, "Member 'UInterchangeGenericMaterialPipeline::MaterialImport' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMaterialPipeline, bIdentifyDuplicateMaterials) == 0x000171, "Member 'UInterchangeGenericMaterialPipeline::bIdentifyDuplicateMaterials' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMaterialPipeline, bCreateMaterialInstanceForParent) == 0x000172, "Member 'UInterchangeGenericMaterialPipeline::bCreateMaterialInstanceForParent' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMaterialPipeline, ParentMaterial) == 0x000178, "Member 'UInterchangeGenericMaterialPipeline::ParentMaterial' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMaterialPipeline, TexturePipeline) == 0x000198, "Member 'UInterchangeGenericMaterialPipeline::TexturePipeline' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMaterialPipeline, BaseNodeContainer) == 0x0001A0, "Member 'UInterchangeGenericMaterialPipeline::BaseNodeContainer' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeGenericMaterialPipeline;
 
 // Class InterchangePipelines.InterchangeGenericMeshPipeline
-// 0x00F0 (0x0238 - 0x0148)
+// 0x0118 (0x0240 - 0x0128)
 class UInterchangeGenericMeshPipeline final : public UInterchangePipelineBase
 {
 public:
-	TWeakObjectPtr<class UInterchangeGenericCommonMeshesProperties> CommonMeshesProperties;          // 0x0148(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties> CommonSkeletalMeshesAndAnimationsProperties; // 0x0150(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bImportStaticMeshes;                               // 0x0158(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCombineStaticMeshes;                              // 0x0159(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15A[0x2];                                      // 0x015A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   LODGroup;                                          // 0x015C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoComputeLODScreenSizes;                        // 0x0164(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_165[0x3];                                      // 0x0165(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 LODScreenSizes;                                    // 0x0168(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bImportCollision;                                  // 0x0178(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCollision;                                        // 0x0179(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bImportCollisionAccordingToMeshName;               // 0x017A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOneConvexHullPerUCX;                              // 0x017B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInterchangeMeshCollision                     Collision;                                         // 0x017C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBuildNanite;                                      // 0x017D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBuildReversedIndexBuffer;                         // 0x017E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bGenerateLightmapUVs;                              // 0x017F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bGenerateDistanceFieldAsIfTwoSided;                // 0x0180(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSupportFaceRemap;                                 // 0x0181(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_182[0x2];                                      // 0x0182(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinLightmapResolution;                             // 0x0184(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SrcLightmapIndex;                                  // 0x0188(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         DstLightmapIndex;                                  // 0x018C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                BuildScale3D;                                      // 0x0190(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DistanceFieldResolutionScale;                      // 0x01A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UStaticMesh>             DistanceFieldReplacementMesh;                      // 0x01AC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxLumenMeshCards;                                 // 0x01B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bImportSkeletalMeshes;                             // 0x01B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInterchangeSkeletalMeshContentType           SkeletalMeshImportContentType;                     // 0x01B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInterchangeSkeletalMeshContentType           LastSkeletalMeshImportContentType;                 // 0x01BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCombineSkeletalMeshes;                            // 0x01BB(0x0001)(BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bImportMorphTargets;                               // 0x01BC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMergeMorphTargetsWithSameName;                    // 0x01BD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bImportVertexAttributes;                           // 0x01BE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateSkeletonReferencePose;                      // 0x01BF(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCreatePhysicsAsset;                               // 0x01C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C1[0x3];                                      // 0x01C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TWeakObjectPtr<class UPhysicsAsset>           PhysicsAsset;                                      // 0x01C4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseHighPrecisionSkinWeights;                      // 0x01CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CD[0x3];                                      // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ThresholdPosition;                                 // 0x01D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ThresholdTangentNormal;                            // 0x01D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ThresholdUV;                                       // 0x01D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MorphThresholdPosition;                            // 0x01DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BoneInfluenceLimit;                                // 0x01E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E4[0x54];                                     // 0x01E4(0x0054)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class UInterchangeGenericCommonMeshesProperties> CommonMeshesProperties;          // 0x0128(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties> CommonSkeletalMeshesAndAnimationsProperties; // 0x0130(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportStaticMeshes;                               // 0x0138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCombineStaticMeshes;                              // 0x0139(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13A[0x2];                                      // 0x013A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   LODGroup;                                          // 0x013C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoComputeLODScreenSizes;                        // 0x0144(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_145[0x3];                                      // 0x0145(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 LODScreenSizes;                                    // 0x0148(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bImportCollision;                                  // 0x0158(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCollision;                                        // 0x0159(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportCollisionAccordingToMeshName;               // 0x015A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOneConvexHullPerUCX;                              // 0x015B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangeMeshCollision                     Collision;                                         // 0x015C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceCollisionPrimitiveGeneration;                // 0x015D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBuildNanite;                                      // 0x015E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBuildReversedIndexBuffer;                         // 0x015F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGenerateLightmapUVs;                              // 0x0160(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGenerateDistanceFieldAsIfTwoSided;                // 0x0161(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSupportFaceRemap;                                 // 0x0162(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_163[0x1];                                      // 0x0163(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinLightmapResolution;                             // 0x0164(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SrcLightmapIndex;                                  // 0x0168(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DstLightmapIndex;                                  // 0x016C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BuildScale3D;                                      // 0x0170(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DistanceFieldResolutionScale;                      // 0x0188(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UStaticMesh>             DistanceFieldReplacementMesh;                      // 0x018C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxLumenMeshCards;                                 // 0x0194(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportSkeletalMeshes;                             // 0x0198(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangeSkeletalMeshContentType           SkeletalMeshImportContentType;                     // 0x0199(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangeSkeletalMeshContentType           LastSkeletalMeshImportContentType;                 // 0x019A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCombineSkeletalMeshes;                            // 0x019B(0x0001)(BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportMorphTargets;                               // 0x019C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMergeMorphTargetsWithSameName;                    // 0x019D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportVertexAttributes;                           // 0x019E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateSkeletonReferencePose;                      // 0x019F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCreatePhysicsAsset;                               // 0x01A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A1[0x3];                                      // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class UPhysicsAsset>           PhysicsAsset;                                      // 0x01A4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseHighPrecisionSkinWeights;                      // 0x01AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1AD[0x3];                                      // 0x01AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ThresholdPosition;                                 // 0x01B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ThresholdTangentNormal;                            // 0x01B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ThresholdUV;                                       // 0x01B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MorphThresholdPosition;                            // 0x01BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BoneInfluenceLimit;                                // 0x01C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportGeometryCaches;                             // 0x01C4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFlattenTracks;                                    // 0x01C5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C6[0x2];                                      // 0x01C6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CompressedPositionPrecision;                       // 0x01C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CompressedTextureCoordinatesNumberOfBits;          // 0x01CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOverrideTimeRange;                                // 0x01D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D1[0x3];                                      // 0x01D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         FrameStart;                                        // 0x01D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FrameEnd;                                          // 0x01D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangeMotionVectorsHandling             MotionVectors;                                     // 0x01DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyConstantTopologyOptimizations;               // 0x01DD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStoreImportedVertexNumbers;                       // 0x01DE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOptimizeIndexBuffers;                             // 0x01DF(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E0[0x60];                                     // 0x01E0(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetCombineSkeletalMeshes(bool InbCombineSkeletalMeshes);
@@ -414,123 +391,79 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeGenericMeshPipeline">();
+		STATIC_CLASS_IMPL("InterchangeGenericMeshPipeline")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeGenericMeshPipeline")
 	}
 	static class UInterchangeGenericMeshPipeline* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeGenericMeshPipeline>();
 	}
 };
-static_assert(alignof(UInterchangeGenericMeshPipeline) == 0x000008, "Wrong alignment on UInterchangeGenericMeshPipeline");
-static_assert(sizeof(UInterchangeGenericMeshPipeline) == 0x000238, "Wrong size on UInterchangeGenericMeshPipeline");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, CommonMeshesProperties) == 0x000148, "Member 'UInterchangeGenericMeshPipeline::CommonMeshesProperties' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, CommonSkeletalMeshesAndAnimationsProperties) == 0x000150, "Member 'UInterchangeGenericMeshPipeline::CommonSkeletalMeshesAndAnimationsProperties' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bImportStaticMeshes) == 0x000158, "Member 'UInterchangeGenericMeshPipeline::bImportStaticMeshes' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bCombineStaticMeshes) == 0x000159, "Member 'UInterchangeGenericMeshPipeline::bCombineStaticMeshes' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, LODGroup) == 0x00015C, "Member 'UInterchangeGenericMeshPipeline::LODGroup' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bAutoComputeLODScreenSizes) == 0x000164, "Member 'UInterchangeGenericMeshPipeline::bAutoComputeLODScreenSizes' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, LODScreenSizes) == 0x000168, "Member 'UInterchangeGenericMeshPipeline::LODScreenSizes' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bImportCollision) == 0x000178, "Member 'UInterchangeGenericMeshPipeline::bImportCollision' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bCollision) == 0x000179, "Member 'UInterchangeGenericMeshPipeline::bCollision' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bImportCollisionAccordingToMeshName) == 0x00017A, "Member 'UInterchangeGenericMeshPipeline::bImportCollisionAccordingToMeshName' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bOneConvexHullPerUCX) == 0x00017B, "Member 'UInterchangeGenericMeshPipeline::bOneConvexHullPerUCX' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, Collision) == 0x00017C, "Member 'UInterchangeGenericMeshPipeline::Collision' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bBuildNanite) == 0x00017D, "Member 'UInterchangeGenericMeshPipeline::bBuildNanite' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bBuildReversedIndexBuffer) == 0x00017E, "Member 'UInterchangeGenericMeshPipeline::bBuildReversedIndexBuffer' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bGenerateLightmapUVs) == 0x00017F, "Member 'UInterchangeGenericMeshPipeline::bGenerateLightmapUVs' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bGenerateDistanceFieldAsIfTwoSided) == 0x000180, "Member 'UInterchangeGenericMeshPipeline::bGenerateDistanceFieldAsIfTwoSided' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bSupportFaceRemap) == 0x000181, "Member 'UInterchangeGenericMeshPipeline::bSupportFaceRemap' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, MinLightmapResolution) == 0x000184, "Member 'UInterchangeGenericMeshPipeline::MinLightmapResolution' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, SrcLightmapIndex) == 0x000188, "Member 'UInterchangeGenericMeshPipeline::SrcLightmapIndex' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, DstLightmapIndex) == 0x00018C, "Member 'UInterchangeGenericMeshPipeline::DstLightmapIndex' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, BuildScale3D) == 0x000190, "Member 'UInterchangeGenericMeshPipeline::BuildScale3D' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, DistanceFieldResolutionScale) == 0x0001A8, "Member 'UInterchangeGenericMeshPipeline::DistanceFieldResolutionScale' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, DistanceFieldReplacementMesh) == 0x0001AC, "Member 'UInterchangeGenericMeshPipeline::DistanceFieldReplacementMesh' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, MaxLumenMeshCards) == 0x0001B4, "Member 'UInterchangeGenericMeshPipeline::MaxLumenMeshCards' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bImportSkeletalMeshes) == 0x0001B8, "Member 'UInterchangeGenericMeshPipeline::bImportSkeletalMeshes' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, SkeletalMeshImportContentType) == 0x0001B9, "Member 'UInterchangeGenericMeshPipeline::SkeletalMeshImportContentType' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, LastSkeletalMeshImportContentType) == 0x0001BA, "Member 'UInterchangeGenericMeshPipeline::LastSkeletalMeshImportContentType' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bCombineSkeletalMeshes) == 0x0001BB, "Member 'UInterchangeGenericMeshPipeline::bCombineSkeletalMeshes' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bImportMorphTargets) == 0x0001BC, "Member 'UInterchangeGenericMeshPipeline::bImportMorphTargets' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bMergeMorphTargetsWithSameName) == 0x0001BD, "Member 'UInterchangeGenericMeshPipeline::bMergeMorphTargetsWithSameName' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bImportVertexAttributes) == 0x0001BE, "Member 'UInterchangeGenericMeshPipeline::bImportVertexAttributes' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bUpdateSkeletonReferencePose) == 0x0001BF, "Member 'UInterchangeGenericMeshPipeline::bUpdateSkeletonReferencePose' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bCreatePhysicsAsset) == 0x0001C0, "Member 'UInterchangeGenericMeshPipeline::bCreatePhysicsAsset' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, PhysicsAsset) == 0x0001C4, "Member 'UInterchangeGenericMeshPipeline::PhysicsAsset' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, bUseHighPrecisionSkinWeights) == 0x0001CC, "Member 'UInterchangeGenericMeshPipeline::bUseHighPrecisionSkinWeights' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, ThresholdPosition) == 0x0001D0, "Member 'UInterchangeGenericMeshPipeline::ThresholdPosition' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, ThresholdTangentNormal) == 0x0001D4, "Member 'UInterchangeGenericMeshPipeline::ThresholdTangentNormal' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, ThresholdUV) == 0x0001D8, "Member 'UInterchangeGenericMeshPipeline::ThresholdUV' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, MorphThresholdPosition) == 0x0001DC, "Member 'UInterchangeGenericMeshPipeline::MorphThresholdPosition' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericMeshPipeline, BoneInfluenceLimit) == 0x0001E0, "Member 'UInterchangeGenericMeshPipeline::BoneInfluenceLimit' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeGenericMeshPipeline;
 
 // Class InterchangePipelines.InterchangeGenericLevelPipeline
-// 0x0030 (0x0178 - 0x0148)
+// 0x0038 (0x0160 - 0x0128)
 class UInterchangeGenericLevelPipeline final : public UInterchangePipelineBase
 {
 public:
-	class FString                                 PipelineDisplayName;                               // 0x0148(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EReimportStrategyFlags                        ReimportPropertyStrategy;                          // 0x0158(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInterchangeSceneHierarchyType                SceneHierarchyType;                                // 0x0159(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDeleteMissingActors;                              // 0x015A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceReimportDeletedActors;                       // 0x015B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceReimportDeletedAssets;                       // 0x015C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDeleteMissingAssets;                              // 0x015D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUsePhysicalInsteadOfStandardPerspectiveCamera;    // 0x015E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_15F[0x19];                                     // 0x015F(0x0019)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 PipelineDisplayName;                               // 0x0128(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EReimportStrategyFlags                        ReimportPropertyStrategy;                          // 0x0138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangeSceneHierarchyType                SceneHierarchyType;                                // 0x0139(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDeleteMissingActors;                              // 0x013A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceReimportDeletedActors;                       // 0x013B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceReimportDeletedAssets;                       // 0x013C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDeleteMissingAssets;                              // 0x013D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUsePhysicalInsteadOfStandardPerspectiveCamera;    // 0x013E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_13F[0x21];                                     // 0x013F(0x0021)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeGenericLevelPipeline">();
+		STATIC_CLASS_IMPL("InterchangeGenericLevelPipeline")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeGenericLevelPipeline")
 	}
 	static class UInterchangeGenericLevelPipeline* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeGenericLevelPipeline>();
 	}
 };
-static_assert(alignof(UInterchangeGenericLevelPipeline) == 0x000008, "Wrong alignment on UInterchangeGenericLevelPipeline");
-static_assert(sizeof(UInterchangeGenericLevelPipeline) == 0x000178, "Wrong size on UInterchangeGenericLevelPipeline");
-static_assert(offsetof(UInterchangeGenericLevelPipeline, PipelineDisplayName) == 0x000148, "Member 'UInterchangeGenericLevelPipeline::PipelineDisplayName' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericLevelPipeline, ReimportPropertyStrategy) == 0x000158, "Member 'UInterchangeGenericLevelPipeline::ReimportPropertyStrategy' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericLevelPipeline, SceneHierarchyType) == 0x000159, "Member 'UInterchangeGenericLevelPipeline::SceneHierarchyType' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericLevelPipeline, bDeleteMissingActors) == 0x00015A, "Member 'UInterchangeGenericLevelPipeline::bDeleteMissingActors' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericLevelPipeline, bForceReimportDeletedActors) == 0x00015B, "Member 'UInterchangeGenericLevelPipeline::bForceReimportDeletedActors' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericLevelPipeline, bForceReimportDeletedAssets) == 0x00015C, "Member 'UInterchangeGenericLevelPipeline::bForceReimportDeletedAssets' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericLevelPipeline, bDeleteMissingAssets) == 0x00015D, "Member 'UInterchangeGenericLevelPipeline::bDeleteMissingAssets' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericLevelPipeline, bUsePhysicalInsteadOfStandardPerspectiveCamera) == 0x00015E, "Member 'UInterchangeGenericLevelPipeline::bUsePhysicalInsteadOfStandardPerspectiveCamera' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeGenericLevelPipeline;
 
 // Class InterchangePipelines.InterchangeGenericTexturePipeline
-// 0x0068 (0x01B0 - 0x0148)
+// 0x0068 (0x0190 - 0x0128)
 class UInterchangeGenericTexturePipeline final : public UInterchangePipelineBase
 {
 public:
-	class FString                                 PipelineDisplayName;                               // 0x0148(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bImportTextures;                                   // 0x0158(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 AssetName;                                         // 0x0160(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowNonPowerOfTwo;                               // 0x0170(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0178(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_180[0x30];                                     // 0x0180(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 PipelineDisplayName;                               // 0x0128(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportTextures;                                   // 0x0138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AssetName;                                         // 0x0140(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowNonPowerOfTwo;                               // 0x0150(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0158(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_160[0x30];                                     // 0x0160(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangeGenericTexturePipeline">();
+		STATIC_CLASS_IMPL("InterchangeGenericTexturePipeline")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeGenericTexturePipeline")
 	}
 	static class UInterchangeGenericTexturePipeline* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangeGenericTexturePipeline>();
 	}
 };
-static_assert(alignof(UInterchangeGenericTexturePipeline) == 0x000008, "Wrong alignment on UInterchangeGenericTexturePipeline");
-static_assert(sizeof(UInterchangeGenericTexturePipeline) == 0x0001B0, "Wrong size on UInterchangeGenericTexturePipeline");
-static_assert(offsetof(UInterchangeGenericTexturePipeline, PipelineDisplayName) == 0x000148, "Member 'UInterchangeGenericTexturePipeline::PipelineDisplayName' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericTexturePipeline, bImportTextures) == 0x000158, "Member 'UInterchangeGenericTexturePipeline::bImportTextures' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericTexturePipeline, AssetName) == 0x000160, "Member 'UInterchangeGenericTexturePipeline::AssetName' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericTexturePipeline, bAllowNonPowerOfTwo) == 0x000170, "Member 'UInterchangeGenericTexturePipeline::bAllowNonPowerOfTwo' has a wrong offset!");
-static_assert(offsetof(UInterchangeGenericTexturePipeline, BaseNodeContainer) == 0x000178, "Member 'UInterchangeGenericTexturePipeline::BaseNodeContainer' has a wrong offset!");
+DUMPER7_ASSERTS_UInterchangeGenericTexturePipeline;
 
 // Class InterchangePipelines.InterchangePipelineMeshesUtilities
 // 0x0100 (0x0128 - 0x0028)
@@ -542,6 +475,8 @@ public:
 public:
 	static class UInterchangePipelineMeshesUtilities* CreateInterchangePipelineMeshesUtilities(class UInterchangeBaseNodeContainer* BaseNodeContainer);
 
+	void GetAllGeometryCacheGeometry(TArray<class FString>* MeshGeometryUids) const;
+	void GetAllGeometryCacheInstance(TArray<class FString>* MeshInstanceUids) const;
 	void GetAllMeshGeometry(TArray<class FString>* MeshGeometryUids) const;
 	void GetAllMeshGeometryNotInstanced(TArray<class FString>* MeshGeometryUids) const;
 	void GetAllMeshInstanceUids(TArray<class FString>* MeshInstanceUids) const;
@@ -561,15 +496,46 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InterchangePipelineMeshesUtilities">();
+		STATIC_CLASS_IMPL("InterchangePipelineMeshesUtilities")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangePipelineMeshesUtilities")
 	}
 	static class UInterchangePipelineMeshesUtilities* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInterchangePipelineMeshesUtilities>();
 	}
 };
-static_assert(alignof(UInterchangePipelineMeshesUtilities) == 0x000008, "Wrong alignment on UInterchangePipelineMeshesUtilities");
-static_assert(sizeof(UInterchangePipelineMeshesUtilities) == 0x000128, "Wrong size on UInterchangePipelineMeshesUtilities");
+DUMPER7_ASSERTS_UInterchangePipelineMeshesUtilities;
+
+// Class InterchangePipelines.InterchangeSparseVolumeTexturePipeline
+// 0x0030 (0x0158 - 0x0128)
+class UInterchangeSparseVolumeTexturePipeline final : public UInterchangePipelineBase
+{
+public:
+	class FString                                 PipelineDisplayName;                               // 0x0128(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportSparseVolumeTextures;                       // 0x0138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportAnimatedSparseVolumeTextures;               // 0x0139(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13A[0x6];                                      // 0x013A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AssetName;                                         // 0x0140(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0150(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeSparseVolumeTexturePipeline")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSparseVolumeTexturePipeline")
+	}
+	static class UInterchangeSparseVolumeTexturePipeline* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeSparseVolumeTexturePipeline>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeSparseVolumeTexturePipeline;
 
 }
 

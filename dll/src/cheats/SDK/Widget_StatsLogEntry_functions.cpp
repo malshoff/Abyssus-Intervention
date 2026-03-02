@@ -17,19 +17,53 @@
 namespace SDK
 {
 
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetTotalRuns
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText*                            Result                                                 (Parm, OutParm)
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_StatsLogEntry_C::GetTotalRuns(class FText* Result)
+void UWidget_StatsLogEntry_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetTotalRuns");
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "Construct");
 
-	Params::Widget_StatsLogEntry_C_GetTotalRuns Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.ExecuteUbergraph_Widget_StatsLogEntry
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_StatsLogEntry_C::ExecuteUbergraph_Widget_StatsLogEntry(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "ExecuteUbergraph_Widget_StatsLogEntry");
+
+	Params::Widget_StatsLogEntry_C_ExecuteUbergraph_Widget_StatsLogEntry Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetAverageAccuracy
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText*                            Result                                                 (Parm, OutParm)
+
+void UWidget_StatsLogEntry_C::GetAverageAccuracy(class FText* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetAverageAccuracy");
+
+	Params::Widget_StatsLogEntry_C_GetAverageAccuracy Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -38,19 +72,19 @@ void UWidget_StatsLogEntry_C::GetTotalRuns(class FText* Result)
 }
 
 
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetTotalEnemiesKilled
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetAverageRunTime
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class FText*                            Result                                                 (Parm, OutParm)
 
-void UWidget_StatsLogEntry_C::GetTotalEnemiesKilled(class FText* Result)
+void UWidget_StatsLogEntry_C::GetAverageRunTime(class FText* Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetTotalEnemiesKilled");
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetAverageRunTime");
 
-	Params::Widget_StatsLogEntry_C_GetTotalEnemiesKilled Parms{};
+	Params::Widget_StatsLogEntry_C_GetAverageRunTime Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -59,19 +93,19 @@ void UWidget_StatsLogEntry_C::GetTotalEnemiesKilled(class FText* Result)
 }
 
 
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetTotalDamageDealt
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetDeaths
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class FText*                            Result                                                 (Parm, OutParm)
 
-void UWidget_StatsLogEntry_C::GetTotalDamageDealt(class FText* Result)
+void UWidget_StatsLogEntry_C::GetDeaths(class FText* Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetTotalDamageDealt");
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetDeaths");
 
-	Params::Widget_StatsLogEntry_C_GetTotalDamageDealt Parms{};
+	Params::Widget_StatsLogEntry_C_GetDeaths Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -80,277 +114,19 @@ void UWidget_StatsLogEntry_C::GetTotalDamageDealt(class FText* Result)
 }
 
 
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetTimesRevivedOtherPlayers
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetDeepestRun
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class FText*                            Result                                                 (Parm, OutParm)
 
-void UWidget_StatsLogEntry_C::GetTimesRevivedOtherPlayers(class FText* Result)
+void UWidget_StatsLogEntry_C::GetDeepestRun(class FText* Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetTimesRevivedOtherPlayers");
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetDeepestRun");
 
-	Params::Widget_StatsLogEntry_C_GetTimesRevivedOtherPlayers Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
-}
-
-
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetTimesKilledByEnemyType
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const class FString&                    EnemyTypeName                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FText*                            Result                                                 (Parm, OutParm)
-
-void UWidget_StatsLogEntry_C::GetTimesKilledByEnemyType(const class FString& EnemyTypeName, class FText* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetTimesKilledByEnemyType");
-
-	Params::Widget_StatsLogEntry_C_GetTimesKilledByEnemyType Parms{};
-
-	Parms.EnemyTypeName = std::move(EnemyTypeName);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
-}
-
-
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetTimesDowned
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText*                            Result                                                 (Parm, OutParm)
-
-void UWidget_StatsLogEntry_C::GetTimesDowned(class FText* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetTimesDowned");
-
-	Params::Widget_StatsLogEntry_C_GetTimesDowned Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
-}
-
-
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetStatByKey
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const class FString&                    Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FText*                            TextResult                                             (Parm, OutParm)
-
-void UWidget_StatsLogEntry_C::GetStatByKey(const class FString& Key, class FText* TextResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetStatByKey");
-
-	Params::Widget_StatsLogEntry_C_GetStatByKey Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (TextResult != nullptr)
-		*TextResult = std::move(Parms.TextResult);
-}
-
-
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetShortestRunTime
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText*                            Result                                                 (Parm, OutParm)
-
-void UWidget_StatsLogEntry_C::GetShortestRunTime(class FText* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetShortestRunTime");
-
-	Params::Widget_StatsLogEntry_C_GetShortestRunTime Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
-}
-
-
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetRunSuccesRate
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText*                            Result                                                 (Parm, OutParm)
-
-void UWidget_StatsLogEntry_C::GetRunSuccesRate(class FText* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetRunSuccesRate");
-
-	Params::Widget_StatsLogEntry_C_GetRunSuccesRate Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
-}
-
-
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetRunStreak
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText*                            Result                                                 (Parm, OutParm)
-
-void UWidget_StatsLogEntry_C::GetRunStreak(class FText* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetRunStreak");
-
-	Params::Widget_StatsLogEntry_C_GetRunStreak Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
-}
-
-
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetNumSuccesfulRuns
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText*                            Result                                                 (Parm, OutParm)
-
-void UWidget_StatsLogEntry_C::GetNumSuccesfulRuns(class FText* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetNumSuccesfulRuns");
-
-	Params::Widget_StatsLogEntry_C_GetNumSuccesfulRuns Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
-}
-
-
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetNumMutatorsPickedUp
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText*                            Result                                                 (Parm, OutParm)
-
-void UWidget_StatsLogEntry_C::GetNumMutatorsPickedUp(class FText* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetNumMutatorsPickedUp");
-
-	Params::Widget_StatsLogEntry_C_GetNumMutatorsPickedUp Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
-}
-
-
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetNemesisEnemy
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText*                            EnemyName                                              (Parm, OutParm)
-
-void UWidget_StatsLogEntry_C::GetNemesisEnemy(class FText* EnemyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetNemesisEnemy");
-
-	Params::Widget_StatsLogEntry_C_GetNemesisEnemy Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (EnemyName != nullptr)
-		*EnemyName = std::move(Parms.EnemyName);
-}
-
-
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetMostDamageDoneInARun
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText*                            Result                                                 (Parm, OutParm)
-
-void UWidget_StatsLogEntry_C::GetMostDamageDoneInARun(class FText* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetMostDamageDoneInARun");
-
-	Params::Widget_StatsLogEntry_C_GetMostDamageDoneInARun Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
-}
-
-
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetMaxHPReached
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText*                            Result                                                 (Parm, OutParm)
-
-void UWidget_StatsLogEntry_C::GetMaxHPReached(class FText* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetMaxHPReached");
-
-	Params::Widget_StatsLogEntry_C_GetMaxHPReached Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
-}
-
-
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetFavoriteMutator
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText*                            Result                                                 (Parm, OutParm)
-
-void UWidget_StatsLogEntry_C::GetFavoriteMutator(class FText* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetFavoriteMutator");
-
-	Params::Widget_StatsLogEntry_C_GetFavoriteMutator Parms{};
+	Params::Widget_StatsLogEntry_C_GetDeepestRun Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -383,19 +159,19 @@ void UWidget_StatsLogEntry_C::GetEnemyKillsOfType(class FName EnemyTypeName, cla
 }
 
 
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetDeaths
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetFavoriteMutator
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class FText*                            Result                                                 (Parm, OutParm)
 
-void UWidget_StatsLogEntry_C::GetDeaths(class FText* Result)
+void UWidget_StatsLogEntry_C::GetFavoriteMutator(class FText* Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetDeaths");
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetFavoriteMutator");
 
-	Params::Widget_StatsLogEntry_C_GetDeaths Parms{};
+	Params::Widget_StatsLogEntry_C_GetFavoriteMutator Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -404,19 +180,19 @@ void UWidget_StatsLogEntry_C::GetDeaths(class FText* Result)
 }
 
 
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetAverageRunTime
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetMaxHPReached
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class FText*                            Result                                                 (Parm, OutParm)
 
-void UWidget_StatsLogEntry_C::GetAverageRunTime(class FText* Result)
+void UWidget_StatsLogEntry_C::GetMaxHPReached(class FText* Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetAverageRunTime");
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetMaxHPReached");
 
-	Params::Widget_StatsLogEntry_C_GetAverageRunTime Parms{};
+	Params::Widget_StatsLogEntry_C_GetMaxHPReached Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -425,19 +201,19 @@ void UWidget_StatsLogEntry_C::GetAverageRunTime(class FText* Result)
 }
 
 
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetAverageAccuracy
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetMostDamageDoneInARun
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class FText*                            Result                                                 (Parm, OutParm)
 
-void UWidget_StatsLogEntry_C::GetAverageAccuracy(class FText* Result)
+void UWidget_StatsLogEntry_C::GetMostDamageDoneInARun(class FText* Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetAverageAccuracy");
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetMostDamageDoneInARun");
 
-	Params::Widget_StatsLogEntry_C_GetAverageAccuracy Parms{};
+	Params::Widget_StatsLogEntry_C_GetMostDamageDoneInARun Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -446,37 +222,282 @@ void UWidget_StatsLogEntry_C::GetAverageAccuracy(class FText* Result)
 }
 
 
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.ExecuteUbergraph_Widget_StatsLogEntry
-// (Final, UbergraphFunction, HasDefaults)
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetNemesisEnemy
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText*                            EnemyName                                              (Parm, OutParm)
 
-void UWidget_StatsLogEntry_C::ExecuteUbergraph_Widget_StatsLogEntry(int32 EntryPoint)
+void UWidget_StatsLogEntry_C::GetNemesisEnemy(class FText* EnemyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "ExecuteUbergraph_Widget_StatsLogEntry");
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetNemesisEnemy");
 
-	Params::Widget_StatsLogEntry_C_ExecuteUbergraph_Widget_StatsLogEntry Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::Widget_StatsLogEntry_C_GetNemesisEnemy Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (EnemyName != nullptr)
+		*EnemyName = std::move(Parms.EnemyName);
 }
 
 
-// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetNumMutatorsPickedUp
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText*                            Result                                                 (Parm, OutParm)
 
-void UWidget_StatsLogEntry_C::Construct()
+void UWidget_StatsLogEntry_C::GetNumMutatorsPickedUp(class FText* Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_StatsLogEntry_C", "Construct");
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetNumMutatorsPickedUp");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Widget_StatsLogEntry_C_GetNumMutatorsPickedUp Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
+}
+
+
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetNumSuccesfulRuns
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText*                            Result                                                 (Parm, OutParm)
+
+void UWidget_StatsLogEntry_C::GetNumSuccesfulRuns(class FText* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetNumSuccesfulRuns");
+
+	Params::Widget_StatsLogEntry_C_GetNumSuccesfulRuns Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
+}
+
+
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetRunStreak
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText*                            Result                                                 (Parm, OutParm)
+
+void UWidget_StatsLogEntry_C::GetRunStreak(class FText* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetRunStreak");
+
+	Params::Widget_StatsLogEntry_C_GetRunStreak Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
+}
+
+
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetRunSuccesRate
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText*                            Result                                                 (Parm, OutParm)
+
+void UWidget_StatsLogEntry_C::GetRunSuccesRate(class FText* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetRunSuccesRate");
+
+	Params::Widget_StatsLogEntry_C_GetRunSuccesRate Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
+}
+
+
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetShortestRunTime
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText*                            Result                                                 (Parm, OutParm)
+
+void UWidget_StatsLogEntry_C::GetShortestRunTime(class FText* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetShortestRunTime");
+
+	Params::Widget_StatsLogEntry_C_GetShortestRunTime Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
+}
+
+
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetStatByKey
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const class FString&                    Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FText*                            TextResult                                             (Parm, OutParm)
+
+void UWidget_StatsLogEntry_C::GetStatByKey(const class FString& Key, class FText* TextResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetStatByKey");
+
+	Params::Widget_StatsLogEntry_C_GetStatByKey Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (TextResult != nullptr)
+		*TextResult = std::move(Parms.TextResult);
+}
+
+
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetTimesDowned
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText*                            Result                                                 (Parm, OutParm)
+
+void UWidget_StatsLogEntry_C::GetTimesDowned(class FText* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetTimesDowned");
+
+	Params::Widget_StatsLogEntry_C_GetTimesDowned Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
+}
+
+
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetTimesKilledByEnemyType
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const class FString&                    EnemyTypeName                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FText*                            Result                                                 (Parm, OutParm)
+
+void UWidget_StatsLogEntry_C::GetTimesKilledByEnemyType(const class FString& EnemyTypeName, class FText* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetTimesKilledByEnemyType");
+
+	Params::Widget_StatsLogEntry_C_GetTimesKilledByEnemyType Parms{};
+
+	Parms.EnemyTypeName = std::move(EnemyTypeName);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
+}
+
+
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetTimesRevivedOtherPlayers
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText*                            Result                                                 (Parm, OutParm)
+
+void UWidget_StatsLogEntry_C::GetTimesRevivedOtherPlayers(class FText* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetTimesRevivedOtherPlayers");
+
+	Params::Widget_StatsLogEntry_C_GetTimesRevivedOtherPlayers Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
+}
+
+
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetTotalDamageDealt
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText*                            Result                                                 (Parm, OutParm)
+
+void UWidget_StatsLogEntry_C::GetTotalDamageDealt(class FText* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetTotalDamageDealt");
+
+	Params::Widget_StatsLogEntry_C_GetTotalDamageDealt Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
+}
+
+
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetTotalEnemiesKilled
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText*                            Result                                                 (Parm, OutParm)
+
+void UWidget_StatsLogEntry_C::GetTotalEnemiesKilled(class FText* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetTotalEnemiesKilled");
+
+	Params::Widget_StatsLogEntry_C_GetTotalEnemiesKilled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
+}
+
+
+// Function Widget_StatsLogEntry.Widget_StatsLogEntry_C.GetTotalRuns
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText*                            Result                                                 (Parm, OutParm)
+
+void UWidget_StatsLogEntry_C::GetTotalRuns(class FText* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_StatsLogEntry_C", "GetTotalRuns");
+
+	Params::Widget_StatsLogEntry_C_GetTotalRuns Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
 }
 
 }

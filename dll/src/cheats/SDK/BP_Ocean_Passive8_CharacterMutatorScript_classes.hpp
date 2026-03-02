@@ -23,15 +23,18 @@ class UBP_Ocean_Passive8_CharacterMutatorScript_C final : public URGCharacterMut
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Ocean_Passive8_CharacterMutatorScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_Ocean_Passive8_CharacterMutatorScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Ocean_Passive8_CharacterMutatorScript_C")
 	}
 	static class UBP_Ocean_Passive8_CharacterMutatorScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Ocean_Passive8_CharacterMutatorScript_C>();
 	}
 };
-static_assert(alignof(UBP_Ocean_Passive8_CharacterMutatorScript_C) == 0x000008, "Wrong alignment on UBP_Ocean_Passive8_CharacterMutatorScript_C");
-static_assert(sizeof(UBP_Ocean_Passive8_CharacterMutatorScript_C) == 0x000108, "Wrong size on UBP_Ocean_Passive8_CharacterMutatorScript_C");
+DUMPER7_ASSERTS_UBP_Ocean_Passive8_CharacterMutatorScript_C;
 
 }
 

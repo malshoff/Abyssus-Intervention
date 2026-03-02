@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function BP_GoldLure_CharacterMutator.BP_GoldLure_CharacterMutator_C.ExecuteUbergraph_BP_GoldLure_CharacterMutator
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

@@ -21,9 +21,7 @@ struct Widget_SkillTree_TierSeparator_C_UpdateText final
 public:
 	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_SkillTree_TierSeparator_C_UpdateText) == 0x000008, "Wrong alignment on Widget_SkillTree_TierSeparator_C_UpdateText");
-static_assert(sizeof(Widget_SkillTree_TierSeparator_C_UpdateText) == 0x000010, "Wrong size on Widget_SkillTree_TierSeparator_C_UpdateText");
-static_assert(offsetof(Widget_SkillTree_TierSeparator_C_UpdateText, InText) == 0x000000, "Member 'Widget_SkillTree_TierSeparator_C_UpdateText::InText' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SkillTree_TierSeparator_C_UpdateText;
 
 }
 

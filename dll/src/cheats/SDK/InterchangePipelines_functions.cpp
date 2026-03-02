@@ -68,7 +68,7 @@ bool UInterchangeGenericMeshPipeline::GetCombineSkeletalMeshes() const
 
 
 // Function InterchangePipelines.InterchangePipelineMeshesUtilities.CreateInterchangePipelineMeshesUtilities
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UInterchangeBaseNodeContainer*    BaseNodeContainer                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UInterchangePipelineMeshesUtilities*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -95,8 +95,60 @@ class UInterchangePipelineMeshesUtilities* UInterchangePipelineMeshesUtilities::
 }
 
 
+// Function InterchangePipelines.InterchangePipelineMeshesUtilities.GetAllGeometryCacheGeometry
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class FString>*                  MeshGeometryUids                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UInterchangePipelineMeshesUtilities::GetAllGeometryCacheGeometry(TArray<class FString>* MeshGeometryUids) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangePipelineMeshesUtilities", "GetAllGeometryCacheGeometry");
+
+	Params::InterchangePipelineMeshesUtilities_GetAllGeometryCacheGeometry Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (MeshGeometryUids != nullptr)
+		*MeshGeometryUids = std::move(Parms.MeshGeometryUids);
+}
+
+
+// Function InterchangePipelines.InterchangePipelineMeshesUtilities.GetAllGeometryCacheInstance
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class FString>*                  MeshInstanceUids                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UInterchangePipelineMeshesUtilities::GetAllGeometryCacheInstance(TArray<class FString>* MeshInstanceUids) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangePipelineMeshesUtilities", "GetAllGeometryCacheInstance");
+
+	Params::InterchangePipelineMeshesUtilities_GetAllGeometryCacheInstance Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (MeshInstanceUids != nullptr)
+		*MeshInstanceUids = std::move(Parms.MeshInstanceUids);
+}
+
+
 // Function InterchangePipelines.InterchangePipelineMeshesUtilities.GetAllMeshGeometry
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class FString>*                  MeshGeometryUids                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
@@ -122,7 +174,7 @@ void UInterchangePipelineMeshesUtilities::GetAllMeshGeometry(TArray<class FStrin
 
 
 // Function InterchangePipelines.InterchangePipelineMeshesUtilities.GetAllMeshGeometryNotInstanced
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class FString>*                  MeshGeometryUids                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
@@ -148,7 +200,7 @@ void UInterchangePipelineMeshesUtilities::GetAllMeshGeometryNotInstanced(TArray<
 
 
 // Function InterchangePipelines.InterchangePipelineMeshesUtilities.GetAllMeshInstanceUids
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class FString>*                  MeshInstanceUids                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
@@ -174,7 +226,7 @@ void UInterchangePipelineMeshesUtilities::GetAllMeshInstanceUids(TArray<class FS
 
 
 // Function InterchangePipelines.InterchangePipelineMeshesUtilities.GetAllMeshInstanceUidsUsingMeshGeometryUid
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FString&                    MeshGeometryUid                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class FString>*                  MeshInstanceUids                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
@@ -203,7 +255,7 @@ void UInterchangePipelineMeshesUtilities::GetAllMeshInstanceUidsUsingMeshGeometr
 
 
 // Function InterchangePipelines.InterchangePipelineMeshesUtilities.GetAllSkinnedMeshGeometry
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class FString>*                  MeshGeometryUids                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
@@ -229,7 +281,7 @@ void UInterchangePipelineMeshesUtilities::GetAllSkinnedMeshGeometry(TArray<class
 
 
 // Function InterchangePipelines.InterchangePipelineMeshesUtilities.GetAllSkinnedMeshInstance
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class FString>*                  MeshInstanceUids                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
@@ -255,7 +307,7 @@ void UInterchangePipelineMeshesUtilities::GetAllSkinnedMeshInstance(TArray<class
 
 
 // Function InterchangePipelines.InterchangePipelineMeshesUtilities.GetAllStaticMeshGeometry
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class FString>*                  MeshGeometryUids                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
@@ -281,7 +333,7 @@ void UInterchangePipelineMeshesUtilities::GetAllStaticMeshGeometry(TArray<class 
 
 
 // Function InterchangePipelines.InterchangePipelineMeshesUtilities.GetAllStaticMeshInstance
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class FString>*                  MeshInstanceUids                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
@@ -307,7 +359,7 @@ void UInterchangePipelineMeshesUtilities::GetAllStaticMeshInstance(TArray<class 
 
 
 // Function InterchangePipelines.InterchangePipelineMeshesUtilities.GetMeshGeometryByUid
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FString&                    MeshGeometryUid                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FInterchangeMeshGeometry   ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
@@ -335,7 +387,7 @@ const struct FInterchangeMeshGeometry UInterchangePipelineMeshesUtilities::GetMe
 
 
 // Function InterchangePipelines.InterchangePipelineMeshesUtilities.GetMeshGeometrySkeletonRootUid
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FString&                    MeshGeometryUid                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -363,7 +415,7 @@ class FString UInterchangePipelineMeshesUtilities::GetMeshGeometrySkeletonRootUi
 
 
 // Function InterchangePipelines.InterchangePipelineMeshesUtilities.GetMeshInstanceByUid
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FString&                    MeshInstanceUid                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FInterchangeMeshInstance   ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
@@ -391,7 +443,7 @@ const struct FInterchangeMeshInstance UInterchangePipelineMeshesUtilities::GetMe
 
 
 // Function InterchangePipelines.InterchangePipelineMeshesUtilities.GetMeshInstanceSkeletonRootUid
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FString&                    MeshInstanceUid                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -419,7 +471,7 @@ class FString UInterchangePipelineMeshesUtilities::GetMeshInstanceSkeletonRootUi
 
 
 // Function InterchangePipelines.InterchangePipelineMeshesUtilities.IsValidMeshGeometryUid
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FString&                    MeshGeometryUid                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -447,7 +499,7 @@ bool UInterchangePipelineMeshesUtilities::IsValidMeshGeometryUid(const class FSt
 
 
 // Function InterchangePipelines.InterchangePipelineMeshesUtilities.IsValidMeshInstanceUid
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FString&                    MeshInstanceUid                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

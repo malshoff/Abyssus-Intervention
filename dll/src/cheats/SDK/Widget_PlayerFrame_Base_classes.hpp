@@ -11,22 +11,22 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_classes.hpp"
 #include "UMG_structs.hpp"
+#include "RGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_PlayerFrame_Base.Widget_PlayerFrame_Base_C
-// 0x0020 (0x02F0 - 0x02D0)
+// 0x0020 (0x0360 - 0x0340)
 class UWidget_PlayerFrame_Base_C : public URPlayerFrameUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Image_PreviewSize;                                 // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNamedSlot*                             Slot_Frame;                                        // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          PreviewTemplateSize;                               // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNamedSlot*                             Slot_Frame;                                        // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_PreviewSize;                                 // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          PreviewTemplateSize;                               // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Widget_PlayerFrame_Base(int32 EntryPoint);
@@ -36,19 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_PlayerFrame_Base_C">();
+		BP_STATIC_CLASS_IMPL("Widget_PlayerFrame_Base_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_PlayerFrame_Base_C")
 	}
 	static class UWidget_PlayerFrame_Base_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_PlayerFrame_Base_C>();
 	}
 };
-static_assert(alignof(UWidget_PlayerFrame_Base_C) == 0x000008, "Wrong alignment on UWidget_PlayerFrame_Base_C");
-static_assert(sizeof(UWidget_PlayerFrame_Base_C) == 0x0002F0, "Wrong size on UWidget_PlayerFrame_Base_C");
-static_assert(offsetof(UWidget_PlayerFrame_Base_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_PlayerFrame_Base_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerFrame_Base_C, Image_PreviewSize) == 0x0002D8, "Member 'UWidget_PlayerFrame_Base_C::Image_PreviewSize' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerFrame_Base_C, Slot_Frame) == 0x0002E0, "Member 'UWidget_PlayerFrame_Base_C::Slot_Frame' has a wrong offset!");
-static_assert(offsetof(UWidget_PlayerFrame_Base_C, PreviewTemplateSize) == 0x0002E8, "Member 'UWidget_PlayerFrame_Base_C::PreviewTemplateSize' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_PlayerFrame_Base_C;
 
 }
 

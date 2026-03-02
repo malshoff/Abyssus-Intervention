@@ -121,13 +121,16 @@ enum class EReimportStrategyFlags : uint8
 
 // ScriptStruct InterchangeCore.InterchangePipelineContextParams
 // 0x0020 (0x0020 - 0x0000)
-struct alignas(0x08) FInterchangePipelineContextParams final
+struct FInterchangePipelineContextParams final
 {
 public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EInterchangePipelineContext                   ContextType;                                       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UObject>                    ImportObjectType;                                  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UObject*                                ReimportAsset;                                     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 };
-static_assert(alignof(FInterchangePipelineContextParams) == 0x000008, "Wrong alignment on FInterchangePipelineContextParams");
-static_assert(sizeof(FInterchangePipelineContextParams) == 0x000020, "Wrong size on FInterchangePipelineContextParams");
+DUMPER7_ASSERTS_FInterchangePipelineContextParams;
 
 // ScriptStruct InterchangeCore.InterchangePipelinePropertyStatePerContext
 // 0x0001 (0x0001 - 0x0000)
@@ -136,28 +139,20 @@ struct FInterchangePipelinePropertyStatePerContext final
 public:
 	bool                                          bVisible;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FInterchangePipelinePropertyStatePerContext) == 0x000001, "Wrong alignment on FInterchangePipelinePropertyStatePerContext");
-static_assert(sizeof(FInterchangePipelinePropertyStatePerContext) == 0x000001, "Wrong size on FInterchangePipelinePropertyStatePerContext");
-static_assert(offsetof(FInterchangePipelinePropertyStatePerContext, bVisible) == 0x000000, "Member 'FInterchangePipelinePropertyStatePerContext::bVisible' has a wrong offset!");
+DUMPER7_ASSERTS_FInterchangePipelinePropertyStatePerContext;
 
 // ScriptStruct InterchangeCore.InterchangePipelinePropertyStates
 // 0x0005 (0x0005 - 0x0000)
 struct FInterchangePipelinePropertyStates final
 {
 public:
-	bool                                          bLocked;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Blocked;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPreDialogReset;                                   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FInterchangePipelinePropertyStatePerContext BasicLayoutStates;                            // 0x0002(0x0001)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FInterchangePipelinePropertyStatePerContext ImportStates;                                 // 0x0003(0x0001)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FInterchangePipelinePropertyStatePerContext ReimportStates;                               // 0x0004(0x0001)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FInterchangePipelinePropertyStates) == 0x000001, "Wrong alignment on FInterchangePipelinePropertyStates");
-static_assert(sizeof(FInterchangePipelinePropertyStates) == 0x000005, "Wrong size on FInterchangePipelinePropertyStates");
-static_assert(offsetof(FInterchangePipelinePropertyStates, bLocked) == 0x000000, "Member 'FInterchangePipelinePropertyStates::bLocked' has a wrong offset!");
-static_assert(offsetof(FInterchangePipelinePropertyStates, bPreDialogReset) == 0x000001, "Member 'FInterchangePipelinePropertyStates::bPreDialogReset' has a wrong offset!");
-static_assert(offsetof(FInterchangePipelinePropertyStates, BasicLayoutStates) == 0x000002, "Member 'FInterchangePipelinePropertyStates::BasicLayoutStates' has a wrong offset!");
-static_assert(offsetof(FInterchangePipelinePropertyStates, ImportStates) == 0x000003, "Member 'FInterchangePipelinePropertyStates::ImportStates' has a wrong offset!");
-static_assert(offsetof(FInterchangePipelinePropertyStates, ReimportStates) == 0x000004, "Member 'FInterchangePipelinePropertyStates::ReimportStates' has a wrong offset!");
+DUMPER7_ASSERTS_FInterchangePipelinePropertyStates;
 
 // ScriptStruct InterchangeCore.InterchangeUserDefinedAttributeInfo
 // 0x0030 (0x0030 - 0x0000)
@@ -167,9 +162,7 @@ public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_10[0x20];                                      // 0x0010(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FInterchangeUserDefinedAttributeInfo) == 0x000008, "Wrong alignment on FInterchangeUserDefinedAttributeInfo");
-static_assert(sizeof(FInterchangeUserDefinedAttributeInfo) == 0x000030, "Wrong size on FInterchangeUserDefinedAttributeInfo");
-static_assert(offsetof(FInterchangeUserDefinedAttributeInfo, Name) == 0x000000, "Member 'FInterchangeUserDefinedAttributeInfo::Name' has a wrong offset!");
+DUMPER7_ASSERTS_FInterchangeUserDefinedAttributeInfo;
 
 }
 

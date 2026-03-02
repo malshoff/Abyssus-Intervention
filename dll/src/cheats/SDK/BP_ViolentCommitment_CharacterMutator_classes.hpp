@@ -42,19 +42,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ViolentCommitment_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_ViolentCommitment_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ViolentCommitment_CharacterMutator_C")
 	}
 	static class UBP_ViolentCommitment_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ViolentCommitment_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_ViolentCommitment_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_ViolentCommitment_CharacterMutator_C");
-static_assert(sizeof(UBP_ViolentCommitment_CharacterMutator_C) == 0x000128, "Wrong size on UBP_ViolentCommitment_CharacterMutator_C");
-static_assert(offsetof(UBP_ViolentCommitment_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_ViolentCommitment_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_ViolentCommitment_CharacterMutator_C, StatusEffectRef) == 0x000110, "Member 'UBP_ViolentCommitment_CharacterMutator_C::StatusEffectRef' has a wrong offset!");
-static_assert(offsetof(UBP_ViolentCommitment_CharacterMutator_C, DamageIncrease) == 0x000118, "Member 'UBP_ViolentCommitment_CharacterMutator_C::DamageIncrease' has a wrong offset!");
-static_assert(offsetof(UBP_ViolentCommitment_CharacterMutator_C, NodesCompleted) == 0x000120, "Member 'UBP_ViolentCommitment_CharacterMutator_C::NodesCompleted' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_ViolentCommitment_CharacterMutator_C;
 
 }
 

@@ -30,15 +30,7 @@ public:
 	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPNotify_ToggleInputBlock_C_Received_Notify) == 0x000008, "Wrong alignment on BPNotify_ToggleInputBlock_C_Received_Notify");
-static_assert(sizeof(BPNotify_ToggleInputBlock_C_Received_Notify) == 0x000060, "Wrong size on BPNotify_ToggleInputBlock_C_Received_Notify");
-static_assert(offsetof(BPNotify_ToggleInputBlock_C_Received_Notify, MeshComp) == 0x000000, "Member 'BPNotify_ToggleInputBlock_C_Received_Notify::MeshComp' has a wrong offset!");
-static_assert(offsetof(BPNotify_ToggleInputBlock_C_Received_Notify, Animation) == 0x000008, "Member 'BPNotify_ToggleInputBlock_C_Received_Notify::Animation' has a wrong offset!");
-static_assert(offsetof(BPNotify_ToggleInputBlock_C_Received_Notify, EventReference) == 0x000010, "Member 'BPNotify_ToggleInputBlock_C_Received_Notify::EventReference' has a wrong offset!");
-static_assert(offsetof(BPNotify_ToggleInputBlock_C_Received_Notify, ReturnValue) == 0x000040, "Member 'BPNotify_ToggleInputBlock_C_Received_Notify::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_ToggleInputBlock_C_Received_Notify, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'BPNotify_ToggleInputBlock_C_Received_Notify::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_ToggleInputBlock_C_Received_Notify, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000050, "Member 'BPNotify_ToggleInputBlock_C_Received_Notify::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BPNotify_ToggleInputBlock_C_Received_Notify, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'BPNotify_ToggleInputBlock_C_Received_Notify::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BPNotify_ToggleInputBlock_C_Received_Notify;
 
 }
 

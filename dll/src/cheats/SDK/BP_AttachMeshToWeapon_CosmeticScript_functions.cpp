@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function BP_AttachMeshToWeapon_CosmeticScript.BP_AttachMeshToWeapon_CosmeticScript_C.K2_DeactivateScript
-// (Event, Public, BlueprintEvent)
-
-void UBP_AttachMeshToWeapon_CosmeticScript_C::K2_DeactivateScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AttachMeshToWeapon_CosmeticScript_C", "K2_DeactivateScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AttachMeshToWeapon_CosmeticScript.BP_AttachMeshToWeapon_CosmeticScript_C.K2_ActivateScript
-// (Event, Public, BlueprintEvent)
-
-void UBP_AttachMeshToWeapon_CosmeticScript_C::K2_ActivateScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AttachMeshToWeapon_CosmeticScript_C", "K2_ActivateScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_AttachMeshToWeapon_CosmeticScript.BP_AttachMeshToWeapon_CosmeticScript_C.ExecuteUbergraph_BP_AttachMeshToWeapon_CosmeticScript
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -62,6 +34,34 @@ void UBP_AttachMeshToWeapon_CosmeticScript_C::ExecuteUbergraph_BP_AttachMeshToWe
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AttachMeshToWeapon_CosmeticScript.BP_AttachMeshToWeapon_CosmeticScript_C.K2_ActivateScript
+// (Event, Public, BlueprintEvent)
+
+void UBP_AttachMeshToWeapon_CosmeticScript_C::K2_ActivateScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AttachMeshToWeapon_CosmeticScript_C", "K2_ActivateScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AttachMeshToWeapon_CosmeticScript.BP_AttachMeshToWeapon_CosmeticScript_C.K2_DeactivateScript
+// (Event, Public, BlueprintEvent)
+
+void UBP_AttachMeshToWeapon_CosmeticScript_C::K2_DeactivateScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AttachMeshToWeapon_CosmeticScript_C", "K2_DeactivateScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

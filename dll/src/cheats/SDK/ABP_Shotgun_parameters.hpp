@@ -24,9 +24,7 @@ struct ABP_Shotgun_C_AnimGraph final
 public:
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_Shotgun_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_Shotgun_C_AnimGraph");
-static_assert(sizeof(ABP_Shotgun_C_AnimGraph) == 0x000010, "Wrong size on ABP_Shotgun_C_AnimGraph");
-static_assert(offsetof(ABP_Shotgun_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'ABP_Shotgun_C_AnimGraph::AnimGraph_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Shotgun_C_AnimGraph;
 
 // Function ABP_Shotgun.ABP_Shotgun_C.ExecuteUbergraph_ABP_Shotgun
 // 0x0098 (0x0098 - 0x0000)
@@ -42,15 +40,7 @@ public:
 	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun) == 0x000008, "Wrong alignment on ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun");
-static_assert(sizeof(ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun) == 0x000098, "Wrong size on ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun");
-static_assert(offsetof(ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun, EntryPoint) == 0x000000, "Member 'ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun, CallFunc_BreakTransform_Location) == 0x000008, "Member 'ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun, CallFunc_BreakTransform_Rotation) == 0x000020, "Member 'ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun, CallFunc_BreakTransform_Scale) == 0x000038, "Member 'ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun, CallFunc_BreakTransform_Location_1) == 0x000050, "Member 'ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun::CallFunc_BreakTransform_Location_1' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun, CallFunc_BreakTransform_Rotation_1) == 0x000068, "Member 'ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
-static_assert(offsetof(ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun, CallFunc_BreakTransform_Scale_1) == 0x000080, "Member 'ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Shotgun_C_ExecuteUbergraph_ABP_Shotgun;
 
 }
 

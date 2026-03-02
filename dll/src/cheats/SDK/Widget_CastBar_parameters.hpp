@@ -25,11 +25,7 @@ public:
 	float                                         CurrentCastTime_0;                                 // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_OnCastStarted_CastTimeElapsed_ImplicitCast; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CastBar_C_CREATEDELEGATE_PROXYFUNCTION_0) == 0x000008, "Wrong alignment on Widget_CastBar_C_CREATEDELEGATE_PROXYFUNCTION_0");
-static_assert(sizeof(Widget_CastBar_C_CREATEDELEGATE_PROXYFUNCTION_0) == 0x000010, "Wrong size on Widget_CastBar_C_CREATEDELEGATE_PROXYFUNCTION_0");
-static_assert(offsetof(Widget_CastBar_C_CREATEDELEGATE_PROXYFUNCTION_0, CastTime_0) == 0x000000, "Member 'Widget_CastBar_C_CREATEDELEGATE_PROXYFUNCTION_0::CastTime_0' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_CREATEDELEGATE_PROXYFUNCTION_0, CurrentCastTime_0) == 0x000004, "Member 'Widget_CastBar_C_CREATEDELEGATE_PROXYFUNCTION_0::CurrentCastTime_0' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_CREATEDELEGATE_PROXYFUNCTION_0, CallFunc_OnCastStarted_CastTimeElapsed_ImplicitCast) == 0x000008, "Member 'Widget_CastBar_C_CREATEDELEGATE_PROXYFUNCTION_0::CallFunc_OnCastStarted_CastTimeElapsed_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CastBar_C_CREATEDELEGATE_PROXYFUNCTION_0;
 
 // Function Widget_CastBar.Widget_CastBar_C.ExecuteUbergraph_Widget_CastBar
 // 0x00F8 (0x00F8 - 0x0000)
@@ -66,32 +62,7 @@ public:
 	double                                        K2Node_VariableSet_CastTime_ImplicitCast;          // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar) == 0x000008, "Wrong alignment on Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar");
-static_assert(sizeof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar) == 0x0000F8, "Wrong size on Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, EntryPoint) == 0x000000, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000008, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, K2Node_Event_IsDesignTime) == 0x000010, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, K2Node_Event_MyGeometry) == 0x000014, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, K2Node_Event_InDeltaTime) == 0x00004C, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, CallFunc_GetOwningPlayer_ReturnValue) == 0x000050, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, K2Node_CustomEvent_CastTime) == 0x000058, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::K2Node_CustomEvent_CastTime' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, K2Node_CustomEvent_CastTimeElapsed) == 0x000060, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::K2Node_CustomEvent_CastTimeElapsed' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, K2Node_DynamicCast_AsRGame_Player_Controller) == 0x000068, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::K2Node_DynamicCast_AsRGame_Player_Controller' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, CallFunc_FClamp_ReturnValue) == 0x000078, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000080, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, CallFunc_IsVisible_ReturnValue) == 0x000081, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000088, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, K2Node_CreateDelegate_OutputDelegate) == 0x000090, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000A0, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, CallFunc_FClamp_ReturnValue_1) == 0x0000A8, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::CallFunc_FClamp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000B0, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, K2Node_CreateDelegate_OutputDelegate_2) == 0x0000C0, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, CallFunc_GetDynamicMaterial_ReturnValue_1) == 0x0000D0, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::CallFunc_GetDynamicMaterial_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x0000D8, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x0000E0, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, K2Node_VariableSet_CastTime_ImplicitCast) == 0x0000E8, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::K2Node_VariableSet_CastTime_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x0000F0, "Member 'Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CastBar_C_ExecuteUbergraph_Widget_CastBar;
 
 // Function Widget_CastBar.Widget_CastBar_C.OnCastStarted
 // 0x0010 (0x0010 - 0x0000)
@@ -102,10 +73,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CastTimeElapsed;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CastBar_C_OnCastStarted) == 0x000008, "Wrong alignment on Widget_CastBar_C_OnCastStarted");
-static_assert(sizeof(Widget_CastBar_C_OnCastStarted) == 0x000010, "Wrong size on Widget_CastBar_C_OnCastStarted");
-static_assert(offsetof(Widget_CastBar_C_OnCastStarted, CastTime_0) == 0x000000, "Member 'Widget_CastBar_C_OnCastStarted::CastTime_0' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_OnCastStarted, CastTimeElapsed) == 0x000008, "Member 'Widget_CastBar_C_OnCastStarted::CastTimeElapsed' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CastBar_C_OnCastStarted;
 
 // Function Widget_CastBar.Widget_CastBar_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -114,9 +82,7 @@ struct Widget_CastBar_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CastBar_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_CastBar_C_PreConstruct");
-static_assert(sizeof(Widget_CastBar_C_PreConstruct) == 0x000001, "Wrong size on Widget_CastBar_C_PreConstruct");
-static_assert(offsetof(Widget_CastBar_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_CastBar_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CastBar_C_PreConstruct;
 
 // Function Widget_CastBar.Widget_CastBar_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -126,10 +92,7 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CastBar_C_Tick) == 0x000004, "Wrong alignment on Widget_CastBar_C_Tick");
-static_assert(sizeof(Widget_CastBar_C_Tick) == 0x00003C, "Wrong size on Widget_CastBar_C_Tick");
-static_assert(offsetof(Widget_CastBar_C_Tick, MyGeometry) == 0x000000, "Member 'Widget_CastBar_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_CastBar_C_Tick, InDeltaTime) == 0x000038, "Member 'Widget_CastBar_C_Tick::InDeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CastBar_C_Tick;
 
 }
 

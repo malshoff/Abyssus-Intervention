@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Anchor_Grenade.BP_Anchor_Grenade_C
-// 0x0010 (0x06F8 - 0x06E8)
+// 0x0010 (0x0708 - 0x06F8)
 class ABP_Anchor_Grenade_C final : public ARGrenade
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      Trail;                                             // 0x06F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      Trail;                                             // 0x0700(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Anchor_Grenade(int32 EntryPoint);
@@ -32,17 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Anchor_Grenade_C">();
+		BP_STATIC_CLASS_IMPL("BP_Anchor_Grenade_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Anchor_Grenade_C")
 	}
 	static class ABP_Anchor_Grenade_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Anchor_Grenade_C>();
 	}
 };
-static_assert(alignof(ABP_Anchor_Grenade_C) == 0x000008, "Wrong alignment on ABP_Anchor_Grenade_C");
-static_assert(sizeof(ABP_Anchor_Grenade_C) == 0x0006F8, "Wrong size on ABP_Anchor_Grenade_C");
-static_assert(offsetof(ABP_Anchor_Grenade_C, UberGraphFrame) == 0x0006E8, "Member 'ABP_Anchor_Grenade_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Anchor_Grenade_C, Trail) == 0x0006F0, "Member 'ABP_Anchor_Grenade_C::Trail' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Anchor_Grenade_C;
 
 }
 

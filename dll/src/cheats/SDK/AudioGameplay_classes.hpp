@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Engine_classes.hpp"
 #include "CoreUObject_classes.hpp"
 #include "AudioExtensions_structs.hpp"
 
@@ -29,16 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioAssetUserData">();
+		STATIC_CLASS_IMPL("AudioAssetUserData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioAssetUserData")
 	}
 	static class UAudioAssetUserData* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioAssetUserData>();
 	}
 };
-static_assert(alignof(UAudioAssetUserData) == 0x000008, "Wrong alignment on UAudioAssetUserData");
-static_assert(sizeof(UAudioAssetUserData) == 0x000048, "Wrong size on UAudioAssetUserData");
-static_assert(offsetof(UAudioAssetUserData, MetadataTags) == 0x000028, "Member 'UAudioAssetUserData::MetadataTags' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioAssetUserData;
 
 // Class AudioGameplay.AudioComponentGroupExtension
 // 0x0000 (0x0000 - 0x0000)
@@ -47,7 +49,11 @@ class IAudioComponentGroupExtension final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioComponentGroupExtension">();
+		STATIC_CLASS_IMPL("AudioComponentGroupExtension")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioComponentGroupExtension")
 	}
 	static class IAudioComponentGroupExtension* GetDefaultObj()
 	{
@@ -63,8 +69,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IAudioComponentGroupExtension) == 0x000001, "Wrong alignment on IAudioComponentGroupExtension");
-static_assert(sizeof(IAudioComponentGroupExtension) == 0x000001, "Wrong size on IAudioComponentGroupExtension");
+DUMPER7_ASSERTS_IAudioComponentGroupExtension;
 
 // Class AudioGameplay.AudioGameplayCondition
 // 0x0000 (0x0000 - 0x0000)
@@ -77,7 +82,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioGameplayCondition">();
+		STATIC_CLASS_IMPL("AudioGameplayCondition")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioGameplayCondition")
 	}
 	static class IAudioGameplayCondition* GetDefaultObj()
 	{
@@ -93,8 +102,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IAudioGameplayCondition) == 0x000001, "Wrong alignment on IAudioGameplayCondition");
-static_assert(sizeof(IAudioGameplayCondition) == 0x000001, "Wrong size on IAudioGameplayCondition");
+DUMPER7_ASSERTS_IAudioGameplayCondition;
 
 // Class AudioGameplay.AudioGameplayVolumeInteraction
 // 0x0000 (0x0000 - 0x0000)
@@ -107,7 +115,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioGameplayVolumeInteraction">();
+		STATIC_CLASS_IMPL("AudioGameplayVolumeInteraction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioGameplayVolumeInteraction")
 	}
 	static class IAudioGameplayVolumeInteraction* GetDefaultObj()
 	{
@@ -123,8 +135,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IAudioGameplayVolumeInteraction) == 0x000001, "Wrong alignment on IAudioGameplayVolumeInteraction");
-static_assert(sizeof(IAudioGameplayVolumeInteraction) == 0x000001, "Wrong size on IAudioGameplayVolumeInteraction");
+DUMPER7_ASSERTS_IAudioGameplayVolumeInteraction;
 
 // Class AudioGameplay.SoundHandleSubsystem
 // 0x00B0 (0x00E0 - 0x0030)
@@ -136,31 +147,34 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundHandleSubsystem">();
+		STATIC_CLASS_IMPL("SoundHandleSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundHandleSubsystem")
 	}
 	static class USoundHandleSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundHandleSubsystem>();
 	}
 };
-static_assert(alignof(USoundHandleSubsystem) == 0x000008, "Wrong alignment on USoundHandleSubsystem");
-static_assert(sizeof(USoundHandleSubsystem) == 0x0000E0, "Wrong size on USoundHandleSubsystem");
+DUMPER7_ASSERTS_USoundHandleSubsystem;
 
 // Class AudioGameplay.AudioComponentGroup
-// 0x01B0 (0x03E0 - 0x0230)
+// 0x01B0 (0x03F0 - 0x0240)
 class UAudioComponentGroup final : public USceneComponent
 {
 public:
-	uint8                                         Pad_230[0x8];                                      // 0x0230(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnStopped;                                         // 0x0238(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnKilled;                                          // 0x0248(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnVirtualized;                                     // 0x0258(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnUnvirtualized;                                   // 0x0268(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TArray<class UAudioComponent*>                Components;                                        // 0x0278(0x0010)(Edit, ExportObject, ZeroConstructor, EditConst, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TArray<struct FAudioParameter>                ParamsToSet;                                       // 0x0288(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FAudioParameter>                PersistentParams;                                  // 0x0298(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected)
-	TArray<TScriptInterface<class IAudioComponentGroupExtension>> Extensions;                        // 0x02A8(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2B8[0x128];                                    // 0x02B8(0x0128)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_240[0x8];                                      // 0x0240(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnStopped;                                         // 0x0248(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnKilled;                                          // 0x0258(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnVirtualized;                                     // 0x0268(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnUnvirtualized;                                   // 0x0278(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TArray<class UAudioComponent*>                Components;                                        // 0x0288(0x0010)(Edit, ExportObject, ZeroConstructor, EditConst, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
+	TArray<struct FAudioParameter>                ParamsToSet;                                       // 0x0298(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FAudioParameter>                PersistentParams;                                  // 0x02A8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected)
+	TArray<TScriptInterface<class IAudioComponentGroupExtension>> Extensions;                        // 0x02B8(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C8[0x128];                                    // 0x02C8(0x0128)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UAudioComponentGroup* StaticGetOrCreateComponentGroup(class AActor* Actor);
@@ -192,43 +206,41 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioComponentGroup">();
+		STATIC_CLASS_IMPL("AudioComponentGroup")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioComponentGroup")
 	}
 	static class UAudioComponentGroup* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioComponentGroup>();
 	}
 };
-static_assert(alignof(UAudioComponentGroup) == 0x000010, "Wrong alignment on UAudioComponentGroup");
-static_assert(sizeof(UAudioComponentGroup) == 0x0003E0, "Wrong size on UAudioComponentGroup");
-static_assert(offsetof(UAudioComponentGroup, OnStopped) == 0x000238, "Member 'UAudioComponentGroup::OnStopped' has a wrong offset!");
-static_assert(offsetof(UAudioComponentGroup, OnKilled) == 0x000248, "Member 'UAudioComponentGroup::OnKilled' has a wrong offset!");
-static_assert(offsetof(UAudioComponentGroup, OnVirtualized) == 0x000258, "Member 'UAudioComponentGroup::OnVirtualized' has a wrong offset!");
-static_assert(offsetof(UAudioComponentGroup, OnUnvirtualized) == 0x000268, "Member 'UAudioComponentGroup::OnUnvirtualized' has a wrong offset!");
-static_assert(offsetof(UAudioComponentGroup, Components) == 0x000278, "Member 'UAudioComponentGroup::Components' has a wrong offset!");
-static_assert(offsetof(UAudioComponentGroup, ParamsToSet) == 0x000288, "Member 'UAudioComponentGroup::ParamsToSet' has a wrong offset!");
-static_assert(offsetof(UAudioComponentGroup, PersistentParams) == 0x000298, "Member 'UAudioComponentGroup::PersistentParams' has a wrong offset!");
-static_assert(offsetof(UAudioComponentGroup, Extensions) == 0x0002A8, "Member 'UAudioComponentGroup::Extensions' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioComponentGroup;
 
 // Class AudioGameplay.AudioGameplayComponent
-// 0x0008 (0x00A8 - 0x00A0)
+// 0x0008 (0x00C0 - 0x00B8)
 class UAudioGameplayComponent : public UActorComponent
 {
 public:
-	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioGameplayComponent">();
+		STATIC_CLASS_IMPL("AudioGameplayComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioGameplayComponent")
 	}
 	static class UAudioGameplayComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioGameplayComponent>();
 	}
 };
-static_assert(alignof(UAudioGameplayComponent) == 0x000008, "Wrong alignment on UAudioGameplayComponent");
-static_assert(sizeof(UAudioGameplayComponent) == 0x0000A8, "Wrong size on UAudioGameplayComponent");
+DUMPER7_ASSERTS_UAudioGameplayComponent;
 
 // Class AudioGameplay.AudioRequirementPreset
 // 0x0048 (0x0078 - 0x0030)
@@ -240,16 +252,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioRequirementPreset">();
+		STATIC_CLASS_IMPL("AudioRequirementPreset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioRequirementPreset")
 	}
 	static class UAudioRequirementPreset* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioRequirementPreset>();
 	}
 };
-static_assert(alignof(UAudioRequirementPreset) == 0x000008, "Wrong alignment on UAudioRequirementPreset");
-static_assert(sizeof(UAudioRequirementPreset) == 0x000078, "Wrong size on UAudioRequirementPreset");
-static_assert(offsetof(UAudioRequirementPreset, Query) == 0x000030, "Member 'UAudioRequirementPreset::Query' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioRequirementPreset;
 
 // Class AudioGameplay.AudioGameplayTagCacheSubsystem
 // 0x0050 (0x0080 - 0x0030)
@@ -261,24 +275,27 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioGameplayTagCacheSubsystem">();
+		STATIC_CLASS_IMPL("AudioGameplayTagCacheSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioGameplayTagCacheSubsystem")
 	}
 	static class UAudioGameplayTagCacheSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioGameplayTagCacheSubsystem>();
 	}
 };
-static_assert(alignof(UAudioGameplayTagCacheSubsystem) == 0x000008, "Wrong alignment on UAudioGameplayTagCacheSubsystem");
-static_assert(sizeof(UAudioGameplayTagCacheSubsystem) == 0x000080, "Wrong size on UAudioGameplayTagCacheSubsystem");
+DUMPER7_ASSERTS_UAudioGameplayTagCacheSubsystem;
 
 // Class AudioGameplay.AudioParameterComponent
-// 0x0030 (0x00D8 - 0x00A8)
+// 0x0030 (0x00F0 - 0x00C0)
 class UAudioParameterComponent final : public UAudioGameplayComponent
 {
 public:
-	uint8                                         Pad_A8[0x10];                                      // 0x00A8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TWeakObjectPtr<class UAudioComponent>> ActiveComponents;                                  // 0x00B8(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TArray<struct FAudioParameter>                Parameters;                                        // 0x00C8(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_C0[0x10];                                      // 0x00C0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<TWeakObjectPtr<class UAudioComponent>> ActiveComponents;                                  // 0x00D0(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<struct FAudioParameter>                Parameters;                                        // 0x00E0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
 
 public:
 	const TArray<struct FAudioParameter> GetParameters() const;
@@ -286,17 +303,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioParameterComponent">();
+		STATIC_CLASS_IMPL("AudioParameterComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioParameterComponent")
 	}
 	static class UAudioParameterComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioParameterComponent>();
 	}
 };
-static_assert(alignof(UAudioParameterComponent) == 0x000008, "Wrong alignment on UAudioParameterComponent");
-static_assert(sizeof(UAudioParameterComponent) == 0x0000D8, "Wrong size on UAudioParameterComponent");
-static_assert(offsetof(UAudioParameterComponent, ActiveComponents) == 0x0000B8, "Member 'UAudioParameterComponent::ActiveComponents' has a wrong offset!");
-static_assert(offsetof(UAudioParameterComponent, Parameters) == 0x0000C8, "Member 'UAudioParameterComponent::Parameters' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioParameterComponent;
 
 }
 

@@ -17,52 +17,34 @@ namespace SDK::Params
 {
 
 // Function BPCM_Syringe_Heal.BPCM_Syringe_Heal_C.BlueprintModifyPostProcess
-// 0x0E80 (0x0E80 - 0x0000)
+// 0x0F40 (0x0F40 - 0x0000)
 struct BPCM_Syringe_Heal_C_BlueprintModifyPostProcess final
 {
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         PostProcessBlendWeight;                            // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPostProcessSettings                   PostProcessSettings;                               // 0x0010(0x0700)(Parm, OutParm)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0710(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0711(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_712[0x6];                                      // 0x0712(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerCameraManager*                   CallFunc_GetPlayerCameraManager_ReturnValue;       // 0x0718(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBPCM_Syringe_Heal_C*                   CallFunc_FindCameraModifierByClass_ReturnValue;    // 0x0720(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0728(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RemoveCameraModifier_ReturnValue;         // 0x0729(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_72A[0x6];                                      // 0x072A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0730(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FWeightedBlendable                     K2Node_MakeStruct_WeightedBlendable;               // 0x0738(0x0010)(NoDestructor)
-	TArray<struct FWeightedBlendable>             K2Node_MakeArray_Array;                            // 0x0748(0x0010)(ReferenceParm)
-	struct FWeightedBlendables                    K2Node_MakeStruct_WeightedBlendables;              // 0x0758(0x0010)()
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0768(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_769[0x7];                                      // 0x0769(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPostProcessSettings                   K2Node_MakeStruct_PostProcessSettings;             // 0x0770(0x0700)()
-	float                                         CallFunc_GetRuntimeFloatCurveValue_ReturnValue;    // 0x0E70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E74[0x4];                                      // 0x0E74(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast; // 0x0E78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPostProcessSettings                   PostProcessSettings;                               // 0x0010(0x0760)(Parm, OutParm)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0770(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0771(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_772[0x6];                                      // 0x0772(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerCameraManager*                   CallFunc_GetPlayerCameraManager_ReturnValue;       // 0x0778(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBPCM_Syringe_Heal_C*                   CallFunc_FindCameraModifierByClass_ReturnValue;    // 0x0780(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0788(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RemoveCameraModifier_ReturnValue;         // 0x0789(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_78A[0x6];                                      // 0x078A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0790(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWeightedBlendable                     K2Node_MakeStruct_WeightedBlendable;               // 0x0798(0x0010)(NoDestructor)
+	TArray<struct FWeightedBlendable>             K2Node_MakeArray_Array;                            // 0x07A8(0x0010)(ReferenceParm)
+	struct FWeightedBlendables                    K2Node_MakeStruct_WeightedBlendables;              // 0x07B8(0x0010)()
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x07C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C9[0x7];                                      // 0x07C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPostProcessSettings                   K2Node_MakeStruct_PostProcessSettings;             // 0x07D0(0x0760)()
+	float                                         CallFunc_GetRuntimeFloatCurveValue_ReturnValue;    // 0x0F30(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F34[0x4];                                      // 0x0F34(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast; // 0x0F38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess) == 0x000010, "Wrong alignment on BPCM_Syringe_Heal_C_BlueprintModifyPostProcess");
-static_assert(sizeof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess) == 0x000E80, "Wrong size on BPCM_Syringe_Heal_C_BlueprintModifyPostProcess");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, DeltaTime) == 0x000000, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::DeltaTime' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, PostProcessBlendWeight) == 0x000004, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::PostProcessBlendWeight' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, PostProcessSettings) == 0x000010, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::PostProcessSettings' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, Temp_bool_Has_Been_Initd_Variable) == 0x000710, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, Temp_bool_IsClosed_Variable) == 0x000711, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, CallFunc_GetPlayerCameraManager_ReturnValue) == 0x000718, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::CallFunc_GetPlayerCameraManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, CallFunc_FindCameraModifierByClass_ReturnValue) == 0x000720, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::CallFunc_FindCameraModifierByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000728, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, CallFunc_RemoveCameraModifier_ReturnValue) == 0x000729, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::CallFunc_RemoveCameraModifier_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000730, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, K2Node_MakeStruct_WeightedBlendable) == 0x000738, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::K2Node_MakeStruct_WeightedBlendable' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, K2Node_MakeArray_Array) == 0x000748, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, K2Node_MakeStruct_WeightedBlendables) == 0x000758, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::K2Node_MakeStruct_WeightedBlendables' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, CallFunc_IsValid_ReturnValue) == 0x000768, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, K2Node_MakeStruct_PostProcessSettings) == 0x000770, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::K2Node_MakeStruct_PostProcessSettings' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, CallFunc_GetRuntimeFloatCurveValue_ReturnValue) == 0x000E70, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::CallFunc_GetRuntimeFloatCurveValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPCM_Syringe_Heal_C_BlueprintModifyPostProcess, CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast) == 0x000E78, "Member 'BPCM_Syringe_Heal_C_BlueprintModifyPostProcess::CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BPCM_Syringe_Heal_C_BlueprintModifyPostProcess;
 
 }
 

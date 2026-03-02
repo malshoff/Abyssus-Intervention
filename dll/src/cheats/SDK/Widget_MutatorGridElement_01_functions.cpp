@@ -17,97 +17,184 @@
 namespace SDK
 {
 
-// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.UpdateGamepadFocus
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.AddGodPassiveToDescriptionIfTrigger
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    HasFocus                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      InDescription                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// class URMutatorPrimaryAsset*            Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FText*                            OutDescription                                         (Parm, OutParm)
 
-void UWidget_MutatorGridElement_01_C::UpdateGamepadFocus(bool HasFocus)
+void UWidget_MutatorGridElement_01_C::AddGodPassiveToDescriptionIfTrigger(const class FText& InDescription, class URMutatorPrimaryAsset* Target, class FText* OutDescription)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "UpdateGamepadFocus");
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "AddGodPassiveToDescriptionIfTrigger");
 
-	Params::Widget_MutatorGridElement_01_C_UpdateGamepadFocus Parms{};
+	Params::Widget_MutatorGridElement_01_C_AddGodPassiveToDescriptionIfTrigger Parms{};
 
-	Parms.HasFocus = HasFocus;
+	Parms.InDescription = std::move(InDescription);
+	Parms.Target = Target;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutDescription != nullptr)
+		*OutDescription = std::move(Parms.OutDescription);
 }
 
 
-// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.SetIcon
-// (Private, BlueprintCallable, BlueprintEvent)
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.BndEvt__Widget_MutatorGridElement_01_Button_220_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWidget_MutatorGridElement_01_C::SetIcon()
+void UWidget_MutatorGridElement_01_C::BndEvt__Widget_MutatorGridElement_01_Button_220_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "SetIcon");
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "BndEvt__Widget_MutatorGridElement_01_Button_220_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.Clear
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void UWidget_MutatorGridElement_01_C::PreConstruct(bool IsDesignTime)
+void UWidget_MutatorGridElement_01_C::Clear()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "PreConstruct");
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "Clear");
 
-	Params::Widget_MutatorGridElement_01_C_PreConstruct Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.IsDesignTime = IsDesignTime;
+
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_MutatorGridElement_01_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.DestroyTooltip
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_MutatorGridElement_01_C::DestroyTooltip()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "DestroyTooltip");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_MutatorGridElement_01_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.ExecuteUbergraph_Widget_MutatorGridElement_01
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_MutatorGridElement_01_C::ExecuteUbergraph_Widget_MutatorGridElement_01(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "ExecuteUbergraph_Widget_MutatorGridElement_01");
+
+	Params::Widget_MutatorGridElement_01_C_ExecuteUbergraph_Widget_MutatorGridElement_01 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.OnRemovedFromFocusPath
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.GetOwningRPlayerPawn
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// class ARPlayerPawn**                    RPlayerPawn                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_MutatorGridElement_01_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
+void UWidget_MutatorGridElement_01_C::GetOwningRPlayerPawn(class ARPlayerPawn** RPlayerPawn)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "OnRemovedFromFocusPath");
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "GetOwningRPlayerPawn");
 
-	Params::Widget_MutatorGridElement_01_C_OnRemovedFromFocusPath Parms{};
-
-	Parms.InFocusEvent = std::move(InFocusEvent);
+	Params::Widget_MutatorGridElement_01_C_GetOwningRPlayerPawn Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (RPlayerPawn != nullptr)
+		*RPlayerPawn = Parms.RPlayerPawn;
 }
 
 
-// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.OnAddedToFocusPath
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.GetTooltipSize
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// class UWidget_BaseTooltip_C*            ToolTipWidget_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// struct FVector2D*                       Values                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_MutatorGridElement_01_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
+void UWidget_MutatorGridElement_01_C::GetTooltipSize(class UWidget_BaseTooltip_C* ToolTipWidget_0, struct FVector2D* Values)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "OnAddedToFocusPath");
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "GetTooltipSize");
 
-	Params::Widget_MutatorGridElement_01_C_OnAddedToFocusPath Parms{};
+	Params::Widget_MutatorGridElement_01_C_GetTooltipSize Parms{};
 
-	Parms.InFocusEvent = std::move(InFocusEvent);
+	Parms.ToolTipWidget_0 = ToolTipWidget_0;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Values != nullptr)
+		*Values = std::move(Parms.Values);
+}
+
+
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.GetToolTipWidget
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWidget_MutatorGridElement_01_C::GetToolTipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "GetToolTipWidget");
+
+	Params::Widget_MutatorGridElement_01_C_GetToolTipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -137,149 +224,151 @@ void UWidget_MutatorGridElement_01_C::Initialize(class URMutatorPrimaryAsset* Mu
 }
 
 
-// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.GetToolTipWidget
-// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.NativeClear
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-class UWidget* UWidget_MutatorGridElement_01_C::GetToolTipWidget()
+void UWidget_MutatorGridElement_01_C::NativeClear()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "GetToolTipWidget");
-
-	Params::Widget_MutatorGridElement_01_C_GetToolTipWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.GetTooltipSize
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWidget_BaseTooltip_C*            ToolTipWidget_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D*                       Values                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_MutatorGridElement_01_C::GetTooltipSize(class UWidget_BaseTooltip_C* ToolTipWidget_0, struct FVector2D* Values)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "GetTooltipSize");
-
-	Params::Widget_MutatorGridElement_01_C_GetTooltipSize Parms{};
-
-	Parms.ToolTipWidget_0 = ToolTipWidget_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Values != nullptr)
-		*Values = std::move(Parms.Values);
-}
-
-
-// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.ExecuteUbergraph_Widget_MutatorGridElement_01
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_MutatorGridElement_01_C::ExecuteUbergraph_Widget_MutatorGridElement_01(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "ExecuteUbergraph_Widget_MutatorGridElement_01");
-
-	Params::Widget_MutatorGridElement_01_C_ExecuteUbergraph_Widget_MutatorGridElement_01 Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_MutatorGridElement_01_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "Destruct");
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "NativeClear");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.DestroyTooltip
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.NativeInitialize
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class URMutatorPrimaryAsset*      RMutatorPA                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const int32                             Rank_0                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class URWeaponPrimaryAsset*       RWeaponPA                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const TArray<class URWeaponModPrimaryAsset*>&RWeaponModPAs                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWidget_MutatorGridElement_01_C::NativeInitialize(const class URMutatorPrimaryAsset* RMutatorPA, const int32 Rank_0, const class URWeaponPrimaryAsset* RWeaponPA, const TArray<class URWeaponModPrimaryAsset*>& RWeaponModPAs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "NativeInitialize");
+
+	Params::Widget_MutatorGridElement_01_C_NativeInitialize Parms{};
+
+	Parms.RMutatorPA = RMutatorPA;
+	Parms.Rank_0 = Rank_0;
+	Parms.RWeaponPA = RWeaponPA;
+	Parms.RWeaponModPAs = std::move(RWeaponModPAs);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.OnAddedToFocusPath
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+
+void UWidget_MutatorGridElement_01_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "OnAddedToFocusPath");
+
+	Params::Widget_MutatorGridElement_01_C_OnAddedToFocusPath Parms{};
+
+	Parms.InFocusEvent = std::move(InFocusEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.OnRemovedFromFocusPath
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+
+void UWidget_MutatorGridElement_01_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "OnRemovedFromFocusPath");
+
+	Params::Widget_MutatorGridElement_01_C_OnRemovedFromFocusPath Parms{};
+
+	Parms.InFocusEvent = std::move(InFocusEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_MutatorGridElement_01_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "PreConstruct");
+
+	Params::Widget_MutatorGridElement_01_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.SetIcon
 // (Private, BlueprintCallable, BlueprintEvent)
 
-void UWidget_MutatorGridElement_01_C::DestroyTooltip()
+void UWidget_MutatorGridElement_01_C::SetIcon()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "DestroyTooltip");
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "SetIcon");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.SetRank
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWidget_MutatorGridElement_01_C::Construct()
+void UWidget_MutatorGridElement_01_C::SetRank()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "Construct");
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "SetRank");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.BndEvt__Widget_MutatorGridElement_01_Button_220_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWidget_MutatorGridElement_01_C::BndEvt__Widget_MutatorGridElement_01_Button_220_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "BndEvt__Widget_MutatorGridElement_01_Button_220_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.AddGodPassiveToDescriptionIfTrigger
-// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function Widget_MutatorGridElement_01.Widget_MutatorGridElement_01_C.UpdateGamepadFocus
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FText&                      InDescription                                          (BlueprintVisible, BlueprintReadOnly, Parm)
-// class URMutatorPrimaryAsset*            Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FText*                            OutDescription                                         (Parm, OutParm)
+// bool                                    HasFocus                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_MutatorGridElement_01_C::AddGodPassiveToDescriptionIfTrigger(const class FText& InDescription, class URMutatorPrimaryAsset* Target, class FText* OutDescription)
+void UWidget_MutatorGridElement_01_C::UpdateGamepadFocus(bool HasFocus)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "AddGodPassiveToDescriptionIfTrigger");
+		Func = Class->GetFunction("Widget_MutatorGridElement_01_C", "UpdateGamepadFocus");
 
-	Params::Widget_MutatorGridElement_01_C_AddGodPassiveToDescriptionIfTrigger Parms{};
+	Params::Widget_MutatorGridElement_01_C_UpdateGamepadFocus Parms{};
 
-	Parms.InDescription = std::move(InDescription);
-	Parms.Target = Target;
+	Parms.HasFocus = HasFocus;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutDescription != nullptr)
-		*OutDescription = std::move(Parms.OutDescription);
 }
 
 }

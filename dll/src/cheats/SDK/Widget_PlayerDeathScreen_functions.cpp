@@ -17,117 +17,15 @@
 namespace SDK
 {
 
-// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.SequenceEvent__ENTRYPOINTWidget_PlayerDeathScreen
+// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.AddCameraModifier
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWidget_PlayerDeathScreen_C::SequenceEvent__ENTRYPOINTWidget_PlayerDeathScreen()
+void UWidget_PlayerDeathScreen_C::AddCameraModifier()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "SequenceEvent__ENTRYPOINTWidget_PlayerDeathScreen");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.OnPlayerRespawn
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ARPlayerPawn*                     Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_PlayerDeathScreen_C::OnPlayerRespawn(class ARPlayerPawn* Player)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "OnPlayerRespawn");
-
-	Params::Widget_PlayerDeathScreen_C_OnPlayerRespawn Parms{};
-
-	Parms.Player = Player;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.OnLevelChanged
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UWidget_PlayerDeathScreen_C::OnLevelChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "OnLevelChanged");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.OnInputMethodChanged
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ECommonInputType                        bNewInputType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_PlayerDeathScreen_C::OnInputMethodChanged(ECommonInputType bNewInputType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "OnInputMethodChanged");
-
-	Params::Widget_PlayerDeathScreen_C_OnInputMethodChanged Parms{};
-
-	Parms.bNewInputType = bNewInputType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_PlayerDeathScreen_C::OnInitialized()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "OnInitialized");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.ExecuteUbergraph_Widget_PlayerDeathScreen
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_PlayerDeathScreen_C::ExecuteUbergraph_Widget_PlayerDeathScreen(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "ExecuteUbergraph_Widget_PlayerDeathScreen");
-
-	Params::Widget_PlayerDeathScreen_C_ExecuteUbergraph_Widget_PlayerDeathScreen Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_PlayerDeathScreen_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "Construct");
+		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "AddCameraModifier");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -153,29 +51,117 @@ void UWidget_PlayerDeathScreen_C::BndEvt__Widget_PlayerDeathScreen_W_Button_Simp
 }
 
 
-// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.AnimationFinished
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_PlayerDeathScreen_C::AnimationFinished()
+void UWidget_PlayerDeathScreen_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "AnimationFinished");
+		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.AddCameraModifier
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.ExecuteUbergraph_Widget_PlayerDeathScreen
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_PlayerDeathScreen_C::AddCameraModifier()
+void UWidget_PlayerDeathScreen_C::ExecuteUbergraph_Widget_PlayerDeathScreen(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "AddCameraModifier");
+		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "ExecuteUbergraph_Widget_PlayerDeathScreen");
+
+	Params::Widget_PlayerDeathScreen_C_ExecuteUbergraph_Widget_PlayerDeathScreen Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_PlayerDeathScreen_C::OnInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "OnInitialized");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.OnInputMethodChanged
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECommonInputType                        bNewInputType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_PlayerDeathScreen_C::OnInputMethodChanged(ECommonInputType bNewInputType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "OnInputMethodChanged");
+
+	Params::Widget_PlayerDeathScreen_C_OnInputMethodChanged Parms{};
+
+	Parms.bNewInputType = bNewInputType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.OnLevelChanged
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_PlayerDeathScreen_C::OnLevelChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "OnLevelChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.OnPlayerRespawn
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ARPlayerPawn*                     Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_PlayerDeathScreen_C::OnPlayerRespawn(class ARPlayerPawn* Player)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "OnPlayerRespawn");
+
+	Params::Widget_PlayerDeathScreen_C_OnPlayerRespawn Parms{};
+
+	Parms.Player = Player;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerDeathScreen.Widget_PlayerDeathScreen_C.StartAnimationFinished
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_PlayerDeathScreen_C::StartAnimationFinished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerDeathScreen_C", "StartAnimationFinished");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

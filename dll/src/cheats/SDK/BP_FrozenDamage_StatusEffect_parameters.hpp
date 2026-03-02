@@ -21,9 +21,7 @@ struct BP_FrozenDamage_StatusEffect_C_ExecuteUbergraph_BP_FrozenDamage_StatusEff
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FrozenDamage_StatusEffect_C_ExecuteUbergraph_BP_FrozenDamage_StatusEffect) == 0x000004, "Wrong alignment on BP_FrozenDamage_StatusEffect_C_ExecuteUbergraph_BP_FrozenDamage_StatusEffect");
-static_assert(sizeof(BP_FrozenDamage_StatusEffect_C_ExecuteUbergraph_BP_FrozenDamage_StatusEffect) == 0x000004, "Wrong size on BP_FrozenDamage_StatusEffect_C_ExecuteUbergraph_BP_FrozenDamage_StatusEffect");
-static_assert(offsetof(BP_FrozenDamage_StatusEffect_C_ExecuteUbergraph_BP_FrozenDamage_StatusEffect, EntryPoint) == 0x000000, "Member 'BP_FrozenDamage_StatusEffect_C_ExecuteUbergraph_BP_FrozenDamage_StatusEffect::EntryPoint' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FrozenDamage_StatusEffect_C_ExecuteUbergraph_BP_FrozenDamage_StatusEffect;
 
 }
 

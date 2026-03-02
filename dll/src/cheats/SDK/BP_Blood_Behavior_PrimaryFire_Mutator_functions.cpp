@@ -91,8 +91,9 @@ void UBP_Blood_Behavior_PrimaryFire_Mutator_C::MutatorRankChanged(int32 NewRank,
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   HealthDamage                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           TriggeringActor                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBP_Blood_Behavior_PrimaryFire_Mutator_C::RunPrimaryFireBehavior(float HealthDamage)
+void UBP_Blood_Behavior_PrimaryFire_Mutator_C::RunPrimaryFireBehavior(float HealthDamage, class AActor* TriggeringActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -102,6 +103,7 @@ void UBP_Blood_Behavior_PrimaryFire_Mutator_C::RunPrimaryFireBehavior(float Heal
 	Params::BP_Blood_Behavior_PrimaryFire_Mutator_C_RunPrimaryFireBehavior Parms{};
 
 	Parms.HealthDamage = HealthDamage;
+	Parms.TriggeringActor = TriggeringActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -17,33 +17,31 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LightningSurge_AreaEffect.BP_LightningSurge_AreaEffect_C
-// 0x0028 (0x0478 - 0x0450)
+// 0x0028 (0x0480 - 0x0458)
 class ABP_LightningSurge_AreaEffect_C final : public ARAreaEffect
 {
 public:
-	class UDecalComponent*                        Decal;                                             // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Sphere1;                                           // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Sphere;                                            // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDMActorProximitySphereComponent*       DMActorProximitySphere;                            // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      SpawnedIndicatorFX;                                // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UDecalComponent*                        Decal;                                             // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Sphere1;                                           // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Sphere;                                            // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UDMActorProximitySphereComponent*       DMActorProximitySphere;                            // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      SpawnedIndicatorFX;                                // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_LightningSurge_AreaEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_LightningSurge_AreaEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_LightningSurge_AreaEffect_C")
 	}
 	static class ABP_LightningSurge_AreaEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_LightningSurge_AreaEffect_C>();
 	}
 };
-static_assert(alignof(ABP_LightningSurge_AreaEffect_C) == 0x000008, "Wrong alignment on ABP_LightningSurge_AreaEffect_C");
-static_assert(sizeof(ABP_LightningSurge_AreaEffect_C) == 0x000478, "Wrong size on ABP_LightningSurge_AreaEffect_C");
-static_assert(offsetof(ABP_LightningSurge_AreaEffect_C, Decal) == 0x000450, "Member 'ABP_LightningSurge_AreaEffect_C::Decal' has a wrong offset!");
-static_assert(offsetof(ABP_LightningSurge_AreaEffect_C, Sphere1) == 0x000458, "Member 'ABP_LightningSurge_AreaEffect_C::Sphere1' has a wrong offset!");
-static_assert(offsetof(ABP_LightningSurge_AreaEffect_C, Sphere) == 0x000460, "Member 'ABP_LightningSurge_AreaEffect_C::Sphere' has a wrong offset!");
-static_assert(offsetof(ABP_LightningSurge_AreaEffect_C, DMActorProximitySphere) == 0x000468, "Member 'ABP_LightningSurge_AreaEffect_C::DMActorProximitySphere' has a wrong offset!");
-static_assert(offsetof(ABP_LightningSurge_AreaEffect_C, SpawnedIndicatorFX) == 0x000470, "Member 'ABP_LightningSurge_AreaEffect_C::SpawnedIndicatorFX' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_LightningSurge_AreaEffect_C;
 
 }
 

@@ -17,28 +17,6 @@
 namespace SDK
 {
 
-// Function BPNotify_SpawnFishDietyRagdoll.BPNotify_SpawnFishDietyRagdoll_C.CopyMeshes
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class ABP_SkeletalMeshRagdoll_FishDiety_C*Ragdoll                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class ABP_FishDiety_Body_C*             Weapon                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBPNotify_SpawnFishDietyRagdoll_C::CopyMeshes(class ABP_SkeletalMeshRagdoll_FishDiety_C* Ragdoll, class ABP_FishDiety_Body_C* Weapon) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPNotify_SpawnFishDietyRagdoll_C", "CopyMeshes");
-
-	Params::BPNotify_SpawnFishDietyRagdoll_C_CopyMeshes Parms{};
-
-	Parms.Ragdoll = Ragdoll;
-	Parms.Weapon = Weapon;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPNotify_SpawnFishDietyRagdoll.BPNotify_SpawnFishDietyRagdoll_C.Received_Notify
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:

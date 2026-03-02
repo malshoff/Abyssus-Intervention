@@ -36,19 +36,7 @@ public:
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast; // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge) == 0x000008, "Wrong alignment on BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge");
-static_assert(sizeof(BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge) == 0x000060, "Wrong size on BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge");
-static_assert(offsetof(BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge, EntryPoint) == 0x000000, "Member 'BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge, CallFunc_GetChallengeManager_ReturnValue) == 0x000008, "Member 'BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge, CallFunc_K2_GetPawn_ReturnValue) == 0x000010, "Member 'BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge, K2Node_CustomEvent_NPC) == 0x000018, "Member 'BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge::K2Node_CustomEvent_NPC' has a wrong offset!");
-static_assert(offsetof(BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge, CallFunc_GetDistanceTo_ReturnValue) == 0x000020, "Member 'BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge::CallFunc_GetDistanceTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge, CallFunc_K2_GetPawn_ReturnValue_1) == 0x000028, "Member 'BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge::CallFunc_K2_GetPawn_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000030, "Member 'BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000038, "Member 'BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge, K2Node_CreateDelegate_OutputDelegate) == 0x000044, "Member 'BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge, CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast) == 0x000058, "Member 'BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge::CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DistanceKill_Challenge_C_ExecuteUbergraph_BP_DistanceKill_Challenge;
 
 // Function BP_DistanceKill_Challenge.BP_DistanceKill_Challenge_C.OnEnemyKilled
 // 0x0008 (0x0008 - 0x0000)
@@ -57,9 +45,7 @@ struct BP_DistanceKill_Challenge_C_OnEnemyKilled final
 public:
 	class ARNPCPawnBase*                          NPC;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DistanceKill_Challenge_C_OnEnemyKilled) == 0x000008, "Wrong alignment on BP_DistanceKill_Challenge_C_OnEnemyKilled");
-static_assert(sizeof(BP_DistanceKill_Challenge_C_OnEnemyKilled) == 0x000008, "Wrong size on BP_DistanceKill_Challenge_C_OnEnemyKilled");
-static_assert(offsetof(BP_DistanceKill_Challenge_C_OnEnemyKilled, NPC) == 0x000000, "Member 'BP_DistanceKill_Challenge_C_OnEnemyKilled::NPC' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DistanceKill_Challenge_C_OnEnemyKilled;
 
 }
 

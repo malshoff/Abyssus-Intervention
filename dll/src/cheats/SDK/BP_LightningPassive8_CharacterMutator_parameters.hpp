@@ -49,28 +49,7 @@ public:
 	TDelegate<void(class ARNPCPawnBase* NPC)>     K2Node_CreateDelegate_OutputDelegate_1;            // 0x00C8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Less_DoubleDouble_B_ImplicitCast;         // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator) == 0x000008, "Wrong alignment on BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator");
-static_assert(sizeof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator) == 0x0000E0, "Wrong size on BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000038, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000048, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn_1) == 0x000078, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn_1' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000080, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, CallFunc_IsServer_ReturnValue) == 0x000081, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::CallFunc_IsServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, CallFunc_GetMutatorRank_ReturnValue) == 0x000084, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x000088, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, CallFunc_RandomFloatInRange_ReturnValue) == 0x000090, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000098, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, K2Node_CustomEvent_Target) == 0x0000A0, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::K2Node_CustomEvent_Target' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, K2Node_CustomEvent_NPC) == 0x0000A8, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::K2Node_CustomEvent_NPC' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, CallFunc_Not_PreBool_ReturnValue) == 0x0000B0, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x0000B4, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, CallFunc_DamageSourceMaskHasFlag_ReturnValue) == 0x0000C4, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::CallFunc_DamageSourceMaskHasFlag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, CallFunc_BooleanAND_ReturnValue) == 0x0000C5, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000C8, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator, CallFunc_Less_DoubleDouble_B_ImplicitCast) == 0x0000D8, "Member 'BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator::CallFunc_Less_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LightningPassive8_CharacterMutator_C_ExecuteUbergraph_BP_LightningPassive8_CharacterMutator;
 
 // Function BP_LightningPassive8_CharacterMutator.BP_LightningPassive8_CharacterMutator_C.OnNPCKilled
 // 0x0008 (0x0008 - 0x0000)
@@ -79,9 +58,7 @@ struct BP_LightningPassive8_CharacterMutator_C_OnNPCKilled final
 public:
 	class ARNPCPawnBase*                          NPC;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_LightningPassive8_CharacterMutator_C_OnNPCKilled) == 0x000008, "Wrong alignment on BP_LightningPassive8_CharacterMutator_C_OnNPCKilled");
-static_assert(sizeof(BP_LightningPassive8_CharacterMutator_C_OnNPCKilled) == 0x000008, "Wrong size on BP_LightningPassive8_CharacterMutator_C_OnNPCKilled");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_OnNPCKilled, NPC) == 0x000000, "Member 'BP_LightningPassive8_CharacterMutator_C_OnNPCKilled::NPC' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LightningPassive8_CharacterMutator_C_OnNPCKilled;
 
 // Function BP_LightningPassive8_CharacterMutator.BP_LightningPassive8_CharacterMutator_C.SetEnemyDropLoot
 // 0x0008 (0x0008 - 0x0000)
@@ -90,9 +67,7 @@ struct BP_LightningPassive8_CharacterMutator_C_SetEnemyDropLoot final
 public:
 	class ARNPCPawnBase*                          Target;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_LightningPassive8_CharacterMutator_C_SetEnemyDropLoot) == 0x000008, "Wrong alignment on BP_LightningPassive8_CharacterMutator_C_SetEnemyDropLoot");
-static_assert(sizeof(BP_LightningPassive8_CharacterMutator_C_SetEnemyDropLoot) == 0x000008, "Wrong size on BP_LightningPassive8_CharacterMutator_C_SetEnemyDropLoot");
-static_assert(offsetof(BP_LightningPassive8_CharacterMutator_C_SetEnemyDropLoot, Target) == 0x000000, "Member 'BP_LightningPassive8_CharacterMutator_C_SetEnemyDropLoot::Target' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LightningPassive8_CharacterMutator_C_SetEnemyDropLoot;
 
 }
 

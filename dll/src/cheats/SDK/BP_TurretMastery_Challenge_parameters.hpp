@@ -42,26 +42,7 @@ public:
 	TDelegate<void(class ABP_Turret_C* SpawnedTurret)> K2Node_CreateDelegate_OutputDelegate_1;       // 0x0074(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge) == 0x000008, "Wrong alignment on BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge");
-static_assert(sizeof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge) == 0x000088, "Wrong size on BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, EntryPoint) == 0x000000, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, Temp_int_Variable) == 0x000004, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, Temp_int_Variable_1) == 0x000008, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, K2Node_CreateDelegate_OutputDelegate) == 0x00000C, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, K2Node_CustomEvent_SpawnedTurret) == 0x000020, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::K2Node_CustomEvent_SpawnedTurret' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, CallFunc_GetChallengeManager_ReturnValue) == 0x000028, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, K2Node_CustomEvent_DestroyedActor) == 0x000030, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::K2Node_CustomEvent_DestroyedActor' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, CallFunc_K2_GetPawn_ReturnValue) == 0x000038, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000040, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, CallFunc_GetGScriptComponentFromActor_ReturnValue) == 0x000050, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::CallFunc_GetGScriptComponentFromActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, CallFunc_GetFirstScriptOfType_ReturnValue) == 0x000058, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::CallFunc_GetFirstScriptOfType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, CallFunc_Add_IntInt_ReturnValue) == 0x000060, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, K2Node_DynamicCast_AsBP_Turret_Character_Mutator) == 0x000068, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::K2Node_DynamicCast_AsBP_Turret_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, K2Node_DynamicCast_bSuccess_1) == 0x000070, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000071, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, K2Node_CreateDelegate_OutputDelegate_1) == 0x000074, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge, CallFunc_Subtract_IntInt_ReturnValue) == 0x000084, "Member 'BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_TurretMastery_Challenge_C_ExecuteUbergraph_BP_TurretMastery_Challenge;
 
 // Function BP_TurretMastery_Challenge.BP_TurretMastery_Challenge_C.OnTurretDestroyed
 // 0x0008 (0x0008 - 0x0000)
@@ -70,9 +51,7 @@ struct BP_TurretMastery_Challenge_C_OnTurretDestroyed final
 public:
 	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_TurretMastery_Challenge_C_OnTurretDestroyed) == 0x000008, "Wrong alignment on BP_TurretMastery_Challenge_C_OnTurretDestroyed");
-static_assert(sizeof(BP_TurretMastery_Challenge_C_OnTurretDestroyed) == 0x000008, "Wrong size on BP_TurretMastery_Challenge_C_OnTurretDestroyed");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_OnTurretDestroyed, DestroyedActor) == 0x000000, "Member 'BP_TurretMastery_Challenge_C_OnTurretDestroyed::DestroyedActor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_TurretMastery_Challenge_C_OnTurretDestroyed;
 
 // Function BP_TurretMastery_Challenge.BP_TurretMastery_Challenge_C.OnTurretSpawned
 // 0x0008 (0x0008 - 0x0000)
@@ -81,9 +60,7 @@ struct BP_TurretMastery_Challenge_C_OnTurretSpawned final
 public:
 	class ABP_Turret_C*                           SpawnedTurret;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_TurretMastery_Challenge_C_OnTurretSpawned) == 0x000008, "Wrong alignment on BP_TurretMastery_Challenge_C_OnTurretSpawned");
-static_assert(sizeof(BP_TurretMastery_Challenge_C_OnTurretSpawned) == 0x000008, "Wrong size on BP_TurretMastery_Challenge_C_OnTurretSpawned");
-static_assert(offsetof(BP_TurretMastery_Challenge_C_OnTurretSpawned, SpawnedTurret) == 0x000000, "Member 'BP_TurretMastery_Challenge_C_OnTurretSpawned::SpawnedTurret' has a wrong offset!");
+DUMPER7_ASSERTS_BP_TurretMastery_Challenge_C_OnTurretSpawned;
 
 }
 

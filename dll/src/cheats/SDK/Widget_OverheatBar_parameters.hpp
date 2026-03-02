@@ -30,36 +30,25 @@ public:
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0028(0x0008)(NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar) == 0x000008, "Wrong alignment on Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar");
-static_assert(sizeof(Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar) == 0x000038, "Wrong size on Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar");
-static_assert(offsetof(Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar, EntryPoint) == 0x000000, "Member 'Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar, K2Node_CreateDelegate_OutputDelegate_1) == 0x000014, "Member 'Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar, K2Node_CustomEvent_InVisibility) == 0x000024, "Member 'Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar::K2Node_CustomEvent_InVisibility' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000028, "Member 'Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar, K2Node_SwitchEnum_CmpSuccess) == 0x000030, "Member 'Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_OverheatBar_C_ExecuteUbergraph_Widget_OverheatBar;
 
 // Function Widget_OverheatBar.Widget_OverheatBar_C.OnOverheatCleared
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct Widget_OverheatBar_C_OnOverheatCleared final
 {
 public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0000(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_OverheatBar_C_OnOverheatCleared) == 0x000008, "Wrong alignment on Widget_OverheatBar_C_OnOverheatCleared");
-static_assert(sizeof(Widget_OverheatBar_C_OnOverheatCleared) == 0x000008, "Wrong size on Widget_OverheatBar_C_OnOverheatCleared");
-static_assert(offsetof(Widget_OverheatBar_C_OnOverheatCleared, CallFunc_PlayAnimationReverse_ReturnValue) == 0x000000, "Member 'Widget_OverheatBar_C_OnOverheatCleared::CallFunc_PlayAnimationReverse_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_OverheatBar_C_OnOverheatCleared;
 
 // Function Widget_OverheatBar.Widget_OverheatBar_C.OnOverheated
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct Widget_OverheatBar_C_OnOverheated final
 {
 public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue;         // 0x0000(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_OverheatBar_C_OnOverheated) == 0x000008, "Wrong alignment on Widget_OverheatBar_C_OnOverheated");
-static_assert(sizeof(Widget_OverheatBar_C_OnOverheated) == 0x000008, "Wrong size on Widget_OverheatBar_C_OnOverheated");
-static_assert(offsetof(Widget_OverheatBar_C_OnOverheated, CallFunc_PlayAnimationForward_ReturnValue) == 0x000000, "Member 'Widget_OverheatBar_C_OnOverheated::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_OverheatBar_C_OnOverheated;
 
 // Function Widget_OverheatBar.Widget_OverheatBar_C.OnVisibilityChanged_Event
 // 0x0001 (0x0001 - 0x0000)
@@ -68,12 +57,10 @@ struct Widget_OverheatBar_C_OnVisibilityChanged_Event final
 public:
 	ESlateVisibility                              InVisibility;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_OverheatBar_C_OnVisibilityChanged_Event) == 0x000001, "Wrong alignment on Widget_OverheatBar_C_OnVisibilityChanged_Event");
-static_assert(sizeof(Widget_OverheatBar_C_OnVisibilityChanged_Event) == 0x000001, "Wrong size on Widget_OverheatBar_C_OnVisibilityChanged_Event");
-static_assert(offsetof(Widget_OverheatBar_C_OnVisibilityChanged_Event, InVisibility) == 0x000000, "Member 'Widget_OverheatBar_C_OnVisibilityChanged_Event::InVisibility' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_OverheatBar_C_OnVisibilityChanged_Event;
 
 // Function Widget_OverheatBar.Widget_OverheatBar_C.UpdateOverheatAmount
-// 0x0098 (0x0098 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct Widget_OverheatBar_C_UpdateOverheatAmount final
 {
 public:
@@ -93,35 +80,15 @@ public:
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationTimeRange_ReturnValue;       // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SafeDivide_B_ImplicitCast;                // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetPercent_InPercent_ImplicitCast;        // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimationTimeRange_StartAtTime_ImplicitCast; // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimationTimeRange_EndAtTime_ImplicitCast; // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationTimeRange_ReturnValue;       // 0x0070(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SafeDivide_B_ImplicitCast;                // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetPercent_InPercent_ImplicitCast;        // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PlayAnimationTimeRange_StartAtTime_ImplicitCast; // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PlayAnimationTimeRange_EndAtTime_ImplicitCast; // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_OverheatBar_C_UpdateOverheatAmount) == 0x000008, "Wrong alignment on Widget_OverheatBar_C_UpdateOverheatAmount");
-static_assert(sizeof(Widget_OverheatBar_C_UpdateOverheatAmount) == 0x000098, "Wrong size on Widget_OverheatBar_C_UpdateOverheatAmount");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, K2Node_CreateDelegate_OutputDelegate) == 0x000000, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, K2Node_CreateDelegate_OutputDelegate_1) == 0x000010, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000020, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000028, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, CallFunc_GetEquippedWeapon_ReturnValue) == 0x000038, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::CallFunc_GetEquippedWeapon_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, K2Node_DynamicCast_AsRWeapon_Engine_Rifle) == 0x000040, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::K2Node_DynamicCast_AsRWeapon_Engine_Rifle' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, K2Node_DynamicCast_bSuccess_1) == 0x000048, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, CallFunc_GetMutableFloatCurrentValue_ReturnValue) == 0x00004C, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::CallFunc_GetMutableFloatCurrentValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, K2Node_DynamicCast_AsBP_Engine_Rifle_Script) == 0x000050, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::K2Node_DynamicCast_AsBP_Engine_Rifle_Script' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, K2Node_DynamicCast_bSuccess_2) == 0x000058, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, CallFunc_SafeDivide_ReturnValue) == 0x000060, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000068, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, CallFunc_PlayAnimationTimeRange_ReturnValue) == 0x000070, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::CallFunc_PlayAnimationTimeRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, CallFunc_IsValid_ReturnValue) == 0x000078, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, CallFunc_SafeDivide_B_ImplicitCast) == 0x000080, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::CallFunc_SafeDivide_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, CallFunc_SetPercent_InPercent_ImplicitCast) == 0x000088, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::CallFunc_SetPercent_InPercent_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, CallFunc_PlayAnimationTimeRange_StartAtTime_ImplicitCast) == 0x00008C, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::CallFunc_PlayAnimationTimeRange_StartAtTime_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_OverheatBar_C_UpdateOverheatAmount, CallFunc_PlayAnimationTimeRange_EndAtTime_ImplicitCast) == 0x000090, "Member 'Widget_OverheatBar_C_UpdateOverheatAmount::CallFunc_PlayAnimationTimeRange_EndAtTime_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_OverheatBar_C_UpdateOverheatAmount;
 
 }
 

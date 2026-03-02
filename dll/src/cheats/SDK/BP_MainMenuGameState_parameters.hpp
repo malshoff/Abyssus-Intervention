@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "OnlineSubsystemUtils_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -24,9 +24,7 @@ struct BP_MainMenuGameState_C_AcceptEvent final
 public:
 	class FText                                   Input;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_MainMenuGameState_C_AcceptEvent) == 0x000008, "Wrong alignment on BP_MainMenuGameState_C_AcceptEvent");
-static_assert(sizeof(BP_MainMenuGameState_C_AcceptEvent) == 0x000010, "Wrong size on BP_MainMenuGameState_C_AcceptEvent");
-static_assert(offsetof(BP_MainMenuGameState_C_AcceptEvent, Input) == 0x000000, "Member 'BP_MainMenuGameState_C_AcceptEvent::Input' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainMenuGameState_C_AcceptEvent;
 
 // Function BP_MainMenuGameState.BP_MainMenuGameState_C.ExecuteUbergraph_BP_MainMenuGameState
 // 0x09B8 (0x09B8 - 0x0000)
@@ -132,94 +130,7 @@ public:
 	class FString                                 K2Node_CustomEvent_Error_5;                        // 0x0998(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	TDelegate<void(const class FString& Error)>   K2Node_CreateDelegate_OutputDelegate_7;            // 0x09A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState) == 0x000008, "Wrong alignment on BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState");
-static_assert(sizeof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState) == 0x0009B8, "Wrong size on BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, EntryPoint) == 0x000000, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CustomEvent_Error_3) == 0x000008, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CustomEvent_Error_3' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CustomEvent_Result) == 0x000018, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CustomEvent_Result' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, Temp_struct_Variable) == 0x000138, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, Temp_string_Variable) == 0x000258, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::Temp_string_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, Temp_name_Variable) == 0x000268, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::Temp_name_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CreateDelegate_OutputDelegate) == 0x000270, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CustomEvent_TravelURL_1) == 0x000280, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CustomEvent_TravelURL_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CustomEvent_Error_2) == 0x000290, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CustomEvent_Error_2' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CustomEvent_TravelURL) == 0x0002A0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CustomEvent_TravelURL' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CustomEvent_Error_1) == 0x0002B0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CustomEvent_Error_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CreateDelegate_OutputDelegate_1) == 0x0002C0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, Temp_string_Variable_1) == 0x0002D0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::Temp_string_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, Temp_string_Variable_2) == 0x0002E0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::Temp_string_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_MakeArray_Array) == 0x0002F0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CreateDelegate_OutputDelegate_2) == 0x000300, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Format_ReturnValue) == 0x000310, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_MakeArray_Array_1) == 0x000320, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Conv_TextToString_ReturnValue) == 0x000330, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Format_ReturnValue_1) == 0x000340, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000350, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_MakeArray_Array_2) == 0x000360, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_MakeArray_Array_3) == 0x000370, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Format_ReturnValue_2) == 0x000380, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Format_ReturnValue_3) == 0x000390, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Format_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Conv_TextToString_ReturnValue_2) == 0x0003A0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Conv_TextToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Conv_TextToString_ReturnValue_3) == 0x0003B0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Conv_TextToString_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_MakeArray_Array_4) == 0x0003C0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_MakeArray_Array_4' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Format_ReturnValue_4) == 0x0003D0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Format_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_Event_Session) == 0x0003E0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_Event_Session' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_Event_bWasSuccesful) == 0x000500, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_Event_bWasSuccesful' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Conv_TextToString_ReturnValue_4) == 0x000508, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Conv_TextToString_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Concat_StrStr_ReturnValue) == 0x000518, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CustomEvent_Error_6) == 0x000528, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CustomEvent_Error_6' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CustomEvent_Error) == 0x000538, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CustomEvent_Error' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CreateDelegate_OutputDelegate_3) == 0x000548, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Conv_StringToText_ReturnValue) == 0x000558, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CustomEvent_Error_4) == 0x000568, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CustomEvent_Error_4' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CustomEvent_Result_1) == 0x000578, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CustomEvent_Result_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_IsValid_ReturnValue_1) == 0x000698, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_MakeLiteralText_ReturnValue) == 0x0006A0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_MakeLiteralText_ReturnValue_1) == 0x0006B0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_MakeLiteralText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_MakeLiteralText_ReturnValue_2) == 0x0006C0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_MakeLiteralText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_MakeLiteralText_ReturnValue_3) == 0x0006D0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_MakeLiteralText_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_Event_SessionID) == 0x0006E0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_Event_SessionID' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_CreateFindSessionByIdProxyObject_ReturnValue) == 0x0006F0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_CreateFindSessionByIdProxyObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CreateDelegate_OutputDelegate_4) == 0x0006F8, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_IsValid_ReturnValue_2) == 0x000708, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_GetPlayerController_ReturnValue) == 0x000710, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_PushWidget_OutWidget) == 0x000718, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_PushWidget_OutWidget' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_GetPlayerController_ReturnValue_1) == 0x000720, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_GetPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_PushWidget_OutWidget_1) == 0x000728, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_PushWidget_OutWidget_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_GetPlayerController_ReturnValue_2) == 0x000730, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_GetPlayerController_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CustomEvent_Session) == 0x000738, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CustomEvent_Session' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_PushWidget_OutWidget_2) == 0x000858, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_PushWidget_OutWidget_2' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_CreateJoinSessionProxyObject_ReturnValue) == 0x000860, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_CreateJoinSessionProxyObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_IsValid_ReturnValue_3) == 0x000868, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_GetMaxPlayers_ReturnValue) == 0x00086C, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_GetMaxPlayers_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_GetCurrentPlayers_ReturnValue) == 0x000870, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_GetCurrentPlayers_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_GetSessionCustomSettings_ReturnValue) == 0x000878, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_GetSessionCustomSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Less_IntInt_ReturnValue) == 0x0008C8, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Map_Find_Value) == 0x0008D0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Map_Find_ReturnValue) == 0x0008E0, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_IsEmpty_ReturnValue) == 0x0008E1, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Not_PreBool_ReturnValue) == 0x0008E2, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_BooleanAND_ReturnValue) == 0x0008E3, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CreateDelegate_OutputDelegate_5) == 0x0008E4, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CustomEvent_Input) == 0x0008F8, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CustomEvent_Input' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_GetPlayerController_ReturnValue_3) == 0x000908, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_GetPlayerController_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Conv_TextToString_ReturnValue_5) == 0x000910, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Conv_TextToString_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_PushWidget_OutWidget_3) == 0x000920, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_PushWidget_OutWidget_3' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000928, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_CreateAutoLoginProxyObject_ReturnValue) == 0x000930, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_CreateAutoLoginProxyObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, Temp_string_Variable_3) == 0x000938, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::Temp_string_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000948, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_IsValid_ReturnValue_4) == 0x000958, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CreateDelegate_OutputDelegate_6) == 0x00095C, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_IsValid_ReturnValue_5) == 0x00096C, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_GetPlayerController_ReturnValue_4) == 0x000970, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_GetPlayerController_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_GetPlayerController_ReturnValue_5) == 0x000978, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_GetPlayerController_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_DynamicCast_AsRPlayer_Controller) == 0x000980, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_DynamicCast_AsRPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_DynamicCast_bSuccess) == 0x000988, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, CallFunc_GetHUDWidget_ReturnValue) == 0x000990, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::CallFunc_GetHUDWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CustomEvent_Error_5) == 0x000998, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CustomEvent_Error_5' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState, K2Node_CreateDelegate_OutputDelegate_7) == 0x0009A8, "Member 'BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainMenuGameState_C_ExecuteUbergraph_BP_MainMenuGameState;
 
 // Function BP_MainMenuGameState.BP_MainMenuGameState_C.Fail_583A356143D9EE03B50275A63094137D
 // 0x0020 (0x0020 - 0x0000)
@@ -229,10 +140,7 @@ public:
 	class FString                                 TravelURL;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 Error;                                             // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MainMenuGameState_C_Fail_583A356143D9EE03B50275A63094137D) == 0x000008, "Wrong alignment on BP_MainMenuGameState_C_Fail_583A356143D9EE03B50275A63094137D");
-static_assert(sizeof(BP_MainMenuGameState_C_Fail_583A356143D9EE03B50275A63094137D) == 0x000020, "Wrong size on BP_MainMenuGameState_C_Fail_583A356143D9EE03B50275A63094137D");
-static_assert(offsetof(BP_MainMenuGameState_C_Fail_583A356143D9EE03B50275A63094137D, TravelURL) == 0x000000, "Member 'BP_MainMenuGameState_C_Fail_583A356143D9EE03B50275A63094137D::TravelURL' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_Fail_583A356143D9EE03B50275A63094137D, Error) == 0x000010, "Member 'BP_MainMenuGameState_C_Fail_583A356143D9EE03B50275A63094137D::Error' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainMenuGameState_C_Fail_583A356143D9EE03B50275A63094137D;
 
 // Function BP_MainMenuGameState.BP_MainMenuGameState_C.Fail_A8C43F404FDB5805C33B9BB833089395
 // 0x0130 (0x0130 - 0x0000)
@@ -242,10 +150,7 @@ public:
 	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	struct FBlueprintSessionResult                Result;                                            // 0x0010(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(BP_MainMenuGameState_C_Fail_A8C43F404FDB5805C33B9BB833089395) == 0x000008, "Wrong alignment on BP_MainMenuGameState_C_Fail_A8C43F404FDB5805C33B9BB833089395");
-static_assert(sizeof(BP_MainMenuGameState_C_Fail_A8C43F404FDB5805C33B9BB833089395) == 0x000130, "Wrong size on BP_MainMenuGameState_C_Fail_A8C43F404FDB5805C33B9BB833089395");
-static_assert(offsetof(BP_MainMenuGameState_C_Fail_A8C43F404FDB5805C33B9BB833089395, Error) == 0x000000, "Member 'BP_MainMenuGameState_C_Fail_A8C43F404FDB5805C33B9BB833089395::Error' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_Fail_A8C43F404FDB5805C33B9BB833089395, Result) == 0x000010, "Member 'BP_MainMenuGameState_C_Fail_A8C43F404FDB5805C33B9BB833089395::Result' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainMenuGameState_C_Fail_A8C43F404FDB5805C33B9BB833089395;
 
 // Function BP_MainMenuGameState.BP_MainMenuGameState_C.Fail_D0FDCBC44DC68C76E4B1F89A3707A28F
 // 0x0010 (0x0010 - 0x0000)
@@ -254,9 +159,7 @@ struct BP_MainMenuGameState_C_Fail_D0FDCBC44DC68C76E4B1F89A3707A28F final
 public:
 	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MainMenuGameState_C_Fail_D0FDCBC44DC68C76E4B1F89A3707A28F) == 0x000008, "Wrong alignment on BP_MainMenuGameState_C_Fail_D0FDCBC44DC68C76E4B1F89A3707A28F");
-static_assert(sizeof(BP_MainMenuGameState_C_Fail_D0FDCBC44DC68C76E4B1F89A3707A28F) == 0x000010, "Wrong size on BP_MainMenuGameState_C_Fail_D0FDCBC44DC68C76E4B1F89A3707A28F");
-static_assert(offsetof(BP_MainMenuGameState_C_Fail_D0FDCBC44DC68C76E4B1F89A3707A28F, Error) == 0x000000, "Member 'BP_MainMenuGameState_C_Fail_D0FDCBC44DC68C76E4B1F89A3707A28F::Error' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainMenuGameState_C_Fail_D0FDCBC44DC68C76E4B1F89A3707A28F;
 
 // Function BP_MainMenuGameState.BP_MainMenuGameState_C.FailedToJoinGame
 // 0x0010 (0x0010 - 0x0000)
@@ -265,9 +168,7 @@ struct BP_MainMenuGameState_C_FailedToJoinGame final
 public:
 	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MainMenuGameState_C_FailedToJoinGame) == 0x000008, "Wrong alignment on BP_MainMenuGameState_C_FailedToJoinGame");
-static_assert(sizeof(BP_MainMenuGameState_C_FailedToJoinGame) == 0x000010, "Wrong size on BP_MainMenuGameState_C_FailedToJoinGame");
-static_assert(offsetof(BP_MainMenuGameState_C_FailedToJoinGame, Error) == 0x000000, "Member 'BP_MainMenuGameState_C_FailedToJoinGame::Error' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainMenuGameState_C_FailedToJoinGame;
 
 // Function BP_MainMenuGameState.BP_MainMenuGameState_C.JoinSession
 // 0x0120 (0x0120 - 0x0000)
@@ -276,9 +177,7 @@ struct BP_MainMenuGameState_C_JoinSession final
 public:
 	struct FBlueprintSessionResult                Session;                                           // 0x0000(0x0120)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_MainMenuGameState_C_JoinSession) == 0x000008, "Wrong alignment on BP_MainMenuGameState_C_JoinSession");
-static_assert(sizeof(BP_MainMenuGameState_C_JoinSession) == 0x000120, "Wrong size on BP_MainMenuGameState_C_JoinSession");
-static_assert(offsetof(BP_MainMenuGameState_C_JoinSession, Session) == 0x000000, "Member 'BP_MainMenuGameState_C_JoinSession::Session' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainMenuGameState_C_JoinSession;
 
 // Function BP_MainMenuGameState.BP_MainMenuGameState_C.OnSessionUserInviteAcceptedEOS
 // 0x0128 (0x0128 - 0x0000)
@@ -288,10 +187,7 @@ public:
 	struct FBlueprintSessionResult                Session;                                           // 0x0000(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          bWasSuccesful;                                     // 0x0120(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MainMenuGameState_C_OnSessionUserInviteAcceptedEOS) == 0x000008, "Wrong alignment on BP_MainMenuGameState_C_OnSessionUserInviteAcceptedEOS");
-static_assert(sizeof(BP_MainMenuGameState_C_OnSessionUserInviteAcceptedEOS) == 0x000128, "Wrong size on BP_MainMenuGameState_C_OnSessionUserInviteAcceptedEOS");
-static_assert(offsetof(BP_MainMenuGameState_C_OnSessionUserInviteAcceptedEOS, Session) == 0x000000, "Member 'BP_MainMenuGameState_C_OnSessionUserInviteAcceptedEOS::Session' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_OnSessionUserInviteAcceptedEOS, bWasSuccesful) == 0x000120, "Member 'BP_MainMenuGameState_C_OnSessionUserInviteAcceptedEOS::bWasSuccesful' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainMenuGameState_C_OnSessionUserInviteAcceptedEOS;
 
 // Function BP_MainMenuGameState.BP_MainMenuGameState_C.OnSessionUserInviteAcceptedSteam
 // 0x0010 (0x0010 - 0x0000)
@@ -300,9 +196,7 @@ struct BP_MainMenuGameState_C_OnSessionUserInviteAcceptedSteam final
 public:
 	class FString                                 SessionId;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MainMenuGameState_C_OnSessionUserInviteAcceptedSteam) == 0x000008, "Wrong alignment on BP_MainMenuGameState_C_OnSessionUserInviteAcceptedSteam");
-static_assert(sizeof(BP_MainMenuGameState_C_OnSessionUserInviteAcceptedSteam) == 0x000010, "Wrong size on BP_MainMenuGameState_C_OnSessionUserInviteAcceptedSteam");
-static_assert(offsetof(BP_MainMenuGameState_C_OnSessionUserInviteAcceptedSteam, SessionId) == 0x000000, "Member 'BP_MainMenuGameState_C_OnSessionUserInviteAcceptedSteam::SessionId' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainMenuGameState_C_OnSessionUserInviteAcceptedSteam;
 
 // Function BP_MainMenuGameState.BP_MainMenuGameState_C.Success_583A356143D9EE03B50275A63094137D
 // 0x0020 (0x0020 - 0x0000)
@@ -312,10 +206,7 @@ public:
 	class FString                                 TravelURL;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 Error;                                             // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MainMenuGameState_C_Success_583A356143D9EE03B50275A63094137D) == 0x000008, "Wrong alignment on BP_MainMenuGameState_C_Success_583A356143D9EE03B50275A63094137D");
-static_assert(sizeof(BP_MainMenuGameState_C_Success_583A356143D9EE03B50275A63094137D) == 0x000020, "Wrong size on BP_MainMenuGameState_C_Success_583A356143D9EE03B50275A63094137D");
-static_assert(offsetof(BP_MainMenuGameState_C_Success_583A356143D9EE03B50275A63094137D, TravelURL) == 0x000000, "Member 'BP_MainMenuGameState_C_Success_583A356143D9EE03B50275A63094137D::TravelURL' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_Success_583A356143D9EE03B50275A63094137D, Error) == 0x000010, "Member 'BP_MainMenuGameState_C_Success_583A356143D9EE03B50275A63094137D::Error' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainMenuGameState_C_Success_583A356143D9EE03B50275A63094137D;
 
 // Function BP_MainMenuGameState.BP_MainMenuGameState_C.Success_A8C43F404FDB5805C33B9BB833089395
 // 0x0130 (0x0130 - 0x0000)
@@ -325,10 +216,7 @@ public:
 	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	struct FBlueprintSessionResult                Result;                                            // 0x0010(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(BP_MainMenuGameState_C_Success_A8C43F404FDB5805C33B9BB833089395) == 0x000008, "Wrong alignment on BP_MainMenuGameState_C_Success_A8C43F404FDB5805C33B9BB833089395");
-static_assert(sizeof(BP_MainMenuGameState_C_Success_A8C43F404FDB5805C33B9BB833089395) == 0x000130, "Wrong size on BP_MainMenuGameState_C_Success_A8C43F404FDB5805C33B9BB833089395");
-static_assert(offsetof(BP_MainMenuGameState_C_Success_A8C43F404FDB5805C33B9BB833089395, Error) == 0x000000, "Member 'BP_MainMenuGameState_C_Success_A8C43F404FDB5805C33B9BB833089395::Error' has a wrong offset!");
-static_assert(offsetof(BP_MainMenuGameState_C_Success_A8C43F404FDB5805C33B9BB833089395, Result) == 0x000010, "Member 'BP_MainMenuGameState_C_Success_A8C43F404FDB5805C33B9BB833089395::Result' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainMenuGameState_C_Success_A8C43F404FDB5805C33B9BB833089395;
 
 // Function BP_MainMenuGameState.BP_MainMenuGameState_C.Success_D0FDCBC44DC68C76E4B1F89A3707A28F
 // 0x0010 (0x0010 - 0x0000)
@@ -337,9 +225,7 @@ struct BP_MainMenuGameState_C_Success_D0FDCBC44DC68C76E4B1F89A3707A28F final
 public:
 	class FString                                 Error;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MainMenuGameState_C_Success_D0FDCBC44DC68C76E4B1F89A3707A28F) == 0x000008, "Wrong alignment on BP_MainMenuGameState_C_Success_D0FDCBC44DC68C76E4B1F89A3707A28F");
-static_assert(sizeof(BP_MainMenuGameState_C_Success_D0FDCBC44DC68C76E4B1F89A3707A28F) == 0x000010, "Wrong size on BP_MainMenuGameState_C_Success_D0FDCBC44DC68C76E4B1F89A3707A28F");
-static_assert(offsetof(BP_MainMenuGameState_C_Success_D0FDCBC44DC68C76E4B1F89A3707A28F, Error) == 0x000000, "Member 'BP_MainMenuGameState_C_Success_D0FDCBC44DC68C76E4B1F89A3707A28F::Error' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainMenuGameState_C_Success_D0FDCBC44DC68C76E4B1F89A3707A28F;
 
 }
 

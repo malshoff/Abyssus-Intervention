@@ -21,41 +21,46 @@ namespace SDK
 class ADataflowActor final : public AActor
 {
 public:
-	class UDataflowComponent*                     DataflowComponent;                                 // 0x02A8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataflowComponent*                     DataflowComponent;                                 // 0x02A8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataflowActor">();
+		STATIC_CLASS_IMPL("DataflowActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowActor")
 	}
 	static class ADataflowActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ADataflowActor>();
 	}
 };
-static_assert(alignof(ADataflowActor) == 0x000008, "Wrong alignment on ADataflowActor");
-static_assert(sizeof(ADataflowActor) == 0x0002B0, "Wrong size on ADataflowActor");
-static_assert(offsetof(ADataflowActor, DataflowComponent) == 0x0002A8, "Member 'ADataflowActor::DataflowComponent' has a wrong offset!");
+DUMPER7_ASSERTS_ADataflowActor;
 
 // Class DataflowEnginePlugin.DataflowComponent
-// 0x0140 (0x0630 - 0x04F0)
+// 0x0150 (0x0670 - 0x0520)
 class UDataflowComponent final : public UPrimitiveComponent
 {
 public:
-	uint8                                         Pad_4E8[0x148];                                    // 0x04E8(0x0148)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_520[0x150];                                    // 0x0520(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DataflowComponent">();
+		STATIC_CLASS_IMPL("DataflowComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowComponent")
 	}
 	static class UDataflowComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDataflowComponent>();
 	}
 };
-static_assert(alignof(UDataflowComponent) == 0x000010, "Wrong alignment on UDataflowComponent");
-static_assert(sizeof(UDataflowComponent) == 0x000630, "Wrong size on UDataflowComponent");
+DUMPER7_ASSERTS_UDataflowComponent;
 
 }
 

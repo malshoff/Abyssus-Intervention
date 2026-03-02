@@ -26,15 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NNEModelData">();
+		STATIC_CLASS_IMPL("NNEModelData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNEModelData")
 	}
 	static class UNNEModelData* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNNEModelData>();
 	}
 };
-static_assert(alignof(UNNEModelData) == 0x000008, "Wrong alignment on UNNEModelData");
-static_assert(sizeof(UNNEModelData) == 0x000110, "Wrong size on UNNEModelData");
+DUMPER7_ASSERTS_UNNEModelData;
 
 // Class NNE.NNERuntime
 // 0x0000 (0x0000 - 0x0000)
@@ -43,7 +46,11 @@ class INNERuntime final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NNERuntime">();
+		STATIC_CLASS_IMPL("NNERuntime")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntime")
 	}
 	static class INNERuntime* GetDefaultObj()
 	{
@@ -59,8 +66,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(INNERuntime) == 0x000001, "Wrong alignment on INNERuntime");
-static_assert(sizeof(INNERuntime) == 0x000001, "Wrong size on INNERuntime");
+DUMPER7_ASSERTS_INNERuntime;
 
 // Class NNE.NNERuntimeCPU
 // 0x0000 (0x0000 - 0x0000)
@@ -69,7 +75,11 @@ class INNERuntimeCPU final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NNERuntimeCPU">();
+		STATIC_CLASS_IMPL("NNERuntimeCPU")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeCPU")
 	}
 	static class INNERuntimeCPU* GetDefaultObj()
 	{
@@ -85,8 +95,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(INNERuntimeCPU) == 0x000001, "Wrong alignment on INNERuntimeCPU");
-static_assert(sizeof(INNERuntimeCPU) == 0x000001, "Wrong size on INNERuntimeCPU");
+DUMPER7_ASSERTS_INNERuntimeCPU;
 
 // Class NNE.NNERuntimeGPU
 // 0x0000 (0x0000 - 0x0000)
@@ -95,7 +104,11 @@ class INNERuntimeGPU final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NNERuntimeGPU">();
+		STATIC_CLASS_IMPL("NNERuntimeGPU")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeGPU")
 	}
 	static class INNERuntimeGPU* GetDefaultObj()
 	{
@@ -111,8 +124,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(INNERuntimeGPU) == 0x000001, "Wrong alignment on INNERuntimeGPU");
-static_assert(sizeof(INNERuntimeGPU) == 0x000001, "Wrong size on INNERuntimeGPU");
+DUMPER7_ASSERTS_INNERuntimeGPU;
 
 // Class NNE.NNERuntimeNPU
 // 0x0000 (0x0000 - 0x0000)
@@ -121,7 +133,11 @@ class INNERuntimeNPU final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NNERuntimeNPU">();
+		STATIC_CLASS_IMPL("NNERuntimeNPU")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeNPU")
 	}
 	static class INNERuntimeNPU* GetDefaultObj()
 	{
@@ -137,8 +153,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(INNERuntimeNPU) == 0x000001, "Wrong alignment on INNERuntimeNPU");
-static_assert(sizeof(INNERuntimeNPU) == 0x000001, "Wrong size on INNERuntimeNPU");
+DUMPER7_ASSERTS_INNERuntimeNPU;
 
 // Class NNE.NNERuntimeRDG
 // 0x0000 (0x0000 - 0x0000)
@@ -147,7 +162,11 @@ class INNERuntimeRDG final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NNERuntimeRDG">();
+		STATIC_CLASS_IMPL("NNERuntimeRDG")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeRDG")
 	}
 	static class INNERuntimeRDG* GetDefaultObj()
 	{
@@ -163,8 +182,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(INNERuntimeRDG) == 0x000001, "Wrong alignment on INNERuntimeRDG");
-static_assert(sizeof(INNERuntimeRDG) == 0x000001, "Wrong size on INNERuntimeRDG");
+DUMPER7_ASSERTS_INNERuntimeRDG;
 
 }
 

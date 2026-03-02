@@ -188,14 +188,7 @@ public:
 	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  Rotation;                                          // 0x0040(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FXRHMDData) == 0x000010, "Wrong alignment on FXRHMDData");
-static_assert(sizeof(FXRHMDData) == 0x000060, "Wrong size on FXRHMDData");
-static_assert(offsetof(FXRHMDData, bValid) == 0x000000, "Member 'FXRHMDData::bValid' has a wrong offset!");
-static_assert(offsetof(FXRHMDData, DeviceName) == 0x000004, "Member 'FXRHMDData::DeviceName' has a wrong offset!");
-static_assert(offsetof(FXRHMDData, ApplicationInstanceID) == 0x00000C, "Member 'FXRHMDData::ApplicationInstanceID' has a wrong offset!");
-static_assert(offsetof(FXRHMDData, TrackingStatus) == 0x00001C, "Member 'FXRHMDData::TrackingStatus' has a wrong offset!");
-static_assert(offsetof(FXRHMDData, Position) == 0x000020, "Member 'FXRHMDData::Position' has a wrong offset!");
-static_assert(offsetof(FXRHMDData, Rotation) == 0x000040, "Member 'FXRHMDData::Rotation' has a wrong offset!");
+DUMPER7_ASSERTS_FXRHMDData;
 
 // ScriptStruct HeadMountedDisplay.XRMotionControllerData
 // 0x0120 (0x0120 - 0x0000)
@@ -225,24 +218,7 @@ public:
 	bool                                          bIsGrasped;                                        // 0x0110(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_111[0xF];                                      // 0x0111(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FXRMotionControllerData) == 0x000010, "Wrong alignment on FXRMotionControllerData");
-static_assert(sizeof(FXRMotionControllerData) == 0x000120, "Wrong size on FXRMotionControllerData");
-static_assert(offsetof(FXRMotionControllerData, bValid) == 0x000000, "Member 'FXRMotionControllerData::bValid' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, DeviceName) == 0x000004, "Member 'FXRMotionControllerData::DeviceName' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, ApplicationInstanceID) == 0x00000C, "Member 'FXRMotionControllerData::ApplicationInstanceID' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, DeviceVisualType) == 0x00001C, "Member 'FXRMotionControllerData::DeviceVisualType' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, HandIndex) == 0x00001D, "Member 'FXRMotionControllerData::HandIndex' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, TrackingStatus) == 0x00001E, "Member 'FXRMotionControllerData::TrackingStatus' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, GripPosition) == 0x000020, "Member 'FXRMotionControllerData::GripPosition' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, GripRotation) == 0x000040, "Member 'FXRMotionControllerData::GripRotation' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, AimPosition) == 0x000060, "Member 'FXRMotionControllerData::AimPosition' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, AimRotation) == 0x000080, "Member 'FXRMotionControllerData::AimRotation' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, PalmPosition) == 0x0000A0, "Member 'FXRMotionControllerData::PalmPosition' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, PalmRotation) == 0x0000C0, "Member 'FXRMotionControllerData::PalmRotation' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, HandKeyPositions) == 0x0000E0, "Member 'FXRMotionControllerData::HandKeyPositions' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, HandKeyRotations) == 0x0000F0, "Member 'FXRMotionControllerData::HandKeyRotations' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, HandKeyRadii) == 0x000100, "Member 'FXRMotionControllerData::HandKeyRadii' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, bIsGrasped) == 0x000110, "Member 'FXRMotionControllerData::bIsGrasped' has a wrong offset!");
+DUMPER7_ASSERTS_FXRMotionControllerData;
 
 // ScriptStruct HeadMountedDisplay.XRMotionControllerState
 // 0x00A0 (0x00A0 - 0x0000)
@@ -264,19 +240,7 @@ public:
 	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  GripUnrealSpaceRotation;                           // 0x0080(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FXRMotionControllerState) == 0x000010, "Wrong alignment on FXRMotionControllerState");
-static_assert(sizeof(FXRMotionControllerState) == 0x0000A0, "Wrong size on FXRMotionControllerState");
-static_assert(offsetof(FXRMotionControllerState, bValid) == 0x000000, "Member 'FXRMotionControllerState::bValid' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerState, DeviceName) == 0x000004, "Member 'FXRMotionControllerState::DeviceName' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerState, ApplicationInstanceID) == 0x00000C, "Member 'FXRMotionControllerState::ApplicationInstanceID' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerState, XRSpaceType) == 0x00001C, "Member 'FXRMotionControllerState::XRSpaceType' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerState, Hand) == 0x00001D, "Member 'FXRMotionControllerState::Hand' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerState, TrackingStatus) == 0x00001E, "Member 'FXRMotionControllerState::TrackingStatus' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerState, XRControllerPoseType) == 0x00001F, "Member 'FXRMotionControllerState::XRControllerPoseType' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerState, ControllerLocation) == 0x000020, "Member 'FXRMotionControllerState::ControllerLocation' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerState, ControllerRotation) == 0x000040, "Member 'FXRMotionControllerState::ControllerRotation' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerState, GripUnrealSpaceLocation) == 0x000060, "Member 'FXRMotionControllerState::GripUnrealSpaceLocation' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerState, GripUnrealSpaceRotation) == 0x000080, "Member 'FXRMotionControllerState::GripUnrealSpaceRotation' has a wrong offset!");
+DUMPER7_ASSERTS_FXRMotionControllerState;
 
 // ScriptStruct HeadMountedDisplay.XRHandTrackingState
 // 0x0050 (0x0050 - 0x0000)
@@ -295,17 +259,7 @@ public:
 	TArray<struct FQuat>                          HandKeyRotations;                                  // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<float>                                 HandKeyRadii;                                      // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FXRHandTrackingState) == 0x000008, "Wrong alignment on FXRHandTrackingState");
-static_assert(sizeof(FXRHandTrackingState) == 0x000050, "Wrong size on FXRHandTrackingState");
-static_assert(offsetof(FXRHandTrackingState, bValid) == 0x000000, "Member 'FXRHandTrackingState::bValid' has a wrong offset!");
-static_assert(offsetof(FXRHandTrackingState, DeviceName) == 0x000004, "Member 'FXRHandTrackingState::DeviceName' has a wrong offset!");
-static_assert(offsetof(FXRHandTrackingState, ApplicationInstanceID) == 0x00000C, "Member 'FXRHandTrackingState::ApplicationInstanceID' has a wrong offset!");
-static_assert(offsetof(FXRHandTrackingState, XRSpaceType) == 0x00001C, "Member 'FXRHandTrackingState::XRSpaceType' has a wrong offset!");
-static_assert(offsetof(FXRHandTrackingState, Hand) == 0x00001D, "Member 'FXRHandTrackingState::Hand' has a wrong offset!");
-static_assert(offsetof(FXRHandTrackingState, TrackingStatus) == 0x00001E, "Member 'FXRHandTrackingState::TrackingStatus' has a wrong offset!");
-static_assert(offsetof(FXRHandTrackingState, HandKeyLocations) == 0x000020, "Member 'FXRHandTrackingState::HandKeyLocations' has a wrong offset!");
-static_assert(offsetof(FXRHandTrackingState, HandKeyRotations) == 0x000030, "Member 'FXRHandTrackingState::HandKeyRotations' has a wrong offset!");
-static_assert(offsetof(FXRHandTrackingState, HandKeyRadii) == 0x000040, "Member 'FXRHandTrackingState::HandKeyRadii' has a wrong offset!");
+DUMPER7_ASSERTS_FXRHandTrackingState;
 
 // ScriptStruct HeadMountedDisplay.XRDeviceId
 // 0x000C (0x000C - 0x0000)
@@ -315,10 +269,7 @@ public:
 	class FName                                   SystemName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         DeviceID;                                          // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FXRDeviceId) == 0x000004, "Wrong alignment on FXRDeviceId");
-static_assert(sizeof(FXRDeviceId) == 0x00000C, "Wrong size on FXRDeviceId");
-static_assert(offsetof(FXRDeviceId, SystemName) == 0x000000, "Member 'FXRDeviceId::SystemName' has a wrong offset!");
-static_assert(offsetof(FXRDeviceId, DeviceID) == 0x000008, "Member 'FXRDeviceId::DeviceID' has a wrong offset!");
+DUMPER7_ASSERTS_FXRDeviceId;
 
 }
 

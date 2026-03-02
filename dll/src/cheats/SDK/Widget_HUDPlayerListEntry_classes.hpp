@@ -18,19 +18,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_HUDPlayerListEntry.Widget_HUDPlayerListEntry_C
-// 0x0048 (0x0318 - 0x02D0)
+// 0x0050 (0x0390 - 0x0340)
 class UWidget_HUDPlayerListEntry_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 DeathIcon;                                         // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URetainerBox*                           DeathIconShadow;                                   // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 DownedIcon;                                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URetainerBox*                           DownedIconShadow;                                  // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 HealthBar;                                         // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Text_PlayerName;                                   // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_PlayerAvatarElement_C*          Widget_PlayerFrame_Base;                           // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ARPlayerState*                          PlayerState;                                       // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_PlayerAvatarElement_C*          Widget_PlayerAvatarElement;                        // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text_PlayerName;                                   // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HealthBarUnder;                                    // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HealthBarOver;                                     // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URetainerBox*                           DownedIconShadow;                                  // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 DownedIcon;                                        // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URetainerBox*                           DeathIconShadow;                                   // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 DeathIcon;                                         // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ARPlayerState*                          PlayerState;                                       // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -45,29 +46,23 @@ public:
 	void OnPlayerPawnRevived(class ARPlayerPawn* Player);
 	void PlayerStateIsValid(bool* IsValid);
 	void PollPlayerStateValidity();
-	void SetCurrentHealthText(double currentHealth, class URHealthComponent* HealthComponent);
+	void SetCurrentHealth(double currentHealth, class URHealthComponent* HealthComponent);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_HUDPlayerListEntry_C">();
+		BP_STATIC_CLASS_IMPL("Widget_HUDPlayerListEntry_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_HUDPlayerListEntry_C")
 	}
 	static class UWidget_HUDPlayerListEntry_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_HUDPlayerListEntry_C>();
 	}
 };
-static_assert(alignof(UWidget_HUDPlayerListEntry_C) == 0x000008, "Wrong alignment on UWidget_HUDPlayerListEntry_C");
-static_assert(sizeof(UWidget_HUDPlayerListEntry_C) == 0x000318, "Wrong size on UWidget_HUDPlayerListEntry_C");
-static_assert(offsetof(UWidget_HUDPlayerListEntry_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_HUDPlayerListEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_HUDPlayerListEntry_C, DeathIcon) == 0x0002D8, "Member 'UWidget_HUDPlayerListEntry_C::DeathIcon' has a wrong offset!");
-static_assert(offsetof(UWidget_HUDPlayerListEntry_C, DeathIconShadow) == 0x0002E0, "Member 'UWidget_HUDPlayerListEntry_C::DeathIconShadow' has a wrong offset!");
-static_assert(offsetof(UWidget_HUDPlayerListEntry_C, DownedIcon) == 0x0002E8, "Member 'UWidget_HUDPlayerListEntry_C::DownedIcon' has a wrong offset!");
-static_assert(offsetof(UWidget_HUDPlayerListEntry_C, DownedIconShadow) == 0x0002F0, "Member 'UWidget_HUDPlayerListEntry_C::DownedIconShadow' has a wrong offset!");
-static_assert(offsetof(UWidget_HUDPlayerListEntry_C, HealthBar) == 0x0002F8, "Member 'UWidget_HUDPlayerListEntry_C::HealthBar' has a wrong offset!");
-static_assert(offsetof(UWidget_HUDPlayerListEntry_C, Text_PlayerName) == 0x000300, "Member 'UWidget_HUDPlayerListEntry_C::Text_PlayerName' has a wrong offset!");
-static_assert(offsetof(UWidget_HUDPlayerListEntry_C, Widget_PlayerFrame_Base) == 0x000308, "Member 'UWidget_HUDPlayerListEntry_C::Widget_PlayerFrame_Base' has a wrong offset!");
-static_assert(offsetof(UWidget_HUDPlayerListEntry_C, PlayerState) == 0x000310, "Member 'UWidget_HUDPlayerListEntry_C::PlayerState' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_HUDPlayerListEntry_C;
 
 }
 

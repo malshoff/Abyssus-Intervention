@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "RGame_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -18,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Brine_AreaEffect_Script.BP_Brine_AreaEffect_Script_C
-// 0x0018 (0x00E0 - 0x00C8)
+// 0x0140 (0x0208 - 0x00C8)
 class UBP_Brine_AreaEffect_Script_C final : public URGAreaEffectScript
 {
 public:
@@ -26,6 +27,7 @@ public:
 	float                                         Tick_Interval;                                     // 0x00D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        DamageMultiplier;                                  // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRMutableFloat                         AbilityTriggerProcChanceModifier;                  // 0x00E0(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_BP_Brine_AreaEffect_Script(int32 EntryPoint);
@@ -38,18 +40,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Brine_AreaEffect_Script_C">();
+		BP_STATIC_CLASS_IMPL("BP_Brine_AreaEffect_Script_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Brine_AreaEffect_Script_C")
 	}
 	static class UBP_Brine_AreaEffect_Script_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Brine_AreaEffect_Script_C>();
 	}
 };
-static_assert(alignof(UBP_Brine_AreaEffect_Script_C) == 0x000008, "Wrong alignment on UBP_Brine_AreaEffect_Script_C");
-static_assert(sizeof(UBP_Brine_AreaEffect_Script_C) == 0x0000E0, "Wrong size on UBP_Brine_AreaEffect_Script_C");
-static_assert(offsetof(UBP_Brine_AreaEffect_Script_C, UberGraphFrame) == 0x0000C8, "Member 'UBP_Brine_AreaEffect_Script_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Brine_AreaEffect_Script_C, Tick_Interval) == 0x0000D0, "Member 'UBP_Brine_AreaEffect_Script_C::Tick_Interval' has a wrong offset!");
-static_assert(offsetof(UBP_Brine_AreaEffect_Script_C, DamageMultiplier) == 0x0000D8, "Member 'UBP_Brine_AreaEffect_Script_C::DamageMultiplier' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Brine_AreaEffect_Script_C;
 
 }
 

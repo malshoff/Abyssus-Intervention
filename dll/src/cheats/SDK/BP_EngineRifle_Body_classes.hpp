@@ -35,17 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_EngineRifle_Body_C">();
+		BP_STATIC_CLASS_IMPL("BP_EngineRifle_Body_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_EngineRifle_Body_C")
 	}
 	static class ABP_EngineRifle_Body_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_EngineRifle_Body_C>();
 	}
 };
-static_assert(alignof(ABP_EngineRifle_Body_C) == 0x000008, "Wrong alignment on ABP_EngineRifle_Body_C");
-static_assert(sizeof(ABP_EngineRifle_Body_C) == 0x0003A0, "Wrong size on ABP_EngineRifle_Body_C");
-static_assert(offsetof(ABP_EngineRifle_Body_C, UberGraphFrame) == 0x000390, "Member 'ABP_EngineRifle_Body_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_EngineRifle_Body_C, AttachmentSlot) == 0x000398, "Member 'ABP_EngineRifle_Body_C::AttachmentSlot' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_EngineRifle_Body_C;
 
 }
 

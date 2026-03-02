@@ -51,27 +51,6 @@ void UBP_HealthBonus_CharacterMutator_C::ExecuteUbergraph_BP_HealthBonus_Charact
 }
 
 
-// Function BP_HealthBonus_CharacterMutator.BP_HealthBonus_CharacterMutator_C.GetBloodPassive1Bonus
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// double*                                 PercentBonus                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_HealthBonus_CharacterMutator_C::GetBloodPassive1Bonus(double* PercentBonus)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealthBonus_CharacterMutator_C", "GetBloodPassive1Bonus");
-
-	Params::BP_HealthBonus_CharacterMutator_C_GetBloodPassive1Bonus Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (PercentBonus != nullptr)
-		*PercentBonus = Parms.PercentBonus;
-}
-
-
 // Function BP_HealthBonus_CharacterMutator.BP_HealthBonus_CharacterMutator_C.IsPlayerStateValid
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -121,15 +100,15 @@ void UBP_HealthBonus_CharacterMutator_C::K2_DeactivateScript()
 }
 
 
-// Function BP_HealthBonus_CharacterMutator.BP_HealthBonus_CharacterMutator_C.OnInvoke_F80534834BB0A3FB2767E69FFD9A9EE0
+// Function BP_HealthBonus_CharacterMutator.BP_HealthBonus_CharacterMutator_C.OnInvoke_C6B33D444EAF89A492066B957C25494F
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_HealthBonus_CharacterMutator_C::OnInvoke_F80534834BB0A3FB2767E69FFD9A9EE0()
+void UBP_HealthBonus_CharacterMutator_C::OnInvoke_C6B33D444EAF89A492066B957C25494F()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HealthBonus_CharacterMutator_C", "OnInvoke_F80534834BB0A3FB2767E69FFD9A9EE0");
+		Func = Class->GetFunction("BP_HealthBonus_CharacterMutator_C", "OnInvoke_C6B33D444EAF89A492066B957C25494F");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

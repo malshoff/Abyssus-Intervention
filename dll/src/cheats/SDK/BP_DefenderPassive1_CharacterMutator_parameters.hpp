@@ -17,17 +17,14 @@ namespace SDK::Params
 {
 
 // Function BP_DefenderPassive1_CharacterMutator.BP_DefenderPassive1_CharacterMutator_C.OnDealtDamage
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_DefenderPassive1_CharacterMutator_C_OnDealtDamage final
 {
 public:
 	class ARPawnBase*                             Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageCombatEventData;                             // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageCombatEventData;                             // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_DefenderPassive1_CharacterMutator_C_OnDealtDamage) == 0x000008, "Wrong alignment on BP_DefenderPassive1_CharacterMutator_C_OnDealtDamage");
-static_assert(sizeof(BP_DefenderPassive1_CharacterMutator_C_OnDealtDamage) == 0x0000C8, "Wrong size on BP_DefenderPassive1_CharacterMutator_C_OnDealtDamage");
-static_assert(offsetof(BP_DefenderPassive1_CharacterMutator_C_OnDealtDamage, Pawn) == 0x000000, "Member 'BP_DefenderPassive1_CharacterMutator_C_OnDealtDamage::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_DefenderPassive1_CharacterMutator_C_OnDealtDamage, DamageCombatEventData) == 0x000008, "Member 'BP_DefenderPassive1_CharacterMutator_C_OnDealtDamage::DamageCombatEventData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DefenderPassive1_CharacterMutator_C_OnDealtDamage;
 
 // Function BP_DefenderPassive1_CharacterMutator.BP_DefenderPassive1_CharacterMutator_C.OnPreDealtDamage
 // 0x0018 (0x0018 - 0x0000)
@@ -40,12 +37,7 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DamageSourceMask;                                  // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DefenderPassive1_CharacterMutator_C_OnPreDealtDamage) == 0x000008, "Wrong alignment on BP_DefenderPassive1_CharacterMutator_C_OnPreDealtDamage");
-static_assert(sizeof(BP_DefenderPassive1_CharacterMutator_C_OnPreDealtDamage) == 0x000018, "Wrong size on BP_DefenderPassive1_CharacterMutator_C_OnPreDealtDamage");
-static_assert(offsetof(BP_DefenderPassive1_CharacterMutator_C_OnPreDealtDamage, Pawn) == 0x000000, "Member 'BP_DefenderPassive1_CharacterMutator_C_OnPreDealtDamage::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_DefenderPassive1_CharacterMutator_C_OnPreDealtDamage, DamagedActor) == 0x000008, "Member 'BP_DefenderPassive1_CharacterMutator_C_OnPreDealtDamage::DamagedActor' has a wrong offset!");
-static_assert(offsetof(BP_DefenderPassive1_CharacterMutator_C_OnPreDealtDamage, bWasCritical) == 0x000010, "Member 'BP_DefenderPassive1_CharacterMutator_C_OnPreDealtDamage::bWasCritical' has a wrong offset!");
-static_assert(offsetof(BP_DefenderPassive1_CharacterMutator_C_OnPreDealtDamage, DamageSourceMask) == 0x000014, "Member 'BP_DefenderPassive1_CharacterMutator_C_OnPreDealtDamage::DamageSourceMask' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DefenderPassive1_CharacterMutator_C_OnPreDealtDamage;
 
 }
 

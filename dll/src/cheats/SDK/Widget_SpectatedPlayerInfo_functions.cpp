@@ -17,23 +17,17 @@
 namespace SDK
 {
 
-// Function Widget_SpectatedPlayerInfo.Widget_SpectatedPlayerInfo_C.OnSpectatedPlayerChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ARPlayerPawn*                     NewSpectatedPlayer                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function Widget_SpectatedPlayerInfo.Widget_SpectatedPlayerInfo_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_SpectatedPlayerInfo_C::OnSpectatedPlayerChanged(class ARPlayerPawn* NewSpectatedPlayer)
+void UWidget_SpectatedPlayerInfo_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SpectatedPlayerInfo_C", "OnSpectatedPlayerChanged");
+		Func = Class->GetFunction("Widget_SpectatedPlayerInfo_C", "Construct");
 
-	Params::Widget_SpectatedPlayerInfo_C_OnSpectatedPlayerChanged Parms{};
-
-	Parms.NewSpectatedPlayer = NewSpectatedPlayer;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -57,17 +51,23 @@ void UWidget_SpectatedPlayerInfo_C::ExecuteUbergraph_Widget_SpectatedPlayerInfo(
 }
 
 
-// Function Widget_SpectatedPlayerInfo.Widget_SpectatedPlayerInfo_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_SpectatedPlayerInfo.Widget_SpectatedPlayerInfo_C.OnSpectatedPlayerChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ARPlayerPawn*                     NewSpectatedPlayer                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_SpectatedPlayerInfo_C::Construct()
+void UWidget_SpectatedPlayerInfo_C::OnSpectatedPlayerChanged(class ARPlayerPawn* NewSpectatedPlayer)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SpectatedPlayerInfo_C", "Construct");
+		Func = Class->GetFunction("Widget_SpectatedPlayerInfo_C", "OnSpectatedPlayerChanged");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Widget_SpectatedPlayerInfo_C_OnSpectatedPlayerChanged Parms{};
+
+	Parms.NewSpectatedPlayer = NewSpectatedPlayer;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -19,7 +19,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_LevelExit.BP_LevelExit_C
 // 0x0088 (0x0330 - 0x02A8)
-class ABP_LevelExit_C : public AActor
+class ABP_LevelExit_C final : public AActor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
@@ -42,68 +42,58 @@ public:
 	class UNiagaraSystem*                         PortalSystemTemplate;                              // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ToggleInteractionIndicatorVisibility(class AActor* InteractingActor, const bool NewVisible);
-	void StartWaitingForPlayers(class APlayerController* PlayerController);
-	void SkipWaitingForDisconnectedPlayers();
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void ReceiveBeginPlay();
-	void PruneGeneratedActors();
-	void OnSegmentCompleted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment);
-	void OnRep_bIsCorrupted();
-	void OnInteract(class APlayerController* Controller);
-	void OnFocusGone(class APlayerController* Controller);
-	void OnFocus(class APlayerController* Controller);
-	void MakeCorrupted();
-	void IsCorrupted(bool* IsCorrupted_0);
-	void Is_Last_Node_Of_Last_Area(bool* OutBool);
-	void GetSpawnLocation(double InFloat, struct FVector* Location, bool* OutBool);
-	void Force_Load_Lobby_Level(bool* ShouldForceLobby);
-	void ExecuteUbergraph_BP_LevelExit(int32 EntryPoint);
-	void CheckNodeChoice();
-	void CheckDisconnectPlayers(bool* HasDisconnectedPlayers);
 	bool CanInteract(class APlayerController* Controller);
+	void CheckDisconnectPlayers(bool* HasDisconnectedPlayers);
+	void CheckNodeChoice();
+	void ContinueFromInfiniteModePrompt();
+	void ExecuteUbergraph_BP_LevelExit(int32 EntryPoint);
+	void Force_Load_Lobby_Level(bool* ShouldForceLobby);
+	void GetSpawnLocation(double InFloat, struct FVector* Location, bool* OutBool);
+	void Is_Last_Node_Of_Last_Area(bool* OutBool);
+	void IsCorrupted(bool* IsCorrupted_0);
+	bool IsShareable(class APlayerController* PlayerController);
+	void MakeCorrupted();
+	void OnFocus(class APlayerController* Controller);
+	void OnFocusGone(class APlayerController* Controller);
+	void OnInteract(class APlayerController* Controller);
+	void OnPromptAnswer_Event(bool ToVoid);
+	void OnRep_bIsCorrupted();
+	void OnSegmentCompleted(class AREnemySpawnAreaSegment* EnemySpawnAreaSegment);
+	void PruneGeneratedActors();
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ShareInteractableActor(const class APlayerController* PlayerController);
+	void SkipWaitingForDisconnectedPlayers();
+	void StartWaitingForPlayers(class APlayerController* PlayerController);
+	void ToggleInteractionIndicatorVisibility(class AActor* InteractingActor, const bool NewVisible);
 
-	bool ShouldShowOnRadar() const;
-	class USlateBrushAsset* GetRadarObjectIcon() const;
-	struct FVector2D GetRadarIconSize() const;
-	struct FLinearColor GetRadarIconColor() const;
-	class UWidgetComponent* GetInteractionIndicatorWidget() const;
-	class FText GetInteractableSubHeader() const;
-	class FText GetInteractableName() const;
-	class FText GetInteractableDescription() const;
-	class FText GetInteractableCostCurrencyType() const;
-	int32 GetInteractableCost() const;
 	class FText GetInteractableAlternativeDescription() const;
+	int32 GetInteractableCost() const;
+	class FText GetInteractableCostCurrencyType() const;
+	class FText GetInteractableDescription() const;
+	class FText GetInteractableName() const;
+	class FText GetInteractableSubHeader() const;
+	class UWidgetComponent* GetInteractionIndicatorWidget() const;
+	struct FLinearColor GetRadarIconColor() const;
+	struct FVector2D GetRadarIconSize() const;
+	class USlateBrushAsset* GetRadarObjectIcon() const;
+	bool ShouldShowOnRadar() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_LevelExit_C">();
+		BP_STATIC_CLASS_IMPL("BP_LevelExit_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_LevelExit_C")
 	}
 	static class ABP_LevelExit_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_LevelExit_C>();
 	}
 };
-static_assert(alignof(ABP_LevelExit_C) == 0x000008, "Wrong alignment on ABP_LevelExit_C");
-static_assert(sizeof(ABP_LevelExit_C) == 0x000330, "Wrong size on ABP_LevelExit_C");
-static_assert(offsetof(ABP_LevelExit_C, UberGraphFrame) == 0x0002A8, "Member 'ABP_LevelExit_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, MSS_Portal_Passive) == 0x0002B0, "Member 'ABP_LevelExit_C::MSS_Portal_Passive' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, PointLight) == 0x0002B8, "Member 'ABP_LevelExit_C::PointLight' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, Arrow) == 0x0002C0, "Member 'ABP_LevelExit_C::Arrow' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, PostProcessSphere) == 0x0002C8, "Member 'ABP_LevelExit_C::PostProcessSphere' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, Cube) == 0x0002D0, "Member 'ABP_LevelExit_C::Cube' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, Root) == 0x0002D8, "Member 'ABP_LevelExit_C::Root' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, PostProcess) == 0x0002E0, "Member 'ABP_LevelExit_C::PostProcess' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, Blackbox) == 0x0002E8, "Member 'ABP_LevelExit_C::Blackbox' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, SpawnedPortalFX) == 0x0002F0, "Member 'ABP_LevelExit_C::SpawnedPortalFX' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, CachedSpawnAreaSegments) == 0x000300, "Member 'ABP_LevelExit_C::CachedSpawnAreaSegments' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, CachedOverworldManager) == 0x000310, "Member 'ABP_LevelExit_C::CachedOverworldManager' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, PortalSizeMultiplier) == 0x000318, "Member 'ABP_LevelExit_C::PortalSizeMultiplier' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, ForceLoadLobby) == 0x000320, "Member 'ABP_LevelExit_C::ForceLoadLobby' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, bIsCorrupted) == 0x000321, "Member 'ABP_LevelExit_C::bIsCorrupted' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, SpawnPortalVFX) == 0x000322, "Member 'ABP_LevelExit_C::SpawnPortalVFX' has a wrong offset!");
-static_assert(offsetof(ABP_LevelExit_C, PortalSystemTemplate) == 0x000328, "Member 'ABP_LevelExit_C::PortalSystemTemplate' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_LevelExit_C;
 
 }
 

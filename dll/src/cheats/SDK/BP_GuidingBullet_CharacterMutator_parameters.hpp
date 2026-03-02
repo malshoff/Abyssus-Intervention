@@ -41,23 +41,7 @@ public:
 	class UBP_Turret_CharacterMutator_C*          K2Node_DynamicCast_AsBP_Turret_Character_Mutator;  // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator) == 0x000008, "Wrong alignment on BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator");
-static_assert(sizeof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator) == 0x000110, "Wrong size on BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000038, "Member 'BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000048, "Member 'BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000078, "Member 'BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x000088, "Member 'BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000090, "Member 'BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x000094, "Member 'BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_2) == 0x0000A4, "Member 'BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_3) == 0x0000B4, "Member 'BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x0000C8, "Member 'BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator, CallFunc_GetFirstScriptOfType_ReturnValue) == 0x0000F8, "Member 'BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator::CallFunc_GetFirstScriptOfType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator, K2Node_DynamicCast_AsBP_Turret_Character_Mutator) == 0x000100, "Member 'BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator::K2Node_DynamicCast_AsBP_Turret_Character_Mutator' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator, K2Node_DynamicCast_bSuccess_2) == 0x000108, "Member 'BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GuidingBullet_CharacterMutator_C_ExecuteUbergraph_BP_GuidingBullet_CharacterMutator;
 
 // Function BP_GuidingBullet_CharacterMutator.BP_GuidingBullet_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -69,32 +53,21 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_GuidingBullet_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_GuidingBullet_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_GuidingBullet_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_GuidingBullet_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_GuidingBullet_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_GuidingBullet_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_GuidingBullet_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GuidingBullet_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_GuidingBullet_CharacterMutator.BP_GuidingBullet_CharacterMutator_C.On Dealt Damage
-// 0x0110 (0x0110 - 0x0000)
+// 0x0240 (0x0240 - 0x0000)
 struct BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage final
 {
 public:
 	class ARPawnBase*                             Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x00D0(0x0030)(ContainsInstancedReference)
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FName                                   CallFunc_GetScriptFName_ReturnValue;               // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0200(0x0030)(ContainsInstancedReference)
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base;                   // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage) == 0x000008, "Wrong alignment on BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage");
-static_assert(sizeof(BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage) == 0x000110, "Wrong size on BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage, Pawn) == 0x000000, "Member 'BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage, DamageEventData) == 0x000008, "Member 'BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage::DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage, CallFunc_GetScriptFName_ReturnValue) == 0x0000C8, "Member 'BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x0000D0, "Member 'BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage, K2Node_DynamicCast_AsRPawn_Base) == 0x000100, "Member 'BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage, K2Node_DynamicCast_bSuccess) == 0x000108, "Member 'BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GuidingBullet_CharacterMutator_C_On_Dealt_Damage;
 
 // Function BP_GuidingBullet_CharacterMutator.BP_GuidingBullet_CharacterMutator_C.OnPreDealtDamage
 // 0x00B0 (0x00B0 - 0x0000)
@@ -135,36 +108,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage) == 0x000008, "Wrong alignment on BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage");
-static_assert(sizeof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage) == 0x0000B0, "Wrong size on BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, Pawn) == 0x000000, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, DamagedActor) == 0x000008, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::DamagedActor' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, bWasCritical) == 0x000010, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::bWasCritical' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, DamageSourceMask) == 0x000014, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::DamageSourceMask' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, FoundTarget) == 0x000018, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::FoundTarget' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_DamageSourceMaskHasFlag_ReturnValue) == 0x000019, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_DamageSourceMaskHasFlag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, Temp_bool_True_if_break_was_hit_Variable) == 0x00001A, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_Not_PreBool_ReturnValue) == 0x00001B, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_Not_PreBool_ReturnValue_1) == 0x00001C, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, Temp_int_Array_Index_Variable) == 0x000020, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, Temp_int_Loop_Counter_Variable) == 0x000024, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_Add_IntInt_ReturnValue) == 0x000028, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_GetMutatorRank_ReturnValue) == 0x00002C, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x000030, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000038, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000040, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_GetScriptFName_ReturnValue) == 0x000048, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000050, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_Array_Get_Item) == 0x000080, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, K2Node_DynamicCast_AsRPawn_Base) == 0x000088, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, K2Node_DynamicCast_bSuccess) == 0x000090, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000091, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_IsValid_ReturnValue) == 0x000092, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_Array_Length_ReturnValue) == 0x000094, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_Less_IntInt_ReturnValue) == 0x000098, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_BooleanAND_ReturnValue) == 0x000099, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0000A0, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage, CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast) == 0x0000A8, "Member 'BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage::CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GuidingBullet_CharacterMutator_C_OnPreDealtDamage;
 
 }
 

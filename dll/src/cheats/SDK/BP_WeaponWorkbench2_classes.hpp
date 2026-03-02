@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -76,6 +76,7 @@ public:
 	void EnterAnimationTimeline__UpdateFunc();
 	void ExecuteUbergraph_BP_WeaponWorkbench2(int32 EntryPoint);
 	void HideHighlight();
+	bool IsShareable(class APlayerController* PlayerController);
 	bool IsWeaponPaintUnlocked(class URPrimaryDataAsset* Asset);
 	void LightOnTimeline__FinishedFunc();
 	void LightOnTimeline__UpdateFunc();
@@ -94,7 +95,9 @@ public:
 	void SetGunBodySemiHidden();
 	void SetGunMeshPaint(class URWeaponCosmeticPrimaryAsset* CosmeticPA);
 	void SetLightIntesity(double Alpha);
+	void SetStaticPreviewMeshState();
 	void SetupHighlight();
+	void ShareInteractableActor(const class APlayerController* PlayerController);
 	void ToggleCinematicLights(bool LightsOn);
 	void ToggleInteractionIndicatorVisibility(class AActor* InteractingActor, const bool NewVisible);
 	void TopLight__FinishedFunc();
@@ -115,54 +118,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_WeaponWorkbench2_C">();
+		BP_STATIC_CLASS_IMPL("BP_WeaponWorkbench2_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_WeaponWorkbench2_C")
 	}
 	static class ABP_WeaponWorkbench2_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_WeaponWorkbench2_C>();
 	}
 };
-static_assert(alignof(ABP_WeaponWorkbench2_C) == 0x000008, "Wrong alignment on ABP_WeaponWorkbench2_C");
-static_assert(sizeof(ABP_WeaponWorkbench2_C) == 0x000410, "Wrong size on ABP_WeaponWorkbench2_C");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, UberGraphFrame) == 0x0002F0, "Member 'ABP_WeaponWorkbench2_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, Box) == 0x0002F8, "Member 'ABP_WeaponWorkbench2_C::Box' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, Spotlight_Bottom_R) == 0x000300, "Member 'ABP_WeaponWorkbench2_C::Spotlight_Bottom_R' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, BPC_InteractableIndicator) == 0x000308, "Member 'ABP_WeaponWorkbench2_C::BPC_InteractableIndicator' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, StaticPreviewMesh) == 0x000310, "Member 'ABP_WeaponWorkbench2_C::StaticPreviewMesh' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, ObjectHighlightWidgetComponent) == 0x000318, "Member 'ABP_WeaponWorkbench2_C::ObjectHighlightWidgetComponent' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, TESTBRINE_LIQUID) == 0x000320, "Member 'ABP_WeaponWorkbench2_C::TESTBRINE_LIQUID' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, OVH_R_Spotlight) == 0x000328, "Member 'ABP_WeaponWorkbench2_C::OVH_R_Spotlight' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, OVH_L_Spotlight) == 0x000330, "Member 'ABP_WeaponWorkbench2_C::OVH_L_Spotlight' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, LampAudio) == 0x000338, "Member 'ABP_WeaponWorkbench2_C::LampAudio' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, OVH_R_Pointlight) == 0x000340, "Member 'ABP_WeaponWorkbench2_C::OVH_R_Pointlight' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, OVH_L_Pointlight) == 0x000348, "Member 'ABP_WeaponWorkbench2_C::OVH_L_Pointlight' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, OverheadLights) == 0x000350, "Member 'ABP_WeaponWorkbench2_C::OverheadLights' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, VolumetricSphere) == 0x000358, "Member 'ABP_WeaponWorkbench2_C::VolumetricSphere' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, SpotLight_Side_R) == 0x000360, "Member 'ABP_WeaponWorkbench2_C::SpotLight_Side_R' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, SpotLight_Side_L) == 0x000368, "Member 'ABP_WeaponWorkbench2_C::SpotLight_Side_L' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, SpotLight_Top) == 0x000370, "Member 'ABP_WeaponWorkbench2_C::SpotLight_Top' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, Spotlight_Bottom_L) == 0x000378, "Member 'ABP_WeaponWorkbench2_C::Spotlight_Bottom_L' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, CinematicLightRig) == 0x000380, "Member 'ABP_WeaponWorkbench2_C::CinematicLightRig' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, SK_Workbench_Body) == 0x000388, "Member 'ABP_WeaponWorkbench2_C::SK_Workbench_Body' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, SkeletalPreviewMesh) == 0x000390, "Member 'ABP_WeaponWorkbench2_C::SkeletalPreviewMesh' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, MainMenuCameraPosition) == 0x000398, "Member 'ABP_WeaponWorkbench2_C::MainMenuCameraPosition' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, SubmenuCameraPosition) == 0x0003A0, "Member 'ABP_WeaponWorkbench2_C::SubmenuCameraPosition' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, Camera) == 0x0003A8, "Member 'ABP_WeaponWorkbench2_C::Camera' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, EnterAnimationTimeline_Alpha_B3C9F9354E1E8D11BB3A10A72E470188) == 0x0003B0, "Member 'ABP_WeaponWorkbench2_C::EnterAnimationTimeline_Alpha_B3C9F9354E1E8D11BB3A10A72E470188' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, EnterAnimationTimeline__Direction_B3C9F9354E1E8D11BB3A10A72E470188) == 0x0003B4, "Member 'ABP_WeaponWorkbench2_C::EnterAnimationTimeline__Direction_B3C9F9354E1E8D11BB3A10A72E470188' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, EnterAnimationTimeline) == 0x0003B8, "Member 'ABP_WeaponWorkbench2_C::EnterAnimationTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, TopLight_TopLight_8A1B4393432440D57F466EAB6DF3ECB6) == 0x0003C0, "Member 'ABP_WeaponWorkbench2_C::TopLight_TopLight_8A1B4393432440D57F466EAB6DF3ECB6' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, TopLight__Direction_8A1B4393432440D57F466EAB6DF3ECB6) == 0x0003C4, "Member 'ABP_WeaponWorkbench2_C::TopLight__Direction_8A1B4393432440D57F466EAB6DF3ECB6' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, TopLight) == 0x0003C8, "Member 'ABP_WeaponWorkbench2_C::TopLight' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, CinematicLightsTimeline_LightIntensity_D372B08B4364448F4681D8BD7300D677) == 0x0003D0, "Member 'ABP_WeaponWorkbench2_C::CinematicLightsTimeline_LightIntensity_D372B08B4364448F4681D8BD7300D677' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, CinematicLightsTimeline__Direction_D372B08B4364448F4681D8BD7300D677) == 0x0003D4, "Member 'ABP_WeaponWorkbench2_C::CinematicLightsTimeline__Direction_D372B08B4364448F4681D8BD7300D677' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, CinematicLightsTimeline) == 0x0003D8, "Member 'ABP_WeaponWorkbench2_C::CinematicLightsTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, LightOnTimeline_LightAnimation_3EF6DC744D12085B058AEF8D91D04A96) == 0x0003E0, "Member 'ABP_WeaponWorkbench2_C::LightOnTimeline_LightAnimation_3EF6DC744D12085B058AEF8D91D04A96' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, LightOnTimeline__Direction_3EF6DC744D12085B058AEF8D91D04A96) == 0x0003E4, "Member 'ABP_WeaponWorkbench2_C::LightOnTimeline__Direction_3EF6DC744D12085B058AEF8D91D04A96' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, LightOnTimeline) == 0x0003E8, "Member 'ABP_WeaponWorkbench2_C::LightOnTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, IsOpen) == 0x0003F0, "Member 'ABP_WeaponWorkbench2_C::IsOpen' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, ShouldShowHighlight) == 0x0003F1, "Member 'ABP_WeaponWorkbench2_C::ShouldShowHighlight' has a wrong offset!");
-static_assert(offsetof(ABP_WeaponWorkbench2_C, WeaponPreviewPivotInitialLocation) == 0x0003F8, "Member 'ABP_WeaponWorkbench2_C::WeaponPreviewPivotInitialLocation' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_WeaponWorkbench2_C;
 
 }
 

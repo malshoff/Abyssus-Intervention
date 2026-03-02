@@ -26,24 +26,25 @@ public:
 	TArray<class UStaticMeshComponent*>           CachedMeshes;                                      // 0x00E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
-	void K2_DeactivateScript();
-	void K2_ActivateScript();
 	void ExecuteUbergraph_BP_AttachMeshToWeapon_CosmeticScript(int32 EntryPoint);
+	void K2_ActivateScript();
+	void K2_DeactivateScript();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_AttachMeshToWeapon_CosmeticScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_AttachMeshToWeapon_CosmeticScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_AttachMeshToWeapon_CosmeticScript_C")
 	}
 	static class UBP_AttachMeshToWeapon_CosmeticScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_AttachMeshToWeapon_CosmeticScript_C>();
 	}
 };
-static_assert(alignof(UBP_AttachMeshToWeapon_CosmeticScript_C) == 0x000008, "Wrong alignment on UBP_AttachMeshToWeapon_CosmeticScript_C");
-static_assert(sizeof(UBP_AttachMeshToWeapon_CosmeticScript_C) == 0x0000F8, "Wrong size on UBP_AttachMeshToWeapon_CosmeticScript_C");
-static_assert(offsetof(UBP_AttachMeshToWeapon_CosmeticScript_C, UberGraphFrame) == 0x0000E0, "Member 'UBP_AttachMeshToWeapon_CosmeticScript_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_AttachMeshToWeapon_CosmeticScript_C, CachedMeshes) == 0x0000E8, "Member 'UBP_AttachMeshToWeapon_CosmeticScript_C::CachedMeshes' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_AttachMeshToWeapon_CosmeticScript_C;
 
 }
 

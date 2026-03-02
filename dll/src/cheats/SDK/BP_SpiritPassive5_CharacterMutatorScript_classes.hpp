@@ -23,15 +23,18 @@ class UBP_SpiritPassive5_CharacterMutatorScript_C final : public URGCharacterMut
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SpiritPassive5_CharacterMutatorScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_SpiritPassive5_CharacterMutatorScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SpiritPassive5_CharacterMutatorScript_C")
 	}
 	static class UBP_SpiritPassive5_CharacterMutatorScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SpiritPassive5_CharacterMutatorScript_C>();
 	}
 };
-static_assert(alignof(UBP_SpiritPassive5_CharacterMutatorScript_C) == 0x000008, "Wrong alignment on UBP_SpiritPassive5_CharacterMutatorScript_C");
-static_assert(sizeof(UBP_SpiritPassive5_CharacterMutatorScript_C) == 0x000108, "Wrong size on UBP_SpiritPassive5_CharacterMutatorScript_C");
+DUMPER7_ASSERTS_UBP_SpiritPassive5_CharacterMutatorScript_C;
 
 }
 

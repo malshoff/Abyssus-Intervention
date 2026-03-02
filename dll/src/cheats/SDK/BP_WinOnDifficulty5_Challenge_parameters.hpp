@@ -29,15 +29,7 @@ public:
 	class ARGameState*                            CallFunc_GetRGameState_ReturnValue_1;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge) == 0x000008, "Wrong alignment on BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge");
-static_assert(sizeof(BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge) == 0x000038, "Wrong size on BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge");
-static_assert(offsetof(BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge, EntryPoint) == 0x000000, "Member 'BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge, CallFunc_GetRGameState_ReturnValue) == 0x000008, "Member 'BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge::CallFunc_GetRGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge, CallFunc_GetChallengeManager_ReturnValue) == 0x000010, "Member 'BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge, CallFunc_GetNumDifficultyTreeAssignedPoints_ReturnValue) == 0x000018, "Member 'BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge::CallFunc_GetNumDifficultyTreeAssignedPoints_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x00001C, "Member 'BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge, CallFunc_GetRGameState_ReturnValue_1) == 0x000020, "Member 'BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge::CallFunc_GetRGameState_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge, K2Node_CreateDelegate_OutputDelegate) == 0x000028, "Member 'BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WinOnDifficulty5_Challenge_C_ExecuteUbergraph_BP_WinOnDifficulty5_Challenge;
 
 }
 

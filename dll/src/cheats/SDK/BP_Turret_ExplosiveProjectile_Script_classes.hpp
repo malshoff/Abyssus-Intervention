@@ -35,18 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Turret_ExplosiveProjectile_Script_C">();
+		BP_STATIC_CLASS_IMPL("BP_Turret_ExplosiveProjectile_Script_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Turret_ExplosiveProjectile_Script_C")
 	}
 	static class UBP_Turret_ExplosiveProjectile_Script_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Turret_ExplosiveProjectile_Script_C>();
 	}
 };
-static_assert(alignof(UBP_Turret_ExplosiveProjectile_Script_C) == 0x000008, "Wrong alignment on UBP_Turret_ExplosiveProjectile_Script_C");
-static_assert(sizeof(UBP_Turret_ExplosiveProjectile_Script_C) == 0x0000F8, "Wrong size on UBP_Turret_ExplosiveProjectile_Script_C");
-static_assert(offsetof(UBP_Turret_ExplosiveProjectile_Script_C, UberGraphFrame) == 0x0000E0, "Member 'UBP_Turret_ExplosiveProjectile_Script_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_ExplosiveProjectile_Script_C, SpawnedProjectileMovementSound) == 0x0000E8, "Member 'UBP_Turret_ExplosiveProjectile_Script_C::SpawnedProjectileMovementSound' has a wrong offset!");
-static_assert(offsetof(UBP_Turret_ExplosiveProjectile_Script_C, Damage_Radius) == 0x0000F0, "Member 'UBP_Turret_ExplosiveProjectile_Script_C::Damage_Radius' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Turret_ExplosiveProjectile_Script_C;
 
 }
 

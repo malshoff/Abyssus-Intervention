@@ -800,62 +800,6 @@ TArray<struct FScriptTypedElementHandle> UTypedElementSelectionSet::K2_GetSelect
 }
 
 
-// Function TypedElementRuntime.TypedElementAssetDataInterface.GetAllReferencedAssetDatas
-// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<struct FAssetData>               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FAssetData> ITypedElementAssetDataInterface::GetAllReferencedAssetDatas(const struct FScriptTypedElementHandle& InElementHandle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementAssetDataInterface", "GetAllReferencedAssetDatas");
-
-	Params::TypedElementAssetDataInterface_GetAllReferencedAssetDatas Parms{};
-
-	Parms.InElementHandle = std::move(InElementHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TypedElementRuntime.TypedElementAssetDataInterface.GetAssetData
-// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FAssetData                       ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FAssetData ITypedElementAssetDataInterface::GetAssetData(const struct FScriptTypedElementHandle& InElementHandle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementAssetDataInterface", "GetAssetData");
-
-	Params::TypedElementAssetDataInterface_GetAssetData Parms{};
-
-	Parms.InElementHandle = std::move(InElementHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function TypedElementRuntime.TypedElementHierarchyInterface.GetChildElements
 // (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -905,6 +849,62 @@ struct FScriptTypedElementHandle ITypedElementHierarchyInterface::GetParentEleme
 
 	Parms.InElementHandle = std::move(InElementHandle);
 	Parms.bAllowCreate = bAllowCreate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementAssetDataInterface.GetAllReferencedAssetDatas
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FAssetData>               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FAssetData> ITypedElementAssetDataInterface::GetAllReferencedAssetDatas(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementAssetDataInterface", "GetAllReferencedAssetDatas");
+
+	Params::TypedElementAssetDataInterface_GetAllReferencedAssetDatas Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementAssetDataInterface.GetAssetData
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FAssetData                       ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FAssetData ITypedElementAssetDataInterface::GetAssetData(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementAssetDataInterface", "GetAssetData");
+
+	Params::TypedElementAssetDataInterface_GetAssetData Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

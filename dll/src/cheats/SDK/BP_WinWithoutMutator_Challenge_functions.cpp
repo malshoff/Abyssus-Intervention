@@ -51,15 +51,15 @@ void UBP_WinWithoutMutator_Challenge_C::FinalBossKilled()
 }
 
 
-// Function BP_WinWithoutMutator_Challenge.BP_WinWithoutMutator_Challenge_C.OnApplicableRunStarted
+// Function BP_WinWithoutMutator_Challenge.BP_WinWithoutMutator_Challenge_C.OnPlayerRegistered
 // (Event, Public, BlueprintEvent)
 
-void UBP_WinWithoutMutator_Challenge_C::OnApplicableRunStarted()
+void UBP_WinWithoutMutator_Challenge_C::OnPlayerRegistered()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_WinWithoutMutator_Challenge_C", "OnApplicableRunStarted");
+		Func = Class->GetFunction("BP_WinWithoutMutator_Challenge_C", "OnPlayerRegistered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

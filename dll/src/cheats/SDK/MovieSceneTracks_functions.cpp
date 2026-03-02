@@ -37,6 +37,34 @@ struct FTransform IMovieSceneTransformOrigin::BP_GetTransformOrigin() const
 }
 
 
+// Function MovieSceneTracks.MovieSceneFadeTrackTestLibrary.GetManualFadeAmount
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class APlayerCameraManager*             PlayerCameraManager                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UMovieSceneFadeTrackTestLibrary::GetManualFadeAmount(class APlayerCameraManager* PlayerCameraManager)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MovieSceneFadeTrackTestLibrary", "GetManualFadeAmount");
+
+	Params::MovieSceneFadeTrackTestLibrary_GetManualFadeAmount Parms{};
+
+	Parms.PlayerCameraManager = PlayerCameraManager;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MovieSceneTracks.MovieSceneReplaceableActorBinding_BPBase.BP_InitReplaceableBinding
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
@@ -378,6 +406,31 @@ bool UMovieSceneAudioSection::GetOverrideAttenuation() const
 		Func = Class->GetFunction("MovieSceneAudioSection", "GetOverrideAttenuation");
 
 	Params::MovieSceneAudioSection_GetOverrideAttenuation Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieSceneTracks.MovieSceneAudioSection.GetPlaybackSound
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class USoundBase*                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class USoundBase* UMovieSceneAudioSection::GetPlaybackSound() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneAudioSection", "GetPlaybackSound");
+
+	Params::MovieSceneAudioSection_GetPlaybackSound Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

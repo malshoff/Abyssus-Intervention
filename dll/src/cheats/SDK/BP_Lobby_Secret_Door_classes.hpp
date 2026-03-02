@@ -46,26 +46,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Lobby_Secret_Door_C">();
+		BP_STATIC_CLASS_IMPL("BP_Lobby_Secret_Door_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Lobby_Secret_Door_C")
 	}
 	static class ABP_Lobby_Secret_Door_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Lobby_Secret_Door_C>();
 	}
 };
-static_assert(alignof(ABP_Lobby_Secret_Door_C) == 0x000008, "Wrong alignment on ABP_Lobby_Secret_Door_C");
-static_assert(sizeof(ABP_Lobby_Secret_Door_C) == 0x0002F0, "Wrong size on ABP_Lobby_Secret_Door_C");
-static_assert(offsetof(ABP_Lobby_Secret_Door_C, UberGraphFrame) == 0x0002A8, "Member 'ABP_Lobby_Secret_Door_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Lobby_Secret_Door_C, DMActorProximityBox) == 0x0002B0, "Member 'ABP_Lobby_Secret_Door_C::DMActorProximityBox' has a wrong offset!");
-static_assert(offsetof(ABP_Lobby_Secret_Door_C, SM_Boatyard_Aztec_Floor_Frame_03) == 0x0002B8, "Member 'ABP_Lobby_Secret_Door_C::SM_Boatyard_Aztec_Floor_Frame_03' has a wrong offset!");
-static_assert(offsetof(ABP_Lobby_Secret_Door_C, SM_Boatyard_Aztec_Floor_Frame_02) == 0x0002C0, "Member 'ABP_Lobby_Secret_Door_C::SM_Boatyard_Aztec_Floor_Frame_02' has a wrong offset!");
-static_assert(offsetof(ABP_Lobby_Secret_Door_C, StaticMesh) == 0x0002C8, "Member 'ABP_Lobby_Secret_Door_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_Lobby_Secret_Door_C, DefaultSceneRoot) == 0x0002D0, "Member 'ABP_Lobby_Secret_Door_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_Lobby_Secret_Door_C, Timeline_Alpha_D7C380874E104239AB02699C1A8FF7CA) == 0x0002D8, "Member 'ABP_Lobby_Secret_Door_C::Timeline_Alpha_D7C380874E104239AB02699C1A8FF7CA' has a wrong offset!");
-static_assert(offsetof(ABP_Lobby_Secret_Door_C, Timeline__Direction_D7C380874E104239AB02699C1A8FF7CA) == 0x0002DC, "Member 'ABP_Lobby_Secret_Door_C::Timeline__Direction_D7C380874E104239AB02699C1A8FF7CA' has a wrong offset!");
-static_assert(offsetof(ABP_Lobby_Secret_Door_C, Timeline) == 0x0002E0, "Member 'ABP_Lobby_Secret_Door_C::Timeline' has a wrong offset!");
-static_assert(offsetof(ABP_Lobby_Secret_Door_C, SouvenirsUnlocked) == 0x0002E8, "Member 'ABP_Lobby_Secret_Door_C::SouvenirsUnlocked' has a wrong offset!");
-static_assert(offsetof(ABP_Lobby_Secret_Door_C, SouvenirsRequired) == 0x0002EC, "Member 'ABP_Lobby_Secret_Door_C::SouvenirsRequired' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Lobby_Secret_Door_C;
 
 }
 

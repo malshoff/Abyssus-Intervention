@@ -27,17 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_StaticMeshRagdollActor_C">();
+		BP_STATIC_CLASS_IMPL("BP_StaticMeshRagdollActor_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_StaticMeshRagdollActor_C")
 	}
 	static class ABP_StaticMeshRagdollActor_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_StaticMeshRagdollActor_C>();
 	}
 };
-static_assert(alignof(ABP_StaticMeshRagdollActor_C) == 0x000008, "Wrong alignment on ABP_StaticMeshRagdollActor_C");
-static_assert(sizeof(ABP_StaticMeshRagdollActor_C) == 0x0002B8, "Wrong size on ABP_StaticMeshRagdollActor_C");
-static_assert(offsetof(ABP_StaticMeshRagdollActor_C, StaticMesh) == 0x0002A8, "Member 'ABP_StaticMeshRagdollActor_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_StaticMeshRagdollActor_C, DefaultSceneRoot) == 0x0002B0, "Member 'ABP_StaticMeshRagdollActor_C::DefaultSceneRoot' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_StaticMeshRagdollActor_C;
 
 }
 

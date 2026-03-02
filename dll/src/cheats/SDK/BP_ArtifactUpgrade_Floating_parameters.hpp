@@ -25,10 +25,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             CallFunc_K2_AddLocalOffset_SweepHitResult;         // 0x0008(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(BP_ArtifactUpgrade_Floating_C_ExecuteUbergraph_BP_ArtifactUpgrade_Floating) == 0x000008, "Wrong alignment on BP_ArtifactUpgrade_Floating_C_ExecuteUbergraph_BP_ArtifactUpgrade_Floating");
-static_assert(sizeof(BP_ArtifactUpgrade_Floating_C_ExecuteUbergraph_BP_ArtifactUpgrade_Floating) == 0x000108, "Wrong size on BP_ArtifactUpgrade_Floating_C_ExecuteUbergraph_BP_ArtifactUpgrade_Floating");
-static_assert(offsetof(BP_ArtifactUpgrade_Floating_C_ExecuteUbergraph_BP_ArtifactUpgrade_Floating, EntryPoint) == 0x000000, "Member 'BP_ArtifactUpgrade_Floating_C_ExecuteUbergraph_BP_ArtifactUpgrade_Floating::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_ArtifactUpgrade_Floating_C_ExecuteUbergraph_BP_ArtifactUpgrade_Floating, CallFunc_K2_AddLocalOffset_SweepHitResult) == 0x000008, "Member 'BP_ArtifactUpgrade_Floating_C_ExecuteUbergraph_BP_ArtifactUpgrade_Floating::CallFunc_K2_AddLocalOffset_SweepHitResult' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ArtifactUpgrade_Floating_C_ExecuteUbergraph_BP_ArtifactUpgrade_Floating;
 
 }
 

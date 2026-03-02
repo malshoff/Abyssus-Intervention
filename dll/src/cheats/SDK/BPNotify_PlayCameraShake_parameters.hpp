@@ -34,18 +34,7 @@ public:
 	class UCameraShakeBase*                       CallFunc_StartCameraShake_ReturnValue;             // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_StartCameraShake_Scale_ImplicitCast;      // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPNotify_PlayCameraShake_C_Received_Notify) == 0x000008, "Wrong alignment on BPNotify_PlayCameraShake_C_Received_Notify");
-static_assert(sizeof(BPNotify_PlayCameraShake_C_Received_Notify) == 0x000070, "Wrong size on BPNotify_PlayCameraShake_C_Received_Notify");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_Received_Notify, MeshComp) == 0x000000, "Member 'BPNotify_PlayCameraShake_C_Received_Notify::MeshComp' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_Received_Notify, Animation) == 0x000008, "Member 'BPNotify_PlayCameraShake_C_Received_Notify::Animation' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_Received_Notify, EventReference) == 0x000010, "Member 'BPNotify_PlayCameraShake_C_Received_Notify::EventReference' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_Received_Notify, ReturnValue) == 0x000040, "Member 'BPNotify_PlayCameraShake_C_Received_Notify::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_Received_Notify, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'BPNotify_PlayCameraShake_C_Received_Notify::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_Received_Notify, CallFunc_TryGetPlayerController_PlayerController) == 0x000050, "Member 'BPNotify_PlayCameraShake_C_Received_Notify::CallFunc_TryGetPlayerController_PlayerController' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_Received_Notify, CallFunc_IsValid_ReturnValue) == 0x000058, "Member 'BPNotify_PlayCameraShake_C_Received_Notify::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_Received_Notify, CallFunc_IsValidClass_ReturnValue) == 0x000059, "Member 'BPNotify_PlayCameraShake_C_Received_Notify::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_Received_Notify, CallFunc_StartCameraShake_ReturnValue) == 0x000060, "Member 'BPNotify_PlayCameraShake_C_Received_Notify::CallFunc_StartCameraShake_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_Received_Notify, CallFunc_StartCameraShake_Scale_ImplicitCast) == 0x000068, "Member 'BPNotify_PlayCameraShake_C_Received_Notify::CallFunc_StartCameraShake_Scale_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BPNotify_PlayCameraShake_C_Received_Notify;
 
 // Function BPNotify_PlayCameraShake.BPNotify_PlayCameraShake_C.TryGetPlayerController
 // 0x0078 (0x0078 - 0x0000)
@@ -72,23 +61,7 @@ public:
 	class APlayerController*                      K2Node_DynamicCast_AsPlayer_Controller_1;          // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPNotify_PlayCameraShake_C_TryGetPlayerController) == 0x000008, "Wrong alignment on BPNotify_PlayCameraShake_C_TryGetPlayerController");
-static_assert(sizeof(BPNotify_PlayCameraShake_C_TryGetPlayerController) == 0x000078, "Wrong size on BPNotify_PlayCameraShake_C_TryGetPlayerController");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_TryGetPlayerController, OwnerActor) == 0x000000, "Member 'BPNotify_PlayCameraShake_C_TryGetPlayerController::OwnerActor' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_TryGetPlayerController, PlayerController) == 0x000008, "Member 'BPNotify_PlayCameraShake_C_TryGetPlayerController::PlayerController' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_TryGetPlayerController, K2Node_DynamicCast_AsRWeapon) == 0x000010, "Member 'BPNotify_PlayCameraShake_C_TryGetPlayerController::K2Node_DynamicCast_AsRWeapon' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_TryGetPlayerController, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BPNotify_PlayCameraShake_C_TryGetPlayerController::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_TryGetPlayerController, K2Node_DynamicCast_AsRPawn_Base) == 0x000020, "Member 'BPNotify_PlayCameraShake_C_TryGetPlayerController::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_TryGetPlayerController, K2Node_DynamicCast_bSuccess_1) == 0x000028, "Member 'BPNotify_PlayCameraShake_C_TryGetPlayerController::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_TryGetPlayerController, CallFunc_GetOwner_ReturnValue) == 0x000030, "Member 'BPNotify_PlayCameraShake_C_TryGetPlayerController::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_TryGetPlayerController, CallFunc_GetController_ReturnValue) == 0x000038, "Member 'BPNotify_PlayCameraShake_C_TryGetPlayerController::CallFunc_GetController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_TryGetPlayerController, K2Node_DynamicCast_AsRPawn_Base_1) == 0x000040, "Member 'BPNotify_PlayCameraShake_C_TryGetPlayerController::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_TryGetPlayerController, K2Node_DynamicCast_bSuccess_2) == 0x000048, "Member 'BPNotify_PlayCameraShake_C_TryGetPlayerController::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_TryGetPlayerController, K2Node_DynamicCast_AsPlayer_Controller) == 0x000050, "Member 'BPNotify_PlayCameraShake_C_TryGetPlayerController::K2Node_DynamicCast_AsPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_TryGetPlayerController, K2Node_DynamicCast_bSuccess_3) == 0x000058, "Member 'BPNotify_PlayCameraShake_C_TryGetPlayerController::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_TryGetPlayerController, CallFunc_GetController_ReturnValue_1) == 0x000060, "Member 'BPNotify_PlayCameraShake_C_TryGetPlayerController::CallFunc_GetController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_TryGetPlayerController, K2Node_DynamicCast_AsPlayer_Controller_1) == 0x000068, "Member 'BPNotify_PlayCameraShake_C_TryGetPlayerController::K2Node_DynamicCast_AsPlayer_Controller_1' has a wrong offset!");
-static_assert(offsetof(BPNotify_PlayCameraShake_C_TryGetPlayerController, K2Node_DynamicCast_bSuccess_4) == 0x000070, "Member 'BPNotify_PlayCameraShake_C_TryGetPlayerController::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+DUMPER7_ASSERTS_BPNotify_PlayCameraShake_C_TryGetPlayerController;
 
 }
 

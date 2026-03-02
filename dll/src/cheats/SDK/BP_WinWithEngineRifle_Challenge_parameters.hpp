@@ -33,18 +33,7 @@ public:
 	class ARGameState*                            CallFunc_GetRGameState_ReturnValue_1;              // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0060(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge) == 0x000008, "Wrong alignment on BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge");
-static_assert(sizeof(BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge) == 0x000070, "Wrong size on BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge");
-static_assert(offsetof(BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge, EntryPoint) == 0x000000, "Member 'BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge, CallFunc_GetChallengeManager_ReturnValue) == 0x000018, "Member 'BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge, CallFunc_IsChallengeCompleted_ReturnValue) == 0x000020, "Member 'BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge::CallFunc_IsChallengeCompleted_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge, CallFunc_GetRGameState_ReturnValue) == 0x000028, "Member 'BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge::CallFunc_GetRGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge, K2Node_CreateDelegate_OutputDelegate_1) == 0x000030, "Member 'BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge, K2Node_CreateDelegate_OutputDelegate_2) == 0x000040, "Member 'BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge, K2Node_CustomEvent_RunFailed) == 0x000050, "Member 'BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge::K2Node_CustomEvent_RunFailed' has a wrong offset!");
-static_assert(offsetof(BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge, CallFunc_GetRGameState_ReturnValue_1) == 0x000058, "Member 'BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge::CallFunc_GetRGameState_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge, K2Node_CreateDelegate_OutputDelegate_3) == 0x000060, "Member 'BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WinWithEngineRifle_Challenge_C_ExecuteUbergraph_BP_WinWithEngineRifle_Challenge;
 
 // Function BP_WinWithEngineRifle_Challenge.BP_WinWithEngineRifle_Challenge_C.OnRunFinished
 // 0x0001 (0x0001 - 0x0000)
@@ -53,9 +42,7 @@ struct BP_WinWithEngineRifle_Challenge_C_OnRunFinished final
 public:
 	bool                                          RunFailed;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WinWithEngineRifle_Challenge_C_OnRunFinished) == 0x000001, "Wrong alignment on BP_WinWithEngineRifle_Challenge_C_OnRunFinished");
-static_assert(sizeof(BP_WinWithEngineRifle_Challenge_C_OnRunFinished) == 0x000001, "Wrong size on BP_WinWithEngineRifle_Challenge_C_OnRunFinished");
-static_assert(offsetof(BP_WinWithEngineRifle_Challenge_C_OnRunFinished, RunFailed) == 0x000000, "Member 'BP_WinWithEngineRifle_Challenge_C_OnRunFinished::RunFailed' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WinWithEngineRifle_Challenge_C_OnRunFinished;
 
 }
 

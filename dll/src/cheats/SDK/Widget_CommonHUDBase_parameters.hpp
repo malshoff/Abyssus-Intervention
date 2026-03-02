@@ -22,10 +22,7 @@ public:
 	class UCommonActivatableWidgetStack*          ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonHUDBase_C_GetWidgetStack) == 0x000008, "Wrong alignment on Widget_CommonHUDBase_C_GetWidgetStack");
-static_assert(sizeof(Widget_CommonHUDBase_C_GetWidgetStack) == 0x000010, "Wrong size on Widget_CommonHUDBase_C_GetWidgetStack");
-static_assert(offsetof(Widget_CommonHUDBase_C_GetWidgetStack, ReturnValue) == 0x000000, "Member 'Widget_CommonHUDBase_C_GetWidgetStack::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonHUDBase_C_GetWidgetStack, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'Widget_CommonHUDBase_C_GetWidgetStack::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonHUDBase_C_GetWidgetStack;
 
 }
 

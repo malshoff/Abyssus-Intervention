@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "RGame_structs.hpp"
-#include "CommonInput_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
+#include "RGame_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "CommonInput_structs.hpp"
 
 
 namespace SDK::Params
@@ -27,9 +27,7 @@ struct W_WorkBench_ButtonStyle_C_BndEvt__W_WorkBench_ButtonStyle_CommonActionWid
 public:
 	bool                                          bUsingGamepad;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_WorkBench_ButtonStyle_C_BndEvt__W_WorkBench_ButtonStyle_CommonActionWidget_139_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature) == 0x000001, "Wrong alignment on W_WorkBench_ButtonStyle_C_BndEvt__W_WorkBench_ButtonStyle_CommonActionWidget_139_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature");
-static_assert(sizeof(W_WorkBench_ButtonStyle_C_BndEvt__W_WorkBench_ButtonStyle_CommonActionWidget_139_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature) == 0x000001, "Wrong size on W_WorkBench_ButtonStyle_C_BndEvt__W_WorkBench_ButtonStyle_CommonActionWidget_139_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_BndEvt__W_WorkBench_ButtonStyle_CommonActionWidget_139_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature, bUsingGamepad) == 0x000000, "Member 'W_WorkBench_ButtonStyle_C_BndEvt__W_WorkBench_ButtonStyle_CommonActionWidget_139_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature::bUsingGamepad' has a wrong offset!");
+DUMPER7_ASSERTS_W_WorkBench_ButtonStyle_C_BndEvt__W_WorkBench_ButtonStyle_CommonActionWidget_139_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature;
 
 // Function W_WorkBench_ButtonStyle.W_WorkBench_ButtonStyle_C.ExecuteUbergraph_W_WorkBench_ButtonStyle
 // 0x000C (0x000C - 0x0000)
@@ -44,18 +42,10 @@ public:
 	bool                                          K2Node_ComponentBoundEvent_bUsingGamepad;          // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle) == 0x000004, "Wrong alignment on W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle");
-static_assert(sizeof(W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle) == 0x00000C, "Wrong size on W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle, EntryPoint) == 0x000000, "Member 'W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle::EntryPoint' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle, Temp_bool_Variable) == 0x000004, "Member 'W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle, Temp_byte_Variable) == 0x000005, "Member 'W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle, Temp_byte_Variable_1) == 0x000006, "Member 'W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle, K2Node_Event_IsDesignTime) == 0x000007, "Member 'W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle, K2Node_ComponentBoundEvent_bUsingGamepad) == 0x000008, "Member 'W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle::K2Node_ComponentBoundEvent_bUsingGamepad' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle, K2Node_Select_Default) == 0x000009, "Member 'W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_W_WorkBench_ButtonStyle_C_ExecuteUbergraph_W_WorkBench_ButtonStyle;
 
 // Function W_WorkBench_ButtonStyle.W_WorkBench_ButtonStyle_C.IsWeaponPaintUnlocked
-// 0x01C8 (0x01C8 - 0x0000)
+// 0x01D8 (0x01D8 - 0x0000)
 struct W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked final
 {
 public:
@@ -73,51 +63,28 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_GetOwningPlayerPawn_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue;          // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FRChallenge                            CallFunc_GetChallengeByRewardAsset_ReturnValue;    // 0x0048(0x0178)()
-	bool                                          CallFunc_IsChallengeCompleted_ReturnValue;         // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ChallengeExists_ReturnValue;              // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRChallenge                            CallFunc_GetChallengeByRewardAsset_ReturnValue;    // 0x0048(0x0188)()
+	bool                                          CallFunc_IsChallengeCompleted_ReturnValue;         // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ChallengeExists_ReturnValue;              // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked) == 0x000008, "Wrong alignment on W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked");
-static_assert(sizeof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked) == 0x0001C8, "Wrong size on W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked, Asset) == 0x000000, "Member 'W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked::Asset' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked, ReturnValue) == 0x000008, "Member 'W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked::ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked, K2Node_DynamicCast_AsRWeapon_Cosmetic_Primary_Asset) == 0x000010, "Member 'W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked::K2Node_DynamicCast_AsRWeapon_Cosmetic_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked, CallFunc_IsValid_ReturnValue) == 0x000019, "Member 'W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked, CallFunc_IsValid_ReturnValue_1) == 0x00001A, "Member 'W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked, CallFunc_GetCurrentWeaponPAInView_RWeaponPA) == 0x000020, "Member 'W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked::CallFunc_GetCurrentWeaponPAInView_RWeaponPA' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000028, "Member 'W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked, CallFunc_IsLoadoutOptionUnlocked_ReturnValue) == 0x000030, "Member 'W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked::CallFunc_IsLoadoutOptionUnlocked_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000038, "Member 'W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked, CallFunc_GetChallengeManager_ReturnValue) == 0x000040, "Member 'W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked, CallFunc_GetChallengeByRewardAsset_ReturnValue) == 0x000048, "Member 'W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked::CallFunc_GetChallengeByRewardAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked, CallFunc_IsChallengeCompleted_ReturnValue) == 0x0001C0, "Member 'W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked::CallFunc_IsChallengeCompleted_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked, CallFunc_ChallengeExists_ReturnValue) == 0x0001C1, "Member 'W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked::CallFunc_ChallengeExists_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_W_WorkBench_ButtonStyle_C_IsWeaponPaintUnlocked;
 
 // Function W_WorkBench_ButtonStyle.W_WorkBench_ButtonStyle_C.OnKeyDown
-// 0x02B0 (0x02B0 - 0x0000)
+// 0x02B8 (0x02B8 - 0x0000)
 struct W_WorkBench_ButtonStyle_C_OnKeyDown final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
-	EUINavigationAction                           CallFunc_Key_GetNavigationActionFromKey_ReturnValue; // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x0138(0x00B8)()
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F1[0x7];                                      // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x01F8(0x00B8)()
+	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                            ReturnValue;                                       // 0x0080(0x00B8)(Parm, OutParm, ReturnParm)
+	EUINavigationAction                           CallFunc_Key_GetNavigationActionFromKey_ReturnValue; // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x0140(0x00B8)()
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F9[0x7];                                      // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0200(0x00B8)()
 };
-static_assert(alignof(W_WorkBench_ButtonStyle_C_OnKeyDown) == 0x000008, "Wrong alignment on W_WorkBench_ButtonStyle_C_OnKeyDown");
-static_assert(sizeof(W_WorkBench_ButtonStyle_C_OnKeyDown) == 0x0002B0, "Wrong size on W_WorkBench_ButtonStyle_C_OnKeyDown");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_OnKeyDown, MyGeometry) == 0x000000, "Member 'W_WorkBench_ButtonStyle_C_OnKeyDown::MyGeometry' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_OnKeyDown, InKeyEvent) == 0x000038, "Member 'W_WorkBench_ButtonStyle_C_OnKeyDown::InKeyEvent' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_OnKeyDown, ReturnValue) == 0x000078, "Member 'W_WorkBench_ButtonStyle_C_OnKeyDown::ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_OnKeyDown, CallFunc_Key_GetNavigationActionFromKey_ReturnValue) == 0x000130, "Member 'W_WorkBench_ButtonStyle_C_OnKeyDown::CallFunc_Key_GetNavigationActionFromKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_OnKeyDown, CallFunc_Unhandled_ReturnValue) == 0x000138, "Member 'W_WorkBench_ButtonStyle_C_OnKeyDown::CallFunc_Unhandled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_OnKeyDown, K2Node_SwitchEnum_CmpSuccess) == 0x0001F0, "Member 'W_WorkBench_ButtonStyle_C_OnKeyDown::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_OnKeyDown, CallFunc_Handled_ReturnValue) == 0x0001F8, "Member 'W_WorkBench_ButtonStyle_C_OnKeyDown::CallFunc_Handled_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_W_WorkBench_ButtonStyle_C_OnKeyDown;
 
 // Function W_WorkBench_ButtonStyle.W_WorkBench_ButtonStyle_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -126,9 +93,7 @@ struct W_WorkBench_ButtonStyle_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_WorkBench_ButtonStyle_C_PreConstruct) == 0x000001, "Wrong alignment on W_WorkBench_ButtonStyle_C_PreConstruct");
-static_assert(sizeof(W_WorkBench_ButtonStyle_C_PreConstruct) == 0x000001, "Wrong size on W_WorkBench_ButtonStyle_C_PreConstruct");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'W_WorkBench_ButtonStyle_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_W_WorkBench_ButtonStyle_C_PreConstruct;
 
 // Function W_WorkBench_ButtonStyle.W_WorkBench_ButtonStyle_C.SetIcon
 // 0x0008 (0x0008 - 0x0000)
@@ -137,38 +102,29 @@ struct W_WorkBench_ButtonStyle_C_SetIcon final
 public:
 	class UTexture2D*                             Icon_0;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_WorkBench_ButtonStyle_C_SetIcon) == 0x000008, "Wrong alignment on W_WorkBench_ButtonStyle_C_SetIcon");
-static_assert(sizeof(W_WorkBench_ButtonStyle_C_SetIcon) == 0x000008, "Wrong size on W_WorkBench_ButtonStyle_C_SetIcon");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_SetIcon, Icon_0) == 0x000000, "Member 'W_WorkBench_ButtonStyle_C_SetIcon::Icon_0' has a wrong offset!");
+DUMPER7_ASSERTS_W_WorkBench_ButtonStyle_C_SetIcon;
 
 // Function W_WorkBench_ButtonStyle.W_WorkBench_ButtonStyle_C.TransHovered
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct W_WorkBench_ButtonStyle_C_TransHovered final
 {
 public:
 	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ECommonInputType                              CallFunc_GetCurrentInputType_ReturnValue;          // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue;         // 0x000C(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(W_WorkBench_ButtonStyle_C_TransHovered) == 0x000008, "Wrong alignment on W_WorkBench_ButtonStyle_C_TransHovered");
-static_assert(sizeof(W_WorkBench_ButtonStyle_C_TransHovered) == 0x000018, "Wrong size on W_WorkBench_ButtonStyle_C_TransHovered");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_TransHovered, CallFunc_GetLocalPlayerSubsystem_ReturnValue) == 0x000000, "Member 'W_WorkBench_ButtonStyle_C_TransHovered::CallFunc_GetLocalPlayerSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_TransHovered, CallFunc_GetCurrentInputType_ReturnValue) == 0x000008, "Member 'W_WorkBench_ButtonStyle_C_TransHovered::CallFunc_GetCurrentInputType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_TransHovered, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000009, "Member 'W_WorkBench_ButtonStyle_C_TransHovered::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_TransHovered, CallFunc_PlayAnimationForward_ReturnValue) == 0x000010, "Member 'W_WorkBench_ButtonStyle_C_TransHovered::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_W_WorkBench_ButtonStyle_C_TransHovered;
 
 // Function W_WorkBench_ButtonStyle.W_WorkBench_ButtonStyle_C.TransUnHovered
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct W_WorkBench_ButtonStyle_C_TransUnHovered final
 {
 public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0000(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(W_WorkBench_ButtonStyle_C_TransUnHovered) == 0x000008, "Wrong alignment on W_WorkBench_ButtonStyle_C_TransUnHovered");
-static_assert(sizeof(W_WorkBench_ButtonStyle_C_TransUnHovered) == 0x000008, "Wrong size on W_WorkBench_ButtonStyle_C_TransUnHovered");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_TransUnHovered, CallFunc_PlayAnimationReverse_ReturnValue) == 0x000000, "Member 'W_WorkBench_ButtonStyle_C_TransUnHovered::CallFunc_PlayAnimationReverse_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_W_WorkBench_ButtonStyle_C_TransUnHovered;
 
 // Function W_WorkBench_ButtonStyle.W_WorkBench_ButtonStyle_C.Update
 // 0x00A0 (0x00A0 - 0x0000)
@@ -206,34 +162,7 @@ public:
 	struct FLinearColor                           K2Node_Select_Default_2;                           // 0x008C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default_3;                           // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_WorkBench_ButtonStyle_C_Update) == 0x000008, "Wrong alignment on W_WorkBench_ButtonStyle_C_Update");
-static_assert(sizeof(W_WorkBench_ButtonStyle_C_Update) == 0x0000A0, "Wrong size on W_WorkBench_ButtonStyle_C_Update");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, Asset) == 0x000000, "Member 'W_WorkBench_ButtonStyle_C_Update::Asset' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, ForceLock) == 0x000008, "Member 'W_WorkBench_ButtonStyle_C_Update::ForceLock' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, Asset_Local) == 0x000010, "Member 'W_WorkBench_ButtonStyle_C_Update::Asset_Local' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, Temp_struct_Variable) == 0x000018, "Member 'W_WorkBench_ButtonStyle_C_Update::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, Temp_struct_Variable_1) == 0x000028, "Member 'W_WorkBench_ButtonStyle_C_Update::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, Temp_bool_Variable) == 0x000038, "Member 'W_WorkBench_ButtonStyle_C_Update::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, Temp_byte_Variable) == 0x000039, "Member 'W_WorkBench_ButtonStyle_C_Update::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, Temp_byte_Variable_1) == 0x00003A, "Member 'W_WorkBench_ButtonStyle_C_Update::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, Temp_bool_Variable_1) == 0x00003B, "Member 'W_WorkBench_ButtonStyle_C_Update::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, Temp_struct_Variable_2) == 0x00003C, "Member 'W_WorkBench_ButtonStyle_C_Update::Temp_struct_Variable_2' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, Temp_struct_Variable_3) == 0x00004C, "Member 'W_WorkBench_ButtonStyle_C_Update::Temp_struct_Variable_3' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, Temp_bool_Variable_2) == 0x00005C, "Member 'W_WorkBench_ButtonStyle_C_Update::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, Temp_byte_Variable_2) == 0x00005D, "Member 'W_WorkBench_ButtonStyle_C_Update::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, Temp_byte_Variable_3) == 0x00005E, "Member 'W_WorkBench_ButtonStyle_C_Update::Temp_byte_Variable_3' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, Temp_bool_Variable_3) == 0x00005F, "Member 'W_WorkBench_ButtonStyle_C_Update::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, K2Node_DynamicCast_AsRWeapon_Cosmetic_Primary_Asset) == 0x000060, "Member 'W_WorkBench_ButtonStyle_C_Update::K2Node_DynamicCast_AsRWeapon_Cosmetic_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, K2Node_DynamicCast_bSuccess) == 0x000068, "Member 'W_WorkBench_ButtonStyle_C_Update::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, CallFunc_IsWeaponPaintUnlocked_ReturnValue) == 0x000069, "Member 'W_WorkBench_ButtonStyle_C_Update::CallFunc_IsWeaponPaintUnlocked_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, K2Node_Select_Default) == 0x00006C, "Member 'W_WorkBench_ButtonStyle_C_Update::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, K2Node_Select_Default_1) == 0x00007C, "Member 'W_WorkBench_ButtonStyle_C_Update::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000080, "Member 'W_WorkBench_ButtonStyle_C_Update::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, CallFunc_IsValid_ReturnValue) == 0x000088, "Member 'W_WorkBench_ButtonStyle_C_Update::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, CallFunc_IsValid_ReturnValue_1) == 0x000089, "Member 'W_WorkBench_ButtonStyle_C_Update::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, CallFunc_IsLoadoutOptionUnlocked_ReturnValue) == 0x00008A, "Member 'W_WorkBench_ButtonStyle_C_Update::CallFunc_IsLoadoutOptionUnlocked_ReturnValue' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, K2Node_Select_Default_2) == 0x00008C, "Member 'W_WorkBench_ButtonStyle_C_Update::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_Update, K2Node_Select_Default_3) == 0x00009C, "Member 'W_WorkBench_ButtonStyle_C_Update::K2Node_Select_Default_3' has a wrong offset!");
+DUMPER7_ASSERTS_W_WorkBench_ButtonStyle_C_Update;
 
 // Function W_WorkBench_ButtonStyle.W_WorkBench_ButtonStyle_C.UpdateIcon
 // 0x0001 (0x0001 - 0x0000)
@@ -242,9 +171,7 @@ struct W_WorkBench_ButtonStyle_C_UpdateIcon final
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(W_WorkBench_ButtonStyle_C_UpdateIcon) == 0x000001, "Wrong alignment on W_WorkBench_ButtonStyle_C_UpdateIcon");
-static_assert(sizeof(W_WorkBench_ButtonStyle_C_UpdateIcon) == 0x000001, "Wrong size on W_WorkBench_ButtonStyle_C_UpdateIcon");
-static_assert(offsetof(W_WorkBench_ButtonStyle_C_UpdateIcon, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'W_WorkBench_ButtonStyle_C_UpdateIcon::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_W_WorkBench_ButtonStyle_C_UpdateIcon;
 
 }
 

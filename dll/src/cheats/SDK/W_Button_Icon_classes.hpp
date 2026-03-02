@@ -20,27 +20,27 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass W_Button_Icon.W_Button_Icon_C
-// 0x0160 (0x1510 - 0x13B0)
+// 0x0160 (0x1690 - 0x1530)
 class UW_Button_Icon_C final : public UCommonButtonBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x13B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Trans_OnDisabled;                                  // 0x13B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Trans_OnHover;                                     // 0x13C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Image_Icon;                                        // 0x13C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_Root;                                      // 0x13D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   Text;                                              // 0x13D8(0x0010)(Edit, BlueprintVisible)
-	uint8                                         Pad_13E8[0x8];                                     // 0x13E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            IconBrush;                                         // 0x13F0(0x00B0)(Edit, BlueprintVisible)
-	struct FSlateColor                            TextColor;                                         // 0x14A0(0x0014)(Edit, BlueprintVisible)
-	struct FLinearColor                           BGColor;                                           // 0x14B4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Translucency;                                      // 0x14C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           TextHoverColor;                                    // 0x14C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              SizeOverride;                                      // 0x14D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          PlayConstructAnimation;                            // 0x14E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14E9[0x7];                                     // 0x14E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture*                               Icon;                                              // 0x14F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           DefaultColor;                                      // 0x14F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1530(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USizeBox*                               SizeBox_Root;                                      // 0x1538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Icon;                                        // 0x1540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Trans_OnHover;                                     // 0x1548(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Trans_OnDisabled;                                  // 0x1550(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x1558(0x0010)(Edit, BlueprintVisible)
+	uint8                                         Pad_1568[0x8];                                     // 0x1568(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            IconBrush;                                         // 0x1570(0x00B0)(Edit, BlueprintVisible)
+	struct FSlateColor                            TextColor;                                         // 0x1620(0x0014)(Edit, BlueprintVisible)
+	struct FLinearColor                           BGColor;                                           // 0x1634(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Translucency;                                      // 0x1644(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           TextHoverColor;                                    // 0x1648(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              SizeOverride;                                      // 0x1658(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          PlayConstructAnimation;                            // 0x1668(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1669[0x7];                                     // 0x1669(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture*                               Icon;                                              // 0x1670(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           DefaultColor;                                      // 0x1678(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BP_OnHovered();
@@ -56,30 +56,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"W_Button_Icon_C">();
+		BP_STATIC_CLASS_IMPL("W_Button_Icon_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"W_Button_Icon_C")
 	}
 	static class UW_Button_Icon_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UW_Button_Icon_C>();
 	}
 };
-static_assert(alignof(UW_Button_Icon_C) == 0x000010, "Wrong alignment on UW_Button_Icon_C");
-static_assert(sizeof(UW_Button_Icon_C) == 0x001510, "Wrong size on UW_Button_Icon_C");
-static_assert(offsetof(UW_Button_Icon_C, UberGraphFrame) == 0x0013B0, "Member 'UW_Button_Icon_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UW_Button_Icon_C, Trans_OnDisabled) == 0x0013B8, "Member 'UW_Button_Icon_C::Trans_OnDisabled' has a wrong offset!");
-static_assert(offsetof(UW_Button_Icon_C, Trans_OnHover) == 0x0013C0, "Member 'UW_Button_Icon_C::Trans_OnHover' has a wrong offset!");
-static_assert(offsetof(UW_Button_Icon_C, Image_Icon) == 0x0013C8, "Member 'UW_Button_Icon_C::Image_Icon' has a wrong offset!");
-static_assert(offsetof(UW_Button_Icon_C, SizeBox_Root) == 0x0013D0, "Member 'UW_Button_Icon_C::SizeBox_Root' has a wrong offset!");
-static_assert(offsetof(UW_Button_Icon_C, Text) == 0x0013D8, "Member 'UW_Button_Icon_C::Text' has a wrong offset!");
-static_assert(offsetof(UW_Button_Icon_C, IconBrush) == 0x0013F0, "Member 'UW_Button_Icon_C::IconBrush' has a wrong offset!");
-static_assert(offsetof(UW_Button_Icon_C, TextColor) == 0x0014A0, "Member 'UW_Button_Icon_C::TextColor' has a wrong offset!");
-static_assert(offsetof(UW_Button_Icon_C, BGColor) == 0x0014B4, "Member 'UW_Button_Icon_C::BGColor' has a wrong offset!");
-static_assert(offsetof(UW_Button_Icon_C, Translucency) == 0x0014C4, "Member 'UW_Button_Icon_C::Translucency' has a wrong offset!");
-static_assert(offsetof(UW_Button_Icon_C, TextHoverColor) == 0x0014C8, "Member 'UW_Button_Icon_C::TextHoverColor' has a wrong offset!");
-static_assert(offsetof(UW_Button_Icon_C, SizeOverride) == 0x0014D8, "Member 'UW_Button_Icon_C::SizeOverride' has a wrong offset!");
-static_assert(offsetof(UW_Button_Icon_C, PlayConstructAnimation) == 0x0014E8, "Member 'UW_Button_Icon_C::PlayConstructAnimation' has a wrong offset!");
-static_assert(offsetof(UW_Button_Icon_C, Icon) == 0x0014F0, "Member 'UW_Button_Icon_C::Icon' has a wrong offset!");
-static_assert(offsetof(UW_Button_Icon_C, DefaultColor) == 0x0014F8, "Member 'UW_Button_Icon_C::DefaultColor' has a wrong offset!");
+DUMPER7_ASSERTS_UW_Button_Icon_C;
 
 }
 

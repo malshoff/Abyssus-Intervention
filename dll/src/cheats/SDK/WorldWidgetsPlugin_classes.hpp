@@ -11,21 +11,21 @@
 #include "Basic.hpp"
 
 #include "UMG_classes.hpp"
-#include "WorldWidgetsPlugin_structs.hpp"
 #include "Engine_classes.hpp"
+#include "WorldWidgetsPlugin_structs.hpp"
 
 
 namespace SDK
 {
 
 // Class WorldWidgetsPlugin.WorldWidgetCanvas
-// 0x0060 (0x0330 - 0x02D0)
+// 0x0060 (0x03A0 - 0x0340)
 class UWorldWidgetCanvas final : public UUserWidget
 {
 public:
-	uint8                                         Pad_2D0[0x58];                                     // 0x02D0(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         GlobalZOrder;                                      // 0x0328(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_32C[0x4];                                      // 0x032C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_340[0x58];                                     // 0x0340(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         GlobalZOrder;                                      // 0x0398(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_39C[0x4];                                      // 0x039C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static void DestroyPushedWorldWidget(class UObject* WorldContextObject, class UUserWidget* Widget);
@@ -43,44 +43,45 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WorldWidgetCanvas">();
+		STATIC_CLASS_IMPL("WorldWidgetCanvas")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WorldWidgetCanvas")
 	}
 	static class UWorldWidgetCanvas* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWorldWidgetCanvas>();
 	}
 };
-static_assert(alignof(UWorldWidgetCanvas) == 0x000008, "Wrong alignment on UWorldWidgetCanvas");
-static_assert(sizeof(UWorldWidgetCanvas) == 0x000330, "Wrong size on UWorldWidgetCanvas");
-static_assert(offsetof(UWorldWidgetCanvas, GlobalZOrder) == 0x000328, "Member 'UWorldWidgetCanvas::GlobalZOrder' has a wrong offset!");
+DUMPER7_ASSERTS_UWorldWidgetCanvas;
 
 // Class WorldWidgetsPlugin.WorldWidgetComponent
-// 0x0160 (0x0390 - 0x0230)
+// 0x0160 (0x03A0 - 0x0240)
 class UWorldWidgetComponent final : public USceneComponent
 {
 public:
-	TArray<class UUserWidget*>                    OwnedWidgets;                                      // 0x0230(0x0010)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TSubclassOf<class UUserWidget>                WidgetClass;                                       // 0x0240(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FWorldWidgetInfo                       WidgetSettings;                                    // 0x0248(0x0130)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	TMulticastInlineDelegate<void(class UWorldWidgetComponent* Component, const TArray<class UUserWidget*>& Widgets)> OnWidgetsCreated; // 0x0378(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_388[0x8];                                      // 0x0388(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UUserWidget*>                    OwnedWidgets;                                      // 0x0240(0x0010)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TSubclassOf<class UUserWidget>                WidgetClass;                                       // 0x0250(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FWorldWidgetInfo                       WidgetSettings;                                    // 0x0258(0x0130)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void(class UWorldWidgetComponent* Component, const TArray<class UUserWidget*>& Widgets)> OnWidgetsCreated; // 0x0388(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_398[0x8];                                      // 0x0398(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WorldWidgetComponent">();
+		STATIC_CLASS_IMPL("WorldWidgetComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WorldWidgetComponent")
 	}
 	static class UWorldWidgetComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWorldWidgetComponent>();
 	}
 };
-static_assert(alignof(UWorldWidgetComponent) == 0x000010, "Wrong alignment on UWorldWidgetComponent");
-static_assert(sizeof(UWorldWidgetComponent) == 0x000390, "Wrong size on UWorldWidgetComponent");
-static_assert(offsetof(UWorldWidgetComponent, OwnedWidgets) == 0x000230, "Member 'UWorldWidgetComponent::OwnedWidgets' has a wrong offset!");
-static_assert(offsetof(UWorldWidgetComponent, WidgetClass) == 0x000240, "Member 'UWorldWidgetComponent::WidgetClass' has a wrong offset!");
-static_assert(offsetof(UWorldWidgetComponent, WidgetSettings) == 0x000248, "Member 'UWorldWidgetComponent::WidgetSettings' has a wrong offset!");
-static_assert(offsetof(UWorldWidgetComponent, OnWidgetsCreated) == 0x000378, "Member 'UWorldWidgetComponent::OnWidgetsCreated' has a wrong offset!");
+DUMPER7_ASSERTS_UWorldWidgetComponent;
 
 }
 

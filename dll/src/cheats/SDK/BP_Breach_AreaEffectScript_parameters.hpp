@@ -17,38 +17,38 @@ namespace SDK::Params
 {
 
 // Function BP_Breach_AreaEffectScript.BP_Breach_AreaEffectScript_C.ExecuteUbergraph_BP_Breach_AreaEffectScript
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x00E8 (0x00E8 - 0x0000)
 struct BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 K2Node_Event_Actor;                                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARNPCPawnBase*                          K2Node_DynamicCast_AsRNPCPawn_Base;                // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0028(0x0030)(ContainsInstancedReference)
-	class URStatusEffectGScript*                  CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0060(0x0030)(ContainsInstancedReference)
-	class UAudioComponent*                        CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue; // 0x0090(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue;       // 0x0010(0x0030)(ContainsInstancedReference)
+	class ARNPCPawnBase*                          K2Node_DynamicCast_AsRNPCPawn_Base;                // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URStatusEffectGScript*                  CallFunc_AttachStatusEffectToPawn_ReturnValue;     // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URPlayerGScriptComponent*               K2Node_DynamicCast_AsRPlayer_GScript_Component;    // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_Breach_StatusEffect_C*              K2Node_DynamicCast_AsBP_Breach_Status_Effect;      // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0090(0x0030)(ContainsInstancedReference)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_RSpawnSoundAttached_ReturnValue;          // 0x00D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_AddMutableFloatCoefficient_Val_ImplicitCast; // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript) == 0x000008, "Wrong alignment on BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript");
-static_assert(sizeof(BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript) == 0x0000A8, "Wrong size on BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript");
-static_assert(offsetof(BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript, EntryPoint) == 0x000000, "Member 'BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript, K2Node_Event_Actor) == 0x000008, "Member 'BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript::K2Node_Event_Actor' has a wrong offset!");
-static_assert(offsetof(BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript, K2Node_DynamicCast_AsRNPCPawn_Base) == 0x000018, "Member 'BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript::K2Node_DynamicCast_AsRNPCPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000028, "Member 'BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript, CallFunc_AttachStatusEffectToPawn_ReturnValue) == 0x000058, "Member 'BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript::CallFunc_AttachStatusEffectToPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000060, "Member 'BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript, CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue) == 0x000090, "Member 'BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript::CallFunc_SetAudioComponentSettingsMultiplayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000098, "Member 'BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript, CallFunc_SpawnSoundAttached_ReturnValue) == 0x0000A0, "Member 'BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Breach_AreaEffectScript_C_ExecuteUbergraph_BP_Breach_AreaEffectScript;
 
 // Function BP_Breach_AreaEffectScript.BP_Breach_AreaEffectScript_C.K2_OnEnter
 // 0x0008 (0x0008 - 0x0000)
@@ -57,9 +57,7 @@ struct BP_Breach_AreaEffectScript_C_K2_OnEnter final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Breach_AreaEffectScript_C_K2_OnEnter) == 0x000008, "Wrong alignment on BP_Breach_AreaEffectScript_C_K2_OnEnter");
-static_assert(sizeof(BP_Breach_AreaEffectScript_C_K2_OnEnter) == 0x000008, "Wrong size on BP_Breach_AreaEffectScript_C_K2_OnEnter");
-static_assert(offsetof(BP_Breach_AreaEffectScript_C_K2_OnEnter, Actor) == 0x000000, "Member 'BP_Breach_AreaEffectScript_C_K2_OnEnter::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Breach_AreaEffectScript_C_K2_OnEnter;
 
 }
 

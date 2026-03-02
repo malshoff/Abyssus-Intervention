@@ -36,19 +36,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body) == 0x000008, "Wrong alignment on BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body");
-static_assert(sizeof(BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body) == 0x000058, "Wrong size on BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body");
-static_assert(offsetof(BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body, EntryPoint) == 0x000000, "Member 'BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body, K2Node_MakeArray_Array) == 0x000008, "Member 'BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body, Temp_int_Array_Index_Variable) == 0x000018, "Member 'BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body, Temp_int_Loop_Counter_Variable) == 0x00001C, "Member 'BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body, K2Node_Event_WeaponMod) == 0x000028, "Member 'BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body::K2Node_Event_WeaponMod' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body, K2Node_SwitchEnum_CmpSuccess) == 0x000030, "Member 'BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body, K2Node_MakeArray_Array_1) == 0x000038, "Member 'BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body, CallFunc_Array_Get_Item) == 0x000048, "Member 'BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body, CallFunc_Less_IntInt_ReturnValue) == 0x000054, "Member 'BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_TeslaRifle_Body_C_ExecuteUbergraph_BP_TeslaRifle_Body;
 
 // Function BP_TeslaRifle_Body.BP_TeslaRifle_Body_C.GetMuzzleTransforms
 // 0x0080 (0x0080 - 0x0000)
@@ -59,11 +47,7 @@ public:
 	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue;           // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FTransform>                     K2Node_MakeArray_Array;                            // 0x0070(0x0010)(ReferenceParm)
 };
-static_assert(alignof(BP_TeslaRifle_Body_C_GetMuzzleTransforms) == 0x000010, "Wrong alignment on BP_TeslaRifle_Body_C_GetMuzzleTransforms");
-static_assert(sizeof(BP_TeslaRifle_Body_C_GetMuzzleTransforms) == 0x000080, "Wrong size on BP_TeslaRifle_Body_C_GetMuzzleTransforms");
-static_assert(offsetof(BP_TeslaRifle_Body_C_GetMuzzleTransforms, ReturnValue) == 0x000000, "Member 'BP_TeslaRifle_Body_C_GetMuzzleTransforms::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_GetMuzzleTransforms, CallFunc_GetSocketTransform_ReturnValue) == 0x000010, "Member 'BP_TeslaRifle_Body_C_GetMuzzleTransforms::CallFunc_GetSocketTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_GetMuzzleTransforms, K2Node_MakeArray_Array) == 0x000070, "Member 'BP_TeslaRifle_Body_C_GetMuzzleTransforms::K2Node_MakeArray_Array' has a wrong offset!");
+DUMPER7_ASSERTS_BP_TeslaRifle_Body_C_GetMuzzleTransforms;
 
 // Function BP_TeslaRifle_Body.BP_TeslaRifle_Body_C.K2_OnWeaponModCosmeticAttached
 // 0x0008 (0x0008 - 0x0000)
@@ -72,9 +56,7 @@ struct BP_TeslaRifle_Body_C_K2_OnWeaponModCosmeticAttached final
 public:
 	const class URWeaponModPrimaryAsset*          WeaponMod;                                         // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_TeslaRifle_Body_C_K2_OnWeaponModCosmeticAttached) == 0x000008, "Wrong alignment on BP_TeslaRifle_Body_C_K2_OnWeaponModCosmeticAttached");
-static_assert(sizeof(BP_TeslaRifle_Body_C_K2_OnWeaponModCosmeticAttached) == 0x000008, "Wrong size on BP_TeslaRifle_Body_C_K2_OnWeaponModCosmeticAttached");
-static_assert(offsetof(BP_TeslaRifle_Body_C_K2_OnWeaponModCosmeticAttached, WeaponMod) == 0x000000, "Member 'BP_TeslaRifle_Body_C_K2_OnWeaponModCosmeticAttached::WeaponMod' has a wrong offset!");
+DUMPER7_ASSERTS_BP_TeslaRifle_Body_C_K2_OnWeaponModCosmeticAttached;
 
 // Function BP_TeslaRifle_Body.BP_TeslaRifle_Body_C.UpdateChargeVFX
 // 0x00B0 (0x00B0 - 0x0000)
@@ -115,36 +97,7 @@ public:
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_TeslaRifle_Body_C_UpdateChargeVFX) == 0x000008, "Wrong alignment on BP_TeslaRifle_Body_C_UpdateChargeVFX");
-static_assert(sizeof(BP_TeslaRifle_Body_C_UpdateChargeVFX) == 0x0000B0, "Wrong size on BP_TeslaRifle_Body_C_UpdateChargeVFX");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CurrentCharges) == 0x000000, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CurrentCharges' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, MaxCharges) == 0x000004, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::MaxCharges' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, Charges_Ratio) == 0x000008, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::Charges_Ratio' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, Charges_Max) == 0x000010, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::Charges_Max' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, Charges_Current) == 0x000014, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::Charges_Current' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000018, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_GetEquippedWeaponModPrimaryAsset_ReturnValue) == 0x000020, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_GetEquippedWeaponModPrimaryAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_SpawnSystemAttached_ReturnValue) == 0x000028, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_SpawnSystemAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_Max_ReturnValue) == 0x000030, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_Max_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_IsValid_ReturnValue) == 0x000034, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000038, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000040, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_GetEquippedWeaponModPrimaryAsset_ReturnValue_1) == 0x000048, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_GetEquippedWeaponModPrimaryAsset_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_GetEquippedWeaponModPrimaryAsset_ReturnValue_2) == 0x000050, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_GetEquippedWeaponModPrimaryAsset_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_IsValid_ReturnValue_1) == 0x000058, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_SpawnSystemAttached_ReturnValue_1) == 0x000060, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_SpawnSystemAttached_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000068, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_Subtract_IntInt_ReturnValue) == 0x00006C, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, K2Node_MakeArray_Array) == 0x000070, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_Array_Length_ReturnValue) == 0x000080, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_Greater_IntInt_ReturnValue) == 0x000084, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x000088, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_Clamp_ReturnValue) == 0x00008C, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_Clamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_Array_Get_Item) == 0x000090, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000098, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_SpawnSystemAttached_ReturnValue_2) == 0x0000A0, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_SpawnSystemAttached_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x0000A8, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TeslaRifle_Body_C_UpdateChargeVFX, CallFunc_BooleanAND_ReturnValue) == 0x0000A9, "Member 'BP_TeslaRifle_Body_C_UpdateChargeVFX::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_TeslaRifle_Body_C_UpdateChargeVFX;
 
 }
 

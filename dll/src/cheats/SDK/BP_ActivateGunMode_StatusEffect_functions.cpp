@@ -65,6 +65,20 @@ void UBP_ActivateGunMode_StatusEffect_C::K2_DeactivateScript()
 }
 
 
+// Function BP_ActivateGunMode_StatusEffect.BP_ActivateGunMode_StatusEffect_C.OnFinish_B5D2DDFA484A6D1F0D883FADB173FC67
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_ActivateGunMode_StatusEffect_C::OnFinish_B5D2DDFA484A6D1F0D883FADB173FC67()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ActivateGunMode_StatusEffect_C", "OnFinish_B5D2DDFA484A6D1F0D883FADB173FC67");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_ActivateGunMode_StatusEffect.BP_ActivateGunMode_StatusEffect_C.PlayFX
 // (BlueprintCallable, BlueprintEvent)
 
@@ -74,6 +88,34 @@ void UBP_ActivateGunMode_StatusEffect_C::PlayFX()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_ActivateGunMode_StatusEffect_C", "PlayFX");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ActivateGunMode_StatusEffect.BP_ActivateGunMode_StatusEffect_C.RefreshStatusEffect
+// (Event, Public, BlueprintEvent)
+
+void UBP_ActivateGunMode_StatusEffect_C::RefreshStatusEffect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ActivateGunMode_StatusEffect_C", "RefreshStatusEffect");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ActivateGunMode_StatusEffect.BP_ActivateGunMode_StatusEffect_C.RefreshVFX
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void UBP_ActivateGunMode_StatusEffect_C::RefreshVFX()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ActivateGunMode_StatusEffect_C", "RefreshVFX");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

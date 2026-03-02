@@ -10,27 +10,27 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "EnhancedInput_structs.hpp"
-#include "InputCore_structs.hpp"
 #include "UMG_classes.hpp"
+#include "EnhancedInput_structs.hpp"
+#include "Engine_structs.hpp"
+#include "InputCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_Settings_KeyMappingBase.Widget_Settings_KeyMappingBase_C
-// 0x00C0 (0x0390 - 0x02D0)
+// 0x00E8 (0x0428 - 0x0340)
 class UWidget_Settings_KeyMappingBase_C : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          bSelectingKey;                                     // 0x02D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D9[0x7];                                      // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPlayerKeyMapping                      KeyToMap;                                          // 0x02E0(0x0080)(Edit, BlueprintVisible, BlueprintReadOnly, ExposeOnSpawn, HasGetValueTypeHash)
-	struct FKey                                   NewKey;                                            // 0x0360(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TArray<class UInputMappingContext*>           MappableIMCs;                                      // 0x0378(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ExposeOnSpawn)
-	class UWidget_SettingInputMappingTabBase_C*   ParentWidget;                                      // 0x0388(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          bSelectingKey;                                     // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPlayerKeyMapping                      KeyToMap;                                          // 0x0350(0x00A8)(Edit, BlueprintVisible, BlueprintReadOnly, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FKey                                   NewKey;                                            // 0x03F8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UInputMappingContext*>           MappableIMCs;                                      // 0x0410(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ExposeOnSpawn)
+	class UWidget_SettingInputMappingTabBase_C*   ParentWidget;                                      // 0x0420(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -48,21 +48,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_Settings_KeyMappingBase_C">();
+		BP_STATIC_CLASS_IMPL("Widget_Settings_KeyMappingBase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_Settings_KeyMappingBase_C")
 	}
 	static class UWidget_Settings_KeyMappingBase_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_Settings_KeyMappingBase_C>();
 	}
 };
-static_assert(alignof(UWidget_Settings_KeyMappingBase_C) == 0x000008, "Wrong alignment on UWidget_Settings_KeyMappingBase_C");
-static_assert(sizeof(UWidget_Settings_KeyMappingBase_C) == 0x000390, "Wrong size on UWidget_Settings_KeyMappingBase_C");
-static_assert(offsetof(UWidget_Settings_KeyMappingBase_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_Settings_KeyMappingBase_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_Settings_KeyMappingBase_C, bSelectingKey) == 0x0002D8, "Member 'UWidget_Settings_KeyMappingBase_C::bSelectingKey' has a wrong offset!");
-static_assert(offsetof(UWidget_Settings_KeyMappingBase_C, KeyToMap) == 0x0002E0, "Member 'UWidget_Settings_KeyMappingBase_C::KeyToMap' has a wrong offset!");
-static_assert(offsetof(UWidget_Settings_KeyMappingBase_C, NewKey) == 0x000360, "Member 'UWidget_Settings_KeyMappingBase_C::NewKey' has a wrong offset!");
-static_assert(offsetof(UWidget_Settings_KeyMappingBase_C, MappableIMCs) == 0x000378, "Member 'UWidget_Settings_KeyMappingBase_C::MappableIMCs' has a wrong offset!");
-static_assert(offsetof(UWidget_Settings_KeyMappingBase_C, ParentWidget) == 0x000388, "Member 'UWidget_Settings_KeyMappingBase_C::ParentWidget' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_Settings_KeyMappingBase_C;
 
 }
 

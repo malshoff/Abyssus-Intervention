@@ -92,6 +92,46 @@ void UWidget_DifficultyTree_C::BndEvt__Widget_DifficultyTree_Widget_TextButton_K
 }
 
 
+// Function Widget_DifficultyTree.Widget_DifficultyTree_C.BndEvt__Widget_ModesScreen_WBP_CheckBox_InfiniteMode_K2Node_ComponentBoundEvent_4_OnCheckBoxComponentStateChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    bIsChecked                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_DifficultyTree_C::BndEvt__Widget_ModesScreen_WBP_CheckBox_InfiniteMode_K2Node_ComponentBoundEvent_4_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_DifficultyTree_C", "BndEvt__Widget_ModesScreen_WBP_CheckBox_InfiniteMode_K2Node_ComponentBoundEvent_4_OnCheckBoxComponentStateChanged__DelegateSignature");
+
+	Params::Widget_DifficultyTree_C_BndEvt__Widget_ModesScreen_WBP_CheckBox_InfiniteMode_K2Node_ComponentBoundEvent_4_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
+
+	Parms.bIsChecked = bIsChecked;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_DifficultyTree.Widget_DifficultyTree_C.BndEvt__Widget_ModesScreen_WBP_CheckBox_RandomMode_K2Node_ComponentBoundEvent_3_OnCheckBoxComponentStateChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    bIsChecked                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_DifficultyTree_C::BndEvt__Widget_ModesScreen_WBP_CheckBox_RandomMode_K2Node_ComponentBoundEvent_3_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_DifficultyTree_C", "BndEvt__Widget_ModesScreen_WBP_CheckBox_RandomMode_K2Node_ComponentBoundEvent_3_OnCheckBoxComponentStateChanged__DelegateSignature");
+
+	Params::Widget_DifficultyTree_C_BndEvt__Widget_ModesScreen_WBP_CheckBox_RandomMode_K2Node_ComponentBoundEvent_3_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
+
+	Parms.bIsChecked = bIsChecked;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Widget_DifficultyTree.Widget_DifficultyTree_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -199,6 +239,26 @@ void UWidget_DifficultyTree_C::GetAllNodes(TArray<class UWidget_DifficultyNode_C
 }
 
 
+// Function Widget_DifficultyTree.Widget_DifficultyTree_C.GetInfiniteModeTooltipWidget
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWidget_DifficultyTree_C::GetInfiniteModeTooltipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_DifficultyTree_C", "GetInfiniteModeTooltipWidget");
+
+	Params::Widget_DifficultyTree_C_GetInfiniteModeTooltipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Widget_DifficultyTree.Widget_DifficultyTree_C.GetNumTotalPointsAssigned
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -217,6 +277,26 @@ void UWidget_DifficultyTree_C::GetNumTotalPointsAssigned(int32* TotalPointsAssig
 
 	if (TotalPointsAssigned != nullptr)
 		*TotalPointsAssigned = Parms.TotalPointsAssigned;
+}
+
+
+// Function Widget_DifficultyTree.Widget_DifficultyTree_C.GetRandomModeTooltipWidget
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWidget_DifficultyTree_C::GetRandomModeTooltipWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_DifficultyTree_C", "GetRandomModeTooltipWidget");
+
+	Params::Widget_DifficultyTree_C_GetRandomModeTooltipWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -259,6 +339,20 @@ void UWidget_DifficultyTree_C::HasInfiniteNodePointsAssigned(bool* HasPointsAssi
 
 	if (HasPointsAssigned != nullptr)
 		*HasPointsAssigned = Parms.HasPointsAssigned;
+}
+
+
+// Function Widget_DifficultyTree.Widget_DifficultyTree_C.InitializeModeStates
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWidget_DifficultyTree_C::InitializeModeStates()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_DifficultyTree_C", "InitializeModeStates");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -361,7 +455,7 @@ void UWidget_DifficultyTree_C::IsNodePredetermined(class UWidget* WidgetNode, bo
 
 
 // Function Widget_DifficultyTree.Widget_DifficultyTree_C.IsTreeCapped
-// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool*                                   Capped                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -378,6 +472,20 @@ void UWidget_DifficultyTree_C::IsTreeCapped(bool* Capped)
 
 	if (Capped != nullptr)
 		*Capped = Parms.Capped;
+}
+
+
+// Function Widget_DifficultyTree.Widget_DifficultyTree_C.PlayEnterAnimation
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_DifficultyTree_C::PlayEnterAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_DifficultyTree_C", "PlayEnterAnimation");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -33,16 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ExplosionKillsWithEngineRifle_Challenge_C">();
+		BP_STATIC_CLASS_IMPL("BP_ExplosionKillsWithEngineRifle_Challenge_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ExplosionKillsWithEngineRifle_Challenge_C")
 	}
 	static class UBP_ExplosionKillsWithEngineRifle_Challenge_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ExplosionKillsWithEngineRifle_Challenge_C>();
 	}
 };
-static_assert(alignof(UBP_ExplosionKillsWithEngineRifle_Challenge_C) == 0x000008, "Wrong alignment on UBP_ExplosionKillsWithEngineRifle_Challenge_C");
-static_assert(sizeof(UBP_ExplosionKillsWithEngineRifle_Challenge_C) == 0x000038, "Wrong size on UBP_ExplosionKillsWithEngineRifle_Challenge_C");
-static_assert(offsetof(UBP_ExplosionKillsWithEngineRifle_Challenge_C, UberGraphFrame) == 0x000030, "Member 'UBP_ExplosionKillsWithEngineRifle_Challenge_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_ExplosionKillsWithEngineRifle_Challenge_C;
 
 }
 

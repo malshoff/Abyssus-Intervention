@@ -51,15 +51,29 @@ void UWidget_DPSMeter_C::ExecuteUbergraph_Widget_DPSMeter(int32 EntryPoint)
 }
 
 
-// Function Widget_DPSMeter.Widget_DPSMeter_C.OnCombatEntered_Event_0
+// Function Widget_DPSMeter.Widget_DPSMeter_C.OnCombatEntered_Event
 // (BlueprintCallable, BlueprintEvent)
 
-void UWidget_DPSMeter_C::OnCombatEntered_Event_0()
+void UWidget_DPSMeter_C::OnCombatEntered_Event()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_DPSMeter_C", "OnCombatEntered_Event_0");
+		Func = Class->GetFunction("Widget_DPSMeter_C", "OnCombatEntered_Event");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_DPSMeter.Widget_DPSMeter_C.OnCombatLeft
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_DPSMeter_C::OnCombatLeft()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_DPSMeter_C", "OnCombatLeft");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -87,6 +101,28 @@ void UWidget_DPSMeter_C::OnDamageDealt(class ARPawnBase* Pawn, const struct FDam
 }
 
 
+// Function Widget_DPSMeter.Widget_DPSMeter_C.SetEncounterArray
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<double>&                   TargetArray                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_DPSMeter_C::SetEncounterArray(const TArray<double>& TargetArray, double Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_DPSMeter_C", "SetEncounterArray");
+
+	Params::Widget_DPSMeter_C_SetEncounterArray Parms{};
+
+	Parms.TargetArray = std::move(TargetArray);
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Widget_DPSMeter.Widget_DPSMeter_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -104,6 +140,46 @@ void UWidget_DPSMeter_C::Tick(const struct FGeometry& MyGeometry, float InDeltaT
 
 	Parms.MyGeometry = std::move(MyGeometry);
 	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_DPSMeter.Widget_DPSMeter_C.UpdateCurrentEncounterDamage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FDamageCombatEvent&        DamageCombatEvent                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWidget_DPSMeter_C::UpdateCurrentEncounterDamage(const struct FDamageCombatEvent& DamageCombatEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_DPSMeter_C", "UpdateCurrentEncounterDamage");
+
+	Params::Widget_DPSMeter_C_UpdateCurrentEncounterDamage Parms{};
+
+	Parms.DamageCombatEvent = std::move(DamageCombatEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_DPSMeter.Widget_DPSMeter_C.UpdateEncounterAvarage
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Steps                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_DPSMeter_C::UpdateEncounterAvarage(int32 Steps)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_DPSMeter_C", "UpdateEncounterAvarage");
+
+	Params::Widget_DPSMeter_C_UpdateEncounterAvarage Parms{};
+
+	Parms.Steps = Steps;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

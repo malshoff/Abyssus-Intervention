@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+
 
 namespace SDK
 {
@@ -58,6 +60,39 @@ enum class EText3DVerticalTextAlignment : uint8
 	EText3DVerticalTextAlignment_MAX         = 4,
 };
 
+// Enum Text3D.EText3DMaterialStyle
+// NumValues: 0x0006
+enum class EText3DMaterialStyle : uint8
+{
+	Invalid                                  = 0,
+	Solid                                    = 1,
+	Gradient                                 = 2,
+	Texture                                  = 3,
+	Custom                                   = 4,
+	EText3DMaterialStyle_MAX                 = 5,
+};
+
+// Enum Text3D.EText3DMaterialBlendMode
+// NumValues: 0x0004
+enum class EText3DMaterialBlendMode : uint8
+{
+	Invalid                                  = 0,
+	Opaque                                   = 1,
+	Translucent                              = 2,
+	EText3DMaterialBlendMode_MAX             = 3,
+};
+
+// Enum Text3D.EText3DFontStyleFlags
+// NumValues: 0x0005
+enum class EText3DFontStyleFlags : uint8
+{
+	None                                     = 0,
+	Monospace                                = 1,
+	Bold                                     = 2,
+	Italic                                   = 4,
+	EText3DFontStyleFlags_MAX                = 5,
+};
+
 // Enum Text3D.EText3DCharacterEffectOrder
 // NumValues: 0x0005
 enum class EText3DCharacterEffectOrder : uint8
@@ -69,20 +104,8 @@ enum class EText3DCharacterEffectOrder : uint8
 	EText3DCharacterEffectOrder_MAX          = 4,
 };
 
-// Enum Text3D.EText3DModifyFlags
-// NumValues: 0x0006
-enum class EText3DModifyFlags : uint8
-{
-	None                                     = 0,
-	Layout                                   = 1,
-	Geometry                                 = 2,
-	Unfreeze                                 = 4,
-	All                                      = 7,
-	EText3DModifyFlags_MAX                   = 8,
-};
-
 // ScriptStruct Text3D.GlyphMeshParameters
-// 0x001C (0x001C - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct FGlyphMeshParameters final
 {
 public:
@@ -95,28 +118,31 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         OutlineExpand;                                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        TypefaceIndex;                                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                PivotOffset;                                       // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGlyphMeshParameters) == 0x000004, "Wrong alignment on FGlyphMeshParameters");
-static_assert(sizeof(FGlyphMeshParameters) == 0x00001C, "Wrong size on FGlyphMeshParameters");
-static_assert(offsetof(FGlyphMeshParameters, Extrude) == 0x000000, "Member 'FGlyphMeshParameters::Extrude' has a wrong offset!");
-static_assert(offsetof(FGlyphMeshParameters, Bevel) == 0x000004, "Member 'FGlyphMeshParameters::Bevel' has a wrong offset!");
-static_assert(offsetof(FGlyphMeshParameters, BevelType) == 0x000008, "Member 'FGlyphMeshParameters::BevelType' has a wrong offset!");
-static_assert(offsetof(FGlyphMeshParameters, BevelSegments) == 0x00000C, "Member 'FGlyphMeshParameters::BevelSegments' has a wrong offset!");
-static_assert(offsetof(FGlyphMeshParameters, bOutline) == 0x000010, "Member 'FGlyphMeshParameters::bOutline' has a wrong offset!");
-static_assert(offsetof(FGlyphMeshParameters, OutlineExpand) == 0x000014, "Member 'FGlyphMeshParameters::OutlineExpand' has a wrong offset!");
-static_assert(offsetof(FGlyphMeshParameters, TypefaceIndex) == 0x000018, "Member 'FGlyphMeshParameters::TypefaceIndex' has a wrong offset!");
+DUMPER7_ASSERTS_FGlyphMeshParameters;
+
+// ScriptStruct Text3D.Text3DCachedMesh
+// 0x0058 (0x0058 - 0x0000)
+struct FText3DCachedMesh final
+{
+public:
+	class UStaticMesh*                            Mesh;                                              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	struct FBox                                   MeshBounds;                                        // 0x0008(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                MeshOffset;                                        // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FText3DCachedMesh;
 
 // ScriptStruct Text3D.CachedFontMeshes
 // 0x0060 (0x0060 - 0x0000)
 struct FCachedFontMeshes final
 {
 public:
-	TMap<uint32, class UStaticMesh*>              Glyphs;                                            // 0x0000(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic)
+	TMap<uint32, struct FText3DCachedMesh>        Glyphs;                                            // 0x0000(0x0050)(NativeAccessSpecifierPublic)
 	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FCachedFontMeshes) == 0x000008, "Wrong alignment on FCachedFontMeshes");
-static_assert(sizeof(FCachedFontMeshes) == 0x000060, "Wrong size on FCachedFontMeshes");
-static_assert(offsetof(FCachedFontMeshes, Glyphs) == 0x000000, "Member 'FCachedFontMeshes::Glyphs' has a wrong offset!");
+DUMPER7_ASSERTS_FCachedFontMeshes;
 
 // ScriptStruct Text3D.TypefaceFontData
 // 0x0088 (0x0088 - 0x0000)
@@ -126,22 +152,38 @@ public:
 	TMap<uint32, struct FCachedFontMeshes>        Meshes;                                            // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
 	uint8                                         Pad_50[0x38];                                      // 0x0050(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTypefaceFontData) == 0x000008, "Wrong alignment on FTypefaceFontData");
-static_assert(sizeof(FTypefaceFontData) == 0x000088, "Wrong size on FTypefaceFontData");
-static_assert(offsetof(FTypefaceFontData, Meshes) == 0x000000, "Member 'FTypefaceFontData::Meshes' has a wrong offset!");
+DUMPER7_ASSERTS_FTypefaceFontData;
 
 // ScriptStruct Text3D.CachedFontData
 // 0x0058 (0x0058 - 0x0000)
 struct FCachedFontData final
 {
 public:
-	class UFont*                                  Font;                                              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UFont*                                  Font;                                              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	TMap<uint32, struct FTypefaceFontData>        TypefaceFontDataMap;                               // 0x0008(0x0050)(NativeAccessSpecifierPrivate)
 };
-static_assert(alignof(FCachedFontData) == 0x000008, "Wrong alignment on FCachedFontData");
-static_assert(sizeof(FCachedFontData) == 0x000058, "Wrong size on FCachedFontData");
-static_assert(offsetof(FCachedFontData, Font) == 0x000000, "Member 'FCachedFontData::Font' has a wrong offset!");
-static_assert(offsetof(FCachedFontData, TypefaceFontDataMap) == 0x000008, "Member 'FCachedFontData::TypefaceFontDataMap' has a wrong offset!");
+DUMPER7_ASSERTS_FCachedFontData;
+
+// ScriptStruct Text3D.Text3DMaterialKey
+// 0x0002 (0x0002 - 0x0000)
+struct FText3DMaterialKey final
+{
+public:
+	EText3DMaterialBlendMode                      BlendMode;                                         // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsUnlit;                                          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FText3DMaterialKey;
+
+// ScriptStruct Text3D.Text3DMaterialGroupKey
+// 0x0004 (0x0004 - 0x0000)
+struct FText3DMaterialGroupKey final
+{
+public:
+	struct FText3DMaterialKey                     Key;                                               // 0x0000(0x0002)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x1];                                        // 0x0002(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	EText3DMaterialStyle                          Style;                                             // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FText3DMaterialGroupKey;
 
 }
 

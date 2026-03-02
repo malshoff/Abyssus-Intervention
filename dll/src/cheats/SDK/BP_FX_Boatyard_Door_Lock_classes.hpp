@@ -41,23 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FX_Boatyard_Door_Lock_C">();
+		BP_STATIC_CLASS_IMPL("BP_FX_Boatyard_Door_Lock_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FX_Boatyard_Door_Lock_C")
 	}
 	static class ABP_FX_Boatyard_Door_Lock_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_FX_Boatyard_Door_Lock_C>();
 	}
 };
-static_assert(alignof(ABP_FX_Boatyard_Door_Lock_C) == 0x000008, "Wrong alignment on ABP_FX_Boatyard_Door_Lock_C");
-static_assert(sizeof(ABP_FX_Boatyard_Door_Lock_C) == 0x0002E0, "Wrong size on ABP_FX_Boatyard_Door_Lock_C");
-static_assert(offsetof(ABP_FX_Boatyard_Door_Lock_C, UberGraphFrame) == 0x0002A8, "Member 'ABP_FX_Boatyard_Door_Lock_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_FX_Boatyard_Door_Lock_C, StaticMesh) == 0x0002B0, "Member 'ABP_FX_Boatyard_Door_Lock_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_FX_Boatyard_Door_Lock_C, Scene) == 0x0002B8, "Member 'ABP_FX_Boatyard_Door_Lock_C::Scene' has a wrong offset!");
-static_assert(offsetof(ABP_FX_Boatyard_Door_Lock_C, Timeline_Fade_3A9B741247F0D3807ED227AF22FD33EE) == 0x0002C0, "Member 'ABP_FX_Boatyard_Door_Lock_C::Timeline_Fade_3A9B741247F0D3807ED227AF22FD33EE' has a wrong offset!");
-static_assert(offsetof(ABP_FX_Boatyard_Door_Lock_C, Timeline_Alpha_3A9B741247F0D3807ED227AF22FD33EE) == 0x0002C4, "Member 'ABP_FX_Boatyard_Door_Lock_C::Timeline_Alpha_3A9B741247F0D3807ED227AF22FD33EE' has a wrong offset!");
-static_assert(offsetof(ABP_FX_Boatyard_Door_Lock_C, Timeline__Direction_3A9B741247F0D3807ED227AF22FD33EE) == 0x0002C8, "Member 'ABP_FX_Boatyard_Door_Lock_C::Timeline__Direction_3A9B741247F0D3807ED227AF22FD33EE' has a wrong offset!");
-static_assert(offsetof(ABP_FX_Boatyard_Door_Lock_C, Timeline) == 0x0002D0, "Member 'ABP_FX_Boatyard_Door_Lock_C::Timeline' has a wrong offset!");
-static_assert(offsetof(ABP_FX_Boatyard_Door_Lock_C, NewVar) == 0x0002D8, "Member 'ABP_FX_Boatyard_Door_Lock_C::NewVar' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_FX_Boatyard_Door_Lock_C;
 
 }
 

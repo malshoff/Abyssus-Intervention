@@ -27,12 +27,7 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AbyssGodPassive_CharacterMutator_C_AddToBreachedNPCs) == 0x000008, "Wrong alignment on BP_AbyssGodPassive_CharacterMutator_C_AddToBreachedNPCs");
-static_assert(sizeof(BP_AbyssGodPassive_CharacterMutator_C_AddToBreachedNPCs) == 0x000018, "Wrong size on BP_AbyssGodPassive_CharacterMutator_C_AddToBreachedNPCs");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_AddToBreachedNPCs, Actor) == 0x000000, "Member 'BP_AbyssGodPassive_CharacterMutator_C_AddToBreachedNPCs::Actor' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_AddToBreachedNPCs, K2Node_DynamicCast_AsRNPCPawn_Base) == 0x000008, "Member 'BP_AbyssGodPassive_CharacterMutator_C_AddToBreachedNPCs::K2Node_DynamicCast_AsRNPCPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_AddToBreachedNPCs, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_AbyssGodPassive_CharacterMutator_C_AddToBreachedNPCs::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_AddToBreachedNPCs, CallFunc_Array_AddUnique_ReturnValue) == 0x000014, "Member 'BP_AbyssGodPassive_CharacterMutator_C_AddToBreachedNPCs::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_AbyssGodPassive_CharacterMutator_C_AddToBreachedNPCs;
 
 // Function BP_AbyssGodPassive_CharacterMutator.BP_AbyssGodPassive_CharacterMutator_C.ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator
 // 0x0198 (0x0198 - 0x0000)
@@ -80,41 +75,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetEffectDuration_Duration_ImplicitCast;  // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator) == 0x000008, "Wrong alignment on BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator");
-static_assert(sizeof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator) == 0x000198, "Wrong size on BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000008, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, Temp_int_Array_Index_Variable) == 0x000038, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000040, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000070, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, K2Node_CustomEvent_StatusEffectScript) == 0x000080, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::K2Node_CustomEvent_StatusEffectScript' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x000088, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000090, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x000098, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000C8, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_GetMutatorRank_ReturnValue) == 0x0000D8, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x0000E0, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x0000E8, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x0000EC, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000F0, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_3) == 0x0000F8, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, Temp_int_Loop_Counter_Variable) == 0x000128, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_GetNumEquippedMutatorsInGodCategory_ReturnValue) == 0x00012C, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_GetNumEquippedMutatorsInGodCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_Add_IntInt_ReturnValue) == 0x000130, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_Subtract_IntInt_ReturnValue) == 0x000134, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000138, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000140, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000148, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000150, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_Array_Get_Item) == 0x000158, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_GetActorStatusEffectFromInstigator_ReturnValue) == 0x000160, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_GetActorStatusEffectFromInstigator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_Array_Length_ReturnValue) == 0x000168, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, K2Node_DynamicCast_AsBP_Breach_Status_Effect) == 0x000170, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::K2Node_DynamicCast_AsBP_Breach_Status_Effect' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, K2Node_DynamicCast_bSuccess_2) == 0x000178, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_Less_IntInt_ReturnValue) == 0x000179, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000180, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x000188, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator, CallFunc_SetEffectDuration_Duration_ImplicitCast) == 0x000190, "Member 'BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator::CallFunc_SetEffectDuration_Duration_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_AbyssGodPassive_CharacterMutator_C_ExecuteUbergraph_BP_AbyssGodPassive_CharacterMutator;
 
 // Function BP_AbyssGodPassive_CharacterMutator.BP_AbyssGodPassive_CharacterMutator_C.GetBreachedNPCs
 // 0x0010 (0x0010 - 0x0000)
@@ -123,9 +84,7 @@ struct BP_AbyssGodPassive_CharacterMutator_C_GetBreachedNPCs final
 public:
 	TArray<class ARNPCPawnBase*>                  BreachedNPCs_0;                                    // 0x0000(0x0010)(Parm, OutParm)
 };
-static_assert(alignof(BP_AbyssGodPassive_CharacterMutator_C_GetBreachedNPCs) == 0x000008, "Wrong alignment on BP_AbyssGodPassive_CharacterMutator_C_GetBreachedNPCs");
-static_assert(sizeof(BP_AbyssGodPassive_CharacterMutator_C_GetBreachedNPCs) == 0x000010, "Wrong size on BP_AbyssGodPassive_CharacterMutator_C_GetBreachedNPCs");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_GetBreachedNPCs, BreachedNPCs_0) == 0x000000, "Member 'BP_AbyssGodPassive_CharacterMutator_C_GetBreachedNPCs::BreachedNPCs_0' has a wrong offset!");
+DUMPER7_ASSERTS_BP_AbyssGodPassive_CharacterMutator_C_GetBreachedNPCs;
 
 // Function BP_AbyssGodPassive_CharacterMutator.BP_AbyssGodPassive_CharacterMutator_C.OnStatusEffectApplied
 // 0x0008 (0x0008 - 0x0000)
@@ -134,9 +93,7 @@ struct BP_AbyssGodPassive_CharacterMutator_C_OnStatusEffectApplied final
 public:
 	class URStatusEffectGScript*                  StatusEffectScript;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AbyssGodPassive_CharacterMutator_C_OnStatusEffectApplied) == 0x000008, "Wrong alignment on BP_AbyssGodPassive_CharacterMutator_C_OnStatusEffectApplied");
-static_assert(sizeof(BP_AbyssGodPassive_CharacterMutator_C_OnStatusEffectApplied) == 0x000008, "Wrong size on BP_AbyssGodPassive_CharacterMutator_C_OnStatusEffectApplied");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_OnStatusEffectApplied, StatusEffectScript) == 0x000000, "Member 'BP_AbyssGodPassive_CharacterMutator_C_OnStatusEffectApplied::StatusEffectScript' has a wrong offset!");
+DUMPER7_ASSERTS_BP_AbyssGodPassive_CharacterMutator_C_OnStatusEffectApplied;
 
 // Function BP_AbyssGodPassive_CharacterMutator.BP_AbyssGodPassive_CharacterMutator_C.RemoveFromBreachedNPCs
 // 0x0018 (0x0018 - 0x0000)
@@ -148,12 +105,7 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AbyssGodPassive_CharacterMutator_C_RemoveFromBreachedNPCs) == 0x000008, "Wrong alignment on BP_AbyssGodPassive_CharacterMutator_C_RemoveFromBreachedNPCs");
-static_assert(sizeof(BP_AbyssGodPassive_CharacterMutator_C_RemoveFromBreachedNPCs) == 0x000018, "Wrong size on BP_AbyssGodPassive_CharacterMutator_C_RemoveFromBreachedNPCs");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_RemoveFromBreachedNPCs, Actor) == 0x000000, "Member 'BP_AbyssGodPassive_CharacterMutator_C_RemoveFromBreachedNPCs::Actor' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_RemoveFromBreachedNPCs, K2Node_DynamicCast_AsRNPCPawn_Base) == 0x000008, "Member 'BP_AbyssGodPassive_CharacterMutator_C_RemoveFromBreachedNPCs::K2Node_DynamicCast_AsRNPCPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_RemoveFromBreachedNPCs, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_AbyssGodPassive_CharacterMutator_C_RemoveFromBreachedNPCs::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_AbyssGodPassive_CharacterMutator_C_RemoveFromBreachedNPCs, CallFunc_Array_RemoveItem_ReturnValue) == 0x000011, "Member 'BP_AbyssGodPassive_CharacterMutator_C_RemoveFromBreachedNPCs::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_AbyssGodPassive_CharacterMutator_C_RemoveFromBreachedNPCs;
 
 }
 

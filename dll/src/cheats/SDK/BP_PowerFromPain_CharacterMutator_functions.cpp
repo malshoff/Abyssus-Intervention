@@ -158,9 +158,10 @@ void UBP_PowerFromPain_CharacterMutator_C::OnMaximumHealthChanged_Event(class UR
 // Function BP_PowerFromPain_CharacterMutator.BP_PowerFromPain_CharacterMutator_C.UpdateBuff
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// class URHealthComponent*                HealthComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // double                                  MissingHealth                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_PowerFromPain_CharacterMutator_C::UpdateBuff(double MissingHealth)
+void UBP_PowerFromPain_CharacterMutator_C::UpdateBuff(class URHealthComponent* HealthComponent, double MissingHealth)
 {
 	static class UFunction* Func = nullptr;
 
@@ -169,6 +170,7 @@ void UBP_PowerFromPain_CharacterMutator_C::UpdateBuff(double MissingHealth)
 
 	Params::BP_PowerFromPain_CharacterMutator_C_UpdateBuff Parms{};
 
+	Parms.HealthComponent = HealthComponent;
 	Parms.MissingHealth = MissingHealth;
 
 	UObject::ProcessEvent(Func, &Parms);

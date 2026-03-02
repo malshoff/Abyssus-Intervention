@@ -31,15 +31,7 @@ public:
 	class FText                                   K2Node_CustomEvent_NewDisplayName;                 // 0x0050(0x0010)()
 	class FText                                   K2Node_CustomEvent_NewMessage;                     // 0x0060(0x0010)()
 };
-static_assert(alignof(Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification) == 0x000008, "Wrong alignment on Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification");
-static_assert(sizeof(Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification) == 0x000070, "Wrong size on Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification");
-static_assert(offsetof(Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification, EntryPoint) == 0x000000, "Member 'Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification, K2Node_Event_IncomingMessage) == 0x000008, "Member 'Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification::K2Node_Event_IncomingMessage' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification, CallFunc_Conv_NameToText_ReturnValue) == 0x000028, "Member 'Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000038, "Member 'Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification, CallFunc_SelectText_ReturnValue) == 0x000040, "Member 'Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification::CallFunc_SelectText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification, K2Node_CustomEvent_NewDisplayName) == 0x000050, "Member 'Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification::K2Node_CustomEvent_NewDisplayName' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification, K2Node_CustomEvent_NewMessage) == 0x000060, "Member 'Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification::K2Node_CustomEvent_NewMessage' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChatLog_Notification_C_ExecuteUbergraph_Widget_ChatLog_Notification;
 
 // Function Widget_ChatLog_Notification.Widget_ChatLog_Notification_C.SetMessage
 // 0x0020 (0x0020 - 0x0000)
@@ -48,9 +40,7 @@ struct Widget_ChatLog_Notification_C_SetMessage final
 public:
 	struct FRChatLogMessage                       IncomingMessage;                                   // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_ChatLog_Notification_C_SetMessage) == 0x000008, "Wrong alignment on Widget_ChatLog_Notification_C_SetMessage");
-static_assert(sizeof(Widget_ChatLog_Notification_C_SetMessage) == 0x000020, "Wrong size on Widget_ChatLog_Notification_C_SetMessage");
-static_assert(offsetof(Widget_ChatLog_Notification_C_SetMessage, IncomingMessage) == 0x000000, "Member 'Widget_ChatLog_Notification_C_SetMessage::IncomingMessage' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChatLog_Notification_C_SetMessage;
 
 // Function Widget_ChatLog_Notification.Widget_ChatLog_Notification_C.UpdateNotification
 // 0x0020 (0x0020 - 0x0000)
@@ -60,10 +50,7 @@ public:
 	class FText                                   NewDisplayName;                                    // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class FText                                   NewMessage;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_ChatLog_Notification_C_UpdateNotification) == 0x000008, "Wrong alignment on Widget_ChatLog_Notification_C_UpdateNotification");
-static_assert(sizeof(Widget_ChatLog_Notification_C_UpdateNotification) == 0x000020, "Wrong size on Widget_ChatLog_Notification_C_UpdateNotification");
-static_assert(offsetof(Widget_ChatLog_Notification_C_UpdateNotification, NewDisplayName) == 0x000000, "Member 'Widget_ChatLog_Notification_C_UpdateNotification::NewDisplayName' has a wrong offset!");
-static_assert(offsetof(Widget_ChatLog_Notification_C_UpdateNotification, NewMessage) == 0x000010, "Member 'Widget_ChatLog_Notification_C_UpdateNotification::NewMessage' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_ChatLog_Notification_C_UpdateNotification;
 
 }
 

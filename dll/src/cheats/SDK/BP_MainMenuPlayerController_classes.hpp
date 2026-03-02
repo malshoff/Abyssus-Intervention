@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MainMenuPlayerController.BP_MainMenuPlayerController_C
-// 0x0008 (0x0900 - 0x08F8)
+// 0x0008 (0x07E0 - 0x07D8)
 class ABP_MainMenuPlayerController_C final : public ARPlayerController
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x08F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_MainMenuPlayerController(int32 EntryPoint);
@@ -31,16 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_MainMenuPlayerController_C">();
+		BP_STATIC_CLASS_IMPL("BP_MainMenuPlayerController_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_MainMenuPlayerController_C")
 	}
 	static class ABP_MainMenuPlayerController_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_MainMenuPlayerController_C>();
 	}
 };
-static_assert(alignof(ABP_MainMenuPlayerController_C) == 0x000008, "Wrong alignment on ABP_MainMenuPlayerController_C");
-static_assert(sizeof(ABP_MainMenuPlayerController_C) == 0x000900, "Wrong size on ABP_MainMenuPlayerController_C");
-static_assert(offsetof(ABP_MainMenuPlayerController_C, UberGraphFrame) == 0x0008F8, "Member 'ABP_MainMenuPlayerController_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_MainMenuPlayerController_C;
 
 }
 

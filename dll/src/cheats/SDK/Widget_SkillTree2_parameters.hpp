@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
-#include "InputCore_structs.hpp"
 #include "CommonInput_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "InputCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -27,9 +27,7 @@ struct Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Close_K2Node_Compo
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Close_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Close_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Close_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Close_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Close_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Close_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Close_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_SkillTree2.Widget_SkillTree2_C.BndEvt__Widget_SkillTree2_W_Button_Reset_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -38,102 +36,109 @@ struct Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Reset_K2Node_Compo
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Reset_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Reset_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Reset_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Reset_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Reset_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Reset_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SkillTree2_C_BndEvt__Widget_SkillTree2_W_Button_Reset_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature;
+
+// Function Widget_SkillTree2.Widget_SkillTree2_C.BPUpdateNodes
+// 0x00A8 (0x00A8 - 0x0000)
+struct Widget_SkillTree2_C_BPUpdateNodes final
+{
+public:
+	class UWidget_SkillTreeNode2_C*               SkillTreeNodeWidget;                               // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumPointsAssigned;                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumMaxPoints;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsLockedBehindPreviousNodeRequirements;            // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class URSkillTreeNode*>                CallFunc_GetSkillTreeNodes_ReturnValue;            // 0x0018(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_SkillTreeNode2_C*               K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2;     // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetMutatorPASkillTreeIdName_ReturnValue;  // 0x0044(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URMutatorPrimaryAsset*                  CallFunc_GetMutatorPA_ReturnValue;                 // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetNumRanks_ReturnValue;                  // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSkillTreeAssignedPoints_ReturnValue;   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetPointsAssignedInPreviousRows_Points;   // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Map_Find_Value;                           // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x007D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7E[0x2];                                       // 0x007E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsDemoBuild_ReturnValue;               // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8E[0x2];                                       // 0x008E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerController*                     K2Node_DynamicCast_AsRPlayer_Controller;           // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_SkillTree2_C_BPUpdateNodes;
+
+// Function Widget_SkillTree2.Widget_SkillTree2_C.BPUpdateSoulFragmentsText
+// 0x0078 (0x0078 - 0x0000)
+struct Widget_SkillTree2_C_BPUpdateSoulFragmentsText final
+{
+public:
+	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0010(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0058(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0068(0x0010)()
+};
+DUMPER7_ASSERTS_Widget_SkillTree2_C_BPUpdateSoulFragmentsText;
 
 // Function Widget_SkillTree2.Widget_SkillTree2_C.ExecuteUbergraph_Widget_SkillTree2
-// 0x00F8 (0x00F8 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2 final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerController*                     K2Node_DynamicCast_AsRPlayer_Controller;           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue; // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	ECommonInputType                              CallFunc_GetCurrentInputType_ReturnValue;          // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0068(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget_SkillTreeNode2_C*               K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2;     // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue_1;             // 0x00A0(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UWidget*                                CallFunc_Array_Get_Item_1;                         // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget_SkillTreeNode2_C*               K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2_1;   // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CA[0x6];                                       // 0x00CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class URMutatorPrimaryAsset*                  CallFunc_GetMutatorPA_MutatorPA;                   // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasMutator_ReturnValue;                   // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DA[0x2];                                       // 0x00DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetPointsSpentOnNode_SpentSoulFragments;  // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x00E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerController*                     K2Node_DynamicCast_AsRPlayer_Controller;           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue; // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ECommonInputType                              CallFunc_GetCurrentInputType_ReturnValue;          // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue;         // 0x0078(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<class URSkillTreeNode*>                CallFunc_GetSkillTreeNodes_ReturnValue;            // 0x0088(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_SkillTreeNode2_C*               K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2;     // 0x00A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class URMutatorPrimaryAsset*                  CallFunc_GetMutatorPA_ReturnValue;                 // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasMutator_ReturnValue;                   // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C2[0x2];                                       // 0x00C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetPointsSpentOnNode_SpentSoulFragments;  // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2) == 0x000008, "Wrong alignment on Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2");
-static_assert(sizeof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2) == 0x0000F8, "Wrong size on Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, EntryPoint) == 0x000000, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, Temp_int_Array_Index_Variable) == 0x000004, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, Temp_int_Array_Index_Variable_1) == 0x000010, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000018, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_GetOwningPlayer_ReturnValue) == 0x000020, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, K2Node_DynamicCast_AsRPlayer_Controller) == 0x000028, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::K2Node_DynamicCast_AsRPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_K2_GetPawn_ReturnValue) == 0x000038, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x000040, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000048, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, K2Node_DynamicCast_bSuccess_1) == 0x000050, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue) == 0x000058, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_GetCurrentInputType_ReturnValue) == 0x000060, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_GetCurrentInputType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000061, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_GetAllChildren_ReturnValue) == 0x000068, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_GetAllChildren_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, Temp_int_Loop_Counter_Variable_1) == 0x000078, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_Array_Get_Item) == 0x000080, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2) == 0x000088, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, K2Node_DynamicCast_bSuccess_2) == 0x000090, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_Add_IntInt_ReturnValue_1) == 0x000094, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_Array_Length_ReturnValue) == 0x000098, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_Less_IntInt_ReturnValue) == 0x00009C, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_GetAllChildren_ReturnValue_1) == 0x0000A0, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_GetAllChildren_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_Array_Get_Item_1) == 0x0000B0, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_Array_Length_ReturnValue_1) == 0x0000B8, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2_1) == 0x0000C0, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, K2Node_DynamicCast_bSuccess_3) == 0x0000C8, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000C9, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_GetMutatorPA_MutatorPA) == 0x0000D0, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_GetMutatorPA_MutatorPA' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_IsValid_ReturnValue) == 0x0000D8, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_HasMutator_ReturnValue) == 0x0000D9, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_GetPointsSpentOnNode_SpentSoulFragments) == 0x0000DC, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_GetPointsSpentOnNode_SpentSoulFragments' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, K2Node_ComponentBoundEvent_Button_1) == 0x0000E0, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, K2Node_ComponentBoundEvent_Button) == 0x0000E8, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2, CallFunc_PlayAnimationForward_ReturnValue) == 0x0000F0, "Member 'Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SkillTree2_C_ExecuteUbergraph_Widget_SkillTree2;
 
 // Function Widget_SkillTree2.Widget_SkillTree2_C.GetPointsAssignedInNextRows
 // 0x0060 (0x0060 - 0x0000)
@@ -146,39 +151,22 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0020(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget_SkillTreeNode2_C*               K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2;     // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B[0x1];                                       // 0x004B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_GetMutatorPrimaryAssetSkillTreeIdName_Name; // 0x004C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSkillTreeAssignedPoints_ReturnValue;   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class URSkillTreeNode*>                CallFunc_GetSkillTreeNodes_ReturnValue;            // 0x0018(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URSkillTreeNode*                        K2Node_DynamicCast_AsRSkill_Tree_Node;             // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_43[0x1];                                       // 0x0043(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetMutatorPASkillTreeIdName_ReturnValue;  // 0x0044(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSkillTreeAssignedPoints_ReturnValue;   // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SkillTree2_C_GetPointsAssignedInNextRows) == 0x000008, "Wrong alignment on Widget_SkillTree2_C_GetPointsAssignedInNextRows");
-static_assert(sizeof(Widget_SkillTree2_C_GetPointsAssignedInNextRows) == 0x000060, "Wrong size on Widget_SkillTree2_C_GetPointsAssignedInNextRows");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, Row) == 0x000000, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::Row' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, Points) == 0x000004, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::Points' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, NumPoints) == 0x000008, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::NumPoints' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000018, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, CallFunc_GetAllChildren_ReturnValue) == 0x000020, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::CallFunc_GetAllChildren_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, CallFunc_Array_Get_Item) == 0x000030, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2) == 0x000040, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, CallFunc_Less_IntInt_ReturnValue) == 0x000049, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, CallFunc_Greater_IntInt_ReturnValue) == 0x00004A, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, CallFunc_GetMutatorPrimaryAssetSkillTreeIdName_Name) == 0x00004C, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::CallFunc_GetMutatorPrimaryAssetSkillTreeIdName_Name' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, CallFunc_GetSkillTreeAssignedPoints_ReturnValue) == 0x000054, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::CallFunc_GetSkillTreeAssignedPoints_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInNextRows, CallFunc_Add_IntInt_ReturnValue_1) == 0x000058, "Member 'Widget_SkillTree2_C_GetPointsAssignedInNextRows::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SkillTree2_C_GetPointsAssignedInNextRows;
 
 // Function Widget_SkillTree2.Widget_SkillTree2_C.GetPointsAssignedInPreviousRows
 // 0x0060 (0x0060 - 0x0000)
@@ -191,84 +179,22 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0020(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget_SkillTreeNode2_C*               K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2;     // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B[0x1];                                       // 0x004B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_GetMutatorPrimaryAssetSkillTreeIdName_Name; // 0x004C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSkillTreeAssignedPoints_ReturnValue;   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class URSkillTreeNode*>                CallFunc_GetSkillTreeNodes_ReturnValue;            // 0x0018(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URSkillTreeNode*                        K2Node_DynamicCast_AsRSkill_Tree_Node;             // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_43[0x1];                                       // 0x0043(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetMutatorPASkillTreeIdName_ReturnValue;  // 0x0044(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetSkillTreeAssignedPoints_ReturnValue;   // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows) == 0x000008, "Wrong alignment on Widget_SkillTree2_C_GetPointsAssignedInPreviousRows");
-static_assert(sizeof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows) == 0x000060, "Wrong size on Widget_SkillTree2_C_GetPointsAssignedInPreviousRows");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, Row) == 0x000000, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::Row' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, Points) == 0x000004, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::Points' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, NumPoints) == 0x000008, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::NumPoints' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000018, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, CallFunc_GetAllChildren_ReturnValue) == 0x000020, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::CallFunc_GetAllChildren_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, CallFunc_Array_Get_Item) == 0x000030, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2) == 0x000040, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, CallFunc_Less_IntInt_ReturnValue) == 0x000049, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, CallFunc_Less_IntInt_ReturnValue_1) == 0x00004A, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, CallFunc_GetMutatorPrimaryAssetSkillTreeIdName_Name) == 0x00004C, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::CallFunc_GetMutatorPrimaryAssetSkillTreeIdName_Name' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, CallFunc_GetSkillTreeAssignedPoints_ReturnValue) == 0x000054, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::CallFunc_GetSkillTreeAssignedPoints_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInPreviousRows, CallFunc_Add_IntInt_ReturnValue_1) == 0x000058, "Member 'Widget_SkillTree2_C_GetPointsAssignedInPreviousRows::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-
-// Function Widget_SkillTree2.Widget_SkillTree2_C.GetPointsAssignedInRow
-// 0x0060 (0x0060 - 0x0000)
-struct Widget_SkillTree2_C_GetPointsAssignedInRow final
-{
-public:
-	int32                                         Row;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Points;                                            // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         NumPoints;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0020(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget_SkillTreeNode2_C*               K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2;     // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B[0x1];                                       // 0x004B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_GetMutatorPrimaryAssetSkillTreeIdName_Name; // 0x004C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSkillTreeAssignedPoints_ReturnValue;   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SkillTree2_C_GetPointsAssignedInRow) == 0x000008, "Wrong alignment on Widget_SkillTree2_C_GetPointsAssignedInRow");
-static_assert(sizeof(Widget_SkillTree2_C_GetPointsAssignedInRow) == 0x000060, "Wrong size on Widget_SkillTree2_C_GetPointsAssignedInRow");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, Row) == 0x000000, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::Row' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, Points) == 0x000004, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::Points' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, NumPoints) == 0x000008, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::NumPoints' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000018, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, CallFunc_GetAllChildren_ReturnValue) == 0x000020, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::CallFunc_GetAllChildren_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, CallFunc_Array_Get_Item) == 0x000030, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2) == 0x000040, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, CallFunc_Less_IntInt_ReturnValue) == 0x000049, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00004A, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, CallFunc_GetMutatorPrimaryAssetSkillTreeIdName_Name) == 0x00004C, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::CallFunc_GetMutatorPrimaryAssetSkillTreeIdName_Name' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, CallFunc_GetSkillTreeAssignedPoints_ReturnValue) == 0x000054, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::CallFunc_GetSkillTreeAssignedPoints_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsAssignedInRow, CallFunc_Add_IntInt_ReturnValue_1) == 0x000058, "Member 'Widget_SkillTree2_C_GetPointsAssignedInRow::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SkillTree2_C_GetPointsAssignedInPreviousRows;
 
 // Function Widget_SkillTree2.Widget_SkillTree2_C.GetPointsSpentOnNode
 // 0x0040 (0x0040 - 0x0000)
@@ -292,148 +218,45 @@ public:
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SkillTree2_C_GetPointsSpentOnNode) == 0x000008, "Wrong alignment on Widget_SkillTree2_C_GetPointsSpentOnNode");
-static_assert(sizeof(Widget_SkillTree2_C_GetPointsSpentOnNode) == 0x000040, "Wrong size on Widget_SkillTree2_C_GetPointsSpentOnNode");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsSpentOnNode, RMutatorPrimaryAsset) == 0x000000, "Member 'Widget_SkillTree2_C_GetPointsSpentOnNode::RMutatorPrimaryAsset' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsSpentOnNode, SpentSoulFragments) == 0x000008, "Member 'Widget_SkillTree2_C_GetPointsSpentOnNode::SpentSoulFragments' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsSpentOnNode, TotalResourcesSpent) == 0x00000C, "Member 'Widget_SkillTree2_C_GetPointsSpentOnNode::TotalResourcesSpent' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsSpentOnNode, Temp_int_Variable) == 0x000010, "Member 'Widget_SkillTree2_C_GetPointsSpentOnNode::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsSpentOnNode, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000014, "Member 'Widget_SkillTree2_C_GetPointsSpentOnNode::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsSpentOnNode, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'Widget_SkillTree2_C_GetPointsSpentOnNode::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsSpentOnNode, CallFunc_Add_IntInt_ReturnValue_1) == 0x00001C, "Member 'Widget_SkillTree2_C_GetPointsSpentOnNode::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsSpentOnNode, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000020, "Member 'Widget_SkillTree2_C_GetPointsSpentOnNode::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsSpentOnNode, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000028, "Member 'Widget_SkillTree2_C_GetPointsSpentOnNode::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsSpentOnNode, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'Widget_SkillTree2_C_GetPointsSpentOnNode::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsSpentOnNode, CallFunc_GetMutatorRank_ReturnValue) == 0x000034, "Member 'Widget_SkillTree2_C_GetPointsSpentOnNode::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsSpentOnNode, CallFunc_Subtract_IntInt_ReturnValue) == 0x000038, "Member 'Widget_SkillTree2_C_GetPointsSpentOnNode::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsSpentOnNode, CallFunc_LessEqual_IntInt_ReturnValue) == 0x00003C, "Member 'Widget_SkillTree2_C_GetPointsSpentOnNode::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_GetPointsSpentOnNode, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x00003D, "Member 'Widget_SkillTree2_C_GetPointsSpentOnNode::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SkillTree2_C_GetPointsSpentOnNode;
 
-// Function Widget_SkillTree2.Widget_SkillTree2_C.GetRowRequiredPointsMap
-// 0x0050 (0x0050 - 0x0000)
-struct Widget_SkillTree2_C_GetRowRequiredPointsMap final
+// Function Widget_SkillTree2.Widget_SkillTree2_C.GetSkillTreeNodes
+// 0x0068 (0x0068 - 0x0000)
+struct Widget_SkillTree2_C_GetSkillTreeNodes final
 {
 public:
-	TMap<int32, int32>                            Map;                                               // 0x0000(0x0050)(Parm, OutParm)
+	TArray<class URSkillTreeNode*>                ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, ContainsInstancedReference)
+	TArray<class URSkillTreeNode*>                Nodes;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0030(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URSkillTreeNode*                        K2Node_DynamicCast_AsRSkill_Tree_Node;             // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SkillTree2_C_GetRowRequiredPointsMap) == 0x000008, "Wrong alignment on Widget_SkillTree2_C_GetRowRequiredPointsMap");
-static_assert(sizeof(Widget_SkillTree2_C_GetRowRequiredPointsMap) == 0x000050, "Wrong size on Widget_SkillTree2_C_GetRowRequiredPointsMap");
-static_assert(offsetof(Widget_SkillTree2_C_GetRowRequiredPointsMap, Map) == 0x000000, "Member 'Widget_SkillTree2_C_GetRowRequiredPointsMap::Map' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SkillTree2_C_GetSkillTreeNodes;
 
 // Function Widget_SkillTree2.Widget_SkillTree2_C.OnPreviewKeyDown
-// 0x0208 (0x0208 - 0x0000)
+// 0x0210 (0x0210 - 0x0000)
 struct Widget_SkillTree2_C_OnPreviewKeyDown final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0130(0x00B8)()
-	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x01E8(0x0018)(HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                            ReturnValue;                                       // 0x0080(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0138(0x00B8)()
+	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x01F0(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SkillTree2_C_OnPreviewKeyDown) == 0x000008, "Wrong alignment on Widget_SkillTree2_C_OnPreviewKeyDown");
-static_assert(sizeof(Widget_SkillTree2_C_OnPreviewKeyDown) == 0x000208, "Wrong size on Widget_SkillTree2_C_OnPreviewKeyDown");
-static_assert(offsetof(Widget_SkillTree2_C_OnPreviewKeyDown, MyGeometry) == 0x000000, "Member 'Widget_SkillTree2_C_OnPreviewKeyDown::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_OnPreviewKeyDown, InKeyEvent) == 0x000038, "Member 'Widget_SkillTree2_C_OnPreviewKeyDown::InKeyEvent' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_OnPreviewKeyDown, ReturnValue) == 0x000078, "Member 'Widget_SkillTree2_C_OnPreviewKeyDown::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_OnPreviewKeyDown, CallFunc_Handled_ReturnValue) == 0x000130, "Member 'Widget_SkillTree2_C_OnPreviewKeyDown::CallFunc_Handled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_OnPreviewKeyDown, CallFunc_GetKey_ReturnValue) == 0x0001E8, "Member 'Widget_SkillTree2_C_OnPreviewKeyDown::CallFunc_GetKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_OnPreviewKeyDown, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x000200, "Member 'Widget_SkillTree2_C_OnPreviewKeyDown::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
-
-// Function Widget_SkillTree2.Widget_SkillTree2_C.UpdateNodes
-// 0x00B0 (0x00B0 - 0x0000)
-struct Widget_SkillTree2_C_UpdateNodes final
-{
-public:
-	class UWidget_SkillTreeNode2_C*               SkillTreeNodeWidget;                               // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         NumPointsAssigned;                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         NumMaxPoints;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsLockedBehindPreviousNodeRequirements;            // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetMutatorPrimaryAssetSkillTreeIdName_Name; // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URMutatorPrimaryAsset*                  CallFunc_GetMutatorPA_MutatorPA;                   // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetNumRanks_NumRanks;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetSkillTreeAssignedPoints_ReturnValue;   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetPointsAssignedInPreviousRows_Points;   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Map_Find_Value;                           // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0050(0x0010)(ReferenceParm, ContainsInstancedReference)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget_SkillTreeNode2_C*               K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2;     // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsDemoBuild_ReturnValue;               // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0085(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_86[0x2];                                       // 0x0086(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPlayerController*                     K2Node_DynamicCast_AsRPlayer_Controller;           // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_SkillTree2_C_UpdateNodes) == 0x000008, "Wrong alignment on Widget_SkillTree2_C_UpdateNodes");
-static_assert(sizeof(Widget_SkillTree2_C_UpdateNodes) == 0x0000B0, "Wrong size on Widget_SkillTree2_C_UpdateNodes");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, SkillTreeNodeWidget) == 0x000000, "Member 'Widget_SkillTree2_C_UpdateNodes::SkillTreeNodeWidget' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, NumPointsAssigned) == 0x000008, "Member 'Widget_SkillTree2_C_UpdateNodes::NumPointsAssigned' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, NumMaxPoints) == 0x00000C, "Member 'Widget_SkillTree2_C_UpdateNodes::NumMaxPoints' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, IsLockedBehindPreviousNodeRequirements) == 0x000010, "Member 'Widget_SkillTree2_C_UpdateNodes::IsLockedBehindPreviousNodeRequirements' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, Temp_int_Array_Index_Variable) == 0x000014, "Member 'Widget_SkillTree2_C_UpdateNodes::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_GetMutatorPrimaryAssetSkillTreeIdName_Name) == 0x000018, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_GetMutatorPrimaryAssetSkillTreeIdName_Name' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_GetMutatorPA_MutatorPA) == 0x000020, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_GetMutatorPA_MutatorPA' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_GetNumRanks_NumRanks) == 0x000028, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_GetNumRanks_NumRanks' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000030, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_Add_IntInt_ReturnValue) == 0x000038, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_GetSkillTreeAssignedPoints_ReturnValue) == 0x00003C, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_GetSkillTreeAssignedPoints_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_Add_IntInt_ReturnValue_1) == 0x000040, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_GetPointsAssignedInPreviousRows_Points) == 0x000044, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_GetPointsAssignedInPreviousRows_Points' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_Map_Find_Value) == 0x000048, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_Map_Find_ReturnValue) == 0x00004C, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_GetAllChildren_ReturnValue) == 0x000050, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_GetAllChildren_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_Greater_IntInt_ReturnValue) == 0x000060, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_Array_Get_Item) == 0x000068, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2) == 0x000070, "Member 'Widget_SkillTree2_C_UpdateNodes::K2Node_DynamicCast_AsWidget_Skill_Tree_Node_2' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'Widget_SkillTree2_C_UpdateNodes::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_Array_Length_ReturnValue) == 0x00007C, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, Temp_int_Loop_Counter_Variable) == 0x000080, "Member 'Widget_SkillTree2_C_UpdateNodes::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_GetIsDemoBuild_ReturnValue) == 0x000084, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_GetIsDemoBuild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_Less_IntInt_ReturnValue) == 0x000085, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_Add_IntInt_ReturnValue_2) == 0x000088, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_GetOwningPlayer_ReturnValue) == 0x000090, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000098, "Member 'Widget_SkillTree2_C_UpdateNodes::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, K2Node_DynamicCast_AsRPlayer_Controller) == 0x0000A0, "Member 'Widget_SkillTree2_C_UpdateNodes::K2Node_DynamicCast_AsRPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateNodes, K2Node_DynamicCast_bSuccess_1) == 0x0000A8, "Member 'Widget_SkillTree2_C_UpdateNodes::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-
-// Function Widget_SkillTree2.Widget_SkillTree2_C.UpdateSoulFragmentsText
-// 0x0078 (0x0078 - 0x0000)
-struct Widget_SkillTree2_C_UpdateSoulFragmentsText final
-{
-public:
-	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0010(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0058(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0068(0x0010)()
-};
-static_assert(alignof(Widget_SkillTree2_C_UpdateSoulFragmentsText) == 0x000008, "Wrong alignment on Widget_SkillTree2_C_UpdateSoulFragmentsText");
-static_assert(sizeof(Widget_SkillTree2_C_UpdateSoulFragmentsText) == 0x000078, "Wrong size on Widget_SkillTree2_C_UpdateSoulFragmentsText");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateSoulFragmentsText, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000000, "Member 'Widget_SkillTree2_C_UpdateSoulFragmentsText::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateSoulFragmentsText, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000008, "Member 'Widget_SkillTree2_C_UpdateSoulFragmentsText::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateSoulFragmentsText, K2Node_MakeStruct_FormatArgumentData) == 0x000010, "Member 'Widget_SkillTree2_C_UpdateSoulFragmentsText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateSoulFragmentsText, K2Node_MakeArray_Array) == 0x000058, "Member 'Widget_SkillTree2_C_UpdateSoulFragmentsText::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateSoulFragmentsText, CallFunc_Format_ReturnValue) == 0x000068, "Member 'Widget_SkillTree2_C_UpdateSoulFragmentsText::CallFunc_Format_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SkillTree2_C_OnPreviewKeyDown;
 
 // Function Widget_SkillTree2.Widget_SkillTree2_C.UpdateTierSeparatorText
 // 0x00F0 (0x00F0 - 0x0000)
@@ -445,61 +268,34 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsDemoBuild_ReturnValue;               // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 CallFunc_Map_Values_Values;                        // 0x0030(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Get_Item;                           // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 CallFunc_Map_Values_Values_1;                      // 0x0050(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Get_Item_1;                         // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0078(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00C0(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00D8(0x0010)()
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 CallFunc_Map_Values_Values;                        // 0x0018(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Get_Item;                           // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0048(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0090(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GetIsDemoBuild_ReturnValue;               // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00A8(0x0010)()
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 CallFunc_Map_Values_Values_1;                      // 0x00D0(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Get_Item_1;                         // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SkillTree2_C_UpdateTierSeparatorText) == 0x000008, "Wrong alignment on Widget_SkillTree2_C_UpdateTierSeparatorText");
-static_assert(sizeof(Widget_SkillTree2_C_UpdateTierSeparatorText) == 0x0000F0, "Wrong size on Widget_SkillTree2_C_UpdateTierSeparatorText");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, TotalAssigned) == 0x000000, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::TotalAssigned' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, Temp_int_Array_Index_Variable) == 0x000004, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, Temp_int_Array_Index_Variable_1) == 0x000010, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Less_IntInt_ReturnValue) == 0x000014, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_GetIsDemoBuild_ReturnValue) == 0x000015, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_GetIsDemoBuild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, Temp_int_Loop_Counter_Variable_1) == 0x000018, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000020, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Add_IntInt_ReturnValue_1) == 0x000028, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Map_Values_Values) == 0x000030, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Map_Values_Values' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Array_Get_Item) == 0x000040, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Array_Length_ReturnValue) == 0x000044, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Add_IntInt_ReturnValue_2) == 0x000048, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Less_IntInt_ReturnValue_1) == 0x00004C, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Map_Values_Values_1) == 0x000050, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Map_Values_Values_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Array_Get_Item_1) == 0x000060, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000068, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Less_IntInt_ReturnValue_2) == 0x000070, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, K2Node_MakeStruct_FormatArgumentData) == 0x000078, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, K2Node_MakeArray_Array) == 0x0000C0, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Array_Length_ReturnValue_1) == 0x0000D0, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Format_ReturnValue) == 0x0000D8, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Less_IntInt_ReturnValue_3) == 0x0000E8, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Widget_SkillTree2_C_UpdateTierSeparatorText, CallFunc_Array_IsValidIndex_ReturnValue) == 0x0000E9, "Member 'Widget_SkillTree2_C_UpdateTierSeparatorText::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SkillTree2_C_UpdateTierSeparatorText;
 
 // Function Widget_SkillTree2.Widget_SkillTree2_C.BP_GetDesiredFocusTarget
 // 0x0008 (0x0008 - 0x0000)
@@ -508,9 +304,7 @@ struct Widget_SkillTree2_C_BP_GetDesiredFocusTarget final
 public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SkillTree2_C_BP_GetDesiredFocusTarget) == 0x000008, "Wrong alignment on Widget_SkillTree2_C_BP_GetDesiredFocusTarget");
-static_assert(sizeof(Widget_SkillTree2_C_BP_GetDesiredFocusTarget) == 0x000008, "Wrong size on Widget_SkillTree2_C_BP_GetDesiredFocusTarget");
-static_assert(offsetof(Widget_SkillTree2_C_BP_GetDesiredFocusTarget, ReturnValue) == 0x000000, "Member 'Widget_SkillTree2_C_BP_GetDesiredFocusTarget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SkillTree2_C_BP_GetDesiredFocusTarget;
 
 }
 

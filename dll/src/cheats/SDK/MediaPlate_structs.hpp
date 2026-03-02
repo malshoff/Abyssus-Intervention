@@ -41,39 +41,26 @@ enum class EMediaPlateEventState : uint8
 };
 
 // ScriptStruct MediaPlate.MediaPlateResource
-// 0x0078 (0x0078 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct FMediaPlateResource final
 {
 public:
-	EMediaPlateResourceType                       Type;                                              // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EMediaPlateResourceType                       Type;                                              // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ExternalMediaPath;                                 // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMediaSource*                           ExternalMedia;                                     // 0x0018(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSoftObjectPtr<class UMediaSource>            MediaAsset;                                        // 0x0020(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSoftObjectPtr<class UMediaPlaylist>          SourcePlaylist;                                    // 0x0048(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMediaPlaylist*                         ActivePlaylist;                                    // 0x0070(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 ExternalMediaPath;                                 // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSoftObjectPtr<class UMediaSource>            MediaAsset;                                        // 0x0018(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSoftObjectPtr<class UMediaPlaylist>          SourcePlaylist;                                    // 0x0040(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-static_assert(alignof(FMediaPlateResource) == 0x000008, "Wrong alignment on FMediaPlateResource");
-static_assert(sizeof(FMediaPlateResource) == 0x000078, "Wrong size on FMediaPlateResource");
-static_assert(offsetof(FMediaPlateResource, Type) == 0x000000, "Member 'FMediaPlateResource::Type' has a wrong offset!");
-static_assert(offsetof(FMediaPlateResource, ExternalMediaPath) == 0x000008, "Member 'FMediaPlateResource::ExternalMediaPath' has a wrong offset!");
-static_assert(offsetof(FMediaPlateResource, ExternalMedia) == 0x000018, "Member 'FMediaPlateResource::ExternalMedia' has a wrong offset!");
-static_assert(offsetof(FMediaPlateResource, MediaAsset) == 0x000020, "Member 'FMediaPlateResource::MediaAsset' has a wrong offset!");
-static_assert(offsetof(FMediaPlateResource, SourcePlaylist) == 0x000048, "Member 'FMediaPlateResource::SourcePlaylist' has a wrong offset!");
-static_assert(offsetof(FMediaPlateResource, ActivePlaylist) == 0x000070, "Member 'FMediaPlateResource::ActivePlaylist' has a wrong offset!");
+DUMPER7_ASSERTS_FMediaPlateResource;
 
 // ScriptStruct MediaPlate.MediaTextureResourceSettings
-// 0x0002 (0x0002 - 0x0000)
+// 0x0001 (0x0001 - 0x0000)
 struct FMediaTextureResourceSettings final
 {
 public:
 	bool                                          bEnableGenMips;                                    // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         CurrentNumMips;                                    // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMediaTextureResourceSettings) == 0x000001, "Wrong alignment on FMediaTextureResourceSettings");
-static_assert(sizeof(FMediaTextureResourceSettings) == 0x000002, "Wrong size on FMediaTextureResourceSettings");
-static_assert(offsetof(FMediaTextureResourceSettings, bEnableGenMips) == 0x000000, "Member 'FMediaTextureResourceSettings::bEnableGenMips' has a wrong offset!");
-static_assert(offsetof(FMediaTextureResourceSettings, CurrentNumMips) == 0x000001, "Member 'FMediaTextureResourceSettings::CurrentNumMips' has a wrong offset!");
+DUMPER7_ASSERTS_FMediaTextureResourceSettings;
 
 }
 

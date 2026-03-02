@@ -17,71 +17,97 @@
 namespace SDK
 {
 
-// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.SetUnlockVisuals
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.BndEvt__Widget_ChallengesCompletedPopup_W_Button_Continue_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// class UTexture2D*                       Icon                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const class FText&                      Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
-// const class FText&                      Description                                            (BlueprintVisible, BlueprintReadOnly, Parm)
-// const class FText&                      TopTitle                                               (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_ChallengesCompletedPopup_C::SetUnlockVisuals(class UTexture2D* Icon, const class FText& Name_0, const class FText& Description, const class FText& TopTitle)
+void UWidget_ChallengesCompletedPopup_C::BndEvt__Widget_ChallengesCompletedPopup_W_Button_Continue_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "SetUnlockVisuals");
+		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "BndEvt__Widget_ChallengesCompletedPopup_W_Button_Continue_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_ChallengesCompletedPopup_C_SetUnlockVisuals Parms{};
+	Params::Widget_ChallengesCompletedPopup_C_BndEvt__Widget_ChallengesCompletedPopup_W_Button_Continue_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
 
-	Parms.Icon = Icon;
-	Parms.Name_0 = std::move(Name_0);
-	Parms.Description = std::move(Description);
-	Parms.TopTitle = std::move(TopTitle);
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.Set Continue Text
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.BndEvt__Widget_ChallengesCompletedPopup_W_Button_Skip_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// int32                                   ChallengeIndex_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_ChallengesCompletedPopup_C::Set_Continue_Text(int32 ChallengeIndex_0)
+void UWidget_ChallengesCompletedPopup_C::BndEvt__Widget_ChallengesCompletedPopup_W_Button_Skip_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "Set Continue Text");
+		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "BndEvt__Widget_ChallengesCompletedPopup_W_Button_Skip_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
 
-	Params::Widget_ChallengesCompletedPopup_C_Set_Continue_Text Parms{};
+	Params::Widget_ChallengesCompletedPopup_C_BndEvt__Widget_ChallengesCompletedPopup_W_Button_Skip_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature Parms{};
 
-	Parms.ChallengeIndex_0 = ChallengeIndex_0;
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.Initialize
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class URChallengeGridItem*>&     GridItems                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWidget_ChallengesCompletedPopup_C::Initialize(TArray<class URChallengeGridItem*>& GridItems)
+void UWidget_ChallengesCompletedPopup_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "Initialize");
+		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "Construct");
 
-	Params::Widget_ChallengesCompletedPopup_C_Initialize Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.GridItems = std::move(GridItems);
+
+// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.ExecuteUbergraph_Widget_ChallengesCompletedPopup
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_ChallengesCompletedPopup_C::ExecuteUbergraph_Widget_ChallengesCompletedPopup(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "ExecuteUbergraph_Widget_ChallengesCompletedPopup");
+
+	Params::Widget_ChallengesCompletedPopup_C_ExecuteUbergraph_Widget_ChallengesCompletedPopup Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	GridItems = std::move(Parms.GridItems);
+
+// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.GenerateUnlockWidget
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_ChallengesCompletedPopup_C::GenerateUnlockWidget(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "GenerateUnlockWidget");
+
+	Params::Widget_ChallengesCompletedPopup_C_GenerateUnlockWidget Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -109,95 +135,69 @@ void UWidget_ChallengesCompletedPopup_C::GetRewardTypeName(class URPrimaryDataAs
 }
 
 
-// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.GenerateUnlockWidget
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.Initialize
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class URChallengeGridItem*>&     GridItems                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWidget_ChallengesCompletedPopup_C::GenerateUnlockWidget(int32 Index_0)
+void UWidget_ChallengesCompletedPopup_C::Initialize(TArray<class URChallengeGridItem*>& GridItems)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "GenerateUnlockWidget");
+		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "Initialize");
 
-	Params::Widget_ChallengesCompletedPopup_C_GenerateUnlockWidget Parms{};
+	Params::Widget_ChallengesCompletedPopup_C_Initialize Parms{};
 
-	Parms.Index_0 = Index_0;
+	Parms.GridItems = std::move(GridItems);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	GridItems = std::move(Parms.GridItems);
+}
+
+
+// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.Set Continue Text
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   ChallengeIndex_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_ChallengesCompletedPopup_C::Set_Continue_Text(int32 ChallengeIndex_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "Set Continue Text");
+
+	Params::Widget_ChallengesCompletedPopup_C_Set_Continue_Text Parms{};
+
+	Parms.ChallengeIndex_0 = ChallengeIndex_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.ExecuteUbergraph_Widget_ChallengesCompletedPopup
-// (Final, UbergraphFunction, HasDefaults)
+// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.SetUnlockVisuals
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UTexture2D*                       Icon                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      Description                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      TopTitle                                               (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWidget_ChallengesCompletedPopup_C::ExecuteUbergraph_Widget_ChallengesCompletedPopup(int32 EntryPoint)
+void UWidget_ChallengesCompletedPopup_C::SetUnlockVisuals(class UTexture2D* Icon, const class FText& Name_0, const class FText& Description, const class FText& TopTitle)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "ExecuteUbergraph_Widget_ChallengesCompletedPopup");
+		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "SetUnlockVisuals");
 
-	Params::Widget_ChallengesCompletedPopup_C_ExecuteUbergraph_Widget_ChallengesCompletedPopup Parms{};
+	Params::Widget_ChallengesCompletedPopup_C_SetUnlockVisuals Parms{};
 
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_ChallengesCompletedPopup_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.BndEvt__Widget_ChallengesCompletedPopup_W_Button_Skip_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_ChallengesCompletedPopup_C::BndEvt__Widget_ChallengesCompletedPopup_W_Button_Skip_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "BndEvt__Widget_ChallengesCompletedPopup_W_Button_Skip_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_ChallengesCompletedPopup_C_BndEvt__Widget_ChallengesCompletedPopup_W_Button_Skip_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_ChallengesCompletedPopup.Widget_ChallengesCompletedPopup_C.BndEvt__Widget_ChallengesCompletedPopup_W_Button_Continue_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_ChallengesCompletedPopup_C::BndEvt__Widget_ChallengesCompletedPopup_W_Button_Continue_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_ChallengesCompletedPopup_C", "BndEvt__Widget_ChallengesCompletedPopup_W_Button_Continue_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-
-	Params::Widget_ChallengesCompletedPopup_C_BndEvt__Widget_ChallengesCompletedPopup_W_Button_Continue_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
+	Parms.Icon = Icon;
+	Parms.Name_0 = std::move(Name_0);
+	Parms.Description = std::move(Description);
+	Parms.TopTitle = std::move(TopTitle);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

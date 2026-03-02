@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function BP_EngineRev_Base_StatusEffect.BP_EngineRev_Base_StatusEffect_C.K2_DeactivateScript
-// (Event, Public, BlueprintEvent)
-
-void UBP_EngineRev_Base_StatusEffect_C::K2_DeactivateScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EngineRev_Base_StatusEffect_C", "K2_DeactivateScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_EngineRev_Base_StatusEffect.BP_EngineRev_Base_StatusEffect_C.ExecuteUbergraph_BP_EngineRev_Base_StatusEffect
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UBP_EngineRev_Base_StatusEffect_C::ExecuteUbergraph_BP_EngineRev_Base_Statu
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EngineRev_Base_StatusEffect.BP_EngineRev_Base_StatusEffect_C.K2_DeactivateScript
+// (Event, Public, BlueprintEvent)
+
+void UBP_EngineRev_Base_StatusEffect_C::K2_DeactivateScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EngineRev_Base_StatusEffect_C", "K2_DeactivateScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

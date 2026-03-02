@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "RGame_structs.hpp"
 #include "Engine_structs.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK::Params
@@ -25,13 +25,10 @@ public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Souvenir_Base_C_CanInteract) == 0x000008, "Wrong alignment on BP_Souvenir_Base_C_CanInteract");
-static_assert(sizeof(BP_Souvenir_Base_C_CanInteract) == 0x000010, "Wrong size on BP_Souvenir_Base_C_CanInteract");
-static_assert(offsetof(BP_Souvenir_Base_C_CanInteract, Controller) == 0x000000, "Member 'BP_Souvenir_Base_C_CanInteract::Controller' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_CanInteract, ReturnValue) == 0x000008, "Member 'BP_Souvenir_Base_C_CanInteract::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_CanInteract;
 
 // Function BP_Souvenir_Base.BP_Souvenir_Base_C.ExecuteUbergraph_BP_Souvenir_Base
-// 0x02C8 (0x02C8 - 0x0000)
+// 0x02E0 (0x02E0 - 0x0000)
 struct BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base final
 {
 public:
@@ -43,60 +40,44 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      K2Node_Event_controller_2;                         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      K2Node_Event_controller_1;                         // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_InteractingActor;                     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_NewVisible;                           // 0x0038(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class USceneComponent*>                CallFunc_GetChildrenComponents_Children;           // 0x0040(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class USceneComponent*                        CallFunc_Array_Get_Item;                           // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimitiveComponent*                    K2Node_DynamicCast_AsPrimitive_Component;          // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6A[0x2];                                       // 0x006A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0070(0x0048)(HasGetValueTypeHash)
-	class ARGamePlayerController*                 CallFunc_GetFirstLocalGamePlayerController_ReturnValue; // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue;          // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsChallengeCompleted_ReturnValue;         // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRChallenge                            CallFunc_FindChallengeById_ReturnValue;            // 0x00E8(0x0178)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0260(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x02A8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x02B8(0x0010)()
+	const class APlayerController*                K2Node_Event_PlayerController;                     // 0x0030(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_InteractingActor;                     // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_NewVisible;                           // 0x0040(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class USceneComponent*>                CallFunc_GetChildrenComponents_Children;           // 0x0048(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class USceneComponent*                        CallFunc_Array_Get_Item;                           // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPrimitiveComponent*                    K2Node_DynamicCast_AsPrimitive_Component;          // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_72[0x2];                                       // 0x0072(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0078(0x0048)(HasGetValueTypeHash)
+	class ARGamePlayerController*                 CallFunc_GetFirstLocalGamePlayerController_ReturnValue; // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARChallengeManager*                     CallFunc_GetChallengeManager_ReturnValue;          // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChallengeCompleted_ReturnValue;         // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRChallenge                            CallFunc_FindChallengeById_ReturnValue;            // 0x00F0(0x0188)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0278(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x02C0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x02D0(0x0010)()
 };
-static_assert(alignof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base) == 0x000008, "Wrong alignment on BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base");
-static_assert(sizeof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base) == 0x0002C8, "Wrong size on BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, EntryPoint) == 0x000000, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, K2Node_Event_controller) == 0x000008, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::K2Node_Event_controller' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, CallFunc_PushWidget_OutWidget) == 0x000010, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::CallFunc_PushWidget_OutWidget' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, Temp_int_Array_Index_Variable) == 0x000018, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, K2Node_Event_controller_2) == 0x000020, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::K2Node_Event_controller_2' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, K2Node_Event_controller_1) == 0x000028, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::K2Node_Event_controller_1' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, K2Node_Event_InteractingActor) == 0x000030, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::K2Node_Event_InteractingActor' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, K2Node_Event_NewVisible) == 0x000038, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::K2Node_Event_NewVisible' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, Temp_int_Loop_Counter_Variable) == 0x00003C, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, CallFunc_GetChildrenComponents_Children) == 0x000040, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::CallFunc_GetChildrenComponents_Children' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, CallFunc_Array_Get_Item) == 0x000050, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, CallFunc_Array_Length_ReturnValue) == 0x000058, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, K2Node_DynamicCast_AsPrimitive_Component) == 0x000060, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::K2Node_DynamicCast_AsPrimitive_Component' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, K2Node_DynamicCast_bSuccess) == 0x000068, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, CallFunc_Less_IntInt_ReturnValue) == 0x000069, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, CallFunc_Add_IntInt_ReturnValue) == 0x00006C, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, K2Node_MakeStruct_FormatArgumentData) == 0x000070, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x0000B8, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, CallFunc_GetChallengeManager_ReturnValue) == 0x0000C0, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, CallFunc_IsChallengeCompleted_ReturnValue) == 0x0000C8, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::CallFunc_IsChallengeCompleted_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, CallFunc_Conv_NameToString_ReturnValue) == 0x0000D0, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, CallFunc_BooleanOR_ReturnValue) == 0x0000E0, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, CallFunc_FindChallengeById_ReturnValue) == 0x0000E8, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::CallFunc_FindChallengeById_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, K2Node_MakeStruct_FormatArgumentData_1) == 0x000260, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, K2Node_MakeArray_Array) == 0x0002A8, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base, CallFunc_Format_ReturnValue) == 0x0002B8, "Member 'BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base::CallFunc_Format_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_ExecuteUbergraph_BP_Souvenir_Base;
+
+// Function BP_Souvenir_Base.BP_Souvenir_Base_C.IsShareable
+// 0x0010 (0x0010 - 0x0000)
+struct BP_Souvenir_Base_C_IsShareable final
+{
+public:
+	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_IsShareable;
 
 // Function BP_Souvenir_Base.BP_Souvenir_Base_C.OnFocus
 // 0x0008 (0x0008 - 0x0000)
@@ -105,9 +86,7 @@ struct BP_Souvenir_Base_C_OnFocus final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Souvenir_Base_C_OnFocus) == 0x000008, "Wrong alignment on BP_Souvenir_Base_C_OnFocus");
-static_assert(sizeof(BP_Souvenir_Base_C_OnFocus) == 0x000008, "Wrong size on BP_Souvenir_Base_C_OnFocus");
-static_assert(offsetof(BP_Souvenir_Base_C_OnFocus, Controller) == 0x000000, "Member 'BP_Souvenir_Base_C_OnFocus::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_OnFocus;
 
 // Function BP_Souvenir_Base.BP_Souvenir_Base_C.OnFocusGone
 // 0x0008 (0x0008 - 0x0000)
@@ -116,9 +95,7 @@ struct BP_Souvenir_Base_C_OnFocusGone final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Souvenir_Base_C_OnFocusGone) == 0x000008, "Wrong alignment on BP_Souvenir_Base_C_OnFocusGone");
-static_assert(sizeof(BP_Souvenir_Base_C_OnFocusGone) == 0x000008, "Wrong size on BP_Souvenir_Base_C_OnFocusGone");
-static_assert(offsetof(BP_Souvenir_Base_C_OnFocusGone, Controller) == 0x000000, "Member 'BP_Souvenir_Base_C_OnFocusGone::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_OnFocusGone;
 
 // Function BP_Souvenir_Base.BP_Souvenir_Base_C.OnInteract
 // 0x0008 (0x0008 - 0x0000)
@@ -127,9 +104,16 @@ struct BP_Souvenir_Base_C_OnInteract final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Souvenir_Base_C_OnInteract) == 0x000008, "Wrong alignment on BP_Souvenir_Base_C_OnInteract");
-static_assert(sizeof(BP_Souvenir_Base_C_OnInteract) == 0x000008, "Wrong size on BP_Souvenir_Base_C_OnInteract");
-static_assert(offsetof(BP_Souvenir_Base_C_OnInteract, Controller) == 0x000000, "Member 'BP_Souvenir_Base_C_OnInteract::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_OnInteract;
+
+// Function BP_Souvenir_Base.BP_Souvenir_Base_C.ShareInteractableActor
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Souvenir_Base_C_ShareInteractableActor final
+{
+public:
+	const class APlayerController*                PlayerController;                                  // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_ShareInteractableActor;
 
 // Function BP_Souvenir_Base.BP_Souvenir_Base_C.ToggleInteractionIndicatorVisibility
 // 0x0010 (0x0010 - 0x0000)
@@ -139,10 +123,7 @@ public:
 	class AActor*                                 InteractingActor;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          NewVisible;                                        // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Souvenir_Base_C_ToggleInteractionIndicatorVisibility) == 0x000008, "Wrong alignment on BP_Souvenir_Base_C_ToggleInteractionIndicatorVisibility");
-static_assert(sizeof(BP_Souvenir_Base_C_ToggleInteractionIndicatorVisibility) == 0x000010, "Wrong size on BP_Souvenir_Base_C_ToggleInteractionIndicatorVisibility");
-static_assert(offsetof(BP_Souvenir_Base_C_ToggleInteractionIndicatorVisibility, InteractingActor) == 0x000000, "Member 'BP_Souvenir_Base_C_ToggleInteractionIndicatorVisibility::InteractingActor' has a wrong offset!");
-static_assert(offsetof(BP_Souvenir_Base_C_ToggleInteractionIndicatorVisibility, NewVisible) == 0x000008, "Member 'BP_Souvenir_Base_C_ToggleInteractionIndicatorVisibility::NewVisible' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_ToggleInteractionIndicatorVisibility;
 
 // Function BP_Souvenir_Base.BP_Souvenir_Base_C.UserConstructionScript
 // 0x0001 (0x0001 - 0x0000)
@@ -151,9 +132,7 @@ struct BP_Souvenir_Base_C_UserConstructionScript final
 public:
 	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Souvenir_Base_C_UserConstructionScript) == 0x000001, "Wrong alignment on BP_Souvenir_Base_C_UserConstructionScript");
-static_assert(sizeof(BP_Souvenir_Base_C_UserConstructionScript) == 0x000001, "Wrong size on BP_Souvenir_Base_C_UserConstructionScript");
-static_assert(offsetof(BP_Souvenir_Base_C_UserConstructionScript, CallFunc_SetStaticMesh_ReturnValue) == 0x000000, "Member 'BP_Souvenir_Base_C_UserConstructionScript::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_UserConstructionScript;
 
 // Function BP_Souvenir_Base.BP_Souvenir_Base_C.GetInteractableAlternativeDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -162,9 +141,7 @@ struct BP_Souvenir_Base_C_GetInteractableAlternativeDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_Souvenir_Base_C_GetInteractableAlternativeDescription) == 0x000008, "Wrong alignment on BP_Souvenir_Base_C_GetInteractableAlternativeDescription");
-static_assert(sizeof(BP_Souvenir_Base_C_GetInteractableAlternativeDescription) == 0x000010, "Wrong size on BP_Souvenir_Base_C_GetInteractableAlternativeDescription");
-static_assert(offsetof(BP_Souvenir_Base_C_GetInteractableAlternativeDescription, ReturnValue) == 0x000000, "Member 'BP_Souvenir_Base_C_GetInteractableAlternativeDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_GetInteractableAlternativeDescription;
 
 // Function BP_Souvenir_Base.BP_Souvenir_Base_C.GetInteractableCost
 // 0x0004 (0x0004 - 0x0000)
@@ -173,9 +150,7 @@ struct BP_Souvenir_Base_C_GetInteractableCost final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Souvenir_Base_C_GetInteractableCost) == 0x000004, "Wrong alignment on BP_Souvenir_Base_C_GetInteractableCost");
-static_assert(sizeof(BP_Souvenir_Base_C_GetInteractableCost) == 0x000004, "Wrong size on BP_Souvenir_Base_C_GetInteractableCost");
-static_assert(offsetof(BP_Souvenir_Base_C_GetInteractableCost, ReturnValue) == 0x000000, "Member 'BP_Souvenir_Base_C_GetInteractableCost::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_GetInteractableCost;
 
 // Function BP_Souvenir_Base.BP_Souvenir_Base_C.GetInteractableCostCurrencyType
 // 0x0010 (0x0010 - 0x0000)
@@ -184,9 +159,7 @@ struct BP_Souvenir_Base_C_GetInteractableCostCurrencyType final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_Souvenir_Base_C_GetInteractableCostCurrencyType) == 0x000008, "Wrong alignment on BP_Souvenir_Base_C_GetInteractableCostCurrencyType");
-static_assert(sizeof(BP_Souvenir_Base_C_GetInteractableCostCurrencyType) == 0x000010, "Wrong size on BP_Souvenir_Base_C_GetInteractableCostCurrencyType");
-static_assert(offsetof(BP_Souvenir_Base_C_GetInteractableCostCurrencyType, ReturnValue) == 0x000000, "Member 'BP_Souvenir_Base_C_GetInteractableCostCurrencyType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_GetInteractableCostCurrencyType;
 
 // Function BP_Souvenir_Base.BP_Souvenir_Base_C.GetInteractableDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -195,9 +168,7 @@ struct BP_Souvenir_Base_C_GetInteractableDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_Souvenir_Base_C_GetInteractableDescription) == 0x000008, "Wrong alignment on BP_Souvenir_Base_C_GetInteractableDescription");
-static_assert(sizeof(BP_Souvenir_Base_C_GetInteractableDescription) == 0x000010, "Wrong size on BP_Souvenir_Base_C_GetInteractableDescription");
-static_assert(offsetof(BP_Souvenir_Base_C_GetInteractableDescription, ReturnValue) == 0x000000, "Member 'BP_Souvenir_Base_C_GetInteractableDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_GetInteractableDescription;
 
 // Function BP_Souvenir_Base.BP_Souvenir_Base_C.GetInteractableName
 // 0x0010 (0x0010 - 0x0000)
@@ -206,9 +177,7 @@ struct BP_Souvenir_Base_C_GetInteractableName final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_Souvenir_Base_C_GetInteractableName) == 0x000008, "Wrong alignment on BP_Souvenir_Base_C_GetInteractableName");
-static_assert(sizeof(BP_Souvenir_Base_C_GetInteractableName) == 0x000010, "Wrong size on BP_Souvenir_Base_C_GetInteractableName");
-static_assert(offsetof(BP_Souvenir_Base_C_GetInteractableName, ReturnValue) == 0x000000, "Member 'BP_Souvenir_Base_C_GetInteractableName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_GetInteractableName;
 
 // Function BP_Souvenir_Base.BP_Souvenir_Base_C.GetInteractableSubHeader
 // 0x0010 (0x0010 - 0x0000)
@@ -217,9 +186,7 @@ struct BP_Souvenir_Base_C_GetInteractableSubHeader final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_Souvenir_Base_C_GetInteractableSubHeader) == 0x000008, "Wrong alignment on BP_Souvenir_Base_C_GetInteractableSubHeader");
-static_assert(sizeof(BP_Souvenir_Base_C_GetInteractableSubHeader) == 0x000010, "Wrong size on BP_Souvenir_Base_C_GetInteractableSubHeader");
-static_assert(offsetof(BP_Souvenir_Base_C_GetInteractableSubHeader, ReturnValue) == 0x000000, "Member 'BP_Souvenir_Base_C_GetInteractableSubHeader::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_GetInteractableSubHeader;
 
 // Function BP_Souvenir_Base.BP_Souvenir_Base_C.GetInteractionIndicatorWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -228,9 +195,7 @@ struct BP_Souvenir_Base_C_GetInteractionIndicatorWidget final
 public:
 	class UWidgetComponent*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Souvenir_Base_C_GetInteractionIndicatorWidget) == 0x000008, "Wrong alignment on BP_Souvenir_Base_C_GetInteractionIndicatorWidget");
-static_assert(sizeof(BP_Souvenir_Base_C_GetInteractionIndicatorWidget) == 0x000008, "Wrong size on BP_Souvenir_Base_C_GetInteractionIndicatorWidget");
-static_assert(offsetof(BP_Souvenir_Base_C_GetInteractionIndicatorWidget, ReturnValue) == 0x000000, "Member 'BP_Souvenir_Base_C_GetInteractionIndicatorWidget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Souvenir_Base_C_GetInteractionIndicatorWidget;
 
 }
 

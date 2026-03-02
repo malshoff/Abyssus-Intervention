@@ -46,7 +46,7 @@ void UWidget_InteractionIndicator_C::Destruct()
 
 
 // Function Widget_InteractionIndicator.Widget_InteractionIndicator_C.ExecuteUbergraph_Widget_InteractionIndicator
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

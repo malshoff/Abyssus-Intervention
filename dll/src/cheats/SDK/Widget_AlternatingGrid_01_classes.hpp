@@ -12,63 +12,61 @@
 
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "UMG_classes.hpp"
+#include "RGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C
-// 0x0048 (0x0318 - 0x02D0)
-class UWidget_AlternatingGrid_01_C final : public UUserWidget
+// 0x0048 (0x0388 - 0x0340)
+class UWidget_AlternatingGrid_01_C final : public URAlternatingGridWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UOverlay*                               Overlay;                                           // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         GridSize;                                          // 0x02E0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E4[0x4];                                      // 0x02E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        GridSpacing;                                       // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EOrientation                                  Orientation;                                       // 0x02F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Preview;                                           // 0x02F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2F2[0x6];                                      // 0x02F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWidget*>                        GridElements;                                      // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	int32                                         GridPreviewSizeMultiplier;                         // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         NumElementsInRow;                                  // 0x030C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         LastRow;                                           // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UOverlay*                               Overlay;                                           // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	int32                                         GridSize;                                          // 0x0350(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_354[0x4];                                      // 0x0354(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        GridSpacing;                                       // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EOrientation                                  Orientation;                                       // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Preview;                                           // 0x0361(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_362[0x6];                                      // 0x0362(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWidget*>                        GridElements;                                      // 0x0368(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	int32                                         GridPreviewSizeMultiplier;                         // 0x0378(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumElementsInRow;                                  // 0x037C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         LastRow;                                           // 0x0380(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateGrid();
-	void SetGridNavigationData(class UWidget* InGridElement, int32 InElemIndex, int32 InRow);
-	void RemoveWidgetFromGrid(class UWidget* Widget);
-	void PreConstruct(bool IsDesignTime);
-	void OnInitialized();
-	void GeneratePreviewElements();
-	void ExecuteUbergraph_Widget_AlternatingGrid_01(int32 EntryPoint);
+	void AddWidgetToGrid(class UWidget* Widget, bool bUpdateImmediately);
 	void ClearGrid();
-	void AddWidgetToGrid(class UWidget* Widget);
+	void ExecuteUbergraph_Widget_AlternatingGrid_01(int32 EntryPoint);
+	void GeneratePreviewElements();
+	TArray<class UWidget*> GetGridOverlayChildren();
+	int32 GetGridPreviewSizeMultiplier();
+	void NativeAddWidgetToGrid(const class UUserWidget* Widget, const bool bUpdateImmediately);
+	void NativeClearGrid();
+	void NativeUpdateGrid();
+	void OnInitialized();
+	void PreConstruct(bool IsDesignTime);
+	void RemoveWidgetFromGrid(class UWidget* Widget);
+	void SetGridNavigationData(class UWidget* InGridElement, int32 InElemIndex, int32 InRow);
+	void UpdateGrid();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_AlternatingGrid_01_C">();
+		BP_STATIC_CLASS_IMPL("Widget_AlternatingGrid_01_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_AlternatingGrid_01_C")
 	}
 	static class UWidget_AlternatingGrid_01_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_AlternatingGrid_01_C>();
 	}
 };
-static_assert(alignof(UWidget_AlternatingGrid_01_C) == 0x000008, "Wrong alignment on UWidget_AlternatingGrid_01_C");
-static_assert(sizeof(UWidget_AlternatingGrid_01_C) == 0x000318, "Wrong size on UWidget_AlternatingGrid_01_C");
-static_assert(offsetof(UWidget_AlternatingGrid_01_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_AlternatingGrid_01_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_AlternatingGrid_01_C, Overlay) == 0x0002D8, "Member 'UWidget_AlternatingGrid_01_C::Overlay' has a wrong offset!");
-static_assert(offsetof(UWidget_AlternatingGrid_01_C, GridSize) == 0x0002E0, "Member 'UWidget_AlternatingGrid_01_C::GridSize' has a wrong offset!");
-static_assert(offsetof(UWidget_AlternatingGrid_01_C, GridSpacing) == 0x0002E8, "Member 'UWidget_AlternatingGrid_01_C::GridSpacing' has a wrong offset!");
-static_assert(offsetof(UWidget_AlternatingGrid_01_C, Orientation) == 0x0002F0, "Member 'UWidget_AlternatingGrid_01_C::Orientation' has a wrong offset!");
-static_assert(offsetof(UWidget_AlternatingGrid_01_C, Preview) == 0x0002F1, "Member 'UWidget_AlternatingGrid_01_C::Preview' has a wrong offset!");
-static_assert(offsetof(UWidget_AlternatingGrid_01_C, GridElements) == 0x0002F8, "Member 'UWidget_AlternatingGrid_01_C::GridElements' has a wrong offset!");
-static_assert(offsetof(UWidget_AlternatingGrid_01_C, GridPreviewSizeMultiplier) == 0x000308, "Member 'UWidget_AlternatingGrid_01_C::GridPreviewSizeMultiplier' has a wrong offset!");
-static_assert(offsetof(UWidget_AlternatingGrid_01_C, NumElementsInRow) == 0x00030C, "Member 'UWidget_AlternatingGrid_01_C::NumElementsInRow' has a wrong offset!");
-static_assert(offsetof(UWidget_AlternatingGrid_01_C, LastRow) == 0x000310, "Member 'UWidget_AlternatingGrid_01_C::LastRow' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_AlternatingGrid_01_C;
 
 }
 

@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function AudioSynesthesia.ConstantQAnalyzer.GetCenterFrequencies
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // TArray<float>*                          OutCenterFrequencies                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
@@ -44,7 +44,7 @@ void UConstantQAnalyzer::GetCenterFrequencies(TArray<float>* OutCenterFrequencie
 
 
 // Function AudioSynesthesia.ConstantQAnalyzer.GetNumCenterFrequencies
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const int32                             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -69,7 +69,7 @@ const int32 UConstantQAnalyzer::GetNumCenterFrequencies() const
 
 
 // Function AudioSynesthesia.ConstantQNRT.GetChannelConstantQAtTime
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const float                             InSeconds                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const int32                             InChannel                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -100,7 +100,7 @@ void UConstantQNRT::GetChannelConstantQAtTime(const float InSeconds, const int32
 
 
 // Function AudioSynesthesia.ConstantQNRT.GetNormalizedChannelConstantQAtTime
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const float                             InSeconds                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const int32                             InChannel                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -131,7 +131,7 @@ void UConstantQNRT::GetNormalizedChannelConstantQAtTime(const float InSeconds, c
 
 
 // Function AudioSynesthesia.LoudnessNRT.GetChannelLoudnessAtTime
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const float                             InSeconds                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const int32                             InChannel                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -162,7 +162,7 @@ void ULoudnessNRT::GetChannelLoudnessAtTime(const float InSeconds, const int32 I
 
 
 // Function AudioSynesthesia.LoudnessNRT.GetLoudnessAtTime
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const float                             InSeconds                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float*                                  OutLoudness                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -191,7 +191,7 @@ void ULoudnessNRT::GetLoudnessAtTime(const float InSeconds, float* OutLoudness) 
 
 
 // Function AudioSynesthesia.LoudnessNRT.GetNormalizedChannelLoudnessAtTime
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const float                             InSeconds                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const int32                             InChannel                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -222,7 +222,7 @@ void ULoudnessNRT::GetNormalizedChannelLoudnessAtTime(const float InSeconds, con
 
 
 // Function AudioSynesthesia.LoudnessNRT.GetNormalizedLoudnessAtTime
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const float                             InSeconds                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float*                                  OutLoudness                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -251,7 +251,7 @@ void ULoudnessNRT::GetNormalizedLoudnessAtTime(const float InSeconds, float* Out
 
 
 // Function AudioSynesthesia.OnsetNRT.GetChannelOnsetsBetweenTimes
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const float                             InStartSeconds                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const float                             InEndSeconds                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -288,7 +288,7 @@ void UOnsetNRT::GetChannelOnsetsBetweenTimes(const float InStartSeconds, const f
 
 
 // Function AudioSynesthesia.OnsetNRT.GetNormalizedChannelOnsetsBetweenTimes
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const float                             InStartSeconds                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const float                             InEndSeconds                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -325,7 +325,7 @@ void UOnsetNRT::GetNormalizedChannelOnsetsBetweenTimes(const float InStartSecond
 
 
 // Function AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetCenterFrequencies
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const float                             InSampleRate                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<float>*                          OutCenterFrequencies                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
@@ -354,7 +354,7 @@ void USynesthesiaSpectrumAnalyzer::GetCenterFrequencies(const float InSampleRate
 
 
 // Function AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetNumCenterFrequencies
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const int32                             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

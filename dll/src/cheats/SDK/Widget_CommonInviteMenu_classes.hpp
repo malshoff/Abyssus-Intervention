@@ -11,29 +11,29 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_classes.hpp"
 #include "UMG_structs.hpp"
+#include "RGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_CommonInviteMenu.Widget_CommonInviteMenu_C
-// 0x0068 (0x04A0 - 0x0438)
+// 0x0068 (0x0528 - 0x04C0)
 class UWidget_CommonInviteMenu_C final : public URCommonActivatableWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       ConstructAnimation;                                // 0x0440(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   BackButton;                                        // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Glyph_Image;                                       // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   InviteFriendsButton;                               // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   SessionBrowserButton;                              // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   SessionSettingsButton;                             // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   LastFocusedPauseMenuButton;                        // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget_TextButton_C*                   LastFocusedWidgetTextButton;                       // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class UWidget_CommonPauseMenu_C* PauseMenuReference)> OnMenuWasClosed; // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TArray<class UQuartzClockHandle*>             PausedClocks;                                      // 0x0490(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_TextButton_C*                   SessionSettingsButton;                             // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   SessionBrowserButton;                              // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   InviteFriendsButton;                               // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Glyph_Image;                                       // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   BackButton;                                        // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ConstructAnimation;                                // 0x04F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   LastFocusedPauseMenuButton;                        // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget_TextButton_C*                   LastFocusedWidgetTextButton;                       // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class UWidget_CommonPauseMenu_C* PauseMenuReference)> OnMenuWasClosed; // 0x0508(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TArray<class UQuartzClockHandle*>             PausedClocks;                                      // 0x0518(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void BndEvt__Widget_CommonInviteMenu_InviteFriendsButton_K2Node_ComponentBoundEvent_9_OnPressed__DelegateSignature(class UWidget_TextButton_C* Button);
@@ -56,26 +56,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_CommonInviteMenu_C">();
+		BP_STATIC_CLASS_IMPL("Widget_CommonInviteMenu_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_CommonInviteMenu_C")
 	}
 	static class UWidget_CommonInviteMenu_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_CommonInviteMenu_C>();
 	}
 };
-static_assert(alignof(UWidget_CommonInviteMenu_C) == 0x000008, "Wrong alignment on UWidget_CommonInviteMenu_C");
-static_assert(sizeof(UWidget_CommonInviteMenu_C) == 0x0004A0, "Wrong size on UWidget_CommonInviteMenu_C");
-static_assert(offsetof(UWidget_CommonInviteMenu_C, UberGraphFrame) == 0x000438, "Member 'UWidget_CommonInviteMenu_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonInviteMenu_C, ConstructAnimation) == 0x000440, "Member 'UWidget_CommonInviteMenu_C::ConstructAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonInviteMenu_C, BackButton) == 0x000448, "Member 'UWidget_CommonInviteMenu_C::BackButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonInviteMenu_C, Glyph_Image) == 0x000450, "Member 'UWidget_CommonInviteMenu_C::Glyph_Image' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonInviteMenu_C, InviteFriendsButton) == 0x000458, "Member 'UWidget_CommonInviteMenu_C::InviteFriendsButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonInviteMenu_C, SessionBrowserButton) == 0x000460, "Member 'UWidget_CommonInviteMenu_C::SessionBrowserButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonInviteMenu_C, SessionSettingsButton) == 0x000468, "Member 'UWidget_CommonInviteMenu_C::SessionSettingsButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonInviteMenu_C, LastFocusedPauseMenuButton) == 0x000470, "Member 'UWidget_CommonInviteMenu_C::LastFocusedPauseMenuButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonInviteMenu_C, LastFocusedWidgetTextButton) == 0x000478, "Member 'UWidget_CommonInviteMenu_C::LastFocusedWidgetTextButton' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonInviteMenu_C, OnMenuWasClosed) == 0x000480, "Member 'UWidget_CommonInviteMenu_C::OnMenuWasClosed' has a wrong offset!");
-static_assert(offsetof(UWidget_CommonInviteMenu_C, PausedClocks) == 0x000490, "Member 'UWidget_CommonInviteMenu_C::PausedClocks' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_CommonInviteMenu_C;
 
 }
 

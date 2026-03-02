@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function OptimusCore.OptimusNode.SetGraphPosition
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // const struct FVector2D&                 InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -46,7 +46,7 @@ bool UOptimusNode::SetGraphPosition(const struct FVector2D& InPosition)
 
 
 // Function OptimusCore.OptimusNode.GetDisplayName
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -96,7 +96,7 @@ struct FVector2D UOptimusNode::GetGraphPosition() const
 
 
 // Function OptimusCore.OptimusNode.GetNodeCategory
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -121,7 +121,7 @@ class FName UOptimusNode::GetNodeCategory() const
 
 
 // Function OptimusCore.OptimusNode.GetNodeName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -171,7 +171,7 @@ const TArray<class UOptimusComponentSourceBinding*> UOptimusDeformer::GetCompone
 
 
 // Function OptimusCore.OptimusDeformer.GetPrimaryComponentBinding
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UOptimusComponentSourceBinding*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -246,7 +246,7 @@ const TArray<class UOptimusVariableDescription*> UOptimusDeformer::GetVariables(
 
 
 // Function OptimusCore.OptimusDeformerInstance.EnqueueTriggerGraph
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             InTriggerGraphName                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -274,7 +274,7 @@ bool UOptimusDeformerInstance::EnqueueTriggerGraph(class FName InTriggerGraphNam
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetBoolArrayVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<bool>&                     InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -304,7 +304,7 @@ bool UOptimusDeformerInstance::SetBoolArrayVariable(class FName InVariableName, 
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetBoolVariable
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -334,7 +334,7 @@ bool UOptimusDeformerInstance::SetBoolVariable(class FName InVariableName, bool 
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetFloatArrayVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<double>&                   InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -364,7 +364,7 @@ bool UOptimusDeformerInstance::SetFloatArrayVariable(class FName InVariableName,
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetFloatVariable
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -394,7 +394,7 @@ bool UOptimusDeformerInstance::SetFloatVariable(class FName InVariableName, doub
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetInt2ArrayVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FIntPoint>&         InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -424,7 +424,7 @@ bool UOptimusDeformerInstance::SetInt2ArrayVariable(class FName InVariableName, 
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetInt2Variable
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FIntPoint&                 InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -454,7 +454,7 @@ bool UOptimusDeformerInstance::SetInt2Variable(class FName InVariableName, const
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetInt3ArrayVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FIntVector>&        InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -484,7 +484,7 @@ bool UOptimusDeformerInstance::SetInt3ArrayVariable(class FName InVariableName, 
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetInt3Variable
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FIntVector&                InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -514,7 +514,7 @@ bool UOptimusDeformerInstance::SetInt3Variable(class FName InVariableName, const
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetInt4ArrayVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FIntVector4>&       InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -544,7 +544,7 @@ bool UOptimusDeformerInstance::SetInt4ArrayVariable(class FName InVariableName, 
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetInt4Variable
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FIntVector4&               InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -574,7 +574,7 @@ bool UOptimusDeformerInstance::SetInt4Variable(class FName InVariableName, const
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetIntArrayVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<int32>&                    InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -604,7 +604,7 @@ bool UOptimusDeformerInstance::SetIntArrayVariable(class FName InVariableName, c
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetIntVariable
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -634,7 +634,7 @@ bool UOptimusDeformerInstance::SetIntVariable(class FName InVariableName, int32 
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetLinearColorArrayVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FLinearColor>&      InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -664,7 +664,7 @@ bool UOptimusDeformerInstance::SetLinearColorArrayVariable(class FName InVariabl
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetLinearColorVariable
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FLinearColor&              InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -694,7 +694,7 @@ bool UOptimusDeformerInstance::SetLinearColorVariable(class FName InVariableName
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetNameArrayVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<class FName>&              InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -724,7 +724,7 @@ bool UOptimusDeformerInstance::SetNameArrayVariable(class FName InVariableName, 
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetNameVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FName&                      InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -754,7 +754,7 @@ bool UOptimusDeformerInstance::SetNameVariable(class FName InVariableName, const
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetQuatArrayVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FQuat>&             InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -784,7 +784,7 @@ bool UOptimusDeformerInstance::SetQuatArrayVariable(class FName InVariableName, 
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetQuatVariable
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FQuat&                     InValue                                                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -814,7 +814,7 @@ bool UOptimusDeformerInstance::SetQuatVariable(class FName InVariableName, const
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetRotatorArrayVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FRotator>&          InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -844,7 +844,7 @@ bool UOptimusDeformerInstance::SetRotatorArrayVariable(class FName InVariableNam
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetRotatorVariable
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRotator&                  InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
@@ -874,7 +874,7 @@ bool UOptimusDeformerInstance::SetRotatorVariable(class FName InVariableName, co
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetTransformArrayVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FTransform>&        InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -904,7 +904,7 @@ bool UOptimusDeformerInstance::SetTransformArrayVariable(class FName InVariableN
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetTransformVariable
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FTransform&                InValue                                                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -934,7 +934,7 @@ bool UOptimusDeformerInstance::SetTransformVariable(class FName InVariableName, 
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetVector2ArrayVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FVector2D>&         InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -964,7 +964,7 @@ bool UOptimusDeformerInstance::SetVector2ArrayVariable(class FName InVariableNam
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetVector2Variable
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -994,7 +994,7 @@ bool UOptimusDeformerInstance::SetVector2Variable(class FName InVariableName, co
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetVector4ArrayVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FVector4>&          InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -1024,7 +1024,7 @@ bool UOptimusDeformerInstance::SetVector4ArrayVariable(class FName InVariableNam
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetVector4Variable
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector4&                  InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1054,7 +1054,7 @@ bool UOptimusDeformerInstance::SetVector4Variable(class FName InVariableName, co
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetVectorArrayVariable
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FVector>&           InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -1084,7 +1084,7 @@ bool UOptimusDeformerInstance::SetVectorArrayVariable(class FName InVariableName
 
 
 // Function OptimusCore.OptimusDeformerInstance.SetVectorVariable
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector&                   InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1113,8 +1113,40 @@ bool UOptimusDeformerInstance::SetVectorVariable(class FName InVariableName, con
 }
 
 
+// Function OptimusCore.OptimusNodeGraph.AddCommentNode
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector2D&                 InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 InSize                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FLinearColor&              InColor                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOptimusNode*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOptimusNode* UOptimusNodeGraph::AddCommentNode(const struct FVector2D& InPosition, const struct FVector2D& InSize, const struct FLinearColor& InColor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OptimusNodeGraph", "AddCommentNode");
+
+	Params::OptimusNodeGraph_AddCommentNode Parms{};
+
+	Parms.InPosition = std::move(InPosition);
+	Parms.InSize = std::move(InSize);
+	Parms.InColor = std::move(InColor);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function OptimusCore.OptimusNodeGraph.AddComponentBindingGetNode
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UOptimusComponentSourceBinding*   InComponentBinding                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1144,7 +1176,7 @@ class UOptimusNode* UOptimusNodeGraph::AddComponentBindingGetNode(class UOptimus
 
 
 // Function OptimusCore.OptimusNodeGraph.AddDataInterfaceNode
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // const TSubclassOf<class UOptimusComputeDataInterface>InDataInterfaceClass                                   (ConstParm, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1174,13 +1206,13 @@ class UOptimusNode* UOptimusNodeGraph::AddDataInterfaceNode(const TSubclassOf<cl
 
 
 // Function OptimusCore.OptimusNodeGraph.AddFunctionReferenceNode
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// TSoftObjectPtr<class UOptimusFunctionNodeGraph>InFunctionGraph                                        (Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOptimusFunctionNodeGraph*        InFunctionGraph                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UOptimusNode*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UOptimusNode* UOptimusNodeGraph::AddFunctionReferenceNode(TSoftObjectPtr<class UOptimusFunctionNodeGraph> InFunctionGraph, const struct FVector2D& InPosition)
+class UOptimusNode* UOptimusNodeGraph::AddFunctionReferenceNode(class UOptimusFunctionNodeGraph* InFunctionGraph, const struct FVector2D& InPosition)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1204,7 +1236,7 @@ class UOptimusNode* UOptimusNodeGraph::AddFunctionReferenceNode(TSoftObjectPtr<c
 
 
 // Function OptimusCore.OptimusNodeGraph.AddLink
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UOptimusNodePin*                  InNodeOutputPin                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UOptimusNodePin*                  InNodeInputPin                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1234,7 +1266,7 @@ bool UOptimusNodeGraph::AddLink(class UOptimusNodePin* InNodeOutputPin, class UO
 
 
 // Function OptimusCore.OptimusNodeGraph.AddLoopTerminalNodes
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // const struct FVector2D&                 InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class UOptimusNode*>             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
@@ -1262,7 +1294,7 @@ TArray<class UOptimusNode*> UOptimusNodeGraph::AddLoopTerminalNodes(const struct
 
 
 // Function OptimusCore.OptimusNodeGraph.AddNode
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // const TSubclassOf<class UOptimusNode>   InNodeClass                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1292,7 +1324,7 @@ class UOptimusNode* UOptimusNodeGraph::AddNode(const TSubclassOf<class UOptimusN
 
 
 // Function OptimusCore.OptimusNodeGraph.AddResourceGetNode
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UOptimusResourceDescription*      InResourceDesc                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1322,7 +1354,7 @@ class UOptimusNode* UOptimusNodeGraph::AddResourceGetNode(class UOptimusResource
 
 
 // Function OptimusCore.OptimusNodeGraph.AddResourceNode
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UOptimusResourceDescription*      InResourceDesc                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1352,7 +1384,7 @@ class UOptimusNode* UOptimusNodeGraph::AddResourceNode(class UOptimusResourceDes
 
 
 // Function OptimusCore.OptimusNodeGraph.AddResourceSetNode
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UOptimusResourceDescription*      InResourceDesc                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1382,7 +1414,7 @@ class UOptimusNode* UOptimusNodeGraph::AddResourceSetNode(class UOptimusResource
 
 
 // Function OptimusCore.OptimusNodeGraph.AddValueNode
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // const struct FOptimusDataTypeRef&       InDataTypeRef                                          (Parm, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1412,7 +1444,7 @@ class UOptimusNode* UOptimusNodeGraph::AddValueNode(const struct FOptimusDataTyp
 
 
 // Function OptimusCore.OptimusNodeGraph.AddVariableGetNode
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UOptimusVariableDescription*      InVariableDesc                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1442,7 +1474,7 @@ class UOptimusNode* UOptimusNodeGraph::AddVariableGetNode(class UOptimusVariable
 
 
 // Function OptimusCore.OptimusNodeGraph.CollapseNodesToFunction
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<class UOptimusNode*>&      InNodes                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // class UOptimusNode*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1470,7 +1502,7 @@ class UOptimusNode* UOptimusNodeGraph::CollapseNodesToFunction(const TArray<clas
 
 
 // Function OptimusCore.OptimusNodeGraph.CollapseNodesToSubGraph
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<class UOptimusNode*>&      InNodes                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // class UOptimusNode*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1498,7 +1530,7 @@ class UOptimusNode* UOptimusNodeGraph::CollapseNodesToSubGraph(const TArray<clas
 
 
 // Function OptimusCore.OptimusNodeGraph.ConvertCustomKernelToFunction
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UOptimusNode*                     InCustomKernel                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UOptimusNode*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1526,7 +1558,7 @@ class UOptimusNode* UOptimusNodeGraph::ConvertCustomKernelToFunction(class UOpti
 
 
 // Function OptimusCore.OptimusNodeGraph.ConvertFunctionToCustomKernel
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UOptimusNode*                     InKernelFunction                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UOptimusNode*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1554,7 +1586,7 @@ class UOptimusNode* UOptimusNodeGraph::ConvertFunctionToCustomKernel(class UOpti
 
 
 // Function OptimusCore.OptimusNodeGraph.ConvertToFunction
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UOptimusNode*                     InSubGraphNode                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1582,7 +1614,7 @@ bool UOptimusNodeGraph::ConvertToFunction(class UOptimusNode* InSubGraphNode)
 
 
 // Function OptimusCore.OptimusNodeGraph.ConvertToSubGraph
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UOptimusNode*                     InFunctionNode                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1610,7 +1642,7 @@ bool UOptimusNodeGraph::ConvertToSubGraph(class UOptimusNode* InFunctionNode)
 
 
 // Function OptimusCore.OptimusNodeGraph.DuplicateNode
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UOptimusNode*                     InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1640,7 +1672,7 @@ class UOptimusNode* UOptimusNodeGraph::DuplicateNode(class UOptimusNode* InNode,
 
 
 // Function OptimusCore.OptimusNodeGraph.DuplicateNodes
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // const TArray<class UOptimusNode*>&      InNodes                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 InPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1670,7 +1702,7 @@ bool UOptimusNodeGraph::DuplicateNodes(const TArray<class UOptimusNode*>& InNode
 
 
 // Function OptimusCore.OptimusNodeGraph.ExpandCollapsedNodes
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UOptimusNode*                     InGraphReferenceNode                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class UOptimusNode*>             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
@@ -1698,7 +1730,7 @@ TArray<class UOptimusNode*> UOptimusNodeGraph::ExpandCollapsedNodes(class UOptim
 
 
 // Function OptimusCore.OptimusNodeGraph.MoveGraphDirect
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UOptimusNodeGraph*                InGraph                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   InInsertBefore                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1728,7 +1760,7 @@ bool UOptimusNodeGraph::MoveGraphDirect(class UOptimusNodeGraph* InGraph, int32 
 
 
 // Function OptimusCore.OptimusNodeGraph.RemoveAllLinks
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UOptimusNodePin*                  InNodePin                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1756,7 +1788,7 @@ bool UOptimusNodeGraph::RemoveAllLinks(class UOptimusNodePin* InNodePin)
 
 
 // Function OptimusCore.OptimusNodeGraph.RemoveLink
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UOptimusNodePin*                  InNodeOutputPin                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UOptimusNodePin*                  InNodeInputPin                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1786,7 +1818,7 @@ bool UOptimusNodeGraph::RemoveLink(class UOptimusNodePin* InNodeOutputPin, class
 
 
 // Function OptimusCore.OptimusNodeGraph.RemoveNode
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UOptimusNode*                     InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1814,7 +1846,7 @@ bool UOptimusNodeGraph::RemoveNode(class UOptimusNode* InNode)
 
 
 // Function OptimusCore.OptimusNodeGraph.RemoveNodes
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<class UOptimusNode*>&      InNodes                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1842,7 +1874,7 @@ bool UOptimusNodeGraph::RemoveNodes(const TArray<class UOptimusNode*>& InNodes)
 
 
 // Function OptimusCore.OptimusNodeGraph.RenameGraph
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UOptimusNodeGraph*                InGraph                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    InNewName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1872,7 +1904,7 @@ bool UOptimusNodeGraph::RenameGraph(class UOptimusNodeGraph* InGraph, const clas
 
 
 // Function OptimusCore.OptimusNodeGraph.RenameGraphDirect
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UOptimusNodeGraph*                InGraph                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    InNewName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1902,7 +1934,7 @@ bool UOptimusNodeGraph::RenameGraphDirect(class UOptimusNodeGraph* InGraph, cons
 
 
 // Function OptimusCore.OptimusNodeGraph.GetGraphIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1977,7 +2009,7 @@ EOptimusNodeGraphType UOptimusNodeGraph::GetGraphType() const
 
 
 // Function OptimusCore.OptimusNodeGraph.IsCustomKernel
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UOptimusNode*                     InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2055,7 +2087,7 @@ bool UOptimusNodeGraph::IsFunctionGraph() const
 
 
 // Function OptimusCore.OptimusNodeGraph.IsFunctionReference
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UOptimusNode*                     InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2083,7 +2115,7 @@ bool UOptimusNodeGraph::IsFunctionReference(class UOptimusNode* InNode) const
 
 
 // Function OptimusCore.OptimusNodeGraph.IsKernelFunction
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UOptimusNode*                     InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2111,7 +2143,7 @@ bool UOptimusNodeGraph::IsKernelFunction(class UOptimusNode* InNode) const
 
 
 // Function OptimusCore.OptimusNodeGraph.IsSubGraphReference
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UOptimusNode*                     InNode                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2139,7 +2171,7 @@ bool UOptimusNodeGraph::IsSubGraphReference(class UOptimusNode* InNode) const
 
 
 // Function OptimusCore.OptimusFunctionNodeGraph.GetAccessSpecifierOptions
-// (Final, Native, Public, Const)
+// (Final, RequiredAPI, Native, Public, Const)
 // Parameters:
 // TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 

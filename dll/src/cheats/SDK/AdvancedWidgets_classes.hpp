@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -85,43 +85,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"RadialSlider">();
+		STATIC_CLASS_IMPL("RadialSlider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RadialSlider")
 	}
 	static class URadialSlider* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<URadialSlider>();
 	}
 };
-static_assert(alignof(URadialSlider) == 0x000010, "Wrong alignment on URadialSlider");
-static_assert(sizeof(URadialSlider) == 0x000730, "Wrong size on URadialSlider");
-static_assert(offsetof(URadialSlider, Value) == 0x000168, "Member 'URadialSlider::Value' has a wrong offset!");
-static_assert(offsetof(URadialSlider, ValueDelegate) == 0x00016C, "Member 'URadialSlider::ValueDelegate' has a wrong offset!");
-static_assert(offsetof(URadialSlider, bUseCustomDefaultValue) == 0x00017C, "Member 'URadialSlider::bUseCustomDefaultValue' has a wrong offset!");
-static_assert(offsetof(URadialSlider, CustomDefaultValue) == 0x000180, "Member 'URadialSlider::CustomDefaultValue' has a wrong offset!");
-static_assert(offsetof(URadialSlider, SliderRange) == 0x000188, "Member 'URadialSlider::SliderRange' has a wrong offset!");
-static_assert(offsetof(URadialSlider, ValueTags) == 0x000210, "Member 'URadialSlider::ValueTags' has a wrong offset!");
-static_assert(offsetof(URadialSlider, SliderHandleStartAngle) == 0x000220, "Member 'URadialSlider::SliderHandleStartAngle' has a wrong offset!");
-static_assert(offsetof(URadialSlider, SliderHandleEndAngle) == 0x000224, "Member 'URadialSlider::SliderHandleEndAngle' has a wrong offset!");
-static_assert(offsetof(URadialSlider, AngularOffset) == 0x000228, "Member 'URadialSlider::AngularOffset' has a wrong offset!");
-static_assert(offsetof(URadialSlider, HandStartEndRatio) == 0x000230, "Member 'URadialSlider::HandStartEndRatio' has a wrong offset!");
-static_assert(offsetof(URadialSlider, WidgetStyle) == 0x000240, "Member 'URadialSlider::WidgetStyle' has a wrong offset!");
-static_assert(offsetof(URadialSlider, SliderBarColor) == 0x000680, "Member 'URadialSlider::SliderBarColor' has a wrong offset!");
-static_assert(offsetof(URadialSlider, SliderProgressColor) == 0x000690, "Member 'URadialSlider::SliderProgressColor' has a wrong offset!");
-static_assert(offsetof(URadialSlider, SliderHandleColor) == 0x0006A0, "Member 'URadialSlider::SliderHandleColor' has a wrong offset!");
-static_assert(offsetof(URadialSlider, CenterBackgroundColor) == 0x0006B0, "Member 'URadialSlider::CenterBackgroundColor' has a wrong offset!");
-static_assert(offsetof(URadialSlider, Locked) == 0x0006C0, "Member 'URadialSlider::Locked' has a wrong offset!");
-static_assert(offsetof(URadialSlider, MouseUsesStep) == 0x0006C1, "Member 'URadialSlider::MouseUsesStep' has a wrong offset!");
-static_assert(offsetof(URadialSlider, RequiresControllerLock) == 0x0006C2, "Member 'URadialSlider::RequiresControllerLock' has a wrong offset!");
-static_assert(offsetof(URadialSlider, StepSize) == 0x0006C4, "Member 'URadialSlider::StepSize' has a wrong offset!");
-static_assert(offsetof(URadialSlider, IsFocusable) == 0x0006C8, "Member 'URadialSlider::IsFocusable' has a wrong offset!");
-static_assert(offsetof(URadialSlider, UseVerticalDrag) == 0x0006C9, "Member 'URadialSlider::UseVerticalDrag' has a wrong offset!");
-static_assert(offsetof(URadialSlider, ShowSliderHandle) == 0x0006CA, "Member 'URadialSlider::ShowSliderHandle' has a wrong offset!");
-static_assert(offsetof(URadialSlider, ShowSliderHand) == 0x0006CB, "Member 'URadialSlider::ShowSliderHand' has a wrong offset!");
-static_assert(offsetof(URadialSlider, OnMouseCaptureBegin) == 0x0006D0, "Member 'URadialSlider::OnMouseCaptureBegin' has a wrong offset!");
-static_assert(offsetof(URadialSlider, OnMouseCaptureEnd) == 0x0006E0, "Member 'URadialSlider::OnMouseCaptureEnd' has a wrong offset!");
-static_assert(offsetof(URadialSlider, OnControllerCaptureBegin) == 0x0006F0, "Member 'URadialSlider::OnControllerCaptureBegin' has a wrong offset!");
-static_assert(offsetof(URadialSlider, OnControllerCaptureEnd) == 0x000700, "Member 'URadialSlider::OnControllerCaptureEnd' has a wrong offset!");
-static_assert(offsetof(URadialSlider, OnValueChanged) == 0x000710, "Member 'URadialSlider::OnValueChanged' has a wrong offset!");
+DUMPER7_ASSERTS_URadialSlider;
 
 }
 

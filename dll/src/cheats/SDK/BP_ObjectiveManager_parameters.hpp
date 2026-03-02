@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "RGame_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "RGame_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
@@ -84,53 +84,7 @@ public:
 	int32                                         CallFunc_Array_Random_OutIndex_3;                  // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x01C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager) == 0x000008, "Wrong alignment on BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager");
-static_assert(sizeof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager) == 0x0001C8, "Wrong size on BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, EntryPoint) == 0x000000, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_GetAllPlayerPawnsInLevel_ReturnValue) == 0x000008, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_GetAllPlayerPawnsInLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_Array_Random_OutItem) == 0x000018, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_Array_Random_OutItem' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_Array_Random_OutIndex) == 0x000020, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_Array_Random_OutIndex' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_HasAuthority_ReturnValue) == 0x000024, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_GetLevelManager_ReturnValue) == 0x000028, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_GetLevelManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, K2Node_CreateDelegate_OutputDelegate) == 0x000030, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_IsValid_ReturnValue) == 0x000040, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_GetSpawnManager_ReturnValue) == 0x000048, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_GetSpawnManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000050, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_IsValid_ReturnValue_1) == 0x000060, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, K2Node_CustomEvent_Message) == 0x000068, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::K2Node_CustomEvent_Message' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000078, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_GetOverworldManager_ReturnValue) == 0x000080, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_GetOverworldManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_IsValid_ReturnValue_2) == 0x000088, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, K2Node_CreateDelegate_OutputDelegate_2) == 0x00008C, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_HasAuthority_ReturnValue_1) == 0x00009C, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, K2Node_MakeStruct_RObjectiveData) == 0x0000A0, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::K2Node_MakeStruct_RObjectiveData' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_MakeLiteralGameplayTag_ReturnValue) == 0x0000E0, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_MakeLiteralGameplayTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_GetOverworldManager_ReturnValue_1) == 0x0000E8, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_GetOverworldManager_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_GetObjectiveAssetsByTag_ReturnValue) == 0x0000F0, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_GetObjectiveAssetsByTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_IsValid_ReturnValue_3) == 0x000100, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_Array_Random_OutItem_1) == 0x000108, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_Array_Random_OutItem_1' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_Array_Random_OutIndex_1) == 0x000110, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_Array_Random_OutIndex_1' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_GetCurrentNodeData_ReturnValue) == 0x000118, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_GetCurrentNodeData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_IsValid_ReturnValue_4) == 0x000120, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, K2Node_CustomEvent_ObjectiveScript) == 0x000128, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::K2Node_CustomEvent_ObjectiveScript' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_GetAllPlayerPawnsInLevel_ReturnValue_1) == 0x000130, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_GetAllPlayerPawnsInLevel_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_Array_Random_OutItem_2) == 0x000140, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_Array_Random_OutItem_2' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_Array_Random_OutIndex_2) == 0x000148, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_Array_Random_OutIndex_2' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_MatchesTag_ReturnValue) == 0x00014C, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_MatchesTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_MatchesTag_ReturnValue_1) == 0x00014D, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_MatchesTag_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, K2Node_CreateDelegate_OutputDelegate_3) == 0x000150, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000160, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, K2Node_CustomEvent_ObjectiveTag) == 0x000178, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::K2Node_CustomEvent_ObjectiveTag' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, K2Node_CustomEvent_bCompleted) == 0x000180, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::K2Node_CustomEvent_bCompleted' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_GetClosestActorToLocation_OutDistance) == 0x000184, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_GetClosestActorToLocation_OutDistance' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_GetClosestActorToLocation_ReturnValue) == 0x000188, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_GetClosestActorToLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_MatchesTag_ReturnValue_2) == 0x000190, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_MatchesTag_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000198, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, K2Node_DynamicCast_bSuccess) == 0x0001A0, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, K2Node_CreateDelegate_OutputDelegate_4) == 0x0001A4, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_Array_Random_OutItem_3) == 0x0001B8, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_Array_Random_OutItem_3' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_Array_Random_OutIndex_3) == 0x0001C0, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_Array_Random_OutIndex_3' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x0001C4, "Member 'BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ObjectiveManager_C_ExecuteUbergraph_BP_ObjectiveManager;
 
 // Function BP_ObjectiveManager.BP_ObjectiveManager_C.OnCorruptedEffectApplied
 // 0x0060 (0x0060 - 0x0000)
@@ -141,11 +95,7 @@ public:
 	TArray<class URGScript*>                      NodeChoiceScripts;                                 // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FRObjectiveData                        K2Node_MakeStruct_RObjectiveData;                  // 0x0020(0x0040)()
 };
-static_assert(alignof(BP_ObjectiveManager_C_OnCorruptedEffectApplied) == 0x000008, "Wrong alignment on BP_ObjectiveManager_C_OnCorruptedEffectApplied");
-static_assert(sizeof(BP_ObjectiveManager_C_OnCorruptedEffectApplied) == 0x000060, "Wrong size on BP_ObjectiveManager_C_OnCorruptedEffectApplied");
-static_assert(offsetof(BP_ObjectiveManager_C_OnCorruptedEffectApplied, NodeChoicePAs) == 0x000000, "Member 'BP_ObjectiveManager_C_OnCorruptedEffectApplied::NodeChoicePAs' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnCorruptedEffectApplied, NodeChoiceScripts) == 0x000010, "Member 'BP_ObjectiveManager_C_OnCorruptedEffectApplied::NodeChoiceScripts' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnCorruptedEffectApplied, K2Node_MakeStruct_RObjectiveData) == 0x000020, "Member 'BP_ObjectiveManager_C_OnCorruptedEffectApplied::K2Node_MakeStruct_RObjectiveData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ObjectiveManager_C_OnCorruptedEffectApplied;
 
 // Function BP_ObjectiveManager.BP_ObjectiveManager_C.OnObjectiveEnded_Event
 // 0x000C (0x000C - 0x0000)
@@ -155,10 +105,7 @@ public:
 	struct FGameplayTag                           ObjectiveTag;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 	bool                                          bCompleted;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ObjectiveManager_C_OnObjectiveEnded_Event) == 0x000004, "Wrong alignment on BP_ObjectiveManager_C_OnObjectiveEnded_Event");
-static_assert(sizeof(BP_ObjectiveManager_C_OnObjectiveEnded_Event) == 0x00000C, "Wrong size on BP_ObjectiveManager_C_OnObjectiveEnded_Event");
-static_assert(offsetof(BP_ObjectiveManager_C_OnObjectiveEnded_Event, ObjectiveTag) == 0x000000, "Member 'BP_ObjectiveManager_C_OnObjectiveEnded_Event::ObjectiveTag' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnObjectiveEnded_Event, bCompleted) == 0x000008, "Member 'BP_ObjectiveManager_C_OnObjectiveEnded_Event::bCompleted' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ObjectiveManager_C_OnObjectiveEnded_Event;
 
 // Function BP_ObjectiveManager.BP_ObjectiveManager_C.OnObjectiveStarted_Event
 // 0x0008 (0x0008 - 0x0000)
@@ -167,9 +114,7 @@ struct BP_ObjectiveManager_C_OnObjectiveStarted_Event final
 public:
 	class URGObjectiveScript*                     ObjectiveScript;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ObjectiveManager_C_OnObjectiveStarted_Event) == 0x000008, "Wrong alignment on BP_ObjectiveManager_C_OnObjectiveStarted_Event");
-static_assert(sizeof(BP_ObjectiveManager_C_OnObjectiveStarted_Event) == 0x000008, "Wrong size on BP_ObjectiveManager_C_OnObjectiveStarted_Event");
-static_assert(offsetof(BP_ObjectiveManager_C_OnObjectiveStarted_Event, ObjectiveScript) == 0x000000, "Member 'BP_ObjectiveManager_C_OnObjectiveStarted_Event::ObjectiveScript' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ObjectiveManager_C_OnObjectiveStarted_Event;
 
 // Function BP_ObjectiveManager.BP_ObjectiveManager_C.OnRep_RandomizedObjectivePA_BP
 // 0x0048 (0x0048 - 0x0000)
@@ -181,11 +126,7 @@ public:
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRObjectiveData                        K2Node_MakeStruct_RObjectiveData;                  // 0x0008(0x0040)()
 };
-static_assert(alignof(BP_ObjectiveManager_C_OnRep_RandomizedObjectivePA_BP) == 0x000008, "Wrong alignment on BP_ObjectiveManager_C_OnRep_RandomizedObjectivePA_BP");
-static_assert(sizeof(BP_ObjectiveManager_C_OnRep_RandomizedObjectivePA_BP) == 0x000048, "Wrong size on BP_ObjectiveManager_C_OnRep_RandomizedObjectivePA_BP");
-static_assert(offsetof(BP_ObjectiveManager_C_OnRep_RandomizedObjectivePA_BP, CallFunc_HasAuthority_ReturnValue) == 0x000000, "Member 'BP_ObjectiveManager_C_OnRep_RandomizedObjectivePA_BP::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnRep_RandomizedObjectivePA_BP, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'BP_ObjectiveManager_C_OnRep_RandomizedObjectivePA_BP::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnRep_RandomizedObjectivePA_BP, K2Node_MakeStruct_RObjectiveData) == 0x000008, "Member 'BP_ObjectiveManager_C_OnRep_RandomizedObjectivePA_BP::K2Node_MakeStruct_RObjectiveData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ObjectiveManager_C_OnRep_RandomizedObjectivePA_BP;
 
 // Function BP_ObjectiveManager.BP_ObjectiveManager_C.OnSpawnAreaSegmentStarted
 // 0x00E0 (0x00E0 - 0x0000)
@@ -211,22 +152,7 @@ public:
 	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00D0(0x0010)()
 };
-static_assert(alignof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted) == 0x000008, "Wrong alignment on BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted");
-static_assert(sizeof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted) == 0x0000E0, "Wrong size on BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted");
-static_assert(offsetof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted, EnemySpawnAreaSegment) == 0x000000, "Member 'BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted::EnemySpawnAreaSegment' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted, Temp_int_Array_Index_Variable) == 0x000008, "Member 'BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted, CallFunc_HasAuthority_ReturnValue) == 0x000014, "Member 'BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted, CallFunc_MatchesTag_ReturnValue) == 0x000015, "Member 'BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted::CallFunc_MatchesTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted, CallFunc_Array_Get_Item) == 0x000020, "Member 'BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted, CallFunc_Less_IntInt_ReturnValue) == 0x000028, "Member 'BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted, K2Node_MakeStruct_RObjectiveData) == 0x000030, "Member 'BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted::K2Node_MakeStruct_RObjectiveData' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted, K2Node_MakeStruct_FormatArgumentData) == 0x000070, "Member 'BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted, K2Node_MakeArray_Array) == 0x0000B8, "Member 'BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x0000C8, "Member 'BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted, CallFunc_Format_ReturnValue) == 0x0000D0, "Member 'BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted::CallFunc_Format_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ObjectiveManager_C_OnSpawnAreaSegmentStarted;
 
 // Function BP_ObjectiveManager.BP_ObjectiveManager_C.PushRoomObjectiveNotificationMessge
 // 0x0010 (0x0010 - 0x0000)
@@ -235,9 +161,7 @@ struct BP_ObjectiveManager_C_PushRoomObjectiveNotificationMessge final
 public:
 	class FText                                   Message;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_ObjectiveManager_C_PushRoomObjectiveNotificationMessge) == 0x000008, "Wrong alignment on BP_ObjectiveManager_C_PushRoomObjectiveNotificationMessge");
-static_assert(sizeof(BP_ObjectiveManager_C_PushRoomObjectiveNotificationMessge) == 0x000010, "Wrong size on BP_ObjectiveManager_C_PushRoomObjectiveNotificationMessge");
-static_assert(offsetof(BP_ObjectiveManager_C_PushRoomObjectiveNotificationMessge, Message) == 0x000000, "Member 'BP_ObjectiveManager_C_PushRoomObjectiveNotificationMessge::Message' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ObjectiveManager_C_PushRoomObjectiveNotificationMessge;
 
 }
 

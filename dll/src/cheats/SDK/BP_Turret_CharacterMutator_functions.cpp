@@ -323,6 +323,20 @@ void UBP_Turret_CharacterMutator_C::OnNotifyEnd_6E4888C1479C106A692EA5A4B1420A75
 }
 
 
+// Function BP_Turret_CharacterMutator.BP_Turret_CharacterMutator_C.OnPlayerFailsafeTeleported
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Turret_CharacterMutator_C::OnPlayerFailsafeTeleported()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Turret_CharacterMutator_C", "OnPlayerFailsafeTeleported");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_Turret_CharacterMutator.BP_Turret_CharacterMutator_C.OnProjectileSpawned_2C6A38C944FA0C6C42FA55A16E3F0EA0
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

@@ -138,7 +138,7 @@ void UBP_LightningPassive4_CharacterMutator_C::OnFinished_1A91D81B4F78AAD5534A5B
 
 
 // Function BP_LightningPassive4_CharacterMutator.BP_LightningPassive4_CharacterMutator_C.PlayFX
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   Radius                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

@@ -19,7 +19,7 @@ namespace SDK::Params
 {
 
 // Function BP_BloodPassive3_CharacterMutator.BP_BloodPassive3_CharacterMutator_C.ExecuteUbergraph_BP_BloodPassive3_CharacterMutator
-// 0x0670 (0x0670 - 0x0000)
+// 0x07A0 (0x07A0 - 0x0000)
 struct BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator final
 {
 public:
@@ -41,141 +41,72 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ARPawnBase*                             K2Node_CustomEvent_Pawn;                           // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x00C8(0x00C0)()
-	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue;      // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_191[0x3];                                      // 0x0191(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RollProcChance_OutProcChance;             // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RollProcChance_ReturnValue;               // 0x019C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19D[0x3];                                      // 0x019D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_1; // 0x01A0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_2; // 0x01B0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_2;     // 0x01C0(0x0030)(ContainsInstancedReference)
-	struct FVector                                CallFunc_Vector_Up_ReturnValue;                    // 0x01F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0208(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0238(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_3;     // 0x0250(0x0030)(ContainsInstancedReference)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_281[0x3];                                      // 0x0281(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0284(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_294[0x4];                                      // 0x0294(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_2;                 // 0x0298(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A1[0x7];                                      // 0x02A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x02A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x02B8(0x0010)(ConstParm, ReferenceParm)
-	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array_1;                          // 0x02C8(0x0010)(ConstParm, ReferenceParm)
-	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x02D8(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x03D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x03DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x03DB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x03DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x03E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x03E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0400(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0418(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0430(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0448(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0450(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0458(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0470(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x0474(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0478(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47C[0x4];                                      // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0480(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0498(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x04B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_CustomEvent_NewLocation;                    // 0x04C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ARAreaEffect*                           K2Node_CustomEvent_Target;                         // 0x04E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E8[0x8];                                      // 0x04E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x04F0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URGTask_SpawnAreaEffect*                CallFunc_SpawnAreaEffect_ReturnValue;              // 0x0550(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0558(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x0658(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0659(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_65A[0x2];                                      // 0x065A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SpawnAreaEffect_InLifetime_ImplicitCast;  // 0x065C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x0660(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x00C8(0x01F0)()
+	int32                                         CallFunc_GetMutatorRank_ReturnValue;               // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetMutatorValueByArrayIndex_ReturnValue;  // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DamageSourceMaskHasFlag_ReturnValue;      // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C1[0x3];                                      // 0x02C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x02C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RollProcChance_OutProcChance;             // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RollProcChance_ReturnValue;               // 0x02CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2CD[0x3];                                      // 0x02CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_1; // 0x02D0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class ARPawnBase* Pawn, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_2; // 0x02E0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_2;     // 0x02F0(0x0030)(ContainsInstancedReference)
+	struct FVector                                CallFunc_Vector_Up_ReturnValue;                    // 0x0320(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0338(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0350(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0368(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_3;     // 0x0380(0x0030)(ContainsInstancedReference)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x03B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B1[0x3];                                      // 0x03B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x03B4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C4[0x4];                                      // 0x03C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPawnBase*                             K2Node_DynamicCast_AsRPawn_Base_2;                 // 0x03C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x03D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D1[0x7];                                      // 0x03D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x03D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E1[0x7];                                      // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x03E8(0x0010)(ConstParm, ReferenceParm)
+	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array_1;                          // 0x03F8(0x0010)(ConstParm, ReferenceParm)
+	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x0408(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0508(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0509(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x050A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x050B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x050C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0510(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_514[0x4];                                      // 0x0514(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0518(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0530(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0548(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0560(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0578(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0580(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0588(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0590(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0598(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x05A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x05A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x05A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5AC[0x4];                                      // 0x05AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x05B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x05C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x05E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                K2Node_CustomEvent_NewLocation;                    // 0x05F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ARAreaEffect*                           K2Node_CustomEvent_Target;                         // 0x0610(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_618[0x8];                                      // 0x0618(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0620(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URGTask_SpawnAreaEffect*                CallFunc_SpawnAreaEffect_ReturnValue;              // 0x0680(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0688(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x0788(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0789(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_78A[0x2];                                      // 0x078A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SpawnAreaEffect_InLifetime_ImplicitCast;  // 0x078C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x0790(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator) == 0x000010, "Wrong alignment on BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator");
-static_assert(sizeof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator) == 0x000670, "Wrong size on BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_MakeLiteralDouble_ReturnValue) == 0x000008, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_MakeLiteralDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_CustomEvent_GroundEffect) == 0x000020, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_CustomEvent_GroundEffect' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, Temp_object_Variable) == 0x000028, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_DynamicCast_AsBP_Blood_Passive_3_Area_Effect) == 0x000030, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_DynamicCast_AsBP_Blood_Passive_3_Area_Effect' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000040, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000070, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base) == 0x0000A0, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x0000A8, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_1) == 0x0000B0, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_DynamicCast_bSuccess_2) == 0x0000B8, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_CustomEvent_Pawn) == 0x0000C0, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_CustomEvent_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_CustomEvent_DamageEventData) == 0x0000C8, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_CustomEvent_DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_GetMutatorRank_ReturnValue) == 0x000188, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_GetMutatorValueByArrayIndex_ReturnValue) == 0x00018C, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_GetMutatorValueByArrayIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_DamageSourceMaskHasFlag_ReturnValue) == 0x000190, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_DamageSourceMaskHasFlag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_FTrunc_ReturnValue) == 0x000194, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_RollProcChance_OutProcChance) == 0x000198, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_RollProcChance_OutProcChance' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_RollProcChance_ReturnValue) == 0x00019C, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_RollProcChance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_1) == 0x0001A0, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_2) == 0x0001B0, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_2) == 0x0001C0, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_Vector_Up_ReturnValue) == 0x0001F0, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_Vector_Up_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000208, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000220, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_Add_VectorVector_ReturnValue) == 0x000238, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_3) == 0x000250, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_IsValid_ReturnValue) == 0x000280, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_CreateDelegate_OutputDelegate_3) == 0x000284, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_DynamicCast_AsRPawn_Base_2) == 0x000298, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_DynamicCast_AsRPawn_Base_2' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_DynamicCast_bSuccess_3) == 0x0002A0, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x0002A8, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_DynamicCast_bSuccess_4) == 0x0002B0, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_MakeArray_Array) == 0x0002B8, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_MakeArray_Array_1) == 0x0002C8, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_LineTraceSingleForObjects_OutHit) == 0x0002D8, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_LineTraceSingleForObjects_OutHit' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x0003D8, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_IsValid_ReturnValue_1) == 0x0003D9, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_bBlockingHit) == 0x0003DA, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_bInitialOverlap) == 0x0003DB, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_Time) == 0x0003DC, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_Distance) == 0x0003E0, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_Location) == 0x0003E8, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_ImpactPoint) == 0x000400, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_Normal) == 0x000418, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_ImpactNormal) == 0x000430, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_PhysMat) == 0x000448, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_HitActor) == 0x000450, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_HitComponent) == 0x000458, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_HitBoneName) == 0x000460, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_BoneName) == 0x000468, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_HitItem) == 0x000470, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_ElementIndex) == 0x000474, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_FaceIndex) == 0x000478, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_TraceStart) == 0x000480, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_BreakHitResult_TraceEnd) == 0x000498, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_Add_VectorVector_ReturnValue_1) == 0x0004B0, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_CustomEvent_NewLocation) == 0x0004C8, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_CustomEvent_NewLocation' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, K2Node_CustomEvent_Target) == 0x0004E0, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::K2Node_CustomEvent_Target' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_MakeTransform_ReturnValue) == 0x0004F0, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_SpawnAreaEffect_ReturnValue) == 0x000550, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_SpawnAreaEffect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x000558, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_K2_SetActorLocation_ReturnValue) == 0x000658, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_IsValid_ReturnValue_2) == 0x000659, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_SpawnAreaEffect_InLifetime_ImplicitCast) == 0x00065C, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_SpawnAreaEffect_InLifetime_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator, CallFunc_FTrunc_A_ImplicitCast) == 0x000660, "Member 'BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator::CallFunc_FTrunc_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BloodPassive3_CharacterMutator_C_ExecuteUbergraph_BP_BloodPassive3_CharacterMutator;
 
 // Function BP_BloodPassive3_CharacterMutator.BP_BloodPassive3_CharacterMutator_C.GetMutatorDescription
 // 0x0028 (0x0028 - 0x0000)
@@ -187,24 +118,17 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0018(0x0010)()
 };
-static_assert(alignof(BP_BloodPassive3_CharacterMutator_C_GetMutatorDescription) == 0x000008, "Wrong alignment on BP_BloodPassive3_CharacterMutator_C_GetMutatorDescription");
-static_assert(sizeof(BP_BloodPassive3_CharacterMutator_C_GetMutatorDescription) == 0x000028, "Wrong size on BP_BloodPassive3_CharacterMutator_C_GetMutatorDescription");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_GetMutatorDescription, ReturnValue) == 0x000000, "Member 'BP_BloodPassive3_CharacterMutator_C_GetMutatorDescription::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_GetMutatorDescription, CallFunc_GetMutatorRank_ReturnValue) == 0x000010, "Member 'BP_BloodPassive3_CharacterMutator_C_GetMutatorDescription::CallFunc_GetMutatorRank_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_GetMutatorDescription, CallFunc_ParseMutatorDescription_ReturnValue) == 0x000018, "Member 'BP_BloodPassive3_CharacterMutator_C_GetMutatorDescription::CallFunc_ParseMutatorDescription_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BloodPassive3_CharacterMutator_C_GetMutatorDescription;
 
 // Function BP_BloodPassive3_CharacterMutator.BP_BloodPassive3_CharacterMutator_C.OnDealtDamage_Event
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_BloodPassive3_CharacterMutator_C_OnDealtDamage_Event final
 {
 public:
 	class ARPawnBase*                             Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_BloodPassive3_CharacterMutator_C_OnDealtDamage_Event) == 0x000008, "Wrong alignment on BP_BloodPassive3_CharacterMutator_C_OnDealtDamage_Event");
-static_assert(sizeof(BP_BloodPassive3_CharacterMutator_C_OnDealtDamage_Event) == 0x0000C8, "Wrong size on BP_BloodPassive3_CharacterMutator_C_OnDealtDamage_Event");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_OnDealtDamage_Event, Pawn) == 0x000000, "Member 'BP_BloodPassive3_CharacterMutator_C_OnDealtDamage_Event::Pawn' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_OnDealtDamage_Event, DamageEventData) == 0x000008, "Member 'BP_BloodPassive3_CharacterMutator_C_OnDealtDamage_Event::DamageEventData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BloodPassive3_CharacterMutator_C_OnDealtDamage_Event;
 
 // Function BP_BloodPassive3_CharacterMutator.BP_BloodPassive3_CharacterMutator_C.OnGroundEffectSpawned_AEDBD1954993252F170EE290C7D18AD5
 // 0x0008 (0x0008 - 0x0000)
@@ -213,9 +137,7 @@ struct BP_BloodPassive3_CharacterMutator_C_OnGroundEffectSpawned_AEDBD1954993252
 public:
 	class ARAreaEffect*                           GroundEffect;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BloodPassive3_CharacterMutator_C_OnGroundEffectSpawned_AEDBD1954993252F170EE290C7D18AD5) == 0x000008, "Wrong alignment on BP_BloodPassive3_CharacterMutator_C_OnGroundEffectSpawned_AEDBD1954993252F170EE290C7D18AD5");
-static_assert(sizeof(BP_BloodPassive3_CharacterMutator_C_OnGroundEffectSpawned_AEDBD1954993252F170EE290C7D18AD5) == 0x000008, "Wrong size on BP_BloodPassive3_CharacterMutator_C_OnGroundEffectSpawned_AEDBD1954993252F170EE290C7D18AD5");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_OnGroundEffectSpawned_AEDBD1954993252F170EE290C7D18AD5, GroundEffect) == 0x000000, "Member 'BP_BloodPassive3_CharacterMutator_C_OnGroundEffectSpawned_AEDBD1954993252F170EE290C7D18AD5::GroundEffect' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BloodPassive3_CharacterMutator_C_OnGroundEffectSpawned_AEDBD1954993252F170EE290C7D18AD5;
 
 // Function BP_BloodPassive3_CharacterMutator.BP_BloodPassive3_CharacterMutator_C.UpdateAreaEffect
 // 0x0020 (0x0020 - 0x0000)
@@ -225,10 +147,7 @@ public:
 	struct FVector                                NewLocation;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ARAreaEffect*                           Target;                                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BloodPassive3_CharacterMutator_C_UpdateAreaEffect) == 0x000008, "Wrong alignment on BP_BloodPassive3_CharacterMutator_C_UpdateAreaEffect");
-static_assert(sizeof(BP_BloodPassive3_CharacterMutator_C_UpdateAreaEffect) == 0x000020, "Wrong size on BP_BloodPassive3_CharacterMutator_C_UpdateAreaEffect");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_UpdateAreaEffect, NewLocation) == 0x000000, "Member 'BP_BloodPassive3_CharacterMutator_C_UpdateAreaEffect::NewLocation' has a wrong offset!");
-static_assert(offsetof(BP_BloodPassive3_CharacterMutator_C_UpdateAreaEffect, Target) == 0x000018, "Member 'BP_BloodPassive3_CharacterMutator_C_UpdateAreaEffect::Target' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BloodPassive3_CharacterMutator_C_UpdateAreaEffect;
 
 }
 

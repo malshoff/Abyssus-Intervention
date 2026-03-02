@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "GameplayTags_structs.hpp"
 #include "RGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -32,14 +32,7 @@ public:
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             SweepResult;                                       // 0x0020(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000120, "Wrong size on BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherBodyIndex) == 0x000018, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherBodyIndex' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, bFromSweep) == 0x00001C, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::bFromSweep' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, SweepResult) == 0x000020, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::SweepResult' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature;
 
 // Function BP_RoomObjectiveObject_ChargingPlate.BP_RoomObjectiveObject_ChargingPlate_C.BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
 // 0x0020 (0x0020 - 0x0000)
@@ -51,115 +44,71 @@ public:
 	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature) == 0x000020, "Wrong size on BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherBodyIndex) == 0x000018, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherBodyIndex' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargingPlate_C_BndEvt__BP_RoomProgressionObject_ChargingPlate_ProximityBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature;
 
 // Function BP_RoomObjectiveObject_ChargingPlate.BP_RoomObjectiveObject_ChargingPlate_C.ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate
-// 0x0220 (0x0220 - 0x0000)
+// 0x0240 (0x0240 - 0x0000)
 struct BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsObjectCompleted_ReturnValue;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPlayerPawn*                           K2Node_CustomEvent_RPlayerPawn_1;                  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ARPlayerPawn*                           K2Node_CustomEvent_RPlayerPawn;                    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bNewVisibility;                 // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_Condition;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPlaying_ReturnValue;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetTriggerParameter_self_CastInput; // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetTriggerParameter_self_CastInput_1; // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue_1;             // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_62[0x2];                                       // 0x0062(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class URGObjectiveScript* ObjectiveScript)> K2Node_CreateDelegate_OutputDelegate; // 0x0068(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent_1;  // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor_1;           // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp_1;            // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex_1;       // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x00A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bFromSweep;             // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x00B8(0x0100)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn_1;               // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D1[0x7];                                      // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARObjectiveManager*                     CallFunc_GetObjectiveManager_ReturnValue;          // 0x01D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IRRoomObjectiveInterface> K2Node_DynamicCast_AsRRoom_Objective_Interface; // 0x01E0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsObjectCompleted_ReturnValue_1;          // 0x01F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F3[0x5];                                      // 0x01F3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class URGObjectiveScript*                     K2Node_CustomEvent_ObjectiveScript;                // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FGameplayTag& ObjectiveTag, bool bCompleted)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0200(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue;       // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_211[0x3];                                      // 0x0211(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           K2Node_CustomEvent_ObjectiveTag;                   // 0x0214(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bCompleted;                     // 0x021C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue_1;     // 0x021D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FGameplayTag& ObjectiveTag, bool bCompleted)> K2Node_CreateDelegate_OutputDelegate; // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent_1;  // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor_1;           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp_1;            // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex_1;       // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bFromSweep;             // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0038(0x0100)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x0138(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0148(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn;                 // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPlayerPawn*                           K2Node_DynamicCast_AsRPlayer_Pawn_1;               // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPlayerPawn*                           K2Node_CustomEvent_RPlayerPawn_1;                  // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerPawn*                           K2Node_CustomEvent_RPlayerPawn;                    // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x018A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue_1;             // 0x018B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bNewVisibility;                 // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0198(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_Condition;                      // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IRRoomObjectiveInterface> K2Node_DynamicCast_AsRRoom_Objective_Interface; // 0x01B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARObjectiveManager*                     CallFunc_GetObjectiveManager_ReturnValue;          // 0x01D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsObjectCompleted_ReturnValue;            // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1DA[0x6];                                      // 0x01DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class URGObjectiveScript*                     K2Node_CustomEvent_ObjectiveScript;                // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue;       // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E9[0x3];                                      // 0x01E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           K2Node_CustomEvent_ObjectiveTag;                   // 0x01EC(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bCompleted;                     // 0x01F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue_1;     // 0x01F5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F6[0x2];                                      // 0x01F6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class URGObjectiveScript* ObjectiveScript)> K2Node_CreateDelegate_OutputDelegate_1; // 0x01F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsObjectCompleted_ReturnValue_1;          // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0209(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_20A[0x6];                                      // 0x020A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetTriggerParameter_self_CastInput; // 0x0210(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlaying_ReturnValue;                    // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IAudioParameterControllerInterface> CallFunc_SetTriggerParameter_self_CastInput_1; // 0x0228(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsObjectCompleted_ReturnValue_2;          // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate) == 0x000220, "Wrong size on BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, EntryPoint) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_IsObjectCompleted_ReturnValue) == 0x000004, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_IsObjectCompleted_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_Not_PreBool_ReturnValue) == 0x000005, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_CustomEvent_RPlayerPawn_1) == 0x000008, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_CustomEvent_RPlayerPawn_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_CustomEvent_RPlayerPawn) == 0x000010, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_CustomEvent_RPlayerPawn' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_Array_RemoveItem_ReturnValue) == 0x000018, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_CustomEvent_bNewVisibility) == 0x000019, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_CustomEvent_bNewVisibility' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_Array_Contains_ReturnValue) == 0x00001A, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000020, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_CustomEvent_Condition) == 0x000038, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_CustomEvent_Condition' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_IsPlaying_ReturnValue) == 0x000039, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_IsPlaying_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_SetTriggerParameter_self_CastInput) == 0x000040, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_SetTriggerParameter_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_SetTriggerParameter_self_CastInput_1) == 0x000050, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_SetTriggerParameter_self_CastInput_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_Array_Contains_ReturnValue_1) == 0x000060, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_Array_Contains_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_Not_PreBool_ReturnValue_1) == 0x000061, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_Array_AddUnique_ReturnValue) == 0x000064, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_CreateDelegate_OutputDelegate) == 0x000068, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_ComponentBoundEvent_OverlappedComponent_1) == 0x000078, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_ComponentBoundEvent_OverlappedComponent_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_ComponentBoundEvent_OtherActor_1) == 0x000080, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_ComponentBoundEvent_OtherActor_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_ComponentBoundEvent_OtherComp_1) == 0x000088, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_ComponentBoundEvent_OtherComp_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_ComponentBoundEvent_OtherBodyIndex_1) == 0x000090, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_ComponentBoundEvent_OtherBodyIndex_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_ComponentBoundEvent_OverlappedComponent) == 0x000098, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_ComponentBoundEvent_OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_ComponentBoundEvent_OtherActor) == 0x0000A0, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_ComponentBoundEvent_OtherActor' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_ComponentBoundEvent_OtherComp) == 0x0000A8, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_ComponentBoundEvent_OtherComp' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_ComponentBoundEvent_OtherBodyIndex) == 0x0000B0, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_ComponentBoundEvent_OtherBodyIndex' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_ComponentBoundEvent_bFromSweep) == 0x0000B4, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_ComponentBoundEvent_bFromSweep' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_ComponentBoundEvent_SweepResult) == 0x0000B8, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_ComponentBoundEvent_SweepResult' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x0001B8, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_DynamicCast_bSuccess) == 0x0001C0, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_DynamicCast_AsRPlayer_Pawn_1) == 0x0001C8, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_DynamicCast_AsRPlayer_Pawn_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_DynamicCast_bSuccess_1) == 0x0001D0, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_GetObjectiveManager_ReturnValue) == 0x0001D8, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_GetObjectiveManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_DynamicCast_AsRRoom_Objective_Interface) == 0x0001E0, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_DynamicCast_AsRRoom_Objective_Interface' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_DynamicCast_bSuccess_2) == 0x0001F0, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_IsValid_ReturnValue) == 0x0001F1, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_IsObjectCompleted_ReturnValue_1) == 0x0001F2, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_IsObjectCompleted_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_CustomEvent_ObjectiveScript) == 0x0001F8, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_CustomEvent_ObjectiveScript' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_CreateDelegate_OutputDelegate_1) == 0x000200, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x000210, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_CustomEvent_ObjectiveTag) == 0x000214, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_CustomEvent_ObjectiveTag' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, K2Node_CustomEvent_bCompleted) == 0x00021C, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::K2Node_CustomEvent_bCompleted' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate, CallFunc_EqualEqual_GameplayTag_ReturnValue_1) == 0x00021D, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate::CallFunc_EqualEqual_GameplayTag_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargingPlate_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargingPlate;
 
 // Function BP_RoomObjectiveObject_ChargingPlate.BP_RoomObjectiveObject_ChargingPlate_C.IsEmpty
 // 0x0002 (0x0002 - 0x0000)
@@ -169,10 +118,7 @@ public:
 	bool                                          IsEmpty_0;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_IsEmpty_ReturnValue;                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargingPlate_C_IsEmpty) == 0x000001, "Wrong alignment on BP_RoomObjectiveObject_ChargingPlate_C_IsEmpty");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargingPlate_C_IsEmpty) == 0x000002, "Wrong size on BP_RoomObjectiveObject_ChargingPlate_C_IsEmpty");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_IsEmpty, IsEmpty_0) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_IsEmpty::IsEmpty_0' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_IsEmpty, CallFunc_Array_IsEmpty_ReturnValue) == 0x000001, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_IsEmpty::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargingPlate_C_IsEmpty;
 
 // Function BP_RoomObjectiveObject_ChargingPlate.BP_RoomObjectiveObject_ChargingPlate_C.OnComponentBeginOverlapServer
 // 0x0008 (0x0008 - 0x0000)
@@ -181,9 +127,7 @@ struct BP_RoomObjectiveObject_ChargingPlate_C_OnComponentBeginOverlapServer fina
 public:
 	class ARPlayerPawn*                           RPlayerPawn;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargingPlate_C_OnComponentBeginOverlapServer) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargingPlate_C_OnComponentBeginOverlapServer");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargingPlate_C_OnComponentBeginOverlapServer) == 0x000008, "Wrong size on BP_RoomObjectiveObject_ChargingPlate_C_OnComponentBeginOverlapServer");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_OnComponentBeginOverlapServer, RPlayerPawn) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_OnComponentBeginOverlapServer::RPlayerPawn' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargingPlate_C_OnComponentBeginOverlapServer;
 
 // Function BP_RoomObjectiveObject_ChargingPlate.BP_RoomObjectiveObject_ChargingPlate_C.OnComponentEndOverlapServer
 // 0x0008 (0x0008 - 0x0000)
@@ -192,9 +136,7 @@ struct BP_RoomObjectiveObject_ChargingPlate_C_OnComponentEndOverlapServer final
 public:
 	class ARPlayerPawn*                           RPlayerPawn;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargingPlate_C_OnComponentEndOverlapServer) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargingPlate_C_OnComponentEndOverlapServer");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargingPlate_C_OnComponentEndOverlapServer) == 0x000008, "Wrong size on BP_RoomObjectiveObject_ChargingPlate_C_OnComponentEndOverlapServer");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_OnComponentEndOverlapServer, RPlayerPawn) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_OnComponentEndOverlapServer::RPlayerPawn' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargingPlate_C_OnComponentEndOverlapServer;
 
 // Function BP_RoomObjectiveObject_ChargingPlate.BP_RoomObjectiveObject_ChargingPlate_C.OnObjectiveEnded_Event
 // 0x000C (0x000C - 0x0000)
@@ -204,10 +146,7 @@ public:
 	struct FGameplayTag                           ObjectiveTag;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 	bool                                          bCompleted;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveEnded_Event) == 0x000004, "Wrong alignment on BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveEnded_Event");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveEnded_Event) == 0x00000C, "Wrong size on BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveEnded_Event");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveEnded_Event, ObjectiveTag) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveEnded_Event::ObjectiveTag' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveEnded_Event, bCompleted) == 0x000008, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveEnded_Event::bCompleted' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveEnded_Event;
 
 // Function BP_RoomObjectiveObject_ChargingPlate.BP_RoomObjectiveObject_ChargingPlate_C.OnObjectiveStarted_Event
 // 0x0008 (0x0008 - 0x0000)
@@ -216,9 +155,7 @@ struct BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveStarted_Event final
 public:
 	class URGObjectiveScript*                     ObjectiveScript;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveStarted_Event) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveStarted_Event");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveStarted_Event) == 0x000008, "Wrong size on BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveStarted_Event");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveStarted_Event, ObjectiveScript) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveStarted_Event::ObjectiveScript' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargingPlate_C_OnObjectiveStarted_Event;
 
 // Function BP_RoomObjectiveObject_ChargingPlate.BP_RoomObjectiveObject_ChargingPlate_C.ToggleActiveFX
 // 0x0001 (0x0001 - 0x0000)
@@ -227,9 +164,7 @@ struct BP_RoomObjectiveObject_ChargingPlate_C_ToggleActiveFX final
 public:
 	bool                                          bNewVisibility;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargingPlate_C_ToggleActiveFX) == 0x000001, "Wrong alignment on BP_RoomObjectiveObject_ChargingPlate_C_ToggleActiveFX");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargingPlate_C_ToggleActiveFX) == 0x000001, "Wrong size on BP_RoomObjectiveObject_ChargingPlate_C_ToggleActiveFX");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ToggleActiveFX, bNewVisibility) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ToggleActiveFX::bNewVisibility' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargingPlate_C_ToggleActiveFX;
 
 // Function BP_RoomObjectiveObject_ChargingPlate.BP_RoomObjectiveObject_ChargingPlate_C.ToggleChargeFX
 // 0x0001 (0x0001 - 0x0000)
@@ -238,9 +173,7 @@ struct BP_RoomObjectiveObject_ChargingPlate_C_ToggleChargeFX final
 public:
 	bool                                          Condition;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargingPlate_C_ToggleChargeFX) == 0x000001, "Wrong alignment on BP_RoomObjectiveObject_ChargingPlate_C_ToggleChargeFX");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargingPlate_C_ToggleChargeFX) == 0x000001, "Wrong size on BP_RoomObjectiveObject_ChargingPlate_C_ToggleChargeFX");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ToggleChargeFX, Condition) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ToggleChargeFX::Condition' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargingPlate_C_ToggleChargeFX;
 
 // Function BP_RoomObjectiveObject_ChargingPlate.BP_RoomObjectiveObject_ChargingPlate_C.GetRadarIconColor
 // 0x0010 (0x0010 - 0x0000)
@@ -249,9 +182,7 @@ struct BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconColor final
 public:
 	struct FLinearColor                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconColor) == 0x000004, "Wrong alignment on BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconColor");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconColor) == 0x000010, "Wrong size on BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconColor");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconColor, ReturnValue) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconColor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconColor;
 
 // Function BP_RoomObjectiveObject_ChargingPlate.BP_RoomObjectiveObject_ChargingPlate_C.GetRadarIconSize
 // 0x0010 (0x0010 - 0x0000)
@@ -260,9 +191,7 @@ struct BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconSize final
 public:
 	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconSize) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconSize");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconSize) == 0x000010, "Wrong size on BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconSize");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconSize, ReturnValue) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconSize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargingPlate_C_GetRadarIconSize;
 
 // Function BP_RoomObjectiveObject_ChargingPlate.BP_RoomObjectiveObject_ChargingPlate_C.GetRadarObjectIcon
 // 0x0008 (0x0008 - 0x0000)
@@ -271,12 +200,10 @@ struct BP_RoomObjectiveObject_ChargingPlate_C_GetRadarObjectIcon final
 public:
 	class USlateBrushAsset*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargingPlate_C_GetRadarObjectIcon) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargingPlate_C_GetRadarObjectIcon");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargingPlate_C_GetRadarObjectIcon) == 0x000008, "Wrong size on BP_RoomObjectiveObject_ChargingPlate_C_GetRadarObjectIcon");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_GetRadarObjectIcon, ReturnValue) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_GetRadarObjectIcon::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargingPlate_C_GetRadarObjectIcon;
 
 // Function BP_RoomObjectiveObject_ChargingPlate.BP_RoomObjectiveObject_ChargingPlate_C.ShouldShowOnRadar
-// 0x0200 (0x0200 - 0x0000)
+// 0x0210 (0x0210 - 0x0000)
 struct BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar final
 {
 public:
@@ -290,23 +217,11 @@ public:
 	TArray<struct FLevelGenerationSettings>       CallFunc_GetCurrentLevelSettings_ReturnValue;      // 0x0020(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_34[0xC];                                       // 0x0034(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLevelGenerationSettings               CallFunc_Array_Get_Item;                           // 0x0040(0x01B0)()
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsObjectInSameRoomAsPlayer_ReturnValue;   // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLevelGenerationSettings               CallFunc_Array_Get_Item;                           // 0x0040(0x01C0)()
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsObjectInSameRoomAsPlayer_ReturnValue;   // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar) == 0x000010, "Wrong alignment on BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar) == 0x000200, "Wrong size on BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar, ReturnValue) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000010, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar, CallFunc_GetLevelManager_ReturnValue) == 0x000018, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar::CallFunc_GetLevelManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar, CallFunc_GetCurrentLevelSettings_ReturnValue) == 0x000020, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar::CallFunc_GetCurrentLevelSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar, CallFunc_Array_Get_Item) == 0x000040, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar, CallFunc_Less_IntInt_ReturnValue) == 0x0001F0, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar, CallFunc_IsObjectInSameRoomAsPlayer_ReturnValue) == 0x0001F1, "Member 'BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar::CallFunc_IsObjectInSameRoomAsPlayer_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargingPlate_C_ShouldShowOnRadar;
 
 }
 

@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BloodPassive8_StatusEffect.BP_BloodPassive8_StatusEffect_C
-// 0x0038 (0x0510 - 0x04D8)
+// 0x0038 (0x0518 - 0x04E0)
 class UBP_BloodPassive8_StatusEffect_C final : public URStatusEffectGScript
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGScriptActorInfo                      GScript_Actor_Info;                                // 0x04E0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGScriptActorInfo                      GScript_Actor_Info;                                // 0x04E8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void AddDamageMultiplier();
@@ -37,17 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BloodPassive8_StatusEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_BloodPassive8_StatusEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BloodPassive8_StatusEffect_C")
 	}
 	static class UBP_BloodPassive8_StatusEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_BloodPassive8_StatusEffect_C>();
 	}
 };
-static_assert(alignof(UBP_BloodPassive8_StatusEffect_C) == 0x000008, "Wrong alignment on UBP_BloodPassive8_StatusEffect_C");
-static_assert(sizeof(UBP_BloodPassive8_StatusEffect_C) == 0x000510, "Wrong size on UBP_BloodPassive8_StatusEffect_C");
-static_assert(offsetof(UBP_BloodPassive8_StatusEffect_C, UberGraphFrame) == 0x0004D8, "Member 'UBP_BloodPassive8_StatusEffect_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_BloodPassive8_StatusEffect_C, GScript_Actor_Info) == 0x0004E0, "Member 'UBP_BloodPassive8_StatusEffect_C::GScript_Actor_Info' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_BloodPassive8_StatusEffect_C;
 
 }
 

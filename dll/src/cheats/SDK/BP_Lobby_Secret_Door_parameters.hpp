@@ -24,9 +24,7 @@ struct BP_Lobby_Secret_Door_C_BndEvt__BP_Lobby_Secret_Door_DMActorProximityBox_K
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Lobby_Secret_Door_C_BndEvt__BP_Lobby_Secret_Door_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentEnter__DelegateSignature) == 0x000008, "Wrong alignment on BP_Lobby_Secret_Door_C_BndEvt__BP_Lobby_Secret_Door_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentEnter__DelegateSignature");
-static_assert(sizeof(BP_Lobby_Secret_Door_C_BndEvt__BP_Lobby_Secret_Door_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentEnter__DelegateSignature) == 0x000008, "Wrong size on BP_Lobby_Secret_Door_C_BndEvt__BP_Lobby_Secret_Door_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentEnter__DelegateSignature");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_BndEvt__BP_Lobby_Secret_Door_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentEnter__DelegateSignature, Actor) == 0x000000, "Member 'BP_Lobby_Secret_Door_C_BndEvt__BP_Lobby_Secret_Door_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentEnter__DelegateSignature::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Lobby_Secret_Door_C_BndEvt__BP_Lobby_Secret_Door_DMActorProximityBox_K2Node_ComponentBoundEvent_1_OnOverlapProximityBoxComponentEnter__DelegateSignature;
 
 // Function BP_Lobby_Secret_Door.BP_Lobby_Secret_Door_C.ExecuteUbergraph_BP_Lobby_Secret_Door
 // 0x0180 (0x0180 - 0x0000)
@@ -58,26 +56,7 @@ public:
 	class AActor*                                 K2Node_ComponentBoundEvent_Actor;                  // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetPlayRate_NewRate_ImplicitCast;         // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door) == 0x000008, "Wrong alignment on BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door");
-static_assert(sizeof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door) == 0x000180, "Wrong size on BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, EntryPoint) == 0x000000, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, Temp_bool_IsClosed_Variable) == 0x00000C, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, Temp_bool_Has_Been_Initd_Variable) == 0x00000D, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, Temp_int_Variable) == 0x000010, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, CallFunc_VLerp_ReturnValue) == 0x000028, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::CallFunc_VLerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, CallFunc_Add_IntInt_ReturnValue_1) == 0x000040, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000048, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, CallFunc_GetAllActorsOfClass_OutActors) == 0x000148, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000158, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, CallFunc_Array_Get_Item) == 0x000160, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, CallFunc_Array_Length_ReturnValue) == 0x000168, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, CallFunc_Less_IntInt_ReturnValue) == 0x00016C, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, K2Node_ComponentBoundEvent_Actor) == 0x000170, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::K2Node_ComponentBoundEvent_Actor' has a wrong offset!");
-static_assert(offsetof(BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door, CallFunc_SetPlayRate_NewRate_ImplicitCast) == 0x000178, "Member 'BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door::CallFunc_SetPlayRate_NewRate_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Lobby_Secret_Door_C_ExecuteUbergraph_BP_Lobby_Secret_Door;
 
 }
 

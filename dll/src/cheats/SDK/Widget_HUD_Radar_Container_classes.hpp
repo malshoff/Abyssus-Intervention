@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -17,31 +18,41 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_HUD_Radar_Container.Widget_HUD_Radar_Container_C
-// 0x0020 (0x02F0 - 0x02D0)
+// 0x0048 (0x0388 - 0x0340)
 class UWidget_HUD_Radar_Container_C final : public UUserWidget
 {
 public:
-	class UImage*                                 Background;                                        // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 RadarFrame;                                        // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URetainerBox*                           RetainerBox_0;                                     // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_Radar_C*                        Widget_Radar;                                      // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_Radar_C*                        Widget_Radar;                                      // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_GameTimer_C*                    Widget_GameTimer;                                  // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text_Depth;                                        // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URetainerBox*                           RetainerBox_0;                                     // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 RadarFrame;                                        // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BackgroundFrame;                                   // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Background;                                        // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       DepthCanged_Animation;                             // 0x0380(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void ExecuteUbergraph_Widget_HUD_Radar_Container(int32 EntryPoint);
+	void OnInitialized();
+	void OnLevelChanged();
+	void UpdateDepthText();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_HUD_Radar_Container_C">();
+		BP_STATIC_CLASS_IMPL("Widget_HUD_Radar_Container_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_HUD_Radar_Container_C")
 	}
 	static class UWidget_HUD_Radar_Container_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_HUD_Radar_Container_C>();
 	}
 };
-static_assert(alignof(UWidget_HUD_Radar_Container_C) == 0x000008, "Wrong alignment on UWidget_HUD_Radar_Container_C");
-static_assert(sizeof(UWidget_HUD_Radar_Container_C) == 0x0002F0, "Wrong size on UWidget_HUD_Radar_Container_C");
-static_assert(offsetof(UWidget_HUD_Radar_Container_C, Background) == 0x0002D0, "Member 'UWidget_HUD_Radar_Container_C::Background' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_Radar_Container_C, RadarFrame) == 0x0002D8, "Member 'UWidget_HUD_Radar_Container_C::RadarFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_Radar_Container_C, RetainerBox_0) == 0x0002E0, "Member 'UWidget_HUD_Radar_Container_C::RetainerBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_HUD_Radar_Container_C, Widget_Radar) == 0x0002E8, "Member 'UWidget_HUD_Radar_Container_C::Widget_Radar' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_HUD_Radar_Container_C;
 
 }
 

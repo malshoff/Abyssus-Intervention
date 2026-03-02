@@ -23,9 +23,7 @@ struct Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_Slider_277_K2Node_C
 public:
 	float                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_Slider_277_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature) == 0x000004, "Wrong alignment on Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_Slider_277_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature");
-static_assert(sizeof(Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_Slider_277_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature) == 0x000004, "Wrong size on Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_Slider_277_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature");
-static_assert(offsetof(Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_Slider_277_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature, Value) == 0x000000, "Member 'Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_Slider_277_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature::Value' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_Slider_277_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature;
 
 // Function Widget_SettingsSlider.Widget_SettingsSlider_C.BndEvt__Widget_SettingsSlider_W_Button_Left_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -34,9 +32,7 @@ struct Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Left_K2Nod
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Left_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Left_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Left_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Left_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Left_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Left_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Left_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_SettingsSlider.Widget_SettingsSlider_C.BndEvt__Widget_SettingsSlider_W_Button_Right_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -45,9 +41,7 @@ struct Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Right_K2No
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Right_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Right_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Right_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Right_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Right_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Right_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsSlider_C_BndEvt__Widget_SettingsSlider_W_Button_Right_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_SettingsSlider.Widget_SettingsSlider_C.BP_DecreaseSettingValue
 // 0x0010 (0x0010 - 0x0000)
@@ -57,10 +51,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsSlider_C_BP_DecreaseSettingValue) == 0x000008, "Wrong alignment on Widget_SettingsSlider_C_BP_DecreaseSettingValue");
-static_assert(sizeof(Widget_SettingsSlider_C_BP_DecreaseSettingValue) == 0x000010, "Wrong size on Widget_SettingsSlider_C_BP_DecreaseSettingValue");
-static_assert(offsetof(Widget_SettingsSlider_C_BP_DecreaseSettingValue, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000000, "Member 'Widget_SettingsSlider_C_BP_DecreaseSettingValue::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_BP_DecreaseSettingValue, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000008, "Member 'Widget_SettingsSlider_C_BP_DecreaseSettingValue::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsSlider_C_BP_DecreaseSettingValue;
 
 // Function Widget_SettingsSlider.Widget_SettingsSlider_C.BP_IncreaseSettingValue
 // 0x0008 (0x0008 - 0x0000)
@@ -69,9 +60,7 @@ struct Widget_SettingsSlider_C_BP_IncreaseSettingValue final
 public:
 	double                                        CallFunc_ChangeValueWithNavigation_Delta_ImplicitCast; // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsSlider_C_BP_IncreaseSettingValue) == 0x000008, "Wrong alignment on Widget_SettingsSlider_C_BP_IncreaseSettingValue");
-static_assert(sizeof(Widget_SettingsSlider_C_BP_IncreaseSettingValue) == 0x000008, "Wrong size on Widget_SettingsSlider_C_BP_IncreaseSettingValue");
-static_assert(offsetof(Widget_SettingsSlider_C_BP_IncreaseSettingValue, CallFunc_ChangeValueWithNavigation_Delta_ImplicitCast) == 0x000000, "Member 'Widget_SettingsSlider_C_BP_IncreaseSettingValue::CallFunc_ChangeValueWithNavigation_Delta_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsSlider_C_BP_IncreaseSettingValue;
 
 // Function Widget_SettingsSlider.Widget_SettingsSlider_C.ChangeValueWithNavigation
 // 0x0008 (0x0008 - 0x0000)
@@ -80,9 +69,7 @@ struct Widget_SettingsSlider_C_ChangeValueWithNavigation final
 public:
 	double                                        Delta;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsSlider_C_ChangeValueWithNavigation) == 0x000008, "Wrong alignment on Widget_SettingsSlider_C_ChangeValueWithNavigation");
-static_assert(sizeof(Widget_SettingsSlider_C_ChangeValueWithNavigation) == 0x000008, "Wrong size on Widget_SettingsSlider_C_ChangeValueWithNavigation");
-static_assert(offsetof(Widget_SettingsSlider_C_ChangeValueWithNavigation, Delta) == 0x000000, "Member 'Widget_SettingsSlider_C_ChangeValueWithNavigation::Delta' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsSlider_C_ChangeValueWithNavigation;
 
 // Function Widget_SettingsSlider.Widget_SettingsSlider_C.ExecuteUbergraph_Widget_SettingsSlider
 // 0x00C0 (0x00C0 - 0x0000)
@@ -115,29 +102,7 @@ public:
 	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_SafeDivide_B_ImplicitCast;                // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider) == 0x000008, "Wrong alignment on Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider");
-static_assert(sizeof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider) == 0x0000C0, "Wrong size on Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, EntryPoint) == 0x000000, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, K2Node_Event_IsDesignTime) == 0x000004, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, K2Node_ComponentBoundEvent_Value) == 0x000008, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::K2Node_ComponentBoundEvent_Value' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, CallFunc_BreakVector2D_X) == 0x000010, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, CallFunc_BreakVector2D_Y) == 0x000018, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, CallFunc_GetNormalizedValue_ReturnValue) == 0x000020, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::CallFunc_GetNormalizedValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, K2Node_Event_MyGeometry) == 0x000024, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, K2Node_Event_InDeltaTime) == 0x00005C, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, K2Node_CustomEvent_Delta) == 0x000060, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::K2Node_CustomEvent_Delta' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, CallFunc_GetValue_ReturnValue) == 0x000068, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::CallFunc_GetValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000070, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, CallFunc_SafeDivide_ReturnValue) == 0x000078, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, K2Node_ComponentBoundEvent_Button_1) == 0x000080, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, K2Node_ComponentBoundEvent_Button) == 0x000088, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, K2Node_CallDelegate_Value_ImplicitCast) == 0x000090, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::K2Node_CallDelegate_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, CallFunc_SetMinValue_InValue_ImplicitCast) == 0x000098, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::CallFunc_SetMinValue_InValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, CallFunc_SetMaxValue_InValue_ImplicitCast) == 0x00009C, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::CallFunc_SetMaxValue_InValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, K2Node_CallDelegate_Percent_ImplicitCast) == 0x0000A0, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::K2Node_CallDelegate_Percent_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, CallFunc_SetStepSize_InValue_ImplicitCast) == 0x0000A8, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::CallFunc_SetStepSize_InValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x0000B0, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider, CallFunc_SafeDivide_B_ImplicitCast) == 0x0000B8, "Member 'Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider::CallFunc_SafeDivide_B_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsSlider_C_ExecuteUbergraph_Widget_SettingsSlider;
 
 // Function Widget_SettingsSlider.Widget_SettingsSlider_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -146,9 +111,7 @@ struct Widget_SettingsSlider_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsSlider_C_PreConstruct) == 0x000001, "Wrong alignment on Widget_SettingsSlider_C_PreConstruct");
-static_assert(sizeof(Widget_SettingsSlider_C_PreConstruct) == 0x000001, "Wrong size on Widget_SettingsSlider_C_PreConstruct");
-static_assert(offsetof(Widget_SettingsSlider_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'Widget_SettingsSlider_C_PreConstruct::IsDesignTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsSlider_C_PreConstruct;
 
 // Function Widget_SettingsSlider.Widget_SettingsSlider_C.Set Value Text Value
 // 0x0038 (0x0038 - 0x0000)
@@ -162,13 +125,7 @@ public:
 	double                                        CallFunc_Conv_DoubleToText_Value_ImplicitCast;     // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_DoubleToText_Value_ImplicitCast_1;   // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsSlider_C_Set_Value_Text_Value) == 0x000008, "Wrong alignment on Widget_SettingsSlider_C_Set_Value_Text_Value");
-static_assert(sizeof(Widget_SettingsSlider_C_Set_Value_Text_Value) == 0x000038, "Wrong size on Widget_SettingsSlider_C_Set_Value_Text_Value");
-static_assert(offsetof(Widget_SettingsSlider_C_Set_Value_Text_Value, CallFunc_GetValue_ReturnValue) == 0x000000, "Member 'Widget_SettingsSlider_C_Set_Value_Text_Value::CallFunc_GetValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_Set_Value_Text_Value, CallFunc_Conv_DoubleToText_ReturnValue) == 0x000008, "Member 'Widget_SettingsSlider_C_Set_Value_Text_Value::CallFunc_Conv_DoubleToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_Set_Value_Text_Value, CallFunc_Conv_DoubleToText_ReturnValue_1) == 0x000018, "Member 'Widget_SettingsSlider_C_Set_Value_Text_Value::CallFunc_Conv_DoubleToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_Set_Value_Text_Value, CallFunc_Conv_DoubleToText_Value_ImplicitCast) == 0x000028, "Member 'Widget_SettingsSlider_C_Set_Value_Text_Value::CallFunc_Conv_DoubleToText_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_Set_Value_Text_Value, CallFunc_Conv_DoubleToText_Value_ImplicitCast_1) == 0x000030, "Member 'Widget_SettingsSlider_C_Set_Value_Text_Value::CallFunc_Conv_DoubleToText_Value_ImplicitCast_1' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsSlider_C_Set_Value_Text_Value;
 
 // Function Widget_SettingsSlider.Widget_SettingsSlider_C.SetValue
 // 0x0030 (0x0030 - 0x0000)
@@ -183,14 +140,7 @@ public:
 	double                                        CallFunc_FClamp_Max_ImplicitCast;                  // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetValue_InValue_ImplicitCast;            // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsSlider_C_SetValue) == 0x000008, "Wrong alignment on Widget_SettingsSlider_C_SetValue");
-static_assert(sizeof(Widget_SettingsSlider_C_SetValue) == 0x000030, "Wrong size on Widget_SettingsSlider_C_SetValue");
-static_assert(offsetof(Widget_SettingsSlider_C_SetValue, InValue) == 0x000000, "Member 'Widget_SettingsSlider_C_SetValue::InValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_SetValue, bBroadcastValueChanged_0) == 0x000008, "Member 'Widget_SettingsSlider_C_SetValue::bBroadcastValueChanged_0' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_SetValue, CallFunc_FClamp_ReturnValue) == 0x000010, "Member 'Widget_SettingsSlider_C_SetValue::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_SetValue, CallFunc_FClamp_Min_ImplicitCast) == 0x000018, "Member 'Widget_SettingsSlider_C_SetValue::CallFunc_FClamp_Min_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_SetValue, CallFunc_FClamp_Max_ImplicitCast) == 0x000020, "Member 'Widget_SettingsSlider_C_SetValue::CallFunc_FClamp_Max_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_SetValue, CallFunc_SetValue_InValue_ImplicitCast) == 0x000028, "Member 'Widget_SettingsSlider_C_SetValue::CallFunc_SetValue_InValue_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsSlider_C_SetValue;
 
 // Function Widget_SettingsSlider.Widget_SettingsSlider_C.SetValuePercentage
 // 0x0020 (0x0020 - 0x0000)
@@ -202,12 +152,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetValue_InValue_ImplicitCast;            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsSlider_C_SetValuePercentage) == 0x000008, "Wrong alignment on Widget_SettingsSlider_C_SetValuePercentage");
-static_assert(sizeof(Widget_SettingsSlider_C_SetValuePercentage) == 0x000020, "Wrong size on Widget_SettingsSlider_C_SetValuePercentage");
-static_assert(offsetof(Widget_SettingsSlider_C_SetValuePercentage, InPercentage) == 0x000000, "Member 'Widget_SettingsSlider_C_SetValuePercentage::InPercentage' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_SetValuePercentage, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000008, "Member 'Widget_SettingsSlider_C_SetValuePercentage::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_SetValuePercentage, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x000010, "Member 'Widget_SettingsSlider_C_SetValuePercentage::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_SetValuePercentage, CallFunc_SetValue_InValue_ImplicitCast) == 0x000018, "Member 'Widget_SettingsSlider_C_SetValuePercentage::CallFunc_SetValue_InValue_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsSlider_C_SetValuePercentage;
 
 // Function Widget_SettingsSlider.Widget_SettingsSlider_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -217,10 +162,7 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsSlider_C_Tick) == 0x000004, "Wrong alignment on Widget_SettingsSlider_C_Tick");
-static_assert(sizeof(Widget_SettingsSlider_C_Tick) == 0x00003C, "Wrong size on Widget_SettingsSlider_C_Tick");
-static_assert(offsetof(Widget_SettingsSlider_C_Tick, MyGeometry) == 0x000000, "Member 'Widget_SettingsSlider_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_Tick, InDeltaTime) == 0x000038, "Member 'Widget_SettingsSlider_C_Tick::InDeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsSlider_C_Tick;
 
 // Function Widget_SettingsSlider.Widget_SettingsSlider_C.ToggleHighlight
 // 0x0005 (0x0005 - 0x0000)
@@ -233,13 +175,7 @@ public:
 	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasKeyboardFocus_ReturnValue;             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsSlider_C_ToggleHighlight) == 0x000001, "Wrong alignment on Widget_SettingsSlider_C_ToggleHighlight");
-static_assert(sizeof(Widget_SettingsSlider_C_ToggleHighlight) == 0x000005, "Wrong size on Widget_SettingsSlider_C_ToggleHighlight");
-static_assert(offsetof(Widget_SettingsSlider_C_ToggleHighlight, Temp_bool_IsClosed_Variable) == 0x000000, "Member 'Widget_SettingsSlider_C_ToggleHighlight::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ToggleHighlight, Temp_bool_Has_Been_Initd_Variable) == 0x000001, "Member 'Widget_SettingsSlider_C_ToggleHighlight::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ToggleHighlight, Temp_bool_Has_Been_Initd_Variable_1) == 0x000002, "Member 'Widget_SettingsSlider_C_ToggleHighlight::Temp_bool_Has_Been_Initd_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ToggleHighlight, Temp_bool_IsClosed_Variable_1) == 0x000003, "Member 'Widget_SettingsSlider_C_ToggleHighlight::Temp_bool_IsClosed_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_SettingsSlider_C_ToggleHighlight, CallFunc_HasKeyboardFocus_ReturnValue) == 0x000004, "Member 'Widget_SettingsSlider_C_ToggleHighlight::CallFunc_HasKeyboardFocus_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsSlider_C_ToggleHighlight;
 
 // Function Widget_SettingsSlider.Widget_SettingsSlider_C.UpdateProgressbarPercentage
 // 0x0004 (0x0004 - 0x0000)
@@ -248,9 +184,7 @@ struct Widget_SettingsSlider_C_UpdateProgressbarPercentage final
 public:
 	float                                         CallFunc_GetNormalizedValue_ReturnValue;           // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SettingsSlider_C_UpdateProgressbarPercentage) == 0x000004, "Wrong alignment on Widget_SettingsSlider_C_UpdateProgressbarPercentage");
-static_assert(sizeof(Widget_SettingsSlider_C_UpdateProgressbarPercentage) == 0x000004, "Wrong size on Widget_SettingsSlider_C_UpdateProgressbarPercentage");
-static_assert(offsetof(Widget_SettingsSlider_C_UpdateProgressbarPercentage, CallFunc_GetNormalizedValue_ReturnValue) == 0x000000, "Member 'Widget_SettingsSlider_C_UpdateProgressbarPercentage::CallFunc_GetNormalizedValue_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SettingsSlider_C_UpdateProgressbarPercentage;
 
 }
 

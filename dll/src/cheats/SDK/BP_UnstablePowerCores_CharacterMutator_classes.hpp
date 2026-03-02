@@ -53,24 +53,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_UnstablePowerCores_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_UnstablePowerCores_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_UnstablePowerCores_CharacterMutator_C")
 	}
 	static class UBP_UnstablePowerCores_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_UnstablePowerCores_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_UnstablePowerCores_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_UnstablePowerCores_CharacterMutator_C");
-static_assert(sizeof(UBP_UnstablePowerCores_CharacterMutator_C) == 0x000150, "Wrong size on UBP_UnstablePowerCores_CharacterMutator_C");
-static_assert(offsetof(UBP_UnstablePowerCores_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_UnstablePowerCores_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_UnstablePowerCores_CharacterMutator_C, AbilityDamagePercent) == 0x000110, "Member 'UBP_UnstablePowerCores_CharacterMutator_C::AbilityDamagePercent' has a wrong offset!");
-static_assert(offsetof(UBP_UnstablePowerCores_CharacterMutator_C, BaseAreaRadius) == 0x000118, "Member 'UBP_UnstablePowerCores_CharacterMutator_C::BaseAreaRadius' has a wrong offset!");
-static_assert(offsetof(UBP_UnstablePowerCores_CharacterMutator_C, stunDuration) == 0x000120, "Member 'UBP_UnstablePowerCores_CharacterMutator_C::stunDuration' has a wrong offset!");
-static_assert(offsetof(UBP_UnstablePowerCores_CharacterMutator_C, AreaRadiusIncreasePerRank) == 0x000128, "Member 'UBP_UnstablePowerCores_CharacterMutator_C::AreaRadiusIncreasePerRank' has a wrong offset!");
-static_assert(offsetof(UBP_UnstablePowerCores_CharacterMutator_C, Spawned_Turret) == 0x000130, "Member 'UBP_UnstablePowerCores_CharacterMutator_C::Spawned_Turret' has a wrong offset!");
-static_assert(offsetof(UBP_UnstablePowerCores_CharacterMutator_C, ExplosionInterval) == 0x000138, "Member 'UBP_UnstablePowerCores_CharacterMutator_C::ExplosionInterval' has a wrong offset!");
-static_assert(offsetof(UBP_UnstablePowerCores_CharacterMutator_C, TimerHandle) == 0x000140, "Member 'UBP_UnstablePowerCores_CharacterMutator_C::TimerHandle' has a wrong offset!");
-static_assert(offsetof(UBP_UnstablePowerCores_CharacterMutator_C, DetonationDelay) == 0x000148, "Member 'UBP_UnstablePowerCores_CharacterMutator_C::DetonationDelay' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_UnstablePowerCores_CharacterMutator_C;
 
 }
 

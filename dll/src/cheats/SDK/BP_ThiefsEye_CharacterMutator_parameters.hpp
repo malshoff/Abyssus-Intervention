@@ -34,17 +34,7 @@ public:
 	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_GetScriptFName_ReturnValue_1;             // 0x008C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator) == 0x000008, "Wrong alignment on BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator");
-static_assert(sizeof(BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator) == 0x000098, "Wrong size on BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator");
-static_assert(offsetof(BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator, EntryPoint) == 0x000000, "Member 'BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator, CallFunc_GetScriptFName_ReturnValue) == 0x000004, "Member 'BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator::CallFunc_GetScriptFName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000010, "Member 'BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000040, "Member 'BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000070, "Member 'BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator, K2Node_DynamicCast_AsRPlayer_Pawn_1) == 0x000080, "Member 'BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator::K2Node_DynamicCast_AsRPlayer_Pawn_1' has a wrong offset!");
-static_assert(offsetof(BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator, K2Node_DynamicCast_bSuccess_1) == 0x000088, "Member 'BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator, CallFunc_GetScriptFName_ReturnValue_1) == 0x00008C, "Member 'BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator::CallFunc_GetScriptFName_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ThiefsEye_CharacterMutator_C_ExecuteUbergraph_BP_ThiefsEye_CharacterMutator;
 
 // Function BP_ThiefsEye_CharacterMutator.BP_ThiefsEye_CharacterMutator_C.GetDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -53,9 +43,7 @@ struct BP_ThiefsEye_CharacterMutator_C_GetDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_ThiefsEye_CharacterMutator_C_GetDescription) == 0x000008, "Wrong alignment on BP_ThiefsEye_CharacterMutator_C_GetDescription");
-static_assert(sizeof(BP_ThiefsEye_CharacterMutator_C_GetDescription) == 0x000010, "Wrong size on BP_ThiefsEye_CharacterMutator_C_GetDescription");
-static_assert(offsetof(BP_ThiefsEye_CharacterMutator_C_GetDescription, ReturnValue) == 0x000000, "Member 'BP_ThiefsEye_CharacterMutator_C_GetDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ThiefsEye_CharacterMutator_C_GetDescription;
 
 }
 

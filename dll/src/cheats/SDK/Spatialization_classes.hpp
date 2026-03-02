@@ -29,17 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ITDSpatializationSourceSettings">();
+		STATIC_CLASS_IMPL("ITDSpatializationSourceSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ITDSpatializationSourceSettings")
 	}
 	static class UITDSpatializationSourceSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UITDSpatializationSourceSettings>();
 	}
 };
-static_assert(alignof(UITDSpatializationSourceSettings) == 0x000008, "Wrong alignment on UITDSpatializationSourceSettings");
-static_assert(sizeof(UITDSpatializationSourceSettings) == 0x0000B8, "Wrong size on UITDSpatializationSourceSettings");
-static_assert(offsetof(UITDSpatializationSourceSettings, bEnableILD) == 0x000028, "Member 'UITDSpatializationSourceSettings::bEnableILD' has a wrong offset!");
-static_assert(offsetof(UITDSpatializationSourceSettings, PanningIntensityOverDistance) == 0x000030, "Member 'UITDSpatializationSourceSettings::PanningIntensityOverDistance' has a wrong offset!");
+DUMPER7_ASSERTS_UITDSpatializationSourceSettings;
 
 }
 

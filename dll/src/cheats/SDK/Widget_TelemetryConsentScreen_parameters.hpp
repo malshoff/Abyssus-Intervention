@@ -21,9 +21,7 @@ struct Widget_TelemetryConsentScreen_C_BndEvt__Widget_DemoEndScreen_W_Button_Sim
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_TelemetryConsentScreen_C_BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_TelemetryConsentScreen_C_BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_TelemetryConsentScreen_C_BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_TelemetryConsentScreen_C_BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_TelemetryConsentScreen_C_BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_TelemetryConsentScreen_C_BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_TelemetryConsentScreen_C_BndEvt__Widget_DemoEndScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_TelemetryConsentScreen.Widget_TelemetryConsentScreen_C.BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -32,9 +30,7 @@ struct Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_B
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_1_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_TelemetryConsentScreen.Widget_TelemetryConsentScreen_C.BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -43,9 +39,7 @@ struct Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_B
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_Deny_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_TelemetryConsentScreen.Widget_TelemetryConsentScreen_C.BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -54,9 +48,7 @@ struct Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_B
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_TelemetryConsentScreen_C_BndEvt__Widget_TelemetryConsentScreen_W_Button_SimpleText_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_TelemetryConsentScreen.Widget_TelemetryConsentScreen_C.ExecuteUbergraph_Widget_TelemetryConsentScreen
 // 0x0050 (0x0050 - 0x0000)
@@ -75,18 +67,7 @@ public:
 	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen) == 0x000008, "Wrong alignment on Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen");
-static_assert(sizeof(Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen) == 0x000050, "Wrong size on Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen");
-static_assert(offsetof(Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen, EntryPoint) == 0x000000, "Member 'Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen, K2Node_ComponentBoundEvent_Button_3) == 0x000008, "Member 'Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen::K2Node_ComponentBoundEvent_Button_3' has a wrong offset!");
-static_assert(offsetof(Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen, K2Node_ComponentBoundEvent_Button_2) == 0x000010, "Member 'Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen::K2Node_ComponentBoundEvent_Button_2' has a wrong offset!");
-static_assert(offsetof(Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen, CallFunc_GetRGameUserSettings_ReturnValue) == 0x000018, "Member 'Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen, CallFunc_GetRGameUserSettings_ReturnValue_1) == 0x000020, "Member 'Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen::CallFunc_GetRGameUserSettings_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen, CallFunc_GetOwningPlayer_ReturnValue) == 0x000028, "Member 'Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen, CallFunc_PushWidget_OutWidget) == 0x000030, "Member 'Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen::CallFunc_PushWidget_OutWidget' has a wrong offset!");
-static_assert(offsetof(Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen, CallFunc_GetRGameUserSettings_ReturnValue_2) == 0x000038, "Member 'Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen::CallFunc_GetRGameUserSettings_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen, K2Node_ComponentBoundEvent_Button_1) == 0x000040, "Member 'Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
-static_assert(offsetof(Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen, K2Node_ComponentBoundEvent_Button) == 0x000048, "Member 'Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_TelemetryConsentScreen_C_ExecuteUbergraph_Widget_TelemetryConsentScreen;
 
 }
 

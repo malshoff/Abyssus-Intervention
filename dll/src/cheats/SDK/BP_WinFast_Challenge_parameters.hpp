@@ -31,16 +31,7 @@ public:
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge) == 0x000008, "Wrong alignment on BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge");
-static_assert(sizeof(BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge) == 0x000048, "Wrong size on BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge");
-static_assert(offsetof(BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge, EntryPoint) == 0x000000, "Member 'BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge, CallFunc_GetChallengeManager_ReturnValue) == 0x000008, "Member 'BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge::CallFunc_GetChallengeManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge, K2Node_DynamicCast_AsRPlayer_State) == 0x000010, "Member 'BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge::K2Node_DynamicCast_AsRPlayer_State' has a wrong offset!");
-static_assert(offsetof(BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge, CallFunc_GetRGameState_ReturnValue) == 0x000020, "Member 'BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge::CallFunc_GetRGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge, K2Node_CreateDelegate_OutputDelegate) == 0x000028, "Member 'BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000038, "Member 'BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000040, "Member 'BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_WinFast_Challenge_C_ExecuteUbergraph_BP_WinFast_Challenge;
 
 }
 

@@ -41,18 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_TimeWarp_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_TimeWarp_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_TimeWarp_CharacterMutator_C")
 	}
 	static class UBP_TimeWarp_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_TimeWarp_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_TimeWarp_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_TimeWarp_CharacterMutator_C");
-static_assert(sizeof(UBP_TimeWarp_CharacterMutator_C) == 0x000120, "Wrong size on UBP_TimeWarp_CharacterMutator_C");
-static_assert(offsetof(UBP_TimeWarp_CharacterMutator_C, UberGraphFrame) == 0x000108, "Member 'UBP_TimeWarp_CharacterMutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_TimeWarp_CharacterMutator_C, AreaEffectSizeMultiplier) == 0x000110, "Member 'UBP_TimeWarp_CharacterMutator_C::AreaEffectSizeMultiplier' has a wrong offset!");
-static_assert(offsetof(UBP_TimeWarp_CharacterMutator_C, EstimatedAreaEffectBaseRadius) == 0x000118, "Member 'UBP_TimeWarp_CharacterMutator_C::EstimatedAreaEffectBaseRadius' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_TimeWarp_CharacterMutator_C;
 
 }
 

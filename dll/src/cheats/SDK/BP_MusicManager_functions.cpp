@@ -31,6 +31,20 @@ void ABP_MusicManager_C::CalculateMultiplayerMix()
 }
 
 
+// Function BP_MusicManager.BP_MusicManager_C.Debug_ToggleCombatMusic
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_MusicManager_C::Debug_ToggleCombatMusic()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "Debug_ToggleCombatMusic");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_MusicManager.BP_MusicManager_C.ExecuteUbergraph_BP_MusicManager
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -423,6 +437,20 @@ void ABP_MusicManager_C::Set_MusicData_Fallback()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_MusicManager_C", "Set MusicData Fallback");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MusicManager.BP_MusicManager_C.SetIsInEliteFight
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_MusicManager_C::SetIsInEliteFight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MusicManager_C", "SetIsInEliteFight");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

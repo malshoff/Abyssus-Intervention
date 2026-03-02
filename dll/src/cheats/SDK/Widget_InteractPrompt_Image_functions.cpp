@@ -45,6 +45,20 @@ void UWidget_InteractPrompt_Image_C::Construct()
 }
 
 
+// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.ControlMappingsRebuiltDelegate_Event
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_InteractPrompt_Image_C::ControlMappingsRebuiltDelegate_Event()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_InteractPrompt_Image_C", "ControlMappingsRebuiltDelegate_Event");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.ExecuteUbergraph_Widget_InteractPrompt_Image
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -65,28 +79,95 @@ void UWidget_InteractPrompt_Image_C::ExecuteUbergraph_Widget_InteractPrompt_Imag
 }
 
 
-// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.GetKeyMappedToInteract
+// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.Get_Binding_Text_Text
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FKey*                            Key                                                    (Parm, OutParm, HasGetValueTypeHash)
-// bool*                                   KeyFound                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-void UWidget_InteractPrompt_Image_C::GetKeyMappedToInteract(struct FKey* Key, bool* KeyFound)
+class FText UWidget_InteractPrompt_Image_C::Get_Binding_Text_Text()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_InteractPrompt_Image_C", "GetKeyMappedToInteract");
+		Func = Class->GetFunction("Widget_InteractPrompt_Image_C", "Get_Binding_Text_Text");
 
-	Params::Widget_InteractPrompt_Image_C_GetKeyMappedToInteract Parms{};
+	Params::Widget_InteractPrompt_Image_C_Get_Binding_Text_Text Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Key != nullptr)
-		*Key = std::move(Parms.Key);
+	return Parms.ReturnValue;
+}
 
-	if (KeyFound != nullptr)
-		*KeyFound = Parms.KeyFound;
+
+// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.HandleVisibilityChanged
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_InteractPrompt_Image_C::HandleVisibilityChanged(ESlateVisibility InVisibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_InteractPrompt_Image_C", "HandleVisibilityChanged");
+
+	Params::Widget_InteractPrompt_Image_C_HandleVisibilityChanged Parms{};
+
+	Parms.InVisibility = InVisibility;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_0
+// (BlueprintEvent)
+// Parameters:
+// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_InteractPrompt_Image_C::InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_InteractPrompt_Image_C", "InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_0");
+
+	Params::Widget_InteractPrompt_Image_C_InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_0 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_1
+// (BlueprintEvent)
+// Parameters:
+// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_InteractPrompt_Image_C::InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_InteractPrompt_Image_C", "InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_1");
+
+	Params::Widget_InteractPrompt_Image_C_InpActEvt_IA_Interact_K2Node_EnhancedInputActionEvent_1 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -167,6 +248,68 @@ void UWidget_InteractPrompt_Image_C::OnPlayerPawnRespawned_Event(class ARPlayerP
 	Params::Widget_InteractPrompt_Image_C_OnPlayerPawnRespawned_Event Parms{};
 
 	Parms.Player = Player;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.SetPressedState
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Pressed                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_InteractPrompt_Image_C::SetPressedState(bool Pressed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_InteractPrompt_Image_C", "SetPressedState");
+
+	Params::Widget_InteractPrompt_Image_C_SetPressedState Parms{};
+
+	Parms.Pressed = Pressed;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_InteractPrompt_Image_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_InteractPrompt_Image_C", "Tick");
+
+	Params::Widget_InteractPrompt_Image_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_InteractPrompt_Image.Widget_InteractPrompt_Image_C.UpdateKeyboardHelper
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECommonInputType                        bNewInputType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_InteractPrompt_Image_C::UpdateKeyboardHelper(ECommonInputType bNewInputType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_InteractPrompt_Image_C", "UpdateKeyboardHelper");
+
+	Params::Widget_InteractPrompt_Image_C_UpdateKeyboardHelper Parms{};
+
+	Parms.bNewInputType = bNewInputType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

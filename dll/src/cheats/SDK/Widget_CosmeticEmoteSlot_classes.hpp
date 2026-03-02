@@ -11,26 +11,26 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "RGame_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 #include "CommonInput_structs.hpp"
-#include "RGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_CosmeticEmoteSlot.Widget_CosmeticEmoteSlot_C
-// 0x0030 (0x0300 - 0x02D0)
+// 0x0030 (0x0370 - 0x0340)
 class UWidget_CosmeticEmoteSlot_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Focused;                                           // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Image;                                             // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 IMG_DragDrop_Indicator;                            // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 IMG_Focus_Indicator;                               // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         EmoteSlot;                                         // 0x02F8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 IMG_Focus_Indicator;                               // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IMG_DragDrop_Indicator;                            // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image;                                             // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Focused;                                           // 0x0360(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	int32                                         EmoteSlot;                                         // 0x0368(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -47,21 +47,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_CosmeticEmoteSlot_C">();
+		BP_STATIC_CLASS_IMPL("Widget_CosmeticEmoteSlot_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_CosmeticEmoteSlot_C")
 	}
 	static class UWidget_CosmeticEmoteSlot_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_CosmeticEmoteSlot_C>();
 	}
 };
-static_assert(alignof(UWidget_CosmeticEmoteSlot_C) == 0x000008, "Wrong alignment on UWidget_CosmeticEmoteSlot_C");
-static_assert(sizeof(UWidget_CosmeticEmoteSlot_C) == 0x000300, "Wrong size on UWidget_CosmeticEmoteSlot_C");
-static_assert(offsetof(UWidget_CosmeticEmoteSlot_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_CosmeticEmoteSlot_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticEmoteSlot_C, Focused) == 0x0002D8, "Member 'UWidget_CosmeticEmoteSlot_C::Focused' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticEmoteSlot_C, Image) == 0x0002E0, "Member 'UWidget_CosmeticEmoteSlot_C::Image' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticEmoteSlot_C, IMG_DragDrop_Indicator) == 0x0002E8, "Member 'UWidget_CosmeticEmoteSlot_C::IMG_DragDrop_Indicator' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticEmoteSlot_C, IMG_Focus_Indicator) == 0x0002F0, "Member 'UWidget_CosmeticEmoteSlot_C::IMG_Focus_Indicator' has a wrong offset!");
-static_assert(offsetof(UWidget_CosmeticEmoteSlot_C, EmoteSlot) == 0x0002F8, "Member 'UWidget_CosmeticEmoteSlot_C::EmoteSlot' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_CosmeticEmoteSlot_C;
 
 }
 

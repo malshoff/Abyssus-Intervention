@@ -46,27 +46,7 @@ public:
 	bool                                          Temp_bool_Variable_2;                              // 0x009A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Select_Default;                             // 0x009B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPNotify_AnimationTriggerEvent_C_Received_Notify) == 0x000008, "Wrong alignment on BPNotify_AnimationTriggerEvent_C_Received_Notify");
-static_assert(sizeof(BPNotify_AnimationTriggerEvent_C_Received_Notify) == 0x0000A0, "Wrong size on BPNotify_AnimationTriggerEvent_C_Received_Notify");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, MeshComp) == 0x000000, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::MeshComp' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, Animation) == 0x000008, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::Animation' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, EventReference) == 0x000010, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::EventReference' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, ReturnValue) == 0x000040, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, Temp_bool_Variable) == 0x000041, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, K2Node_DynamicCast_AsRAnimation_Notify_Listener) == 0x000050, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::K2Node_DynamicCast_AsRAnimation_Notify_Listener' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, CallFunc_IsValid_ReturnValue) == 0x000061, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, K2Node_DynamicCast_AsRPawn_Base) == 0x000068, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::K2Node_DynamicCast_AsRPawn_Base' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, K2Node_DynamicCast_bSuccess_1) == 0x000070, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, K2Node_DynamicCast_AsREnemy_Pawn_Base) == 0x000078, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::K2Node_DynamicCast_AsREnemy_Pawn_Base' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, K2Node_DynamicCast_bSuccess_2) == 0x000080, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, CallFunc_GetGScriptCategory_ReturnValue) == 0x000084, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::CallFunc_GetGScriptCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, CallFunc_GetGScriptComponent_ReturnValue) == 0x000090, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::CallFunc_GetGScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, CallFunc_DoesImplementInterface_ReturnValue) == 0x000098, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::CallFunc_DoesImplementInterface_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, Temp_bool_Variable_1) == 0x000099, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, Temp_bool_Variable_2) == 0x00009A, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(BPNotify_AnimationTriggerEvent_C_Received_Notify, K2Node_Select_Default) == 0x00009B, "Member 'BPNotify_AnimationTriggerEvent_C_Received_Notify::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_BPNotify_AnimationTriggerEvent_C_Received_Notify;
 
 }
 

@@ -25,10 +25,7 @@ public:
 	float                                         AmountProgressed;                                  // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         AmountRequired;                                    // 0x0004(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargeZone_C_BroadcastOnRoomObjectiveObjectUpdated_Multicast) == 0x000004, "Wrong alignment on BP_RoomObjectiveObject_ChargeZone_C_BroadcastOnRoomObjectiveObjectUpdated_Multicast");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargeZone_C_BroadcastOnRoomObjectiveObjectUpdated_Multicast) == 0x000008, "Wrong size on BP_RoomObjectiveObject_ChargeZone_C_BroadcastOnRoomObjectiveObjectUpdated_Multicast");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_BroadcastOnRoomObjectiveObjectUpdated_Multicast, AmountProgressed) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargeZone_C_BroadcastOnRoomObjectiveObjectUpdated_Multicast::AmountProgressed' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_BroadcastOnRoomObjectiveObjectUpdated_Multicast, AmountRequired) == 0x000004, "Member 'BP_RoomObjectiveObject_ChargeZone_C_BroadcastOnRoomObjectiveObjectUpdated_Multicast::AmountRequired' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargeZone_C_BroadcastOnRoomObjectiveObjectUpdated_Multicast;
 
 // Function BP_RoomObjectiveObject_ChargeZone.BP_RoomObjectiveObject_ChargeZone_C.ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone
 // 0x00A8 (0x00A8 - 0x0000)
@@ -66,31 +63,7 @@ public:
 	uint8                                         Pad_A2[0x2];                                       // 0x00A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone) == 0x0000A8, "Wrong size on BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, EntryPoint) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, Temp_bool_IsClosed_Variable) == 0x000004, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, Temp_bool_Has_Been_Initd_Variable) == 0x000005, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, K2Node_CreateDelegate_OutputDelegate_1) == 0x000018, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, CallFunc_GetSpawnManager_ReturnValue) == 0x000028, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::CallFunc_GetSpawnManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000030, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, K2Node_CustomEvent_EnemySpawnAreaSegment) == 0x000040, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::K2Node_CustomEvent_EnemySpawnAreaSegment' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, CallFunc_IsCurrentSegment_ReturnValue) == 0x000048, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::CallFunc_IsCurrentSegment_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, CallFunc_IsValid_ReturnValue_1) == 0x000049, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, CallFunc_Array_AddUnique_ReturnValue) == 0x00004C, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000050, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, CallFunc_GetNumPlayersInProximity_NumPlayers) == 0x000068, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::CallFunc_GetNumPlayersInProximity_NumPlayers' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, CallFunc_SpawnSoundAttached_ReturnValue) == 0x000070, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, CallFunc_Greater_IntInt_ReturnValue) == 0x000078, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, CallFunc_SelectName_ReturnValue) == 0x00007C, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::CallFunc_SelectName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, K2Node_CustomEvent_AmountProgressed) == 0x000084, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::K2Node_CustomEvent_AmountProgressed' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, K2Node_CustomEvent_AmountRequired) == 0x000088, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::K2Node_CustomEvent_AmountRequired' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, CallFunc_SetTriggerParameter_self_CastInput) == 0x000090, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::CallFunc_SetTriggerParameter_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, CallFunc_IsObjectCompleted_ReturnValue) == 0x0000A0, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::CallFunc_IsObjectCompleted_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, CallFunc_Not_PreBool_ReturnValue) == 0x0000A1, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast) == 0x0000A4, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargeZone_C_ExecuteUbergraph_BP_RoomObjectiveObject_ChargeZone;
 
 // Function BP_RoomObjectiveObject_ChargeZone.BP_RoomObjectiveObject_ChargeZone_C.GetNumPlayersInProximity
 // 0x0048 (0x0048 - 0x0000)
@@ -113,21 +86,7 @@ public:
 	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity) == 0x000048, "Wrong size on BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity, NumPlayers) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity::NumPlayers' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity, NumPlayersInProximity) == 0x000004, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity::NumPlayersInProximity' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity, Temp_int_Array_Index_Variable) == 0x000010, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity, Temp_int_Variable) == 0x000014, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity, CallFunc_GetOverlappingActors_OverlappingActors) == 0x000018, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity::CallFunc_GetOverlappingActors_OverlappingActors' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000038, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity, CallFunc_Less_IntInt_ReturnValue) == 0x000041, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity, CallFunc_Add_IntInt_ReturnValue_1) == 0x000044, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargeZone_C_GetNumPlayersInProximity;
 
 // Function BP_RoomObjectiveObject_ChargeZone.BP_RoomObjectiveObject_ChargeZone_C.GetPlayerPawnsInProximity
 // 0x0060 (0x0060 - 0x0000)
@@ -149,20 +108,7 @@ public:
 	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity) == 0x000060, "Wrong size on BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity, PlayerPawns) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity::PlayerPawns' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity, RPlayerPawns) == 0x000010, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity::RPlayerPawns' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity, Temp_int_Array_Index_Variable) == 0x000020, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity, Temp_int_Loop_Counter_Variable) == 0x000024, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity, CallFunc_Add_IntInt_ReturnValue) == 0x000028, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity, CallFunc_GetOverlappingActors_OverlappingActors) == 0x000030, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity::CallFunc_GetOverlappingActors_OverlappingActors' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity, CallFunc_Array_Get_Item) == 0x000040, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000048, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity, CallFunc_Array_Length_ReturnValue) == 0x000054, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity, CallFunc_Array_AddUnique_ReturnValue) == 0x000058, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity, CallFunc_Less_IntInt_ReturnValue) == 0x00005C, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargeZone_C_GetPlayerPawnsInProximity;
 
 // Function BP_RoomObjectiveObject_ChargeZone.BP_RoomObjectiveObject_ChargeZone_C.GetProgressionAmountPerTick
 // 0x00A0 (0x00A0 - 0x0000)
@@ -193,28 +139,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_SafeDivide_B_ImplicitCast;                // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick) == 0x0000A0, "Wrong size on BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, ProgressionAmountPerTick) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::ProgressionAmountPerTick' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, SelectedChargeValue) == 0x000008, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::SelectedChargeValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, Temp_bool_Variable) == 0x00000C, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, Temp_real_Variable) == 0x000010, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::Temp_real_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, Temp_real_Variable_1) == 0x000018, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::Temp_real_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, CallFunc_GetOverlappingActors_OverlappingActors) == 0x000020, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::CallFunc_GetOverlappingActors_OverlappingActors' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, CallFunc_Array_Get_Item) == 0x000030, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, CallFunc_Array_IsEmpty_ReturnValue) == 0x000038, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, K2Node_MakeArray_Array) == 0x000040, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, CallFunc_GetChargeValueFromPlayers_ReturnValue) == 0x000050, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::CallFunc_GetChargeValueFromPlayers_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, CallFunc_GetNumPlayersInProximity_NumPlayers) == 0x000054, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::CallFunc_GetNumPlayersInProximity_NumPlayers' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000058, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000060, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, CallFunc_GetRequiredProgressionAmount_Value) == 0x000068, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::CallFunc_GetRequiredProgressionAmount_Value' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, CallFunc_SafeDivide_ReturnValue) == 0x000070, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, K2Node_Select_Default) == 0x000078, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000080, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000088, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x000090, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick, CallFunc_SafeDivide_B_ImplicitCast) == 0x000098, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick::CallFunc_SafeDivide_B_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargeZone_C_GetProgressionAmountPerTick;
 
 // Function BP_RoomObjectiveObject_ChargeZone.BP_RoomObjectiveObject_ChargeZone_C.GetRequiredProgressionAmount
 // 0x0018 (0x0018 - 0x0000)
@@ -225,11 +150,7 @@ public:
 	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_SafeDivide_A_ImplicitCast;                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargeZone_C_GetRequiredProgressionAmount) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargeZone_C_GetRequiredProgressionAmount");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargeZone_C_GetRequiredProgressionAmount) == 0x000018, "Wrong size on BP_RoomObjectiveObject_ChargeZone_C_GetRequiredProgressionAmount");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetRequiredProgressionAmount, Value) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetRequiredProgressionAmount::Value' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetRequiredProgressionAmount, CallFunc_SafeDivide_ReturnValue) == 0x000008, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetRequiredProgressionAmount::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetRequiredProgressionAmount, CallFunc_SafeDivide_A_ImplicitCast) == 0x000010, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetRequiredProgressionAmount::CallFunc_SafeDivide_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargeZone_C_GetRequiredProgressionAmount;
 
 // Function BP_RoomObjectiveObject_ChargeZone.BP_RoomObjectiveObject_ChargeZone_C.OnSegmentCompleted_Event
 // 0x0008 (0x0008 - 0x0000)
@@ -238,9 +159,7 @@ struct BP_RoomObjectiveObject_ChargeZone_C_OnSegmentCompleted_Event final
 public:
 	class AREnemySpawnAreaSegment*                EnemySpawnAreaSegment;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargeZone_C_OnSegmentCompleted_Event) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargeZone_C_OnSegmentCompleted_Event");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargeZone_C_OnSegmentCompleted_Event) == 0x000008, "Wrong size on BP_RoomObjectiveObject_ChargeZone_C_OnSegmentCompleted_Event");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_OnSegmentCompleted_Event, EnemySpawnAreaSegment) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargeZone_C_OnSegmentCompleted_Event::EnemySpawnAreaSegment' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargeZone_C_OnSegmentCompleted_Event;
 
 // Function BP_RoomObjectiveObject_ChargeZone.BP_RoomObjectiveObject_ChargeZone_C.ProximityTick
 // 0x00F0 (0x00F0 - 0x0000)
@@ -291,43 +210,7 @@ public:
 	double                                        CallFunc_Less_DoubleDouble_B_ImplicitCast;         // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Greater_DoubleDouble_B_ImplicitCast;      // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargeZone_C_ProximityTick");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick) == 0x0000F0, "Wrong size on BP_RoomObjectiveObject_ChargeZone_C_ProximityTick");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, Temp_int_Loop_Counter_Variable) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_Add_IntInt_ReturnValue) == 0x000004, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, Temp_int_Array_Index_Variable) == 0x000008, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_GetPlayerPawnsInProximity_PlayerPawns) == 0x000010, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_GetPlayerPawnsInProximity_PlayerPawns' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_GetObjectiveManager_ReturnValue) == 0x000020, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_GetObjectiveManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_GetSpawnManager_ReturnValue) == 0x000028, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_GetSpawnManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_GetCurrentSpawnAreaSegment_ReturnValue) == 0x000038, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_GetCurrentSpawnAreaSegment_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_IsValid_ReturnValue_1) == 0x000040, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_GetRequiredProgressionAmount_Value) == 0x000048, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_GetRequiredProgressionAmount_Value' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x000050, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_SafeDivide_ReturnValue) == 0x000058, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_GetRequiredProgressionAmount_Value_1) == 0x000060, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_GetRequiredProgressionAmount_Value_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_IsValid_ReturnValue_2) == 0x000068, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_SafeDivide_ReturnValue_1) == 0x000070, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_SafeDivide_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_Array_Get_Item) == 0x000078, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_Array_Length_ReturnValue) == 0x00007C, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000080, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_Less_IntInt_ReturnValue) == 0x000081, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000082, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_BooleanAND_ReturnValue) == 0x000083, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_GetRequiredProgressionAmount_Value_2) == 0x000088, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_GetRequiredProgressionAmount_Value_2' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_GetRequiredProgressionAmount_Value_3) == 0x000090, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_GetRequiredProgressionAmount_Value_3' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000098, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x000099, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_GetProgressionAmountPerTick_ProgressionAmountPerTick) == 0x0000A0, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_GetProgressionAmountPerTick_ProgressionAmountPerTick' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_GetRequiredProgressionAmount_Value_4) == 0x0000A8, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_GetRequiredProgressionAmount_Value_4' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000B0, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000B8, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_FClamp_ReturnValue) == 0x0000C0, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_BroadcastOnRoomObjectiveObjectUpdated_Multicast_AmountProgressed_ImplicitCast) == 0x0000C8, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_BroadcastOnRoomObjectiveObjectUpdated_Multicast_AmountProgressed_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x0000D0, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0000D8, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_Less_DoubleDouble_B_ImplicitCast) == 0x0000E0, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_Less_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_ProximityTick, CallFunc_Greater_DoubleDouble_B_ImplicitCast) == 0x0000E8, "Member 'BP_RoomObjectiveObject_ChargeZone_C_ProximityTick::CallFunc_Greater_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargeZone_C_ProximityTick;
 
 // Function BP_RoomObjectiveObject_ChargeZone.BP_RoomObjectiveObject_ChargeZone_C.GetRadarIconColor
 // 0x0010 (0x0010 - 0x0000)
@@ -336,9 +219,7 @@ struct BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconColor final
 public:
 	struct FLinearColor                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconColor) == 0x000004, "Wrong alignment on BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconColor");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconColor) == 0x000010, "Wrong size on BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconColor");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconColor, ReturnValue) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconColor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconColor;
 
 // Function BP_RoomObjectiveObject_ChargeZone.BP_RoomObjectiveObject_ChargeZone_C.GetRadarIconSize
 // 0x0010 (0x0010 - 0x0000)
@@ -347,9 +228,7 @@ struct BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconSize final
 public:
 	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconSize) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconSize");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconSize) == 0x000010, "Wrong size on BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconSize");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconSize, ReturnValue) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconSize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargeZone_C_GetRadarIconSize;
 
 // Function BP_RoomObjectiveObject_ChargeZone.BP_RoomObjectiveObject_ChargeZone_C.GetRadarObjectIcon
 // 0x0008 (0x0008 - 0x0000)
@@ -358,9 +237,7 @@ struct BP_RoomObjectiveObject_ChargeZone_C_GetRadarObjectIcon final
 public:
 	class USlateBrushAsset*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RoomObjectiveObject_ChargeZone_C_GetRadarObjectIcon) == 0x000008, "Wrong alignment on BP_RoomObjectiveObject_ChargeZone_C_GetRadarObjectIcon");
-static_assert(sizeof(BP_RoomObjectiveObject_ChargeZone_C_GetRadarObjectIcon) == 0x000008, "Wrong size on BP_RoomObjectiveObject_ChargeZone_C_GetRadarObjectIcon");
-static_assert(offsetof(BP_RoomObjectiveObject_ChargeZone_C_GetRadarObjectIcon, ReturnValue) == 0x000000, "Member 'BP_RoomObjectiveObject_ChargeZone_C_GetRadarObjectIcon::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RoomObjectiveObject_ChargeZone_C_GetRadarObjectIcon;
 
 }
 

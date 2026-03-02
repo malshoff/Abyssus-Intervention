@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "RGame_classes.hpp"
 
 
@@ -19,35 +19,35 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Enginerifle.ABP_EngineRifle_C
-// 0x0800 (0x0D60 - 0x0560)
+// 0x0800 (0x0D80 - 0x0580)
 class UABP_EngineRifle_C final : public URWeaponAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0560(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0568(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0570(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0578(0x0020)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_4;                        // 0x0598(0x0128)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x06C0(0x0020)()
-	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x06E0(0x0010)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_3;                        // 0x06F0(0x0128)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0818(0x0048)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0860(0x0020)()
-	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive;                       // 0x0880(0x00C8)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0948(0x0048)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_2;                        // 0x0990(0x0128)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_1;                        // 0x0AB8(0x0128)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0BE0(0x0128)()
-	double                                        Barrels;                                           // 0x0D08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Slowdown;                                          // 0x0D10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Rotation;                                          // 0x0D18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Minimum_Rotation;                                  // 0x0D20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Maximum_Rotation;                                  // 0x0D28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TopPiston;                                         // 0x0D30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TopPistonTarget;                                   // 0x0D38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BottomPiston;                                      // 0x0D40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BottomPistonTarget;                                // 0x0D48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          FireCycler;                                        // 0x0D50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0580(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0588(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0590(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0598(0x0020)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_4;                        // 0x05B8(0x0128)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x06E0(0x0020)()
+	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x0700(0x0010)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_3;                        // 0x0710(0x0128)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0838(0x0048)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0880(0x0020)()
+	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive;                       // 0x08A0(0x00C8)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0968(0x0048)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_2;                        // 0x09B0(0x0128)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_1;                        // 0x0AD8(0x0128)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0C00(0x0128)()
+	double                                        Barrels;                                           // 0x0D28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Slowdown;                                          // 0x0D30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Rotation;                                          // 0x0D38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Minimum_Rotation;                                  // 0x0D40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Maximum_Rotation;                                  // 0x0D48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TopPiston;                                         // 0x0D50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TopPistonTarget;                                   // 0x0D58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BottomPiston;                                      // 0x0D60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BottomPistonTarget;                                // 0x0D68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          FireCycler;                                        // 0x0D70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -62,40 +62,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_EngineRifle_C">();
+		BP_STATIC_CLASS_IMPL("ABP_EngineRifle_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_EngineRifle_C")
 	}
 	static class UABP_EngineRifle_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_EngineRifle_C>();
 	}
 };
-static_assert(alignof(UABP_EngineRifle_C) == 0x000010, "Wrong alignment on UABP_EngineRifle_C");
-static_assert(sizeof(UABP_EngineRifle_C) == 0x000D60, "Wrong size on UABP_EngineRifle_C");
-static_assert(offsetof(UABP_EngineRifle_C, UberGraphFrame) == 0x000560, "Member 'UABP_EngineRifle_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, AnimBlueprintExtension_PropertyAccess) == 0x000568, "Member 'UABP_EngineRifle_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, AnimBlueprintExtension_Base) == 0x000570, "Member 'UABP_EngineRifle_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, AnimGraphNode_Root) == 0x000578, "Member 'UABP_EngineRifle_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, AnimGraphNode_ModifyBone_4) == 0x000598, "Member 'UABP_EngineRifle_C::AnimGraphNode_ModifyBone_4' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, AnimGraphNode_LocalToComponentSpace) == 0x0006C0, "Member 'UABP_EngineRifle_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, AnimGraphNode_LocalRefPose) == 0x0006E0, "Member 'UABP_EngineRifle_C::AnimGraphNode_LocalRefPose' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, AnimGraphNode_ModifyBone_3) == 0x0006F0, "Member 'UABP_EngineRifle_C::AnimGraphNode_ModifyBone_3' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, AnimGraphNode_Slot) == 0x000818, "Member 'UABP_EngineRifle_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, AnimGraphNode_ComponentToLocalSpace) == 0x000860, "Member 'UABP_EngineRifle_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, AnimGraphNode_ApplyAdditive) == 0x000880, "Member 'UABP_EngineRifle_C::AnimGraphNode_ApplyAdditive' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, AnimGraphNode_SequencePlayer) == 0x000948, "Member 'UABP_EngineRifle_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, AnimGraphNode_ModifyBone_2) == 0x000990, "Member 'UABP_EngineRifle_C::AnimGraphNode_ModifyBone_2' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, AnimGraphNode_ModifyBone_1) == 0x000AB8, "Member 'UABP_EngineRifle_C::AnimGraphNode_ModifyBone_1' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, AnimGraphNode_ModifyBone) == 0x000BE0, "Member 'UABP_EngineRifle_C::AnimGraphNode_ModifyBone' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, Barrels) == 0x000D08, "Member 'UABP_EngineRifle_C::Barrels' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, Slowdown) == 0x000D10, "Member 'UABP_EngineRifle_C::Slowdown' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, Rotation) == 0x000D18, "Member 'UABP_EngineRifle_C::Rotation' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, Minimum_Rotation) == 0x000D20, "Member 'UABP_EngineRifle_C::Minimum_Rotation' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, Maximum_Rotation) == 0x000D28, "Member 'UABP_EngineRifle_C::Maximum_Rotation' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, TopPiston) == 0x000D30, "Member 'UABP_EngineRifle_C::TopPiston' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, TopPistonTarget) == 0x000D38, "Member 'UABP_EngineRifle_C::TopPistonTarget' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, BottomPiston) == 0x000D40, "Member 'UABP_EngineRifle_C::BottomPiston' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, BottomPistonTarget) == 0x000D48, "Member 'UABP_EngineRifle_C::BottomPistonTarget' has a wrong offset!");
-static_assert(offsetof(UABP_EngineRifle_C, FireCycler) == 0x000D50, "Member 'UABP_EngineRifle_C::FireCycler' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_EngineRifle_C;
 
 }
 

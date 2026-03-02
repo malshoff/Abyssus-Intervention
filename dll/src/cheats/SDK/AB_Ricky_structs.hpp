@@ -17,12 +17,11 @@ namespace SDK
 {
 
 // ScriptStruct AB_Ricky.AB_Ricky_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0x24D0 - 0x24D0)
+// 0x0000 (0x24F8 - 0x24F8)
 struct AB_Ricky::FAnimBlueprintGeneratedConstantData final : public ABP_BasePlayer::FAnimBlueprintGeneratedConstantData
 {
 };
-static_assert(alignof(AB_Ricky::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on AB_Ricky::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(AB_Ricky::FAnimBlueprintGeneratedConstantData) == 0x0024D0, "Wrong size on AB_Ricky::FAnimBlueprintGeneratedConstantData");
+DUMPER7_ASSERTS_AB_Ricky__FAnimBlueprintGeneratedConstantData;
 
 }
 

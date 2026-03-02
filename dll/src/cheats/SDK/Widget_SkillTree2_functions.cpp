@@ -57,6 +57,34 @@ void UWidget_SkillTree2_C::BndEvt__Widget_SkillTree2_W_Button_Reset_K2Node_Compo
 }
 
 
+// Function Widget_SkillTree2.Widget_SkillTree2_C.BPUpdateNodes
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_SkillTree2_C::BPUpdateNodes()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SkillTree2_C", "BPUpdateNodes");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_SkillTree2.Widget_SkillTree2_C.BPUpdateSoulFragmentsText
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_SkillTree2_C::BPUpdateSoulFragmentsText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_SkillTree2_C", "BPUpdateSoulFragmentsText");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Widget_SkillTree2.Widget_SkillTree2_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -116,7 +144,7 @@ void UWidget_SkillTree2_C::GetPointsAssignedInNextRows(int32 Row, int32* Points)
 
 
 // Function Widget_SkillTree2.Widget_SkillTree2_C.GetPointsAssignedInPreviousRows
-// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int32                                   Row                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32*                                  Points                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -129,30 +157,6 @@ void UWidget_SkillTree2_C::GetPointsAssignedInPreviousRows(int32 Row, int32* Poi
 		Func = Class->GetFunction("Widget_SkillTree2_C", "GetPointsAssignedInPreviousRows");
 
 	Params::Widget_SkillTree2_C_GetPointsAssignedInPreviousRows Parms{};
-
-	Parms.Row = Row;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Points != nullptr)
-		*Points = Parms.Points;
-}
-
-
-// Function Widget_SkillTree2.Widget_SkillTree2_C.GetPointsAssignedInRow
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32                                   Row                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32*                                  Points                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_SkillTree2_C::GetPointsAssignedInRow(int32 Row, int32* Points)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SkillTree2_C", "GetPointsAssignedInRow");
-
-	Params::Widget_SkillTree2_C_GetPointsAssignedInRow Parms{};
 
 	Parms.Row = Row;
 
@@ -187,24 +191,23 @@ void UWidget_SkillTree2_C::GetPointsSpentOnNode(class URMutatorPrimaryAsset* RMu
 }
 
 
-// Function Widget_SkillTree2.Widget_SkillTree2_C.GetRowRequiredPointsMap
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function Widget_SkillTree2.Widget_SkillTree2_C.GetSkillTreeNodes
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// TMap<int32, int32>*                     Map                                                    (Parm, OutParm)
+// TArray<class URSkillTreeNode*>          ReturnValue                                            (Parm, OutParm, ReturnParm, ContainsInstancedReference)
 
-void UWidget_SkillTree2_C::GetRowRequiredPointsMap(TMap<int32, int32>* Map)
+TArray<class URSkillTreeNode*> UWidget_SkillTree2_C::GetSkillTreeNodes()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_SkillTree2_C", "GetRowRequiredPointsMap");
+		Func = Class->GetFunction("Widget_SkillTree2_C", "GetSkillTreeNodes");
 
-	Params::Widget_SkillTree2_C_GetRowRequiredPointsMap Parms{};
+	Params::Widget_SkillTree2_C_GetSkillTreeNodes Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Map != nullptr)
-		*Map = std::move(Parms.Map);
+	return Parms.ReturnValue;
 }
 
 
@@ -346,7 +349,7 @@ void UWidget_SkillTree2_C::SetupRow6ExplicitNav()
 
 
 // Function Widget_SkillTree2.Widget_SkillTree2_C.UpdateNodes
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SkillTree2_C::UpdateNodes()
 {
@@ -360,7 +363,7 @@ void UWidget_SkillTree2_C::UpdateNodes()
 
 
 // Function Widget_SkillTree2.Widget_SkillTree2_C.UpdateSoulFragmentsText
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWidget_SkillTree2_C::UpdateSoulFragmentsText()
 {

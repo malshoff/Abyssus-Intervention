@@ -25,10 +25,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UFCDummyBlueprintProxy*                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMFlowControlLibrary_CreateDummyProxyObject) == 0x000008, "Wrong alignment on DMFlowControlLibrary_CreateDummyProxyObject");
-static_assert(sizeof(DMFlowControlLibrary_CreateDummyProxyObject) == 0x000010, "Wrong size on DMFlowControlLibrary_CreateDummyProxyObject");
-static_assert(offsetof(DMFlowControlLibrary_CreateDummyProxyObject, WorldContextObject) == 0x000000, "Member 'DMFlowControlLibrary_CreateDummyProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateDummyProxyObject, ReturnValue) == 0x000008, "Member 'DMFlowControlLibrary_CreateDummyProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMFlowControlLibrary_CreateDummyProxyObject;
 
 // Function DMFlowControl.DMFlowControlLibrary.CreateInvokeProxyObject
 // 0x0020 (0x0020 - 0x0000)
@@ -39,11 +36,7 @@ public:
 	TDelegate<void(bool* RetValue)>               Predicate;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UFCInvokeBlueprintProxy*                ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMFlowControlLibrary_CreateInvokeProxyObject) == 0x000008, "Wrong alignment on DMFlowControlLibrary_CreateInvokeProxyObject");
-static_assert(sizeof(DMFlowControlLibrary_CreateInvokeProxyObject) == 0x000020, "Wrong size on DMFlowControlLibrary_CreateInvokeProxyObject");
-static_assert(offsetof(DMFlowControlLibrary_CreateInvokeProxyObject, WorldContextObject) == 0x000000, "Member 'DMFlowControlLibrary_CreateInvokeProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateInvokeProxyObject, Predicate) == 0x000008, "Member 'DMFlowControlLibrary_CreateInvokeProxyObject::Predicate' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateInvokeProxyObject, ReturnValue) == 0x000018, "Member 'DMFlowControlLibrary_CreateInvokeProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMFlowControlLibrary_CreateInvokeProxyObject;
 
 // Function DMFlowControl.DMFlowControlLibrary.CreateLerpFloatProxyObject
 // 0x0020 (0x0020 - 0x0000)
@@ -57,13 +50,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFCLerpFloatBlueprintProxy*             ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMFlowControlLibrary_CreateLerpFloatProxyObject) == 0x000008, "Wrong alignment on DMFlowControlLibrary_CreateLerpFloatProxyObject");
-static_assert(sizeof(DMFlowControlLibrary_CreateLerpFloatProxyObject) == 0x000020, "Wrong size on DMFlowControlLibrary_CreateLerpFloatProxyObject");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpFloatProxyObject, WorldContextObject) == 0x000000, "Member 'DMFlowControlLibrary_CreateLerpFloatProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpFloatProxyObject, Start) == 0x000008, "Member 'DMFlowControlLibrary_CreateLerpFloatProxyObject::Start' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpFloatProxyObject, End) == 0x00000C, "Member 'DMFlowControlLibrary_CreateLerpFloatProxyObject::End' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpFloatProxyObject, Time) == 0x000010, "Member 'DMFlowControlLibrary_CreateLerpFloatProxyObject::Time' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpFloatProxyObject, ReturnValue) == 0x000018, "Member 'DMFlowControlLibrary_CreateLerpFloatProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMFlowControlLibrary_CreateLerpFloatProxyObject;
 
 // Function DMFlowControl.DMFlowControlLibrary.CreateLerpRotatorProxyObject
 // 0x0048 (0x0048 - 0x0000)
@@ -77,13 +64,7 @@ public:
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFCLerpRotatorBlueprintProxy*           ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMFlowControlLibrary_CreateLerpRotatorProxyObject) == 0x000008, "Wrong alignment on DMFlowControlLibrary_CreateLerpRotatorProxyObject");
-static_assert(sizeof(DMFlowControlLibrary_CreateLerpRotatorProxyObject) == 0x000048, "Wrong size on DMFlowControlLibrary_CreateLerpRotatorProxyObject");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpRotatorProxyObject, WorldContextObject) == 0x000000, "Member 'DMFlowControlLibrary_CreateLerpRotatorProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpRotatorProxyObject, Start) == 0x000008, "Member 'DMFlowControlLibrary_CreateLerpRotatorProxyObject::Start' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpRotatorProxyObject, End) == 0x000020, "Member 'DMFlowControlLibrary_CreateLerpRotatorProxyObject::End' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpRotatorProxyObject, Time) == 0x000038, "Member 'DMFlowControlLibrary_CreateLerpRotatorProxyObject::Time' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpRotatorProxyObject, ReturnValue) == 0x000040, "Member 'DMFlowControlLibrary_CreateLerpRotatorProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMFlowControlLibrary_CreateLerpRotatorProxyObject;
 
 // Function DMFlowControl.DMFlowControlLibrary.CreateLerpTransformProxyObject
 // 0x00E0 (0x00E0 - 0x0000)
@@ -99,14 +80,7 @@ public:
 	uint8                                         Pad_D5[0x3];                                       // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFCLerpTransformBlueprintProxy*         ReturnValue;                                       // 0x00D8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMFlowControlLibrary_CreateLerpTransformProxyObject) == 0x000010, "Wrong alignment on DMFlowControlLibrary_CreateLerpTransformProxyObject");
-static_assert(sizeof(DMFlowControlLibrary_CreateLerpTransformProxyObject) == 0x0000E0, "Wrong size on DMFlowControlLibrary_CreateLerpTransformProxyObject");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpTransformProxyObject, WorldContextObject) == 0x000000, "Member 'DMFlowControlLibrary_CreateLerpTransformProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpTransformProxyObject, Start) == 0x000010, "Member 'DMFlowControlLibrary_CreateLerpTransformProxyObject::Start' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpTransformProxyObject, End) == 0x000070, "Member 'DMFlowControlLibrary_CreateLerpTransformProxyObject::End' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpTransformProxyObject, Time) == 0x0000D0, "Member 'DMFlowControlLibrary_CreateLerpTransformProxyObject::Time' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpTransformProxyObject, LerpInterpolationMode) == 0x0000D4, "Member 'DMFlowControlLibrary_CreateLerpTransformProxyObject::LerpInterpolationMode' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpTransformProxyObject, ReturnValue) == 0x0000D8, "Member 'DMFlowControlLibrary_CreateLerpTransformProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMFlowControlLibrary_CreateLerpTransformProxyObject;
 
 // Function DMFlowControl.DMFlowControlLibrary.CreateLerpVectorProxyObject
 // 0x0048 (0x0048 - 0x0000)
@@ -120,13 +94,7 @@ public:
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFCLerpVectorBlueprintProxy*            ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DMFlowControlLibrary_CreateLerpVectorProxyObject) == 0x000008, "Wrong alignment on DMFlowControlLibrary_CreateLerpVectorProxyObject");
-static_assert(sizeof(DMFlowControlLibrary_CreateLerpVectorProxyObject) == 0x000048, "Wrong size on DMFlowControlLibrary_CreateLerpVectorProxyObject");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpVectorProxyObject, WorldContextObject) == 0x000000, "Member 'DMFlowControlLibrary_CreateLerpVectorProxyObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpVectorProxyObject, Start) == 0x000008, "Member 'DMFlowControlLibrary_CreateLerpVectorProxyObject::Start' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpVectorProxyObject, End) == 0x000020, "Member 'DMFlowControlLibrary_CreateLerpVectorProxyObject::End' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpVectorProxyObject, Time) == 0x000038, "Member 'DMFlowControlLibrary_CreateLerpVectorProxyObject::Time' has a wrong offset!");
-static_assert(offsetof(DMFlowControlLibrary_CreateLerpVectorProxyObject, ReturnValue) == 0x000040, "Member 'DMFlowControlLibrary_CreateLerpVectorProxyObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DMFlowControlLibrary_CreateLerpVectorProxyObject;
 
 }
 

@@ -10,58 +10,59 @@
 
 #include "Basic.hpp"
 
-#include "BP_FlaskBase_CharacterMutator_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_FlaskBase_CharacterMutator_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_HealingFlask_CharacterMutator.BP_HealingFlask_CharacterMutator_C
-// 0x0028 (0x0EE0 - 0x0EB8)
+// 0x0028 (0x0EE8 - 0x0EC0)
 class UBP_HealingFlask_CharacterMutator_C final : public UBP_FlaskBase_CharacterMutator_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_HealingFlask_CharacterMutator_C; // 0x0EB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class ARPlayerPawn*                           As_RPlayer_Pawn;                                   // 0x0EC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        Cast_Time;                                         // 0x0EC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              OnHealingFlaskHeal;                                // 0x0ED0(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_HealingFlask_CharacterMutator_C; // 0x0EC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class ARPlayerPawn*                           As_RPlayer_Pawn;                                   // 0x0EC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        Cast_Time;                                         // 0x0ED0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              OnHealingFlaskHeal;                                // 0x0ED8(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void OnPlayerDowned(class ARPlayerPawn* Player);
-	void OnNotifyEnd_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName);
-	void OnNotifyBegin_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName);
-	void OnLocalPlayerReconnectSync(const struct FRDisconnectedPlayerData& PlayerData);
-	void OnInvoke_74952549483B23663A462690B2A8EC60();
-	void OnInterrupted_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName);
-	void OnCompleted_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName);
-	void OnBlendOut_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName);
-	void K2_OnDeath();
-	void K2_OnAbilityActivate(int32 AbilityIndex_0);
-	void K2_ActivateScript();
-	void IsPlayerStateValid(bool* RetValue);
-	void FireAbility();
-	void ExecuteUbergraph_BP_HealingFlask_CharacterMutator(int32 EntryPoint);
 	bool BPCanFireAbility();
+	void ExecuteUbergraph_BP_HealingFlask_CharacterMutator(int32 EntryPoint);
+	void FireAbility();
+	void IsPlayerStateValid(bool* RetValue);
+	void K2_ActivateScript();
+	void K2_OnAbilityActivate(int32 AbilityIndex_0);
+	void K2_OnDeath();
+	void OnBlendOut_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName);
+	void OnCancelled_81A747B7402F6980A17AD6903862EE13();
+	void OnCompleted_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName);
+	void OnFinish_81A747B7402F6980A17AD6903862EE13();
+	void OnInterrupted_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName);
+	void OnInvoke_74952549483B23663A462690B2A8EC60();
+	void OnLocalPlayerReconnectSync(const struct FRDisconnectedPlayerData& PlayerData);
+	void OnNotifyBegin_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName);
+	void OnNotifyEnd_3ECAEAC84DF83AE9B06581AF447B6167(class FName NotifyName);
+	void OnPlayerDowned(class ARPlayerPawn* Player);
 
 	class FText GetDescription() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_HealingFlask_CharacterMutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_HealingFlask_CharacterMutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_HealingFlask_CharacterMutator_C")
 	}
 	static class UBP_HealingFlask_CharacterMutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_HealingFlask_CharacterMutator_C>();
 	}
 };
-static_assert(alignof(UBP_HealingFlask_CharacterMutator_C) == 0x000008, "Wrong alignment on UBP_HealingFlask_CharacterMutator_C");
-static_assert(sizeof(UBP_HealingFlask_CharacterMutator_C) == 0x000EE0, "Wrong size on UBP_HealingFlask_CharacterMutator_C");
-static_assert(offsetof(UBP_HealingFlask_CharacterMutator_C, UberGraphFrame_BP_HealingFlask_CharacterMutator_C) == 0x000EB8, "Member 'UBP_HealingFlask_CharacterMutator_C::UberGraphFrame_BP_HealingFlask_CharacterMutator_C' has a wrong offset!");
-static_assert(offsetof(UBP_HealingFlask_CharacterMutator_C, As_RPlayer_Pawn) == 0x000EC0, "Member 'UBP_HealingFlask_CharacterMutator_C::As_RPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(UBP_HealingFlask_CharacterMutator_C, Cast_Time) == 0x000EC8, "Member 'UBP_HealingFlask_CharacterMutator_C::Cast_Time' has a wrong offset!");
-static_assert(offsetof(UBP_HealingFlask_CharacterMutator_C, OnHealingFlaskHeal) == 0x000ED0, "Member 'UBP_HealingFlask_CharacterMutator_C::OnHealingFlaskHeal' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_HealingFlask_CharacterMutator_C;
 
 }
 

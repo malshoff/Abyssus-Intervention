@@ -11,63 +11,58 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "CommonInput_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "CommonInput_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_TabMenu_CharmSlot.Widget_TabMenu_CharmSlot_C
-// 0x0050 (0x0320 - 0x02D0)
+// 0x0050 (0x0390 - 0x0340)
 class UWidget_TabMenu_CharmSlot_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Background_2;                                      // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Border_2;                                          // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_0;                                          // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_FocusIndicator;                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 StatCharmIcon;                                     // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URMutatorPrimaryAsset*                  PrimaryAsset;                                      // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UWidget_BaseTooltip_C*                  MutatorTooltipWidget;                              // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(const struct FPointerEvent& PointerEvent)> OnCharmDropped;         // 0x0310(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 StatCharmIcon;                                     // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_FocusIndicator;                              // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_0;                                          // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Border_2;                                          // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Background_2;                                      // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URMutatorPrimaryAsset*                  PrimaryAsset;                                      // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UWidget_BaseTooltip_C*                  MutatorTooltipWidget;                              // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(const struct FPointerEvent& PointerEvent)> OnCharmDropped;         // 0x0380(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UpdateGamepadFocus(bool HasFocus);
-	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
-	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
-	struct FEventReply On_StatCharmIcon_MouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void Initialize(class URMutatorPrimaryAsset* InPrimaryAsset);
-	class UWidget* GetToolTipWidget();
-	void GetTooltipSize(class UWidget_BaseTooltip_C* ToolTipWidget_0, struct FVector2D* Values);
-	void ExecuteUbergraph_Widget_TabMenu_CharmSlot(int32 EntryPoint);
-	void DestroyTooltip();
 	void BndEvt__Widget_TabMenu_CharmSlot_Button_0_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
+	void Clear();
+	void DestroyTooltip();
+	void ExecuteUbergraph_Widget_TabMenu_CharmSlot(int32 EntryPoint);
+	void GetTooltipSize(class UWidget_BaseTooltip_C* ToolTipWidget_0, struct FVector2D* Values);
+	class UWidget* GetToolTipWidget();
+	void Initialize(class URMutatorPrimaryAsset* InPrimaryAsset);
+	struct FEventReply On_StatCharmIcon_MouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
+	void OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent);
+	void UpdateGamepadFocus(bool HasFocus);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_TabMenu_CharmSlot_C">();
+		BP_STATIC_CLASS_IMPL("Widget_TabMenu_CharmSlot_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_TabMenu_CharmSlot_C")
 	}
 	static class UWidget_TabMenu_CharmSlot_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_TabMenu_CharmSlot_C>();
 	}
 };
-static_assert(alignof(UWidget_TabMenu_CharmSlot_C) == 0x000008, "Wrong alignment on UWidget_TabMenu_CharmSlot_C");
-static_assert(sizeof(UWidget_TabMenu_CharmSlot_C) == 0x000320, "Wrong size on UWidget_TabMenu_CharmSlot_C");
-static_assert(offsetof(UWidget_TabMenu_CharmSlot_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_TabMenu_CharmSlot_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_TabMenu_CharmSlot_C, Background_2) == 0x0002D8, "Member 'UWidget_TabMenu_CharmSlot_C::Background_2' has a wrong offset!");
-static_assert(offsetof(UWidget_TabMenu_CharmSlot_C, Border_2) == 0x0002E0, "Member 'UWidget_TabMenu_CharmSlot_C::Border_2' has a wrong offset!");
-static_assert(offsetof(UWidget_TabMenu_CharmSlot_C, Button_0) == 0x0002E8, "Member 'UWidget_TabMenu_CharmSlot_C::Button_0' has a wrong offset!");
-static_assert(offsetof(UWidget_TabMenu_CharmSlot_C, Image_FocusIndicator) == 0x0002F0, "Member 'UWidget_TabMenu_CharmSlot_C::Image_FocusIndicator' has a wrong offset!");
-static_assert(offsetof(UWidget_TabMenu_CharmSlot_C, StatCharmIcon) == 0x0002F8, "Member 'UWidget_TabMenu_CharmSlot_C::StatCharmIcon' has a wrong offset!");
-static_assert(offsetof(UWidget_TabMenu_CharmSlot_C, PrimaryAsset) == 0x000300, "Member 'UWidget_TabMenu_CharmSlot_C::PrimaryAsset' has a wrong offset!");
-static_assert(offsetof(UWidget_TabMenu_CharmSlot_C, MutatorTooltipWidget) == 0x000308, "Member 'UWidget_TabMenu_CharmSlot_C::MutatorTooltipWidget' has a wrong offset!");
-static_assert(offsetof(UWidget_TabMenu_CharmSlot_C, OnCharmDropped) == 0x000310, "Member 'UWidget_TabMenu_CharmSlot_C::OnCharmDropped' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_TabMenu_CharmSlot_C;
 
 }
 

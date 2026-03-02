@@ -38,7 +38,7 @@ void UWidget_BarrierGauge_C::ExecuteUbergraph_Widget_BarrierGauge(int32 EntryPoi
 
 
 // Function Widget_BarrierGauge.Widget_BarrierGauge_C.GagueBlocked
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BarrierGauge_C::GagueBlocked()
 {
@@ -52,7 +52,7 @@ void UWidget_BarrierGauge_C::GagueBlocked()
 
 
 // Function Widget_BarrierGauge.Widget_BarrierGauge_C.GaugeReset
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BarrierGauge_C::GaugeReset()
 {
@@ -174,7 +174,7 @@ void UWidget_BarrierGauge_C::SetGaugePercent(float Percent)
 
 
 // Function Widget_BarrierGauge.Widget_BarrierGauge_C.SetGaugeVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ESlateVisibility                        Visibility_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -194,7 +194,7 @@ void UWidget_BarrierGauge_C::SetGaugeVisibility(ESlateVisibility Visibility_0)
 
 
 // Function Widget_BarrierGauge.Widget_BarrierGauge_C.ThresholdReached
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWidget_BarrierGauge_C::ThresholdReached()
 {

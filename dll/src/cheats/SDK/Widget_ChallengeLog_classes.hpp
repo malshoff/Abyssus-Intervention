@@ -19,90 +19,72 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_ChallengeLog.Widget_ChallengeLog_C
-// 0x00C8 (0x03A8 - 0x02E0)
+// 0x00D0 (0x0420 - 0x0350)
 class UWidget_ChallengeLog_C final : public URChallengeLogWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       DetailsUpdateAnimation;                            // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 BackgroundFrame;                                   // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 BackgroundShadow;                                  // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_1;                                          // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_2;                                          // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_3;                                          // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_4;                                          // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_5;                                          // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_14;                                         // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ChallengeDescription;                              // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ChallengeIcon;                                     // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ChallengeName;                                     // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_1;                                           // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_2;                                           // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_3;                                           // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_4;                                           // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_5;                                           // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWBP_ComboBoxString_C*                  WBP_ComboBoxString_C_780;                          // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_83;                                      // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Reward;                                            // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             Progress;                                          // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Reward;                                            // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_83;                                      // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ComboBoxString_C*                  WBP_ComboBoxString_C_780;                          // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bScrollingToLockedItem;                            // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UImage*>                         Images;                                            // 0x0398(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UImage*                                 Image_5;                                           // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_4;                                           // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_3;                                           // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_2;                                           // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_1;                                           // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ChallengeName;                                     // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ChallengeIcon;                                     // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ChallengeDescription;                              // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_Weapons;                                    // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_Resources;                                  // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_Relics;                                     // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_Cosmetics;                                  // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_Charms;                                     // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_All;                                        // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BackgroundShadow;                                  // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BackgroundFrame;                                   // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       DetailsUpdateAnimation;                            // 0x03F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	bool                                          bScrollingToLockedItem;                            // 0x0400(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_401[0x7];                                      // 0x0401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UImage*>                         Images;                                            // 0x0408(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UButton*                                LastPressedFilterBTN;                              // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Update_Info(class UObject* RChallengeGridItem);
-	void SpecificCategorySelected(int32 ButtonIndex);
-	void SortByRewardCategory(ERChallengeRewardCategory RewardCategory);
-	void SetAllSelected(bool Selected);
-	void ScrollToChallengeByAsset(class URPrimaryDataAsset* Asset);
-	void OnInitialized();
-	void ExecuteUbergraph_Widget_ChallengeLog(int32 EntryPoint);
-	void BP_OnItemScrolledIntoView_Event(class UObject* Item, class UUserWidget* Widget);
-	void BP_OnEntryInitialized_Event(class UObject* Item, class UUserWidget* Widget);
-	void BndEvt__Widget_ChallengeLog_ChallengeGrid_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature(class UObject* Item, bool bIsHovered);
-	void BndEvt__Widget_ChallengeLog_Button_5_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Widget_ChallengeLog_Button_4_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Widget_ChallengeLog_Button_3_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Widget_ChallengeLog_Button_2_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Widget_ChallengeLog_Button_1_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Widget_ChallengeLog_Button_14_K2Node_ComponentBoundEvent_12_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__Widget_ChallengeLog_Button_1_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__Widget_ChallengeLog_Button_2_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__Widget_ChallengeLog_Button_3_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__Widget_ChallengeLog_Button_4_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__Widget_ChallengeLog_Button_5_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__Widget_ChallengeLog_ChallengeGrid_K2Node_ComponentBoundEvent_0_OnItemIsHoveredChangedDynamic__DelegateSignature(class UObject* Item, bool bIsHovered);
+	void BP_OnEntryInitialized_Event(class UObject* Item, class UUserWidget* Widget);
+	void BP_OnItemScrolledIntoView_Event(class UObject* Item, class UUserWidget* Widget);
+	void Construct();
+	void ExecuteUbergraph_Widget_ChallengeLog(int32 EntryPoint);
+	void OnInitialized();
+	void ScrollToChallengeByAsset(class URPrimaryDataAsset* Asset);
+	void SetAllSelected(bool Selected);
+	void SetupExplicitNav();
+	void SortByRewardCategory(ERChallengeRewardCategory RewardCategory);
+	void SpecificCategorySelected(int32 ButtonIndex);
+	void Update_Info(class UObject* RChallengeGridItem);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_ChallengeLog_C">();
+		BP_STATIC_CLASS_IMPL("Widget_ChallengeLog_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_ChallengeLog_C")
 	}
 	static class UWidget_ChallengeLog_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_ChallengeLog_C>();
 	}
 };
-static_assert(alignof(UWidget_ChallengeLog_C) == 0x000008, "Wrong alignment on UWidget_ChallengeLog_C");
-static_assert(sizeof(UWidget_ChallengeLog_C) == 0x0003A8, "Wrong size on UWidget_ChallengeLog_C");
-static_assert(offsetof(UWidget_ChallengeLog_C, UberGraphFrame) == 0x0002E0, "Member 'UWidget_ChallengeLog_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, DetailsUpdateAnimation) == 0x0002E8, "Member 'UWidget_ChallengeLog_C::DetailsUpdateAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, BackgroundFrame) == 0x0002F0, "Member 'UWidget_ChallengeLog_C::BackgroundFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, BackgroundShadow) == 0x0002F8, "Member 'UWidget_ChallengeLog_C::BackgroundShadow' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, Button_1) == 0x000300, "Member 'UWidget_ChallengeLog_C::Button_1' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, Button_2) == 0x000308, "Member 'UWidget_ChallengeLog_C::Button_2' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, Button_3) == 0x000310, "Member 'UWidget_ChallengeLog_C::Button_3' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, Button_4) == 0x000318, "Member 'UWidget_ChallengeLog_C::Button_4' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, Button_5) == 0x000320, "Member 'UWidget_ChallengeLog_C::Button_5' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, Button_14) == 0x000328, "Member 'UWidget_ChallengeLog_C::Button_14' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, ChallengeDescription) == 0x000330, "Member 'UWidget_ChallengeLog_C::ChallengeDescription' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, ChallengeIcon) == 0x000338, "Member 'UWidget_ChallengeLog_C::ChallengeIcon' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, ChallengeName) == 0x000340, "Member 'UWidget_ChallengeLog_C::ChallengeName' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, Image_1) == 0x000348, "Member 'UWidget_ChallengeLog_C::Image_1' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, Image_2) == 0x000350, "Member 'UWidget_ChallengeLog_C::Image_2' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, Image_3) == 0x000358, "Member 'UWidget_ChallengeLog_C::Image_3' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, Image_4) == 0x000360, "Member 'UWidget_ChallengeLog_C::Image_4' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, Image_5) == 0x000368, "Member 'UWidget_ChallengeLog_C::Image_5' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, Progress) == 0x000370, "Member 'UWidget_ChallengeLog_C::Progress' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, Reward) == 0x000378, "Member 'UWidget_ChallengeLog_C::Reward' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, TextBlock_83) == 0x000380, "Member 'UWidget_ChallengeLog_C::TextBlock_83' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, WBP_ComboBoxString_C_780) == 0x000388, "Member 'UWidget_ChallengeLog_C::WBP_ComboBoxString_C_780' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, bScrollingToLockedItem) == 0x000390, "Member 'UWidget_ChallengeLog_C::bScrollingToLockedItem' has a wrong offset!");
-static_assert(offsetof(UWidget_ChallengeLog_C, Images) == 0x000398, "Member 'UWidget_ChallengeLog_C::Images' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_ChallengeLog_C;
 
 }
 

@@ -18,7 +18,7 @@ namespace SDK::Params
 {
 
 // Function BP_DominoBomb_StatusEffect.BP_DominoBomb_StatusEffect_C.ExecuteUbergraph_BP_DominoBomb_StatusEffect
-// 0x0240 (0x0240 - 0x0000)
+// 0x0370 (0x0370 - 0x0000)
 struct BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect final
 {
 public:
@@ -36,44 +36,21 @@ public:
 	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class URHealthComponent*                      K2Node_CustomEvent_Component;                      // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0090(0x00C0)()
-	TDelegate<void(class URHealthComponent* Component, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0150(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_CustomEvent_Damage;                         // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0168(0x0030)(ContainsInstancedReference)
-	double                                        CallFunc_RandomFloatInRange_ReturnValue;           // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B8[0x8];                                      // 0x01B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_Conv_VectorToTransform_ReturnValue;       // 0x01C0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URGTask_SpawnNonWeaponProjectile*       CallFunc_SpawnNonWeaponProjectile_ReturnValue;     // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_229[0x3];                                      // 0x0229(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SpawnNonWeaponProjectile_BaseDamage_ImplicitCast; // 0x022C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_ResetDetonateTimer_NewTimeToDetonate_ImplicitCast; // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDamageCombatEvent                     K2Node_CustomEvent_DamageEventData;                // 0x0090(0x01F0)()
+	TDelegate<void(class URHealthComponent* Component, const struct FDamageCombatEvent& DamageEventData)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0280(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_Damage;                         // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGScriptActorInfo                      CallFunc_K2_GetCurrentActorInfo_ReturnValue_1;     // 0x0298(0x0030)(ContainsInstancedReference)
+	double                                        CallFunc_RandomFloatInRange_ReturnValue;           // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x02D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E8[0x8];                                      // 0x02E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_Conv_VectorToTransform_ReturnValue;       // 0x02F0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URGTask_SpawnNonWeaponProjectile*       CallFunc_SpawnNonWeaponProjectile_ReturnValue;     // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0358(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_359[0x3];                                      // 0x0359(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SpawnNonWeaponProjectile_BaseDamage_ImplicitCast; // 0x035C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_ResetDetonateTimer_NewTimeToDetonate_ImplicitCast; // 0x0360(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect) == 0x000010, "Wrong alignment on BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect");
-static_assert(sizeof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect) == 0x000240, "Wrong size on BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, EntryPoint) == 0x000000, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, K2Node_CustomEvent_Projectile) == 0x000018, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::K2Node_CustomEvent_Projectile' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, K2Node_CreateDelegate_OutputDelegate_1) == 0x000020, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, Temp_object_Variable) == 0x000030, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue) == 0x000038, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, K2Node_DynamicCast_AsRGrenade) == 0x000068, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::K2Node_DynamicCast_AsRGrenade' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, CallFunc_GetHealthComponent_ReturnValue) == 0x000078, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::CallFunc_GetHealthComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000080, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, K2Node_CustomEvent_Component) == 0x000088, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::K2Node_CustomEvent_Component' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, K2Node_CustomEvent_DamageEventData) == 0x000090, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::K2Node_CustomEvent_DamageEventData' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, K2Node_CreateDelegate_OutputDelegate_2) == 0x000150, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, K2Node_CustomEvent_Damage) == 0x000160, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::K2Node_CustomEvent_Damage' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, CallFunc_K2_GetCurrentActorInfo_ReturnValue_1) == 0x000168, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::CallFunc_K2_GetCurrentActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, CallFunc_RandomFloatInRange_ReturnValue) == 0x000198, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, CallFunc_K2_GetActorLocation_ReturnValue) == 0x0001A0, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, CallFunc_Conv_VectorToTransform_ReturnValue) == 0x0001C0, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::CallFunc_Conv_VectorToTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, CallFunc_SpawnNonWeaponProjectile_ReturnValue) == 0x000220, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::CallFunc_SpawnNonWeaponProjectile_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, CallFunc_IsValid_ReturnValue) == 0x000228, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, CallFunc_SpawnNonWeaponProjectile_BaseDamage_ImplicitCast) == 0x00022C, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::CallFunc_SpawnNonWeaponProjectile_BaseDamage_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect, CallFunc_ResetDetonateTimer_NewTimeToDetonate_ImplicitCast) == 0x000230, "Member 'BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect::CallFunc_ResetDetonateTimer_NewTimeToDetonate_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DominoBomb_StatusEffect_C_ExecuteUbergraph_BP_DominoBomb_StatusEffect;
 
 // Function BP_DominoBomb_StatusEffect.BP_DominoBomb_StatusEffect_C.OnEffect
 // 0x0008 (0x0008 - 0x0000)
@@ -82,22 +59,17 @@ struct BP_DominoBomb_StatusEffect_C_OnEffect final
 public:
 	double                                        Damage_0;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DominoBomb_StatusEffect_C_OnEffect) == 0x000008, "Wrong alignment on BP_DominoBomb_StatusEffect_C_OnEffect");
-static_assert(sizeof(BP_DominoBomb_StatusEffect_C_OnEffect) == 0x000008, "Wrong size on BP_DominoBomb_StatusEffect_C_OnEffect");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_OnEffect, Damage_0) == 0x000000, "Member 'BP_DominoBomb_StatusEffect_C_OnEffect::Damage_0' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DominoBomb_StatusEffect_C_OnEffect;
 
 // Function BP_DominoBomb_StatusEffect.BP_DominoBomb_StatusEffect_C.OnHealthDepleted
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct BP_DominoBomb_StatusEffect_C_OnHealthDepleted final
 {
 public:
 	class URHealthComponent*                      Component;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FDamageCombatEvent                     DamageEventData;                                   // 0x0008(0x01F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_DominoBomb_StatusEffect_C_OnHealthDepleted) == 0x000008, "Wrong alignment on BP_DominoBomb_StatusEffect_C_OnHealthDepleted");
-static_assert(sizeof(BP_DominoBomb_StatusEffect_C_OnHealthDepleted) == 0x0000C8, "Wrong size on BP_DominoBomb_StatusEffect_C_OnHealthDepleted");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_OnHealthDepleted, Component) == 0x000000, "Member 'BP_DominoBomb_StatusEffect_C_OnHealthDepleted::Component' has a wrong offset!");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_OnHealthDepleted, DamageEventData) == 0x000008, "Member 'BP_DominoBomb_StatusEffect_C_OnHealthDepleted::DamageEventData' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DominoBomb_StatusEffect_C_OnHealthDepleted;
 
 // Function BP_DominoBomb_StatusEffect.BP_DominoBomb_StatusEffect_C.OnProjectileSpawned_1C5945364C4717A90A9ED0B36137D85A
 // 0x0008 (0x0008 - 0x0000)
@@ -106,9 +78,7 @@ struct BP_DominoBomb_StatusEffect_C_OnProjectileSpawned_1C5945364C4717A90A9ED0B3
 public:
 	class ARProjectileBase*                       Projectile;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DominoBomb_StatusEffect_C_OnProjectileSpawned_1C5945364C4717A90A9ED0B36137D85A) == 0x000008, "Wrong alignment on BP_DominoBomb_StatusEffect_C_OnProjectileSpawned_1C5945364C4717A90A9ED0B36137D85A");
-static_assert(sizeof(BP_DominoBomb_StatusEffect_C_OnProjectileSpawned_1C5945364C4717A90A9ED0B36137D85A) == 0x000008, "Wrong size on BP_DominoBomb_StatusEffect_C_OnProjectileSpawned_1C5945364C4717A90A9ED0B36137D85A");
-static_assert(offsetof(BP_DominoBomb_StatusEffect_C_OnProjectileSpawned_1C5945364C4717A90A9ED0B36137D85A, Projectile) == 0x000000, "Member 'BP_DominoBomb_StatusEffect_C_OnProjectileSpawned_1C5945364C4717A90A9ED0B36137D85A::Projectile' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DominoBomb_StatusEffect_C_OnProjectileSpawned_1C5945364C4717A90A9ED0B36137D85A;
 
 }
 

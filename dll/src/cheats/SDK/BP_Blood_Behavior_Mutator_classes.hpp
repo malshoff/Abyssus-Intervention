@@ -36,17 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Blood_Behavior_Mutator_C">();
+		BP_STATIC_CLASS_IMPL("BP_Blood_Behavior_Mutator_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Blood_Behavior_Mutator_C")
 	}
 	static class UBP_Blood_Behavior_Mutator_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Blood_Behavior_Mutator_C>();
 	}
 };
-static_assert(alignof(UBP_Blood_Behavior_Mutator_C) == 0x000008, "Wrong alignment on UBP_Blood_Behavior_Mutator_C");
-static_assert(sizeof(UBP_Blood_Behavior_Mutator_C) == 0x000138, "Wrong size on UBP_Blood_Behavior_Mutator_C");
-static_assert(offsetof(UBP_Blood_Behavior_Mutator_C, UberGraphFrame) == 0x000128, "Member 'UBP_Blood_Behavior_Mutator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Blood_Behavior_Mutator_C, TriggeringBloodMutatorPA) == 0x000130, "Member 'UBP_Blood_Behavior_Mutator_C::TriggeringBloodMutatorPA' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Blood_Behavior_Mutator_C;
 
 }
 

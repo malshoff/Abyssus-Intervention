@@ -127,8 +127,9 @@ void UBP_Chill_StatusEffect_Rework_C::GetMultiplayerScalingMultiplier(double* Mu
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 MinShredHealthPercentage                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-double UBP_Chill_StatusEffect_Rework_C::GetShredDamagePercentage()
+double UBP_Chill_StatusEffect_Rework_C::GetShredDamagePercentage(double* MinShredHealthPercentage)
 {
 	static class UFunction* Func = nullptr;
 
@@ -138,6 +139,9 @@ double UBP_Chill_StatusEffect_Rework_C::GetShredDamagePercentage()
 	Params::BP_Chill_StatusEffect_Rework_C_GetShredDamagePercentage Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (MinShredHealthPercentage != nullptr)
+		*MinShredHealthPercentage = Parms.MinShredHealthPercentage;
 
 	return Parms.ReturnValue;
 }

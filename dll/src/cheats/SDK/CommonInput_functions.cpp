@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function CommonInput.CommonInputBaseControllerData.GetRegisteredGamepads
-// (Final, Native, Static, Public)
+// (Final, RequiredAPI, Native, Static, Public)
 // Parameters:
 // const TArray<class FName>               ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -43,7 +43,7 @@ const TArray<class FName> UCommonInputBaseControllerData::GetRegisteredGamepads(
 
 
 // Function CommonInput.CommonInputSettings.IsEnhancedInputSupportEnabled
-// (Final, Native, Static, Public)
+// (Final, RequiredAPI, Native, Static, Public)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -68,7 +68,7 @@ bool UCommonInputSettings::IsEnhancedInputSupportEnabled()
 
 
 // Function CommonInput.CommonInputSubsystem.BroadcastInputMethodChanged
-// (Final, Native, Protected)
+// (Final, RequiredAPI, Native, Protected)
 
 void UCommonInputSubsystem::BroadcastInputMethodChanged()
 {
@@ -87,7 +87,7 @@ void UCommonInputSubsystem::BroadcastInputMethodChanged()
 
 
 // Function CommonInput.CommonInputSubsystem.SetCurrentInputType
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // ECommonInputType                        NewInputType                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -112,7 +112,7 @@ void UCommonInputSubsystem::SetCurrentInputType(ECommonInputType NewInputType)
 
 
 // Function CommonInput.CommonInputSubsystem.SetGamepadInputType
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FName                       InGamepadInputType                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -137,7 +137,7 @@ void UCommonInputSubsystem::SetGamepadInputType(const class FName InGamepadInput
 
 
 // Function CommonInput.CommonInputSubsystem.GetCurrentGamepadName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FName                       ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -162,7 +162,7 @@ const class FName UCommonInputSubsystem::GetCurrentGamepadName() const
 
 
 // Function CommonInput.CommonInputSubsystem.GetCurrentInputType
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ECommonInputType                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -187,7 +187,7 @@ ECommonInputType UCommonInputSubsystem::GetCurrentInputType() const
 
 
 // Function CommonInput.CommonInputSubsystem.GetDefaultInputType
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ECommonInputType                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -212,7 +212,7 @@ ECommonInputType UCommonInputSubsystem::GetDefaultInputType() const
 
 
 // Function CommonInput.CommonInputSubsystem.IsInputMethodActive
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ECommonInputType                        InputMethod                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -240,7 +240,7 @@ bool UCommonInputSubsystem::IsInputMethodActive(ECommonInputType InputMethod) co
 
 
 // Function CommonInput.CommonInputSubsystem.IsUsingPointerInput
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -265,7 +265,7 @@ bool UCommonInputSubsystem::IsUsingPointerInput() const
 
 
 // Function CommonInput.CommonInputSubsystem.ShouldShowInputKeys
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

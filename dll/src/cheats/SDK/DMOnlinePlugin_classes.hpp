@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
-#include "Engine_classes.hpp"
-#include "OnlineSubsystemUtils_structs.hpp"
 #include "DMOnlinePlugin_structs.hpp"
+#include "CoreUObject_classes.hpp"
+#include "OnlineSubsystemUtils_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -26,15 +26,18 @@ class USPDummyBlueprintProxy final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SPDummyBlueprintProxy">();
+		STATIC_CLASS_IMPL("SPDummyBlueprintProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SPDummyBlueprintProxy")
 	}
 	static class USPDummyBlueprintProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USPDummyBlueprintProxy>();
 	}
 };
-static_assert(alignof(USPDummyBlueprintProxy) == 0x000008, "Wrong alignment on USPDummyBlueprintProxy");
-static_assert(sizeof(USPDummyBlueprintProxy) == 0x000028, "Wrong size on USPDummyBlueprintProxy");
+DUMPER7_ASSERTS_USPDummyBlueprintProxy;
 
 // Class DMOnlinePlugin.SPCreateSessionBlueprintProxy
 // 0x0020 (0x0048 - 0x0028)
@@ -47,17 +50,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SPCreateSessionBlueprintProxy">();
+		STATIC_CLASS_IMPL("SPCreateSessionBlueprintProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SPCreateSessionBlueprintProxy")
 	}
 	static class USPCreateSessionBlueprintProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USPCreateSessionBlueprintProxy>();
 	}
 };
-static_assert(alignof(USPCreateSessionBlueprintProxy) == 0x000008, "Wrong alignment on USPCreateSessionBlueprintProxy");
-static_assert(sizeof(USPCreateSessionBlueprintProxy) == 0x000048, "Wrong size on USPCreateSessionBlueprintProxy");
-static_assert(offsetof(USPCreateSessionBlueprintProxy, Success) == 0x000028, "Member 'USPCreateSessionBlueprintProxy::Success' has a wrong offset!");
-static_assert(offsetof(USPCreateSessionBlueprintProxy, Fail) == 0x000038, "Member 'USPCreateSessionBlueprintProxy::Fail' has a wrong offset!");
+DUMPER7_ASSERTS_USPCreateSessionBlueprintProxy;
 
 // Class DMOnlinePlugin.SPDestroySessionBlueprintProxy
 // 0x0020 (0x0048 - 0x0028)
@@ -70,17 +74,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SPDestroySessionBlueprintProxy">();
+		STATIC_CLASS_IMPL("SPDestroySessionBlueprintProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SPDestroySessionBlueprintProxy")
 	}
 	static class USPDestroySessionBlueprintProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USPDestroySessionBlueprintProxy>();
 	}
 };
-static_assert(alignof(USPDestroySessionBlueprintProxy) == 0x000008, "Wrong alignment on USPDestroySessionBlueprintProxy");
-static_assert(sizeof(USPDestroySessionBlueprintProxy) == 0x000048, "Wrong size on USPDestroySessionBlueprintProxy");
-static_assert(offsetof(USPDestroySessionBlueprintProxy, Success) == 0x000028, "Member 'USPDestroySessionBlueprintProxy::Success' has a wrong offset!");
-static_assert(offsetof(USPDestroySessionBlueprintProxy, Fail) == 0x000038, "Member 'USPDestroySessionBlueprintProxy::Fail' has a wrong offset!");
+DUMPER7_ASSERTS_USPDestroySessionBlueprintProxy;
 
 // Class DMOnlinePlugin.SPStartSessionBlueprintProxy
 // 0x0020 (0x0048 - 0x0028)
@@ -93,17 +98,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SPStartSessionBlueprintProxy">();
+		STATIC_CLASS_IMPL("SPStartSessionBlueprintProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SPStartSessionBlueprintProxy")
 	}
 	static class USPStartSessionBlueprintProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USPStartSessionBlueprintProxy>();
 	}
 };
-static_assert(alignof(USPStartSessionBlueprintProxy) == 0x000008, "Wrong alignment on USPStartSessionBlueprintProxy");
-static_assert(sizeof(USPStartSessionBlueprintProxy) == 0x000048, "Wrong size on USPStartSessionBlueprintProxy");
-static_assert(offsetof(USPStartSessionBlueprintProxy, Success) == 0x000028, "Member 'USPStartSessionBlueprintProxy::Success' has a wrong offset!");
-static_assert(offsetof(USPStartSessionBlueprintProxy, Fail) == 0x000038, "Member 'USPStartSessionBlueprintProxy::Fail' has a wrong offset!");
+DUMPER7_ASSERTS_USPStartSessionBlueprintProxy;
 
 // Class DMOnlinePlugin.SPFindSessionBlueprintProxy
 // 0x0020 (0x0048 - 0x0028)
@@ -116,17 +122,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SPFindSessionBlueprintProxy">();
+		STATIC_CLASS_IMPL("SPFindSessionBlueprintProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SPFindSessionBlueprintProxy")
 	}
 	static class USPFindSessionBlueprintProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USPFindSessionBlueprintProxy>();
 	}
 };
-static_assert(alignof(USPFindSessionBlueprintProxy) == 0x000008, "Wrong alignment on USPFindSessionBlueprintProxy");
-static_assert(sizeof(USPFindSessionBlueprintProxy) == 0x000048, "Wrong size on USPFindSessionBlueprintProxy");
-static_assert(offsetof(USPFindSessionBlueprintProxy, Success) == 0x000028, "Member 'USPFindSessionBlueprintProxy::Success' has a wrong offset!");
-static_assert(offsetof(USPFindSessionBlueprintProxy, Fail) == 0x000038, "Member 'USPFindSessionBlueprintProxy::Fail' has a wrong offset!");
+DUMPER7_ASSERTS_USPFindSessionBlueprintProxy;
 
 // Class DMOnlinePlugin.SPFindSessionByIdBlueprintProxy
 // 0x0020 (0x0048 - 0x0028)
@@ -139,17 +146,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SPFindSessionByIdBlueprintProxy">();
+		STATIC_CLASS_IMPL("SPFindSessionByIdBlueprintProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SPFindSessionByIdBlueprintProxy")
 	}
 	static class USPFindSessionByIdBlueprintProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USPFindSessionByIdBlueprintProxy>();
 	}
 };
-static_assert(alignof(USPFindSessionByIdBlueprintProxy) == 0x000008, "Wrong alignment on USPFindSessionByIdBlueprintProxy");
-static_assert(sizeof(USPFindSessionByIdBlueprintProxy) == 0x000048, "Wrong size on USPFindSessionByIdBlueprintProxy");
-static_assert(offsetof(USPFindSessionByIdBlueprintProxy, Success) == 0x000028, "Member 'USPFindSessionByIdBlueprintProxy::Success' has a wrong offset!");
-static_assert(offsetof(USPFindSessionByIdBlueprintProxy, Fail) == 0x000038, "Member 'USPFindSessionByIdBlueprintProxy::Fail' has a wrong offset!");
+DUMPER7_ASSERTS_USPFindSessionByIdBlueprintProxy;
 
 // Class DMOnlinePlugin.SPJoinSessionBlueprintProxy
 // 0x0020 (0x0048 - 0x0028)
@@ -162,17 +170,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SPJoinSessionBlueprintProxy">();
+		STATIC_CLASS_IMPL("SPJoinSessionBlueprintProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SPJoinSessionBlueprintProxy")
 	}
 	static class USPJoinSessionBlueprintProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USPJoinSessionBlueprintProxy>();
 	}
 };
-static_assert(alignof(USPJoinSessionBlueprintProxy) == 0x000008, "Wrong alignment on USPJoinSessionBlueprintProxy");
-static_assert(sizeof(USPJoinSessionBlueprintProxy) == 0x000048, "Wrong size on USPJoinSessionBlueprintProxy");
-static_assert(offsetof(USPJoinSessionBlueprintProxy, Success) == 0x000028, "Member 'USPJoinSessionBlueprintProxy::Success' has a wrong offset!");
-static_assert(offsetof(USPJoinSessionBlueprintProxy, Fail) == 0x000038, "Member 'USPJoinSessionBlueprintProxy::Fail' has a wrong offset!");
+DUMPER7_ASSERTS_USPJoinSessionBlueprintProxy;
 
 // Class DMOnlinePlugin.SPJoinFirstAvailableSessionBlueprintProxy
 // 0x0020 (0x0048 - 0x0028)
@@ -185,17 +194,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SPJoinFirstAvailableSessionBlueprintProxy">();
+		STATIC_CLASS_IMPL("SPJoinFirstAvailableSessionBlueprintProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SPJoinFirstAvailableSessionBlueprintProxy")
 	}
 	static class USPJoinFirstAvailableSessionBlueprintProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USPJoinFirstAvailableSessionBlueprintProxy>();
 	}
 };
-static_assert(alignof(USPJoinFirstAvailableSessionBlueprintProxy) == 0x000008, "Wrong alignment on USPJoinFirstAvailableSessionBlueprintProxy");
-static_assert(sizeof(USPJoinFirstAvailableSessionBlueprintProxy) == 0x000048, "Wrong size on USPJoinFirstAvailableSessionBlueprintProxy");
-static_assert(offsetof(USPJoinFirstAvailableSessionBlueprintProxy, Success) == 0x000028, "Member 'USPJoinFirstAvailableSessionBlueprintProxy::Success' has a wrong offset!");
-static_assert(offsetof(USPJoinFirstAvailableSessionBlueprintProxy, Fail) == 0x000038, "Member 'USPJoinFirstAvailableSessionBlueprintProxy::Fail' has a wrong offset!");
+DUMPER7_ASSERTS_USPJoinFirstAvailableSessionBlueprintProxy;
 
 // Class DMOnlinePlugin.SPStartMatchmakingProxy
 // 0x0030 (0x0058 - 0x0028)
@@ -209,18 +219,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SPStartMatchmakingProxy">();
+		STATIC_CLASS_IMPL("SPStartMatchmakingProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SPStartMatchmakingProxy")
 	}
 	static class USPStartMatchmakingProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USPStartMatchmakingProxy>();
 	}
 };
-static_assert(alignof(USPStartMatchmakingProxy) == 0x000008, "Wrong alignment on USPStartMatchmakingProxy");
-static_assert(sizeof(USPStartMatchmakingProxy) == 0x000058, "Wrong size on USPStartMatchmakingProxy");
-static_assert(offsetof(USPStartMatchmakingProxy, JoinedSession) == 0x000028, "Member 'USPStartMatchmakingProxy::JoinedSession' has a wrong offset!");
-static_assert(offsetof(USPStartMatchmakingProxy, CreatedSession) == 0x000038, "Member 'USPStartMatchmakingProxy::CreatedSession' has a wrong offset!");
-static_assert(offsetof(USPStartMatchmakingProxy, Fail) == 0x000048, "Member 'USPStartMatchmakingProxy::Fail' has a wrong offset!");
+DUMPER7_ASSERTS_USPStartMatchmakingProxy;
 
 // Class DMOnlinePlugin.SPAutoLoginBlueprintProxy
 // 0x0020 (0x0048 - 0x0028)
@@ -233,17 +243,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SPAutoLoginBlueprintProxy">();
+		STATIC_CLASS_IMPL("SPAutoLoginBlueprintProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SPAutoLoginBlueprintProxy")
 	}
 	static class USPAutoLoginBlueprintProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USPAutoLoginBlueprintProxy>();
 	}
 };
-static_assert(alignof(USPAutoLoginBlueprintProxy) == 0x000008, "Wrong alignment on USPAutoLoginBlueprintProxy");
-static_assert(sizeof(USPAutoLoginBlueprintProxy) == 0x000048, "Wrong size on USPAutoLoginBlueprintProxy");
-static_assert(offsetof(USPAutoLoginBlueprintProxy, Success) == 0x000028, "Member 'USPAutoLoginBlueprintProxy::Success' has a wrong offset!");
-static_assert(offsetof(USPAutoLoginBlueprintProxy, Fail) == 0x000038, "Member 'USPAutoLoginBlueprintProxy::Fail' has a wrong offset!");
+DUMPER7_ASSERTS_USPAutoLoginBlueprintProxy;
 
 // Class DMOnlinePlugin.DMOnlineAsyncProxies
 // 0x0000 (0x0028 - 0x0028)
@@ -264,15 +275,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMOnlineAsyncProxies">();
+		STATIC_CLASS_IMPL("DMOnlineAsyncProxies")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMOnlineAsyncProxies")
 	}
 	static class UDMOnlineAsyncProxies* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMOnlineAsyncProxies>();
 	}
 };
-static_assert(alignof(UDMOnlineAsyncProxies) == 0x000008, "Wrong alignment on UDMOnlineAsyncProxies");
-static_assert(sizeof(UDMOnlineAsyncProxies) == 0x000028, "Wrong size on UDMOnlineAsyncProxies");
+DUMPER7_ASSERTS_UDMOnlineAsyncProxies;
 
 // Class DMOnlinePlugin.DMOnlineFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -287,7 +301,7 @@ public:
 	static bool IsLoggedIn(const class UObject* WorldContextObject, const class FName& SubsystemName);
 	static bool IsSessionHost(const class UObject* WorldContextObject);
 	static bool IsSessionSingleplayer(const class UObject* WorldContextObject);
-	static void OpenSteamBrowser(const class UObject* WorldContextObject, const class FString& URL);
+	static void OpenSteamBrowser(const class UObject* WorldContextObject, const class FString& URL, TDelegate<void(const class FString& FinalUrl)> OnClosedCallback);
 	static void PerformClientTravel(class UObject* WorldContextObject, const class FString& Adress);
 	static void PerformServerTravel(class UObject* WorldContextObject, const class FName WorldPath, const class FName GameMode, bool bAbsolute, bool bSeamlessTravel, bool bStartSession, const class FName& SubsystemName);
 	static bool RegisterPlayer(class APlayerController* PlayerController, const class FName& SubsystemName);
@@ -299,15 +313,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DMOnlineFunctionLibrary">();
+		STATIC_CLASS_IMPL("DMOnlineFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DMOnlineFunctionLibrary")
 	}
 	static class UDMOnlineFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDMOnlineFunctionLibrary>();
 	}
 };
-static_assert(alignof(UDMOnlineFunctionLibrary) == 0x000008, "Wrong alignment on UDMOnlineFunctionLibrary");
-static_assert(sizeof(UDMOnlineFunctionLibrary) == 0x000028, "Wrong size on UDMOnlineFunctionLibrary");
+DUMPER7_ASSERTS_UDMOnlineFunctionLibrary;
 
 }
 

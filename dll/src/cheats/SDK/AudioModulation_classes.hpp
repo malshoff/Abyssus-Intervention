@@ -35,22 +35,25 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioModulationStyle">();
+		STATIC_CLASS_IMPL("AudioModulationStyle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioModulationStyle")
 	}
 	static class UAudioModulationStyle* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioModulationStyle>();
 	}
 };
-static_assert(alignof(UAudioModulationStyle) == 0x000008, "Wrong alignment on UAudioModulationStyle");
-static_assert(sizeof(UAudioModulationStyle) == 0x000028, "Wrong size on UAudioModulationStyle");
+DUMPER7_ASSERTS_UAudioModulationStyle;
 
 // Class AudioModulation.AudioModulationDestination
 // 0x0018 (0x0040 - 0x0028)
 class UAudioModulationDestination final : public UObject
 {
 public:
-	class USoundModulatorBase*                    Modulator;                                         // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class USoundModulatorBase*                    Modulator;                                         // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -63,16 +66,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioModulationDestination">();
+		STATIC_CLASS_IMPL("AudioModulationDestination")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioModulationDestination")
 	}
 	static class UAudioModulationDestination* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioModulationDestination>();
 	}
 };
-static_assert(alignof(UAudioModulationDestination) == 0x000008, "Wrong alignment on UAudioModulationDestination");
-static_assert(sizeof(UAudioModulationDestination) == 0x000040, "Wrong size on UAudioModulationDestination");
-static_assert(offsetof(UAudioModulationDestination, Modulator) == 0x000028, "Member 'UAudioModulationDestination::Modulator' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioModulationDestination;
 
 // Class AudioModulation.AudioModulationSettings
 // 0x0010 (0x0048 - 0x0038)
@@ -84,16 +89,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioModulationSettings">();
+		STATIC_CLASS_IMPL("AudioModulationSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioModulationSettings")
 	}
 	static class UAudioModulationSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioModulationSettings>();
 	}
 };
-static_assert(alignof(UAudioModulationSettings) == 0x000008, "Wrong alignment on UAudioModulationSettings");
-static_assert(sizeof(UAudioModulationSettings) == 0x000048, "Wrong size on UAudioModulationSettings");
-static_assert(offsetof(UAudioModulationSettings, Parameters) == 0x000038, "Member 'UAudioModulationSettings::Parameters' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioModulationSettings;
 
 // Class AudioModulation.AudioModulationStatics
 // 0x0000 (0x0028 - 0x0028)
@@ -107,7 +114,7 @@ public:
 	static void ClearGlobalBusMixValue(const class UObject* WorldContextObject, class USoundControlBus* Bus, float FadeTime);
 	static class USoundModulationGeneratorADEnvelope* CreateADEnvelopeGenerator(class UObject* WorldContextObject, class FName Name_0, const struct FSoundModulationADEnvelopeParams& Params_0);
 	static class USoundControlBus* CreateBus(class UObject* WorldContextObject, class FName Name_0, class USoundModulationParameter* Parameter, bool Activate);
-	static class USoundControlBusMix* CreateBusMix(class UObject* WorldContextObject, class FName Name_0, const TArray<struct FSoundControlBusMixStage>& Stages, bool Activate);
+	static class USoundControlBusMix* CreateBusMix(class UObject* WorldContextObject, class FName Name_0, const TArray<struct FSoundControlBusMixStage>& Stages, bool Activate, double Duration, bool bRetriggerOnActivation);
 	static class USoundControlBusMix* CreateBusMixFromValue(const class UObject* WorldContextObject, class FName Name_0, const TArray<class USoundControlBus*>& Buses, float Value, float AttackTime, float ReleaseTime, bool bActivate);
 	static struct FSoundControlBusMixStage CreateBusMixStage(const class UObject* WorldContextObject, class USoundControlBus* Bus, float Value, float AttackTime, float ReleaseTime);
 	static class USoundModulationGeneratorEnvelopeFollower* CreateEnvelopeFollowerGenerator(class UObject* WorldContextObject, class FName Name_0, const struct FEnvelopeFollowerGeneratorParams& Params_0);
@@ -124,7 +131,7 @@ public:
 	static TArray<struct FSoundControlBusMixStage> LoadMixFromProfile(const class UObject* WorldContextObject, class USoundControlBusMix* Mix, bool bActivate, int32 ProfileIndex);
 	static void SaveMixToProfile(const class UObject* WorldContextObject, class USoundControlBusMix* Mix, int32 ProfileIndex);
 	static void SetGlobalBusMixValue(const class UObject* WorldContextObject, class USoundControlBus* Bus, float Value, float FadeTime);
-	static void UpdateMix(const class UObject* WorldContextObject, class USoundControlBusMix* Mix, const TArray<struct FSoundControlBusMixStage>& Stages, float FadeTime);
+	static void UpdateMix(const class UObject* WorldContextObject, class USoundControlBusMix* Mix, const TArray<struct FSoundControlBusMixStage>& Stages, float FadeTime, double Duration, bool bRetriggerOnActivation);
 	static void UpdateMixByFilter(const class UObject* WorldContextObject, class USoundControlBusMix* Mix, const class FString& AddressFilter, TSubclassOf<class USoundModulationParameter> ParamClassFilter, class USoundModulationParameter* ParamFilter, float Value, float FadeTime);
 	static void UpdateMixFromObject(const class UObject* WorldContextObject, class USoundControlBusMix* Mix, float FadeTime);
 	static void UpdateModulator(const class UObject* WorldContextObject, class USoundModulatorBase* Modulator);
@@ -132,15 +139,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioModulationStatics">();
+		STATIC_CLASS_IMPL("AudioModulationStatics")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioModulationStatics")
 	}
 	static class UAudioModulationStatics* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioModulationStatics>();
 	}
 };
-static_assert(alignof(UAudioModulationStatics) == 0x000008, "Wrong alignment on UAudioModulationStatics");
-static_assert(sizeof(UAudioModulationStatics) == 0x000028, "Wrong size on UAudioModulationStatics");
+DUMPER7_ASSERTS_UAudioModulationStatics;
 
 // Class AudioModulation.SoundModulationGenerator
 // 0x0000 (0x0030 - 0x0030)
@@ -149,15 +159,18 @@ class USoundModulationGenerator : public USoundModulatorBase
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulationGenerator">();
+		STATIC_CLASS_IMPL("SoundModulationGenerator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulationGenerator")
 	}
 	static class USoundModulationGenerator* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulationGenerator>();
 	}
 };
-static_assert(alignof(USoundModulationGenerator) == 0x000008, "Wrong alignment on USoundModulationGenerator");
-static_assert(sizeof(USoundModulationGenerator) == 0x000030, "Wrong size on USoundModulationGenerator");
+DUMPER7_ASSERTS_USoundModulationGenerator;
 
 // Class AudioModulation.SoundModulationGeneratorADEnvelope
 // 0x0018 (0x0048 - 0x0030)
@@ -170,16 +183,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulationGeneratorADEnvelope">();
+		STATIC_CLASS_IMPL("SoundModulationGeneratorADEnvelope")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulationGeneratorADEnvelope")
 	}
 	static class USoundModulationGeneratorADEnvelope* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulationGeneratorADEnvelope>();
 	}
 };
-static_assert(alignof(USoundModulationGeneratorADEnvelope) == 0x000008, "Wrong alignment on USoundModulationGeneratorADEnvelope");
-static_assert(sizeof(USoundModulationGeneratorADEnvelope) == 0x000048, "Wrong size on USoundModulationGeneratorADEnvelope");
-static_assert(offsetof(USoundModulationGeneratorADEnvelope, Params_0) == 0x000030, "Member 'USoundModulationGeneratorADEnvelope::Params_0' has a wrong offset!");
+DUMPER7_ASSERTS_USoundModulationGeneratorADEnvelope;
 
 // Class AudioModulation.SoundModulationGeneratorEnvelopeFollower
 // 0x0020 (0x0050 - 0x0030)
@@ -191,16 +206,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulationGeneratorEnvelopeFollower">();
+		STATIC_CLASS_IMPL("SoundModulationGeneratorEnvelopeFollower")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulationGeneratorEnvelopeFollower")
 	}
 	static class USoundModulationGeneratorEnvelopeFollower* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulationGeneratorEnvelopeFollower>();
 	}
 };
-static_assert(alignof(USoundModulationGeneratorEnvelopeFollower) == 0x000008, "Wrong alignment on USoundModulationGeneratorEnvelopeFollower");
-static_assert(sizeof(USoundModulationGeneratorEnvelopeFollower) == 0x000050, "Wrong size on USoundModulationGeneratorEnvelopeFollower");
-static_assert(offsetof(USoundModulationGeneratorEnvelopeFollower, Params_0) == 0x000030, "Member 'USoundModulationGeneratorEnvelopeFollower::Params_0' has a wrong offset!");
+DUMPER7_ASSERTS_USoundModulationGeneratorEnvelopeFollower;
 
 // Class AudioModulation.SoundModulationGeneratorLFO
 // 0x0020 (0x0050 - 0x0030)
@@ -212,16 +229,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulationGeneratorLFO">();
+		STATIC_CLASS_IMPL("SoundModulationGeneratorLFO")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulationGeneratorLFO")
 	}
 	static class USoundModulationGeneratorLFO* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulationGeneratorLFO>();
 	}
 };
-static_assert(alignof(USoundModulationGeneratorLFO) == 0x000008, "Wrong alignment on USoundModulationGeneratorLFO");
-static_assert(sizeof(USoundModulationGeneratorLFO) == 0x000050, "Wrong size on USoundModulationGeneratorLFO");
-static_assert(offsetof(USoundModulationGeneratorLFO, Params_0) == 0x000030, "Member 'USoundModulationGeneratorLFO::Params_0' has a wrong offset!");
+DUMPER7_ASSERTS_USoundModulationGeneratorLFO;
 
 // Class AudioModulation.SoundControlBus
 // 0x0030 (0x0060 - 0x0030)
@@ -231,34 +250,36 @@ public:
 	bool                                          bBypass;                                           // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Address;                                           // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class USoundModulationGenerator*>      Generators;                                        // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	class USoundModulationParameter*              Parameter;                                         // 0x0058(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class USoundModulationGenerator*>      Generators;                                        // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	class USoundModulationParameter*              Parameter;                                         // 0x0058(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundControlBus">();
+		STATIC_CLASS_IMPL("SoundControlBus")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundControlBus")
 	}
 	static class USoundControlBus* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundControlBus>();
 	}
 };
-static_assert(alignof(USoundControlBus) == 0x000008, "Wrong alignment on USoundControlBus");
-static_assert(sizeof(USoundControlBus) == 0x000060, "Wrong size on USoundControlBus");
-static_assert(offsetof(USoundControlBus, bBypass) == 0x000030, "Member 'USoundControlBus::bBypass' has a wrong offset!");
-static_assert(offsetof(USoundControlBus, Address) == 0x000038, "Member 'USoundControlBus::Address' has a wrong offset!");
-static_assert(offsetof(USoundControlBus, Generators) == 0x000048, "Member 'USoundControlBus::Generators' has a wrong offset!");
-static_assert(offsetof(USoundControlBus, Parameter) == 0x000058, "Member 'USoundControlBus::Parameter' has a wrong offset!");
+DUMPER7_ASSERTS_USoundControlBus;
 
 // Class AudioModulation.SoundControlBusMix
-// 0x0018 (0x0040 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class USoundControlBusMix final : public UObject
 {
 public:
 	uint32                                        ProfileIndex;                                      // 0x0028(0x0004)(Edit, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSoundControlBusMixStage>       MixStages;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	double                                        Duration;                                          // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRetriggerOnActivation;                            // 0x0038(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSoundControlBusMixStage>       MixStages;                                         // 0x0040(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	void ActivateMix();
@@ -271,17 +292,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundControlBusMix">();
+		STATIC_CLASS_IMPL("SoundControlBusMix")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundControlBusMix")
 	}
 	static class USoundControlBusMix* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundControlBusMix>();
 	}
 };
-static_assert(alignof(USoundControlBusMix) == 0x000008, "Wrong alignment on USoundControlBusMix");
-static_assert(sizeof(USoundControlBusMix) == 0x000040, "Wrong size on USoundControlBusMix");
-static_assert(offsetof(USoundControlBusMix, ProfileIndex) == 0x000028, "Member 'USoundControlBusMix::ProfileIndex' has a wrong offset!");
-static_assert(offsetof(USoundControlBusMix, MixStages) == 0x000030, "Member 'USoundControlBusMix::MixStages' has a wrong offset!");
+DUMPER7_ASSERTS_USoundControlBusMix;
 
 // Class AudioModulation.SoundModulationParameter
 // 0x0010 (0x0038 - 0x0028)
@@ -295,16 +317,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulationParameter">();
+		STATIC_CLASS_IMPL("SoundModulationParameter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulationParameter")
 	}
 	static class USoundModulationParameter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulationParameter>();
 	}
 };
-static_assert(alignof(USoundModulationParameter) == 0x000008, "Wrong alignment on USoundModulationParameter");
-static_assert(sizeof(USoundModulationParameter) == 0x000038, "Wrong size on USoundModulationParameter");
-static_assert(offsetof(USoundModulationParameter, Settings) == 0x000030, "Member 'USoundModulationParameter::Settings' has a wrong offset!");
+DUMPER7_ASSERTS_USoundModulationParameter;
 
 // Class AudioModulation.SoundModulationParameterScaled
 // 0x0008 (0x0040 - 0x0038)
@@ -317,17 +341,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulationParameterScaled">();
+		STATIC_CLASS_IMPL("SoundModulationParameterScaled")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulationParameterScaled")
 	}
 	static class USoundModulationParameterScaled* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulationParameterScaled>();
 	}
 };
-static_assert(alignof(USoundModulationParameterScaled) == 0x000008, "Wrong alignment on USoundModulationParameterScaled");
-static_assert(sizeof(USoundModulationParameterScaled) == 0x000040, "Wrong size on USoundModulationParameterScaled");
-static_assert(offsetof(USoundModulationParameterScaled, UnitMin) == 0x000038, "Member 'USoundModulationParameterScaled::UnitMin' has a wrong offset!");
-static_assert(offsetof(USoundModulationParameterScaled, UnitMax) == 0x00003C, "Member 'USoundModulationParameterScaled::UnitMax' has a wrong offset!");
+DUMPER7_ASSERTS_USoundModulationParameterScaled;
 
 // Class AudioModulation.SoundModulationParameterFrequencyBase
 // 0x0000 (0x0038 - 0x0038)
@@ -336,15 +361,18 @@ class USoundModulationParameterFrequencyBase : public USoundModulationParameter
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulationParameterFrequencyBase">();
+		STATIC_CLASS_IMPL("SoundModulationParameterFrequencyBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulationParameterFrequencyBase")
 	}
 	static class USoundModulationParameterFrequencyBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulationParameterFrequencyBase>();
 	}
 };
-static_assert(alignof(USoundModulationParameterFrequencyBase) == 0x000008, "Wrong alignment on USoundModulationParameterFrequencyBase");
-static_assert(sizeof(USoundModulationParameterFrequencyBase) == 0x000038, "Wrong size on USoundModulationParameterFrequencyBase");
+DUMPER7_ASSERTS_USoundModulationParameterFrequencyBase;
 
 // Class AudioModulation.SoundModulationParameterFrequency
 // 0x0008 (0x0040 - 0x0038)
@@ -357,17 +385,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulationParameterFrequency">();
+		STATIC_CLASS_IMPL("SoundModulationParameterFrequency")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulationParameterFrequency")
 	}
 	static class USoundModulationParameterFrequency* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulationParameterFrequency>();
 	}
 };
-static_assert(alignof(USoundModulationParameterFrequency) == 0x000008, "Wrong alignment on USoundModulationParameterFrequency");
-static_assert(sizeof(USoundModulationParameterFrequency) == 0x000040, "Wrong size on USoundModulationParameterFrequency");
-static_assert(offsetof(USoundModulationParameterFrequency, UnitMin) == 0x000038, "Member 'USoundModulationParameterFrequency::UnitMin' has a wrong offset!");
-static_assert(offsetof(USoundModulationParameterFrequency, UnitMax) == 0x00003C, "Member 'USoundModulationParameterFrequency::UnitMax' has a wrong offset!");
+DUMPER7_ASSERTS_USoundModulationParameterFrequency;
 
 // Class AudioModulation.SoundModulationParameterFilterFrequency
 // 0x0000 (0x0038 - 0x0038)
@@ -376,15 +405,18 @@ class USoundModulationParameterFilterFrequency : public USoundModulationParamete
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulationParameterFilterFrequency">();
+		STATIC_CLASS_IMPL("SoundModulationParameterFilterFrequency")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulationParameterFilterFrequency")
 	}
 	static class USoundModulationParameterFilterFrequency* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulationParameterFilterFrequency>();
 	}
 };
-static_assert(alignof(USoundModulationParameterFilterFrequency) == 0x000008, "Wrong alignment on USoundModulationParameterFilterFrequency");
-static_assert(sizeof(USoundModulationParameterFilterFrequency) == 0x000038, "Wrong size on USoundModulationParameterFilterFrequency");
+DUMPER7_ASSERTS_USoundModulationParameterFilterFrequency;
 
 // Class AudioModulation.SoundModulationParameterLPFFrequency
 // 0x0000 (0x0038 - 0x0038)
@@ -393,15 +425,18 @@ class USoundModulationParameterLPFFrequency final : public USoundModulationParam
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulationParameterLPFFrequency">();
+		STATIC_CLASS_IMPL("SoundModulationParameterLPFFrequency")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulationParameterLPFFrequency")
 	}
 	static class USoundModulationParameterLPFFrequency* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulationParameterLPFFrequency>();
 	}
 };
-static_assert(alignof(USoundModulationParameterLPFFrequency) == 0x000008, "Wrong alignment on USoundModulationParameterLPFFrequency");
-static_assert(sizeof(USoundModulationParameterLPFFrequency) == 0x000038, "Wrong size on USoundModulationParameterLPFFrequency");
+DUMPER7_ASSERTS_USoundModulationParameterLPFFrequency;
 
 // Class AudioModulation.SoundModulationParameterHPFFrequency
 // 0x0000 (0x0038 - 0x0038)
@@ -410,15 +445,18 @@ class USoundModulationParameterHPFFrequency final : public USoundModulationParam
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulationParameterHPFFrequency">();
+		STATIC_CLASS_IMPL("SoundModulationParameterHPFFrequency")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulationParameterHPFFrequency")
 	}
 	static class USoundModulationParameterHPFFrequency* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulationParameterHPFFrequency>();
 	}
 };
-static_assert(alignof(USoundModulationParameterHPFFrequency) == 0x000008, "Wrong alignment on USoundModulationParameterHPFFrequency");
-static_assert(sizeof(USoundModulationParameterHPFFrequency) == 0x000038, "Wrong size on USoundModulationParameterHPFFrequency");
+DUMPER7_ASSERTS_USoundModulationParameterHPFFrequency;
 
 // Class AudioModulation.SoundModulationParameterBipolar
 // 0x0008 (0x0040 - 0x0038)
@@ -431,16 +469,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulationParameterBipolar">();
+		STATIC_CLASS_IMPL("SoundModulationParameterBipolar")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulationParameterBipolar")
 	}
 	static class USoundModulationParameterBipolar* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulationParameterBipolar>();
 	}
 };
-static_assert(alignof(USoundModulationParameterBipolar) == 0x000008, "Wrong alignment on USoundModulationParameterBipolar");
-static_assert(sizeof(USoundModulationParameterBipolar) == 0x000040, "Wrong size on USoundModulationParameterBipolar");
-static_assert(offsetof(USoundModulationParameterBipolar, UnitRange) == 0x000038, "Member 'USoundModulationParameterBipolar::UnitRange' has a wrong offset!");
+DUMPER7_ASSERTS_USoundModulationParameterBipolar;
 
 // Class AudioModulation.SoundModulationParameterVolume
 // 0x0008 (0x0040 - 0x0038)
@@ -453,16 +493,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulationParameterVolume">();
+		STATIC_CLASS_IMPL("SoundModulationParameterVolume")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulationParameterVolume")
 	}
 	static class USoundModulationParameterVolume* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulationParameterVolume>();
 	}
 };
-static_assert(alignof(USoundModulationParameterVolume) == 0x000008, "Wrong alignment on USoundModulationParameterVolume");
-static_assert(sizeof(USoundModulationParameterVolume) == 0x000040, "Wrong size on USoundModulationParameterVolume");
-static_assert(offsetof(USoundModulationParameterVolume, MinVolume) == 0x000038, "Member 'USoundModulationParameterVolume::MinVolume' has a wrong offset!");
+DUMPER7_ASSERTS_USoundModulationParameterVolume;
 
 // Class AudioModulation.SoundModulationParameterAdditive
 // 0x0008 (0x0040 - 0x0038)
@@ -475,17 +517,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulationParameterAdditive">();
+		STATIC_CLASS_IMPL("SoundModulationParameterAdditive")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulationParameterAdditive")
 	}
 	static class USoundModulationParameterAdditive* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulationParameterAdditive>();
 	}
 };
-static_assert(alignof(USoundModulationParameterAdditive) == 0x000008, "Wrong alignment on USoundModulationParameterAdditive");
-static_assert(sizeof(USoundModulationParameterAdditive) == 0x000040, "Wrong size on USoundModulationParameterAdditive");
-static_assert(offsetof(USoundModulationParameterAdditive, UnitMin) == 0x000038, "Member 'USoundModulationParameterAdditive::UnitMin' has a wrong offset!");
-static_assert(offsetof(USoundModulationParameterAdditive, UnitMax) == 0x00003C, "Member 'USoundModulationParameterAdditive::UnitMax' has a wrong offset!");
+DUMPER7_ASSERTS_USoundModulationParameterAdditive;
 
 // Class AudioModulation.SoundModulationPatch
 // 0x0020 (0x0050 - 0x0030)
@@ -497,16 +540,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulationPatch">();
+		STATIC_CLASS_IMPL("SoundModulationPatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulationPatch")
 	}
 	static class USoundModulationPatch* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulationPatch>();
 	}
 };
-static_assert(alignof(USoundModulationPatch) == 0x000008, "Wrong alignment on USoundModulationPatch");
-static_assert(sizeof(USoundModulationPatch) == 0x000050, "Wrong size on USoundModulationPatch");
-static_assert(offsetof(USoundModulationPatch, PatchSettings) == 0x000030, "Member 'USoundModulationPatch::PatchSettings' has a wrong offset!");
+DUMPER7_ASSERTS_USoundModulationPatch;
 
 }
 

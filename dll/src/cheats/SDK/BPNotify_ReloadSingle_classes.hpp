@@ -17,24 +17,32 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BPNotify_ReloadSingle.BPNotify_ReloadSingle_C
-// 0x0000 (0x0038 - 0x0038)
+// 0x0010 (0x0048 - 0x0038)
 class UBPNotify_ReloadSingle_C final : public UAnimNotify
 {
+public:
+	bool                                          MontageSelection;                                  // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Montage_Section;                                   // 0x003C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
 public:
 	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPNotify_ReloadSingle_C">();
+		BP_STATIC_CLASS_IMPL("BPNotify_ReloadSingle_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPNotify_ReloadSingle_C")
 	}
 	static class UBPNotify_ReloadSingle_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPNotify_ReloadSingle_C>();
 	}
 };
-static_assert(alignof(UBPNotify_ReloadSingle_C) == 0x000008, "Wrong alignment on UBPNotify_ReloadSingle_C");
-static_assert(sizeof(UBPNotify_ReloadSingle_C) == 0x000038, "Wrong size on UBPNotify_ReloadSingle_C");
+DUMPER7_ASSERTS_UBPNotify_ReloadSingle_C;
 
 }
 

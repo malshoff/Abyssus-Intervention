@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function RigVM.RigVM.AddRigVMFunction
-// (Native, Public, HasOutParams)
+// (RequiredAPI, Native, Public, HasOutParams)
 // Parameters:
 // class UScriptStruct*                    InRigVMStruct                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FName&                      InMethodName                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -670,7 +670,7 @@ void URigVM::SetParameterValueVector2D(const class FName& InParameterName, const
 
 
 // Function RigVM.RigVM.GetRigVMFunctionName
-// (Native, Public, Const)
+// (RequiredAPI, Native, Public, Const)
 // Parameters:
 // int32                                   InFunctionIndex                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -873,7 +873,7 @@ bool URigVMUserWorkflowOptions::IsValid() const
 
 
 // Function RigVM.RigVMUserWorkflowOptions.RequiresDialog
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -898,7 +898,7 @@ bool URigVMUserWorkflowOptions::RequiresDialog() const
 
 
 // Function RigVM.RigVMHost.FindRigVMHosts
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          Outer_0                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class URigVMHost>           OptionalClass                                          (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -928,7 +928,7 @@ TArray<class URigVMHost*> URigVMHost::FindRigVMHosts(class UObject* Outer_0, TSu
 
 
 // Function RigVM.RigVMHost.Execute
-// (Native, Public, HasOutParams, BlueprintCallable)
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class FName&                      InEventName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -956,7 +956,7 @@ bool URigVMHost::Execute(const class FName& InEventName)
 
 
 // Function RigVM.RigVMHost.ExecuteEvent
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class FName&                      InEventName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1009,7 +1009,7 @@ struct FRigVMExtendedExecuteContext URigVMHost::GetExtendedExecuteContext()
 
 
 // Function RigVM.RigVMHost.GetVM
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class URigVM*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1034,7 +1034,7 @@ class URigVM* URigVMHost::GetVM()
 
 
 // Function RigVM.RigVMHost.RemoveRunOnceEvent
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class FName&                      InEventName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1062,7 +1062,7 @@ bool URigVMHost::RemoveRunOnceEvent(const class FName& InEventName)
 
 
 // Function RigVM.RigVMHost.RequestInit
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 
 void URigVMHost::RequestInit()
 {
@@ -1081,7 +1081,7 @@ void URigVMHost::RequestInit()
 
 
 // Function RigVM.RigVMHost.RequestRunOnceEvent
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class FName&                      InEventName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   InEventIndex                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1108,7 +1108,7 @@ void URigVMHost::RequestRunOnceEvent(const class FName& InEventName, int32 InEve
 
 
 // Function RigVM.RigVMHost.SetAbsoluteAndDeltaTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InAbsoluteTime                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   InDeltaTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1135,7 +1135,7 @@ void URigVMHost::SetAbsoluteAndDeltaTime(float InAbsoluteTime, float InDeltaTime
 
 
 // Function RigVM.RigVMHost.SetAbsoluteTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InAbsoluteTime                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    InSetDeltaTimeZero                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1162,7 +1162,7 @@ void URigVMHost::SetAbsoluteTime(float InAbsoluteTime, bool InSetDeltaTimeZero)
 
 
 // Function RigVM.RigVMHost.SetDeltaTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InDeltaTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1187,7 +1187,7 @@ void URigVMHost::SetDeltaTime(float InDeltaTime)
 
 
 // Function RigVM.RigVMHost.SetFramesPerSecond
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InFramesPerSecond                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1212,7 +1212,7 @@ void URigVMHost::SetFramesPerSecond(float InFramesPerSecond)
 
 
 // Function RigVM.RigVMHost.SetVariableFromString
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class FName&                      InVariableName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    InValue                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1242,7 +1242,7 @@ bool URigVMHost::SetVariableFromString(const class FName& InVariableName, const 
 
 
 // Function RigVM.RigVMHost.CanExecute
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1292,7 +1292,7 @@ float URigVMHost::GetAbsoluteTime() const
 
 
 // Function RigVM.RigVMHost.GetCurrentFramesPerSecond
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1342,7 +1342,7 @@ float URigVMHost::GetDeltaTime() const
 
 
 // Function RigVM.RigVMHost.GetScriptAccessibleVariables
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -1367,7 +1367,7 @@ TArray<class FName> URigVMHost::GetScriptAccessibleVariables() const
 
 
 // Function RigVM.RigVMHost.GetSupportedEvents
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const TArray<class FName>               ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -1392,7 +1392,7 @@ const TArray<class FName> URigVMHost::GetSupportedEvents() const
 
 
 // Function RigVM.RigVMHost.GetVariableAsString
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FName&                      InVariableName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1420,7 +1420,7 @@ class FString URigVMHost::GetVariableAsString(const class FName& InVariableName)
 
 
 // Function RigVM.RigVMHost.GetVariableType
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FName&                      InVariableName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1473,7 +1473,7 @@ bool URigVMHost::IsInitRequired() const
 
 
 // Function RigVM.RigVMHost.SupportsEvent
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FName&                      InEventName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1501,7 +1501,7 @@ bool URigVMHost::SupportsEvent(const class FName& InEventName) const
 
 
 // Function RigVM.RigVMProjectSettings.GetTag
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             InTagName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FRigVMTag                        ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)

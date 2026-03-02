@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "RGame_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK::Params
@@ -26,11 +26,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CanInteract_ReturnValue;                  // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_CanInteract) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_CanInteract");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_CanInteract) == 0x000010, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_CanInteract");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_CanInteract, Controller) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_CanInteract::Controller' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_CanInteract, ReturnValue) == 0x000008, "Member 'BP_Pickupable_Mutator_GodCategory_C_CanInteract::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_CanInteract, CallFunc_CanInteract_ReturnValue) == 0x000009, "Member 'BP_Pickupable_Mutator_GodCategory_C_CanInteract::CallFunc_CanInteract_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_CanInteract;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory
 // 0x00E8 (0x00E8 - 0x0000)
@@ -38,7 +34,8 @@ struct BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutato
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class URMutatorRewardCategoryDataAsset*       CallFunc_GenerateGodCategory_GeneratedCategory;    // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ARGamePlayerController*                 CallFunc_GetFirstLocalGamePlayerController_ReturnValue; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -47,10 +44,10 @@ public:
 	class APlayerController*                      K2Node_Event_PlayerController;                     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      K2Node_Event_controller;                           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Pickup_ReturnValue;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class URPlayerGScriptComponent*               CallFunc_GetPlayerGScriptComponent_ReturnValue;    // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget_CommonMutatorSelectScreen_C*    CallFunc_PushWidget_OutWidget;                     // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TArray<class URMutatorRewardCategoryDataAsset*> CallFunc_GetMutatorRewardCategoryDataAssets_ReturnValue; // 0x0058(0x0010)(ReferenceParm)
@@ -65,51 +62,18 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(const struct FRLootSelectionOption& LootSelectionOption)> K2Node_CreateDelegate_OutputDelegate; // 0x00B4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayerHasGeneratedMutator_Value;          // 0x00C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x00C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00C7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x00CB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_PlayerHasGeneratedMutator_Value;          // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x00C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x00C7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x00CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CB[0x5];                                       // 0x00CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class URMutatorRewardCategoryDataAsset*       K2Node_Event_NewGodCategory;                       // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FRLootSelectionOption>          K2Node_Event_NewLootOptions;                       // 0x00D8(0x0010)(ConstParm, ReferenceParm)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory) == 0x0000E8, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, EntryPoint) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_GenerateGodCategory_GeneratedCategory) == 0x000008, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_GenerateGodCategory_GeneratedCategory' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000010, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000018, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_Array_IsEmpty_ReturnValue) == 0x000020, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, K2Node_Event_PlayerController) == 0x000028, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::K2Node_Event_PlayerController' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, K2Node_Event_controller) == 0x000030, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::K2Node_Event_controller' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_Pickup_ReturnValue) == 0x000038, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_Pickup_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_IsValid_ReturnValue) == 0x000039, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_GetPlayerGScriptComponent_ReturnValue) == 0x000040, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_GetPlayerGScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_IsValid_ReturnValue_1) == 0x000048, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_PushWidget_OutWidget) == 0x000050, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_PushWidget_OutWidget' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_GetMutatorRewardCategoryDataAssets_ReturnValue) == 0x000058, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_GetMutatorRewardCategoryDataAssets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_GetUniqueRewardCategoriesFromRewardCategryoDataAssets_ReturnValue) == 0x000068, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_GetUniqueRewardCategoriesFromRewardCategryoDataAssets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_HasCappedMutatorRewardCategories_ReturnValue) == 0x000088, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_HasCappedMutatorRewardCategories_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, K2Node_CustomEvent_LootSelectionOption) == 0x000090, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::K2Node_CustomEvent_LootSelectionOption' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_PlayerHasGeneratedTriggerType_Value) == 0x0000A0, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_PlayerHasGeneratedTriggerType_Value' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_BooleanOR_ReturnValue) == 0x0000A1, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, K2Node_DynamicCast_AsRMutator_Primary_Asset) == 0x0000A8, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::K2Node_DynamicCast_AsRMutator_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, K2Node_DynamicCast_bSuccess) == 0x0000B0, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, K2Node_CreateDelegate_OutputDelegate) == 0x0000B4, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_IsValid_ReturnValue_2) == 0x0000C4, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_PlayerHasGeneratedMutator_Value) == 0x0000C5, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_PlayerHasGeneratedMutator_Value' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_BooleanOR_ReturnValue_1) == 0x0000C6, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_IsValid_ReturnValue_3) == 0x0000C7, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_HasTag_ReturnValue) == 0x0000C8, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_HasTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_Not_PreBool_ReturnValue) == 0x0000C9, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_BooleanAND_ReturnValue) == 0x0000CA, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, CallFunc_IsValid_ReturnValue_4) == 0x0000CB, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, K2Node_Event_NewGodCategory) == 0x0000D0, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::K2Node_Event_NewGodCategory' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory, K2Node_Event_NewLootOptions) == 0x0000D8, "Member 'BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory::K2Node_Event_NewLootOptions' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_ExecuteUbergraph_BP_Pickupable_Mutator_GodCategory;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.FilterByMerchantBlacklist
 // 0x0108 (0x0108 - 0x0000)
@@ -142,29 +106,7 @@ public:
 	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0102(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0103(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist) == 0x000108, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, InRows) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::InRows' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, OutRows) == 0x000010, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::OutRows' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, MerchantFilteredRows) == 0x000020, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::MerchantFilteredRows' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, Temp_int_Array_Index_Variable) == 0x000034, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, Temp_int_Loop_Counter_Variable) == 0x000038, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, CallFunc_Array_Get_Item) == 0x000040, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, CallFunc_Less_IntInt_ReturnValue) == 0x0000C8, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x0000C9, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue) == 0x0000D0, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::CallFunc_LoadObjectFromSoftObjectPtr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, CallFunc_Add_IntInt_ReturnValue) == 0x0000D8, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, CallFunc_IsValid_ReturnValue) == 0x0000DC, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, K2Node_DynamicCast_AsRMutator_Primary_Asset) == 0x0000E0, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::K2Node_DynamicCast_AsRMutator_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, K2Node_DynamicCast_bSuccess) == 0x0000E8, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, CallFunc_Array_Add_ReturnValue) == 0x0000EC, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, CallFunc_GetOwner_ReturnValue) == 0x0000F0, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, K2Node_DynamicCast_AsRMerchant) == 0x0000F8, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::K2Node_DynamicCast_AsRMerchant' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, K2Node_DynamicCast_bSuccess_1) == 0x000100, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, CallFunc_IsValid_ReturnValue_1) == 0x000101, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, CallFunc_Array_Contains_ReturnValue) == 0x000102, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist, CallFunc_Not_PreBool_ReturnValue) == 0x000103, "Member 'BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_FilterByMerchantBlacklist;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.GenerateGodCategory
 // 0x00D8 (0x00D8 - 0x0000)
@@ -203,52 +145,21 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasCappedMutatorRewardCategories_ReturnValue; // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory) == 0x0000D8, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, GeneratedCategory) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::GeneratedCategory' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000008, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_GetOwner_ReturnValue) == 0x000010, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_GetNumMaxMutatorCategories_ReturnValue) == 0x000018, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_GetNumMaxMutatorCategories_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_IsValid_ReturnValue) == 0x00001C, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, K2Node_DynamicCast_AsRMerchant) == 0x000020, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::K2Node_DynamicCast_AsRMerchant' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_GetNumUniqueGeneratedMutatorCategories_ReturnValue) == 0x00002C, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_GetNumUniqueGeneratedMutatorCategories_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_GetNumUniqueEquippedMutatorCategories_Num) == 0x000030, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_GetNumUniqueEquippedMutatorCategories_Num' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_Add_IntInt_ReturnValue) == 0x000034, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_GetMutatorRewardCategoryDataAssets_ReturnValue) == 0x000038, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_GetMutatorRewardCategoryDataAssets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000048, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_GetUniqueRewardCategoriesFromRewardCategryoDataAssets_ReturnValue) == 0x000050, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_GetUniqueRewardCategoriesFromRewardCategryoDataAssets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_GetFirstLocalGamePlayerController_ReturnValue_1) == 0x000070, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_GetFirstLocalGamePlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_GenerateRandomGodCategory_GeneratedCategory) == 0x000078, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_GenerateRandomGodCategory_GeneratedCategory' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_IsValid_ReturnValue_1) == 0x000080, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_IsValid_ReturnValue_2) == 0x000081, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_GetRGScriptComponent_ReturnValue) == 0x000088, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_GetRGScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_GetEquippedGodCategories_EquippedGodCategories) == 0x000090, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_GetEquippedGodCategories_EquippedGodCategories' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_IsValid_ReturnValue_3) == 0x0000B0, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_GenerateRandomGodCategoryFromEquippedCategories_GeneratedCategory) == 0x0000B8, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_GenerateRandomGodCategoryFromEquippedCategories_GeneratedCategory' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_IsValid_ReturnValue_4) == 0x0000C0, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x0000C8, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, K2Node_DynamicCast_bSuccess_1) == 0x0000D0, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory, CallFunc_HasCappedMutatorRewardCategories_ReturnValue) == 0x0000D1, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory::CallFunc_HasCappedMutatorRewardCategories_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_GenerateGodCategory;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.GenerateGodMutatorOptionsFromGodCategory
-// 0x00C0 (0x00C0 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory final
 {
 public:
 	class URMutatorRewardCategoryDataAsset*       GodCategory;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FRLootSelectionOption>          GeneratedMutatorOptions;                           // 0x0008(0x0010)(Edit, BlueprintVisible)
-	struct FMutatorLootTableRow                   RandomizedMutatorOption;                           // 0x0018(0x0088)(Edit, BlueprintVisible)
-	TArray<struct FMutatorLootTableRow>           FilteredRows;                                      // 0x00A0(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FRLootSelectionOption>          CallFunc_GetLootableOptionsByMutatorRewardCategory_ReturnValue; // 0x00B0(0x0010)(ReferenceParm)
+	class URMutatorPrimaryAsset*                  BoughtMutatorPA;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FRLootSelectionOption>          GeneratedMutatorOptions;                           // 0x0010(0x0010)(Edit, BlueprintVisible)
+	struct FMutatorLootTableRow                   RandomizedMutatorOption;                           // 0x0020(0x0088)(Edit, BlueprintVisible)
+	TArray<struct FMutatorLootTableRow>           FilteredRows;                                      // 0x00A8(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FRLootSelectionOption>          CallFunc_GetLootableOptionsByMutatorRewardCategory_ReturnValue; // 0x00B8(0x0010)(ReferenceParm)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory) == 0x0000C0, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory, GodCategory) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory::GodCategory' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory, GeneratedMutatorOptions) == 0x000008, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory::GeneratedMutatorOptions' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory, RandomizedMutatorOption) == 0x000018, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory::RandomizedMutatorOption' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory, FilteredRows) == 0x0000A0, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory::FilteredRows' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory, CallFunc_GetLootableOptionsByMutatorRewardCategory_ReturnValue) == 0x0000B0, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory::CallFunc_GetLootableOptionsByMutatorRewardCategory_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_GenerateGodMutatorOptionsFromGodCategory;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.GenerateRandomGodCategory
 // 0x00E0 (0x00E0 - 0x0000)
@@ -287,33 +198,7 @@ public:
 	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class URMutatorRewardCategoryDataAsset*> K2Node_Select_Default;                           // 0x00D0(0x0010)(ConstParm, ReferenceParm)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory) == 0x0000E0, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, GeneratedCategory) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::GeneratedCategory' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, ViableRewardCategoryDAs) == 0x000008, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::ViableRewardCategoryDAs' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, SelectedRewardCategoryDAs) == 0x000018, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::SelectedRewardCategoryDAs' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, LocalGamePC) == 0x000028, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::LocalGamePC' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, Temp_bool_Variable) == 0x000030, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, Temp_int_Array_Index_Variable) == 0x000034, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, Temp_int_Loop_Counter_Variable) == 0x000038, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, CallFunc_Add_IntInt_ReturnValue) == 0x00003C, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, CallFunc_Array_Random_OutItem) == 0x000040, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::CallFunc_Array_Random_OutItem' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, CallFunc_Array_Random_OutIndex) == 0x000048, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::CallFunc_Array_Random_OutIndex' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, CallFunc_K2_GetPawn_ReturnValue) == 0x000050, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000058, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, CallFunc_Array_Get_Item) == 0x000068, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, CallFunc_IsCategoryCapped_Value) == 0x000070, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::CallFunc_IsCategoryCapped_Value' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, CallFunc_HasEnoughMutatorsInCategoryToSpawn_Value) == 0x000071, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::CallFunc_HasEnoughMutatorsInCategoryToSpawn_Value' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, CallFunc_Array_Length_ReturnValue) == 0x000074, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, CallFunc_Less_IntInt_ReturnValue) == 0x000078, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, CallFunc_Array_AddUnique_ReturnValue) == 0x00007C, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, CallFunc_GetMutatorRewardCategoryDataAssets_ReturnValue) == 0x000080, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::CallFunc_GetMutatorRewardCategoryDataAssets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, CallFunc_GetMutatorRewardCategoryDataAssetsByTags_ReturnValue) == 0x000090, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::CallFunc_GetMutatorRewardCategoryDataAssetsByTags_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, CallFunc_GetUniqueRewardCategoriesFromRewardCategryoDataAssets_ReturnValue) == 0x0000A0, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::CallFunc_GetUniqueRewardCategoriesFromRewardCategryoDataAssets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x0000C0, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, CallFunc_HasCappedMutatorRewardCategories_ReturnValue) == 0x0000C8, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::CallFunc_HasCappedMutatorRewardCategories_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory, K2Node_Select_Default) == 0x0000D0, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategory;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.GenerateRandomGodCategoryFromEquippedCategories
 // 0x0090 (0x0090 - 0x0000)
@@ -342,26 +227,7 @@ public:
 	class URMutatorRewardCategoryDataAsset*       CallFunc_Array_Random_OutItem;                     // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Random_OutIndex;                    // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories) == 0x000090, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, EquippedGodCategories) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::EquippedGodCategories' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, GeneratedCategory) == 0x000020, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::GeneratedCategory' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, ViableGodCategories) == 0x000028, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::ViableGodCategories' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, Temp_int_Array_Index_Variable) == 0x000038, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, Temp_int_Loop_Counter_Variable) == 0x00003C, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, CallFunc_Add_IntInt_ReturnValue) == 0x000040, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, CallFunc_GenerateRandomGodCategory_GeneratedCategory) == 0x000048, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::CallFunc_GenerateRandomGodCategory_GeneratedCategory' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, CallFunc_Array_IsEmpty_ReturnValue) == 0x000050, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, CallFunc_GetMutatorRewardCategoryDataAssets_ReturnValue) == 0x000058, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::CallFunc_GetMutatorRewardCategoryDataAssets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, CallFunc_Array_Get_Item) == 0x000068, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, CallFunc_Array_Length_ReturnValue) == 0x000070, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, CallFunc_Array_AddUnique_ReturnValue) == 0x000074, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, CallFunc_Less_IntInt_ReturnValue) == 0x000078, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, CallFunc_IsCategoryCapped_Value) == 0x000079, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::CallFunc_IsCategoryCapped_Value' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, CallFunc_HasEnoughMutatorsInCategoryToSpawn_Value) == 0x00007A, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::CallFunc_HasEnoughMutatorsInCategoryToSpawn_Value' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, CallFunc_HasTag_ReturnValue) == 0x00007B, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::CallFunc_HasTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, CallFunc_Array_Random_OutItem) == 0x000080, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::CallFunc_Array_Random_OutItem' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories, CallFunc_Array_Random_OutIndex) == 0x000088, "Member 'BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories::CallFunc_Array_Random_OutIndex' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_GenerateRandomGodCategoryFromEquippedCategories;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.GetEquippedGodCategories
 // 0x00C8 (0x00C8 - 0x0000)
@@ -396,30 +262,7 @@ public:
 	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x00C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories) == 0x0000C8, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, EquippedGodCategories) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::EquippedGodCategories' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, EquippedCategories) == 0x000020, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::EquippedCategories' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, Temp_int_Loop_Counter_Variable) == 0x000040, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, CallFunc_Add_IntInt_ReturnValue) == 0x000044, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, Temp_int_Array_Index_Variable) == 0x000048, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, Temp_int_Array_Index_Variable_1) == 0x00004C, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, Temp_int_Loop_Counter_Variable_1) == 0x000050, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000058, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, CallFunc_K2_GetPawn_ReturnValue) == 0x000060, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, CallFunc_Add_IntInt_ReturnValue_1) == 0x000068, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000070, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, CallFunc_GetEquippedMutators_ReturnValue) == 0x000080, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::CallFunc_GetEquippedMutators_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, CallFunc_Array_Length_ReturnValue) == 0x000090, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, CallFunc_Array_Get_Item) == 0x000098, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, CallFunc_Less_IntInt_ReturnValue) == 0x0000A0, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, CallFunc_BreakGameplayTagContainer_GameplayTags) == 0x0000A8, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::CallFunc_BreakGameplayTagContainer_GameplayTags' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, CallFunc_Array_Length_ReturnValue_1) == 0x0000B8, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, CallFunc_Array_Get_Item_1) == 0x0000BC, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000C4, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, CallFunc_HasTag_ReturnValue) == 0x0000C5, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::CallFunc_HasTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories, CallFunc_Not_PreBool_ReturnValue) == 0x0000C6, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_GetEquippedGodCategories;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.GetGeneratedGodCategoryDataAsset
 // 0x0008 (0x0008 - 0x0000)
@@ -428,9 +271,7 @@ struct BP_Pickupable_Mutator_GodCategory_C_GetGeneratedGodCategoryDataAsset fina
 public:
 	class UDataAsset*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_GetGeneratedGodCategoryDataAsset) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_GetGeneratedGodCategoryDataAsset");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_GetGeneratedGodCategoryDataAsset) == 0x000008, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_GetGeneratedGodCategoryDataAsset");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetGeneratedGodCategoryDataAsset, ReturnValue) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetGeneratedGodCategoryDataAsset::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_GetGeneratedGodCategoryDataAsset;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.GetNumUniqueEquippedMutatorCategories
 // 0x0060 (0x0060 - 0x0000)
@@ -451,18 +292,7 @@ public:
 	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetNumUniqueEquippedMutatorCategories_ReturnValue; // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories) == 0x000060, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories, PlayerController) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories::PlayerController' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories, Num) == 0x000008, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories::Num' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories, CallFunc_IsValid_ReturnValue) == 0x00000C, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories, CallFunc_GetMutatorRewardCategoryDataAssets_ReturnValue) == 0x000010, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories::CallFunc_GetMutatorRewardCategoryDataAssets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories, CallFunc_GetUniqueRewardCategoriesFromRewardCategryoDataAssets_ReturnValue) == 0x000020, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories::CallFunc_GetUniqueRewardCategoriesFromRewardCategryoDataAssets_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories, CallFunc_GetRGScriptComponent_ReturnValue) == 0x000040, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories::CallFunc_GetRGScriptComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories, CallFunc_IsValid_ReturnValue_1) == 0x000048, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories, K2Node_DynamicCast_AsRPlayer_GScript_Component) == 0x000050, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories::K2Node_DynamicCast_AsRPlayer_GScript_Component' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories, CallFunc_GetNumUniqueEquippedMutatorCategories_ReturnValue) == 0x00005C, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories::CallFunc_GetNumUniqueEquippedMutatorCategories_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_GetNumUniqueEquippedMutatorCategories;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.HasEnoughMutatorsInCategoryToSpawn
 // 0x0040 (0x0040 - 0x0000)
@@ -483,18 +313,7 @@ public:
 	int32                                         CallFunc_GetNumMutatorsSpawnedInCategory_ReturnValue; // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn) == 0x000040, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn, CategoryDA) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn::CategoryDA' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn, Value) == 0x000008, "Member 'BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn::Value' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn, CallFunc_GetOwner_ReturnValue) == 0x000010, "Member 'BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000018, "Member 'BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn, CallFunc_GetNumLootableMutatorsInCategory_ReturnValue) == 0x000024, "Member 'BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn::CallFunc_GetNumLootableMutatorsInCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn, K2Node_DynamicCast_AsRLootable_Actor) == 0x000028, "Member 'BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn::K2Node_DynamicCast_AsRLootable_Actor' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn, CallFunc_GetNumMutatorsSpawnedInCategory_ReturnValue) == 0x000034, "Member 'BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn::CallFunc_GetNumMutatorsSpawnedInCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn, CallFunc_Greater_IntInt_ReturnValue) == 0x000038, "Member 'BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_HasEnoughMutatorsInCategoryToSpawn;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.IsCategoryCapped
 // 0x0048 (0x0048 - 0x0000)
@@ -511,16 +330,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped) == 0x000048, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped, CategoryDA) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped::CategoryDA' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped, Value) == 0x000008, "Member 'BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped::Value' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000010, "Member 'BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped, CallFunc_GetLootTableManager_ReturnValue) == 0x000018, "Member 'BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped::CallFunc_GetLootTableManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped, CallFunc_GetEnabledMutatorRowsByCategory_ReturnValue) == 0x000020, "Member 'BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped::CallFunc_GetEnabledMutatorRowsByCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped, CallFunc_FilterMutatorRowsByTriggersAndPassivesWeighting_ReturnValue) == 0x000030, "Member 'BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped::CallFunc_FilterMutatorRowsByTriggersAndPassivesWeighting_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped, CallFunc_Array_Length_ReturnValue) == 0x000040, "Member 'BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000044, "Member 'BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_IsCategoryCapped;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.OnInteract
 // 0x0008 (0x0008 - 0x0000)
@@ -529,9 +339,7 @@ struct BP_Pickupable_Mutator_GodCategory_C_OnInteract final
 public:
 	class APlayerController*                      Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_OnInteract) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_OnInteract");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_OnInteract) == 0x000008, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_OnInteract");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_OnInteract, Controller) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_OnInteract::Controller' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_OnInteract;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.OnInteractionSuccesful
 // 0x0008 (0x0008 - 0x0000)
@@ -540,9 +348,7 @@ struct BP_Pickupable_Mutator_GodCategory_C_OnInteractionSuccesful final
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_OnInteractionSuccesful) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_OnInteractionSuccesful");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_OnInteractionSuccesful) == 0x000008, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_OnInteractionSuccesful");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_OnInteractionSuccesful, PlayerController) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_OnInteractionSuccesful::PlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_OnInteractionSuccesful;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.OnLootOptionSelected_Event
 // 0x0010 (0x0010 - 0x0000)
@@ -551,9 +357,7 @@ struct BP_Pickupable_Mutator_GodCategory_C_OnLootOptionSelected_Event final
 public:
 	struct FRLootSelectionOption                  LootSelectionOption;                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_OnLootOptionSelected_Event) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_OnLootOptionSelected_Event");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_OnLootOptionSelected_Event) == 0x000010, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_OnLootOptionSelected_Event");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_OnLootOptionSelected_Event, LootSelectionOption) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_OnLootOptionSelected_Event::LootSelectionOption' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_OnLootOptionSelected_Event;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.PlayerHasGeneratedMutator
 // 0x0058 (0x0058 - 0x0000)
@@ -578,22 +382,7 @@ public:
 	bool                                          CallFunc_HasMutator_ReturnValue;                   // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator) == 0x000058, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator, Value) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator::Value' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000010, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator, CallFunc_Array_Get_Item) == 0x000018, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator, CallFunc_K2_GetPawn_ReturnValue) == 0x000028, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000030, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator, K2Node_DynamicCast_AsRMutator_Primary_Asset) == 0x000040, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator::K2Node_DynamicCast_AsRMutator_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator, K2Node_DynamicCast_bSuccess_1) == 0x000048, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator, CallFunc_Array_Length_ReturnValue) == 0x00004C, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator, CallFunc_HasMutator_ReturnValue) == 0x000050, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator, CallFunc_Less_IntInt_ReturnValue) == 0x000051, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedMutator;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.PlayerHasGeneratedTriggerType
 // 0x0098 (0x0098 - 0x0000)
@@ -634,34 +423,16 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue_3;     // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType) == 0x000098, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, Value) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::Value' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, Temp_int_Array_Index_Variable_1) == 0x000010, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, Temp_int_Loop_Counter_Variable_1) == 0x000014, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_Array_Get_Item) == 0x000018, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_Less_IntInt_ReturnValue) == 0x00002C, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, K2Node_DynamicCast_AsRMutator_Primary_Asset) == 0x000030, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::K2Node_DynamicCast_AsRMutator_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_Add_IntInt_ReturnValue_1) == 0x00003C, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x000040, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_EqualEqual_GameplayTag_ReturnValue_1) == 0x000041, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_EqualEqual_GameplayTag_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_EqualEqual_GameplayTag_ReturnValue_2) == 0x000042, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_EqualEqual_GameplayTag_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_BooleanOR_ReturnValue) == 0x000043, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000048, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_BooleanOR_ReturnValue_1) == 0x000050, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_K2_GetPawn_ReturnValue) == 0x000058, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000060, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, K2Node_DynamicCast_bSuccess_1) == 0x000068, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_GetEquippedMutators_ReturnValue) == 0x000070, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_GetEquippedMutators_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_Array_Length_ReturnValue_1) == 0x000080, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_Array_Get_Item_1) == 0x000088, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_Less_IntInt_ReturnValue_1) == 0x000090, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType, CallFunc_EqualEqual_GameplayTag_ReturnValue_3) == 0x000091, "Member 'BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType::CallFunc_EqualEqual_GameplayTag_ReturnValue_3' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_PlayerHasGeneratedTriggerType;
+
+// Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.RegenerateOptions
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Pickupable_Mutator_GodCategory_C_RegenerateOptions final
+{
+public:
+	class URMutatorPrimaryAsset*                  BoughtMutatorPA;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_RegenerateOptions;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.TryUpdatePlinthSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -672,11 +443,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_TryUpdatePlinthSettings) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_TryUpdatePlinthSettings");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_TryUpdatePlinthSettings) == 0x000010, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_TryUpdatePlinthSettings");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_TryUpdatePlinthSettings, CallFunc_GetFirstLocalGamePlayerController_ReturnValue) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_TryUpdatePlinthSettings::CallFunc_GetFirstLocalGamePlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_TryUpdatePlinthSettings, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_Pickupable_Mutator_GodCategory_C_TryUpdatePlinthSettings::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_TryUpdatePlinthSettings, CallFunc_IsValid_ReturnValue_1) == 0x000009, "Member 'BP_Pickupable_Mutator_GodCategory_C_TryUpdatePlinthSettings::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_TryUpdatePlinthSettings;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.UpdateGeneratedGodCategory
 // 0x0008 (0x0008 - 0x0000)
@@ -685,9 +452,7 @@ struct BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedGodCategory final
 public:
 	class URMutatorRewardCategoryDataAsset*       NewGodCategory;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedGodCategory) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedGodCategory");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedGodCategory) == 0x000008, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedGodCategory");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedGodCategory, NewGodCategory) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedGodCategory::NewGodCategory' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedGodCategory;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.UpdateGeneratedMutatorOptions
 // 0x0010 (0x0010 - 0x0000)
@@ -696,97 +461,85 @@ struct BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedMutatorOptions final
 public:
 	TArray<struct FRLootSelectionOption>          NewLootOptions;                                    // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedMutatorOptions) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedMutatorOptions");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedMutatorOptions) == 0x000010, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedMutatorOptions");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedMutatorOptions, NewLootOptions) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedMutatorOptions::NewLootOptions' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_UpdateGeneratedMutatorOptions;
 
-// Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.UpdateMerchantOptionsAfterTriggerWasBought
-// 0x00B8 (0x00B8 - 0x0000)
-struct BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought final
+// Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.UpdateMutatorMerchantOptionsBlessings
+// 0x0098 (0x0098 - 0x0000)
+struct BP_Pickupable_Mutator_GodCategory_C_UpdateMutatorMerchantOptionsBlessings final
+{
+public:
+	class URMutatorPrimaryAsset*                  BoughtMutator;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_MakeLiteralGameplayTagContainer_ReturnValue; // 0x0010(0x0020)()
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_MatchesAnyTags_ReturnValue;               // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ARMerchant*                             K2Node_DynamicCast_AsRMerchant;                    // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         CallFunc_GetSpawnedItems_ReturnValue;              // 0x0058(0x0010)(ReferenceParm)
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0075(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_76[0x2];                                       // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_Pickupable_Mutator_GodCategory_C*   K2Node_DynamicCast_AsBP_Pickupable_Mutator_God_Category; // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARPickupableMutator*                    K2Node_DynamicCast_AsRPickupable_Mutator;          // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue;       // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_UpdateMutatorMerchantOptionsBlessings;
+
+// Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.UpdateMutatorMerchantOptionsTriggers
+// 0x00A8 (0x00A8 - 0x0000)
+struct BP_Pickupable_Mutator_GodCategory_C_UpdateMutatorMerchantOptionsTriggers final
 {
 public:
 	class URMutatorPrimaryAsset*                  BoughtMutator;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_3;        // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_MatchesTag_ReturnValue;                   // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ARMerchant*                             K2Node_DynamicCast_AsRMerchant;                    // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ARMerchant*                             K2Node_DynamicCast_AsRMerchant;                    // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         CallFunc_GetSpawnedItems_ReturnValue;              // 0x0050(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_Pickupable_Mutator_GodCategory_C*   K2Node_DynamicCast_AsBP_Pickupable_Mutator_God_Category; // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRLootSelectionOption                  CallFunc_Array_Get_Item_1;                         // 0x0088(0x0010)(NoDestructor)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URMutatorPrimaryAsset*                  K2Node_DynamicCast_AsRMutator_Primary_Asset;       // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_4;        // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         CallFunc_GetSpawnedItems_ReturnValue;              // 0x0040(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_Pickupable_Mutator_GodCategory_C*   K2Node_DynamicCast_AsBP_Pickupable_Mutator_God_Category; // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRLootSelectionOption                  CallFunc_Array_Get_Item_1;                         // 0x0078(0x0010)(NoDestructor)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URMutatorPrimaryAsset*                  K2Node_DynamicCast_AsRMutator_Primary_Asset;       // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought) == 0x0000B8, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, BoughtMutator) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::BoughtMutator' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, Temp_bool_True_if_break_was_hit_Variable) == 0x000008, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_Not_PreBool_ReturnValue) == 0x000009, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00000A, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x00000B, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x00000C, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_EqualEqual_ByteByte_ReturnValue_3) == 0x00000D, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_EqualEqual_ByteByte_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_BooleanOR_ReturnValue) == 0x000014, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_BooleanOR_ReturnValue_1) == 0x00001C, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_BooleanOR_ReturnValue_2) == 0x00001D, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, Temp_int_Array_Index_Variable) == 0x000020, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, Temp_int_Array_Index_Variable_1) == 0x000024, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, Temp_int_Loop_Counter_Variable_1) == 0x000028, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_GetOwner_ReturnValue) == 0x000030, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, K2Node_DynamicCast_AsRMerchant) == 0x000040, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::K2Node_DynamicCast_AsRMerchant' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_GetSpawnedItems_ReturnValue) == 0x000050, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_GetSpawnedItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_Add_IntInt_ReturnValue_1) == 0x000060, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_Array_Get_Item) == 0x000068, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000070, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, K2Node_DynamicCast_AsBP_Pickupable_Mutator_God_Category) == 0x000078, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::K2Node_DynamicCast_AsBP_Pickupable_Mutator_God_Category' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, K2Node_DynamicCast_bSuccess_1) == 0x000080, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_Array_Length_ReturnValue) == 0x000084, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_Array_Get_Item_1) == 0x000088, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_Less_IntInt_ReturnValue) == 0x000098, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, K2Node_DynamicCast_AsRMutator_Primary_Asset) == 0x0000A0, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::K2Node_DynamicCast_AsRMutator_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, K2Node_DynamicCast_bSuccess_2) == 0x0000A8, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_Array_Length_ReturnValue_1) == 0x0000AC, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000B0, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_EqualEqual_ByteByte_ReturnValue_4) == 0x0000B1, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_EqualEqual_ByteByte_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought, CallFunc_BooleanAND_ReturnValue) == 0x0000B2, "Member 'BP_Pickupable_Mutator_GodCategory_C_UpdateMerchantOptionsAfterTriggerWasBought::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_UpdateMutatorMerchantOptionsTriggers;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.GetInteractableAlternativeDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -795,9 +548,7 @@ struct BP_Pickupable_Mutator_GodCategory_C_GetInteractableAlternativeDescription
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_GetInteractableAlternativeDescription) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_GetInteractableAlternativeDescription");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_GetInteractableAlternativeDescription) == 0x000010, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_GetInteractableAlternativeDescription");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetInteractableAlternativeDescription, ReturnValue) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetInteractableAlternativeDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_GetInteractableAlternativeDescription;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.GetInteractableDescription
 // 0x0010 (0x0010 - 0x0000)
@@ -806,9 +557,7 @@ struct BP_Pickupable_Mutator_GodCategory_C_GetInteractableDescription final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_GetInteractableDescription) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_GetInteractableDescription");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_GetInteractableDescription) == 0x000010, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_GetInteractableDescription");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetInteractableDescription, ReturnValue) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetInteractableDescription::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_GetInteractableDescription;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.GetInteractableName
 // 0x0010 (0x0010 - 0x0000)
@@ -817,9 +566,7 @@ struct BP_Pickupable_Mutator_GodCategory_C_GetInteractableName final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_GetInteractableName) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_GetInteractableName");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_GetInteractableName) == 0x000010, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_GetInteractableName");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetInteractableName, ReturnValue) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetInteractableName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_GetInteractableName;
 
 // Function BP_Pickupable_Mutator_GodCategory.BP_Pickupable_Mutator_GodCategory_C.GetInteractableSubHeader
 // 0x0010 (0x0010 - 0x0000)
@@ -828,9 +575,7 @@ struct BP_Pickupable_Mutator_GodCategory_C_GetInteractableSubHeader final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_Pickupable_Mutator_GodCategory_C_GetInteractableSubHeader) == 0x000008, "Wrong alignment on BP_Pickupable_Mutator_GodCategory_C_GetInteractableSubHeader");
-static_assert(sizeof(BP_Pickupable_Mutator_GodCategory_C_GetInteractableSubHeader) == 0x000010, "Wrong size on BP_Pickupable_Mutator_GodCategory_C_GetInteractableSubHeader");
-static_assert(offsetof(BP_Pickupable_Mutator_GodCategory_C_GetInteractableSubHeader, ReturnValue) == 0x000000, "Member 'BP_Pickupable_Mutator_GodCategory_C_GetInteractableSubHeader::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Pickupable_Mutator_GodCategory_C_GetInteractableSubHeader;
 
 }
 

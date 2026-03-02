@@ -24,9 +24,7 @@ struct Widget_Settings_GamepadInput_C_BndEvt__Widget_Settings_KeybindInput_Input
 public:
 	struct FInputChord                            SelectedKey;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_GamepadInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature) == 0x000008, "Wrong alignment on Widget_Settings_GamepadInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature");
-static_assert(sizeof(Widget_Settings_GamepadInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature) == 0x000020, "Wrong size on Widget_Settings_GamepadInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature");
-static_assert(offsetof(Widget_Settings_GamepadInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature, SelectedKey) == 0x000000, "Member 'Widget_Settings_GamepadInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature::SelectedKey' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Settings_GamepadInput_C_BndEvt__Widget_Settings_KeybindInput_InputKeySelector_151_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature;
 
 // Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.ExecuteUbergraph_Widget_Settings_GamepadInput
 // 0x0110 (0x0110 - 0x0000)
@@ -45,27 +43,7 @@ public:
 	struct FSlateBrush                            CallFunc_GetCommonInputKeyBrush_ReturnValue;       // 0x0050(0x00B0)()
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput) == 0x000010, "Wrong alignment on Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput");
-static_assert(sizeof(Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput) == 0x000110, "Wrong size on Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput");
-static_assert(offsetof(Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput, EntryPoint) == 0x000000, "Member 'Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput, K2Node_Event_InFocusEvent_1) == 0x000004, "Member 'Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput::K2Node_Event_InFocusEvent_1' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput, K2Node_Event_InFocusEvent) == 0x00000C, "Member 'Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput::K2Node_Event_InFocusEvent' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput, CallFunc_GetOwningPlayer_ReturnValue) == 0x000018, "Member 'Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput, CallFunc_GamepadLostFocusByMouseEvent_ReturnValue) == 0x000020, "Member 'Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput::CallFunc_GamepadLostFocusByMouseEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput, K2Node_ComponentBoundEvent_SelectedKey) == 0x000028, "Member 'Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput::K2Node_ComponentBoundEvent_SelectedKey' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput, CallFunc_GetCommonInputKeyBrush_ReturnValue) == 0x000050, "Member 'Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput::CallFunc_GetCommonInputKeyBrush_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput, CallFunc_IsValid_ReturnValue) == 0x000100, "Member 'Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.GetInputKeySelector
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_Settings_GamepadInput_C_GetInputKeySelector final
-{
-public:
-	class UInputKeySelector*                      OutSelector;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_Settings_GamepadInput_C_GetInputKeySelector) == 0x000008, "Wrong alignment on Widget_Settings_GamepadInput_C_GetInputKeySelector");
-static_assert(sizeof(Widget_Settings_GamepadInput_C_GetInputKeySelector) == 0x000008, "Wrong size on Widget_Settings_GamepadInput_C_GetInputKeySelector");
-static_assert(offsetof(Widget_Settings_GamepadInput_C_GetInputKeySelector, OutSelector) == 0x000000, "Member 'Widget_Settings_GamepadInput_C_GetInputKeySelector::OutSelector' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Settings_GamepadInput_C_ExecuteUbergraph_Widget_Settings_GamepadInput;
 
 // Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.OnAddedToFocusPath
 // 0x0008 (0x0008 - 0x0000)
@@ -74,9 +52,7 @@ struct Widget_Settings_GamepadInput_C_OnAddedToFocusPath final
 public:
 	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-static_assert(alignof(Widget_Settings_GamepadInput_C_OnAddedToFocusPath) == 0x000004, "Wrong alignment on Widget_Settings_GamepadInput_C_OnAddedToFocusPath");
-static_assert(sizeof(Widget_Settings_GamepadInput_C_OnAddedToFocusPath) == 0x000008, "Wrong size on Widget_Settings_GamepadInput_C_OnAddedToFocusPath");
-static_assert(offsetof(Widget_Settings_GamepadInput_C_OnAddedToFocusPath, InFocusEvent) == 0x000000, "Member 'Widget_Settings_GamepadInput_C_OnAddedToFocusPath::InFocusEvent' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Settings_GamepadInput_C_OnAddedToFocusPath;
 
 // Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.OnRemovedFromFocusPath
 // 0x0008 (0x0008 - 0x0000)
@@ -85,9 +61,16 @@ struct Widget_Settings_GamepadInput_C_OnRemovedFromFocusPath final
 public:
 	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-static_assert(alignof(Widget_Settings_GamepadInput_C_OnRemovedFromFocusPath) == 0x000004, "Wrong alignment on Widget_Settings_GamepadInput_C_OnRemovedFromFocusPath");
-static_assert(sizeof(Widget_Settings_GamepadInput_C_OnRemovedFromFocusPath) == 0x000008, "Wrong size on Widget_Settings_GamepadInput_C_OnRemovedFromFocusPath");
-static_assert(offsetof(Widget_Settings_GamepadInput_C_OnRemovedFromFocusPath, InFocusEvent) == 0x000000, "Member 'Widget_Settings_GamepadInput_C_OnRemovedFromFocusPath::InFocusEvent' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_Settings_GamepadInput_C_OnRemovedFromFocusPath;
+
+// Function Widget_Settings_GamepadInput.Widget_Settings_GamepadInput_C.GetInputKeySelector
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_Settings_GamepadInput_C_GetInputKeySelector final
+{
+public:
+	class UInputKeySelector*                      OutSelector;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_Settings_GamepadInput_C_GetInputKeySelector;
 
 }
 

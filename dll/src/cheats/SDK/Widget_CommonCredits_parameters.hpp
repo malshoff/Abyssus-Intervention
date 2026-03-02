@@ -25,9 +25,7 @@ struct Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonCredits_C_BndEvt__Widget_CommonCredits_W_Button_SimpleText_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature;
 
 // Function Widget_CommonCredits.Widget_CommonCredits_C.ExecuteUbergraph_Widget_CommonCredits
 // 0x0108 (0x0108 - 0x0000)
@@ -52,24 +50,7 @@ public:
 	struct FWidgetTransform                       K2Node_MakeStruct_WidgetTransform_1;               // 0x00C8(0x0038)(NoDestructor)
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits) == 0x000008, "Wrong alignment on Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits");
-static_assert(sizeof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits) == 0x000108, "Wrong size on Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, EntryPoint) == 0x000000, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, K2Node_Event_MyGeometry) == 0x000004, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, K2Node_Event_InDeltaTime) == 0x00003C, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, CallFunc_BreakVector2D_X) == 0x000040, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, CallFunc_BreakVector2D_Y) == 0x000048, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000050, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, CallFunc_Not_PreBool_ReturnValue) == 0x000051, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, CallFunc_BreakVector2D_X_1) == 0x000058, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, CallFunc_BreakVector2D_Y_1) == 0x000060, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, K2Node_ComponentBoundEvent_Button) == 0x000068, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, K2Node_MakeStruct_WidgetTransform) == 0x000070, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::K2Node_MakeStruct_WidgetTransform' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000A8, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0000B0, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, CallFunc_MakeVector2D_ReturnValue) == 0x0000B8, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, K2Node_MakeStruct_WidgetTransform_1) == 0x0000C8, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::K2Node_MakeStruct_WidgetTransform_1' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000100, "Member 'Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonCredits_C_ExecuteUbergraph_Widget_CommonCredits;
 
 // Function Widget_CommonCredits.Widget_CommonCredits_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -79,10 +60,7 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_CommonCredits_C_Tick) == 0x000004, "Wrong alignment on Widget_CommonCredits_C_Tick");
-static_assert(sizeof(Widget_CommonCredits_C_Tick) == 0x00003C, "Wrong size on Widget_CommonCredits_C_Tick");
-static_assert(offsetof(Widget_CommonCredits_C_Tick, MyGeometry) == 0x000000, "Member 'Widget_CommonCredits_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_CommonCredits_C_Tick, InDeltaTime) == 0x000038, "Member 'Widget_CommonCredits_C_Tick::InDeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_CommonCredits_C_Tick;
 
 }
 

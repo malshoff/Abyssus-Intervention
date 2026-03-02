@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function EngineCameras.LegacyCameraShake.StartLegacyCameraShake
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class APlayerCameraManager*             PlayerCameraManager                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class ULegacyCameraShake>   ShakeClass                                             (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -54,7 +54,7 @@ class ULegacyCameraShake* ULegacyCameraShake::StartLegacyCameraShake(class APlay
 
 
 // Function EngineCameras.LegacyCameraShake.StartLegacyCameraShakeFromSource
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class APlayerCameraManager*             PlayerCameraManager                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class ULegacyCameraShake>   ShakeClass                                             (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -92,7 +92,7 @@ class ULegacyCameraShake* ULegacyCameraShake::StartLegacyCameraShakeFromSource(c
 
 
 // Function EngineCameras.LegacyCameraShake.BlueprintUpdateCameraShake
-// (Event, Public, HasOutParams, BlueprintEvent)
+// (RequiredAPI, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
 // float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Alpha                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -120,7 +120,7 @@ void ULegacyCameraShake::BlueprintUpdateCameraShake(float DeltaTime, float Alpha
 
 
 // Function EngineCameras.LegacyCameraShake.ReceivePlayShake
-// (Event, Public, BlueprintEvent)
+// (RequiredAPI, Event, Public, BlueprintEvent)
 // Parameters:
 // float                                   Scale                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -140,7 +140,7 @@ void ULegacyCameraShake::ReceivePlayShake(float Scale)
 
 
 // Function EngineCameras.LegacyCameraShake.ReceiveStopShake
-// (Event, Public, BlueprintEvent)
+// (RequiredAPI, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                                    bImmediately                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -160,7 +160,7 @@ void ULegacyCameraShake::ReceiveStopShake(bool bImmediately)
 
 
 // Function EngineCameras.LegacyCameraShake.ReceiveIsFinished
-// (Native, Event, Public, BlueprintEvent, Const)
+// (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -213,7 +213,7 @@ class ULegacyCameraShake* ULegacyCameraShakeFunctionLibrary::Conv_LegacyCameraSh
 
 
 // Function EngineCameras.CameraAnimationCameraModifier.GetCameraAnimationCameraModifier
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   PlayerIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -243,7 +243,7 @@ class UCameraAnimationCameraModifier* UCameraAnimationCameraModifier::GetCameraA
 
 
 // Function EngineCameras.CameraAnimationCameraModifier.GetCameraAnimationCameraModifierFromID
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ControllerId                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -273,7 +273,7 @@ class UCameraAnimationCameraModifier* UCameraAnimationCameraModifier::GetCameraA
 
 
 // Function EngineCameras.CameraAnimationCameraModifier.GetCameraAnimationCameraModifierFromPlayerController
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const class APlayerController*          PlayerController                                       (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UCameraAnimationCameraModifier*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -301,7 +301,7 @@ class UCameraAnimationCameraModifier* UCameraAnimationCameraModifier::GetCameraA
 
 
 // Function EngineCameras.CameraAnimationCameraModifier.PlayCameraAnimation
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UCameraAnimationSequence*         Sequence                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FCameraAnimationParams&    Params_0                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
@@ -331,7 +331,7 @@ struct FCameraAnimationHandle UCameraAnimationCameraModifier::PlayCameraAnimatio
 
 
 // Function EngineCameras.CameraAnimationCameraModifier.StopAllCameraAnimations
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bImmediate                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -356,7 +356,7 @@ void UCameraAnimationCameraModifier::StopAllCameraAnimations(bool bImmediate)
 
 
 // Function EngineCameras.CameraAnimationCameraModifier.StopAllCameraAnimationsOf
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UCameraAnimationSequence*         Sequence                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bImmediate                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -383,7 +383,7 @@ void UCameraAnimationCameraModifier::StopAllCameraAnimationsOf(class UCameraAnim
 
 
 // Function EngineCameras.CameraAnimationCameraModifier.StopCameraAnimation
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FCameraAnimationHandle&    Handle                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bImmediate                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -410,7 +410,7 @@ void UCameraAnimationCameraModifier::StopCameraAnimation(const struct FCameraAni
 
 
 // Function EngineCameras.CameraAnimationCameraModifier.IsCameraAnimationActive
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FCameraAnimationHandle&    Handle                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -438,7 +438,7 @@ bool UCameraAnimationCameraModifier::IsCameraAnimationActive(const struct FCamer
 
 
 // Function EngineCameras.EngineCameraAnimationFunctionLibrary.Conv_CameraAnimationCameraModifier
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class APlayerCameraManager*             PlayerCameraManager                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UCameraAnimationCameraModifier*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -466,7 +466,7 @@ class UCameraAnimationCameraModifier* UEngineCameraAnimationFunctionLibrary::Con
 
 
 // Function EngineCameras.EngineCameraAnimationFunctionLibrary.Conv_CameraAnimationPlaySpace
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // ECameraShakePlaySpace                   CameraShakePlaySpace                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ECameraAnimationPlaySpace               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -494,7 +494,7 @@ ECameraAnimationPlaySpace UEngineCameraAnimationFunctionLibrary::Conv_CameraAnim
 
 
 // Function EngineCameras.EngineCameraAnimationFunctionLibrary.Conv_CameraShakePlaySpace
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // ECameraAnimationPlaySpace               CameraAnimationPlaySpace                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ECameraShakePlaySpace                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -522,7 +522,7 @@ ECameraShakePlaySpace UEngineCameraAnimationFunctionLibrary::Conv_CameraShakePla
 
 
 // Function EngineCameras.EngineCamerasSubsystem.PlayCameraAnimation
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UCameraAnimationSequence*         Sequence                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -554,7 +554,7 @@ struct FCameraAnimationHandle UEngineCamerasSubsystem::PlayCameraAnimation(class
 
 
 // Function EngineCameras.EngineCamerasSubsystem.StopAllCameraAnimations
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bImmediate                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -581,7 +581,7 @@ void UEngineCamerasSubsystem::StopAllCameraAnimations(class APlayerController* P
 
 
 // Function EngineCameras.EngineCamerasSubsystem.StopAllCameraAnimationsOf
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UCameraAnimationSequence*         Sequence                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -610,7 +610,7 @@ void UEngineCamerasSubsystem::StopAllCameraAnimationsOf(class APlayerController*
 
 
 // Function EngineCameras.EngineCamerasSubsystem.StopCameraAnimation
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FCameraAnimationHandle&    Handle                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -639,7 +639,7 @@ void UEngineCamerasSubsystem::StopCameraAnimation(class APlayerController* Playe
 
 
 // Function EngineCameras.EngineCamerasSubsystem.IsCameraAnimationActive
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FCameraAnimationHandle&    Handle                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

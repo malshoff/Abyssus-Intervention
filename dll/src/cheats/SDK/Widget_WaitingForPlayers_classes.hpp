@@ -20,22 +20,25 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_WaitingForPlayers.Widget_WaitingForPlayers_C
-// 0x0048 (0x0318 - 0x02D0)
+// 0x0058 (0x0398 - 0x0340)
 class UWidget_WaitingForPlayers_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonActionWidget*                    CommonActionWidget_106;                            // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_Proceed1;                                // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_Proceed2;                                // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_Timer;                                   // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_VotingStats;                             // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_WaitingForPlayers;                       // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UW_ActionInput_C*                       W_ActionInput;                                     // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInputAction*                           IAProceed;                                         // 0x0310(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             TextBlock_WaitingForPlayers;                       // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_VotingStats;                             // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_Timer;                                   // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_Proceed2;                                // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_Proceed1;                                // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_1;                                         // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_106;                            // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Binding_Text;                                      // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BG_Image;                                          // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInputAction*                           IAProceed;                                         // 0x0390(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
+	void ControlMappingsRebuiltDelegate_Event();
 	void ExecuteUbergraph_Widget_WaitingForPlayers(int32 EntryPoint);
 	void HandlePlayerLeft(class APlayerState* PlayerState);
 	void HideWidget();
@@ -45,32 +48,28 @@ public:
 	void OnLevelChanged();
 	void OnLobbyElevatorSequenceStart_Event();
 	void OnUngluTeleportSequenceStarted_Event();
+	void OnVisibilityChanged_Event(ESlateVisibility InVisibility);
 	void OnVoteToProceed(int32 NumVotes, int32 NumPlayers, int32 TimeLeft);
 	void OnVoteToProceedTimerTick(int32 TimeLeft);
 	void StopWait();
+	void UpdateKeyboardHelper(ECommonInputType bNewInputType);
 	void UpdateText(ECommonInputType Selection);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_WaitingForPlayers_C">();
+		BP_STATIC_CLASS_IMPL("Widget_WaitingForPlayers_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_WaitingForPlayers_C")
 	}
 	static class UWidget_WaitingForPlayers_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_WaitingForPlayers_C>();
 	}
 };
-static_assert(alignof(UWidget_WaitingForPlayers_C) == 0x000008, "Wrong alignment on UWidget_WaitingForPlayers_C");
-static_assert(sizeof(UWidget_WaitingForPlayers_C) == 0x000318, "Wrong size on UWidget_WaitingForPlayers_C");
-static_assert(offsetof(UWidget_WaitingForPlayers_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_WaitingForPlayers_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_WaitingForPlayers_C, CommonActionWidget_106) == 0x0002D8, "Member 'UWidget_WaitingForPlayers_C::CommonActionWidget_106' has a wrong offset!");
-static_assert(offsetof(UWidget_WaitingForPlayers_C, TextBlock_Proceed1) == 0x0002E0, "Member 'UWidget_WaitingForPlayers_C::TextBlock_Proceed1' has a wrong offset!");
-static_assert(offsetof(UWidget_WaitingForPlayers_C, TextBlock_Proceed2) == 0x0002E8, "Member 'UWidget_WaitingForPlayers_C::TextBlock_Proceed2' has a wrong offset!");
-static_assert(offsetof(UWidget_WaitingForPlayers_C, TextBlock_Timer) == 0x0002F0, "Member 'UWidget_WaitingForPlayers_C::TextBlock_Timer' has a wrong offset!");
-static_assert(offsetof(UWidget_WaitingForPlayers_C, TextBlock_VotingStats) == 0x0002F8, "Member 'UWidget_WaitingForPlayers_C::TextBlock_VotingStats' has a wrong offset!");
-static_assert(offsetof(UWidget_WaitingForPlayers_C, TextBlock_WaitingForPlayers) == 0x000300, "Member 'UWidget_WaitingForPlayers_C::TextBlock_WaitingForPlayers' has a wrong offset!");
-static_assert(offsetof(UWidget_WaitingForPlayers_C, W_ActionInput) == 0x000308, "Member 'UWidget_WaitingForPlayers_C::W_ActionInput' has a wrong offset!");
-static_assert(offsetof(UWidget_WaitingForPlayers_C, IAProceed) == 0x000310, "Member 'UWidget_WaitingForPlayers_C::IAProceed' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_WaitingForPlayers_C;
 
 }
 

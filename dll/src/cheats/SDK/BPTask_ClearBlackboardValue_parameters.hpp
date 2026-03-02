@@ -23,10 +23,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 K2Node_Event_OwnerActor;                           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPTask_ClearBlackboardValue_C_ExecuteUbergraph_BPTask_ClearBlackboardValue) == 0x000008, "Wrong alignment on BPTask_ClearBlackboardValue_C_ExecuteUbergraph_BPTask_ClearBlackboardValue");
-static_assert(sizeof(BPTask_ClearBlackboardValue_C_ExecuteUbergraph_BPTask_ClearBlackboardValue) == 0x000010, "Wrong size on BPTask_ClearBlackboardValue_C_ExecuteUbergraph_BPTask_ClearBlackboardValue");
-static_assert(offsetof(BPTask_ClearBlackboardValue_C_ExecuteUbergraph_BPTask_ClearBlackboardValue, EntryPoint) == 0x000000, "Member 'BPTask_ClearBlackboardValue_C_ExecuteUbergraph_BPTask_ClearBlackboardValue::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BPTask_ClearBlackboardValue_C_ExecuteUbergraph_BPTask_ClearBlackboardValue, K2Node_Event_OwnerActor) == 0x000008, "Member 'BPTask_ClearBlackboardValue_C_ExecuteUbergraph_BPTask_ClearBlackboardValue::K2Node_Event_OwnerActor' has a wrong offset!");
+DUMPER7_ASSERTS_BPTask_ClearBlackboardValue_C_ExecuteUbergraph_BPTask_ClearBlackboardValue;
 
 // Function BPTask_ClearBlackboardValue.BPTask_ClearBlackboardValue_C.ReceiveExecute
 // 0x0008 (0x0008 - 0x0000)
@@ -35,9 +32,7 @@ struct BPTask_ClearBlackboardValue_C_ReceiveExecute final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPTask_ClearBlackboardValue_C_ReceiveExecute) == 0x000008, "Wrong alignment on BPTask_ClearBlackboardValue_C_ReceiveExecute");
-static_assert(sizeof(BPTask_ClearBlackboardValue_C_ReceiveExecute) == 0x000008, "Wrong size on BPTask_ClearBlackboardValue_C_ReceiveExecute");
-static_assert(offsetof(BPTask_ClearBlackboardValue_C_ReceiveExecute, OwnerActor) == 0x000000, "Member 'BPTask_ClearBlackboardValue_C_ReceiveExecute::OwnerActor' has a wrong offset!");
+DUMPER7_ASSERTS_BPTask_ClearBlackboardValue_C_ReceiveExecute;
 
 }
 

@@ -41,23 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_AmbiencePlayer_C">();
+		BP_STATIC_CLASS_IMPL("BP_AmbiencePlayer_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_AmbiencePlayer_C")
 	}
 	static class ABP_AmbiencePlayer_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_AmbiencePlayer_C>();
 	}
 };
-static_assert(alignof(ABP_AmbiencePlayer_C) == 0x000008, "Wrong alignment on ABP_AmbiencePlayer_C");
-static_assert(sizeof(ABP_AmbiencePlayer_C) == 0x0002E0, "Wrong size on ABP_AmbiencePlayer_C");
-static_assert(offsetof(ABP_AmbiencePlayer_C, UberGraphFrame) == 0x0002A8, "Member 'ABP_AmbiencePlayer_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_AmbiencePlayer_C, AudioComponent) == 0x0002B0, "Member 'ABP_AmbiencePlayer_C::AudioComponent' has a wrong offset!");
-static_assert(offsetof(ABP_AmbiencePlayer_C, DefaultSceneRoot) == 0x0002B8, "Member 'ABP_AmbiencePlayer_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_AmbiencePlayer_C, Ambience) == 0x0002C0, "Member 'ABP_AmbiencePlayer_C::Ambience' has a wrong offset!");
-static_assert(offsetof(ABP_AmbiencePlayer_C, Fade_in_Duration) == 0x0002C8, "Member 'ABP_AmbiencePlayer_C::Fade_in_Duration' has a wrong offset!");
-static_assert(offsetof(ABP_AmbiencePlayer_C, Fade_Out_Duration) == 0x0002D0, "Member 'ABP_AmbiencePlayer_C::Fade_Out_Duration' has a wrong offset!");
-static_assert(offsetof(ABP_AmbiencePlayer_C, bIsQuad) == 0x0002D8, "Member 'ABP_AmbiencePlayer_C::bIsQuad' has a wrong offset!");
-static_assert(offsetof(ABP_AmbiencePlayer_C, Debug) == 0x0002D9, "Member 'ABP_AmbiencePlayer_C::Debug' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_AmbiencePlayer_C;
 
 }
 

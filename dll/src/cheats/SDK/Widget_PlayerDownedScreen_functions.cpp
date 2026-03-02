@@ -17,59 +17,17 @@
 namespace SDK
 {
 
-// Function Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C.Tick
+// Function Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_PlayerDownedScreen_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UWidget_PlayerDownedScreen_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerDownedScreen_C", "Tick");
-
-	Params::Widget_PlayerDownedScreen_C_Tick Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C.RegisterDefeatDownedPlayerEvents
-// (BlueprintCallable, BlueprintEvent)
-
-void UWidget_PlayerDownedScreen_C::RegisterDefeatDownedPlayerEvents()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerDownedScreen_C", "RegisterDefeatDownedPlayerEvents");
+		Func = Class->GetFunction("Widget_PlayerDownedScreen_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C.OnPlayerPawnKilled
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ARPlayerPawn*                     Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_PlayerDownedScreen_C::OnPlayerPawnKilled(class ARPlayerPawn* Player)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerDownedScreen_C", "OnPlayerPawnKilled");
-
-	Params::Widget_PlayerDownedScreen_C_OnPlayerPawnKilled Parms{};
-
-	Parms.Player = Player;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -93,15 +51,79 @@ void UWidget_PlayerDownedScreen_C::ExecuteUbergraph_Widget_PlayerDownedScreen(in
 }
 
 
-// Function Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C.OnPlayerPawnKilled
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ARPlayerPawn*                     Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_PlayerDownedScreen_C::Construct()
+void UWidget_PlayerDownedScreen_C::OnPlayerPawnKilled(class ARPlayerPawn* Player)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_PlayerDownedScreen_C", "Construct");
+		Func = Class->GetFunction("Widget_PlayerDownedScreen_C", "OnPlayerPawnKilled");
+
+	Params::Widget_PlayerDownedScreen_C_OnPlayerPawnKilled Parms{};
+
+	Parms.Player = Player;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C.OnRevivedCastInterrupted
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ARPlayerPawn*                     RevivingPlayer                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_PlayerDownedScreen_C::OnRevivedCastInterrupted(class ARPlayerPawn* RevivingPlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerDownedScreen_C", "OnRevivedCastInterrupted");
+
+	Params::Widget_PlayerDownedScreen_C_OnRevivedCastInterrupted Parms{};
+
+	Parms.RevivingPlayer = RevivingPlayer;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C.OnRevivedCastStarted_Event
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ARPlayerPawn*                     RevivingPlayer                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// float                                   CastTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   CurrentCastTime                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_PlayerDownedScreen_C::OnRevivedCastStarted_Event(class ARPlayerPawn* RevivingPlayer, float CastTime, float CurrentCastTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerDownedScreen_C", "OnRevivedCastStarted_Event");
+
+	Params::Widget_PlayerDownedScreen_C_OnRevivedCastStarted_Event Parms{};
+
+	Parms.RevivingPlayer = RevivingPlayer;
+	Parms.CastTime = CastTime;
+	Parms.CurrentCastTime = CurrentCastTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_PlayerDownedScreen.Widget_PlayerDownedScreen_C.RegisterDefeatDownedPlayerEvents
+// (BlueprintCallable, BlueprintEvent)
+
+void UWidget_PlayerDownedScreen_C::RegisterDefeatDownedPlayerEvents()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_PlayerDownedScreen_C", "RegisterDefeatDownedPlayerEvents");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

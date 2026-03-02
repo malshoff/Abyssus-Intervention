@@ -42,19 +42,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PlayFabAuthenticationContext">();
+		STATIC_CLASS_IMPL("PlayFabAuthenticationContext")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabAuthenticationContext")
 	}
 	static class UPlayFabAuthenticationContext* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPlayFabAuthenticationContext>();
 	}
 };
-static_assert(alignof(UPlayFabAuthenticationContext) == 0x000008, "Wrong alignment on UPlayFabAuthenticationContext");
-static_assert(sizeof(UPlayFabAuthenticationContext) == 0x000068, "Wrong size on UPlayFabAuthenticationContext");
-static_assert(offsetof(UPlayFabAuthenticationContext, ClientSessionTicket) == 0x000028, "Member 'UPlayFabAuthenticationContext::ClientSessionTicket' has a wrong offset!");
-static_assert(offsetof(UPlayFabAuthenticationContext, EntityToken) == 0x000038, "Member 'UPlayFabAuthenticationContext::EntityToken' has a wrong offset!");
-static_assert(offsetof(UPlayFabAuthenticationContext, DeveloperSecretKey) == 0x000048, "Member 'UPlayFabAuthenticationContext::DeveloperSecretKey' has a wrong offset!");
-static_assert(offsetof(UPlayFabAuthenticationContext, PlayFabId) == 0x000058, "Member 'UPlayFabAuthenticationContext::PlayFabId' has a wrong offset!");
+DUMPER7_ASSERTS_UPlayFabAuthenticationContext;
 
 // Class PlayFabCommon.PlayFabRuntimeSettings
 // 0x0030 (0x0058 - 0x0028)
@@ -68,18 +67,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PlayFabRuntimeSettings">();
+		STATIC_CLASS_IMPL("PlayFabRuntimeSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayFabRuntimeSettings")
 	}
 	static class UPlayFabRuntimeSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPlayFabRuntimeSettings>();
 	}
 };
-static_assert(alignof(UPlayFabRuntimeSettings) == 0x000008, "Wrong alignment on UPlayFabRuntimeSettings");
-static_assert(sizeof(UPlayFabRuntimeSettings) == 0x000058, "Wrong size on UPlayFabRuntimeSettings");
-static_assert(offsetof(UPlayFabRuntimeSettings, ProductionEnvironmentURL) == 0x000028, "Member 'UPlayFabRuntimeSettings::ProductionEnvironmentURL' has a wrong offset!");
-static_assert(offsetof(UPlayFabRuntimeSettings, TitleId) == 0x000038, "Member 'UPlayFabRuntimeSettings::TitleId' has a wrong offset!");
-static_assert(offsetof(UPlayFabRuntimeSettings, DeveloperSecretKey) == 0x000048, "Member 'UPlayFabRuntimeSettings::DeveloperSecretKey' has a wrong offset!");
+DUMPER7_ASSERTS_UPlayFabRuntimeSettings;
 
 }
 

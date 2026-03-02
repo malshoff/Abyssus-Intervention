@@ -10,116 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "RGame_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function Widget_RunsLog.Widget_RunsLog_C.OnPreviewKeyDown
-// 0x0378 (0x0378 - 0x0000)
-struct Widget_RunsLog_C_OnPreviewKeyDown final
-{
-public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0130(0x00B8)()
-	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x01E8(0x0018)(HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_202[0x6];                                      // 0x0202(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEventReply                            CallFunc_Handled_ReturnValue_1;                    // 0x0208(0x00B8)()
-	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x02C0(0x00B8)()
-};
-static_assert(alignof(Widget_RunsLog_C_OnPreviewKeyDown) == 0x000008, "Wrong alignment on Widget_RunsLog_C_OnPreviewKeyDown");
-static_assert(sizeof(Widget_RunsLog_C_OnPreviewKeyDown) == 0x000378, "Wrong size on Widget_RunsLog_C_OnPreviewKeyDown");
-static_assert(offsetof(Widget_RunsLog_C_OnPreviewKeyDown, MyGeometry) == 0x000000, "Member 'Widget_RunsLog_C_OnPreviewKeyDown::MyGeometry' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_OnPreviewKeyDown, InKeyEvent) == 0x000038, "Member 'Widget_RunsLog_C_OnPreviewKeyDown::InKeyEvent' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_OnPreviewKeyDown, ReturnValue) == 0x000078, "Member 'Widget_RunsLog_C_OnPreviewKeyDown::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_OnPreviewKeyDown, CallFunc_Handled_ReturnValue) == 0x000130, "Member 'Widget_RunsLog_C_OnPreviewKeyDown::CallFunc_Handled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_OnPreviewKeyDown, CallFunc_GetKey_ReturnValue) == 0x0001E8, "Member 'Widget_RunsLog_C_OnPreviewKeyDown::CallFunc_GetKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_OnPreviewKeyDown, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x000200, "Member 'Widget_RunsLog_C_OnPreviewKeyDown::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_OnPreviewKeyDown, CallFunc_EqualEqual_KeyKey_ReturnValue_1) == 0x000201, "Member 'Widget_RunsLog_C_OnPreviewKeyDown::CallFunc_EqualEqual_KeyKey_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_OnPreviewKeyDown, CallFunc_Handled_ReturnValue_1) == 0x000208, "Member 'Widget_RunsLog_C_OnPreviewKeyDown::CallFunc_Handled_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_OnPreviewKeyDown, CallFunc_Unhandled_ReturnValue) == 0x0002C0, "Member 'Widget_RunsLog_C_OnPreviewKeyDown::CallFunc_Unhandled_ReturnValue' has a wrong offset!");
-
-// Function Widget_RunsLog.Widget_RunsLog_C.ExecuteUbergraph_Widget_RunsLog
-// 0x0030 (0x0030 - 0x0000)
-struct Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog) == 0x000008, "Wrong alignment on Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog");
-static_assert(sizeof(Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog) == 0x000030, "Wrong size on Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog");
-static_assert(offsetof(Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog, EntryPoint) == 0x000000, "Member 'Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000008, "Member 'Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog, CallFunc_Array_Length_ReturnValue) == 0x000014, "Member 'Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog, CallFunc_Subtract_IntInt_ReturnValue) == 0x000018, "Member 'Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x00001C, "Member 'Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog, K2Node_ComponentBoundEvent_Button_1) == 0x000020, "Member 'Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog, K2Node_ComponentBoundEvent_Button) == 0x000028, "Member 'Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-
-// Function Widget_RunsLog.Widget_RunsLog_C.Change Run Stats Page to Index
-// 0x0158 (0x0158 - 0x0000)
-struct Widget_RunsLog_C_Change_Run_Stats_Page_to_Index final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0020(0x0048)(HasGetValueTypeHash)
-	struct FRPlayerStats                          CallFunc_Array_Get_Item;                           // 0x0068(0x00C0)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0128(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0138(0x0010)()
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_149[0x3];                                      // 0x0149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_RunsLog_C_Change_Run_Stats_Page_to_Index) == 0x000008, "Wrong alignment on Widget_RunsLog_C_Change_Run_Stats_Page_to_Index");
-static_assert(sizeof(Widget_RunsLog_C_Change_Run_Stats_Page_to_Index) == 0x000158, "Wrong size on Widget_RunsLog_C_Change_Run_Stats_Page_to_Index");
-static_assert(offsetof(Widget_RunsLog_C_Change_Run_Stats_Page_to_Index, Index_0) == 0x000000, "Member 'Widget_RunsLog_C_Change_Run_Stats_Page_to_Index::Index_0' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_Change_Run_Stats_Page_to_Index, CallFunc_GetCurrentSaveGame_ReturnValue) == 0x000008, "Member 'Widget_RunsLog_C_Change_Run_Stats_Page_to_Index::CallFunc_GetCurrentSaveGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_Change_Run_Stats_Page_to_Index, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'Widget_RunsLog_C_Change_Run_Stats_Page_to_Index::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_Change_Run_Stats_Page_to_Index, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000018, "Member 'Widget_RunsLog_C_Change_Run_Stats_Page_to_Index::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_Change_Run_Stats_Page_to_Index, K2Node_MakeStruct_FormatArgumentData) == 0x000020, "Member 'Widget_RunsLog_C_Change_Run_Stats_Page_to_Index::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_Change_Run_Stats_Page_to_Index, CallFunc_Array_Get_Item) == 0x000068, "Member 'Widget_RunsLog_C_Change_Run_Stats_Page_to_Index::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_Change_Run_Stats_Page_to_Index, K2Node_MakeArray_Array) == 0x000128, "Member 'Widget_RunsLog_C_Change_Run_Stats_Page_to_Index::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_Change_Run_Stats_Page_to_Index, CallFunc_Format_ReturnValue) == 0x000138, "Member 'Widget_RunsLog_C_Change_Run_Stats_Page_to_Index::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_Change_Run_Stats_Page_to_Index, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000148, "Member 'Widget_RunsLog_C_Change_Run_Stats_Page_to_Index::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_Change_Run_Stats_Page_to_Index, CallFunc_Array_Length_ReturnValue) == 0x00014C, "Member 'Widget_RunsLog_C_Change_Run_Stats_Page_to_Index::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_Change_Run_Stats_Page_to_Index, CallFunc_Greater_IntInt_ReturnValue) == 0x000150, "Member 'Widget_RunsLog_C_Change_Run_Stats_Page_to_Index::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_RunsLog_C_Change_Run_Stats_Page_to_Index, CallFunc_BooleanAND_ReturnValue) == 0x000151, "Member 'Widget_RunsLog_C_Change_Run_Stats_Page_to_Index::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-
-// Function Widget_RunsLog.Widget_RunsLog_C.BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature final
-{
-public:
-	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
 
 // Function Widget_RunsLog.Widget_RunsLog_C.BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -128,9 +28,367 @@ struct Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBou
 public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong alignment on Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(sizeof(Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature) == 0x000008, "Wrong size on Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature");
-static_assert(offsetof(Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature, Button) == 0x000000, "Member 'Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature::Button' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Next_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature final
+{
+public:
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_BndEvt__Widget_RunsLog_W_Button_Prev_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.ChangeRunStatsPageToIndex
+// 0x0098 (0x0098 - 0x0000)
+struct Widget_RunsLog_C_ChangeRunStatsPageToIndex final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0010(0x0048)(HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0060(0x0010)(ReferenceParm)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0078(0x0010)()
+	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0095(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0096(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_ChangeRunStatsPageToIndex;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.ConstructActivatableAbility
+// 0x0138 (0x0138 - 0x0000)
+struct Widget_RunsLog_C_ConstructActivatableAbility final
+{
+public:
+	TArray<class URWeaponModPrimaryAsset*>        Temp_object_Variable;                              // 0x0000(0x0010)(ConstParm, ReferenceParm)
+	struct FRPlayerStats                          CallFunc_GetSelectedStats_RPlayerStats;            // 0x0010(0x0128)()
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_ConstructActivatableAbility;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.ConstructCharms
+// 0x0148 (0x0148 - 0x0000)
+struct Widget_RunsLog_C_ConstructCharms final
+{
+public:
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRPlayerStats                          CallFunc_GetSelectedStats_RPlayerStats;            // 0x0008(0x0128)()
+	class URMutatorPrimaryAsset*                  CallFunc_Array_Get_Item;                           // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URMutatorPrimaryAsset*                  CallFunc_Array_Get_Item_1;                         // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0142(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0143(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_ConstructCharms;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.ConstructForgeMutators
+// 0x01B0 (0x01B0 - 0x0000)
+struct Widget_RunsLog_C_ConstructForgeMutators final
+{
+public:
+	TArray<class UWidget_MutatorGridElement_01_Large_C*> Widget_Mutators;                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+	struct FGameplayTag                           Tag;                                               // 0x0010(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	int32                                         ArrIdx;                                            // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class URWeaponModPrimaryAsset*>        Temp_object_Variable;                              // 0x0020(0x0010)(ConstParm, ReferenceParm)
+	int32                                         Temp_int_Variable;                                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget_MutatorGridElement_01_Large_C*  CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRPlayerStats                          CallFunc_GetSelectedStats_RPlayerStats;            // 0x0060(0x0128)()
+	class UWidget_MutatorGridElement_01_Large_C*  CallFunc_Array_Get_Item_1;                         // 0x0188(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRMutatorLogData                       CallFunc_Array_Get_Item_2;                         // 0x0198(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x01AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_MatchesTag_ReturnValue;                   // 0x01AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_ConstructForgeMutators;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.ConstructMutatorGrid
+// 0x01C0 (0x01C0 - 0x0000)
+struct Widget_RunsLog_C_ConstructMutatorGrid final
+{
+public:
+	TArray<class URMutatorPrimaryAsset*>          MutatorPAs;                                        // 0x0000(0x0010)(Edit, BlueprintVisible)
+	class URMutatorPrimaryAsset*                  CurrentPrimaryAsset;                               // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class URWeaponModPrimaryAsset*>        Temp_object_Variable;                              // 0x0020(0x0010)(ConstParm, ReferenceParm)
+	TArray<class URWeaponModPrimaryAsset*>        Temp_object_Variable_1;                            // 0x0030(0x0010)(ConstParm, ReferenceParm)
+	struct FRPlayerStats                          CallFunc_GetSelectedStats_RPlayerStats;            // 0x0040(0x0128)()
+	struct FRMutatorLogData                       CallFunc_Array_Get_Item;                           // 0x0168(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TArray<class UWidget_MutatorGridElement_01_Large_C*> K2Node_MakeArray_Array;                     // 0x0178(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWidget_MutatorGridElement_01_Large_C*> K2Node_MakeArray_Array_1;                   // 0x0190(0x0010)(ReferenceParm, ContainsInstancedReference)
+	TArray<class URWeaponModPrimaryAsset*>        Temp_object_Variable_2;                            // 0x01A0(0x0010)(ConstParm, ReferenceParm)
+	bool                                          GameplayTagsK2Node_SwitchGameplayTag_CmpSuccess;   // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_MatchesTag_ReturnValue;                   // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B2[0x2];                                      // 0x01B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B9[0x3];                                      // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_ConstructMutatorGrid;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.ConstructMutatorSubGrid
+// 0x0220 (0x0220 - 0x0000)
+struct Widget_RunsLog_C_ConstructMutatorSubGrid final
+{
+public:
+	class UWidget_AlternatingGrid_01_C*           Grid;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  Tags;                                              // 0x0008(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
+	class URMutatorPrimaryAsset*                  MutatorPA;                                         // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Rank;                                              // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         LoopCount;                                         // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class URWeaponModPrimaryAsset*>        Temp_object_Variable;                              // 0x0050(0x0010)(ConstParm, ReferenceParm)
+	int32                                         Temp_int_Variable;                                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0070(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_MutatorGridElement_01_C*        K2Node_DynamicCast_AsWidget_Mutator_Grid_Element_01; // 0x0090(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_1;                               // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FGameplayTag>                   CallFunc_BreakGameplayTagContainer_GameplayTags;   // 0x00A0(0x0010)(ReferenceParm)
+	struct FGameplayTag                           CallFunc_Array_Get_Item_1;                         // 0x00B0(0x0008)(NoDestructor, HasGetValueTypeHash)
+	struct FRPlayerStats                          CallFunc_GetSelectedStats_RPlayerStats;            // 0x00B8(0x0128)()
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E5[0x3];                                      // 0x01E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRMutatorLogData                       CallFunc_Array_Get_Item_2;                         // 0x01E8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x01FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_MatchesAnyTags_ReturnValue;               // 0x01FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_GameplayTag_ReturnValue;         // 0x01FE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_MatchesTag_ReturnValue;                   // 0x01FF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0202(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_203[0x5];                                      // 0x0203(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_MutatorGridElement_01_Small_C*  CallFunc_Create_ReturnValue;                       // 0x0218(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_ConstructMutatorSubGrid;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.ConstructWeapon
+// 0x0138 (0x0138 - 0x0000)
+struct Widget_RunsLog_C_ConstructWeapon final
+{
+public:
+	struct FRPlayerStats                          CallFunc_GetSelectedStats_RPlayerStats;            // 0x0000(0x0128)()
+	TArray<class URWeaponModPrimaryAsset*>        K2Node_MakeArray_Array;                            // 0x0128(0x0010)(ConstParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_ConstructWeapon;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.ExecuteUbergraph_Widget_RunsLog
+// 0x0058 (0x0058 - 0x0000)
+struct Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget_BaseTooltip_C*                  CallFunc_GetCurrentTooltipWidget_Return_Value;     // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UWidget_PlayerGameOverPlayerTile_C* SelectedPlayerTile)> K2Node_CreateDelegate_OutputDelegate; // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue;           // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URSaveGame*                             CallFunc_GetCurrentSaveGame_ReturnValue_1;         // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_ExecuteUbergraph_Widget_RunsLog;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.GetCharm1TooltipWidget
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_RunsLog_C_GetCharm1TooltipWidget final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetCharmTooltipWidget_ReturnValue;        // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_GetCharm1TooltipWidget;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.GetCharm2TooltipWidget
+// 0x0010 (0x0010 - 0x0000)
+struct Widget_RunsLog_C_GetCharm2TooltipWidget final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetCharmTooltipWidget_ReturnValue;        // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_GetCharm2TooltipWidget;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.GetCharmTooltipWidget
+// 0x0168 (0x0168 - 0x0000)
+struct Widget_RunsLog_C_GetCharmTooltipWidget final
+{
+public:
+	int32                                         CharmIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget_BaseTooltip_C*                  CallFunc_GetCurrentTooltipWidget_Return_Value;     // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget_BaseTooltip_C*                  CallFunc_GetCurrentTooltipWidget_Return_Value_1;   // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FRPlayerStats                          CallFunc_GetSelectedStats_RPlayerStats;            // 0x0020(0x0128)()
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URMutatorPrimaryAsset*                  CallFunc_Array_Get_Item;                           // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_ParseMutatorDescription_ReturnValue;      // 0x0158(0x0010)()
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_GetCharmTooltipWidget;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.GetCurrentTooltipWidget
+// 0x0020 (0x0020 - 0x0000)
+struct Widget_RunsLog_C_GetCurrentTooltipWidget final
+{
+public:
+	class UWidget_BaseTooltip_C*                  Return_Value;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWidget_BaseTooltip_C*                  CallFunc_Create_ReturnValue;                       // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_GetCurrentTooltipWidget;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.GetGridAvatarElementsWidget
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_RunsLog_C_GetGridAvatarElementsWidget final
+{
+public:
+	class URGridPlayerAvatarElementsWidget*       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_GetGridAvatarElementsWidget;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.HandleSelectPlayerTile
+// 0x0008 (0x0008 - 0x0000)
+struct Widget_RunsLog_C_HandleSelectPlayerTile final
+{
+public:
+	class UWidget_PlayerGameOverPlayerTile_C*     SelectedPlayerTile;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_HandleSelectPlayerTile;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.OnPreviewKeyDown
+// 0x0380 (0x0380 - 0x0000)
+struct Widget_RunsLog_C_OnPreviewKeyDown final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                            ReturnValue;                                       // 0x0080(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0138(0x00B8)()
+	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x01F0(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x0209(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_20A[0x6];                                      // 0x020A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_Handled_ReturnValue_1;                    // 0x0210(0x00B8)()
+	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x02C8(0x00B8)()
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_OnPreviewKeyDown;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.SetupCharmsNavigation
+// 0x0018 (0x0018 - 0x0000)
+struct Widget_RunsLog_C_SetupCharmsNavigation final
+{
+public:
+	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_SetupCharmsNavigation;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.SetupGridItemsNavigation
+// 0x0018 (0x0018 - 0x0000)
+struct Widget_RunsLog_C_SetupGridItemsNavigation final
+{
+public:
+	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_SetupGridItemsNavigation;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.SetupTriggersNavigation
+// 0x0048 (0x0048 - 0x0000)
+struct Widget_RunsLog_C_SetupTriggersNavigation final
+{
+public:
+	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_Array_Get_Item_1;                         // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_Array_Get_Item_2;                         // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_2;         // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_SetupTriggersNavigation;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.SetupWeaponMutatorsNavigation
+// 0x0018 (0x0018 - 0x0000)
+struct Widget_RunsLog_C_SetupWeaponMutatorsNavigation final
+{
+public:
+	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_SetupWeaponMutatorsNavigation;
+
+// Function Widget_RunsLog.Widget_RunsLog_C.UpdateRunStatsWidgets
+// 0x0128 (0x0128 - 0x0000)
+struct Widget_RunsLog_C_UpdateRunStatsWidgets final
+{
+public:
+	struct FRPlayerStats                          CallFunc_GetSelectedStats_RPlayerStats;            // 0x0000(0x0128)()
+};
+DUMPER7_ASSERTS_Widget_RunsLog_C_UpdateRunStatsWidgets;
 
 }
 

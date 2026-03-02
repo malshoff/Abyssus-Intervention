@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
@@ -60,38 +60,7 @@ public:
 	bool                                          K2Node_CustomEvent_NewValue;                       // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer) == 0x000008, "Wrong alignment on Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer");
-static_assert(sizeof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer) == 0x000100, "Wrong size on Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, EntryPoint) == 0x000000, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, K2Node_CreateDelegate_OutputDelegate_1) == 0x000014, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, Temp_bool_Variable) == 0x000024, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, Temp_byte_Variable) == 0x000025, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, Temp_byte_Variable_1) == 0x000026, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, Temp_int_Array_Index_Variable) == 0x000028, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, Temp_int_Loop_Counter_Variable) == 0x00002C, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, CallFunc_Add_IntInt_ReturnValue) == 0x000030, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, K2Node_CreateDelegate_OutputDelegate_2) == 0x000034, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, K2Node_CustomEvent_PlayingVoiceAC) == 0x000048, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::K2Node_CustomEvent_PlayingVoiceAC' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, K2Node_CustomEvent_PlayerName) == 0x000050, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::K2Node_CustomEvent_PlayerName' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, K2Node_CustomEvent_Subtitle) == 0x000060, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::K2Node_CustomEvent_Subtitle' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, CallFunc_GetOwningPlayer_ReturnValue) == 0x000070, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, CallFunc_TextIsEmpty_ReturnValue) == 0x000078, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, CallFunc_Create_ReturnValue) == 0x000080, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, CallFunc_Not_PreBool_ReturnValue) == 0x000088, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000090, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, CallFunc_AreAnyListenersWithinRange_ReturnValue) == 0x0000A8, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::CallFunc_AreAnyListenersWithinRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, CallFunc_AddChild_ReturnValue) == 0x0000B0, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::CallFunc_AddChild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, CallFunc_BooleanAND_ReturnValue) == 0x0000B8, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, CallFunc_GetRGameState_ReturnValue) == 0x0000C0, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::CallFunc_GetRGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, K2Node_CustomEvent_PlayerState) == 0x0000C8, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::K2Node_CustomEvent_PlayerState' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, CallFunc_GetAllPlayerPawnsInLevel_ReturnValue) == 0x0000D0, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::CallFunc_GetAllPlayerPawnsInLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, CallFunc_Array_Get_Item) == 0x0000E0, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, CallFunc_Array_Length_ReturnValue) == 0x0000E8, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, CallFunc_Less_IntInt_ReturnValue) == 0x0000EC, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, CallFunc_GetRGameUserSettings_ReturnValue) == 0x0000F0, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::CallFunc_GetRGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, K2Node_CustomEvent_NewValue) == 0x0000F8, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::K2Node_CustomEvent_NewValue' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer, K2Node_Select_Default) == 0x0000F9, "Member 'Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer::K2Node_Select_Default' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SubtitleContainer_C_ExecuteUbergraph_Widget_SubtitleContainer;
 
 // Function Widget_SubtitleContainer.Widget_SubtitleContainer_C.OnPlayerJoined_Event
 // 0x0008 (0x0008 - 0x0000)
@@ -100,9 +69,7 @@ struct Widget_SubtitleContainer_C_OnPlayerJoined_Event final
 public:
 	class APlayerState*                           PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SubtitleContainer_C_OnPlayerJoined_Event) == 0x000008, "Wrong alignment on Widget_SubtitleContainer_C_OnPlayerJoined_Event");
-static_assert(sizeof(Widget_SubtitleContainer_C_OnPlayerJoined_Event) == 0x000008, "Wrong size on Widget_SubtitleContainer_C_OnPlayerJoined_Event");
-static_assert(offsetof(Widget_SubtitleContainer_C_OnPlayerJoined_Event, PlayerState) == 0x000000, "Member 'Widget_SubtitleContainer_C_OnPlayerJoined_Event::PlayerState' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SubtitleContainer_C_OnPlayerJoined_Event;
 
 // Function Widget_SubtitleContainer.Widget_SubtitleContainer_C.OnShowSubtitlesUpdated_Event
 // 0x0001 (0x0001 - 0x0000)
@@ -111,9 +78,7 @@ struct Widget_SubtitleContainer_C_OnShowSubtitlesUpdated_Event final
 public:
 	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_SubtitleContainer_C_OnShowSubtitlesUpdated_Event) == 0x000001, "Wrong alignment on Widget_SubtitleContainer_C_OnShowSubtitlesUpdated_Event");
-static_assert(sizeof(Widget_SubtitleContainer_C_OnShowSubtitlesUpdated_Event) == 0x000001, "Wrong size on Widget_SubtitleContainer_C_OnShowSubtitlesUpdated_Event");
-static_assert(offsetof(Widget_SubtitleContainer_C_OnShowSubtitlesUpdated_Event, NewValue) == 0x000000, "Member 'Widget_SubtitleContainer_C_OnShowSubtitlesUpdated_Event::NewValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SubtitleContainer_C_OnShowSubtitlesUpdated_Event;
 
 // Function Widget_SubtitleContainer.Widget_SubtitleContainer_C.OnVoiceLinePlayed
 // 0x0028 (0x0028 - 0x0000)
@@ -124,11 +89,7 @@ public:
 	class FText                                   PlayerName;                                        // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class FText                                   Subtitle;                                          // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(Widget_SubtitleContainer_C_OnVoiceLinePlayed) == 0x000008, "Wrong alignment on Widget_SubtitleContainer_C_OnVoiceLinePlayed");
-static_assert(sizeof(Widget_SubtitleContainer_C_OnVoiceLinePlayed) == 0x000028, "Wrong size on Widget_SubtitleContainer_C_OnVoiceLinePlayed");
-static_assert(offsetof(Widget_SubtitleContainer_C_OnVoiceLinePlayed, PlayingVoiceAC) == 0x000000, "Member 'Widget_SubtitleContainer_C_OnVoiceLinePlayed::PlayingVoiceAC' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_OnVoiceLinePlayed, PlayerName) == 0x000008, "Member 'Widget_SubtitleContainer_C_OnVoiceLinePlayed::PlayerName' has a wrong offset!");
-static_assert(offsetof(Widget_SubtitleContainer_C_OnVoiceLinePlayed, Subtitle) == 0x000018, "Member 'Widget_SubtitleContainer_C_OnVoiceLinePlayed::Subtitle' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_SubtitleContainer_C_OnVoiceLinePlayed;
 
 }
 

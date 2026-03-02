@@ -18,21 +18,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Widget_SoulShardCount.Widget_SoulShardCount_C
-// 0x0058 (0x0328 - 0x02D0)
+// 0x0058 (0x0398 - 0x0340)
 class UWidget_SoulShardCount_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       KeyUpdateAnimation;                                // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       GoldUpdateAnimation;                               // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             GoldCountText;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 GoldIcon;                                          // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             KeyCountText;                                      // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 KeyIcon;                                           // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_HUD_Background_C*               Widget_HUD_Background;                             // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidget_HUD_Background_C*               Widget_HUD_Background_44;                          // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ARPlayerState*                          PlayerState;                                       // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidget_HUD_Background_C*               Widget_HUD_Background_44;                          // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidget_HUD_Background_C*               Widget_HUD_Background;                             // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 KeyIcon;                                           // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             KeyCountText;                                      // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 GoldIcon;                                          // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             GoldCountText;                                     // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       GoldUpdateAnimation;                               // 0x0380(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       KeyUpdateAnimation;                                // 0x0388(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class ARPlayerState*                          PlayerState;                                       // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -50,26 +50,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Widget_SoulShardCount_C">();
+		BP_STATIC_CLASS_IMPL("Widget_SoulShardCount_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Widget_SoulShardCount_C")
 	}
 	static class UWidget_SoulShardCount_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWidget_SoulShardCount_C>();
 	}
 };
-static_assert(alignof(UWidget_SoulShardCount_C) == 0x000008, "Wrong alignment on UWidget_SoulShardCount_C");
-static_assert(sizeof(UWidget_SoulShardCount_C) == 0x000328, "Wrong size on UWidget_SoulShardCount_C");
-static_assert(offsetof(UWidget_SoulShardCount_C, UberGraphFrame) == 0x0002D0, "Member 'UWidget_SoulShardCount_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWidget_SoulShardCount_C, KeyUpdateAnimation) == 0x0002D8, "Member 'UWidget_SoulShardCount_C::KeyUpdateAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_SoulShardCount_C, GoldUpdateAnimation) == 0x0002E0, "Member 'UWidget_SoulShardCount_C::GoldUpdateAnimation' has a wrong offset!");
-static_assert(offsetof(UWidget_SoulShardCount_C, GoldCountText) == 0x0002E8, "Member 'UWidget_SoulShardCount_C::GoldCountText' has a wrong offset!");
-static_assert(offsetof(UWidget_SoulShardCount_C, GoldIcon) == 0x0002F0, "Member 'UWidget_SoulShardCount_C::GoldIcon' has a wrong offset!");
-static_assert(offsetof(UWidget_SoulShardCount_C, InvalidationBox_0) == 0x0002F8, "Member 'UWidget_SoulShardCount_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWidget_SoulShardCount_C, KeyCountText) == 0x000300, "Member 'UWidget_SoulShardCount_C::KeyCountText' has a wrong offset!");
-static_assert(offsetof(UWidget_SoulShardCount_C, KeyIcon) == 0x000308, "Member 'UWidget_SoulShardCount_C::KeyIcon' has a wrong offset!");
-static_assert(offsetof(UWidget_SoulShardCount_C, Widget_HUD_Background) == 0x000310, "Member 'UWidget_SoulShardCount_C::Widget_HUD_Background' has a wrong offset!");
-static_assert(offsetof(UWidget_SoulShardCount_C, Widget_HUD_Background_44) == 0x000318, "Member 'UWidget_SoulShardCount_C::Widget_HUD_Background_44' has a wrong offset!");
-static_assert(offsetof(UWidget_SoulShardCount_C, PlayerState) == 0x000320, "Member 'UWidget_SoulShardCount_C::PlayerState' has a wrong offset!");
+DUMPER7_ASSERTS_UWidget_SoulShardCount_C;
 
 }
 

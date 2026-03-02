@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "RGame_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "RGame_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -42,23 +42,7 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_LootSelectScreenBase_C_CreateOptionWidgets) == 0x000008, "Wrong alignment on Widget_LootSelectScreenBase_C_CreateOptionWidgets");
-static_assert(sizeof(Widget_LootSelectScreenBase_C_CreateOptionWidgets) == 0x000088, "Wrong size on Widget_LootSelectScreenBase_C_CreateOptionWidgets");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_CreateOptionWidgets, Temp_int_Loop_Counter_Variable) == 0x000000, "Member 'Widget_LootSelectScreenBase_C_CreateOptionWidgets::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_CreateOptionWidgets, CallFunc_Add_IntInt_ReturnValue) == 0x000004, "Member 'Widget_LootSelectScreenBase_C_CreateOptionWidgets::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_CreateOptionWidgets, Temp_int_Array_Index_Variable) == 0x000008, "Member 'Widget_LootSelectScreenBase_C_CreateOptionWidgets::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_CreateOptionWidgets, CallFunc_GetLootOptionWidgetClass_Class) == 0x000010, "Member 'Widget_LootSelectScreenBase_C_CreateOptionWidgets::CallFunc_GetLootOptionWidgetClass_Class' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_CreateOptionWidgets, CallFunc_LoadClassFromSoftClassPtr_ReturnValue) == 0x000038, "Member 'Widget_LootSelectScreenBase_C_CreateOptionWidgets::CallFunc_LoadClassFromSoftClassPtr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_CreateOptionWidgets, CallFunc_IsValidSoftClassReference_ReturnValue) == 0x000040, "Member 'Widget_LootSelectScreenBase_C_CreateOptionWidgets::CallFunc_IsValidSoftClassReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_CreateOptionWidgets, K2Node_ClassDynamicCast_AsRLoot_Option_Widget) == 0x000048, "Member 'Widget_LootSelectScreenBase_C_CreateOptionWidgets::K2Node_ClassDynamicCast_AsRLoot_Option_Widget' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_CreateOptionWidgets, K2Node_ClassDynamicCast_bSuccess) == 0x000050, "Member 'Widget_LootSelectScreenBase_C_CreateOptionWidgets::K2Node_ClassDynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_CreateOptionWidgets, CallFunc_GetOwningPlayer_ReturnValue) == 0x000058, "Member 'Widget_LootSelectScreenBase_C_CreateOptionWidgets::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_CreateOptionWidgets, CallFunc_Create_ReturnValue) == 0x000060, "Member 'Widget_LootSelectScreenBase_C_CreateOptionWidgets::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_CreateOptionWidgets, CallFunc_Array_Add_ReturnValue) == 0x000068, "Member 'Widget_LootSelectScreenBase_C_CreateOptionWidgets::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_CreateOptionWidgets, CallFunc_Array_Length_ReturnValue) == 0x00006C, "Member 'Widget_LootSelectScreenBase_C_CreateOptionWidgets::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_CreateOptionWidgets, CallFunc_Array_Get_Item) == 0x000070, "Member 'Widget_LootSelectScreenBase_C_CreateOptionWidgets::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_CreateOptionWidgets, CallFunc_Less_IntInt_ReturnValue) == 0x000080, "Member 'Widget_LootSelectScreenBase_C_CreateOptionWidgets::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_CreateOptionWidgets, CallFunc_IsValid_ReturnValue) == 0x000081, "Member 'Widget_LootSelectScreenBase_C_CreateOptionWidgets::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_LootSelectScreenBase_C_CreateOptionWidgets;
 
 // Function Widget_LootSelectScreenBase.Widget_LootSelectScreenBase_C.ExecuteUbergraph_Widget_LootSelectScreenBase
 // 0x0004 (0x0004 - 0x0000)
@@ -67,9 +51,7 @@ struct Widget_LootSelectScreenBase_C_ExecuteUbergraph_Widget_LootSelectScreenBas
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_LootSelectScreenBase_C_ExecuteUbergraph_Widget_LootSelectScreenBase) == 0x000004, "Wrong alignment on Widget_LootSelectScreenBase_C_ExecuteUbergraph_Widget_LootSelectScreenBase");
-static_assert(sizeof(Widget_LootSelectScreenBase_C_ExecuteUbergraph_Widget_LootSelectScreenBase) == 0x000004, "Wrong size on Widget_LootSelectScreenBase_C_ExecuteUbergraph_Widget_LootSelectScreenBase");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_ExecuteUbergraph_Widget_LootSelectScreenBase, EntryPoint) == 0x000000, "Member 'Widget_LootSelectScreenBase_C_ExecuteUbergraph_Widget_LootSelectScreenBase::EntryPoint' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_LootSelectScreenBase_C_ExecuteUbergraph_Widget_LootSelectScreenBase;
 
 // Function Widget_LootSelectScreenBase.Widget_LootSelectScreenBase_C.GetLootOptionWidgetClass
 // 0x0028 (0x0028 - 0x0000)
@@ -78,9 +60,7 @@ struct Widget_LootSelectScreenBase_C_GetLootOptionWidgetClass final
 public:
 	TSoftClassPtr<class UClass>                   Class_0;                                           // 0x0000(0x0028)(Parm, OutParm, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_LootSelectScreenBase_C_GetLootOptionWidgetClass) == 0x000008, "Wrong alignment on Widget_LootSelectScreenBase_C_GetLootOptionWidgetClass");
-static_assert(sizeof(Widget_LootSelectScreenBase_C_GetLootOptionWidgetClass) == 0x000028, "Wrong size on Widget_LootSelectScreenBase_C_GetLootOptionWidgetClass");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_GetLootOptionWidgetClass, Class_0) == 0x000000, "Member 'Widget_LootSelectScreenBase_C_GetLootOptionWidgetClass::Class_0' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_LootSelectScreenBase_C_GetLootOptionWidgetClass;
 
 // Function Widget_LootSelectScreenBase.Widget_LootSelectScreenBase_C.Initialize
 // 0x0028 (0x0028 - 0x0000)
@@ -92,12 +72,7 @@ public:
 	class ARPickupableItem*                       PickupableItem;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EOrientation                                  OptionOrientation;                                 // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_LootSelectScreenBase_C_Initialize) == 0x000008, "Wrong alignment on Widget_LootSelectScreenBase_C_Initialize");
-static_assert(sizeof(Widget_LootSelectScreenBase_C_Initialize) == 0x000028, "Wrong size on Widget_LootSelectScreenBase_C_Initialize");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_Initialize, LootOptions_0) == 0x000000, "Member 'Widget_LootSelectScreenBase_C_Initialize::LootOptions_0' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_Initialize, LootSelectionType_0) == 0x000010, "Member 'Widget_LootSelectScreenBase_C_Initialize::LootSelectionType_0' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_Initialize, PickupableItem) == 0x000018, "Member 'Widget_LootSelectScreenBase_C_Initialize::PickupableItem' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_Initialize, OptionOrientation) == 0x000020, "Member 'Widget_LootSelectScreenBase_C_Initialize::OptionOrientation' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_LootSelectScreenBase_C_Initialize;
 
 // Function Widget_LootSelectScreenBase.Widget_LootSelectScreenBase_C.OnLootSelected
 // 0x0038 (0x0038 - 0x0000)
@@ -113,15 +88,7 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasMutator_ReturnValue;                   // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Widget_LootSelectScreenBase_C_OnLootSelected) == 0x000008, "Wrong alignment on Widget_LootSelectScreenBase_C_OnLootSelected");
-static_assert(sizeof(Widget_LootSelectScreenBase_C_OnLootSelected) == 0x000038, "Wrong size on Widget_LootSelectScreenBase_C_OnLootSelected");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_OnLootSelected, LootSelectionOption) == 0x000000, "Member 'Widget_LootSelectScreenBase_C_OnLootSelected::LootSelectionOption' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_OnLootSelected, K2Node_DynamicCast_AsRMutator_Primary_Asset) == 0x000010, "Member 'Widget_LootSelectScreenBase_C_OnLootSelected::K2Node_DynamicCast_AsRMutator_Primary_Asset' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_OnLootSelected, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'Widget_LootSelectScreenBase_C_OnLootSelected::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_OnLootSelected, CallFunc_GetOwningPlayerPawn_ReturnValue) == 0x000020, "Member 'Widget_LootSelectScreenBase_C_OnLootSelected::CallFunc_GetOwningPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_OnLootSelected, K2Node_DynamicCast_AsRPlayer_Pawn) == 0x000028, "Member 'Widget_LootSelectScreenBase_C_OnLootSelected::K2Node_DynamicCast_AsRPlayer_Pawn' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_OnLootSelected, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'Widget_LootSelectScreenBase_C_OnLootSelected::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Widget_LootSelectScreenBase_C_OnLootSelected, CallFunc_HasMutator_ReturnValue) == 0x000031, "Member 'Widget_LootSelectScreenBase_C_OnLootSelected::CallFunc_HasMutator_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_Widget_LootSelectScreenBase_C_OnLootSelected;
 
 }
 

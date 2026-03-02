@@ -129,7 +129,7 @@ TScriptInterface<class IAssetRegistry> UAssetRegistryHelpers::GetAssetRegistry()
 
 
 // Function AssetRegistry.AssetRegistryHelpers.GetBlueprintAssets
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FARFilter&                 InFilter                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // TArray<struct FAssetData>*              OutAssetData                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)

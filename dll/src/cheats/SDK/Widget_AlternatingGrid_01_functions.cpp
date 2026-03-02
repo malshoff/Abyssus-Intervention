@@ -17,17 +17,217 @@
 namespace SDK
 {
 
-// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.UpdateGrid
-// (BlueprintCallable, BlueprintEvent)
+// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.AddWidgetToGrid
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget*                          Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    bUpdateImmediately                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWidget_AlternatingGrid_01_C::UpdateGrid()
+void UWidget_AlternatingGrid_01_C::AddWidgetToGrid(class UWidget* Widget, bool bUpdateImmediately)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "UpdateGrid");
+		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "AddWidgetToGrid");
+
+	Params::Widget_AlternatingGrid_01_C_AddWidgetToGrid Parms{};
+
+	Parms.Widget = Widget;
+	Parms.bUpdateImmediately = bUpdateImmediately;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.ClearGrid
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWidget_AlternatingGrid_01_C::ClearGrid()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "ClearGrid");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.ExecuteUbergraph_Widget_AlternatingGrid_01
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_AlternatingGrid_01_C::ExecuteUbergraph_Widget_AlternatingGrid_01(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "ExecuteUbergraph_Widget_AlternatingGrid_01");
+
+	Params::Widget_AlternatingGrid_01_C_ExecuteUbergraph_Widget_AlternatingGrid_01 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.GeneratePreviewElements
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_AlternatingGrid_01_C::GeneratePreviewElements()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "GeneratePreviewElements");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.GetGridOverlayChildren
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<class UWidget*>                  ReturnValue                                            (Parm, OutParm, ReturnParm, ContainsInstancedReference)
+
+TArray<class UWidget*> UWidget_AlternatingGrid_01_C::GetGridOverlayChildren()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "GetGridOverlayChildren");
+
+	Params::Widget_AlternatingGrid_01_C_GetGridOverlayChildren Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.GetGridPreviewSizeMultiplier
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 UWidget_AlternatingGrid_01_C::GetGridPreviewSizeMultiplier()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "GetGridPreviewSizeMultiplier");
+
+	Params::Widget_AlternatingGrid_01_C_GetGridPreviewSizeMultiplier Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.NativeAddWidgetToGrid
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class UUserWidget*                Widget                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const bool                              bUpdateImmediately                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_AlternatingGrid_01_C::NativeAddWidgetToGrid(const class UUserWidget* Widget, const bool bUpdateImmediately)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "NativeAddWidgetToGrid");
+
+	Params::Widget_AlternatingGrid_01_C_NativeAddWidgetToGrid Parms{};
+
+	Parms.Widget = Widget;
+	Parms.bUpdateImmediately = bUpdateImmediately;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.NativeClearGrid
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_AlternatingGrid_01_C::NativeClearGrid()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "NativeClearGrid");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.NativeUpdateGrid
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWidget_AlternatingGrid_01_C::NativeUpdateGrid()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "NativeUpdateGrid");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWidget_AlternatingGrid_01_C::OnInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "OnInitialized");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_AlternatingGrid_01_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "PreConstruct");
+
+	Params::Widget_AlternatingGrid_01_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.RemoveWidgetFromGrid
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget*                          Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWidget_AlternatingGrid_01_C::RemoveWidgetFromGrid(class UWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "RemoveWidgetFromGrid");
+
+	Params::Widget_AlternatingGrid_01_C_RemoveWidgetFromGrid Parms{};
+
+	Parms.Widget = Widget;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -55,125 +255,17 @@ void UWidget_AlternatingGrid_01_C::SetGridNavigationData(class UWidget* InGridEl
 }
 
 
-// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.RemoveWidgetFromGrid
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.UpdateGrid
+// (BlueprintCallable, BlueprintEvent)
 
-void UWidget_AlternatingGrid_01_C::RemoveWidgetFromGrid(class UWidget* Widget)
+void UWidget_AlternatingGrid_01_C::UpdateGrid()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "RemoveWidgetFromGrid");
-
-	Params::Widget_AlternatingGrid_01_C_RemoveWidgetFromGrid Parms{};
-
-	Parms.Widget = Widget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_AlternatingGrid_01_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "PreConstruct");
-
-	Params::Widget_AlternatingGrid_01_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWidget_AlternatingGrid_01_C::OnInitialized()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "OnInitialized");
+		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "UpdateGrid");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.GeneratePreviewElements
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWidget_AlternatingGrid_01_C::GeneratePreviewElements()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "GeneratePreviewElements");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.ExecuteUbergraph_Widget_AlternatingGrid_01
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_AlternatingGrid_01_C::ExecuteUbergraph_Widget_AlternatingGrid_01(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "ExecuteUbergraph_Widget_AlternatingGrid_01");
-
-	Params::Widget_AlternatingGrid_01_C_ExecuteUbergraph_Widget_AlternatingGrid_01 Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.ClearGrid
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWidget_AlternatingGrid_01_C::ClearGrid()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "ClearGrid");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Widget_AlternatingGrid_01.Widget_AlternatingGrid_01_C.AddWidgetToGrid
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWidget_AlternatingGrid_01_C::AddWidgetToGrid(class UWidget* Widget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Widget_AlternatingGrid_01_C", "AddWidgetToGrid");
-
-	Params::Widget_AlternatingGrid_01_C_AddWidgetToGrid Parms{};
-
-	Parms.Widget = Widget;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

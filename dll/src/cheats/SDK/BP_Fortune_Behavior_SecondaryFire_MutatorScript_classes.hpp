@@ -34,16 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Fortune_Behavior_SecondaryFire_MutatorScript_C">();
+		BP_STATIC_CLASS_IMPL("BP_Fortune_Behavior_SecondaryFire_MutatorScript_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Fortune_Behavior_SecondaryFire_MutatorScript_C")
 	}
 	static class UBP_Fortune_Behavior_SecondaryFire_MutatorScript_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_Fortune_Behavior_SecondaryFire_MutatorScript_C>();
 	}
 };
-static_assert(alignof(UBP_Fortune_Behavior_SecondaryFire_MutatorScript_C) == 0x000008, "Wrong alignment on UBP_Fortune_Behavior_SecondaryFire_MutatorScript_C");
-static_assert(sizeof(UBP_Fortune_Behavior_SecondaryFire_MutatorScript_C) == 0x0001C0, "Wrong size on UBP_Fortune_Behavior_SecondaryFire_MutatorScript_C");
-static_assert(offsetof(UBP_Fortune_Behavior_SecondaryFire_MutatorScript_C, UberGraphFrame_BP_Fortune_Behavior_SecondaryFire_MutatorScript_C) == 0x0001B8, "Member 'UBP_Fortune_Behavior_SecondaryFire_MutatorScript_C::UberGraphFrame_BP_Fortune_Behavior_SecondaryFire_MutatorScript_C' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_Fortune_Behavior_SecondaryFire_MutatorScript_C;
 
 }
 
