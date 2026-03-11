@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_structs.hpp"
-#include "Widget_Settings_KeyMappingBase_classes.hpp"
 #include "CommonInput_structs.hpp"
+#include "Widget_Settings_KeyMappingBase_classes.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK

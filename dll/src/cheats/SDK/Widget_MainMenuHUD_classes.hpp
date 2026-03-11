@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Widget_CommonHUDBase_classes.hpp"
 #include "Engine_structs.hpp"
 #include "RGame_structs.hpp"
+#include "Widget_CommonHUDBase_classes.hpp"
 
 
 namespace SDK

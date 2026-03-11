@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "RGame_structs.hpp"
 #include "BP_ChargeBase_ModScript_classes.hpp"
+#include "RGame_structs.hpp"
 
 
 namespace SDK

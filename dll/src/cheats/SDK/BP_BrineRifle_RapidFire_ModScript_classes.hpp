@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_SemiAutoBase_ModScript_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK

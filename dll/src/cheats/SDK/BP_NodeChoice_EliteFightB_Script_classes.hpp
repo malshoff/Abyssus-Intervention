@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BP_NodeChoice_EliteFight_BaseScript_classes.hpp"
 #include "RGame_structs.hpp"
+#include "BP_NodeChoice_EliteFight_BaseScript_classes.hpp"
 
 
 namespace SDK

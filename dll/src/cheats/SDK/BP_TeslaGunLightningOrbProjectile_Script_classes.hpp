@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "F_TeslaGunLightningOrbProjectile_ZapHit_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "F_TeslaGunLightningOrbProjectile_ZapHit_structs.hpp"
 #include "RGame_classes.hpp"
 
 

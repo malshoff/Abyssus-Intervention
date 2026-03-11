@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Widget_PlayerFrame_Base_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK

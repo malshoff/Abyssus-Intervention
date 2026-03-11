@@ -12,8 +12,8 @@
 
 #include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
-#include "RGame_classes.hpp"
 #include "ABP_GolemMelee_structs.hpp"
+#include "RGame_classes.hpp"
 
 
 namespace SDK

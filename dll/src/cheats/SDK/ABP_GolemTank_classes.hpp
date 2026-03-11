@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "ABP_GolemTank_structs.hpp"
 #include "Engine_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
+#include "ABP_GolemTank_structs.hpp"
 #include "E_GolemTank_AttackState_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "RGame_classes.hpp"
 
 
